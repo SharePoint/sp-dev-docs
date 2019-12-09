@@ -27,7 +27,7 @@ Alert templates also define what filters and event types appear on the new alert
 > [!IMPORTANT]
 > Do not modify the `Alerttemplates.xml` file. Doing so may result in loss of functionality when upgrading or installing service packs. 
   
-For a listing of the predefined alert templates, see [Predefined Alert Templates](http://msdn.microsoft.com/library/6a5296b2-c158-40e4-897f-bbf008b6bbaf%28Office.15%29.aspx).
+For a listing of the predefined alert templates, see [Predefined Alert Templates](https://msdn.microsoft.com/library/6a5296b2-c158-40e4-897f-bbf008b6bbaf%28Office.15%29.aspx).
   
 [AlertTemplates](alerttemplates-element-alerttemplates.md)
   
@@ -111,5 +111,5 @@ The following example shows the basic elements in an alert templates schema.
 ## See also
 
 - [Query schema](query-schema.md)
-- [Alerts in Windows SharePoint Services](http://msdn.microsoft.com/library/cb9586d9-84e1-43c9-93c9-8a7496f2f41d%28Office.15%29.aspx)
+- [Alerts in Windows SharePoint Services](https://msdn.microsoft.com/library/cb9586d9-84e1-43c9-93c9-8a7496f2f41d%28Office.15%29.aspx)
 

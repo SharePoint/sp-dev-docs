@@ -20,7 +20,7 @@ description: Specifies the name and access level (public or internal) of the cla
   
 Specifies the name and access level (public or internal) of the class (derived from [DataContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Linq.DataContext.aspx)) that SPMetal generates. 
   
-For information about the default behavior of SPMetal when an optional element or attribute is not present, see [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx). 
+For information about the default behavior of SPMetal when an optional element or attribute is not present, see [SPMetal Default Code Generation Rules](https://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx). 
   
 ```XML
 <Web Class="TeamSite" AccessModifier="Internal"> ... </Web>
@@ -88,5 +88,5 @@ The following is an example of a **Web** element.
 
 ## See also
 
-- [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)  
-- [Overriding SPMetal Defaults by Using a Parameters XML File](http://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
+- [SPMetal Default Code Generation Rules](https://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)  
+- [Overriding SPMetal Defaults by Using a Parameters XML File](https://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)

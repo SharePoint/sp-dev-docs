@@ -275,8 +275,8 @@ The following example demonstrates how to construct a **Parameter** element so t
 - [.ACTIONS File Example](actions-file-example-workflowinfo.md)
 - [Default Workflow Actions](default-workflow-actions-workflowinfo.md)
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

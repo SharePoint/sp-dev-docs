@@ -23,7 +23,7 @@ The endpoint URI for most Following tasks begins with the **SocialRestFollowingM
     
     
 
-We recommend that you use the **SocialRestFollowingManager** API for Following People and Following Content tasks, but you can use the **PeopleManager** resource for some Following People tasks that **SocialRestFollowingManager** doesn't support. For example, you can find out whether someone is following the current user or get another user's followers. For these tasks, you send HTTP **GET** requests to endpoint URIs that begin with the **PeopleManager** resource ( `sp.userprofiles.peoplemanager`) and end with the resource that performs the specific task.If the endpoint takes a parameter, the parameter metadata is sent in the URI or in the request body in XML or JavaScript Object Notation (JSON) format. You can make HTTP requests in any language, including JavaScript and C#. By default, the REST service returns responses that are formatted by using the Atom protocol, but you can request the JSON format by using HTTP **Accept** headers. See [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
+We recommend that you use the **SocialRestFollowingManager** API for Following People and Following Content tasks, but you can use the **PeopleManager** resource for some Following People tasks that **SocialRestFollowingManager** doesn't support. For example, you can find out whether someone is following the current user or get another user's followers. For these tasks, you send HTTP **GET** requests to endpoint URIs that begin with the **PeopleManager** resource ( `sp.userprofiles.peoplemanager`) and end with the resource that performs the specific task.If the endpoint takes a parameter, the parameter metadata is sent in the URI or in the request body in XML or JavaScript Object Notation (JSON) format. You can make HTTP requests in any language, including JavaScript and C#. By default, the REST service returns responses that are formatted by using the Atom protocol, but you can request the JSON format by using HTTP **Accept** headers. See [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
 ## Resource endpoints for Following People and Following Content tasks
 <a name="bk_Overview"> </a>
 
@@ -1568,7 +1568,7 @@ The following response represents a user who is following the specified user.
 -  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint.md)
     
   
--  [SharePoint User Profiles JavaScript Reference (sp.userprofiles.js)](http://msdn.microsoft.com/library/80cf5436-6aa2-6f11-a782-66a04f6e2fb0%28Office.15%29.aspx)
+-  [SharePoint User Profiles JavaScript Reference (sp.userprofiles.js)](https://msdn.microsoft.com/library/80cf5436-6aa2-6f11-a782-66a04f6e2fb0%28Office.15%29.aspx)
     
   
 -  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)

@@ -26,7 +26,7 @@ Represents the schema of certain special variable properties of a custom field t
 ```
 
 > [!IMPORTANT]
-> This topic describes markup that was used in an obsolete method of rendering custom field type properties. It is provided solely to assist with the debugging of custom field type properties developed against earlier versions of SharePoint Foundation. For information about the recommended method, see [Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx). 
+> This topic describes markup that was used in an obsolete method of rendering custom field type properties. It is provided solely to assist with the debugging of custom field type properties developed against earlier versions of SharePoint Foundation. For information about the recommended method, see [Custom Field Type Property Rendering](https://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx). 
   
 ## Elements and attributes
 
@@ -46,7 +46,7 @@ None
    
 ### Remarks
 
-Custom field types may have special properties whose value will vary from one column based on the field type to another column based on the same field type. Consider a custom regular expression field type that is designed to hold [String](http://msdn2.microsoft.com/EN-US/library/s1wwdcbf) values that match a certain regular expression, such as `^(\d{3})\d{3}-\d{4}$` for American telephone numbers. 
+Custom field types may have special properties whose value will vary from one column based on the field type to another column based on the same field type. Consider a custom regular expression field type that is designed to hold [String](http://msdn2.microsoft.com/library/s1wwdcbf) values that match a certain regular expression, such as `^(\d{3})\d{3}-\d{4}$` for American telephone numbers. 
 
 Rather than create separate custom regular expression field types for British license plate numbers, American Social Security numbers, Chinese telephone numbers, etc., it is more efficient to create a single regular expression field type and enable users who create columns based on the field type to set the regular expression that needs to be matched on a column-by-column basis. For example, a user creating a "US Telephone Number" column would set the column's regular expression to the string above. Another user, creating a "Brazilian Post Box" column would set his column's regular expression to `^\d{5}\-\d{3}$`. 
   
@@ -86,7 +86,7 @@ The following code example has been edited for clarity.
 
 ## See also
 
-- [Custom Field Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)  
-- [Custom Field Classes](http://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)  
-- [Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)  
-- [Custom Field Type Definition](http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)  
+- [Custom Field Types](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)  
+- [Custom Field Classes](https://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)  
+- [Custom Field Type Property Rendering](https://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)  
+- [Custom Field Type Definition](https://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)  

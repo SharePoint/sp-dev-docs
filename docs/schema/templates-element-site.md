@@ -18,7 +18,7 @@ description: Top-level element in a WebTemp*.xml file that specifies the collect
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Top-level element in a [WebTemp\*.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file that specifies the collection of site definitions available for instantiating sites within the deployment. 
+Top-level element in a [WebTemp\*.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file that specifies the collection of site definitions available for instantiating sites within the deployment. 
   
 ```XML
 <Templates>
@@ -55,7 +55,7 @@ None
    
 ## Example
 
-The following example shows the templates defined in the default [WebTemp.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file installed in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033 folder of SharePoint Foundation. 
+The following example shows the templates defined in the default [WebTemp.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8%28Office.15%29.aspx) file installed in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033 folder of SharePoint Foundation. 
   
 ```XML
 <?xml version="1.0" encoding="utf-8"?>

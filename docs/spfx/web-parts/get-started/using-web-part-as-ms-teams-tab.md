@@ -91,7 +91,7 @@ Locate the manifest json file for the web part you want to make available to Tea
 
   // If true, the component can only be installed on sites where Custom Script is allowed.
   // Components that allow authors to embed arbitrary script code should set this to true.
-  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
   "supportedHosts": ["SharePointWebPart", "TeamsTab"],
 
@@ -186,7 +186,7 @@ Locate the manifest json file for the web part you want to make available to Tea
     ```
 
     > [!NOTE]
-    > You can find full description of the information available through Microsoft Teams context for Microsoft Teams tabs from the [Microsoft Teams developer documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-context).
+    > You can find full description of the information available through Microsoft Teams context for Microsoft Teams tabs from the [Microsoft Teams developer documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-context).
 
 ## Packaging and deploying your web part to SharePoint
 
@@ -208,7 +208,7 @@ Ensure that your console is activated in the root folder of the solution, which 
 Next, you need to deploy the package that was generated to the tenant app catalog.
 
 > [!NOTE]
-> If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/en-us/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
+> If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
 
 1. Go to your site's app catalog.
 
@@ -283,4 +283,4 @@ You should now be able to sync your new version to Microsoft Teams.
 
 ## See also
 
-* [The Microsoft Teams developer platform](https://docs.microsoft.com/en-us/microsoftteams/platform/overview)
+* [The Microsoft Teams developer platform](https://docs.microsoft.com/microsoftteams/platform/overview)

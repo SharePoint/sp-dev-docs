@@ -196,7 +196,7 @@ unchecked((int)0xffffffffL), InheritanceFlags.None, PropagationFlags.None);
 -  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
--  [Implementing a BinarySecurityDescriptorAccessor](http://msdn.microsoft.com/library/6cf70490-dd3c-49cd-bb13-ed33e938435d%28Office.15%29.aspx)
+-  [Implementing a BinarySecurityDescriptorAccessor](https://msdn.microsoft.com/library/6cf70490-dd3c-49cd-bb13-ed33e938435d%28Office.15%29.aspx)
     
   
 -  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)

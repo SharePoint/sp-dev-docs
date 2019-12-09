@@ -39,7 +39,7 @@ Perhaps best of all, in cases where there is an existing web service that you ne
   
     
     
-While SharePoint can consume any type of web service, it is easiest (and recommended) that you use web services that accept and return data using the standard  [OData](http://www.odata.org/) formats of [Atom](http://msdn.microsoft.com/en-us/library/ff478141.aspx) or [JSON](http://json.org/) (JavaScript Object Notation).
+While SharePoint can consume any type of web service, it is easiest (and recommended) that you use web services that accept and return data using the standard  [OData](http://www.odata.org/) formats of [Atom](https://msdn.microsoft.com/library/ff478141.aspx) or [JSON](http://json.org/) (JavaScript Object Notation).
   
     
     
@@ -72,7 +72,7 @@ In SharePoint workflows, you call a web service using a new action introduced in
   
     
     
-The **Call HTTP Web Service** action lets you specify any of several request methods, including **GET**, **PUT**, **POST**, and **DELETE**. This lets you tell the web services, specifically  [RESTful](http://msdn.microsoft.com/en-us/library/office/jj164022.aspx) services, what to do on the service that you've specified with the URI property on the activity.
+The **Call HTTP Web Service** action lets you specify any of several request methods, including **GET**, **PUT**, **POST**, and **DELETE**. This lets you tell the web services, specifically  [RESTful](https://msdn.microsoft.com/library/office/jj164022.aspx) services, what to do on the service that you've specified with the URI property on the activity.
   
     
     
@@ -80,7 +80,7 @@ For instance, to get all the properties of a specific item, the service URL woul
   
     
     
-The second stage of working with web services involves submitting data to, and receiving data from, a web service, which you do by using either the **request** or **response** properties on the **Call HTTP Web Service** action. Note, however, that rather than as a stream, data is passed as a complex structure using the [Dynamic Value](http://msdn.microsoft.com/en-us/library/windowsazure/microsoft.activities.dynamicvalue%28v=azure.10%29.aspx) object. (For more information about dynamic values, see [Understanding Dynamic Value](http://msdn.microsoft.com/en-us/library/windowsazure/jj193505%28v=azure.10%29.aspx).)
+The second stage of working with web services involves submitting data to, and receiving data from, a web service, which you do by using either the **request** or **response** properties on the **Call HTTP Web Service** action. Note, however, that rather than as a stream, data is passed as a complex structure using the [Dynamic Value](https://msdn.microsoft.com/library/windowsazure/microsoft.activities.dynamicvalue%28v=azure.10%29.aspx) object. (For more information about dynamic values, see [Understanding Dynamic Value](https://msdn.microsoft.com/library/windowsazure/jj193505%28v=azure.10%29.aspx).)
   
     
     
@@ -103,7 +103,7 @@ Fortunately, there are plenty of options for creating custom web services for us
   
     
     
- OData is a protocol for creating and consuming data based on the principles of REST services. It was developed to standardize exchanging data using mature, reliable, and robust HTTP protocols. Once the OData specification was complete, different organizations implemented the protocol on their own technology stacks. Microsoft implemented its own version of OData, which it branded [WCF Data Services](http://msdn.microsoft.com/en-us/library/hh487257%28v=vs.103%29.aspx).
+ OData is a protocol for creating and consuming data based on the principles of REST services. It was developed to standardize exchanging data using mature, reliable, and robust HTTP protocols. Once the OData specification was complete, different organizations implemented the protocol on their own technology stacks. Microsoft implemented its own version of OData, which it branded [WCF Data Services](https://msdn.microsoft.com/library/hh487257%28v=vs.103%29.aspx).
   
     
     
@@ -121,7 +121,7 @@ Following are discussions of two common scenarios in which RESTful web services 
 
 ### Implementing OData service CRUD-Q operations
 
-A common use for web services is performing simple create, read, update, delete, and query (CRUD-Q) operations on data in a database. It is relatively easy to create an OData web service for a SharePoint workflow WCF data service an OData service to be used by a workflow by using WCF Data services. You can review the walkthroughs and samples on creating web services at sites like  [WCF Data Services](http://msdn.microsoft.com/en-us/library/cc668792.aspx),  [www.OData.org](http://www.odata.org), and others. 
+A common use for web services is performing simple create, read, update, delete, and query (CRUD-Q) operations on data in a database. It is relatively easy to create an OData web service for a SharePoint workflow WCF data service an OData service to be used by a workflow by using WCF Data services. You can review the walkthroughs and samples on creating web services at sites like  [WCF Data Services](https://msdn.microsoft.com/library/cc668792.aspx),  [www.OData.org](http://www.odata.org), and others. 
   
     
     
@@ -130,10 +130,10 @@ Assuming that you already have database that you can operate against, there are 
     
     
 
-1. Create a model of the database using the Microsoft  [Entity Framework](http://msdn.microsoft.com/en-us/data/aa937723). There is no code required as this is a wizard-based creation in Visual Studio. For additional information, see  [Entity Framework 4.0 and WCF Data Services 4.0 in Visual Studio 2010](http://msdn.microsoft.com/en-us/magazine/ee336128.aspx) and [Entity Framework Designer Gets Some Love in Visual Studio 2012](http://msdn.microsoft.com/en-us/magazine/jj721589.aspx).
+1. Create a model of the database using the Microsoft  [Entity Framework](https://msdn.microsoft.com/data/aa937723). There is no code required as this is a wizard-based creation in Visual Studio. For additional information, see  [Entity Framework 4.0 and WCF Data Services 4.0 in Visual Studio 2010](https://msdn.microsoft.com/magazine/ee336128.aspx) and [Entity Framework Designer Gets Some Love in Visual Studio 2012](https://msdn.microsoft.com/magazine/jj721589.aspx).
     
   
-2. Create a new WCF Data Service. Again, no code is required in this Visual Studio wizard. For more information, see Walkthrough:  [Creating and Accessing a WCF Data Service in Visual Studio](http://msdn.microsoft.com/en-us/library/vstudio/cc668184.aspx).
+2. Create a new WCF Data Service. Again, no code is required in this Visual Studio wizard. For more information, see Walkthrough:  [Creating and Accessing a WCF Data Service in Visual Studio](https://msdn.microsoft.com/library/vstudio/cc668184.aspx).
     
   
 3. In the service code file, set the name of the entity model that you created in step one to the source of the service; then, set the accessibility and permission for the entities in the model (both steps implemented in as little as two lines of code).
@@ -149,7 +149,7 @@ There's a pretty good chance that your workflow wants to run some business logic
   
     
     
-However, you can support this scenario by using OData and WCF Data Services, through which you can implement  [Service Operations](http://msdn.microsoft.com/en-us/library/cc668788.aspx). Service operations are common, and are even used in the SharePoint services. For example, when SharePoint retrieves a specific list using the address format  `http://[..]/_api/web/lists/GetByTitle('ListTitle')`, the **GetByTitle()** function in the address is actually a service operator that was created by the SharePoint team. Typically, developers create their custom service operations in web services they create using WCF Data Services.
+However, you can support this scenario by using OData and WCF Data Services, through which you can implement  [Service Operations](https://msdn.microsoft.com/library/cc668788.aspx). Service operations are common, and are even used in the SharePoint services. For example, when SharePoint retrieves a specific list using the address format  `http://[..]/_api/web/lists/GetByTitle('ListTitle')`, the **GetByTitle()** function in the address is actually a service operator that was created by the SharePoint team. Typically, developers create their custom service operations in web services they create using WCF Data Services.
   
     
     
@@ -390,10 +390,10 @@ SharePointintroduced a new workflow architecture facilitated by a new product, W
 -  [Introducing JSON](http://json.org/)
     
   
--  [Get started with the SharePoint REST service](http://msdn.microsoft.com/en-us/library/office/fp142380.aspx)
+-  [Get started with the SharePoint REST service](https://msdn.microsoft.com/library/office/fp142380.aspx)
     
   
--  [Entity Framework 4.0 and WCF Data Services 4.0 in Visual Studio 2010](http://msdn.microsoft.com/en-us/magazine/ee336128.aspx)
+-  [Entity Framework 4.0 and WCF Data Services 4.0 in Visual Studio 2010](https://msdn.microsoft.com/magazine/ee336128.aspx)
     
   
 

@@ -200,7 +200,7 @@ public render(): void {
 
 Many client-side customizations use jQuery for executing AJAX requests for its simplicity and cross-browser compatibility. If this is all that you're using jQuery for, you can execute the AJAX calls by using the standard HTTP client provided with the SharePoint Framework. 
 
-SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](https://docs.microsoft.com/en-us/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](https://docs.microsoft.com/en-us/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
+SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](https://docs.microsoft.com/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](https://docs.microsoft.com/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
 
 ```typescript
 this.context.spHttpClient.get(`${this.context.pageContext.web.absoluteUrl}/_api/web?$select=Title`,

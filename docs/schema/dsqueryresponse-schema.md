@@ -16,9 +16,9 @@ description: Used by the XSLT list view rendering system of Microsoft SharePoint
   
 The **dsQueryResponse** XML is used by the XSLT list view rendering system of Microsoft SharePoint Foundation to represent the data of a list. The markup is not persisted. It is created when a list is rendered and passed as a parameter to the XSLT templates that render the list. 
   
-For an example of **dsQueryResponse** markup, see [Examples of Input and Result Node Trees in XSLT Transformations](http://msdn.microsoft.com/library/cbe88144-25ac-4cd2-8f2a-50e8c271c6ae%28Office.15%29.aspx). 
+For an example of **dsQueryResponse** markup, see [Examples of Input and Result Node Trees in XSLT Transformations](https://msdn.microsoft.com/library/cbe88144-25ac-4cd2-8f2a-50e8c271c6ae%28Office.15%29.aspx). 
   
-For information about the XSLT list view rendering system, see [Overview of XSLT List View Rendering System](http://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593%28Office.15%29.aspx).
+For information about the XSLT list view rendering system, see [Overview of XSLT List View Rendering System](https://msdn.microsoft.com/library/7c1e0b6f-f53f-4379-a2b3-fbbaf2e00593%28Office.15%29.aspx).
   
 ## dsQueryResponse markup elements
 

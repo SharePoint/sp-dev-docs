@@ -12,15 +12,15 @@ localization_priority: Priority
 Client secrets for SharePoint Add-ins that are registered by using the AppRegNew.aspx page expire after one year. This article explains how to add a new secret for the add-in, as well as how to create a new client secret that is valid for three years.
 
 > [!NOTE]
-> This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/en-us/office/dev/store/create-or-update-client-ids-and-secrets).
+> This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/office/dev/store/create-or-update-client-ids-and-secrets).
 
 ## Prerequisites
 
 Ensure the following before you begin:
 
-- [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=39267) is installed on the development computer.
+- [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=39267) is installed on the development computer.
 
-- You can connect to Office 365 with PowerShell: [Connect to Office 365 PowerShell](https://docs.microsoft.com/en-us/office365/enterprise/powershell/connect-to-office-365-powershell)
+- You can connect to Office 365 with PowerShell: [Connect to Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)
 
 - You are a tenant administrator for the Office 365 tenant (or a farm administrator on the farm) where the add-in was registered with the AppRegNew.aspx page.
 
@@ -78,7 +78,7 @@ Ensure the following before you begin:
 3. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
 
   > [!TIP]
-  > By default, the add-in secret lasts one year. You can set this to a shorter or longer (up to 3 years maximum) by using the **-EndDate** parameter on the three calls of the **New-MsolServicePrincipalCredential** cmdlet. The value of the parameter must be a [DateTime](https://msdn.microsoft.com/EN-US/library/03ybds8y) object set to no longer than 3 years from **DateTime.Now**.
+  > By default, the add-in secret lasts one year. You can set this to a shorter or longer (up to 3 years maximum) by using the **-EndDate** parameter on the three calls of the **New-MsolServicePrincipalCredential** cmdlet. The value of the parameter must be a [DateTime](https://msdn.microsoft.com/library/03ybds8y) object set to no longer than 3 years from **DateTime.Now**.
 
 ## Update the remote web application in Visual Studio to use the new secret
 

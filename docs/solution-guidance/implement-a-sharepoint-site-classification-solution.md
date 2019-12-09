@@ -25,7 +25,7 @@ To get started, download the [Core.SiteClassification](https://github.com/ShareP
 
 Initially, you need to define and set the site policies that will be available in all your site collections. The Core.SiteClassification sample applies to SharePoint Online MT, but can be used as well in SharePoint Online Dedicated or SharePoint on-premises. Site polices are set in the Content Type Hub, which in SharePoint Online MT is located at `https://[tenantname]/sites/contentTypeHub`. 
 
-To set site policies, go to **Settings** > **Site Collection Administration** > **Site Policies** > **Create**. The **New Site Policy** page appears. For more information about site policy options, see [Overview of site policies in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/sites/site-policy-overview).
+To set site policies, go to **Settings** > **Site Collection Administration** > **Site Policies** > **Create**. The **New Site Policy** page appears. For more information about site policy options, see [Overview of site policies in SharePoint Server](https://docs.microsoft.com/SharePoint/sites/site-policy-overview).
 
 On the **New Site Policy** page, enter the following information in the fields:
 
@@ -49,7 +49,7 @@ Repeat these steps two more times, for the names **MBI** and **LBI**. Use differ
 
 ## Insert a custom action
 
-You can insert a custom action for site classification to the **Settings** page and the **SharePoint gear** icon. This action is only available to users with **ManageWeb** permission. For more information, see [Default Custom Action Locations and IDs](https://msdn.microsoft.com/en-us/library/office/bb802730%28v=office.15%29.aspx).
+You can insert a custom action for site classification to the **Settings** page and the **SharePoint gear** icon. This action is only available to users with **ManageWeb** permission. For more information, see [Default Custom Action Locations and IDs](https://msdn.microsoft.com/library/office/bb802730%28v=office.15%29.aspx).
 
 ```csharp
 /// <summary>

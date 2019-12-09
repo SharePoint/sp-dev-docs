@@ -32,4 +32,4 @@ During this walkthrough, you will learn how to:
 - [How to: Trust a Location](how-to-trust-a-location.md)
 - [Excel Services Alerts](excel-services-alerts.md)
 - [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
-- [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx)
+- [How to: Trust Workbook Locations Using Script](https://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx)

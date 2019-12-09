@@ -1,7 +1,7 @@
 ---
 title: Upload a file by using the REST API and jQuery
 description: Upload a local file to a SharePoint folder by using the REST API and jQuery AJAX requests.
-ms.date: 4/19/2018
+ms.date: 11/01/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,47 +10,42 @@ localization_priority: Priority
 
 The code examples in this article use the REST interface and jQuery AJAX requests to add a local file to the **Documents** library, and then change properties of the list item that represents the uploaded file.
 
-This process uses the following high-level steps: 
+This process uses the following high-level steps:
 
 1. Convert the local file to an array buffer by using the **FileReader** API, which requires HTML5 support. The **jQuery(document).ready** function checks for FileReader API support in the browser.
-    
-2. Add the file to the **Shared Documents** folder by using the **Add** method on the folder's file collection. The array buffer is passed in the body of the POST request.
-    
-    These examples use the **getfolderbyserverrelativeurl** endpoint to reach the file collection, but you can also use a list endpoint (example: `…/_api/web/lists/getbytitle('<list title>')/rootfolder/files/add`).
-    
-3. Get the list item that corresponds to the uploaded file by using the **ListItemAllFields** property of the uploaded file.
-    
-4. Change the display name and title of the list item by using a MERGE request.
+1. Add the file to the **Shared Documents** folder by using the **Add** method on the folder's file collection. The array buffer is passed in the body of the POST request.
 
+    These examples use the **getfolderbyserverrelativeurl** endpoint to reach the file collection, but you can also use a list endpoint (example: `…/_api/web/lists/getbytitle('<list title>')/rootfolder/files/add`).
+
+1. Get the list item that corresponds to the uploaded file by using the **ListItemAllFields** property of the uploaded file.
+1. Change the display name and title of the list item by using a MERGE request.
 
 <a name="RunTheExamples"> </a>
 
 ## Running the code examples
 
-Both code examples in this article use the REST API and jQuery AJAX requests to upload a file to the **Shared Documents** folder and then change list item properties. 
+Both code examples in this article use the REST API and jQuery AJAX requests to upload a file to the **Shared Documents** folder and then change list item properties.
 
-The first example uses **SP.AppContextSite** to make calls across SharePoint domains, like a SharePoint-hosted add-in would do when uploading files to the host web. 
+The first example uses **SP.AppContextSite** to make calls across SharePoint domains, like a SharePoint-hosted add-in would do when uploading files to the host web.
 
 The second example makes same-domain calls, like a SharePoint-hosted add-in would do when uploading files to the add-in web, or a solution that's running on the server would do when uploading files.
- 
-> [!NOTE] 
-> Provider-hosted add-ins written in JavaScript must use the SP.RequestExecutor cross-domain library to send requests to a SharePoint domain. For an example, see [upload a file by using the cross-domain library](https://msdn.microsoft.com/en-us/library/office/dn450841.aspx).
- 
+
+> [!NOTE]
+> Provider-hosted add-ins written in JavaScript must use the SP.RequestExecutor cross-domain library to send requests to a SharePoint domain. For an example, see [upload a file by using the cross-domain library](https://msdn.microsoft.com/library/office/dn450841.aspx).
+
 To use the examples in this article, you'll need the following:
 
 - SharePoint Server or SharePoint Online.
-
 - **Write** permissions to the **Documents** library for the user running the code. If you're developing a SharePoint Add-in, you can specify **Write** add-in permissions at the **List** scope.
-
 - Browser support for the **FileReader** API (HTML5).
-
 - A reference to the jQuery library in your page markup. For example:
-    
+
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
     ```
+
 - The following controls in your page markup.
-    
+
     ```HTML
     <input id="getFile" type="file"/><br />
     <input id="displayName" type="text" value="Enter a unique name" /><br />
@@ -64,7 +59,6 @@ To use the examples in this article, you'll need the following:
 The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the **Documents** library and to change properties of the list item that represents the file. The context for this example is a SharePoint-hosted add-in that uploads a file to a folder on the host web.
 
 You need to meet [these requirements](#RunTheExamples) to use this example.
- 
 
 ```js
 'use strict';
@@ -88,7 +82,7 @@ jQuery(document).ready(function () {
 function uploadFile() {
 
     // Define the folder path for this example.
-    var serverRelativeUrlToFolder = '/shared documents';
+    var serverRelativeUrlToFolder = 'shared documents';
 
     // Get test values from the file input and text input page controls.
     // The display name must be unique every time you run the example.
@@ -171,7 +165,7 @@ function uploadFile() {
         // add-in web and specifies the host web as the context site.
         fileListItemUri = fileListItemUri.replace(hostWebUrl, '{0}');
         fileListItemUri = fileListItemUri.replace('_api/Web', '_api/sp.appcontextsite(@target)/web');
-        
+
         var listItemAllFieldsEndpoint = String.format(fileListItemUri + "?@target='{1}'",
             appWebUrl, hostWebUrl);
 
@@ -191,7 +185,7 @@ function uploadFile() {
         var listItemUri = itemMetadata.uri.replace('_api/Web', '_api/sp.appcontextsite(@target)/web');
         var listItemEndpoint = String.format(listItemUri + "?@target='{0}'", hostWebUrl);
 
-        // Define the list item changes. Use the FileLeafRef property to change the display name. 
+        // Define the list item changes. Use the FileLeafRef property to change the display name.
         // For simplicity, also use the name as the title.
         // The example gets the list item type from the item's metadata, but you can also get it from the
         // ListItemEntityTypeFullName property of the list.
@@ -215,7 +209,7 @@ function uploadFile() {
     }
 }
 
-// Display error messages. 
+// Display error messages.
 function onError(error) {
     alert(error.responseText);
 }
@@ -231,15 +225,13 @@ function getQueryStringParameter(paramToRetrieve) {
 }
 ```
 
-<br/>
-
 <a name="CodeExample2"> </a>
 
 ## Code example 2: Upload a file in the same domain by using the REST API and jQuery
 
 The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the **Documents** library and to change properties of the list item that represents the file. The context for this example is a solution that's running on the server. The code would be similar in a SharePoint-hosted add-in that uploads files to the add-in web.
 
-You need to meet [these requirements](#RunTheExamples) before you can run this example. 
+You need to meet [these requirements](#RunTheExamples) before you can run this example.
 
 ```js
 'use strict';
@@ -348,8 +340,8 @@ function uploadFile() {
     // Change the display name and title of the list item.
     function updateListItem(itemMetadata) {
 
-        // Define the list item changes. Use the FileLeafRef property to change the display name. 
-        // For simplicity, also use the name as the title. 
+        // Define the list item changes. Use the FileLeafRef property to change the display name.
+        // For simplicity, also use the name as the title.
         // The example gets the list item type from the item's metadata, but you can also get it from the
         // ListItemEntityTypeFullName property of the list.
         var body = String.format("{{'__metadata':{{'type':'{0}'}},'FileLeafRef':'{1}','Title':'{2}'}}",
@@ -372,13 +364,11 @@ function uploadFile() {
     }
 }
 
-// Display error messages. 
+// Display error messages.
 function onError(error) {
     alert(error.responseText);
 }
 ```
-
-<br/>
 
 ## See also
 
@@ -387,10 +377,3 @@ function onError(error) {
 - [REST API reference and samples](https://msdn.microsoft.com/library)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
-
-    
- 
-
-    
- 
-

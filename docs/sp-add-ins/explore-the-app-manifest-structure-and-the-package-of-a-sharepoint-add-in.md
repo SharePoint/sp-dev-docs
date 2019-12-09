@@ -13,7 +13,7 @@ localization_priority: Priority
 
 ## Add-in for SharePoint package structure
 
-A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](https://msdn.microsoft.com/en-us/library/windows/desktop/dd742818(v=vs.85).aspx). The package contains the following items:
+A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](https://msdn.microsoft.com/library/windows/desktop/dd742818(v=vs.85).aspx). The package contains the following items:
 
 - **Add-in manifest**: This is a required file that is named appmanifest.xml. It tells SharePoint about some important properties of the add-in, such as its title and the permissions it needs to run. For more information about the contents of this file, see [Add-in for SharePoint manifest file](#AppManifest).
     
@@ -52,7 +52,7 @@ Every SharePoint Add-in includes an appmanifest.xml file. The appmanifest.xml te
 - The URL of the start page, which is the page that opens when the add-in is started. This can be a page in the add-in web, a cloud-based page, or a page on a web server of the ISV.
     
     > [!NOTE] 
-    > In certain circumstances, there may be restrictions on what type of file can be specified in the **StartPage** element. For details, see [StartPage element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/3092674c-a6c3-9021-3d7e-e716562a4a4f%28Office.15%29.aspx). When you are combining more than one query parameter in the **StartPage** value, you must use the encoded ampersand `&amp;amp;` rather than `&amp;` or a semi-colon to append them together.
+    > In certain circumstances, there may be restrictions on what type of file can be specified in the **StartPage** element. For details, see [StartPage element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](https://msdn.microsoft.com/library/3092674c-a6c3-9021-3d7e-e716562a4a4f%28Office.15%29.aspx). When you are combining more than one query parameter in the **StartPage** value, you must use the encoded ampersand `&amp;amp;` rather than `&amp;` or a semi-colon to append them together.
 
 - Other properties of the add-in. These include title and the locales supported by the add-in (both are required), the URLs of services that handle the post-install, post-upgrade, and pre-uninstall events, and the web template to use when the add-in web is created.
     
@@ -65,11 +65,11 @@ Every SharePoint Add-in includes an appmanifest.xml file. The appmanifest.xml te
 > [!NOTE] 
 > The add-in manifest file is the only required item in the add-in package, but not all of the items in the previous list are required parts of the file. 
  
-For detailed information about the add-in manifest markup, see [Schema reference for manifests of SharePoint Add-ins](http://msdn.microsoft.com/library/1f8c5d44-3b60-0bfe-9069-1df821220691%28Office.15%29.aspx). This topic is not a substitute for the information in that node, including information about required elements and attributes. Also, note that SharePoint add-in manifests have a different schema from Office Add-in manifests. You can find information about the latter at [Schema reference for Office Add-ins manifests (v1.1)](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests).
+For detailed information about the add-in manifest markup, see [Schema reference for manifests of SharePoint Add-ins](https://msdn.microsoft.com/library/1f8c5d44-3b60-0bfe-9069-1df821220691%28Office.15%29.aspx). This topic is not a substitute for the information in that node, including information about required elements and attributes. Also, note that SharePoint add-in manifests have a different schema from Office Add-in manifests. You can find information about the latter at [Schema reference for Office Add-ins manifests (v1.1)](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests).
  
 The following is an example of an appmanifest.xml file. Note that in this example, the start page for the add-in is an ASP.NET page that is on a remote server, not a page on the SharePoint site. The URL for the page includes a query string that passes to the remote web application the URL of the host web. The `{HostUrl}` part of the string is a token that is resolved when the add-in is launched. The add-in is requesting Write permission to all the lists in the host web. The add-in principal that must be granted this permission is the remote web application.
 
-You must use either the **SupportedLocales** or the **SupportedLanguages** element in your add-in manifest. **SupportedLanguages** is being deprecated in favor of **SupportedLocales**. The **SupportedLanguages** element will continue to work even after release, but you should refrain from using it. For more information about these elements, see [SupportedLocales element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/49bde91a-8d7a-be17-4c91-82c9c19f0f61%28Office.15%29.aspx) and [SupportedLanguages element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/7a8da886-5731-9abd-2911-5cd268bba4cf%28Office.15%29.aspx).
+You must use either the **SupportedLocales** or the **SupportedLanguages** element in your add-in manifest. **SupportedLanguages** is being deprecated in favor of **SupportedLocales**. The **SupportedLanguages** element will continue to work even after release, but you should refrain from using it. For more information about these elements, see [SupportedLocales element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](https://msdn.microsoft.com/library/49bde91a-8d7a-be17-4c91-82c9c19f0f61%28Office.15%29.aspx) and [SupportedLanguages element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](https://msdn.microsoft.com/library/7a8da886-5731-9abd-2911-5cd268bba4cf%28Office.15%29.aspx).
 
 > [!NOTE] 
 > The values of the **Scope** attribute of the **AppPermissionRequest** element are structured like URIs, but they are actually literal strings. No part of the example **Scope** value in the following example is a placeholder. For more information about permissions, see [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md).
@@ -108,7 +108,7 @@ You must use either the **SupportedLocales** or the **SupportedLanguages** eleme
 
 SharePoint provides several tokens that can be used in the  **StartPage** element and other places in add-ins and components of add-ins to represent information that is not known until the add-in is run. The SharePoint infrastructure resolves these tokens. Some are used at the beginning of the URL and others can be used within a URL such as the value of a query parameter. These tokens and several others can also be used in a variety of SharePoint development contexts. 
 
-For detailed information about all the tokens and where they can be used, see [URL strings and tokens in SharePoint Add-ins](url-strings-and-tokens-in-sharepoint-add-ins.md). For general information about other tokens and URLs in SharePoint, see [URLs and tokens in SharePoint](http://msdn.microsoft.com/library/161418d7-8123-4c4e-91a1-97e43c17f0e6%28Office.15%29.aspx).
+For detailed information about all the tokens and where they can be used, see [URL strings and tokens in SharePoint Add-ins](url-strings-and-tokens-in-sharepoint-add-ins.md). For general information about other tokens and URLs in SharePoint, see [URLs and tokens in SharePoint](https://msdn.microsoft.com/library/161418d7-8123-4c4e-91a1-97e43c17f0e6%28Office.15%29.aspx).
  
 > [!NOTE] 
 > These tokens are not used in the **Scope** attribute of an **AppPermissionRequest** element.
@@ -120,7 +120,7 @@ For detailed information about all the tokens and where they can be used, see [U
 
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 -  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
--  [Data-Tier Application Connection (DAC)](http://msdn.microsoft.com/en-us/library/ee210546)
+-  [Data-Tier Application Connection (DAC)](https://msdn.microsoft.com/library/ee210546)
 -  [Web Deploy 2.0](http://www.iis.net/download/WebDeploy)
     
  

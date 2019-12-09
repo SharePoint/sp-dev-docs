@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Get to know the SharePoint REST service
 
-SharePoint introduces a Representational State Transfer (REST) service that is comparable to the existing SharePoint [client object models](http://msdn.microsoft.com/library/88e5e1b9-eab2-4f3b-a3f2-75c96b86f1f4%28Office.15%29.aspx). Now, developers can interact remotely with SharePoint data by using any technology that supports REST web requests. This means that developers can perform **Create**, **Read**, **Update**, and **Delete** (CRUD) operations from their SharePoint Add-ins, solutions, and client applications, using REST web technologies and standard Open Data Protocol (OData) syntax.\
+SharePoint introduces a Representational State Transfer (REST) service that is comparable to the existing SharePoint [client object models](https://msdn.microsoft.com/library/88e5e1b9-eab2-4f3b-a3f2-75c96b86f1f4%28Office.15%29.aspx). Now, developers can interact remotely with SharePoint data by using any technology that supports REST web requests. This means that developers can perform **Create**, **Read**, **Update**, and **Delete** (CRUD) operations from their SharePoint Add-ins, solutions, and client applications, using REST web technologies and standard Open Data Protocol (OData) syntax.
 
 ## Prerequisites
 
@@ -140,7 +140,7 @@ The SharePoint Online (and on-premises SharePoint 2016 or later) REST service su
 
 ## OData resources
 
-- [Developing Service-Oriented Applications with WCF](https://docs.microsoft.com/en-us/dotnet/framework/wcf/index)
+- [Developing Service-Oriented Applications with WCF](https://docs.microsoft.com/dotnet/framework/wcf/index)
 - [Open Data Protocol](http://www.odata.org/)
 - [OData Protocol URI Conventions](http://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
 - [Addressing Service Operations](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#AddressingServiceOperations)

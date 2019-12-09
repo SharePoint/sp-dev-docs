@@ -3,6 +3,7 @@ title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and are deployed to SharePoint sites when the solution is installed on it. 
 ms.date: 03/14/2019
 ms.prod: sharepoint
+ms.custom: scenarios:getting-started
 ---
 
 
@@ -153,7 +154,7 @@ In the following steps, we define the needed structure to be provisioned.
     * We use the **CustomSchema** attribute in the **ListInstance** element to define a provisioning time schema.xml file for the list. This way the list is still based on the out-of-the-box list template (normal custom list '100' in this case), but we can define an alternative provisioning definition during initial provisioning.
     * When provisioning list instances using Features you must provide the ID of the Feature associated with the particular list definition. Using the FeatureId attribute you are supposed to provide the ID of the Feature which contains the List Definition. As an example: if you’re provisioning an instance of a custom list the FeatureId attribute should be set to `{00bfea71-de22-43b2-a848-c05709900100}`.
 
-    More details about the used schema structures can be found at [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) on MSDN.
+    More details about the used schema structures can be found at [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/office/ms460318(v=office.14).aspx) on MSDN.
 
 ### To add a schema.xml file for defining list structure
 
@@ -201,7 +202,7 @@ Note the following about the included XML structure:
 * The custom content type deployed by using the **elements.xml** file is referenced in the **ContentTypeRef** element.
 * Custom fields called **SPFxAmount** and **SPFxCostCenter** are referenced in the **FieldRef** element.
 
-More details about the used schema structures can be found at [Understanding Schema.xml Files](https://msdn.microsoft.com/en-us/library/office/ms459356(v=office.14).aspx) article at MSDN.
+More details about the used schema structures can be found at [Understanding Schema.xml Files](https://msdn.microsoft.com/library/office/ms459356(v=office.14).aspx) article at MSDN.
 
 ## Ensure that definitions are taken into use in build pipeline
 

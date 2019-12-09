@@ -22,7 +22,7 @@ The following are some of the enhancements added to SharePoint:
   - SharePoint continues to offer support for both claims and classic authentication modes. Claims authentication is the default authentication option in SharePoint. Classic-mode authentication is deprecated and can be managed only by using Windows PowerShell. A lot of features in SharePoint require claims-mode. 
     
   
-  - The **MigrateUsers** method from SharePoint 2010 is now deprecated, it's no longer the correct way to migrate accounts. To migrate accounts, use the new Windows PowerShell cmdlet called `Convert-SPWebApplication`. For more information see  [Migrate from classic-mode to claims-based authentication in SharePoint](http://technet.microsoft.com/en-us/library/gg251985.aspx).
+  - The **MigrateUsers** method from SharePoint 2010 is now deprecated, it's no longer the correct way to migrate accounts. To migrate accounts, use the new Windows PowerShell cmdlet called `Convert-SPWebApplication`. For more information see  [Migrate from classic-mode to claims-based authentication in SharePoint](https://technet.microsoft.com/library/gg251985.aspx).
     
   
   - Requirement to register claims providers is eliminated. However, you do have to pre-configure claims type. You can choose the characters for the claim type and there is no enforcement on the ordering of claim types.
@@ -52,7 +52,7 @@ SharePoint supports security for user access at the website, list, list or libra
     
 
 > [!NOTE]
-> For information about authorization related to SharePoint Add-ins, see  [Authorization and authentication of SharePoint Add-ins](http://msdn.microsoft.com/library/bde5647a-fff1-4b51-b67b-2139de79ce4a%28Office.15%29.aspx). 
+> For information about authorization related to SharePoint Add-ins, see  [Authorization and authentication of SharePoint Add-ins](https://msdn.microsoft.com/library/bde5647a-fff1-4b51-b67b-2139de79ce4a%28Office.15%29.aspx). 
   
     
     
@@ -71,7 +71,7 @@ SharePoint supports the following types of authentication:
     For information about signing in to SharePoint by using Windows claims mode, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).
     
     > **Important:**
-      >  For information about suspending impersonation, see [Avoid suspending impersonation of the calling user](http://msdn.microsoft.com/en-us/library/ff407852.aspx). 
+      >  For information about suspending impersonation, see [Avoid suspending impersonation of the calling user](https://msdn.microsoft.com/library/ff407852.aspx). 
 - **ASP.NET Forms:** A non-Windows identity management system that uses the pluggable ASP.NET forms-based authentication system is supported. This mode enables SharePoint to work with a variety of identity management systems, including externally defined groups or roles such as Lightweight Directory Access Protocol (LDAP) and light-weight database identity management systems. Forms authentication allows ASP.NET to perform the authentication for SharePoint, often involving a redirect to a log-on page. In SharePoint, ASP.NET forms are supported only under claims authentication. A forms provider must be registered within a web application that is configured for claims.
     
     For information about signing in to SharePoint by using ASP.NET membership and role passive sign-in, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).
@@ -152,11 +152,11 @@ Under this model, your application makes identity-related decisions based on cla
 ## Forms-based authentication
 <a name="SP15_AuthenticationAuthorizationSecurity_FormsBasedAuthentication"> </a>
 
-Forms-based authentication provides custom identity management in SharePoint by implementing a membership provider, which defines interfaces for identifying and authenticating individual users, and a role manager, which defines interfaces for grouping individual users into logical groups or roles. In SharePoint, a membership provider must implement the required  [System.Web.Security.Membership.ValidateUser](http://msdn.microsoft.com/library/33f4af0b-75c0-4504-b90f-05e742e44a88.aspx) method. Given a user name, the role provider system returns a list of roles to which the user belongs.
+Forms-based authentication provides custom identity management in SharePoint by implementing a membership provider, which defines interfaces for identifying and authenticating individual users, and a role manager, which defines interfaces for grouping individual users into logical groups or roles. In SharePoint, a membership provider must implement the required  [System.Web.Security.Membership.ValidateUser](https://msdn.microsoft.com/library/33f4af0b-75c0-4504-b90f-05e742e44a88.aspx) method. Given a user name, the role provider system returns a list of roles to which the user belongs.
   
     
     
-The membership provider is responsible for validating the credential information by using the  [System.Web.Security.Membership.ValidateUser](http://msdn.microsoft.com/library/33f4af0b-75c0-4504-b90f-05e742e44a88.aspx) method (required now in SharePoint). But, the actual user token is created by the security token service (STS). The STS creates the user token from the user name validated by the membership provider and from the set of group memberships associated with the user name that are provided by the membership provider.
+The membership provider is responsible for validating the credential information by using the  [System.Web.Security.Membership.ValidateUser](https://msdn.microsoft.com/library/33f4af0b-75c0-4504-b90f-05e742e44a88.aspx) method (required now in SharePoint). But, the actual user token is created by the security token service (STS). The STS creates the user token from the user name validated by the membership provider and from the set of group memberships associated with the user name that are provided by the membership provider.
   
     
     
@@ -193,7 +193,7 @@ SharePoint consumes the standard ASP.NET role provider interface to gather group
 For information about the pluggable authentication framework provided by ASP.NET, see ASP.NET developer documentation.
   
 > [!NOTE]
-> For more information about forms-based authentication, see  [Forms authentication in SharePoint products and technologies (Part 1): Introduction](http://msdn.microsoft.com/library/e5efd4d7-b369-49f0-a6f7-431d21daff20%28Office.15%29.aspx). 
+> For more information about forms-based authentication, see  [Forms authentication in SharePoint products and technologies (Part 1): Introduction](https://msdn.microsoft.com/library/e5efd4d7-b369-49f0-a6f7-431d21daff20%28Office.15%29.aspx). 
   
     
     

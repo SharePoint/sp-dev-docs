@@ -11,7 +11,7 @@ localization_priority: Priority
 # Requesting Excel workbook data from SharePoint Server using OData
 
 > [!NOTE]
-> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel) endpoint.
+> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/docs/api-reference/v1.0/resources/excel) endpoint.
   
     
     

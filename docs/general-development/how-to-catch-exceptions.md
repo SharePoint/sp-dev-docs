@@ -59,7 +59,7 @@ Catch e As Exception
 End Try
 ```
 
-You place catch blocks targeted to specific types of exceptions before a general exception. The common language runtime catches exceptions that are not caught by a catch block. Depending on how the runtime is configured, either a debug dialog box appears, or the program stops executing and a dialog box with exception information appears. For information about debugging, see  [Debugging and Profiling Applications](http://go.microsoft.com/fwlink/?LinkId=64641) (http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpcondebuggingprofiling.asp).For more information about how to handle exceptions, see  [Best Practices for Handling Exceptions](http://go.microsoft.com/fwlink/?LinkId=64480) (http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconbestpracticesforhandlingexceptions.asp).
+You place catch blocks targeted to specific types of exceptions before a general exception. The common language runtime catches exceptions that are not caught by a catch block. Depending on how the runtime is configured, either a debug dialog box appears, or the program stops executing and a dialog box with exception information appears. For information about debugging, see  [Debugging and Profiling Applications](http://go.microsoft.com/fwlink/?LinkId=64641) (https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpcondebuggingprofiling.asp).For more information about how to handle exceptions, see  [Best Practices for Handling Exceptions](http://go.microsoft.com/fwlink/?LinkId=64480) (https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpconbestpracticesforhandlingexceptions.asp).
 ## Example
 
 

@@ -23,7 +23,7 @@ Contains an access control entry (ACE) that specifies access rights for the pare
   
     
     
-See  [Business Connectivity Services security overview](http://technet.microsoft.com/en-us/library/ee661734%28office.14%29.aspx) to learn more about the Business Connectivity Services and security.
+See  [Business Connectivity Services security overview](https://technet.microsoft.com/library/ee661734%28office.14%29.aspx) to learn more about the Business Connectivity Services and security.
   
     
     
@@ -65,7 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Right Element in AccessControlEntry (BDCMetadata Schema)](http://msdn.microsoft.com/library/a2e4bd6c-2306-b657-7290-cc9c9b262911%28Office.15%29.aspx) <br/> |A **Right** element that specifies the permissions available to the security principal. <br/> |
+| [Right Element in AccessControlEntry (BDCMetadata Schema)](https://msdn.microsoft.com/library/a2e4bd6c-2306-b657-7290-cc9c9b262911%28Office.15%29.aspx) <br/> |A **Right** element that specifies the permissions available to the security principal. <br/> |
    
  **Parent element**
   
@@ -75,7 +75,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [AccessControlList Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) that contains this ACE.  <br/> |
+| [AccessControlList Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) that contains this ACE.  <br/> |
    
 
 ## AccessControlList element
@@ -120,7 +120,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [AccessControlEntry Element in AccessControlList (BDCMetadata Schema)](http://msdn.microsoft.com/library/85e24489-0a6b-dfda-fb03-474fe7b0d947%28Office.15%29.aspx) <br/> |An access control entry (ACE).  <br/> |
+| [AccessControlEntry Element in AccessControlList (BDCMetadata Schema)](https://msdn.microsoft.com/library/85e24489-0a6b-dfda-fb03-474fe7b0d947%28Office.15%29.aspx) <br/> |An access control entry (ACE).  <br/> |
    
  **Parent element**
   
@@ -130,12 +130,12 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Model Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> |A model that contains external content types in a business application.  <br/> |
-| [LobSystem Element in LobSystems (BDCMetadata Schema)](http://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |The LobSystems contained inside the model.  <br/> |
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |An external content type.  <br/> |
-| [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |A method of an external content type.  <br/> |
-| [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> |An association.  <br/> |
-| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> |A method instance of an external content type.  <br/> |
+| [Model Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> |A model that contains external content types in a business application.  <br/> |
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](https://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |The LobSystems contained inside the model.  <br/> |
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |An external content type.  <br/> |
+| [Method Element in Methods (BDCMetadata Schema)](https://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |A method of an external content type.  <br/> |
+| [Association Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> |An association.  <br/> |
+| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> |A method instance of an external content type.  <br/> |
    
 
 ## Action element
@@ -200,9 +200,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the action.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the action.  <br/> |
-| [ActionParameters Element in Action (BDCMetadata Schema)](http://msdn.microsoft.com/library/e14df901-621c-1851-db78-e99fd3cf31ae%28Office.15%29.aspx) <br/> |The parameters of the action.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the action.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the action.  <br/> |
+| [ActionParameters Element in Action (BDCMetadata Schema)](https://msdn.microsoft.com/library/e14df901-621c-1851-db78-e99fd3cf31ae%28Office.15%29.aspx) <br/> |The parameters of the action.  <br/> |
    
  **Parent element**
   
@@ -212,7 +212,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Actions Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/c5a6c08d-a3df-61db-3ce3-1e6837bbf221%28Office.15%29.aspx) <br/> |The list of actions of an external content type.  <br/> |
+| [Actions Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/c5a6c08d-a3df-61db-3ce3-1e6837bbf221%28Office.15%29.aspx) <br/> |The list of actions of an external content type.  <br/> |
    
 
 ## ActionParameter element
@@ -292,8 +292,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names for the **ActionParameter**.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **ActionParameter**.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names for the **ActionParameter**.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **ActionParameter**.  <br/> |
    
  **Parent element**
   
@@ -303,7 +303,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [ActionParameters Element in Action (BDCMetadata Schema)](http://msdn.microsoft.com/library/e14df901-621c-1851-db78-e99fd3cf31ae%28Office.15%29.aspx) <br/> |The **ActionParameters** element that contains this **ActionParameter**.  <br/> |
+| [ActionParameters Element in Action (BDCMetadata Schema)](https://msdn.microsoft.com/library/e14df901-621c-1851-db78-e99fd3cf31ae%28Office.15%29.aspx) <br/> |The **ActionParameters** element that contains this **ActionParameter**.  <br/> |
    
 
 ## ActionParameters element
@@ -352,7 +352,7 @@ None.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [ActionParameter Element in ActionParameters (BDCMetadata Schema)](http://msdn.microsoft.com/library/1f5fa96a-1bff-f007-984d-a644cbbb2648%28Office.15%29.aspx) <br/> |An **ActionParameter**.  <br/> |
+| [ActionParameter Element in ActionParameters (BDCMetadata Schema)](https://msdn.microsoft.com/library/1f5fa96a-1bff-f007-984d-a644cbbb2648%28Office.15%29.aspx) <br/> |An **ActionParameter**.  <br/> |
    
  **Parent element**
   
@@ -362,7 +362,7 @@ None.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Action Element in Actions (BDCMetadata Schema)](http://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> |The **Action** that these **ActionParameters** belong to. <br/> |
+| [Action Element in Actions (BDCMetadata Schema)](https://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> |The **Action** that these **ActionParameters** belong to. <br/> |
    
 
 ## Actions element
@@ -411,7 +411,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Action Element in Actions (BDCMetadata Schema)](http://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> |An action of an external content type.  <br/> |
+| [Action Element in Actions (BDCMetadata Schema)](https://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> |An action of an external content type.  <br/> |
    
  **Parent element**
   
@@ -421,7 +421,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that these actions belong to.  <br/> |
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that these actions belong to.  <br/> |
    
 
 ## Association element
@@ -495,11 +495,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The **LocalizedDisplayNames** element specifies a list of localized names for the Association. <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The Properties element specifies the properties of the Association.  <br/> |
-| [AccessControlList Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The **AccessControlList** element specifies a set of access rights for the Association. <br/> |
-| [SourceEntity Element in Association (BDCMetadata Schema)](http://msdn.microsoft.com/library/19fb5f38-4e85-7fb0-2562-281b9a9ffbef%28Office.15%29.aspx) <br/> |The **SourceEntity** element specifies the source external content type in the association. <br/> |
-| [DestinationEntity Element in Association (BDCMetadata Schema)](http://msdn.microsoft.com/library/15c53c3b-888d-67c7-af7d-ef36922eeebc%28Office.15%29.aspx) <br/> |The **DestinationEntity** element specifies the destination external content type in the Association. <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The **LocalizedDisplayNames** element specifies a list of localized names for the Association. <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The Properties element specifies the properties of the Association.  <br/> |
+| [AccessControlList Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The **AccessControlList** element specifies a set of access rights for the Association. <br/> |
+| [SourceEntity Element in Association (BDCMetadata Schema)](https://msdn.microsoft.com/library/19fb5f38-4e85-7fb0-2562-281b9a9ffbef%28Office.15%29.aspx) <br/> |The **SourceEntity** element specifies the source external content type in the association. <br/> |
+| [DestinationEntity Element in Association (BDCMetadata Schema)](https://msdn.microsoft.com/library/15c53c3b-888d-67c7-af7d-ef36922eeebc%28Office.15%29.aspx) <br/> |The **DestinationEntity** element specifies the destination external content type in the Association. <br/> |
    
  **Parent element**
   
@@ -509,7 +509,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [MethodInstances Element in Method (BDCMetadata Schema)](http://msdn.microsoft.com/library/dae3aeae-e72a-0b52-1348-f5e5cd31109f%28Office.15%29.aspx) <br/> |The **MethodInstances** element that contains the Association. <br/> |
+| [MethodInstances Element in Method (BDCMetadata Schema)](https://msdn.microsoft.com/library/dae3aeae-e72a-0b52-1348-f5e5cd31109f%28Office.15%29.aspx) <br/> |The **MethodInstances** element that contains the Association. <br/> |
    
 
 ## AssociationGroup element
@@ -566,9 +566,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **AssociationGroup**.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **AssociationGroup**.  <br/> |
-| [AssociationReference Element in AssociationGroup (BDCMetadata Schema)](http://msdn.microsoft.com/library/e32c5267-53b0-9ff0-6e9a-1cb00d9f1d57%28Office.15%29.aspx) <br/> |An **AssociationReference** of an **AssociationGroup**.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **AssociationGroup**.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **AssociationGroup**.  <br/> |
+| [AssociationReference Element in AssociationGroup (BDCMetadata Schema)](https://msdn.microsoft.com/library/e32c5267-53b0-9ff0-6e9a-1cb00d9f1d57%28Office.15%29.aspx) <br/> |An **AssociationReference** of an **AssociationGroup**.  <br/> |
    
  **Parent element**
   
@@ -578,7 +578,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [AssociationGroups Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/b50c2648-daea-d8c0-039a-b95590b9924c%28Office.15%29.aspx) <br/> |The **AssociationGroups** element that contains this **AssociationGroup**.  <br/> |
+| [AssociationGroups Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/b50c2648-daea-d8c0-039a-b95590b9924c%28Office.15%29.aspx) <br/> |The **AssociationGroups** element that contains this **AssociationGroup**.  <br/> |
    
 
 ## AssociationGroups element
@@ -627,7 +627,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](http://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> |An **AssociationGroup**.  <br/> |
+| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](https://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> |An **AssociationGroup**.  <br/> |
    
  **Parent element**
   
@@ -637,7 +637,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that this **AssociationGroups** element is associated with. <br/> |
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that this **AssociationGroups** element is associated with. <br/> |
    
 
 ## AssociationReference element
@@ -699,7 +699,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](http://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> |The **AssociationGroup** that this **AssociationReference** belongs to. <br/> |
+| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](https://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> |The **AssociationGroup** that this **AssociationReference** belongs to. <br/> |
    
 
 ## ConvertType element
@@ -767,7 +767,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Interpretation Element in TypeDescriptor (BDCMetadata Schema)](http://msdn.microsoft.com/library/730f9590-ab40-85b8-eb97-8fd9d8e33c8a%28Office.15%29.aspx) <br/> |The rules to apply to the data stored in the data structures that are represented by a **TypeDescriptor**.  <br/> |
+| [Interpretation Element in TypeDescriptor (BDCMetadata Schema)](https://msdn.microsoft.com/library/730f9590-ab40-85b8-eb97-8fd9d8e33c8a%28Office.15%29.aspx) <br/> |The rules to apply to the data stored in the data structures that are represented by a **TypeDescriptor**.  <br/> |
    
 
 ## DefaultValue element
@@ -823,7 +823,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [DefaultValues Element in TypeDescriptor (BDCMetadata Schema)](http://msdn.microsoft.com/library/635295d1-0f85-6308-976b-d0cb483dece6%28Office.15%29.aspx)||
+| [DefaultValues Element in TypeDescriptor (BDCMetadata Schema)](https://msdn.microsoft.com/library/635295d1-0f85-6308-976b-d0cb483dece6%28Office.15%29.aspx)||
    
 
 ## DefaultValues element
@@ -868,7 +868,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [DefaultValue Element in DefaultValues (BDCMetadata Schema)](http://msdn.microsoft.com/library/ddb67f64-6361-7b59-6724-4680484d585d%28Office.15%29.aspx) <br/> |The default value of a **TypeDescriptor** for a **MethodInstance**.  <br/> |
+| [DefaultValue Element in DefaultValues (BDCMetadata Schema)](https://msdn.microsoft.com/library/ddb67f64-6361-7b59-6724-4680484d585d%28Office.15%29.aspx) <br/> |The default value of a **TypeDescriptor** for a **MethodInstance**.  <br/> |
    
  **Parent element**
   
@@ -878,7 +878,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> |The **TypeDescriptor** that these **DefaultValues** belong to. <br/> |
+| [TypeDescriptor Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> |The **TypeDescriptor** that these **DefaultValues** belong to. <br/> |
    
 
 ## DestinationEntity element
@@ -934,7 +934,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx)||
+| [Association Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx)||
    
 
 ## Entities element
@@ -983,7 +983,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |An external content type in an external system.  <br/> |
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |An external content type in an external system.  <br/> |
    
  **Parent element**
   
@@ -993,7 +993,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LobSystem Element in LobSystems (BDCMetadata Schema)](http://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |An external system.  <br/> |
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](https://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |An external system.  <br/> |
    
 
 ## Entity element
@@ -1050,13 +1050,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of this external content type.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of this external content type.  <br/> |
-| [AccessControlList Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) of this external content type.  <br/> |
-| [Identifiers Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/6566cb43-4f9e-9a2e-7ec0-89057d7daacc%28Office.15%29.aspx) <br/> |The identifiers of the external content type.  <br/> |
-| [Methods Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/42a24b32-bd97-4067-2e25-681d876d29fd%28Office.15%29.aspx) <br/> |The methods of the external content type.  <br/> |
-| [AssociationGroups Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/b50c2648-daea-d8c0-039a-b95590b9924c%28Office.15%29.aspx) <br/> |The association groups of the external content type.  <br/> |
-| [Actions Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/c5a6c08d-a3df-61db-3ce3-1e6837bbf221%28Office.15%29.aspx) <br/> |The actions of the external content type.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of this external content type.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of this external content type.  <br/> |
+| [AccessControlList Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) of this external content type.  <br/> |
+| [Identifiers Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/6566cb43-4f9e-9a2e-7ec0-89057d7daacc%28Office.15%29.aspx) <br/> |The identifiers of the external content type.  <br/> |
+| [Methods Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/42a24b32-bd97-4067-2e25-681d876d29fd%28Office.15%29.aspx) <br/> |The methods of the external content type.  <br/> |
+| [AssociationGroups Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/b50c2648-daea-d8c0-039a-b95590b9924c%28Office.15%29.aspx) <br/> |The association groups of the external content type.  <br/> |
+| [Actions Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/c5a6c08d-a3df-61db-3ce3-1e6837bbf221%28Office.15%29.aspx) <br/> |The actions of the external content type.  <br/> |
    
  **Parent element**
   
@@ -1066,7 +1066,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Entities Element in LobSystem (BDCMetadata Schema)](http://msdn.microsoft.com/library/fa121ed1-160a-03c9-df42-851ddc2528d5%28Office.15%29.aspx) <br/> |The list of external content types in this external system.  <br/> |
+| [Entities Element in LobSystem (BDCMetadata Schema)](https://msdn.microsoft.com/library/fa121ed1-160a-03c9-df42-851ddc2528d5%28Office.15%29.aspx) <br/> |The list of external content types in this external system.  <br/> |
    
 
 ## FilterDescriptor element
@@ -1121,8 +1121,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of this filter descriptor.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of this filter descriptor.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of this filter descriptor.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of this filter descriptor.  <br/> |
    
  **Parent element**
   
@@ -1132,7 +1132,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [FilterDescriptors Element in Method (BDCMetadata Schema)](http://msdn.microsoft.com/library/33d8e418-ddbb-e1ac-b145-836ed9f36e5c%28Office.15%29.aspx) <br/> |A list of filter descriptors of a method.  <br/> |
+| [FilterDescriptors Element in Method (BDCMetadata Schema)](https://msdn.microsoft.com/library/33d8e418-ddbb-e1ac-b145-836ed9f36e5c%28Office.15%29.aspx) <br/> |A list of filter descriptors of a method.  <br/> |
    
 
 ## FilterDescriptors element
@@ -1177,7 +1177,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](http://msdn.microsoft.com/library/8ce0a852-38f9-75d2-8258-27c57418f53c%28Office.15%29.aspx) <br/> |A filter descriptor.  <br/> |
+| [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](https://msdn.microsoft.com/library/8ce0a852-38f9-75d2-8258-27c57418f53c%28Office.15%29.aspx) <br/> |A filter descriptor.  <br/> |
    
  **Parent element**
   
@@ -1187,7 +1187,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |The method this list of filter descriptors belongs to.  <br/> |
+| [Method Element in Methods (BDCMetadata Schema)](https://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |The method this list of filter descriptors belongs to.  <br/> |
    
 
 ## Identifier element
@@ -1247,8 +1247,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of the identifier.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the identifier.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of the identifier.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the identifier.  <br/> |
    
  **Parent element**
   
@@ -1258,7 +1258,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Identifiers Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/6566cb43-4f9e-9a2e-7ec0-89057d7daacc%28Office.15%29.aspx) <br/> |A list of identifiers of an external content type.  <br/> |
+| [Identifiers Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/6566cb43-4f9e-9a2e-7ec0-89057d7daacc%28Office.15%29.aspx) <br/> |A list of identifiers of an external content type.  <br/> |
    
 
 ## Identifiers element
@@ -1303,7 +1303,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Identifier Element in Identifiers (BDCMetadata Schema)](http://msdn.microsoft.com/library/c4abf09b-10b6-0007-9214-35d5fe675be7%28Office.15%29.aspx) <br/> |Specifies an identifier.  <br/> |
+| [Identifier Element in Identifiers (BDCMetadata Schema)](https://msdn.microsoft.com/library/c4abf09b-10b6-0007-9214-35d5fe675be7%28Office.15%29.aspx) <br/> |Specifies an identifier.  <br/> |
    
  **Parent element**
   
@@ -1313,7 +1313,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that contains this list of identifiers.  <br/> |
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that contains this list of identifiers.  <br/> |
    
 
 ## Interpretation element
@@ -1358,8 +1358,8 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [ConvertType Element in Interpretation (BDCMetadata Schema)](http://msdn.microsoft.com/library/c474cf2c-b631-f3c9-daf1-f05d3e0d385f%28Office.15%29.aspx) <br/> |A **ConvertType** element that specifies the conversion of a data type to another data type. <br/> |
-| [NormalizeDateTime Element in Interpretation (BDCMetadata Schema)](http://msdn.microsoft.com/library/bbae3bfa-0754-d576-2bee-1ac0e8508a57%28Office.15%29.aspx) <br/> |A **NormalizeDateTime** element that specifies the conversion of the date and time representation of a value obtained from an external system into another representation. <br/> |
+| [ConvertType Element in Interpretation (BDCMetadata Schema)](https://msdn.microsoft.com/library/c474cf2c-b631-f3c9-daf1-f05d3e0d385f%28Office.15%29.aspx) <br/> |A **ConvertType** element that specifies the conversion of a data type to another data type. <br/> |
+| [NormalizeDateTime Element in Interpretation (BDCMetadata Schema)](https://msdn.microsoft.com/library/bbae3bfa-0754-d576-2bee-1ac0e8508a57%28Office.15%29.aspx) <br/> |A **NormalizeDateTime** element that specifies the conversion of the date and time representation of a value obtained from an external system into another representation. <br/> |
 |NormalizeString  <br/> |A **NormalizeString** element that specifies the conversion of the string representation of a value obtained from an external system into another representation. <br/> |
    
  **Parent element**
@@ -1370,7 +1370,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> |The **TypeDescriptor** element. <br/> |
+| [TypeDescriptor Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> |The **TypeDescriptor** element. <br/> |
    
 
 ## LobSystem element
@@ -1424,12 +1424,12 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **LobSystem**.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |Specifies the properties of an **LobSystem**.  <br/> |
-| [AccessControlList Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |Specifies the access control list (ACL) of an **LobSystem**.  <br/> |
-| [Proxy Element in LobSystem (BDCMetadata Schema)](http://msdn.microsoft.com/library/8ec2e7b0-156f-ff4a-a87b-fe5764e4875b%28Office.15%29.aspx) <br/> |Specifies a user-provided proxy that is identical to the one that would be generated if this element was not present.  <br/> |
-| [LobSystemInstances Element in LobSystem (BDCMetadata Schema)](http://msdn.microsoft.com/library/122e419a-0497-afdf-1117-a82ab429f3eb%28Office.15%29.aspx) <br/> |Specifies the external system instances for this external system.  <br/> |
-| [Entities Element in LobSystem (BDCMetadata Schema)](http://msdn.microsoft.com/library/fa121ed1-160a-03c9-df42-851ddc2528d5%28Office.15%29.aspx) <br/> |Specifies the external content types in this external system.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **LobSystem**.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |Specifies the properties of an **LobSystem**.  <br/> |
+| [AccessControlList Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |Specifies the access control list (ACL) of an **LobSystem**.  <br/> |
+| [Proxy Element in LobSystem (BDCMetadata Schema)](https://msdn.microsoft.com/library/8ec2e7b0-156f-ff4a-a87b-fe5764e4875b%28Office.15%29.aspx) <br/> |Specifies a user-provided proxy that is identical to the one that would be generated if this element was not present.  <br/> |
+| [LobSystemInstances Element in LobSystem (BDCMetadata Schema)](https://msdn.microsoft.com/library/122e419a-0497-afdf-1117-a82ab429f3eb%28Office.15%29.aspx) <br/> |Specifies the external system instances for this external system.  <br/> |
+| [Entities Element in LobSystem (BDCMetadata Schema)](https://msdn.microsoft.com/library/fa121ed1-160a-03c9-df42-851ddc2528d5%28Office.15%29.aspx) <br/> |Specifies the external content types in this external system.  <br/> |
    
  **Parent element**
   
@@ -1439,7 +1439,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LobSystems Element in Model (BDCMetadata Schema)](http://msdn.microsoft.com/library/d9bf0ca9-fb79-e3a5-cc84-9510d93798cb%28Office.15%29.aspx) <br/> |Specifies a list of external systems in this model.  <br/> |
+| [LobSystems Element in Model (BDCMetadata Schema)](https://msdn.microsoft.com/library/d9bf0ca9-fb79-e3a5-cc84-9510d93798cb%28Office.15%29.aspx) <br/> |Specifies a list of external systems in this model.  <br/> |
    
 
 ## LobSystemInstance element
@@ -1488,8 +1488,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of this external system instance.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of this external system instance.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of this external system instance.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of this external system instance.  <br/> |
    
  **Parent element**
   
@@ -1499,7 +1499,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LobSystemInstances Element in LobSystem (BDCMetadata Schema)](http://msdn.microsoft.com/library/122e419a-0497-afdf-1117-a82ab429f3eb%28Office.15%29.aspx) <br/> |A list of external system instances.  <br/> |
+| [LobSystemInstances Element in LobSystem (BDCMetadata Schema)](https://msdn.microsoft.com/library/122e419a-0497-afdf-1117-a82ab429f3eb%28Office.15%29.aspx) <br/> |A list of external system instances.  <br/> |
    
 
 ## LobSystemInstances element
@@ -1544,7 +1544,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/a0c37891-ef4f-58af-445c-5ff4d5ad6cef%28Office.15%29.aspx) <br/> |An external system instance.  <br/> |
+| [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/a0c37891-ef4f-58af-445c-5ff4d5ad6cef%28Office.15%29.aspx) <br/> |An external system instance.  <br/> |
    
  **Parent element**
   
@@ -1554,7 +1554,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LobSystem Element in LobSystems (BDCMetadata Schema)](http://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |An external system.  <br/> |
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](https://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |An external system.  <br/> |
    
 
 ## LobSystems element
@@ -1599,7 +1599,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LobSystem Element in LobSystems (BDCMetadata Schema)](http://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |A **LobSystem** element that specifies a external system. <br/> |
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](https://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |A **LobSystem** element that specifies a external system. <br/> |
    
  **Parent element**
   
@@ -1609,7 +1609,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Model Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> |An application definition (BDC model).  <br/> |
+| [Model Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> |An application definition (BDC model).  <br/> |
    
 
 ## LocalizedDisplayName element
@@ -1664,7 +1664,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The **LocalizedDisplayNames** element that contains this **LocalizedDisplayName**.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The **LocalizedDisplayNames** element that contains this **LocalizedDisplayName**.  <br/> |
    
 
 ## LocalizedDisplayNames element
@@ -1713,7 +1713,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadata Schema)](http://msdn.microsoft.com/library/93fb80ef-6347-b463-da90-4980d872678e%28Office.15%29.aspx) <br/> |A localized name.  <br/> |
+| [LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadata Schema)](https://msdn.microsoft.com/library/93fb80ef-6347-b463-da90-4980d872678e%28Office.15%29.aspx) <br/> |A localized name.  <br/> |
    
  **Parent element**
   
@@ -1723,20 +1723,20 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Model Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> ||
-| [LobSystem Element in LobSystems (BDCMetadata Schema)](http://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> ||
-| [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/a0c37891-ef4f-58af-445c-5ff4d5ad6cef%28Office.15%29.aspx) <br/> ||
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> ||
-| [Identifier Element in Identifiers (BDCMetadata Schema)](http://msdn.microsoft.com/library/c4abf09b-10b6-0007-9214-35d5fe675be7%28Office.15%29.aspx) <br/> ||
-| [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> ||
-| [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](http://msdn.microsoft.com/library/8ce0a852-38f9-75d2-8258-27c57418f53c%28Office.15%29.aspx) <br/> ||
-| [Parameter Element in Parameters (BDCMetadata Schema)](http://msdn.microsoft.com/library/811cad0b-ba71-8be0-0765-3e0dec18a0d3%28Office.15%29.aspx) <br/> ||
-| [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
-| [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> ||
-| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> ||
-| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](http://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> ||
-| [Action Element in Actions (BDCMetadata Schema)](http://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> ||
-| [ActionParameter Element in ActionParameters (BDCMetadata Schema)](http://msdn.microsoft.com/library/1f5fa96a-1bff-f007-984d-a644cbbb2648%28Office.15%29.aspx) <br/> ||
+| [Model Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> ||
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](https://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> ||
+| [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/a0c37891-ef4f-58af-445c-5ff4d5ad6cef%28Office.15%29.aspx) <br/> ||
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> ||
+| [Identifier Element in Identifiers (BDCMetadata Schema)](https://msdn.microsoft.com/library/c4abf09b-10b6-0007-9214-35d5fe675be7%28Office.15%29.aspx) <br/> ||
+| [Method Element in Methods (BDCMetadata Schema)](https://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> ||
+| [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](https://msdn.microsoft.com/library/8ce0a852-38f9-75d2-8258-27c57418f53c%28Office.15%29.aspx) <br/> ||
+| [Parameter Element in Parameters (BDCMetadata Schema)](https://msdn.microsoft.com/library/811cad0b-ba71-8be0-0765-3e0dec18a0d3%28Office.15%29.aspx) <br/> ||
+| [TypeDescriptor Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
+| [Association Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> ||
+| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> ||
+| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](https://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> ||
+| [Action Element in Actions (BDCMetadata Schema)](https://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> ||
+| [ActionParameter Element in ActionParameters (BDCMetadata Schema)](https://msdn.microsoft.com/library/1f5fa96a-1bff-f007-984d-a644cbbb2648%28Office.15%29.aspx) <br/> ||
    
 
 ## MetadataObject element
@@ -1826,12 +1826,12 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of the method.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the method.  <br/> |
-| [AccessControlList Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) of this method.  <br/> |
-| [FilterDescriptors Element in Method (BDCMetadata Schema)](http://msdn.microsoft.com/library/33d8e418-ddbb-e1ac-b145-836ed9f36e5c%28Office.15%29.aspx) <br/> |The filter descriptors of the method.  <br/> |
-| [Parameters Element in Method (BDCMetadata Schema)](http://msdn.microsoft.com/library/343f4c25-e122-1a4c-2b80-bb8f25e3cc82%28Office.15%29.aspx) <br/> |The parameters of the method. A method cannot have more than one return parameter.  <br/> |
-| [MethodInstances Element in Method (BDCMetadata Schema)](http://msdn.microsoft.com/library/dae3aeae-e72a-0b52-1348-f5e5cd31109f%28Office.15%29.aspx) <br/> |The method instances of the method.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of the method.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the method.  <br/> |
+| [AccessControlList Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) of this method.  <br/> |
+| [FilterDescriptors Element in Method (BDCMetadata Schema)](https://msdn.microsoft.com/library/33d8e418-ddbb-e1ac-b145-836ed9f36e5c%28Office.15%29.aspx) <br/> |The filter descriptors of the method.  <br/> |
+| [Parameters Element in Method (BDCMetadata Schema)](https://msdn.microsoft.com/library/343f4c25-e122-1a4c-2b80-bb8f25e3cc82%28Office.15%29.aspx) <br/> |The parameters of the method. A method cannot have more than one return parameter.  <br/> |
+| [MethodInstances Element in Method (BDCMetadata Schema)](https://msdn.microsoft.com/library/dae3aeae-e72a-0b52-1348-f5e5cd31109f%28Office.15%29.aspx) <br/> |The method instances of the method.  <br/> |
    
  **Parent element**
   
@@ -1841,7 +1841,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Methods Element in Entity (BDCMetadata Schema)](http://msdn.microsoft.com/library/42a24b32-bd97-4067-2e25-681d876d29fd%28Office.15%29.aspx) <br/> |A list of methods of an external content type.  <br/> |
+| [Methods Element in Entity (BDCMetadata Schema)](https://msdn.microsoft.com/library/42a24b32-bd97-4067-2e25-681d876d29fd%28Office.15%29.aspx) <br/> |A list of methods of an external content type.  <br/> |
    
 
 ## MethodInstance element
@@ -1906,9 +1906,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of the **MethodInstance**.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **MethodInstance**.  <br/> |
-| [AccessControlList Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control lists (ACLs) of the **MethodInstance**.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized display names of the **MethodInstance**.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **MethodInstance**.  <br/> |
+| [AccessControlList Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control lists (ACLs) of the **MethodInstance**.  <br/> |
    
  **Parent element**
   
@@ -1918,7 +1918,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [MethodInstances Element in Method (BDCMetadata Schema)](http://msdn.microsoft.com/library/dae3aeae-e72a-0b52-1348-f5e5cd31109f%28Office.15%29.aspx) <br/> |The **MethodInstances** element that contains this **MethodInstance**.  <br/> |
+| [MethodInstances Element in Method (BDCMetadata Schema)](https://msdn.microsoft.com/library/dae3aeae-e72a-0b52-1348-f5e5cd31109f%28Office.15%29.aspx) <br/> |The **MethodInstances** element that contains this **MethodInstance**.  <br/> |
    
 
 ## MethodInstances element
@@ -1963,8 +1963,8 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> |An association.  <br/> |
-| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> |A method instance.  <br/> |
+| [Association Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> |An association.  <br/> |
+| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> |A method instance.  <br/> |
    
  **Parent element**
   
@@ -1974,7 +1974,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |The method that this method instance belongs to.  <br/> |
+| [Method Element in Methods (BDCMetadata Schema)](https://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |The method that this method instance belongs to.  <br/> |
    
 
 ## Methods element
@@ -2023,7 +2023,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |Specifies a method.  <br/> |
+| [Method Element in Methods (BDCMetadata Schema)](https://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |Specifies a method.  <br/> |
    
  **Parent element**
   
@@ -2033,7 +2033,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that this list of methods belongs to.  <br/> |
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> |The external content type that this list of methods belongs to.  <br/> |
    
 
 ## Model element
@@ -2082,10 +2082,10 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **Model**.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **Model**.  <br/> |
-| [AccessControlList Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) of the **Model**.  <br/> |
-| [LobSystems Element in Model (BDCMetadata Schema)](http://msdn.microsoft.com/library/d9bf0ca9-fb79-e3a5-cc84-9510d93798cb%28Office.15%29.aspx) <br/> |The **LobSystems** contained inside this **Model**.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **Model**.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **Model**.  <br/> |
+| [AccessControlList Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/b7f97740-5d2c-f91a-1028-10e2890d4a99%28Office.15%29.aspx) <br/> |The access control list (ACL) of the **Model**.  <br/> |
+| [LobSystems Element in Model (BDCMetadata Schema)](https://msdn.microsoft.com/library/d9bf0ca9-fb79-e3a5-cc84-9510d93798cb%28Office.15%29.aspx) <br/> |The **LobSystems** contained inside this **Model**.  <br/> |
    
  **Parent element**
   
@@ -2149,7 +2149,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Interpretation Element in TypeDescriptor (BDCMetadata Schema)](http://msdn.microsoft.com/library/730f9590-ab40-85b8-eb97-8fd9d8e33c8a%28Office.15%29.aspx) <br/> |An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.  <br/> |
+| [Interpretation Element in TypeDescriptor (BDCMetadata Schema)](https://msdn.microsoft.com/library/730f9590-ab40-85b8-eb97-8fd9d8e33c8a%28Office.15%29.aspx) <br/> |An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.  <br/> |
    
 
 ## NormalizeString element
@@ -2238,8 +2238,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the parameter.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the parameter.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the parameter.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the parameter.  <br/> |
 | [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor) <br/> |The root type descriptor of the parameter.  <br/> |
    
  **Parent element**
@@ -2250,7 +2250,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Parameters Element in Method (BDCMetadata Schema)](http://msdn.microsoft.com/library/343f4c25-e122-1a4c-2b80-bb8f25e3cc82%28Office.15%29.aspx) <br/> |The **Parameters** element that contains this parameter. <br/> |
+| [Parameters Element in Method (BDCMetadata Schema)](https://msdn.microsoft.com/library/343f4c25-e122-1a4c-2b80-bb8f25e3cc82%28Office.15%29.aspx) <br/> |The **Parameters** element that contains this parameter. <br/> |
    
 
 ## Parameters element
@@ -2299,7 +2299,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Parameter Element in Parameters (BDCMetadata Schema)](http://msdn.microsoft.com/library/811cad0b-ba71-8be0-0765-3e0dec18a0d3%28Office.15%29.aspx) <br/> |A parameter.  <br/> |
+| [Parameter Element in Parameters (BDCMetadata Schema)](https://msdn.microsoft.com/library/811cad0b-ba71-8be0-0765-3e0dec18a0d3%28Office.15%29.aspx) <br/> |A parameter.  <br/> |
    
  **Parent element**
   
@@ -2309,7 +2309,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |The method these parameters belong to.  <br/> |
+| [Method Element in Methods (BDCMetadata Schema)](https://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> |The method these parameters belong to.  <br/> |
    
 
 ## Properties element
@@ -2354,7 +2354,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Property Element in Properties (BDCMetadata Schema)](http://msdn.microsoft.com/library/2e6e8d5d-ef3b-c536-f3d1-ad2039b92c24%28Office.15%29.aspx) <br/> |Specifies a property.  <br/> |
+| [Property Element in Properties (BDCMetadata Schema)](https://msdn.microsoft.com/library/2e6e8d5d-ef3b-c536-f3d1-ad2039b92c24%28Office.15%29.aspx) <br/> |Specifies a property.  <br/> |
    
  **Parent element**
   
@@ -2364,21 +2364,21 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Model Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> ||
-| [LobSystem Element in LobSystems (BDCMetadata Schema)](http://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> ||
-| [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/a0c37891-ef4f-58af-445c-5ff4d5ad6cef%28Office.15%29.aspx) <br/> ||
-| [Entity Element in Entities (BDCMetadata Schema)](http://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> ||
-| [Identifier Element in Identifiers (BDCMetadata Schema)](http://msdn.microsoft.com/library/c4abf09b-10b6-0007-9214-35d5fe675be7%28Office.15%29.aspx) <br/> ||
-| [Method Element in Methods (BDCMetadata Schema)](http://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> ||
-| [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](http://msdn.microsoft.com/library/8ce0a852-38f9-75d2-8258-27c57418f53c%28Office.15%29.aspx) <br/> ||
-| [Parameter Element in Parameters (BDCMetadata Schema)](http://msdn.microsoft.com/library/811cad0b-ba71-8be0-0765-3e0dec18a0d3%28Office.15%29.aspx) <br/> ||
+| [Model Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/d7823090-b20d-2c96-c359-081c055d0e65%28Office.15%29.aspx) <br/> ||
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](https://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> ||
+| [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/a0c37891-ef4f-58af-445c-5ff4d5ad6cef%28Office.15%29.aspx) <br/> ||
+| [Entity Element in Entities (BDCMetadata Schema)](https://msdn.microsoft.com/library/a8455bc4-12d8-85e0-146e-5d1d8579e1f5%28Office.15%29.aspx) <br/> ||
+| [Identifier Element in Identifiers (BDCMetadata Schema)](https://msdn.microsoft.com/library/c4abf09b-10b6-0007-9214-35d5fe675be7%28Office.15%29.aspx) <br/> ||
+| [Method Element in Methods (BDCMetadata Schema)](https://msdn.microsoft.com/library/70e87a9e-4959-0a7b-3f37-ddec36473ff4%28Office.15%29.aspx) <br/> ||
+| [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](https://msdn.microsoft.com/library/8ce0a852-38f9-75d2-8258-27c57418f53c%28Office.15%29.aspx) <br/> ||
+| [Parameter Element in Parameters (BDCMetadata Schema)](https://msdn.microsoft.com/library/811cad0b-ba71-8be0-0765-3e0dec18a0d3%28Office.15%29.aspx) <br/> ||
 | [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor) <br/> ||
-| [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
-| [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> ||
-| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> ||
-| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](http://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> ||
-| [Action Element in Actions (BDCMetadata Schema)](http://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> ||
-| [ActionParameter Element in ActionParameters (BDCMetadata Schema)](http://msdn.microsoft.com/library/1f5fa96a-1bff-f007-984d-a644cbbb2648%28Office.15%29.aspx) <br/> ||
+| [TypeDescriptor Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
+| [Association Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> ||
+| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/577ff9d0-706b-be7d-af5b-883e137cada8%28Office.15%29.aspx) <br/> ||
+| [AssociationGroup Element in AssociationGroups (BDCMetadata Schema)](https://msdn.microsoft.com/library/db30622e-3c2b-2735-9360-a702196cbcff%28Office.15%29.aspx) <br/> ||
+| [Action Element in Actions (BDCMetadata Schema)](https://msdn.microsoft.com/library/f58b96c0-77a8-69d3-8710-fff03d4970b9%28Office.15%29.aspx) <br/> ||
+| [ActionParameter Element in ActionParameters (BDCMetadata Schema)](https://msdn.microsoft.com/library/1f5fa96a-1bff-f007-984d-a644cbbb2648%28Office.15%29.aspx) <br/> ||
    
 
 ## Property element
@@ -2434,7 +2434,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The **Properties** element that contains this property. <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The **Properties** element that contains this property. <br/> |
    
 
 ## Proxy element
@@ -2487,7 +2487,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LobSystem Element in LobSystems (BDCMetadata Schema)](http://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |The **LobSystem** element that this proxy applies to. <br/> |
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](https://msdn.microsoft.com/library/d4e58d7d-a628-8093-97fe-7c3136e8f6f2%28Office.15%29.aspx) <br/> |The **LobSystem** element that this proxy applies to. <br/> |
    
 
 ## Right element
@@ -2543,7 +2543,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [AccessControlEntry Element in AccessControlList (BDCMetadata Schema)](http://msdn.microsoft.com/library/85e24489-0a6b-dfda-fb03-474fe7b0d947%28Office.15%29.aspx) <br/> |The **AccessControlEntry** element that contains this right. <br/> |
+| [AccessControlEntry Element in AccessControlList (BDCMetadata Schema)](https://msdn.microsoft.com/library/85e24489-0a6b-dfda-fb03-474fe7b0d947%28Office.15%29.aspx) <br/> |The **AccessControlEntry** element that contains this right. <br/> |
    
 
 ## SourceEntity element
@@ -2599,7 +2599,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> |The **Association** that contains this element. <br/> |
+| [Association Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx) <br/> |The **Association** that contains this element. <br/> |
    
 
 ## TypeDescriptor element
@@ -2663,11 +2663,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **TypeDescriptor**.  <br/> |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](http://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **TypeDescriptor**.  <br/> When the **TypeDescriptor** is of type **System.String**, the **Properties** element can contain a **Property** of type **System.Int32** with the **Name** attribute set to **Size**. The value of the **Property** specifies the expected maximum string length of the value of the data structure described by this **TypeDescriptor**.  <br/> |
-| [Interpretation Element in TypeDescriptor (BDCMetadata Schema)](http://msdn.microsoft.com/library/730f9590-ab40-85b8-eb97-8fd9d8e33c8a%28Office.15%29.aspx) <br/> |The rules for the data stored by the data structure represented by the **TypeDescriptor**.  <br/> |
-| [DefaultValues Element in TypeDescriptor (BDCMetadata Schema)](http://msdn.microsoft.com/library/635295d1-0f85-6308-976b-d0cb483dece6%28Office.15%29.aspx) <br/> |The default values of the **TypeDescriptor**.  <br/> |
-| [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](http://msdn.microsoft.com/library/322b2d3f-c92d-3c24-9f22-07b56396275b%28Office.15%29.aspx) <br/> |The child **TypeDescriptors** of the **TypeDescriptor**.  <br/> |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/3202aecf-f98f-20cb-1fdd-f3a054cb24aa%28Office.15%29.aspx) <br/> |The localized names of the **TypeDescriptor**.  <br/> |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](https://msdn.microsoft.com/library/9901904f-96ee-0cbb-64a9-c2aad9d72128%28Office.15%29.aspx) <br/> |The properties of the **TypeDescriptor**.  <br/> When the **TypeDescriptor** is of type **System.String**, the **Properties** element can contain a **Property** of type **System.Int32** with the **Name** attribute set to **Size**. The value of the **Property** specifies the expected maximum string length of the value of the data structure described by this **TypeDescriptor**.  <br/> |
+| [Interpretation Element in TypeDescriptor (BDCMetadata Schema)](https://msdn.microsoft.com/library/730f9590-ab40-85b8-eb97-8fd9d8e33c8a%28Office.15%29.aspx) <br/> |The rules for the data stored by the data structure represented by the **TypeDescriptor**.  <br/> |
+| [DefaultValues Element in TypeDescriptor (BDCMetadata Schema)](https://msdn.microsoft.com/library/635295d1-0f85-6308-976b-d0cb483dece6%28Office.15%29.aspx) <br/> |The default values of the **TypeDescriptor**.  <br/> |
+| [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](https://msdn.microsoft.com/library/322b2d3f-c92d-3c24-9f22-07b56396275b%28Office.15%29.aspx) <br/> |The child **TypeDescriptors** of the **TypeDescriptor**.  <br/> |
    
  **Parent element**
   
@@ -2677,7 +2677,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](http://msdn.microsoft.com/library/322b2d3f-c92d-3c24-9f22-07b56396275b%28Office.15%29.aspx)||
+| [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](https://msdn.microsoft.com/library/322b2d3f-c92d-3c24-9f22-07b56396275b%28Office.15%29.aspx)||
    
 
 ## TypeDescriptors element
@@ -2722,7 +2722,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> |A **TypeDescriptor**.  <br/> |
+| [TypeDescriptor Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> |A **TypeDescriptor**.  <br/> |
    
  **Parent element**
   
@@ -2732,7 +2732,7 @@ None
 
 |**Element**|**Description**|
 |:-----|:-----|
-| [TypeDescriptor Element (BDCMetadata Schema)](http://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
+| [TypeDescriptor Element (BDCMetadata Schema)](https://msdn.microsoft.com/library/ae423de8-c13b-aea5-d47b-17ef786fb5a7%28Office.15%29.aspx) <br/> ||
 | [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor) <br/> ||
    
 

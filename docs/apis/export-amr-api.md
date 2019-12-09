@@ -1,5 +1,5 @@
 ---
-title: "Sharepoint Migration Export (Asynchronous Metadata Read) API"
+title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
@@ -12,23 +12,23 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.collection: 
 - Strat_SP_gtc
 - SPMigration
-description: "Sharepoint Migration Export (Asynchronous Metadata Read) API"
+description: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 ---
 
-# Sharepoint Migration Export (Asynchronous Metadata Read) API
+# SharePoint Migration Export (Asynchronous Metadata Read) API
 
 
 ## Overview
 The goal of the new Migration Asynchronous Metadata Read API is to reduce the number of CSOM calls, reduce throttling, and improve overall migration performance. Instead of calling thousands of CSOM calls to query information from SPO, the new Migration Asynchronous Metadata Read can return the same amount of data in a single read.
 
-When the new Sharepoint Migration Export (Asynchronous Metadata Read) API performs a read operation of a provided URL, the Microsoft backend software aggregates all the information into a designated manifest. The ISV can read back from the manifest and parse the metadata without sending thousands of CSOM calls individually.
+When the new SharePoint Migration Export (Asynchronous Metadata Read) API performs a read operation of a provided URL, the Microsoft backend software aggregates all the information into a designated manifest. The ISV can read back from the manifest and parse the metadata without sending thousands of CSOM calls individually.
 
 This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
 
 
 
 ### Background:
-Currently, the SharePoint Online Migration API, [CreateMigrationJob](https://docs.microsoft.com/en-us/sharepoint/dev/apis/migration-api-overview), lets your migration tool efficiently migrate large amounts data to SharePoint Online. However, the lack of an official API to read content from SharePoint Online means that these tools must rely on CSOM function calls to perform individual metadata read operations.
+Currently, the SharePoint Online Migration API, [CreateMigrationJob](https://docs.microsoft.com/sharepoint/dev/apis/migration-api-overview), lets your migration tool efficiently migrate large amounts data to SharePoint Online. However, the lack of an official API to read content from SharePoint Online means that these tools must rely on CSOM function calls to perform individual metadata read operations.
 
 </br>
 Large numbers of CSOM calls increase the likelihood of throttling which impacts migration performance and customer experience. Ineffective CSOM usage results in large SQL round trip per function calls that can potentially bring down the database and impact its reliability.
@@ -39,12 +39,12 @@ A migration performance study identified four areas where CSOM calls are heavily
 - **After migration verification** is done when migration is completed and is used to ensure the source and destination file metadata matches.
 - **Permission settings** are CSOM function calls made getting user permission information.
 
-## Sharepoint Migration Export (Asynchronous Metadata Read) API
+## SharePoint Migration Export (Asynchronous Metadata Read) API
 
-The Sharepoint Migration Export (Asynchronous Metadata Read) API aims to reduce the CSOM calls in areas: incremental migration, after migration verification and permission settings. 
+The SharePoint Migration Export (Asynchronous Metadata Read) API aims to reduce the CSOM calls in areas: incremental migration, after migration verification and permission settings. 
 
 >[!Note]
->The first version of the Sharepoint Migration Export (Asynchronous Metadata Read) API supports files, folders, lists, list items, and the document library. Permissions are expected to be covered in a subsequent version.
+>The first version of the SharePoint Migration Export (Asynchronous Metadata Read) API supports files, folders, lists, list items, and the document library. Permissions are expected to be covered in a subsequent version.
 
 Key supported features:
 
@@ -108,7 +108,7 @@ The use case for this function:  The ISV can issue a default read to retrieve th
 
 This flag indicates whether to return the extended set of metadata content of object query. By default this option is off and only basic content is provided (e.g. names, URL, author, modifier, dates) . Turning  this flag on provides all the metadata content; however, it will also impact the performance as query will take longer. 
 
-Recommendation is to keep the default for file share migration, but consider setting this flag on for Sharepoint on-prem or other more complex migration.
+Recommendation is to keep the default for file share migration, but consider setting this flag on for SharePoint on-premises or other more complex migration.
 
     public string StartChangeToken { get; set; }
 
@@ -130,7 +130,7 @@ If an invalid value is detected, other than NULL, an error will be generated, an
 
 This is an optional parameter. If it is specified, the AES256CBCKey is used to encrypt output files and queue messages. Otherwise, there is no encryption. 
 
-For more information, see [EncryptionOption Class](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.client.encryptionoption).
+For more information, see [EncryptionOption Class](https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.encryptionoption).
 
 
 #### azureContainerManifestUri
@@ -204,13 +204,13 @@ It returns the AES256CBC encryption key used to decrypt the message in azureMani
 |EncryptionKey|AES256CBC encryption key used to decrypt messages from job/manifest queue|
 
 ## Set up Guidelines
-The following provides high level guidelines for implementing the asynchronous metadata migration function. This documentation does not go into details on how to interact with SharePoint RESTful service. It is assumed that the ISV has prior knowledge and will be able to access the target website with proper permission. </br>,</br>For more information on how to access the Sharepoint website, refer to [Get to Know the SharePoint Rest Service](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service).
+The following provides high level guidelines for implementing the asynchronous metadata migration function. This documentation does not go into details on how to interact with SharePoint RESTful service. It is assumed that the ISV has prior knowledge and will be able to access the target website with proper permission. </br>,</br>For more information on how to access the SharePoint website, refer to [Get to Know the SharePoint Rest Service](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service).
 
 1. Install and update the latest Microsoft.SharePointOnline.CSOM version. The minimum version requirement is V16.1.9119.1200 or later.
 2. ISVs figure out the folder, document library or files of interested to be query and issued with CreateSPAsyncReadJob function. 
 3. Once successfully created, query the job status using the *jobQueueUri*. It provides the job process status and any error logging. After job completion, parse the Manifest to retrieve the metadata.
 
-### Sharepoint Migration Export (Asynchronous Metadata Read) API Example 
+### SharePoint Migration Export (Asynchronous Metadata Read) API Example 
 
 #### Scenario: Large file share with nested files/folders
 
@@ -227,7 +227,7 @@ Suggestion:
 >[!NOTE]
 >This scenario is only recommended for top level folders or if the sub-folder contains greater than 100k of objects. The performance of the asynchronous metadata read api is not as effective when reading a small set of items.
 
-#### Scenario: Tenant to tenant or large Sharepoint Migration
+#### Scenario: Tenant to tenant or large SharePoint Migration
  
 1. Issue CreateSPAsyncReadJob: </br>
     a. URL = root URL (e.g. <spam><spam>www.contoso.com/my-resource-item<spam><spam>)</br>
@@ -250,7 +250,7 @@ Suggestion:
 
 By default, each URL supports up to 1 million limits. At the start of the migration, the asynchronous read migration function will check. If more than 1 million is detected an error will be thrown. Multiple versions of a single file will count as one. This limit may be changed in the future.
 
-**Sharepoint Migration Export (Asynchronous Metadata Read) API Limitations**</br>
+**SharePoint Migration Export (Asynchronous Metadata Read) API Limitations**</br>
 
 
 |**Type**|**SharePoint Online Limit**|**Recommended limit</br>for async read**|**Description**|

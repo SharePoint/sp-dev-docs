@@ -48,38 +48,54 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**DesignerType**</p></td>
-<td align="left"><p>Optional **text**. Specifies the type of control or user input that is presented to the workflow creator when building sentences in the workflow editor.</p>
-<p>**Note**: If you do not specify a **DesignerType**, the default **DesignerType** attribute is used. The default **DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p>
-<p>**Note**: A code-free workflow editor should treat the values returned to it from the server as case-insensitive.</p></td>
+<td>
+ <strong>DesignerType</strong>
+</td>
+<td align="left"><p>Optional <strong>text</strong>. Specifies the type of control or user input that is presented to the workflow creator when building sentences in the workflow editor.</p>
+ <strong>Note:</strong> If you do not specify a  <strong>DesignerType</strong>, the default <strong>DesignerType</strong> attribute is used. The default  <strong>DesignerType</strong> is a text box followed by an ellipsis button (...) and a lookup button.</p>
+ <strong>Note:</strong> A code-free workflow editor should treat the values returned to it from the server as case-insensitive.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**Field**</p></td>
-<td align="left"><p>Required **text**. Represents a **Parameter** element used to build workflows. The **Field** attribute maps directly to one or more **Parameter** elements when a parameter type and direction are defined.</p>
-<p>**Note**: If you use more than one parameter for a **Field** attribute, the parameter names should be separated by commas (for example, **Field**="**Variable**,**ValueType**").</p></td>
+<td>
+ <strong>Field</strong>
+</td>
+<td align="left"><p>Required <strong>text</strong>. Represents a <strong>Parameter</strong> element used to build workflows. The <strong>Field</strong> attribute maps directly to one or more <strong>Parameter</strong> elements when a parameter type and direction are defined.</p>
+ <strong>Note:</strong> If you use more than one parameter for a <strong>Field</strong> attribute, the parameter names should be separated by commas (for example, <strong>Field</strong>="<strong>Variable</strong>,<strong>ValueType</strong>").</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**Function**</p></td>
-<td align="left"><p>Optional **Boolean**. When set to **true**, this attribute inserts the name of the **Action** method into the sentence.</p></td>
+<td>
+ <strong>Function</strong>
+</td>
+<td align="left"><p>Optional <strong>Boolean</strong>. When set to <strong>true</strong>, this attribute inserts the name of the <strong>Action</strong> method into the sentence.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required **Integer** (non-negative). **Id** is used as the relational key between a **FieldBind** element and the **Sentence** property of the parent **RuleDesigner** element, much like a primary key is used in a database.</p></td>
+<td>
+ <strong>Id</strong>
+</td>
+<td align="left"><p>Required <strong>Integer</strong> (non-negative). <strong>Id</strong> is used as the relational key between a <strong>FieldBind</strong> element and the <strong>Sentence</strong> property of the parent <strong>RuleDesigner</strong> element, much like a primary key is used in a database.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**OperatorTypeFrom**</p></td>
-<td align="left"><p>Required **text**. Used only when **DesignerType** attribute is set to **Operator**. This attribute determines the types of operators that are available to the user, based on the Microsoft .NET data type that is listed in the corresponding **Parameter** element. The parameter that is specified for the **OperatorTypeFrom** attribute can be different from the parameter that is listed in the **Field** attribute.</p></td>
+<td>
+ <strong>OperatorTypeFrom</strong>
+</td>
+<td align="left"><p>Required <strong>text</strong>. Used only when <strong>DesignerType</strong> attribute is set to <strong>Operator</strong>. This attribute determines the types of operators that are available to the user, based on the Microsoft .NET data type that is listed in the corresponding <strong>Parameter</strong> element. The parameter that is specified for the <strong>OperatorTypeFrom</strong> attribute can be different from the parameter that is listed in the <strong>Field</strong> attribute.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**Text**</p></td>
-<td align="left"><p>Required **text**. Text displayed to the user as a hyperlink in the condition sentence.</p></td>
+<td>
+ <strong>Text</strong>
+</td>
+<td align="left"><p>Required <strong>text</strong>. Text displayed to the user as a hyperlink in the condition sentence.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**TypeFrom**</p></td>
-<td align="left"><p>Optional **text**. Specifies the .NET data types that are valid for use with an instance of the **FieldBind** element. The **TypeFrom** attribute is associated with a **Parameter** element that contains the type definition.</p></td>
+<td>
+ <strong>TypeFrom</strong>
+</td>
+<td align="left"><p>Optional <strong>text</strong>. Specifies the .NET data types that are valid for use with an instance of the <strong>FieldBind</strong> element. The <strong>TypeFrom</strong> attribute is associated with a <strong>Parameter</strong> element that contains the type definition.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**Value**</p></td>
+<td>
+ <strong>Value</strong>
+</td>
 <td align="left"><p>Reserved for future use.</p></td>
 </tr>
 </tbody>
@@ -159,18 +175,17 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="even">
 <td align="left"><p>Dependent</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>The user interface element shown depends on values of the **TypeFrom** and **OperatorTypeFrom** attributes.</p></td>
+<td align="left"><p>The user interface element shown depends on values of the <strong>TypeFrom</strong>and  <strong>OperatorTypeFrom</strong> attributes.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Dropdown</p></td>
 <td align="left"><p>Single parameter</p></td>
-<td align="left"><p>List that contains options specified as <a href="option-element-workflowinfo.md">Option</a> elements of the **FieldBind** element.</p></td>
+<td align="left"><p>List that contains options specified as <a href="option-element-workflowinfo.md">Option</a> elements of the <strong>FieldBind</strong> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Email</p></td>
 <td align="left"><p>To CC Subject Body</p></td>
 <td align="left"><p>Dialog box for composing an email message.</p></td>
-</tr>
 <tr class="odd">
 <td align="left"><p>FieldNames</p></td>
 <td align="left"><p>Field</p></td>
@@ -199,7 +214,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="even">
 <td align="left"><p>Operator</p></td>
 <td align="left"><p>Value</p></td>
-<td align="left"><p>List that contains operator options specified as <a href="option-element-workflowinfo.md">Option</a> elements of the **FieldBind** element. The list of operators is filtered based on the type of the operand.</p></td>
+<td align="left"><p>List that contains operator options specified as <a href="option-element-workflowinfo.md">Option</a> elements of the <strong>FieldBind</strong>element. The list of operators is filtered based on the type of the operand.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ParameterNames</p></td>
@@ -310,8 +325,8 @@ The following example demonstrates how to construct the **FieldBind** element wi
 - [.ACTIONS File Example](actions-file-example-workflowinfo.md)
 - [Default Workflow Actions](default-workflow-actions-workflowinfo.md)
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

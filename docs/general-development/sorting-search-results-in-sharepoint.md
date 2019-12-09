@@ -30,10 +30,10 @@ You can sort the search results for SharePoint in four ways:
 
 This article focuses on sorting search results programmatically. To learn how to sort search results using SharePoint query rules, see the following articles:
 
--  [Change ranked search results in Manage query rules](http://technet.microsoft.com/en-us/library/jj871676.aspx#BKMK_ChangeRankedSearchResults)
+-  [Change ranked search results in Manage query rules](https://technet.microsoft.com/library/jj871676.aspx#BKMK_ChangeRankedSearchResults)
     
   
--  [Change ranked search results in Create query rules for web content management](http://technet.microsoft.com/en-us/library/jj871014.aspx#BKMK_ChangeRankedSearchResults)
+-  [Change ranked search results in Create query rules for web content management](https://technet.microsoft.com/library/jj871014.aspx#BKMK_ChangeRankedSearchResults)
     
   
 <a name="SP15_Specify_sorting_in_query_request"> </a>
@@ -78,7 +78,7 @@ You can also influence the rank calculation in the query string, in one of two w
 
 You can specify search result sorting based on the value of one or more managed properties. This means that SharePoint performs the sorting based on all results that match the query.
 
-You can sort based on text and numeric properties. For text properties, the sorting is based on standard text string sorting. In contrast, for numeric properties (including managed properties of type [DateTime](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14))), the sorting is based on numeric value.
+You can sort based on text and numeric properties. For text properties, the sorting is based on standard text string sorting. In contrast, for numeric properties (including managed properties of type [DateTime](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14))), the sorting is based on numeric value.
   
     
     
@@ -234,15 +234,15 @@ http://localhost/_api/search/query?querytext='home'&amp;sortlist='[formula:abs(2
 
 ### Using managed properties in the sort formula
 
-You can apply a sort formula on the value of managed properties of type [Integer](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), [Decimal](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), and [Datetime()](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)). You must enable sorting for the specified managed property in the search schema.
+You can apply a sort formula on the value of managed properties of type [Integer](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), [Decimal](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), and [Datetime()](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)). You must enable sorting for the specified managed property in the search schema.
   
     
     
-For more managed properties of type  [Decimal](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is multiplied by 10^(decimal digits) before being used in the formula evaluation.
+For more managed properties of type  [Decimal](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is multiplied by 10^(decimal digits) before being used in the formula evaluation.
   
     
     
-For managed properties of type  Datetime()](https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
+For managed properties of type  Datetime()](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
   
     
     
@@ -462,7 +462,7 @@ Table 2 explains the parameters to the random sort specification.
 |**Parameter**|**Description**|**Required**|
 |:-----|:-----|:-----|
 | _Seed_ <br/> |The seed for the random value generation.  <br/> The seed value is input to a function that generates a random number. This random number is used in the final sorting.Using only the  _seed_ option will give you a randomly sorted query result set. The sorting order for the same query (when using the same seed) may change after an index update. <br/> |Yes  <br/> |
-| _Hashfield_ <br/> |A managed property that is used as the hash value for the random generation. You can use this parameter to ensure that the sorting order for the same query (when using the same seed) does not change after an index update.  <br/> The managed property must be of type  [Integer]https://docs.microsoft.com/en-us/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) and must be [Sortable()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedPropertyInfo.Sortable.aspx). You may fill this managed property with random or unique values (for example a sequence number populated by an item processing stage). <br/> |No  <br/> |
+| _Hashfield_ <br/> |A managed property that is used as the hash value for the random generation. You can use this parameter to ensure that the sorting order for the same query (when using the same seed) does not change after an index update.  <br/> The managed property must be of type  [Integer]https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) and must be [Sortable()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedPropertyInfo.Sortable.aspx). You may fill this managed property with random or unique values (for example a sequence number populated by an item processing stage). <br/> |No  <br/> |
    
 By providing the same seed for equal queries, items will be presented in the same order. This enables you to preserve the same random order when paging through search results. Use the  _hashfield_ parameter if you want to preserve the same random order when an index update accidentally occurs between the queries.
   
@@ -551,7 +551,7 @@ using (var context = new ClientContext("http://localhost"))
 - [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) 
 - [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
 - [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md) 
-- [Overview of crawled and managed properties in SharePoint](http://technet.microsoft.com/en-us/library/jj219630%28office.15%29.aspx)
+- [Overview of crawled and managed properties in SharePoint](https://technet.microsoft.com/library/jj219630%28office.15%29.aspx)
     
   
 

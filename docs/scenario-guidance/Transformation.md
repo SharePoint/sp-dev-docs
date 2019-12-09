@@ -25,11 +25,11 @@ Typically, farm solutions are packaged as SharePoint solution package (WSP) file
 ### Articles
 
 - [Advanced SharePoint Add-in model development](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658)
-- [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
-- [Work with __REQUESTDIGEST](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/basics/working-with-requestdigest)
+- [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
+- [Work with __REQUESTDIGEST](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/basics/working-with-requestdigest)
 - [Transformation guidance from farm solutions to add-in model training module](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/AddIns/14%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model)
-- [SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/sharepoint-add-ins)
-- [SharePoint Add-in recipes](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sharepoint-add-in-recipes)
+- [SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/sharepoint-add-ins)
+- [SharePoint Add-in recipes](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sharepoint-add-in-recipes)
 
 ### Videos
 
@@ -66,8 +66,8 @@ Script- and Content Editor web part solutions make it hard for IT organizations 
 
 ### Articles
 
-- [Migrate existing Script Editor web part customizations to the SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
-- [Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx)
+- [Migrate existing Script Editor web part customizations to the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
+- [Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx)
 
 ### Videos
 
@@ -94,8 +94,8 @@ When you deactivate your existing sandbox solution from your sites, any assets o
 
 ### Articles
 
-- [Sandbox solution transformation guidance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance)
-- [Remove the assembly reference from your Sandbox solution created in Visual Studio](https://support.microsoft.com/en-us/help/3183084/remove-the-assembly-reference-from-your-sandbox-solution-created-in-vi)
+- [Sandbox solution transformation guidance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance)
+- [Remove the assembly reference from your Sandbox solution created in Visual Studio](https://support.microsoft.com/help/3183084/remove-the-assembly-reference-from-your-sandbox-solution-created-in-vi)
 
 ### Videos
 
@@ -128,8 +128,8 @@ JSLink works only with the classic SharePoint experience and cannot be reused wi
 
 ### Articles
 
-- [Migrating JSLink customizations to SharePoint Framework Field Customizers](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-jslink-to-spfx-extensions)
-- [Migrating from JSLink to SharePoint Framework Extensions (tutorial)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions)
+- [Migrating JSLink customizations to SharePoint Framework Field Customizers](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-jslink-to-spfx-extensions)
+- [Migrating from JSLink to SharePoint Framework Extensions (tutorial)](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions)
 
 ### Samples
 
@@ -142,9 +142,9 @@ _**Applies to:** Office 365 and SharePoint Server_
 
 ### Articles
 
-- [Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions)
-- [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
-- [Migrating from UserCustomAction to SharePoint Framework Extensions (tutorial)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
+- [Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions)
+- [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
+- [Migrating from UserCustomAction to SharePoint Framework Extensions (tutorial)](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
 
 ### Videos
 
@@ -160,7 +160,7 @@ _**Applies to:** Office 365 and SharePoint Server_
 
 ### Articles
 
-- [Sandbox solution transformation guidance - InfoPath](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance-infopath)
+- [Sandbox solution transformation guidance - InfoPath](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance-infopath)
 
 ### Samples
 

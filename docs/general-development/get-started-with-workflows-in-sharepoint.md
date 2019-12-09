@@ -170,16 +170,16 @@ For more information about **SharePoint Add-ins**, see the following:
     
     
 
--  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
+-  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
--  [Three ways to think about design options for SharePoint Add-ins](http://msdn.microsoft.com/library/0942fdce-3227-496a-8873-399fc1dbb72c%28Office.15%29.aspx)
+-  [Three ways to think about design options for SharePoint Add-ins](https://msdn.microsoft.com/library/0942fdce-3227-496a-8873-399fc1dbb72c%28Office.15%29.aspx)
     
   
--  [Important aspects of the SharePoint Add-in architecture and development landscape](http://msdn.microsoft.com/library/ae96572b-8f06-4fd3-854f-fc312f7f2d88%28Office.15%29.aspx)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](https://msdn.microsoft.com/library/ae96572b-8f06-4fd3-854f-fc312f7f2d88%28Office.15%29.aspx)
     
   
--  [Work with external data in SharePoint](http://msdn.microsoft.com/library/1534a5f4-1d83-45b4-9714-3a1995677d85%28Office.15%29.aspx)
+-  [Work with external data in SharePoint](https://msdn.microsoft.com/library/1534a5f4-1d83-45b4-9714-3a1995677d85%28Office.15%29.aspx)
     
   
 For more information about developing workflows using **Visual Studio 2012** and **SharePoint Designer 2013**, see the following:
@@ -198,22 +198,22 @@ For more information about Windows Workflow Foundation 4, see the following:
     
     
 
--  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](http://msdn.microsoft.com/en-us/library/ee342461.aspx)
+-  [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](https://msdn.microsoft.com/library/ee342461.aspx)
     
   
--  [What's New in Windows Workflow Foundation](http://msdn.microsoft.com/en-us/library/dd489410%28v=vs.110%29.aspx)
+-  [What's New in Windows Workflow Foundation](https://msdn.microsoft.com/library/dd489410%28v=vs.110%29.aspx)
     
   
--  [Beginner's Guide to Windows Workflow Foundation](http://msdn.microsoft.com/en-us/netframework/first-steps-with-wf.aspx)
+-  [Beginner's Guide to Windows Workflow Foundation](https://msdn.microsoft.com/netframework/first-steps-with-wf.aspx)
     
   
--  [The Workflow Way: Understanding Windows Workflow Foundation](http://msdn.microsoft.com/en-us/library/dd851337.aspx)
+-  [The Workflow Way: Understanding Windows Workflow Foundation](https://msdn.microsoft.com/library/dd851337.aspx)
     
   
--  [Introduction to the Windows Workflow Foundation Rules Engine](http://msdn.microsoft.com/en-us/library/dd554919.aspx)
+-  [Introduction to the Windows Workflow Foundation Rules Engine](https://msdn.microsoft.com/library/dd554919.aspx)
     
   
--  [Windows Workflow Foundation integration with Windows Communication Foundation](http://msdn.microsoft.com/en-us/library/cc626077.aspx)
+-  [Windows Workflow Foundation integration with Windows Communication Foundation](https://msdn.microsoft.com/library/cc626077.aspx)
     
   
 

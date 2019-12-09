@@ -13,9 +13,9 @@ ms.assetid: 170d526a-49c7-41c6-9295-47bd21b1ba7d
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 In an
-[Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx) file, the [Feature](feature-element-site.md) element is used within a site definition configuration to contain a reference to a Feature instance and default property values. The [Configuration](configuration-element-site.md) element specifies lists and modules to use when creating SharePoint sites. For information about the format and elements used in site definitions, see [Site schema](site-schema.md).
+[Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx) file, the [Feature](feature-element-site.md) element is used within a site definition configuration to contain a reference to a Feature instance and default property values. The [Configuration](configuration-element-site.md) element specifies lists and modules to use when creating SharePoint sites. For information about the format and elements used in site definitions, see [Site schema](site-schema.md).
 
-SharePoint Foundation activates Features specified within the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx) file in the order that they are listed. Consequently, you must specify Features that are depended upon before Features that depend upon them.
+SharePoint Foundation activates Features specified within the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx) file in the order that they are listed. Consequently, you must specify Features that are depended upon before Features that depend upon them.
 
 ## Example
 
@@ -51,8 +51,8 @@ The following example shows the [Feature](feature-element-site.md) element used 
 ## See also
 
 - [Site schema](site-schema.md)
-- [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
-- [WebTemp.xml](http://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8(Office.15).aspx)
+- [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
+- [WebTemp.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8(Office.15).aspx)
 
 
 

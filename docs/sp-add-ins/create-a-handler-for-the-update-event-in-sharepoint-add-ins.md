@@ -131,7 +131,7 @@ When you update an add-in for the second (or third, and so on) time, you may nee
     ```
 
 > [!IMPORTANT]
-> If you add a component to an add-in in an **UpgradedEventEndpoint** handler, be sure to add the same code to an **InstalledEventEndpoint** handler because you want that component included in the add-in on a brand new installation as well. Also, you should add an [UninstallingEventEndpoint](http://msdn.microsoft.com/library/4194e44b-f2af-1db4-aad5-9b7b511b4348%28Office.15%29.aspx) (or revise it) for the add-in to remove the component. 
+> If you add a component to an add-in in an **UpgradedEventEndpoint** handler, be sure to add the same code to an **InstalledEventEndpoint** handler because you want that component included in the add-in on a brand new installation as well. Also, you should add an [UninstallingEventEndpoint](https://msdn.microsoft.com/library/4194e44b-f2af-1db4-aad5-9b7b511b4348%28Office.15%29.aspx) (or revise it) for the add-in to remove the component. 
 
 > For the most part, anything that was added or changed by the **InstalledEventEndpoint** should be reversed or deleted by the **UninstallingEventEndpoint**. One exception is that data that will remain useful after the add-in is removed from the second-stage recycle bin should not be deleted. (Websites, other than the add-in web, that are created by the add-in should be considered data.)
 
@@ -202,7 +202,7 @@ Return to [Major steps in updating an add-in](update-sharepoint-add-ins.md#Major
 ## See also
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
--  [UpgradedEventEndpoint element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx)
+-  [UpgradedEventEndpoint element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](https://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx)
 -  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)
 -  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md)
     

@@ -19,7 +19,7 @@ description: RenderPattern defines the actual Collaborative Application Markup L
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 > [!IMPORTANT]
-> This topic describes markup that was used in a now obsolete method of rendering custom fields types on list views and on the Display, Edit, and New forms. It is provided solely to assist persons who are debugging a custom field type that was originally developed against an earlier version of SharePoint Foundation. For information about the recommended methods, see [Field Rendering Templates](http://msdn.microsoft.com/library/812772eb-03d0-4a78-b212-0ba2875857df%28Office.15%29.aspx) and [Patterns of Custom Field Rendering](http://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f%28Office.15%29.aspx). 
+> This topic describes markup that was used in a now obsolete method of rendering custom fields types on list views and on the Display, Edit, and New forms. It is provided solely to assist persons who are debugging a custom field type that was originally developed against an earlier version of SharePoint Foundation. For information about the recommended methods, see [Field Rendering Templates](https://msdn.microsoft.com/library/812772eb-03d0-4a78-b212-0ba2875857df%28Office.15%29.aspx) and [Patterns of Custom Field Rendering](https://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f%28Office.15%29.aspx). 
 > 
 > Custom fields whose rendering is defined with **RenderPattern** markup still render properly on forms. However, SharePoint Foundation, by default, uses XSLT stylesheets to render fields on list views, even for legacy custom fields whose list view rendering is defined with a **RenderPattern**. To enable the rendering of such a field, a `<Field Name="CAMLRendering">TRUE</Field>` element must be added to the containing **FieldTypes** element in the field type definition file (`fldtype*.xml`). 
   
@@ -60,7 +60,7 @@ If CAML rendering is enabled, the field type must have a **HeaderPattern** type 
   
 ### DisplayPattern
 
-If CAML rendering is enabled, a field type must have a **DisplayPattern** type of the **RenderPattern** element (by inheritance, if not directly) so that the field can be rendered on list views. This is not necessary to render the field in Display mode, such as on the Display (list item) page, because a field can also be rendered in Display mode by means of a [rendering control (.ascx file)](http://msdn.microsoft.com/library/12616aab-f427-4abe-9e5b-8b9085a9740e%28Office.15%29.aspx). None of the legacy field types that ship with SharePoint Foundation use a rendering control rather than a **DisplayPattern** type of **RenderPattern** element to render the field in Display mode. 
+If CAML rendering is enabled, a field type must have a **DisplayPattern** type of the **RenderPattern** element (by inheritance, if not directly) so that the field can be rendered on list views. This is not necessary to render the field in Display mode, such as on the Display (list item) page, because a field can also be rendered in Display mode by means of a [rendering control (.ascx file)](https://msdn.microsoft.com/library/12616aab-f427-4abe-9e5b-8b9085a9740e%28Office.15%29.aspx). None of the legacy field types that ship with SharePoint Foundation use a rendering control rather than a **DisplayPattern** type of **RenderPattern** element to render the field in Display mode. 
   
 The **DisplayPattern** type of **RenderPattern** can also be used to render the field in each row of a list view. By default, SharePoint Foundation uses XSLT markup in a `fldtypes*.xsl` file located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS\XSL to render fields on list views. But the  `fldtypes*.xml` file in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\XML is checked for the presence of `<Field Name="CAMLRendering">TRUE</Field>` in the containing **FieldTypes** element for the field. If it is present, the **DisplayPattern** is used to render the field on list views. 
   
@@ -75,7 +75,7 @@ For examples of **NewPattern** and **EditPattern** types of **RenderPatterns**, 
   
 ### RenderPatterns for multicolumn-derived custom field types
 
-In the **RenderPattern** markup for a custom MultiColumn field, the **SubcolumnNumber** attribute of a **Column** element is used to specify an individual column in a multicolumn field type. For more information about multicolumn field types, see [Custom Multicolumn Field Classes](http://msdn.microsoft.com/library/62818d63-6473-42d0-b12f-251865887b33%28Office.15%29.aspx).
+In the **RenderPattern** markup for a custom MultiColumn field, the **SubcolumnNumber** attribute of a **Column** element is used to specify an individual column in a multicolumn field type. For more information about multicolumn field types, see [Custom Multicolumn Field Classes](https://msdn.microsoft.com/library/62818d63-6473-42d0-b12f-251865887b33%28Office.15%29.aspx).
   
 ## Example
 
@@ -102,10 +102,10 @@ The following example defines a display rendering pattern for a custom field typ
 
 ## See also
 
-- [Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx) 
-- [Custom Field Types](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)  
-- [Custom Field Classes](http://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)  
-- [Custom Field Type Property Rendering](http://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)  
-- [Custom Field Type Definition](http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)  
-- [Custom Multicolumn Field Classes](http://msdn.microsoft.com/library/62818d63-6473-42d0-b12f-251865887b33%28Office.15%29.aspx)
+- [Walkthrough: Creating a Custom Field Type](https://msdn.microsoft.com/library/089a1b8a-cafc-4050-b445-16650602fe4f%28Office.15%29.aspx) 
+- [Custom Field Types](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx)  
+- [Custom Field Classes](https://msdn.microsoft.com/library/436a9d9b-7a6f-4e8f-86e8-f42ded85c069%28Office.15%29.aspx)  
+- [Custom Field Type Property Rendering](https://msdn.microsoft.com/library/a959ad5b-6f3a-462c-80b9-e2d00bb0d62a%28Office.15%29.aspx)  
+- [Custom Field Type Definition](https://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx)  
+- [Custom Multicolumn Field Classes](https://msdn.microsoft.com/library/62818d63-6473-42d0-b12f-251865887b33%28Office.15%29.aspx)
 

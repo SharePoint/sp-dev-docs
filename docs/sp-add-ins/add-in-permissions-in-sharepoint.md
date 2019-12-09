@@ -65,7 +65,7 @@ Permissions indicate the activities that an add-in is permitted to do within the
 > For more information about what Read, Write, Manage, and FullControl rights include, see [Plan add-in permissions management](/SharePoint/administration/plan-for-apps-for-sharepoint).
  
 > [!NOTE] 
-> These rights correspond to the default user permission levels of SharePoint: Reader, Contributor, Designer, and Full Control. For more information about user permission levels, see [User permissions and permission levels](https://technet.microsoft.com/en-us/library/cc288074.aspx).The add-ins rights names do not match SharePoint user roles rights names, to avoid confusion between user roles rights and add-in rights. Because customizing the permissions that are associated with SharePoint user roles does not affect add-in permission request levels, the add-in rights names do not match the corresponding SharePoint user roles, except Full Control, which can't be customized through the permissions management user interface.
+> These rights correspond to the default user permission levels of SharePoint: Reader, Contributor, Designer, and Full Control. For more information about user permission levels, see [User permissions and permission levels](https://technet.microsoft.com/library/cc288074.aspx).The add-ins rights names do not match SharePoint user roles rights names, to avoid confusion between user roles rights and add-in rights. Because customizing the permissions that are associated with SharePoint user roles does not affect add-in permission request levels, the add-in rights names do not match the corresponding SharePoint user roles, except Full Control, which can't be customized through the permissions management user interface.
  
 In addition:
 

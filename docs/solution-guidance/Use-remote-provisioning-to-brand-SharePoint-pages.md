@@ -9,8 +9,8 @@ localization_priority: Normal
 
 You can apply and interact with themes by using remote provisioning features in SharePoint. These features are provided by the following APIs:
 
--  [ApplyTheme method](http://msdn.microsoft.com/library/52c567e8-03e6-7ba3-a9ed-cf4e3c22dbdd%28Office.15%29.aspx)
--  [ThemeInfo class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.themeinfo.aspx)
+-  [ApplyTheme method](https://msdn.microsoft.com/library/52c567e8-03e6-7ba3-a9ed-cf4e3c22dbdd%28Office.15%29.aspx)
+-  [ThemeInfo class](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.themeinfo.aspx)
 
 > [!IMPORTANT] 
 > This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites.
@@ -49,7 +49,7 @@ The **ApplyTheme** method uses the following parameters:
 
 ## ThemeInfo class
 
-You can use CSOM code to get information about the composed looks that are applied to a site. The [ThemeInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.themeinfo.aspx) class gets the context associated with the themes, as shown in the following example.
+You can use CSOM code to get information about the composed looks that are applied to a site. The [ThemeInfo](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.themeinfo.aspx) class gets the context associated with the themes, as shown in the following example.
 
 ```cs
 public ThemeInfo ThemeInfo { get; }

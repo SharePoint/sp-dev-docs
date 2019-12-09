@@ -18,7 +18,7 @@ description: Used in list definitions (Schema.xml file) to separate list metadat
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Used in list definitions ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file) to separate list metadata from data. 
+Used in list definitions ([Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file) to separate list metadata from data. 
   
 ```XML
 <MetaData>

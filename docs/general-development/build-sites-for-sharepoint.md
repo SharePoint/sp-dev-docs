@@ -107,8 +107,8 @@ You can use the variations feature in SharePoint to create accessible sites or o
 -  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
 -  [Minimal Download Strategy overview](minimal-download-strategy-overview.md)
 -  [Modify SharePoint components for MDS](modify-sharepoint-components-for-mds.md)
--  [SharePoint Sites and Content server class library](http://msdn.microsoft.com/library/8a93e838-234c-41d8-b990-7ac1a415dd5e%28Office.15%29.aspx)
--  [Sites and Content client class library](http://msdn.microsoft.com/library/e6542022-a459-4c3b-aee0-e350c6397139%28Office.15%29.aspx)
+-  [SharePoint Sites and Content server class library](https://msdn.microsoft.com/library/8a93e838-234c-41d8-b990-7ac1a415dd5e%28Office.15%29.aspx)
+-  [Sites and Content client class library](https://msdn.microsoft.com/library/e6542022-a459-4c3b-aee0-e350c6397139%28Office.15%29.aspx)
     
   
 

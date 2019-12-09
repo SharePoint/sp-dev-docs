@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - REST API
 description: Use the the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site themes.
-ms.date: 0/29/2019
+ms.date: 10/29/2019
 localization_priority: Priority
 ---
 
@@ -269,5 +269,3 @@ RestRequest("/_api/thememanager/UpdateTenantTheme", {name:"Sounders Rave Green",
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
-
-

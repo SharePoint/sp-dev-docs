@@ -73,7 +73,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**CommandMenuClose** <br/> |Optional. The name of the command to execute when the drop-down menu is closed.  <br/> |
 |**CommandPreview** <br/> |Optional. The name of the command to execute for previewing a selection.  <br/> |
 |**CommandPreviewRevert** <br/> |Optional. The name of the command to execute to return to the state that existed before previewing a selection.  <br/> |
-|**ImeEnabled** <br/> |Optional. **TRUE** to set the [Input Method Editor (IME)](http://msdn.microsoft.com/library/a595a28f-7a9d-4135-ad5c-d66ae45ec682.aspx) to the **active** state.  <br/> |
+|**ImeEnabled** <br/> |Optional. **TRUE** to set the [Input Method Editor (IME)](https://msdn.microsoft.com/library/a595a28f-7a9d-4135-ad5c-d66ae45ec682.aspx) to the **active** state.  <br/> |
 |**InitialItem** <br/> |Optional. The ID of the menu item to display in the text box when it is first rendered.  <br/> |
 |**Id** <br/> |Required. A string that identifies the control, such as "Ribbon.EditingTools.CPEditTab.Font.Fonts".  <br/> |
 |**QueryCommand** <br/> |Optional. The name of the command to execute when polling for state information.  <br/> |

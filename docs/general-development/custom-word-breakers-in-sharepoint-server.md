@@ -15,10 +15,10 @@ Word breaking is one of the key Natural Language Processing (NLP) features that 
     
 
 For information on how to write a word breaker refer to the following articles 
--  [Implementing a Word Breaker](http://msdn.microsoft.com/en-us/library/ms693186%28v=vs.85%29.aspx)
+-  [Implementing a Word Breaker](https://msdn.microsoft.com/library/ms693186%28v=vs.85%29.aspx)
     
   
--  [IWordBreaker interface](http://msdn.microsoft.com/en-us/library/ms691079%28v=vs.85%29.aspx)
+-  [IWordBreaker interface](https://msdn.microsoft.com/library/ms691079%28v=vs.85%29.aspx)
     
   
 
@@ -284,10 +284,10 @@ Vietnamese
 -  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
--  [Implementing a Word Breaker](http://msdn.microsoft.com/en-us/library/ms693186%28v=vs.85%29.aspx)
+-  [Implementing a Word Breaker](https://msdn.microsoft.com/library/ms693186%28v=vs.85%29.aspx)
     
   
--  [IWordBreaker interface](http://msdn.microsoft.com/en-us/library/ms691079%28v=vs.85%29.aspx)
+-  [IWordBreaker interface](https://msdn.microsoft.com/library/ms691079%28v=vs.85%29.aspx)
     
   
 

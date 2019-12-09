@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # Retrieving query suggestions using the Search REST service
 Learn how you can use the Search REST service from your client and mobile applications to retrieve query suggestions from Search in SharePoint.
-Query suggestions, also known as search suggestions, are phrases that users have already searched for and that are displayed or "suggested" to them as they type their queries. You can use Search in SharePoint to turn on pre-query and post-query suggestions. These suggestions appear in a list below the Search box as a user types a query. For more information about query suggestions and how to enable them, see  [Manage query suggestions in SharePoint](http://technet.microsoft.com/en-us/library/jj721441.aspx).
+Query suggestions, also known as search suggestions, are phrases that users have already searched for and that are displayed or "suggested" to them as they type their queries. You can use Search in SharePoint to turn on pre-query and post-query suggestions. These suggestions appear in a list below the Search box as a user types a query. For more information about query suggestions and how to enable them, see  [Manage query suggestions in SharePoint](https://technet.microsoft.com/library/jj721441.aspx).
   
     
     
@@ -156,7 +156,7 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fcapitalizefirst
 
 ### Culture
 
-The locale ID (LCID) for the query (see  [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/en-us/goglobal/bb964664.aspx)).
+The locale ID (LCID) for the query (see  [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx)).
   
     
     
@@ -245,7 +245,7 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fprefixmatchallt
 -  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
--  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
+-  [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
     
   
 

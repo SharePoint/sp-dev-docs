@@ -16,8 +16,8 @@ _**Applies to:** Office 365 hosted in the Germany, China or US Government enviro
 <a name="introduction"> </a>
 
 Microsoft has specific Office 365 deployments in Germany, China and for US Government to fulfill the specific regulations for those areas. Below links provide more context:
-- [Office 365 Germany](https://technet.microsoft.com/en-us/library/mt793278.aspx)
-- [Office 365 operated by 21Vianet (China)](https://technet.microsoft.com/en-us/library/mt651782.aspx)
+- [Office 365 Germany](https://technet.microsoft.com/library/mt793278.aspx)
+- [Office 365 operated by 21Vianet (China)](https://technet.microsoft.com/library/mt651782.aspx)
 - [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
 If you are a developer targeting applications for SharePoint Online hosted in these environments then you'll need to take in account that these environments have their own dedicated Azure AD authentication endpoints that you as developer need to use. Below chapters explain how do use these dedicated endpoints for the typical SharePoint Online customization options.
@@ -77,7 +77,7 @@ ClientContext cc = new AuthenticationManager().GetAzureADNativeApplicationAuthen
 ## Using Azure ACS to authorize your SharePoint add-in
 <a name="usingazureacs"> </a>
 
-When you create SharePoint add-ins they'll typically low-trust authorization which depends on Azure ACS as descrived in [Creating SharePoint Add-ins that use low-trust authorization](https://msdn.microsoft.com/en-us/library/office/dn790707.aspx).
+When you create SharePoint add-ins they'll typically low-trust authorization which depends on Azure ACS as descrived in [Creating SharePoint Add-ins that use low-trust authorization](https://msdn.microsoft.com/library/office/dn790707.aspx).
 
 
 ### Azure ACS endpoints
@@ -163,5 +163,5 @@ ClientContext cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext(si
 ### See also
 <a name="bk_addresources"> </a>
 
-- [Learn about Office 365 Germany](https://support.office.com/en-US/article/Learn-about-Office-365-Germany-8a5a4bbc-667a-4cac-8769-d8ac9015db4c) 
-- [Learn about Office 365 operated by 21Vianet (China)](https://support.office.com/en-us/article/Learn-about-Office-365-operated-by-21Vianet-A8AB5061-3346-4DA0-BB7C-5260822B53AE)
+- [Learn about Office 365 Germany](https://support.office.com/article/Learn-about-Office-365-Germany-8a5a4bbc-667a-4cac-8769-d8ac9015db4c) 
+- [Learn about Office 365 operated by 21Vianet (China)](https://support.office.com/article/Learn-about-Office-365-operated-by-21Vianet-A8AB5061-3346-4DA0-BB7C-5260822B53AE)

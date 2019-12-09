@@ -276,9 +276,9 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
-- [Fine-grained permission reference for SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn169567.aspx)
-- [Best practices for using fine-grained permissions in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg128955.aspx)
-- [User permissions and permission levels in SharePoint](http://technet.microsoft.com/en-us/library/cc721640.aspx)
+- [Fine-grained permission reference for SharePoint Server 2013](https://technet.microsoft.com/library/dn169567.aspx)
+- [Best practices for using fine-grained permissions in SharePoint Server 2013](https://technet.microsoft.com/library/gg128955.aspx)
+- [User permissions and permission levels in SharePoint](https://technet.microsoft.com/library/cc721640.aspx)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)    
  
 

@@ -50,7 +50,7 @@ The recommended model for rolling out new functionality is a phased approach tha
 
 The following diagram shows a gradual roll-out plan. Note that this takes into account the fact that typically end-user waves have fewer active users than invited users.
 
-![Phased portal roll-out model](https://support.content.office.net/en-us/media/0bc14a20-9420-4986-b9b9-fbcd2c6e0fb9.png)
+![Phased portal roll-out model](https://support.content.office.net/media/0bc14a20-9420-4986-b9b9-fbcd2c6e0fb9.png)
 
 This phased approach gives you time to absorb feedback and make adjustments to your portal if needed. However, how do you measure and follow up on performance during this phased roll-out? 
 
@@ -58,5 +58,5 @@ The recommended approach for doing this is to embed portal telemetry in your imp
 
 ## See also
 
-- [Capacity planning and load testing SharePoint Online](https://support.office.com/en-us/article/Capacity-planning-and-load-testing-SharePoint-Online-c932bd9b-fb9a-47ab-a330-6979d03688c0?ui=en-US&rs=en-US&ad=US)
+- [Capacity planning and load testing SharePoint Online](https://support.office.com/article/Capacity-planning-and-load-testing-SharePoint-Online-c932bd9b-fb9a-47ab-a330-6979d03688c0?ui=en-US&rs=en-US&ad=US)
 - [Building SharePoint Online portals](portal-overview.md)

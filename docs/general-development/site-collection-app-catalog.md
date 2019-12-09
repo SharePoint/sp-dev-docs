@@ -45,9 +45,9 @@ When deploying SharePoint Framework solutions that support tenant-wide deploymen
 You can configure and manage site collection app catalogs using the SharePoint Online Management Shell.
 
 > [!NOTE]
-> Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) from November 2017 or newer.
+> Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) from November 2017 or newer.
 
-Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to [create the app catalog](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/add-pnpsitecollectionappcatalog?view=sharepoint-ps) or [remove the app catalog](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/remove-pnpsitecollectionappcatalog?view=sharepoint-ps) is also an option when using Windows.
+Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Using [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to [create the app catalog](https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsitecollectionappcatalog?view=sharepoint-ps) or [remove the app catalog](https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitecollectionappcatalog?view=sharepoint-ps) is also an option when using Windows.
 
 ### Create a site collection app catalog
 
@@ -128,7 +128,7 @@ After executing this script, the **Apps for SharePoint** library will be still v
 
 ### Governance
 
-Currently, it's not possible to list all site collections in the tenant that have the site collection app catalog enabled.
+To list all site collections in the tenant that have the site collection app catalog enabled, use the URL `https://<tenant-app-catalog-URL>/Lists/SiteCollectionAppCatalogs/AllItems.aspx`.
 
 ### Security
 
@@ -136,6 +136,6 @@ Before deploying solutions to site collection app catalogs, site collection admi
 
 ## See also
 
-- [Manage the Site Collection App Catalog](https://support.office.com/en-us/article/Manage-the-Site-Collection-App-Catalog-928b9b61-a9de-4563-a7d1-6231aa9d4d19)
+- [Manage the Site Collection App Catalog](https://support.office.com/article/Manage-the-Site-Collection-App-Catalog-928b9b61-a9de-4563-a7d1-6231aa9d4d19)
 - [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog)
 

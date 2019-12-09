@@ -74,7 +74,7 @@ To specify a default value for a field, add a **Default** element to the [Field 
 
 For each [Field Element (Field)](field-element-field.md) element contained in the **Fields** element, there must be a corresponding [Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md) element with a matching Name attribute. The [Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md) element specifies the System data type of the field.
 
-The [Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md) element also represents a workflow variable of the same name. When the user submits the workflow initiation form, SharePoint Foundation passes the value specified for each parameter to the workflow instance as part of the [InitiationData](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowactivationproperties.initiationdata.aspx) property.
+The [Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md) element also represents a workflow variable of the same name. When the user submits the workflow initiation form, SharePoint Foundation passes the value specified for each parameter to the workflow instance as part of the [InitiationData](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowactivationproperties.initiationdata.aspx) property.
 
 Use the URL attribute of the [Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md) element to specify the path to the workflow initiation form for the workflow.
 
@@ -108,9 +108,9 @@ This example has been edited for clarity.
 ## See also
 
 - [Workflow configuration schema reference](workflow-configuration-schema-reference.md)
-- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/en-us/library/office/ms414613.aspx)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Office SharePoint Designer Overview](https://msdn.microsoft.com/en-us/library/office/ms454098.aspx)
+- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
 
 
 

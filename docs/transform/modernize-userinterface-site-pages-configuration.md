@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 10/03/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -156,6 +156,72 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 > [!NOTE]
 > This option is not available for publishing page transformation.
 
+## TargetPageName option
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally override the page name of the target page. By default the page transformation engine will generate one, but sometimes it's needed to override (e.g. default.aspx will collide with the default.aspx view page of the SitePages library).
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TargetPageName = "mypage.aspx",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TargetPageName = "mypage.aspx",
+};
+```
+
+## TargetPageFolder option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify the folder in which the target page will be created. Note that if a folder was created automatically (e.g. because you were transforming from an extra wiki page library) then the folder specified by this parameter will be combined with the auto-generated folder. You can specify a folder like this: `MyFolder` or `MyFolder/SubFolder` when you want to create a nested folder structure.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TargetPageFolder = "MyFolder",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TargetPageFolder = "MyFolder",
+};
+```
+
+## TargetPageFolderOverridesDefaultFolder option (as of December 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+You can force page transformation to use the folder specified via the `TargetPageFolder` property, regardless whether there was an automatically created folder or not.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TargetPageFolderOverridesDefaultFolder = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TargetPageFolderOverridesDefaultFolder = true,
+};
+```
+
 ## ReplaceHomePageWithDefaultHomePage option
 
 Type | Default value if not specified
@@ -302,7 +368,7 @@ Bool | false
 The default behavior is to not keep the author, editor, create data and modification date of the source page. Use this option to change that.
 
 > [!NOTE]
-> This option only works for when the source page is in the same SPO tenant as the target destination of the modern page. For pages transformed from on-premises SharePoint this feature will be enabled once we do have account mapping functionality implemented.
+> This option only works for when the source page is in the same SPO tenant as the target destination of the modern page.
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
@@ -447,6 +513,72 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     AddTableListImageAsImageWebPart = false,
+};
+```
+
+## UserMappingFile option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify a file with custom user mappings. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    UserMappingFile = @"c:\temp\usermappingfile.csv",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    UserMappingFile = @"c:\temp\usermappingfile.csv",
+};
+```
+
+## LDAPConnectionString option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify a custom LDAP connection string towards your Active Directory environment. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    LDAPConnectionString = "LDAP://OU=Test,DC=CONTOSO,DC=COM",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    LDAPConnectionString = "LDAP://OU=Test,DC=CONTOSO,DC=COM",
+};
+```
+
+## SkipUserMapping option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to always perform user mapping when you are transforming pages coming from SharePoint on-premises, use this option to disable that. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipUserMapping = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipUserMapping = true,
 };
 ```
 

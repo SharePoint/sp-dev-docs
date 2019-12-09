@@ -18,7 +18,7 @@ The workflow framework in SharePoint is significantly changed from previous vers
 ## Completely redesigned workflow infrastructure
 <a name="SP15Whatsnewinworflow_infrastructure"> </a>
 
-SharePoint workflows are powered by Windows Workflow Foundation 4 (WF), which was substantially redesigned from previous versions. Windows Workflow Foundation, in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/en-us/netframework/aa663324).
+SharePoint workflows are powered by Windows Workflow Foundation 4 (WF), which was substantially redesigned from previous versions. Windows Workflow Foundation, in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/netframework/aa663324).
   
     
     

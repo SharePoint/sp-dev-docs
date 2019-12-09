@@ -12,6 +12,15 @@ Azure DevOps (Visual Studio Team Services / Team Foundation Server) consists of 
 
 This article explains the steps involved in setting up your Azure DevOps environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
+## Chosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
+There are currently two approaches available to implement continuous integration, and deployement in Azure DevOps.  
+Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
+Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history and repeatability.  
+Both approaches are decribed for the SharePoint Framework:
+- [Azure Build and Release](./implement-ci-cd-with-azure-pipelines.md)
+- Azure Multi-stage Pipelines (this article)
+
+
 ## Continuous Integration
 
 Continuous Integration (CI) helps developers integrate code into a shared repository by automatically verifying the build using unit tests and packaging the solution each time new code changes are submitted.  
@@ -60,7 +69,7 @@ The SharePoint Framework does not provide a testing framework by default (since 
 By default SharePoint Framework projects does not include a testing Framework. We will leverage Jest in this sample.
 
 ```shell
-npm i chai@4.X jest jest-junit @voitanos/jest-preset-spfx-react16 -D
+npm i jest jest-junit @voitanos/jest-preset-spfx-react16 -D
 ```
 
 > [!NOTE] 
@@ -81,7 +90,11 @@ You also need to configure Jest, to do so create a file `config/jest.config.json
   ],
   "reporters": [
     "default",
-    "jest-junit"
+    ["jest-junit", {
+      "suiteName": "jest tests",
+      "outputDirectory": "temp/test/junit",
+      "outputName": "junit.xml"
+    }]
   ]
 }
 ```
@@ -90,40 +103,28 @@ You also need to configure your project to leverage jest when typing commands. T
     "test": "./node_modules/.bin/jest --config ./config/jest.config.json",
     "test:watch": "./node_modules/.bin/jest --config ./config/jest.config.json --watchAll"
 ```
-Finally you need to modify the `package.json` to configure the reporter. Reporters are plugins that provide new export formats for test results to test runners. To do so edit `package.json` and add these lines after the `scripts` property.
-
-```JSON
-  "jest-junit": {
-    "output": "temp/test/junit/junit.xml",
-    "usePathForSuiteName": "true"
-  }
-```
 #### Writing a unit test
 To write your first unit test, create a new file `src/webparts/webPartName/tests/webPartName.spec.ts` and add the following content:
 ```TS
-/// <reference types="mocha" />
-import {assert, expect} from 'chai';
+import 'jest'
 
 describe("webPartName", () => {
-  it("should do something", () => {
-    assert.ok(true, 'should be true');
-  });
-  it("should add numbers Sync fluent", () => {
-    const result:number = 1 + 3;
-    expect(result).to.eq(4); // fluent API
+  test("should add numbers Sync fluent", () => {
+    const result = 1 + 3;
+    expect(result).toBe(4); // fluent API
   });
 });
 ```
 > [!NOTE] 
-> You can learn more about writing unit tests using Jest and Chai [here](https://jestjs.io/docs/en/getting-started.html).
+> You can learn more about writing unit tests using Jest [here](https://jestjs.io/docs/en/getting-started.html). You can learn more about testing react applications with Jest and Enzyme [here](https://jestjs.io/docs/en/tutorial-react) (you can ignore the setup part). 
 
 ### Importing test results
-In order to get test results information attached with the build results, you need to import these test results from the test runner into Azure DevOps. To do so, add a new `Publish Test Results` task. Set the `Test results files` field to `temp/test/junit/junit.xml` and the `Search folder` to `$(Build.SourcesDirectory)`.  
+In order to get test results information attached with the build results, you need to import these test results from the test runner into Azure DevOps. To do so, add a new `Publish Test Results` task. Set the `Test results files` field to `**/junit.xml` and the `Search folder` to `$(Build.SourcesDirectory)`.  
 ![importing test results](../../images/azure-devops-spfx-04b.png)
 
 ### Importing code coverage information
 
-In order to get code coverage reported with the build status you need to add a task to import that information. To configure the code coverage information, add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/temp/test/cobertura-coverage.xml` and `Report Directory` to `$(Build.SourcesDirectory)/temp/test`.
+In order to get code coverage reported with the build status you need to add a task to import that information. To configure the code coverage information, add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/**/*-coverage.xml`.
 
 ![importing coverage information](../../images/azure-devops-spfx-05.png)
 

@@ -14,7 +14,7 @@ Learn how to use the search specific properties in the Business Data Connectivit
 ## Crawling the associated external content type
 <a name="HowToCrawlAssociations_CrawlingAssociatedExternalTypes"> </a>
 
-Microsoft Business Connectivity Services (BCS) enables you to link two related external content types, which then enables you to fetch related external content. For example, you can fetch external content from two SQL Server database table-based external content types that are based on foreign keys. This concept of linking two related external content types is known as an  *association*  . For more information about associations, see [Adding Associations Between External Content Types](http://msdn.microsoft.com/library/791e95ab-9b3c-413b-be12-bd0e59962c93%28Office.15%29.aspx). 
+Microsoft Business Connectivity Services (BCS) enables you to link two related external content types, which then enables you to fetch related external content. For example, you can fetch external content from two SQL Server database table-based external content types that are based on foreign keys. This concept of linking two related external content types is known as an  *association*  . For more information about associations, see [Adding Associations Between External Content Types](https://msdn.microsoft.com/library/791e95ab-9b3c-413b-be12-bd0e59962c93%28Office.15%29.aspx). 
   
     
     
@@ -123,13 +123,13 @@ To mark an association so that it is crawled as a child external content type, a
 -  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
--  [Adding Associations Between External Content Types](http://msdn.microsoft.com/library/791e95ab-9b3c-413b-be12-bd0e59962c93%28Office.15%29.aspx)
+-  [Adding Associations Between External Content Types](https://msdn.microsoft.com/library/791e95ab-9b3c-413b-be12-bd0e59962c93%28Office.15%29.aspx)
     
   
--  [Association Element in MethodInstances (BDCMetadata Schema)](http://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx)
+-  [Association Element in MethodInstances (BDCMetadata Schema)](https://msdn.microsoft.com/library/9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0%28Office.15%29.aspx)
     
   
--  [Step 4 (Optional): Define Associations](http://msdn.microsoft.com/library/6bc55f46-459a-4986-8744-8c6c5f45097b%28Office.15%29.aspx)
+-  [Step 4 (Optional): Define Associations](https://msdn.microsoft.com/library/6bc55f46-459a-4986-8744-8c6c5f45097b%28Office.15%29.aspx)
     
   
 

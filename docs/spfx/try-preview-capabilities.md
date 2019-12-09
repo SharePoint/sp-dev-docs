@@ -22,7 +22,7 @@ Starting from version 1.5.0, Microsoft offers the ability for organizations to e
 When scaffolding SharePoint Framework projects using the regular SharePoint Framework Yeoman generator (_@microsoft/generator-sharepoint_), you can choose if you want to use the preview capabilities or not. Based on your choice, the generator will create a project which you can run in a production environment or a project that you can use to evaluate the experimental features. You should keep in mind, that there is no guarantee that the capabilities from a _plusbeta_ version will be released in a future version of the SharePoint Framework and using solutions built using the _plusbeta_ version in production is not supported.
 
 > [!NOTE]
-> Feedback on provided preview capabilities is welcome using the [issue list](http://aka.ms/spdev-issues) at sp-dev-docs GitHub repository. 
+> Feedback on provided preview capabilities is welcome using the [issue list](https://aka.ms/spdev-issues) at sp-dev-docs GitHub repository. 
 
 ## Create SharePoint Framework projects using preview features
 

@@ -12,12 +12,15 @@ To support the new add-in model, the Office 365 Developer Patterns and Practices
 - Persist the model as a provisioning template. 
 - Apply the custom template to new or existing site collections as needed.
 
+> [!NOTE] 
+> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 In this sample, we create a basic console application that implements classes in the provisioning PnP Core library to enable the PnP provisioning engine to complete these essential provisioning tasks: 
 
 - Design and model your site customization. This can be a new site design, or you can point to an existing site and save it as a provisioning template.
 - Save and persist the site model as a provisioning template so that you can reuse it.
 - Apply the provisioning template to a new or existing site collection.
-    
+
 > [!NOTE] 
 > This sample walkthrough is a companion to a sample currently available on GitHub at [Getting Started with the PnP provisioning engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site, [Getting Started with the PnP provisioning engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 
@@ -35,7 +38,7 @@ To begin, create a Visual Studio project. In this sample, for simplicity, we cre
 4. Download and install the PnP Core library that is available as a NuGet package at [OfficeDevPnP.Core packages](https://www.nuget.org/packages?q=SharePointPnPCore*).
     
 	> [!NOTE] 
-	> There are three versions of the library. One version is the **SharePointPnPCoreOnline** library, which targets SharePoint Online and Office 365. The other versions are **SharePointPnPCore2013** and **SharePointPnPCore2016** , which target SharePoint on-premise versions 2013 and 2016 respectively. 
+	> There are three versions of the library. One version is the **SharePointPnPCoreOnline** library, which targets SharePoint Online and Office 365. The other versions are **SharePointPnPCore2013** and **SharePointPnPCore2016** , which target SharePoint on-premises versions 2013 and 2016 respectively. 
 
 	
 5. Install the NuGet client by going to the [NuGet client installer](http://docs.nuget.org/consume/installing-nuget).
@@ -46,7 +49,7 @@ To begin, create a Visual Studio project. In this sample, for simplicity, we cre
 
 8. Follow directions to download and install the **SharePointPnPCoreOnline** library, following the given directions.
 
-   After the PnP Core library is referenced in your Visual Studio project, all library members are available to you as [extension methods](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) on existing object instances, for example, **web** and **list** instances.
+   After the PnP Core library is referenced in your Visual Studio project, all library members are available to you as [extension methods](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/extension-methods) on existing object instances, for example, **web** and **list** instances.
 
 9. Ensure that your Program.cs file contains all of the following `using` statements.
 

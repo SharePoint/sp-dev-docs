@@ -149,7 +149,7 @@ Software designs based on the MVVM pattern often confine business logic and vali
 ## The App.xaml file and the Silverlight application model
 <a name="BKMK_ApplicationModel"> </a>
 
-The App.xaml file and its associated code-behind file, App.xaml.cs, are standard components of a managed Silverlight application. Applications that use the managed API for Silverlight must include a class derived from the Silverlight  [Application](http://msdn.microsoft.com/en-us/library/system.windows.application%28VS.95%29.aspx) class, in order to implement the Silverlight application model. The **Application** class supports application life-cycle events and facilities for managing resources like images, strings, and XAML templates.
+The App.xaml file and its associated code-behind file, App.xaml.cs, are standard components of a managed Silverlight application. Applications that use the managed API for Silverlight must include a class derived from the Silverlight  [Application](https://msdn.microsoft.com/library/system.windows.application%28VS.95%29.aspx) class, in order to implement the Silverlight application model. The **Application** class supports application life-cycle events and facilities for managing resources like images, strings, and XAML templates.
   
     
     
@@ -162,28 +162,28 @@ For information about the kinds of modifications you might make to the App.xaml.
 <a name="SP15Winphoneover_addlresources"> </a>
 
 
--  [Using the Model-View-ViewModel Pattern](http://msdn.microsoft.com/en-us/library/hh821028.aspx)
+-  [Using the Model-View-ViewModel Pattern](https://msdn.microsoft.com/library/hh821028.aspx)
     
   
--  [Pivot Control Architecture for Windows Phone](http://msdn.microsoft.com/en-us/library/ff941097%28VS.92%29.aspx)
+-  [Pivot Control Architecture for Windows Phone](https://msdn.microsoft.com/library/ff941097%28VS.92%29.aspx)
     
   
--  [Silverlight Application Model](http://msdn.microsoft.com/en-us/library/cc872869%28VS.95%29.aspx)
+-  [Silverlight Application Model](https://msdn.microsoft.com/library/cc872869%28VS.95%29.aspx)
     
   
--  [Developing a Windows Phone Application using the MVVM Pattern](http://msdn.microsoft.com/en-us/library/hh848247.aspx)
+-  [Developing a Windows Phone Application using the MVVM Pattern](https://msdn.microsoft.com/library/hh848247.aspx)
     
   
--  [WPF Apps With The Model-View-ViewModel Design Pattern](http://msdn.microsoft.com/en-us/magazine/dd419663.aspx)
+-  [WPF Apps With The Model-View-ViewModel Design Pattern](https://msdn.microsoft.com/magazine/dd419663.aspx)
     
   
--  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
+-  [Windows Phone SDK 8.0](http://www.microsoft.com/download/details.aspx?id=35471)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/en-us/download/details.aspx?id=36818)
+-  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/download/details.aspx?id=36818)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=30476)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
     
   
 

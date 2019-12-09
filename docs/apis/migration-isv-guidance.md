@@ -42,9 +42,9 @@ To learn more on how to register an app ID and how to implement app-based authen
 #### Permission settings
 Azure Active Directory (AAD) provides two type of permission : delegated permission and application permissions. For official AAD guidance please see:
 
-- [Permissions and consent in the Azure Active Directory v1.0 endpoint](https://docs.microsoft.com/en-us/azure/active-directory/develop/v1-permissions-and-consent). 
+- [Permissions and consent in the Azure Active Directory v1.0 endpoint](https://docs.microsoft.com/azure/active-directory/develop/v1-permissions-and-consent). 
 
-For Sharepoint and Onedrive migration scenarios, the guidance is to follow the AAD permission specification. 
+For SharePoint and OneDrive migration scenarios, the guidance is to follow the AAD permission specification. 
 
 For migration tool that relies on end user signed in and presence, delegated permission is recommended. 
 
@@ -65,29 +65,29 @@ For migration jobs, the first guidance is to use existing published migration AP
 
 The *CreateMigrationJob* helps the ISVs to import to SharePoint and OneDrive faster and more reliably. 
 
-- [Create Migration Job (Import API)](https://docs.microsoft.com/en-us/sharepoint/dev/apis/migration-api-overview)
+- [Create Migration Job (Import API)](https://docs.microsoft.com/sharepoint/dev/apis/migration-api-overview)
 
 The lastest supported features are:
 
-- [Migrate web parts using the Migration API](https://docs.microsoft.com/en-us/sharepoint/dev/apis/migrate-webparts-with-migrationapi)
+- [Migrate web parts using the Migration API](https://docs.microsoft.com/sharepoint/dev/apis/migrate-webparts-with-migrationapi)
 
 
 ### Export API (Asynchronous Metadata Read)
 
 A new migration API, Asynchronous Metadata Read API (Export API) is currently being made available to ISVs for testing.  If you are interested, please contact Microsoft with your test tenant information.
 
-- [Asynchronous Metadata Read (Export API)](https://docs.microsoft.com/en-us/sharepoint/dev/apis/export-amr-api)
+- [Asynchronous Metadata Read (Export API)](https://docs.microsoft.com/sharepoint/dev/apis/export-amr-api)
 
 The *AsynchronousMetadataRead* helps the ISVs export content from SharePoint and OneDrive.
 
 ## Switch to the Microsoft Graph API 
 If a feature is not supported by the migration API, we recommend that you use the Graph API.  If the Graph API does not support the needed migration feature, then use CSOM. However, using CSOM increases the likelihood of being throttled. 
 
-- [Graph Guidance: Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/en-us/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online)
+- [Graph Guidance: Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online)
 
 ### CSOM Guidance (fallback only)
 
-The following provides guidance on specific CSOM implementation scenarios to help improve migration performance with Sharepoint and OneDrive.
+The following provides guidance on specific CSOM implementation scenarios to help improve migration performance with SharePoint and OneDrive.
 
 #### Enumeration Query Ordering guidance 
 There are two kinds of enumeration queries, assuming the client intends to read every item with no server-side filtering.
@@ -105,7 +105,7 @@ To query for every item in a specific folder, the query should sort by the filen
 
 For customers migrating greater than 100TB of data, please follow the instructions on how to create a support ticket to help the product team to prepare the backend for the customers. 
 
-• [Best practices for improving SharePoint and OneDrive migration performance](https://docs.microsoft.com/en-us/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). 
+• [Best practices for improving SharePoint and OneDrive migration performance](https://docs.microsoft.com/sharepointmigration/sharepoint-online-and-onedrive-migration-speed). 
  
 ## Escalation and throttling
  

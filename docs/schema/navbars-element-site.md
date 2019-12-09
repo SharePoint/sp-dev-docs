@@ -48,7 +48,7 @@ None
    
 ## Example
 
-The following example from the file [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) defines the default navigation areas for the home page. 
+The following example from the file [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) defines the default navigation areas for the home page. 
   
 ```XML
 <NavBars>

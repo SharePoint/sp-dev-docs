@@ -64,8 +64,8 @@ The following articles will help you understand more about the client object mod
 | [External content types in SharePoint](external-content-types-in-sharepoint.md) <br/> |Learn what you can do with external content types and what you need to start creating them in SharePoint.  <br/> |
 | [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md) <br/> |Provides information to help get started creating external content types based on OData sources and using that data in SharePoint or Office 2013 components.  <br/> |
 | [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md) <br/> |Learn about the several sets of APIs that are provided in SharePoint, including the server object model, the various client object models, and the REST/OData web service.  <br/> |
-| [.NET client API reference for SharePoint Online](http://msdn.microsoft.com/library/88e5e1b9-eab2-4f3b-a3f2-75c96b86f1f4%28Office.15%29.aspx) <br/> |Find information about the .NET client class libraries in SharePoint.  <br/> |
-| [JavaScript API reference for SharePoint](http://msdn.microsoft.com/library/1ead2f8d-a541-4a50-89fa-f195f2ba14e5%28Office.15%29.aspx) <br/> |Find information about the JavaScript object libraries in SharePoint.  <br/> |
+| [.NET client API reference for SharePoint Online](https://msdn.microsoft.com/library/88e5e1b9-eab2-4f3b-a3f2-75c96b86f1f4%28Office.15%29.aspx) <br/> |Find information about the .NET client class libraries in SharePoint.  <br/> |
+| [JavaScript API reference for SharePoint](https://msdn.microsoft.com/library/1ead2f8d-a541-4a50-89fa-f195f2ba14e5%28Office.15%29.aspx) <br/> |Find information about the JavaScript object libraries in SharePoint.  <br/> |
    
 
 ## What can you do with the client object model?
@@ -85,7 +85,7 @@ See the articles in Table 2 for more information about what you can do with the 
 
 |**Task**|**Description**|
 |:-----|:-----|
-| [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx) <br/> |Learn how to write code to perform basic operations with the SharePoint client object model.  <br/> |
+| [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx) <br/> |Learn how to write code to perform basic operations with the SharePoint client object model.  <br/> |
 | [How to: Use the client code library to access external data in SharePoint](how-to-use-the-client-code-library-to-access-external-data-in-sharepoint.md) <br/> |Learn how to use the SharePoint client object model to work with SharePoint BCS objects using browser-based scripting.  <br/> |
    
 The following are some basic examples of tasks you can accomplish using CSOM.
@@ -215,13 +215,13 @@ For more information about using the client object model in SharePoint, see the 
 -  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
+-  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
 -  [How to: Use the client code library to access external data in SharePoint](how-to-use-the-client-code-library-to-access-external-data-in-sharepoint.md)
     
   
--  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
 -  [SharePoint: Access complex external content types with CSOM](https://code.msdn.microsoft.com/office/SharePoint-2013-Accessing-ccbc24cf)

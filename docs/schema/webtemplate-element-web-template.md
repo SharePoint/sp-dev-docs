@@ -250,7 +250,7 @@ The following includes an example of a **WebTemplate** element.
 
 ## See also
 
-- [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
+- [Working with Site Templates and Definitions](https://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
 
 
 

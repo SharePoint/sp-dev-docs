@@ -22,7 +22,7 @@ All default master pages use corev15.css when processing styles, and rely on the
 
 ## CSS in master pages
 
-The `<SharePoint:CssRegistration>` content placeholder, which corresponds to the [WebControls.CssRegistration](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webcontrols.cssregistration.aspx) class in the server-side object model, defines the CSS file. Like a reference to a master page, SharePoint replaces the tokens in the master page when the page is processed. The [WebControls.CssLink](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webcontrols.csslink.aspx) class reads the registration from the master page and inserts a `<link>` tag in the resulting HTML file that is generated.
+The `<SharePoint:CssRegistration>` content placeholder, which corresponds to the [WebControls.CssRegistration](https://msdn.microsoft.com/library/office/microsoft.sharepoint.webcontrols.cssregistration.aspx) class in the server-side object model, defines the CSS file. Like a reference to a master page, SharePoint replaces the tokens in the master page when the page is processed. The [WebControls.CssLink](https://msdn.microsoft.com/library/office/microsoft.sharepoint.webcontrols.csslink.aspx) class reads the registration from the master page and inserts a `<link>` tag in the resulting HTML file that is generated.
 
 Consider the following example.
 
@@ -33,7 +33,7 @@ Consider the following example.
 At runtime, this code is rendered as follows.
 
 ```XML
-<link rel="stylesheet" type="text/css" href="/sites/nopub/Style%20Library/en-US/Core%20Styles/contoso.css">
+<link rel="stylesheet" type="text/css" href="/sites/nopub/Style%20Library/Core%20Styles/contoso.css">
 ```
 
 The **CSSLink** class renders all style sheets when the page is rendered. If you define styles in a custom .css file that are also defined in corev15.css, they are overwritten.

@@ -55,7 +55,7 @@
     {
       "path_to_root": "sp-dev-modernization",
       "url": "https://github.com/SharePoint/sp-dev-modernization.git",
-      "branch": "master",
+      "branch": "dev",
       "branch_mapping": {}
     }
   ],

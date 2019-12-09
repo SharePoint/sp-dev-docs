@@ -98,7 +98,7 @@ The first part of preparing the back-end system is to add the Northwind sample d
   
     
     
-However, if you don't have Northwind installed, see  [Installing the Northwind Sample Database](http://msdn.microsoft.com/library/2f92cfc3-6310-4327-b2f2-8610f7385c86%28Office.15%29.aspx).
+However, if you don't have Northwind installed, see  [Installing the Northwind Sample Database](https://msdn.microsoft.com/library/2f92cfc3-6310-4327-b2f2-8610f7385c86%28Office.15%29.aspx).
   
     
     
@@ -381,7 +381,7 @@ Next, using the Visual Studio wizard, you discover the schema of the data source
   
 5. Connect the data model to the database by doing one of the following steps:
     
-1. If you do not have a database connection already configured, choose **New Connection** and create a new connection. For more information, see [How to: Create Connections to SQL Server Databases](http://msdn.microsoft.com/library/360c340d-e5a6-4a7e-a569-e95d500be43d%28Office.15%29.aspx). This SQL Server instance must have the Northwind sample database attached. Choose **Next**.
+1. If you do not have a database connection already configured, choose **New Connection** and create a new connection. For more information, see [How to: Create Connections to SQL Server Databases](https://msdn.microsoft.com/library/360c340d-e5a6-4a7e-a569-e95d500be43d%28Office.15%29.aspx). This SQL Server instance must have the Northwind sample database attached. Choose **Next**.
     
     -or-
     

@@ -105,7 +105,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**CacheSchema**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** to enable schema caching of the list when provisioning a site. The **CacheSchema** attribute is used, for example, in the global <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file to enable caching of the user list for the current site collection.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** to enable schema caching of the list when provisioning a site. The **CacheSchema** attribute is used, for example, in the global <a href="https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file to enable caching of the user list for the current site collection.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Catalog**</p></td>

@@ -1,7 +1,7 @@
 ---
 title: Publish SharePoint Add-ins
 description: Decide where to publish your SharePoint Add-ins.
-ms.date: 10/16/2019
+ms.date: 12/09/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -58,6 +58,3 @@ The following table offers a comparison of publishing to AppSource or to an add-
 -  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
 -  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md)
 -  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md)
-
-
-

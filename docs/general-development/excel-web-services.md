@@ -53,7 +53,7 @@ This section contains information about Excel Web Services and explains how to u
 > Read about the error codes for Excel Web Services alerts and the associated messages, explanations, and resolutions.
     
   
- [How to: Set Credentials](http://msdn.microsoft.com/library/fd26b635-355f-44e4-9ce8-2a3a2c3bab9b%28Office.15%29.aspx)
+ [How to: Set Credentials](https://msdn.microsoft.com/library/fd26b635-355f-44e4-9ce8-2a3a2c3bab9b%28Office.15%29.aspx)
   
     
     
@@ -67,7 +67,7 @@ This section contains information about Excel Web Services and explains how to u
 > Learn how to get an entire workbook, a snapshot of the file, or a snapshot of the viewable sheets or objects in the file by using Excel Web Services.
     
   
- [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx)
+ [How to: Save a Workbook](https://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx)
   
     
     
@@ -137,4 +137,4 @@ This section contains information about Excel Web Services and explains how to u
   
     
     
- [Excel Services Class Library and Web Service Reference](http://msdn.microsoft.com/library/5dd9fbe2-9bc3-4869-9129-83c1a067cc5f%28Office.15%29.aspx)
+ [Excel Services Class Library and Web Service Reference](https://msdn.microsoft.com/library/5dd9fbe2-9bc3-4869-9129-83c1a067cc5f%28Office.15%29.aspx)

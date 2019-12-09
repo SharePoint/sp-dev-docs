@@ -203,7 +203,7 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 
   Notice that when executing the page request, you are prompted with a warning message box with the title "Allow debug scripts?", which asks your consent to run code from localhost for security reasons. Of course, if you want to locally debug and test the solution, you have to allow it to "Load debug scripts."
 
-> Alternatively, you can create serve configuration entries in the `config/serve.json` file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
+> Alternatively, you can create serve configuration entries in the `config/serve.json` file in your project to automate the creation of the debug query string parameters as outlined in this document: [Debug SharePoint Framework solutions on modern SharePoint pages](https://docs.microsoft.com/sharepoint/dev/spfx/debug-modern-pages#debug-sharepoint-framework-extensions-on-modern-sharepoint-pages)
 
 <a name="PackageAndHostCommandSet"> </a>
 
@@ -265,7 +265,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
 
 Now you need to host the extension in a hosting environment. Office 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
 
-1. Download the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) to ensure that you have the latest version.
+1. Download the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) to ensure that you have the latest version.
 
 2. Connect to your SharePoint Online tenant by using PowerShell:
     

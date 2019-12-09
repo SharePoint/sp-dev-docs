@@ -125,7 +125,7 @@ The following example shows an XML file that declares a Client web part. For an 
 
 ## See also
 
-- [CustomAction](https://msdn.microsoft.com/en-us/library/office/ms458635.aspx)
+- [CustomAction](https://msdn.microsoft.com/library/office/ms458635.aspx)
 - [UX design for SharePoint Add-ins](../sp-add-ins/ux-design-for-sharepoint-add-ins.md)
 
 

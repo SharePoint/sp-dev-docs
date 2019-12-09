@@ -238,7 +238,7 @@ In this example, **LoginNameTextBox**, **LoginPWDTextBox**, and **LoginDomainTex
   
     
     
-For more information about how to use the **CredentialCache** class and the **NetworkCredential** class, and how to use them securely, see the Microsoft Visual Studio documentation, or [NetworkCredential Class](http://msdn.microsoft.com/library/60b63419-9606-4fdc-a30f-257ded236f16.aspx).
+For more information about how to use the **CredentialCache** class and the **NetworkCredential** class, and how to use them securely, see the Microsoft Visual Studio documentation, or [NetworkCredential Class](https://msdn.microsoft.com/library/60b63419-9606-4fdc-a30f-257ded236f16.aspx).
   
     
     

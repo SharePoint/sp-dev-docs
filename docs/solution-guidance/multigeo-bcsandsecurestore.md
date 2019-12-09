@@ -18,8 +18,8 @@ A SharePoint Multi-Geo tenant has one default geo location and one or more satel
 
 ## See also
 
-- [Business Connectivity Services in SharePoint Server](https://docs.microsoft.com/en-us/SharePoint/administration/business-connectivity-services-overview)
-- [Create or edit a Secure Store Target Application](https://support.office.com/en-us/article/Create-or-edit-a-Secure-Store-Target-Application-F724DEC2-CE28-4B76-9235-31728DCE64B5) 
+- [Business Connectivity Services in SharePoint Server](https://docs.microsoft.com/SharePoint/administration/business-connectivity-services-overview)
+- [Create or edit a Secure Store Target Application](https://support.office.com/article/Create-or-edit-a-Secure-Store-Target-Application-F724DEC2-CE28-4B76-9235-31728DCE64B5) 
 - [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)
 
 

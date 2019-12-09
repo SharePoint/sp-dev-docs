@@ -19,7 +19,7 @@ The theming experience in SharePoint was redesigned to simplify the process of c
 This article describes the issues that may occur when you try to use custom SharePoint 2010 themes, SharePoint 2010 CSS, and custom CSS with the new theming experience. It also explains the changes you have to make to your custom SharePoint 2010 themes, SharePoint 2010 CSS, and custom CSS if you want to use them in SharePoint sites.
   
 > [!NOTE] 
-> SharePoint 2010 themes can be used on site collections that are running in 2010 mode. For more information about site collection modes, see  [Plan for site collection upgrades in SharePoint](http://technet.microsoft.com/en-us/library/ff191199.aspx) or [Plan for upgrade to SharePoint](https://technet.microsoft.com/en-us/library/cc303429.aspx). 
+> SharePoint 2010 themes can be used on site collections that are running in 2010 mode. For more information about site collection modes, see  [Plan for site collection upgrades in SharePoint](https://technet.microsoft.com/library/ff191199.aspx) or [Plan for upgrade to SharePoint](https://technet.microsoft.com/library/cc303429.aspx). 
   
     
     
@@ -40,7 +40,7 @@ You cannot upgrade a THMX file from SharePoint 2010 to SharePoint. If you applie
   
     
     
-For more information about creating themes customizations, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md). You can also use the SharePoint color palette tool to help you create SharePoint designs. You can  [ download the SharePoint color palette tool](http://www.microsoft.com/en-us/download/details.aspx?id=38182) from the Microsoft Download Center.
+For more information about creating themes customizations, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md). You can also use the SharePoint color palette tool to help you create SharePoint designs. You can  [ download the SharePoint color palette tool](http://www.microsoft.com/download/details.aspx?id=38182) from the Microsoft Download Center.
   
     
     
@@ -51,7 +51,7 @@ For more information about creating themes customizations, see  [How to: Deploy 
     
     
 
-You can also decide to use one of the preinstalled SharePoint themes. For more information, see  [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx?CTT=1) on Office.com.
+You can also decide to use one of the preinstalled SharePoint themes. For more information, see  [Choose a theme for your publishing site](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx?CTT=1) on Office.com.
   
     
     
@@ -73,7 +73,7 @@ Consider the following before you decide whether to apply the SharePoint 2010 cu
     If you want to use the custom master page and custom CSS files together with the SharePoint theming experience, you must update the CSS files to use the new SharePoint color slots. If you want to access the custom master page from the themes user interface, you also have to create a master page preview file. For more information, see  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md).
     
   
-- **If the custom master page depends on SharePoint 2010 CSS files:** CSS files have changed significantly from SharePoint 2010 to SharePoint. In many cases, you will have to rework the master page so that it can work with new classes before you can successfully apply it to the upgraded site. For more information about CSS classes, see the **Using the host web CSS in apps for SharePoint** section in [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx).
+- **If the custom master page depends on SharePoint 2010 CSS files:** CSS files have changed significantly from SharePoint 2010 to SharePoint. In many cases, you will have to rework the master page so that it can work with new classes before you can successfully apply it to the upgraded site. For more information about CSS classes, see the **Using the host web CSS in apps for SharePoint** section in [SharePoint Add-ins UX design guidelines](https://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx).
     
   
 
@@ -94,7 +94,7 @@ Unmodified SharePoint 2010 CSS files and custom CSS files cannot be used on Shar
 - **New annotation**. SharePoint has a new annotation that lets you replace the background image. For more information, see  [How to: Make custom CSS files themable in SharePoint](how-to-make-custom-css-files-themable-in-sharepoint.md).
     
   
-- **New classes**. You may have to update CSS files to work with the new classes in SharePoint. For more information about CSS classes (also referred to as CSS styles), see the **Using the host web CSS in apps for SharePoint** section in [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx).
+- **New classes**. You may have to update CSS files to work with the new classes in SharePoint. For more information about CSS classes (also referred to as CSS styles), see the **Using the host web CSS in apps for SharePoint** section in [SharePoint Add-ins UX design guidelines](https://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx).
     
   
 

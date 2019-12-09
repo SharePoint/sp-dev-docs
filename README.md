@@ -2,7 +2,7 @@
 
 The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
-* [Official SharePoint Framework Documentation](http://aka.ms/spfx)
+* [Official SharePoint Framework Documentation](https://aka.ms/spfx)
 
 This repository contains the raw documents published to docs.microsoft.com site.
 
@@ -65,34 +65,34 @@ You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@off
    
 ## Get Started
 
-* [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-* [Setup your Machine](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
-* [Go build your first web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
+* [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
+* [Setup your Machine](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
+* [Go build your first web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
 
 ## Reference
-* [sp-application-base](https://docs.microsoft.com/en-us/javascript/api/sp-application-base)
-* [sp-component-base](https://docs.microsoft.com/en-us/javascript/api/sp-component-base)
-* [sp-core-library](https://docs.microsoft.com/en-us/javascript/api/sp-core-library)
-* [sp-dialog](https://docs.microsoft.com/en-us/javascript/api/sp-dialog)
-* [sp-extension-base](https://docs.microsoft.com/en-us/javascript/api/sp-extension-base)
-* [sp-http](https://docs.microsoft.com/en-us/javascript/api/sp-http)
-* [sp-listview-extensibility](https://docs.microsoft.com/en-us/javascript/api/sp-listview-extensibility)
-* [sp-odata-types](https://docs.microsoft.com/en-us/javascript/api/sp-odata-types)
-* [sp-page-context](https://docs.microsoft.com/en-us/javascript/api/sp-page-context)
-* [sp-webpart-base](https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base)
+* [sp-application-base](https://docs.microsoft.com/javascript/api/sp-application-base)
+* [sp-component-base](https://docs.microsoft.com/javascript/api/sp-component-base)
+* [sp-core-library](https://docs.microsoft.com/javascript/api/sp-core-library)
+* [sp-dialog](https://docs.microsoft.com/javascript/api/sp-dialog)
+* [sp-extension-base](https://docs.microsoft.com/javascript/api/sp-extension-base)
+* [sp-http](https://docs.microsoft.com/javascript/api/sp-http)
+* [sp-listview-extensibility](https://docs.microsoft.com/javascript/api/sp-listview-extensibility)
+* [sp-odata-types](https://docs.microsoft.com/javascript/api/sp-odata-types)
+* [sp-page-context](https://docs.microsoft.com/javascript/api/sp-page-context)
+* [sp-webpart-base](https://docs.microsoft.com/javascript/api/sp-webpart-base)
 
 ## Learn More
 
-* [Background and Philosophy](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview)
-* [Design Great Web Parts](https://docs.microsoft.com/en-us/sharepoint/dev/design/design-guidance-overview)
-* [API Docs](https://docs.microsoft.com/en-us/javascript/api/sp-application-base)
+* [Background and Philosophy](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
+* [Design Great Web Parts](https://docs.microsoft.com/sharepoint/dev/design/design-guidance-overview)
+* [API Docs](https://docs.microsoft.com/javascript/api/sp-application-base)
 
 ## Updates & Feedback
 
 To keep track of improvements to the Office 365 Framework, please take a look at:
 
 * [@SharePoint](https://twitter.com/sharepoint), [@OfficeDev](https://twitter.com/officedev) and [@OfficeDevPnP](https://twitter.com/officedevpnp) on Twitter
-* [Office Developer Blog](http://dev.office.com/blogs)
+* [Office Developer Blog](https://developer.microsoft.com/en-us/office/blogs/)
 
 Provide Feedback:
 

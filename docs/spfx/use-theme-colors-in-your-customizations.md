@@ -1,17 +1,15 @@
 ---
 title: Use theme colors in your SharePoint Framework customizations
 description: Use theme colors so that your customizations look like a part of the site by referring to the theme colors of the context site in your SharePoint Framework solution.
-ms.date: 01/24/2018
+ms.date: 10/22/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
-
 # Use theme colors in your SharePoint Framework customizations
 
 When building SharePoint Framework customizations, you should use theme colors so that your customizations look like a part of the site. This article explains how can you refer to the theme colors of the context site in your SharePoint Framework solution.
 
-> [!NOTE] 
+> [!NOTE]
 > Although this article uses a SharePoint Framework client-side web part as an example, the described techniques apply to all types of SharePoint Framework customizations.
 
 ## Fixed colors vs. theme colors
@@ -30,49 +28,45 @@ When working with fixed colors, you specify them in CSS properties, for example:
 
 ```css
 .button {
-    background-color: #0078d7;
+  background-color: #0078d7;
 }
 ```
-
-<br/>
 
 To use a theme color instead, replace the fixed color with a theme token:
 
 ```css
 .button {
-    background-color: "[theme: themePrimary, default: #0078d7]";
+  background-color: "[theme: themePrimary, default: #0078d7]";
 }
 ```
 
-<br/>
-
-When your SharePoint Framework customization is loading on the page, the **@microsoft/load-themed-styles** package, which is a part of the SharePoint Framework, looks for theme tokens in CSS files and tries to replace them with the corresponding color from the current theme. If the value for the specified token is not available, SharePoint Framework uses the value specified by using the **default** parameter instead, which is why it's important that you always include it.
+When your SharePoint Framework customization is loading on the page, the **\@microsoft/load-themed-styles** package, which is a part of the SharePoint Framework, looks for theme tokens in CSS files and tries to replace them with the corresponding color from the current theme. If the value for the specified token is not available, SharePoint Framework uses the value specified by using the **default** parameter instead, which is why it's important that you always include it.
 
 The following theme tokens are available for you to use:
 
-Token|Default value on a modern team site using the red palette|Remarks
------|--------------------------------|-----------
-`backgroundImageUri`|`none`|
-`accent`|`#ee0410`|
-`themeDark`|`#b3030c`|Used for action icons in the command bar and as a hover color.
-`themeDarkAlt`|`#b3030c`|
-`themeDarker`|`#770208`|
-`themeLight`|`#fd969b`|
-`themeLightAlt`|`#fd969b`|
-`themeLighter`|`#fecacd`|
-`themeLighterAlt`|`#fecacd`|
-`themePrimary`|`#ee0410`|Primary theme color. Used for icons and default buttons.
-`themeSecondary`|`#fc6169`|
-`themeTertiary`|`#fd969b`|
+|        Token         | Default value on a modern team site using the red palette |                            Remarks                             |
+| -------------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
+| `backgroundImageUri` | `none`                                                    |                                                                |
+| `accent`             | `#ee0410`                                                 |                                                                |
+| `themeDark`          | `#b3030c`                                                 | Used for action icons in the command bar and as a hover color. |
+| `themeDarkAlt`       | `#b3030c`                                                 |                                                                |
+| `themeDarker`        | `#770208`                                                 |                                                                |
+| `themeLight`         | `#fd969b`                                                 |                                                                |
+| `themeLightAlt`      | `#fd969b`                                                 |                                                                |
+| `themeLighter`       | `#fecacd`                                                 |                                                                |
+| `themeLighterAlt`    | `#fecacd`                                                 |                                                                |
+| `themePrimary`       | `#ee0410`                                                 | Primary theme color. Used for icons and default buttons.       |
+| `themeSecondary`     | `#fc6169`                                                 |                                                                |
+| `themeTertiary`      | `#fd969b`                                                 |                                                                |
 
-> [!NOTE] 
+> [!NOTE]
 > There are more tokens registered with the SharePoint Framework. While all of them have values specified on classic sites, only the subset mentioned earlier has values on modern SharePoint sites. For the complete list of available tokens, see the value of the `window.__themeState__.theme` property by using the console in your web browser's developer tools.
 
 ## Use theme colors in your customizations
 
 When you scaffold a new SharePoint Framework client-side web part, by default, it uses the fixed blue palette. The following steps describe the necessary adjustments to have the web part use theme colors instead.
 
-> [!NOTE] 
+> [!NOTE]
 > The following steps apply to a SharePoint Framework client-side web part named _HelloWorld_ built by using React. For web parts built using different libraries and other types of customizations, you might need to adjust the modifications accordingly.
 
 ### To use theme colors
@@ -81,35 +75,31 @@ When you scaffold a new SharePoint Framework client-side web part, by default, i
 
     ![The 'ms-bgColor-themeDark' class selected in Visual Studio Code editor](../images/themed-styles-ms-bgcolor-themedark-class.png)
 
-2. In the same folder, open the **HelloWorld.module.scss** file. Change the `.row` selector to:
+1. In the same folder, open the **HelloWorld.module.scss** file. Change the `.row` selector to:
 
     ```css
     .row {
-        padding: 20px;
-        background-color: "[theme: themeDark, default: #005a9e]";
+      padding: 20px;
+      background-color: "[theme: themeDark, default: #005a9e]";
     }
     ```
-
-    <br/>
 
     ![The .row selector extended with background color](../images/themed-styles-row-class.png)
 
-3. In the `.button` selector, change the `background-color` and `border-color` properties to:
+1. In the `.button` selector, change the `background-color` and `border-color` properties to:
 
     ```css
     .button {
-        /* ... */
-        background-color: "[theme: themePrimary, default: #0078d7]";
-        border-color: "[theme: themePrimary, default: #0078d7]";
-        /* ... */
+      /* ... */
+      background-color: "[theme: themePrimary, default: #0078d7]";
+      border-color: "[theme: themePrimary, default: #0078d7]";
+      /* ... */
     }
     ```
 
-    <br/>
-
     ![The .button selector updated with references to theme colors](../images/themed-styles-button-class.png)
 
-4. When you add the web part to a site, the colors used by the web part automatically adapt to the theme colors used by the current site.
+1. When you add the web part to a site, the colors used by the web part automatically adapt to the theme colors used by the current site.
 
     ![Side-by-side view of the same web part displayed in two sites using different colors. The web part follows the color scheme of each website](../images/themed-styles-side-by-side.png)
 

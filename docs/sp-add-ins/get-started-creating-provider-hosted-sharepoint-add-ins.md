@@ -30,11 +30,11 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
 
 ### Get the tools
 
-- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
  
-- Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
+- Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](https://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015). 
 
-Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/).
+Reference [earlier versions of Visual Studio](https://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/visualstudio/).
 
 <a name="o365_signup"> </a>
 
@@ -47,9 +47,9 @@ Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/
 
 To get an Office 365 plan: 
 
-- [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/en-us/office/dev-program).
+- [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/office/dev-program).
 
-- See the [Office 365 Developer Program documentation](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
+- See the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 ### Open your developer site 
  
@@ -97,7 +97,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
 
 1. Open the AppManifest.xml file. On the **Permissions** tab, specify the **Site Collection** scope and the **Read** permission level.
 
-2. Delete any markup inside the `<body>` tag of the Pages/Default.aspx file of your web application, and then add the following HTML and ASP.NET controls inside the `<body>`. This sample uses the [UpdatePanel](http://msdn2.microsoft.com/EN-US/library/bb359258) control to enable partial page rendering.
+2. Delete any markup inside the `<body>` tag of the Pages/Default.aspx file of your web application, and then add the following HTML and ASP.NET controls inside the `<body>`. This sample uses the [UpdatePanel](http://msdn2.microsoft.com/library/bb359258) control to enable partial page rendering.
     
     ```HTML
      <form id="form1" runat="server">
@@ -153,7 +153,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
        using System.Xml;
     ```
 
-4. In the Default.aspx.cs file of your web application, add these variables inside the [Page](http://msdn2.microsoft.com/EN-US/library/dfbt9et1) class.
+4. In the Default.aspx.cs file of your web application, add these variables inside the [Page](http://msdn2.microsoft.com/library/dfbt9et1) class.
     
    ```csharp
      SharePointContextToken contextToken;
@@ -165,7 +165,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
      List<string> listOfLists = new List<string>();
    ```
 
-5. Add the `RetrieveWithCSOM` method inside the [Page](http://msdn2.microsoft.com/EN-US/library/dfbt9et1) class. This method uses the SharePoint CSOM to retrieve information about your site and display it on the page.
+5. Add the `RetrieveWithCSOM` method inside the [Page](http://msdn2.microsoft.com/library/dfbt9et1) class. This method uses the SharePoint CSOM to retrieve information about your site and display it on the page.
     
     ```csharp
         // This method retrieves information about the host web by using the CSOM.
@@ -216,7 +216,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
       }
     ```
 
-6. Add the `CSOM_Click` method inside the [Page](http://msdn2.microsoft.com/EN-US/library/dfbt9et1) class. This method triggers the event that occurs when the user clicks the **Populate Data** link.
+6. Add the `CSOM_Click` method inside the [Page](http://msdn2.microsoft.com/library/dfbt9et1) class. This method triggers the event that occurs when the user clicks the **Populate Data** link.
     
     ```csharp
       protected void CSOM_Click(object sender, EventArgs e)

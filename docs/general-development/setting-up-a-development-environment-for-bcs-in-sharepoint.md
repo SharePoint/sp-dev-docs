@@ -54,7 +54,7 @@ Because these solutions don't require code, you can use SharePoint Designer 2013
 <a name="SP15SettingupdevenvBCS_addresources"> </a>
 
 
--  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx)
+-  [Set up an on-premises development environment for SharePoint Add-ins](https://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx)
     
   
 -  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)

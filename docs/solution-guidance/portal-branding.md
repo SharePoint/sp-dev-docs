@@ -55,7 +55,7 @@ Consider the following general principles when branding portals in a SharePoint 
 
 - **Avoid customizing master pages**. Updates to the service may affect the structure of out-of-the-box master pages. If you have implemented a custom master page by copying the contents of any out-of-the-box master page, you must further monitor if this out-of-the-box master page is not updated, and re-implement these changes in your custom master page. Otherwise, some SharePoint functionality may behave incorrectly when your custom master page is in use. That's why customizing master pages leads to additional risks and maintenance costs, and we recommend that you avoid it when possible.
 
-- **Customized branding of personal sites (OneDrive for Business sites) is not supported**. You can [apply custom color schemes via Office 365 tenant-level branding settings](https://support.office.com/en-us/article/Customize-the-Office-365-theme-for-your-organization-8275da91-7a48-4591-94ab-3123a3f79530)). Note that this applies to the default modern experience of OneDrive for Business.
+- **Customized branding of personal sites (OneDrive for Business sites) is not supported**. You can [apply custom color schemes via Office 365 tenant-level branding settings](https://support.office.com/article/Customize-the-Office-365-theme-for-your-organization-8275da91-7a48-4591-94ab-3123a3f79530)). Note that this applies to the default modern experience of OneDrive for Business.
 
 - **SharePoint Online portals must be considered a part of the overall Office 365 ecosystem**. That's why every portal now has an Office 365 Suite Bar, and customizing it is **not** supported (see the section [Office 365 Suite Bar](#office-365-suite-bar)).
 
@@ -76,7 +76,7 @@ These techniques can be used to "get" the needed colors and allow for flexible c
 
 These techniques are demonstrated in the following articles and PnP samples:
 
-- [Customize the Office 365 theme for your organization](https://support.office.com/en-us/article/Customize-the-Office-365-theme-for-your-organization-8275da91-7a48-4591-94ab-3123a3f79530)
+- [Customize the Office 365 theme for your organization](https://support.office.com/article/Customize-the-Office-365-theme-for-your-organization-8275da91-7a48-4591-94ab-3123a3f79530)
 - [Theme management using CSOM (GitHub)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.DeployCustomThemeWeb)
 - [Apply branding (GitHub)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ApplyBranding)
 - [AlternateCSSUrl & SiteLogoUrl properties in Web object (GitHub)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
@@ -90,7 +90,7 @@ Follow these recommendations when developing custom CSS files for SharePoint:
 
 ### Office 365 sign-in page
 
-Customers can apply company branding to the Office 365 sign-in page. The process is described in [Add your company branding to Office 365 sign-in page](https://support.office.com/en-us/article/Add-your-company-branding-to-Office-365-Sign-In-Page-a1229cdb-ce19-4da5-90c7-2b9b146aef0a).
+Customers can apply company branding to the Office 365 sign-in page. The process is described in [Add your company branding to Office 365 sign-in page](https://support.office.com/article/Add-your-company-branding-to-Office-365-Sign-In-Page-a1229cdb-ce19-4da5-90c7-2b9b146aef0a).
 
 ### Office 365 Suite Bar
 

@@ -119,7 +119,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 Applications created to work as a declarative rules-based, code-free workflow editor can use the <span sdata="cer" target="M:websvcWebPartPages.WebPartPagesWebService.AssociateWorkflowMarkup(System.String,System.String ">**AssociateWorkflowMarkup(String, String)**</span> method of the <span sdata="cer" target="N:websvcWebPartPages">**websvcWebPartPages**</span> Web Service to create a workflow template and associate it to a SharePoint list specifying a workflow markup file, a workflow configuration file, and optionally, a workflow rules markup file.
 
-For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx).
+For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx).
 
 ## Example
 
@@ -139,9 +139,9 @@ The following example shows a Template element for a workflow configuration.
 ## See also
 
 - [Workflow configuration schema reference](workflow-configuration-schema-reference.md)
-- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/en-us/library/office/ms414613.aspx)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Office SharePoint Designer Overview](https://msdn.microsoft.com/en-us/library/office/ms454098.aspx)
+- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
 
 
 

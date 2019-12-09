@@ -20,13 +20,13 @@ The Business Connectivity Services (BCS) hybrid connectivity capability lets Sha
   
     
     
-For a complete description of how to configure a working hybrid solution, see  [Hybrid for SharePoint](http://technet.microsoft.com/en-us/library/jj838715.aspx). This series of articles walks you through all the requirements of configuring data sources, reverse proxies, search, security, networking, and everything else needed to set up the end-to-end scenario.
+For a complete description of how to configure a working hybrid solution, see  [Hybrid for SharePoint](https://technet.microsoft.com/library/jj838715.aspx). This series of articles walks you through all the requirements of configuring data sources, reverse proxies, search, security, networking, and everything else needed to set up the end-to-end scenario.
   
     
     
 
 > **Caution:**
-> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](http://www.microsoft.com/en-us/microsoftservices/deploy.aspx). 
+> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](http://www.microsoft.com/microsoftservices/deploy.aspx). 
   
     
     
@@ -119,10 +119,10 @@ For a complete tutorial of how to set this up, see the following:
     
     
 
--  [Getting Started With OData Part 1: Building an OData Service](http://msdn.microsoft.com/en-us/data/gg601462)
+-  [Getting Started With OData Part 1: Building an OData Service](https://msdn.microsoft.com/data/gg601462)
     
   
--  [Quickstart (WCF Data Services)](http://msdn.microsoft.com/en-us/library/cc668796.aspx)
+-  [Quickstart (WCF Data Services)](https://msdn.microsoft.com/library/cc668796.aspx)
     
   
 
@@ -201,10 +201,10 @@ For information about deploying SharePoint Add-ins, see the following:
     
     
 
--  [Deploying and installing SharePoint Add-ins: methods and options](http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90%28Office.15%29.aspx)
+-  [Deploying and installing SharePoint Add-ins: methods and options](https://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90%28Office.15%29.aspx)
     
   
--  [Publish SharePoint Add-ins by using Visual Studio](http://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)
+-  [Publish SharePoint Add-ins by using Visual Studio](https://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)
     
   
 You can also take the BDCM file created for the external content type and extract that to be used at any level above the app. This is demonstrated in  [How to: Convert an add-in-scoped external content type to tenant-scoped](how-to-convert-an-add-in-scoped-external-content-type-to-tenant-scoped.md).
@@ -216,7 +216,7 @@ You can also take the BDCM file created for the external content type and extrac
 <a name="bk_addresources"> </a>
 
 
--  [Hybrid for SharePoint](http://technet.microsoft.com/en-us/library/jj838715.aspx)
+-  [Hybrid for SharePoint](https://technet.microsoft.com/library/jj838715.aspx)
     
   
 -  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
@@ -225,7 +225,7 @@ You can also take the BDCM file created for the external content type and extrac
 -  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
--  [Publish SharePoint Add-ins by using Visual Studio](http://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)
+-  [Publish SharePoint Add-ins by using Visual Studio](https://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)
     
   
 

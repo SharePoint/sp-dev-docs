@@ -74,7 +74,7 @@ None.
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

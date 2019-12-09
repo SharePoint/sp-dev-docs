@@ -80,11 +80,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 The initiation form specified should contain a data field for each [Field Element (Field)](field-element-field.md) element defined in the [Fields Element (WorkflowConfig)](fields-element-workflowconfig.md) section of the workflow configuration file. If a data field is not present, the default value is used when the workflow starts.
 
-After the workflow has been associated with a specific SharePoint list, the contents of the URL attribute are stored in the [InstantiationUrl](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowtemplate.instantiationurl.aspx) property of the [SPWorkflowTemplate](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowtemplate.aspx) and [SPWorkflowAssociation](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowassociation.aspx) objects for the workflow.
+After the workflow has been associated with a specific SharePoint list, the contents of the URL attribute are stored in the [InstantiationUrl](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowtemplate.instantiationurl.aspx) property of the [SPWorkflowTemplate](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowtemplate.aspx) and [SPWorkflowAssociation](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowassociation.aspx) objects for the workflow.
 
 Applications created to work as a declarative rules-based, code-free workflow editor can use the **AssociateWorkflowMarkup(String, String)** method of the **websvcWebPartPages** Web Service to create a workflow template and associate it to a SharePoint list specifying a workflow markup file, a workflow configuration file, and optionally, a workflow rules markup file.
 
-For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx).
+For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx).
 
 ## Example
 
@@ -116,8 +116,8 @@ This example has been edited for clarity.
 ## See also
 
 - [Workflow configuration schema reference](workflow-configuration-schema-reference.md)
-- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/en-us/library/office/ms414613.aspx)
-- [Office SharePoint Designer Overview](https://msdn.microsoft.com/en-us/library/office/ms454098.aspx)
+- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
+- [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
 
 
 

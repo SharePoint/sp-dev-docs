@@ -19,19 +19,19 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ### Articles
 
-- [Authentication, authorization, and security in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/authentication-authorization-and-security-in-sharepoint)
-- [Authorization and authentication of SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins)
-- [Three authorization systems for SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/three-authorization-systems-for-sharepoint-add-ins)
-- [Add-in permissions in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-permissions-in-sharepoint)
-- [Cross-domain images in SharePoint provider-hosted add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/cross-domain-images-in-sharepoint-provider-hosted-add-ins)
-- [Set external sharing on site collections in Office 365](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/set-external-sharing-on-site-collections-in-office-365)
-- [Alternative model for web app policies in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-webapppolicies)
-- [Add a Security Trim snippet in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-add-a-security-trim-snippet-in-sharepoint)
-- [SharePoint Framework (SPFx) enterprise guidance](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/enterprise-guidance)
-- [Secure data access and client object models for SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins)
-- [Important aspects of the SharePoint Add-in architecture and development landscape](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap)
-- [Authorize provider-hosted add-in users at run time by using OAuth](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth)
-- [Build mobile apps for other platforms using SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/build-mobile-apps-for-other-platforms-using-sharepoint)
+- [Authentication, authorization, and security in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/authentication-authorization-and-security-in-sharepoint)
+- [Authorization and authentication of SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins)
+- [Three authorization systems for SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/three-authorization-systems-for-sharepoint-add-ins)
+- [Add-in permissions in SharePoint](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/add-in-permissions-in-sharepoint)
+- [Cross-domain images in SharePoint provider-hosted add-ins](https://docs.microsoft.com/sharepoint/dev/solution-guidance/cross-domain-images-in-sharepoint-provider-hosted-add-ins)
+- [Set external sharing on site collections in Office 365](https://docs.microsoft.com/sharepoint/dev/solution-guidance/set-external-sharing-on-site-collections-in-office-365)
+- [Alternative model for web app policies in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-webapppolicies)
+- [Add a Security Trim snippet in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-add-a-security-trim-snippet-in-sharepoint)
+- [SharePoint Framework (SPFx) enterprise guidance](https://docs.microsoft.com/sharepoint/dev/spfx/enterprise-guidance)
+- [Secure data access and client object models for SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins)
+- [Important aspects of the SharePoint Add-in architecture and development landscape](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap)
+- [Authorize provider-hosted add-in users at run time by using OAuth](https://docs.microsoft.com/sharepoint/dev/solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth)
+- [Build mobile apps for other platforms using SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/build-mobile-apps-for-other-platforms-using-sharepoint)
 - [Moving Full Trust Code to the Cloud](https://github.com/OfficeDev/TrainingContent/blob/master/SharePoint/AddIns/04%20Moving%20Full%20Trust%20Code%20to%20the%20cloud%20using%20repeatable%20patterns%20and%20best%20practices/Lab.md)
 - [A Series of Visual Studio Solutions to Accompany the MSDN Tutorial Series about Provider-hosted Add-ins](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials)
 
@@ -58,12 +58,12 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ### Articles
 
-- [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint)
-- [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly)
-- [How to provide add-in app only tenant administrative permissions in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online)
-- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
-- [Developing using Tenant permissions with App-Only in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online)
-- [Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
+- [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint)
+- [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-apponly)
+- [How to provide add-in app only tenant administrative permissions in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online)
+- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
+- [Developing using Tenant permissions with App-Only in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online)
+- [Getting Started with azure WebJobs ("timer jobs") for your Office 365 Sites](https://docs.microsoft.com/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 
 ### Samples
 
@@ -77,9 +77,9 @@ If your solution allows users to perform actions for which they don't have adequ
 
 ### Articles
 
-- [Elevated privileges in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/elevated-privileges-in-sharepoint-add-ins)
-- [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint#Scenario)
-- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
+- [Elevated privileges in SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/solution-guidance/elevated-privileges-in-sharepoint-add-ins)
+- [Add-in authorization policy types in SharePoint](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/add-in-authorization-policy-types-in-sharepoint#Scenario)
+- [App-only and elevated privileges in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
 
 ## Azure AD Authentication/Authorization
 
@@ -89,7 +89,7 @@ When using SharePoint Online you can define applications in Azure AD and these a
 
 ### Articles
 
-- [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly)
+- [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-apponly)
 
 ### Videos
 
@@ -108,6 +108,6 @@ When your Office 365 tenant is hosted in an specific environment like the German
 
 ### Articles
 
-- [Authorization considerations for tenants hosted in the Germany, China or US Government environments](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/extending-sharepoint-online-for-germany-china-usgovernment-environments)
-- [Learn about Office 365 Germany](https://support.office.com/en-US/article/Learn-about-Office-365-Germany-8a5a4bbc-667a-4cac-8769-d8ac9015db4c)
-- [Learn about Office 365 operated by 21Vianet](https://support.office.com/en-us/article/Learn-about-Office-365-operated-by-21Vianet-A8AB5061-3346-4DA0-BB7C-5260822B53AE)
+- [Authorization considerations for tenants hosted in the Germany, China or US Government environments](https://docs.microsoft.com/sharepoint/dev/solution-guidance/extending-sharepoint-online-for-germany-china-usgovernment-environments)
+- [Learn about Office 365 Germany](https://support.office.com/article/Learn-about-Office-365-Germany-8a5a4bbc-667a-4cac-8769-d8ac9015db4c)
+- [Learn about Office 365 operated by 21Vianet](https://support.office.com/article/Learn-about-Office-365-operated-by-21Vianet-A8AB5061-3346-4DA0-BB7C-5260822B53AE)

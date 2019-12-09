@@ -33,7 +33,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**AcceptHeader** <br/> |Optional **Text**. Specifies the application to use to open a file in a document library.<br/><br/>If HTML viewing is enabled, Microsoft SharePoint Foundation compares the value of this attribute with the Accept-Header HTTP header of the request, and either opens the document in its native format through the specified application, or offers to convert the document to HTML.<br/><br/>For more information, see [Programming with the Microsoft.HtmlTrans Namespace](http://msdn.microsoft.com/library/ed3b5457-0dbd-49f7-b60e-545b44d4a2b2%28Office.15%29.aspx).  <br/> |
+|**AcceptHeader** <br/> |Optional **Text**. Specifies the application to use to open a file in a document library.<br/><br/>If HTML viewing is enabled, Microsoft SharePoint Foundation compares the value of this attribute with the Accept-Header HTTP header of the request, and either opens the document in its native format through the specified application, or offers to convert the document to HTML.<br/><br/>For more information, see [Programming with the Microsoft.HtmlTrans Namespace](https://msdn.microsoft.com/library/ed3b5457-0dbd-49f7-b60e-545b44d4a2b2%28Office.15%29.aspx).  <br/> |
 |**Extension** <br/> |Optional **Text**. Specifies the file name extension for the document type.  <br/> |
 |**HandlerUrl** <br/> |Optional **Text**. Specifies the URL of a converter program used by the server to handle a request when the client computer does not have Microsoft Office system installed.  <br/> |
 |**ProgId** <br/> |Optional **Text**. Specifies the name of the ActiveX control used to open the type of document.  <br/> |

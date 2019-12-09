@@ -22,9 +22,9 @@ This article provides information about the development and design options that 
 |Design package|Designed for use with SharePoint publishing sites; contains branding assets that are stored in Design Manager.| [SharePoint Composites Handbook](../general-development/sharepoint-composites-handbook.md)|
 |Remote provisioning|A model that involves provisioning sites by using templates and code that runs outside SharePoint in a provider-hosted add-in.|- [Site provisioning techniques and remote provisioning in SharePoint 2013](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/)<br/>- [Self-Service Site Provisioning using Apps for SharePoint 2013](https://blogs.msdn.microsoft.com/richard_dizeregas_blog/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013/)|
 |Root web|The first web inside a site collection. The root web is also sometimes referred to as the Web Application Root.||
-|Sandboxed solutions|.wsp files that contain assemblies, other non-compiled components, and an XML manifest file. A sandbox solution uses partial-trust code.| [Sandboxed solutions](https://msdn.microsoft.com/en-us/library/ff798382.aspx)|
+|Sandboxed solutions|.wsp files that contain assemblies, other non-compiled components, and an XML manifest file. A sandbox solution uses partial-trust code.| [Sandboxed solutions](https://msdn.microsoft.com/library/ff798382.aspx)|
 |SharePoint Designer |An HTML designer and design asset management tool for managing branding elements in SharePoint. SharePoint Designer mainly supports custom workflows.|- [What's new with SharePoint site development](../general-development/what-s-new-with-sharepoint-site-development.md)|
-|.wsp file|A SharePoint solution file. A .wsp is a .cab file that categorizes site assets and organizes them with a manifest.xml file.| [Solutions overview](https://msdn.microsoft.com/en-us/library/office/aa543214%28v=office.14%29.aspx)|
+|.wsp file|A SharePoint solution file. A .wsp is a .cab file that categorizes site assets and organizes them with a manifest.xml file.| [Solutions overview](https://msdn.microsoft.com/library/office/aa543214%28v=office.14%29.aspx)|
 
 ## Development options
 
@@ -34,7 +34,7 @@ When you use SharePoint as a development platform, you need to create an environ
 
 |Option|Considerations|
 |:-----|:-----|
-|[Team Foundation Server](https://docs.microsoft.com/en-us/visualstudio/releasenotes/tfs2017-relnotes)|- Located on [Visual Studio Team Services](https://www.visualstudio.com/vso/) for easy access.<br/>- Includes a centralized source code and life cycle management system.|
+|[Team Foundation Server](https://docs.microsoft.com/visualstudio/releasenotes/tfs2017-relnotes)|- Located on [Visual Studio Team Services](https://www.visualstudio.com/vso/) for easy access.<br/>- Includes a centralized source code and life cycle management system.|
 |Cloud test and acceptance environments|- Use a separate tenant for acceptance testing.<br/>- Separate test environment for on-premises testing.|
 |On-premises test and acceptance environments|- Use for on-premises SharePoint deployments.<br/>- Hosted by customer on-premises or in Microsoft Azure.|
  
@@ -62,7 +62,7 @@ The design package includes all files that have been customized. For example, if
     
 If you applied composed looks to a site before you applied custom branding, the design package will include files with .themedcss and .themedpng file extensions. To apply the branding assets in a design package to a SharePoint site, export the design package and use the remote provisioning pattern to apply the contents of the design package.
 
-SharePoint includes the APIs that you can use to work with design packages. If you're using either SSOM, CSOM, or JSOM, you can use the  [DesignPackage](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.aspx) or [DesignPackageInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.designpackageinfo.aspx) classes.
+SharePoint includes the APIs that you can use to work with design packages. If you're using either SSOM, CSOM, or JSOM, you can use the  [DesignPackage](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.aspx) or [DesignPackageInfo](https://msdn.microsoft.com/library/office/microsoft.sharepoint.publishing.designpackageinfo.aspx) classes.
 
 #### Using the design package CSOM to apply the contents of design packages to a SharePoint site
 
@@ -172,7 +172,7 @@ namespace ProviderSharePointAppWeb
 
 You can use SharePoint CSOM functionality to install and uninstall design packages and export design packages to SharePoint Online sites. 
 
-For example, use the [SP.Publishing.DesignPackage.install Method (sp.publishing)](https://msdn.microsoft.com/library/26500127-210f-6c52-c0de-cf2894939a91.aspx) or [DesignPackage.Install method](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.install.aspx) to install the design package on the site, as shown in the following example. 
+For example, use the [SP.Publishing.DesignPackage.install Method (sp.publishing)](https://msdn.microsoft.com/library/26500127-210f-6c52-c0de-cf2894939a91.aspx) or [DesignPackage.Install method](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.install.aspx) to install the design package on the site, as shown in the following example. 
 
 
 ```cs
@@ -186,7 +186,7 @@ public static void Install(
 
 <br/>
 
-The  [DesignPackageInfo](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.publishing.designpackageinfo.aspx) class specifies metadata that describe the contents of the design package to be installed. Use the [Uninstall](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.uninstall.aspx) method to uninstall the design package from the site, as shown in the following example.
+The  [DesignPackageInfo](https://msdn.microsoft.com/library/office/microsoft.sharepoint.publishing.designpackageinfo.aspx) class specifies metadata that describe the contents of the design package to be installed. Use the [Uninstall](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.uninstall.aspx) method to uninstall the design package from the site, as shown in the following example.
 
 ```cs
 public static void UnInstall(
@@ -198,7 +198,7 @@ public static void UnInstall(
 
 <br/>
 
-If you need to brand a team site with the publishing feature enabled, or a publishing site on SharePoint Online, you can use the [ExportEnterprise](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportenterprise.aspx) or the [ExportSmallBusiness](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.publishing.designpackage.exportsmallbusiness.aspx) method to export design packages for site templates to the Solution Gallery. Use the **ExportSmallBusiness** method with the small business site template, and use the **ExportEnterprise** method for all other site templates, as shown in the following example. 
+If you need to brand a team site with the publishing feature enabled, or a publishing site on SharePoint Online, you can use the [ExportEnterprise](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.exportenterprise.aspx) or the [ExportSmallBusiness](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.exportsmallbusiness.aspx) method to export design packages for site templates to the Solution Gallery. Use the **ExportSmallBusiness** method with the small business site template, and use the **ExportEnterprise** method for all other site templates, as shown in the following example. 
 
 ```cs
 public static ClientResult<DesignPackageInfo> ExportEnterprise(

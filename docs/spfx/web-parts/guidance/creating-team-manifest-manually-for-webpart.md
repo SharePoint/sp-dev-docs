@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams
 
-You can create the Microsoft Teams app manifest file using the [Teams App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-app-studio) in the Microsoft Teams or you can also download a sample file from the [sp-dev-docs GitHub repository](https://github.com/SharePoint/sp-dev-docs/blob/master/assets/teams-tab-manual.zip) and modify that based on your requirements.
+You can create the Microsoft Teams app manifest file using the [Teams App Studio](https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-app-studio) in the Microsoft Teams or you can also download a sample file from the [sp-dev-docs GitHub repository](https://github.com/SharePoint/sp-dev-docs/blob/master/assets/teams-tab-manual.zip) and modify that based on your requirements.
 
 > [!NOTE]
 > You may notice a menu item **Sync to Teams** in the App Catalog ribbon:
@@ -23,16 +23,16 @@ To side load a SharePoint Framework web part as a Microsoft Teams application, y
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
   "manifestVersion": "1.2",
   "packageName": "{{SPFX_COMPONENT_ALIAS}}",
-  "id": "aa3fecf0-1fd0-4751-aba1-12314dc3a22f",
+  "id": "{{SPFX_COMPONENT_ID}}",
   "version": "0.1",
   "developer": {
     "name": "Parker Porcupine",
-    "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
-    "privacyUrl": "https://privacy.microsoft.com/en-us/privacystatement",
-    "termsOfUseUrl": "https://www.microsoft.com/en-us/servicesagreement"
+    "websiteUrl": "https://products.office.com/sharepoint/collaboration",
+    "privacyUrl": "https://privacy.microsoft.com/privacystatement",
+    "termsOfUseUrl": "https://www.microsoft.com/servicesagreement"
   },
   "name": {
     "short": "{{SPFX_COMPONENT_NAME}}"
@@ -95,22 +95,22 @@ Notice in the template manifest file above, there are multiple placeholders that
 
 Notice the `componentId` query parameter in the `configurulationUrl`. You should not update any other sections of the URL as it's dynamically replaced when the tab is rendered from the context of SharePoint.
 
-See more details around the Microsoft Teams manifest options from the [Microsoft Teams developer guidance](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-package).
+See more details around the Microsoft Teams manifest options from the [Microsoft Teams developer guidance](https://docs.microsoft.com/microsoftteams/platform/concepts/apps/apps-package).
 
 Below json structure demonstrates sample manifest file content.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
   "manifestVersion": "1.2",
   "packageName": "SpFxTeamsTogetherWebPart",
-  "id": "aa3fecf0-1fd0-4751-aba1-12314dc3a22f",
+  "id": "b7771434-9587-4a79-9990-48c310f78a3d",
   "version": "0.1",
   "developer": {
     "name": "Parker Porcupine",
-    "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
-    "privacyUrl": "https://privacy.microsoft.com/en-us/privacystatement",
-    "termsOfUseUrl": "https://www.microsoft.com/en-us/servicesagreement"
+    "websiteUrl": "https://products.office.com/sharepoint/collaboration",
+    "privacyUrl": "https://privacy.microsoft.com/privacystatement",
+    "termsOfUseUrl": "https://www.microsoft.com/servicesagreement"
   },
   "name": {
     "short": "SPFx Teams Together"

@@ -18,7 +18,7 @@ Learn about the Machine Translation Service, which is a new service application 
     
     
 
-Machine Translation Service is a new service application in SharePoint that provides automatic machine translation of files and sites. When the Machine Translation Service application processes a translation request, it forwards the request to the  [Microsoft Translator](http://www.microsoft.com/en-us/translator/) cloud-hosted machine translation service, where the actual translation work is performed. This cloud-service also powers the Microsoft Office, Lync, Yammer and Bing translation features.
+Machine Translation Service is a new service application in SharePoint that provides automatic machine translation of files and sites. When the Machine Translation Service application processes a translation request, it forwards the request to the  [Microsoft Translator](http://www.microsoft.com/translator/) cloud-hosted machine translation service, where the actual translation work is performed. This cloud-service also powers the Microsoft Office, Lync, Yammer and Bing translation features.
   
     
     
@@ -31,7 +31,7 @@ The Machine Translation Service application processes translation requests async
 
 ```
 
-$tj = get-sptimerjob "Sharepoint Translation Services"
+$tj = get-sptimerjob "SharePoint Translation Services"
 $tj.Runnow()
 ```
 
@@ -43,7 +43,7 @@ Synchronous translation requests are processed as soon as they are submitted.
 ### Shared components with Word Automation Services
 <a name="TranslationSvc_SharedWAS"> </a>
 
-The Machine Translation Service architecture shares several components from the Microsoft Word Automation Services architecture. For more information about the Word Automation Services architecture, see  [Word Automation Services Architecture](http://msdn.microsoft.com/library/567bf68d-46bb-4ee8-981d-186549b9e5b8%28Office.15%29.aspx).
+The Machine Translation Service architecture shares several components from the Microsoft Word Automation Services architecture. For more information about the Word Automation Services architecture, see  [Word Automation Services Architecture](https://msdn.microsoft.com/library/567bf68d-46bb-4ee8-981d-186549b9e5b8%28Office.15%29.aspx).
   
     
     
@@ -239,7 +239,7 @@ The Machine Translation Service CSOM includes a .NET managed client-side object 
   
     
     
-For more information about the SharePoint CSOM, see  [SharePoint 2010 Client Object Model](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the **ClientContext** object, which is the entry point to the CSOM, see [Client Context as Central Object](http://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx).
+For more information about the SharePoint CSOM, see  [SharePoint 2010 Client Object Model](https://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the **ClientContext** object, which is the entry point to the CSOM, see [Client Context as Central Object](https://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx).
   
     
     
@@ -647,7 +647,7 @@ clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySuccee
 ## Machine Translation Service REST service
 <a name="TranslationSvc_REST"> </a>
 
-SharePoint includes a Representational State Transfer (REST) service that enables you to remotely interact with the Machine Translation Service application by using any technology that supports REST web requests. For general information about REST in SharePoint, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
+SharePoint includes a Representational State Transfer (REST) service that enables you to remotely interact with the Machine Translation Service application by using any technology that supports REST web requests. For general information about REST in SharePoint, see  [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
   
     
     
