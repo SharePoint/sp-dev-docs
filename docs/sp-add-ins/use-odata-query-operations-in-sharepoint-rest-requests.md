@@ -57,7 +57,7 @@ Use the [$orderby](http://www.odata.org/documentation/odata-version-2-0/uri-conv
 
 ## Page through returned items
 
-Use the [$top](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#TopSystemQueryOption) and [$skiptoken](http://msdn.microsoft.com/library/dd942121.aspx) query options to select a subset of the items that would otherwise be returned by your query.
+Use the [$top](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#TopSystemQueryOption) and [$skiptoken](https://msdn.microsoft.com/library/dd942121.aspx) query options to select a subset of the items that would otherwise be returned by your query.
  
 > [!NOTE] 
 > The $skip query option does not work with queries for SharePoint list items.

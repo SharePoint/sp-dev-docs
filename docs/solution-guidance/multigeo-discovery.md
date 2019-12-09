@@ -44,7 +44,7 @@ clientContext.ExecuteQuery();
 You can get the geo location information for a tenant by using Microsoft Graph. The following example returns a collection with one object per geo location.
 
 > [!NOTE]
-> The following code sample uses the `dataLocationCode` attribute on the `siteCollection` object. At the time of publishing, this property is only available in [Microsoft Graph beta endpoint](https://docs.microsoft.com/en-us/graph/api/resources/sitecollection?view=graph-rest-beta).
+> The following code sample uses the `dataLocationCode` attribute on the `siteCollection` object. At the time of publishing, this property is only available in [Microsoft Graph beta endpoint](https://docs.microsoft.com/graph/api/resources/sitecollection?view=graph-rest-beta).
 
 
 ```
@@ -118,7 +118,7 @@ GET https://graph.microsoft.com/beta/sites?filter=siteCollection/root%20ne%20nul
 
 ## See also
 
-- [Microsoft Graph Developer Center](https://developer.microsoft.com/en-us/graph)
-- [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)
-- [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- [Microsoft Graph Developer Center](https://developer.microsoft.com/graph)
+- [Microsoft Graph documentation](https://developer.microsoft.com/graph/docs/concepts/overview)
+- [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 - [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)

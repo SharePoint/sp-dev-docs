@@ -30,7 +30,7 @@ The following elements and attributes are implemented within a site upgrade defi
   
     - [List](list-element-upgrade.md)
   
-  - [Files](http://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2%28Office.15%29.aspx)
+  - [Files](https://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2%28Office.15%29.aspx)
   
     - [File](file-element-upgrade.md)
   

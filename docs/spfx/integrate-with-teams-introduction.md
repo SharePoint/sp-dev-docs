@@ -88,7 +88,7 @@ In order to upload an app for a specific team, you will have to enable side load
 1. Click **Save**.
 
     > [!NOTE]
-    > The side loading configuration to be done only once in a tenant which you are using. More content on preparing your Office 365 tenant for Microsoft Teams development from the [Microsoft Teams developer documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/get-started-tenant#turn-on-microsoft-teams-for-your-organization).
+    > The side loading configuration to be done only once in a tenant which you are using. More content on preparing your Office 365 tenant for Microsoft Teams development from the [Microsoft Teams developer documentation](https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-tenant#turn-on-microsoft-teams-for-your-organization).
 
 1. Move to your Microsoft Teams instance by selecting **Teams** in the app launcher.
 
@@ -125,8 +125,8 @@ In order to upload an app for a specific team, you will have to enable side load
 
 See following resources for additional details around the different options in both systems:
 
-- [Upload an app package to Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/apps/apps-upload)
-- [Tenant-scoped solution deployment for SharePoint Framework solutions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/tenant-scoped-deployment)
+- [Upload an app package to Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/apps/apps-upload)
+- [Tenant-scoped solution deployment for SharePoint Framework solutions](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment)
 
 ## Detecting if web part is in Teams context
 
@@ -137,7 +137,7 @@ this.context.microsoftTeams
 ```
 
 > [!NOTE]
-> See more information around the Microsoft Teams tab context from the [Microsoft Teams development documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-context?view=msteams-client-js-latest).
+> See more information around the Microsoft Teams tab context from the [Microsoft Teams development documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-context?view=msteams-client-js-latest).
 
 ## See also
 

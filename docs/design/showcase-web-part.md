@@ -7,7 +7,7 @@ localization_priority: Priority
 
 # SharePoint web part design showcase: Create a To-Do list property pane
 
-This article describes how to create a To-Do list web part. This example uses the single pane [property pane type](design-a-web-part.md) and is [reactive](reactive-and-nonreactive-web-parts.md) and based on the [Office UI Fabric](https://developer.microsoft.com/en-us/fabric) responsive grid.
+This article describes how to create a To-Do list web part. This example uses the single pane [property pane type](design-a-web-part.md) and is [reactive](reactive-and-nonreactive-web-parts.md) and based on the [Office UI Fabric](https://developer.microsoft.com/fabric) responsive grid.
 
 
 ## Create a To-Do list web part
@@ -20,13 +20,13 @@ This article describes how to create a To-Do list web part. This example uses th
 
 	<br/>
 
-2. Add a Fabric [drop-down component](https://developer.microsoft.com/en-us/fabric#/components/dropdown) connected to a list.
+2. Add a Fabric [drop-down component](https://developer.microsoft.com/fabric#/components/dropdown) connected to a list.
 
 	![Adding a Fabric dropdown](../images/design-showcase-02.png)
 
 	<br/>
 
-3. Add a Fabric [checkbox component](https://developer.microsoft.com/en-us/fabric#/components/checkbox) to display completed tasks.
+3. Add a Fabric [checkbox component](https://developer.microsoft.com/fabric#/components/checkbox) to display completed tasks.
 
 	![Adding a Fabric check box](../images/design-showcase-03.png)
 
@@ -38,7 +38,7 @@ This article describes how to create a To-Do list web part. This example uses th
 
 	<br/>
 
-5. Add a Fabric [slider](https://developer.microsoft.com/en-us/fabric#/components/slider) for the maximum number of items to display.
+5. Add a Fabric [slider](https://developer.microsoft.com/fabric#/components/slider) for the maximum number of items to display.
 
 	![Adding a Fabric slider](../images/design-showcase-05.png)
 

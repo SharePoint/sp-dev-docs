@@ -22,7 +22,7 @@ A list with the appearance of the **Effort**, **Assigned To**, and **Status** fi
 
 ## How is column formatting different than the Field Customizer?
 
-Both column formatting and [SharePoint Framework Field Customizer](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful because you can use it to write any code that you want to control how a field is displayed. 
+Both column formatting and [SharePoint Framework Field Customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful because you can use it to write any code that you want to control how a field is displayed. 
 
 Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes. 
 
@@ -315,7 +315,7 @@ The following image shows action buttons added to a field.
 You can use column formatting to render quick action links next to fields. The following example, intended for a person field, renders two elements inside the parent `<div />` element:
 
 - A `<span />` element that contains the person’s display name.
-- An `<a />` element that opens a mailto: link that creates an email with a subject and body populated dynamically via item metadata. The `<a />` element is styled using the `ms-Icon`, `ms-Icon—Mail`, and `ms-QuickAction` [Fabric](https://developer.microsoft.com/en-us/fabric) classes to make it look like a clickable email icon. 
+- An `<a />` element that opens a mailto: link that creates an email with a subject and body populated dynamically via item metadata. The `<a />` element is styled using the `ms-Icon`, `ms-Icon—Mail`, and `ms-QuickAction` [Fabric](https://developer.microsoft.com/fabric) classes to make it look like a clickable email icon. 
 
 ```JSON
 {
@@ -523,7 +523,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 }
 ```
 
-Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#button-elements) portion of the Detailed syntax reference for more details.
+Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#button-elements) portion of the Detailed syntax reference for more details.
 
 ## Formatting multi-value fields
 You can use column formatting to apply styles to each member of a multi-value field of type Person, Lookup and Choice.
@@ -814,7 +814,7 @@ Any other value will result in an error.
 
 #### button elements
 
-`Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a requred property, `customRowAction`, that specifies an `action` that's taken when the button is clicked. This action must be one of the following values:
+`Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a required property, `customRowAction`, that specifies an `action` that's taken when the button is clicked. This action must be one of the following values:
 
 - **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
 
@@ -844,7 +844,7 @@ Any other value will result in an error.
 ```
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
-- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
+- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
 
 ```JSON
 {
@@ -1624,4 +1624,4 @@ These tokens will yield no value on non-file items including folders.
 
 ## See also
 
-- [Column formatting](https://support.office.com/en-us/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)
+- [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)

@@ -18,7 +18,7 @@ A *site column* is a reusable column definition, or template, that you can assig
 
 For example, suppose you define a site column named **Customer**. Users can add that column to their lists, and reference it in their content types. This ensures that the column has the same attributes—at least to start with—wherever it appears. Much like site content types, you define a site column at the site level, independent of any actual list or content type.
 
-For more information about site and list columns, see [Introduction to Columns](https://msdn.microsoft.com/en-us/library/ms450825(v=office.14).aspx).
+For more information about site and list columns, see [Introduction to Columns](https://msdn.microsoft.com/library/ms450825(v=office.14).aspx).
 
 ## XML schema definition
 
@@ -80,7 +80,7 @@ The following example shows an element manifest for a Feature that creates four 
 
 ## See also
 
-- [How to: Add a Column to a Site](https://msdn.microsoft.com/en-us/library/aa543203(v=office.14).aspx)
+- [How to: Add a Column to a Site](https://msdn.microsoft.com/library/aa543203(v=office.14).aspx)
 
 
 

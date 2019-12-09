@@ -44,14 +44,14 @@ Development of farm solutions has changed very little since SharePoint 2010, so 
 
 ### Packaging and deployment
 
-The basics of packaging, installing, updating, and localizing farm solutions are explained in  [Solutions Overview](http://msdn.microsoft.com/library/1983cab9-4b29-494a-a62a-0f8e83908744%28Office.15%29.aspx) and the node [Farm Solutions in SharePoint 2010](http://msdn.microsoft.com/library/845f7524-b9ff-412b-aa29-3afacda91100%28Office.15%29.aspx). Development of particular SharePoint components for inclusion in a farm solution is explained in the relevant nodes of SharePoint 2010 SDK. Most of the components in a farm solution should be encapsulated in one or more custom SharePoint Features. For information about designing and creating Features, see the  [Working with Features](http://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1%28Office.15%29.aspx) node of the SharePoint 2010 SDK.
+The basics of packaging, installing, updating, and localizing farm solutions are explained in  [Solutions Overview](https://msdn.microsoft.com/library/1983cab9-4b29-494a-a62a-0f8e83908744%28Office.15%29.aspx) and the node [Farm Solutions in SharePoint 2010](https://msdn.microsoft.com/library/845f7524-b9ff-412b-aa29-3afacda91100%28Office.15%29.aspx). Development of particular SharePoint components for inclusion in a farm solution is explained in the relevant nodes of SharePoint 2010 SDK. Most of the components in a farm solution should be encapsulated in one or more custom SharePoint Features. For information about designing and creating Features, see the  [Working with Features](https://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1%28Office.15%29.aspx) node of the SharePoint 2010 SDK.
   
     
     
 
 ### Administrative extensions
 
-Guidance about extending the administrative functions in a SharePoint farm is in the  [Windows SharePoint Services Administration](http://msdn.microsoft.com/library/cdcc1b8a-4144-446f-b471-03d4a754a8ab%28Office.15%29.aspx) node of the SharePoint 2010 SDK. There you can find explanations about extending Central Administration, creating custom Windows PowerShell cmdlets, customizing upgrades and migration, customizing backups, and customizing SharePoint event logging. One section explains how to customize the SharePoint farm health and performance measuring system. For instructions about creating a custom timer job, see [How to: Run Code on All Web Servers](http://msdn.microsoft.com/library/1bbb11b4-a342-4bed-9e7a-b8b13edd0ccc%28Office.15%29.aspx).
+Guidance about extending the administrative functions in a SharePoint farm is in the  [Windows SharePoint Services Administration](https://msdn.microsoft.com/library/cdcc1b8a-4144-446f-b471-03d4a754a8ab%28Office.15%29.aspx) node of the SharePoint 2010 SDK. There you can find explanations about extending Central Administration, creating custom Windows PowerShell cmdlets, customizing upgrades and migration, customizing backups, and customizing SharePoint event logging. One section explains how to customize the SharePoint farm health and performance measuring system. For instructions about creating a custom timer job, see [How to: Run Code on All Web Servers](https://msdn.microsoft.com/library/1bbb11b4-a342-4bed-9e7a-b8b13edd0ccc%28Office.15%29.aspx).
   
     
     

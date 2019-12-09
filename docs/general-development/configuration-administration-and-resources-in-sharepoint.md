@@ -9,61 +9,61 @@ localization_priority: Priority
 
 # Configuration, administration, and resources in SharePoint
 
-For information about planning, administration, configuration, deployment, migration, upgrades, setting up claims, or security in general, see the IT and administrators documentation and guidelines on  [Microsoft TechNet](http://technet.microsoft.com/en-us/sharepoint/ee263910.aspx).
+For information about planning, administration, configuration, deployment, migration, upgrades, setting up claims, or security in general, see the IT and administrators documentation and guidelines on  [Microsoft TechNet](https://technet.microsoft.com/sharepoint/ee263910.aspx).
   
     
     
 
 The following are links to some of the documentation and guidelines on TechNet:
--  [Plan for authentication methods](http://technet.microsoft.com/en-us/library/cc288475.aspx)
+-  [Plan for authentication methods](https://technet.microsoft.com/library/cc288475.aspx)
     
   
--  [Configure claims authentication](http://technet.microsoft.com/en-us/library/ee806886.aspx)
+-  [Configure claims authentication](https://technet.microsoft.com/library/ee806886.aspx)
     
   
--  [Security and protection for SharePoint Foundation 2010](http://technet.microsoft.com/en-us/library/cc287860.aspx)
+-  [Security and protection for SharePoint Foundation 2010](https://technet.microsoft.com/library/cc287860.aspx)
     
   
--  [Custom claims providers for People Picker](http://technet.microsoft.com/en-us/library/gg602065.aspx)
+-  [Custom claims providers for People Picker](https://technet.microsoft.com/library/gg602065.aspx)
     
   
--  [People Picker and claims provider planning](http://technet.microsoft.com/en-us/library/gg602063.aspx)
+-  [People Picker and claims provider planning](https://technet.microsoft.com/library/gg602063.aspx)
     
   
--  [Plan security for sites and content](http://technet.microsoft.com/en-us/library/cc288189.aspx)
+-  [Plan security for sites and content](https://technet.microsoft.com/library/cc288189.aspx)
     
   
--  [Plan security hardening](http://technet.microsoft.com/en-us/library/cc288143.aspx)
+-  [Plan security hardening](https://technet.microsoft.com/library/cc288143.aspx)
     
   
--  [Plan sandboxed solutions](http://technet.microsoft.com/en-us/library/ff603638.aspx)
+-  [Plan sandboxed solutions](https://technet.microsoft.com/library/ff603638.aspx)
     
   
--  [Plan site permissions](http://technet.microsoft.com/en-us/library/cc287752.aspx)
+-  [Plan site permissions](https://technet.microsoft.com/library/cc287752.aspx)
     
   
--  [Plan automatic password change](http://technet.microsoft.com/en-us/library/ee428296.aspx)
+-  [Plan automatic password change](https://technet.microsoft.com/library/ee428296.aspx)
     
   
--  [Security and permissions administration](http://technet.microsoft.com/en-us/library/cc288468.aspx)
+-  [Security and permissions administration](https://technet.microsoft.com/library/cc288468.aspx)
     
   
--  [User permissions and permission levels](http://technet.microsoft.com/en-us/library/cc288074.aspx)
+-  [User permissions and permission levels](https://technet.microsoft.com/library/cc288074.aspx)
     
   
--  [Business Connectivity Services security overview](http://technet.microsoft.com/en-us/library/ee661734.aspx)
+-  [Business Connectivity Services security overview](https://technet.microsoft.com/library/ee661734.aspx)
     
   
--  [Configure forms-based authentication for a claims-based web application](http://technet.microsoft.com/en-us/library/ee806890.aspx)
+-  [Configure forms-based authentication for a claims-based web application](https://technet.microsoft.com/library/ee806890.aspx)
     
   
--  [Configure the security token service](http://technet.microsoft.com/en-us/library/ee806864.aspx)
+-  [Configure the security token service](https://technet.microsoft.com/library/ee806864.aspx)
     
   
--  [Configure Kerberos authentication for the claims to Windows Token Service](http://technet.microsoft.com/en-us/library/ee806887.aspx)
+-  [Configure Kerberos authentication for the claims to Windows Token Service](https://technet.microsoft.com/library/ee806887.aspx)
     
   
--  [Security cmdlets (SharePoint Foundation 2010)](http://technet.microsoft.com/en-us/library/ee890118.aspx)
+-  [Security cmdlets (SharePoint Foundation 2010)](https://technet.microsoft.com/library/ee890118.aspx)
     
   
 
@@ -79,7 +79,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 
 |**Blog Name**|**Links**|
 |:-----|:-----|
-|Microsoft SharePoint Developer Team Blog  <br/> | [Blog home page](https://developer.microsoft.com/en-us/office/blogs/) <br/> |
+|Microsoft SharePoint Developer Team Blog  <br/> | [Blog home page](https://developer.microsoft.com/office/blogs/) <br/> |
 |||
    
 
@@ -88,7 +88,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 
 |**Forum Name**|**Links**|
 |:-----|:-----|
-|SharePoint Products and Technologies Forums  <br/> | [Forum home page](http://social.msdn.microsoft.com/Forums/en-US/category/sharepoint) <br/> |
+|SharePoint Products and Technologies Forums  <br/> | [Forum home page](http://social.msdn.microsoft.com/Forums/category/sharepoint) <br/> |
    
 
 **Table 3. Additional resources**
@@ -96,16 +96,16 @@ The following tables list blogs, forums, and additional resources about claims-b
 
 |**Additional Resources**|**Links**|
 |:-----|:-----|
-|Claims and Security: Technical Articles Node  <br/> | [Claims and security: Technical articles and code samples on MSDN](http://msdn.microsoft.com/en-us/library/gg430136.aspx) <br/> |
+|Claims and Security: Technical Articles Node  <br/> | [Claims and security: Technical articles and code samples on MSDN](https://msdn.microsoft.com/library/gg430136.aspx) <br/> |
 |||
-|Security and Authentication for SharePoint Foundation 2010  <br/> | [Security and Authentication for SharePoint Foundation 2010 Resource Center on TechNet](http://technet.microsoft.com/en-us/sharepoint/ff601873.aspx) <br/> |
-|Microsoft SharePoint Foundation 2010 on TechNet  <br/> | [Microsoft SharePoint Foundation 2010 on TechNet](http://technet.microsoft.com/en-us/sharepoint/ee263910.aspx) <br/> |
-|Security Resource Center  <br/> | [Security Resource Center on MSDN](http://msdn.microsoft.com/en-us/sharepoint/ff660758.aspx) <br/> |
-|Windows PowerShell for SharePoint Foundation 2010 Reference  <br/> | [Security cmdlets (SharePoint Foundation 2010)](http://technet.microsoft.com/en-us/library/ee890118.aspx) <br/> |
-|Security Resource Center  <br/> | [Security Resource Center on TechNet](http://technet.microsoft.com/en-us/office/sharepointserver/cc979168.aspx) <br/> |
-|Windows Identity Foundation (WIF) SDK  <br/> | [Windows Identity Foundation documentation on MSDN](http://msdn.microsoft.com/en-us/library/ee748484.aspx) <br/> |
-|Microsoft patterns &amp; practices  <br/> | [A guide to claims-based identity and access control](http://msdn.microsoft.com/en-us/library/ff423674.aspx) <br/> |
-|.NET Framework Class Library  <br/> | [.NET Framework Class Library](http://msdn.microsoft.com/en-us/library/ms229335.aspx) <br/> |
+|Security and Authentication for SharePoint Foundation 2010  <br/> | [Security and Authentication for SharePoint Foundation 2010 Resource Center on TechNet](https://technet.microsoft.com/sharepoint/ff601873.aspx) <br/> |
+|Microsoft SharePoint Foundation 2010 on TechNet  <br/> | [Microsoft SharePoint Foundation 2010 on TechNet](https://technet.microsoft.com/sharepoint/ee263910.aspx) <br/> |
+|Security Resource Center  <br/> | [Security Resource Center on MSDN](https://msdn.microsoft.com/sharepoint/ff660758.aspx) <br/> |
+|Windows PowerShell for SharePoint Foundation 2010 Reference  <br/> | [Security cmdlets (SharePoint Foundation 2010)](https://technet.microsoft.com/library/ee890118.aspx) <br/> |
+|Security Resource Center  <br/> | [Security Resource Center on TechNet](https://technet.microsoft.com/office/sharepointserver/cc979168.aspx) <br/> |
+|Windows Identity Foundation (WIF) SDK  <br/> | [Windows Identity Foundation documentation on MSDN](https://msdn.microsoft.com/library/ee748484.aspx) <br/> |
+|Microsoft patterns &amp; practices  <br/> | [A guide to claims-based identity and access control](https://msdn.microsoft.com/library/ff423674.aspx) <br/> |
+|.NET Framework Class Library  <br/> | [.NET Framework Class Library](https://msdn.microsoft.com/library/ms229335.aspx) <br/> |
    
 
 ## See also

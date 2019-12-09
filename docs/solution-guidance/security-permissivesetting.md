@@ -14,7 +14,7 @@ Today the default setting is strict, and you already cannot switch your tenant t
 
 
 # Is my tenant impacted?
-The recommended approach to check this is by checking the PermissiveBrowserFileHandlingOverride setting using [Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/en-us/library/fp161362.aspx):
+The recommended approach to check this is by checking the PermissiveBrowserFileHandlingOverride setting using [Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/library/fp161362.aspx):
 
 ```PowerShell
 Connect-SPOService -url https://contoso-admin.sharepoint.com
@@ -109,7 +109,7 @@ This script can be used as a starting basis for a site collection scoped remedia
 
 ```PowerShell
 # This script does rename .htm and .html files to .aspx files. Doing so enables these files to be "executed" in SharePoint Online 
-# which has it's file handling configured to be strict. See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-permissivesetting 
+# which has it's file handling configured to be strict. See https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-permissivesetting 
 # for more details
 
 function PermissiveRemediateASiteCollection

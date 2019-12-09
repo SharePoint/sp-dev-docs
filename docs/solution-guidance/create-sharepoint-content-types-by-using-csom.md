@@ -9,7 +9,7 @@ localization_priority: Priority
 
 You can use the [Core.SPD](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SPD) sample to programmatically create site columns and content types and link them together. 
 
-You can also use the SharePoint CSOM APIs, available in the [SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=35585), to add a specific content type identifier, and localize content types, lists, and site titles. 
+You can also use the SharePoint CSOM APIs, available in the [SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/download/details.aspx?id=35585), to add a specific content type identifier, and localize content types, lists, and site titles. 
 
 ## Before you begin
 

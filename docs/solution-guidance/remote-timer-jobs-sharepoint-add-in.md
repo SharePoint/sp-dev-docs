@@ -84,7 +84,7 @@ When you have access to an Azure subscription to schedule timer jobs with Azure 
 
 The following articles describe the Azure WebJob pattern and provide code samples to get you started.
 
-- [Getting Started with Azure WebJobs ("timer jobs") for your Office 365 Sites (O365 PnP Article)](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
+- [Getting Started with Azure WebJobs ("timer jobs") for your Office 365 Sites (O365 PnP Article)](https://docs.microsoft.com/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 	+ Describes how to build an Azure WebJob to act as a scheduled job for your Office 365 or on-premises SharePoint environment. Includes publishing and monitoring information.
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
 	+ Excellent code samples encompassing 10 different examples. *Note: Not all ten code examples are applicable to the Azure WebJob pattern.*
@@ -175,11 +175,11 @@ The following articles describe the OAUth authentication pattern and provide cod
 
 Related links
 =============
-- [Azure WebJob resources (Azure Documentation)](http://azure.microsoft.com/en-us/documentation/articles/websites-webjobs-resources/)
-- [Deploy WebJobs using Visual Studio (Azure Documentation)](http://azure.microsoft.com/en-us/documentation/articles/websites-dotnet-deploy-webjobs/)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- [Azure WebJob resources (Azure Documentation)](http://azure.microsoft.com/documentation/articles/websites-webjobs-resources/)
+- [Deploy WebJobs using Visual Studio (Azure Documentation)](http://azure.microsoft.com/documentation/articles/websites-dotnet-deploy-webjobs/)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
 Related PnP samples
 ===================

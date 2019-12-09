@@ -67,7 +67,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/c5a3b837-76bb-98fc-d7b4-ffe9a44d95a0.aspx">FormRegion</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/c5a3b837-76bb-98fc-d7b4-ffe9a44d95a0.aspx">FormRegion</a></p></td>
 <td align="left"><p>The form regions in which external data will be displayed in .</p></td>
 </tr>
 <tr class="even">

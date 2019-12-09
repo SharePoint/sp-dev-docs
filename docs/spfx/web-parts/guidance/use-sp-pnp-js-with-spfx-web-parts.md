@@ -70,7 +70,7 @@ After your project is created, you must install and set up @pnp/sp , starting wi
 npm install @pnp/logging @pnp/common @pnp/odata @pnp/sp --save
 ```
 
-Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within classic sites and pages, we can make use of the global `_spPageContextInfo` variable. Within SPFx, this is not available, or if it is, it may not be correct. So we need to rely on the [context](https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base/webpartcontext) object 
+Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within classic sites and pages, we can make use of the global `_spPageContextInfo` variable. Within SPFx, this is not available, or if it is, it may not be correct. So we need to rely on the [context](https://docs.microsoft.com/javascript/api/sp-webpart-base/webpartcontext) object 
 supplied by the framework. 
 
 There are [two ways](https://pnp.github.io/pnpjs/sp/docs/#getting-started-sharepoint-framework) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.

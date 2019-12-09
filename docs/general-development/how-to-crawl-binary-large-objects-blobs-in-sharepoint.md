@@ -52,7 +52,7 @@ The Microsoft SQL Server database table must have a column that specifies either
 ## Modifying the BDC model file to enable crawling of BLOB data
 <a name="HowToCrawlBlobs_BDCModelFile"> </a>
 
-After you confirm that the database table contains the extension or MIME type information for the BLOB data, you can use Microsoft SharePoint Designer to create an external content type that is based on the table containing the BLOB data. Then, you can create all the operations. For more information, see  [How to: Create External Content Types](http://msdn.microsoft.com/library/811b458c-e209-46df-ba02-8db02bc658db%28Office.15%29.aspx) and [How to: Create an External Content Type Based on a SQL Server Table](http://msdn.microsoft.com/library/5c42a679-d71d-46c6-aabc-d63c6cad3846%28Office.15%29.aspx). 
+After you confirm that the database table contains the extension or MIME type information for the BLOB data, you can use Microsoft SharePoint Designer to create an external content type that is based on the table containing the BLOB data. Then, you can create all the operations. For more information, see  [How to: Create External Content Types](https://msdn.microsoft.com/library/811b458c-e209-46df-ba02-8db02bc658db%28Office.15%29.aspx) and [How to: Create an External Content Type Based on a SQL Server Table](https://msdn.microsoft.com/library/5c42a679-d71d-46c6-aabc-d63c6cad3846%28Office.15%29.aspx). 
   
     
     
@@ -173,10 +173,10 @@ with the following line of code:
 -  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
--  [How to: Create External Content Types](http://msdn.microsoft.com/library/811b458c-e209-46df-ba02-8db02bc658db%28Office.15%29.aspx)
+-  [How to: Create External Content Types](https://msdn.microsoft.com/library/811b458c-e209-46df-ba02-8db02bc658db%28Office.15%29.aspx)
     
   
--  [XML Snippet: Modeling a StreamAccessor Method](http://msdn.microsoft.com/library/bd60cc2e-f7f6-421c-9d2a-60e8512b9893%28Office.15%29.aspx)
+-  [XML Snippet: Modeling a StreamAccessor Method](https://msdn.microsoft.com/library/bd60cc2e-f7f6-421c-9d2a-60e8512b9893%28Office.15%29.aspx)
     
   
 

@@ -19,7 +19,7 @@ We recommend that you deploy and update your enterprise applications in all loca
 
 ## Enumerate site collections
 
-To enumerate all tenant site collections, use the [CSOM GetSitePropertiesFromSharePointByFilters method](https://msdn.microsoft.com/en-us/library/microsoft.online.sharepoint.tenantadministration.tenant.getsitepropertiesfromsharepointbyfilters.aspx) on a `Tenant` object instance. Because each geo location has a tenant admin center,  you must enumerate site collections per geo location and concatenate the results to get a single tenant-wide list of site collections.
+To enumerate all tenant site collections, use the [CSOM GetSitePropertiesFromSharePointByFilters method](https://msdn.microsoft.com/library/microsoft.online.sharepoint.tenantadministration.tenant.getsitepropertiesfromsharepointbyfilters.aspx) on a `Tenant` object instance. Because each geo location has a tenant admin center,  you must enumerate site collections per geo location and concatenate the results to get a single tenant-wide list of site collections.
 
 To perform a tenant-wide site enumeration:
 

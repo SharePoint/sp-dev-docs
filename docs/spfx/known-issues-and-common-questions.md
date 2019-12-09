@@ -1,15 +1,13 @@
 ---
 title: SharePoint Framework known issues and frequently asked questions
 description: Find answers to issues and FAQ about the SharePoint Framework.
-ms.date: 01/12/2018
+ms.date: 10/22/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
-
 # SharePoint Framework known issues and frequently asked questions
 
-This page is for listing any known issues or to answer any frequently asked questions about SharePoint Framework. 
+This page is for listing any known issues or to answer any frequently asked questions about SharePoint Framework.
 
 ## Known issues
 
@@ -20,9 +18,9 @@ This page is for listing any known issues or to answer any frequently asked ques
 
 If you are using Chrome as your development browser, you might have challenges with the developer certificate regardless of executing the `gulp trust-dev-cert` command. Chrome has changed its model for certificate validation starting from version 58, and you might see a "Your connection is not private" warning when you are accessing the local workbench.
 
-You should update your Yeoman template packages. We have updated certification creation logic in the [*@microsoft/gulp-core-build-serve* package](https://www.npmjs.com/package/@microsoft/gulp-core-build-serve). 
+You should update your Yeoman template packages. We have updated certification creation logic in the [*\@microsoft/gulp-core-build-serve* package](https://www.npmjs.com/package/@microsoft/gulp-core-build-serve).
 
-In existing solutions, you can simply delete this folder and run `npm install` to get the updated package. You also need to execute `untrust-dev-cert` and `trust-dev-cert` commands on your machine to address the certification creation logic issue. 
+In existing solutions, you can simply delete this folder and run `npm install` to get the updated package. You also need to execute `untrust-dev-cert` and `trust-dev-cert` commands on your machine to address the certification creation logic issue.
 
 ## Frequently asked questions
 
@@ -43,8 +41,7 @@ SharePoint Framework client-side web parts on classic pages were released to Sha
 
 ## See also
 
-Please use following resources to provide feedback, comments, and questions to SharePoint engineering. 
+Please use following resources to provide feedback, comments, and questions to SharePoint engineering.
 
 - [GitHub sp-dev-docs issues](https://github.com/SharePoint/sp-dev-docs/issues)
 - [SharePoint Developer Microsoft Tech Community space](https://aka.ms/sppnp-community)
-

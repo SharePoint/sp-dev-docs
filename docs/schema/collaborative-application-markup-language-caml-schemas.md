@@ -48,7 +48,7 @@ This section provides overview topics as well as information and reference docum
 
 ## See also
 
-- [Other CAML schemas](http://msdn.microsoft.com/library/cee9f788-89a3-4fe1-92d8-10517c8904cf(Office.15).aspx)
+- [Other CAML schemas](https://msdn.microsoft.com/library/cee9f788-89a3-4fe1-92d8-10517c8904cf(Office.15).aspx)
 
 
 

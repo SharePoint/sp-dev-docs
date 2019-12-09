@@ -59,7 +59,7 @@ To create a console application that uses the .NET client object model to retrie
 - **Full Control** connection permissions to access the User Profile service application for the current user.
     
 > [!NOTE]
-> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
+> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
     

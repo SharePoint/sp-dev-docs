@@ -166,7 +166,7 @@ The **<div>** where `class="DefaultContentBlock"` is what you replace with your 
 <a name="AdditionalResources"> </a>
    
   
--  [Understanding permission levels](https://support.office.com/en-us/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)
+-  [Understanding permission levels](https://support.office.com/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)
     
   
 -  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)

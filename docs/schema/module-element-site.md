@@ -43,7 +43,7 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**HyperlinkBaseUrl** <br/> |Optional **Text**.  <br/> |
 |**IncludeFolders** <br/> |Optional **Text**.  <br/> |
-|**List** <br/> |Optional **Integer**. Specifies the type of list, which is defined within [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
+|**List** <br/> |Optional **Integer**. Specifies the type of list, which is defined within [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
 |**Name** <br/> | Required **Text**. Contains the name of the file set.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
 |**Path** <br/> | Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates\ \_Site\_Definition_.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
 |**RootWebOnly** <br/> |Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level website of the site collection.  <br/> |
@@ -71,7 +71,7 @@ The **Module** element specifies a file or collection of files and a location wh
   
 ## Example
 
-The following example from [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) defines the views and files to include within a module. 
+The following example from [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) defines the views and files to include within a module. 
   
 ```XML
 <Module Name="Default" Url="" Path="">
@@ -97,5 +97,5 @@ The following example from [Onet.xml](http://msdn.microsoft.com/library/b99d6657
 
 ## See also
 
-- [How to: Provision a File](http://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6%28Office.15%29.aspx)
+- [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6%28Office.15%29.aspx)
 

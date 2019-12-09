@@ -50,7 +50,7 @@ To use the examples in this article, you need the following:
 - Visual Studio 2013 or later.
 - NuGet Package Manager. For more information, see [Installing NuGet](http://go.microsoft.com/fwlink/?LinkId=271465).
 - A SharePoint development environment (app isolation required for on-premises scenarios).
-- Office Web Widgets - Experimental NuGet package. For more information about how to install a NuGet package, see [NuGet Package Manager UI](https://docs.microsoft.com/en-us/nuget/tools/package-manager-ui). You can also browse the [NuGet gallery page](https://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).
+- Office Web Widgets - Experimental NuGet package. For more information about how to install a NuGet package, see [NuGet Package Manager UI](https://docs.microsoft.com/nuget/tools/package-manager-ui). You can also browse the [NuGet gallery page](https://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).
     
 ## Use the People Picker widget in a provider-hosted SharePoint Add-in
 

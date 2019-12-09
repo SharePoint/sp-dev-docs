@@ -34,4 +34,4 @@ These claims are added to the SharePoint site according to below logic:
 
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
 - [Connect to an Office 365 group](modernize-connect-to-office365-group.md)
-- [Connect a classic experience SharePoint team site to a new Office 365 Group](https://support.office.com/en-us/article/connect-a-classic-experience-sharepoint-team-site-to-a-new-office-365-group-469c6ee0-2139-4496-9914-7e39d07ac49d?ui=en-US&rs=en-US&ad=US)
+- [Connect a classic experience SharePoint team site to a new Office 365 Group](https://support.office.com/article/connect-a-classic-experience-sharepoint-team-site-to-a-new-office-365-group-469c6ee0-2139-4496-9914-7e39d07ac49d?ui=en-US&rs=en-US&ad=US)

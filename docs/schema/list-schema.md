@@ -20,9 +20,9 @@ description: "Last modified: December 07, 2015"
   
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-The list schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define the metadata for creating lists. The list schema includes field definitions ([Field](field-element-list.md) element), view definitions, and a toolbar definition, in addition to specifying content types, forms, and a default description for lists that are created. The definition for a list is contained in a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that is located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES or is included in sandboxed solutions. 
+The list schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define the metadata for creating lists. The list schema includes field definitions ([Field](field-element-list.md) element), view definitions, and a toolbar definition, in addition to specifying content types, forms, and a default description for lists that are created. The definition for a list is contained in a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that is located in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES or is included in sandboxed solutions. 
   
-You can create or modify lists programmatically through the object model (for example, members of the [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) class and the [SPListCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListCollection.aspx) class), through the Lists web service (methods of the [Lists](https://msdn.microsoft.com/library/websvcLists.Lists.aspx) class), and through the Remote Procedure Call (RPC) protocol (see [Windows SharePoint Services RPC Methods](http://msdn.microsoft.com/library/fb791985-a9e4-4c94-b94a-1b3c7f00457a%28Office.15%29.aspx)). 
+You can create or modify lists programmatically through the object model (for example, members of the [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx) class and the [SPListCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListCollection.aspx) class), through the Lists web service (methods of the [Lists](https://msdn.microsoft.com/library/websvcLists.Lists.aspx) class), and through the Remote Procedure Call (RPC) protocol (see [Windows SharePoint Services RPC Methods](https://msdn.microsoft.com/library/fb791985-a9e4-4c94-b94a-1b3c7f00457a%28Office.15%29.aspx)). 
   
 ## List schema elements
 
@@ -117,7 +117,7 @@ You can create or modify lists programmatically through the object model (for ex
     - [\<View\>](view-element-list.md)
   
 > [!NOTE]
-> The following subelements lay out the structure of a view, but Microsoft SharePoint Foundation 2010 uses XSLT to define rendering of view contents. For information about the XSLT that is used, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). For the schema that Windows SharePoint Services 3.0 used to render the view contents, see [View schema](view-schema.md). 
+> The following subelements lay out the structure of a view, but Microsoft SharePoint Foundation 2010 uses XSLT to define rendering of view contents. For information about the XSLT that is used, see [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). For the schema that Windows SharePoint Services 3.0 used to render the view contents, see [View schema](view-schema.md). 
   
 - [\<Aggregations\>](aggregations-element-list.md)
   
@@ -149,7 +149,7 @@ You can create or modify lists programmatically through the object model (for ex
   
 - [\<RowLimitExceeded\>](rowlimitexceeded-element-list.md)
   
-- [\<Toolbar\>](http://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c%28Office.15%29.aspx)
+- [\<Toolbar\>](https://msdn.microsoft.com/library/23251c2b-1172-4ac8-bde2-46c1e682a91c%28Office.15%29.aspx)
   
 - [\<ViewBidiHeader\>](viewbidiheader-element-list.md)
   
@@ -157,7 +157,7 @@ You can create or modify lists programmatically through the object model (for ex
   
 - [\<ViewData\>](viewdata-element-list.md)
   
-    - [\<FieldRef\>](https://msdn.microsoft.com/en-us/library/ms436424.aspx)
+    - [\<FieldRef\>](https://msdn.microsoft.com/library/ms436424.aspx)
   
 - [\<ViewEmpty\>](viewempty-element-list.md)
   

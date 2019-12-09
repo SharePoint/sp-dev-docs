@@ -43,7 +43,7 @@ Before you use this sample, make sure that you have the following:
 
 - A Microsoft Azure account where you can deploy an Azure SQL Database and create an Azure Storage account. 
     
-- A [SharePoint developer site](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) so that you can deploy the sample from Visual Studio.
+- A [SharePoint developer site](https://docs.microsoft.com/office/developer-program/office-365-developer-program) so that you can deploy the sample from Visual Studio.
     
 Also, you need to deploy the Northwind database to Microsoft Azure.
 
@@ -599,7 +599,7 @@ The following are the advantages to using this approach:
     
 The recent orders interface works much like the customer dashboard interface. You choose the **Recent Orders** link in the left column, and then choose a customer from the drop-down menu at the top of the center pane. A list of orders from that customer appears in the center pane.
 
-This page is a Model-View-Controller view defined in the Views/CustomerDashboard/Orders.cshtml file. Code in the Controllers/CustomerDashboardController.cs file uses the [Entity Framework](https://msdn.microsoft.com/en-us/library/aa937723(v=vs.113).aspx) to query the **Orders** table in your Azure SQL Database. The customer ID is passed by using a query string parameter in the URL that is passed when the user selects a customer from the drop-down menu. The query creates a join on the **Customer**, **Employee**, and **Shipper** tables. The query result is then passed to the Model-View-Controller view that displays the results.
+This page is a Model-View-Controller view defined in the Views/CustomerDashboard/Orders.cshtml file. Code in the Controllers/CustomerDashboardController.cs file uses the [Entity Framework](https://msdn.microsoft.com/library/aa937723(v=vs.113).aspx) to query the **Orders** table in your Azure SQL Database. The customer ID is passed by using a query string parameter in the URL that is passed when the user selects a customer from the drop-down menu. The query creates a join on the **Customer**, **Employee**, and **Shipper** tables. The query result is then passed to the Model-View-Controller view that displays the results.
 
 The following code from the CustomerDashboardController.cs file performs the database query and returns the data to the view.
 

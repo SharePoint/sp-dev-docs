@@ -101,9 +101,9 @@ If you do run into throttling, we require leveraging the retry-after header to e
 
 Retry after is the fastest way to handle being throttled because SharePoint Online dynamically determines the right time to try again. In other words, aggressive retries work against you because even though the calls fail, they still accrue against your usage limits.  Following the retry header will ensure the shortest delay. 
 
-For information about ways to monitor your SharePoint Online activity, see  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86).
+For information about ways to monitor your SharePoint Online activity, see  [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86).
 
-For a broader discussion of throttling on the Microsoft Cloud, see  [Throttling Pattern](http://msdn.microsoft.com/library/4baf5af2-32fc-47ab-8569-3e5c59a5ebd5.aspx).
+For a broader discussion of throttling on the Microsoft Cloud, see  [Throttling Pattern](https://msdn.microsoft.com/library/4baf5af2-32fc-47ab-8569-3e5c59a5ebd5.aspx).
 
 ## How to decorate your http traffic to avoid throttling?
 <a name="BKMK_DecorateSharePointOnlineThrottling"> </a>
@@ -202,12 +202,21 @@ public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientCon
             }
             else
             {
-                // retry the previous request
+                //increment the retry count                
+                retryAttempts++;
+                
+                // retry the previous request using wrapper
                 if (wrapper != null && wrapper.Value != null)
                 {
                     clientContext.RetryQuery(wrapper.Value);
                     return;
-                }
+                } 
+                // retry the previous request as normal
+                else
+                {
+                    clientContext.ExecuteQuery();
+                    return;
+                }                
             }
         }
         catch (WebException ex)
@@ -237,8 +246,7 @@ public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientCon
                 // Delay for the requested seconds
                 Thread.Sleep(retryAfterInterval * 1000);
 
-                // Increase counters
-                retryAttempts++;
+                // Increase counters          
                 backoffInterval = backoffInterval * 2;
             }
             else
@@ -267,8 +275,8 @@ If we block your subscription we will notify you of the block in the Office 365 
 ## See also
 <a name="BKMK_Additionalresources"> </a>
 
--  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
+-  [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
   
--  [Capacity planning and load testing SharePoint Online](https://support.office.com/en-us/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
+-  [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
   
 -  [GitHub: SharePoint Online Throttling code sample](https://github.com/OfficeDev/PnP/tree/dev/Samples/Core.Throttling)

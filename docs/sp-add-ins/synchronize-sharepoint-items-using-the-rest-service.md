@@ -12,7 +12,7 @@ If you want to synchronize items between SharePoint and your add-ins or services
 
 Perform a **POST** request that includes an [SP.ChangeLogItemQuery object properties](#bk_props) object in the request body.
 
-The request returns ADO **rowset** XML, which includes rows corresponding to any list item change matching the specified query. For more information about these properties, including property data structures, CAML element descriptions, and return values, see [Lists.GetListItemChangesSinceToken](https://msdn.microsoft.com/en-us/library/office/jj247029.aspx).
+The request returns ADO **rowset** XML, which includes rows corresponding to any list item change matching the specified query. For more information about these properties, including property data structures, CAML element descriptions, and return values, see [Lists.GetListItemChangesSinceToken](https://msdn.microsoft.com/library/office/jj247029.aspx).
 
 ### Example
 
@@ -59,10 +59,10 @@ The request returns ADO **rowset** XML, which includes rows corresponding to any
 |:-----|:-----|
 |**ListName**|A string that contains either the title or the GUID for the list. When querying the UserInfo table, the string contains UserInfo. Using the GUID results in better performance.|
 |**ViewName**|A string that contains the GUID for the view, which determines the view to use for the default view attributes represented by the _query_, _viewFields_, and _rowLimit_ parameters. If this argument is not supplied, the default view is assumed.<br/><br/>If it is supplied, the value of the _query_,  _viewFields_, or _rowLimit_ parameter overrides the equivalent setting within the view.<br/><br/>For example, if the view specified by the _viewFields_ parameter has a row limit of 100 rows, but the _rowLimit_ parameter contains a value of 1000, then 1,000 rows are returned in the response.|
-|**Query**|A [Query](http://msdn.microsoft.com/en-us/library/ms471093.aspx) element containing the query that determines which records are returned and in what order.|
+|**Query**|A [Query](https://msdn.microsoft.com/library/ms471093.aspx) element containing the query that determines which records are returned and in what order.|
 |**QueryOptions**|An XML fragment in the following form that contains separate nodes for the various properties of the **SPQuery** object.|
-|**ChangeToken**|A string that contains the change token for the request.<br/><br/>For a description of the format that is used in this string, see [Overview of the Change Log](http://msdn.microsoft.com/en-us/library/bb417456.aspx). If null is passed, all items in the list are returned.|
-|**Contains**|A [Contains](http://msdn.microsoft.com/en-us/library/ms196501.aspx) element that defines custom filtering for the query.|
+|**ChangeToken**|A string that contains the change token for the request.<br/><br/>For a description of the format that is used in this string, see [Overview of the Change Log](https://msdn.microsoft.com/library/bb417456.aspx). If null is passed, all items in the list are returned.|
+|**Contains**|A [Contains](https://msdn.microsoft.com/library/ms196501.aspx) element that defines custom filtering for the query.|
 
 ## See also
 <a name="bk_addresources"> </a>

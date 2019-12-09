@@ -13,7 +13,7 @@ Learn about how to create a requestor for use with the Volume Shadow Copy Servic
 
 ## Writing a requestor
 
-The process of writing a requestor for backing up and restoring SharePoint Foundation by using VSS is the same as that for writing a requestor for any other Windows-based application such as Microsoft SQL Server or Microsoft Exchange Server. Developers of backup applications should follow the procedures outlined in the  [Volume Shadow Copy Service Overview](http://msdn.microsoft.com/en-us/library/aa384649%28VS.85%29.aspx) and [Volume Shadow Copy API Reference](http://msdn.microsoft.com/en-us/library/aa384648%28VS.85%29.aspx) to build applications that can properly back up and restore SharePoint Foundation data.
+The process of writing a requestor for backing up and restoring SharePoint Foundation by using VSS is the same as that for writing a requestor for any other Windows-based application such as Microsoft SQL Server or Microsoft Exchange Server. Developers of backup applications should follow the procedures outlined in the  [Volume Shadow Copy Service Overview](https://msdn.microsoft.com/library/aa384649%28VS.85%29.aspx) and [Volume Shadow Copy API Reference](https://msdn.microsoft.com/library/aa384648%28VS.85%29.aspx) to build applications that can properly back up and restore SharePoint Foundation data.
   
     
     

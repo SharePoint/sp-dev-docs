@@ -104,7 +104,7 @@ GET https://fabrikam.sharepoint.com/_api/Web/lists HTTP/1.1
 
 OData libraries support OData batching for many languages. Following are two examples. For a more complete list, see [OData Libraries](http://www.odata.org/libraries/).
 
-- [.NET OData library](http://msdn.microsoft.com/en-us/office/microsoft.data.odata%28v=vs.90%29). See especially the **ODataBatch*** classes.
+- [.NET OData library](https://msdn.microsoft.com/office/microsoft.data.odata%28v=vs.90%29). See especially the **ODataBatch*** classes.
 - [Datajs library](http://datajs.codeplex.com/documentation). See especially [Batch operations](http://datajs.codeplex.com/wikipage?title=datajs%20OData%20API&amp;referringTitle=Documentation#Batch).
 
 ## See also

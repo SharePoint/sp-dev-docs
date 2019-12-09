@@ -60,7 +60,7 @@ The following example shows the contents of an XML file in which the [ListInstan
 
 ## See also
 
-- [List Instance](https://msdn.microsoft.com/en-us/library/office/ms469947.aspx)
+- [List Instance](https://msdn.microsoft.com/library/office/ms469947.aspx)
 
 
 

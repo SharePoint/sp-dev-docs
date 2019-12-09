@@ -30,16 +30,16 @@ With Logic Apps you can build, schedule, and automate processes as workflows so 
 
 ### Articles
 
-* [Logic Apps](https://azure.microsoft.com/en-us/services/logic-apps/)
-* [Quickstart: Build your first logic app workflow - Azure portal](https://docs.microsoft.com/en-us/azure/logic-apps/quickstart-create-first-logic-app-workflow)
-* [Get started with the SharePoint Online connector](https://docs.microsoft.com/en-us/azure/connectors/connectors-create-api-sharepointonline)
-* [Get started with the SharePoint connector](https://docs.microsoft.com/en-us/azure/connectors/connectors-create-api-sharepointserver)
-* [Choose between Flow, Logic Apps, Functions, and WebJobs](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
+* [Logic Apps](https://azure.microsoft.com/services/logic-apps/)
+* [Quickstart: Build your first logic app workflow - Azure portal](https://docs.microsoft.com/azure/logic-apps/quickstart-create-first-logic-app-workflow)
+* [Get started with the SharePoint Online connector](https://docs.microsoft.com/azure/connectors/connectors-create-api-sharepointonline)
+* [Get started with the SharePoint connector](https://docs.microsoft.com/azure/connectors/connectors-create-api-sharepointserver)
+* [Choose between Flow, Logic Apps, Functions, and WebJobs](https://docs.microsoft.com/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 
 ### Videos
 
-* [Slice, dice, and route your SharePoint documents with Microsoft Flow, Azure Logic Apps, and Microsoft PowerApps](https://azure.microsoft.com/en-us/resources/videos/build-2017-slice-dice-and-route-your-sharepoint-documents-with-microsoft-flow-azure-logic-apps-and-microsoft-powerapps/)
-* [Microsoft Azure and Office 365 together: The modern business development platform](https://azure.microsoft.com/en-us/resources/videos/microsoft-ignite-2017-microsoft-azure-and-office-365-together-the-modern-business-development-platform/)
+* [Slice, dice, and route your SharePoint documents with Microsoft Flow, Azure Logic Apps, and Microsoft PowerApps](https://azure.microsoft.com/resources/videos/build-2017-slice-dice-and-route-your-sharepoint-documents-with-microsoft-flow-azure-logic-apps-and-microsoft-powerapps/)
+* [Microsoft Azure and Office 365 together: The modern business development platform](https://azure.microsoft.com/resources/videos/microsoft-ignite-2017-microsoft-azure-and-office-365-together-the-modern-business-development-platform/)
 
 ## Microsoft Flow
 
@@ -51,14 +51,14 @@ As a developer, you can extend Microsoft Flow, enabling even more powerful solut
 
 ### Articles
 
-* [Get started with Microsoft Flow](https://docs.microsoft.com/en-us/flow/getting-started)
-* [Create a flow for a list or library in SharePoint Online or OneDrive for Business](https://support.office.com/en-us/article/create-a-flow-for-a-list-or-library-in-sharepoint-online-or-onedrive-for-business-a9c3e03b-0654-46af-a254-20252e580d01)
-* [Introducing Microsoft Flow integration for SharePoint Document Libraries](https://flow.microsoft.com/en-us/blog/flow-in-spo-document-libraries/)
-* [Choose between Flow, Logic Apps, Functions, and WebJobs](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
+* [Get started with Microsoft Flow](https://docs.microsoft.com/flow/getting-started)
+* [Create a flow for a list or library in SharePoint Online or OneDrive for Business](https://support.office.com/article/create-a-flow-for-a-list-or-library-in-sharepoint-online-or-onedrive-for-business-a9c3e03b-0654-46af-a254-20252e580d01)
+* [Introducing Microsoft Flow integration for SharePoint Document Libraries](https://flow.microsoft.com/blog/flow-in-spo-document-libraries/)
+* [Choose between Flow, Logic Apps, Functions, and WebJobs](https://docs.microsoft.com/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 
 ### Videos
 
-* [Slice, dice, and route your SharePoint documents with Microsoft Flow, Azure Logic Apps, and Microsoft PowerApps](https://azure.microsoft.com/en-us/resources/videos/build-2017-slice-dice-and-route-your-sharepoint-documents-with-microsoft-flow-azure-logic-apps-and-microsoft-powerapps/)
+* [Slice, dice, and route your SharePoint documents with Microsoft Flow, Azure Logic Apps, and Microsoft PowerApps](https://azure.microsoft.com/resources/videos/build-2017-slice-dice-and-route-your-sharepoint-documents-with-microsoft-flow-azure-logic-apps-and-microsoft-powerapps/)
 
 ## Workflow Manager of SharePoint 2013/2016
 
@@ -70,9 +70,9 @@ Both in SharePoint Online and in SharePoint 2013/2016 on-premises you can define
 
 ### Articles
 
-* [Get started with workflows in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/get-started-with-workflows-in-sharepoint)
-* [SharePoint workflow development best practices](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-workflow-development-best-practices)
-* [Workflow actions and activities reference for SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/workflow-actions-and-activities-reference-for-sharepoint)
+* [Get started with workflows in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/get-started-with-workflows-in-sharepoint)
+* [SharePoint workflow development best practices](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-workflow-development-best-practices)
+* [Workflow actions and activities reference for SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/workflow-actions-and-activities-reference-for-sharepoint)
 
 ### Samples
 

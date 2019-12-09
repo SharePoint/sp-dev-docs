@@ -22,7 +22,7 @@ Be sure that you have the following:
 - [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) installed either remotely or on a computer running SharePoint, with the workload **Office/SharePoint development**. Earlier versions of Visual Studio require component **Microsoft Office Developer Tools for Visual Studio** instead. The latest version of this component is available [here for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), and [here for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
 > [!IMPORTANT]
-> ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/en-us/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
+> ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
 
 <a name="ConnectAAD"> </a>
 

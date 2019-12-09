@@ -58,7 +58,7 @@ Do not migrate anonymous sharing links from the source; this is not useful as it
 ### Sharing with external users
 Before starting migration, you must ensure all users are provisioned in the customer tenant. For users external to the tenant (ie. from a different organization), provision them as B2B collaboration users in Azure Active Directory. This is done in the Azure portal following these steps: 
 
-- [Add Azure Active Directory B2B collaboration users in the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/b2b/add-users-administrator). 
+- [Add Azure Active Directory B2B collaboration users in the Azure portal](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator). 
 
 Once the external users are provisioned, share files and folders with them during migration the same way as internal users.
 

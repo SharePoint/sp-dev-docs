@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 09/04/2019
+ms.date: 11/27/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -82,13 +82,16 @@ Upcoming chapters will provide more details.
 Let's analyze how a page layout mapping is configured in the page layout mapping model, which is best done based upon a sample definition:
 
 ```Xml
-    <PageLayout Name="MyPageLayout" AlsoAppliesTo="MyOtherPageLayout;MyOtherPageLayout2" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" PageHeader="Custom">
+    <PageLayout Name="MyPageLayout" AlsoAppliesTo="MyOtherPageLayout;MyOtherPageLayout2" AssociatedContentType="CustomPage1" PageLayoutTemplate="AutoDetect" IncludeVerticalColumn="true" PageHeader="Custom">
+      <SectionEmphasis VerticalColumnEmphasis="Soft">
+        <Section Row="3" Emphasis="Neutral" />
+      </SectionEmphasis>
       <Header Type="FullWidthImage" Alignment="Left" ShowPublishedDate="true">
         <Field Name="PublishingRollupImage;PublishingPageImage" HeaderProperty="ImageServerRelativeUrl" Functions="ToImageUrl({@name})" />
         <Field Name="ArticleByLine" HeaderProperty="TopicHeader" Functions=""/>
         <Field Name="PublishingContact" HeaderProperty="Authors" Functions="ToAuthors({PublishingContact})"/>
       </Header>
-      <MetaData ShowPageProperties="true" PagePropertiesRow="1" PagePropertiesColumn="3" PagePropertiesOrder="1">
+      <MetaData ShowPageProperties="true" PagePropertiesRow="1" PagePropertiesColumn="4" PagePropertiesOrder="1">
         <Field Name="PublishingContactName;PublishingContactEmail" TargetFieldName="MyPageContact" Functions="" />
         <Field Name="MyCategory" TargetFieldName="Category" Functions="" ShowInPageProperties="true" />
       </MetaData>
@@ -131,10 +134,26 @@ The following properties are used on the PageLayout element:
 - **AlsoAppliesTo**: when this mapping will be used for multiple page layouts then you can specify the names of those additional page layouts as a semi colon delimited list in this attribute. The **Name** property will be name of the first page layout, the **AlsoAppliesTo** just contains the additional ones.
 - **AssociatedContentType**: the name of the modern site page content type you want use. Leave this blank if you want to use the default site page content type.
 - **PageLayoutTemplate**: the layout system to use...defaults to `AutoDetect` which should work fine in all cases, but optionally you can pick a specific wiki layout as well.
+- **IncludeVerticalColumn**: optional element to specify the created target page should have a vertical column. When using a vertical column you target the vertical column as an extra column, so if you before adding a vertical column had 3 columns you'll now have 4 and as such you can set the column value of page content to 4 to put it in the vertical column.
 - **PageHeader**: controls the type of page header that will be used. Defaults to `Custom` as that allows for a nice header, but you can switch it to `None` for no header or `Default` for the default modern page header.
 
 > [!Note]
-> - The **AlsoAppliesTo** attribute  was introduced in the September 2019 release
+> - The **AlsoAppliesTo** attribute was introduced in the September 2019 release
+> - The **IncludeVerticalColumn** attribute was introduced in the November 2019 release
+
+### SectionEmphasis element
+
+The following properties are used on the optional SectionEmphasis element:
+
+- **VerticalColumnEmphasis**: use this property to set the vertical column emphasis to None, Neutral, Soft or Strong
+
+For each section you optionally can specify a section emphasis via the Section element:
+
+- **Row**: indicates the row number of this section, first section will have number 1
+- **Emphasis**: sets the section emphasis to None, Neutral, Soft or Strong
+
+> [!Note]
+> The **SectionEmphasis** element was introduced in the November 2019 release
 
 ### Header element
 
@@ -381,6 +400,108 @@ Sometimes a page layout contains text snippets, which since they're not content 
 
 > [!Note]
 > The HTML provided in the StaticString function must be XML encoded and must be formatted like the source page HTML as this HTML will still be converted to HTML which is compliant with the modern text editor
+
+### I want to add an extra web part on the created page
+
+When you transform you classic publishing page to a modern page you sometimes want to add an **additional** modern web part on the created page, without that there's a classic version of that web part on the classic publishing page. This can be done by adjusting your webpartmapping.xml and page layout mapping files as shown below.
+
+First define your custom web part in your **webpartmapping.xml** file by **adding** it the `WebParts` element in the file like shown in this [standard SPFX Hello World web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part):
+
+```XML
+<WebParts>
+  ...
+  <!-- Custom Hello world web part-->
+  <WebPart Type="SharePointPnP.Demo.HelloWorld" CrossSiteTransformationSupported="true">
+    <Properties>
+      <Property Name="HelloWorld" Type="string" />
+    </Properties>
+   <Mappings>
+    <Mapping Default="true" Name="default">
+      <ClientSideWebPart Type="Custom" ControlId="157b22d0-8006-4ec7-bf4b-ed62383fea76" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;"/>
+    </Mapping>
+  </Mappings>
+</WebPart>
+  ...
+</WebParts>
+```
+
+If you're not how to correctly define your custom web part in above **ClientSideWebPart** element then follow these steps:
+
+- Navigate to the SharePoint Framework Workbench in your site (e.g. https://contoso.sharepoint.com/sites/myportalsite/_layouts/workbench.aspx)
+- Add your custom web part to the workbench and configure it when needed
+- Click on the "Web part data" button in the toolbar and then on the "Modern Pages" button
+- Copy the **WebPartData** json structure and use it to complete next steps:
+  - The **ControlId** guid value is the value of the **id** json property
+  - Delete the following json properties from the copied snippet: id, instanceIf, title and description. At this point you have the following left:  `{"serverProcessedContent":{"htmlStrings":{},"searchablePlainTexts":{},"imageSources":{},"links":{}},"dataVersion":"1.0","properties":{"description":"HelloWorld from Bert","test":"Multi-line text field","test1":true,"test2":"2","test3":true}}`
+  - XML encode this string, this will give you this: `&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;HelloWorld from Bert&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;`
+  - If needed insert web part parameters in this string (e.g. {HelloWorld} in above sample): `&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;`
+  - Paste the resulting string in the **JsonControlData** property
+
+Once that's in place you need to update your page layout mapping by adding a field in the **WebParts** section that will be transformed to this custom web part:
+
+```XML
+<WebParts>
+  ...
+  <!-- Add an extra web part on the page -->
+  <Field Name="ID"  TargetWebPart="SharePointPnP.Demo.HelloWorld" Row="4" Column="1" Order="1">
+    <Property Name="HelloWorld" Type="string" Functions="StaticString('PnP Rocks!')"/>
+  </Field>
+  ...
+</WebParts>
+```
+
+Ensure that specify the custom **webpartmapping.xml** file as part of your transformation (`-WebPartMappingFile` PowerShell cmdlet parameter, `PublishingPageTransformator` constructor when using .Net).
+
+### I'm using a lot of Add-In parts and want to transform these to custom SPFX web parts (as of the December 2019 release)
+
+The default behavior of page transformation is simply take over the add-in part on the modern client side page as add-in's do work on modern pages. If you however want to selectively transform some add-in parts to custom SPFX based web parts, drop some of add-in parts and keep the remaining add-in parts then the default mapping will not be sufficient. In the below example you see that the `StaticString` function is used to feed the add-in title as mapping selector value. So based up on the title of the web part a mapping will be selected. The first add-in will be taken over as add-in on the modern page, the second one will be transformed to a custom SPFX based alternative and the last one will be simply dropped.
+
+When mapping to a custom SPFX based web part you can use any of your add-in part properties to configure the SPFX based alternative (e.g. {HelloWorld} in below sample), even if those properties are not listed in the Properties node in the mapping file. See also the previous chapter if you want to learn more about how to create a custom mapping file.
+
+```XML
+<WebPart Type="Microsoft.SharePoint.WebPartPages.ClientWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" CrossSiteTransformationSupported="true">
+  <!-- Note: the add-in can depend on assets that live in the source site, which is not something we can detect -->
+  <Properties>
+    <Property Name="FeatureId" Type="guid"/>
+    <Property Name="ProductWebId" Type="guid"/>
+    <Property Name="ProductId" Type="guid"/>
+  </Properties>
+  <Mappings Selector="StaticString({Title})">
+    <Mapping Name="My Custom Report" Default="true">
+      <!-- We keep this web part -->
+      <ClientSideWebPart Type="ClientWebPart" Order="10" JsonControlData="{}"/>
+    </Mapping>
+    <Mapping Name="News Ticker" Default="false">
+      <!--This web part will be transformed to a custom SPFX based web part -->
+      <ClientSideWebPart Type="Custom" ControlId="157b22d0-8006-4ec7-bf4b-ed62383fea76" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;{HelloWorld}&quot;,&quot;test&quot;:&quot;Multi-line text field&quot;,&quot;test1&quot;:true,&quot;test2&quot;:&quot;2&quot;,&quot;test3&quot;:true&#125;&#125;"/>
+    </Mapping>
+    <Mapping Name="Some other add-in" Default="false">
+      <!-- This add-in will not be taken over -->
+    </Mapping>
+  </Mappings>
+</WebPart>
+```
+
+You can even make the mapping more precise by taking in account add-in part properties by combining the add-in part properties to generate a selector string.
+
+```XML
+<WebPart Type="Microsoft.SharePoint.WebPartPages.ClientWebPart, Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" CrossSiteTransformationSupported="true">
+  <!-- Note: the add-in can depend on assets that live in the source site, which is not something we can detect -->
+  <Properties>
+    <Property Name="FeatureId" Type="guid"/>
+    <Property Name="ProductWebId" Type="guid"/>
+    <Property Name="ProductId" Type="guid"/>
+  </Properties>
+  <Mappings Selector="ConcatenateWithPipeDelimiter({Title},{effect})">
+    <Mapping Name="News Ticker|Slide" Default="true">
+      <ClientSideText Text="***TEST.{Title} web part - Slide mapping chosen! Slider theme = {theme}***" Order="10" />
+    </Mapping>
+    <Mapping Name="News Ticker|Scroll" Default="false">
+      <ClientSideText Text="***TEST.{Title} web part - Scroll mapping chosen! Slider theme = {theme}***" Order="10" />
+    </Mapping>
+  </Mappings>
+</WebPart>
+```
 
 ### Can I control the page preview image (as of the May 2019 release)
 

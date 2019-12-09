@@ -24,13 +24,13 @@ The new mobility features offered by SharePoint are built on existing Microsoft 
 
 In this section, we assume that you're familiar with SharePoint, the .NET Framework, the Visual Studio development system, and Visual C#. It's also good to have some experience with Windows Phone 8 or Windows Phone 7 application development using Silverlight, and it helps to be familiar with XAML, the StackPanel and Pivot controls for Windows Phone, and concepts such as tombstoning, Silverlight data binding, and so on. If you are new to Windows Phone application development using Silverlight, we recommend that you check out the following resources.
 
--  [Developing a Windows Phone Application from Start to Finish](http://msdn.microsoft.com/en-us/library/gg680270%28v=pandp.11%29.aspx)
+-  [Developing a Windows Phone Application from Start to Finish](https://msdn.microsoft.com/library/gg680270%28v=pandp.11%29.aspx)
 
--  [User interface for Windows Phone](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff967556%28v=vs.105%29.aspx)
+-  [User interface for Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff967556%28v=vs.105%29.aspx)
 
--  [Quickstart: Creating a user interface with XAML for Windows Phone](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207025%28v=vs.105%29.aspx)
+-  [Quickstart: Creating a user interface with XAML for Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/jj207025%28v=vs.105%29.aspx)
 
--  [Pivot control architecture for Windows Phone](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff941097%28v=vs.105%29.aspx)
+-  [Pivot control architecture for Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff941097%28v=vs.105%29.aspx)
     
 <a name="SP15buildmobile_devoverview"> </a>  
 
@@ -68,7 +68,7 @@ In SharePoint Foundation 2010, the client object models provide APIs that enable
   
 ![SharePoint client object model architecture](../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig3.png)
    
-To learn how to use the JavaScript client object model against SharePoint data, see the [ECMAScript Client Object Model video](https://msdn.microsoft.com/en-us/SP2010DevTrainingCourse_ECMAScriptClientObjectModel.aspx).
+To learn how to use the JavaScript client object model against SharePoint data, see the [ECMAScript Client Object Model video](https://msdn.microsoft.com/SP2010DevTrainingCourse_ECMAScriptClientObjectModel.aspx).
 
 #### REST endpoints in SharePoint
 
@@ -80,7 +80,7 @@ To use the REST capabilities that are built into SharePoint, you can construct a
  
 Currently, the REST service in SharePoint is read-only. That is, only REST endpoints that represent an HTTP GET operation are available
  
-By default, the SharePoint REST service responses are formatted using the Atom protocol, according to the OData specification. In addition, the REST service supports HTTP Accept headers that enable developers to specify that the response is returned in JSON format. To learn more about REST services in SharePoint, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
+By default, the SharePoint REST service responses are formatted using the Atom protocol, according to the OData specification. In addition, the REST service supports HTTP Accept headers that enable developers to specify that the response is returned in JSON format. To learn more about REST services in SharePoint, see  [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
  
 The SharePoint REST service supports the following OData query operators:
 
@@ -129,11 +129,11 @@ The following how-tos and overviews delve into the specific information you need
 
 -  [Programming models in SharePoint](programming-models-in-sharepoint.md)
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
--  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
--  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/en-us/download/details.aspx?id=36818)
--  [Windows Phone SDK 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=27570)
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=30476)
--  [About Expression Blend](http://msdn.microsoft.com/en-us/library/cc296376%28Expression.40%29.aspx)
+-  [Windows Phone SDK 8.0](http://www.microsoft.com/download/details.aspx?id=35471)
+-  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/download/details.aspx?id=36818)
+-  [Windows Phone SDK 7.1](http://www.microsoft.com/download/details.aspx?id=27570)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+-  [About Expression Blend](https://msdn.microsoft.com/library/cc296376%28Expression.40%29.aspx)
     
   
 

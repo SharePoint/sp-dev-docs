@@ -92,7 +92,7 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 
 ## See also
 
-- [Content Migration](http://msdn.microsoft.com/library/626286f9-71b3-4b3c-9bac-a7bca059463f(Office.15).aspx)
+- [Content Migration](https://msdn.microsoft.com/library/626286f9-71b3-4b3c-9bac-a7bca059463f(Office.15).aspx)
 
 
 

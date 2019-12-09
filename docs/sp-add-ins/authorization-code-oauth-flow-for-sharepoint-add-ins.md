@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # Authorization Code OAuth flow for SharePoint Add-ins
 
-> [!NOTE] 
+> [!NOTE]
 > This article assumes that you are familiar with [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) and with the concepts and principles behind OAuth. For more information about OAuth, see [OAuth.net](http://oauth.net/) and [Web Authorization Protocol (oauth)](http://datatracker.ietf.org/doc/active/#oauth).
 
 > [!IMPORTANT]
@@ -17,7 +17,7 @@ localization_priority: Priority
 
 In some scenarios, an add-in can request permission to access SharePoint resources on the fly; that is, an add-in can request permission to access SharePoint resources dynamically at runtime, instead of at add-in installation time. This type of add-in does not have to be launched from, or even installed on, SharePoint. For example, it could be a native device add-in, an add-in that is launched from any website, or an Office Add-in launched from an Office application that wants to access resources on SharePoint on the fly.
 
-> [!NOTE] 
+> [!NOTE]
 > This type of add-in can only be run by users who have Manage permissions to the resources the add-in wants to access. For example, if an add-in requests only Read permission to a website, a user who has Read, but not Manage, rights to the website cannot run the add-in.
 
 To be able to call in to SharePoint, this type of add-in must first be registered through the Seller Dashboard or the appregnew.aspx page. For more information about registering add-ins via the Seller Dashboard or appregnew.aspx, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md).
@@ -25,29 +25,29 @@ To be able to call in to SharePoint, this type of add-in must first be registere
 After you've registered your add-in, it is a *security principal* and has an identity just as users and groups do. This identity is referred to as an add-in principal. Like users and groups, an add-in principal has certain permissions. For more information about add-in principals, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md).
 
 When you register the add-in, you'll get a client ID, client secret, add-in domain, and redirect URI for the add-in principal. This information is registered with the authorization server, Microsoft Azure Access Control Service (ACS).
- 
+
 <a name="Flow"> </a>
- 
+
 ## Authorization Code OAuth flow for add-ins that request permissions on the fly
 
 This section summarizes the OAuth authentication and authorization flow for a SharePoint add-in requesting permissions on the fly. The flow is called the **Authentication Code flow**. The sequence describes how an add-in that is not launched from within SharePoint can access resources in SharePoint.
 
-> [!NOTE] 
+> [!NOTE]
 > The flow involves a series of interactions between your add-in, SharePoint, the authorization server (which is ACS), and the end user at runtime. So the flow requires either SharePoint Online or a SharePoint farm that is connected to the Internet, so it can communicate with ACS. SharePoint farms that are not connected to the Internet must use [the high-trust authorization system](creating-sharepoint-add-ins-that-use-high-trust-authorization.md).
- 
-There has to be a web application or service that is hosted separately from SharePoint. Even if the add-in is a device add-in, it has to have a web application or service URL that can be registered with ACS, even if the web component is used for nothing else. 
+
+There has to be a web application or service that is hosted separately from SharePoint. Even if the add-in is a device add-in, it has to have a web application or service URL that can be registered with ACS, even if the web component is used for nothing else.
 
 For simplicity, this article assumes that the add-in is a web application called Contoso.com. The application uses the SharePoint client object model (CSOM) or the SharePoint REST APIs to make calls to SharePoint. When the application first attempts to access SharePoint, SharePoint requests an authorization code from ACS that it can send to the Contoso.com application. The application then uses the authorization code to request an access token from ACS. After it has the access token, the Contoso.com application includes it in all its requests to SharePoint.
- 
 
-<a name="Fly"> </a> 
+
+<a name="Fly"> </a>
 
 ### Detailed example of the flow
 
 Suppose that Contoso provides a photo-printing service online. A user wants to print some photos. The user wants to give consent to a Contoso photo-printing service to access and print photos from a set of photo libraries that the user keeps on a SharePoint Online site `fabrikam.sharepoint.com`.
 
 ![OAuth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_0.png)
- 
+
 The photo-printing application is registered, so it has a client ID, client secret, and redirect URI. The redirect URI that Contoso provided when it registered the add-in is `https://contoso.com/RedirectAccept.aspx`. The client ID and client secret information are stored in the photo-printing application's web.config file. The following is an example of how the client ID and client secret are entered in the web.config file.
 
 ```XML
@@ -62,8 +62,8 @@ The photo-printing application is registered, so it has a client ID, client secr
 ### Authentication Code flow steps
 
 Following are the steps in the Authentication Code flow.
- 
-> [!TIP] 
+
+> [!TIP]
 > These steps refer to methods in the TokenHelper.cs (or .vb) file. This managed code is not compiled, so there are no reference topics for it. However, the file itself is fully commented with descriptions of every class, member parameter, and return value. Consider having a copy of it open to refer to as you read these steps.
 
 #### Step 1: Client opens an application and then directs it to a SharePoint site for data
@@ -76,7 +76,7 @@ In this example, the URL is `https://contoso.com/print/home.aspx`
 
 The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: `https://fabrikam.sharepoint.com/`
 
-<a name="FlowStep2"> </a> 
+<a name="FlowStep2"> </a>
 
 #### Step 2: The add-in redirects to the SharePoint site authorization URL
 
@@ -125,11 +125,11 @@ Contoso retrieves the authorization code from the query parameter, and then incl
 
 If you are using managed code and the SharePoint CSOM, the TokenHelper.cs (or .vb) file, the method that makes the request to ACS is **GetClientContextWithAuthorizationCode**. In this case the code looks similar to the following (where  `authCode` is a variable to which the authorization code has been assigned): `TokenHelper.GetClientContextWithAuthorizationCode(`  `"https://fabrikam.sharepoint.com/",`  `"00000003-0000-0ff1-ce00-000000000000",`  `authCode,`  `"1ee82b34-7c1b-471b-b27e-ff272accd564",`  `new Uri(Request.Url.GetLeftPart(UriPartial.Path)));`
 
-If you look at the TokenHelper.cs (or .vb) file, the second parameter of the **GetClientContextWithAuthorizationCode** method is the `targetPrincipalName`. This value is always the constant `00000003-0000-0ff1-ce00-000000000000` in an add-in that is accessing SharePoint. If you trace the call hierarchy from **GetClientContextWithAuthorizationCode**, it obtains the client ID and secret from the web.config file. 
+If you look at the TokenHelper.cs (or .vb) file, the second parameter of the **GetClientContextWithAuthorizationCode** method is the `targetPrincipalName`. This value is always the constant `00000003-0000-0ff1-ce00-000000000000` in an add-in that is accessing SharePoint. If you trace the call hierarchy from **GetClientContextWithAuthorizationCode**, it obtains the client ID and secret from the web.config file.
 
 ACS receives Contoso's request and validates the client ID, client secret, redirect URI, and authorization code. If all are valid, the ACS invalidates the authorization code (it can be used only once) and creates a refresh token and an access token, which it returns to Contoso. The Contoso application can cache this access token for reuse on later requests. By default, access tokens are good for about 12 hours.
 
-Each access token is specific to the user account that is specified in the original request for authorization, and grants access only to the services that are specified in that request. Your add-in should store the access token securely. The Contoso application can also cache the refresh token. By default, refresh tokens are good for 6 months. The refresh token can be redeemed for a new access token from ACS whenever the access token expires. 
+Each access token is specific to the user account that is specified in the original request for authorization, and grants access only to the services that are specified in that request. Your add-in should store the access token securely. The Contoso application can also cache the refresh token. By default, refresh tokens are good for 6 months. The refresh token can be redeemed for a new access token from ACS whenever the access token expires.
 
 For more information about tokens, see [Handle security tokens in provider-hosted low-trust SharePoint Add-ins](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md).
 
@@ -137,7 +137,7 @@ For more information about tokens, see [Handle security tokens in provider-hoste
 
 ![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_7.png)
 
-Contoso includes the access token to make a REST API call or CSOM request to SharePoint, passing the OAuth access token in the HTTP **Authorization** header. SharePoint returns the information that Contoso requested. 
+Contoso includes the access token to make a REST API call or CSOM request to SharePoint, passing the OAuth access token in the HTTP **Authorization** header. SharePoint returns the information that Contoso requested.
 
 For more information about how this request is made, see [Handle security tokens in provider-hosted low-trust SharePoint Add-ins](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md).
 
@@ -151,12 +151,12 @@ This section assumes that you are familiar with the article [Add-in permissions 
 
 The values listed in the **Scope alias** column are shorthand versions of their counterparts in the **Scope URI** column. The aliases can be used only by add-ins that request permission to access SharePoint resources on the fly. (The scope URI values are used in the add-in manifest of add-ins that are launched from SharePoint. These add-ins request permissions during add-in installation.)
 
-The scope aliases are used only in the context of using the OAuthAuthorize.aspx redirect page. As shown in [step 2 of the OAuth flow](#FlowStep2) described in the previous section, when the add-in is using managed code, the aliases are used when you call the **GetAuthorizationUrl** method of TokenHelper.cs (or .vb) in your project. The following is another example: 
+The scope aliases are used only in the context of using the OAuthAuthorize.aspx redirect page. As shown in [step 2 of the OAuth flow](#FlowStep2) described in the previous section, when the add-in is using managed code, the aliases are used when you call the **GetAuthorizationUrl** method of TokenHelper.cs (or .vb) in your project. The following is another example:
 
 ```csharp
 Response.Redirect(TokenHelper.GetAuthorizationUrl(
-    sharePointSiteUrl.ToString(), 
-    "Web.Read List.Write ", 
+    sharePointSiteUrl.ToString(),
+    "Web.Read List.Write ",
     "https://contoso.com/RedirectAccept.aspx "));
 ```
 
@@ -166,9 +166,9 @@ If you are not using managed code, the scope aliases are used in the scope field
 
 `https://fabrikam.sharepoint.com/_layout/15/OAuthAuthorize.aspx?client_id=c78d058c-7f82-44ca-a077-fba855e14d38&amp;scope=list.write&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`
 
-> [!NOTE] 
+> [!NOTE]
 > For a description of the scopes, see [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md).
- 
+
 <br/>
 
 **Table 1. SharePoint add-in permission request scope URIs and their corresponding aliases**
@@ -237,7 +237,7 @@ public partial class RedirectAccept : System.Web.UI.Page
         Uri rUri = new Uri("https://contoso.com/RedirectAccept.aspx");
 
         using (ClientContext context = TokenHelper.GetClientContextWithAuthorizationCode(
-            "https://fabrikam.sharepoint.com/", 
+            "https://fabrikam.sharepoint.com/",
             "00000003-0000-0ff1-ce00-000000000000",
             authCode,
             "1ee82b34-7c1b-471b-b27e-ff272accd564".
@@ -263,14 +263,14 @@ The following is code-behind for a Default.aspx page. This page assumes a scenar
 
 - The **Page_Load** method first checks for an authorization code in the query string. There is one if the browser was redirected to the page by SharePoint. If there is one, the code uses it to get a new refresh token, which it caches in a durable cache that lasts across sessions.
 
-- The method then checks for a refresh token in the cache. 
-    
+- The method then checks for a refresh token in the cache.
+
     - If there isn't one, it gets one by telling SharePoint the permissions it needs (Write permission at Web scope) and asking SharePoint for an authorization code. The user is prompted to grant the permission, and if it is granted, SharePoint gets the authorization code from ACS and sends it back as a query parameter on a redirect to this same page.
-    
+
     - If there is a cached refresh token, the method uses it to obtain an access token directly from ACS. Just as in the example at the end of the preceding section of this article, the access token is used to create a SharePoint client context object. Using a cached refresh token to get an access token directly from ACS avoids the additional network call to SharePoint on session startup, so users rerunning the add-in within the lifespan of the refresh token cache experience faster startup.
 
-- Just as in the example at the end of the preceding section, this code makes no provision for dealing with an expired access token. After the client context object is created, it keeps using the same access token. One way to protect against an expired access token is to cache the access token, in addition to the refresh token. You would then modify the following code so that it calls the **GetAccessToken** method only if there isn't an unexpired access token in the cache. 
-    
+- Just as in the example at the end of the preceding section, this code makes no provision for dealing with an expired access token. After the client context object is created, it keeps using the same access token. One way to protect against an expired access token is to cache the access token, in addition to the refresh token. You would then modify the following code so that it calls the **GetAccessToken** method only if there isn't an unexpired access token in the cache.
+
     However, while it is acceptable to have the refresh token cached on the client, in a cookie, for example, the access token should only be in a server-side cache for security reasons. The refresh token is encrypted and can only be unencrypted by ACS. But the access token is merely encoded (with Base 64 encoding) and can be easily decoded by a man-in-the-middle attack.
 
 - The **TokenCache** class that is referred to in this code is defined later in this section.
@@ -293,7 +293,7 @@ namespace DynamicAppPermissionRequest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Uri sharePointSiteUrl = new Uri("https://fabrikam.sharpoint.com/print/");
+            Uri sharePointSiteUrl = new Uri("https://fabrikam.sharepoint.com/print/");
 
             if (Request.QueryString["code"] != null)
             {
@@ -302,21 +302,21 @@ namespace DynamicAppPermissionRequest
 
             if (!TokenCache.IsTokenInCache(Request.Cookies))
             {
-                Response.Redirect(TokenHelper.GetAuthorizationUrl(sharePointSiteUrl.ToString(), 
+                Response.Redirect(TokenHelper.GetAuthorizationUrl(sharePointSiteUrl.ToString(),
                                                                   "Web.Write"));
             }
             else
             {
                 string refreshToken = TokenCache.GetCachedRefreshToken(Request.Cookies);
-                string accessToken = 
+                string accessToken =
                 TokenHelper.GetAccessToken(
-                           refreshToken, 
-                           "00000003-0000-0ff1-ce00-000000000000", 
-                           sharePointSiteUrl.Authority, 
+                           refreshToken,
+                           "00000003-0000-0ff1-ce00-000000000000",
+                           sharePointSiteUrl.Authority,
                            TokenHelper.GetRealmFromTargetUrl(sharePointSiteUrl)).AccessToken;
 
-                using (ClientContext context = 
-                       TokenHelper.GetClientContextWithAccessToken(sharePointSiteUrl.ToString(), 
+                using (ClientContext context =
+                       TokenHelper.GetClientContextWithAccessToken(sharePointSiteUrl.ToString(),
                                                                    accessToken))
                 {
                     context.Load(context.Web);
@@ -349,16 +349,16 @@ namespace DynamicAppPermissionRequest
     {
         private const string REFRESH_TOKEN_COOKIE_NAME = "RefreshToken";
 
-        public static void UpdateCacheWithCode(HttpRequest request, 
-                                               HttpResponse response, 
+        public static void UpdateCacheWithCode(HttpRequest request,
+                                               HttpResponse response,
                                                Uri targetUri)
         {
-            string refreshToken = 
+            string refreshToken =
                 TokenHelper.GetAccessToken(
-                    request.QueryString["code"], 
-                    "00000003-0000-0ff1-ce00-000000000000", 
-                    targetUri.Authority, 
-                    TokenHelper.GetRealmFromTargetUrl(targetUri), 
+                    request.QueryString["code"],
+                    "00000003-0000-0ff1-ce00-000000000000",
+                    targetUri.Authority,
+                    TokenHelper.GetRealmFromTargetUrl(targetUri),
                     new Uri(request.Url.GetLeftPart(UriPartial.Path)))
                    .RefreshToken;
             SetRefreshTokenCookie(response.Cookies, refreshToken);
@@ -387,7 +387,7 @@ namespace DynamicAppPermissionRequest
             }
         }
 
-        private static void SetRefreshTokenCookie(HttpCookieCollection cookies, 
+        private static void SetRefreshTokenCookie(HttpCookieCollection cookies,
                                                   string refreshToken)
         {
             if (cookies[REFRESH_TOKEN_COOKIE_NAME] != null)
@@ -396,7 +396,7 @@ namespace DynamicAppPermissionRequest
             }
             else
             {
-                HttpCookie cookie = new HttpCookie(REFRESH_TOKEN_COOKIE_NAME, 
+                HttpCookie cookie = new HttpCookie(REFRESH_TOKEN_COOKIE_NAME,
                                                    refreshToken);
                 cookie.Expires = DateTime.Now.AddDays(30);
                 cookies.Add(cookie);
@@ -417,5 +417,5 @@ namespace DynamicAppPermissionRequest
 - [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
 
 
-    
- 
+
+

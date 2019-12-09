@@ -21,7 +21,7 @@ Terminology
 
 This article uses the term **SharePoint theme**, which has overloaded meanings in other articles on MSDN, MS Blogs, and all across the Internet.  In MSDN terminology, **SharePoint theme** specifically refers to the color palette / color scheme (.spcolor file) applied to a SharePoint site.  In PnP terminology, the terms **SharePoint theme** and **composed look** are the same thing.
 
-A SharePoint theme is one of many [SharePoint theming experience components](https://msdn.microsoft.com/en-us/library/office/jj927174.aspx).
+A SharePoint theme is one of many [SharePoint theming experience components](https://msdn.microsoft.com/library/office/jj927174.aspx).
 
 In this article we chose to align the term **SharePoint theme** with the specific technical item it refers to in order to succinctly describe all your branding options. 
 
@@ -86,7 +86,7 @@ See the [Customize the Office 365 theme for your organization](https://support.o
 - master page
 - master page preview
 
-See the [Themes overview for SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/jj927174.aspx) article to learn more about these components.
+See the [Themes overview for SharePoint 2013](https://msdn.microsoft.com/library/office/jj927174.aspx) article to learn more about these components.
 
 **Composed looks used for Office 365 SharePoint sites** include one or more of the following components.  
 
@@ -334,9 +334,9 @@ Related links
 - [SharePoint color palette tool](http://www.microsoft.com/en-gb/download/details.aspx?id=38182)
 - Ignite 2015 - [Deep Dive into Safe SharePoint Branding in Office 365 Using Repeatable Patterns and Practices](https://channel9.msdn.com/Events/Ignite/2015/BRK3164)
 - [Customize your SharePoint site UI by using JavaScript](Customize-your-SharePoint-site-UI-by-using-JavaScript.md)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
 Related PnP samples
 ===================

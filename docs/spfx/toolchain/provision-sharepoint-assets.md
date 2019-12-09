@@ -39,7 +39,7 @@ A field or a site column represents an attribute, or piece of metadata, that the
 
 For example, suppose you define a site column named Customer. Users can add that column to their lists and reference it in their content types. This ensures that the column has the same attributes—at least to start with—wherever it appears.
 
-You can refer to the schema and attributes in the [Field Element (Field)](https://msdn.microsoft.com/en-us/library/aa979575(v=office.15).aspx) documentation to define a new field in your solution. 
+You can refer to the schema and attributes in the [Field Element (Field)](https://msdn.microsoft.com/library/aa979575(v=office.15).aspx) documentation to define a new field in your solution. 
 
 Following is an example of a new DateTime field:
 
@@ -63,7 +63,7 @@ For example, imagine a business situation in which you have three different type
 
 One solution to this business problem is to create four content types. The first content type, Financial Document, could encapsulate data requirements that are common to all financial documents in the organization. The remaining three, Expense Report, Purchase Order, and Invoice, could inherit common elements from Financial Document. In addition, they could define characteristics that are unique to each type, such as a particular set of metadata, a document template to be used in creating a new item, and a specific workflow for processing an item.
 
-You can refer to the schema and attributes in the [ContentType Element (ContentType)](https://msdn.microsoft.com/en-us/library/aa544268.aspx) documentation to define a new content type in your solution. 
+You can refer to the schema and attributes in the [ContentType Element (ContentType)](https://msdn.microsoft.com/library/aa544268.aspx) documentation to define a new content type in your solution. 
 
 Following is an example of a content type:
 
@@ -85,7 +85,7 @@ Lists are a key, underlying feature of a SharePoint site. They enable teams to g
 
 SharePoint provides several list templates such as contact list, calendar, task list, and more. You can use these templates to create new list instances for your web parts or other components. For example, you can define a list instance Finance Documents based on the Document Library template to store associated documents with your web part. 
 
-You can refer to the schema and attributes in the [ListInstance Element (List Instance)](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx) documentation to define a list instance in your solution.
+You can refer to the schema and attributes in the [ListInstance Element (List Instance)](https://msdn.microsoft.com/library/office/ms476062.aspx) documentation to define a list instance in your solution.
 
 Following is an example of a list instance definition:
 
@@ -101,7 +101,7 @@ Following is an example of a list instance definition:
 
 ### List instances with custom schema
 
-You can use a custom list schema definition to define your fields, content types, and views used in your list instance. You use the [CustomSchema](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx#sectionSection0) attribute in the ListInstance element to reference a custom schema for the list instance. 
+You can use a custom list schema definition to define your fields, content types, and views used in your list instance. You use the [CustomSchema](https://msdn.microsoft.com/library/office/ms476062.aspx#sectionSection0) attribute in the ListInstance element to reference a custom schema for the list instance. 
 
 For example, you can define a list instance **Finance Documents** with a content type **Financial Document** that could encapsulate data requirements that are common to all financial documents in the organization. 
 
@@ -158,7 +158,7 @@ This is the custom schema definition that defines a content type for the list in
 
 ## Create SharePoint items in your solution
 
-The solution package uses [SharePoint Features](https://msdn.microsoft.com/en-us/library/ee537350(office.14).aspx) to package and provision the SharePoint items. A feature is a container that includes one or more SharePoint items to provision. A feature contains a Feature.xml file and one or more element manifest files. These XML files are also known as feature definitions. 
+The solution package uses [SharePoint Features](https://msdn.microsoft.com/library/ee537350(office.14).aspx) to package and provision the SharePoint items. A feature is a container that includes one or more SharePoint items to provision. A feature contains a Feature.xml file and one or more element manifest files. These XML files are also known as feature definitions. 
 
 Typically, a client-side solution package contains one feature. This feature is activated when the solution is installed on a site. It is important to note that the site administrators install your solution package and not the feature. 
 
@@ -285,7 +285,7 @@ This command packages one or more client-side component manifests, such as web p
 
 ## Upgrade SharePoint items
 
-You may include new SharePoint items or update existing SharePoint items when you upgrade your client-side solution. Because provisioning SharePoint items uses features, you are using the feature [UpgradeActions](https://msdn.microsoft.com/en-us/library/office/ee537575(v=office.14).aspx) XML file to define a list of upgrade actions.
+You may include new SharePoint items or update existing SharePoint items when you upgrade your client-side solution. Because provisioning SharePoint items uses features, you are using the feature [UpgradeActions](https://msdn.microsoft.com/library/office/ee537575(v=office.14).aspx) XML file to define a list of upgrade actions.
 
 The `upgradeActions` JSON object array in the `package-solution.json` references the feature XML file(s) associated with the upgrade actions for your feature. At the least, an upgrade action file defines the element manifest XML file that is executed when upgrading the feature. 
 

@@ -20,10 +20,10 @@ The SPMetal Parameters XML is used to override certain aspects of the default be
 
 For more information about how the elements are used, see:
 
-- [Overriding SPMetal Defaults by Using a Parameters XML File](http://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
-- [How to: Use SPMetal](http://msdn.microsoft.com/library/bfeb17f4-9cee-4008-bfb4-8e22e3acae1c%28Office.15%29.aspx)
-- [SPMetal Default Code Generation Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
-- [SPMetal](http://msdn.microsoft.com/library/bbb79c7c-a994-4ef9-9d43-8fc046dc508b%28Office.15%29.aspx)
+- [Overriding SPMetal Defaults by Using a Parameters XML File](https://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
+- [How to: Use SPMetal](https://msdn.microsoft.com/library/bfeb17f4-9cee-4008-bfb4-8e22e3acae1c%28Office.15%29.aspx)
+- [SPMetal Default Code Generation Rules](https://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
+- [SPMetal](https://msdn.microsoft.com/library/bbb79c7c-a994-4ef9-9d43-8fc046dc508b%28Office.15%29.aspx)
   
 ## Elements
 

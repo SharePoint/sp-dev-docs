@@ -62,7 +62,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p><a href="removefieldref-element-contenttype.md">RemoveFieldRef</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx">DocumentTemplate</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx">DocumentTemplate</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -111,11 +111,11 @@ Changing these properties in the field reference only changes them as they apply
 > [!NOTE] 
 > The order in which **FieldRef** elements are listed determines the order of fields shown on NewForm.aspx.
 
-The [DocumentTemplate](http://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx)
+The [DocumentTemplate](https://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx)
 child element is obsolete. Instead use the [DocumentTemplate](documenttemplate-element-contenttype.md) element
 that is a child of the [ContentType](contenttype-element-contenttype.md) element.
 
-For more information about field references, see [Fields and Field References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx).
+For more information about field references, see [Fields and Field References](https://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx).
 
 
 ## Example
@@ -159,7 +159,7 @@ The following example shows the field references collection for the Document con
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 
 
 

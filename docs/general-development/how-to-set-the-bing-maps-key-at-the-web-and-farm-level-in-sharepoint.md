@@ -19,7 +19,7 @@ Learn how to set the Bing Maps key programmatically at the web (SharePoint Serve
 To follow the steps in this example, you should have the following:
      
 - SharePoint - with administrative privileges at farm OR site collection level
-- SharePoint Online Management Shell - https://www.microsoft.com/en-us/download/details.aspx?id=35588
+- SharePoint Online Management Shell - https://www.microsoft.com/download/details.aspx?id=35588
 - SharePoint Online PnP PowerShell - https://github.com/SharePoint/PnP-PowerShell/
 - Visual Studio 2010 or later
 - A valid Bing Maps key, which you can obtain from the  [Bing Maps Account Center](https://www.bingmapsportal.com/).
@@ -72,7 +72,7 @@ Set-PnPPropertyBagValue -Key "BING_MAPS_KEY" -Value "YOURKEYVALUE"
 Set-SPOsite <SiteURL> -DenyAddAndCustomizePages 0
 ```
     
-   > [!NOTE] Ensure you understand the implications of changing a site's NoScript Policy - https://docs.microsoft.com/en-us/sharepoint/allow-or-prevent-custom-script?redirectSourcePath=%252fen-us%252farticle%252fTurn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+   > [!NOTE] Ensure you understand the implications of changing a site's NoScript Policy - https://docs.microsoft.com/sharepoint/allow-or-prevent-custom-script?redirectSourcePath=%252fen-us%252farticle%252fTurn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
 
 
 ### To set the Bing Maps key at the farm or web level using the client object model with Visual Studio

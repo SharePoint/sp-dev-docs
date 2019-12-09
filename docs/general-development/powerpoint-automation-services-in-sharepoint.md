@@ -95,7 +95,7 @@ To use PowerPoint Automation Services, you use its programming interface to send
 PowerPoint Automation Services uses the asynchronous pattern method for sending and receiving conversion requests. Thus, you can write code that continues to execute after a conversion request has been sent. If you need to provide notification to users after a conversion request has been completed, you can specify a delegate that references a callback method to execute when the operation completes. 
   
 > [!NOTE]
-> For more information about how to work with the asynchronous design pattern, see the  [Asynchronous Programming Overview](http://msdn.microsoft.com/en-us/library/ms228963.aspx). 
+> For more information about how to work with the asynchronous design pattern, see the  [Asynchronous Programming Overview](https://msdn.microsoft.com/library/ms228963.aspx). 
   
     
     
@@ -138,7 +138,7 @@ The constructor method for the **PresentationRequest** class has three required 
 -  _extension_—A string that specifies the file extension of the file being converted.
     
   
--  _output_—An  [SPFileStream](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfilestream.aspx) object that specifies where the output will be stored.
+-  _output_—An  [SPFileStream](https://msdn.microsoft.com/library/microsoft.sharepoint.spfilestream.aspx) object that specifies where the output will be stored.
     
   
 The **PresentationRequest** class has a single overload for its constructor method that adds a _settings_ parameter. The _settings_ parameter accepts a **PresentationSettings** object as an argument.
@@ -147,7 +147,7 @@ The **PresentationRequest** class has a single overload for its constructor meth
     
 
 > **Tip:**
-> When converting the output  [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file matches the extension of the file type that you want (.ppt or .pptx).
+> When converting the output  [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](https://msdn.microsoft.com/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file matches the extension of the file type that you want (.ppt or .pptx).
   
     
     
@@ -169,7 +169,7 @@ The **PdfRequest** class also has a single overload for its constructor method t
     
 
 > **Tip:**
-> When converting the output  [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file matches the extension of the file type that you want (.pdf).
+> When converting the output  [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](https://msdn.microsoft.com/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file matches the extension of the file type that you want (.pdf).
   
     
     
@@ -191,7 +191,7 @@ The **PictureRequest** class does not have any overloads for its constructor met
     
 
 > **Tip:**
-> The **PictureRequest** class returns a stream that contains a package of image files. When converting the output [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file is .zip.
+> The **PictureRequest** class returns a stream that contains a package of image files. When converting the output [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](https://msdn.microsoft.com/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file is .zip.
   
     
     
@@ -475,13 +475,13 @@ PowerPoint Automation Services on SharePoint provides businesses with advanced c
 <a name="PAS_Additional"> </a>
 
 
--  [Developing with SharePoint 2010 Word Automation Services](http://msdn.microsoft.com/en-us/library/ff742315.aspx)
+-  [Developing with SharePoint 2010 Word Automation Services](https://msdn.microsoft.com/library/ff742315.aspx)
     
   
--  [PowerPoint Developer Center](http://msdn.microsoft.com/en-us/office/aa905465)
+-  [PowerPoint Developer Center](https://msdn.microsoft.com/office/aa905465)
     
   
--  [SharePoint Developer Center](http://msdn.microsoft.com/en-us/sharepoint/default.aspx)
+-  [SharePoint Developer Center](https://msdn.microsoft.com/sharepoint/default.aspx)
     
   
 

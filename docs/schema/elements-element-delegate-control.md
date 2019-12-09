@@ -80,7 +80,7 @@ For an example of how this element is used, see [Delegate Controls](delegate-con
 
 ## See also
 
-- [How to: Customize a Delegate Control](http://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
+- [How to: Customize a Delegate Control](https://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
 
 
 

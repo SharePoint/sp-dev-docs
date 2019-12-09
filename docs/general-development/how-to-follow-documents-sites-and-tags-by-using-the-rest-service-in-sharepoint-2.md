@@ -67,7 +67,7 @@ To perform Following Content tasks by using the REST API, you send HTTP **GET** 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
   
 > [!NOTE]
-> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to sign up for a Developer Site and start using Napa.
+> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](https://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to sign up for a Developer Site and start using Napa.
   
     
     
@@ -97,7 +97,7 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
   - You must be logged on as someone other than the system account. The system account does not have permission to install the app.
     
 > [!NOTE]
-> See  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) for guidance about on-premises setup (including how to disable the loopback check, if necessary).
+> See  [Set up an on-premises development environment for SharePoint Add-ins](https://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) for guidance about on-premises setup (including how to disable the loopback check, if necessary).
   
     
     

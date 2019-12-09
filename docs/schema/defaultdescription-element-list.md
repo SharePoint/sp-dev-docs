@@ -44,7 +44,7 @@ None
    
 ### Remarks
 
-The **DefaultDescription** element requires a value within the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file of a custom list definition. 
+The **DefaultDescription** element requires a value within the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file of a custom list definition. 
   
 ## Example
 

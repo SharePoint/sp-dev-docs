@@ -445,4 +445,4 @@ Because client-side applications are incapable of securely storing secrets, and 
 - [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../../use-aadhttpclient.md)
 - [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md)
 - [Call custom APIs secured with Azure Active Directory without ADAL JS (code sample)](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/aad-api-spo-cookie)
-- [Authentication scenarios for Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
+- [Authentication scenarios for Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)

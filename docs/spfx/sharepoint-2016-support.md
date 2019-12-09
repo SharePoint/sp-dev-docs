@@ -41,7 +41,7 @@ You can host the JavaScript files in the location that best fits your environmen
 - **Local server in your network**. A server hosting the JavaScript files for your corporate network. This can be using whatever technology is desired as long as the files are accessible through HTTP requests.
 - **SharePoint 2016**. You can also host your files in the local SharePoint farm itself. You can, for example, define a standardized site in your farm where all the SharePoint Framework assets are being hosted. Take note, however, that by default, .json files are not allowed to be uploaded to SharePoint 2016 libraries, so farm level settings must be adjusted for this option.
 
-For more information about blocked file types in SharePoint 2016, see the following support article: [Types of files that cannot be added to a list or library](https://support.office.com/en-us/article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3#ID0EAADAAA=2016).
+For more information about blocked file types in SharePoint 2016, see the following support article: [Types of files that cannot be added to a list or library](https://support.office.com/article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3#ID0EAADAAA=2016).
 
 ## Development environment considerations
 

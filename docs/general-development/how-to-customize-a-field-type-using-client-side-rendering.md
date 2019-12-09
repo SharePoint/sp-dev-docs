@@ -51,7 +51,7 @@ The following table lists useful articles that can help you understand the conce
 |**Article title**|**Description**|
 |:-----|:-----|
 | [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
-| [Custom Field Types](http://msdn.microsoft.com/en-us/library/ms446361.aspx) <br/> |Learn about creating custom field types. As you store your business information in SharePoint, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering.  <br/> |
+| [Custom Field Types](https://msdn.microsoft.com/library/ms446361.aspx) <br/> |Learn about creating custom field types. As you store your business information in SharePoint, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering.  <br/> |
    
 
 ## Code example: Customize the rendering process for a custom field type in a view form
@@ -336,13 +336,13 @@ This article demonstrated how to customize the rendering process for a custom fi
     
     
 
--  [How to: Create a Custom Field Type](http://msdn.microsoft.com/en-us/library/bb862248.aspx)
+-  [How to: Create a Custom Field Type](https://msdn.microsoft.com/library/bb862248.aspx)
     
   
--  [Walkthrough: Creating a Custom Field Type](http://msdn.microsoft.com/en-us/library/bb861799.aspx)
+-  [Walkthrough: Creating a Custom Field Type](https://msdn.microsoft.com/library/bb861799.aspx)
     
   
--  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx)
+-  [Customize a list view in SharePoint Add-ins using client-side rendering](https://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx)
     
   
 

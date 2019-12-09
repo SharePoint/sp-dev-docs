@@ -1,10 +1,12 @@
 # Granting access via Azure AD App-Only
+
 When using SharePoint Online you can define applications in Azure AD and these applications can be granted permissions to SharePoint, but also to all the other services in Office 365. This model is the preferred model in case you’re using SharePoint Online, if you’re using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS as described in [here](security-apponly-azureacs.md).
 
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 ## Setting up an Azure AD app for app-only access
+
 In Azure AD when doing app-only you typically use a certificate to request access: anyone having the certificate and its private key can use the app and the permissions granted to the app. Below steps walk you through the setup of this model.
 
 You are now ready to configure the Azure AD Application for invoking SharePoint Online with an App Only access token. To do that, you have to create and configure a self-signed X.509 certificate, which will be used to authenticate your Application against Azure AD, while requesting the App Only access token. First you must create the self-signed X.509 Certificate, which can be created using the makecert.exe tool that is available in the Windows SDK or through a provided PowerShell script which does not have a dependency to makecert. Using the PowerShell script is the preferred method and is explained in this chapter.
@@ -208,6 +210,7 @@ In this sample the Sites.FullControl.All application permission require admin co
 ![granting permissions to azure ad application](media/apponly/azureadapponly5.png)
 
 ## Using this principal with PnP PowerShell
+
 If you want to use this AAD App Only principal with [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell), after you have installed the PnP PowerShell module, you can connect to your SharePoint Online environment using:
 
 ```powershell
@@ -217,6 +220,7 @@ Connect-PnPOnline -ClientId <$application client id as copied over from the AAD 
 You can now perform operations through PnP PowerShell against your SharePoint Online environment using this certificate App Only trust.
 
 ## Using this principal in your application using the SharePoint PnP Sites Core library
+
 In a first step, you add the SharePointPnPCoreOnline library nuget package: https://www.nuget.org/packages/SharePointPnPCoreOnline. Once that’s done you can use below code construct:
 
 ```csharp
@@ -241,6 +245,7 @@ namespace AzureADCertAuth
 }
 ```
 ## Using this principal in your Powershell script using the PnP Sites core library
+
 When making use of Azure Automation Runbooks, first add the certificate (.pfx) using the Certificates option (under Shared Resources), then use the Get-AutomationCertificate cmdlet to retrieve the certificate to be used in the script.
 
 > [!NOTE]
@@ -277,10 +282,68 @@ $clientContext.ExecuteQuery()
 $clientContext.Web.Title
 ```
 
+## Using this principal in your application and make use of the Azure KeyVault to store the certificate and retrieve it using an Azure Function 
+
+Add a [Managed Identity](https://docs.microsoft.com/azure/app-service/overview-managed-identity
+) to the Azure Function and give this identity access (GET permission on Secrets) to the [KeyVault](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references). 
+
+Below there is a slightly different call to the same GetAzureADAppOnlyAuthenticatedContext method where we pass an actual certificate instead of a path to the certificate. An extra function is added to retrieve to certificate from the KeyVault using the managed identity of the Azure Function, this retrieval is seamless and transparent since the 'magic' happens in the AzureServiceTokenProvider.  
+
+```csharp
+static void Main(string[] args)
+{
+	using (var cc = new AuthenticationManager().GetAzureADAppOnlyAuthenticatedContext(
+		siteUrl,
+		ApplicationId,
+		tenant + ".onmicrosoft.com",
+		GetKeyVaultCertificate("kv-spo", "AzureAutomationSPOAccess")))
+	    {
+		cc.Load(cc.Web, p => p.Title);
+		cc.ExecuteQuery();
+		log.Info("Via PnP, we have site: " + cc.Web.Title);
+	    };
+}
+
+
+internal static X509Certificate2 GetKeyVaultCertificate(string keyvaultName, string name)
+{
+    // Some steps need to be taken to make this work
+    // 1. Create a KeyVault and upload the certificate
+    // 2. Give the Function App the permission to GET certificates via Access Policies in the KeyVault
+    // 3. Call an explicit access token request to the management resource to https://vault.azure.net and use the URL of our Keyvault in the GetSecretMethod
+    if (keyVaultClient == null)
+    {
+        // this token provider gets the appid/secret from the azure function identity
+        // and thus makes the call on behalf of that appid/secret
+        var serviceTokenProvider = new AzureServiceTokenProvider();
+        keyVaultClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(serviceTokenProvider.KeyVaultTokenCallback));
+    }
+
+    // Getting the certificate
+    var secret = keyVaultClient.GetSecretAsync("https://" + keyvaultName + ".vault.azure.net/", name);
+
+    // Returning the certificate
+    return new X509Certificate2(Convert.FromBase64String(secret.Result.Value));
+
+    // If you receive the following error when running the Function; 
+    // Microsoft.Azure.WebJobs.Host.FunctionInvocationException: 
+    // Exception while executing function: NotificationFunctions.QueueOperation--->
+    // System.Security.Cryptography.CryptographicException: 
+    // The system cannot find the file specified.at System.Security.Cryptography.NCryptNative.ImportKey(SafeNCryptProviderHandle provider, Byte[] keyBlob, String format) at System.Security.Cryptography.CngKey.Import(Byte[] keyBlob, CngKeyBlobFormat format, CngProvider provider)
+    // 
+    // Please see https://stackoverflow.com/questions/31685278/create-a-self-signed-certificate-in-net-using-an-azure-web-application-asp-ne
+    // Add the following Application setting to the AF "WEBSITE_LOAD_USER_PROFILE = 1"
+}
+
+
+```
+
 ## Using this principal with the Pnp Modernization Scanner
-Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](https://docs.microsoft.com/en-us/sharepoint/dev/transform/modernize-scanner) to use this principal with the tool.
+
+Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner) to use this principal with the tool.
 
 ## FAQ
+
 ### Can I use other means besides certificates for realizing app-only access for my Azure AD app?
 No, all other options are blocked by SharePoint Online and will result in an Access Denied message.
 

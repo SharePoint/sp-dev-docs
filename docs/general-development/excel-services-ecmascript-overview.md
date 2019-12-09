@@ -49,7 +49,7 @@ For more information, see the following links:
     
     
 
-- For more information about the JavaScript object model in Excel Services, see the  [Ewa](http://msdn.microsoft.com/library/6fe73191-3213-b986-1ad6-2c3b918a2241%28Office.15%29.aspx) namespace reference documentation.
+- For more information about the JavaScript object model in Excel Services, see the  [Ewa](https://msdn.microsoft.com/library/6fe73191-3213-b986-1ad6-2c3b918a2241%28Office.15%29.aspx) namespace reference documentation.
     
   
 - For an example of how to interact with the JavaScript object model in Excel Services by using the Content Editor web part, see  [Walkthrough: Developing Using the Content Editor web part](walkthrough-developing-using-the-content-editor-web-part.md).
@@ -62,7 +62,7 @@ Minified .js files for the JavaScript object model are installed in the %Program
   
     
     
-For basic information about how to use the JavaScript object model within an .aspx page or .js file, see  [Setting Up an Application Page for JavaScript](http://msdn.microsoft.com/library/48582a0b-f787-4868-8298-958717ec8ff8%28Office.15%29.aspx).
+For basic information about how to use the JavaScript object model within an .aspx page or .js file, see  [Setting Up an Application Page for JavaScript](https://msdn.microsoft.com/library/48582a0b-f787-4868-8298-958717ec8ff8%28Office.15%29.aspx).
   
     
     

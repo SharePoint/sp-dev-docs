@@ -21,4 +21,4 @@ This will result the application to be exposed in the web part picker for modern
 > Static tabs are not supported to be rendered in the context of SharePoint. This capability is in the roadmap and is planned to be supported in future.
 
 > [!NOTE]
-> You read more details around the Microsoft Teams tab applications from the [Microsoft Teams developer documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/tabs/tabs-overview).
+> You read more details around the Microsoft Teams tab applications from the [Microsoft Teams developer documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-overview).

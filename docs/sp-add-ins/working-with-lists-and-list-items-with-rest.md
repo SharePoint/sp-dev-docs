@@ -192,8 +192,8 @@ http://site url/_api/web/lists/getbytitle('ListName')/Items?&$filter=LookupColum
 The following example shows how to retrieve all of a list's items.  
  
 > [!NOTE] 
-> * The OData $skip query option does not work when querying list items. In many situations, you can use the [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
-> * By default, this will return the first 100 items.  More information on controlling the # of items, paging, etc. see the documentation on [OData Query options](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests)
+> * The OData $skip query option does not work when querying list items. In many situations, you can use the [$skiptoken](https://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
+> * By default, this will return the first 100 items.  More information on controlling the # of items, paging, etc. see the documentation on [OData Query options](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests)
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items
@@ -504,7 +504,14 @@ content-type: application/json;odata=nometadata
 The following example shows how to create a list item.
  
 > [!NOTE] 
-> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
+> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body. Following is a sample rest call to get the ListItemEntityTypeFullName
+> ```
+> url: http://site url/_api/web/lists/GetByTitle('Test')?$select=ListItemEntityTypeFullName,
+> method: GET
+> Headers:
+>    Authorization: "Bearer " + accessToken
+>    accept: "application/json;odata=verbose" or "application/atom+xml"
+> ```
  
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items
@@ -560,7 +567,7 @@ None
 |----------|-------|
 |listItemCreateInfo|Information about the list and folder where the item should be created|
 |listItemCreateInfo.FolderPath.DecodedUrl|Absolute URL of the folder where the item should be created|
-|listItemCreateInfo.UnderlyingObjectType|Type of item to create. For more information see [https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.filesystemobjecttype(v=office.14).aspx](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.filesystemobjecttype(v=office.14).aspx)|
+|listItemCreateInfo.UnderlyingObjectType|Type of item to create. For more information see [https://msdn.microsoft.com/library/microsoft.sharepoint.client.filesystemobjecttype(v=office.14).aspx](https://msdn.microsoft.com/library/microsoft.sharepoint.client.filesystemobjecttype(v=office.14).aspx)|
 |formValues|Array of field names and values to set on the newly created item|
 |bNewDocumentUpdate|Set to `false` to create a list item|
 
@@ -650,7 +657,7 @@ Within SharePoint, ETags apply only to SharePoint lists and list items.
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
-- [SharePoint: Perform basic data access operations on files and folders by using REST](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/working-with-folders-and-files-with-rest)
+- [SharePoint: Perform basic data access operations on files and folders by using REST](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/working-with-folders-and-files-with-rest)
 - [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
 - [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
 - [REST API reference and samples](https://msdn.microsoft.com/library)

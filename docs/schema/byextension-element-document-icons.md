@@ -52,7 +52,7 @@ None
    
 ### Remarks
 
-This element is used in the [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to drive mapping between file extensions and their corresponding document library icons. 
+This element is used in the [DocIcon.xml](https://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb%28Office.15%29.aspx) file to drive mapping between file extensions and their corresponding document library icons. 
   
 If you want the document library feature to support a new file extension, add the extension to a **ByExtension** section, and then restart the server. 
   

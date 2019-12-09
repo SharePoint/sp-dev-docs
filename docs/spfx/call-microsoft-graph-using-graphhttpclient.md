@@ -135,7 +135,7 @@ Next, you'll call the **GraphHttpClient.get()** method to make a REST call to Mi
 
   In the previous code, the context property has the GraphHttpClient instance. When you call the **get()** method, a REST call is made to Microsoft Graph that passes the specified URL. In this case, the URL is **v1.0/groups?orderby=displayName**. This issues a GET request, and Microsoft Graph returns all Office 365 groups in the tenant in order by display name.
 
-  You can issue any GET request by using this technique and entering the correct URL values. To find the URL values, see the [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview). For example, you can use the URL specified in the [Groups GET request](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_get) topic to get groups. 
+  You can issue any GET request by using this technique and entering the correct URL values. To find the URL values, see the [Microsoft Graph documentation](https://developer.microsoft.com/graph/docs/concepts/overview). For example, you can use the URL specified in the [Groups GET request](https://developer.microsoft.com/graph/docs/api-reference/v1.0/api/group_get) topic to get groups. 
 
   The **get()** method returns an **HttpClientResponse**, which you can use to determine whether the call was successful. The returned JSON is in the **result.value**. Because you expect multiple groups to be returned, you pass the value to a **_renderTable()** method, which builds a table of rows for each group.
 
@@ -268,7 +268,7 @@ Again, you need to modify the HTML to add a button that creates a new group.
     }
   ```
 
-  The previous code creates a simple group by using the code example from the Microsoft Graph [Create group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_post_groups) article.
+  The previous code creates a simple group by using the code example from the Microsoft Graph [Create group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/api/group_post_groups) article.
 
   The **post()** issues a POST REST API call to the **v1.0/groups** URL. The third parameter is an **IGraphHttpClientOptions** value in which the JSON body is specified to describe the new group. The **HttpClientResponse** is used to determine whether the call was successful, and to display an appropriate result.
 

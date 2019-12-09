@@ -82,13 +82,13 @@ The Windows Developer Center provides extensive documentation of MSMQ. Following
     
     
 
--  [About Message Queuing](http://msdn.microsoft.com/en-us/library/windows/desktop/ms706032%28v=vs.85%29.aspx)
+-  [About Message Queuing](https://msdn.microsoft.com/library/windows/desktop/ms706032%28v=vs.85%29.aspx)
     
   
--  [Message Queuing Reference](http://msdn.microsoft.com/en-us/library/windows/desktop/ms700112%28v=vs.85%29.aspx)
+-  [Message Queuing Reference](https://msdn.microsoft.com/library/windows/desktop/ms700112%28v=vs.85%29.aspx)
     
   
--  [Message Queuing Error and Information Codes](http://msdn.microsoft.com/en-us/library/windows/desktop/ms700106%28v=vs.85%29.aspx)
+-  [Message Queuing Error and Information Codes](https://msdn.microsoft.com/library/windows/desktop/ms700106%28v=vs.85%29.aspx)
     
   
 
@@ -96,7 +96,7 @@ The Windows Developer Center provides extensive documentation of MSMQ. Following
 <a name="bk_addresources"> </a>
 
 
--  [Message Queuing (MSMQ)](http://msdn.microsoft.com/en-us/library/windows/desktop/ms711472%28v=vs.85%29.aspx)
+-  [Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472%28v=vs.85%29.aspx)
     
   
 

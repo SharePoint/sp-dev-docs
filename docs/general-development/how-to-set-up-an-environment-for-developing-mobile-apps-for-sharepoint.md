@@ -23,7 +23,7 @@ To create and test Windows Phone apps that interact with SharePoint, you need ac
   
     
     
-For information on installing and configuring SharePoint, see the documentation in the  [SharePoint Products](http://technet.microsoft.com/en-us/library/ee428287.aspx) section of the Microsoft TechNet Library. For information on using SharePoint Online in your development solutions, visit the [SharePoint Online Developer Resource Center](http://msdn.microsoft.com/en-us/sharepoint/gg153540.aspx).
+For information on installing and configuring SharePoint, see the documentation in the  [SharePoint Products](https://technet.microsoft.com/library/ee428287.aspx) section of the Microsoft TechNet Library. For information on using SharePoint Online in your development solutions, visit the [SharePoint Online Developer Resource Center](https://msdn.microsoft.com/sharepoint/gg153540.aspx).
   
     
     
@@ -47,14 +47,14 @@ To develop SharePoint Add-ins for use on Windows Phone 8, you need to set up you
     
     
 
-1. On a computer with a supported client operating system, install  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471). The Windows Phone Software Development Kit (SDK) 8.0 provides you with the tools that you need to develop apps and games for Windows Phone 8 and Windows Phone 7.5.
+1. On a computer with a supported client operating system, install  [Windows Phone SDK 8.0](http://www.microsoft.com/download/details.aspx?id=35471). The Windows Phone Software Development Kit (SDK) 8.0 provides you with the tools that you need to develop apps and games for Windows Phone 8 and Windows Phone 7.5.
     
     The Windows Phone SDK 8.0 is a full-featured development environment to use for building apps and games for Windows Phone 8.0 and Windows Phone 7.5. The Windows Phone SDK provides a stand-alone Visual Studio Express 2012 edition for Windows Phone or works as an add-in to Visual Studio 2012 Professional, Premium or Ultimate editions. With the SDK, you can use your existing programming skills and code to build managed or native code apps. In addition, the SDK includes multiple emulators and additional tools for profiling and testing your Windows Phone app under real-world conditions.
     
     > [!NOTE]
-    > If your computer meets the hardware and operating system requirements, but does not meet the requirements for the Windows Phone 8 Emulator, the Windows Phone SDK 8.0 will install and run. However, the Windows Phone 8 Emulator will not function and you will not be able to deploy or test apps on the Windows Phone 8 Emulator. For information about the system requirements for running the Windows Phone Emulator, see  [Setup and System Requirements for Windows Phone Emulator](http://msdn.microsoft.com/en-us/library/ff626524). 
+    > If your computer meets the hardware and operating system requirements, but does not meet the requirements for the Windows Phone 8 Emulator, the Windows Phone SDK 8.0 will install and run. However, the Windows Phone 8 Emulator will not function and you will not be able to deploy or test apps on the Windows Phone 8 Emulator. For information about the system requirements for running the Windows Phone Emulator, see  [Setup and System Requirements for Windows Phone Emulator](https://msdn.microsoft.com/library/ff626524). 
 
-2. Install  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/en-us/download/details.aspx?id=36818).
+2. Install  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/download/details.aspx?id=36818).
     
     The SharePoint SDK for Windows Phone installs two Silverlight for Windows Phone templates (in addition to those installed by the Windows Phone SDK): the Windows Phone Empty SharePoint Application template and the Windows Phone SharePoint List Application template. The SDK also installs SharePoint CSOM libraries, an authentication library, and Windows Phone project templates, and it now supports NTLM authentication. You can use the bundled APIs and templates to build Windows Phone 8 applications against SharePoint.
     
@@ -87,17 +87,17 @@ To develop SharePoint Add-ins for use on Windows Phone 7, you need to set up you
     
     
 
-1. On a computer with a supported client operating system, install  [Windows Phone SDK 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=27570).
+1. On a computer with a supported client operating system, install  [Windows Phone SDK 7.1](http://www.microsoft.com/download/details.aspx?id=27570).
     
     > [!NOTE]
     > An earlier version of the Windows Phone SDK was named the Windows Phone Developer Tools. 
 
     The Windows Phone SDK installs Microsoft Visual Studio 2010 Express for Windows Phone, the Windows Phone Emulator, XNA Game Studio, and Microsoft Expression Blend for Windows Phone. Visual Studio 2010 Express for Windows Phone is a suitable development environment for most Windows Phone solutions. You can also use Visual Studio 2010 Professional as your preferred development environment, but you still need to install the Windows Phone SDK, which installs the necessary add-ins to Visual Studio. (The Windows Phone SDK is not currently supported for use with Visual Studio 2012.)
     
-    For information on additional system requirements and instructions for installing the Windows Phone SDK, see  [Installing the Windows Phone SDK](http://msdn.microsoft.com/en-us/library/ff402530). For information about the system requirements for running the Windows Phone Emulator, see  [Setup and System Requirements for Windows Phone Emulator](http://msdn.microsoft.com/en-us/library/ff626524).
+    For information on additional system requirements and instructions for installing the Windows Phone SDK, see  [Installing the Windows Phone SDK](https://msdn.microsoft.com/library/ff402530). For information about the system requirements for running the Windows Phone Emulator, see  [Setup and System Requirements for Windows Phone Emulator](https://msdn.microsoft.com/library/ff626524).
     
   
-2. Install  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=30476).
+2. Install  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476).
     
     The SharePoint SDK for Windows Phone installs two Silverlight for Windows Phone templates (in addition to those installed by the Windows Phone SDK): the Windows Phone Empty SharePoint Application template and the Windows Phone SharePoint List Application template.
     
@@ -130,16 +130,16 @@ For more information about the templates in SharePoint SDK for Windows Phone, se
 -  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)
+-  [Windows Phone SDK 8.0](http://www.microsoft.com/download/details.aspx?id=35471)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/en-us/download/details.aspx?id=36818)
+-  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/download/details.aspx?id=36818)
     
   
--  [Windows Phone SDK 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=27570)
+-  [Windows Phone SDK 7.1](http://www.microsoft.com/download/details.aspx?id=27570)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=30476)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
     
   
 

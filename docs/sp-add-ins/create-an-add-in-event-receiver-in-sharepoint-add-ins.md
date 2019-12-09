@@ -165,7 +165,7 @@ If you work through the continuing example in this article, you will have a fini
 
     ```
 
-11. Rollback logic is basically exception handling logic, and the SharePoint CSOM (Client-side object model) has an **ExceptionHandlingScope** that enables your web service to delegate exception handling to the SharePoint server (see [How to: Use Exception Handling Scope](http://msdn.microsoft.com/library/103619ef-1ba3-44e3-93e1-5e0685bc616e%28Office.15%29.aspx)). 
+11. Rollback logic is basically exception handling logic, and the SharePoint CSOM (Client-side object model) has an **ExceptionHandlingScope** that enables your web service to delegate exception handling to the SharePoint server (see [How to: Use Exception Handling Scope](https://msdn.microsoft.com/library/103619ef-1ba3-44e3-93e1-5e0685bc616e%28Office.15%29.aspx)). 
 
     Add the following code to the **if** block in the preceding snippet.
     
@@ -209,7 +209,7 @@ If you work through the continuing example in this article, you will have a fini
     List createdList = null;
     ```
 
-13. The code to create a host web list goes into the **StartTry** block, but the code must first check whether the list has already been added (as explained in [Include rollback logic and "already done" logic in your add-in event handlers](handle-events-in-sharepoint-add-ins.md#Rollback)). If-then-else logic can be delegated to the SharePoint server by using the **ConditionalScope** class (see [How to: Use Conditional Scope](http://msdn.microsoft.com/library/560112e9-c3ed-4b8f-9cd4-c8bc5d60d63c%28Office.15%29.aspx)). 
+13. The code to create a host web list goes into the **StartTry** block, but the code must first check whether the list has already been added (as explained in [Include rollback logic and "already done" logic in your add-in event handlers](handle-events-in-sharepoint-add-ins.md#Rollback)). If-then-else logic can be delegated to the SharePoint server by using the **ConditionalScope** class (see [How to: Use Conditional Scope](https://msdn.microsoft.com/library/560112e9-c3ed-4b8f-9cd4-c8bc5d60d63c%28Office.15%29.aspx)). 
 
     Add the following code inside the **StartTry** block.
     

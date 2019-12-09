@@ -283,7 +283,7 @@ The document ID,  _docid_, is used to retrieve the duplicates of a particular do
 -  [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.aspx)
     
   
--  [Overview of the search schema in SharePoint](http://technet.microsoft.com/en-us/library/jj219669%28office.15%29.aspx)
+-  [Overview of the search schema in SharePoint](https://technet.microsoft.com/library/jj219669%28office.15%29.aspx)
     
   
 

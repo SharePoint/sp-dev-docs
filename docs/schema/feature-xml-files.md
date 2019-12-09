@@ -99,7 +99,7 @@ The following example shows how to use a Feature.xml file to specify activation 
 
 ## See also
 
-- [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318.aspx)
+- [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/office/ms460318.aspx)
 
 
 

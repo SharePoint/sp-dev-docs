@@ -48,7 +48,7 @@ Numerous
    
 ### Remarks
 
-The **ListFormButtons** element is used in the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file with the other list form elements to create the Display, Edit, and New forms for a list. 
+The **ListFormButtons** element is used in the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file with the other list form elements to create the Display, Edit, and New forms for a list. 
   
 ## See also
 

@@ -8,6 +8,9 @@ localization_priority: Priority
 
 # Modernize customizations
 
+> [!IMPORTANT]
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
+
 An important aspect when modernizing a site is understanding the customizations used on that site because not all existing customizations continue to work after the site is modernized. A classic example that occurs frequently is a site banner that shows some type of company information (such as a legal notice). 
 
 This typically is realized via a user custom action that embeds JavaScript on the page, which in turn is responsible for showing the banner. This banner is visible on all classic pages, but will not be visible on modern pages. To work around this problem, you can implement the banner as a SharePoint Framework Application Customizer extension and deploy that to the tenant/site. 
@@ -115,9 +118,9 @@ In the introduction, we mentioned the common pattern of adding a site banner by 
 
 To learn more about SharePoint Framework Application Customizer extensions, see:
 
-- [Build your first SharePoint Framework Extension](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
-- [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
-- [Migrating from UserCustomAction to SharePoint Framework Extensions tutorial](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
+- [Build your first SharePoint Framework Extension](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension)
+- [Migrating user custom actions and ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
+- [Migrating from UserCustomAction to SharePoint Framework Extensions tutorial](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
 
 ### Custom menu items in the site actions menu
 

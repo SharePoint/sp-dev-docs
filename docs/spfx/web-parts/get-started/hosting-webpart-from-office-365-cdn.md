@@ -3,6 +3,7 @@ title: Host your client-side web part from Office 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Office 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online. 
 ms.date: 03/14/2019
 ms.prod: sharepoint
+ms.custom: scenarios:getting-started
 ---
 
 
@@ -32,7 +33,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Enable CDN in your Office 365 tenant
 
-1. Ensure that you have the latest version of the SharePoint Online Management Shell by downloading it from the [Microsoft Download site](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
+1. Ensure that you have the latest version of the SharePoint Online Management Shell by downloading it from the [Microsoft Download site](https://www.microsoft.com/download/details.aspx?id=35588).
 
     > [!TIP]
     > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).

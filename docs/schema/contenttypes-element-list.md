@@ -74,5 +74,5 @@ The following example shows a partial definition for a list that uses three cont
 
 ## See also
 
-- [How to: Add a Content Type to a List](http://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666%28Office.15%29.aspx)
+- [How to: Add a Content Type to a List](https://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666%28Office.15%29.aspx)
 

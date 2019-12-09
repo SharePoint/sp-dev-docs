@@ -44,7 +44,7 @@ To make your customization easier, start by using one of the default ranking mod
   
     
     
-SharePoint provides 14 ranking models by default. See  [What is a ranking model?](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Models) (on TechNet) for detailed information about these ranking models and their purpose.
+SharePoint provides 14 ranking models by default. See  [What is a ranking model?](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Models) (on TechNet) for detailed information about these ranking models and their purpose.
   
     
     
@@ -60,16 +60,16 @@ You use the following Windows PowerShell cmdlets to customize ranking models:
     
     
 
--  [Get-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/en-us/library/ff607990.aspx)
+-  [Get-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607990.aspx)
     
   
--  [New-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/en-us/library/ff607980.aspx)
+-  [New-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607980.aspx)
     
   
--  [Remove-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/en-us/library/ff608045.aspx)
+-  [Remove-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff608045.aspx)
     
   
--  [Set-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/en-us/library/ff607940.aspx)
+-  [Set-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607940.aspx)
     
   
 
@@ -149,7 +149,7 @@ $rm.RankingModelXML > myrm.xml
 3. Edit the  `myrm.xml` file in an XML editor. You must use new GUID values for the **id** attributes in _RankModel2Stage_ element and all _RankingModel2NN_ elements. To get a new GUID value you can for example use the following Windows PowerShell command: `[guid]::NewGuid()`
     
   
-4. Create a new ranking model with the  [New-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/en-us/library/ff607980.aspx) cmdlet by running the following commands.
+4. Create a new ranking model with the  [New-SPEnterpriseSearchRankingModel](https://technet.microsoft.com/library/ff607980.aspx) cmdlet by running the following commands.
     
 ```powershell
   
@@ -425,14 +425,14 @@ In a custom ranking model, you can have two or more managed properties that are 
   
     
     
-Weight groups are also known as context. See  [Influencing the ranking of search results by using the search schema](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Schema) (on TechNet) for more information about the relationship between a managed property and its context.
+Weight groups are also known as context. See  [Influencing the ranking of search results by using the search schema](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Schema) (on TechNet) for more information about the relationship between a managed property and its context.
   
     
     
 
 ### Static
 
-The static rank feature ranks items based on numeric managed properties that are stored in the search index. The numeric managed properties used for relevance rank calculation in static rank features must be of type  [Integer](https://docs.microsoft.com/en-us/dotnet/api/system.int32) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the static rank feature.
+The static rank feature ranks items based on numeric managed properties that are stored in the search index. The numeric managed properties used for relevance rank calculation in static rank features must be of type  [Integer](https://docs.microsoft.com/dotnet/api/system.int32) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the static rank feature.
   
     
     
@@ -490,7 +490,7 @@ The bucketed static rank feature ranks documents based on their file type and la
   
     
     
-The managed properties used for relevance rank calculation in bucketed static rank features must be of type  [Integer](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the bucketed static rank feature.
+The managed properties used for relevance rank calculation in bucketed static rank features must be of type  [Integer](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/int) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the bucketed static rank feature.
   
     
     
@@ -945,7 +945,7 @@ Query properties is a ranking mechanism that populates additional information us
 ## Example 1: Basic ranking model with one linear stage containing a single static rank feature
 <a name="sp15_example_1_ranking"> </a>
 
-This ranking model assumes that the customer has created a managed property named **CustomRating**. The static rank feature requires **CustomRating** to be of [Integer](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int) data type and to be configured as [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) or [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) in the search schema. For each document in the result set, the rank score produced by this ranking model is equal to the value of **CustomRating** for that document. The effect of this model is similar to sorting all search results, descending, with the **CustomRating** managed property.
+This ranking model assumes that the customer has created a managed property named **CustomRating**. The static rank feature requires **CustomRating** to be of [Integer](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/int) data type and to be configured as [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) or [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) in the search schema. For each document in the result set, the rank score produced by this ranking model is equal to the value of **CustomRating** for that document. The effect of this model is similar to sorting all search results, descending, with the **CustomRating** managed property.
   
     
     
@@ -1082,7 +1082,7 @@ This ranking model with one linear stage contains these four rank features:
 -  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
--  [Overview of search result ranking in SharePoint](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
+-  [Overview of search result ranking in SharePoint](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
     
   
 -  [Create a custom ranking model by using the Ranking Model Tuning App](https://docs.microsoft.com/sharepoint/search/create-custom-ranking-model)

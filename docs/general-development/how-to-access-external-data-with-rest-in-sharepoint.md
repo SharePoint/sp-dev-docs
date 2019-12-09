@@ -52,9 +52,9 @@ The SharePoint REST service provides a way to access external data using a speci
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx) <br/> |Learn how to use the SharePoint REST service, which provides a REST programming interface comparable to the existing client object model.  <br/> |
-| [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx) <br/> |Get the basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.  <br/> |
-| [Complete basic operations using SharePoint REST endpoints](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) <br/> |Learn how to navigate the SharePoint data structure as it is represented in the REST service, perform common CRUD (create, read, update, and delete) operations on SharePoint items via the REST service, synchronize SharePoint items across applications, and control item concurrency.  <br/> |
+| [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx) <br/> |Learn how to use the SharePoint REST service, which provides a REST programming interface comparable to the existing client object model.  <br/> |
+| [Get to know the SharePoint REST service](https://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx) <br/> |Get the basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.  <br/> |
+| [Complete basic operations using SharePoint REST endpoints](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints) <br/> |Learn how to navigate the SharePoint data structure as it is represented in the REST service, perform common CRUD (create, read, update, and delete) operations on SharePoint items via the REST service, synchronize SharePoint items across applications, and control item concurrency.  <br/> |
    
 
 ## Create an SharePoint Add-in to access external data using REST
@@ -74,7 +74,7 @@ The following procedures guide you through setting up an SharePoint Add-in and c
 2. Create an **App for SharePoint** project.
     
   
-3. Specify the app settings, including app name, the site URL for debugging the app, and how you want to host the app (Autohosted, Provider-hosted, SharePoint-hosted). For more information about hosting options, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
+3. Specify the app settings, including app name, the site URL for debugging the app, and how you want to host the app (Autohosted, Provider-hosted, SharePoint-hosted). For more information about hosting options, see  [Choose patterns for developing and hosting your SharePoint Add-in](https://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
     
   
 4. Choose **Finish** to create the app.
@@ -208,10 +208,10 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
+-  [Get to know the SharePoint REST service](https://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
     
   
--  [Complete basic operations using SharePoint REST endpoints](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints)
+-  [Complete basic operations using SharePoint REST endpoints](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints)
     
   
 -  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint.md)

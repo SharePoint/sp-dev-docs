@@ -42,7 +42,7 @@ Following web part manifest demonstrates scenario where the web part is included
 
   // If true, the component can only be installed on sites where Custom Script is allowed.
   // Components that allow authors to embed arbitrary script code should set this to true.
-  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
   "supportedHosts": ["SharePointWebPart", "SharePointFullPage", "TeamsTab"],
 
@@ -110,7 +110,7 @@ fetch(siteUrl + '_api/contextinfo', {
 
 ## Changing page layout using PnP PowerShell
 
-You can also use [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to update the page layout for the existing page with following script.
+You can also use [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to update the page layout for the existing page with following script.
 
 > [!NOTE]
 > PnP PowerShell is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.

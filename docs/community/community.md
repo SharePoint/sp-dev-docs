@@ -13,8 +13,8 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 
 ## Blog posts, videos, and social media
 
-- [SharePoint Developer Blog](http://dev.office.com/blogs) - Latest developer news around SharePoint and Office 365
-- [SharePoint Developer Videos](http://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
+- [SharePoint Developer Blog](https://developer.microsoft.com/en-us/office/blogs/) - Latest developer news around SharePoint and Office 365
+- [SharePoint Developer Videos](https://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
 - [OfficeDev Twitter](https://twitter.com/officedev) - Official communication channel for SharePoint and Office 365 developer topics
 - [OfficeDevPnP Twitter](https://twitter.com/officedevpnp) - Community account for SharePoint and Office 365 developer topics
 - [OfficeDev Facebook](https://www.facebook.com/OfficeDev/) - Official communication channel for SharePoint and Office 365 developer topics
@@ -52,16 +52,16 @@ There are numerous community calls for SharePoint development, and you can choos
 
 Following statements apply across all of the SharePoint PnP assets, including samples, controls, component and solutions, like SharePoint Starter Kit or the PnP Provisioning Service.
 
-- PnP assets are created by the Microsoft & the community
-- PnP assets are maintained by the Microsoft & the community
+- PnP assets are created by Microsoft & the community
+- PnP assets are maintained by Microsoft & the community
 - PnP uses supported and recommended techniques defined by Microsoft
-- PnP is NOT a product and therefore it’s not supported by Premier Support or other official support channels, but if the experienced issue(s) is caused by out-of-the-box API, it falls on the normal support patterns from Microsoft side.
+- PnP is NOT a product and therefore it’s not supported by Premier Support or other official support channels, but if the experienced issue(s) is caused by out-of-the-box API, it falls on the normal support patterns from Microsoft side
 - PnP is supported in similar ways as other open source projects done by Microsoft with support from the community by the community
 - There are numerous partners that utilize PnP within their solutions for customers. Support for this is provided by the Partner. When PnP material is used in deployments, we recommend being clear with your customer/deployment owner on the support model
 
 ## See also
 
-- [SharePoint developer portal](http://aka.ms/spdev)
-- [SharePoint developer samples](http://aka.ms/spdev-samples)
+- [SharePoint developer portal](https://aka.ms/spdev)
+- [SharePoint developer samples](https://aka.ms/spdev-samples)
 - [SharePoint PnP open-source projects](open-source-projects.md)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md) 

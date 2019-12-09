@@ -44,12 +44,12 @@ In 2016, the SharePoint Online team released "modern" collaboration sites. These
 
 ### Articles
 
-- [Customizing the "modern" experiences in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations)
-- [SharePoint Site Theming (modern)](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
-- [Overview of programming SharePoint hub sites](https://docs.microsoft.com/en-us/sharepoint/dev/features/hub-site/hub-site-overview)
+- [Customizing the "modern" experiences in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations)
+- [SharePoint Site Theming (modern)](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
+- [Overview of programming SharePoint hub sites](https://docs.microsoft.com/sharepoint/dev/features/hub-site/hub-site-overview)
 - [New site theming options for SharePoint sites in Office 365](https://techcommunity.microsoft.com/t5/SharePoint-Blog/New-site-theming-options-for-SharePoint-sites-in-Office-365/ba-p/94001)
-- [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818)
-- [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions)
+- [Change the look of your SharePoint site](https://support.office.com/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818)
+- [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions)
 
 ### Solutions
 
@@ -74,9 +74,9 @@ The classic SharePoint user experience is based on ASP.NET master pages and page
 
 ### Articles
 
-- [Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016 and SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-and-site-provisioning-solutions-for-sharepoint)
-- [Master pages, the Master Page Gallery, and page layouts in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
-- [Customize OneDrive for Business site branding](https://msdn.microsoft.com/en-us/library/office/mt168839.aspx)
+- [Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016 and SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/branding-and-site-provisioning-solutions-for-sharepoint)
+- [Master pages, the Master Page Gallery, and page layouts in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
+- [Customize OneDrive for Business site branding](https://msdn.microsoft.com/library/office/mt168839.aspx)
 
 ### Solutions
 
@@ -95,7 +95,7 @@ _**Applies to:** Modern sites_
 SharePoint site owners have new options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections. These new features include:
 
 - The ability to define custom themes and make them available to site owners. Themes are defined in a [JSON schema](../declarative-customization/site-theming/sharepoint-site-theming-overview.md) that stores color settings and related metadata for each theme.
-- An online [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) that you can use to define new custom themes.
+- An online [Theme Generator tool](https://developer.microsoft.com/fabric#/styles/themegenerator) that you can use to define new custom themes.
 - A simplified set of default themes, with six light themes and two dark themes presently available.
 - An updated color palette, with 12 light colors and 6 dark colors, as well as 16 supplementary themes.
 - Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
@@ -105,7 +105,7 @@ These capabilities are available to administrators via [PowerShell cmdlets](../d
 ### Articles
 
 - [SharePoint site theming](../declarative-customization/site-theming/sharepoint-site-theming-overview.md)
-- [SharePoint themes and colors](https://docs.microsoft.com/en-us/sharepoint/dev/design/themes-colors)
+- [SharePoint themes and colors](https://docs.microsoft.com/sharepoint/dev/design/themes-colors)
 
 ## Composed looks (classic SharePoint themes)
 
@@ -115,11 +115,11 @@ Composed looks are out-of-the-box themes that are included in SharePoint 2013 an
 
 ### Articles
 
-- [Themes overview for SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/themes-overview-for-sharepoint)
-- [Use composed looks to brand SharePoint sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-composed-looks-to-brand-sharepoint-sites)
-- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
-- [SharePoint site branding and page customization solutions](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sharepoint-site-branding-and-page-customization-solutions)
-- [Proven Practices for SharePoint Online portal branding](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-branding)
+- [Themes overview for SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/themes-overview-for-sharepoint)
+- [Use composed looks to brand SharePoint sites](https://docs.microsoft.com/sharepoint/dev/solution-guidance/use-composed-looks-to-brand-sharepoint-sites)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [SharePoint site branding and page customization solutions](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sharepoint-site-branding-and-page-customization-solutions)
+- [Proven Practices for SharePoint Online portal branding](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-branding)
 
 ## Design Manager and Design packages
 
@@ -132,9 +132,9 @@ With Design Manager, you can create a visual design for your website by using wh
 ### Articles
 
 - [Overview of Design Manager in SharePoint](../general-development/overview-of-design-manager-in-sharepoint.md)
-- [SharePoint Design Manager display templates](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-design-manager-display-templates)
-- [SharePoint Design Manager branding and design capabilities](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-design-manager-branding-and-design-capabilities)
-- [SharePoint development and design tools and practices](https://msdn.microsoft.com/en-us/library/office/dn985873.aspx)
+- [SharePoint Design Manager display templates](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-design-manager-display-templates)
+- [SharePoint Design Manager branding and design capabilities](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-design-manager-branding-and-design-capabilities)
+- [SharePoint development and design tools and practices](https://msdn.microsoft.com/library/office/dn985873.aspx)
 
 ## Custom master pages and page layouts
 
@@ -146,13 +146,13 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 
 ### Articles
 
-- [Overview of the SharePoint page model](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model)
-- [Master pages, the Master Page Gallery, and page layouts in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
-- [Master pages in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/master-pages-sharepoint-add-in)
-- [SharePoint Page Layouts and Master Pages (ECM)](https://msdn.microsoft.com/en-us/library/office/ms543497(v=office.14).aspx)
-- [Master Pages](https://msdn.microsoft.com/en-us/library/office/ms443795(v=office.14).aspx)
+- [Overview of the SharePoint page model](https://docs.microsoft.com/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model)
+- [Master pages, the Master Page Gallery, and page layouts in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
+- [Master pages in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/master-pages-sharepoint-add-in)
+- [SharePoint Page Layouts and Master Pages (ECM)](https://msdn.microsoft.com/library/office/ms543497(v=office.14).aspx)
+- [Master Pages](https://msdn.microsoft.com/library/office/ms443795(v=office.14).aspx)
 - [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model)
-- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 
 ### Videos
 
@@ -163,7 +163,7 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 ### Solutions
 
 - [SharePoint Modernization scanner](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization)
-- [PnP PowerShell branding cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps#branding)
+- [PnP PowerShell branding cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps#branding)
 - [Transformation tool](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM#introduction)
 
 ## Custom CSS
@@ -174,16 +174,16 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 
 ### Articles
 
-- [Use CSS to brand SharePoint pages](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-css-to-brand-pages)
-- [Make custom CSS files themable in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-make-custom-css-files-themable-in-sharepoint)
-- [Customize a SharePoint page by using remote provisioning and CSS](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/customize-a-sharepoint-page-by-using-remote-provisioning-and-css)
-- [Upgrade custom themes and CSS to SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/upgrade-custom-themes-and-css-to-sharepoint)
-- [Apply styles to page fields in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-apply-styles-to-page-fields-in-sharepoint)
-- [Use a SharePoint website's style sheet in SharePoint Add-ins](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins)
-- [Give your provider-hosted add-in the SharePoint look-and-feel](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
-- [Optimize page performance in SharePoint - JavaScript and CSS files](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint#compress-crunch-javascript-and-css-files)
-- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
-- [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
+- [Use CSS to brand SharePoint pages](https://docs.microsoft.com/sharepoint/dev/solution-guidance/use-css-to-brand-pages)
+- [Make custom CSS files themable in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-make-custom-css-files-themable-in-sharepoint)
+- [Customize a SharePoint page by using remote provisioning and CSS](https://docs.microsoft.com/sharepoint/dev/solution-guidance/customize-a-sharepoint-page-by-using-remote-provisioning-and-css)
+- [Upgrade custom themes and CSS to SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/upgrade-custom-themes-and-css-to-sharepoint)
+- [Apply styles to page fields in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-apply-styles-to-page-fields-in-sharepoint)
+- [Use a SharePoint website's style sheet in SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins)
+- [Give your provider-hosted add-in the SharePoint look-and-feel](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
+- [Optimize page performance in SharePoint - JavaScript and CSS files](https://docs.microsoft.com/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint#compress-crunch-javascript-and-css-files)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-performance)
 - [Controlling branding in SharePoint using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/AddIns/06%20Branding%20with%20add-in%20model%20techniques)
 
 ### Videos
@@ -194,7 +194,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 ### Solutions
 
 - [SharePoint 2013/2016/Online Responsive UI](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UI.Responsive)
-- [Activate the PnP Responsive UI Add-on using PnP PowerShell](https://msdn.microsoft.com/en-us/pnp_powershell/enablepnpresponsiveui)
+- [Activate the PnP Responsive UI Add-on using PnP PowerShell](https://msdn.microsoft.com/pnp_powershell/enablepnpresponsiveui)
 - [CSS Injection Pattern sample](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.CustomCSS)
 - [SharePoint Modernization scanner](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization)
 - [Transformation tool](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM#introduction)
@@ -213,12 +213,12 @@ Script Embedding means a pattern where custom JavaScript is added on the page wh
 
 ### Articles
 
-- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
-- [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
-- [Embedding JavaScript into SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/embedding-javascript-into-sharepoint)
-- [Migrating User CustomAction / ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
-- [Migrating from UserCustomAction to SharePoint Framework Extensions (tutorial)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
-- [JavaScript Patterns and Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
+- [Branding SharePoint sites in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
+- [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-performance)
+- [Embedding JavaScript into SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/embedding-javascript-into-sharepoint)
+- [Migrating User CustomAction / ECB menu items to SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions)
+- [Migrating from UserCustomAction to SharePoint Framework Extensions (tutorial)](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
+- [JavaScript Patterns and Performance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
 
 ### Videos
 

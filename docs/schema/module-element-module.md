@@ -57,7 +57,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**List**</p></td>
-<td align="left"><p>Optional **Integer**. Specifies the type of list, which is defined within <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a>.</p></td>
+<td align="left"><p>Optional **Integer**. Specifies the type of list, which is defined within <a href="https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
@@ -173,8 +173,8 @@ For an example of how this element is used, see [Modules](modules.md).
 
 ## See also
 
-- [Module](http://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
-- [How to: Provision a File](http://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
+- [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
+- [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
 
 
 

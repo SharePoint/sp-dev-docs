@@ -27,6 +27,6 @@ Supports the use of globally unique identifiers (GUIDs) as attribute field value
 
 ## See also
 
-- [Guid](http://msdn2.microsoft.com/EN-US/library/cey1zx63)
+- [Guid](http://msdn2.microsoft.com/library/cey1zx63)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

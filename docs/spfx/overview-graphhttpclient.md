@@ -46,7 +46,7 @@ export default class MyApplicationCustomizer
 
 To make a request to Microsoft Graph:
 
-1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **@microsoft/sp-http** package.
+1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **\@microsoft/sp-http** package.
 
 2. Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
 
@@ -79,5 +79,5 @@ To acquire a valid access token, **GraphHttpClient** issues a web request to the
 
 - [Use GraphHttpClient to call Microsoft Graph](call-microsoft-graph-using-graphhttpclient.md)
 - [Application Customizer GraphClient from Modern Teamsite sample](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/js-application-graph-client).
-- [Microsoft Graph Dev Center](https://developer.microsoft.com/en-us/graph/)
+- [Microsoft Graph Dev Center](https://developer.microsoft.com/graph/)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)
