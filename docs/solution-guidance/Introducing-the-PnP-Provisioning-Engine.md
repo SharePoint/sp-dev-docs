@@ -28,7 +28,7 @@ However, what if you would like to provision other artifacts like Microsoft Team
 
 There are basically two types of templates that the engine understands: **Site Templates** (also called Provisioning Templates) and the extended version: **Tenant Templates**. 
 
-When the engine was introduced the only template type available was the Provisioning Template. After a few years we introduced the Tenant Template which distinguishes itself from its ability to provision artifacts beyond the scope of SharePoint sites. A tenant template for instance allows you to provision a Microsoft Teams team, Azure AD users, Site Designs and Site Scripts, tenant scoped themes, etc. Unlike Site Templates, you can create a so-called 'Sequence' in a tenant template and create site collections. 
+When the engine was introduced the only template type available was the Site Template. After a few years we introduced the Tenant Template which distinguishes itself from its ability to provision artifacts beyond the scope of SharePoint sites. A tenant template for instance allows you to provision a Microsoft Teams team, Azure AD users, Site Designs and Site Scripts, tenant scoped themes, etc. Unlike Site Templates, you can create a so-called 'Sequence' in a tenant template and create site collections. 
 
 To keep it short: a tenant template is a site template which can contain artifacts to provision to tenant level.
 
