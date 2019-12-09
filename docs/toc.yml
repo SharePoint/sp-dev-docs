@@ -245,8 +245,10 @@
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator
       href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
-    - name: CI and CD
+    - name: CI and CD with Azure DevOps
       href: spfx/toolchain/implement-ci-cd-with-azure-devops.md
+    - name: CI and CD with Azure Pipelines (preview)
+      href: spfx/toolchain/implement-ci-cd-with-azure-pipelines.md
   - name: Debugging
     href: spfx/debug-in-vscode.md
     items:
