@@ -14,8 +14,9 @@ App pages have following characteristics:
 
 * Single Part App Pages cannot be edited by end users using a browser
 * Currently supports hosting only single web part or Microsoft Teams application
-* Page layout can only be changed programatically from normal page layout to a Single Page App Page
-* End-users cannot parameterize exposed web part or Teams application
+* End users can create new app pages using the New--> Page experience available in modern sites.
+* Developers can change page layout programatically from normal page layout to a Single Page App Page
+* There's no New experience in a Single Page App Page. End users can create new Article pages or Single Page App pages by using the New/page experience present in the ribbon of any modern article pages.
 
 <br/>
 
@@ -59,58 +60,12 @@ Following web part manifest demonstrates scenario where the web part is included
 }
 ``` 
 
-## How to use the Single Part App page in your tenant?
+## How to provision Single Part App page in your tenant
+As a developer, the two most common way to provision Single Part App pages is o use PnP PowerShell or Office 365 ClI
 
-You will need to perform following steps to enable Single Part App Page layout in your SharePoint site. 
+### Changing page layout using PnP PowerShell
 
-1. Create a new page
-1. Add a web part on the page and configure that as needed
-1. Change the page layout type as `SingleWebPartAppPage`
-
-If you need to further modify the page, you can change the page layout back as as `Article` to enable content editing.
-
-## Changing page layout using JavaScript in browser console
-
-You can change existing page to use Single Page App Page layout by using browser developer tools. You can simply enable the developer tools and execute following code to change an existing page to use a `SingleWebPartAppPage` layout.
-
-You will need to adjust tenant and page name based on your environment.
-
-```js
-var siteUrl = 'https://contoso.sharepoint.com/sites/marketing/';
-var pageUrl = 'SitePages/page.aspx'
-
-fetch(siteUrl + '_api/contextinfo', {
-  method: 'POST',
-  headers: {
-    accept: 'application/json;odata=nometadata'
-  }
-})
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (ctx) {
-    return fetch(siteUrl + "_api/web/getfilebyurl('" + pageUrl + "')/ListItemAllFields", {
-      method: 'POST',
-      headers: {
-        accept: 'application/json;odata=nometadata',
-        'X-HTTP-Method': 'MERGE',
-        'IF-MATCH': '*',
-        'X-RequestDigest': ctx.FormDigestValue,
-        'content-type': 'application/json;odata=nometadata',
-      },
-      body: JSON.stringify({
-        PageLayoutType: "SingleWebPartAppPage"
-      })
-    })
-  })
-  .then(function(res) {
-    console.log(res.ok ? 'DONE' : 'Error: ' + res.statusText);
-  });
-```
-
-## Changing page layout using PnP PowerShell
-
-You can also use [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to update the page layout for the existing page with following script.
+You can use [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to update the page layout for the existing page with following script.
 
 > [!NOTE]
 > PnP PowerShell is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
@@ -125,7 +80,7 @@ $item2.Update()
 Invoke-PnPQuery
 ```
 
-## Changing page layout using Office 365 CLI
+### Changing page layout using Office 365 CLI
 
 You can also use [Office 365 CLI](https://pnp.github.io/office365-cli/) to update the page layout for the existing page with following script.
 
