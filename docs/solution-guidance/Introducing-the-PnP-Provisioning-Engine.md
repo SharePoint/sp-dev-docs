@@ -51,7 +51,7 @@ To export that site as a provisioning template, you can either use PowerShell or
 ### Using PowerShell cmdlets
 
 > [!NOTE] 
-> This article focuses on using PnP PowerShell to work with the Provisioning Engine. If you prefer using C#, please refer to [PnP Provisioning Engine and the Core Library](./pnp-provisioning-engine-and-the-coire-library.md).
+> This article focuses on using PnP PowerShell to work with the Provisioning Engine. If you prefer using C#, please refer to [PnP Provisioning Engine and the Core Library](./pnp-provisioning-engine-and-the-core-library.md).
 
 To use the PowerShell cmdlets for SharePoint Online or SharePoint, go to [PnP PowerShell overview](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), and install the SharePoint PnP PowerShell module. 
 
