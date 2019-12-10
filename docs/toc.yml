@@ -1427,16 +1427,18 @@
       - name: Scanner FAQ
         href: transform/modernize-scanner-faq.md
     - name: SharePoint modernization guidance
-      href: transform/modernize-partner-guidance.md
+      href: transform/modernize-guidance.md
       items:
         - name: Assessment
-          href: transform/modernize-partner-guidance-assessment.md
+          href: transform/modernize-guidance-assessment.md
         - name: Strategy
-          href: transform/modernize-partner-guidance-strategy.md
+          href: transform/modernize-guidance-strategy.md
         - name: Execution
-          href: transform/modernize-partner-guidance-execution.md
+          href: transform/modernize-guidance-execution.md
         - name: Support
-          href: transform/modernize-partner-guidance-support.md
+          href: transform/modernize-guidance-support.md
+        - name: Partner modernization guidance
+          href: transform/modernize-partner-guidance.md
     - name: Modernization scripts
       href: transform/modernize-sample-scripts.md
     - name: Modernize customizations
