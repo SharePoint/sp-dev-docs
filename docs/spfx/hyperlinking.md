@@ -9,7 +9,7 @@ localization_priority: Priority
 # Hyperlinking considerations in SharePoint Framework (SPFx)
 By default on a modern page in SharePoint when a hyperlink is clicked, navigation to the page is achieved via a page router to avoid full refresh of the screen.
 
-When you develop custom SPFx solutions the behavior of smart navigation might not be desirable, especially for scenarios using the `target` attribute to open a page in a separte tab in the browser.
+When you develop custom SPFx solutions the behavior of smart navigation might not be desirable, especially for scenarios using the `target` attribute to open a page in a separate tab in the browser.
 
 Consider the following markup.
 
