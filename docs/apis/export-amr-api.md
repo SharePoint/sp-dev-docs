@@ -6,12 +6,10 @@ author: JoanneHendrickson
 manager: pamgreen
 audience: ITPro
 ms.topic: article
-ms.prod: sharepoint-server-itpro
 localization_priority: Priority
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection: 
-- Strat_SP_gtc
 - SPMigration
+- m365-collaboration
 description: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 ---
 
@@ -248,27 +246,22 @@ Suggestion:
 ## Limitations
 <a name="limitations"> </a>
 
-By default, each URL supports up to 1 million limits. At the start of the migration, the asynchronous read migration function will check. If more than 1 million is detected an error will be thrown. Multiple versions of a single file will count as one. This limit may be changed in the future.
-
-**SharePoint Migration Export (Asynchronous Metadata Read) API Limitations**</br>
-
-
-|**Type**|**SharePoint Online Limit**|**Recommended limit</br>for async read**|**Description**|
-|:-----|:-----|:-----|:-----|
-|Lists|30 million items|1 million|Per list URL, the migration read will process up to 1 million rea|
-|Document Library|30 million files/folders|1 million|Per list URL, the migration job will process up to 1 million reads|
-|Users|2 million per site collection|1 million|Per site collection. This is only supported in a future permission setting.|
+Asynchronous Metadata Read (Export API) now supports unlimited list, document library, file, and folder metadata export.
 
 
 ## Performance Expectation
-The preliminary performance test provides a rough estimate of more than 200 items per second throughput. This does not account for any potential throttle over the network. If the read asynchronous function fails to reach the server due to throttling, then performance will be impacted. 
 
-This measure of throughput assumes the software package has a sufficient items per read. The recommendation is to read greater than 10K per package. This is because at the start of read asynchronous migration, the server calculates the number of objects to confirm that it is within the 1 million object limit, hence there is an overhead.   If only a few thousand are being read, it results in a less than ideal performance. 
+The preliminary performance test provides a rough estimate of more than 400 items per second throughput for every 250K of objects read. We have seen over 700 items per second throughput in a testing environment.  However, this is highly dependent on the number of items that are being read plus the implementation of the AMR API. This does not account for any potential throttle over the network. If the asynchronous read function fails to reach the server due to throttling, then performance will be impacted.
  
-For single read query or small items read (e.g. 1000 items), it is faster to use Graph API or RESTful/CSOM query as the asynchronous read metadata will have the overhead cost.
+This measure of throughput assumes the software package has a sufficient number of items per read. Microsoft recommends the following:
 
-However, one of the key performance benefits of the asynchronous metadata read is the ability to balance the server-side load and the backend query is much more efficient than individual CSOM load reducing your chance of throttling. 
+|**Folder size**|**Recommendation**|
+|:-----|:-----|
+|Less than 10,000 items|Combine the URLs of multiple folders into a single call|
+|Greater than 10,000 items but less than 1,000,000|Run AMR at the root folder level|
+|Greater than 1,000,000|Method is at the discretion of the ISV|
 
-
-
-
+For a single read query, it is faster to use the Graph API or a RESTful/CSOM query.
+ 
+One of the key performance benefits of using the asynchronous metadata read is the ability to balance the server-side load and the backend query. It is much more efficient than using individual CSOM load reducing to lessen your chance of throttling.
+ 
