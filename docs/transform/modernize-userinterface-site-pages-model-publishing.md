@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 11/27/2019
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -71,7 +71,7 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 When you open a page layout mapping file the following top level elements are present:
 
-- **AddOns**: as user of page transformation you might have the needed to apply custom logic to realize your needs e.g. you need to transform a given property in a way that it can work with your custom client side web part. The framework supports this by allowing you to add your assemblies with functions...simply defining them in the AddOn section and then referencing your custom functions later on by prefixing them with the given name will make the publishing page transformation use your custom code.
+- **AddOns**: as user of page transformation you might have the needed to apply custom logic to realize your needs e.g. you need to transform a given property in a way that it can work with your custom SPFX web part. The framework supports this by allowing you to add your assemblies with functions...simply defining them in the AddOn section and then referencing your custom functions later on by prefixing them with the given name will make the publishing page transformation use your custom code.
 
 - **PageLayouts**: this element contains information for each page layout that you'll plan to use. For each page layout you'll find a definition of the header, web part, metadata, web part zones and fixed web parts.
 
@@ -454,7 +454,7 @@ Ensure that specify the custom **webpartmapping.xml** file as part of your trans
 
 ### I'm using a lot of Add-In parts and want to transform these to custom SPFX web parts (as of the December 2019 release)
 
-The default behavior of page transformation is simply take over the add-in part on the modern client side page as add-in's do work on modern pages. If you however want to selectively transform some add-in parts to custom SPFX based web parts, drop some of add-in parts and keep the remaining add-in parts then the default mapping will not be sufficient. In the below example you see that the `StaticString` function is used to feed the add-in title as mapping selector value. So based up on the title of the web part a mapping will be selected. The first add-in will be taken over as add-in on the modern page, the second one will be transformed to a custom SPFX based alternative and the last one will be simply dropped.
+The default behavior of page transformation is simply take over the add-in part on the modern page as add-in's do work on modern pages. If you however want to selectively transform some add-in parts to custom SPFX based web parts, drop some of add-in parts and keep the remaining add-in parts then the default mapping will not be sufficient. In the below example you see that the `StaticString` function is used to feed the add-in title as mapping selector value. So based up on the title of the web part a mapping will be selected. The first add-in will be taken over as add-in on the modern page, the second one will be transformed to a custom SPFX based alternative and the last one will be simply dropped.
 
 When mapping to a custom SPFX based web part you can use any of your add-in part properties to configure the SPFX based alternative (e.g. {HelloWorld} in below sample), even if those properties are not listed in the Properties node in the mapping file. See also the previous chapter if you want to learn more about how to create a custom mapping file.
 

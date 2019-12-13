@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the pages scanner mode
 description: Explains the pages output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -53,8 +53,8 @@ Filter | Takeaway
 
 For each exported web part the same base JSON structure is used as shown below. Important to note are:
 
-- The "Row" property indicates the row (=section) this web part should be added into in a new client side page (assuming the layout of the original page was detected)
-- The "Column" property indicates the column this web part should be added into in a new client side page (assuming the layout of the original page was detected)
+- The "Row" property indicates the row (=section) this web part should be added into in a new modern page (assuming the layout of the original page was detected)
+- The "Column" property indicates the column this web part should be added into in a new modern page (assuming the layout of the original page was detected)
 - The "Properties" property holds the web part specific properties
 
 ```JSON

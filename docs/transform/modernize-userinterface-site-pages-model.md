@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the page transformation model
 description: Provides detailed guidance on how to configure and use the page transformation model
-ms.date: 04/04/2019
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -19,8 +19,8 @@ Below picture explains the page transformation in 4 steps:
 
 1. At the start you need to tell the transformation engine how you want to transform pages and that's done by providing a page transformation model. This model is an XML file which describes how each classic web part needs to be mapped to a modern equivalent. Per classic web part the model contains a list of relevant properties and mapping information. See the [Understanding and configuring the page transformation model](modernize-userinterface-site-pages-model.md) article to learn more. If you want to understand how classic web parts compare to modern web parts it's recommended to checkout the [Classic and modern web part experiences](https://support.office.com/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64) article.
 2. Next step is analyzing the page you want to transform: the transformation engine will break down the page in a collection of web parts (wiki text is broken down in one or more wiki text web parts) and it will try to detect the used layout.
-3. The information retrieved from the analysis in step 2 is often not sufficient to map the web part to a modern equivalent and therefor in step 3 we'll enhance the information by calling functions: these functions take properties retrieved in step 2 and generate new properties based upon the inputted properties from step 2. After step 3 we have all the needed information to map the web part...except we optionally need to call the defined selector to understand which mapping we'll need in case one classic web part can be mapped to multiple client side configurations.
-4. The final step is creating and configuring the client side page followed by adding the mapped modern client side web parts to it.
+3. The information retrieved from the analysis in step 2 is often not sufficient to map the web part to a modern equivalent and therefor in step 3 we'll enhance the information by calling functions: these functions take properties retrieved in step 2 and generate new properties based upon the inputted properties from step 2. After step 3 we have all the needed information to map the web part...except we optionally need to call the defined selector to understand which mapping we'll need in case one classic web part can be mapped to multiple modern configurations.
+4. The final step is creating and configuring the modern page followed by adding the mapped modern web parts to it.
 
 ![page transformation](media/modernize/pagetransformation_1.png)
 
@@ -28,9 +28,9 @@ Below picture explains the page transformation in 4 steps:
 
 When you open the page transformation model the following top level elements are present:
 
-- **BaseWebPart**: this element contains the configuration that applies to all web parts e.g. it describes that the property "Title" will be fetched for all web parts. It's also the place that defines the default web part mapping: if a web part has no mapping defined the engine will fall back to this mapping to represent the web part on the target client side page.
+- **BaseWebPart**: this element contains the configuration that applies to all web parts e.g. it describes that the property "Title" will be fetched for all web parts. It's also the place that defines the default web part mapping: if a web part has no mapping defined the engine will fall back to this mapping to represent the web part on the target page.
 
-- **AddOns**: as user of page transformation you might have needed to apply custom logic to realize your needs e.g. you need to transform a given property in a way that it can work with your custom client side web part. The framework supports this by allowing you to add your assemblies with functions and selectors...simply defining them in the AddOn section and then referencing your custom functions and selectors later on by prefixing them with the given name will make the page transformation use your custom code.
+- **AddOns**: as user of page transformation you might have needed to apply custom logic to realize your needs e.g. you need to transform a given property in a way that it can work with your custom SPFX web part. The framework supports this by allowing you to add your assemblies with functions and selectors...simply defining them in the AddOn section and then referencing your custom functions and selectors later on by prefixing them with the given name will make the page transformation use your custom code.
 
 - **WebParts**: this element contains information for each web part that you want to transform. For each web part you'll find a definition of the properties to use, the functions to execute on those properties, the possible mappings that define the target of the transformation combined with a selector that you dynamically select the needed mapping.
 
@@ -56,7 +56,7 @@ Let's analyze how a web part is configured in the page transformation model, whi
         <!-- This selector outputs: Library, List  -->
         <Mappings Selector="ListSelectorListLibrary({ListId})">
           <Mapping Name="List" Default="true">
-            <ClientSideText Text="You can map a source web part ({Title}) to a combination of client side controls :-)" Order="10" />
+            <ClientSideText Text="You can map a source web part ({Title}) to a combination of modern web parts :-)" Order="10" />
             <ClientSideWebPart Type="List" Order="20" JsonControlData="&#123;&quot;serverProcessedContent&quot;&#58;&#123;&quot;htmlStrings&quot;&#58;&#123;&#125;,&quot;searchablePlainTexts&quot;&#58;&#123;&#125;,&quot;imageSources&quot;&#58;&#123;&#125;,&quot;links&quot;&#58;&#123;&#125;&#125;,&quot;dataVersion&quot;&#58;&quot;1.0&quot;,&quot;properties&quot;&#58;&#123;&quot;isDocumentLibrary&quot;&#58;false,&quot;selectedListId&quot;&#58;&quot;{ListId}&quot;,&quot;listTitle&quot;&#58;&quot;{Title}&quot;,&quot;selectedListUrl&quot;&#58;&quot;{ListServerRelativeUrl}&quot;,&quot;webRelativeListUrl&quot;&#58;&quot;{ListWebRelativeUrl}&quot;,&quot;webpartHeightKey&quot;&#58;4,&quot;selectedViewId&quot;&#58;&quot;{ListViewId}&quot;&#125;&#125;" />
           </Mapping>
           <Mapping Name="Library" Default="false">
@@ -68,7 +68,7 @@ Let's analyze how a web part is configured in the page transformation model, whi
 
 ### Properties element
 
-For each web part the model defines the properties that might be useful to configure the target client side web part(s). If you miss certain properties you can simply extend them in the model. On some of the properties you'll see a Functions attribute: this attribute contains one or more functions (separate functions via a ;) that are executed when the source web part is mapped to a target client side web part. The anatomy of a function is the following:
+For each web part the model defines the properties that might be useful to configure the target modern web part(s). If you miss certain properties you can simply extend them in the model. On some of the properties you'll see a Functions attribute: this attribute contains one or more functions (separate functions via a ;) that are executed when the source web part is mapped to a target modern web part. The anatomy of a function is the following:
 
 ```csharp
 {Output} = FunctionName({Input1}, {Input2})
@@ -120,12 +120,12 @@ Inside a Mapping element you can have one or more ClientSideText or ClientSideWe
 
 ```Xml
 <Mapping Name="List" Default="true" Functions="{SampleVariable} = SampleFunction({ListId})>
-  <ClientSideText Text="You can map a source web part ({Title}) to a combination of client side controls :-)" Order="10" />
+  <ClientSideText Text="You can map a source web part ({Title}) to a combination of modern web parts :-)" Order="10" />
   <ClientSideWebPart Type="List" Order="20" JsonControlData="&#123;&quot;serverProcessedContent&quot;&#58;&#123;&quot;htmlStrings&quot;&#58;&#123;&#125;,&quot;searchablePlainTexts&quot;&#58;&#123;&#125;,&quot;imageSources&quot;&#58;&#123;&#125;,&quot;links&quot;&#58;&#123;&#125;&#125;,&quot;dataVersion&quot;&#58;&quot;1.0&quot;,&quot;properties&quot;&#58;&#123;&quot;isDocumentLibrary&quot;&#58;false,&quot;selectedListId&quot;&#58;&quot;{ListId}&quot;,&quot;listTitle&quot;&#58;&quot;{Title}&quot;,&quot;selectedListUrl&quot;&#58;&quot;{ListServerRelativeUrl}&quot;,&quot;webRelativeListUrl&quot;&#58;&quot;{ListWebRelativeUrl}&quot;,&quot;webpartHeightKey&quot;&#58;4,&quot;selectedViewId&quot;&#58;&quot;{ListViewId}&quot;&#125;&#125;" />
 </Mapping>
 ```
 
-In above sample the source XSLTListView web part is mapped to a client side text part (`ClientSideText`) and a client side web part (`ClientSideWebPart`):
+In above sample the source XSLTListView web part is mapped to a modern text part (`ClientSideText`) and a modern web part (`ClientSideWebPart`):
 
 - Use the `Order` attribute to determine which one comes first
 - For a `ClientSideWebPart` you need to specify the `Type` of the web part, if you choose `Custom` as type you'll also need to specify the `ControlId` property to identify the needed custom web part

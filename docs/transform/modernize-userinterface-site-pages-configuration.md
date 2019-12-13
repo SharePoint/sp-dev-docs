@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 11/27/2019
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -268,7 +268,7 @@ Type | Default value if not specified
 -----|----
 Bool | false
 
-If you've extended your wiki page library with additional columns to collect page metadata and you want to copy this metadata to the created modern client side page then set this option to true
+If you've extended your wiki page library with additional columns to collect page metadata and you want to copy this metadata to the created modern page then set this option to true
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)

@@ -1,14 +1,14 @@
 ---
-title: Transform classic pages to modern client-side pages
-description: Explains how to transform classic wiki and web part pages into modern client side pages
-ms.date: 11/04/2019
+title: Transform classic pages to modern pages
+description: Explains how to transform classic wiki and web part pages into modern pages
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# Transform classic pages to modern client-side pages
+# Transform classic pages to modern pages
 
-Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern client side pages and this is the solution here. After you've maximized the use of the modern list and library user interface and connected your site to an Office 365 Group transforming the pages to modern client side pages is the last task to fully transform your classic site into a modern group connected site. Get inspired by the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
+Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern pages and this is the solution here. After you've maximized the use of the modern list and library user interface and connected your site to an Office 365 Group transforming the pages to modern pages is the last task to fully transform your classic site into a modern group connected site. Get inspired by the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
 
 The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline), [source code](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/SharePointPnP.Modernization.Framework)) does bring page transformation capabilities which will be explained in the upcoming chapters.
 

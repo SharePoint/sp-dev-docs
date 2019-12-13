@@ -1372,7 +1372,7 @@
           href: transform/modernize-userinterface-lists-and-libraries-rollout.md
         - name: Opting out from modern
           href: transform/modernize-userinterface-lists-and-libraries-optout.md
-      - name: Transform classic pages to modern client-side pages
+      - name: Transform classic pages to modern pages
         href: transform/modernize-userinterface-site-pages.md
         items:
         - name: Page transformation via the SharePoint UI
