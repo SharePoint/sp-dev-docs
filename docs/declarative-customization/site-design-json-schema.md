@@ -646,6 +646,12 @@ Use the **addNavLink** verb to add a new navigation link to the site QuickLaunch
      "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
      "displayName": "About Site Footer",
      "navComponent":"Footer"
+ },
+ {
+     "verb": "addNavLink",
+     "url": "http://linkless.header/",
+     "displayName": "Linkless Heading",
+     "isWebRelative": false
  }
 ```
 
