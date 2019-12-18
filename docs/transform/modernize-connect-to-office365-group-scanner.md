@@ -1,7 +1,7 @@
 ---
 title: Analyze and use the scanner data
 description: Understand and process the scanner results to help your sites be in optimal shape for connecting an Office 365 group to them.
-ms.date: 06/07/2018
+ms.date: 12/13/2018
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -57,7 +57,7 @@ With that filter applied let's have a look at the typical warnings:
 - **MasterPageUsed** or **AlternateCSSUsed**: Custom master pages or alternate CSS is not used on modern pages. If your site depends on these, you might want to verify that, because your custom master pages and CSS will not work on the modern home page that the site gets. Checkout the [Modernize branding](modernize-branding.md) article to learn more on the possible remediation steps.
 - **UserCustomActionUsed**: Using user custom actions that embed JavaScript is common for customizing sites, but this does not work for modern pages. If you have user custom actions, you can build alternatives by using SharePoint Framework Extensions and install those to your site. See the ModernizationUserCustomActionScanResults.csv and checkout the [Modernize customizations](modernize-customizations.md) article for more details.
 - **PublishingFeatureEnabled**: The publishing features are not compatible with the modern page feature, which is a requirement due to the modern home page being set. If the publishing capabilities are not used on your site then you can disable them.
-- **ModernPageFeatureDisabled**: Because the site gets a modern home page after group-connection creation, it's important that the modern homepage feature is enabled. Use the remediation steps outlined in [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md) to fix this.
+- **ModernPageFeatureDisabled**: Because the site gets a modern home page after group-connection creation, it's important that the modern homepage feature is enabled. Use the remediation steps outlined in [Transform classic pages to modern pages](modernize-userinterface-site-pages.md) to fix this.
 - **ModernListsBlockedAtSiteLevel** or **ModernListsBlockedAtWebLevel**: Preventing the modern user interface for lists and libraries is not blocking group-connection, but because group-connection is typically part of a site modernization, it makes no sense to prevent lists and libraries to use the modern user interface on an Office 365 group-connected site. Use the remediation steps outlined in [Maximize use of modern lists and libraries](modernize-userinterface-lists-and-libraries.md) to fix this.
 
 ### Permission Warnings

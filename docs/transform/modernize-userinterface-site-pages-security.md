@@ -1,7 +1,7 @@
 ---
 title: Security requirements for using page transformation
 description: Explains the required permission levels for page transformation
-ms.date: 10/11/2019
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,7 +11,7 @@ localization_priority: Priority
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
-Before an existing wiki or web part page can be transformed to a modern client side page you do need to have the needed SharePoint permissions. This short article explains what permissions are required.
+Before an existing wiki or web part page can be transformed to a modern page you do need to have the needed SharePoint permissions. This short article explains what permissions are required.
 
 ## General security requirements
 

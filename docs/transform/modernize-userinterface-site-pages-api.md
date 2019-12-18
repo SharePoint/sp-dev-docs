@@ -1,7 +1,7 @@
 ---
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
-ms.date: 11/04/2019
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -138,7 +138,7 @@ Name|Description
 {return value}|String provided as input
 ### TextCleanup
 
-**Description:** Rewrites wiki page html to be compliant with the html supported by the client side text part.
+**Description:** Rewrites wiki page html to be compliant with the html supported by the modern text part.
 
 **Example:** `{CleanedText} = TextCleanup({Text},{UsePlaceHolders})`
 
@@ -152,7 +152,7 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{CleanedText}|Html compliant with client side text part
+{CleanedText}|Html compliant with modern text part
 ### ContainsScript
 
 **Description:** Checks if the provided html contains JavaScript
@@ -303,7 +303,7 @@ Name|Description
 {Anchor}|The url after url rewrite. If the anchor and original image url were the same then the anchor will be set to the new image url
 ### ExtractWebpartProperties
 
-**Description:** Extracts the client side web part properties so they can be reused.
+**Description:** Extracts the modern web part properties so they can be reused.
 
 **Example:** `{JsonProperties} = ExtractWebpartProperties({ClientSideWebPartData})`
 
@@ -311,12 +311,12 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{ClientSideWebPartData}|Web part data defining the client side web part configuration
+{ClientSideWebPartData}|Web part data defining the modern web part configuration
 #### Output parameters
 
 Name|Description
 :-----|:----------
-{JsonProperties}|Json properties to configure the client side web part
+{JsonProperties}|Json properties to configure the modern web part
 ### DocumentEmbedLookup
 
 **Description:** Does lookup a file based on the given server relative path and return needed properties of the file. Returns null if file was not found.
@@ -447,7 +447,7 @@ Name|Description
 {ImageSources}|ImageSources nodes to be added in the serverProcessedContent node
 ### TextCleanUpSummaryLinks
 
-**Description:** Rewrites summarylinks web part html to be compliant with the html supported by the client side text part.
+**Description:** Rewrites summarylinks web part html to be compliant with the html supported by the modern modern text part.
 
 **Example:** `{CleanedText} = TextCleanUpSummaryLinks({Text})`
 
@@ -460,7 +460,7 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{CleanedText}|Html compliant with client side text part
+{CleanedText}|Html compliant with modern text part
 ### SummaryLinksToQuickLinksProperties
 
 **Description:** Maps summarylinks web part data into a properties collection and supporting serverProcessedContent nodes for the quicklinks web part
@@ -637,7 +637,7 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{CleanedText}|Client side text part compliant html (cleaned via TextCleanup function)
+{CleanedText}|modern text part compliant html (cleaned via TextCleanup function)
 #### Output values
 
 Name|Description

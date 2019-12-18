@@ -1,7 +1,7 @@
 ---
-title: Transform classic pages to modern client-side pages using .NET
-description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .NET
-ms.date: 09/03/2019
+title: Transform classic pages to modern pages using .NET
+description: Explains how to transform classic wiki and web part pages into modern modern pages using the SharePoint .NET
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -75,7 +75,7 @@ Consult the [web part transformation list](modernize-userinterface-site-pages-we
 
 ### I want to transform pages into another site collection (as of March 2019 release, version 1.0.1903.*)
 
-The default transformation behavior is doing an in-place transformation, meaning the modern client side page is created in the same location as the classic page was. You can however also create the modern version of the page in another site collection by providing a client context object for the target site collection.
+The default transformation behavior is doing an in-place transformation, meaning the modern page is created in the same location as the classic page was. You can however also create the modern version of the page in another site collection by providing a client context object for the target site collection.
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestsite";
@@ -115,7 +115,7 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 ### I want to transform publishing pages (as of April 2019 release, version 1.0.1904.*)
 
-Publishing page transformation always will be a cross site transformation as mixing modern client side pages with publishing pages is unsupported. Below sample shows how all publishing pages starting with an "a" are transformed to client side pages in the https://contoso.sharepoint.com/sites/mycommunicationsite site. This sample also shows how to provide a custom page layout mapping file.
+Publishing page transformation always will be a cross site transformation as mixing modern pages with publishing pages is unsupported. Below sample shows how all publishing pages starting with an "a" are transformed to modern pages in the https://contoso.sharepoint.com/sites/mycommunicationsite site. This sample also shows how to provide a custom page layout mapping file.
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
@@ -212,7 +212,7 @@ using (var cc = new ClientContext(siteUrl))
 
 ### I want to use the logging features (as of April 2019 release, version 1.0.1904.*)
 
-By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .NET:
+By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a modern page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .NET:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";

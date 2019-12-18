@@ -11,7 +11,7 @@ localization_priority: Priority
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
-When a page is transformed from a classic page into a modern client side page then the most commonly used web parts are transformed as well. Classic web parts (e.g. XSLTListView) are replaced by their OOB modern counterparts (e.g. List web part) assuming there is a modern counterpart available. The next chapter provides an overview of which classic web parts are transformed and how.
+When a page is transformed from a classic page into a modern page then the most commonly used web parts are transformed as well. Classic web parts (e.g. XSLTListView) are replaced by their OOB modern counterparts (e.g. List web part) assuming there is a modern counterpart available. The next chapter provides an overview of which classic web parts are transformed and how.
 
 ## Web part transformation list (updated for September 2019 release)
 

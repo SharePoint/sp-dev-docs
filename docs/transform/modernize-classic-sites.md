@@ -1,7 +1,7 @@
 ---
 title: Modernize your classic SharePoint sites
 description: Steps to transform your SharePoint classic site into a modern Office 365 group-connected team site or communication site.
-ms.date: 10/03/2019
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -66,9 +66,9 @@ For more information, see [Modernize site branding](modernize-branding.md).
 
 ## Transform your classic site pages into modern pages
 
-The final step in a site transformation is transforming your site pages. After you have completed the other steps, your site pages still appear in the classic user interface. Page transformation is not a simple process because there's no one-on-one mapping between the functionality offered by classic web parts and what's offered by the first-party client-side web parts on modern pages. Therefore, we recommend that you transform only the pages that are frequently used.
+The final step in a site transformation is transforming your site pages. After you have completed the other steps, your site pages still appear in the classic user interface. Page transformation is not a simple process because there's no one-on-one mapping between the functionality offered by classic web parts and what's offered by the first-party web parts on modern pages. Therefore, we recommend that you transform only the pages that are frequently used.
 
-For more information about page transformation, see [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md).
+For more information about page transformation, see [Transform classic pages to modern pages](modernize-userinterface-site-pages.md).
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 title: Modernize customizations
 description: Overview of the customizations that are not compatible with the modern user interface in SharePoint, and guidelines on how to remediate them.
-ms.date: 04/17/2018
+ms.date: 12/13/2018
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -58,7 +58,7 @@ To learn more about column formatting, see:
 
 #### Use SharePoint Framework Field Customizer extension
 
-SharePoint Framework Extensions enable you to extend the SharePoint user experience within modern pages and document libraries, while using the familiar SharePoint Framework tools and libraries for client-side development. Specifically, Field Customizers allow you to fully control how field data is presented in your list or library views. 
+SharePoint Framework Extensions enable you to extend the SharePoint user experience within modern pages and document libraries, while using the familiar SharePoint Framework tools and libraries for development. Specifically, Field Customizers allow you to fully control how field data is presented in your list or library views.
 
 Following is an example of a percent column.
 
@@ -92,19 +92,19 @@ SharePoint has multiple flavors of classic site pages such as wiki pages, web pa
 
 ### Out-of-the-box classic web parts
 
-SharePoint has many out-of-the-box web parts (including the script editor web part) that work on classic pages but not on modern pages (that is, there's no out-of-the-box modern equivalent). There's also a set of modern, first-party, client-side web parts available that offer similar functionality for some of the classic web parts; however, there's no feature parity. 
+SharePoint has many out-of-the-box web parts (including the script editor web part) that work on classic pages but not on modern pages (that is, there's no out-of-the-box modern equivalent). There's also a set of modern, first-party, modern web parts available that offer similar functionality for some of the classic web parts; however, there's no feature parity. 
 
-If you need the functionality of a classic web part as a modern client-side equivalent, you must either roll your own version based on the SharePoint Framework or alternatively consume a web part from the large list of open source SharePoint Framework web parts, which you can find in the [sp-dev-fx-webparts GitHub repository](https://github.com/SharePoint/sp-dev-fx-webparts). 
+If you need the functionality of a classic web part as a modern equivalent, you must either roll your own version based on the SharePoint Framework or alternatively consume a web part from the large list of open source SharePoint Framework web parts, which you can find in the [sp-dev-fx-webparts GitHub repository](https://github.com/SharePoint/sp-dev-fx-webparts). 
 
 Following is a diagram showing a sample web part.
 
 ![SPFX web part sample](media/modernize/spfx-react-image-magnifier.gif)
 
-To learn more about SharePoint Framework client-side web parts, see:
+To learn more about SharePoint Framework web parts, see:
 
-- [Overview of SharePoint client-side web parts](../spfx/web-parts/overview-client-side-web-parts.md)
+- [Overview of SharePoint web parts](../spfx/web-parts/overview-client-side-web-parts.md)
 - [Migrate existing Script Editor web part customizations to the SharePoint Framework](../spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md)
-- [SharePoint Framework client-side web part samples and tutorial materials](https://github.com/SharePoint/sp-dev-fx-webparts)
+- [SharePoint Framework web part samples and tutorial materials](https://github.com/SharePoint/sp-dev-fx-webparts)
 
 ### Site or web-scoped user custom actions that embed JavaScript
 
