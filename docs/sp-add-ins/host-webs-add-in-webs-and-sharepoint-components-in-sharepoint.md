@@ -71,7 +71,7 @@ In general, a SharePoint Add-in can contain one or more of the components in the
 - Modules (sets of files)
 - Pages
 - List templates
-- List and library instances
+- List and library instances (Classic experience only)
 - Custom list forms
 - Custom list views
 - Custom content types
