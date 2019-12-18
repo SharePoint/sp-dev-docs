@@ -81,6 +81,8 @@
     items:
     - name: Tenant Wide Deployment
       href: spfx/extensions/basics/tenant-wide-deployment-extensions.md  
+    - name: Pre-allocated placeholders
+      href: spfx/extensions/basics/preallocated-space-placeholders.md
     - name: Getting started
       href: spfx/extensions/get-started/build-a-hello-world-extension.md
       items:
