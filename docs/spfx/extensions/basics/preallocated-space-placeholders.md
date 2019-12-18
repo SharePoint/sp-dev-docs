@@ -76,4 +76,4 @@ There are few considerations to be aware, depending on your implementation:
 * If you have defined a pre-allocation, but application customizer does not create placeholder in the code or is not associated on the page, server side allocated space will remain on the page.
 
 > [!NOTE]
-> HostpProperties can be defined also for existing application customizers either modifying site level CustomAction object or by using the **Host Properties** column in the **Tenant Wide Extensions** list at the app catalog site. As this is a server side setting, it can be also applied to extensions which have been built using older SharePoint Framework versions.
+> HostProperties can be defined also for existing application customizers either modifying site level CustomAction object or by using the **Host Properties** column in the **Tenant Wide Extensions** list at the app catalog site. As this is a server side setting, it can be also applied to extensions which have been built using older SharePoint Framework versions.
