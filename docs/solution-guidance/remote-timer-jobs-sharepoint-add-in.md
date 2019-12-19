@@ -126,7 +126,7 @@ In this pattern, you define one or more service accounts used to authenticate ti
 
 The following articles describe how to use a service account authentication pattern and provide code samples to get you started.
 
-- [Building a SharePoint App as a Timer Job (MSDN Blog)](http://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
+- [Building a SharePoint App as a Timer Job (MSDN Blog)](https://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
 	+ End-to-end article about this pattern.
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SimpleTimerJob)
 	+ End-to-end article about this pattern with accompanying video.
@@ -168,7 +168,7 @@ In this pattern, you define an application in SharePoint or Azure Active Directo
 
 The following articles describe the OAUth authentication pattern and provide code samples to get you started.
 
-- [Building a SharePoint App as a Timer Job (MSDN Blog)](http://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
+- [Building a SharePoint App as a Timer Job (MSDN Blog)](https://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
 	+ End-to-end article about this pattern.
 - [Core.TimerJobs.Samples (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
 	+ Excellent code samples encompassing 10 different examples. *Note: Not all ten code examples are applicable to the OAUth authentication pattern.*

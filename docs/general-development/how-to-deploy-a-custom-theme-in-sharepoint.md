@@ -114,7 +114,7 @@ A composed look, or design, is the color palette, font scheme, background image,
     > [!NOTE]
     > If there is an issue with the composed look values, the composed look is not added to the design gallery, and no message is recorded in the log files. The following are possible reasons why a composed look cannot be added: a file cannot be found, there is a formatting issue with one of the files, or SharePoint is unable to access the files. 
 
-You can now use the design gallery to apply the new design to your site. For more information, see  [Choose a theme for your publishing site](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
+You can now use the design gallery to apply the new design to your site. For more information, see  [Choose a theme for your publishing site](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
   
     
     

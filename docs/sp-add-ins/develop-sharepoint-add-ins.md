@@ -86,5 +86,5 @@ When you are familiar with the capabilities and features of SharePoint Add-ins, 
 -  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md) 
 -  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)
 -  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)
--  [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
+-  [SharePoint Add-ins sample pack](https://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
  

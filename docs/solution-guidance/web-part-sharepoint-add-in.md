@@ -32,7 +32,7 @@ Add-in Parts may be easily created by using the out-of-the-box Add-in Script Par
 
 The following article describes the Add-in Script Part pattern and how to use it.
 
-- [Introducing app script part pattern for Office365 app model (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2014/07/08/introducing-app-script-part-pattern-for-office365-app-model.aspx)
+- [Introducing app script part pattern for Office365 app model (MSDN Blog Article)](https://blogs.msdn.com/b/vesku/archive/2014/07/08/introducing-app-script-part-pattern-for-office365-app-model.aspx)
 
 The following sample demonstrates how to use an Add-in Script Part to integrate with Yammer, Bing Maps, and Google Maps.
 
@@ -45,7 +45,7 @@ The following video walks you through the code sample.
 Related links
 =============
 
-- [Introducing app script part pattern for Office365 app model (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2014/07/08/introducing-app-script-part-pattern-for-office365-app-model.aspx)
+- [Introducing app script part pattern for Office365 app model (MSDN Blog Article)](https://blogs.msdn.com/b/vesku/archive/2014/07/08/introducing-app-script-part-pattern-for-office365-app-model.aspx)
 - [Core.AppScriptPart (O365 PnP Video)](https://channel9.msdn.com/Blogs/Office-365-Dev/App-Script-Parts-in-SharePoint-Office-365-Developer-Patterns-and-Practices)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")

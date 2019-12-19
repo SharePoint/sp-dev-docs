@@ -36,7 +36,7 @@ Ensure that you have the following installed:
 - Visual Studio 2012
     
   
-- Visual Studio Express 2010 with new the SharePoint phone templates from  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+- Visual Studio Express 2010 with new the SharePoint phone templates from  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
     
   
 - Access to a SharePoint list, with sufficient privileges to add a column
@@ -282,10 +282,10 @@ In this step, you can run your app and validate it.
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
--  [Windows Phone SDK 7.1](http://www.microsoft.com/download/details.aspx?id=27570)
+-  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
     
   
 

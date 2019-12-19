@@ -30,7 +30,7 @@ Use the following procedure to back up and restore Microsoft SharePoint Foundati
 3. Repeat steps 1 and 2 on all SharePoint Foundation servers.
     
   
-4. Use your requestor to back up and restore data. You can either use your requestor (as outlined in the  [Volume Shadow Copy Service Overview](https://msdn.microsoft.com/library/aa384649%28VS.85%29.aspx)) or the BETest test utility (available in the  [VSS SDK](http://www.microsoft.com/downloads/details.aspx?FamilyID=0B4F56E4-0CCC-4626-826A-ED2C4C95C871&amp;displaylang=en)) to back up or restore from SharePoint Foundation. 
+4. Use your requestor to back up and restore data. You can either use your requestor (as outlined in the  [Volume Shadow Copy Service Overview](https://msdn.microsoft.com/library/aa384649%28VS.85%29.aspx)) or the BETest test utility (available in the  [VSS SDK](https://www.microsoft.com/downloads/details.aspx?FamilyID=0B4F56E4-0CCC-4626-826A-ED2C4C95C871&amp;displaylang=en)) to back up or restore from SharePoint Foundation. 
     
   
 

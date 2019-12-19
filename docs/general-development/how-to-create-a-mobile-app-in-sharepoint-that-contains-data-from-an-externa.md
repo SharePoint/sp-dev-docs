@@ -30,7 +30,7 @@ SharePoint enables you to build mobile applications that can access external dat
 - A SharePoint installation with administrative privileges to upload the BDC model for the Northwind database and a SharePoint site where you create the external list
     
   
-- Microsoft Visual Studio Express with the new SharePoint phone templates from  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+- Microsoft Visual Studio Express with the new SharePoint phone templates from  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
     
   
 - The BDC model for our exampleNorthwind_oData.bdmc (download from  [SharePoint: Create a simple external list-based phone app](https://code.msdn.microsoft.com/sharepoint/sharepoint-2013-create-a-88800202))
@@ -287,10 +287,10 @@ Now that the app is ready to run, you can test it using phone emulator.
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
--  [Windows Phone SDK 7.1](http://www.microsoft.com/download/details.aspx?id=27570)
+-  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
     
   
 

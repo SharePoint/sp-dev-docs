@@ -145,7 +145,7 @@ Once you're done with the upgrade, you'll want to think about the future and lon
 -  [Upgrade to SharePoint](https://technet.microsoft.com/library/cc303420%28v=office.15%29.aspx)
     
   
--  [SharePoint and SharePoint Online solution pack for branding and site provisioning](http://www.microsoft.com/download/details.aspx?id=42030)
+-  [SharePoint and SharePoint Online solution pack for branding and site provisioning](https://www.microsoft.com/download/details.aspx?id=42030)
     
   
 -  [Install and manage solutions for SharePoint](https://technet.microsoft.com/library/cc263205%28v=office.15%29.aspx)

@@ -9,10 +9,10 @@ localization_priority: Normal
 
 # Working with Web Services in SharePoint Workflows using Visual Studio 2012
 Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
+ **Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
 > [!NOTE] 
-> This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code in the MSDN Code Gallery, here:  [Working with Web Services in SharePoint Workflows using Visual Studio 2012](http://code.msdn.microsoft.com/Working-with-Web-in-46148199). 
+> This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code in the MSDN Code Gallery, here:  [Working with Web Services in SharePoint Workflows using Visual Studio 2012](https://code.msdn.microsoft.com/Working-with-Web-in-46148199). 
   
     
     

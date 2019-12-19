@@ -115,13 +115,13 @@ Four parameters are passed into this method:
     
     
 
--  _documentUrls_: A  [IList\<T\>](http://msdn2.microsoft.com/library/5y536ey6) object that contain the URLs for each content item from the search results that match the crawl rule.
+-  _documentUrls_: A  [IList\<T\>](https://msdn2.microsoft.com/library/5y536ey6) object that contain the URLs for each content item from the search results that match the crawl rule.
     
   
--  _documentAcls_: A  [IList\<T\>](http://msdn2.microsoft.com/library/5y536ey6) object containing item ACLs for each content item whose access is to be determined by the security trimmer implementation.
+-  _documentAcls_: A  [IList\<T\>](https://msdn2.microsoft.com/library/5y536ey6) object containing item ACLs for each content item whose access is to be determined by the security trimmer implementation.
     
   
--  _sessionProperties_: A  [IDictionary\<TKey, TValue\>](http://msdn2.microsoft.com/library/s4ys34ea) object containing the transient property bag.
+-  _sessionProperties_: A  [IDictionary\<TKey, TValue\>](https://msdn2.microsoft.com/library/s4ys34ea) object containing the transient property bag.
     
   
 -  _userIdentity_: An  [IIdentity](https://msdn.microsoft.com/library/System.Security.Principal.IIdentity.aspx) object from which implementers can retrieve the user's identity.

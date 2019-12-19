@@ -59,7 +59,7 @@ The following table lists all of the validation issues that can appear in the Is
 -  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
--  [Create, import, and export SharePoint workflows in Visio 2010](http://office.microsoft.com/visio-help/create-import-and-export-sharepoint-workflows-in-visio-HA101888007.aspx)
+-  [Create, import, and export SharePoint workflows in Visio 2010](https://office.microsoft.com/visio-help/create-import-and-export-sharepoint-workflows-in-visio-HA101888007.aspx)
     
   
 -  [SharePoint Developer Center](https://msdn.microsoft.com/sharepoint/default.aspx)

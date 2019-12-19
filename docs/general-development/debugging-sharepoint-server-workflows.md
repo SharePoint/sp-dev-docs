@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # Debugging SharePoint workflows
 Demonstrates how SharePoint now relies on Workflow Manager 1.0 for all workflow processing and management, and demonstrates debugging options.
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
+ **Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
   
     
 

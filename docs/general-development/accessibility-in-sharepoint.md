@@ -14,7 +14,7 @@ Accessible technology enables users to interact with computers and applications 
     
     
 
-Microsoft strives to build products that are accessible to everyone. For information about these efforts, see the  [Microsoft Accessibility](http://www.microsoft.com/enable/default.aspx) site.
+Microsoft strives to build products that are accessible to everyone. For information about these efforts, see the  [Microsoft Accessibility](https://www.microsoft.com/enable/default.aspx) site.
 ## Accessibility features in SharePoint
 <a name="bkmk_AccessibilitySP2013"> </a>
 
@@ -27,7 +27,7 @@ For more information about accessibility features in SharePoint, see the followi
     
     
 
--  [Accessibility features in SharePoint products](http://office.microsoft.com/sharepoint-foundation-help/accessibility-features-in-sharepoint-products-HA102772892.aspx?CTT=1)
+-  [Accessibility features in SharePoint products](https://office.microsoft.com/sharepoint-foundation-help/accessibility-features-in-sharepoint-products-HA102772892.aspx?CTT=1)
     
   
 -  [Keyboard shortcuts in SharePoint Online](https://support.office.com/article/keyboard-shortcuts-in-sharepoint-online-466e33ee-613b-4f47-96bb-1c20f20b1015)
@@ -37,7 +37,7 @@ Users who have site administrator responsibilities typically use the SharePoint 
   
     
     
-Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](https://docs.microsoft.com/windows/desktop/uxguide/inter-touch) on MSDN, and the [Office Touch Guide](http://office.microsoft.com/support/office-touch-guide-HA102823845.aspx) on Office.com.
+Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](https://docs.microsoft.com/windows/desktop/uxguide/inter-touch) on MSDN, and the [Office Touch Guide](https://office.microsoft.com/support/office-touch-guide-HA102823845.aspx) on Office.com.
   
     
     
@@ -92,10 +92,10 @@ SharePoint administrators and users depend on the accessibility features that we
 
 |**Browser**|**For more information**|
 |:-----|:-----|
-|Internet Explorer  <br/> | [Accessibility in Internet Explorer 9](http://www.microsoft.com/enable/products/ie9/default.aspx) <br/> |
-|Firefox  <br/> | [Accessibility features in Firefox](http://go.microsoft.com/fwlink/p/?LinkId=275209) <br/> |
-|Safari  <br/> | [Safari Accessibility](http://go.microsoft.com/fwlink/p/?LinkId=275210) <br/> |
-|Chrome  <br/> | [Chrome Accessibility Technical Documentation](http://go.microsoft.com/fwlink/p/?LinkId=275211) <br/> |
+|Internet Explorer  <br/> | [Accessibility in Internet Explorer 9](https://www.microsoft.com/enable/products/ie9/default.aspx) <br/> |
+|Firefox  <br/> | [Accessibility features in Firefox](https://go.microsoft.com/fwlink/p/?LinkId=275209) <br/> |
+|Safari  <br/> | [Safari Accessibility](https://go.microsoft.com/fwlink/p/?LinkId=275210) <br/> |
+|Chrome  <br/> | [Chrome Accessibility Technical Documentation](https://go.microsoft.com/fwlink/p/?LinkId=275211) <br/> |
    
 
 ## See also
@@ -105,7 +105,7 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [Accessibility](https://msdn.microsoft.com/windows/bb735024.aspx)
     
   
--  [Microsoft Accessibility Resource Centers](http://www.microsoft.com/enable/centers/)
+-  [Microsoft Accessibility Resource Centers](https://www.microsoft.com/enable/centers/)
     
   
 -  [Guidelines and checklist for accessibility](https://msdn.microsoft.com/library/windows/apps/hh700325.aspx)
@@ -120,7 +120,7 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
--  [Accessibility in Microsoft Products](http://www.microsoft.com/enable/products/default.aspx)
+-  [Accessibility in Microsoft Products](https://www.microsoft.com/enable/products/default.aspx)
     
   
 -  [Accessibility for SharePoint](https://technet.microsoft.com/library/jj219681.aspx)

@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
 Demonstrates how to use web services in SharePoint Designer 2013 workflows. 
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
+ **Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
   
     
     

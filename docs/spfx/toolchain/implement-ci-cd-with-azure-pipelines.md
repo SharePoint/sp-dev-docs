@@ -185,7 +185,7 @@ stages:
 > [!NOTE] 
 > You can define multiple environments and by duplicating the __deployqa__ stage and providing different parameters. If you do so, make sure the stage name, the job name, the target environment and the variable group name are unique.
 > [!NOTE] 
-> You can conditionnally deploy to different environments leveraging [conditions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml)
+> You can conditionnally deploy to different environments leveraging [conditions](https://docs.microsoft.com/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml)
 
 ## Configuring the credentials for the environments
 Secrets should never be committed to a repository for security reasons. The pipeline described in the previous steps makes use of _variable groups_ to keep configuration values secret. The variable groups need to be created for each environment and the name needs to match what is described in the pipeline definition (here __qa_configuration__).  

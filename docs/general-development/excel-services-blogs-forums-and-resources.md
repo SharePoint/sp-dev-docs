@@ -21,7 +21,7 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 |**Blog Name**|**Links**|
 |:-----|:-----|
-|Cum Grano Salis  <br/> | [Home page](http://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](https://blogs.msdn.microsoft.com/cumgranosalis/tag/excel-services/) <br/> |
+|Cum Grano Salis  <br/> | [Home page](https://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](https://blogs.msdn.microsoft.com/cumgranosalis/tag/excel-services/) <br/> |
 |Microsoft Excel: The official blog of the Microsoft Excel product team  <br/> | [Home page](https://www.microsoft.com/microsoft-365/blog/excel) <br/>  |
    
 
@@ -29,7 +29,7 @@ The following are links to blogs, forums, and additional resources related to Ex
 |**Forum Name**|**Links**|
 |:-----|:-----|
 |SharePoint - Excel Services  <br/> | [Excel Services forum home page](/sharepoint/dev/general-development/excel-services-blogs-forums-and-resources) <br/> |
-|SharePoint Products and Technologies  <br/> | [List of SharePoint Products and Technologies forums](http://social.msdn.microsoft.com/forums/category/sharepoint) <br/> |
+|SharePoint Products and Technologies  <br/> | [List of SharePoint Products and Technologies forums](https://social.msdn.microsoft.com/forums/category/sharepoint) <br/> |
    
 
 

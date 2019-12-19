@@ -103,7 +103,7 @@ When you need to elevate privileges in a SharePoint S2S scenario this is a good 
 
 The following article demonstrates how to use AllowAppOnlyPolicy with S2S.
 
-- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](http://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
+- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
 
 **ACS sub option**
 
@@ -121,7 +121,7 @@ When you need to elevate privileges in a SharePoint ACS scenario this is a good 
 
 The following article demonstrates how to use AllowAppOnlyPolicy with ACS.
 
-- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](http://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
+- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
 
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
@@ -142,7 +142,7 @@ The following article demonstrates how the SharePointOnlineCredentials class is 
 
 Related links
 =============
-- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](http://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
+- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
 - [Getting Started with building Azure WebJobs ("Timer Jobs") for your Office 365 sites (Authentication considerations section) - Tobias Zimmergren Blog Article](http://zimmergren.net/technical/getting-started-with-building-azure-webjobs-timer-jobs-for-your-office-365-sites)
 - [SharePointOnlineCredentials class (MSDN API Documentation)](https://msdn.microsoft.com/library/microsoft.sharepoint.client.sharepointonlinecredentials.aspx)
 - [Using add-in only / app-only permissions with search queries in SharePoint Online - Vesa Juvonen Blog Article](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/)

@@ -186,13 +186,13 @@ After you add a site template to the solutions gallery and the template is activ
 -  [Build farm solutions in SharePoint](https://msdn.microsoft.com/library/jj163902%28v=office.15%29.aspx)
     
   
--  [Copy or move lists by using list templates](http://office.com/redir/HA101782479.aspx)
+-  [Copy or move lists by using list templates](https://office.com/redir/HA101782479.aspx)
     
   
--  [Copy or move a library by using a library template](http://office.com/redir/HA101814157.aspx)
+-  [Copy or move a library by using a library template](https://office.com/redir/HA101814157.aspx)
     
   
--  [Copy or move library files by using Windows Explorer](http://office.com/redir/HA101811182.aspx)
+-  [Copy or move library files by using Windows Explorer](https://office.com/redir/HA101811182.aspx)
     
   
 

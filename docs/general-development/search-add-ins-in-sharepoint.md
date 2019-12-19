@@ -242,7 +242,7 @@ The add-in manifest file is in XML format and can be edited directly. To get per
 -  [Explore the app manifest structure and the package of a SharePoint Add-in](https://msdn.microsoft.com/library/7cd5850f-cbf3-48d2-bcb7-59b8f4ed0e63%28Office.15%29.aspx)
     
   
--  [Add search capabilities to your add-ins for SharePoint](http://blogs.msdn.com/b/officeapps/archive/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint.aspx)
+-  [Add search capabilities to your add-ins for SharePoint](https://blogs.msdn.com/b/officeapps/archive/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint.aspx)
     
   
 -  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint.md)

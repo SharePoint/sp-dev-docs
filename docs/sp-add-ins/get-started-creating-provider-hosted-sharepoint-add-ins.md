@@ -97,7 +97,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
 
 1. Open the AppManifest.xml file. On the **Permissions** tab, specify the **Site Collection** scope and the **Read** permission level.
 
-2. Delete any markup inside the `<body>` tag of the Pages/Default.aspx file of your web application, and then add the following HTML and ASP.NET controls inside the `<body>`. This sample uses the [UpdatePanel](http://msdn2.microsoft.com/library/bb359258) control to enable partial page rendering.
+2. Delete any markup inside the `<body>` tag of the Pages/Default.aspx file of your web application, and then add the following HTML and ASP.NET controls inside the `<body>`. This sample uses the [UpdatePanel](https://msdn2.microsoft.com/library/bb359258) control to enable partial page rendering.
     
     ```HTML
      <form id="form1" runat="server">
@@ -153,7 +153,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
        using System.Xml;
     ```
 
-4. In the Default.aspx.cs file of your web application, add these variables inside the [Page](http://msdn2.microsoft.com/library/dfbt9et1) class.
+4. In the Default.aspx.cs file of your web application, add these variables inside the [Page](https://msdn2.microsoft.com/library/dfbt9et1) class.
     
    ```csharp
      SharePointContextToken contextToken;
@@ -165,7 +165,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
      List<string> listOfLists = new List<string>();
    ```
 
-5. Add the `RetrieveWithCSOM` method inside the [Page](http://msdn2.microsoft.com/library/dfbt9et1) class. This method uses the SharePoint CSOM to retrieve information about your site and display it on the page.
+5. Add the `RetrieveWithCSOM` method inside the [Page](https://msdn2.microsoft.com/library/dfbt9et1) class. This method uses the SharePoint CSOM to retrieve information about your site and display it on the page.
     
     ```csharp
         // This method retrieves information about the host web by using the CSOM.
@@ -216,7 +216,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
       }
     ```
 
-6. Add the `CSOM_Click` method inside the [Page](http://msdn2.microsoft.com/library/dfbt9et1) class. This method triggers the event that occurs when the user clicks the **Populate Data** link.
+6. Add the `CSOM_Click` method inside the [Page](https://msdn2.microsoft.com/library/dfbt9et1) class. This method triggers the event that occurs when the user clicks the **Populate Data** link.
     
     ```csharp
       protected void CSOM_Click(object sender, EventArgs e)

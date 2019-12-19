@@ -318,10 +318,10 @@ For more information, see  [Complete basic operations using SharePoint REST endp
 -  [Authorization and authentication of SharePoint Add-ins](https://msdn.microsoft.com/library/bde5647a-fff1-4b51-b67b-2139de79ce4a%28Office.15%29.aspx)
     
   
--  [Windows Phone SDK 8.0](http://www.microsoft.com/download/details.aspx?id=35471)
+-  [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/download/details.aspx?id=36818)
+-  [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
     
   
 

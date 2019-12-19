@@ -221,7 +221,7 @@ By default, this line is included in all display templates. You can add more lin
 |A CSS file that is in a location relative to the current display template  <br/> | `$includeCSS(this.url,"../../MyStyles/MyCSS.css");` <br/> |
    
 > [!NOTE]
-> If **Content Approval** is required for items in the Master Page Gallery, all resource files (including CSS and .js files) must be published before they are available to master pages and page layouts. For more information, see [Require approval of items in a site list or library](http://office.microsoft.com/sharepoint-help/require-approval-of-items-in-a-site-list-or-library-HA102853936.aspx?CTT=1). 
+> If **Content Approval** is required for items in the Master Page Gallery, all resource files (including CSS and .js files) must be published before they are available to master pages and page layouts. For more information, see [Require approval of items in a site list or library](https://office.microsoft.com/sharepoint-help/require-approval-of-items-in-a-site-list-or-library-HA102853936.aspx?CTT=1). 
   
     
     

@@ -40,7 +40,7 @@ You cannot upgrade a THMX file from SharePoint 2010 to SharePoint. If you applie
   
     
     
-For more information about creating themes customizations, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md). You can also use the SharePoint color palette tool to help you create SharePoint designs. You can  [ download the SharePoint color palette tool](http://www.microsoft.com/download/details.aspx?id=38182) from the Microsoft Download Center.
+For more information about creating themes customizations, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md). You can also use the SharePoint color palette tool to help you create SharePoint designs. You can  [ download the SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) from the Microsoft Download Center.
   
     
     
@@ -51,7 +51,7 @@ For more information about creating themes customizations, see  [How to: Deploy 
     
     
 
-You can also decide to use one of the preinstalled SharePoint themes. For more information, see  [Choose a theme for your publishing site](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx?CTT=1) on Office.com.
+You can also decide to use one of the preinstalled SharePoint themes. For more information, see  [Choose a theme for your publishing site](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx?CTT=1) on Office.com.
   
     
     
@@ -114,7 +114,7 @@ Unmodified SharePoint 2010 CSS files and custom CSS files cannot be used on Shar
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
     
   
 -  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)

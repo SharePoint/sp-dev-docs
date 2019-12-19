@@ -60,7 +60,7 @@ My Site Host administrators can use the **ProfileLoader.CreatePersonalSiteEnqueu
 The following code example uses the .NET client object model in a console application. Before you run the example, add references to Microsoft.SharePoint.Client.dll, Microsoft.SharePoint.Client.Runtime.dll and Microsoft.SharePoint.Client.UserProfiles.dll, and change the placeholder values for the **userName**, **passwordStr**, and **serverUrl** variables. The **serverUrl** variable must be the URL of the SharePoint Online Administration Center.
   
 > [!NOTE] 
-> To get the required client DLLs, download the  [SharePoint Online Client Components SDK](http://www.microsoft.com/download/details.aspx?id=42038). 
+> To get the required client DLLs, download the  [SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038). 
   
     
     

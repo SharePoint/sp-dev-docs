@@ -376,7 +376,7 @@ Figure 9 shows a standard process for SharePoint application builds and deployme
     
     
     
-The developer checks in the SharePoint application Visual Studio 2012 solution. Depending on the desired configuration (that is, continuous integration or scheduled build), TFS build services will execute the steps defined by the SharePoint application build definition. This definition, configured by developers, contains the continuous integration build process template as well as post-build instructions to execute Windows PowerShell scripts for application deployment. Note that the SharePoint Online Management Shell extensions will be required in order to deploy the application to SharePoint Online. For more information about SharePoint Online Management Shell extensions, see  [SharePoint Online Management Shell page](http://www.microsoft.com/download/details.aspx?id=35588) on the Download Center.
+The developer checks in the SharePoint application Visual Studio 2012 solution. Depending on the desired configuration (that is, continuous integration or scheduled build), TFS build services will execute the steps defined by the SharePoint application build definition. This definition, configured by developers, contains the continuous integration build process template as well as post-build instructions to execute Windows PowerShell scripts for application deployment. Note that the SharePoint Online Management Shell extensions will be required in order to deploy the application to SharePoint Online. For more information about SharePoint Online Management Shell extensions, see  [SharePoint Online Management Shell page](https://www.microsoft.com/download/details.aspx?id=35588) on the Download Center.
   
     
     

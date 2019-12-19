@@ -32,7 +32,7 @@ To create the console application, you'll need the following:
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
 > [!NOTE]
-> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
+> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](https://www.microsoft.com/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
     
@@ -86,7 +86,7 @@ Table 1 contains links to articles that describe core concepts you should know b
     
      - **Microsoft.SharePoint.Client.UserProfiles**  
 
-   If you are developing on the computer that is running SharePoint, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](http://www.microsoft.com/download/details.aspx?id=35585)).
+   If you are developing on the computer that is running SharePoint, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](https://www.microsoft.com/download/details.aspx?id=35585)).
     
   
 7. In the Program.cs file, add the following **using** statements.

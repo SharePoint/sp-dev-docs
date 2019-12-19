@@ -25,7 +25,7 @@ Learn how to publish your SharePoint Add-in by using Microsoft Visual Studio 201
     
     -or-
     
-     [Visual Studio 2012](https://www.visualstudio.com/vs/) and the Office Developer Tools for Visual Studio. To download the tools, see "Tools" on the [Download page](http://go.microsoft.com/fwlink/?LinkId=234393). (The new Publish Manager is not available in Visual Studio 2012 or earlier versions.)
+     [Visual Studio 2012](https://www.visualstudio.com/vs/) and the Office Developer Tools for Visual Studio. To download the tools, see "Tools" on the [Download page](https://go.microsoft.com/fwlink/?LinkId=234393). (The new Publish Manager is not available in Visual Studio 2012 or earlier versions.)
     
  
 - Microsoft SharePoint
@@ -187,7 +187,7 @@ The deployment package of the web application project is contained in a compress
 | _ProjectName_.deploy.cmd|This file is a command-line batch file that invokes Web Deploy so that you can more easily install the package at a command prompt.|
 | _ProjectName_.SetParameters.xml|This file contains parameters that are passed to Web Deploy when you use the deploy.cmd file to install the package. The Visual Studio package settings determine the default value that's specified for each parameter. You can change these values if, for example, you want to install the web application to multiple servers and use different settings for each server.|
 | _ProjectName_.SourceManifest.xml|This file contains settings that Visual Studio passes to Web Deploy and that Web Deploy uses to create the web package. Web Deploy requires this file only to create the package. This file isn't used when the package is installed.|
-For step-by-step guidance, see  [How to: Install a Deployment Package Using the deploy.cmd File Created by Using Visual Studio](http://go.microsoft.com/fwlink/?LinkID=254954)
+For step-by-step guidance, see  [How to: Install a Deployment Package Using the deploy.cmd File Created by Using Visual Studio](https://go.microsoft.com/fwlink/?LinkID=254954)
  
 
  

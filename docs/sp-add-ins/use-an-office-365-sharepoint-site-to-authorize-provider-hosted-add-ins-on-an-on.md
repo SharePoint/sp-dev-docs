@@ -19,7 +19,7 @@ Be sure that you have the following:
 
 - An Office 365 SharePoint site. If don't have one yet and you want to set up a development environment quickly, you can  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
 
-- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) installed either remotely or on a computer running SharePoint, with the workload **Office/SharePoint development**. Earlier versions of Visual Studio require component **Microsoft Office Developer Tools for Visual Studio** instead. The latest version of this component is available [here for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), and [here for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
+- [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) installed either remotely or on a computer running SharePoint, with the workload **Office/SharePoint development**. Earlier versions of Visual Studio require component **Microsoft Office Developer Tools for Visual Studio** instead. The latest version of this component is available [here for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), and [here for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
 > [!IMPORTANT]
 > ACS retirement in the Azure Active Directory side does not impact this functionality for SharePoint. See more details from following article - [Impact of Azure Access Control retirement for SharePoint add-ins](https://developer.microsoft.com/sharepoint/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).

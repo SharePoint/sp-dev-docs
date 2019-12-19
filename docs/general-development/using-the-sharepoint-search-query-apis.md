@@ -82,7 +82,7 @@ using (ClientContext clientContext = new ClientContext("http://<serverName>/site
 }
 ```
 
-To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/mvp/Corey%20Roth-4029260):  [SharePoint: Query Search with the Managed Client Object Model](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1).
+To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/mvp/Corey%20Roth-4029260):  [SharePoint: Query Search with the Managed Client Object Model](https://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1).
   
     
     
@@ -112,7 +112,7 @@ var results = searchExecutor.executeQuery(keywordQuery);
 context.executeQueryAsync(onQuerySuccess, onQueryError);
 ```
 
-To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/mvp/Corey%20Roth-4029260):  [SharePoint: Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b).
+To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/mvp/Corey%20Roth-4029260):  [SharePoint: Querying Search with the JavaScript Client Object Model](https://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b).
   
     
     
@@ -165,7 +165,7 @@ using (SPSite siteCollection = new SPSite("<serverRelativeUrl>"))
 }
 ```
 
-To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/mvp/Corey%20Roth-4029260):  [SharePoint: Query Search with the KeywordQuery Class](http://code.msdn.microsoft.com/Query-Search-with-the-372139b5).
+To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/mvp/Corey%20Roth-4029260):  [SharePoint: Query Search with the KeywordQuery Class](https://code.msdn.microsoft.com/Query-Search-with-the-372139b5).
   
     
     
@@ -180,7 +180,7 @@ To download an example, see the following code sample posted by SharePoint MVP  
 -  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
--  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d)
+-  [SharePoint: Using the search REST service from an app for SharePoint](https://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d)
     
   
 

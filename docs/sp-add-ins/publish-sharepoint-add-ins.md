@@ -49,9 +49,9 @@ The following table offers a comparison of publishing to AppSource or to an add-
 ## See also
 <a name="bk_addresources"> </a>
 
--  [Make your solutions available in AppSource and within Office](https://docs.microsoft.com/en-us/office/dev/store/submit-to-appsource-via-partner-center)
+-  [Make your solutions available in AppSource and within Office](https://docs.microsoft.com/office/dev/store/submit-to-appsource-via-partner-center)
 -  [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/office/dev/store/create-or-update-client-ids-and-secrets)
--  [Submit your Office solution to AppSource via Partner Center](https://docs.microsoft.com/en-us/office/dev/store/use-partner-center-to-submit-to-appsource)
+-  [Submit your Office solution to AppSource via Partner Center](https://docs.microsoft.com/office/dev/store/use-partner-center-to-submit-to-appsource)
 -  [Validation policies for apps and add-ins submitted to AppSource](https://docs.microsoft.com/office/dev/store/validation-policies)
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins)
 -  [Get started creating provider-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins)

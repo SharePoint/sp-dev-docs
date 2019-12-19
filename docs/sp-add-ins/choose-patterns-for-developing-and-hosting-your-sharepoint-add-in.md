@@ -140,7 +140,7 @@ See the following links for more information about Azure web roles.
 -  [Introducing Microsoft Azure](http://www.windowsazure.com/develop/net/fundamentals/intro-to-windows-azure/)
 -  [Autoscaling and Microsoft Azure](https://msdn.microsoft.com/library/hh680945%28v=pandp.50%29.aspx)
 
-As a prerequisite, you will need the Microsoft Azure SDK for .NET (Visual Studio 2012) 1.8.1, which you can install by using the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx).
+As a prerequisite, you will need the Microsoft Azure SDK for .NET (Visual Studio 2012) 1.8.1, which you can install by using the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx).
 
 The way that you create the project in vsnv depends on whether you start with a SharePoint Add-in project and then add the Azure web role project, or you start with the Azure project and then add the SharePoint project.
 

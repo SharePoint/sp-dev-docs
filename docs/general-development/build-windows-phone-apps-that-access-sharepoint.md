@@ -129,10 +129,10 @@ The following how-tos and overviews delve into the specific information you need
 
 -  [Programming models in SharePoint](programming-models-in-sharepoint.md)
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
--  [Windows Phone SDK 8.0](http://www.microsoft.com/download/details.aspx?id=35471)
--  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/download/details.aspx?id=36818)
--  [Windows Phone SDK 7.1](http://www.microsoft.com/download/details.aspx?id=27570)
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+-  [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
+-  [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
+-  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
 -  [About Expression Blend](https://msdn.microsoft.com/library/cc296376%28Expression.40%29.aspx)
     
   

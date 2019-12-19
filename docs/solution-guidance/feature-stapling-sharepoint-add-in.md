@@ -53,7 +53,7 @@ Staple Add-ins
 --------------
 In this pattern you deploy Add-ins stored in the app catalog to specific site collections, managed paths, and site templates.
 
-- See the [SharePoint 2013 App Deployment through 'App Stapling' (MSDN Blog Article - Richard DiZerega)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/09/18/10399333.aspx) for more details about the Add-in stapling model.
+- See the [SharePoint 2013 App Deployment through 'App Stapling' (MSDN Blog Article - Richard DiZerega)](https://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/09/18/10399333.aspx) for more details about the Add-in stapling model.
 - Because the add-in is pushed by an administrator, site owners will not be able to remove the add-in from a site that meets the deployment criteria.  Not even a site collection administrator can remove the add-in.
 - This centralized deployment also shares the same centralized add-in resources (Add-in Web and Remote Web).  Essentially, the Add-in is deployed, but not installed in the sites.  All sites will leverage the Add-in Web and Remote Web from the instance installed in the app catalog.
 - Because of centralized deployment, remote events such as 'Handle App Installed', 'Handle App Uninstalled', and 'Handle App Upgrade' will only fire once (when the Add-In is installed in the app catalog).
@@ -94,8 +94,8 @@ In this pattern you use the SharePoint Client Side Object Model (CSOM) to create
 
 Related links
 =============
-- [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
-- [SharePoint 2013 App Deployment through 'App Stapling' (MSDN Blog Article - Richard DiZerega)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/09/18/10399333.aspx)
+- [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](https://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
+- [SharePoint 2013 App Deployment through 'App Stapling' (MSDN Blog Article - Richard DiZerega)](https://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/09/18/10399333.aspx)
 - [Site Provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)
 - [Creating Cloud Hosted Line Of Business Applications with Add-ins for Office, O365, Azure, and WP8 (Todd Baginski, Michael Sherman - SharePoint Conference 2014)](https://channel9.msdn.com/Events/SharePoint-Conference/2014/SPC361)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")

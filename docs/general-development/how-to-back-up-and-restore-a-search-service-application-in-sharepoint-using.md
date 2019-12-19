@@ -34,7 +34,7 @@ The following procedures are intended to help developers with creating a backup/
   
     
     
- **Prerequisite:** Download and install [Microsoft Windows SDK for Windows 7 and .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=8279) to the server with the search service application (SSA) and to every server with a search index component. Among other things, this will install vshadow.exe and betest.exe to `C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\Bin\\x64\\vsstools`.
+ **Prerequisite:** Download and install [Microsoft Windows SDK for Windows 7 and .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279) to the server with the search service application (SSA) and to every server with a search index component. Among other things, this will install vshadow.exe and betest.exe to `C:\\Program Files\\Microsoft SDKs\\Windows\\v7.1\\Bin\\x64\\vsstools`.
   
     
     

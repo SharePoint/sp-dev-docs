@@ -57,7 +57,7 @@ You can add custom properties to your Client web part. You define the custom pro
 
 You can detect when the user is editing your Client web part by using the **\_editMode\_** token. The **\_editMode\_** token returns 1 if the Client web part is in edit mode and 0 otherwise.
 
-The target page can dynamically resize the Client web part's **IFrame**. You can use JavaScript to issue a **postmessage** with the desired height and width. For a code sample that shows you how to resize an app part, see [Resize app parts dynamically in apps for SharePoint](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88).
+The target page can dynamically resize the Client web part's **IFrame**. You can use JavaScript to issue a **postmessage** with the desired height and width. For a code sample that shows you how to resize an app part, see [Resize app parts dynamically in apps for SharePoint](https://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88).
 
 Client web parts don't support web part connections.
 

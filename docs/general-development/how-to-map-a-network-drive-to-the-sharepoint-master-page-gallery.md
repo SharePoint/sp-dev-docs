@@ -33,13 +33,13 @@ First, find the location of the Master Page Gallery.
     
   
 On the computer that runs your design tool or HTML editor, map a network drive to the location that you just copied. The procedure for mapping a network drive differs depending on the computer's operating system:
-- If the computer is running Windows 8, follow the steps that are described in the Windows 8 version of the article  [Create a shortcut to (map) a network drive](http://windows.microsoft.com/windows-8/create-shortcut-to-map-network-drive).
+- If the computer is running Windows 8, follow the steps that are described in the Windows 8 version of the article  [Create a shortcut to (map) a network drive](https://windows.microsoft.com/windows-8/create-shortcut-to-map-network-drive).
     
   
-- If the computer is running Windows 7, follow the steps that are described in the Windows 7 version of the article  [Create a shortcut to (map) a network drive](http://windows.microsoft.com/windows7/Create-a-shortcut-to-map-a-network-drive).
+- If the computer is running Windows 7, follow the steps that are described in the Windows 7 version of the article  [Create a shortcut to (map) a network drive](https://windows.microsoft.com/windows7/Create-a-shortcut-to-map-a-network-drive).
     
   
-- If the computer is running Windows Vista, follow the steps that are described in the version of the article  [Create a shortcut to (map) a network drive](http://windows.microsoft.com/windows-vista/Create-a-shortcut-to-map-a-network-drive).
+- If the computer is running Windows Vista, follow the steps that are described in the version of the article  [Create a shortcut to (map) a network drive](https://windows.microsoft.com/windows-vista/Create-a-shortcut-to-map-a-network-drive).
     
   
 - If the computer is running Windows XP, follow the steps that are described in the article  [How to connect and disconnect a network drive in Windows XP](http://support.microsoft.com/kb/308582).

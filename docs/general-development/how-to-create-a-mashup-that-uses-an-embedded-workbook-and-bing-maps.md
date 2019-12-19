@@ -60,7 +60,7 @@ To create this mashup, we followed 3 basic steps:
 1. Store the workbook on OneDrive. Find more information on the  [OneDrive](https://onedrive.live.com/about/) page.
     
   
-2. Embed the workbook on the page. Find more information on embedding workbooks from OneDrive  [here](http://office.microsoft.com/excel-help/share-it-embed-an-excel-workbook-on-your-blog-HA102029502.aspx?CTT=5&amp;origin=HA102775335).
+2. Embed the workbook on the page. Find more information on embedding workbooks from OneDrive  [here](https://office.microsoft.com/excel-help/share-it-embed-an-excel-workbook-on-your-blog-HA102029502.aspx?CTT=5&amp;origin=HA102775335).
     
   
 3. Mash it up with Bing Maps. This step is covered in more detail in the following sections.

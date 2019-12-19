@@ -31,7 +31,7 @@ Table 1 lists articles that can help you understand the core concepts for workin
 |**Article Title**|**Description**|
 |:-----|:-----|
 | [Themes overview for SharePoint](themes-overview-for-sharepoint.md) <br/> |Learn about the theming experience in SharePoint.  <br/> |
-| [Choose a theme for your publishing site](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) <br/> |Learn how to change the look and feel of a SharePoint site by using the **Change the look** wizard. <br/> |
+| [Choose a theme for your publishing site](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) <br/> |Learn how to change the look and feel of a SharePoint site by using the **Change the look** wizard. <br/> |
    
 
 ## What is a master page preview file?
@@ -245,7 +245,7 @@ To create a master page preview file, use an existing master page preview as a s
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
     
   
 

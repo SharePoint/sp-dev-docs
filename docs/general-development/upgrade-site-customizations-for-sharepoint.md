@@ -17,7 +17,7 @@ SharePoint introduces significant changes to the user interface (UI) that let yo
 This article will help SharePoint developers and those responsible for administering the upgrade process from SharePoint 2010 to identify potential problems after upgrading.
 ## General recommendations for upgrading
 
-In general, we recommend that you create a new "evaluation" site where you can test your customizations and redesign them for a SharePoint environment. For more information about creating an evaluation site collection, see  [Upgrade a site collection](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/upgrade-a-site-collection-HA102865473.aspx?CTT=5&amp;origin=HA104034491).
+In general, we recommend that you create a new "evaluation" site where you can test your customizations and redesign them for a SharePoint environment. For more information about creating an evaluation site collection, see  [Upgrade a site collection](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/upgrade-a-site-collection-HA102865473.aspx?CTT=5&amp;origin=HA104034491).
   
     
     
@@ -47,13 +47,13 @@ Table 1 lists the possible after-upgrade problems for custom components and info
 -  [Plan to upgrade a site collection](https://technet.microsoft.com/library/ff191199.aspx)
     
   
--  [Branding issues that may occur when upgrading to SharePoint](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/branding-issues-that-may-occur-when-upgrading-to-sharepoint-HA104052656.aspx?CTT=5&amp;origin=HA104034491)
+-  [Branding issues that may occur when upgrading to SharePoint](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/branding-issues-that-may-occur-when-upgrading-to-sharepoint-HA104052656.aspx?CTT=5&amp;origin=HA104034491)
     
   
--  [Upgrade a site collection](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/upgrade-a-site-collection-HA102865473.aspx?CTT=5&amp;origin=HA104034491)
+-  [Upgrade a site collection](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/upgrade-a-site-collection-HA102865473.aspx?CTT=5&amp;origin=HA104034491)
     
   
--  [Troubleshoot site collection upgrade issues](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/troubleshoot-site-collection-upgrade-issues-HA104037311.aspx?CTT=5&amp;origin=HA104034491)
+-  [Troubleshoot site collection upgrade issues](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/troubleshoot-site-collection-upgrade-issues-HA104037311.aspx?CTT=5&amp;origin=HA104034491)
     
   
 

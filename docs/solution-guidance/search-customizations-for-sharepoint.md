@@ -154,7 +154,7 @@ In this scenario, the search add-in shows search results as featured content tar
 
 ### Code sample for personalized search
 
-The [Personalizing search results in a SharePoint Add-in](http://code.msdn.microsoft.com/SharePoint-2013-Personalizi-fb6ddcf9) sample shows a basic search example and a personalized search results example that uses the search query CSOM. The basic search example lets the user provide a search filter to use for a tenant-wide search. Sites are searched based on that user-supplied filter.
+The [Personalizing search results in a SharePoint Add-in](https://code.msdn.microsoft.com/SharePoint-2013-Personalizi-fb6ddcf9) sample shows a basic search example and a personalized search results example that uses the search query CSOM. The basic search example lets the user provide a search filter to use for a tenant-wide search. Sites are searched based on that user-supplied filter.
 
 The example first gets SharePoint context by using the **SharePointContextProvider** class.
 
@@ -259,7 +259,7 @@ You can see the UI for this example in the following figure.
 
 In SharePoint and SharePoint Online, you can export and import customized search configuration settings between site collections and sites. You can only export customized search configuration settings at the Search service application (SSA) level, and you have to use the search APIs to do this programmatically. The export option is not available in the SharePoint UI.
 
-The [Import and Export search settings for SharePoint Online](http://code.msdn.microsoft.com/SharePoint-2013-Import-and-6287b5ac) sample shows how to import and export search settings for a SharePoint Online site by using the search CSOM in a console application.
+The [Import and Export search settings for SharePoint Online](https://code.msdn.microsoft.com/SharePoint-2013-Import-and-6287b5ac) sample shows how to import and export search settings for a SharePoint Online site by using the search CSOM in a console application.
 
 ### Configuration settings that are portable
 

@@ -177,13 +177,13 @@ For information about the kinds of modifications you might make to the App.xaml.
 -  [WPF Apps With The Model-View-ViewModel Design Pattern](https://msdn.microsoft.com/magazine/dd419663.aspx)
     
   
--  [Windows Phone SDK 8.0](http://www.microsoft.com/download/details.aspx?id=35471)
+-  [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/download/details.aspx?id=36818)
+-  [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
     
   
 

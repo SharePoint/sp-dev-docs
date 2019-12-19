@@ -13,7 +13,7 @@ You can develop SharePoint Add-ins by using new templates for projects and proje
 <a name="SP15Projecttemplates_templates"> </a>
 ## Project templates
 
-When you use a project template in Visual Studio, it creates a solution that contains the project items and files that the project type requires. The following project templates appear in the **New Project** dialog box if you expand the **Office/SharePoint** node and then you select the **Add-ins** node. For information about the project templates under the **SharePoint Solutions** node, see [SharePoint Project and Project Item Templates](http://go.microsoft.com/fwlink/?LinkId=255306). 
+When you use a project template in Visual Studio, it creates a solution that contains the project items and files that the project type requires. The following project templates appear in the **New Project** dialog box if you expand the **Office/SharePoint** node and then you select the **Add-ins** node. For information about the project templates under the **SharePoint Solutions** node, see [SharePoint Project and Project Item Templates](https://go.microsoft.com/fwlink/?LinkId=255306). 
 
 ### Office Add-in
 

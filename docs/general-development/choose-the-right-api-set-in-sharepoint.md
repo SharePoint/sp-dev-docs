@@ -91,7 +91,7 @@ To improve performance, lines of code written against in the .NET Framework clie
 
 You can use LINQ query syntax in your client code to query any **IEnumerable** object, including SharePoint objects that implement **IEnumerable**. However, when you do this, you are using  [LINQ to Objects](https://msdn.microsoft.com/library/bb397919.aspx), not the  [LINQ to SharePoint provider](https://msdn.microsoft.com/library/3fa2dc5f-d308-4337-aefd-191a5df8dbbe%28Office.15%29.aspx), so documentation of the latter is not relevant to client-side code.
 
-The assemblies for the .NET Framework client object model must be installed on the client. They are included in a redistribute package that you can obtain on the  [SharePoint Client Components](http://www.microsoft.com/download/details.aspx?id=35585).
+The assemblies for the .NET Framework client object model must be installed on the client. They are included in a redistribute package that you can obtain on the  [SharePoint Client Components](https://www.microsoft.com/download/details.aspx?id=35585).
 
 For examples of using the .NET Framework object model, see  [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx).
   

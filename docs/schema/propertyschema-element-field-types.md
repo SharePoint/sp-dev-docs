@@ -46,7 +46,7 @@ None
    
 ### Remarks
 
-Custom field types may have special properties whose value will vary from one column based on the field type to another column based on the same field type. Consider a custom regular expression field type that is designed to hold [String](http://msdn2.microsoft.com/library/s1wwdcbf) values that match a certain regular expression, such as `^(\d{3})\d{3}-\d{4}$` for American telephone numbers. 
+Custom field types may have special properties whose value will vary from one column based on the field type to another column based on the same field type. Consider a custom regular expression field type that is designed to hold [String](https://msdn2.microsoft.com/library/s1wwdcbf) values that match a certain regular expression, such as `^(\d{3})\d{3}-\d{4}$` for American telephone numbers. 
 
 Rather than create separate custom regular expression field types for British license plate numbers, American Social Security numbers, Chinese telephone numbers, etc., it is more efficient to create a single regular expression field type and enable users who create columns based on the field type to set the regular expression that needs to be matched on a column-by-column basis. For example, a user creating a "US Telephone Number" column would set the column's regular expression to the string above. Another user, creating a "Brazilian Post Box" column would set his column's regular expression to `^\d{5}\-\d{3}$`. 
   

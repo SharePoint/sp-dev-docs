@@ -160,8 +160,8 @@ Enterprise term store hierarchies are typically managed by a governance steering
 
 For planning managed metadata, the following worksheets are available:
 
-- [Managed metadata services planning worksheet](http://go.microsoft.com/fwlink/p/?LinkId=164578)
-- [Detailed term set planning worksheet](http://go.microsoft.com/fwlink/p/?LinkId=163487)
+- [Managed metadata services planning worksheet](https://go.microsoft.com/fwlink/p/?LinkId=164578)
+- [Detailed term set planning worksheet](https://go.microsoft.com/fwlink/p/?LinkId=163487)
 
 ### Navigation
 

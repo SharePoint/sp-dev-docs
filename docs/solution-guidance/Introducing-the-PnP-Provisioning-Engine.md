@@ -218,7 +218,7 @@ Make sure to check out the other [articles](pnp-remote-provisioning.md) for more
 
 ## Requirements and wrap-up
 
-To play with the PnP provisioning engine on-premises, you need to have at least the SharePoint 2013 March 2015 Cumulative Update installed, because the engine leverages some [capabilities](http://blogs.msdn.com/b/vesku/archive/2015/04/10/new-sharepoint-csom-version-released-for-office-365.aspx) of the client-side object model which are not available in previous versions of the product. If you target SharePoint Online, the requirements are automatically satisfied thanks to the Software as a Service model.
+To play with the PnP provisioning engine on-premises, you need to have at least the SharePoint 2013 March 2015 Cumulative Update installed, because the engine leverages some [capabilities](https://blogs.msdn.com/b/vesku/archive/2015/04/10/new-sharepoint-csom-version-released-for-office-365.aspx) of the client-side object model which are not available in previous versions of the product. If you target SharePoint Online, the requirements are automatically satisfied thanks to the Software as a Service model.
 
 Play with the PnP provisioning engine, give us feedback, and enjoy the future of the SharePoint Add-in model and remote provisioning!
 

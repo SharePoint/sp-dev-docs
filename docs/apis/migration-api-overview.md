@@ -356,9 +356,9 @@ b)      A warning will be reported in the ImportLogs- “Failed to retrieve user
  
 ### Helpful Resources
 
-* [SharePoint Online Client Components SDK](http://www.microsoft.com/download/details.aspx?id=42038)
+* [SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038)
  
-* [Azure Windows Azure SDK for .NET - 2.4](http://www.microsoft.com/download/details.aspx?id=43709)
+* [Azure Windows Azure SDK for .NET - 2.4](https://www.microsoft.com/download/details.aspx?id=43709)
 
 * [Bulk Creation of OneDrive for Business sites](https://msdn.microsoft.com/library/office/jj163783(v=office.15).aspx) 
 

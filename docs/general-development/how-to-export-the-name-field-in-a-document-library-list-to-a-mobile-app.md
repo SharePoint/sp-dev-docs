@@ -150,10 +150,10 @@ public string m_fileUrl;
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
--  [Windows Phone SDK 7.1](http://www.microsoft.com/download/details.aspx?id=27570)
+-  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
     
   
--  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/download/details.aspx?id=30476)
+-  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
     
   
 

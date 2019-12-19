@@ -9,7 +9,7 @@ localization_priority: Normal
 
 # Working with Tasks in SharePoint Workflows using Visual Studio 2012
 Learn about the new and revised workflow task framework that was introduced in SharePoint, which is built on the new Workflow Manager. 
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
+ **Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
 > [!NOTE] 
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code  [here](http://assets.andrewconnell.com/media/Default/Downloads/SP2013Wf-CustomTasks.zip). 

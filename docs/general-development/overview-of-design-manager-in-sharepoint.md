@@ -20,7 +20,7 @@ With Design Manager, you can create a visual design for your website by using wh
   
     
     
-Creating the visual design of a site often fits into a larger process, in which multiple people or organizations are involved. For a roadmap of the tasks from a larger perspective, see  [Design and branding in SharePoint](http://go.microsoft.com/fwlink/?LinkId=262838)
+Creating the visual design of a site often fits into a larger process, in which multiple people or organizations are involved. For a roadmap of the tasks from a larger perspective, see  [Design and branding in SharePoint](https://go.microsoft.com/fwlink/?LinkId=262838)
   
     
     

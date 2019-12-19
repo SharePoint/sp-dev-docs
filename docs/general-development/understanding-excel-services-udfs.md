@@ -156,7 +156,7 @@ To reload a UDF assembly, you can run **iisreset** or restart the Excel Calculat
     
     
 
-For more information, see  [Unloading an Application from Memory](http://go.microsoft.com/fwlink/?LinkId=65706) (https://msdn.microsoft.com/library/default.asp?url=/library/csvr2002/htm/cs_mmc_administering_myhj.asp).
+For more information, see  [Unloading an Application from Memory](https://go.microsoft.com/fwlink/?LinkId=65706) (https://msdn.microsoft.com/library/default.asp?url=/library/csvr2002/htm/cs_mmc_administering_myhj.asp).
   
     
     
@@ -186,7 +186,7 @@ For more information about configuring code groups, as well as the **RequestMini
 -  [Configuring Code Groups Using the .NET Framework Configuration Tool](https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpconUsingNETConfigurationToolToWorkWithCodeGroups.asp?frame=true) (https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpconUsingNETConfigurationToolToWorkWithCodeGroups.asp?frame=true)
     
   
--  [Code Access Security in Practice](http://go.microsoft.com/fwlink/?LinkId=65465) (https://msdn.microsoft.com/library/default.asp?url=/library/dnnetsec/html/thcmch08.asp)
+-  [Code Access Security in Practice](https://go.microsoft.com/fwlink/?LinkId=65465) (https://msdn.microsoft.com/library/default.asp?url=/library/dnnetsec/html/thcmch08.asp)
     
   
 

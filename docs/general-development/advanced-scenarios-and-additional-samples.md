@@ -25,14 +25,14 @@ This topic describes some advanced REST scenarios and additional samples. It pro
 
 ## Passing Parameters to a Workbook
 
-The  [Advanced Excel Services REST API Capabilities—Passing Parameters to a Spreadsheet](http://blogs.msdn.com/cumgranosalis/archive/2009/11/05/advanced-excel-services-rest-api-capabilities-where-things-get-interesting.aspx) sample shows you how to pass parameters in REST URLs, to modify the result that you get back. This sample demonstrates how, by passing parameters into the workbook, you are able to take advantage of the data and visualization, and you can also take advantage of the logic that is behind them.
+The  [Advanced Excel Services REST API Capabilities—Passing Parameters to a Spreadsheet](https://blogs.msdn.com/cumgranosalis/archive/2009/11/05/advanced-excel-services-rest-api-capabilities-where-things-get-interesting.aspx) sample shows you how to pass parameters in REST URLs, to modify the result that you get back. This sample demonstrates how, by passing parameters into the workbook, you are able to take advantage of the data and visualization, and you can also take advantage of the logic that is behind them.
   
     
     
 
 ## Using URL Parameters with Excel Services Gadget
 
-The  [Using Advanced REST Functionality with the Excel Services Gadget](http://blogs.msdn.com/cumgranosalis/archive/2009/11/06/bringing-it-all-back-home-using-advanced-rest-functionality-with-the-excel-services-gadget.aspx) sample shows you how to use the [Advanced Excel Services REST API Capabilities—Passing Parameters to a Spreadsheet](http://blogs.msdn.com/cumgranosalis/archive/2009/11/05/advanced-excel-services-rest-api-capabilities-where-things-get-interesting.aspx) sample with the [Excel Services Gadget](http://blogs.msdn.com/cumgranosalis/archive/2009/11/03/interoducing-the-excel-services-gadget.aspx). You can use the gadget to display the results that you get from the REST API.
+The  [Using Advanced REST Functionality with the Excel Services Gadget](https://blogs.msdn.com/cumgranosalis/archive/2009/11/06/bringing-it-all-back-home-using-advanced-rest-functionality-with-the-excel-services-gadget.aspx) sample shows you how to use the [Advanced Excel Services REST API Capabilities—Passing Parameters to a Spreadsheet](https://blogs.msdn.com/cumgranosalis/archive/2009/11/05/advanced-excel-services-rest-api-capabilities-where-things-get-interesting.aspx) sample with the [Excel Services Gadget](https://blogs.msdn.com/cumgranosalis/archive/2009/11/03/interoducing-the-excel-services-gadget.aspx). You can use the gadget to display the results that you get from the REST API.
   
     
     

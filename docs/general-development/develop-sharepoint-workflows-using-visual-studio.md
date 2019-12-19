@@ -160,7 +160,7 @@ To debug SharePoint Online workflows in Visual Studio, perform the following ste
     
     
 
-1. If you're behind a firewall, you may need to install a proxy client (such as the  [Forefront Threat Management Gateway (TMG) Client](http://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=10504)), depending on your company's network topology.
+1. If you're behind a firewall, you may need to install a proxy client (such as the  [Forefront Threat Management Gateway (TMG) Client](https://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=10504)), depending on your company's network topology.
     
   
 2. Register for a Microsoft Azure account if you haven't already, and then sign into that account.

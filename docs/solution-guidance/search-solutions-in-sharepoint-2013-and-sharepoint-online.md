@@ -334,9 +334,9 @@ SharePoint search includes .NET and JavaScript client object models and a REST s
 
 |API|Class library or schema path|Example|
 |:-----|:-----|:-----|
-|.NET CSOM|Microsoft.SharePoint.Client.Search.dll<br/><br/>[SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/download/details.aspx?id=35585)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI<br/><br/>[SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\16\ISAPI|[Query Search with the Managed Client Object Model](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1) (Code Gallery)|
-|JavaScript CSOM|SP.search.js<br/>%ProgramFiles%\SharePoint Client Components\Scripts|[Query Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b) (Code Gallery)|
-|REST service|`http://server/_api/search/query` <br/><br/>`http://server/_api/search/postquery`<br/><br/>`http://server/_api/search/suggest` |[Using the search REST service from a SharePoint Add-in ](http://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d) (Code Gallery)|
+|.NET CSOM|Microsoft.SharePoint.Client.Search.dll<br/><br/>[SharePoint Server 2013 Client Components SDK](https://www.microsoft.com/download/details.aspx?id=35585)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI<br/><br/>[SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038)<br/>%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\16\ISAPI|[Query Search with the Managed Client Object Model](https://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1) (Code Gallery)|
+|JavaScript CSOM|SP.search.js<br/>%ProgramFiles%\SharePoint Client Components\Scripts|[Query Search with the JavaScript Client Object Model](https://code.msdn.microsoft.com/SharePoint-2013-Querying-a629b53b) (Code Gallery)|
+|REST service|`http://server/_api/search/query` <br/><br/>`http://server/_api/search/postquery`<br/><br/>`http://server/_api/search/suggest` |[Using the search REST service from a SharePoint Add-in ](https://code.msdn.microsoft.com/sharepoint/SharePoint-2013-Perform-a-1bf3e87d) (Code Gallery)|
 
 ### Search query .NET CSOM
 

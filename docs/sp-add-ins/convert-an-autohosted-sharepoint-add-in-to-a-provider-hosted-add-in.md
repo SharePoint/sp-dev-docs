@@ -310,7 +310,7 @@ The last step is to reconfigure the SharePoint Add-in project. The Visual Studio
 
 ## See also
 
-- [Office Developer Blog](http://blogs.office.com/dev/)
+- [Office Developer Blog](https://blogs.office.com/dev/)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 
  

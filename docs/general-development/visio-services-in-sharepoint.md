@@ -109,6 +109,6 @@ Visio Services in Microsoft SharePoint and in Microsoft SharePoint Online includ
 -  [New in Visio for developers](https://msdn.microsoft.com/library/7e3fb858-0ab8-bd2e-217c-c85b10d79785%28Office.15%29.aspx)
     
   
-- For a list of new features in vis15short for end users, see  [What's new in Visio](http://office.com/redir/HA102749364.aspx).
+- For a list of new features in vis15short for end users, see  [What's new in Visio](https://office.com/redir/HA102749364.aspx).
     
   

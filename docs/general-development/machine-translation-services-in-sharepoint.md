@@ -18,7 +18,7 @@ Learn about the Machine Translation Service, which is a new service application 
     
     
 
-Machine Translation Service is a new service application in SharePoint that provides automatic machine translation of files and sites. When the Machine Translation Service application processes a translation request, it forwards the request to the  [Microsoft Translator](http://www.microsoft.com/translator/) cloud-hosted machine translation service, where the actual translation work is performed. This cloud-service also powers the Microsoft Office, Lync, Yammer and Bing translation features.
+Machine Translation Service is a new service application in SharePoint that provides automatic machine translation of files and sites. When the Machine Translation Service application processes a translation request, it forwards the request to the  [Microsoft Translator](https://www.microsoft.com/translator/) cloud-hosted machine translation service, where the actual translation work is performed. This cloud-service also powers the Microsoft Office, Lync, Yammer and Bing translation features.
   
     
     
@@ -71,7 +71,7 @@ Using the server object model, you can submit requests to the Machine Translatio
   
     
     
-For sample code demonstrating how to use the server object model from a console application, see  [SharePoint: Access Machine Translation Service using server object model](http://code.msdn.microsoft.com/SharePoint-2013-Access-86639c3d ).
+For sample code demonstrating how to use the server object model from a console application, see  [SharePoint: Access Machine Translation Service using server object model](https://code.msdn.microsoft.com/SharePoint-2013-Access-86639c3d ).
   
     
     
@@ -275,7 +275,7 @@ For the .NET managed CSOM, get a **ClientContext** instance (located in the **Mi
   
     
     
-For sample code demonstrating how to use the .NET Managed CSOM, see  [SharePoint: Access Machine Translation Service using the client object model](http://code.msdn.microsoft.com/SharePoint-2013-Perform-a-8e53b06a).
+For sample code demonstrating how to use the .NET Managed CSOM, see  [SharePoint: Access Machine Translation Service using the client object model](https://code.msdn.microsoft.com/SharePoint-2013-Perform-a-8e53b06a).
   
     
     
@@ -291,7 +291,7 @@ For the Silverlight CSOM, get a **ClientContext** instance (located in the **Mic
   
     
     
-For sample code demonstrating how to use the Silverlight CSOM, see  [SharePoint: Access Machine Translation Service from Silverlight application](http://code.msdn.microsoft.com/SharePoint-2013-Access-cdaff6b2).
+For sample code demonstrating how to use the Silverlight CSOM, see  [SharePoint: Access Machine Translation Service from Silverlight application](https://code.msdn.microsoft.com/SharePoint-2013-Access-cdaff6b2).
   
     
     
@@ -493,7 +493,7 @@ For the JavaScript CSOM, get an **SP.ClientContext** instance, and then use the 
   
     
     
-For sample code demonstrating how to use the JavaScript CSOM, see  [SharePoint: Accessing the Machine Translation Service with JavaScript](http://code.msdn.microsoft.com/SharePoint-2013-Accessing-647f6dd9).
+For sample code demonstrating how to use the JavaScript CSOM, see  [SharePoint: Accessing the Machine Translation Service with JavaScript](https://code.msdn.microsoft.com/SharePoint-2013-Accessing-647f6dd9).
   
     
     
