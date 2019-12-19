@@ -35,6 +35,7 @@ The following cmdlets are available for managing site designs and site scripts f
 - [Get-SPOSiteDesignRunStatus](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteDesignRunStatus?view=sharepoint-ps)
 - [Get-SPOSiteDesignTask](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteDesignTask?view=sharepoint-ps)
 - [Get-SPOSiteScript](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteScript?view=sharepoint-ps)
+- [Get-SPOSiteScriptFromWeb](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spositescriptfromweb?view=sharepoint-ps)
 - [Get-SPOSiteScriptFromList](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList?view=sharepoint-ps)
 - [Grant-SPOSiteDesignRights](https://docs.microsoft.com/powershell/module/sharepoint-online/Grant-SPOSiteDesignRights?view=sharepoint-ps)
 - [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps)
