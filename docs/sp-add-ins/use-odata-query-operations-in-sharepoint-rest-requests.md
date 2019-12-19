@@ -79,8 +79,8 @@ The $skiptoken option enables you to skip over items until the specified item is
 
 |**Supported**|**Not supported**|
 |:-----|:-----|
-|**Numeric comparisons** Lt Le Gt Ge Eq Ne| **Arithmetic operators** (Add, Sub, Mul, Div, Mod)<br/>**Basic math functions** (round, floor, ceiling) |
-|**String comparisons** startsWith substringof Eq Ne| endsWith replace substring tolower toupper trim concat|
+|**Numeric comparisons** lt le gt ge eq ne| **Arithmetic operators** (add, sub, mul, div, mod)<br/>**Basic math functions** (round, floor, ceiling) |
+|**String comparisons** startswith substringof eq ne| endswith replace substring tolower toupper trim concat|
 |**Date and time functions** day() month() year() hour() minute() second()| DateTimeRangesOverlap operator<br/>Querying as to whether a date time falls inside a recurrent date time pattern|
 
 The following figure shows the supported OData query options.
