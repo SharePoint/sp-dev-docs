@@ -1,3 +1,14 @@
+---
+title: Solutions Deployment and Maintenance
+description: Solutions Deployment and Maintenance
+ms.date: 12/12/2018
+ms.prod: sharepoint
+author: vesajuvonen
+ms.author: vesaj
+ms.topic: sharepoint
+localization_priority: normal
+---
+
 # Solutions Deployment and Maintenance
 
 ## Summary

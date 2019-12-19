@@ -1,3 +1,14 @@
+---
+title: Line of Business Integration
+description: Line of Business Integration
+ms.date: 12/12/2018
+ms.prod: sharepoint
+author: vesajuvonen
+ms.author: vesaj
+ms.topic: sharepoint
+localization_priority: normal
+---
+
 # Line of Business Integration
 
 ## Summary
