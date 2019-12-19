@@ -57,7 +57,7 @@ Here are the components you need. It is important that you install these items i
 
 1. **Install the SharePoint environment**
     
-  -  [SharePoint update (KB2767999)](http://support.microsoft.com/kb/2767999)
+  -  [SharePoint update (KB2767999)](https://support.microsoft.com/kb/2767999)
     
   
   - Optionally, you can subscribe to an  [Office 365 development environment](https://msdn.microsoft.com/library/office/apps/fp179924%28v=office.15%29)
@@ -65,7 +65,7 @@ Here are the components you need. It is important that you install these items i
   
 2. **Install the Workflow Manager environment**
     
-  -  [Workflow Manager 1.0 Cumulative (KB2799754)](http://support.microsoft.com/kb/2799754/en-us)
+  -  [Workflow Manager 1.0 Cumulative (KB2799754)](https://support.microsoft.com/kb/2799754/en-us)
     
   
 3. **Install the Visual Studio 2012 development environment**
@@ -73,10 +73,10 @@ Here are the components you need. It is important that you install these items i
   -  [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
     
   
-  -  [Visual Studio 2012 Update 2 (KB2797912)](http://support.microsoft.com/kb/2797912)
+  -  [Visual Studio 2012 Update 2 (KB2797912)](https://support.microsoft.com/kb/2797912)
     
   
-  -  [.NET Framework 4.5 update (KB2750149)](http://support.microsoft.com/kb/2750149/en-us)
+  -  [.NET Framework 4.5 update (KB2750149)](https://support.microsoft.com/kb/2750149/en-us)
     
   
   -  [Office Developer Tools for Visual Studio 2012](https://aka.ms/OfficeDevToolsForVS2012)
@@ -90,10 +90,10 @@ If you have pre-release (that is, "Preview") versions of SharePoint Server, Work
     
     
 
--  [SharePoint update (KB2767999)](http://support.microsoft.com/kb/2767999)
+-  [SharePoint update (KB2767999)](https://support.microsoft.com/kb/2767999)
     
   
--  [Microsoft Azure Service Bus 1.0 Cumulative Update (KB2799752)](http://support.microsoft.com/kb/2799752/en-us)
+-  [Microsoft Azure Service Bus 1.0 Cumulative Update (KB2799752)](https://support.microsoft.com/kb/2799752/en-us)
     
   
 -  [Workflow Manager 1.0 Cumulative (KB2799754)](http://support.microsoft.com/kb/2799754/en-us)

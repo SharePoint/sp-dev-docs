@@ -20,7 +20,7 @@ SharePoint Designer is tool used to connect to and work with a SharePoint site. 
     
     
 
-Trying to use a version of SharePoint Designer that does not match with the SharePoint farm can result in a number of issues. For example, see  [You have problems with workflows or receive errors in SharePoint Designer 2010](http://support.microsoft.com/kb/2794961).
+Trying to use a version of SharePoint Designer that does not match with the SharePoint farm can result in a number of issues. For example, see  [You have problems with workflows or receive errors in SharePoint Designer 2010](https://support.microsoft.com/kb/2794961).
   
     
     
