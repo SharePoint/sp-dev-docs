@@ -1,3 +1,14 @@
+---
+title: Granting access via Azure AD App-Only
+description: Granting access via Azure AD App-Only
+ms.date: 12/12/2018
+ms.prod: sharepoint
+author: vesajuvonen
+ms.author: vesaj
+ms.topic: sharepoint
+localization_priority: normal
+---
+
 # Granting access via Azure AD App-Only
 
 When using SharePoint Online you can define applications in Azure AD and these applications can be granted permissions to SharePoint, but also to all the other services in Office 365. This model is the preferred model in case you’re using SharePoint Online, if you’re using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS as described in [here](security-apponly-azureacs.md).
