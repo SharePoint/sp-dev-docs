@@ -1,4 +1,5 @@
 ---
+title: Property element in Properties (BDCMetadata)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

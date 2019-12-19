@@ -1,4 +1,5 @@
 ---
+title: Internal element (AppPrincipalDefinition complexType)
 manager: soliver
 ms.date: 1/25/2016
 ms.audience: Developer

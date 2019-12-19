@@ -1,4 +1,5 @@
 ---
+title: .ACTIONS File Example (WorkflowInfo)</td>
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer

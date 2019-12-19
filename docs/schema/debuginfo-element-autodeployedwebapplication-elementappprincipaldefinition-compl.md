@@ -1,4 +1,5 @@
 ---
+title: DebugInfo element (AutoDeployedWebApplication element)
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer

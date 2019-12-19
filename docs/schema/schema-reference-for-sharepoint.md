@@ -1,4 +1,5 @@
 ---
+title: Schema reference for SharePoint
 manager: soliver
 ms.date: 9/14/2015
 ms.audience: Developer

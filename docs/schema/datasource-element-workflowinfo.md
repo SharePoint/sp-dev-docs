@@ -1,4 +1,5 @@
 ---
+title: DataSource Element (WorkflowInfo)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

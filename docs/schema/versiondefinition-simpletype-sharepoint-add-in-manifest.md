@@ -1,4 +1,5 @@
 ---
+title: VersionDefinition simpleType
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer

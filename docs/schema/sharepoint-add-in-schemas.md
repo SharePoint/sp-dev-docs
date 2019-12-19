@@ -1,4 +1,5 @@
 ---
+title: SharePoint Add-in schemas
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer

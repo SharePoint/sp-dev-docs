@@ -1,4 +1,5 @@
 ---
+title: Method element in Methods (BDCMetadataResource)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

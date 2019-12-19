@@ -1,4 +1,5 @@
 ---
+title: Property Element in Properties (Subscription)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

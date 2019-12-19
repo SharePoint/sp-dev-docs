@@ -1,4 +1,5 @@
 ---
+title: App element (SharePoint Add-in Manifest)
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer

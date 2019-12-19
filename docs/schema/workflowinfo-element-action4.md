@@ -1,4 +1,5 @@
 ---
+title: WorkflowInfo element (Action4)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

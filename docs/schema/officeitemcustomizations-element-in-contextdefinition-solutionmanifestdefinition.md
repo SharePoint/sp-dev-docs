@@ -1,4 +1,5 @@
 ---
+title: OfficeItemCustomizations element in ContextDefinition
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

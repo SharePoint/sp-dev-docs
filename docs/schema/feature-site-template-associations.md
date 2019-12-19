@@ -1,4 +1,5 @@
 ---
+title: Feature/Site Template Associations
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

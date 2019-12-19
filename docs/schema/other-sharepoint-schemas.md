@@ -1,4 +1,5 @@
 ---
+title: Other SharePoint schemas
 manager: soliver
 ms.date: 9/18/2015
 ms.audience: Developer

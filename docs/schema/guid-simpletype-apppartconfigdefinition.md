@@ -1,4 +1,5 @@
 ---
+title: GUID simpleType (AppPartConfigDefinition)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer

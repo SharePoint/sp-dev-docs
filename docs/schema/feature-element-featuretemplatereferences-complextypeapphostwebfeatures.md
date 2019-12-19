@@ -1,4 +1,5 @@
 ---
+title: Feature element (FeatureTemplateReferences complexType)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer

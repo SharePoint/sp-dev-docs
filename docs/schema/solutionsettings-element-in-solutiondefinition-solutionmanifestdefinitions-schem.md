@@ -1,4 +1,5 @@
 ---
+title: SolutionSettings Element in SolutionDefinition
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

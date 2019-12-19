@@ -1,4 +1,5 @@
 ---
+title: Class element (Event)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
