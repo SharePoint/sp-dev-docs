@@ -5,7 +5,7 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e4ae6f71-70d7-4a91-a3f5-4c6604c2b0ff
 ---

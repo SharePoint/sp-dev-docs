@@ -7,7 +7,7 @@ f1_keywords:
 - SharePoint workflows
 keywords:
 - customizing site definitions,site definition configurations [SharePoint 2010]
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 8c873040-28c8-4fa9-a411-6638af47131b
 ---

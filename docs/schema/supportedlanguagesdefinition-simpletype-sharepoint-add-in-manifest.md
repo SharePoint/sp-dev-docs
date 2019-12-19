@@ -3,7 +3,7 @@ manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 2dc9b295-4355-d6e9-c734-4d636bef3a74
 ---

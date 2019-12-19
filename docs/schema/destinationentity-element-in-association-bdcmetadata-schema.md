@@ -5,7 +5,7 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.DestinationEntity
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 15c53c3b-888d-67c7-af7d-ef36922eeebc
 ---

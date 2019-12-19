@@ -5,7 +5,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, metadata element (workflow)
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c454e18c-ea94-4dd1-8081-a25a8acbacef
 ---

@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: d198f1b0-600c-4368-8051-ca47bfb03bbe
 description: Contains the collection of view styles within a ViewStyles.xml file. 

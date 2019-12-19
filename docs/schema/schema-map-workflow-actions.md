@@ -3,7 +3,7 @@ manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: d7e60875-b06d-9475-d823-08079b376ef3
 ---

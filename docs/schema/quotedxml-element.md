@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 9731bc10-8986-4597-97d5-eea87ea2962b
 description: Used to HTML-decode and execute the Collaborative Application Markup Language (CAML) that the element contains. 

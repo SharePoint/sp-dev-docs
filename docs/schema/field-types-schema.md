@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 53176171-c597-47a0-8b34-b064c415d9df
 description: Field Types XML markup is used to define information about a field that is needed to render the field in the UI and in visual designers, regardless of whether the rendering is done by a user control (ASCX), an XSLT template, or a (now Obsolete) RenderPattern. 

@@ -5,7 +5,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, extendedstatuscolumnvalues element
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 111e8cac-cd35-49c9-88e1-92e34a3bfeb1
 ---

@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 52eb5087-e0ca-45f8-8137-e6350cfb0481
 description: "Last modified: March 09, 2015"

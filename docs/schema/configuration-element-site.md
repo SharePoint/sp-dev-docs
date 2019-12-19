@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - customizing site definitions
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Site schema

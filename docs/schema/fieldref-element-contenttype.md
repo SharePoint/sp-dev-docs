@@ -5,7 +5,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, fieldref element
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 1b4c2bfa-7a75-4143-bf7f-050509e4607d
 ---

@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 29bdd666-77e4-7420-7f4b-542650f156e6
 description: Specifies XML that represents enumerations used in other schemas.

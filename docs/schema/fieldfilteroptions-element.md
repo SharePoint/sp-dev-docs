@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b409e73c-bdca-4299-860d-13ac0b470c37
 description: Used in the HeaderPattern sections of the FldTypes.xml file to display filtered drop-down menus. 

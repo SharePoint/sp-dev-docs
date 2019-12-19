@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b280a03d-dfdc-4d29-98b0-3e4bcb0f8231
 description: Used in an HtmlTransInfo.xml file to direct requests to the URL for handling the requests when the client computer does not have the 2007 Microsoft Office system installed.

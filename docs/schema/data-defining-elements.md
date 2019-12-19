@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e873b640-c1ee-436a-81ef-ae8f6a439e61
 description:  CAML field rendering elements are designed for use when rendering individual field values.

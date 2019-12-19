@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/20/2019
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Field Types XML

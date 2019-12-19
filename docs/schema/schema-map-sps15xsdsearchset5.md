@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 0e7abdce-c9fd-ab9a-e629-7e024994db1b
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Query.

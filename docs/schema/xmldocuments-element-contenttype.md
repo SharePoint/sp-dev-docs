@@ -5,7 +5,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, xmldocuments element (contenttype)
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 90198d80-5f53-4f05-967e-40bb367b48ac
 ---

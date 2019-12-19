@@ -5,7 +5,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - content migration [sharepoint 2010],content migration schema
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 6741b149-815d-48eb-91d9-691a47195faf
 ---
