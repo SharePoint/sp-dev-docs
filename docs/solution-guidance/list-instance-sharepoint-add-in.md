@@ -29,7 +29,7 @@ The following O365 PnP code sample and video demonstrates how to create a ShareP
 
 The following video walks through the code sample.
 
-- [Document and list templates with app model (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
+- [Document and list templates with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
 
 Use the AddList method in the SharePoint CSOM to create a list instance via the remote provisioning pattern. The following code taken from the [ECM.DocumentLibraries (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries) illustrates how to do it.
 
@@ -83,7 +83,7 @@ Related links
 =============
 - [Lists and list items REST API reference (MSDN Article)](https://msdn.microsoft.com/library/office/dn531433.aspx)
 - [List Definitions / List Templates (SharePoint Add-in model recipe)](list-definition-template-sharepoint-add-in.md)
-- [Document and list templates with app model (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
+- [Document and list templates with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")

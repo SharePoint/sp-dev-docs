@@ -18,7 +18,7 @@ When a SharePoint Add-in project in Visual Studio includes a remote event receiv
 
 ### To configure Azure
 
-1. If you don't already have one, get a Microsoft Azure subscription. One is included as a benefit with an [MSDN Subscription](http://azure.microsoft.com/pricing/member-offers/msdn-benefits/).
+1. If you don't already have one, get a Microsoft Azure subscription. One is included as a benefit with an [MSDN Subscription](https://azure.microsoft.com/pricing/member-offers/msdn-benefits/).
 
 2. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-resource-manager-overview).
     

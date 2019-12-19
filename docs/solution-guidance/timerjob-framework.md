@@ -14,7 +14,7 @@ After a timer job has been created, it needs to be scheduled and executed. The t
 - When Microsoft Azure is the hosting platform, timer jobs can be deployed and run as Azure WebJobs.
 - When Windows Server is the hosting platform (for example, for on-premises SharePoint), timer jobs can be deployed and run in Windows Scheduler.
 
-For a video introduction to timer jobs, see the video [Introduction to the PnP timer job framework](http://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework), which introduces the timer job framework and demonstrates the simple timer job example.
+For a video introduction to timer jobs, see the video [Introduction to the PnP timer job framework](https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework), which introduces the timer job framework and demonstrates the simple timer job example.
 
 ## Simple timer job example
 

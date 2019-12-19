@@ -36,11 +36,11 @@ The following O365 PnP Code Sample and video demonstrates how to manage and appl
 
 The following video walks through the code sample.
 
-- [Information management policy with app model (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Information-management-policy-wtih-app-model)
+- [Information management policy with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Information-management-policy-wtih-app-model)
 
 Related links
 =============
-- [Information management policy with app model (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Information-management-policy-wtih-app-model)
+- [Information management policy with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Information-management-policy-wtih-app-model)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")

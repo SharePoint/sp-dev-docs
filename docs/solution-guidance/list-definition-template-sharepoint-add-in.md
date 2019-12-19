@@ -77,14 +77,14 @@ The following O365 PnP Code Sample and video demonstrates how to create a ShareP
 
 The following video walks through the code sample.
 
-- [Document and list templates with app model (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
+- [Document and list templates with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
 
 Related links
 =============
 
 - [List Instance (SharePoint Add-in model recipe)](list-instance-sharepoint-add-in.md)
 - [Event Receivers (SharePoint Add-in model recipe)](event-receiver-and-list-event-receiver-sharepoint-add-in.md)
-- [Document and list templates with app model (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
+- [Document and list templates with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")

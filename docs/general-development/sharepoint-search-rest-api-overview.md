@@ -1194,7 +1194,7 @@ You can configure search to support Search REST queries from anonymous users. Si
 1. Create an XML file named queryparametertemplate.xml, and copy the following XML to the file.
 
     ```xml  
-    <QueryPropertiesTemplate xmlns="http://www.microsoft.com/sharepoint/search/KnownTypes/2008/08" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <QueryPropertiesTemplate xmlns="https://www.microsoft.com/sharepoint/search/KnownTypes/2008/08" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
       <QueryProperties i:type="KeywordQueryProperties">
         <EnableStemming>true</EnableStemming>
         <FarmId>FarmID</FarmId>

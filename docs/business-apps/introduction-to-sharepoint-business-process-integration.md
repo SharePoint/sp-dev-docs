@@ -1,3 +1,11 @@
+---
+title: SharePoint custom forms and automated business workflow
+description: SharePoint custom forms and automated business workflow.
+ms.date: 02/02/2018
+ms.prod: sharepoint
+localization_priority: Priority
+---
+
 # SharePoint custom forms and automated business workflow
 
 Creativity and teamwork are essential to transforming business process. Most processes center on content – files and data. SharePoint gives you tools to gather and manage data in lists and libraries.  

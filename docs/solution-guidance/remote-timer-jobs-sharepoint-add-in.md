@@ -175,8 +175,8 @@ The following articles describe the OAUth authentication pattern and provide cod
 
 Related links
 =============
-- [Azure WebJob resources (Azure Documentation)](http://azure.microsoft.com/documentation/articles/websites-webjobs-resources/)
-- [Deploy WebJobs using Visual Studio (Azure Documentation)](http://azure.microsoft.com/documentation/articles/websites-dotnet-deploy-webjobs/)
+- [Azure WebJob resources (Azure Documentation)](https://azure.microsoft.com/documentation/articles/websites-webjobs-resources/)
+- [Deploy WebJobs using Visual Studio (Azure Documentation)](https://azure.microsoft.com/documentation/articles/websites-dotnet-deploy-webjobs/)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")

@@ -203,7 +203,7 @@ If you want to extend the toolbar in the "modern" list and library experiences, 
             <CommandUIHandlers>
               <CommandUIHandler Command="CustomButton1.Command" CommandAction="https://contoso.azurewebsites.net/pages/index.aspx" />
               <CommandUIHandler Command="CustomButton2.Command" CommandAction="http://www.bing.com" />
-              <CommandUIHandler Command="CustomButton3.Command" CommandAction="http://dev.office.com/sharepoint" />
+              <CommandUIHandler Command="CustomButton3.Command" CommandAction="https://dev.office.com/sharepoint" />
             </CommandUIHandlers>
         </pnp:CommandUIExtension>
       </pnp:CustomAction>

@@ -42,7 +42,7 @@ In such a scenario, team sites usually do not require the amount of custom brand
 
 - When deploying custom master pages to *publishing sites* you only need to deploy the custom master pages to the root site.
 	+ The [Provisioning.PublishingFeatures (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.PublishingFeatures) demonstrates how to deploy custom master pages to publishing sites. 
-	+ The [Provisioning SharePoint Publishing Features (O365 PnP Video)](http://channel9.msdn.com/Blogs/Office-365-Dev/Provisioning-SharePoint-Publishing-Features-Office-365-Developer-Patterns-and-Practices) walks you through the sample. 	
+	+ The [Provisioning SharePoint Publishing Features (O365 PnP Video)](https://channel9.msdn.com/Blogs/Office-365-Dev/Provisioning-SharePoint-Publishing-Features-Office-365-Developer-Patterns-and-Practices) walks you through the sample. 	
 - When deploying custom master pages to *non-publishing sites* you need to deploy the custom master pages to each site.
 
 Custom master pages are typically applied when a site is provisioned. The remote provisioning process fits very well with this approach. Usually the only time you will use the web browser to manually apply SharePoint branding customization is when you are prototyping or modifying a single SharePoint site that is not planned to grow to include other site collections or sub sites. 

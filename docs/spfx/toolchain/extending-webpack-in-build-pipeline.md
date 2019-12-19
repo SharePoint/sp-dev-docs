@@ -6,7 +6,6 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-
 # Extending Webpack in the SharePoint Framework toolchain
 
 [Webpack](https://Webpack.js.org/) is a JavaScript module bundler that takes your JavaScript files and their dependencies and generates one or more JavaScript files, so you can load different pieces of code for different scenarios.

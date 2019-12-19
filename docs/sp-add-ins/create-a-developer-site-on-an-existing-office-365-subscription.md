@@ -22,7 +22,7 @@ An Office 365 developer site makes it easier to get set up and start creating, t
 
 **If you have an Office 365 Small Business subscription,** it supports only a single site collection, so you can't create a developer site collection. If you would like to learn more about Office 365 plans for your business, see [SharePoint Online: software boundaries and limits](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/sharepoint-online-software-boundaries-and-limits-HA102694293.aspx).
     
-For more information about the Office 365 Enterprise offerings, see [Plans &amp; Pricing](http://products.office.com/business/office-365-enterprise-e1-business-software).
+For more information about the Office 365 Enterprise offerings, see [Plans &amp; Pricing](https://products.office.com/business/office-365-enterprise-e1-business-software).
 
 <a name="bk_createdevsite"> </a>
 ## Create a developer site

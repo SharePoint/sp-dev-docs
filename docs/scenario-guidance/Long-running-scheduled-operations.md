@@ -95,7 +95,7 @@ The PnP timer job framework is a set of classes designed to ease the creation of
 ##### Videos
 
 - [PnP Core Component - Remote timer job framework](https://www.youtube.com/watch?v=nzL6jCv0dKQ)
-- [Introduction to the PnP timer job framework](http://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework)
+- [Introduction to the PnP timer job framework](https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework)
 - [Creating simple remote timer job](https://channel9.msdn.com/Blogs/Office-365-Dev/Simple-remote-timer-job-that-interacts-with-SharePoint-Online-Office-365-Developer-Patterns-and-Prac)
 
 ##### Solutions
