@@ -30,7 +30,7 @@ When you register the add-in, you'll get a client ID, client secret, add-in doma
 
 ## Authorization Code OAuth flow for add-ins that request permissions on the fly
 
-This section summarizes the OAuth authentication and authorization flow for a SharePoint add-in requesting permissions on the fly. The flow is called the **Authentication Code flow**. The sequence describes how an add-in that is not launched from within SharePoint can access resources in SharePoint.
+This section summarizes the OAuth authentication and authorization flow for a SharePoint add-in requesting permissions on the fly. The flow is called the **Authorization Code flow**. The sequence describes how an add-in that is not launched from within SharePoint can access resources in SharePoint.
 
 > [!NOTE]
 > The flow involves a series of interactions between your add-in, SharePoint, the authorization server (which is ACS), and the end user at runtime. So the flow requires either SharePoint Online or a SharePoint farm that is connected to the Internet, so it can communicate with ACS. SharePoint farms that are not connected to the Internet must use [the high-trust authorization system](creating-sharepoint-add-ins-that-use-high-trust-authorization.md).
@@ -59,9 +59,9 @@ The photo-printing application is registered, so it has a client ID, client secr
     </configuration>
 ```
 
-### Authentication Code flow steps
+### Authorization Code flow steps
 
-Following are the steps in the Authentication Code flow.
+Following are the steps in the Authorization Code flow.
 
 > [!TIP]
 > These steps refer to methods in the TokenHelper.cs (or .vb) file. This managed code is not compiled, so there are no reference topics for it. However, the file itself is fully commented with descriptions of every class, member parameter, and return value. Consider having a copy of it open to refer to as you read these steps.
