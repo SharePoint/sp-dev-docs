@@ -292,7 +292,7 @@ These settings are also available in the **Site Collection Administration** sect
 The following table lists schema files that support a search configuration. For information about the schema format, see [SharePoint search settings portability schemas](../schema/sharepoint-search-settings-portability-schemas.md).
 
 > [!NOTE] 
-> You can download the schema files from [SP15_search_settings_portability_schema.zip](http://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip). 
+> You can download the schema files from [SP15_search_settings_portability_schema.zip](https://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip). 
 
 **Search settings portability schemas**
 

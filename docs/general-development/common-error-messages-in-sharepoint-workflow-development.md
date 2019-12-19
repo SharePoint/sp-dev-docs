@@ -139,7 +139,7 @@ Review the following to ensure that you have correctly configured incoming and o
     
     
 
--  [Deployment guide for Microsoft SharePoint](http://download.microsoft.com/download/1/F/6/1F6D3BE4-1174-4320-A1D1-C0E2681CCCF3/Deployment-guide-for-SharePoint-2013.pdf)
+-  [Deployment guide for Microsoft SharePoint](https://download.microsoft.com/download/1/F/6/1F6D3BE4-1174-4320-A1D1-C0E2681CCCF3/Deployment-guide-for-SharePoint-2013.pdf)
 
 
 

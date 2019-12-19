@@ -96,7 +96,7 @@ If you have pre-release (that is, "Preview") versions of SharePoint Server, Work
 -  [Microsoft Azure Service Bus 1.0 Cumulative Update (KB2799752)](https://support.microsoft.com/kb/2799752/en-us)
     
   
--  [Workflow Manager 1.0 Cumulative (KB2799754)](http://support.microsoft.com/kb/2799754/en-us)
+-  [Workflow Manager 1.0 Cumulative (KB2799754)](https://support.microsoft.com/kb/2799754/en-us)
     
   
 

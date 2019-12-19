@@ -31,7 +31,7 @@ The search settings portability schemas describe the XML files you need when you
 <br/>
 
 > [!NOTE] 
-> You can [download the schemas](http://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip).
+> You can [download the schemas](https://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip).
 
 
 
