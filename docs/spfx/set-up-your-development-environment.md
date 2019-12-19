@@ -27,7 +27,7 @@ Install [NodeJS LTS version 10](https://nodejs.org/dist/latest-v10.x/).
 - If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org/dist/latest-v10.x/).
 
 > [!IMPORTANT]
-> The current supported LTS version of NodeJS for the SharePoint Framework is both **Node.js v8.x** and **Node.js v10.x**. Notice that 9.x or 11.x versions are currently not supported with SharePoint Framework development.
+> The current supported LTS version of NodeJS for the SharePoint Framework is both **Node.js v10.x** and **Node.js v12.x**. Node.js v12.x is not currently supported. Notice that 9.x or 11.x versions are currently not supported with SharePoint Framework development.
 
 > [!NOTE]
 > If you are building SharePoint Framework components for SharePoint Server 2016, refer to additional details in the **SPFx & SharePoint Server 2016** section for additional details on which version of NodeJS you should install.
