@@ -4,8 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- content type definition schema, fieldrefs element
 ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e7a61a08-dd2a-4ce8-8e1b-d4fbbdc4749d
@@ -30,72 +28,31 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**None**</p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Attribute** | **Description** |
+| **None** |   |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="fieldref-element-contenttype.md">FieldRef</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="removefieldref-element-contenttype.md">RemoveFieldRef</a></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx">DocumentTemplate</a></p></td>
-</tr>
-</tbody>
-</table>
+|   |
+|---|
+| [FieldRef](fieldref-element-contenttype.md) | 
+| [RemoveFieldRef](removefieldref-element-contenttype.md) |  
+| [DocumentTemplate](https://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="contenttype-element-contenttype.md">ContentType</a></p></td>
-</tr>
-</tbody>
-</table>
+|   |
+|---|
+| [ContentType](contenttype-element-contenttype.md) |
 
 ### Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 1</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
+|   |
+|---|
+| Minimum: 1 |
+| Maximum: 1 |
 
 ### Remarks
 
@@ -109,7 +66,7 @@ The **FieldRefs** element contains a collection of [FieldRef](fieldref-element-c
 
 Changing these properties in the field reference only changes them as they apply to the specific content type that contains the field reference.
 
-> [!NOTE] 
+> [!NOTE]
 > The order in which **FieldRef** elements are listed determines the order of fields shown on NewForm.aspx.
 
 The [DocumentTemplate](https://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx)
@@ -117,7 +74,6 @@ child element is obsolete. Instead use the [DocumentTemplate](documenttemplate-e
 that is a child of the [ContentType](contenttype-element-contenttype.md) element.
 
 For more information about field references, see [Fields and Field References](https://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx).
-
 
 ## Example
 
