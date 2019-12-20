@@ -17,7 +17,7 @@ ms.assetid: d094da28-8be1-a1fb-27f0-bd842044ad93
 
 A list of queries that this cache subscription contains.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

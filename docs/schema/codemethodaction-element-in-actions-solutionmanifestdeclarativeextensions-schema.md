@@ -17,7 +17,7 @@ ms.assetid: dcb85c58-1ed8-4bb9-430e-f2a5c395c785
 
 The **CodeMethodAction** element is used to execute a custom code action or to execute one of the predefined actions provided by Microsoft Business Connectivity Services (BCS).
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

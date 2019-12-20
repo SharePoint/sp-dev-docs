@@ -17,7 +17,7 @@ ms.assetid: e49980f9-75af-aa7a-560e-90dcb47c936d
 
 Lists the actions associated with the context definition.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

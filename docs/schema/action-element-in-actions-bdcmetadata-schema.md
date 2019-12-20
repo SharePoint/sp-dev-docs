@@ -19,7 +19,7 @@ ms.assetid: f58b96c0-77a8-69d3-8710-fff03d4970b9
 
 Specifies an action supported by an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

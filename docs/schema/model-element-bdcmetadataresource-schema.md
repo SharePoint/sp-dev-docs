@@ -17,7 +17,7 @@ ms.assetid: 26f834ca-0db4-ec9f-528f-9e4da115322b
 
 Specifies localized display names, properties, and permissions, in any combination, for a [Model Element (BDCMetadata Schema)](model-element-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

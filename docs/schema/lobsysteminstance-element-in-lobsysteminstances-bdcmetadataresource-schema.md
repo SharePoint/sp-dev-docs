@@ -17,7 +17,7 @@ ms.assetid: a836b2fa-e2a2-9edd-04a0-b1396f8a88a1
 
 Specifies localized display names and properties, in any combination, for an [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

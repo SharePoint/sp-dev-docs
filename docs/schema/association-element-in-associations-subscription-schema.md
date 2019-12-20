@@ -17,7 +17,7 @@ ms.assetid: d334d1ef-f7a4-d709-3b9b-ce564aa60890
 
 Represents a subscription association.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

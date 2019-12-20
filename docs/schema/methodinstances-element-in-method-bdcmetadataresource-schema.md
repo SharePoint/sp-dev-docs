@@ -17,7 +17,7 @@ ms.assetid: 25eec00b-98be-e684-076d-c591a093d5f5
 
 For more information, see [MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

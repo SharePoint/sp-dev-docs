@@ -17,7 +17,7 @@ ms.assetid: 2e6e8d5d-ef3b-c536-f3d1-ad2039b92c24
 
 Specifies the name and type of a property of a metadata object.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

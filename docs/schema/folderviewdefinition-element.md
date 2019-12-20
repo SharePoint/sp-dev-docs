@@ -15,7 +15,7 @@ ms.assetid: f50b6453-1324-4684-afe7-b2a524d4da16
 
 Describes a folder view in Microsoft Outlook 2010.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

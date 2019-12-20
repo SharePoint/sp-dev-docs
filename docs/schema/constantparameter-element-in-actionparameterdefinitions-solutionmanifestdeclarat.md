@@ -17,7 +17,7 @@ ms.assetid: 12b3bdb6-09d0-b59a-e36c-6f8f628bfd27
 
 The **ConstantParameter** element defines a constant parameter for an action.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

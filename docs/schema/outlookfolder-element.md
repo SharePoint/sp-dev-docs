@@ -15,7 +15,7 @@ ms.assetid: c4b78ba3-f271-4d7a-9e7a-ed3ec809ae65
 
 Describes the Microsoft Outlook 2010 folder that contains the external data.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

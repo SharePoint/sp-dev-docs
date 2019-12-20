@@ -17,7 +17,7 @@ ms.assetid: 93cb076a-c981-2655-2f01-4b3f5e6dfbce
 
 Specifies a list of filter values to use for an association method instance in this cache subscription.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

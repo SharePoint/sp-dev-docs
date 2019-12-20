@@ -17,7 +17,7 @@ ms.assetid: 64a35165-b5cf-08f4-8469-a00fabda6a88
 
 Defines the actions exposed by the External Data Part.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

@@ -17,7 +17,7 @@ ms.assetid: 391e8202-e3b4-7d98-6033-c9b0ecc152dc
 
 This element is not used by Microsoft Business Connectivity Services (BCS) in the current release.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

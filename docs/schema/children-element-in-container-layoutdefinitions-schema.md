@@ -17,7 +17,7 @@ ms.assetid: ff84af75-d4f5-885b-f728-534a101c38b8
 
 Lists the External Data Parts in this layout.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

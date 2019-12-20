@@ -15,7 +15,7 @@ ms.assetid: 3ca1d9db-6066-46e4-921a-94f0756a6fc8
 
 Describes the icon to use in Microsoft Outlook 2010.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

@@ -17,7 +17,7 @@ ms.assetid: f6fd7c82-4d2b-12f4-7c42-dd11f48919bf
 
 Specifies a localized display name of a metadata object.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

@@ -17,7 +17,7 @@ ms.assetid: 4fdc1fbf-b492-70e3-1fc8-bcff6f6727b9
 
 For more information, see [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

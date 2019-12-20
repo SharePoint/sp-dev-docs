@@ -17,7 +17,7 @@ ms.assetid: 6b5cd80c-fd89-8ea1-3657-d711dc513976
 
 Specifies a filter value for a query or association. The FilterValue element can contain a mix of character data and child elements.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

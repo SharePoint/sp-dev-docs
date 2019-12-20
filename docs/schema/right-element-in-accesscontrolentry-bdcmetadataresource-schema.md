@@ -17,7 +17,7 @@ ms.assetid: 7e38207d-be3b-ea12-aac1-0dd657a33c21
 
 For more information, see [Right Element in AccessControlEntry (BDCMetadata Schema)](right-element-in-accesscontrolentry-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

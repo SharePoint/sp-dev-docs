@@ -19,7 +19,7 @@ ms.assetid: d9bf0ca9-fb79-e3a5-cc84-9510d93798cb
 
 Specifies a list of **LobSystem** elements of a model.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

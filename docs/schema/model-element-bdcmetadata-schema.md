@@ -19,7 +19,7 @@ ms.assetid: d7823090-b20d-2c96-c359-081c055d0e65
 
 Specifies the root element that represents an application definition. Models define external content types that are contained by external applications.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

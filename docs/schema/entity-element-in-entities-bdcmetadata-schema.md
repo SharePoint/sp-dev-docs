@@ -19,7 +19,7 @@ ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 
 Specifies an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

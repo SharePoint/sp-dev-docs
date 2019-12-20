@@ -19,7 +19,7 @@ ms.assetid: 8ce0a852-38f9-75d2-8258-27c57418f53c
 
 Specifies a filter descriptor of a method.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

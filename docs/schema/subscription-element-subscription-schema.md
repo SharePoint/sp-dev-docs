@@ -17,7 +17,7 @@ ms.assetid: 1eaeefb2-8b18-bf8c-3594-f72ac27cd74d
 
 The top-level (root) element that defines a cache subscription.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **schema**: Subscription
 

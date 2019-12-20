@@ -17,7 +17,7 @@ ms.assetid: 12a4acb8-df31-bdca-1dea-b6534c7c6195
 
 Specifies what data to get from the external system and keep up to date with respect to the corresponding item in Microsoft Outlook.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

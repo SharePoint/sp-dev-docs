@@ -20,7 +20,7 @@ ms.assetid: a2e4bd6c-2306-b657-7290-cc9c9b262911
 
 Specifies a single access permission for an access control entry (ACE).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

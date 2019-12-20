@@ -17,7 +17,7 @@ ms.assetid: c1031b46-28be-51f5-43bb-8d684cc52ee2
 
 Specifies localized display names and properties, in any combination, for an [Action element in Actions (BDCMetadata Schema)](action-element-in-actions-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

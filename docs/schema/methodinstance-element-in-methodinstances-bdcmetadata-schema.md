@@ -19,7 +19,7 @@ ms.assetid: 577ff9d0-706b-be7d-af5b-883e137cada8
 
 Specifies a **MethodInstance**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

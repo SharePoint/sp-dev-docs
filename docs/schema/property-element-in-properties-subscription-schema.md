@@ -17,7 +17,7 @@ This element is not used by Microsoft Business Connectivity Services (BCS) in th
 
 The **Property** element can contain a mix of character data and child elements.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

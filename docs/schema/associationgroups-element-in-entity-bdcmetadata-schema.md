@@ -19,7 +19,7 @@ ms.assetid: b50c2648-daea-d8c0-039a-b95590b9924c
 
 Specifies a list of **AssociationGroup** elements.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

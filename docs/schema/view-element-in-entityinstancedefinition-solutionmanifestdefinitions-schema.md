@@ -17,7 +17,7 @@ ms.assetid: b8e5572f-cf9d-f8c2-a271-e722a11bbfa3
 
 Specifies the **SpecificFinder** method instance of the external content type that should be run to get external data.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

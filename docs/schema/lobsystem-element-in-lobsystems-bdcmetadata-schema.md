@@ -19,7 +19,7 @@ ms.assetid: d4e58d7d-a628-8093-97fe-7c3136e8f6f2
 
 Represents an external data source.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

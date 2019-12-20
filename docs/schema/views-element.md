@@ -15,7 +15,7 @@ ms.assetid: 42034deb-a75a-4ad3-9494-b43fd33bc907
 
 Describes Microsoft Outlook 2010 views.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

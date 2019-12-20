@@ -17,7 +17,7 @@ ms.assetid: 70e87a9e-4959-0a7b-3f37-ddec36473ff4
 
 Specifies a method of an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

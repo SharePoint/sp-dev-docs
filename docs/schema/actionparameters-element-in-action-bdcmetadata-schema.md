@@ -19,7 +19,7 @@ ms.assetid: e14df901-621c-1851-db78-e99fd3cf31ae
 
 Specifies a list of **ActionParameters** for an action.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

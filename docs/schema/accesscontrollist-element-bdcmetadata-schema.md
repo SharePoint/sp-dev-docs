@@ -21,7 +21,7 @@ Specifies an access control list (ACL) for the parent element.
 
 To learn about Business Connectivity Services and security, see [Business Connectivity Services Security Overview](https://technet.microsoft.com/library/ee661734(office.14).aspx).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

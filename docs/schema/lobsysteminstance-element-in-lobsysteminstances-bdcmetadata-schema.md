@@ -19,7 +19,7 @@ ms.assetid: a0c37891-ef4f-58af-445c-5ff4d5ad6cef
 
 Specifies an external system instance.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

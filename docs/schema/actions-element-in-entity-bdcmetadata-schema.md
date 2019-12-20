@@ -19,7 +19,7 @@ ms.assetid: c5a6c08d-a3df-61db-3ce3-1e6837bbf221
 
 Specifies a list of actions of an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

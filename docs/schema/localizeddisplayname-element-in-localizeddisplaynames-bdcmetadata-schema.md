@@ -19,7 +19,7 @@ ms.assetid: 93fb80ef-6347-b463-da90-4980d872678e
 
 Specifies a localized name.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

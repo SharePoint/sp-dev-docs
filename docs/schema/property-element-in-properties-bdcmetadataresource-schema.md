@@ -15,7 +15,7 @@ ms.assetid: 642aaff0-f011-7d6f-b677-538eb95eef89
 
 For more information, see [Property Element in Properties (BDCMetadata Schema)](property-element-in-properties-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

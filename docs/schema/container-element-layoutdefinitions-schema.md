@@ -17,7 +17,7 @@ ms.assetid: b8da155c-7f37-461a-84ab-99a41b0720ea
 
 Specifies the layout for the External Data Parts.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

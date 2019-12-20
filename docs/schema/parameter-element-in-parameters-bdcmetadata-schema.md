@@ -19,7 +19,7 @@ ms.assetid: 811cad0b-ba71-8be0-0765-3e0dec18a0d3
 
 Specifies a parameter of a method.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

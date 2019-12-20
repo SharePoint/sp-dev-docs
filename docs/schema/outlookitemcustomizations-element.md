@@ -15,7 +15,7 @@ ms.assetid: bb7f173c-c9a8-4e71-94bf-743fed55378f
 
 Describes how external data should appear in Microsoft Outlook 2010 and what other customizations you need in Outlook.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

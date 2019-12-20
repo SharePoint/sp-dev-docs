@@ -15,7 +15,7 @@ ms.assetid: 12fd8fb9-91eb-4f23-89d6-2870fb9e30a8
 
 Describes how to display a field of an external content type in Microsoft Outlook 2010.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

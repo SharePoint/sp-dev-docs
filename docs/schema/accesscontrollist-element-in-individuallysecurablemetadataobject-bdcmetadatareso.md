@@ -17,7 +17,7 @@ ms.assetid: 8ca87912-2533-1c7d-3550-c5c3af047e73
 
 For more information, see [AccessControlList element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

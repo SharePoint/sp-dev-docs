@@ -19,7 +19,7 @@ ms.assetid: 9901904f-96ee-0cbb-64a9-c2aad9d72128
 
 Specifies a list of properties of a metadata object.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

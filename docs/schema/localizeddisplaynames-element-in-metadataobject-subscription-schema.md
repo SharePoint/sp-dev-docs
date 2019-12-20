@@ -17,7 +17,7 @@ ms.assetid: edb3742e-054c-f683-7033-b15b31d836bf
 
 Lists the localized display names for a subscription, a query, or a subscription association.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

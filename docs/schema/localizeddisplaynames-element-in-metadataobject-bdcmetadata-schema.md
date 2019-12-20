@@ -19,7 +19,7 @@ ms.assetid: 3202aecf-f98f-20cb-1fdd-f3a054cb24aa
 
 Specifies a list of localized names of a **MetadataObject**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

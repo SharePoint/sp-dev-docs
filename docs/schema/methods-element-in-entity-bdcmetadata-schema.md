@@ -19,7 +19,7 @@ ms.assetid: 42a24b32-bd97-4067-2e25-681d876d29fd
 
 Specifies a list of methods of an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

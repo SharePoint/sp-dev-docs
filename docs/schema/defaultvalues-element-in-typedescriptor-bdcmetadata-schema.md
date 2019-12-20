@@ -19,7 +19,7 @@ ms.assetid: 635295d1-0f85-6308-976b-d0cb483dece6
 
 Specifies a list of DefaultValues of a TypeDescriptor.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

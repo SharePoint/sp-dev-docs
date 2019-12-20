@@ -17,7 +17,7 @@ ms.assetid: c9d772b7-8070-9354-49bf-689720c47b33
 
 For more information, see [AssociationGroups element in Entity (BDCMetadata Schema)](associationgroups-element-in-entity-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

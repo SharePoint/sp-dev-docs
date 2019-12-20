@@ -17,7 +17,7 @@ ms.assetid: cd038ff1-1c67-7632-9180-044efe6e2314
 
 Specifies localized display names and properties, in any combination, for a [TypeDescriptor Element (BDCMetadata Schema)](typedescriptor-element-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

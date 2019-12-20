@@ -19,7 +19,7 @@ ms.assetid: 322b2d3f-c92d-3c24-9f22-07b56396275b
 
 Specifies a list of **TypeDescriptors** of a parent **TypeDescriptor**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

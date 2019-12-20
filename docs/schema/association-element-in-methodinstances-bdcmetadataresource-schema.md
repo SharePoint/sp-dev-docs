@@ -17,7 +17,7 @@ ms.assetid: 23403618-d39a-783d-ff3c-12c439e5f4d3
 
 Specifies localized display names, properties, and permissions in any combination, for an [Association element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

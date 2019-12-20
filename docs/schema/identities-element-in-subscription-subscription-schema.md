@@ -17,7 +17,7 @@ ms.assetid: 0c401210-8f56-70d1-a337-ac7ad529ef16
 
 Lists the explicit identities this cache subscription contains.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

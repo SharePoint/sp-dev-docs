@@ -15,7 +15,7 @@ ms.assetid: d4539cb9-2313-4d0a-9201-70350721964f
 
 Describes the properties of the form region used to display the external data.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

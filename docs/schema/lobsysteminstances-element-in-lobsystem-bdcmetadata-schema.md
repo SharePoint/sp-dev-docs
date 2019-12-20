@@ -19,7 +19,7 @@ ms.assetid: 122e419a-0497-afdf-1117-a82ab429f3eb
 
 Specifies a list of external system instances.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

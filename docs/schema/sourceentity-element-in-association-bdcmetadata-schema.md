@@ -19,7 +19,7 @@ ms.assetid: 19fb5f38-4e85-7fb0-2562-281b9a9ffbef
 
 Specifies a source external content type of an **Association**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

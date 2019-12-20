@@ -15,7 +15,7 @@ ms.assetid: edcb759b-4c10-4202-8534-38ba1db7be19
 
 Describes associations.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

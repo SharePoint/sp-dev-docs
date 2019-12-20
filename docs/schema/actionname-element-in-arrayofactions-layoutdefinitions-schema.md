@@ -17,7 +17,7 @@ ms.assetid: 3bcfca05-2eff-830a-b058-cba0184efc8d
 
 Specifies an action for this External Data Part.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

@@ -19,7 +19,7 @@ ms.assetid: dae3aeae-e72a-0b52-1348-f5e5cd31109f
 
 Specifies a list of associations and method instances of a method.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

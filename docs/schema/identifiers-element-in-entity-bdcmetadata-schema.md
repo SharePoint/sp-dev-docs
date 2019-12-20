@@ -19,7 +19,7 @@ ms.assetid: 6566cb43-4f9e-9a2e-7ec0-89057d7daacc
 
 Specifies a list of identifiers of an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

@@ -17,7 +17,7 @@ ms.assetid: bbc6c6f3-7c1d-f777-fbe8-c5d5d432c8ec
 
 Lists the custom properties of the Container or External Data Part.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

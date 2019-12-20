@@ -17,7 +17,7 @@ ms.assetid: ab936b33-96a6-7ecd-8e12-23bb60c7acad
 
 For more information, see [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 
