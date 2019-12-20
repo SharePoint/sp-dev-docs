@@ -68,8 +68,6 @@ The GraphHttpClient uses the Office 365 SharePoint Online Azure AD application t
 - Read and write all groups (preview) (`Group.ReadWrite.All`)
 - Read all usage reports (`Reports.Read.All`)
 
-These are the only permissions that are available when you use **GraphHttpClient**. If you need other permissions for your solution, you can use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part.md) instead.
-
 ### Tokens are retrieved using an internal API
 
 To acquire a valid access token, **GraphHttpClient** issues a web request to the `/_api/SP.OAuth.Token/Acquire` endpoint. This API is intended for internal use. You should not communicate with it directly in your solutions.
