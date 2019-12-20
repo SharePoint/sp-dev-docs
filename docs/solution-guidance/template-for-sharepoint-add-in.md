@@ -6,8 +6,7 @@ localization_priority: Normal
 XYZ in the SharePoint Add-in model
 ==================================
 
-Summary
--------
+## Summary
 
 - Need to Provide context and short introduction how the capability was done using FTC
 - Summary is really important to keep small and crisp, so that we get the context of the article.
@@ -59,7 +58,7 @@ This section contains the following information:
 - Pre-create OD4B sites for users
 - Samples and content at https://aka.ms/OfficeDevPnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

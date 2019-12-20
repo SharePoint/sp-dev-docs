@@ -6,8 +6,7 @@ localization_priority: Normal
 Performance considerations in the SharePoint Add-in model
 =========================================================
 
-Summary
--------
+## Summary
 
 The approaches you take to ensure optimal performance with SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario most code operations took place in the SharePoint Server-side Object Model code.
 
@@ -157,7 +156,7 @@ The [Performance.Caching (O365 PnP Sample)](https://github.com/SharePoint/PnP/tr
 
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)

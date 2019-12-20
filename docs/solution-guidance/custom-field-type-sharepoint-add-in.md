@@ -6,8 +6,7 @@ localization_priority: Normal
 Custom field type in the SharePoint Add-in model
 ================================================
 
-Summary
--------
+## Summary
 
 The approach you take to provide customized end user experiences is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, custom field types were created with the SharePoint server-side object model code by inheriting from one of the built-in field type classes and creating a field type deployment file (XML). These components were deployed via SharePoint solutions. 
 
@@ -135,7 +134,7 @@ As you develop custom client-side rendering components, keep in mind the followi
 - [Branding.JSLink (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.JSLink)
 - Samples and content at https://github.com/SharePoint/PnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

@@ -152,7 +152,7 @@ The following article demonstrates how the SharePointOnlineCredentials class is 
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SimpleTimerJob)
 - Samples and content at https://github.com/SharePoint/PnP
 
-## Applies to
+### Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

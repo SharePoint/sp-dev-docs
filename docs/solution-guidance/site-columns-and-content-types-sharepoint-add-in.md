@@ -6,8 +6,7 @@ localization_priority: Normal
 Site columns and content types in the SharePoint Add-in model
 =============================================================
 
-Summary
--------
+## Summary
 
 The approach you take to create site columns and content types in SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, you use declarative code to create site columns and content types. In the declarative code approach, you define the site columns and content types in XML and then use  SharePoint's feature framework elements to package and deploy them.
 
@@ -111,7 +110,7 @@ This option works well in Dev-Ops scenarios. It allows you to create custom appl
 - [Core.DataStorageModels (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.DataStorageModels)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

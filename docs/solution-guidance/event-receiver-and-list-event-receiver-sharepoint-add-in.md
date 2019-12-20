@@ -6,8 +6,7 @@ localization_priority: Priority
 Event receivers and list event receivers in the SharePoint Add-in model
 =======================================================================
 
-Summary
--------
+## Summary
 
 The approach you take to handle events in SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code.  
 In a typical Full Trust Code (FTC) / Farm Solution scenario, Event Receivers and List Event Receivers were created with the SharePoint 
@@ -83,7 +82,7 @@ More Examples
 - [Core.AppEvents (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppEvents)
 - Samples and content at https://github.com/SharePoint/PnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) 

@@ -3,11 +3,9 @@ title: Custom actions in the SharePoint Add-in model
 ms.date: 11/03/2017
 localization_priority: Normal
 ---
-Custom actions in the SharePoint Add-in model
-=============================================
+# Custom actions in the SharePoint Add-in model
 
-Summary
--------
+## Summary
 
 The approach you take to modify list item menus and the ribbon in SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list item menus and ribbon modifications were defined in XML (custom actions), packaged in features, and deployed via SharePoint Solutions.
 
@@ -49,7 +47,7 @@ The following sample demonstrates how to add a custom action to the site setting
 - [Provisioning.SiteModifier (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteModifier)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)

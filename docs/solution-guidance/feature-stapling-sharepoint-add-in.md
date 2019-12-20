@@ -6,8 +6,7 @@ localization_priority: Normal
 Feature Stapling in the SharePoint Add-in model
 ===============================================
 
-Summary
--------
+## Summary
 
 The approach you take to run code and deploy artifacts when a SharePoint site is provisioned is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, out-of-the-box site definitions were modified with stapled features.  Features were used to package and deploy artifacts, configurations, and branding assets associated with a SharePoint site and features were stapled to the site definition.  Then the stapled features were automatically installed and activated upon site provisioning.
 
@@ -109,7 +108,7 @@ In this pattern you use the SharePoint Client Side Object Model (CSOM) to create
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)

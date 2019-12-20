@@ -6,8 +6,7 @@ localization_priority: Normal
 Site provisioning in the SharePoint Add-in model
 ================================================
 
-Summary
--------
+## Summary
 
 The approach you take to provision site collections and sub sites is different in the new SharePoint Add-in model, compared to how it was in Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, you would create site collections and sub sites with the site definitions and web templates and then use declarative code to configure the sites and apply customizations. In this model, you would typically use declarative code to create site columns, content types, and lists defined in XML and then use SharePoint's feature framework elements to package and deploy them.
 
@@ -214,7 +213,7 @@ This option works well in Dev-Ops scenarios. It allows you to create custom appl
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
 - Samples and content at https://github.com/SharePoint/PnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

@@ -6,8 +6,7 @@ localization_priority: Normal
 Master pages in the SharePoint Add-in model
 ===========================================
 
-Summary
--------
+## Summary
 
 The approach you take to implement custom master pages in SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code / Farm Solutions. In a typical Full Trust Code (FTC) / Farm Solution branding scenario, custom master pages are created to implement a custom brand. The master pages are typically packaged in a feature that uses declarative code and a FTC / Farm Solution to deploy the master pages and register them with the SharePoint site.
 
@@ -90,7 +89,7 @@ This option works well when your branding needs are very specific or you are usi
 - [Making out-of-the-box Seattle master responsive (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.InjectResponsiveCSS)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

@@ -6,8 +6,7 @@ localization_priority: Normal
 Information management policy in the SharePoint Add-in model
 ============================================================
 
-Summary
--------
+## Summary
 
 The approach you take to apply information management policy is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, information management policy was managed and applied via the SharePoint Server Side Object Model and deployed via SharePoint Farm Solutions, usually as part of a Timer Job. 
 
@@ -49,7 +48,7 @@ The following video walks through the code sample.
 - [Governance.ContentTypeEnforceRetention (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Governance.ContentTypeEnforceRetention)
 - Samples and content at https://github.com/SharePoint/PnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

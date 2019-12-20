@@ -161,12 +161,3 @@ The following example shows the field references collection for the Document con
 
 - [Content Type Definitions](content-type-definitions.md)
 - [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-
-
-
-
-
-
-
-
-

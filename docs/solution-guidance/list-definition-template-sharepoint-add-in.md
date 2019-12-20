@@ -6,8 +6,7 @@ localization_priority: Normal
 List definition / list template in the SharePoint Add-in model
 ==============================================================
 
-Summary
--------
+## Summary
 
 The approach you take to create list definitions / list templates is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, custom list definitions / list templates were created with declarative code and deployed via SharePoint Solutions. 
 
@@ -93,7 +92,7 @@ The following video walks through the code sample.
 - [ECM.DocumentLibraries (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)
 - Samples and content at https://github.com/SharePoint/PnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

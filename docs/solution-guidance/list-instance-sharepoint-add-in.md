@@ -6,8 +6,7 @@ localization_priority: Normal
 List instance in the SharePoint Add-in model
 ============================================
 
-Summary
--------
+## Summary
 
 The approach you take to create list instances is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list instances were created with declarative code and deployed via SharePoint Solutions. 
 
@@ -91,7 +90,7 @@ The following code sample illustrates how to create a list instance with the Sha
 - [ECM.DocumentLibraries (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

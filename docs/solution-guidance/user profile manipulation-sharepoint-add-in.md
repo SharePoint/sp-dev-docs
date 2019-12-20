@@ -6,8 +6,7 @@ localization_priority: Normal
 User profile manipulation in the SharePoint Add-in model
 ========================================================
 
-Summary
--------
+## Summary
 
 The approach you take to perform Create, Read, Update and Delete (CRUD) operations in the user profile service is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, UPS CRUD operations were performed with the SharePoint server-side object model code or the User Profile web service and deployed via Farm Solutions. 
 
@@ -133,7 +132,7 @@ In a scenario where you have both on-premises and Office 365 SharePoint environm
 - [Core.UserProfiles.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfiles.Sync) 
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)

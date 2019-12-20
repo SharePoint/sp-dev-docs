@@ -554,7 +554,7 @@ There are also few other environment variables for WebJobs, which might help you
 - [Office PnP Core component](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)
 - Samples and content at https://github.com/SharePoint/PnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

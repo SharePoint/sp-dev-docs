@@ -6,8 +6,7 @@ localization_priority: Normal
 Remote timer jobs in the SharePoint Add-in model
 ================================================
 
-Summary
--------
+## Summary
 
 The approach you take to implement timer jobs is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration website. SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
 
@@ -187,7 +186,7 @@ The following articles describe the OAUth authentication pattern and provide cod
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
 - Samples and content at https://github.com/SharePoint/PnP
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

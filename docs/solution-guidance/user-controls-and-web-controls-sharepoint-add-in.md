@@ -6,8 +6,7 @@ localization_priority: Normal
 User controls and Web controls in the SharePoint Add-in model
 =============================================================
 
-Summary
--------
+## Summary
 
 The approach you take to implement custom controls in your code is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, custom controls were built as user controls or web controls and deployed via SharePoint Solutions.
 
@@ -86,7 +85,7 @@ When you need to embed JavaScript on a per master page basis, this is a good opt
 - [Core.JavaScriptCustomization (O365 PnP Scenario using PnP Core component)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)

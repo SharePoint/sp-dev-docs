@@ -6,8 +6,7 @@ localization_priority: Normal
 Delegate controls in the SharePoint Add-in model
 ================================================
 
-Summary
--------
+## Summary
 
 The approach you take to implement delegate controls in your code is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, delegate controls were built as user controls or web controls, registered with features, and deployed via SharePoint Solutions.
 
@@ -34,7 +33,7 @@ See the [User controls and web controls (SharePoint Add-in Model Recipe)](user-c
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)

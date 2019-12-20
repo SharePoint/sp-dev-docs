@@ -342,7 +342,7 @@ The following chart summarizes all your options to brand a SharePoint site at a 
 - [AlternateCSSUrl and SiteLogoUrl Properties in the web object (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
 - Samples and content at https://github.com/SharePoint/PnP
 
-## Applies to
+### Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*

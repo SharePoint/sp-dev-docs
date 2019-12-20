@@ -6,8 +6,7 @@ localization_priority: Normal
 Web part in the SharePoint Add-in model
 =======================================
 
-Summary
--------
+## Summary
 
 The approach you take to create portable page components is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, web parts were created to implement portable page components.
 
@@ -56,7 +55,7 @@ The following video walks you through the code sample.
 - [Core.AppScriptPart (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppScriptPart)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)

@@ -6,8 +6,7 @@ localization_priority: Normal
 Search configuration in the SharePoint Add-in model
 ===================================================
 
-Summary
--------
+## Summary
 
 The approach you take to configure search is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint Server-side Object Model was used to configure search, and deployed via SharePoint Solutions.
 
@@ -40,7 +39,7 @@ The following sample demonstrates how to import and export search settings betwe
 - [Core.SearchSettingsPortability (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SearchSettingsPortability)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-# Applies to
+## Applies to
 
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
