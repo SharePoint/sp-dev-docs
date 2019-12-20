@@ -4,7 +4,6 @@
   href: spfx/sharepoint-framework-overview.md
   items:
   - name: Getting started
-    href: spfx/set-up-your-developer-tenant.md
     items:
     - name: Set up Office 365 tenant
       href: spfx/set-up-your-developer-tenant.md
@@ -14,7 +13,6 @@
     href: spfx/web-parts/overview-client-side-web-parts.md
     items:
     - name: Getting started
-      href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
       items:
       - name: Build your first web part
         href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
@@ -84,7 +82,6 @@
     - name: Pre-allocated placeholders
       href: spfx/extensions/basics/preallocated-space-placeholders.md
     - name: Getting started
-      href: spfx/extensions/get-started/build-a-hello-world-extension.md
       items:
       - name: Build your first extension
         href: spfx/extensions/get-started/build-a-hello-world-extension.md
