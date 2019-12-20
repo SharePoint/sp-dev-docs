@@ -13,7 +13,7 @@ ms.assetid: 8e35d357-4b59-aea5-a06b-61ef6af6d4a1
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-This section contains the documentation for the [Layouts schema (LayoutDefinitions.xsd)](http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout). Explore the topics in this section to learn about each element in this schema.
+This section contains the documentation for the **Layouts schema (LayoutDefinitions.xsd)**. Explore the topics in this section to learn about each element in this schema.
 
 - [ActionName element in ArrayOfActions LayoutDefinitions schema)](actionname-element-in-arrayofactions-layoutdefinitions-schema.md)
 

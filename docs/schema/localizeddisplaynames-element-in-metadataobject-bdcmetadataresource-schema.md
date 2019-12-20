@@ -17,7 +17,7 @@ ms.assetid: 4d5bd20d-b6c3-d4bc-3141-33612e341aeb
 
 For more information, see [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md).
 
-**Namespace**:  http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**:  `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

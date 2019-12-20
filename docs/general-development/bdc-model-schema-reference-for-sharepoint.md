@@ -9,8 +9,7 @@ localization_priority: Normal
 
 
 # BDC model schema reference for SharePoint
-Contains reference documentation for the BDC model schema (BDCMetadata.xsd), which you can use to create external content types in SharePoint. 
- [BDCMetadata.xsd](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog)
+Contains reference documentation for the BDC model schema (BDCMetadata.xsd), which you can use to create external content types in SharePoint.
   
     
     
@@ -21,12 +20,8 @@ Contains reference documentation for the BDC model schema (BDCMetadata.xsd), whi
 
 Contains an access control entry (ACE) that specifies access rights for the parent element.
   
-    
-    
 See  [Business Connectivity Services security overview](https://technet.microsoft.com/library/ee661734%28office.14%29.aspx) to learn more about the Business Connectivity Services and security.
   
-    
-    
  **Namespace:** `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
   
     
@@ -435,7 +430,7 @@ The Association element links related external content types within a system. Fo
   
     
     
- **Namespace:** http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+ **Namespace:** `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
   
     
     

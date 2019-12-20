@@ -13,7 +13,7 @@ ms.assetid: 17fb7996-eca8-721e-aeea-17fedf29b16b
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-This section contains documentation for the [SolutionManifestDeclarativeExtensions schema (SolutionManifestDeclarativeExtensions.xsd)](http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions/). Explore the topics in this section to learn about each element in this schema.
+This section contains documentation for the **SolutionManifestDeclarativeExtensions schema (SolutionManifestDeclarativeExtensions.xsd)**. Explore the topics in this section to learn about each element in this schema.
 
 - [Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions schema)](actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md)
 
