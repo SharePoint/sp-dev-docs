@@ -34,7 +34,7 @@ The type for add-in URLs of an auto-deployed web application. If the add-in has 
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
+<td align="left"><p>`http://schemas.microsoft.com/sharepoint/2012/app/manifest`</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span class="label">Schema file</span></p></td>

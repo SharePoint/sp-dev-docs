@@ -30,7 +30,7 @@ Identifies a SharePoint Feature or capability that the add-in depends on, or an 
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
+<td align="left"><p>`http://schemas.microsoft.com/sharepoint/2012/app/manifest`</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Schema file</span></p></td>

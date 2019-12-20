@@ -28,7 +28,7 @@ ms.assetid: fdd507be-29c5-eeb1-3cc1-b821ed81472d
 <tbody>
 <tr class="odd">
 <td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
+<td align="left"><p>`http://schemas.microsoft.com/sharepoint/2012/app/manifest`</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="label">Schema file</span></p></td>
