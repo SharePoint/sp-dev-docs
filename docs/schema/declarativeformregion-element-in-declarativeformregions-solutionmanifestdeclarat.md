@@ -18,7 +18,7 @@ ms.assetid: 0cb3c1b0-96c7-0f7c-5451-3c60c5b5aca7
 The **DeclarativeFormRegion** element is used to describe the form region in which external data is displayed in Microsoft Outlook 2010.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

@@ -18,7 +18,7 @@ ms.assetid: 3cb10648-a1ac-9aba-5273-efc0aa34041c
 The **Layout** element is used to specify the location of the layout file that contains layout information for the external data part.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

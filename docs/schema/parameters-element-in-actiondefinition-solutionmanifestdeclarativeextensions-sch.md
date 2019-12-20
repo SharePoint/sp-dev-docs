@@ -18,7 +18,7 @@ ms.assetid: 70ecf495-6f5d-abb5-c8cc-a3c88faf186b
 The **Parameters** element lists all the parameters that an action accepts.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

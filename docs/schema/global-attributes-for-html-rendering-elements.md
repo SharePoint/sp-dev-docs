@@ -27,7 +27,7 @@ Universal attributes include the following.
   
 ### AutoHyperLink
 
-When **TRUE**, scans the rendering for strings that appear to be hyperlinks (for example, www.microsoft.com). When it finds these strings, it automatically adds an appropriate `<A>` tag around the text so that the user can follow the hyperlink. **HTMLEncode** is assumed **TRUE** when **AutoHyperLink** is set to **TRUE**.
+When **TRUE**, scans the rendering for strings that appear to be hyperlinks (for example, `www.microsoft.com`). When it finds these strings, it automatically adds an appropriate `<A>` tag around the text so that the user can follow the hyperlink. **HTMLEncode** is assumed **TRUE** when **AutoHyperLink** is set to **TRUE**.
     
 ### AutoNewLine
 

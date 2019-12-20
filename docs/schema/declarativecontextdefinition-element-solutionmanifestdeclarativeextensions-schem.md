@@ -18,7 +18,7 @@ ms.assetid: 3dbfc06e-ca4b-dd3e-b7ee-bc52803b3ee4
 The **DeclarativeContextDefinition** element derives from the **ContextDefinition** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to define a context for an external content type of **Outlook Item Type**, which this context definition group defines.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

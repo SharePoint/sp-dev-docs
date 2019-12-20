@@ -18,7 +18,7 @@ ms.assetid: 03145de9-325c-b108-cd24-14aaa890a0c8
 Lists the form regions in which external data will be displayed in Microsoft Outlook 2010.
 
 **Namespace**:
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

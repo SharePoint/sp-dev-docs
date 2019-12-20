@@ -18,7 +18,7 @@ ms.assetid: 83b560be-7aef-fb36-616d-16217334cf92
 The **CodeMethodAction** element is used to execute a URL-based action in Microsoft Outlook 2010.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

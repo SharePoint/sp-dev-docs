@@ -18,7 +18,7 @@ ms.assetid: a8155b3f-7afd-ee92-af0d-64ac1452d539
 The **Picture** element is used to describe the icon to use for a form region in Microsoft Outlook 2010.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

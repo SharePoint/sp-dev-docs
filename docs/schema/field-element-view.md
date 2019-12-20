@@ -41,8 +41,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**AutoHyperLink** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, www.microsoft.com).  <br/> |
-|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, www.microsoft.com) but without HTML encoding.  <br/> |
+|**AutoHyperLink** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, `www.microsoft.com`).  <br/> |
+|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.  <br/> |
 |**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (`&nbsp;`).  <br/> |
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
 |**Name** <br/> |Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example,  `<Field Name="`_ID_`"/>`).  <br/> |
