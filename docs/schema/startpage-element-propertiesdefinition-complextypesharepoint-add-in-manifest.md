@@ -59,6 +59,12 @@ If the add-in uses OAuth, the domain part of the StartPage value must exactly ma
 
 ## Element information
 
+|   |   |
+|---|---|
+| **Element type**  | UrlElementDefinition |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
+
 <table>
 <colgroup>
 <col width="50%" />

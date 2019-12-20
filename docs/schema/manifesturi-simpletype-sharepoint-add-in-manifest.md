@@ -20,6 +20,12 @@ ms.assetid: a6861f44-9d24-40f6-efc5-89033c101b4d
 
 ## Type information
 
+|   |   |
+|---|---|
+| **Base type**  | xs:anyURI |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
+
 <table>
 <colgroup>
 <col width="50%" />

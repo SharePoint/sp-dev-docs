@@ -23,26 +23,11 @@ only, with no spaces, up to 64 characters long.
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Base type</span></p></td>
-<td align="left"><p>xs:token</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>`http://schemas.microsoft.com/sharepoint/2012/app/manifest`</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>appmanifest.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Base type**  | xs:token |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
 
 ## Definition
 
@@ -55,10 +40,3 @@ only, with no spaces, up to 64 characters long.
         </xs:restriction>
     </xs:simpleType>
 ```
-
-
-
-
-
-
-

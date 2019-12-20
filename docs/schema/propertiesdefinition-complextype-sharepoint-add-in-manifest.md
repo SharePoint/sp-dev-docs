@@ -20,26 +20,11 @@ ms.assetid: 2c430e31-cb39-7c9a-67fa-1e584068245f
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>`http://schemas.microsoft.com/sharepoint/2012/app/manifest`</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>appmanifest.xsd</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Extension base</span></p></td>
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
+| **Extension base**  | None |
 
 ## Definition
 
