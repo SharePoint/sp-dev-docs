@@ -228,6 +228,7 @@ This example demonstrates an alternate syntax to express a conditional expressio
 ```
 
 Here's the same sample from above, using the Excel-style expression syntax:
+
 ```JSON
 {
    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
@@ -274,6 +275,7 @@ To compare a date/time field value against another date constant, use the `Date(
 ```
 
 Here's the same sample from above, using the Excel-style expression syntax:
+
 ```JSON
 {
    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
@@ -456,6 +458,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 ```
 
 Here's the same sample from above, using the Excel-style expression syntax:
+
 ```JSON
 {
     "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
@@ -527,9 +530,11 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#button-elements) portion of the Detailed syntax reference for more details.
 
 ## Formatting multi-value fields
+
 You can use column formatting to apply styles to each member of a multi-value field of type Person, Lookup and Choice.
 
 ### Basic text formatting
+
 The following image shows an example of multi-value field formatting applied to a Person field.
 
 ![List of buttons that notifies all assignees of each item, first row is empty, second row reads "Send email to Loyd Barham", third row reads "Send email to all 3 members"](../images/sp-columnformatting-multi-value-0.png)
@@ -585,6 +590,7 @@ This example uses the `length` operator to detect the number of members of the f
 ```
 
 ### Simple HTML elements formatting
+
 The following image shows an example of constructing a simple sentence from the values of a multi-value Lookup field.
 
 ![Screenshot of a field reads "North America, APAC, and Europe"](../images/sp-columnformatting-multi-value-1.png)
@@ -830,6 +836,7 @@ Any other value will result in an error.
 }
 
 ```
+
 - **share**:  Clicking the button will open the sharing dialog. Below is an example of this type of button.
 
 ```JSON
@@ -843,6 +850,7 @@ Any other value will result in an error.
 }
 
 ```
+
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
@@ -858,11 +866,11 @@ Any other value will result in an error.
   }
 }
 ```
+
 The `actionParams` attribute can have the following options when using the `executeFlow` action:
 - **id**: ID of the Flow to launch _(required)_
 - **headerText**: Sets the text at the top of the flow panel _(optional)_
 - **runFlowButtonText**: Sets the text of the primary button in the flow panel _(optional)_
-
 
 ### txtContent
 
@@ -1045,6 +1053,7 @@ The following example shows the value of a style object. In this example, two st
 ```
 
 Here's the same sample from above, using the Excel-style expression syntax:
+
 ```JSON
 {
    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
@@ -1306,8 +1315,6 @@ Operators specify the type of operation to perform. The following operators are 
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 
-  
-  
 **Conditional operator** - The conditional operator is:
 
 - **?**: Conditional operations written in Abstract Tree Syntax use `?` as the operator. This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c. For Excel style expressions you write these with an `if` statement. Regardless, there are 3 operands. The first is the condition to evaluate. The second is the result when the condition is true. The third is the result when the condition is false.
@@ -1412,7 +1419,8 @@ The location field object has the following properties (with example values):
 }
 ```
 
-> [!NOTE] Location fields do not currently have a "Format this column" option in the list view and formats applied directly to these fields will need to be done through field settings.
+> [!NOTE] 
+> Location fields do not currently have a "Format this column" option in the list view and formats applied directly to these fields will need to be done through field settings.
 
 <br/>
 
@@ -1452,7 +1460,7 @@ The following example shows how a location field might be used on a current fiel
     }
   ]
 }
-``` 
+```
 
 
 **Lookup fields**
@@ -1486,7 +1494,7 @@ The following example shows how a lookup field might be used on a current field.
       "target": "_blank"
    }
 }
-``` 
+```
 
 **Hyperlink fields**
 
@@ -1514,9 +1522,9 @@ The following example shows how a hyperlink field might be used on a current fie
       "target": "_blank"
    }
 }
-``` 
+```
 
-#### "[$FieldName]" 
+#### "[$FieldName]"
 
 The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceeded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
 
@@ -1557,6 +1565,7 @@ This field can be used to display the current user's email address, but more lik
 ```
 
 Here's the same sample from above, using the Excel-style expression syntax:
+
 ```JSON
 {
    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
@@ -1577,6 +1586,7 @@ This will evaluate to the current date and time.
 This will evaluate to the rendered index of a row within a view. This value is based on render position and will remain consistent based on position even as views are sorted and filtered. Indexes start at 0. This value is only available in SharePoint Online.
 
 Here's an example of using the value within a view format to apply alternating styles to rows:
+
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
