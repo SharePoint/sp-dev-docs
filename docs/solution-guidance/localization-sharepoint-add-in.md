@@ -13,8 +13,7 @@ The approach you take to implement localization for Add-ins is different in the 
 
 In an SharePoint Add-in model scenario, you use JavaScript or the localization capabilities associated with the web technology you build your Add-ins with to implement localization. Depending on the localized resource, you might also use classic resources files, for example when you need to lozalize elements deployed to add-in web using feature framework elements in the add-in definition.
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for implementing localization.
 

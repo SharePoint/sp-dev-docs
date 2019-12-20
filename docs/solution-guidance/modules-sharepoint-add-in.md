@@ -25,8 +25,7 @@ The term *artifacts* is referred to throughout this article. Artifacts refers to
 - Page Layouts
 - List Items
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines to deploy artifacts to SharePoint environments.
 

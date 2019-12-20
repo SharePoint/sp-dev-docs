@@ -19,8 +19,7 @@ These are called as *Remote Event Receivers (RER)*. In this scenario, the event 
 >**Important**
 >As of January 2017 SharePoint Online does support list webhooks which you can use instead of "-ed" remote event receivers. Checkout [Overview of SharePoint webhooks](https://dev.office.com/sharepoint/docs/apis/webhooks/overview-sharepoint-webhooks) to learn more about webhooks. Also note that several webhook samples are available from the [sp-dev-samples](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples) GitHub repository.
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for creating event receivers.
 

@@ -15,8 +15,7 @@ In a SharePoint Add-in model scenario, MMS CRUD operations are performed with th
 
 **The CSOM provides all of the operations necessary to replicate and synchronize data in the MMS.**
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we recommend the following high-level guidelines for performing MMS CRUD operations.
 

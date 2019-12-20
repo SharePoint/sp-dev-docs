@@ -17,8 +17,7 @@ The major difference between the two models is server-side code versus client-si
 
 Additionally, in the SharePoint Add-in model, because code is executed via clients there could be long delays before a response is received. Caching data for long running operations (like the User Profile APIs) can reduce the amount of time it takes to return information or receive confirmation a process is complete.
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines to ensure optimal performance with SharePoint in the new SharePoint Add-in model.
 

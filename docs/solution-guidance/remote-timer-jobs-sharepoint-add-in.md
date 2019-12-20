@@ -13,8 +13,7 @@ The approach you take to implement timer jobs is different in the new SharePoint
 
 In the SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for creating timer jobs.
 

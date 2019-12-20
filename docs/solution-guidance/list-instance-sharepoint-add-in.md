@@ -13,8 +13,7 @@ The approach you take to create list instances is different in the new SharePoin
 
 In a SharePoint Add-in model scenario, the remote provisioning pattern is used to create list instances.
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines to create list instances.
 

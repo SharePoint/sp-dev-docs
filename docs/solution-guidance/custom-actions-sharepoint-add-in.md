@@ -13,8 +13,7 @@ The approach you take to modify list item menus and the ribbon in SharePoint is 
 
 In an SharePoint Add-in model scenario, you use the SharePoint Client-side Object Model (CSOM) or REST API to create custom actions that modify list item menus and the ribbon. This pattern is commonly referred to as the *remote provisioning pattern*.
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for creating and deploying custom actions in the new SharePoint Add-in model.
 

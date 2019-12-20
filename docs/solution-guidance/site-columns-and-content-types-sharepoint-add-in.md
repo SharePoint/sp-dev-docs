@@ -13,8 +13,7 @@ The approach you take to create site columns and content types in SharePoint sit
 
 In an SharePoint Add-in model scenario, you use the SharePoint Client Side Object Model (CSOM) or SharePoint REST APIs to create site columns and content types.
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we recommend the following high-level guidelines for creating site columns and content types.
 

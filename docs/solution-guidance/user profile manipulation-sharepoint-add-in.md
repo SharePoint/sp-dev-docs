@@ -13,8 +13,7 @@ The approach you take to perform Create, Read, Update and Delete (CRUD) operatio
 
 In a SharePoint Add-in model scenario, UPS CRUD operations are performed with the client-side object model (CSOM) or the User Profile web service.  
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we recommend the following high-level guidelines for performing UPS CRUD operations.
 

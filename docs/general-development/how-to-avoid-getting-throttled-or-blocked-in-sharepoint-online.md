@@ -8,6 +8,7 @@ localization_priority: Priority
 
 
 # Avoid getting throttled or blocked in SharePoint Online
+
 Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample CSOM and REST code you can use to make your task easier.
 
 -  [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whatisthrottling)
@@ -37,7 +38,6 @@ SharePoint Online uses throttling to maintain optimal performance and reliabilit
   
 That said, it is extremely rare for a user to get throttled in SharePoint Online. The service is robust, and it is designed to handle very high volume. If you do get throttled, 99% of the time it is because of custom code. That doesn't mean that there aren't other ways to get throttled, just that they are less common. For example you spin up 10 machines and have a sync client going on all 10. On each sync 1TB of content. This would likely get you throttled.
   
-
 ![How throttling happens](../images/3b9184db-99a4-416e-ba1e-7f8653484cee.png)
   
 ### What happens when you get throttled in SharePoint Online?
@@ -265,7 +265,7 @@ public class MaximumRetryAttemptedException : Exception
 }
 ```
 
-# What should you do if you get blocked in SharePoint Online?
+## What should you do if you get blocked in SharePoint Online?
 <a name="BKMK_Whatshouldyoudoifyougetblocked"> </a>
 
 Blocking is the most extreme form of throttling. We rarely ever block a tenant, unless we detect long-term, extremely excessive traffic that may threaten the overall health of the SharePoint Online service. We apply blocks to prevent excessive traffic from degrading the performance and reliability of SharePoint Online. A block - which is usually placed at the app or user level - prevents the offending process from running until you fix the problem. If we block your subscription, you must take action to modify the offending processes before the block can be removed.

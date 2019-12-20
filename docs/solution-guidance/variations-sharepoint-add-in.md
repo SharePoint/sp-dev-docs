@@ -13,8 +13,7 @@ The approach you take to configure variations is different in the new SharePoint
 
 In an SharePoint Add-in model scenario, you use the SharePoint Client-side Object Model (CSOM) or REST API to configure variations. This pattern is commonly referred to as the *remote provisioning pattern*.
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines to configure variations in the new SharePoint Add-in model.
 

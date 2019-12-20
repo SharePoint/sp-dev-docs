@@ -13,8 +13,7 @@ The approach you take to implement custom controls in your code is different in 
 
 In a SharePoint Add-in model scenario, the JavaScript is embedded in SharePoint pages to implement custom controls.
 
-High-level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for creating custom controls in the new SharePoint Add-in model.
 
