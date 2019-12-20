@@ -7,7 +7,6 @@ localization_priority: Priority
 ms.custom: scenarios:getting-started
 ---
 
-
 # Set up your Office 365 tenant
 
 To build and deploy client-side web parts using the SharePoint Framework, you need an Office 365 tenant.
@@ -21,7 +20,7 @@ If you don't have one, you can get an Office 365 developer subscription when you
 
 ## Create app catalog site
 
-You need an app catalog to upload and deploy web parts. If you've already set up an app catalog, see [create a new developer site collection](#create-a-new-developer-site-collection).
+You need an app catalog to upload and deploy web parts. If you've already set up an app catalog, see [Create app catalog sites](#create-app-catalog-site).
 
 ### To create an app catalog site
 
