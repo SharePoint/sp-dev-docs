@@ -38,21 +38,19 @@ The following video walks through the code sample.
 
 - [Information management policy with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Information-management-policy-wtih-app-model)
 
-Related links
-=============
+## Related links
 - [Information management policy with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Information-management-policy-wtih-app-model)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Governance.ContentTypeEnforceRetention (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Governance.ContentTypeEnforceRetention)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

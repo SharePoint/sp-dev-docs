@@ -234,8 +234,7 @@ The following code example demonstrates how to execute searches with the SharePo
 	        }
 	    );
 
-Related links
-=============
+## Related links
 - [How to perform personalized search queries with CSOM (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-perform-personalized-search-queries-with-CSOM)
 - [EmployeeDirectory (OfficeDev Training Content)](https://github.com/OfficeDev/TrainingContent/blob/master/Archive/O3656/O3656-6%20Deep%20Dive%20into%20Search%20Scenarios%20in%20Office%20365/Demos/EmployeeDirectory)
 - [How to build SharePoint add-ins that leverage search (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/How-to-build-SharePoint-add-ins-that-leverage-search)
@@ -243,13 +242,12 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 - [Search.PersonalizedResults (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

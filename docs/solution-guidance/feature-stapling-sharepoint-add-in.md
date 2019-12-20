@@ -92,8 +92,7 @@ In this pattern you use the SharePoint Client Side Object Model (CSOM) to create
 	+ Full automation is only possible with Add-ins that have full tenant permission that have already been trusted.
 		+ See the [Core.Sideloading (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SideLoading) for an example. 
 
-Related links
-=============
+## Related links
 - [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](https://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
 - [SharePoint 2013 App Deployment through 'App Stapling' (MSDN Blog Article - Richard DiZerega)](https://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/09/18/10399333.aspx)
 - [Site Provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)
@@ -102,8 +101,7 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Provisioning.Cloud.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.Cloud.Sync)
 - [Provisioning.SubSiteCreationApp (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SubSiteCreationApp)
@@ -111,8 +109,8 @@ Related PnP samples
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

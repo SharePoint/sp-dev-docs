@@ -122,8 +122,7 @@ As you develop custom client-side rendering components, keep in mind the followi
 	~sitecollection/Style Library/JSLink-Samples/MainLibrary.js|~sitecollection/Style Library/JSLink-Samples/SpecificField.js**(d)**
 	```
 
-Related links
-=============
+## Related links
 - [SPField.JSLink property (MSDN API Docs)](https://msdn.microsoft.com/library/microsoft.sharepoint.spfield.jslink.aspx)
 - [Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 (Tobias Zimmergren)](http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013)
 - [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/magazine/dn745867.aspx)
@@ -131,15 +130,14 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Branding.ClientSideRendering (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
 - [Branding.JSLink (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.JSLink)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

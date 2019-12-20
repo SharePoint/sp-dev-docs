@@ -119,8 +119,7 @@ Hybrid Environments
 
 In a scenario where you have both on-premises and Office 365 SharePoint environments and User Profile Information needs to be maintained in both environments you can use a combination of the User Profile Web Service and the CSOM to provide you the ability to perform CUD operations on UPS data.
 
-Related links
-=============
+## Related links
 - [User profile CSOM for reading and updates (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/User-profile-CSOM-for-reading-and-updates)
 - [Remote timer jobs (SharePoint Add-in Model Recipe)](remote-timer-jobs-sharepoint-add-in.md)
 - [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/library/hh147510.aspx)
@@ -128,16 +127,15 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 - [Core.UserProfilePropertyUpdater (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfilePropertyUpdater)
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 - [UserProfile.Manipulation.CSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
 - [Core.UserProfiles.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfiles.Sync) 
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

@@ -38,22 +38,20 @@ The following sample demonstrates how to add a custom action to the site setting
 	
 	![The Modify Site popup window is displayed with a check box group named Lists which contains two check boxes, Projects and Contacts. Below Lists is a check box group named Various which contains the check box named Apply theme. Below this are two buttons named Confirm and Cancel.](media/Recipes/CustomActions/Custom-Action-Popup-Menu.png)
 
-Related links
-=============
+## Related links
 
 - [User controls and Web controls (SharePoint Add-in Recipe)](user-controls-and-web-controls-sharepoint-add-in.md)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Provisioning.SiteModifier (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteModifier)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

@@ -3,22 +3,20 @@ title: OneDrive for Business customization in the SharePoint Add-in model
 ms.date: 11/03/2017
 localization_priority: Normal
 ---
-OneDrive for Business customization in the SharePoint Add-in model
+# OneDrive for Business customization in the SharePoint Add-in model
 ==================================================================
 
-Summary
--------
+## Summary
 
 The approach you take to customize OneDrive for Business sites in the new SharePoint Add-in model is different than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration website.  SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
 
 In an SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
 
-Why would you customize OneDrive for Business sites?
-----------------------------------------------------
+## Why would you customize OneDrive for Business sites?
+
 There are numerous different aspects on applying customization to OneDrive for Business (OD4B) sites. You certainly can customize these sites, since they are SharePoint sites, but at the same time you should always consider the short and long term impact of the customization.
 
-High Level Guidelines
----------------------
+## High Level Guidelines
 
 As a rule of a thumb, we would like to provide the following high level guidelines for customizing OD4B sites.
 
@@ -38,8 +36,7 @@ Here’s an example of OD4B site, which has been customized using above guidelin
 
 ![A view of a finished custom OD4B site.](media/Recipes/OD4BCustomization/OD4B-branded.png)
 
-Challenge with applying OneDrive for Business site customizations
------------------------------------------------------------------
+## Challenge with applying OneDrive for Business site customizations
 
 Let’s start with defining what is the challenge and what are we trying to solve here. Technically each OneDrive for Business site is currently using identical architecture as what the personal or my sites used  back in SharePoint 2007 or 2010 version. This means that technically each OneDrive for Business site is their own site collection and we do not have any centralized location to apply branding or any other customizations.
 
@@ -49,8 +46,7 @@ Classic solution to apply needed configuration to the OneDrive for Business site
 
 In Office 365 there is no centralized event raised, which we could attach our custom code to when OD4B site is created. This means that we need to think about alternative solutions, which is quite common with app model approaches. Do not get stuck on old models, think about how to achieve same end result using new APIs and technologies. From pure requirement perspective, it does not really matter how we apply the customizations to the sites, as long as they are applied, since business requirement is not to use feature stapling, it’s about applying needed customizations using whatever supported technical mechanism.
 
-Different options for applying customization
-============================================
+## Different options for applying customization
 
 In practice we do have four different mechanisms to apply centralized customization to OD4B sites in the Office 365. You could also consider manual option as the fifth one, but in the case of having hundreds or thousands of OD4B sites, using manual options is not really a realistic option. Here’s the different options we have.
 
@@ -61,8 +57,7 @@ In practice we do have four different mechanisms to apply centralized customizat
 
 Each of the options have advantages and disadvantages in them and the right option depends on your detailed business requirements. Some of the settings you can also apply from the Office 365 suite level, but often you would be looking for some more specifics, so actual customizations are needed. It obviously all comes down on exact requirements and business case analyses on their impact on short and long term.
 
-Office 365 suite level settings
--------------------------------
+### Office 365 suite level settings
 
 Office 365 is much more than just SharePoint, like you know. You can find more and more additional services which are not based on even the SharePoint architecture, like Delve, Yammer and many upcoming services. This means that the enterprise branding and configuration is not just about controlling what we have in the SharePoint sites, rather we should be thinking the overall end user experience and how we provide consistent configurations cross different services.
 
@@ -74,8 +69,7 @@ Following picture shows the different settings right now for the Office 365 them
 
 Since by default Office 365 theme settings are for controlling OD4B site suite bar, you will most likely be using this options together with other options to ensure that you can provide at least the right branding elements cross your OD4B sites. Notice that when you change for example Office 365 theme settings in Office 365 admin tool, it does take a quite a long time to get the settings applied for OD4B sites, so be patience.
 
-Hidden app part with user context
----------------------------------
+### Hidden app part with user context
 
 This is an approach where use centralized landing page as the location for starting the needed customization process. This means that you would have to have one centralized location, like company intranet front page, where the users are always landing when they open up their browser. This is pretty typical process with midsized and larger enterprises where corporate landing page is then controlled using group policy settings in the AD. This will ensure that end users cannot override default welcome page of the company domain joined browsers.
 
@@ -94,8 +88,7 @@ This is definitely the most reliable process of ensuring that there’s right co
 
 If you are familiar of classic SharePoint development models with farm solutions, this is pretty similar process as one time executing timer jobs.
 
-Pre-create and apply configuration
-----------------------------------
+### Pre-create and apply configuration
 
 This option relies on the pre-creation of the OD4B sites before users will access them. This can be achieved by using [relatively new API](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.OneDriveProvisioning) which provides us away to create OD4B sites for specific users in batch process, using either CSOM or REST. Needed code can be initiated using a PowerShell script or by writing actual code which is calling the remote APIs.
 
@@ -106,8 +99,7 @@ This option relies on the pre-creation of the OD4B sites before users will acces
 
 In some sense this is also really reliable process, but you would have to manage new persons and updates “manually”, which could mean more work then using the *hidden app part* approach. This is definitely valid approach which can be taken and especially useful if you are migrating from some other file sharing solution to the OD4B and want to avoid the need of end users to access the OD4B site once, before actuals site creation is started.
 
-Remote timer job based on user profile updates
-----------------------------------------------
+### Remote timer job based on user profile updates
 
 This approach means scanning through user profiles for checking to whom the OD4B site has been created and then apply the changes to the sites as needed. This would mean scheduled job running outside of the SharePoint, which will periodically check the status and perform needed customizations. Scheduled job could be running as a WebJob in Azure or as simple as PowerShell script scheduled in your own windows scheduler. Obviously the scale of the deployment has huge impact on the chosen scheduling option.
 
@@ -118,8 +110,7 @@ This approach means scanning through user profiles for checking to whom the OD4B
 
 One of the key downsides of this option is that there can clearly be a situations where user can access the OD4B sites before the customizations have been applied. At the same time this option is interesting add-on for other options to ensure that end users have not changed any of the required settings on the sites or to check that the OD4B site content aligns with the company policies.
 
-Enhanced app part based customization
--------------------------------------
+### Enhanced app part based customization
 
 Here's more detailed description of enhanced app part based customizations, which seems to be the typical approach for applying and managing needed customizations to the OD4B sites. Source code and additional details on this solution is available from the [Office 365 Developer Patterns and Practices guidance](https://aka.ms/officedevpnp).
 
@@ -277,8 +268,7 @@ When customization is applied to the site, we will set the applied customization
 
 This is relatively simple process, but will significantly reduce the required resources from Azure and will also reduce unnecesasrey remote operations towards Office 365, which will have positive performance impact.
 
-Needed configuration in Azure
------------------------------
+### Needed configuration in Azure
 
 Key requirement for this sample to work properly is that you have created Azure Storage Data Service and you have updated storage connection strings accordingly for the projects, which are using them. You can simply create as storage service from the Azure administration portal (manage.windowssazure.com), by selecting **New –> Data Services –> Storage –> Quick Create**. After this you will just need to define name, location and few other settings and you are good to go.
 
@@ -296,8 +286,7 @@ WebJob project has two keys, which can be updated to point to the same connectio
 
 ![The App.config file is open in Visual Studio at the appSettings element. Two child elements named Add are listed under the appSettings element. For the first Add element, the attribute key=ClientId and the value attribute is equal to a pair of double-quotes. For the second Add element, the attribute key=ClientSecret and the value attribute is also equal to a pair of double-quotes.](media/Recipes/OD4BCustomization/app-config.png)
 
-Reference solution structure
-----------------------------
+## Reference solution structure
 
 This Visual Studio solution consists from quite a few solutions, but each of them have pretty reasonable reason to be there. Here’s introduction to each of the projects in the solution and why they exists or what they are for.
 
@@ -417,8 +406,7 @@ This is the actual provider hosted app which is hosted in Microsoft Azure. It co
 
 *Notice. If you will face permission denied issues with the WebJob or app only access in general, make sure that you have updated app client id and secret in the app.config to match the values in the web.config from this project. Visual Studio can change these values in certain scenarios.* 
 
-Queue processing in WebJob
---------------------------
+## Queue processing in WebJob
 
 Using the storage queues is really straight forward with the APIs available from Azure. Easiest way to get started is to use the '*Windows Azure Storage*' Nuget package, which will associate all needed APIs and other packages to your project. After you have added this Nuget package, you can simply start using the storage queue APIs for the processing. Following is snippet from the *OD4B.Configuration.Async.Common* project (AddConfigRequestToQueue method in SiteModificationManager class), which contains actual queue message handling code and is used from numerous projects (provided easier development time debugging).
 
@@ -511,13 +499,11 @@ It is also good to notice that we do indeed upload new version of the JS to root
 
 Obviously the needed operations are highly dependent on your business requirements. You can find multiple different patterns and approaches with CSOM based operations from the [Office 365 Developer Patterns and Practices](https://aka.ms/officedevpnp).
 
-Additional notes on WebJob based solutions
-==========================================
+## Additional notes on WebJob based solutions
 
 Here’s few additional notes related on WebJob development in Azure. This is extremely powerful technique which will be definitely used widely cross Office 365 customizations. You will certainly see new and enhanced solutions based on the WebJob technology be added to the Office 365 Developer Patterns & Practices program as well.
 
-Debugging WebJob and customization process
-------------------------------------------
+### Debugging WebJob and customization process
 
 One of the good practices for your code in general is to locate the actual operations outside of the actual final executing process, so that you can first concentrate on testing needed code easily simply by using console application or for example with test projects in the Visual Studio. This way you can ensure that the actual business logic is fully functionality before you actually hook that to the final process, in this case meaning the WebJob. In this reference solution case we placed all the business code to the OD4B.Configuration.Async.Common.SiteModificationManager class and we call that from numerous locations.
 
@@ -529,8 +515,7 @@ One of the great improvements from the debugging perspective for the WebJobs was
 
 There’s even a tester for sending rightly formatted messages to the queue in the reference solution. *OD4B.Configuration.Async.Console.SendMessage* project was created simply to have the opportunity to debug the WebJob process without being forced to deploy the app part to anywhere. This came back again on debugging and testing the whole process step-by-step.
 
-WebJob environment variables
-----------------------------
+### WebJob environment variables
 
 One of the interesting things about the WebJobs are that they are running under a Azure websites, but their execution location is slightly different than normal websites in Azure. What I mean with this is that if you deploy any additional files or assets together with the WebJob to the Azure, you might run into challenges if you assume that you can reference those assets directly using classic relative paths in the WebJob code.
 
@@ -551,28 +536,26 @@ Since WebJobs are however executed in different location and not in the context 
 
 There are also few other environment variables for WebJobs, which might help you. You can check the different environment variables using code and there’s good references in the GitHub for [this](https://gist.github.com/sayedihashimi/831d8883cdf1d23823f3).
 
-Video demonstrating the solution and the actions
-================================================
+## Video demonstrating the solution and the actions
 
 [Here’s a video](http://video.ch9.ms/ch9/053b/3496f324-dc88-4e1f-937f-e1a177fc053b/OD4BCustomizer_high.mp4) showing the solution in practice, including explanation of the solution structures and how you would use it in your Office 365 environment to modify OneDrive for Business sites.
 
-Related links
-=============
+## Related links
+
 - [Customize OneDrive for Business sites](customize-onedrive-for-business-sites.md)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [OD4B.Configuration.Async (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/OD4B.Configuration.Async)
 - [Provisioning.OneDriveProvisioning (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.OneDriveProvisioning)
 - [Office PnP Core component](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

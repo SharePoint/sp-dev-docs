@@ -64,8 +64,7 @@ The following articles describes how to localize Provider-hosted Add-ins with re
 - [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx)
 - [Localize the add-in web, host web, and remote components of an add-in  (MSDN Code Sample)](https://code.msdn.microsoft.com/office/SharePoint-2013-Bookstore-328060fc)
 
-Related links
-=============
+## Related links
 
 - [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx)
 - [Localize the add-in web, host web, and remote components of an add-in  (Office Dev GitHub sample)](https://github.com/OfficeDev/SharePoint-Add-in-Localization)
@@ -73,14 +72,13 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [VariationsExtensions.cs class (O365 PnP Sample)](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/VariationExtensions.cs)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

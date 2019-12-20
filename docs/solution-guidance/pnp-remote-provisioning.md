@@ -16,7 +16,7 @@ In order for you to create a repeatable process, with known parameters, the [Sha
 
 See the following resources for more information:
 
-# PnP Remote Provisioning vs Site Designs and Site Scripts
+## PnP Remote Provisioning vs Site Designs and Site Scripts
 
 The general recommendation is that if you can provision your artifacts with Site Scripts then you should go for Site Scripts. Keep in mind though that the PnP Provisioning Engine extends beyond the scope of just site collection artifacts and moves into the territory of provisioning Tenant scoped artifacts.
 

@@ -24,20 +24,18 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 
 See the [User controls and web controls (SharePoint Add-in Model Recipe)](user-controls-and-web-controls-sharepoint-add-in.md) to learn how to embed JavaScript to all SharePoint pages with custom user actions and how to embed JavaScript directly into page layouts and master pages.
 
-Related links
-=============
+## Related links
 - [Cross site collection navigation (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

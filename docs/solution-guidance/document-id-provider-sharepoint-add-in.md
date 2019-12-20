@@ -87,8 +87,7 @@ In this pattern, a background process checks documents in SharePoint to determin
 
 The [Remote Timer Jobs (SharePoint Add-in Recipe)](remote-timer-jobs-sharepoint-add-in.md) describes how to implement remote timer jobs in the Add-in model and provides links to several samples and articles.
 
-Related links
-=============
+## Related links
 - [Event Receivers and List Event Receivers (SharePoint Add-in Recipe)](event-receiver-and-list-event-receiver-sharepoint-add-in.md)
 - [Search Configuration (SharePoint Add-in Recipe)](search-configuration-sharepoint-add-in.md)
 - [Remote Timer Jobs (SharePoint Add-in Recipe)](remote-timer-jobs-sharepoint-add-in.md)
@@ -96,14 +95,13 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

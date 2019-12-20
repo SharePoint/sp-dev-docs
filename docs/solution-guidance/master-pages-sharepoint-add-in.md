@@ -72,8 +72,7 @@ This option works well when your branding needs are very specific or you are usi
 - Custom master pages may be uploaded and assigned to a SharePoint site via the remote provisioning pattern as well.
 	+ See the [Modules (SharePoint Add-in Recipe)](modules-sharepoint-add-in.md) and [Site Provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md) for more deployment details and additional samples.
 
-Related links
-=============
+## Related links
 - [Modules (SharePoint Add-in Recipe)](modules-sharepoint-add-in.md)
 - [Site Provisioning (SharePoint Add-in Recipe)](site-provisioning-sharepoint-add-in.md)
 - [Branding SharePoint Sites (SharePoint Add-in Recipe)](branding-sharepoint-sites-sharepoint-add-in.md)
@@ -82,8 +81,7 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Theme management using CSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.DeployCustomThemeWeb)
 - [AlternateCSSUrl and SiteLogoUrl Properties in the web object (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
@@ -92,8 +90,8 @@ Related PnP samples
 - [Making out-of-the-box Seattle master responsive (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.InjectResponsiveCSS)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

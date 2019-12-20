@@ -74,22 +74,20 @@ The following sample demonstrates how to build a synchronization tool for MMS da
 
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 
-Related links
-=============
+## Related links
 - [SharePoint 2013: Synchronize term sets with the term store (CSOM)](https://code.msdn.microsoft.com/office/SharePoint-2013-Synchronize-d40638d1)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Core.MMS (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS)
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

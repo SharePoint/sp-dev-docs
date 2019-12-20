@@ -173,16 +173,14 @@ The following articles describe the OAUth authentication pattern and provide cod
 - [Core.TimerJobs.Samples (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
 	+ Excellent code samples encompassing 10 different examples. *Note: Not all ten code examples are applicable to the OAUth authentication pattern.*
 
-Related links
-=============
+## Related links
 - [Azure WebJob resources (Azure Documentation)](https://azure.microsoft.com/documentation/articles/websites-webjobs-resources/)
 - [Deploy WebJobs using Visual Studio (Azure Documentation)](https://azure.microsoft.com/documentation/articles/websites-dotnet-deploy-webjobs/)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SimpleTimerJob)
 - [Core.TimerJobs.Samples (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
@@ -190,8 +188,8 @@ Related PnP samples
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

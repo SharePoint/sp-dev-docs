@@ -30,21 +30,19 @@ The following sample demonstrates how to import and export search settings betwe
 
 - [Core.SearchSettingsPortability (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SearchSettingsPortability)
 
-Related links
-=============
+## Related links
 
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Core.SearchSettingsPortability (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SearchSettingsPortability)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

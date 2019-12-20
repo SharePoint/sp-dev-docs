@@ -73,15 +73,13 @@ In this pattern, JavaScript is embedded directly in custom master pages.
 
 When you need to embed JavaScript on a per master page basis, this is a good option because it allows you to control which master pages the JavaScript is embedded in.
 
-Related links
-=============
+## Related links
 - [Cross site collection navigation (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 - [Core.EmbedJavaScript (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScript)
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
 - [Core.EmbedJavaScript.WeekNumbers (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScript.WeekNumbers)
@@ -89,8 +87,8 @@ Related PnP samples
 - [Core.JavaScriptCustomization (O365 PnP Scenario using PnP Core component)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

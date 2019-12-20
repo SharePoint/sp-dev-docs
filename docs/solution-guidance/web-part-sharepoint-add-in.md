@@ -42,8 +42,7 @@ The following video walks you through the code sample.
 
 - [Core.AppScriptPart (O365 PnP Video)](https://channel9.msdn.com/Blogs/Office-365-Dev/App-Script-Parts-in-SharePoint-Office-365-Developer-Patterns-and-Practices)
 
-Related links
-=============
+## Related links
 
 - [Introducing app script part pattern for Office365 app model (MSDN Blog Article)](https://blogs.msdn.com/b/vesku/archive/2014/07/08/introducing-app-script-part-pattern-for-office365-app-model.aspx)
 - [Core.AppScriptPart (O365 PnP Video)](https://channel9.msdn.com/Blogs/Office-365-Dev/App-Script-Parts-in-SharePoint-Office-365-Developer-Patterns-and-Practices)
@@ -51,15 +50,14 @@ Related links
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Core.AppPartPropertyUIOverride (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppPartPropertyUIOverride)
 - [Core.AppScriptPart (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppScriptPart)
 - Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+# Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises
