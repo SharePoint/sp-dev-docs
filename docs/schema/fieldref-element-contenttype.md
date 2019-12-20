@@ -248,7 +248,8 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fieldrefs-element-contenttype.md">FieldRefs Element (ContentType)</a></span></p></td>
+<td align="left"><p><span sdata="link">
+<a href="fieldrefs-element-contenttype.md">FieldRefs Element (ContentType)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -275,16 +276,13 @@ The following sections describe attributes, child elements, and parent elements.
 The **FieldRef** element is a reference to a column defined elsewhere, either at the site or list level. In the field reference, you can override a subset of the column properties, such as the following:
 
 - Display name
-
 - XML promotion and demotion attributes
-
 - Whether the field is read-only, required, or hidden
 
 Changing these properties in the field reference changes them only as they apply to the specific content type that contains the field reference.
 
 > [!IMPORTANT] 
 > The **ID**, **Name**, **DisplayName**, and **Required** attributes are always required, even when the **FieldRef** element references a field that is defined in the same element manifest.
-
 
 ## Example
 
@@ -304,11 +302,3 @@ The following example shows two **FieldRef** elements specifying columns to incl
 - [Content Type Definitions](content-type-definitions.md)
 - [Fields and Field References](https://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
 - [SPFieldLink](https://msdn.microsoft.com/library/office/microsoft.sharepoint.spfieldlink.aspx)
-
-
-
-
-
-
-
-
