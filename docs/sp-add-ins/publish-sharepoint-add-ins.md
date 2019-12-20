@@ -18,7 +18,7 @@ For information about how to package your add-in for publication by using Visual
 
 ## Publishing to AppSource
 
-To publish an add-in to AppSource, you must first [open a developer account](docs.microsoft.com/office/dev/store/open-a-developer-account). 
+To publish an add-in to AppSource, you must first [open a developer account](https://docs.microsoft.com/office/dev/store/open-a-developer-account). 
 
 When you upload an add-in to AppSource for publication, Microsoft performs a validation check. For example, it checks that the add-in is free of viruses and that the add-in manifest markup is valid and complete, and verifies that any SharePoint solution packages (.wsp files) that you included in the add-in do not contain elements that aren't allowed, or SharePoint features with a scope that is broader than web. The package is also inspected for objectionable content. If the add-in package passes validation, it's wrapped into a file and signed by Microsoft.
 
