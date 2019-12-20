@@ -20,26 +20,11 @@ The top level node of an app part configuration file.
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="apppartconfigdefinition-complextype-apppartconfigdefinition.md">AppPartConfigDefinition</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>apppartconfig.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  | AppPartConfigDefinition |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration` |
+| **Schema file**  | apppartconfig.xsd |
 
 ## Definition
 
