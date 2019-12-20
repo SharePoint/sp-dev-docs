@@ -91,6 +91,7 @@ Lookup fields are also represented as objects; the display text is stored in the
 ```
 
 ## Apply conditional formatting
+
 You can use column formatting to apply styles, classes, and icons to fields, depending on the value inside those fields.
 
 ### Conditional formatting based on a number range (basic)

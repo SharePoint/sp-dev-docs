@@ -32,14 +32,10 @@ If you need to make your solution compatible with site collections of either mod
 ## See also
 <a name="bk_addresources"> </a>
 
-
 -  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
     
   
--  [Planning Deployment of Farm Solutions for SharePoint](http://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint.aspx)
+-  [Planning Deployment of Farm Solutions for SharePoint](https://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint.aspx)
     
   
 -  [SPUtility properties](https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.utilities.sputility?view=sharepoint-server#properties)
-    
-  
-
