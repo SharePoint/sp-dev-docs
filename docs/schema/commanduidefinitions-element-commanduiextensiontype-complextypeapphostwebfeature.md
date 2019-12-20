@@ -18,6 +18,12 @@ ms.assetid: 802a1d04-ea23-582e-96cb-e6e067411d4e
 
 ## Element information
 
+|   |   |
+|---|---|
+| **Element type**  | CommandUIDefinitionsType |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file**  | apphostwebfeatures.xsd |
+
 <table>
 <colgroup>
 <col width="50%" />
