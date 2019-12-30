@@ -1,11 +1,11 @@
 ---
-title: Elevated privileges in SharePoint Add-ins
-ms.date: 11/03/2017
+title: Elevated privileges
+ms.date: 12/30/2019
 localization_priority: Normal
 ---
-# Elevated privileges in SharePoint Add-ins
+# Elevated privileges
 
-Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins.
+Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins or other remotely hosted solutions.
 
 _**Applies to:** apps for SharePoint | SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
@@ -51,6 +51,9 @@ To use the app-only policy, you first must grant permissions to the add-in by us
 ```
 
 Using the app-only policy requires that your add-in use either low-trust or high-trust authorization. The policy is not available with the SharePoint cross-domain JavaScript library, which is a third way of getting authorized access to SharePoint resources.
+
+> [!TIP]
+> To allow to use app-only access for writing to Taxonomy Term Store, you'll need to explicitly add `app@sharepoint` identity as a Term Store Administrator in the Taxonomy Term Store administrative user interface. This grants the app-only identity needed permissions for write operations. You do not need to perform this step for read operations.
 
 ### Low-trust authorization
 
