@@ -75,7 +75,7 @@ $site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
 Add-SPOSiteCollectionAppCatalog -Site $site
 ```
 
-Alternaively, use PnP PowerShell to add the site app catalog functionality to your site after having connected to the SharePoint Online Admin site:
+Alternatively, use PnP PowerShell to add the site app catalog functionality to your site after having connected to the SharePoint Online Admin site:
 
 ```powershell
 Add-PnPSiteCollectionAppCatalog -site https://<tenant>.sharepoint.com/sites/<sitename>
@@ -108,7 +108,7 @@ $site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
 Remove-SPOSiteCollectionAppCatalog -Site $site
 ```
 
-Alternaively, use PnP PowerShell to remove the site app catalog functionality to your site after having connected to the SharePoint Online Admin site:
+Alternatively, use PnP PowerShell to remove the site app catalog functionality from your site after having connected to the SharePoint Online Admin site:
 
 ```powershell
 Remove-PnPSiteCollectionAppCatalog -site https://<tenant>.sharepoint.com/sites/<sitename>
