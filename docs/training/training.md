@@ -47,3 +47,4 @@ These are "presentations in a box" that include slides, demos, videos & hands on
 
 * [SharePoint Development YouTube channel](https://aka.ms/spdev-videos)
 * [SharePoint developer samples](https://aka.ms/spdev-samples)
+* [SharePoint Certification] (https://www.microsoft.com/en-us/learning/sharepoint-training.aspx)
