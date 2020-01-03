@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 11/27/2019
+ms.date: 03/01/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -59,12 +59,12 @@ The first page of the modernization scanner wizard asks you for authentication i
 If you've [setup access via Azure AD App-Only](../solution-guidance/security-apponly-azuread.md) you do have created an Azure App and configured a certificate for accessing it. This information needs to be provided to the tool:
 
 - **Azure AD Application ID**: ID of the created application in your Azure AD environment
-- **Azure AD Domain name**: the default domain of your Azure AD environment. You can find this from the overview page of the Azure AD management portal
+- **Azure AD Domain name**: the default domain of your Azure AD environment. You can find this from the overview page of the Azure AD management portal. Typically this domain is formatted as *.onmicrosoft.com, e.g. contoso.onmicrosoft.com.
 - **Certificate file**: the certificate that you granted app-only access to the Azure AD app, this needs to be presented as a password protected PFX file
 - **Password for the PFX file**: the password used to secure the previously provided PFX file
 
 > [!NOTE]
-> You can also opt to install the certificate on your computer and refence it via the -w command line parameters. To reference the certificate you would use this value for the -w parameter "My|CurrentUser|1FG498B468AV3895E7659C8A6F098FB701C8CDB1". You can use My/Root and CurrentUser/LocalMachine to identify the store. The last argument is the certificate thumbprint. This option is available as of the 2.7 release.
+> You can also opt to install the certificate on your computer and refence it via the -w command line parameters. To reference the certificate you would use this value for the -w parameter "My|CurrentUser|1FG498B468AV3895E7659C8A6F098FB701C8CDB1". You can use My/Root and CurrentUser/LocalMachine to identify the store. The last argument is the certificate thumbprint. This option is available as of the 2.7 release. If you're using LocalMachine then be aware that you'll need to ensure the scanner has permissions to read in the LocalMachine store. You can do this by either running the scanner process under administrative privileges or alternatively (and better) grant the account you're using to run the modernization scan permissions to read the private key of the certificate stored in the LocalMachine store.
 
 > [!IMPORTANT]
 > The default instructions mentioned to grant the Azure AD app the **Sites.FullControl.All** permission which is needed if you want to run all scan components. If you're not interested in workflow scanning you can also use **Sites.Read.All** as a permission as of version 2.6 of the SharePoint Modernization Scanner.
