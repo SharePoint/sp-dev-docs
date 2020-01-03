@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 12/13/2019
+ms.date: 01/03/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -184,7 +184,7 @@ Type | Default value if not specified
 -----|----
 String | empty
 
-You can optionally specify the folder in which the target page will be created. Note that if a folder was created automatically (e.g. because you were transforming from an extra wiki page library) then the folder specified by this parameter will be combined with the auto-generated folder. You can specify a folder like this: `MyFolder` or `MyFolder/SubFolder` when you want to create a nested folder structure.
+You can optionally specify the folder in which the target page will be created. Note that if a folder was created automatically (e.g. because you were transforming from an extra wiki page library) then the folder specified by this parameter will be combined with the auto-generated folder (unless you use the `TargetPageFolderOverridesDefaultFolder` option as well). You can specify a folder like this: `MyFolder` or `MyFolder/SubFolder` when you want to create a nested folder structure. Specifying `<root>` as value allows you to target the root of the target sitepages library (as of January 2020 release).
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)

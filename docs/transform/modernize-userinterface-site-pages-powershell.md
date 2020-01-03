@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern pages using the SharePoint PowerShell
-ms.date: 12/13/2019
+ms.date: 01/03/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -52,7 +52,7 @@ PublishingPage (as of April 2019 release, version 3.8.1904.*) | $false | Publish
 PageLayoutMapping (as of April 2019 release, version 3.8.1904.*) |  | Publishing pages |Via `-PageLayoutMapping` you can specify the path the [page layout mapping file](modernize-userinterface-site-pages-model-publishing.md) that you'll use for your publishing page transformations when the publishing page is using a non out of the box page layout
 TargetPageName (as of Oct 2019 release, version 3.14.1910.*) |  | Wiki/webpart/blog pages | Use the `-TargetPageName` parameter to override the default name for the modern page. This is for example needed to prevent overwriting the existing home.aspx page if you a cross site transformation of a classic team site home page to a modern communication site.
 PublishingTargetPageName (as of May 2019 release, version 3.9.1905.*) |  | Publishing pages | Use the `-PublishingTargetPageName` parameter to override the name for the modern page
-TargetPageFolder (as of November 2019 release, version 3.15.1911.*) |  | All page types | Use the `-TargetPageFolder` parameter to specify a target folder for the modern page. Note that if a folder was created automatically (e.g. because you were transforming from an extra wiki page library) then the folder specified by this parameter will be combined with the auto-generated folder. You can specify a folder like this: `MyFolder` or `MyFolder/SubFolder` when you want to create a nested folder structure.
+TargetPageFolder (as of November 2019 release, version 3.15.1911.*) |  | All page types | Use the `-TargetPageFolder` parameter to specify a target folder for the modern page. Note that if a folder was created automatically (e.g. because you were transforming from an extra wiki page library) then the folder specified by this parameter will be combined with the auto-generated folder (unless you specify `-TargetPageFolderOverridesDefaultFolder`). You can specify a folder like this: `MyFolder` or `MyFolder/SubFolder` when you want to create a nested folder structure. Specifying `<root>` as value allows you to target the root of the target sitepages library (as of January 2020 release, version 3.17.2001)
 TargetPageFolderOverridesDefaultFolder (as of December 2019 release, version 3.16.1912.*) | $false | All page types | Using the `-TargetPageFolderOverridesDefaultFolder` parameter you can force page transformation to use the folder specified via `-TargetPageFolder`, regardless whether there was an automatically created folder
 UrlMappingFile (as of July 2019 release, version 3.11.1907.*) |  | Cross site transformation | File with custom URL mapping definitions allow you to do more than just the default URL mapping. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
 SkipUrlRewriting (as of May 2019 release, version 3.9.1905.*) | $false | Cross site transformation | During publishing page transformation URL's are rewritten to be valid in the target site collection, but using the `-SkipUrlRewriting` you can disable the URL rewriting. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
