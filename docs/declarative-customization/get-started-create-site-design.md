@@ -1,13 +1,13 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
-description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. 
+description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
 ms.date: 12/19/2018
 localization_priority: Priority
 ---
 
 # Get started creating site designs and site scripts
 
-You can create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. 
+You can create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
 
 This article describes how to build a simple site design that adds a SharePoint list for tracking customer orders. You'll use the site design to create a new SharePoint site with the custom list. You'll learn how to use SharePoint PowerShell cmdlets to create site scripts and site designs. You can also use REST APIs to perform the same actions. The corresponding REST calls are shown for reference in each step.
 
@@ -75,16 +75,16 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
 
 <br/>
 
-The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design) if applied programmatically using the Invoke-SPOSiteDesign command. If they are applied through the UX or using the Add-SPOSiteDesignTask command then the limit is 300 cumulative actions (or 100K characters) .
+The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design) if applied programmatically using the Invoke-SPOSiteDesign command. If they are applied through the UX or using the Add-SPOSiteDesignTask command then the limit is 300 cumulative actions (or 100K characters).
 
 ## Add the site script
 
-Each site script must be registered in SharePoint so that it is available to use. Add a new site design by using the **Add-SPOSiteScript** cmdlet. The following example shows how to add the JSON script described previously.
+Each site script must be registered in SharePoint so that it is available to use. Add a new site script by using the **Add-SPOSiteScript** cmdlet. The following example shows how to add the JSON script described previously.
 
 ```powershell
-C:\> Add-SPOSiteScript 
- -Title "Create customer tracking list" 
- -Content $site_script 
+C:\> Add-SPOSiteScript
+ -Title "Create customer tracking list"
+ -Content $site_script
  -Description "Creates list for tracking customer contact information"
 ```
 
@@ -99,10 +99,10 @@ Next, you need to create the site design. The site design appears in a drop-down
 - Run the following cmdlet to add a new site design. Replace `<ID>` with the site script ID from when you added the site script.
 
 ```powershell
-C:\> Add-SPOSiteDesign 
- -Title "Contoso customer tracking" 
- -WebTemplate "64" 
- -SiteScripts "<ID>" 
+C:\> Add-SPOSiteDesign
+ -Title "Contoso customer tracking"
+ -WebTemplate "64"
+ -SiteScripts "<ID>"
  -Description "Tracks key customer data in a list"
 ```
 
@@ -118,29 +118,29 @@ Now that you've added a site script and site design, you can use it to create ne
 
 ### New site creation
 
-1. Go to the home page of the SharePoint site that you are using for development. 
+1. Go to the home page of the SharePoint site that you are using for development.
 
-2. Choose **Create site**. 
+2. Choose **Create site**.
 
-3. Choose **Team site**. 
+3. Choose **Team site**.
 
-4. In the **Choose a design** drop-down, select your site design **customer orders**. 
+4. In the **Choose a design** drop-down, select your site design **customer orders**.
 
-5. In **Site name**, enter a name for the new site **Customer order tracking**. 
+5. In **Site name**, enter a name for the new site **Customer order tracking**.
 
-6. Choose **Next**. 
+6. Choose **Next**.
 
-7. Choose **Finish**. 
+7. Choose **Finish**.
 
-8. A notification bar will be displayed indicating that your script is being applied. To invoke the site design information panel, click the **View progress** link. Once the script(s) have completed the notification banner message will change to **Site Design applied. Refresh this site to see the changes.**, allowing you to either invoke the panel or refresh the page.  
+8. A notification bar will be displayed indicating that your script is being applied. To invoke the site design information panel, click the **View progress** link. Once the script(s) have completed the notification banner message will change to **Site Design applied. Refresh this site to see the changes.**, allowing you to either invoke the panel or refresh the page.
 
-9. You will see the custom list on the page. 
+9. You will see the custom list on the page.
 
 ### Apply to an existing site collection
 
-You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet. 
+You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet.
 
-You can apply a published site design to: 
+You can apply a published site design to:
 1. Group-connected Team site
 2. Team site not connected to an Office 365 Group
 3. Communication site
