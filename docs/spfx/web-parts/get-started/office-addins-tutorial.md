@@ -52,7 +52,7 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
 1. The next set of prompts asks for specific information about your web part:
 
     * Enter **MyFirstOWAaddin** for the web part name, and then select Enter.
-    * Enter **My first Teams tab** as the description of the web part, and then select Enter. 
+    * Enter **My first Outlook add-in** as the description of the web part, and then select Enter. 
     * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
 
     ![Yeoman prompts](../../../images/add-in-yeoman.png)
@@ -87,7 +87,7 @@ This adds the needed intelligence for the Office JavaScript SDK types when you d
 
 ## Making solution aware of the Office context
 
-1.  Open **src\webparts\helloWorld\MyFirstOwAaddinWebPart.ts** for the needed edits on making our solution aware of the Office context, if it's used as an Outlook Web App add-in.
+1.  Open **src\webparts\myFirstOwAaddin\MyFirstOwAaddinWebPart.ts** for the needed edits on making our solution aware of the Office context, if it's used as an Outlook Web App add-in.
 
 1. Update the **render** method as follows. Notice how we are rendering different content dependent if the code is rendered as an Outlook Web App add-in or as a web part in SharePoint. We can detect if solution is hosted Outlook Web App by checking the `this.context.sdks.office` property.
 
