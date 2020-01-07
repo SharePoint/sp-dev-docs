@@ -37,7 +37,7 @@ This will automatically generate Office Add-in manifest file for the solution wi
 You will need to deploy the solution to tenant using the **tenant scoped deployment option** to ensure that the component can be found in the context of the add-in URL as defined in the manifest xml file. This setting can be adjusted in the **package-solution.json** file by updating the `skipFeatureDeployment` as **true**.
 
 > [!NOTE]
-> See more information around Office add-ins XML manifest from the [official Office documentation](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests).
+> See more information around Office add-ins XML manifest from the [official Office documentation](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests).
 
 ## Using Office JavaScript SDK (Office.js) in the web part code
 
@@ -60,7 +60,7 @@ this.context.sdks.office.context.mailbox
 ```
 
 > [!NOTE]
-> See more information around the Office JavaScript API capabilities from the [API Reference documentation](https://docs.microsoft.com/en-us/office/dev/add-ins/reference/javascript-api-for-office).
+> See more information around the Office JavaScript API capabilities from the [API Reference documentation](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office).
 
 
 ## Configuration support with Office Add-ins
