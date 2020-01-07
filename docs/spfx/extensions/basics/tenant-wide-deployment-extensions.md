@@ -1,14 +1,14 @@
 ---
 title: Tenant Wide Deployment of SharePoint Framework Extensions
 description: Activating SharePoint Framework extensions across tenant from centralized location.
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# Tenant Wide Deployment of SharePoint Framework Extensions
+# Tenant-wide Deployment of SharePoint Framework Extensions
 
-Tenant Wide Deployment option for SharePoint Framework Extensions is supported for application customizers and for List View Command Sets. It provides an easy option for tenant app catalog managers to manage which extensions are activated by default across the tenant or based on web / list templates used in the sites.
+Tenant Wide Deployment option for SharePoint Framework Extensions is supported for application customizers and for List View Command Sets. It provides an easy option for tenant App Catalog managers to manage which extensions are activated by default across the tenant or based on web / list templates used in the sites.
 
 > [!NOTE]
 > SharePoint Framework extensions are supported with modern experiences regardless of the actual site template used when content site was created.
@@ -20,7 +20,7 @@ When developers create a new SharePoint Framework extension solution using stand
 
 SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality. This means that the `skipFeatureDeployment` attribute in the `package-solution.json` will need to be set as *true*. 
 
-## Controlling tenant wide deployment from app catalog site collection
+## Controlling tenant wide deployment from App Catalog site collection
 
 App catalog site collection is used to deploy SharePoint add-ins and SharePoint Framework components to the tenant. This site collection is created by tenant administrator and it is used to manage what customizations are available for end users in actual content site collections.
 
@@ -28,29 +28,30 @@ App catalog site collection contains a **Tenant Wide Extensions** list, which ca
 
 Specific SharePoint Framework extensions can be activated in the tenant level by adding entries to the **Tenant Wide Extension** list. Each entry can be targeted to specific web template or a list type, depending on the functional requirements.
 
-These list specific configurations are resolved at runtime when end users are accessing pages in content site collections. This means that the changes applied to this list are available for both existing and new sites in the tenant.
+These list-specific configurations are resolved at runtime when end users are accessing pages in content site collections. This means that the changes applied to this list are available for both existing and new sites in the tenant.
 
-SharePoint Framework solutions can contain automation which will add automatically entry to the Tenant Wide Extension list, when the solution is added
+SharePoint Framework solutions can contain automation that will add automatically entry to the Tenant Wide Extension list, when the solution is added
 
 > [!IMPORTANT]
 > It will take up to 20 minutes before the functionality will be enabled after first entry added to the **Tenant Wide Extensions** list on a specific tenant.
 
 ## Tenant wide deployment list description
 
-Component ID must exists in the tenant to be able to add entry for it.
+Component ID has to exists in the tenant to be able to add entry for it.
 
 | Column                | Type      | Description |
 |-----------            |------     |-------------|
 | Title                 | String    |Title of the entry. Can be descriptive entry for the registration. |
-| Component Id          | Guid      | Manifest ID of the component. Has to be in GUID format and component must exists in the app catalog. |
+| Component Id          | Guid      | Manifest ID of the component. Has to be in GUID format and component must exists in the App Catalog. |
 | Component Properties  | String    | Optional component properties. |
 | Web Template          | String    | Can be used to target extension only to specific web template. See possible values in below table. |
 | List template         | int       | List type as a number. See possible values from below table. |
 | Location              | String    | Location of the entry. There are different support locations for application customizers and List View Command Sets. |
 | Sequence              | int       | Sequence of the entry in rendering. |
+| Host Properties       | String    | Additional server-side configuration, like pre-allocated height for placeholders. |
 | Disabled              | Boolean   | Is the entry enabled or disable. |
 
-For the Web Template column any web template definition is technically supported. Following table defines the most commonly used templates. 
+For the Web Template column, any web template definition is technically supported. Following table defines the most commonly used templates.
 
 | Template                | Web Template ID      |
 |-----------            |------     |
@@ -60,14 +61,14 @@ For the Web Template column any web template definition is technically supported
 | Classic team site | STS#0 |
 | Classic publishing site | BLANKINTERNET#0 |
 
- For the List Template column any list ID is technically supported, but only sub set of classic list types support modern experiences.
+ For the List Template column any list ID is technically supported, but only subs set of classic list types support modern experiences.
 
 | List             | List Id   |
 |-----------       |------     |
 | Custom List      | 100 |
 | Document library | 101 |
 
-Supported location values are following. These are specific for the the component type.
+Supported location values are following. These are specific for the component type.
 
 | Value                                                 | Component Type            | Description |
 |-----------                                            |------                     |-------------|
@@ -85,9 +86,9 @@ SharePoint Framework solutions default scaffolding creates an automation file to
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/ext-tenant-wide-clientsideinstance.png)
 
-**ClientSideInstance.xml** is taken into account in the solution activation at the app catalog if the `skipFeatureDeployment` attribute is set to *true* in the `package-solution.json` file. 
+**ClientSideInstance.xml** is taken into account in the solution activation at the App Catalog if the `skipFeatureDeployment` attribute is set to *true* in the `package-solution.json` file. 
 
-This file contains by default following structure. **ClientSideComponentInstance** element instructs SharePoint to add automatically an entry to the Tenant Wide Deployment list when the solution package is added to the app catalog.
+This file contains by default following structure. **ClientSideComponentInstance** element instructs SharePoint to add automatically an entry to the Tenant Wide Deployment list when the solution package is added to the App Catalog.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,6 +118,7 @@ This file contains by default following structure. **ClientSideComponentInstance
 | ListTemplateId    | No       | Optional list template type ID to which extension should be activated |
 | WebTemplateId     | No       | Optional web template id to define the site type where extension should be activated |
 | Sequence          | No       | Optional activation sequence order for the extensions. Used if multiple extensions are activated on a same scope. |
+| HostProperties    | No       | Optional server-side configurations, like defining pre-allocated height for placeholders. |
 
 Below xml definition shows how the optional values could be used as part of the registration.
 
@@ -130,13 +132,14 @@ Below xml definition shows how the optional values could be used as part of the 
         Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}"
         ListTemplateId="100"
         WebTemplateId="GROUP#0"
-        Sequence="10" >
+        Sequence="10" 
+        HostProperties="{&quot;preAllocatedApplicationCustomizerTopHeight&quot;:&quot;50&quot;,&quot;preAllocatedApplicationCustomizerBottomHeight&quot;:&quot;50&quot;}">
     </ClientSideComponentInstance>
 </Elements>
 
 ```
 
-When an administrator adds a  solution which has a ClientSideInstance.xml file inside of it to app catalog, specific warning message is shows to ensure that presence of the automated configuration is known.
+When an administrator adds a  solution that has a ClientSideInstance.xml file inside of it to App Catalog, specific warning message is shows to ensure that presence of the automated configuration is known.
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/ext-tenant-wide-solution-deployment.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Subscribe to list notifications
 description: Get notified and respond to changes to files in SharePoint Document Libraries
-ms.date: 11/08/2018
+ms.date: 12/10/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -9,9 +9,6 @@ localization_priority: Normal
 # Subscribe to list notifications
 
 Starting from SharePoint Framework v1.7.0, you can subscribe to changes to files stored in a SharePoint Document Library. This allows you to respond to changes when they happen, without having to regularly poll the contents of the library.
-
-> [!NOTE]
-> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `-plusbeta` version of the library (*see [this issue for reference](https://github.com/SharePoint/sp-dev-docs/issues/4306)*)
 
 ## Prerequisites
 
@@ -52,9 +49,6 @@ export default class LatestDocumentsWebPart extends BaseClientSideWebPart<ILates
   // omitted for brevity
 }
 ```
-
-> [!IMPORTANT]
-> At this moment, you can subscribe only to changes in SharePoint Document Libraries. If you try to subscribe to changes in SharePoint List, you will get an error.
 
 When creating a list subscription, using the `callbacks.notification` property, you have to specify the method that should be called, when a change has been detected. The method doesn't have any arguments, and for security reasons, you don't get notified what has been changed exactly. To get the latest contents of the Document Library, adhering to the configured permissions, you can use either the SharePoint REST APIs or the Microsoft Graph.
 
@@ -112,10 +106,10 @@ The method for the `callbacks.disconnect` callback passes as an argument the rea
 
 ## Considerations
 
-- both web parts and extensions can use the list subscription capabilities
-- it is only possible to subscribe to notifications in SharePoint Document Libraries. SharePoint Lists don't support this capability at the moment
+- all SharePoint Framework components can use the list subscription capabilities
+- you can subscribe to events from lists and libraries
 - there is a few seconds delay between the change and the notification being received by the component
-- components can subscribe to changes in multiple Document Libraries
+- components can subscribe to changes in multiple Document Libraries or lists
 - the change notification doesn't pass any information about the added or changed document. To see what has changed, use the SharePoint REST API or Microsoft Graph
 
 ## See also

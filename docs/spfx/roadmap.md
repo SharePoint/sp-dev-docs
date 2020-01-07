@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 09/01/2019
+ms.date: 12/10/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,7 +10,8 @@ localization_priority: Priority
 
 The first release of the SharePoint Framework contained only support for client-side web parts. This was, however, just a start on the journey for providing additional modern customization capabilities to SharePoint. Following is a list of key capabilities released after General Availability:
 
-- [Building Microsoft Team tabs using SharePoint Framework](./integrate-with-teams-introduction.md)
+- Building Office add-ins using SharePoint Framework - in preview from 1.10 release
+- [Building Microsoft Team tabs using SharePoint Framework](./integrate-with-teams-introduction)
 - [Single Part App Pages](./web-parts/single-part-app-pages.md)
 - [Isolated web parts](./web-parts/isolated-web-parts.md)
 - [Dynamic data and web part connections](./dynamic-data.md)
@@ -50,8 +51,6 @@ The first release of the SharePoint Framework contained only support for client-
     - Azure AD registration
     - Native responsive support
     - Build add-ins with SharePoint Framework
-
-- Building Office add-ins using SharePoint Framework
 
 ## Application Lifecycle Management
 

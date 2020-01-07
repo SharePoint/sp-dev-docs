@@ -1,18 +1,18 @@
 ---
 title: Building Microsoft Teams Tabs using SharePoint Framework
 description: You can build your Microsoft Teams tabs using SharePoint Framework and utilize the tooling
-ms.date: 04/04/2019
+ms.date: 01/03/2020
 ms.prod: sharepoint
 ---
 
 # Building Microsoft Teams Tabs using SharePoint Framework
 
-Starting with SharePoint Framework v1.8, you can build tabs for Microsoft Teams using SharePoint Framework tooling and use SharePoint as a host for your solutions
+Starting with SharePoint Framework v1.8, you can build tabs for Microsoft Teams using SharePoint Framework tooling and use SharePoint as a host for your solutions. As part of the SharePoint Framework v1.10 you can also publish your solution as Microsoft Teams personal app.
 
 There are following benefits on using SharePoint Framework as the platform for your Microsoft Teams tabs:
 
 - The development model is similar to SharePoint Framework web parts
-- Technically any web part can be exposed as a tab in Microsoft Teams
+- Technically any web part can be exposed as a tab or personal app in Microsoft Teams
 - You have difference scoping options on exposing your custom tab as a web part and tab in your tenant
 - Your tab will be executed in the context of the underlying SharePoint site behind of the specific team. This means that you can take advantage of any SharePoint specific APIs or functionalities in your web part.
 
@@ -24,20 +24,24 @@ You can start developing Microsoft Teams tabs simply by using the SharePoint Fra
 > Refer to the detailed steps to get started from the [Building Microsoft Teams tab using SharePoint Framework](web-parts/get-started/using-web-part-as-ms-teams-tab.md) tutorial which contains additional important details you must follow.
 
 1. Create a SharePoint Framework solution with a client-side web part
-1. Add `"TeamsTab"` to the `supportedHosts` property of the web part manifest:
+1. Add `"TeamsTab"` to the `supportedHosts` property of the web part manifest to use it as a tab in a channel:
 
     ```json
     "supportedHosts": ["SharePointWebPart", "TeamsTab"],
     ```
 
+1. Add `"TeamsPersonalApp"` to the `supportedHosts` property of the web part manifest to use it as a personal app:
+
+    ```json
+    "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp"],
+    ```
+
 1. Deploy the web part using tenant-scoped deployment option to your SharePoint app catalog
-1. Create the Microsoft Teams app manifest file, **manifest.json**, and save it in the **./teams** folder of the solution
-1. ZIP the contents of the **./teams** folder; this is the Microsoft Teams app package
-1. Use the Microsoft Teams app package to side load the application in Microsoft Teams
+1. Activate the SharePoint Framework solution which you deployed and click **Sync to Teams** button in the App Catalog
 
 ## Deployment options
 
-There are multiple options to deploy Microsoft Teams tab. As both SharePoint and Microsoft Teams have their own app catalog, deployment requires operations on both services. Visibility of the new functionality can be controlled by the deployment steps taken.
+There are multiple options to deploy Microsoft Teams tab or as a personal app. As both SharePoint and Microsoft Teams have their own app catalog, deployment requires operations on both services. Visibility of the new functionality can be controlled by the deployment steps taken.
 
 ### Tenant deployment
 
@@ -50,18 +54,19 @@ There is an alternative way to deploy your solution which will for instance allo
 1. Build your SharePoint Framework solution the normal way:
 
     ```sh
-    gulp build
     gulp bundle --ship
     gulp package-solution --ship
     ```
 
-1. Locate the **./teams** folder in your project folder:
+2. Locate the **./teams** folder in your project folder:
 
     ![Solution structure](../images/sp-teams-solution-structure.png)
 
-1. Notice that there are 2 image files in there. Add the manifest file you created as described in [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) to this folder and call it ***manifest.json**.
-1. After you added the manifest to the **./teams** folder, zip the contents of the folder into a zip file. This means that the zip file should only contain the manifest.json and the 2 images.
-1. Add your solution to the app catalog and make sure to select the option **Make this solution available to all sites in the organization** before selecting **Deploy**
+3. Notice that there are 2 image files in there. Add the manifest file you created as described in [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) to this folder and call it ***manifest.json**.
+
+4. After you added the manifest to the **./teams** folder, zip the contents of the folder into a zip file. This means that the zip file should only contain the manifest.json and the 2 images.
+
+5. Add your solution to the app catalog and make sure to select the option **Make this solution available to all sites in the organization** before selecting **Deploy**
 
 ### Turn on side loading of external apps in Teams
 
@@ -133,11 +138,14 @@ See following resources for additional details around the different options in b
 Page context in a web part has by default a reference to the Teams JavaScript SDK, so that you can easily get access on the Teams context when your web part is rendered as a tab.
 
 ```javascript
-this.context.microsoftTeams
+    this.context.sdks.microsoftTeams
 ```
 
 > [!NOTE]
 > See more information around the Microsoft Teams tab context from the [Microsoft Teams development documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-context?view=msteams-client-js-latest).
+
+> [!NOTE]
+> Property `this.context.microsoftTeams` has been deprecated starting from the v1.10 release and you should be using `this.context.sdks.microsoftTeams` as indicated above.
 
 ## See also
 

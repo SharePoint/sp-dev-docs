@@ -1,7 +1,7 @@
 ---
 title: Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams 
 description: Create Microsoft Teams manifest manually for your solution to provide more flexibility and configuration options for example to enable targeting of the solution to specific team.
-ms.date: 04/04/2019
+ms.date: 01/03/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
