@@ -113,7 +113,7 @@ This adds the needed intelligence for the Office JavaScript SDK types when you d
         }
 
         this.domElement.innerHTML = `
-        <div class="${ styles.outlookDemo }">
+        <div class="${ styles.myFirstOwAaddin }">
             <div class="${ styles.container }">
             <div class="${ styles.row }">
                 <div class="${ styles.column }">
