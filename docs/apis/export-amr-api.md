@@ -59,7 +59,7 @@ The new Migration Asynchronous Read API is:
 ```csharp
 
     public SPAsyncReadJobInfo CreateSPAsyncReadJob(
-            Uri rootObjectUri,            
+            Uri[] rootObjectUri,            
             SPAsyncReadOptions readOptions,
             EncryptionOption encryptionOption,
             string azureContainerManifestUri,
