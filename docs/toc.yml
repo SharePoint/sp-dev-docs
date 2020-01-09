@@ -83,7 +83,7 @@
       href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
     - name: Pre-allocated placeholders
       href: spfx/extensions/basics/preallocated-space-placeholders.md
-    - name: Pre-allocated placeholders
+    - name: Building Search Extensions
       href: spfx/building-search-extensions.md
     - name: Getting started
       items:
