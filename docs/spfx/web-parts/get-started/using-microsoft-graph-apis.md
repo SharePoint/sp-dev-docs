@@ -70,7 +70,7 @@ Before you start, complete the procedures in the following articles to ensure th
     npm install @microsoft/microsoft-graph-types
 ```
 
-## Updating solution manifest with the needed Graph permissions
+## Updating solution manifest with the needed Microsoft Graph permissions requests
 
 By using SharePoint Framework, you do not needed to explicitly create Azure Active Directory applications to manage your permissions for your solutions, you can rather request the needed permissions in your solution package, and Office 365 tenant administrator can then graph the requested permissions in general for all solutions or specifically for this solution (isolated solution).
 
@@ -106,7 +106,7 @@ In this case, we will include the solution specific permissions in the package.
 ```
 
 
-## Updating code call Microsoft Graph APIs
+## Updating code to call Microsoft Graph APIs
 
 In this case, we'll simply slightly adjust the code to call Microsoft Graph API to get access on the latest 5 emails of the current user. 
 
