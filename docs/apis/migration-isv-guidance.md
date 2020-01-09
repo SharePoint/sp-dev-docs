@@ -9,13 +9,9 @@ ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Priority
 ms.collection: 
-- IT_Sharepoint_Server_Top
 - SPMigration
 - M365-collaboration
 search.appverid: MET150
-ROBOTS: NOINDEX, NOFOLLOW
-ms.custom: 
-ms.assetid: 
 ---
 # Migration guidance for ISVs
 
@@ -29,7 +25,7 @@ To provide a stable platform and more reliable service, Microsoft is requesting 
 Migration is a background task application and should **not** be run in user mode. By transitioning to app-based authentication, you will benefit from the elastic capability of off-peak time to have more resources.  
 
 > [!Note]
->Microsoft will start enforcing the proper usage roles in early 2020. Vendors who continue to run migration in user roles can expect to experience increasing throttling and poor performance.
+>Microsoft will start enforcing the proper usage roles in Q1 2020. Vendors who continue to run migration in user roles can expect to experience increasing throttling and poor performance.
 
 To learn more on how to register an app ID and how to implement app-based authentication see:
 
@@ -67,18 +63,16 @@ The *CreateMigrationJob* helps the ISVs to import to SharePoint and OneDrive fas
 
 - [Create Migration Job (Import API)](https://docs.microsoft.com/sharepoint/dev/apis/migration-api-overview)
 
-The lastest supported features are:
+The latest supported features are:
 
 - [Migrate web parts using the Migration API](https://docs.microsoft.com/sharepoint/dev/apis/migrate-webparts-with-migrationapi)
 
 
 ### Export API (Asynchronous Metadata Read)
 
-A new migration API, Asynchronous Metadata Read API (Export API) is currently being made available to ISVs for testing.  If you are interested, please contact Microsoft with your test tenant information.
+A new migration API, Asynchronous Metadata Read API (Export API) is  available to ISVs. The *AsynchronousMetadataRead* helps ISVs export content from SharePoint and OneDrive with fast and reduced calls. For example, the new API can export all the files and lists related metadata from the  root level of document library in a single call. This reduces the number of calls needed, the chance of being throttled, and improves performance.
 
-- [Asynchronous Metadata Read (Export API)](https://docs.microsoft.com/sharepoint/dev/apis/export-amr-api)
-
-The *AsynchronousMetadataRead* helps the ISVs export content from SharePoint and OneDrive.
+To learn more, see [Asynchronous Metadata Read (Export API)](https://docs.microsoft.com/en-us/sharepoint/dev/apis/export-amr-api)
 
 ## Switch to the Microsoft Graph API 
 If a feature is not supported by the migration API, we recommend that you use the Graph API.  If the Graph API does not support the needed migration feature, then use CSOM. However, using CSOM increases the likelihood of being throttled. 
@@ -113,7 +107,7 @@ The primary reason speed is impacted, and throttling occurs, is due to the load 
  
 To read the official throttling guidance, see:
 
-- [Avoid getting throttled or blocked in SharePoint Online](https://myignite.techcommunity.microsoft.com/sessions/65661)
+- [Avoid getting throttled or blocked in SharePoint Online](https://aka.ms/spo429)
 
 We continue to work to identify issues and improve the API. The asynchronous metadata read API is a direct result of ISV feedback. As an ISV/partner, we value your feedback. Please contact Microsoft if you have further questions. 
 
