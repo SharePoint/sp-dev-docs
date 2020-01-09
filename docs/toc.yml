@@ -30,6 +30,8 @@
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Deploy your web part to an Azure CDN
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
+      - name: Using Microsoft Graph APIs
+        href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
       - name: Building Microsoft Teams tab using SharePoint Framework
         href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
       - name: Building Office add-ins using SharePoint Framework
