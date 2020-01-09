@@ -107,9 +107,9 @@ The method for the `callbacks.disconnect` callback passes as an argument the rea
 ## Considerations
 
 - all SharePoint Framework components can use the list subscription capabilities
-- you can subscribe to events from lists and libraries
+- you can subscribe to events from libraries (but not lists)
 - there is a few seconds delay between the change and the notification being received by the component
-- components can subscribe to changes in multiple Document Libraries or lists
+- components can subscribe to changes in multiple Document Libraries
 - the change notification doesn't pass any information about the added or changed document. To see what has changed, use the SharePoint REST API or Microsoft Graph
 
 ## See also
