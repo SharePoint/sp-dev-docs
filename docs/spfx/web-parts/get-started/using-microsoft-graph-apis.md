@@ -1,5 +1,5 @@
 ---
-title: Building SharePoint Framework solutions which use Microsoft Graph APIs
+title: Building SharePoint Framework solutions, which use Microsoft Graph APIs
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
 ms.date: 01/07/2020
 ms.prod: sharepoint
@@ -77,7 +77,7 @@ By using SharePoint Framework, you do not needed to explicitly create Azure Acti
 > [!NOTE]
 > Tenant administrators can also manage the API permissions using PowerShell cmdlets, so there's no specifically a requirement to have the permissions included in the solution package.
 
-In this case, we will include the solution specific permissions in the package.
+In this case, we will include the solution-specific permissions in the package.
 
 1. Open `package-solution.json` under the **config** folder
 2. Update the solution section to include permission grant request as shown in the following code section by using `webApiPermissionRequests` element. In this case we will access user's emails, so we have requested permissions for the `Mail.Read` scope.
@@ -108,7 +108,7 @@ In this case, we will include the solution specific permissions in the package.
 
 ## Updating code to call Microsoft Graph APIs
 
-In this case, we'll simply slightly adjust the code to call Microsoft Graph API to get access on the latest 5 emails of the current user. 
+In this case, we'll slightly adjust the code to call Microsoft Graph API to get access on the latest five emails of the current user. 
 
 1. Open **src\webparts\helloWorld\MyFirstGraphWebPartWebPart.ts** for the needed edits on calling Microsoft Graph APIs.
 
@@ -234,13 +234,13 @@ Now the requested permissions needed for the web part have been approved and we 
 
 ## Using web part in SharePoint
 
-1. Go to a site where you want to test the web part. We did deploy web part using the tenant scoped deployment option, so it will be availalbe on any site.
+1. Go to a site where you want to test the web part. We did deploy web part using the tenant scoped deployment option, so it will be available on any site.
 1. Create a new modern page to the site or edit existing page
 1. Use search term `Graph` in the web part picker to find your web part
 
     ![web part picker](../../../images/graph-helloworld-webpart-picker.png)
 
-1. Choose **MyFirstGraphWebPart** from the list and notice how the web part renders the latest 5 emails from the current user using information from the Microsoft Graph API
+1. Choose **MyFirstGraphWebPart** from the list and notice how the web part renders the latest five emails from the current user using information from the Microsoft Graph API
 
     ![web part picker](../../../images/graph-helloworld-webpart-on-page.png)
 
