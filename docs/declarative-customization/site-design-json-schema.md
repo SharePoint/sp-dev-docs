@@ -21,7 +21,7 @@ The overall JSON structure is specified as follows:
     ],
     "bindata": { },
     "version": 1
-};
+}
 ```
 
 You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
