@@ -11,14 +11,14 @@ Azure Pipelines is the newer version of the Azure DevOps build and release featu
 This article explains the steps involved in setting up your Azure Pipelines environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.  
 
 > [!NOTE]
-> Azure Multi-stage Pipelines is still in preview and you need to make sure you enable this preview feature for your Azure DevOps organization under __Preview Features__
+> Azure Multi-stage Pipelines is still in preview and you need to make sure you [enable this preview feature](https://docs.microsoft.com/azure/devops/project/navigation/preview-features) for your Azure DevOps organization under __Preview Features__.
 
 ## Choosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
 
 There are currently two approaches available to implement continuous integration, and deployement in Azure DevOps.  
 Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
 
-Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history and repeatability.  
+Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history, and repeatability.  
 Both approaches are described for the SharePoint Framework:
 
 - [Azure Build and Release](./implement-ci-cd-with-azure-devops.md)
