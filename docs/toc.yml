@@ -30,20 +30,24 @@
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Deploy your web part to an Azure CDN
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
+      - name: Using Microsoft Graph APIs
+        href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
       - name: Building Microsoft Teams tab using SharePoint Framework
-        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md        
+        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
+      - name: Building Office add-ins using SharePoint Framework
+        href: spfx/web-parts/get-started/office-addins-tutorial.md
     - name: Basics
       items:
       - name: Integrate properties with SharePoint
-        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md      
+        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
       - name: Configure custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
       - name: Configure web part icon
-        href: spfx/web-parts/basics/configure-web-part-icon.md         
+        href: spfx/web-parts/basics/configure-web-part-icon.md
       - name: Using full-width column
-        href: spfx/web-parts/basics/use-web-parts-full-width-column.md        
+        href: spfx/web-parts/basics/use-web-parts-full-width-column.md
       - name: Hide from the toolbox
-        href: spfx/web-parts/basics/hide-web-part-from-toolbox.md        
+        href: spfx/web-parts/basics/hide-web-part-from-toolbox.md
       - name: Preconfigure web parts
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
@@ -53,13 +57,13 @@
       - name: Single Part App Pages
         href: spfx/web-parts/single-part-app-pages.md
       - name: Supporting section backgrounds
-        href: spfx/web-parts/guidance/supporting-section-backgrounds.md                
+        href: spfx/web-parts/guidance/supporting-section-backgrounds.md
       - name: Extend property pane
         items:
         - name: Build custom controls
           href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
         - name: Use cascading dropdowns
-          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md        
+          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
     - name: Migrate existing customizations
       items:
       - name: Script Editor web part
@@ -73,14 +77,16 @@
       - name: Work with __REQUESTDIGEST
         href: spfx/web-parts/basics/working-with-requestdigest.md
       - name: Use JSOM
-        href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
+        href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md
   - name: Extensions
-    href: spfx/extensions/overview-extensions.md    
+    href: spfx/extensions/overview-extensions.md
     items:
     - name: Tenant Wide Deployment
-      href: spfx/extensions/basics/tenant-wide-deployment-extensions.md  
+      href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
     - name: Pre-allocated placeholders
       href: spfx/extensions/basics/preallocated-space-placeholders.md
+    - name: Building Search Extensions
+      href: spfx/building-search-extensions.md
     - name: Getting started
       items:
       - name: Build your first extension
@@ -96,7 +102,7 @@
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
       - name: Configure extension icon
-        href: spfx/extensions/basics/configure-extension-icon.md        
+        href: spfx/extensions/basics/configure-extension-icon.md
     - name: Migrate existing customizations
       items:
       - name: Client Side Rendering (JSLink)
@@ -108,7 +114,7 @@
       - name: Client Side Rendering (JSLink) tutorial
         href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
       - name: JavaScript embedding (UserCustomAction) tutorial
-        href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
+        href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md
   - name: Guidance
     items:
     - name: Enterprise guidance
@@ -128,11 +134,13 @@
     - name: Hosting Microsoft Teams Tabs in SharePoint
       href: spfx/using-teams-solutions-in-sharepoint.md
     - name: Library component overview
-      href: spfx/library-component-overview.md      
+      href: spfx/library-component-overview.md
     - name: Library component tutorial
       href: spfx/library-component-tutorial.md
     - name: Hyperlinking considerations
       href: spfx/hyperlinking.md
+    - name: Building Office add-ins
+      href: spfx/office-addins-create.md
   - name: External libraries
     items:
     - name: Add external libraries
@@ -148,7 +156,7 @@
   - name: Connect to APIs
     items:
     - name: Connect to SharePoint APIs
-      href: spfx/connect-to-sharepoint.md   
+      href: spfx/connect-to-sharepoint.md
     - name: Connect to Microsoft Graph 
       href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD
@@ -156,7 +164,7 @@
     - name: Connect to anonymous APIs
       href: spfx/connect-to-anonymous-apis.md
     - name: Subscribe to list notifications
-      href: spfx/subscribe-to-list-notifications.md      
+      href: spfx/subscribe-to-list-notifications.md
     - name: Tutorials
       items:        
       - name: Consume Microsoft Graph (tutorial)

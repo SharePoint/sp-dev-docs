@@ -17,37 +17,38 @@ description: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 
 
 ## Overview
-The goal of the new Migration Asynchronous Metadata Read API is to reduce the number of CSOM calls, reduce throttling, and improve overall migration performance. Instead of calling thousands of CSOM calls to query information from SPO, the new Migration Asynchronous Metadata Read can return the same amount of data in a single read.
+The goal of the new Migration Asynchronous Metadata Read (AMR) API is to reduce the number of calls, reduce throttling, and improve overall migration performance for our customers. Instead of calling thousands of calls to query information from SPO, the new Migration Asynchronous Metadata Read can return the same amount of data in a single read.
 
-When the new SharePoint Migration Export (Asynchronous Metadata Read) API performs a read operation of a provided URL, the Microsoft backend software aggregates all the information into a designated manifest. The ISV can read back from the manifest and parse the metadata without sending thousands of CSOM calls individually.
+When the new SharePoint Migration Export (Asynchronous Metadata Read) API performs a read operation of a provided URL, the Microsoft backend software aggregates all the information into a designated manifest. The ISV can read back from the manifest and parse the metadata without sending thousands of calls individually.  The AMR API also has the ability to load balance the server, and supports an unlimited amount of metadata to be migrated.
 
 This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
 
 
 
 ### Background:
-Currently, the SharePoint Online Migration API, [CreateMigrationJob](https://docs.microsoft.com/sharepoint/dev/apis/migration-api-overview), lets your migration tool efficiently migrate large amounts data to SharePoint Online. However, the lack of an official API to read content from SharePoint Online means that these tools must rely on CSOM function calls to perform individual metadata read operations.
+Currently, the SharePoint Online Migration API, [CreateMigrationJob](https://docs.microsoft.com/sharepoint/dev/apis/migration-api-overview), lets your migration tool efficiently migrate large amounts data to SharePoint Online. However, the lack of an official API to read content from SharePoint Online means that these tools must rely on CSOM/Vroom function calls to perform individual metadata read operations.
 
 </br>
-Large numbers of CSOM calls increase the likelihood of throttling which impacts migration performance and customer experience. Ineffective CSOM usage results in large SQL round trip per function calls that can potentially bring down the database and impact its reliability.
+Large numbers of calls increase the likelihood of throttling which impacts migration performance and customer experience. Ineffective call usage results in large SQL round trip per function calls that can potentially bring down the database and impact its reliability.
 
-A migration performance study identified four areas where CSOM calls are heavily used: 
-- **Incremental migration** relies on CSOM calls to retrieve the SharePoint online (SPO) content. It compares it with the source location to determine if there have been any changes to the content and whether to proceed with migration.  
-- **Structure creation** leverages CSOM calls for site, webpart and navigation creation.
+A migration performance study identified four areas where a high number of calls are heavily used: 
+- **Incremental migration** relies on calls to retrieve the SharePoint online (SPO) content. It compares it with the source location to determine if there have been any changes to the content and whether to proceed with migration.  
+- **Structure creation** leverages calls for site, webpart and navigation creation.
 - **After migration verification** is done when migration is completed and is used to ensure the source and destination file metadata matches.
-- **Permission settings** are CSOM function calls made getting user permission information.
+- **Permission settings**  function calls are made to get user permission information.
 
 ## SharePoint Migration Export (Asynchronous Metadata Read) API
 
-The SharePoint Migration Export (Asynchronous Metadata Read) API aims to reduce the CSOM calls in areas: incremental migration, after migration verification and permission settings. 
+The SharePoint Migration Export (Asynchronous Metadata Read) API aims to reduce the calls in areas: incremental migration, after migration verification and permission settings. 
 
 >[!Note]
 >The first version of the SharePoint Migration Export (Asynchronous Metadata Read) API supports files, folders, lists, list items, and the document library. Permissions are expected to be covered in a subsequent version.
 
 Key supported features:
 
-- Ability to read up to 1 million items with a single API call. For more information, see Limitations. 
-- Incremental migration feature support returning of item changed since last query with changeToken feature
+- Ability to aggredate small metadata requests calls (e.g., CSOM) into a single AMR call with the multiple URL feature
+- Ability to read unlimited items with a single API call.
+- Incremental migration feature support returning of item changed since last query with *changeToken* feature
 - Ability to include a rich set of metadata per item 
 - Ability to return only top-level structure without subfolders or children.
 
@@ -58,7 +59,7 @@ The new Migration Asynchronous Read API is:
 ```csharp
 
     public SPAsyncReadJobInfo CreateSPAsyncReadJob(
-            Uri rootObjectUri,            
+            Uri[] rootObjectUri,            
             SPAsyncReadOptions readOptions,
             EncryptionOption encryptionOption,
             string azureContainerManifestUri,
@@ -80,6 +81,19 @@ The full path URL  lets your migration tool to specify the root URL path of the 
 This document library URL, https://<spam><spam>www.contoso.com/Shared%20Document<spam>, will be read back for metadata of any files or folders that live under the root URL.
 
 <spam><spam>https://www.contoso.com/Shared%20Documents/FolderA/<spam><spam>, will be read back for children metadata in FolderA.
+
+#### Multiple URLs
+
+With the latest API update in Q1 2020, AMR will now support multiple URL input. This means the user can input multiple root URLs or subfolder URLs and aggregate them into a single call.
+
+As there is a fixed overhead, AMR is most effective when there is a large amount of reads when processing AMR. There are cases when the migration software may not want to read the whole root level URL. The multiple URL feature lets the software to aggregate multiple requests into a single request to improve performance while reducing number of calls.
+
+(For more information regarding the size recommendation please see the performance section) 
+
+*Example:* The document library URL, https://www.contoso.com/Shared%20Document, has folders A through J . The customer only wants to migrate folders A, B, C, D, and E. Instead of issuing a single read at the root level and returning large unnecessary content, or issuing AMR per individual folder which is not effective, the software can issue URI [A, B, C, D, E] in the input parameters returning only required metadata.
+
+There are no limits on the number of URI attached in the parameter as long as the call can fit into a single HTTP request.
+
 
 #### readOptions Flag
 The read asynchronous function will include the SPAsyncReadOptions structure which covers the optional flags to allow the user to specify version and security setting on the site level more is described below.
@@ -112,9 +126,9 @@ Recommendation is to keep the default for file share migration, but consider set
 
 This option applies to input URL of list or document library only.
  
-One of the key CSOM contributor is incremental migration. ChangeToken idea is introduced to reduce the unnecessary CSOM calls. If StartChangeToken is not specified, the CreateSPAsyncReadJob will query and read back all the items specified by the API function. Once specified with the ChangeToken value, only the item changed since last query is returned.
+One of the key calls contributor is incremental migration. ChangeToken idea is introduced to reduce the unnecessary calls. If StartChangeToken is not specified, the CreateSPAsyncReadJob will query and read back all the items specified by the API function. Once specified with the ChangeToken value, only the item changed since last query is returned.
  
-During incremental migration, instead of query everything again, by populating StartChangeToken with the change token received from the CurrentChangeToken output in returning job info, createSPAsyncReadJob then returns only the items that got changed since the specified StartChangeToken, reducing the overall CSOM calls. 
+During incremental migration, instead of query everything again, by populating StartChangeToken with the change token received from the CurrentChangeToken output in returning job info, createSPAsyncReadJob then returns only the items that got changed since the specified StartChangeToken, reducing the overall calls. 
 
 Below is a sample of how the *startChangeToken* might work. This example uses the optional feature setting for initial call and the parameter setting for incremental passes.  
 
@@ -206,24 +220,46 @@ The following provides high level guidelines for implementing the asynchronous m
 
 1. Install and update the latest Microsoft.SharePointOnline.CSOM version. The minimum version requirement is V16.1.9119.1200 or later.
 2. ISVs figure out the folder, document library or files of interested to be query and issued with CreateSPAsyncReadJob function. 
-3. Once successfully created, query the job status using the *jobQueueUri*. It provides the job process status and any error logging. After job completion, parse the Manifest to retrieve the metadata.
+3. Once successfully created, query the job status using the *jobQueueUri*. It provides the job process status and any error logging. After job completion, parse the manifest to retrieve the metadata.
 
 ### SharePoint Migration Export (Asynchronous Metadata Read) API Example 
 
-#### Scenario: Large file share with nested files/folders
+#### Scenario: Large file share (> 1 million) with nested files/folders
 
 Suggestion:
+1.	Issue CreateSPAsyncReadJob:</br>
+ a. URL = root URL (e.g. www.contoso.com/my-resource-document)</br>
+ b. Optional Flag: IncludeDirectDescendantsOnly(true)</br>
 
-1. Issue CreateSPAsyncReadJob:</br>
-    a. URL = root URL (e.g. <spam><spam>www.contoso.com/my-resource-document<spam><spam>)</br>
-    b. Optional Flag: IncludeDirectDescendantsOnly(true)
+For each of the sub folders, issue createSPAsyncReadJob if the folder has > 10K
 
-2. For each of the sub folders, issues createSPAsyncReadJob , for example if there are sub folder A and B</br>
-    a. Issue CreateSPAsyncReadJob with URL = root URL (e.g. <spam><spam>www.contoso.com/my-resource-document/a<spam><spam>) </br>
-    b. Issue CreateSPAsyncReadJob with URL = root URL (e.g. <spam><spam>www.contoso.com/my-resource-document/b<spam><spam>) 
+**Sample source code**
 
->[!NOTE]
->This scenario is only recommended for top level folders or if the sub-folder contains greater than 100k of objects. The performance of the asynchronous metadata read api is not as effective when reading a small set of items.
+```xml 
+$site = get-spsite https://test.sharepoint.com  # get site
+$web = get-spweb https://test.sharepoint.com  # get web
+$list = $web.GetList("Shared Documents") # get the document library under this web
+ 
+# Get the Doclib root folder
+$rootFolder = $web.GetFolder($list.Rootfolder.ServerRelativeUrl)
+ 
+# You can call 1 AMR job here, to get metadata of the direct children of the root folder  only
+CreateAMRJob($rootFolder)
+ 
+# Create parallel AMR jobs for the direct level subfolders
+Foreach ($folder in $rootFolder.SubFolders)
+{
+   // Create 1 AMR job per folder tree
+   CreateAMRJob($folder)
+}
+```
+The ISV can optimize the recursive highlight part by leveraging the $ folder.item["SMTotalFileCount"] that will return the cumulative file count in the folder tree for a given folder item.  Follow the recommendations in the performance section on type of AMR jobs to issue
+2.	object, issued in multiple URL if < 10K objects
+3.	 Note
+
+
+>[!IMPORTANT]
+>This scenario is only recommended for top level folders or if the sub-folder contains greater than one million objects. The performance of the AMR API is **not as effective* when reading a small set of items.
 
 #### Scenario: Tenant to tenant or large SharePoint Migration
  
@@ -259,7 +295,7 @@ This measure of throughput assumes the software package has a sufficient number 
 |:-----|:-----|
 |Less than 10,000 items|Combine the URLs of multiple folders into a single call|
 |Greater than 10,000 items but less than 1,000,000|Run AMR at the root folder level|
-|Greater than 1,000,000|Method is at the discretion of the ISV|
+|Greater than 1,000,000|Use the recursive call logic to explore that folder's direct level children until there are no more folders.|
 
 For a single read query, it is faster to use the Graph API or a RESTful/CSOM query.
  

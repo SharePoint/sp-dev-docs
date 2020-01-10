@@ -67,18 +67,13 @@ Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/off
 To create a site collection app catalog, use the `Add-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be created as the `-Site` parameter.
 
 ```powershell
-# get a reference to the site collection where the
-# site collection app catalog should be created
-$site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
-
-# create site collection app catalog
-Add-SPOSiteCollectionAppCatalog -Site $site
+Add-SPOSiteCollectionAppCatalog -Site https://contoso.sharepoint.com/sites/marketing
 ```
 
 Alternatively, use PnP PowerShell to add the site app catalog functionality to your site after having connected to the SharePoint Online Admin site:
 
 ```powershell
-Add-PnPSiteCollectionAppCatalog -site https://<tenant>.sharepoint.com/sites/<sitename>
+Add-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/marketing
 ```
 
 Alternatively, use the `spo site appcatalog add` command if you are using the Office 365 CLI:
@@ -92,7 +87,7 @@ After executing this script, the **Apps for SharePoint** library will be added t
 ### Disable the site collection app catalog
 
 > [!NOTE]
-> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet for the SharePoint Online PowerShell or `spo connect` command for the Office 365 CLI.
+> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet for the SharePoint Online PowerShell, `Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -UseWebLogin` for PnP PowerShell or `spo connect` command for the Office 365 CLI.
 
 To disable the site collection app catalog in your site collection, use the `Remove-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be disabled as the `-Site` parameter. Alternatively, if you have your site collection's ID, you can use the `Remove-SPOSiteCollectionAppCatalogById` cmdlet instead.
 
@@ -100,18 +95,13 @@ To disable the site collection app catalog in your site collection, use the `Rem
 > Despite the naming, the `Remove-SPOSiteCollectionAppCatalog` and `Remove-SPOSiteCollectionAppCatalogById` cmdlets don't remove the site collection app catalog from the site collection. Instead, they disable it so that it's not possible to deploy or use any solutions deployed in it.
 
 ```powershell
-# get a reference to the site collection in which
-# the site collection app catalog should be disabled
-$site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
-
-# disable the site collection app catalog
-Remove-SPOSiteCollectionAppCatalog -Site $site
+Remove-SPOSiteCollectionAppCatalog -Site https://contoso.sharepoint.com/sites/marketing
 ```
 
 Alternatively, use PnP PowerShell to remove the site app catalog functionality from your site after having connected to the SharePoint Online Admin site:
 
 ```powershell
-Remove-PnPSiteCollectionAppCatalog -site https://<tenant>.sharepoint.com/sites/<sitename>
+Remove-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/marketing
 ```
 
 Alternatively, use the `spo site appcatalog remove` command if you are using the Office 365 CLI

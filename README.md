@@ -16,6 +16,9 @@ You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@off
 
 ## SharePoint Framework Releases
 
+* **January 7, 2020**
+   * **SPFx v1.10** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.10-release-notes)
+
 * **August 14, 2019**
    * **SPFx v1.9.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9.1-release-notes)
 
