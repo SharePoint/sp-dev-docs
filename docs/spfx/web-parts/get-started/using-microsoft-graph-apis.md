@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph APIs
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 01/07/2020
+ms.date: 01/9/2020
 ms.prod: sharepoint
 ---
 
@@ -23,38 +23,36 @@ Before you start, complete the procedures in the following articles to ensure th
     md graph-apis
     ```
 
-2. Go to the project directory:
+1. Go to the project directory:
 
     ```shell
     cd graph-apis
     ```
 
-3. Create a new solution by running the Yeoman SharePoint Framework Generator:
+1. Create a new solution by running the Yeoman SharePoint Framework Generator:
 
     ```shell
     yo @microsoft/sharepoint
     ```
 
-4. When prompted:
+1. When prompted:
 
     * Accept the default **graph-apis** as your solution name, and then select Enter.
     * Select **SharePoint Online only (latest)**, and then select Enter.
     * Select **Use the current folder** as the location for the files.
     * Select **y** to ensure that your web part is automatically deployed tenant-wide when it's added to the tenant App Catalog.
-    * Select **N** on the question if solution contains unique permissions.  
+    * Select **N** on the question if solution contains unique permissions.
     * Select **WebPart** as the client-side component type to be created.
 
-5. The next set of prompts asks for specific information about your web part:
+1. The next set of prompts asks for specific information about your web part:
 
     * Enter **MyFirstGraphWebPart** for the web part name, and then select Enter.
-    * Enter **Calling Graph APIs from SharePoint Framework** as the description of the web part, and then select Enter. 
+    * Enter **Calling Graph APIs from SharePoint Framework** as the description of the web part, and then select Enter.
     * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
-
-    ![Yeoman prompts](../../../images/graph-helloworld-yeoman.png)
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyFirstGraphWebPart** web part as well.
 
-6. Next, enter the following to open the web part project in Visual Studio Code:
+1. Next, enter the following to open the web part project in Visual Studio Code:
 
     ```shell
     code .
@@ -72,46 +70,44 @@ Before you start, complete the procedures in the following articles to ensure th
 
 ## Updating solution manifest with the needed Microsoft Graph permissions requests
 
-By using SharePoint Framework, you do not needed to explicitly create Azure Active Directory applications to manage your permissions for your solutions, you can rather request the needed permissions in your solution package, and Office 365 tenant administrator can then graph the requested permissions in general for all solutions or specifically for this solution (isolated solution).
+By using SharePoint Framework, you don't needed to explicitly create Azure Active Directory applications to manage your permissions for your solutions, you can rather request the needed permissions in your solution package, and Office 365 tenant administrator can then graph the requested permissions in general for all solutions or specifically for this solution (isolated solution).
 
 > [!NOTE]
 > Tenant administrators can also manage the API permissions using PowerShell cmdlets, so there's no specifically a requirement to have the permissions included in the solution package.
 
-In this case, we will include the solution-specific permissions in the package.
+In this case, we'll include the solution-specific permissions in the package.
 
 1. Open `package-solution.json` under the **config** folder
-2. Update the solution section to include permission grant request as shown in the following code section by using `webApiPermissionRequests` element. In this case we will access user's emails, so we have requested permissions for the `Mail.Read` scope.
+1. Update the solution section to include permission grant request as shown in the following code section by using `webApiPermissionRequests` element. In this case we'll access user's emails, so we have requested permissions for the `Mail.Read` scope.
 
-```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-  "solution": {
-    "name": "graph-apis-client-side-solution",
-    "id": "25103ce6-ef10-4369-9d90-24487734555e",
-    "version": "1.0.0.0",
-    "includeClientSideAssets": true,
-    "skipFeatureDeployment": true,
-    "isDomainIsolated": false,
-    "webApiPermissionRequests": [
-      {
-        "resource": "Microsoft Graph",
-        "scope": "Mail.Read"
+    ```json
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+      "solution": {
+        "name": "graph-apis-client-side-solution",
+        "id": "25103ce6-ef10-4369-9d90-24487734555e",
+        "version": "1.0.0.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "isDomainIsolated": false,
+        "webApiPermissionRequests": [
+          {
+            "resource": "Microsoft Graph",
+            "scope": "Mail.Read"
+          }
+        ]
+      },
+      "paths": {
+        "zippedPackage": "solution/graph-apis.sppkg"
       }
-    ]
-  },
-  "paths": {
-    "zippedPackage": "solution/graph-apis.sppkg"
-  }
-}
-```
-
+    }
+    ```
 
 ## Updating code to call Microsoft Graph APIs
 
-In this case, we'll slightly adjust the code to call Microsoft Graph API to get access on the latest five emails of the current user. 
+In this case, we'll slightly adjust the code to call Microsoft Graph API to get access on the latest five emails of the current user.
 
 1. Open **src\webparts\helloWorld\MyFirstGraphWebPartWebPart.ts** for the needed edits on calling Microsoft Graph APIs.
-
 1. Include following entries as an import just below the importing string line in the top of the file
 
     ```typescript
@@ -119,7 +115,7 @@ In this case, we'll slightly adjust the code to call Microsoft Graph API to get 
     import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
     ```
 
-1. Update the **render** method as follows. Notice how we are using the `MSGraphClient` object for the Microsoft Graph API calls. This object abstracts the access token handling, so that as a developer, you can simply concentrate on your business logic.
+1. Update the **render** method as follows. Notice how we're using the `MSGraphClient` object for the Microsoft Graph API calls. This object abstracts the access token handling, so that as a developer, you can concentrate on your business logic.
 
     ```typescript
     public render(): void {
@@ -155,7 +151,7 @@ In this case, we'll slightly adjust the code to call Microsoft Graph API to get 
     }
     ```
 
-1. Include also following helper function for email content rendering just below the `render` method. Notice how we are using the `MicrosoftGraph.Message` types to give us better development experience as accessing the API response data.
+1. Include also following helper function for email content rendering just below the `render` method. Notice how we're using the `MicrosoftGraph.Message` types to give us better development experience as accessing the API response data.
 
     ```typescript
     private _renderEmailList(messages: MicrosoftGraph.Message[]): void {
@@ -190,10 +186,9 @@ Ensure that your console is activated in the root folder of the solution, which 
 Next, you need to deploy the package that was generated to the tenant App Catalog.
 
 > [!NOTE]
-> If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
+> If you don't have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
 
 1. Go to your tenant's SharePoint App Catalog.
-
 1. Upload or drag and drop the **graph-apis.sppkg** to the App Catalog.
 
     ![Upload solution to App Catalog](../../../images/graph-helloworld-app-catalog.png)
@@ -212,7 +207,7 @@ Next, you need to deploy the package that was generated to the tenant App Catalo
 
     Notice that you can see if there's any exceptions or issues in the package by looking the **App Package Error Message** column in the App Catalog.
 
-Now the web part is deployed and is automatically available cross the SharePoint Online sites, it's however important to realize that the web part will **not** work properly until the requested permissions have been approved.
+Now the web part is deployed and is automatically available cross the SharePoint Online sites, it's however important to realize that the web part *won't* work properly until the requested permissions have been approved.
 
 ## Approving requested Graph API permissions
 
@@ -228,7 +223,6 @@ Now the web part is deployed and is automatically available cross the SharePoint
 1. Review the requested permission in the left panel and choose **Approve**
 
     ![Approve](../../../images/graph-helloworld-approve.png)
-
 
 Now the requested permissions needed for the web part have been approved and we can test the functionality.
 
@@ -248,5 +242,5 @@ Now the requested permissions needed for the web part have been approved and we 
 
 * [Use the MSGraphClient to connect to Microsoft Graph](https://docs.microsoft.com/sharepoint/dev/spfx/use-msgraph)
 * [Consume the Microsoft Graph in the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/use-aad-tutorial)
-* [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-* [Get started with Microsoft Graph and JavaScript](https://developer.microsoft.com/en-us/graph/get-started/javascript)
+* [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
+* [Get started with Microsoft Graph and JavaScript](https://developer.microsoft.com/graph/get-started/javascript)
