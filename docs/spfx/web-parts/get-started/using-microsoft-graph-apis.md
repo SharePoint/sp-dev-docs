@@ -66,9 +66,9 @@ Before you start, complete the procedures in the following articles to ensure th
 
 1. In the console, enter the following to install Microsoft Graph typings to  improve development experience
 
-```shell
+    ```shell
     npm install @microsoft/microsoft-graph-types
-```
+    ```
 
 ## Updating solution manifest with the needed Microsoft Graph permissions requests
 
