@@ -343,6 +343,8 @@
       items:
       - name: Migration Guidance for ISVs
         href: apis/migration-isv-guidance.md
+      - name: Migrating OneNote folders
+        href: apis/onenote-migration-service.md
       - name: Migration API
         items:
         - name: Import Migration API     
