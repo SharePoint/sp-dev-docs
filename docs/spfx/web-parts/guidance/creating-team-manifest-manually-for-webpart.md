@@ -23,8 +23,8 @@ To side load a SharePoint Framework web part as a Microsoft Teams application, y
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.2",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "packageName": "{{SPFX_COMPONENT_ALIAS}}",
   "id": "{{SPFX_COMPONENT_ID}}",
   "version": "0.1",
@@ -111,8 +111,8 @@ Below json structure demonstrates sample manifest file content.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.2",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "packageName": "SpFxTeamsTogetherWebPart",
   "id": "b7771434-9587-4a79-9990-48c310f78a3d",
   "version": "0.1",
