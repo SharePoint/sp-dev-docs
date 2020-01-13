@@ -50,7 +50,7 @@ To side load a SharePoint Framework web part as a Microsoft Teams application, y
         {
             "entityId": "com.contoso.personaltab.spfx",
             "name": "My SPFx Personal Tab",
-            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId={{SPFX_COMPONENT_ID}}",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId={{SPFX_COMPONENT_ID}}%26forceLocale={locale}",
             "scopes": [
                 "personal"
             ]
@@ -138,7 +138,7 @@ Below json structure demonstrates sample manifest file content.
         {
             "entityId": "com.contoso.personaltab.spfx",
             "name": "My SPFx Personal Tab",
-            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=50ef7075-1c74-4b40-809b-6aad4b4e2445",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=50ef7075-1c74-4b40-809b-6aad4b4e2445%26forceLocale={locale}",
             "scopes": [
                 "personal"
             ]
