@@ -6,6 +6,8 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
+# Determine SharePoint REST service endpoint URIs
+
 > [!TIP]
 > Before you start, review the following resources:
 >

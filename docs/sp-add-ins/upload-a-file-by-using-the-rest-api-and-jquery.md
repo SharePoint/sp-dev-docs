@@ -6,6 +6,8 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
+# Upload a file by using the REST API and jQuery
+
 The code examples in this article use the REST interface and jQuery AJAX requests to add a local file to the **Documents** library, and then change properties of the list item that represents the uploaded file.
 
 This process uses the following high-level steps:

@@ -6,6 +6,8 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
+# Use OData query operations in SharePoint REST requests
+
 > [!TIP]
 > Before you start, review the following resources:
 >
