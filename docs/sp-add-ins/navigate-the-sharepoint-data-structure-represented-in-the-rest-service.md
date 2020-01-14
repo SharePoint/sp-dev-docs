@@ -6,6 +6,8 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
+# Navigate the SharePoint data structure represented in the REST service
+
 When you're working with the SharePoint REST service, you'll often start out knowing the URL of a specific SharePoint item, but want to access related items, such as the folder or library structure where that item resides. For example, suppose you create an add-in where your user enters the URL of a document in a SharePoint library. Your add-in must then break down that URL to figure out the actual SharePoint site URL. After it's done that, the add-in can then make more requests from the site on the user's behalf, such as to create, update, or delete related items or resources.
 
 To do this, your add-in needs to query SharePoint for the following information:

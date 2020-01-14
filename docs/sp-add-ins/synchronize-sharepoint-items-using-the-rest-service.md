@@ -6,6 +6,8 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
+# Synchronize SharePoint items using the REST service
+
 If you want to synchronize items between SharePoint and your add-ins or services, you can use the **GetListItemChangesSinceToken** resource to do so. The **GetListItemChangesSinceToken**, part of the SharePoint REST service, corresponds to the **Lists.GetListItemChangesSinceToken** web service call.
 
 Perform a **POST** request that includes an [SP.ChangeLogItemQuery object properties](#bk_props) object in the request body.
