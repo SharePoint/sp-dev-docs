@@ -23,7 +23,7 @@ There is now a OneNote converting service in SPO that lets you mark the **OneNot
 
 The following example shows SPMT using the SPO OneNote converting service, which is running in SPO background.  
 
-![OneNote migration process](media/onenote-migration-flow.png)
+![OneNote migration process](../images/onenote-migration-flow.png)
 
 
 ## Algorithm for checking whether to mark the folder as OneNote folder 
