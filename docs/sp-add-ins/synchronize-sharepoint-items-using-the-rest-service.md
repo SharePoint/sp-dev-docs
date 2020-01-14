@@ -1,12 +1,10 @@
 ---
 title: Synchronize SharePoint items using the REST service
 description: Synchronize items between SharePoint and your add-ins or services by using the GetListItemChangesSinceToken resource, part of the SharePoint REST service.
-ms.date: 12/14/2017
+ms.date: 1/14/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
-# Synchronize SharePoint items using the REST service
 
 If you want to synchronize items between SharePoint and your add-ins or services, you can use the **GetListItemChangesSinceToken** resource to do so. The **GetListItemChangesSinceToken**, part of the SharePoint REST service, corresponds to the **Lists.GetListItemChangesSinceToken** web service call.
 
@@ -14,44 +12,47 @@ Perform a **POST** request that includes an [SP.ChangeLogItemQuery object proper
 
 The request returns ADO **rowset** XML, which includes rows corresponding to any list item change matching the specified query. For more information about these properties, including property data structures, CAML element descriptions, and return values, see [Lists.GetListItemChangesSinceToken](https://msdn.microsoft.com/library/office/jj247029.aspx).
 
-### Example
+## Example
 
-**Example request**
+```http
+POST https://{site_url}/_api/web/Lists/GetByTitle('Announcements')/GetListItemChangesSinceToken`
+Authorization: "Bearer " + accessToken
+Content-Type: "application/json"
+Content-Length: {length of request body as integer}
 
-`POST http://server/site/_api/web/Lists/GetByTitle('Announcements')/GetListItemChangesSinceToken`
-
-**Example POST body**
-
-```XML
-{ 'd' : { 
-  'query': { 
-    '__metadata': { 'type': 'SP.ChangeLogItemQuery'}, 
-    'ViewName': '', 
-    'Query': '
+{ "d" : {
+  "query": {
+    "__metadata": {
+      "type": "SP.ChangeLogItemQuery"
+    },
+    "ViewName": "",
+    "Query": "
       <Query>
-      <Where>
+        <Where>
+          <Contains>
+            <FieldRef Name='Title' />
+            <Value Type='Text'>Te</Value>
+          </Contains>
+        </Where>'
+      </Query>,
+    "QueryOptions": "
+      <QueryOptions>
+        <IncludeMandatoryColumns>FALSE</IncludeMandatoryColumns>
+        <DateInUtc>False</DateInUtc>
+        <IncludePermissions>TRUE</IncludePermissions>
+        <IncludeAttachmentUrls>FALSE</IncludeAttachmentUrls>
+        <Folder>Shared Documents/Test1</Folder>
+      </QueryOptions>',
+    "ChangeToken":"1;3;eee4c6d5-f88a-42c4-8ce1-685122984870;634397182229400000;3710",
+    "Contains": "
       <Contains>
-         <FieldRef Name="Title" />
-         <Value Type='Text'>Te</Value>
-      </Contains></Where>'</Query>,
-    'QueryOptions': '<QueryOptions>
-      <IncludeMandatoryColumns>FALSE</IncludeMandatoryColumns>
-      <DateInUtc>False</DateInUtc>
-      <IncludePermissions>TRUE</IncludePermissions>
-      <IncludeAttachmentUrls>FALSE</IncludeAttachmentUrls>
-      <Folder>Shared Documents/Test1</Folder></QueryOptions>', 
-    'ChangeToken':'1;3;eee4c6d5-f88a-42c4-8ce1-685122984870;634397182229400000;3710', 
-    'Contains':'<Contains>
-      <FieldRef Name="Title"/>
-      <Value Type="Text">Testing</Value></Contains>' } 
-  } 
+        <FieldRef Name="Title"/>
+        <Value Type="Text">Testing</Value>
+      </Contains>"
+    }
+  }
 }
-
 ```
-
-<br/>
-
-<a name="bk_props"> </a>
 
 ## SP.ChangeLogItemQuery object properties
 
@@ -65,7 +66,6 @@ The request returns ADO **rowset** XML, which includes rows corresponding to any
 |**Contains**|A [Contains](https://msdn.microsoft.com/library/ms196501.aspx) element that defines custom filtering for the query.|
 
 ## See also
-<a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [Use ETag values through the REST service to get document list item versioning](working-with-lists-and-list-items-with-rest.md#using-etag-values-to-determine-document-and-list-item-versioning)
