@@ -96,7 +96,6 @@ The following figure shows the supported OData query options.
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
-- [REST API reference and samples](https://msdn.microsoft.com/library)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     
  

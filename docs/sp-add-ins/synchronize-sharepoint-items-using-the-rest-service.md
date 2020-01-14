@@ -69,14 +69,5 @@ The request returns ADO **rowset** XML, which includes rows corresponding to any
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [Use ETag values through the REST service to get document list item versioning](working-with-lists-and-list-items-with-rest.md#using-etag-values-to-determine-document-and-list-item-versioning)
-- [REST API reference and samples](https://msdn.microsoft.com/library)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
-
-    
- 
-
- 
-
- 
-

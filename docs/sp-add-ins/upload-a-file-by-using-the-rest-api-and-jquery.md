@@ -374,6 +374,5 @@ function onError(error) {
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md)
-- [REST API reference and samples](https://msdn.microsoft.com/library)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
