@@ -1,7 +1,7 @@
 ---
 title: Synchronize SharePoint items using the REST service
 description: Synchronize items between SharePoint and your add-ins or services by using the GetListItemChangesSinceToken resource, part of the SharePoint REST service.
-ms.date: 1/14/2020
+ms.date: 1/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,7 +10,7 @@ localization_priority: Priority
 
 If you want to synchronize items between SharePoint and your add-ins or services, you can use the **GetListItemChangesSinceToken** resource to do so. The **GetListItemChangesSinceToken**, part of the SharePoint REST service, corresponds to the **Lists.GetListItemChangesSinceToken** web service call.
 
-Perform a **POST** request that includes an [SP.ChangeLogItemQuery object properties](#bk_props) object in the request body.
+Perform a **POST** request that includes an [SP.ChangeLogItemQuery object properties](#spchangelogitemquery-object-properties) object in the request body.
 
 The request returns ADO **rowset** XML, which includes rows corresponding to any list item change matching the specified query. For more information about these properties, including property data structures, CAML element descriptions, and return values, see [Lists.GetListItemChangesSinceToken](https://msdn.microsoft.com/library/office/jj247029.aspx).
 
@@ -22,7 +22,8 @@ Authorization: "Bearer " + accessToken
 Content-Type: "application/json"
 Content-Length: {length of request body as integer}
 
-{ "d" : {
+{
+  "d" : {
   "query": {
     "__metadata": {
       "type": "SP.ChangeLogItemQuery"

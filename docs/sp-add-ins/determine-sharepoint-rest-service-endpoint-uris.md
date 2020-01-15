@@ -22,7 +22,7 @@ Before you can access a SharePoint resource using the REST service, you first ha
 # [CSOM](#tab/csom)
 <!-- {
   "blockType": "request",
-  "name": "sharepoint_rest"
+"name": "sharepoint_rest"
 }-->
 
 ```csharp
