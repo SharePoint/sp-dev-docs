@@ -312,7 +312,7 @@
       href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
     - name: Complete basic operations using JavaScript library code in SharePoint
       href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
-    - name: Get to know the SharePoint REST service
+    - name: SharePoint REST API v1
       href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
       items:
       - name: Complete basic operations
