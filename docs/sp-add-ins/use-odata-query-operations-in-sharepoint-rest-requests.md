@@ -1,7 +1,7 @@
 ---
 title: Use OData query operations in SharePoint REST requests
 description: Use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service.
-ms.date: 1/14/2020
+ms.date: 1/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -39,7 +39,7 @@ Bulk expansion and selection of related items isn't supported.
 
 ## Select items to return
 
-Use the [$filter](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#FilterSystemQueryOption) query option to select which items to return. [OData query operators supported in the SharePoint REST service](#bk_supported) lists the filter query comparison options and functions you can use with the SharePoint REST service.
+Use the [$filter](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#FilterSystemQueryOption) query option to select which items to return. [OData query operators supported in the SharePoint REST service](#odata-query-operators-supported-in-the-sharepoint-rest-service) lists the filter query comparison options and functions you can use with the SharePoint REST service.
 
 ## Query for single value lookup fields
 
