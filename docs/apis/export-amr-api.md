@@ -172,6 +172,7 @@ Below is an example on how to query the folder:
     CloudBlobDirectory folder = blobContainerObj.GetDirectoryReference(jobid);
     CloudBlockBlob blob = folder.GetBlockBlobReference(manifestFileName);
 
+
 |**XML file**|**Schema File**|**Description**|
 |:-----|:-----|:-----|
 |ExportSettings.XML|DeploymentExportSettings Schema|ExportSettings.XML does the following:</br></br>- Contains the export settings specified by using the SPExportSettings class and other classes that are part of the content migration object model. </br></br>- Ensures that the subsequent export process (at the migration target site) enforces the directives specified in the export settings.</br></br>- Maintains a catalog of all objects exported to the migration package.|
@@ -183,6 +184,41 @@ Below is an example on how to query the folder:
 |UserGroupMap.XML|DeploymentUserGroupMap Schema|Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.|
 |ViewFormsList.XML|DeploymentViewFormsList Schema|Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.|
 
+#### How to retrieve the manifest from the Azure blob
+
+The following example code demonstrates how to get the Azure blob of an manifest file and decipher it:</br></br>
+
+```XML
+
+// Get Azure blob of a manifest file
+              CloudBlockBlob blob = folder.GetBlockBlobReference(blobName);
+                blob.FetchAttributes();
+
+                using (Stream stmTemp = new MemoryStream())
+                {
+                    // Download current manifest file
+                    blob.DownloadToStream(stmTemp);
+
+                    // Get IV and decrypt the content into output dir
+                    byte[] IV = Convert.FromBase64String(blob.Metadata[“IV”]);
+
+                    using (Stream targetStream = System.IO.File.Open(outputFileFullPath, FileMode.Append))
+                    {
+                            using (Aes alg = new AesCryptoServiceProvider())
+                            {
+                                stmTemp.Seek(0, SeekOrigin.Begin);
+                                using (CryptoStream csDecrypt = new CryptoStream(
+                                    stmTemp,
+                                    alg.CreateDecryptor(key, IV),
+                                    CryptoStreamMode.Read))
+                                {
+                                    csDecrypt.CopyTo(targetStream);
+                                }
+                            }
+                        }
+                }
+
+```
 #### JobQueueUri
 
     public Uri JobQueueUri { get; set; } 
