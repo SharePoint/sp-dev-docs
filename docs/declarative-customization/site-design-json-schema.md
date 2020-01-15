@@ -382,7 +382,7 @@ Registers field extension for a list field. For more information on these client
     "templateType": 100,
     "subactions": [
         {
-            "verb": "SetDescription",
+            "verb": "setDescription",
             "description": "Custom list to illustrate SharePoint site scripting"
         },
         {
