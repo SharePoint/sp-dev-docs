@@ -19,7 +19,7 @@ The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packag
 > [!IMPORTANT]
 > Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
-Page transformation can be used in one or more models and these models can used together:
+Page transformation can be used in one or more of the below models:
 
 Model | Technique | Audience | Publishing Page support | Comments
 ------|---------- |----------|-------------------------|---------
@@ -33,7 +33,7 @@ Page Type | SharePoint 2010 | SharePoint 2013 | SharePoint 2016 | SharePoint 201
 Wiki page | x | x | x | x | x
 Webpart page | x | x | x | x | x
 Blog page | x (as of the November 2019 release) | x | x | x | x
-Delve Blog page |   |   |   |   | x (as of the November 2019 release)
+Delve Blog page |   |   |   |   | x (as of the December 2019 release)
 Publishing page | x | x | x | x | x
 
 ## See also

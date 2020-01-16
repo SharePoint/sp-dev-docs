@@ -16,7 +16,7 @@ The page transformation engine can also be used from PowerShell. This allows it 
 > [!NOTE]
 > Below script shows how to transform pages. It requires [PnP PowerShell](https://aka.ms/sppnp-powershell) version 3.4.1812.0 (December 2018 release) or higher. There are additional sample scripts (e.g. for transforming publishing page, for transforming from on-premises SharePoint) available in our [GitHub scripts location](https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/PageTransformation).
 
-[!code-powershell[transformpages](../../sp-dev-modernization/Scripts/PageTransformation/TransformPages.ps1 "Transform pages to modern pages using PowerShell")]
+[!code-powershell[transformpages](../../sp-dev-modernization/Scripts/PageTransformation/Convert-WikiAndWebPartPages.ps1 "Transform pages to modern pages using PowerShell")]
 
 ## Options for the ConvertTo-PnPClientSidePage cmdlet
 
