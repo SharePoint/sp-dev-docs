@@ -15,7 +15,16 @@ description: "Migrating OneNote folders using the SPO OneNote converting service
 ---
 # Migrating OneNote folders
 
-When bringing **OneNote** notebooks from outside of SharePoint Online (SPO) into the service, you are required to convert ("shred") the file for it to be supported properly in the service. The OneNote team now has a OneNote converting service in SPO. It is now possible to mark **OneNote** notebooks that are being migrated, to be converted. 
+When bringing **OneNote** notebooks into SharePoint Online (SPO) from outside the service, you are required to convert the file. OneNote files need to be located within a correctly tagged NoteBook folder before the OneNote content is accessible via the modern APIs.  
+
+There is now a OneNote converting service in SPO that lets you mark the **OneNote** notebooks that are being migrated to be converted.
+   
+## Example 
+
+The following example shows SPMT using the SPO OneNote converting service, which is running in SPO background.  
+
+![OneNote migration process](../images/onenote-migration-flow.png)
+
 
 ## Algorithm for checking whether to mark the folder as OneNote folder 
  
