@@ -74,10 +74,7 @@ You will need to adjust tenant and page name based on your environment.
 
 ```ps
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/marketing
-$item2 = Get-PnPListItem -List "Site Pages" -Query "<View><Query><Where><Eq><FieldRef Name='FileLeafRef'/><Value Type='Text'>page.aspx</Value></Eq></Where></Query></View>"
-$item2["PageLayoutType"] = "SingleWebPartAppPage"
-$item2.Update()
-Invoke-PnPQuery
+Set-PnPClientSidePage -Identity "Page" -LayoutType SingleWebPartAppPage
 ```
 
 ### Changing page layout using Office 365 CLI
