@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern pages using the SharePoint PowerShell
-ms.date: 01/03/2020
+ms.date: 01/16/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -14,7 +14,7 @@ localization_priority: Priority
 The page transformation engine can also be used from PowerShell. This allows it to be integrated in a site modernization script that besides page transformation also does other things like installing solution, connecting the site to an Office 365 group and applying tenant branding. A good example of an all-up modernization script can be found [in the Office 365 Group connect article](modernize-connect-to-office365-group.md).
 
 > [!NOTE]
-> Below script shows how to transform pages. It requires [PnP PowerShell](https://aka.ms/sppnp-powershell) version 3.4.1812.0 (December 2018 release) or higher. There are additional sample scripts (e.g. for transforming publishing page, for transforming from on-premises SharePoint) available in our [GitHub scripts location](https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/PageTransformation).
+> Below script shows how to transform pages. It requires [PnP PowerShell](https://aka.ms/sppnp-powershell) version 3.16.1912.* (December 2019) or higher. There are additional sample scripts (e.g. for transforming publishing page, for transforming from on-premises SharePoint) available in our [GitHub scripts location](https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/PageTransformation).
 
 [!code-powershell[transformpages](../../sp-dev-modernization/Scripts/PageTransformation/Convert-WikiAndWebPartPages.ps1 "Transform pages to modern pages using PowerShell")]
 
