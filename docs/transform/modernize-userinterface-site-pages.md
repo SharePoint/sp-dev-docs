@@ -21,10 +21,10 @@ The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packag
 
 Page transformation can be used in one or more models and these models can used together:
 
-Model | Technique | Audience | Publishing Page support | Keep/Discard option | Comments
-------|---------- |----------|-------------------------|---------------------|---------
-I want to transform pages for my users | [PowerShell](modernize-userinterface-site-pages-powershell.md) | DevOps | Yes | Optional (not for publishing pages) | Typically used when you want to modernize pages for multiple site collections. Optionally you can configure the page accept banner to be shown which then enables your end users to keep or discard the pages you've created using PowerShell
-I want to have full control on the page transformation process | [.Net](modernize-userinterface-site-pages-dotnet.md) | DevOps | Yes | Optional (not for publishing pages) | Typically used when you integrate page transformation into existing services or tools. Optionally you can configure the page accept banner to be shown which then enables your end users to keep or discard the pages you've created using .Net. The core of page transformation is the .Net based SharePoint PnP Modernization framework. Using .Net you can fully tailor the transformation process, this approach is recommended whenever you want full control on the transformation process or when you want to integrate page transformation into another solution/product.
+Model | Technique | Audience | Publishing Page support | Comments
+------|---------- |----------|-------------------------|---------
+I want to transform pages for my users | [PowerShell](modernize-userinterface-site-pages-powershell.md) | DevOps | Yes | Typically used when you want to modernize pages for multiple site collections. Using [PowerShell](modernize-userinterface-site-pages-powershell.md) is the **easiest and recommended** approach.
+I want to have full control on the page transformation process | [.Net](modernize-userinterface-site-pages-dotnet.md) | DevOps | Yes | Typically used when you integrate page transformation into existing services or tools. The core of page transformation is the .Net based SharePoint PnP Modernization framework. Using .Net you can fully tailor the transformation process, this approach is recommended whenever you want full control on the transformation process or when you want to integrate page transformation into another solution/product.
 
 Page transformation supports a wide range of SharePoint versions and page types as source, **all of these result in modern pages in SharePoint Online** as a result. Below table shows the possible page types versus pages sources that can be transformed to modern pages using the latest page transformation release.
 
