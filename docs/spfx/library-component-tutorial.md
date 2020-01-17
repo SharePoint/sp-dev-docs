@@ -133,7 +133,7 @@ localization_priority: Priority
     ```
 
     > [!NOTE]
-    > ```npm install``` will throw an error if you create a web part and you just added a reference to ```package.json``` and do not create a local reference using ```npm link```. If you have created a link using ```npm link``` and run ```npm install``` you will not receive an error during ```npm install``` but the symbolic link will be removed. If you want to run ```npm install``` you will have to temporarily remove the reference to the corporate library and re-establish the reference by running ```npm link corporate-library``` and update the reference in ```package.json```. 
+    > ```npm install``` will throw an error if you create a web part and you just added a reference to ```package.json``` and do not create a local reference using ```npm link```. If you have created a link using ```npm link``` and run ```npm install```, you will not receive an error during ```npm install``` but the symbolic link will be removed. If you want to run ```npm install```, you will have to temporarily remove the reference to the corporate library and re-establish the reference by running ```npm link corporate-library``` and update the reference in ```package.json```. 
  
 1. Build the web part:
 
