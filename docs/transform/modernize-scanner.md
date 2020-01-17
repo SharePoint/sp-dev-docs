@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 01/09/2020
+ms.date: 01/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -120,7 +120,7 @@ https://contoso.sharepoint.com/sites/opensourcerocks
 
 The SharePoint modernization scanner does support multiple modes, depending on your modernization mode you might want to scope the scan to a certain area or alternatively, execute a full scan.
 
-![scanner modes](media/modernize/scanner_p3_1_2.6.png)
+![scanner modes](media/modernize/scanner_p3_1_2.8.png)
 
 Select the option you want in the dropdown and then the checkboxes will show which components will be included in the scan. The "Office 365 Group connection readiness" component is the main component that will be included all scan modes.
 
@@ -170,11 +170,12 @@ SharePoint.Modernization.Scanner.exe -m GroupifyOnly -t contoso -i 7a5c1615-997a
 
 ### Supported scanner modes
 
-          Mode            |                                                             Description
+Mode                      | Description
 ------------------------- | -----------------------------------------------------------------------------------------------------------------------------------
 `Full`                    | All components will be included, omitting -m has the same result
 `GroupifyOnly`            | Only use the Office 365 group connection readiness component, this component is part of each scan
 `ListOnly`                | Includes a deep list scan + includes the Office 365 group connection readiness component
+`HomePageOnly`            | Includes a scan from wiki and web part pages home pages + includes the Office 365 group connection readiness component
 `PageOnly`                | Includes a scan from wiki and web part pages + includes the Office 365 group connection readiness component
 `PublishingOnly`          | Includes a classic publishing portal scan at site and web level + includes the Office 365 group connection readiness component
 `PublishingWithPagesOnly` | Includes a classic publishing portal scan at site, web and page level + includes the Office 365 group connection readiness component
@@ -184,9 +185,9 @@ SharePoint.Modernization.Scanner.exe -m GroupifyOnly -t contoso -i 7a5c1615-997a
 
 ### Command-line parameter overview
 
-```shell
-SharePoint PnP Modernization scanner 2.7.0.0
-Copyright (C) 2019 SharePoint PnP
+```text
+SharePoint PnP Modernization scanner 2.8.0.0
+Copyright (C) 2020 SharePoint PnP
 ==========================================================
 
 See the sp-dev-modernization repo for more information at:
@@ -234,8 +235,8 @@ https://contoso-admin.contoso.com -u spadmin@contoso.com -p pwd
 
 
   -m, --mode                               (Default: Full) Execution mode. Use following modes: Full, GroupifyOnly,
-                                           ListOnly, PageOnly, PublishingOnly, PublishingWithPagesOnly, WorkflowOnly,
-                                           InfoPathOnly or BlogOnly. Omit or use full for a full scan
+                                           ListOnly, HomePageOnly, PageOnly, PublishingOnly, PublishingWithPagesOnly,
+                                           WorkflowOnly, InfoPathOnly or BlogOnly. Omit or use full for a full scan
 
   -b, --exportwebpartproperties            (Default: False) Export the web part property data
 
