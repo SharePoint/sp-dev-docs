@@ -17,18 +17,18 @@ The following API description is based upon use of the SharePoint Client Side Ob
 > You can find latest version of the SharePoint Online Client Side Object Model from [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/).
 
 >[!NOTE]
->The **SharePoint Migration Tool** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
+>The **SharePoint Migration Tool** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
 
 ## Methods
 
 ### CreateMigrationJob
 
-This method creates a new migration import job and queues it up for later processing by a separate timer job. The job will consume a well formed (pre-defined format) import package that is located in the Azure Blob Storage Containers specified in this method. The SLA for migration job processing is be controlled through pre-configured queue and work load throttling settings, and there is no guaranteed SLA or return time for a submitted job. 
+This method creates a new migration import job and queues it up for later processing by a separate timer job. The job will consume a well formed (pre-defined format) import package that is located in the Azure Blob Storage Containers specified in this method. The SLA for migration job processing is be controlled through pre-configured queue and work load throttling settings, and there is no guaranteed SLA or return time for a submitted job.
 
 #### Syntax
 
 ```csharp
-public Guid CreateMigrationJob( 
+public Guid CreateMigrationJob(
     Guid gWebId,
     string azureContainerSourceUri,
     string azureContainerManifestUri,
@@ -48,8 +48,7 @@ The valid URL including SAS token for accessing the Azure Blob Storage Container
 The required permissions are as follows in the Azure Storage API:
 
 ```csharp
-    (SharedAccessBlobPermissions.Read | 
-	SharedAccessBlobPermissions.List)
+(SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.List)
 ```
 
 **Note:** The change to enforce Read and List permissions on the SAS token is coming in a future build. Until then it will not be enforced. However, it is a best practice to use these values.
@@ -77,7 +76,7 @@ All files in the container must have at least a single snapshot applied to them 
 > [!NOTE]
 > The change to require and use the latest SnapShots on all files is coming in a future build.  Until then they will be ignored.
 
-##### azureQueueReportUri 
+##### azureQueueReportUri
 
 The valid URL including SAS token for accessing the user provided Azure Queue used for returning notifications of migration job progress. This value can be null if no notification queue will be used during import. If this value is not null and proper access is granted in the SAS token in this URI, it will be used for real time status update. The SAS token must have been created with only Add, Read and Update permissions or the migration job will be unable to add events to the queue. The required permissions are as follows in the Azure Storage API:
 
@@ -134,62 +133,62 @@ SPMigrationJobState is an enumeration that tracks possible major states in the i
 
 #### Members
 
-|**Member name**|**Description**|
-|:-----|:-----|
-|None	|Migration job is currently unknown to the queue, either through completion and removal, or invalid job identifier. Value=0.|
-|Queued	|Migration job is currently known by the queue and not being processed. Value=2.|
-|Processing	|Migration job is currently known by the queue and is being actively processed. Value=4.|
+Member name|Description
+:-----|:-----
+None|Migration job is currently unknown to the queue, either through completion and removal, or invalid job identifier. Value=0.
+Queued|Migration job is currently known by the queue and not being processed. Value=2.
+Processing|Migration job is currently known by the queue and is being actively processed. Value=4.
  
 ## Import Package Structure
 
 Package structure is based on a constrained version of the Content Deployment package schema. Documentation for the original full schema can be found at [docs.microsoft.com](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). Until published on docs.microsoft.com, the constrained structure can be found in this document in the appendix.
 
-|XML file	|Schema File	|Description
-|:-----|:-----|:-----|
-|ExportSettings.XML|DeploymentExportSettings Schema |Provides validation for the ExportSettings.XML file exported into the content migration package. ExportSettings.XML does the following: <br> - Contains the export settings specified by using the SPExportSettings class and other classes that are part of the content migration object model. <br> - Ensures that the subsequent import process (at the migration target site) enforces the directives specified in the export settings. <br> - Maintains a catalog of all objects exported to the migration package.
-|LookupListMap.XML	|DeploymentLookupListMap Schema |Provides validation for the LookupListMap.XML file exported into the content migration package. LookupListMap.XML maintains a simple lookup list that records SharePoint list item (list item to list item) references.
-|Manifest.XML	|DeploymentManifest Schema|Provides validation for the Manifest.xml file that is exported into the content migration package.Provides a comprehensive manifest containing listings of both the contents and the structure of the source site. The migration operation uses the manifest file to reconstitute the source site and its components when it is imported to the destination site.|
-|Requirements.XML|DeploymentRequirements Schema|Provides validation for the Requirements.xml file exported into the content migration package. Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, Web Part assemblies, language packs, and so forth.|
-|RootObjectMap.XML|DeploymentRootObjectMap Schema|Provides validation for the RootObjectMap.xml file exported into the content migration package.RootObjectMap.xml maintains a list of mappings of secondary (dependent) objects, which allows the import phase of the migration operation to correctly place the dependent objects relative to the locations of the root object mappings.|
-|SystemData.XML|DeploymentSystemData Schema|Provides validation for the SystemData.xml file exported into the content migration package.SystemData.xml does the following: Collects a variety of low-level system data. Records the number and names of Manifest.xml files (in cases where the migration uses multiple manifests).|
-|UserGroupMap.XML|DeploymentUserGroupMap Schema|Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.|
-|ViewFormsList.XML|DeploymentViewFormsList Schema|Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.|
+XML file|Schema File|Description
+:-----|:-----|:-----
+ExportSettings.XML|DeploymentExportSettings Schema |Provides validation for the ExportSettings.XML file exported into the content migration package. ExportSettings.XML does the following: <br> - Contains the export settings specified by using the SPExportSettings class and other classes that are part of the content migration object model. <br> - Ensures that the subsequent import process (at the migration target site) enforces the directives specified in the export settings. <br> - Maintains a catalog of all objects exported to the migration package.
+LookupListMap.XML|DeploymentLookupListMap Schema |Provides validation for the LookupListMap.XML file exported into the content migration package. LookupListMap.XML maintains a simple lookup list that records SharePoint list item (list item to list item) references.
+Manifest.XML|DeploymentManifest Schema|Provides validation for the Manifest.xml file that is exported into the content migration package.Provides a comprehensive manifest containing listings of both the contents and the structure of the source site. The migration operation uses the manifest file to reconstitute the source site and its components when it is imported to the destination site.
+Requirements.XML|DeploymentRequirements Schema|Provides validation for the Requirements.xml file exported into the content migration package. Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, Web Part assemblies, language packs, and so forth.
+RootObjectMap.XML|DeploymentRootObjectMap Schema|Provides validation for the RootObjectMap.xml file exported into the content migration package.RootObjectMap.xml maintains a list of mappings of secondary (dependent) objects, which allows the import phase of the migration operation to correctly place the dependent objects relative to the locations of the root object mappings.
+SystemData.XML|DeploymentSystemData Schema|Provides validation for the SystemData.xml file exported into the content migration package.SystemData.xml does the following: Collects a variety of low-level system data. Records the number and names of Manifest.xml files (in cases where the migration uses multiple manifests).
+UserGroupMap.XML|DeploymentUserGroupMap Schema|Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.
+ViewFormsList.XML|DeploymentViewFormsList Schema|Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.
 
 ### Content structure
 
-File content that is referenced within the manifest of the package structure must be stored in either a flat or hierarchical structure within the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerSourceUri` parameter. For example, import packages generated form a legacy version export will not be hierarchical, and will instead have all files stored at the root level with a pattern like ########.dat where the # symbols are hexadecimal characters starting at 0 and no file names are repeated within a package. Alternately, a package generated from a file share can have the source folder hierarchy and file names preserved in the same hierarchy. 
+File content that is referenced within the manifest of the package structure must be stored in either a flat or hierarchical structure within the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerSourceUri` parameter. For example, import packages generated form a legacy version export will not be hierarchical, and will instead have all files stored at the root level with a pattern like ########.dat where the # symbols are hexadecimal characters starting at 0 and no file names are repeated within a package. Alternately, a package generated from a file share can have the source folder hierarchy and file names preserved in the same hierarchy.
 
 The main requirement for the structure is that the FileValue references in the **Manifest.XML** file must refer to the exact name and physical hierarchy that the content is stored in within the Azure Blob Store location for import. The destination file names and folder hierarchy from the import operation are not directly related to the physical naming and hierarchy and are instead defined through the **Manifest.XML** file.
 
 ### ExportSettings.XML
 
-The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). 
+The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
 
 The main requirement is that the ExportSettings `SiteUrl` value must be populated with a URL consistent with the source URL used for the rest of the import package. In the case of file shares as a source, the URL would be pre-specified to be the source URL in the rest of the package, whereas a package generated through an export operation at a source site would be its original source site collection URL.
 
 ### LookupListMap.XML
 
-The **LookupListMap.XML** file, if included, is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained **DeploymentLookupListMap.XSD**, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). 
+The **LookupListMap.XML** file, if included, is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained **DeploymentLookupListMap.XSD**, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
 
 Since an import package for the pipeline does not include defining fields or views on a list or document library, the **LookupListMap.XML** file will normally include no child nodes under the root and as such can also be excluded from the package if not required, although a warning may be logged in this case.
 
 ### Manifest.XML
 
-All instances of the **Manifest.XML** file for a package are expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentManifest.XSD**, which has multiple major changes and significant reduction in types from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). 
+All instances of the **Manifest.XML** file for a package are expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentManifest.XSD**, which has multiple major changes and significant reduction in types from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
 
 The **Manifest.XML** is the primary descriptor for metadata within the package, and provides the list/folder/item hierarchy, along with metadata for the items including references back to users and groups defined in the **UserGroupMap.XML** file. There may be more than one **Manifest.XML** file (which can be identified using different file names to uniquely identify them), and all are found by the import pipeline through references within the **SystemData.XML** file’s ManifestFile entries.
 
-The main requirements for **Manifest.XML** to be possible to successfully import through the pipeline is that the Web Id and Document Library ID/List ID be consistent with the target location. If a Web ID is used which doesn’t match the target location, errors will occur because the parent web for the import operation cannot be found. 
+The main requirements for **Manifest.XML** to be possible to successfully import through the pipeline is that the Web Id and Document Library ID/List ID be consistent with the target location. If a Web ID is used which doesn’t match the target location, errors will occur because the parent web for the import operation cannot be found.
 
 Likewise, an incorrect Document Library ID/List ID will prevent the importation into the target Document Library or List. IDs should never be reused within the same site collection, so same packages should not be imported to the same target site collection regardless of the destination web.
 
-For individual files and folders within the document library or list, their identifiers should be consistent between import events to the same location. Specifically, performing an import of a package generated form a file share would initially require generating new GUIDs for each file and folder, along with matching GUIDs for the list items that represent them. Therefore, performing a second import against the same target using the same package would keep the same IDs, but performing a second import against the same target using a new package for the same content would result in ID conflicts and import errors for all items in conflict. 
+For individual files and folders within the document library or list, their identifiers should be consistent between import events to the same location. Specifically, performing an import of a package generated form a file share would initially require generating new GUIDs for each file and folder, along with matching GUIDs for the list items that represent them. Therefore, performing a second import against the same target using the same package would keep the same IDs, but performing a second import against the same target using a new package for the same content would result in ID conflicts and import errors for all items in conflict.
 
 The initial generated package from a file share is effectively a form of record for the original generated IDs and can potentially be used as a reference for follow up package generation to prevent ID collisions when unintended, and to allow like IDs to ensure correct overwrite, deletion or move activities.
 
 ### Requirements.XML
 
-The **Requirements.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained DeploymentRequirements.XSD, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). 
+The **Requirements.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained DeploymentRequirements.XSD, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
 
 For file shares this is expected to normally include no child nodes under the root and as such can also be excluded from the package if not required, although a warning will be logged in this case.
 
@@ -201,7 +200,7 @@ The **RootObjectMap.XML** file is expected to be at the root of the Azure Blob S
 
 The **SystemData.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentSystemData.XSD**, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
 
-The `SchemaVersion` information is expected to reference the current Build and DatabaseVersion of the target farm, a Version of “15.0.0.0”, and the `SiteVersion` value is expected to always match the target site collection `UIVersion` (i.e. most commonly this will be “15”). Each **Manifest.XML** file for the package is expected to be listed in this file within the `ManifestFile` entries. 
+The `SchemaVersion` information is expected to reference the current Build and DatabaseVersion of the target farm, a Version of “15.0.0.0”, and the `SiteVersion` value is expected to always match the target site collection `UIVersion` (i.e. most commonly this will be “15”). Each **Manifest.XML** file for the package is expected to be listed in this file within the `ManifestFile` entries.
 
 The SystemObjects that define dependent objects that should remain immutable by the migration code should also be listed here to ensure correct behavior of the import operation. The following is an example of the common objects in the **SystemObjects.XML** file from a file share based import, noting that the IDs are expected to be different for each package, and the URLs may be different.
 
@@ -210,28 +209,23 @@ The SystemObjects that define dependent objects that should remain immutable by 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <SystemData xmlns="urn:deployment-systemdata-schema">
-	<SchemaVersion Version="15.0.0.0" Build="16.0.3111.1200" DatabaseVersion="11552" 
-SiteVersion="15" />
-	<ManifestFiles>
-		<ManifestFile Name="Manifest.xml" />
-	</ManifestFiles>
-	<SystemObjects>
-		<SystemObject Id="34321c39-3254-4bd1-b749-c99e16d1f4ab" Type="Folder" 
-Url="/personal/username" />
-		<SystemObject Id="9efb9686-baab-432d-a192-858ac34c073f" Type="Web" 
-Url="/personal/username" />
-		<SystemObject Id="e8ec714f-91a0-4c6f-9926-08328c8b3e05" Type="List" 
-Url="/personal/username/Documents/deleteme2" />
-		<SystemObject Id="a05e1f95-5712-4cc2-958c-31cf0a2cfb62" Type="List" 
-Url="/personal/username/_catalog/users" />
-	</SystemObjects>
-	<RootWebOnlyLists />
+  <SchemaVersion Version="15.0.0.0" Build="16.0.3111.1200" DatabaseVersion="11552" SiteVersion="15" />
+  <ManifestFiles>
+    <ManifestFile Name="Manifest.xml" />
+  </ManifestFiles>
+  <SystemObjects>
+    <SystemObject Id="34321c39-3254-4bd1-b749-c99e16d1f4ab" Type="Folder" Url="/personal/username" />
+    <SystemObject Id="9efb9686-baab-432d-a192-858ac34c073f" Type="Web" Url="/personal/username" />
+    <SystemObject Id="e8ec714f-91a0-4c6f-9926-08328c8b3e05" Type="List" Url="/personal/username/Documents/deleteme2" />
+    <SystemObject Id="a05e1f95-5712-4cc2-958c-31cf0a2cfb62" Type="List" Url="/personal/username/_catalog/users" />
+  </SystemObjects>
+  <RootWebOnlyLists />
 </SystemData>
 ```
 
 ### UserGroupMap.XML
 
-The **UserGroupMap.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentUserGroupMap.XSD**, which has no change from current published full 2013 package schema. 
+The **UserGroupMap.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentUserGroupMap.XSD**, which has no change from current published full 2013 package schema.
 
 The **UserGroupMap.XML** file may not contain any User or Group entries but doing so will prevent author or security information from being populated during import and warnings will be logged in this case. Login and SID values for users must be either adjusted to match the values in SharePoint Online, or if the account no longer should exist can be listed as `IsDeleted = “true”` to prevent lookup failures and additional slowdown during the import operation.
 
@@ -248,30 +242,28 @@ The logs that the import pipeline creates must be easily parsed by machine with 
 Upon completion, these logs will be copied to the `azureContainerManifestUri` location as the SAS token specified in the URI allows write access. The same output logs are also placed at the *“_catalogs/Maintenance Logs”* location of the target site collection as a text file. The logs will only be copied to the destination locations once the job has finished and removed from the queue.
 
 Several log types can be included such as the full import log, along with warning and error files that contain only the subset of import warnings or errors respectively. Log files have unique `datetime` and `job id` stamps to allow each attempted import event to have a unique log for better debugging purposes.
- 
+
 ## Changes for those using the "Ship Disk" option
 
 To use the Migration API, you must have a temporary storage container in Azure. When uploading files into the temporary storage, an MD5 is required as a property on every file. However, when shipping the data on hard drives this MD5 property doesn’t get assigned automatically.  As a work around, we have adapted the Migration API to allow the MD5 to be passed for every file as part of the manifest. This also applies for IV values when encrypting the data.
 
-Since the MD5 is generated at the source instead of at the upload time in Azure, Microsoft can confirm the integrity of the file directly against the source MD5.   
+Since the MD5 is generated at the source instead of at the upload time in Azure, Microsoft can confirm the integrity of the file directly against the source MD5.
 
 ### What is stored in those Azure Blob Containers?
 
 The Migration API requires the Azure Container for content passing and also for log and queue reporting. It can be split down as a summary as follows:<br>
 
-|**Content**|**Manifest**|
-|:-----|:-----|
-|Files and folders|XML files|
-
+     Content      | Manifest
+:---------------- | :--------
+Files and folders | XML files
 
 There are two new optional parameters in manifest.xml:
 
-- MD5Hash <br>
+- MD5Hash
 - InitializationVector
 
-
 #### Preparing the package
-The method for calling the migration job doesn’t change; only the package generation needs to be changed. 
+The method for calling the migration job doesn’t change; only the package generation needs to be changed.
 
 In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *MD5Hash* and *InitializationVector*. <br>
 
@@ -305,11 +297,9 @@ The identifiers used within the import package explicitly are used during import
 
 Additionally, due to identifier preservation, import events can potentially be done in successive iterations using different packages, allowing items to potentially move in location if their identifiers have not changed.
 
-<a name="OverwriteAPI"> </a>
-
 ### This is an overwrite API
 
-The import pipeline does support import of versioning data on files and list item metadata, but as of now if you submit a file and then resubmit the same file with changes the import process will delete and replace the original and all versions with the ones included in the ones in the current package being imported. 
+The import pipeline does support import of versioning data on files and list item metadata, but as of now if you submit a file and then resubmit the same file with changes the import process will delete and replace the original and all versions with the ones included in the ones in the current package being imported.
 
 ### We do not support Active-Active scenario
 
@@ -334,39 +324,36 @@ The import pipeline allows event handlers to be referenced on list items but doe
 ### Resolving Users
 
 If the Migration API was unable to resolve a user using the login provided in the UserGroup.xml and no System ID is provided, then:
-a)       This user will be replaced by “System Account” in the associated metadata within the package ( author, editor etc.).
-b)      A warning will be reported in the ImportLogs –  “Failed to ensure user 'user@contoso.com'”
- 
+
+1. This user will be replaced by “System Account” in the associated metadata within the package ( author, editor etc.).
+1. A warning will be reported in the ImportLogs –  “Failed to ensure user 'user@contoso.com'”
+
 If the migration API was unable to resolve a user using the login provided in the UserGroup.xml and the System ID is provided (which is the SID for the user in the on-premises AD), then:
-a)       A new deleted user with the provided login and SystemId is created and is used in the associated metadata within the package.
-b)      A warning will be reported in the ImportLogs- “Failed to retrieve user 'user@contoso.com' attributes from the SiteUsers; falling back to passed in values”
+
+1. A new deleted user with the provided login and SystemId is created and is used in the associated metadata within the package.
+1. A warning will be reported in the ImportLogs- “Failed to retrieve user 'user@contoso.com' attributes from the SiteUsers; falling back to passed in values”
 
 
 ## Appendices
 
 ### Acronyms Defined
 
-|Acronym|Definition|
-|:-----|:-----|
-|BOT	|SharePoint server running timer jobs|
-|CDB	|Content database, containing site collections and content|
-|CFE	|Content farm front end server|
-|SPO	|SharePoint Online|
-|ABS	|Azure Blob Storage|
- 
+Acronym |                        Definition
+:------ | :--------------------------------------------------------
+BOT     | SharePoint server running timer jobs
+CDB     | Content database, containing site collections and content
+CFE     | Content farm front end server
+SPO     | SharePoint Online
+ABS     | Azure Blob Storage
+
 ### Helpful Resources
 
-* [SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038)
- 
-* [Azure Windows Azure SDK for .NET - 2.4](https://www.microsoft.com/download/details.aspx?id=43709)
+- [SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038)
+- [Azure Windows Azure SDK for .NET - 2.4](https://www.microsoft.com/download/details.aspx?id=43709)
+- [Bulk Creation of OneDrive for Business sites](https://msdn.microsoft.com/library/office/jj163783(v=office.15).aspx)
+- [Restrictions and limitations when you sync SharePoint libraries to your computer through OneDrive for Business](https://support.office.com/article/restrictions-and-limitations-when-you-sync-files-and-folders-7787566e-c352-4bd4-9409-fd100a0165f6)
+- [Types of files that cannot be added to a list or library](https://support.office.com/Article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3?ui=en-US&rs=en-US&ad=US)
 
-* [Bulk Creation of OneDrive for Business sites](https://msdn.microsoft.com/library/office/jj163783(v=office.15).aspx) 
-
-* [Restrictions and limitations when you sync SharePoint libraries to your computer through OneDrive for Business](https://support.office.com/article/restrictions-and-limitations-when-you-sync-files-and-folders-7787566e-c352-4bd4-9409-fd100a0165f6)
-
-* [Types of files that cannot be added to a list or library](https://support.office.com/Article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3?ui=en-US&rs=en-US&ad=US)
-
- 
 ## Working with import package security structures
 
 This section covers a brief overview of what is contained within an export package that includes security with regard to permissions. This can allow the system to determine user and group membership along with roles, and specific assignments (unique permissions set at the object level and its children unless overridden at a deeper child object).
@@ -383,26 +370,23 @@ UserGroup.xml file defines all users and groups within the exported web(s). The 
 
 ```xml
 <UserGroupMap xmlns="urn:deployment-usergroupmap-schema">
-	<Users>
-		<User Id="1" Name="John Doe" Login="DOMAIN\JDoe" Email="DJoe@contoso.com" 
-IsDomainGroup="false" IsSiteAdmin="true" SystemId="AQUAAAAAAAUVAAAAXSj1f9U62DVDVOAqToYSAA==" IsDeleted="false" Flags="0" />
-		<User Id="2" Name="Jane Smith" Login="DOMAIN\JSmith" Email="jsmith@contoso.com" 
-IsDomainGroup="false" IsSiteAdmin="true" SystemId="AQUAAAAAAAUVAAAAXSj1f9U62DVDVOAqdUwNAA==" IsDeleted="false" Flags="0" />
-		…
-	</Users>
-	<Groups>
-		<Group Id="3" Name="Temp Group" Description="A Temp Group" Owner="2" 
-OwnerIsUser="true"
-					OnlyAllowMembersViewMembership="true">
-			<Member UserId="2" />
-		</Group>
-		<Group Id="4" Name="Temp Group 2" Description="Another Temp Group" Owner="2" 
-OwnerIsUser="false" RequestToJoinLeaveEmailSetting="JSmith@contoso.com" OnlyAllowMembersViewMembership="true">
-			<Member UserId="1" />
-			<Member UserId="2" />
-		</Group>
-		…
-	</Groups>
+  <Users>
+    <User Id="1" Name="John Doe" Login="DOMAIN\JDoe" Email="DJoe@contoso.com"
+    IsDomainGroup="false" IsSiteAdmin="true" SystemId="AQUAAAAAAAUVAAAAXSj1f9U62DVDVOAqToYSAA==" IsDeleted="false" Flags="0" />
+    <User Id="2" Name="Jane Smith" Login="DOMAIN\JSmith" Email="jsmith@contoso.com"
+    IsDomainGroup="false" IsSiteAdmin="true" SystemId="AQUAAAAAAAUVAAAAXSj1f9U62DVDVOAqdUwNAA==" IsDeleted="false" Flags="0" />
+    …
+  </Users>
+  <Groups>
+    <Group Id="3" Name="Temp Group" Description="A Temp Group" Owner="2" OwnerIsUser="true" OnlyAllowMembersViewMembership="true">
+      <Member UserId="2" />
+    </Group>
+    <Group Id="4" Name="Temp Group 2" Description="Another Temp Group" Owner="2" OwnerIsUser="false" RequestToJoinLeaveEmailSetting="JSmith@contoso.com" OnlyAllowMembersViewMembership="true">
+      <Member UserId="1" />
+      <Member UserId="2" />
+    </Group>
+    …
+  </Groups>
 </UserGroupMap>
 ```
 
@@ -410,45 +394,39 @@ OwnerIsUser="false" RequestToJoinLeaveEmailSetting="JSmith@contoso.com" OnlyAllo
 
 - Roles objects include the list of defined roles on the web.
 - Role objects define the individual role, including ID, internal permissions rights mask flags and display information.
-    - RoleId values define the identifiers of the Role objects.
-    - PermMask values contain the rights mask flags.
+  - RoleId values define the identifiers of the Role objects.
+  - PermMask values contain the rights mask flags.
 - RoleAssignments objects include the list of unique permissions (RoleAssignment objects).
 - RoleAssignment objects include the list of distinct Assignment objects (if any).
 - Individual RoleAssignment objects contain the actual membership of one distinct user or group and their actual Role.
-    - RoleId values map to the RoleId values of the Role objects.
-    - PrincipalId values map to Id values of user or group objects respectively in UserGroups.xml.
+  - RoleId values map to the RoleId values of the Role objects.
+  - PrincipalId values map to Id values of user or group objects respectively in UserGroups.xml.
 
 #### Table 3: Roles and RoleAssignments annotated in manifest
 
 ```xml
 <SPObjects xmlns="urn:deployment-manifest-schema">
-	…
-	<SPObject Id="0b3c1b13-b260-453c-ac8d-8053a537d610" ObjectType="DeploymentRoles" 
-ParentId="203e30e2-1139-4adf-b545-e74235f105c2" ParentWebId="203e30a2-1139-4acf-b535-e74235f105c2" ParentWebUrl="/teams/temp">
-		<Roles>
-			<Role RoleId="1073751825" Title="Test Role" Description="This is a test role" 
-PermMask="206292717568" Hidden="true" RoleOrder="160" Type="1" />
-			<Role RoleId="1073751826" Title="Test Role 2" Description="This is another test 
-role" PermMask="756052856929" Hidden="false" RoleOrder="128" Type="2" />
-			…
-		</Roles>
-	</SPObject>
-	<SPObject Id="373ea0ba-107a-4a78-9563-bc642f9ab14d" 
-ObjectType="DeploymentRoleAssignments" ParentId="203e30e2-1139-4adf-b545-e74235f105c2" ParentWebId="203e30a2-1139-4acf-b535-e74235f105c2" ParentWebUrl="/teams/temp">
-		<RoleAssignments>
-			<RoleAssignment ScopeId="ffcab9b9-94ef-4701-e6d9-19a370760e1e" 
-RoleDefWebId="203e11c2-1139-4abe-b534-e74235f106c2" RoleDefWebUrl="teams/temp" ObjectId="9f743aaf-65f9-473e-0c37-37f147960560" ObjectType="1" ObjectUrl="teams/temp/IWConvertedForms" AnonymousPermMask="0" />
-			<RoleAssignment ScopeId="c3f564f3-62cd-4b25-8da4-2da7722402ab" 
-RoleDefWebId="203e30a2-1139-4acf-b535-e74255e105c2" RoleDefWebUrl="teams/temp" ObjectId="2b9b0a32-51fb-4af8-a218-c90f63fd1de4" ObjectType="1" ObjectUrl="teams/temp/Relationships List" AnonymousPermMask="0">
-				<Assignment RoleId="1073751825" PrincipalId="5" />
-				<Assignment RoleId="1073751825" PrincipalId="6" />
-				<Assignment RoleId="1073751826" PrincipalId="4" />
-				<Assignment RoleId="1073751828" PrincipalId="1" />
-			</RoleAssignment>
-			…
-		</RoleAssignments >
-	</SPObject>
-	…
+  …
+  <SPObject Id="0b3c1b13-b260-453c-ac8d-8053a537d610" ObjectType="DeploymentRoles" ParentId="203e30e2-1139-4adf-b545-e74235f105c2" ParentWebId="203e30a2-1139-4acf-b535-e74235f105c2" ParentWebUrl="/teams/temp">
+    <Roles>
+      <Role RoleId="1073751825" Title="Test Role" Description="This is a test role" PermMask="206292717568" Hidden="true" RoleOrder="160" Type="1" />
+      <Role RoleId="1073751826" Title="Test Role 2" Description="This is another test role" PermMask="756052856929" Hidden="false" RoleOrder="128" Type="2" />
+      …
+    </Roles>
+  </SPObject>
+  <SPObject Id="373ea0ba-107a-4a78-9563-bc642f9ab14d" ObjectType="DeploymentRoleAssignments" ParentId="203e30e2-1139-4adf-b545-e74235f105c2" ParentWebId="203e30a2-1139-4acf-b535-e74235f105c2" ParentWebUrl="/teams/temp">
+    <RoleAssignments>
+      <RoleAssignment ScopeId="ffcab9b9-94ef-4701-e6d9-19a370760e1e" RoleDefWebId="203e11c2-1139-4abe-b534-e74235f106c2" RoleDefWebUrl="teams/temp" ObjectId="9f743aaf-65f9-473e-0c37-37f147960560" ObjectType="1" ObjectUrl="teams/temp/IWConvertedForms" AnonymousPermMask="0" />
+      <RoleAssignment ScopeId="c3f564f3-62cd-4b25-8da4-2da7722402ab" RoleDefWebId="203e30a2-1139-4acf-b535-e74255e105c2" RoleDefWebUrl="teams/temp" ObjectId="2b9b0a32-51fb-4af8-a218-c90f63fd1de4" ObjectType="1" ObjectUrl="teams/temp/Relationships List" AnonymousPermMask="0">
+        <Assignment RoleId="1073751825" PrincipalId="5" />
+        <Assignment RoleId="1073751825" PrincipalId="6" />
+        <Assignment RoleId="1073751826" PrincipalId="4" />
+        <Assignment RoleId="1073751828" PrincipalId="1" />
+      </RoleAssignment>
+      …
+    </RoleAssignments>
+  </SPObject>
+  …
 </SPObjects>
 ```
 
@@ -478,7 +456,7 @@ Included below are the XSD files used for package validation in the import pipel
 	<xs:simpleType name="SPDeploymentObjectType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Folder" />
-			<xs:enumeration value="List" /> 
+			<xs:enumeration value="List" />
 			<xs:enumeration value="ListItem" />
 			<xs:enumeration value="File" />
 		</xs:restriction>
@@ -572,8 +550,6 @@ Included below are the XSD files used for package validation in the import pipel
 </xs:schema>
 ```
 
-
-
 ### DeploymentLookupListMap.XSD
 There is no change from current published full 2013 package schema.
 
@@ -608,7 +584,7 @@ There is no change from current published full 2013 package schema.
 	<!-- SPGenericObjectCollection definition -->
 	<xs:complexType name="SPGenericObjectCollection">
 		<xs:sequence>
-			<xs:element name="SPObject" type="SPGenericObject" minOccurs="0" 
+			<xs:element name="SPObject" type="SPGenericObject" minOccurs="0"
 maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -709,7 +685,7 @@ maxOccurs="unbounded" />
 	<!-- DeploymentRoles definition -->
 	<xs:complexType name="DeploymentRoles">
 		<xs:sequence>
-			<xs:element name="Role" type="DeploymentRole" minOccurs="0" maxOccurs="unbounded" 
+			<xs:element name="Role" type="DeploymentRole" minOccurs="0" maxOccurs="unbounded"
 />
 		</xs:sequence>
 	</xs:complexType>
@@ -723,7 +699,7 @@ maxOccurs="unbounded" />
 	<!-- DeploymentRoleAssignment Definition -->
 	<xs:complexType name="DeploymentRoleAssignment">
 		<xs:sequence>
-			<xs:element name="Assignment" type="DeploymentAssignment" minOccurs="0" 
+			<xs:element name="Assignment" type="DeploymentAssignment" minOccurs="0"
 maxOccurs="unbounded" />
 		</xs:sequence>
 
@@ -738,7 +714,7 @@ maxOccurs="unbounded" />
 
 	<xs:complexType name="DeploymentRoleAssignments">
 		<xs:sequence>
-			<xs:element name="RoleAssignment" type="DeploymentRoleAssignment" minOccurs="0" 
+			<xs:element name="RoleAssignment" type="DeploymentRoleAssignment" minOccurs="0"
 maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -749,16 +725,16 @@ maxOccurs="unbounded" />
 		<xs:attribute name="Value" type="xs:string" use="optional" />
 		<xs:attribute name="Value2" type="xs:string"  use="optional" />
 		<xs:attribute name="Id" type="Guid" use="optional" />
-		<xs:attribute name="Type" type="SPDictionaryEntryValueType" default="String" 
+		<xs:attribute name="Type" type="SPDictionaryEntryValueType" default="String"
 use="optional" />
-		<xs:attribute name="Access" type="SPDictionaryEntryAccess" default="ReadWrite" 
+		<xs:attribute name="Access" type="SPDictionaryEntryAccess" default="ReadWrite"
 use="optional" />
 	</xs:complexType>
 
 	<!-- Dictionary definition -->
 	<xs:complexType name="Dictionary">
 		<xs:sequence>
-			<xs:element name="Property" type="DictionaryEntry" minOccurs="0" 
+			<xs:element name="Property" type="DictionaryEntry" minOccurs="0"
 maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -792,7 +768,7 @@ maxOccurs="unbounded" />
 	<!-- SPAttachmentCollection definition -->
 	<xs:complexType name="SPAttachmentCollection">
 		<xs:sequence>
-			<xs:element name="Attachment" type="SPAttachment" minOccurs="0" 
+			<xs:element name="Attachment" type="SPAttachment" minOccurs="0"
 maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -980,9 +956,9 @@ maxOccurs="unbounded" />
 	<xs:complexType name="SPList">
 		<xs:sequence >
 			<xs:choice minOccurs="0" maxOccurs="11">
-				<xs:element name="ContentTypes" type="SPContentTypeCollection" minOccurs="0" 
+				<xs:element name="ContentTypes" type="SPContentTypeCollection" minOccurs="0"
 maxOccurs="1" />
-				<xs:element name="DeletedContentTypes" type="ListDeletedContentTypes" 
+				<xs:element name="DeletedContentTypes" type="ListDeletedContentTypes"
 minOccurs="0" maxOccurs="1" />
 			</xs:choice>
 		</xs:sequence>
@@ -1001,7 +977,7 @@ minOccurs="0" maxOccurs="1" />
 
 	<xs:complexType name="SPFieldCollection" mixed="true">
 		<xs:sequence minOccurs="0" maxOccurs="unbounded">
-			<xs:element name="FieldRef" type="SPFieldLink" minOccurs="0" maxOccurs="unbounded" 
+			<xs:element name="FieldRef" type="SPFieldLink" minOccurs="0" maxOccurs="unbounded"
 />
 			<xs:element name="Field" type="SPField" minOccurs="0" maxOccurs="unbounded" />
 		</xs:sequence>
@@ -1009,7 +985,7 @@ minOccurs="0" maxOccurs="1" />
 
 	<xs:complexType name="SPField">
 		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" 
+			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
 processContents="skip" />
 		</xs:sequence>
 		<xs:attribute name="ID" type="Guid" />
@@ -1054,7 +1030,7 @@ processContents="skip" />
 		<xs:attribute name="LinkToItemAllowed" type="xs:string" use="optional" />
 		<xs:attribute name="CalloutMenu" type="xs:string" use="optional" />
 		<xs:attribute name="CalloutMenuAllowed" type="xs:string" use="optional" />
-		<!-- Label definition  -->	
+		<!-- Label definition  -->
 		<xs:attribute name="ListDefaultCompliancetagWrittenTime" type="xs:dateTime" use="optional" />
 		<xs:attribute name="ListDefaultComplianceTagUserId" type="xs:int" use="optional" />
 		<!-- ListDefaultComplianceFlags is a Flags dependes on the Label, if the Label has Keep or KeepAndDelete ( that will have the 0x01 bit set). If the Label is a record label, that will have 0x01 and 0x04 set -->
@@ -1067,7 +1043,7 @@ processContents="skip" />
 	<!-- FieldDataCollection definition -->
 	<xs:complexType name="FieldDataCollection">
 		<xs:sequence>
-			<xs:element name="Field" type="DictionaryEntry" minOccurs="0" maxOccurs="unbounded" 
+			<xs:element name="Field" type="DictionaryEntry" minOccurs="0" maxOccurs="unbounded"
 />
 		</xs:sequence>
 	</xs:complexType>
@@ -1075,7 +1051,7 @@ processContents="skip" />
 	<!-- SPEventReceiverDefinitionCollection definition -->
 	<xs:complexType name="SPEventReceiverDefinitionCollection">
 		<xs:sequence>
-			<xs:element name="EventReceiver" type="SPEventReceiverDefinition" minOccurs="0" 
+			<xs:element name="EventReceiver" type="SPEventReceiverDefinition" minOccurs="0"
 maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -1087,7 +1063,7 @@ maxOccurs="unbounded" />
 		<xs:attribute name="WebId" type="Guid" use="required" />
 		<xs:attribute name="HostId" type="Guid" use="required" />
 		<xs:attribute name="HostType" type="SPEventHostType" use="required" />
-		<xs:attribute name="Synchronization" type="SPEventReceiverSynchronization" 
+		<xs:attribute name="Synchronization" type="SPEventReceiverSynchronization"
 use="optional" />
 		<xs:attribute name="Type" type="SPEventReceiverType" use="required" />
 		<xs:attribute name="SequenceNumber" type="xs:int" use="required" />
@@ -1104,7 +1080,7 @@ use="optional" />
 	<!-- ListDeletedContentTypes definition -->
 	<xs:complexType name="ListDeletedContentTypes">
 		<xs:sequence>
-			<xs:element name="DeletedContentType" type="DeletedContentType" minOccurs="0" 
+			<xs:element name="DeletedContentType" type="DeletedContentType" minOccurs="0"
 maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -1160,7 +1136,7 @@ maxOccurs="unbounded" />
 	<!-- SPListItemVersion Collection definition -->
 	<xs:complexType name="SPListItemVersionCollection">
 		<xs:sequence>
-			<xs:element name="ListItem" type="SPListItem" minOccurs="1" maxOccurs="unbounded" 
+			<xs:element name="ListItem" type="SPListItem" minOccurs="1" maxOccurs="unbounded"
 />
 		</xs:sequence>
 	</xs:complexType>
@@ -1168,7 +1144,7 @@ maxOccurs="unbounded" />
 	<!-- SPFileVersionEvent Collection definition -->
 	<xs:complexType name="SPFileVersionEventCollection">
 		<xs:sequence>
-			<xs:element name="VersionEvent" type="SPFileVersionEvent" minOccurs="1" 
+			<xs:element name="VersionEvent" type="SPFileVersionEvent" minOccurs="1"
 maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
@@ -1185,12 +1161,12 @@ maxOccurs="unbounded" />
 	<xs:complexType name="SPFile">
 		<xs:sequence>
 			<xs:element name="Properties" type="Dictionary" minOccurs="0" />
-			<xs:element name="Versions" type="SPFileVersionCollection" minOccurs="0" 
+			<xs:element name="Versions" type="SPFileVersionCollection" minOccurs="0"
 maxOccurs="1" />
 			<xs:element name="Links" type="SPLinkCollection" minOccurs="0" maxOccurs="1" />
-			<xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection" 
+			<xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection"
 minOccurs="0" maxOccurs="1" />
-			<xs:element name="VersionEvents" type="SPFileVersionEventCollection" minOccurs="0" 
+			<xs:element name="VersionEvents" type="SPFileVersionEventCollection" minOccurs="0"
 maxOccurs="1" />
 		</xs:sequence>
 
@@ -1243,14 +1219,14 @@ maxOccurs="1" />
 	<xs:complexType name="SPListItem">
 		<xs:sequence>
 			<xs:choice minOccurs="0" maxOccurs="5">
-				<xs:element name="Fields" type="SPFieldCollection" minOccurs="0" maxOccurs="1" 
+				<xs:element name="Fields" type="SPFieldCollection" minOccurs="0" maxOccurs="1"
 />
-				<xs:element name="Versions" type="SPListItemVersionCollection" minOccurs="0" 
+				<xs:element name="Versions" type="SPListItemVersionCollection" minOccurs="0"
 maxOccurs="1" />
-				<xs:element name="Attachments" type="SPAttachmentCollection" minOccurs="0" 
+				<xs:element name="Attachments" type="SPAttachmentCollection" minOccurs="0"
 maxOccurs="1" />
 				<xs:element name="Links" type="SPLinkCollection" minOccurs="0" maxOccurs="1" />
-				<xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection" 
+				<xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection"
 minOccurs="0" maxOccurs="1" />
 			</xs:choice>
 		</xs:sequence>
@@ -1314,7 +1290,7 @@ minOccurs="0" maxOccurs="1" />
 
 	<xs:complexType name="SPXmlDocumentCollection">
 		<xs:sequence >
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" 
+			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
 processContents="skip" />
 		</xs:sequence>
 		<xs:anyAttribute namespace="##any" processContents="skip" />
@@ -1322,7 +1298,7 @@ processContents="skip" />
 
 	<xs:complexType name="SPContentType">
 		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" 
+			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
 processContents="skip" />
 		</xs:sequence>
 
@@ -1344,7 +1320,7 @@ processContents="skip" />
 
 	<xs:complexType name="SPContentTypeRef">
 		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" 
+			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
 processContents="skip" />
 		</xs:sequence>
 
@@ -1361,7 +1337,7 @@ processContents="skip" />
 
 	<xs:complexType name="SPContentTypeCollection">
 		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" 
+			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
 processContents="skip" />
 		</xs:sequence>
 	</xs:complexType>
@@ -1370,8 +1346,6 @@ processContents="skip" />
 	<xs:element name="SPObjects" type="SPGenericObjectCollection"></xs:element>
 </xs:schema>
 ```
-
-
 
 ### DeploymentRequirements.XSD
 
@@ -1382,7 +1356,6 @@ There is no change from current published [full 2013 package schema](https://doc
 #### Table 6: Constrained DeploymentRootObjectMap.XSD
 
 ```xml
-
 <?xml version="1.0" encoding="utf-8" ?>
 <xs:schema
 	targetNamespace="urn:deployment-rootobjectmap-schema"
@@ -1440,23 +1413,27 @@ There is no change from current published [full 2013 package schema](https://doc
 
 ## Sample: Using REST to call the API
 
+```http
+https://{site_url}/_api/site/CreateMigrationJobEncrypted
 
-https://<spam><spam>yourtenanthere.sharepoint.com/sites/importSite/_api/site/CreateMigrationJobEncrypted<spam><spam>
- 
 {
-    "options": {
-        "AES256CBCKey": "000000000000000000000000000000000000000000000000000000="
-    },
-    "gWebId": "00000000-0000-0000-0000-000000000000",
-    "azureContainerSourceUri": "https://<spam><spam>tenant.blob.core.windows.net:443/00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<spam><spam>=rw",
-    "azureContainerManifestUri": "https://<spam><spam>tenant.blob.core.windows.net:443/00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<spam><spam>=rw"
+  "options": {
+    "AES256CBCKey": "000000000000000000000000000000000000000000000000000000="
+  },
+  "gWebId": "00000000-0000-0000-0000-000000000000",
+  "azureContainerSourceUri": "https://<spam><spam>tenant.blob.core.windows.net:443/00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<spam><spam>=rw",
+  "azureContainerManifestUri": "https://<spam><spam>tenant.blob.core.windows.net:443/00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000<spam><spam>=rw"
 }
- 
-For the container
-https://<spam><spam>yourtenanthere.sharepoint.com/sites/importSite/_api/site/ProvisionMigrationContainers<spam><spam>
- 
+```
+
+For the container:
+
+```http
+https://{site_url}/_api/site/ProvisionMigrationContainers
+```
+
 
 >[!NOTE]
->The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
+>The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
 
 
