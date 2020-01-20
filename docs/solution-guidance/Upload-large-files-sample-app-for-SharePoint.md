@@ -166,7 +166,7 @@ public Microsoft.SharePoint.Client.File UploadFileSlicePerSlice(ClientContext ct
   ctx.ExecuteQuery();
 
   // File object.
-  Microsoft.SharePoint.Client.File uploadFile;
+  Microsoft.SharePoint.Client.File uploadFile = null;
 
   // Calculate block size in bytes.
   int blockSize = fileChunkSizeInMB * 1024 * 1024;
@@ -255,9 +255,6 @@ public Microsoft.SharePoint.Client.File UploadFileSlicePerSlice(ClientContext ct
           }
           else
           {
-            // Get a reference to your file.
-            uploadFile = ctx.Web.GetFileByServerRelativeUrl(docs.RootFolder.ServerRelativeUrl + System.IO.Path.AltDirectorySeparatorChar + uniqueFileName);
-
             if (last)
             {
               // Is this the last slice of data?
