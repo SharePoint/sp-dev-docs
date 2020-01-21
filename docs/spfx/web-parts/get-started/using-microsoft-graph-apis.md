@@ -224,6 +224,10 @@ Now the web part is deployed and is automatically available cross the SharePoint
 
     ![Approve](../../../images/graph-helloworld-approve.png)
 
+
+> [!IMPORTANT]
+> Account used for granting the requested permissions will need to be a tenant administrator. SharePoint administrator permission is not sufficient as the operation is actually performed towards Azure Active Directory.
+
 Now the requested permissions needed for the web part have been approved and we can test the functionality.
 
 ## Using web part in SharePoint
