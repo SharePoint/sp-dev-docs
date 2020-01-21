@@ -130,7 +130,7 @@ Specifically with regards to Lodash, but which could also be the case with other
 Currently, Lodash doesn't support loading specific methods inside of SharePoint Framework projects by using the **import** notation. Instead, you have to use a **require** statement, which doesn't offer you the typesafety capabilities that using the **import** statement does. Eventually, it is up to you to decide if loading significantly more code into your bundles is worth preserving the typesafety capabilities.
 
 > [!NOTE] 
-> Some of the Lodash methods are provided with the SharePoint Framework in the **@microsoft/sp-lodash-subset** library. Before using Lodash, verify if the method that you want to use isn't already available in the **@microsoft/sp-lodash-subset** library, which is already available as a part of the SharePoint Framework and does not need to be included in your bundle.
+> Some of the Lodash methods are provided with the SharePoint Framework in the **\@microsoft/sp-lodash-subset** library. Before using Lodash, verify if the method that you want to use isn't already available in the **\@microsoft/sp-lodash-subset** library, which is already available as a part of the SharePoint Framework and does not need to be included in your bundle.
 
 ## See also
 
