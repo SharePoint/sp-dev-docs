@@ -1,33 +1,34 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 10/07/2019
+ms.date: 1/18/2020
 localization_priority: Priority
 ---
 
 # Site design JSON schema
 
-The site design is a list of **actions**. For more complex actions, such as creating a list, there are also **subactions**. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time. 
+The site design is a list of **actions**. For more complex actions, such as creating a list, there are also **subactions**. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time.
 
 The overall JSON structure is specified as follows:
 
 ```json
 {
-    "$schema": "schema.json",
-    "actions": [
-        ...
-        <one or more verb actions>
-        ...
-    ],
-    "bindata": { },
-    "version": 1
+  "$schema": "schema.json",
+  "actions": [
+    ...
+    <one or more verb actions>
+    ...
+  ],
+  "bindata": { },
+  "version": 1
 }
 ```
 
 You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
 #### Applying site designs multiple times
-**Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema. 
+
+**Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema.
 
 ## Create a new SharePoint list
 
@@ -38,12 +39,12 @@ Use the **createSPList** verb to create a new SharePoint list.
 
 #### JSON values
 
-- **listName** &ndash; The name of the list.
-- **templateType** &ndash; Which template to apply to the list. Typically you would use value 100. The full list of template type values are documented in [SPListTemplateType enumeration](https://msdn.microsoft.com/library/microsoft.sharepoint.splisttemplatetype.aspx) - but the ones we currently support include:
+- `listName`: The name of the list.
+- `templateType`: Which template to apply to the list. Typically you would use value 100. The full list of template type values is documented in [SPListTemplateType enumeration](/previous-versions/office/sharepoint-server/ms413878(v=office.15)) - but the ones we currently support include:
 
   | List Template Name | Enum |
   |--------------|---------|
-   Generic List | 100 
+   Generic List | 100
    Document Library | 101
    Survey | 102
    Links | 103
@@ -56,39 +57,37 @@ Use the **createSPList** verb to create a new SharePoint list.
    Site Pages | 119
    Issue Tracking | 1100
 
-  If you use 101 or 119 and reference the default names ("Documents" or "Site Pages") you can modify the library created with the template. See example below.
-- **subactions** &ndash; An array of actions that run in the order listed to create your list.
+  If you use 101 or 119 and reference the default names ("Documents" or "Site Pages"), you can modify the library created with the template. See example below.
+- `subactions`: An array of actions that run in the order listed to create your list.
 
 #### Example
 
 ```json
 {
-    "verb": "createSPList",
-    "listName": "Customer Tracking",
-    "templateType": 100,
-    "subactions": [
-        {
-            "verb": "setDescription",
-            "description": "List of Customers and Orders"
-        }
-    ]
+  "verb": "createSPList",
+  "listName": "Customer Tracking",
+  "templateType": 100,
+  "subactions": [
+    {
+      "verb": "setDescription",
+      "description": "List of Customers and Orders"
+    }
+  ]
 },
 {
-    "verb": "createSPList",
-    "listName": "Documents",
-    "templateType": 101,
-    "subactions": [
-        {
-            "verb": "setDescription",
-            "description": "This is a modified default document library"
-        }
-    ]
+  "verb": "createSPList",
+  "listName": "Documents",
+  "templateType": 101,
+  "subactions": [
+    {
+      "verb": "setDescription",
+      "description": "This is a modified default document library"
+    }
+  ]
 }
 ```
 
-<br/>
-
-The subactions array provides additional actions to specify how to construct the list. Subactions are also specified using a **verb** value.
+The subactions array provides additional actions to specify how to construct the list. Subactions are also specified using a `verb` value.
 
 ### setDescription
 
@@ -96,14 +95,14 @@ Sets the description of the list.
 
 #### JSON value
 
-- **description** &ndash; The description of the new list.
+- `description`: The description of the new list.
 
 #### Example
 
 ```json
 {
-   "verb": "setDescription",
-   "description": "List of Customers and Orders"
+  "verb": "setDescription",
+  "description": "List of Customers and Orders"
 }
 ```
 
@@ -113,24 +112,24 @@ Adds a new field.
 
 #### JSON values
 
-- **fieldType** &ndash; The field type can be set to **Text**, **Note**, **Number**, **Boolean**, **User**, or **DateTime**. For other data types, see the addSPFieldXml action.
-- **displayName** &ndash; The display name of the field.
-- **id** &ndash; An optional attribute. If provided, specifies the id of the field. It needs to be a unique, randomly generated GUID. Providing a value for this is strongly recommended to ensure the field is not added multiple times if the script is re-run.
-- **internalName** &ndash; An optional attribute. If provided, specifies the internal name of the field. If not provided, the internal name is based on the display name.
-- **isRequired** &ndash; **True** if this field is required to contain information; otherwise, **false**.
-- **addToDefaultView** &ndash; **True** if the field will be added to the default view; otherwise, **false**.
-- **enforceUnique** &ndash; An optional attribute that defaults to **false**. If **true**, all values for this field must be unique.
+- `fieldType`: The field type can be set to `Text`, `Note`, `Number`, `Boolean`, `User`, or `DateTime`. For other data types, see the addSPFieldXml action.
+- `displayName`: The display name of the field.
+- `id`: An optional attribute. If provided, specifies the id of the field. It needs to be a unique, randomly generated GUID. Providing a value for this is recommended to ensure the field isn't added multiple times if the script is rerun.
+- `internalName`: An optional attribute. If provided, specifies the internal name of the field. If not provided, the internal name is based on the display name.
+- `isRequired`: **True** if this field is required to contain information; otherwise, **False**.
+- `addToDefaultView`: **True** if the field will be added to the default view; otherwise, **False**.
+- `enforceUnique`: An optional attribute that defaults to **False**. If **True**, all values for this field must be unique.
 
 #### Example
 
 ```json
 {
-   "verb": "addSPField",
-   "fieldType": "Text",
-   "displayName": "Customer Name",
-   "isRequired": false,
-   "id": "c532fcb9-cdb3-45c6-8247-c784dcd58e1a"
-   "addToDefaultView": true
+  "verb": "addSPField",
+  "fieldType": "Text",
+  "displayName": "Customer Name",
+  "isRequired": false,
+  "id": "c532fcb9-cdb3-45c6-8247-c784dcd58e1a",
+  "addToDefaultView": true
 }
 ```
 
@@ -140,47 +139,47 @@ Deletes a default field that was provided by the selected template type.
 
 #### JSON value
 
-- **displayName** &ndash; The display name to identify the field to delete.
+- `displayName`: The display name to identify the field to delete.
 
 #### Example
 
 ```json
 {
-   "verb": "deleteSPField",
-   "displayName": "Modified"
+  "verb": "deleteSPField",
+  "displayName": "Modified"
 }
 ```
 
 ### addSPFieldXml
 
-Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
 
-Currently these field constructs cannot be designated as site columns nor added to content types. To create site columns with Field XML use the **createSiteColumnXml** action.
+Currently these field constructs can't be designated as site columns nor added to content types. To create site columns with Field XML, use the **createSiteColumnXml** action.
 
 #### JSON value
 
-- **schemaXml** &ndash; The CAML block to define the field.
-- **addToDefaultView** &ndash; **True** if the field will be added to the default view; otherwise, **false**.
+- `schemaXml`: The CAML block to define the field.
+- `addToDefaultView`: **True** if the field will be added to the default view; otherwise, **False**.
 
 #### Example
 
 ```json
 {
-    "verb": "addSPFieldXml",
-    "schemaXml": "<Field ID=\"{596cbd92-36e3-40cc-a910-0f53468ce5e4}\" Type=\"Choice\" DisplayName=\"Project Category\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectCategory\" Name=\"ProjectCategory\"><Default>Operations</Default><CHOICES><CHOICE>Operations</CHOICE><CHOICE>IT</CHOICE><CHOICE>Legal</CHOICE><CHOICE>Engineering</CHOICE></CHOICES></Field>"
+  "verb": "addSPFieldXml",
+  "schemaXml": "<Field ID=\"{596cbd92-36e3-40cc-a910-0f53468ce5e4}\" Type=\"Choice\" DisplayName=\"Project Category\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectCategory\" Name=\"ProjectCategory\"><Default>Operations</Default><CHOICES><CHOICE>Operations</CHOICE><CHOICE>IT</CHOICE><CHOICE>Legal</CHOICE><CHOICE>Engineering</CHOICE></CHOICES></Field>"
 }
 ```
 
 ### addSPLookupFieldXml
 
-Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
-- **schemaXml** &ndash; The CAML block to define the field.
-- **targetListName** &ndash; The name that identifies the list this lookup field is referencing. Provide either this or targetListUrl.
-- **targetListUrl** &ndash; A web-relative URL that identifies the list this lookup field is referencing. Provide either this or targetListName.
-- **addToDefaultView** &ndash; **True** if the field will be added to the default view; otherwise, **false**.
+- `schemaXml`: The CAML block to define the field.
+- `targetListName`: The name that identifies the list this lookup field is referencing. Provide either this or targetListUrl.
+- `targetListUrl`: A web-relative URL that identifies the list this lookup field is referencing. Provide either this or targetListName.
+- `addToDefaultView`: **True** if the field will be added to the default view; otherwise, **False**.
 
 #### Example
 
@@ -191,26 +190,25 @@ Enables defining lookup fields and their dependent lists element using Collabora
   "targetListName": "Contoso Project Master"
 }
 ```
+
 ### addSiteColumn
 
 Subaction to add a previously defined site column directly to a list (existing or created through the site script).
 
 #### JSON value
 
-- **internalName** &ndash; The internal name of the site column to add.
-- **addToDefaultView** &ndash; Optional attribute that defaults to false. If true, the newly added field will also be added to the default view.
-
+- `internalName`: The internal name of the site column to add.
+- `addToDefaultView`: Optional attribute that defaults to false. If true, the newly added field will also be added to the default view.
 
 #### Example
 
 ```json
  {
-    "verb": "addSiteColumn",
-    "internalName": "siteColumnUser",
-    "addToDefaultView": true
+  "verb": "addSiteColumn",
+  "internalName": "siteColumnUser",
+  "addToDefaultView": true
  }
  ```
-
 
 ### addSPView
 
@@ -218,31 +216,32 @@ Defines and adds a view to the list. Use this action to specify the desired colu
 
 #### JSON value
 
-- **name** &ndash; The name of the view.
-- **viewFields** &ndash; An array of the internal names of the fields in your view.
-- **query** &ndash; A CAML query string that contains the `where` clause for the view's query. See [CAML schemas] (https://docs.microsoft.com/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas). 
-- **rowLimit** &ndash; The row limit of the view.
-- **isPaged** &ndash; Specifies whether the view is paged.
-- **makeDefault** &ndash; If **true**, the view will be made the default for the list; otherwise, **false**.
-- **scope** &ndash; An optional setting to specify the scope of the view. For more details, see [SPViewScope enumeration](https://msdn.microsoft.com/library/microsoft.sharepoint.spviewscope.aspx).
-- **formatterJSON** &ndash; An optional settings to specify the JSON formatting for the view
+- `name`: The name of the view.
+- `viewFields`: An array of the internal names of the fields in your view.
+- `query`: A CAML query string that contains the `where` clause for the view's query. See [CAML schemas] (https://docs.microsoft.com/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas).
+- `rowLimit`: The row limit of the view.
+- `isPaged`: Specifies whether the view is paged.
+- `makeDefault`: If **True**, the view will be made the default for the list; otherwise, **False**.
+- `scope`: An optional setting to specify the scope of the view. For more information, see [SPViewScope enumeration](/previous-versions/office/sharepoint-server/ms458474(v=office.15)).
+- `formatterJSON`: An optional setting to specify the JSON formatting for the view
+
 #### Example
 
 ```json
 {
-    "verb": "addSPView",
-    "name": "Contoso Projects by Category",
-    "viewFields": 
-    [
-        "ID", 
-        "Title",
-        "siteColumnUser",
-        "ProjectCategory"
-    ],
-    "query": "<OrderBy><FieldRef Name=\"ProjectCategory\" /><FieldRef Name=\"siteColumnUser\" Ascending=\"FALSE\" /></OrderBy>",
-    "rowLimit": 100,
-    "isPaged": true,
-    "makeDefault": true
+  "verb": "addSPView",
+  "name": "Contoso Projects by Category",
+  "viewFields":
+  [
+    "ID",
+    "Title",
+    "siteColumnUser",
+    "ProjectCategory"
+  ],
+  "query": "<OrderBy><FieldRef Name=\"ProjectCategory\" /><FieldRef Name=\"siteColumnUser\" Ascending=\"FALSE\" /></OrderBy>",
+  "rowLimit": 100,
+  "isPaged": true,
+  "makeDefault": true
 }
 ```
 
@@ -252,14 +251,14 @@ Removes a view from a list. This action can also be used to remove a view applie
 
 #### JSON value
 
-- **name** &ndash; The name of the view to remove.
+- `name`: The name of the view to remove.
 
 #### Example
 
 ```json
 {
-    "verb": "removeSPView",
-    "name": "All Items"
+  "verb": "removeSPView",
+  "name": "All Items"
 }
 ```
 
@@ -267,20 +266,19 @@ Removes a view from a list. This action can also be used to remove a view applie
 
 Adds a content type to the list. Currently these are limited to the default content types included in the site template or ones defined in a script by using the createContentType action.
 
-
 > [!NOTE]
-> Currently we do not support adding enterprise content types.  
+> Currently we do not support adding enterprise content types.
 
 #### JSON value
 
-- **name** &ndash; The name of the content type to add.
+- `name`: The name of the content type to add.
 
 #### Example
 
 ```json
 {
-   "verb": "addContentType",
-   "name": "name"
+  "verb": "addContentType",
+  "name": "name"
 }
 ```
 
@@ -290,14 +288,14 @@ Removes a content type that was provided by the selected template type.
 
 #### JSON value
 
-- **name** &ndash; The name of the content type to remove.
+- `name`: The name of the content type to remove.
 
 #### Example
 
 ```json
 {
-   "verb": "removeContentType",
-   "name": "name"
+  "verb": "removeContentType",
+  "name": "name"
 }
 ```
 
@@ -307,60 +305,54 @@ Sets column formatting for a field. For more information, see [Use column format
 
 #### JSON values
 
-- **fieldDisplayName** &ndash; The display name of the field to operate on.
-- **formatterJSON** &ndash; A JSON object to use as the field CustomFormatter.
+- `fieldDisplayName`: The display name of the field to operate on.
+- `formatterJSON`: A JSON object to use as the field CustomFormatter.
 
-#### Example 
+#### Example
 
 In this example, we are formatting a number column as a data bar.
 
 ```json
+{
+  "verb": "setSPFieldCustomFormatter",
+  "fieldDisplayName": "Effort (days)",
+  "formatterJSON":
+  {
+    "debugMode": true,
+    "elmType": "div",
+    "txtContent": "@currentField",
+    "attributes": {
+      "class": "sp-field-dataBars"
+    },
+    "style": {
+      "width": {
+        "operator": "?",
+        "operands": [
+          {
+            "operator": ">",
+            "operands": ["@currentField", "20"]
+          },
+          "100%",
+          {
+            "operator": "+",
+              "operands": [
                 {
-                    "verb": "setSPFieldCustomFormatter",
-                    "fieldDisplayName": "Effort (days)",
-                    "formatterJSON":
+                  "operator": "toString()",
+                  "operands": [
                     {
-                        "debugMode": true,
-                        "elmType": "div",
-                        "txtContent": "@currentField",
-                        "attributes": {
-                            "class": "sp-field-dataBars"
-                        },
-                        "style": {
-                            "width": {
-                                "operator": "?",
-                                "operands": [
-                                    {
-                                        "operator": ">",
-                                        "operands": [
-                                            "@currentField",
-                                            "20"
-                                        ]
-                                    },
-                                    "100%",
-                                    {
-                                        "operator": "+",
-                                        "operands": [
-                                            {
-                                                "operator": "toString()",
-                                                "operands": [
-                                                    {
-                                                        "operator": "*",
-                                                        "operands": [
-                                                            "@currentField",
-                                                            5
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                            "%"
-                                        ]
-                                    }
-                                ]
-                            }
-                        }
+                      "operator": "*",
+                      "operands": ["@currentField",5]
                     }
-                }
+                  ]
+                },
+                "%"
+              ]
+          }
+        ]
+      }
+    }
+  }
+}
 ```
 
 ### associateFieldCustomizer
@@ -369,44 +361,44 @@ Registers field extension for a list field. For more information on these client
 
 #### JSON values
 
-- **internalName** &ndash; The internal name of the field to operate on.
-- **clientSiteComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
-- **clientSiteComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the field customizer extension instance.
+- `internalName`: The internal name of the field to operate on.
+- `clientSiteComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- `clientSiteComponentProperties`: An optional parameter, which can be used to provide properties for the field customizer extension instance.
 
-#### Example 
+#### Example
 
 ```json
 {
-    "verb": "createSPList",
-    "listName": "Custom List with Slider Extension",
-    "templateType": 100,
-    "subactions": [
-        {
-            "verb": "SetDescription",
-            "description": "Custom list to illustrate SharePoint site scripting"
-        },
-        {
-            "verb": "addSPField",
-            "fieldType": "Text",
-            "displayName": "Text Field",
-            "isRequired": false,
-            "addToDefaultView": true
-        },
-        {
-            "verb": "addSPField",
-            "fieldType": "Number",
-            "displayName": "Number Field",
-            "internalName": "ElectricSlide",
-            "addToDefaultView": true,
-            "isRequired": true
-        },
-        {
-            "verb": "associateFieldCustomizer",
-            "internalName": "ElectricSlide",
-            "clientSideComponentId": "35944670-3111-4482-b152-9e9d1sean9f7",
-            "clientSideComponentProperties": "{\"sampleText\":\"Yes - added by a site design, what?\"}"
-        }
-    ]
+  "verb": "createSPList",
+  "listName": "Custom List with Slider Extension",
+  "templateType": 100,
+  "subactions": [
+    {
+      "verb": "SetDescription",
+      "description": "Custom list to illustrate SharePoint site scripting"
+    },
+    {
+      "verb": "addSPField",
+      "fieldType": "Text",
+      "displayName": "Text Field",
+      "isRequired": false,
+      "addToDefaultView": true
+    },
+    {
+      "verb": "addSPField",
+      "fieldType": "Number",
+      "displayName": "Number Field",
+      "internalName": "ElectricSlide",
+      "addToDefaultView": true,
+      "isRequired": true
+    },
+    {
+      "verb": "associateFieldCustomizer",
+      "internalName": "ElectricSlide",
+      "clientSideComponentId": "35944670-3111-4482-b152-9e9d1sean9f7",
+      "clientSideComponentProperties": "{\"sampleText\":\"Yes - added by a site design, what?\"}"
+    }
+  ]
 }
 ```
 
@@ -416,155 +408,153 @@ Associates a ListViewCommandSet to the list
 
 #### JSON values
 
-- **title** &ndash; The title of the extension.
-- **location** &ndash; A required parameter to specify where the command is displayed. Options are: ContextMenu or CommandBar. 
-- **clientSideComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
-- **clientSideComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
+- `title`: The title of the extension.
+- `location`: A required parameter to specify where the command is displayed. Options are: ContextMenu or CommandBar.
+- `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
 
-
-#### Example 
+#### Example
 
 ```json
 {
-    "verb": "createSPList",
-    "listName": "CustomList",
-    "templateType": 100,
-    "subactions": [
-        {
-            "verb": "SetDescription",
-            "description": "Custom list to illustrate SharePoint site scripting"
-        },
-        {
-            "verb": "addSPField",
-            "fieldType": "Text",
-            "displayName": "Text Field",
-            "isRequired": false,
-            "addToDefaultView": true
-        },
-        {
-            "verb": "addSPField",
-            "fieldType": "Number",
-            "displayName": "Number Field",
-            "internalName": "ElectricSlide",
-            "addToDefaultView": true,
-            "isRequired": true
-        },
-        {
-            "verb": "associateListViewCommandSet",
-            "title": "HelloWorld",
-            "location": "CommandBar"
-            "clientSideComponentId": "13234283-d6c2-408f-a9ef-31a920c8ae78",
-            "clientSideComponentProperties": "{\"sampleText\":\"added by a site design\"}"
-        }
-    ]
+  "verb": "createSPList",
+  "listName": "CustomList",
+  "templateType": 100,
+  "subactions": [
+      {
+        "verb": "SetDescription",
+        "description": "Custom list to illustrate SharePoint site scripting"
+      },
+      {
+        "verb": "addSPField",
+        "fieldType": "Text",
+        "displayName": "Text Field",
+        "isRequired": false,
+        "addToDefaultView": true
+      },
+      {
+        "verb": "addSPField",
+        "fieldType": "Number",
+        "displayName": "Number Field",
+        "internalName": "ElectricSlide",
+        "addToDefaultView": true,
+        "isRequired": true
+      },
+      {
+        "verb": "associateListViewCommandSet",
+        "title": "HelloWorld",
+        "location": "CommandBar",
+        "clientSideComponentId": "13234283-d6c2-408f-a9ef-31a920c8ae78",
+        "clientSideComponentProperties": "{\"sampleText\":\"added by a site design\"}"
+      }
+  ]
 }
 ```
 
 ### setTitle
 
-Renames the list. To create a new list with a specific name, instead of using setTitle use the **listName** parameter in the **CreateSPList** action. 
+Renames the list. To create a new list with a specific name, instead of using setTitle use the `listName` parameter in the `CreateSPList` action.
 
 > [!NOTE]
-> Using **setTitle** will rename the list, preventing the list from updating if the site design is reapplied. 
+> Using `setTitle` will rename the list, preventing the list from updating if the site design is reapplied.
 
 #### JSON value
 
-- **title** &ndash; The title of the new list.
+- `title`: The title of the new list.
 
 #### Example
 
 ```json
 {
-   "verb": "setTitle",
-   "title": "Customers and Orders"
+  "verb": "setTitle",
+  "title": "Customers and Orders"
 }
 ```
 
 ## Define a new site column
 
-Use the **createSiteColumn** verb to define a new site column that can then be associated to a list directly or by using the addContentType action. 
+Use the `createSiteColumn` verb to define a new site column that can then be associated to a list directly or by using the addContentType action.
 
 #### JSON value
 
-- **fieldType** &ndash; The type of column to add. Supported values - like SPField - are Text, Note, Number, Boolean, User, and DateTime. For other data types, refer to the addSPFieldXml script action. 
-- **internalName** &ndash; The internal name of the site column.
-- **displayName** &ndash; The display name of the site column.  
-- **isRequired** &ndash; **True** if this field is required to contain information; otherwise, **false**.
-- **id** &ndash; An optional attribute. If provided, specifies the id of the field. It needs to be a unique, randomly generated GUID. Providing a value for this is strongly recommended to ensure the field is not added multiple times if the script is re-run.
-- **group** &ndash; An optional attribute to designate the column group.
-- **enforceUnique** &ndash; An optional attribute that defaults to **false**. If **true**, all values for this field must be unique.
+- `fieldType`: The type of column to add. Supported values - like SPField - are Text, Note, Number, Boolean, User, and DateTime. For other data types, refer to the addSPFieldXml script action.
+- `internalName`: The internal name of the site column.
+- `displayName`: The display name of the site column.
+- `isRequired`: **True** if this field is required to contain information; otherwise, **False**.
+- `id`: An optional attribute. If provided, specifies the id of the field. It needs to be a unique, randomly generated GUID. Providing a value for this is recommended to ensure the field isn't added multiple times if the script is rerun.
+- `group`: An optional attribute to designate the column group.
+- `enforceUnique`: An optional attribute that defaults to **False**. If **True**, all values for this field must be unique.
 
 #### Example
 
 ```json
 {
-    "verb": "createSiteColumn",
-    "fieldType": "User",
-    "internalName": "siteColumn4User",
-    "displayName": "Project Owner",
-    "isRequired": false,
-    "id": "181c4370-cdae-471b-9499-730046e55b75"
+  "verb": "createSiteColumn",
+  "fieldType": "User",
+  "internalName": "siteColumn4User",
+  "displayName": "Project Owner",
+  "isRequired": false,
+  "id": "181c4370-cdae-471b-9499-730046e55b75"
 }
 ```
 
-Use the **createSiteColumnXml** verb to define a new site column for those complex data types not supported by createSiteColumn. These columns can then be associated to a list directly or by using the addContentType action. Note that providing the ID attribute in the field schemaXml is very important in order to prevent the field from being created multiple times if the script is run more than once.
+Use the `createSiteColumnXml` verb to define a new site column for those complex data types not supported by createSiteColumn. These columns can then be associated to a list directly or by using the addContentType action. Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
-- **schemaXml** &ndash; The CAML block to define the field.
-- **pushChanges** &ndash; Indicates whether this change should be pushed to lists that already reference this field. Defaults to **true**.
+- `schemaXml`: The CAML block to define the field.
+- `pushChanges`: Indicates whether this change should be pushed to lists that already reference this field. Defaults to **True**.
 
 #### Example
 
 ```json
 {
-    "verb": "createSiteColumnXml",
-    "schemaXml": "<Field ID=\"{82581bd1-356f-4206-8ff7-a3b6ad1f5553}\" Type=\"Choice\" DisplayName=\"Project Status\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectStatus\" Name=\"ProjectStatus\"><Default>In Progress</Default><CHOICES><CHOICE>In Progress</CHOICE><CHOICE>In Review</CHOICE><CHOICE>Done</CHOICE><CHOICE>Has Issues</CHOICE></CHOICES></Field>"
+  "verb": "createSiteColumnXml",
+  "schemaXml": "<Field ID=\"{82581bd1-356f-4206-8ff7-a3b6ad1f5553}\" Type=\"Choice\" DisplayName=\"Project Status\" Required=\"FALSE\" Format=\"Dropdown\" StaticName=\"ProjectStatus\" Name=\"ProjectStatus\"><Default>In Progress</Default><CHOICES><CHOICE>In Progress</CHOICE><CHOICE>In Review</CHOICE><CHOICE>Done</CHOICE><CHOICE>Has Issues</CHOICE></CHOICES></Field>"
 }
 ```
-
 
 ## Define a new content type
 
-Use **createContentType** to define a new content type that can then be associated to a list by using the addContentType action. 
+Use **createContentType** to define a new content type that can then be associated to a list by using the addContentType action.
 
 #### JSON value
 
 > [!NOTE]
 > When referencing the content type ID, only one of the three references are required - ID, parentName, or parentId.
 
-- **name** &ndash; The name of the content type to create.
-- **description** &ndash; The optional description of the content type.
-- **parentName** &ndash; Name of the parent content type. 
-- **parentId** &ndash; ID of the parent content type.
-- **id** &ndash; ID of the content type.
-- **hidden** &ndash; Specifies whether the content type is visible or hidden.
-- **subactions** &ndash; Specifies subactions to run on the content type. These are used to designate the site columns to add.
+- `name`: The name of the content type to create.
+- `description`: The optional description of the content type.
+- `parentName`: Name of the parent content type.
+- `parentId`: ID of the parent content type.
+- `id`: ID of the content type.
+- `hidden`: Specifies whether the content type is visible or hidden.
+- `subactions`: Specifies subactions to run on the content type. These are used to designate the site columns to add.
 
 #### Example
 
 ```json
 {
-    "verb": "createContentType",
-    "name": "Contoso Projects",
-    "description": "custom list content type",
-    "parentName": "Item",
-    "hidden": false,
-    "subactions":
-        [
-            {
-                "verb": "addSiteColumn",
-                "internalName": "siteColumn1Text"
-            },
-            {
-                "verb": "addSiteColumn",
-                "internalName": "siteColumn2Number"
-                },
-            {
-                "verb": "addSiteColumn",
-                "internalName": "siteColumn3Note"
-            }
-        ]
+  "verb": "createContentType",
+  "name": "Contoso Projects",
+  "description": "custom list content type",
+  "parentName": "Item",
+  "hidden": false,
+  "subactions":
+    [
+      {
+        "verb": "addSiteColumn",
+        "internalName": "siteColumn1Text"
+      },
+      {
+        "verb": "addSiteColumn",
+        "internalName": "siteColumn2Number"
+        },
+      {
+        "verb": "addSiteColumn",
+        "internalName": "siteColumn3Note"
+      }
+    ]
 }
 ```
 
@@ -574,130 +564,130 @@ Subaction to add a previously defined site column directly to a content type (ex
 
 #### JSON value
 
-- **internalName** &ndash; The internal name of the site column to add.
+- `internalName`: The internal name of the site column to add.
 
 #### Example
 
 ```json
  {
-    "verb": "addSiteColumn",
-    "internalName": "siteColumnUser"
+  "verb": "addSiteColumn",
+  "internalName": "siteColumnUser"
  }
  ```
 
 ### removeSiteColumn
 
-Subaction to remove a site column from a list or content type. 
+Subaction to remove a site column from a list or content type.
 
 #### JSON value
 
-- **internalName** &ndash; The internal name of the site column to remove.
+- `internalName`: The internal name of the site column to remove.
 
 #### Example
 
 ```json
  {
-    "verb": "removeSiteColumn",
-    "internalName": "siteColumnUser"
+  "verb": "removeSiteColumn",
+  "internalName": "siteColumnUser"
  }
  ```
 
 ## Add a navigation link
 
-Use the **addNavLink** verb to add a new navigation link to the site QuickLaunch or Hub navigation. 
+Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch or Hub navigation.
 
 #### JSON values
 
-- **url** &ndash; The url of the link to add.
-- **displayName** &ndash; The display name of the link.
-- **navComponent** &ndash; The component where to add the link, QuickLaunch, Hub or Footer. The default is **QuickLaunch**.
-- **isWebRelative** &ndash; **true** if the link is web relative; otherwise, **false**. The default is **false**.
-- **parentDisplayName** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
-- **parentUrl** &ndash; An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this url. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
-- **isParentUrlWebRelative** &ndash; An optional parameter. **true** if the link is web relative; otherwise, **false**. The default is **false**.
+- `url`: The url of the link to add.
+- `displayName`: The display name of the link.
+- `navComponent`: The component where to add the link, QuickLaunch, Hub, or Footer. The default is **QuickLaunch**.
+- `isWebRelative`: **True** if the link is web relative; otherwise, **False**. The default is **False**.
+- `parentDisplayName`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
+- `parentUrl`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this url. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
+- `isParentUrlWebRelative`: An optional parameter. **True** if the link is web relative; otherwise, **False**. The default is **False**.
 
 #### Example
 
 > [!NOTE]
-> If you add a link to a nested site item such as a list, be sure to add the path reference from the root. 
+> If you add a link to a nested site item such as a list, be sure to add the path reference from the root.
 
 ```json
 {
-   "verb": "addNavLink",
-   "url": "/Customer Event Collateral",
-   "displayName": "Event Collateral",
-   "navComponent":"Hub",
-   "isWebRelative": true
+  "verb": "addNavLink",
+  "url": "/Customer Event Collateral",
+  "displayName": "Event Collateral",
+  "navComponent":"Hub",
+  "isWebRelative": true
 },
 {
-   "verb": "addNavLink",
-   "url": "/Lists/Project Activities",
-   "displayName": "Project Activities",
-   "isWebRelative": true
- },
- {
     "verb": "addNavLink",
-    "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview",
-    "displayName": "SharePoint Site Design Overview",
-    "parentDisplayName": "Documents"
- },
- {
-     "verb": "addNavLink",
-     "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
-     "displayName": "About Site Footer",
-     "navComponent":"Footer"
- },
- {
-     "verb": "addNavLink",
-     "url": "http://linkless.header/",
-     "displayName": "Linkless Heading",
-     "isWebRelative": false
- }
+    "url": "/Lists/Project Activities",
+    "displayName": "Project Activities",
+    "isWebRelative": true
+    },
+{
+  "verb": "addNavLink",
+  "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview",
+  "displayName": "SharePoint Site Design Overview",
+  "parentDisplayName": "Documents"
+},
+{
+  "verb": "addNavLink",
+  "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
+  "displayName": "About Site Footer",
+  "navComponent":"Footer"
+},
+{
+  "verb": "addNavLink",
+  "url": "http://linkless.header/",
+  "displayName": "Linkless Heading",
+  "isWebRelative": false
+}
 ```
 
 ## Remove a navigation link
 
-Use the **removeNavLink** verb to remove a navigation link from the site. 
+Use the `removeNavLink` verb to remove a navigation link from the site.
 
 #### JSON values
 
-- **url** &ndash; The url of the link to remove.
-- **displayName** &ndash; The display name of the link.
-- **navComponent** &ndash; The component where to remove the link from, QuickLaunch, Hub or Footer. The default is **QuickLaunch**.
-- **isWebRelative** &ndash; **True** if the link is web relative; otherwise, **false**.
+- `url`: The url of the link to remove.
+- `displayName`: The display name of the link.
+- `navComponent`: The component where to remove the link from, QuickLaunch, Hub, or Footer. The default is **QuickLaunch**.
+- `isWebRelative`: **True** if the link is web relative; otherwise, **False**.
 
 #### Example
 
 > [!NOTE]
-> This action can be used to remove site links added by the collaboration and communication site templates (for example, "home", "documents", "pages", "conversations", etc.). 
-
+> This action can be used to remove site links added by the collaboration and communication site templates (for example, "home", "documents", "pages", "conversations", etc.).
 
 ```json
 {
-    "verb": "removeNavLink",
-    "displayName": "Home",
-    "isWebRelative": true
+  "verb": "removeNavLink",
+  "displayName": "Home",
+  "isWebRelative": true
 },
 {
-    "verb": "removeNavLink",
-    "displayName": "Pages",
-    "isWebRelative": true
+  "verb": "removeNavLink",
+  "displayName": "Pages",
+  "isWebRelative": true
 },
 {
-    "verb": "removeNavLink",
-    "displayName": "Conversations",
-    "isWebRelative": true
+  "verb": "removeNavLink",
+  "displayName": "Conversations",
+  "isWebRelative": true
 },
 {
-    "verb": "removeNavLink",
-    "url": "/_layouts/15/groupstatus.aspx?Target=TEAM",
-    "displayName": "Teams",
-    "isWebRelative": true
+  "verb": "removeNavLink",
+  "url": "/_layouts/15/groupstatus.aspx?Target=TEAM",
+  "displayName": "Teams",
+  "isWebRelative": true
 }
 ```
 
 #### Handle special characters
-The sites created in other languages than English may contain special characters. Use UTF-8 encoding to read the JSON content containing special characters. 
+
+The sites created in other languages than English may contain special characters. Use UTF-8 encoding to read the JSON content containing special characters.
 
 ```PowerShell
 Get-Content '<Folder_location_to_site_script>\site-script.json' -Raw -Encoding UTF8
@@ -705,40 +695,40 @@ Get-Content '<Folder_location_to_site_script>\site-script.json' -Raw -Encoding U
 
 ## Apply a theme
 
-Use the **applyTheme** verb to add a custom theme to the site. For more information about how to construct and upload these themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview.md). Note that this site action only works for applying custom themes; to apply one of our in-product SharePoint themes, create a copy as a custom one and reference that one.
+Use the `applyTheme` verb to add a custom theme to the site. For more information about how to construct and upload these themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview.md). This site action only works for applying custom themes; to apply one of our in-product SharePoint themes, create a copy as a custom one and reference that one.
 
 #### JSON value
 
-- **themeName** &ndash; The name of the theme to apply.
+- `themeName`: The name of the theme to apply.
 
 #### Example
 
 ```json
 {
-   "verb": "applyTheme",
-   "themeName": "Blue Yonder"
+  "verb": "applyTheme",
+  "themeName": "Blue Yonder"
 }
 ```
 
 <!-- TBD: add link to Doug's Blue Yonder theme with note you need to create it first -->
 
-<!-- 
+<!--
 ## Create a page
 
 Use the **createPage** verb to create a new page on the site.
 
 > [!NOTE]
-> The createPage site script action is in preview and is subject to change. It is not currently supported for use in production environments.
+> The createPage site script action is in preview and is subject to change. itsn't currently supported for use in production environments.
 
 #### JSON values
 
-- **fileName** &ndash; The name of the file.
-- **setAsHomePage** &ndash; **True** if this page is the home page; otherwise, **false**.
-- **pageData** &ndash; An object with additional information about the page. **pageData** requires the following values:
-  - **Title** &ndash; The title of the page.
-  - **BannerImageUrl** &ndash; A URL specifying the location of an image to display for the banner. <TBD: need more info>
-  - **CanvasContent1** &ndash; Content for the page specified as XML. <TBD: need more info>
-  - **LayoutWebpartsContent** &ndash; JSON for the layout. <TBD: need more info>
+- `fileName`: The name of the file.
+- `setAsHomePage`: **True** if this page is the home page; otherwise, **False**.
+- `pageData`: An object with additional information about the page. **pageData** requires the following values:
+  - `Title`: The title of the page.
+  - `BannerImageUrl`: A URL specifying the location of an image to display for the banner. <TBD: need more info>
+  - `CanvasContent1`: Content for the page specified as XML. <TBD: need more info>
+  - `LayoutWebpartsContent`: JSON for the layout. <TBD: need more info>
 
 #### Example
 
@@ -760,202 +750,200 @@ Use the **createPage** verb to create a new page on the site.
 
 ## Set branding properties
 
-Use the **setSiteBranding** verb to specify the navigation layout, the header layout and header background. 
+Use the `setSiteBranding` verb to specify the navigation layout, the header layout, and header background.
 
 > [!NOTE]
-> Setting the navigation layout only works on the communication site template and for the hub navigation. 
+> Setting the navigation layout only works on the communication site template and for the hub navigation.
 
 #### JSON value
 
-- **navigationLayout** &ndash; Specify the navigation layout as Cascade or Megamenu
-- **headerLayout** &ndash; Specify the header layout as Standard or Compact
-- **headerBackground** &ndash; Specify the header background as None, Neutral, Soft or Strong
-- **showFooter** &ndash; Specify whether site footer should show or not
+- `navigationLayout`: Specify the navigation layout as Cascade or Megamenu
+- `headerLayout`: Specify the header layout as Standard or Compact
+- `headerBackground`: Specify the header background as None, Neutral, Soft, or Strong
+- `showFooter`: Specify whether site footer should show or not
 
 #### Example
 
 ```json
 {
-    "verb": "setSiteBranding",
-    "navigationLayout": "Megamenu",
-    "headerLayout": "Compact",
-    "headerBackground": "Strong",
-    "showFooter": true
+  "verb": "setSiteBranding",
+  "navigationLayout": "Megamenu",
+  "headerLayout": "Compact",
+  "headerBackground": "Strong",
+  "showFooter": true
 }
 ```
 
 ## Set a site logo
 
-Use the **setSiteLogo** verb to specify a logo for your site. 
+Use the `setSiteLogo` verb to specify a logo for your site.
 
 > [!NOTE]
 > This action only works on the communication site template (68).
 
 #### JSON value
 
-- **url** &ndash; The url of the logo image to use.
+- `url`: The url of the logo image to use.
 
 #### Example
 
 ```json
 {
-    "verb": "setSiteLogo",
-    "url": "/Customer Event Collateral/logo.jpg"
+  "verb": "setSiteLogo",
+  "url": "/Customer Event Collateral/logo.jpg"
 }
 ```
 
 ## Join a hub site
 
-Use the **joinHubSite** verb to join the site to a designated hub site. 
+Use the `joinHubSite` verb to join the site to a designated hub site.
 
 #### JSON value
 
-- **hubSiteId** &ndash; The ID of the hub site to join.
-- **name** &ndash; An optional string specifying the name of the hub site.
+- `hubSiteId`: The ID of the hub site to join.
+- `name`: An optional string specifying the name of the hub site.
 
 #### Example
 
 [!NOTE] To get the hubSiteId, sign in to a site by using the Connect-PnPOnline cmdlet, and then run:
+
 ```PowerShell
 $hubSiteName = "My Hub Site"
 Get-PnPHubSite | Where-Object { $_.Title -eq $hubSiteName }
 ```
+
 This returns information about the Hub Site named $hubSiteName. The hubSiteId is returned as the SiteId.
 
 ```json
 {
-    "verb": "joinHubSite",
-    "hubSiteId": "e337cc17-b355-45d2-8dd4-e056f1bcf6f6"
+  "verb": "joinHubSite",
+  "hubSiteId": "e337cc17-b355-45d2-8dd4-e056f1bcf6f6"
 }
 ```
 
 ## Install an add-in or solution
 
-Use the **installSolution** action to install a deployed add-in or SharePoint Framework solution from the tenant app catalog. 
-
-#### JSON values
-
+Use the `installSolution` action to install a deployed add-in or SharePoint Framework solution from the tenant App Catalog.
 
 #### Example
 
 > [!NOTE]
-> To get the solution ID, sign in to a site by using the **Connect-PnPOnline** cmdlet, and then run **Get-PnPApp**. This returns a list of your deployed solutions. For multi-geo tenants, use the Product ID after setting up the solution in each geo location. Obtain the Product ID by uplaoding the solution to the app catalog or in the solution's definition. 
+> To get the solution ID, sign in to a site by using the **Connect-PnPOnline** cmdlet, and then run **Get-PnPApp**. This returns a list of your deployed solutions. For multi-geo tenants, use the Product ID after setting up the solution in each geo location. Obtain the Product ID by uplaoding the solution to the app catalog or in the solution's definition.
 
 ```json
 {
-    "verb": "installSolution",
-    "id": "d40e4edc-a6da-4cd8-b82d-bba970976803"
+  "verb": "installSolution",
+  "id": "d40e4edc-a6da-4cd8-b82d-bba970976803"
 }
 ```
 
 ## Register an extension
 
-Use the **associateExtension** action to register a deployed SharePoint Framework extension from the tenant app catalog. 
+Use the `associateExtension` action to register a deployed SharePoint Framework extension from the tenant App Catalog.
 
 > [!NOTE]
-> For more details on how to create and configure a SharePoint Framework extension, check out: [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions).
+> For more details on how to create and configure a SharePoint Framework extension, check out: [Overview of SharePoint Framework Extensions](../spfx/extensions/overview-extensions.md).
 
 #### JSON values
 
-- **title** &ndash; The title of the extension in the app catalog. 
-- **location** &ndash; Used to specify the extension type. If it is used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
-- **clientSideComponentId** &ndash; The identifier (GUID) of the extension in the app catalog. This property value can be found in the manifest.json file or in the elements.xml file.
-- **clientSideComponentProperties** &ndash; An optional parameter, which can be used to provide properties for the extension instance.
-- **registrationId** &ndash; An optional parameter, which indicates the type of the list the extension is associated to (if it is a list extension).
-- **registrationType** &ndash; An optional parameter, which should be specified if the extension is associated with a list. 
-- **scope** &ndash; Indicates whether the extension is associated with a Web or a Site. 
+- `title`: The title of the extension in the App Catalog.
+- `location`: Used to specify the extension type. If its used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
+- `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
+- `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
+- `registrationId`: An optional parameter, which indicates the type of the list the extension is associated to (if its a list extension).
+- `registrationType`: An optional parameter, which should be specified if the extension is associated with a list.
+- `scope`: Indicates whether the extension is associated with a Web or a Site.
 
 #### Example
 
 ```json
 {
-    "verb": "associateExtension",
-    "title": "SPFXApplicationCustomizer Example",
-    "location": "ClientSideExtension.ApplicationCustomizer",
-    "clientSideComponentId": "40d64749-a6e5-4691-b440-1e32fb6sean5",
-    "scope": "Web"
+  "verb": "associateExtension",
+  "title": "SPFXApplicationCustomizer Example",
+  "location": "ClientSideExtension.ApplicationCustomizer",
+  "clientSideComponentId": "40d64749-a6e5-4691-b440-1e32fb6sean5",
+  "scope": "Web"
 }
 ```
 
 ## Activate a Feature
 
-Use the **activateSPFeature** action to activate a web scoped feature.
+Use the `activateSPFeature` action to activate a web scoped feature.
 
 > [!NOTE]
-> Site scoped features cannot be activated through Site Designs at this time.
+> Site scoped features can't be activated through Site Designs at this time.
 
 #### JSON values
 
-- **featureId** &ndash; The ID of the web scoped feature to activate. 
+- `featureId`: The ID of the web scoped feature to activate.
 
 #### Example
 
-To enable the web scoped feature which allows for Events Lists to be created (feature ID 00bfea71-ec85-4903-972d-ebe475780106):
+To enable the web scoped feature, which allows for Events Lists to be created (feature ID 00bfea71-ec85-4903-972d-ebe475780106):
 
 ```json
 {
-    "verb": "activateSPFeature",
-    "featureId": "00bfea71-ec85-4903-972d-ebe475780106"
+  "verb": "activateSPFeature",
+  "featureId": "00bfea71-ec85-4903-972d-ebe475780106"
 }
 ```
 
 ## Trigger a flow
 
-Use the **triggerFlow** verb to kick off a custom flow.
+Use the `triggerFlow` verb to kick off a custom flow.
 <!-- update this with example from trigger workflow topic -->
 
 #### JSON values
 
-- **url** &ndash; A trigger URL of the flow.
-- **name** &ndash; The name of the flow.
-- **parameters** &ndash; An optional set of parameters to pass into the flow.
+- `url`: A trigger URL of the flow.
+- `name`: The name of the flow.
+- `parameters`: An optional set of parameters to pass into the flow.
 
 #### Example
 
 ```json
  {
-    "verb": "triggerFlow",
-    "url": "<A trigger URL of the Flow.>",
-    "name": "Record and tweet site creation event",
-    "parameters": {
-        "event": "Microsoft Event",
-        "product": "SharePoint"
-    }
+  "verb": "triggerFlow",
+  "url": "<A trigger URL of the Flow.>",
+  "name": "Record and tweet site creation event",
+  "parameters": {
+    "event": "Microsoft Event",
+    "product": "SharePoint"
+  }
 }
 ```
 
 ## Configure regional settings
 
-Use the **setRegionalSettings** action to configure the regional settings of the site (/_layouts/15/regionalsetng.aspx). 
+Use the `setRegionalSettings` action to configure the regional settings of the site (*/_layouts/15/regionalsetng.aspx*).
 
 #### JSON values
 
-- **timeZone** &ndash; A number specifying the time zone. For a list of permissible values, see https://msdn.microsoft.com/library/microsoft.sharepoint.spregionalsettings.timezones.aspx
-- **locale** &ndash; A number specifying the culture LCID. For a list of permissible values, see https://msdn.microsoft.com/library/ms912047(v=winembedded.10).aspx
-- **sortOrder** &ndash; A number specifying the sort order. For a list of permissible values, see https://msdn.microsoft.com/library/microsoft.sharepoint.spregionalsettings.collation.aspx
-- **hourFormat** &ndash; Specifies whether the site should use 12-hour or 24-hour time format.
+- `timeZone`: A number specifying the time zone. For a list of permissible values, see [SPRegsionalSettings.TimeZones](/previous-versions/office/sharepoint-server/ms453853(v=office.15))
+- `locale`: A number specifying the culture LCID. For a list of permissible values, see [Microsoft Locale ID Values](/previous-versions/windows/embedded/ms912047(v=winembedded.10))
+- `sortOrder`: A number specifying the sort order. For a list of permissible values, see [SPRegionalSettings.Collation](/previous-versions/office/sharepoint-server/ms367805(v=office.15))
+- `hourFormat`: Specifies whether the site should use 12-hour or 24-hour time format.
 
 #### Example
 
 ```json
 {
-    "verb": "setRegionalSettings",
-    "timeZone": 2, /* Greenwich Mean Time */
-    "locale": 1050, /* Croatia */
-    "sortOrder": 6, /* Croatian */
-    "hourFormat": "24"
+  "verb": "setRegionalSettings",
+  "timeZone": 2, /* Greenwich Mean Time */
+  "locale": 1050, /* Croatia */
+  "sortOrder": 6, /* Croatian */
+  "hourFormat": "24"
 }
 ```
 
-
 ## Add users (principals) to SharePoint Groups
 
-Use the **addPrincipalToSPGroup** action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Office 365 Groups.
+Use the `addPrincipalToSPGroup` action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Office 365 Groups.
 
 #### JSON values
 
-- **principal** &ndash; A required parameter to specify the name of the principal (user or group) to add to the SharePoint group. 
-- **group** &ndash; A required parameter to specify the SharePoint group to add the principal to.
+- `principal`: A required parameter to specify the name of the principal (user or group) to add to the SharePoint group.
+- `group`: A required parameter to specify the SharePoint group to add the principal to.
 
 #### Example
 
@@ -964,43 +952,43 @@ Use the **addPrincipalToSPGroup** action to manage addition of users and groups 
 
 ```json
 {
-    "verb": "addPrincipalToSPGroup",
-    "principal": "sean@contosotravel.onmicrosoft.com", /* user */
-    "group": "Owners"
-},    
-{
-    "verb": "addPrincipalToSPGroup",
-    "principal": "travelops", /* sg */
-    "group": "Owners"
+  "verb": "addPrincipalToSPGroup",
+  "principal": "sean@contosotravel.onmicrosoft.com", /* user */
+  "group": "Owners"
 },
 {
-    "verb": "addPrincipalToSPGroup",
-    "principal": "itexecutives", /* mail-enabled sg */
-    "group": "Members"
+  "verb": "addPrincipalToSPGroup",
+  "principal": "travelops", /* sg */
+  "group": "Owners"
 },
 {
-    "verb": "addPrincipalToSPGroup",
-    "principal": "Adventure@contosotravel.onmicrosoft.com", /* o365 group */
-    "group": "Visitors"
+  "verb": "addPrincipalToSPGroup",
+  "principal": "itexecutives", /* mail-enabled sg */
+  "group": "Members"
+},
+{
+  "verb": "addPrincipalToSPGroup",
+  "principal": "Adventure@contosotravel.onmicrosoft.com", /* o365 group */
+  "group": "Visitors"
 }
 ```
 
 ## Manage guest access
 
-Use the **setSiteExternalSharingCapability** action to manage guest access. For more information, see [Manage external sharing for your SharePoint Online environment](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
+Use the `setSiteExternalSharingCapability` action to manage guest access. For more information, see [Manage external sharing for your SharePoint Online environment](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 
 <!-- update this table matrix -->
 
 #### JSON values
 
-- **capability** &ndash; A required parameter to specify the sharing option for the site collection. The four options are: Disabled, ExistingExternalUserSharingOnly, ExternalUserSharingOnly, ExternalUserAndGuestSharing
+- `capability`: A required parameter to specify the sharing option for the site collection. The four options are: `Disabled`, `ExistingExternalUserSharingOnly`, `ExternalUserSharingOnly`, and `ExternalUserAndGuestSharing`.
 
 #### Example
 
 ```json
 {
-   "verb": "setSiteExternalSharingCapability",
-   "capability": "Disabled"
+  "verb": "setSiteExternalSharingCapability",
+  "capability": "Disabled"
 }
 ```
 

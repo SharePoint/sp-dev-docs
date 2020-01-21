@@ -18,7 +18,7 @@ When developers create a new SharePoint Framework extension solution using stand
 > [!WARNING]
 > Starting from SharePoint Framework v1.6, default scaffolding will automatically create example files in SharePoint Solution to activate extension across the tenant if you chose to use the tenant-scoped deployment option.
 
-SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality. This means that the `skipFeatureDeployment` attribute in the `package-solution.json` will need to be set as *true*. 
+SharePoint Framework solution will need to be configured to use [tenant-scope deployment option](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment), to be able to automatically activate extensions across the tenant using Tenant Wide Deployment functionality. This means that the `skipFeatureDeployment` attribute in the `package-solution.json` will need to be set as *true*.
 
 ## Controlling tenant wide deployment from App Catalog site collection
 
@@ -37,7 +37,7 @@ SharePoint Framework solutions can contain automation that will add automaticall
 
 ## Tenant wide deployment list description
 
-Component ID has to exists in the tenant to be able to add entry for it.
+Component ID has to exist in the tenant to be able to add entry for it.
 
 | Column                | Type      | Description |
 |-----------            |------     |-------------|
@@ -49,7 +49,7 @@ Component ID has to exists in the tenant to be able to add entry for it.
 | Location              | String    | Location of the entry. There are different support locations for application customizers and List View Command Sets. |
 | Sequence              | int       | Sequence of the entry in rendering. |
 | Host Properties       | String    | Additional server-side configuration, like pre-allocated height for placeholders. |
-| Disabled              | Boolean   | Is the entry enabled or disable. |
+| Disabled              | Boolean   | Is the entry enabled or disabled. |
 
 For the Web Template column, any web template definition is technically supported. Following table defines the most commonly used templates.
 
@@ -61,7 +61,7 @@ For the Web Template column, any web template definition is technically supporte
 | Classic team site | STS#0 |
 | Classic publishing site | BLANKINTERNET#0 |
 
- For the List Template column any list ID is technically supported, but only subs set of classic list types support modern experiences.
+ For the List Template column any list ID is technically supported, but only subset of classic list types supports modern experiences.
 
 | List             | List Id   |
 |-----------       |------     |
@@ -86,7 +86,7 @@ SharePoint Framework solutions default scaffolding creates an automation file to
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/ext-tenant-wide-clientsideinstance.png)
 
-**ClientSideInstance.xml** is taken into account in the solution activation at the App Catalog if the `skipFeatureDeployment` attribute is set to *true* in the `package-solution.json` file. 
+**ClientSideInstance.xml** is taken into account in the solution activation at the App Catalog if the `skipFeatureDeployment` attribute is set to *true* in the `package-solution.json` file.
 
 This file contains by default following structure. **ClientSideComponentInstance** element instructs SharePoint to add automatically an entry to the Tenant Wide Deployment list when the solution package is added to the App Catalog.
 
@@ -132,7 +132,7 @@ Below xml definition shows how the optional values could be used as part of the 
         Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}"
         ListTemplateId="100"
         WebTemplateId="GROUP#0"
-        Sequence="10" 
+        Sequence="10"
         HostProperties="{&quot;preAllocatedApplicationCustomizerTopHeight&quot;:&quot;50&quot;,&quot;preAllocatedApplicationCustomizerBottomHeight&quot;:&quot;50&quot;}">
     </ClientSideComponentInstance>
 </Elements>

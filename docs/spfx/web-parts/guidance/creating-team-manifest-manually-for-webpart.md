@@ -15,7 +15,7 @@ You can create the Microsoft Teams app manifest file using the [Teams App Studio
 >
 > ![Sync To Teams](../../../images/using-web-part-as-ms-teams-tab-sync-to-team.png)
 >
-> This capability is ideal when you have a simple implementation which you want expose automatically in Microsoft Teams. However, Teams solutions can be complex and contain multiple capabilities such as tabs, bots, actionable cards etc. For such complex solutions, crafting the Teams manifest manually and deploying it in Teams App Catalog directly is the only option.
+> This capability is ideal when you have a simple implementation which you want expose automatically in Microsoft Teams. However, Teams solutions can be complex and contain multiple capabilities such as tabs, bots, actionable cards etc. For such complex solutions, crafting the Teams manifest manually and deploying it in Microsoft Teams App Catalog directly is the only option.
 
 ## Create a Microsoft Teams app manifest
 

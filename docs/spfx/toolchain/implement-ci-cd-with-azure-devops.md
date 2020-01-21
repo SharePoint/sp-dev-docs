@@ -240,7 +240,7 @@ Upload the solution package to your App Catalog by adding another `Command Line`
 > The path of the package depends on your solution name (see your project configuration) as well as the `Source Alias` you defined earlier, make sure they match.
 
 > [!NOTE] 
-> You can upload a solution to a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope site`
+> You can upload a solution to a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope sitecollection`
 
 ![uploading the package to the catalog](../../images/azure-devops-spfx-16.png)
 
@@ -252,7 +252,7 @@ The final step in the setup is to deploy the application to the App Catalog to m
 > Make sure you update the package name.
 
 > [!NOTE] 
-> You can deploy a solution from a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope site`
+> You can deploy a solution from a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope sitecollection`
 
 ![Deploying the package to the catalog](../../images/azure-devops-spfx-17.png)
 

@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the pages scanner mode
 description: Explains the pages output created by the modernization scanner
-ms.date: 12/13/2019
+ms.date: 01/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -133,3 +133,7 @@ Filter | Takeaway
 ---------|----------
 **No filter** | Will give you one row per uniquely detected web part
 **InMappingFile = FALSE** | Gives you all the web parts which are not part of the webpartmapping.xml file. If these are important for you it's best to define these web parts with the properties you want to retrieve
+
+## Understanding the SitesWithUncustomizedHomePages.csv file ##
+
+This report contains a list of all the site's which have an uncustomized home page. This output can be used to configure opting out of upgrade of uncustomized home pages to a modern home page. See https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/HomePageModernizationOptOut to learn more.
