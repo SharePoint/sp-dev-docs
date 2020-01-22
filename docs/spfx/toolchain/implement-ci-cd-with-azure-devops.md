@@ -19,8 +19,8 @@ Azure builds and releases is the historic one, featuring a graphical edition exp
 Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history and repeatability.  
 Both approaches are decribed for the SharePoint Framework:
 
-- [Azure Build and Release](./implement-ci-cd-with-azure-pipelines.md)
-- Azure Multi-stage Pipelines (this article)
+- Azure Build and Release (this article)
+- [Azure Multi-stage Pipelines](./implement-ci-cd-with-azure-pipelines.md)
 
 
 ## Continuous Integration
