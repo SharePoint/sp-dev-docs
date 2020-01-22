@@ -1,3 +1,12 @@
+---
+name: Question or generic issue (not a bug or feature request)
+about: Do you have a question that isn't a bug or feature request, or something else that doesn't fit one of our provided tempaltes? Select this option.
+title: ''
+labels: 'Needs: Triage'
+assignees: ''
+
+---
+
 ## Category
 - [ ] Question
 - [ ] Typo
@@ -7,15 +16,16 @@
 ## Question
 
 > **DELETE THIS LINE BEFORE SUBMITTING** - If you are reporting a bug, please describe the expected behavior. If you are suggesting an enhancement please describe thoroughly the enhancement, how it can be achieved, and the expected benefit.
+>
+> _(DELETE THIS PARAGRAPH BEFORE SUBMITTING)_
 
-## Environment details (if applicable)
+## Environment details
+> **DELETE THIS LINE BEFORE SUBMITTING** - Complete the following (*if ignored you'll be prompted for it before we can address your issue... save the time and provide it in your initial submission*).
 
-> **DELETE THIS LINE BEFORE SUBMITTING** - Complete the following (*if ignored you'll be prompted for it before we can address your issue... save the time and provide it in your initial submission*). If this section is not relevant to your issue, please delete it.
-
-- OS: [e.g. Windows 10, MacOS 10.15.x]
-- Framework: [e.g. .NET Framework v3.x, .NET Core v3.x, Node.js v6/v8/v10/v12]
-- Browser(s): [e.g. Chrome v79, Safari v22, FireFox v31, IE v11, Edge, Chromium Edge v79]
-- Tooling: [e.g. VS Code, SPFx v1.10.0, Visual Studio 2019] 
+ - OS: [e.g. Windows 10, MacOS 10.15.x]
+ - Framework: [e.g. .NET Framework v3.x, .NET Core v3.x, Node.js v6/v8/v10/v12]
+ - Browser(s): [e.g. Chrome v79, Safari v22, FireFox v31, IE v11, Edge, Chromium Edge v79]
+ - Tooling: [e.g. VS Code, SPFx v1.10.0, Visual Studio 2019] 
  
 ## Submission guidelines (delete this section before submitting)
 
