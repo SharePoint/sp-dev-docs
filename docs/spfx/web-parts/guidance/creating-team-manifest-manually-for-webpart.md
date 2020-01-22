@@ -90,7 +90,7 @@ Important attributes to update in the manifest file are following:
 - **description:full** - Full description of your app
 - **icons:outline** - The `outline` icon is used in these places: the app bar and messaging extensions the user has marked as a "favorite." This icon must be 32&times;32 pixels.
 - **icons:color** - The `color` icon is used throughout Microsoft Teams (in app and tab galleries, bots, flyouts, and so on). This icon should be 192&times;192 pixels.
-- **configurationUrl** - You should adjust the sample `configurulationUrl` to include manifest id of your web part component by updating the GUID after `componentId` query parameter.
+- **configurationUrl** - You should adjust the sample `configurationUrl` to include manifest id of your web part component by updating the GUID after `componentId` query parameter.
 - **canUpdateConfiguration** - Setting this property to true will mean that you allow modification of the properties of the web part. Set this value to false to prevent this.
 
 Notice in the template manifest file above, there are multiple placeholders that should be updated. Use the following values from the SharePoint Framework's web part manifest file (**./src/webparts/[webpartname]/[webpartname].manifest.json**) to update these values:
@@ -103,7 +103,7 @@ Notice in the template manifest file above, there are multiple placeholders that
 | `{{SPFX_COMPONENT_LONG_DESCRIPTION}}`  | `preconfiguredEntries[0].description` |
 | `{{SPFX_COMPONENT_ID}}`                | `id`                                  |
 
-Notice the `componentId` query parameter in the `configurulationUrl`. You should not update any other sections of the URL as it's dynamically replaced when the tab is rendered from the context of SharePoint.
+Notice the `componentId` query parameter in the `configurationUrl`. You should not update any other sections of the URL as it's dynamically replaced when the tab is rendered from the context of SharePoint.
 
 See more details around the Microsoft Teams manifest options from the [Microsoft Teams developer guidance](https://docs.microsoft.com/microsoftteams/platform/concepts/apps/apps-package).
 
