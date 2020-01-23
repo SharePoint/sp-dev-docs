@@ -108,7 +108,6 @@ ctx.Load(web);
 Entity entity = ctx.Web.GetEntity("http://sharepointservername", "EntityName"); 
 ctx.Load(entity); 
 ctx.ExecuteQuery(); 
-
 ```
 
 
@@ -120,11 +119,28 @@ This example shows how to write a generic invoker so that you can create an enti
     
 
 ```cs
+LobSystem lobSystem = entity.GetLobSystem();
+ctx.Load(lobSystem);
 
-ObjectCollection myObj; 
-entity.Execute("MethodInstanceName", lsi, myObj); 
-ctx.Load(myObj); 
-ctx.ExecuteQuery(); 
+LobSystemInstanceCollection lobInstances = lobSystem.GetLobSystemInstances();
+ctx.Load(lobInstances);
+ctx.ExecuteQuery();
+
+LobSystemInstance lsi;
+foreach(LobSystemInstance lobInstance in lobInstances)
+{
+  if (lobInstance.Name.CompareTo("MyLOBSystemInstance") == 0)
+  {
+    lsi = lobInstance;
+  }
+}
+
+if (null != lsi)
+{
+  entity.Execute("MethodInstanceName", lsi, Array.Empty<object>()); 
+  ctx.Load(myObj); 
+  ctx.ExecuteQuery();
+}
 
 ```
 
@@ -142,21 +158,12 @@ The following example shows how to retrieve a filtered, paged dataset. In this c
 FilterCollection fCollection = entity.GetFilters("methodName"); 
 ctx.Load(fCollection); 
 ctx.ExecuteQuery(); 
-FilterCollection modifiedFCollection = new FilterCollection(); 
-foreach( Filter filter in fCollection) 
-{ 
-    if( filter.FilterField.equals("X.Y.Z.Country")) 
-    { 
-        filter.FilterValue = "India"; 
-        modifiedFCollection.Add(Filter); 
-    } 
-    if(filter.FilterType == FilterType.Limit) 
-    { 
-        filter.FilterValue = 50; 
-        modifiedFCollection.Add(Filter); 
-    } 
-} 
-EntityInstanceCollection eCollection = entity.FindFiltered(modifiedFCollection, 
+
+fCollection.SetFilterValue("X.Y.Z.Country", 0, "India")
+// Assuming that the "RowLimit" filter has the Limit filter type
+fCollection.SetFilterValue("RowLimit", 0, 50)
+
+EntityInstanceCollection eCollection = entity.FindFiltered(fCollection, 
 "nameOfFinder", lsi); 
 ctx.ExecuteQuery(); 
 
@@ -176,16 +183,10 @@ The following example demonstrates how to return a filtered result set. In this 
 FilterCollection fCollection = entity.GetFilters("methodName"); 
 ctx.Load(fCollection); 
 ctx.ExecuteQuery(); 
-FilterCollection modifiedFCollection = new FilterCollection(); 
-foreach( Filter filter in fCollection) 
-{ 
-    if( filter.FilterField.equals("X.Y.Z.Country")) 
-    { 
-        filter.FilterValue = "India"; 
-        modifiedFCollection.Add(Filter); 
-    } 
-} 
-EntityInstanceCollection eCollection = entity.FindFiltered(modifiedFCollection, 
+
+fCollection.SetFilterValue("X.Y.Z.Country", 0, "India")
+
+EntityInstanceCollection eCollection = entity.FindFiltered(fCollection, 
 "nameOfFinder", lsi); 
 ctx.ExecuteQuery(); 
 
