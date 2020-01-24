@@ -521,7 +521,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
     },
     {
       "elmType": "span",
-      "txtContent": "It's Flow Time!"
+      "txtContent": "Send to Manager"
     }
   ]
 }
