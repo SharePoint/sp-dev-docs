@@ -9,6 +9,9 @@ localization_priority: Priority
 
 Use PnP PowerShell cmdlets to create, retrieve, update, and remove site designs and site scripts to new and existing modern site collections.
 
+> [!NOTE]
+> PnP PowerShell is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 ## Getting started
 
 To run the PnP PowerShell cmdlets, you'll need to do the following:

@@ -24,6 +24,9 @@ The steps in this article use the following components:
 
 You'll use these components to trigger the PnP provisioning code after you create the site and apply the site design.
 
+> [!NOTE]
+> PnP Provisioning Engine is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+
 ## Set up app-only access to your tenant
 
 To set up app-only access, you need to have two different pages on your tenant&mdash;one on the regular site, and the other on your SharePoint administration site.

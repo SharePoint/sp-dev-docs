@@ -373,14 +373,18 @@
       href: declarative-customization/customize-default-site-design.md
     - name: JSON schema reference
       href: declarative-customization/site-design-json-schema.md
-    - name: PowerShell cmdlets
-      href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
     - name: Calling Power Automate from a site script
-      href: declarative-customization/site-design-trigger-flow-tutorial.md               
+      href: declarative-customization/site-design-trigger-flow-tutorial.md
     - name: PnP provisioning engine
-      href: declarative-customization/site-design-pnp-provisioning.md         
+      href: declarative-customization/site-design-pnp-provisioning.md
+    - name: SPO PowerShell cmdlets
+      href: declarative-customization/site-design-powershell.md
+    - name: PnP PowerShell cmdlets
+      href: declarative-customization/site-design-pnppowershell.md
+    - name: Office 365 CLI commands
+      href: declarative-customization/site-design-o365cli.md
   - name: Site theming
     href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     items:
