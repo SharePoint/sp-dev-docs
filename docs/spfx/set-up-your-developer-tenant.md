@@ -71,6 +71,12 @@ You also need a site collection and a site for your testing. You can create a ne
 
 SharePoint creates the site and you're able to see its progress. After the site is created, you can browse to your site collection by selecting **Finish** & entering the URL of the new site.
 
+> [!NOTE]
+> In this case, we are creating a new group associated team site with modern user interface experience. You could just as well create a *communication site* to be used as your test site collection supporting your development.
+
+> [!NOTE]
+> You can potentially use same tenant for developing SharePoint Framework experiences, especially for initial development experiences. We do however recommend to use isolated developer tenants for each of the developers for best isolated developer experience. 
+
 ## SharePoint Workbench
 
 SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Framework developer toolchain contains a version of the Workbench that works locally and helps you quickly test and validate solutions that you're building.
