@@ -45,7 +45,8 @@ You can also follow these steps by watching this video on the SharePoint PnP You
       "name": "helloworld-webpart-client-side-solution",
       "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
       "version": "1.0.0.0",
-      "includeClientSideAssets": true
+      "includeClientSideAssets": true,
+      "isDomainIsolated": false
     },
     "paths": {
       "zippedPackage": "solution/helloworld-webpart.sppkg"
