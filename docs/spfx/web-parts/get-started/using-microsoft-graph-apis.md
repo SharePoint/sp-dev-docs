@@ -70,7 +70,7 @@ Before you start, complete the procedures in the following articles to ensure th
 
 ## Updating solution manifest with the needed Microsoft Graph permissions requests
 
-By using SharePoint Framework, you don't needed to explicitly create Azure Active Directory applications to manage your permissions for your solutions, you can rather request the needed permissions in your solution package, and Office 365 tenant administrator can then graph the requested permissions in general for all solutions or specifically for this solution (isolated solution).
+By using SharePoint Framework, you don't needed to explicitly create Azure Active Directory applications to manage your permissions for your solutions, you can rather request the needed permissions in your solution package, and Office 365 tenant administrator can then grant the requested permissions in general for all solutions or specifically for this solution (isolated solution).
 
 > [!NOTE]
 > Tenant administrators can also manage the API permissions using PowerShell cmdlets, so there's no specifically a requirement to have the permissions included in the solution package.
