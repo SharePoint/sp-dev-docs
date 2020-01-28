@@ -35,7 +35,7 @@ The first release of the SharePoint Framework contained only support for client-
 
 ## General improvements
 
-- Updated 'store' story with SharePoint Framework support
+- Updated 'store' story with SharePoint Framework support in AppSource
 - 'Store' story for SharePoint Framework solutions with easy distribution channel for ISVs 
 - Content Security Policy (CSP) support
 - Additional placeholder, like content header, content footer, navigation extensions, search extensions
@@ -45,24 +45,25 @@ The first release of the SharePoint Framework contained only support for client-
 ## Client-side web parts++ and add-ins
 
 - Support more complex scenarios and interactions with web parts
-	- "Citizen developer" model for lightweight development
+  - "Citizen developer" model for lightweight development
 
 - Bring add-ins to the modern world: let’s make them play nicer with the new UX
-    - Azure AD registration
-    - Native responsive support
-    - Build add-ins with SharePoint Framework
+  - Azure AD registration
+  - Native responsive support
+  - Build add-ins with SharePoint Framework
 
 ## Application Lifecycle Management
 
 - Streamlined approval experience: no need to know who your tenant admin is anymore
-    - Owner initiates the approval process.
-    - Tenant admin gets automatically notified.
-    - Settings to control the default experience around approval process.
+  - Owner initiates the approval process.
+  - Tenant admin gets automatically notified.
+  - Settings to control the default experience around approval process.
+- API for creating app catalog in the tenant
 
 ## Developer experience
 
 - SharePoint Framework Workbench 2.0: Development story for SharePoint Framework Extensions
-- Toolchain components
+- Tool chain improvements
 
 ## Already shipped capabilities
 
