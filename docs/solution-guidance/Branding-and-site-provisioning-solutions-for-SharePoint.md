@@ -242,6 +242,7 @@ Part of planning a SharePoint branding project is deciding which types of sites 
 |:-----|:-----|:-----|:-----|:-----|
 |Small business|Yes|Yes|No|Includes one team site and the public website. Does not include publishing site functionality. The public website capabilities were designed with small business in mind.|
 |Enterprise|Yes|No|Yes|Includes a team site collection at the root web application for the domain that does not include publishing, and you can create new publishing site collections under that root web application. |
+
 For more information, see [Select an Office 365 plan for business](https://products.office.com/en-us/compare-all-microsoft-office-products?tab=2) and [Model: Design and branding in SharePoint 2013](https://www.microsoft.com/en-us/download/details.aspx?id=30715).
 
 ## When should I customize?
