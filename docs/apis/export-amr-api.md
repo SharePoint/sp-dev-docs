@@ -57,7 +57,7 @@ The new Migration Asynchronous Read API is:
 
 ```c#
     public SPAsyncReadJobInfo CreateSPAsyncReadJob(
-            Uri[] rootObjectUri,            
+            Uri rootObjectUri,            
             SPAsyncReadOptions readOptions,
             EncryptionOption encryptionOption,
             string azureContainerManifestUri,
@@ -77,7 +77,18 @@ This document library URL, `https://www.contoso.com/Shared%20Document`, will be 
 
 #### Multiple URLs
 
-With the latest API update in Q1 2020, AMR will now support multiple URL inputs. This means the user can input multiple root URLs or subfolder URLs and aggregate them into a single call.
+With the latest API update in Q1 2020, AMR now supports multiple URL inputs. This means the user can input multiple root URLs or subfolder URLs and aggregate them into a single call.
+
+```c#
+
+public SPAsyncReadJobInfo CreateSPAsyncReadJobWithMultiUrl( 
+    Uri[] urls, 
+    SPAsyncReadOptions readOptions, 
+    EncryptionOption encryptionOption, 
+    string azureContainerManifestUri, 
+    string azureQueueReportUri)
+
+```
 
 As there is a fixed overhead, AMR is most effective when there is a large number of reads when processing AMR. There are cases when the migration software may not want to read the whole root level URL. The multiple URL feature lets the software to aggregate multiple requests into a single request to improve performance while reducing number of calls.
 
