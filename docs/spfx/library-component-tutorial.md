@@ -56,6 +56,8 @@ localization_priority: Priority
 
 ## How to consume a 3rd party SPFx library (for local testing)
 1. Run `npm link` from the root directory of library solution. In this case it would be from the **```corporate-library```** folder.
+
+1. Right after creating the symbolic link to your new spfx library component, do not forget to run at least once ```gulp serve```. You need to compile your library component at least once in order to be able to import it as a module into a different project. Remember that the package.json says that ```"main": "lib/index.js"```, therefore, that location needs to exist prior any **import** attempt.
  
 1. This will create a local npm link to the library with the name which is provided in the ```package.json```.
  
