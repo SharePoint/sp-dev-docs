@@ -232,7 +232,7 @@ Now we have created the needed structures for provisioning SharePoint assets aut
 
     ```json
     {
-      "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
       "solution": {
         "name": "asset-deployment-webpart-client-side-solution",
         "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
