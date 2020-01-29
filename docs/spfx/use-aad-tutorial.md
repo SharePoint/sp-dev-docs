@@ -441,7 +441,7 @@ Copy the declaration of the **webApiPermissionRequests** property.
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "$schema": "https://developer.microsoft.com.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "spfx-api-scopes-tutorial-client-side-solution",
     "id": "841cd609-d821-468d-a6e4-2d207b966cd8",
