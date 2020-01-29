@@ -236,7 +236,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
 
   ```JSON
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
       "name": "spfx-ecb-extension-client-side-solution",
       "id": "b8ff6fdf-16e9-4434-9fdb-eac6c5f948ee",
