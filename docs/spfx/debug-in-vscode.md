@@ -49,6 +49,9 @@ When building SharePoint Framework solutions, you can use the local workbench to
 
 With Visual Studio Code configured for debugging SharePoint Framework solutions by using Google Chrome and the local workbench, you can verify that everything is working as expected.
 
+> [!IMPORTANT]
+> Local workbench does not support using Internet Explorer 11. Please use more modern browser.
+
 ### Configure a breakpoint
 
 1. In Visual Studio Code, open the main web part source file, and add a breakpoint in the first line of the **render** method by either selecting the margin that is left to the line number or by highlighting the code line in the editor and selecting the F9 key.

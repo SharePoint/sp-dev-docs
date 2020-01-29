@@ -100,6 +100,9 @@ One new part of the build toolset for SharePoint Framework is called the *Workbe
 
 There are two versions of the Workbench, one outside of SharePoint, hosted locally on the development machine that runs offline without SharePoint access and SharePoint data. This allows the team and designers to build and design solutions with mock or fake data to focus on the user interface. The second version is hosted inside SharePoint and is used when you need to test and verify the SharePoint Framework solution by using real SharePoint data and context.
 
+> [!IMPORTANT]
+> Local workbench does not support using Internet Explorer 11. Please use more modern browser.
+
 ### Deploying SharePoint Framework solutions
 
 Deploying SharePoint Framework solutions is done in two steps: the first one being deploying the script artifacts packaged by the build process to a CDN (Content Delivery Network) location. The second step is to add the solution package to the app catalog and approve it for usage in your tenant. The package added to the SharePoint app catalog contains a pointer to the CDN location.

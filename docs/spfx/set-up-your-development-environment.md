@@ -64,6 +64,10 @@ npm install -g @microsoft/generator-sharepoint
 
 For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
 
+## Install a modern web browser
+
+You should be using a modern web browser like [Edge](https://www.microsoft.com/en-us/edge), [Chrome](https://www.google.com/chrome/) or [Firefox](https://www.mozilla.org/en-US/firefox/new/) as the development browser. Local workbench does not support usage of Internet Explorer 11.
+
 ## Trusting the self-signed developer certificate
 
 The SharePoint Framework's local webserver, used when testing your custom solutions from your development environment, uses HTTPS by default. This is implemented using a development self-signed SSL certificate. Self-signed SSL certificates are not trusted by your developer environment. You must first configure your development environment to trust the certificate.
