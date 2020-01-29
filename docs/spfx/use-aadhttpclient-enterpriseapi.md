@@ -254,7 +254,7 @@ In the **solution** property, add a new property named `webApiPermissionRequests
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "contoso-api-client-side-solution",
     "id": "8cbc01fb-bab6-48fc-afec-2c2053759771",
