@@ -391,7 +391,7 @@ If you followed the steps in the declarative reference sections earlier, you nee
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
     "version": "2.0",
     "bundles": {
       "share-point-lists-web-part": {
