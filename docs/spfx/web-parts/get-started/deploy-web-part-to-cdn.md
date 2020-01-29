@@ -152,7 +152,7 @@ Note, however, that you have not yet deployed the files.
 
     ```json
     {
-      "$schema": "https://dev.office.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
       "workingDir": "./temp/deploy/",
       "account": "<!-- STORAGE ACCOUNT NAME -->",
       "container": "azurehosted-webpart",
