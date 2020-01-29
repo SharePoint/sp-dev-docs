@@ -27,7 +27,7 @@ When you add a new SharePoint Framework extension to your project, the SharePoin
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/core-build/serve.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
   "port": 4321,
   "https": true,
   "serveConfigurations": {
