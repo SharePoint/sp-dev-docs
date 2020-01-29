@@ -1,9 +1,10 @@
 ---
+title: Children element in Container
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: ff84af75-d4f5-885b-f728-534a101c38b8
 ---
@@ -16,7 +17,7 @@ ms.assetid: ff84af75-d4f5-885b-f728-534a101c38b8
 
 Lists the External Data Parts in this layout.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

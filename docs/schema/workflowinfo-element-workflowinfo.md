@@ -1,11 +1,12 @@
 ---
+title: WorkflowInfo Element (WorkflowInfo)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e5cbdadc-53c2-4b48-9522-ba41c90bc4ba
 ---
@@ -45,7 +46,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Language**</p></td>
-<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States" (see <a href="http://msdn.microsoft.com/en-us/library/ms776260.aspx">Locale Identifier Constants and Strings</a>).</p></td>
+<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States" (see <a href="https://msdn.microsoft.com/library/ms776260.aspx">Locale Identifier Constants and Strings</a>).</p></td>
 </tr>
 </tbody>
 </table>
@@ -82,8 +83,8 @@ The following XML demonstrates how to construct the **WorkflowInfo** element so 
 ## See also
 
 - [Actions Schema Reference](actions-schema-reference-workflowinfo.md)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

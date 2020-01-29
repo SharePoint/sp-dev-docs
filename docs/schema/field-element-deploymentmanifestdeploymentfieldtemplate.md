@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 5e1549be-c95f-4414-b72f-e9d0e124abd8
 description: "Last modified: March 09, 2015"
@@ -91,7 +91,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**Description** <br/> |xs:string  <br/> |Optional. Provides a description of the field.  <br/> |
 |**DefaultValue** <br/> |xs:string  <br/> |Optional. Default value associated with the field.  <br/> |
 |**DefaultFormula** <br/> |xs:string  <br/> |Optional. Default formula applied to values in the field, in cases where the field is a calculated field.  <br/> |
-|**FromBaseType** <br/> |xs:string  <br/> |Optional. Indicates the base type from which the field derives. Base types are defined in [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx).  <br/> |
+|**FromBaseType** <br/> |xs:string  <br/> |Optional. Indicates the base type from which the field derives. Base types are defined in [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx).  <br/> |
 |**Sealed** <br/> |xs:string  <br/> |Optional. Indicates whether other fields can be derived from the field.  <br/> |
 |**CanToggleHidden** <br/> |xs:string  <br/> |Optional. Indicates whether the field column can be hidden in the user interface.  <br/> |
 |**DisplaySize** <br/> |xs:string  <br/> |Optional. Specifies the display size for the field.  <br/> |
@@ -123,5 +123,5 @@ None
 
 - [SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-- [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx)
+- [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx)
 

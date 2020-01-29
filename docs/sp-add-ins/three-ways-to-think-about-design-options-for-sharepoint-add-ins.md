@@ -14,7 +14,7 @@ This article looks at the architectural choices for SharePoint Add-ins in three 
 
 The first decision to make is whether your SharePoint extension should be a SharePoint Add-in or a classic SharePoint farm solution or sandboxed solution. Some parts of the SharePoint object model, mainly connected with customizing SharePoint administration and security, are not accessible from clients. Only custom code running on the SharePoint server can access them, and custom server-side code is not allowed in a SharePoint Add-in. (A rich set of client object models and a REST/OData service make it possible for SharePoint Add-ins to do almost any end-user-oriented SharePoint extension.) 
 
-For more information about deciding between classic solutions and add-ins, see [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx). Also helpful for making this decision is [Choose the right API set in SharePoint](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx).
+For more information about deciding between classic solutions and add-ins, see [SharePoint Add-ins compared with SharePoint solutions](https://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx). Also helpful for making this decision is [Choose the right API set in SharePoint](https://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx).
 
 <a name="MajorCategoriesOfChoices"> </a>
 ## Key elements in the design of SharePoint Add-ins
@@ -35,7 +35,7 @@ Three major categories of choices need to be made when a SharePoint Add-in is de
     
    - JavaScript can access data in a SharePoint add-in web and data on other websites within the same tenancy by using a special JavaScript library that enables secure cross-domain scripting. For more information, see [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
     
-   - A SharePoint Add-in can also access external data through Business Connectivity Services (BCS) or a web service proxy. For more information, see [Business Connectivity Services in SharePoint](http://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx) and [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint.md).
+   - A SharePoint Add-in can also access external data through Business Connectivity Services (BCS) or a web service proxy. For more information, see [Business Connectivity Services in SharePoint](https://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx) and [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint.md).
 
    For more information about data storage and access in SharePoint Add-ins, see [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md#data-storage-in-sharepoint-add-ins), [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md), and [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md).
 

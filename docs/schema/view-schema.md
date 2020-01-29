@@ -6,7 +6,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - View schema
@@ -23,11 +23,11 @@ description: The View schema of Collaborative Application Markup Language (CAML)
 The View schema of [Collaborative Application Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define how the contents of a list view are rendered in Microsoft SharePoint Foundation. 
   
 > [!NOTE]
-> SharePoint Foundation 2010 uses XSLT to define list views, and the View schema is maintained for backward compatibility. For information about XSLT list views, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
+> SharePoint Foundation 2010 uses XSLT to define list views, and the View schema is maintained for backward compatibility. For information about XSLT list views, see [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
   
 A list view includes a query that returns the data that is displayed in the view. For the list of query elements, see [Query schema](query-schema.md). For the top-level elements that are used to organize a view, see [List schema](list-schema.md).
   
-In SharePoint Foundation 2010 .aspx pages, the view is conveyed through a [Microsoft.SharePoint.WebPartPages.XsltListViewWebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.XsltListViewWebPart.aspx) object. Views can be created or modified programmatically through either the server-side or client-side object model (for example, members of [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) or [SPViewCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPViewCollection.aspx) and their related types in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) (JavaScript: [SP](http://msdn.microsoft.com/library/e3694767-6f32-f98c-37af-4282f2815c02%28Office.15%29.aspx)) namespace), through the Views web service (methods of the [Views](https://msdn.microsoft.com/library/websvcViews.Views.aspx) class), or through remote procedure call (RPC) protocol (see [Windows SharePoint Services RPC Methods](http://msdn.microsoft.com/library/fb791985-a9e4-4c94-b94a-1b3c7f00457a%28Office.15%29.aspx)).
+In SharePoint Foundation 2010 .aspx pages, the view is conveyed through a [Microsoft.SharePoint.WebPartPages.XsltListViewWebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.XsltListViewWebPart.aspx) object. Views can be created or modified programmatically through either the server-side or client-side object model (for example, members of [SPView](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPView.aspx) or [SPViewCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPViewCollection.aspx) and their related types in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) (JavaScript: [SP](https://msdn.microsoft.com/library/e3694767-6f32-f98c-37af-4282f2815c02%28Office.15%29.aspx)) namespace), through the Views web service (methods of the [Views](https://msdn.microsoft.com/library/websvcViews.Views.aspx) class), or through remote procedure call (RPC) protocol (see [Windows SharePoint Services RPC Methods](https://msdn.microsoft.com/library/fb791985-a9e4-4c94-b94a-1b3c7f00457a%28Office.15%29.aspx)).
   
 ## Specialized rendering elements
 
@@ -199,6 +199,6 @@ The following standard rendering elements are used to render HTML within the var
 
 - [Query schema](query-schema.md)  
 - [List schema](list-schema.md)
-- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx) 
-- [XMLDefinition and CAML View schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
+- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx) 
+- [XMLDefinition and CAML View schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
 

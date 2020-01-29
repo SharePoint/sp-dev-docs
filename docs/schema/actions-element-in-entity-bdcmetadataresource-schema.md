@@ -1,9 +1,10 @@
 ---
+title: Actions element in Entity
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 4d4822f7-bda6-a18d-8f38-64ee92f31c17
 ---
@@ -16,7 +17,7 @@ ms.assetid: 4d4822f7-bda6-a18d-8f38-64ee92f31c17
 
 For more information, see [Actions element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

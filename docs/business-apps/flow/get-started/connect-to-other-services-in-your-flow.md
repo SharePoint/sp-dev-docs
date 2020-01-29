@@ -1,3 +1,11 @@
+---
+title: Connect your flow to other services
+description: Connect your flow to 200+ services available in Microsoft Flow and build an integrated experience to perform actions in the services.
+ms.date: 12/12/2018
+ms.prod: sharepoint
+localization_priority: Priority
+---
+
 # Connect your flow to other services
 
 Connect your flow to 200+ services available in Microsoft Flow and build an integrated experience to perform actions in the services. This article continues building the *Projects* list flow built in the previous article *Create your first flow*.

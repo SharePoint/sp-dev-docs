@@ -12,7 +12,7 @@ Microsoft SharePoint introduced a new approach to extending SharePoint sites in 
  
 Developers can build two different types of SharePoint Add-ins. The first type, a SharePoint-hosted add-in, primarily runs in the browser, and all the assets that support it such as HTML, CSS, images, and JavaScript are stored and served by SharePoint. The other types of add-ins fall into the Cloud Add-in model (CAM) and primarily run external to SharePoint on another server and communicate with SharePoint by using the client-side object model (CSOM) and REST API. They establish an identity using the popular OAuth 2.0 protocol supported by SharePoint.
 
-Developers could implement add-ins by using the add-in model in one of two ways, either as a provider-hosted add-in or an autohosted add-in. Autohosted add-ins were released as a preview program when SharePoint released, but in May 2014, Microsoft announced that they would be closing the preview program and would no longer support creating autohosted add-ins. For the announcement, see [Update on Autohosted Add-ins Preview Program](https://blogs.office.com/en-us/2014/05/16/update-on-autohosted-apps-preview-program/).
+Developers could implement add-ins by using the add-in model in one of two ways, either as a provider-hosted add-in or an autohosted add-in. Autohosted add-ins were released as a preview program when SharePoint released, but in May 2014, Microsoft announced that they would be closing the preview program and would no longer support creating autohosted add-ins. For the announcement, see [Update on Autohosted Add-ins Preview Program](https://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/).
  
 This article explains how to convert and migrate an autohosted add-in to a provider-hosted add-in. However, it is important developers understand some specific differences between the two approaches because this knowledge greatly simplifies the conversion process.
 
@@ -20,7 +20,7 @@ This article explains how to convert and migrate an autohosted add-in to a provi
 
 - All the [prerequisites for developing provider-hosted add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
 
-- [Azure SDK for .NET 2.3](https://azure.microsoft.com/en-us/downloads/dotnet-sdk-23/)
+- [Azure SDK for .NET 2.3](https://azure.microsoft.com/downloads/dotnet-sdk-23/)
     
 <a name="CoreConcepts"> </a> 
 
@@ -72,7 +72,7 @@ Converting a SharePoint autohosted add-in to a provider-hosted add-in involves m
 
 ## Deploy the Azure SQL Database
 
-The first step in converting the autohosted add-in to a provider-hosted add-in is to deploy the Azure SQL Database that the ASP.NET web application relies on. There are many different ways to create an Azure SQL Database, some of which are documented on the Azure documentation site: [SQL Server database migration to SQL Database in the cloud](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-cloud-migrate).
+The first step in converting the autohosted add-in to a provider-hosted add-in is to deploy the Azure SQL Database that the ASP.NET web application relies on. There are many different ways to create an Azure SQL Database, some of which are documented on the Azure documentation site: [SQL Server database migration to SQL Database in the cloud](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate).
 
 The approach outlined in the following steps uses the data-tier application deployment model because that is how the database is deployed in a SharePoint autohosted add-in. This involves generating a data-tier application package (*.dacpac) and using it to create the database.
 
@@ -119,7 +119,7 @@ The approach outlined in the following steps uses the data-tier application depl
 
     <br/>
  
-4. Deploy the database from Visual Studio by using the [Azure SDK for .NET 2.3](https://azure.microsoft.com/en-us/downloads/dotnet-sdk-23/). 
+4. Deploy the database from Visual Studio by using the [Azure SDK for .NET 2.3](https://azure.microsoft.com/downloads/dotnet-sdk-23/). 
 
 5. Within Visual Studio, open the **SQL Server Object Explorer** tool window, right-click the **SQL Server** node, and then select **Add SQL Server**.
 
@@ -261,15 +261,15 @@ Now the ASP.NET MVC web application files need to be deployed to the Azure websi
 After deploying the website, Visual Studio launches the default debugging browser and navigates to the Azure website. However, the site renders with an error because the ASP.NET MVC controllers are decorated with an attribute (specifically the `SharePointContextFilter`) that expects SharePoint to send certain values to the controller in the header of an HTTP POST request, but by default the browser launched an HTTP GET request, so this error is expected.
  
 > [!NOTE] 
-> For additional options for deploying ASP.NET web applications to an Azure website, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-deploy-local-git).
+> For additional options for deploying ASP.NET web applications to an Azure website, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-deploy-local-git).
 
 ### Custom domains and SSL certificates for Azure websites
 
 All Azure websites use the following naming convention: `http[s]://[site-name].azurewebsites.net`. Microsoft has already added a wildcard SSL certificate to all websites under the `*.azurewebsites.net` domain, but customers are free to associate a custom domain with their Azure website as well as use their own SSL certificates for these custom domains.
  
-For information about using custom domains, see [Map an existing custom DNS name to Azure Web Apps](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain). 
+For information about using custom domains, see [Map an existing custom DNS name to Azure Web Apps](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain). 
 
-For information about adding a custom SSL certificate for your custom domain name, see [Bind an existing custom SSL certificate to Azure Web Apps](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-ssl).
+For information about adding a custom SSL certificate for your custom domain name, see [Bind an existing custom SSL certificate to Azure Web Apps](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl).
 
 ## Reconfigure the SharePoint Add-in project
 
@@ -310,7 +310,7 @@ The last step is to reconfigure the SharePoint Add-in project. The Visual Studio
 
 ## See also
 
-- [Office Developer Blog](http://blogs.office.com/dev/)
+- [Office Developer Blog](https://blogs.office.com/dev/)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 
  

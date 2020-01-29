@@ -1,9 +1,10 @@
 ---
+title: Filter Element (Event)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 47512097-9176-4243-9cb8-8ad60e29014f
 ---

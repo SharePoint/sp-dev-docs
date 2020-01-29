@@ -207,7 +207,7 @@ In the following code, **ReplaceContentType** checks all items in all libraries 
     
 2. Getting the new content type by using **GetContentTypeByName**.
     
-3. Getting all the lists on the site by using [Web.Lists](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.web.lists.aspx).
+3. Getting all the lists on the site by using [Web.Lists](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.web.lists.aspx).
     
 4. Loading all the lists on the site, and all content types on each list by using **cc.Load(lists, l => l.Include(list => list.ContentTypes)**.
     

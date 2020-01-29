@@ -14,11 +14,11 @@ Learn how to create and delete microblog posts and retrieve social feeds by usin
 ## What are social feeds in SharePoint?
 <a name="bk_intro"> </a>
 
-In SharePoint, a social feed is a collection of threads that represent conversations, single microblog posts, or notifications. Threads contain a root post and a collection of reply posts. In the JavaScript object model, feeds are represented by  [SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) objects, threads are represented by [SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) objects, and post and replies are represented by [SocialPost](http://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx) objects. To perform core feed-related tasks, you use the [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) object. In this article, we'll show you how to create an application page that uses the JavaScript object model to work with social feeds.
+In SharePoint, a social feed is a collection of threads that represent conversations, single microblog posts, or notifications. Threads contain a root post and a collection of reply posts. In the JavaScript object model, feeds are represented by  [SocialFeed](https://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) objects, threads are represented by [SocialThread](https://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) objects, and post and replies are represented by [SocialPost](https://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx) objects. To perform core feed-related tasks, you use the [SocialFeedManager](https://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) object. In this article, we'll show you how to create an application page that uses the JavaScript object model to work with social feeds.
   
     
     
-For more information about working with  [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md).
+For more information about working with  [SocialFeedManager](https://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md).
   
     
     
@@ -425,7 +425,7 @@ function RequestFailed(sender, args) {
 -  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
--  [SP.Social namespace (sp.userprofiles)](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx)
+-  [SP.Social namespace (sp.userprofiles)](https://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx)
     
   
 -  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)

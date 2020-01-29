@@ -1,11 +1,12 @@
 ---
+title: LobSystems Element in Model
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystems
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: d9bf0ca9-fb79-e3a5-cc84-9510d93798cb
 ---
@@ -18,7 +19,7 @@ ms.assetid: d9bf0ca9-fb79-e3a5-cc84-9510d93798cb
 
 Specifies a list of **LobSystem** elements of a model.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

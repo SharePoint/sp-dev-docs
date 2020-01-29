@@ -1,11 +1,12 @@
 ---
+title: ActionParameters element in Action
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.ActionParameters
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e14df901-621c-1851-db78-e99fd3cf31ae
 ---
@@ -18,7 +19,7 @@ ms.assetid: e14df901-621c-1851-db78-e99fd3cf31ae
 
 Specifies a list of **ActionParameters** for an action.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

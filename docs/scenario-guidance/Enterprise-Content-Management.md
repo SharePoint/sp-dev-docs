@@ -1,3 +1,17 @@
+---
+title: Enterprise Content Management
+ms.date: 3/9/2015
+ms.audience: ITPro
+ms.topic: article
+ms.prod: sharepoint
+author: vesajuvonen
+ms.author: vesaj
+ms.topic: sharepoint
+localization_priority: Normal
+ms.assetid: 6f2336fc-0cdd-6596-fdb7-45607006b2c8
+description: "Last modified: March 09, 2015"
+---
+
 # Enterprise Content Management
 
 ## Summary
@@ -25,9 +39,9 @@ Key challenge with the content type hub usage is that the replication of the con
 
 ### Articles
 
-* [Publish a content type from a content publishing hub](https://support.office.com/en-us/article/publish-a-content-type-from-a-content-publishing-hub-58081155-118d-4e7a-9cc5-d43b5dbb7d02)
-* [Activate a content type syndication hub](https://support.office.com/en-us/article/activate-a-content-type-syndication-hub-1d12ee7f-77e0-4b50-bf93-7628b8478bf6)
-* [Content type hub in a SharePoint Multi-Geo tenant](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-contenttypehub)
+* [Publish a content type from a content publishing hub](https://support.office.com/article/publish-a-content-type-from-a-content-publishing-hub-58081155-118d-4e7a-9cc5-d43b5dbb7d02)
+* [Activate a content type syndication hub](https://support.office.com/article/activate-a-content-type-syndication-hub-1d12ee7f-77e0-4b50-bf93-7628b8478bf6)
+* [Content type hub in a SharePoint Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-contenttypehub)
 
 ## Managed Metadata / Taxonomy
 
@@ -37,11 +51,11 @@ The Managed Metadata service (MMS) and the Managed Metadata fields allow to add 
 
 ### Articles
 
-* [Introduction to managed metadata](https://support.office.com/en-us/article/introduction-to-managed-metadata-a180fa28-6405-4679-9ec3-81d2028c4efc)
-* [Create a Managed Metadata column](https://support.office.com/en-us/article/create-a-managed-metadata-column-8fad9e35-a618-4400-b3c7-46f02785d27f)
-* [Managed navigation in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/managed-navigation-in-sharepoint)
-* [Managed metadata in a SharePoint Multi-Geo tenant](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-managedmetadata)
-* [Overview of managed metadata in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/ee424402.aspx)
+* [Introduction to managed metadata](https://support.office.com/article/introduction-to-managed-metadata-a180fa28-6405-4679-9ec3-81d2028c4efc)
+* [Create a Managed Metadata column](https://support.office.com/article/create-a-managed-metadata-column-8fad9e35-a618-4400-b3c7-46f02785d27f)
+* [Managed navigation in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/managed-navigation-in-sharepoint)
+* [Managed metadata in a SharePoint Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-managedmetadata)
+* [Overview of managed metadata in SharePoint Server 2013](https://technet.microsoft.com/library/ee424402.aspx)
 
 ### Samples
 
@@ -59,10 +73,10 @@ A Document Set is a group of related documents that you can manage as a single e
 
 ### Articles
 
-* [Introduction to Document Sets](https://support.office.com/en-us/article/introduction-to-document-sets-3dbcd93e-0bed-46b7-b1ba-b31de2bcd234)
-* [Create and configure a new Document Set content type](https://support.office.com/en-us/article/Create-and-configure-a-new-Document-Set-content-type-9db6d6dc-c23a-4dcd-a359-3e4bbbc47fc1)
-* [Customize the Welcome Page for a document set](https://support.office.com/en-us/article/customize-the-welcome-page-for-a-document-set-fc4e5d63-b168-4ece-bbf6-851a2ac07e31)
-* [Create and manage Document Sets](https://support.office.com/en-us/article/create-and-manage-document-sets-c71d5796-d559-48de-b1b3-42383bdd13ea)
+* [Introduction to Document Sets](https://support.office.com/article/introduction-to-document-sets-3dbcd93e-0bed-46b7-b1ba-b31de2bcd234)
+* [Create and configure a new Document Set content type](https://support.office.com/article/Create-and-configure-a-new-Document-Set-content-type-9db6d6dc-c23a-4dcd-a359-3e4bbbc47fc1)
+* [Customize the Welcome Page for a document set](https://support.office.com/article/customize-the-welcome-page-for-a-document-set-fc4e5d63-b168-4ece-bbf6-851a2ac07e31)
+* [Create and manage Document Sets](https://support.office.com/article/create-and-manage-document-sets-c71d5796-d559-48de-b1b3-42383bdd13ea)
 
 ### Samples
 
@@ -76,14 +90,14 @@ SharePoint Online includes a set of features that enables you to author and publ
 
 ### Articles
 
-* [Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016 and SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-and-site-provisioning-solutions-for-sharepoint)
-* [SharePoint pages and the page model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sharepoint-pages-and-the-page-model)
+* [Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016 and SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/branding-and-site-provisioning-solutions-for-sharepoint)
+* [SharePoint pages and the page model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sharepoint-pages-and-the-page-model)
 
 ### Samples
 
 * [Creating MMS Based Navigation](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSNavigationSample)
-* [Cross-site publishing in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/cross-site-publishing-in-sharepoint)
-* [SharePoint metadata, site navigation, and publishing site features](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features)
+* [Cross-site publishing in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/cross-site-publishing-in-sharepoint)
+* [SharePoint metadata, site navigation, and publishing site features](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features)
 * [Provisioning.PublishingFeatures](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.PublishingFeatures)
 
 ## "Modern" Experience
@@ -94,12 +108,12 @@ SharePoint Online has started the gradual introduction of "modern" experiences a
 
 ### Articles
 
-* [Customizing the "modern" experiences in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations)
-* [Provisioning "modern" team sites programmatically](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations-provisioning-sites)
-* [Customizing "modern" team sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-sites)
-* [Customizing "modern" lists and libraries](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
-* [Customizing "modern" site pages](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-pages)
-* [SharePoint "modern" sites classification](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-site-classification)
+* [Customizing the "modern" experiences in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations)
+* [Provisioning "modern" team sites programmatically](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-provisioning-sites)
+* [Customizing "modern" team sites](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-sites)
+* [Customizing "modern" lists and libraries](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-lists-and-libraries)
+* [Customizing "modern" site pages](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-customizations-customize-pages)
+* [SharePoint "modern" sites classification](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-site-classification)
 
 ### Samples
 
@@ -115,8 +129,8 @@ Site classification allows managing clusters of sites based on their classificat
 
 ### Articles
 
-* [SharePoint "modern" sites classification](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-site-classification)
-* [Implement a SharePoint site classification solution](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/implement-a-sharepoint-site-classification-solution)
+* [SharePoint "modern" sites classification](https://docs.microsoft.com/sharepoint/dev/solution-guidance/modern-experience-site-classification)
+* [Implement a SharePoint site classification solution](https://docs.microsoft.com/sharepoint/dev/solution-guidance/implement-a-sharepoint-site-classification-solution)
 
 ### Samples
 
@@ -136,9 +150,9 @@ Information Rights Management (IRM) helps prevent sensitive information from bei
 
 ### Articles
 
-* [Information Rights Management](https://technet.microsoft.com/en-us/library/dn792011.aspx)
-* [Set up Information Rights Management (IRM) in SharePoint admin center](https://support.office.com/en-us/article/set-up-information-rights-management-irm-in-sharepoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)
-* [Apply Information Rights Management to a list or library](https://support.office.com/en-us/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1)
+* [Information Rights Management](https://technet.microsoft.com/library/dn792011.aspx)
+* [Set up Information Rights Management (IRM) in SharePoint admin center](https://support.office.com/article/set-up-information-rights-management-irm-in-sharepoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)
+* [Apply Information Rights Management to a list or library](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1)
 
 ## Records Management
 
@@ -148,9 +162,9 @@ A record is a document or other electronic or physical entity in an organization
 
 ### Articles
 
-* [Overview of records management in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/cc261982.aspx)
-* [Implement Records Management](https://support.office.com/en-us/article/Implement-Records-Management-0bfe419e-eb1d-421a-becd-5be9fed1e479)
-* [Records management extensions sample app for SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/records-management-extensions-sample-app-for-sharepoint)
+* [Overview of records management in SharePoint Server 2013](https://technet.microsoft.com/library/cc261982.aspx)
+* [Implement Records Management](https://support.office.com/article/Implement-Records-Management-0bfe419e-eb1d-421a-becd-5be9fed1e479)
+* [Records management extensions sample app for SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/records-management-extensions-sample-app-for-sharepoint)
 
 ### Samples
 
@@ -158,7 +172,7 @@ A record is a document or other electronic or physical entity in an organization
 
 ### Videos
 
-* [Introduction to Records Management and Compliance](https://support.office.com/en-us/article/introduction-to-records-management-and-compliance-99743e35-335e-4010-a244-be8646beb771)
+* [Introduction to Records Management and Compliance](https://support.office.com/article/introduction-to-records-management-and-compliance-99743e35-335e-4010-a244-be8646beb771)
 
 ## DocumentID Provider
 
@@ -168,8 +182,8 @@ Document ID allows to assign a unique identifier to documents. However, the tech
 
 ### Articles
 
-* [Document ID provider in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/document-id-provider-sharepoint-add-in)
-* [Enable and configure unique Document IDs](https://support.office.com/en-us/article/Enable-and-configure-unique-Document-IDs-ea7fee86-bd6f-4cc8-9365-8086e794c984)
+* [Document ID provider in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/document-id-provider-sharepoint-add-in)
+* [Enable and configure unique Document IDs](https://support.office.com/article/Enable-and-configure-unique-Document-IDs-ea7fee86-bd6f-4cc8-9365-8086e794c984)
 
 ## Information Management Policies
 
@@ -179,11 +193,11 @@ An information management policy is a set of rules for a type of content. Inform
 
 ### Articles
 
-* [Introduction to information management policies](https://support.office.com/en-us/article/Introduction-to-information-management-policies-63a0b501-ba59-44b7-a35c-999f3be057b2)
-* [Information management policy in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/information-management-policy-sharepoint-add-in)
-* [Plan for information management policy in SharePoint Server 2013](https://technet.microsoft.com/en-us/library/cc262490.aspx)
-* [Information management policies in Office 365](https://technet.microsoft.com/en-us/library/dn792007.aspx)
-* [Create and apply information management policies](https://support.office.com/en-us/article/create-and-apply-information-management-policies-eb501fe9-2ef6-4150-945a-65a6451ee9e9)
+* [Introduction to information management policies](https://support.office.com/article/Introduction-to-information-management-policies-63a0b501-ba59-44b7-a35c-999f3be057b2)
+* [Information management policy in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/information-management-policy-sharepoint-add-in)
+* [Plan for information management policy in SharePoint Server 2013](https://technet.microsoft.com/library/cc262490.aspx)
+* [Information management policies in Office 365](https://technet.microsoft.com/library/dn792007.aspx)
+* [Create and apply information management policies](https://support.office.com/article/create-and-apply-information-management-policies-eb501fe9-2ef6-4150-945a-65a6451ee9e9)
 
 ### Solutions
 
@@ -197,8 +211,8 @@ Site Columns and Content Types are fundamental to define the Information Archite
 
 ### Articles
 
-* [Site columns and content types in the SharePoint Add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/site-columns-and-content-types-sharepoint-add-in)
-* [Replace SharePoint content types and site columns](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/replace-sharepoint-content-types-and-site-columns)
+* [Site columns and content types in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/site-columns-and-content-types-sharepoint-add-in)
+* [Replace SharePoint content types and site columns](https://docs.microsoft.com/sharepoint/dev/solution-guidance/replace-sharepoint-content-types-and-site-columns)
 
 ### Samples
 

@@ -1,11 +1,12 @@
 ---
+title: ConvertType Element in Interpretation
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.ConvertType
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c474cf2c-b631-f3c9-daf1-f05d3e0d385f
 ---
@@ -18,7 +19,7 @@ ms.assetid: c474cf2c-b631-f3c9-daf1-f05d3e0d385f
 
 Specifies the rule to convert the data type of a data value into another data type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

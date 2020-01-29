@@ -13,9 +13,6 @@ Footers are a common branding / navigation control in websites and portals. Shar
 - Footer logo 
 - Footer name
 
-> [!NOTE]
-> Site footers are current supported only in modern pages of communication sites. This feature is rolled out to Targeted Release (entire organization) customers and will GA in the Q3 CY2019 timeframe.
-
 > [!IMPORTANT]
 > Footer will be enabled by default for all new communication sites after the feature is rolled out. Along with this update, the content bar (also referred to as the “social bar”) - which contains the Like, Comment, View and Save for Later icons - will be docked permanently on top of the Comments section on all modern pages and news posts. 
 
@@ -27,7 +24,7 @@ Following picture demonstrates a footer with a logo, footer name and labels and 
 
 ## Controlling footer rendering using code or PowerShell
 
-You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps):
+You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps):
 
 ```ps
 
@@ -57,4 +54,4 @@ Footer configuration has multiple different options, which can be configured bas
 
 ## See also
 
-- [Change the look of your SharePoint site](https://support.office.com/en-us/article/change-the-look-of-your-sharepoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818)
+- [Change the look of your SharePoint site](https://support.office.com/article/change-the-look-of-your-sharepoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818)

@@ -1,9 +1,10 @@
 ---
+title: Property element (FeatureSiteTemplateAssociation)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 60db0486-d2c3-4c97-a98e-260f6c9193e2
 ---

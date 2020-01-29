@@ -1,9 +1,10 @@
 ---
+title: ContextDefinition Element in ContextDefinitionGroup
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 082dcea0-3ac6-b534-08c2-3ab87f3348a8
 ---
@@ -16,7 +17,7 @@ ms.assetid: 082dcea0-3ac6-b534-08c2-3ab87f3348a8
 
 Defines a context for an external content type of Outlook Item Type that this context definition group defines.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

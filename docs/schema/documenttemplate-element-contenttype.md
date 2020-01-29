@@ -1,11 +1,12 @@
 ---
+title: DocumentTemplate Element (ContentType)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, documenttemplate element
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 7434d1f8-551a-425c-8b9b-d4e961cd4f5e
 ---
@@ -106,7 +107,7 @@ The following example specifies a document template for a content type. In this 
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 
 
 

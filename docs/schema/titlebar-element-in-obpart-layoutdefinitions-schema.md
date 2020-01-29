@@ -1,9 +1,10 @@
 ---
+title: TitleBar Element in OBPart
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b8f24906-53c6-cc28-9472-f0a507fec064
 ---
@@ -16,7 +17,7 @@ ms.assetid: b8f24906-53c6-cc28-9472-f0a507fec064
 
 Specifies the user interface (UI) and behavior of the title bar of the Office External Part.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

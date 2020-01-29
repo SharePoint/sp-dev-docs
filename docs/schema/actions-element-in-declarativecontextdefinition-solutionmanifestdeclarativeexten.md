@@ -1,9 +1,10 @@
 ---
+title: Actions element in DeclarativeContextDefinition
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e49980f9-75af-aa7a-560e-90dcb47c936d
 ---
@@ -16,7 +17,7 @@ ms.assetid: e49980f9-75af-aa7a-560e-90dcb47c936d
 
 Lists the actions associated with the context definition.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

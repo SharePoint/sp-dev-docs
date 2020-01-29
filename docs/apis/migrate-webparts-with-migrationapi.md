@@ -35,7 +35,7 @@ To get the Serializer .dll, perform following steps:
 
 For a complete list of the supported web parts, see:
 
-- [SPMT & Migration API supported SharePoint web parts](https://docs.microsoft.com/en-us/sharepointmigration/spmt-supported-webparts)
+- [SPMT & Migration API supported SharePoint web parts](https://docs.microsoft.com/sharepointmigration/spmt-supported-webparts)
 
 
 
@@ -43,7 +43,7 @@ For a complete list of the supported web parts, see:
 
 For an explanation of the **SPWebPart** fields see:
 
-- [SPWebPart](https://docs.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-primepf/25cfceeb-7769-4331-9936-ce3b9ced87ad)
+- [SPWebPart](https://docs.microsoft.com/openspecs/sharepoint_protocols/ms-primepf/25cfceeb-7769-4331-9936-ce3b9ced87ad)
 
 
 
@@ -200,7 +200,7 @@ Here is the list of web parts that will be ignored by server-side code (treated 
 *Question:*  How to fetch the web part connection info as the input for serialization API?
 *Answer:*    The web part connections could be found in <SPWebPartConnection> elements from the web part page in the response of operation ‘GetWebPartPage’ in ‘WebPartPagesWebService’.
 
-View flags: refer to this https://docs.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-wssfob/252d2086-6571-430f-863d-bcaf9d267e62, for example, all the view flags https://docs.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-wssfob/16a9d8ca-185d-40ec-956e-bb6bf3488cf7. You will need to convert all flag values to PRIME element ‘flags’.
+View flags: refer to this https://docs.microsoft.com/openspecs/sharepoint_protocols/ms-wssfob/252d2086-6571-430f-863d-bcaf9d267e62, for example, all the view flags https://docs.microsoft.com/openspecs/sharepoint_protocols/ms-wssfob/16a9d8ca-185d-40ec-956e-bb6bf3488cf7. You will need to convert all flag values to PRIME element ‘flags’.
 
 ## Appendix
 

@@ -68,7 +68,7 @@ You can edit the .spcolor file in Notepad. You cannot edit it in PowerPoint.
 
 ### Color palette tool
 
-You can use the [color palette tool](https://www.microsoft.com/en-us/download/details.aspx?id=38182) to visualize theme colors and how they work together on the page. Use it to identify color information that you can use in the color slots of the .spcolor file, and apply colors to a SharePoint site without changing any CSS as part of the process.
+You can use the [color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) to visualize theme colors and how they work together on the page. Use it to identify color information that you can use in the color slots of the .spcolor file, and apply colors to a SharePoint site without changing any CSS as part of the process.
 
 The tool displays the colors in hexadecimal format so that you can easily copy and paste the color value into the appropriate element in your .spcolor file. You can also use the color palette tool to fit a background image into a mockup and toggle between the seattle.master and oslo.master master pages. 
 

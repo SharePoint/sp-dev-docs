@@ -70,8 +70,8 @@ Table 1 contains some core concepts that you should be familiar with when workin
 |**Article**|**Description**|
 |:-----|:-----|
 | [External content types in SharePoint](external-content-types-in-sharepoint.md) <br/> |Learn how to create BCS external content types.  <br/> |
-| [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.  <br/> |
-| [Get started creating SharePoint-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/1b992485-6efe-4ea4-a18c-221689b0b66f%28Office.15%29.aspx) <br/> |Learn how to create a basic SharePoint-hosted add-in by using the Office Developer Tools for Visual Studio 2012.  <br/> |
+| [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.  <br/> |
+| [Get started creating SharePoint-hosted SharePoint Add-ins](https://msdn.microsoft.com/library/1b992485-6efe-4ea4-a18c-221689b0b66f%28Office.15%29.aspx) <br/> |Learn how to create a basic SharePoint-hosted add-in by using the Office Developer Tools for Visual Studio 2012.  <br/> |
    
 
 ## What can you do with add-in-scoped external content types?
@@ -221,7 +221,7 @@ The following example shows how to set security credentials for an external syst
 -  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   
--  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
+-  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
 -  [External content types in SharePoint](external-content-types-in-sharepoint.md)

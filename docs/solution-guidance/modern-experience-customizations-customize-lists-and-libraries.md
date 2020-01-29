@@ -29,7 +29,7 @@ This article focuses on the extensibility options within the "modern" library an
 
 - [Modern document libraries in SharePoint](https://blogs.office.com/2016/06/07/modern-document-libraries-in-sharepoint)
 - [Modern SharePoint lists are here—including integration with Microsoft Flow and PowerApps](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps)
-- [Differences between the new and classic experiences for lists and libraries](https://support.office.com/en-us/article/Differences-between-classic-and-new-experiences-for-lists-and-document-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc?ui=en-US&rs=en-US&ad=US)
+- [Differences between the new and classic experiences for lists and libraries](https://support.office.com/article/Differences-between-classic-and-new-experiences-for-lists-and-document-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc?ui=en-US&rs=en-US&ad=US)
 
 In the remainder of this article, we'll use "modern" for the new user experience and "classic" for the legacy user experience. 
 
@@ -59,7 +59,7 @@ These customizations are currently not supported for "modern" lists and librarie
  - SharePoint server publishing
 
 > [!NOTE]
-> In June 2017, [SharePoint Framework Extensions went into developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](http://aka.ms/spfx-extensions). 
+> In June 2017, [SharePoint Framework Extensions went into developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions). 
 
 <a name="supportedcustomactions"> </a>
 
@@ -93,7 +93,7 @@ Adding custom links to the context menu can be done by using the `EditControlBlo
 </pnp:ProvisioningTemplate>
 ```
 
-You can apply this [PnP provisioning template](https://msdn.microsoft.com/en-us/pnp_articles/pnp-provisioning-engine-and-the-core-library) to a site using the PnP Core library or [PnP PowerShell](http://aka.ms/sppnp-powershell). We've opted to show the PowerShell approach in this article. A first step is to [install the PnP PowerShell module](https://github.com/SharePoint/PnP-PowerShell). After that's done, save the PnP provisioning XML to a file, and the two simple lines of PnP PowerShell are enough to apply the template:
+You can apply this [PnP provisioning template](https://msdn.microsoft.com/pnp_articles/pnp-provisioning-engine-and-the-core-library) to a site using the PnP Core library or [PnP PowerShell](https://aka.ms/sppnp-powershell). We've opted to show the PowerShell approach in this article. A first step is to [install the PnP PowerShell module](https://github.com/SharePoint/PnP-PowerShell). After that's done, save the PnP provisioning XML to a file, and the two simple lines of PnP PowerShell are enough to apply the template:
 
 ```powershell
 
@@ -203,7 +203,7 @@ If you want to extend the toolbar in the "modern" list and library experiences, 
             <CommandUIHandlers>
               <CommandUIHandler Command="CustomButton1.Command" CommandAction="https://contoso.azurewebsites.net/pages/index.aspx" />
               <CommandUIHandler Command="CustomButton2.Command" CommandAction="http://www.bing.com" />
-              <CommandUIHandler Command="CustomButton3.Command" CommandAction="http://dev.office.com/sharepoint" />
+              <CommandUIHandler Command="CustomButton3.Command" CommandAction="https://dev.office.com/sharepoint" />
             </CommandUIHandlers>
         </pnp:CommandUIExtension>
       </pnp:CustomAction>
@@ -367,8 +367,8 @@ We'll gradually introduce more customization options for "modern" list and libra
 
 ## See also
 
-- [Switch the default experience for lists or document libraries from new or classic](https://support.office.com/en-us/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9)
+- [Switch the default experience for lists or document libraries from new or classic](https://support.office.com/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9)
 - [Modern document libraries in SharePoint](https://blogs.office.com/2016/06/07/modern-document-libraries-in-sharepoint)
 - [Modern SharePoint lists are here—including integration with Microsoft Flow and PowerApps](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps) 
-- [Differences between the new and classic experiences for lists and libraries](https://support.office.com/en-us/article/Differences-between-the-new-and-classic-experiences-for-lists-and-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc?ui=en-US&rs=en-US&ad=US)
+- [Differences between the new and classic experiences for lists and libraries](https://support.office.com/article/Differences-between-the-new-and-classic-experiences-for-lists-and-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc?ui=en-US&rs=en-US&ad=US)
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)

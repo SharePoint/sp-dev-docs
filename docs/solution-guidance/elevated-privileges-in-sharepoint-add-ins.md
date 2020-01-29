@@ -1,11 +1,11 @@
 ---
-title: Elevated privileges in SharePoint Add-ins
-ms.date: 11/03/2017
+title: Elevated privileges
+ms.date: 12/30/2019
 localization_priority: Normal
 ---
-# Elevated privileges in SharePoint Add-ins
+# Elevated privileges
 
-Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins.
+Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins or other remotely hosted solutions.
 
 _**Applies to:** apps for SharePoint | SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
@@ -52,14 +52,17 @@ To use the app-only policy, you first must grant permissions to the add-in by us
 
 Using the app-only policy requires that your add-in use either low-trust or high-trust authorization. The policy is not available with the SharePoint cross-domain JavaScript library, which is a third way of getting authorized access to SharePoint resources.
 
+> [!TIP]
+> To allow to use app-only access for writing to Taxonomy Term Store, you'll need to explicitly add `app@sharepoint` identity as a Term Store Administrator in the Taxonomy Term Store administrative user interface. This grants the app-only identity needed permissions for write operations. You do not need to perform this step for read operations.
+
 ### Low-trust authorization
 
-Your add-in can use low-trust authorization when using the Microsoft Azure Access Control Service (ACS) to establish trust between your provider-hosted add-in and either your Office 365 site or your on-premises SharePoint farm. You can learn more at [Three authorization systems for SharePoint Add-ins 2013](https://msdn.microsoft.com/en-us/library/office/dn790706.aspx). 
+Your add-in can use low-trust authorization when using the Microsoft Azure Access Control Service (ACS) to establish trust between your provider-hosted add-in and either your Office 365 site or your on-premises SharePoint farm. You can learn more at [Three authorization systems for SharePoint Add-ins 2013](https://msdn.microsoft.com/library/office/dn790706.aspx). 
 
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
-To get a reference to the [ClientContext](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.clientcontext.aspx) object, your add-in should:
+To get a reference to the [ClientContext](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.clientcontext.aspx) object, your add-in should:
 
 1. Get the access token by using TokenHelper.GetAppOnlyAccessToken.
 
@@ -119,7 +122,7 @@ When planning to use service accounts in your add-in, consider the following:
 > [!NOTE] 
 > Add-ins purchased from the Office Store cannot use service accounts.
 
-The following code shows how to authenticate by using [SharePointOnlineCredentials](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.sharepointonlinecredentials.aspx) with a service account.
+The following code shows how to authenticate by using [SharePointOnlineCredentials](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.sharepointonlinecredentials.aspx) with a service account.
 
 ```cs
 using (ClientContext context = new ClientContext("https://contoso.sharepoint.com"))
@@ -136,5 +139,5 @@ using (ClientContext context = new ClientContext("https://contoso.sharepoint.com
 ## See also
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md).
-- [Add-in authorization policy types in SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/fp179892.aspx).
-- [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](https://msdn.microsoft.com/en-us/library/office/dn155905.aspx).
+- [Add-in authorization policy types in SharePoint 2013](https://msdn.microsoft.com/library/office/fp179892.aspx).
+- [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](https://msdn.microsoft.com/library/office/dn155905.aspx).

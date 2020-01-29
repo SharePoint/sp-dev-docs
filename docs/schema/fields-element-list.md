@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - List schema
@@ -18,7 +18,7 @@ description: Contains field definitions for a list definition within a Schema.xm
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Contains field definitions for a list definition within a [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file, or for a base list type within the global [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file, specifying the fields that are implemented in a list. 
+Contains field definitions for a list definition within a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file, or for a base list type within the global [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file, specifying the fields that are implemented in a list. 
   
 ```XML
 <Fields  Revision = "Integer">  ...
@@ -51,7 +51,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ## Example
 
-The following example from the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for tasks lists fields uniquely used in a tasks list. 
+The following example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for tasks lists fields uniquely used in a tasks list. 
   
 ```XML
 <Fields>

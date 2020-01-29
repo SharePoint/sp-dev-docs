@@ -1,11 +1,12 @@
 ---
+title: Parameters Element in Method
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Parameters
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 343f4c25-e122-1a4c-2b80-bb8f25e3cc82
 ---
@@ -18,7 +19,7 @@ ms.assetid: 343f4c25-e122-1a4c-2b80-bb8f25e3cc82
 
 Specifies a list of parameters of a method.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

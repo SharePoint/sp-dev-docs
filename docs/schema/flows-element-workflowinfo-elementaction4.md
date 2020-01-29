@@ -1,9 +1,10 @@
 ---
+title: Flows element
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 4f6ec6ed-2443-2364-b01d-2e60b68c2d39
 ---

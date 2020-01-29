@@ -1,11 +1,12 @@
 ---
+title: Entities Element in LobSystem
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Entities
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: fa121ed1-160a-03c9-df42-851ddc2528d5
 ---
@@ -18,7 +19,7 @@ ms.assetid: fa121ed1-160a-03c9-df42-851ddc2528d5
 
 Specifies a list of external content types in an external system.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

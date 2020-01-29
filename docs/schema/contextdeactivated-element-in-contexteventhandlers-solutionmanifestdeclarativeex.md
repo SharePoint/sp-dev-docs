@@ -1,9 +1,10 @@
 ---
+title: ContextDeactivated Element in ContextEventHandlers
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e11d1c83-a2b8-5f26-5ecb-0a0d5197bbf7
 ---
@@ -18,7 +19,7 @@ ms.assetid: e11d1c83-a2b8-5f26-5ecb-0a0d5197bbf7
 Enables you to execute a specified action when a context is deactivated. For example, this can be used to execute a custom action to do cleanup when a context is deactivated.
 
 **Namespace**:
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

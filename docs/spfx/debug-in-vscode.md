@@ -15,7 +15,7 @@ You can also see the required steps to enable debugging in Visual Studio Code in
 
 <br/>
 
-> [!Video https://www.youtube.com/watch?v=oNChcluMrm8]
+> [!VIDEO https://www.youtube.com/embed/oNChcluMrm8]
 
 <br/> 
 

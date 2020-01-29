@@ -41,7 +41,7 @@ A SharePoint Add-in is similar to an add-in on a mobile device. It is a stand-al
   
     
     
-For an introduction to the model for SharePoint Add-ins, see  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx). For more information, see  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md), and  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
+For an introduction to the model for SharePoint Add-ins, see  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx). For more information, see  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md), and  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     

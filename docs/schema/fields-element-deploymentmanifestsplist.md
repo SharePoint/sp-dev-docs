@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 6d5c3c13-3268-4e61-94c1-bf39b53d9d9b
 description: Represents a collection of Field (SPField) instances on a Windows SharePoint Services 3.0 List object (SPList). 

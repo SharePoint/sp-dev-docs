@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Site schema
@@ -18,7 +18,7 @@ description: A top-level CAML element that is used to specify sets of data.
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-A top-level CAML element that is used to specify sets of data. In [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) files, it specifies a default set of data for a newly created list. 
+A top-level CAML element that is used to specify sets of data. In [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) files, it specifies a default set of data for a newly created list. 
   
 ```XML
 <Data>

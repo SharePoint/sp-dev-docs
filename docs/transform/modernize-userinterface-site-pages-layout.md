@@ -1,7 +1,7 @@
 ---
 title: Understanding how wiki and web part page layouts are mapped to modern page layouts
-description: Provides detailed information on the mapping of layouts between source pages and target modern client side pages
-ms.date: 04/04/2019
+description: Provides detailed information on the mapping of layouts between source pages and target modern  pages
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---

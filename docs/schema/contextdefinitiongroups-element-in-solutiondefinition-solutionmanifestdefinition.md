@@ -1,9 +1,10 @@
 ---
+title: ContextDefinitionGroups Element in SolutionDefinition
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 0ac81036-992e-d3da-d3ee-6a9aa52e0718
 ---
@@ -16,7 +17,7 @@ ms.assetid: 0ac81036-992e-d3da-d3ee-6a9aa52e0718
 
 Lists the context definitions that are part of this Microsoft Business Connectivity Services (BCS) solution, grouped by the Outlook Item Type to which they refer. The manifest file can contain a context definition group containing a list of context definitions for each one of the Outlook Item Types such as Contact, Task, Post, or Calendar. If you want to show related external data in the context of a task pane, you can include an additional context definition group for a context named EntityView.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

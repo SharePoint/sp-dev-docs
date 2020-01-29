@@ -1,11 +1,12 @@
 ---
+title: Dictionary element (WorkflowActions)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e4ae6f71-70d7-4a91-a3f5-4c6604c2b0ff
 ---
@@ -70,8 +71,8 @@ None
 
 ## See also
 
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

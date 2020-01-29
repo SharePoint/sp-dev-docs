@@ -1,9 +1,10 @@
 ---
+title: Parameters Element in Method
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f7ce7810-f817-9560-6154-b4742a8cf162
 ---
@@ -16,7 +17,7 @@ ms.assetid: f7ce7810-f817-9560-6154-b4742a8cf162
 
 For more information, see [Parameters Element in Method (BDCMetadata Schema)](parameters-element-in-method-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

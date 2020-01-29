@@ -1,11 +1,12 @@
 ---
+title: SharePoint Features schemas
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - features [sharepoint 2010], schemas,schemas [SharePoint 2010], Features,Features [SharePoint 2010]
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: a9f6f15e-3489-4677-b579-db330638a853
 ---

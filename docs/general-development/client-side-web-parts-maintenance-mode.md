@@ -72,7 +72,7 @@ If the web part [integrates its properties with SharePoint](../spfx/web-parts/gu
 
 ## Considerations
 
-- the maintenance mode works for client-side web parts placed on both modern and classic SharePoint pages. See the [Open and use the web part maintenance page](https://support.office.com/en-us/article/Open-and-use-the-web-part-maintenance-page-eff9ce22-d04a-44dd-ae83-ac29a5e396c2#PickTab=2016,_2013) support article, to get more information about opening classic web parts in maintenance view
+- the maintenance mode works for client-side web parts placed on both modern and classic SharePoint pages. See the [Open and use the web part maintenance page](https://support.office.com/article/Open-and-use-the-web-part-maintenance-page-eff9ce22-d04a-44dd-ae83-ac29a5e396c2#PickTab=2016,_2013) support article, to get more information about opening classic web parts in maintenance view
 - to open page in maintenance mode, you have to have edit permissions for that page
 - when in maintenance mode, web part code is not being executed and you cannot edit web part properties
 - in maintenance mode, you can delete or move web parts on the page
@@ -81,4 +81,4 @@ If the web part [integrates its properties with SharePoint](../spfx/web-parts/gu
 
 ## See also
 
-- [Open and use the web part maintenance page](https://support.office.com/en-us/article/Open-and-use-the-web-part-maintenance-page-eff9ce22-d04a-44dd-ae83-ac29a5e396c2)
+- [Open and use the web part maintenance page](https://support.office.com/article/Open-and-use-the-web-part-maintenance-page-eff9ce22-d04a-44dd-ae83-ac29a5e396c2)

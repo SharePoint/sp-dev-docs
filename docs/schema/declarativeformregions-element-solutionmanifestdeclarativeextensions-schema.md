@@ -1,9 +1,10 @@
 ---
+title: DeclarativeFormRegions Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 03145de9-325c-b108-cd24-14aaa890a0c8
 ---
@@ -17,7 +18,7 @@ ms.assetid: 03145de9-325c-b108-cd24-14aaa890a0c8
 Lists the form regions in which external data will be displayed in Microsoft Outlook 2010.
 
 **Namespace**:
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
@@ -67,7 +68,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/c5a3b837-76bb-98fc-d7b4-ffe9a44d95a0.aspx">FormRegion</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/c5a3b837-76bb-98fc-d7b4-ffe9a44d95a0.aspx">FormRegion</a></p></td>
 <td align="left"><p>The form regions in which external data will be displayed in .</p></td>
 </tr>
 <tr class="even">

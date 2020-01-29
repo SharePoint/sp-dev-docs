@@ -22,7 +22,7 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
 ### To install SharePoint Designer 2013
 
 
-1. Open your web browser and navigate to the Microsoft Download Center:  [http://www.microsoft.com/download](http://www.microsoft.com/download). 
+1. Open your web browser and navigate to the Microsoft Download Center:  [https://www.microsoft.com/download](https://www.microsoft.com/download). 
     
   
 2. Type SharePoint Designer 2013 in the search field.
@@ -193,10 +193,10 @@ To learn more about the available components of workflow development, see  [Work
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflow in SharePoint](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
+-  [What's new in workflow in SharePoint](https://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
     
   
--  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
+-  [Getting started with SharePoint workflow](https://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)

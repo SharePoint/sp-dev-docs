@@ -15,14 +15,14 @@ Create a new sample web part and deploy its assets to an Azure Content Delivery 
 
 ## Configure an Azure storage account
 
-To configure an Azure storage account and integrate it with the CDN, follow the instructions at [Integrate an Azure storage account with Azure CDN](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-a-storage-account-with-cdn), along with the detailed steps in this article. 
+To configure an Azure storage account and integrate it with the CDN, follow the instructions at [Integrate an Azure storage account with Azure CDN](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn), along with the detailed steps in this article. 
 
 > [!NOTE]
 > As Azure UIs are evolving fast, some of the pictures and steps might be out of date, but high level process is still valid.
 
 ### Storage account name
 
-This is the name you used to create your storage account, as described in [Step 1: Create a storage account](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-a-storage-account-with-cdn#step-1-create-a-storage-account).
+This is the name you used to create your storage account, as described in [Step 1: Create a storage account](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn#step-1-create-a-storage-account).
 
 For example, in the following screenshot, **spfxsamples** is the storage account name.
 
@@ -55,13 +55,13 @@ In the storage account dashboard, select **Access Key** in the dashboard, and co
 
 Create a new CDN profile and associate the CDN endpoint with this BLOB container.
 
-1. Create a new CDN profile as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account) (scroll down in Step 2 for **To create a new CDN profile**).
+1. Create a new CDN profile as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account) (scroll down in Step 2 for **To create a new CDN profile**).
 
     For example, in the following screenshot, **spfxwebparts** is the CDN profile name.
 
     ![Screenshot of create a new CDN profile](../../../images/deploy-create-cdn-profile.png)
 
-1. Create a CDN endpoint as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account). The CDN endpoint is created with the following URL: `http://spfxsamples.azureedge.net`
+1. Create a CDN endpoint as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account). The CDN endpoint is created with the following URL: `http://spfxsamples.azureedge.net`
 
     For example, in the following screenshot, **spfxsamples** is the endpoint name, **Storage** is the origin type, and **spfxsamples.blob.core.windows.net** is the storage account.
 

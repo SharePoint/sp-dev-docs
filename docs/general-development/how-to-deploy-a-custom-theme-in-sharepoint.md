@@ -14,7 +14,7 @@ SharePoint includes preinstalled themes. You can create custom themes by creatin
   
     
 > [!NOTE]
-> This article only applies in the context of classic SharePoint site experience. If you are looking for details around modern SharePoint sites and their theme support, please have a look on the following article - [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
+> This article only applies in the context of classic SharePoint site experience. If you are looking for details around modern SharePoint sites and their theme support, please have a look on the following article - [SharePoint site theming](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
 
 
 ## Core concepts to know to deploy a theme
@@ -31,7 +31,7 @@ Table 1 lists articles that can help you understand the core concepts of deployi
 |**Article title**|**Description**|
 |:-----|:-----|
 | [Themes overview for SharePoint](themes-overview-for-sharepoint.md) <br/> |Learn about the theming experience in SharePoint.  <br/> |
-| [Feature Events](http://msdn.microsoft.com/en-us/library/ms469501.aspx) <br/> |Learn about feature events, which enable you to trap and respond to an event that occurs when a feature is installed in the server farm.  <br/> |
+| [Feature Events](https://msdn.microsoft.com/library/ms469501.aspx) <br/> |Learn about feature events, which enable you to trap and respond to an event that occurs when a feature is installed in the server farm.  <br/> |
    
 
 ## Upload files to the Theme Gallery and the Master Page Gallery
@@ -114,7 +114,7 @@ A composed look, or design, is the color palette, font scheme, background image,
     > [!NOTE]
     > If there is an issue with the composed look values, the composed look is not added to the design gallery, and no message is recorded in the log files. The following are possible reasons why a composed look cannot be added: a file cannot be found, there is a formatting issue with one of the files, or SharePoint is unable to access the files. 
 
-You can now use the design gallery to apply the new design to your site. For more information, see  [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
+You can now use the design gallery to apply the new design to your site. For more information, see  [Choose a theme for your publishing site](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
   
     
     
@@ -239,7 +239,7 @@ currentItem.Update();
 -  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/en-us/2012/10/29/show-off-your-style-with-sharepoint-theming/)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 

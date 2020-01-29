@@ -1,9 +1,10 @@
 ---
+title: Identifier Element in Identifiers
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f1e3324e-5259-8f2f-e1d4-11139819c7c9
 ---
@@ -16,7 +17,7 @@ ms.assetid: f1e3324e-5259-8f2f-e1d4-11139819c7c9
 
 Specifies localized display names and properties, in any combination, for an [Identifier Element in Identifiers (BDCMetadata Schema)](identifier-element-in-identifiers-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

@@ -1,11 +1,12 @@
 ---
+title: Identifier Element in Identifiers
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Identifier
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c4abf09b-10b6-0007-9214-35d5fe675be7
 ---
@@ -18,7 +19,7 @@ ms.assetid: c4abf09b-10b6-0007-9214-35d5fe675be7
 
 Specifies an identifier of an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

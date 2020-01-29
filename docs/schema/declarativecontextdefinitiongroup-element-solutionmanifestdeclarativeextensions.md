@@ -1,9 +1,10 @@
 ---
+title: DeclarativeContextDefinitionGroup Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 427da5ae-bc81-34ae-84ad-b4d723650b9f
 ---
@@ -17,7 +18,7 @@ ms.assetid: 427da5ae-bc81-34ae-84ad-b4d723650b9f
 The **DeclarativeContextDefinitionGroup** element derives from the **ContextDefinitionGroup** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to define a context definition group that contains a list of context definitions for one of the Outlook Item Types, such as Contact, Task, Post, or Calendar, or if showing data in a taskpane, an EntityView.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
@@ -115,7 +116,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/schema/declarativecontextdefinitiongroup-element-solutionmanifestdeclarativeextensions">ContextDefinition</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/sharepoint/dev/schema/declarativecontextdefinitiongroup-element-solutionmanifestdeclarativeextensions">ContextDefinition</a></p></td>
 <td align="left"><p>The **ContextDefinition** element is used to define a context for an external content type that is of this Outlook Item Type.</p></td>
 </tr>
 </tbody>

@@ -1,9 +1,10 @@
 ---
+title: CustomAction Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: cc5ed5c2-c362-4a61-af77-ff9e8f7e1cae
 ---
@@ -107,7 +108,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="even">
 <td align="left"><p>**Location**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the location of this custom action, for example, `"Microsoft.SharePoint.SiteSettings"`.</p>
-<p>If the **CustomAction** element contains a **CommandUIExtension** child element, the **Location** must start with "CommandUI.Ribbon". For a list of default locations that are used with the Server ribbon, see <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a>.</p>
+<p>If the **CustomAction** element contains a **CommandUIExtension** child element, the **Location** must start with "CommandUI.Ribbon". For a list of default locations that are used with the Server ribbon, see <a href="https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a>.</p>
 <p>If the custom action is a menu item or toolbar button, the possible options include **EditControlBlock**, **NewFormToolbar**, **DisplayFormToolbar**, and **EditFormToolbar**.</p>
 <p>If it is contained within a custom action group, the value of the **Location** attribute must equal the location of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
 <p>For a list of the default custom action locations that are used in SharePoint Foundation, see <a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>.</p></td>

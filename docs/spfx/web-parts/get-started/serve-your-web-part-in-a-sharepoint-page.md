@@ -3,6 +3,7 @@ title: Deploy your client-side web part to a SharePoint page (Hello World part 3
 description: Deploy your client-side web part to SharePoint and see it working on a modern SharePoint page. 
 ms.date: 03/14/2019
 ms.prod: sharepoint
+ms.custom: scenarios:getting-started
 ---
 
 # Deploy your client-side web part to a SharePoint page (Hello World part 3)
@@ -44,7 +45,8 @@ You can also follow these steps by watching this video on the SharePoint PnP You
       "name": "helloworld-webpart-client-side-solution",
       "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
       "version": "1.0.0.0",
-      "includeClientSideAssets": true
+      "includeClientSideAssets": true,
+      "isDomainIsolated": false
     },
     "paths": {
       "zippedPackage": "solution/helloworld-webpart.sppkg"
@@ -78,7 +80,7 @@ The JavaScript files, CSS, and other assets are packaged inside of the package w
 Next, you need to deploy the package that was generated to the app catalog.
 
 > [!NOTE]
-> If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/en-us/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
+> If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
 
 1. Go to your site's app catalog.
 1. Upload or drag and drop the **helloworld-webpart.sppkg** to the app catalog.

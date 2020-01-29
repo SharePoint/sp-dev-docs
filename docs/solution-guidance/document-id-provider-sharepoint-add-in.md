@@ -6,15 +6,13 @@ localization_priority: Normal
 Document ID provider in the SharePoint Add-in model
 ===================================================
 
-Summary
--------
+## Summary
 
 The approach you take to set unique identifiers for documents in SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list item event handlers running SharePoint Server-side Object Model code were used to set unique identifiers for documents and they were deployed via SharePoint Solutions.
 
 In an SharePoint Add-in model scenario, the SharePoint Client-side Object Model (CSOM) and/or the SharePoint REST API are used to set unique identifiers for documents.
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for setting unique identifiers for documents in the new SharePoint Add-in model.
 
@@ -29,8 +27,8 @@ How are unique identifiers set on documents?
 
 The SharePoint (CSOM) and/or REST APIs may be used to set column values, and therefor they may be used to set unique identifiers for documents. See the following articles to learn more about these APIs and how to set column values with them.  
 
-- [Complete basic operations using SharePoint 2013 client library code (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/fp179912.aspx#BasicOps_SPListItemTasks) 
-- [Working with lists and list items with REST (MSDN Article)](https://msdn.microsoft.com/en-us/library/office/dn292552.aspx#ListItems)
+- [Complete basic operations using SharePoint 2013 client library code (MSDN Article)](https://msdn.microsoft.com/library/office/fp179912.aspx#BasicOps_SPListItemTasks) 
+- [Working with lists and list items with REST (MSDN Article)](https://msdn.microsoft.com/library/office/dn292552.aspx#ListItems)
 
 Options to set unique identifiers for documents
 -----------------------------------------------
@@ -87,23 +85,21 @@ In this pattern, a background process checks documents in SharePoint to determin
 
 The [Remote Timer Jobs (SharePoint Add-in Recipe)](remote-timer-jobs-sharepoint-add-in.md) describes how to implement remote timer jobs in the Add-in model and provides links to several samples and articles.
 
-Related links
-=============
+## Related links
 - [Event Receivers and List Event Receivers (SharePoint Add-in Recipe)](event-receiver-and-list-event-receiver-sharepoint-add-in.md)
 - [Search Configuration (SharePoint Add-in Recipe)](search-configuration-sharepoint-add-in.md)
 - [Remote Timer Jobs (SharePoint Add-in Recipe)](remote-timer-jobs-sharepoint-add-in.md)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
-- Samples and content at [http://aka.ms/OfficeDevPnP](http://aka.ms/OfficeDevPnP)
+- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

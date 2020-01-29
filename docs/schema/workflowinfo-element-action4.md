@@ -1,9 +1,10 @@
 ---
+title: WorkflowInfo element (Action4)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 76f59dcd-23bc-2ecf-5165-3bf662f3fc5b
 ---
@@ -385,7 +386,7 @@ None.
 <td align="left"><p>**Language**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States." For more information, see <a href="https://msdn.microsoft.com/en-us/library/dd318693.aspx">Language Identifier Constants and Strings</a>.</p></td>
+<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States." For more information, see <a href="https://msdn.microsoft.com/library/dd318693.aspx">Language Identifier Constants and Strings</a>.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 </tbody>

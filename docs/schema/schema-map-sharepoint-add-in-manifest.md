@@ -1,9 +1,10 @@
 ---
+title: Schema map (SharePoint Add-in Manifest)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 6793ccee-0f76-f798-eeb8-c1f9309d7685
 ---

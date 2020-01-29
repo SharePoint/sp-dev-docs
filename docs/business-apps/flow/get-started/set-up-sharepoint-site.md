@@ -1,3 +1,11 @@
+---
+title: Set up your SharePoint site with lists and libraries
+description: Set up your SharePoint site with lists and libraries
+ms.date: 12/12/2018
+ms.prod: sharepoint
+localization_priority: Priority
+---
+
 # Set up your SharePoint site with lists and libraries
 
 In order to successfully complete the getting started tutorials, set up your SharePoint site with the following.

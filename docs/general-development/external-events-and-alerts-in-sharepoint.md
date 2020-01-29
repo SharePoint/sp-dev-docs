@@ -40,7 +40,7 @@ public class EntryContentEventReceiver : SPItemEventReceiver
    }
 ```
 
-External event receivers can also be extended to work against an entity event receiver and as remote event receivers deployed as a service on-premise or in Microsoft Azure. 
+External event receivers can also be extended to work against an entity event receiver and as remote event receivers deployed as a service on-premises or in Microsoft Azure. 
   
     
     

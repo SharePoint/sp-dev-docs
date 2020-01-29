@@ -1,11 +1,12 @@
 ---
+title: DefaultValue Element in DefaultValues
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.DefaultValue
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: ddb67f64-6361-7b59-6724-4680484d585d
 ---
@@ -24,7 +25,7 @@ The user can override any input parameter for which you have defined a DefaultVa
 
 For each abstract primitive in a TypeDescriptor object, you can define multiple default values, each of which corresponds to a particular MethodInstance object. At run-time, depending on which MethodInstance object the client executes, a parameter will be instantiated based on the corresponding default values.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

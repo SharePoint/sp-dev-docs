@@ -1058,7 +1058,7 @@ The [Provisioning.PublishingFeatures](https://github.com/SharePoint/PnP/tree/dev
 The provider-hosted add-in uses CSOM to provision commonly used UI elements on publishing sites, and it uses JavaScript to create more dynamic experiences in page layouts that you can deploy to publishing sites. It also shows the differences between using master pages and themes in publishing sites.
 
 > [!IMPORTANT] 
-> To make the functionality in this sample work, you need to activate the publishing features on your site. For information, see [Enable publishing features](https://support.office.com/en-us/article/Enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518?CorrelationId=22291615-2acd-46be-8813-9e6c48d01a32&ui=en-US&rs=en-US&ad=US).
+> To make the functionality in this sample work, you need to activate the publishing features on your site. For information, see [Enable publishing features](https://support.office.com/article/Enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518?CorrelationId=22291615-2acd-46be-8813-9e6c48d01a32&ui=en-US&rs=en-US&ad=US).
 
 The sample start page presents you with three scenarios for customizing the UI of publishing sites: 
 

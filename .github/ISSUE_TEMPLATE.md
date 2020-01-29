@@ -1,52 +1,29 @@
-> Thank you for reporting an issue or suggesting an enhancement. We appreciate your feedback - to help the team to understand your needs, please complete the below template to ensure we have the necessary details to assist you.
->
-> _(DELETE THIS PARAGRAPH AFTER READING)_
->
-
-#### Category
+## Category
 - [ ] Question
 - [ ] Typo
-- [ ] Bug
 - [ ] Additional article idea
-- [x] Example checked item (*delete this line*)
+- [x] Checked items have no spaces between the <kbd>[</kbd><kbd>]</kbd> (*delete this line*)
 
-> For the above list, an empty checkbox is [ ] as in <kbd>[</kbd><kbd>SPACE</kbd><kbd>]</kbd>. A checked checkbox is [x] with no space between the brackets. Use the `PREVIEW` tab at the top right to preview the rendering before submitting your issue.
->
-> If you are planning to share a new feature request (enhancement / suggestion), please use SP Dev UserVoice at http://aka.ms/sp-dev-uservoice. (DELETE THIS PARAGRAPH AFTER READING)
->
-> _(DELETE THIS PARAGRAPH AFTER READING)_
->
+## Question
 
-#### Expected or Desired Behavior
+> **DELETE THIS LINE BEFORE SUBMITTING** - If you are reporting a bug, please describe the expected behavior. If you are suggesting an enhancement please describe thoroughly the enhancement, how it can be achieved, and the expected benefit.
 
-> If you are reporting a bug, please describe the expected behavior. If you are suggesting an enhancement please describe thoroughly the enhancement, how it can be achieved, and expected benefit.
->
-> _(DELETE THIS PARAGRAPH AFTER READING)_
->
+## Environment details (if applicable)
 
-#### Observed Behavior
+> **DELETE THIS LINE BEFORE SUBMITTING** - Complete the following (*if ignored you'll be prompted for it before we can address your issue... save the time and provide it in your initial submission*). If this section is not relevant to your issue, please delete it.
 
-> If you are reporting a bug, please describe the behavior you expected to occur when performing the action. If you are making a suggestion, you can delete this section.
->
-> _(DELETE THIS PARAGRAPH AFTER READING)_
->
+- OS: [e.g. Windows 10, MacOS 10.15.x]
+- Framework: [e.g. .NET Framework v3.x, .NET Core v3.x, Node.js v6/v8/v10/v12]
+- Browser(s): [e.g. Chrome v79, Safari v22, FireFox v31, IE v11, Edge, Chromium Edge v79]
+- Tooling: [e.g. VS Code, SPFx v1.10.0, Visual Studio 2019] 
+ 
+## Submission guidelines (delete this section before submitting)
 
-#### Steps to Reproduce
-
-> If you are reporting a bug please describe the steps to reproduce the bug in sufficient detail to allow testing. Only way to fix things properly, is to have sufficient details to reproduce it. If you are making a suggestion, you can delete this section.
->
-> _(DELETE THIS PARAGRAPH AFTER READING)_
->
-
-#### Submission Guidelines
-
-> - All suggestions or bugs are welcome, please let us know what's on your mind.
-> - If you are reporting an issue around any of the documents or articles, please ensure that you have clear > reference on the specific file or URL, which should be fixed.
-> - If you have technical questions about the framework, we’ll be monitoring #spfx, #spfx-webparts, and > #spfx-tooling on (SharePoint StackExchange)[http://sharepoint.stackexchange.com/]. You can also > alternatively submit your question to (SharePoint Developer group)> [https://network.office.com/t5/SharePoint-Developer/bd-p/SharePointDev] at Office Network.
+> - All suggestions or bugs are welcome!
+> - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/playground-repo/wiki/How-to-Create-Good-Issues).
+> - If you are reporting an issue around any of the documents or articles, please ensure that you have referenced the specific file or URL of the related document.
+> - If you have technical questions about the framework, we monitor the tags #spfx, #spfx-webparts, and #spfx-tooling on [SharePoint StackExchange](http://sharepoint.stackexchange.com).
 > - Remember to include sufficient details and context.
-> - If you have multiple suggestions or bugs please submit them in separate bugs so we can track resolution.
->
-> _(DELETE THIS PARAGRAPH AFTER READING)_
->
+> - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
 
-Thanks for your contribution! Sharing is caring.
+*Thanks for your contribution! Sharing is caring.*

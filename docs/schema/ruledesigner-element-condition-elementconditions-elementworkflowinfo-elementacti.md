@@ -1,9 +1,10 @@
 ---
+title: RuleDesigner element (Condition element)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 0a10e602-92fe-fde5-287b-2b6b060b5bf8
 ---

@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 83548f11-e64d-4b7d-8d6c-5c331cd7f4e8
 description: In CAML, renders the current date and time in International Organization for Standardization (ISO) format.

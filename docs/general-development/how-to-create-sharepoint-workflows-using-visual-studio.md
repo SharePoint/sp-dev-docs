@@ -11,7 +11,7 @@ localization_priority: Priority
 
 Learn the basics of creating a SharePoint workflow in the new SharePoint workflow platform.
 
-**Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
+**Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
 
 > [!NOTE]
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code here: LINK. 
@@ -60,7 +60,7 @@ The stage construct within a SharePoint Designer 2013 based workflow is based on
 ![Figure 1. Flowchart workflow](../images/ngWfFig01.png)
   
 > [!NOTE]
-> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Approval workflow that uses a custom initiation form](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Approval-f5ac5eb2). 
+> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Approval workflow that uses a custom initiation form](https://code.msdn.microsoft.com/officeapps/SharePoint-2013-Approval-f5ac5eb2). 
   
     
     
@@ -85,7 +85,7 @@ State machine workflows, like flowchart workflows, do not typically follow a spe
 ![Figure 2. State machine workflow](../images/ngWfFig02.png)
   
 > [!NOTE]
-> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Route workflows to states depending on actions and events](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Route-25a25d87). 
+> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Route workflows to states depending on actions and events](https://code.msdn.microsoft.com/officeapps/SharePoint-2013-Route-25a25d87). 
   
     
     

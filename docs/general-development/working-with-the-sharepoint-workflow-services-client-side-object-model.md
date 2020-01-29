@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # Working with the SharePoint Workflow Services Client Side Object Model
 Demonstrates how to use the SharePoint client-side object model (CSOM) API to create and control Workflow Manager 1.0 workflow definitions and instances. 
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
+ **Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
     
     
@@ -25,7 +25,7 @@ In SharePoint 2010, Microsoft introduced features and capabilities that encourag
   
     
     
-In SharePoint, Microsoft added even more capabilities; these updates were oriented toward cloud deployments. Specifically, Microsoft introduced the new SharePoint app model, which went further than the sandboxed solution in that, unlike sandboxed solution, they explicitly blocked server-side code from running in the SharePoint process. Microsoft also built up existing technologies in SharePoint, such as the client-side object model (CSOM), and introduced new capabilities, like support for app identities using  [OAuth](http://msdn.microsoft.com/library/office/fp142382.aspx).
+In SharePoint, Microsoft added even more capabilities; these updates were oriented toward cloud deployments. Specifically, Microsoft introduced the new SharePoint app model, which went further than the sandboxed solution in that, unlike sandboxed solution, they explicitly blocked server-side code from running in the SharePoint process. Microsoft also built up existing technologies in SharePoint, such as the client-side object model (CSOM), and introduced new capabilities, like support for app identities using  [OAuth](https://msdn.microsoft.com/library/office/fp142382.aspx).
   
     
     
@@ -697,10 +697,10 @@ One of the major improvements to workflows in SharePoint is the expansion of CSO
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](http://msdn.microsoft.com/en-us/library/jj163986.aspx)
+-  [Workflows in SharePoint](https://msdn.microsoft.com/library/jj163986.aspx)
     
   
--  [What is Workflow Manager 1.0?](http://msdn.microsoft.com/en-us/library/windowsazure/jj193471%28v=azure.10%29.aspx)
+-  [What is Workflow Manager 1.0?](https://msdn.microsoft.com/library/windowsazure/jj193471%28v=azure.10%29.aspx)
     
   
 

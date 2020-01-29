@@ -13,8 +13,8 @@ The SharePoint client-side object model (CSOM) provides access to the SharePoint
 
 Before you get started, make sure that you're familiar with the following:
 
-- [Using the Client Object Model](https://msdn.microsoft.com/en-us/library/ff798388.aspx)
-- [Common Programming Tasks in the Managed Client Object Model](https://msdn.microsoft.com/en-us/library/ee537013.aspx)
+- [Using the Client Object Model](https://msdn.microsoft.com/library/ff798388.aspx)
+- [Common Programming Tasks in the Managed Client Object Model](https://msdn.microsoft.com/library/ee537013.aspx)
 
 You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.6906.1200 or later).
 
@@ -24,7 +24,7 @@ The following example shows how to create a __Microsoft.Online.SharePoint.Tenant
 
 > [!NOTE]
 > * The URL used to create the context object includes the _-admin_ suffix because **TenantAdministration** methods work with the admin site.
-> * Create a __Tenant__ instance with the [Tenant constructor](https://msdn.microsoft.com/en-us/library/dn174852.aspx), and then call the methods on that instance.
+> * Create a __Tenant__ instance with the [Tenant constructor](https://msdn.microsoft.com/library/dn174852.aspx), and then call the methods on that instance.
 > * You can use the same approach to call other theme management methods.
 
 ```csharp
@@ -80,7 +80,7 @@ public class SPOTheme 
 
 ## Applying a theme
 
-There's currently no supported CSOM API to programmatically apply a theme to a specific site. For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview)
+There's currently no supported CSOM API to programmatically apply a theme to a specific site. For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview)
 
 ## Methods/properties of the Microsoft.Online.SharePoint.TenantAdministration.Tenant class
 

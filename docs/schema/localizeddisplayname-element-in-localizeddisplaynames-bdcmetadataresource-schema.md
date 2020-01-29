@@ -1,9 +1,10 @@
 ---
+title: LocalizedDisplayName Element in LocalizedDisplayNames
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 22df0505-2024-a38d-38ea-6f614758fae6
 ---
@@ -16,7 +17,7 @@ ms.assetid: 22df0505-2024-a38d-38ea-6f614758fae6
 
 For more information, see [LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadata Schema)](localizeddisplayname-element-in-localizeddisplaynames-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

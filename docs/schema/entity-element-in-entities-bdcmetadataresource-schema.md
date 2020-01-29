@@ -1,9 +1,10 @@
 ---
+title: Entity Element in Entities
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b791a3ca-84aa-d4a6-ef8d-43fd40c588fd
 ---
@@ -16,7 +17,7 @@ ms.assetid: b791a3ca-84aa-d4a6-ef8d-43fd40c588fd
 
 Specifies localized display names, properties, and permissions, in any combination, for an [Entity Element in Entities (BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

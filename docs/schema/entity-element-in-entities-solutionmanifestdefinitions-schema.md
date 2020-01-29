@@ -1,9 +1,10 @@
 ---
+title: Entity Element in Entities
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 02ff2123-1176-8c8d-4f6b-3aa6962e2b4f
 ---
@@ -16,7 +17,7 @@ ms.assetid: 02ff2123-1176-8c8d-4f6b-3aa6962e2b4f
 
 Defines the external content type that this context definition is associated with.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

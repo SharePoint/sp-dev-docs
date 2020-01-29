@@ -3,18 +3,16 @@ title: App-only and elevated privileges in the SharePoint Add-in model
 ms.date: 11/03/2017
 localization_priority: Priority
 ---
-App-only and elevated privileges in the SharePoint Add-in model
-===============================================================
 
-Summary
--------
+# App-only and elevated privileges in the SharePoint Add-in model
+
+## Summary
 
 The approach you take to elevate privileges in your code is different in the new SharePoint Add-in model than it was with full trust code. In a typical full trust code (FTC) / Farm Solution scenario, the RunWithElevatedPrivileges API is used with the SharePoint server-side object model code and deployed via Farm Solutions.
 
 In an SharePoint Add-in model scenario, the AllowAppOnlyPolicy permission or a service account is used to allow the current user to execute operations they are not authorize to perform.
 
-High-Level Guidelines
----------------------
+## High-Level Guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for elevating privileges in code.
 
@@ -72,8 +70,7 @@ Here is an example of returning an App Only Policy token and using it to create 
 	}
 	```
 
-Options to elevate permissions
-------------------------------
+## Options to elevate permissions
 
 You have a couple of options to elevate permissions.
 
@@ -83,8 +80,8 @@ You have a couple of options to elevate permissions.
 - Service Account
 	+ Remotely hosted code (Example: Azure WebJob)
 
-OAuth (AllowAppOnlyPolicy)
---------------------------
+### OAuth (AllowAppOnlyPolicy)
+
 In this option the AllowAppOnlyPolicy is set to true in the AppPermissionRequests element and permissions are set in the SharePoint Add-in manifest. OAuth is used to return access tokens to allow the SharePoint Add-in to execute operations it has permissions to perform.
 
 **S2S sub option**
@@ -103,7 +100,7 @@ When you need to elevate privileges in a SharePoint S2S scenario this is a good 
 
 The following article demonstrates how to use AllowAppOnlyPolicy with S2S.
 
-- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](http://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
+- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
 
 **ACS sub option**
 
@@ -121,13 +118,13 @@ When you need to elevate privileges in a SharePoint ACS scenario this is a good 
 
 The following article demonstrates how to use AllowAppOnlyPolicy with ACS.
 
-- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](http://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
+- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
 
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
-Service Account
----------------
+### Service Account
+
 In this pattern, the SharePointOnlineCredentials class is used to establish the context of a user that executes code.
 
 **When is it a good fit?**
@@ -140,24 +137,23 @@ The following article demonstrates how the SharePointOnlineCredentials class is 
 
 - [Getting Started with building Azure WebJobs ("Timer Jobs") for your Office 365 sites (Authentication considerations section) - Tobias Zimmergren Blog Article](http://zimmergren.net/technical/getting-started-with-building-azure-webjobs-timer-jobs-for-your-office-365-sites)
 
-Related links
-=============
-- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](http://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
-- [Getting Started with building Azure WebJobs ("Timer Jobs") for your Office 365 sites (Authentication considerations section) - Tobias Zimmergren Blog Article](http://zimmergren.net/technical/getting-started-with-building-azure-webjobs-timer-jobs-for-your-office-365-sites)
-- [SharePointOnlineCredentials class (MSDN API Documentation)](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.sharepointonlinecredentials.aspx)
-- [Using add-in only / app-only permissions with search queries in SharePoint Online - Vesa Juvonen Blog Article](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+## Related links
 
-Related PnP samples
-===================
+- [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
+- [Getting Started with building Azure WebJobs ("Timer Jobs") for your Office 365 sites (Authentication considerations section) - Tobias Zimmergren Blog Article](http://zimmergren.net/technical/getting-started-with-building-azure-webjobs-timer-jobs-for-your-office-365-sites)
+- [SharePointOnlineCredentials class (MSDN API Documentation)](https://msdn.microsoft.com/library/microsoft.sharepoint.client.sharepointonlinecredentials.aspx)
+- [Using add-in only / app-only permissions with search queries in SharePoint Online - Vesa Juvonen Blog Article](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
+
+## Related PnP samples
 
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SimpleTimerJob)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+### Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

@@ -1,9 +1,10 @@
 ---
+title: BDCMetadataResource schema
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: fad74037-ed09-81cc-60f2-df2297b38bd7
 ---
@@ -12,7 +13,7 @@ ms.assetid: fad74037-ed09-81cc-60f2-df2297b38bd7
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-This section contains documentation for the [BDC Metadata Resource schema (BDCMetadataResource.xsd)](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources). Explore the topics in this section to learn about each element in this schema.
+This section contains documentation for the **BDC Metadata Resource schema (BDCMetadataResource.xsd)**. Explore the topics in this section to learn about each element in this schema.
 
 - [AccessControlEntry element in AccessControlList (BDCMetadataResource schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md)
 

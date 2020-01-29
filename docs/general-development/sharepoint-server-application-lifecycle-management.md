@@ -30,7 +30,7 @@ SharePoint establishes a new paradigm for implementing applications. Because of 
   
     
     
-The following resources outline the application types that can be constructed using SharePoint technologies and contain considerations for both on-premises and cloud applications. To understand hosting options for SharePoint Add-ins, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
+The following resources outline the application types that can be constructed using SharePoint technologies and contain considerations for both on-premises and cloud applications. To understand hosting options for SharePoint Add-ins, see  [Choose patterns for developing and hosting your SharePoint Add-in](https://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
   
     
     
@@ -181,7 +181,7 @@ Developers must establish provider-hosted infrastructure to deploy the provider-
 ### Self-contained farm environments (virtualized farm development)
 <a name="SelfContained"> </a>
 
-For those solutions that require the deployment of full trust code to run on a SharePoint farm a full (often virtualized) implementation of SharePoint will be required. For guidance on how to create an on-premises development environment for SharePoint, see  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx).
+For those solutions that require the deployment of full trust code to run on a SharePoint farm a full (often virtualized) implementation of SharePoint will be required. For guidance on how to create an on-premises development environment for SharePoint, see  [Set up an on-premises development environment for SharePoint Add-ins](https://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx).
   
     
     
@@ -297,7 +297,7 @@ The illustration in Figure 5 is a logical representation of a SharePoint applica
   
     
     
-Figure 6 shows a SharePoint cloud-hosted application (that is, autohosted or provider-hosted). The main difference in the project structure is that the Visual Studio 2012 solution contains a SharePoint application project in addition to one or more projects that contain the cloud-hosted application components. These may include web applications, SQL database projects, or service applications that will be deployed to Azure or an on-premises provider hosted infrastructure (such as ASP.NET) and other solution components. For guidance on packaging and deployment with high-trust applications, see  [Package and publish high-trust SharePoint Add-ins](http://msdn.microsoft.com/library/3c28aed8-c037-407c-9154-39a74073e170%28Office.15%29.aspx).
+Figure 6 shows a SharePoint cloud-hosted application (that is, autohosted or provider-hosted). The main difference in the project structure is that the Visual Studio 2012 solution contains a SharePoint application project in addition to one or more projects that contain the cloud-hosted application components. These may include web applications, SQL database projects, or service applications that will be deployed to Azure or an on-premises provider hosted infrastructure (such as ASP.NET) and other solution components. For guidance on packaging and deployment with high-trust applications, see  [Package and publish high-trust SharePoint Add-ins](https://msdn.microsoft.com/library/3c28aed8-c037-407c-9154-39a74073e170%28Office.15%29.aspx).
   
     
     
@@ -345,7 +345,7 @@ For cloud-hosted SharePoint applications, the components of the solution that re
 #### Creating a build for SharePoint applications
 <a name="CreateBuild"> </a>
 
-TFS provides build services that can compile solutions checked into source control and place the output in a centralized drop location for deployment to target environments in an automated manner. The primary method of configuring TFS to conduct automated builds, deployments, and testing of SharePoint applications is to create a build definition in Visual Studio. The build definition contains information about which code projects to compile, as well as any post-compilation activities such as testing and actual deployment to the target environments. For more information about the Team Foundation Build Service, see  [Set up Team Foundation Build Service](http://msdn.microsoft.com/en-us/library/vstudio/ee259687.aspx).
+TFS provides build services that can compile solutions checked into source control and place the output in a centralized drop location for deployment to target environments in an automated manner. The primary method of configuring TFS to conduct automated builds, deployments, and testing of SharePoint applications is to create a build definition in Visual Studio. The build definition contains information about which code projects to compile, as well as any post-compilation activities such as testing and actual deployment to the target environments. For more information about the Team Foundation Build Service, see  [Set up Team Foundation Build Service](https://msdn.microsoft.com/library/vstudio/ee259687.aspx).
   
     
     
@@ -376,7 +376,7 @@ Figure 9 shows a standard process for SharePoint application builds and deployme
     
     
     
-The developer checks in the SharePoint application Visual Studio 2012 solution. Depending on the desired configuration (that is, continuous integration or scheduled build), TFS build services will execute the steps defined by the SharePoint application build definition. This definition, configured by developers, contains the continuous integration build process template as well as post-build instructions to execute Windows PowerShell scripts for application deployment. Note that the SharePoint Online Management Shell extensions will be required in order to deploy the application to SharePoint Online. For more information about SharePoint Online Management Shell extensions, see  [SharePoint Online Management Shell page](http://www.microsoft.com/en-us/download/details.aspx?id=35588) on the Download Center.
+The developer checks in the SharePoint application Visual Studio 2012 solution. Depending on the desired configuration (that is, continuous integration or scheduled build), TFS build services will execute the steps defined by the SharePoint application build definition. This definition, configured by developers, contains the continuous integration build process template as well as post-build instructions to execute Windows PowerShell scripts for application deployment. Note that the SharePoint Online Management Shell extensions will be required in order to deploy the application to SharePoint Online. For more information about SharePoint Online Management Shell extensions, see  [SharePoint Online Management Shell page](https://www.microsoft.com/download/details.aspx?id=35588) on the Download Center.
   
     
     
@@ -454,7 +454,7 @@ The following sections review the considerations for coded UI tests and other te
 #### Client-side code and coded UI tests
 <a name="CodedUITests"> </a>
 
-For build verification testing (BVT) as well as complete system testing, coded UI tests are recommended. These tests rely on recorded actions to test not only the business logic and middle tier of the application, but the user experience as well. For SharePoint applications that use client-side code, much of the business logic's entry points and execution may exist in the user experience tier. For this reason, coded UI tests can not only test the user experience, but the business logic of the application as well. For more information about the coded UI test, see  [Verifying Code by Using UI Automation](http://msdn.microsoft.com/en-us/library/dd286726.aspx).
+For build verification testing (BVT) as well as complete system testing, coded UI tests are recommended. These tests rely on recorded actions to test not only the business logic and middle tier of the application, but the user experience as well. For SharePoint applications that use client-side code, much of the business logic's entry points and execution may exist in the user experience tier. For this reason, coded UI tests can not only test the user experience, but the business logic of the application as well. For more information about the coded UI test, see  [Verifying Code by Using UI Automation](https://msdn.microsoft.com/library/dd286726.aspx).
   
     
     
@@ -482,7 +482,7 @@ Note that the testing of the infrastructure is not a primary goal of these tests
   
     
     
-For more information about web performance and load tests, see  [Run performance tests on an application before a release](http://msdn.microsoft.com/en-us/library/vstudio/dn250793.aspx).
+For more information about web performance and load tests, see  [Run performance tests on an application before a release](https://msdn.microsoft.com/library/vstudio/dn250793.aspx).
   
     
     
@@ -620,7 +620,7 @@ Microsoft has specific guidance on how application developers can upgrade applic
   
     
     
-For considerations on establishing a strategy around SharePoint application upgrades and patching, see  [Update SharePoint Add-ins](http://msdn.microsoft.com/library/3edcb33c-fa9e-4e9e-82d6-5519fd981324%28Office.15%29.aspx).
+For considerations on establishing a strategy around SharePoint application upgrades and patching, see  [Update SharePoint Add-ins](https://msdn.microsoft.com/library/3edcb33c-fa9e-4e9e-82d6-5519fd981324%28Office.15%29.aspx).
   
     
     
@@ -628,7 +628,7 @@ For changes to applications, the recommended pattern to follow is consistent wit
   
     
     
-The information in  [SharePoint Add-ins update process](http://msdn.microsoft.com/library/3dba209d-cb98-4e5d-b4b2-fad31e667ca1%28Office.15%29.aspx) provides additional tactical guidance on the techniques for updating SharePoint applications. This includes accelerating deployment testing by shortening the cycle by which application updates are reflected in the farm in test environments. Additionally, this article has guidance on how to accommodate for state within various application deployment models.
+The information in  [SharePoint Add-ins update process](https://msdn.microsoft.com/library/3dba209d-cb98-4e5d-b4b2-fad31e667ca1%28Office.15%29.aspx) provides additional tactical guidance on the techniques for updating SharePoint applications. This includes accelerating deployment testing by shortening the cycle by which application updates are reflected in the farm in test environments. Additionally, this article has guidance on how to accommodate for state within various application deployment models.
   
     
     
@@ -637,13 +637,13 @@ The information in  [SharePoint Add-ins update process](http://msdn.microsoft.co
 <a name="bk_addresources"> </a>
 
 
--  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
+-  [Choose patterns for developing and hosting your SharePoint Add-in](https://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
     
   
--  [Set up Team Foundation Build Service](http://msdn.microsoft.com/en-us/library/vstudio/ee259687.aspx)
+-  [Set up Team Foundation Build Service](https://msdn.microsoft.com/library/vstudio/ee259687.aspx)
     
   
--  [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](http://msdn.microsoft.com/library/2f65ba3f-b246-4064-b4fb-ad18399d387a%28Office.15%29.aspx)
+-  [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](https://msdn.microsoft.com/library/2f65ba3f-b246-4064-b4fb-ad18399d387a%28Office.15%29.aspx)
     
   
 -  [SharePoint development overview](sharepoint-development-overview.md)

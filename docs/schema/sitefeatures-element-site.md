@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Site schema
@@ -48,6 +48,6 @@ None
    
 ### Remarks
 
-Microsoft SharePoint Foundation activates features specified within the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file in the order that they are listed. Consequently, you must specify Features that are depended upon before Features that depend upon them. 
+Microsoft SharePoint Foundation activates features specified within the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file in the order that they are listed. Consequently, you must specify Features that are depended upon before Features that depend upon them. 
   
 

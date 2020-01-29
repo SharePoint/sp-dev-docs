@@ -1,9 +1,10 @@
 ---
+title: VersionRange Element (Feature)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: cd715e38-6ec3-43b2-8007-6d0ed8865d91
 ---

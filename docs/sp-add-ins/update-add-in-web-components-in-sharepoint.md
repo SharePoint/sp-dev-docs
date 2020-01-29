@@ -17,9 +17,9 @@ Prerequisites for updating the add-in web components:
 <a name="UpdatingAppWeb"> </a>
 ## Update SharePoint components in the add-in web
 
-All of the SharePoint components that are deployed to the add-in web are contained in **Web**-scoped Features in the add-in package. For that reason, updating these components is a matter of updating one or more of the Features. This process has not changed since SharePoint 2010 and is documented in [Add Elements to an Existing Feature](http://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the SharePoint 2010 SDK. 
+All of the SharePoint components that are deployed to the add-in web are contained in **Web**-scoped Features in the add-in package. For that reason, updating these components is a matter of updating one or more of the Features. This process has not changed since SharePoint 2010 and is documented in [Add Elements to an Existing Feature](https://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the SharePoint 2010 SDK. 
 
-Other articles in the [Upgrading Features](http://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx) node may be helpful also, but consider that add-ins must not include custom code on the SharePoint server, so some aspects of Feature upgrading in SharePoint 2010 are not relevant to updating add-ins. For example, you can't use the [CustomUpgradeAction](http://msdn.microsoft.com/library/16a2182e-80aa-4184-8071-8f717ee5c572%28Office.15%29.aspx) element when you upgrade the Feature of a SharePoint Add-in.
+Other articles in the [Upgrading Features](https://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx) node may be helpful also, but consider that add-ins must not include custom code on the SharePoint server, so some aspects of Feature upgrading in SharePoint 2010 are not relevant to updating add-ins. For example, you can't use the [CustomUpgradeAction](https://msdn.microsoft.com/library/16a2182e-80aa-4184-8071-8f717ee5c572%28Office.15%29.aspx) element when you upgrade the Feature of a SharePoint Add-in.
 
 ### What can and cannot be done declaratively
 
@@ -62,19 +62,19 @@ The Microsoft Office Developer Tools for Visual Studio are oriented to creating 
 
 #### To update the add-in web Feature the first time
 
-1. Increment the **Version** attribute of the [Feature](http://msdn.microsoft.com/library/265cd648-1a7e-410f-a1d7-0da8c64b4006%28Office.15%29.aspx) element, if the Office Developer Tools for Visual Studio did not already do so when you incremented the version number in the add-in manifest (the tools don't do this in every scenario, so you need to verify). 
+1. Increment the **Version** attribute of the [Feature](https://msdn.microsoft.com/library/265cd648-1a7e-410f-a1d7-0da8c64b4006%28Office.15%29.aspx) element, if the Office Developer Tools for Visual Studio did not already do so when you incremented the version number in the add-in manifest (the tools don't do this in every scenario, so you need to verify). 
 
-   You should use the same version number that you use for the add-in. You should even consider raising the Feature version when other components of the add-in are being updated, but not the add-in web Feature itself. The logic of the [VersionRange](http://msdn.microsoft.com/library/cd715e38-6ec3-43b2-8007-6d0ed8865d91%28Office.15%29.aspx) element (which is discussed in the section [Subsequent updates of the add-in web](#SubsequentUpgrades)) is easier to manage when the add-in version and the Feature version are always the same. 
+   You should use the same version number that you use for the add-in. You should even consider raising the Feature version when other components of the add-in are being updated, but not the add-in web Feature itself. The logic of the [VersionRange](https://msdn.microsoft.com/library/cd715e38-6ec3-43b2-8007-6d0ed8865d91%28Office.15%29.aspx) element (which is discussed in the section [Subsequent updates of the add-in web](#SubsequentUpgrades)) is easier to manage when the add-in version and the Feature version are always the same. 
 
-2. Don't delete anything in the [ElementManifests](http://msdn.microsoft.com/library/d8d4db7e-2bc2-40c6-958b-d5683bdee87a%28Office.15%29.aspx) section of the file. Nothing is ever deleted from this section.
+2. Don't delete anything in the [ElementManifests](https://msdn.microsoft.com/library/d8d4db7e-2bc2-40c6-958b-d5683bdee87a%28Office.15%29.aspx) section of the file. Nothing is ever deleted from this section.
 
 3. If they are not already present, add the following elements to the file: 
     
-   - An [UpgradeActions](http://msdn.microsoft.com/library/5af24ac1-a290-454d-b32b-bc7f7a4634f0%28Office.15%29.aspx) child element in the **Feature** element. Do *not* add **ReceiverAssembly** or **ReceiverClass** attributes to the element. These have no use when you are updating a SharePoint Add-in. (These attributes refer to a custom assembly, which is not supported in SharePoint Add-ins. If you include a custom assembly in an add-in, SharePoint will not install the add-in.)
+   - An [UpgradeActions](https://msdn.microsoft.com/library/5af24ac1-a290-454d-b32b-bc7f7a4634f0%28Office.15%29.aspx) child element in the **Feature** element. Do *not* add **ReceiverAssembly** or **ReceiverClass** attributes to the element. These have no use when you are updating a SharePoint Add-in. (These attributes refer to a custom assembly, which is not supported in SharePoint Add-ins. If you include a custom assembly in an add-in, SharePoint will not install the add-in.)
 
    - A **VersionRange** child element in the **UpgradedActions** element. Do not add **BeginVersion** or **EndVersion** attributes to the element. These serve no purpose when an add-in is being updated for the first time. Their use is discussed in the section [Subsequent updates of the add-in web](#SubsequentUpgrades).
 
-   - An [ApplyElementManifests](http://msdn.microsoft.com/library/c087a0c3-1e27-4034-b4da-e025991454d6%28Office.15%29.aspx) child element in the **VersionRange** element.
+   - An [ApplyElementManifests](https://msdn.microsoft.com/library/c087a0c3-1e27-4034-b4da-e025991454d6%28Office.15%29.aspx) child element in the **VersionRange** element.
 
 At this point the file should resemble the following example.
     
@@ -103,13 +103,13 @@ At this point the file should resemble the following example.
 
 2. When you add a component of a type that wasn't in the previous verison of the add-in, such as adding a list to an add-in that did not previously have a list, the Office Developer Tools for Visual Studio adds an elements.xml file to the project. This is the elements manifest for the component. You should add the new version number of the add-in to this file (for example, elements.2.0.0.0.xml). This can be helpful in troubleshooting. Be sure to make the change in **Solution Explorer** to ensure that references to the file, such as in the csproj file and the feature XML, are changed accordingly.
 
-3. For each new element manifest, add an [ElementManifest](http://msdn.microsoft.com/library/5a6a2865-5d31-45a2-a402-6da6e0f5567a%28Office.15%29.aspx) element as a child to both the **ElementManifests** and the **ApplyElementManifests** elements of the feature xml (the exact same **ElementManifest** element in both places). The **Location** attribute of the element should point to the relative path of the elements.2.0.0.0.xml file. For example, if you added a list named MyCustomList, the **ElementManifest** element would look like the following:
+3. For each new element manifest, add an [ElementManifest](https://msdn.microsoft.com/library/5a6a2865-5d31-45a2-a402-6da6e0f5567a%28Office.15%29.aspx) element as a child to both the **ElementManifests** and the **ApplyElementManifests** elements of the feature xml (the exact same **ElementManifest** element in both places). The **Location** attribute of the element should point to the relative path of the elements.2.0.0.0.xml file. For example, if you added a list named MyCustomList, the **ElementManifest** element would look like the following:
     
     ```XML
       <ElementManifest Location="MyCustomList\elements.2.0.0.0.xml" />
     ```
 
-4. Some kinds of components add files to the project. For example, a schema.xml file is created when you add a list; when you add a page, a page file is created. For each such file, add an [ElementFile](http://msdn.microsoft.com/library/bd43638e-8f18-4a0d-b122-1c055f97aa71%28Office.15%29.aspx) element as a child to the **ElementManifests** element (do not add it to the **ApplyElementManifests** element). The **Location** attribute should point to the relative path of the file. For example, if you added a list, the **ElementFile** element for the schema.xml would look like the following:
+4. Some kinds of components add files to the project. For example, a schema.xml file is created when you add a list; when you add a page, a page file is created. For each such file, add an [ElementFile](https://msdn.microsoft.com/library/bd43638e-8f18-4a0d-b122-1c055f97aa71%28Office.15%29.aspx) element as a child to the **ElementManifests** element (do not add it to the **ApplyElementManifests** element). The **Location** attribute should point to the relative path of the file. For example, if you added a list, the **ElementFile** element for the schema.xml would look like the following:
     
     ```XML
       <ElementFile Location="MyCustomList\Schema.xml" />
@@ -131,7 +131,7 @@ At this point the file should resemble the following example.
     
       Another option in any situation in which Office Developer Tools for Visual Studio has changed an existing elements manifest, is to manually create a new elements.2.0.0.0.xml file and move the markup that was added to the old manifest to your new one (you can put the new one in the same **Solution Explorer** node as the old one if you want).
 
-6. If you add a field to a content type in the Feature, add an [AddContentTypeField](http://msdn.microsoft.com/library/cb04a3ac-f41a-4ffe-aaa1-d4bf3fb6347d%28Office.15%29.aspx) element to the **VersionRange** section. Be sure to assign the correct values to the **ContentTypeId** and **FieldId** attributes. Optionally, use the **PushDown** attribute to specify whether the new field should be added to any derived content types. The following is an example.
+6. If you add a field to a content type in the Feature, add an [AddContentTypeField](https://msdn.microsoft.com/library/cb04a3ac-f41a-4ffe-aaa1-d4bf3fb6347d%28Office.15%29.aspx) element to the **VersionRange** section. Be sure to assign the correct values to the **ContentTypeId** and **FieldId** attributes. Optionally, use the **PushDown** attribute to specify whether the new field should be added to any derived content types. The following is an example.
     
     ```XML
      <VersionRange>
@@ -155,7 +155,7 @@ Because there is already such an element in the **ElementManifests** section, si
 
    2.  Select the new file in **Solution Explorer** to make its property pane visible, and change the **Deployment Type** property to **ElementManifest**. This is important to ensure that the Office Developer Tools for Visual Studio handles the file properly.
 
-   3. Copy the contents of the original manifest to the new one, and then delete from the new manifest all the [File](http://msdn.microsoft.com/library/c270e4ce-8110-4da7-b0e7-c223604bfce7%28Office.15%29.aspx) elements that correspond to files that have **not** changed.
+   3. Copy the contents of the original manifest to the new one, and then delete from the new manifest all the [File](https://msdn.microsoft.com/library/c270e4ce-8110-4da7-b0e7-c223604bfce7%28Office.15%29.aspx) elements that correspond to files that have **not** changed.
 
    4. Add an **ElementManifest** element to the **ApplyElementManifests** section that references the new manifest file such as in this example.
     
@@ -166,7 +166,7 @@ Because there is already such an element in the **ElementManifests** section, si
       > [!NOTE]
       > Do not delete the original manifest. The Feature XML is using both of the old and new ones. Do not copy any **ElementFile** elements from the **ElementManifests** section to the **ApplyElementManifests** section even if the file that is referenced in the **ElementFile** has been changed.
       
-2. Open every element manifest file that is referenced in the **ApplyElementManifests** section and ensure that any [File](http://msdn.microsoft.com/library/c270e4ce-8110-4da7-b0e7-c223604bfce7%28Office.15%29.aspx) elements have a **ReplaceContents** attribute that is set to **TRUE**. 
+2. Open every element manifest file that is referenced in the **ApplyElementManifests** section and ensure that any [File](https://msdn.microsoft.com/library/c270e4ce-8110-4da7-b0e7-c223604bfce7%28Office.15%29.aspx) elements have a **ReplaceContents** attribute that is set to **TRUE**. 
 
    The following is an example. The Office Developer Tools for Visual Studio may have done this already, but you should verify it. Do this even for the element manifests from previous versions of the add-in. This is one of the few ways in which it is a good practice to edit an existing element manifest file.
     
@@ -246,7 +246,7 @@ For the most part, this is exactly what should occur: you want every earlier ver
 
 #### To change the add-in web Feature on later updates
 
-1. Open the _FeatureName_.Template.xml file for editing as described in the procedure **To edit the Feature XML** earlier in this article, and increment the **Version** attribute of the [Feature](http://msdn.microsoft.com/library/265cd648-1a7e-410f-a1d7-0da8c64b4006%28Office.15%29.aspx) element. You should use the same version number for the Feature as you used for the add-in.
+1. Open the _FeatureName_.Template.xml file for editing as described in the procedure **To edit the Feature XML** earlier in this article, and increment the **Version** attribute of the [Feature](https://msdn.microsoft.com/library/265cd648-1a7e-410f-a1d7-0da8c64b4006%28Office.15%29.aspx) element. You should use the same version number for the Feature as you used for the add-in.
     
    For purposes of a continuing example, let's suppose that you previously updated the add-in from version 1.0.0.0 to version 2.0.0.0, and now you are updating it to version 3.0.0.0, so set the **Version** attribute to 3.0.0.0.    
  
@@ -345,6 +345,6 @@ Return to [Major steps in updating an add-in](update-sharepoint-add-ins.md#Major
 <a name="bk_addresources"> </a>
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
--  [Add Elements to an Existing Feature](http://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).
--  [Upgrading Features](http://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).
+-  [Add Elements to an Existing Feature](https://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).
+-  [Upgrading Features](https://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).
 

@@ -1,9 +1,10 @@
 ---
+title: DeploymentExportSettings schema
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f5deff87-c593-41b9-840e-43da5649a7dc
 ---

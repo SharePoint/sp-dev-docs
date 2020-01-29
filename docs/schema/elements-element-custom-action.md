@@ -1,9 +1,10 @@
 ---
+title: Elements Element (Custom Action)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: a0b64f14-48d9-4149-b7cd-eb86c95856ca
 ---
@@ -28,28 +29,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**xmlns**</p></td>
-<td align="left"><p>Required. Identifies the XML namespace. The value must be `http://schemas.microsoft.com/sharepoint/`.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Id**</p></td>
-<td align="left"><p>Optional **Text**. Specifies a unique identifier for the Feature manifest file.</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Attribute**  | **Description** |
+| xmlns  | Required. Identifies the XML namespace. The value must be `http://schemas.microsoft.com/sharepoint/`. |
+| Id | Optional **Text**. Specifies a unique identifier for the Feature manifest file. |
 
 ### Child elements
 

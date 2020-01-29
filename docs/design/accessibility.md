@@ -11,13 +11,13 @@ Developing an experience that meets all users' unique visual, hearing, dexterity
 
 ## Accessibility guidelines
 
-All Microsoft products must meet the requirements listed in the [Microsoft Accessibility Standards](https://www.microsoft.com/en-us/accessibility).
+All Microsoft products must meet the requirements listed in the [Microsoft Accessibility Standards](https://www.microsoft.com/accessibility).
 
 ## Making web parts accessible
 
 The SharePoint Framework provides a structure to help make all web parts accessible. The web part container provides keyboard navigation defaults for the web part toolbar to edit, move, and delete the web part, a method to select the web part, and a keyboard short cut (Ctrl+P) to open the property pane. However, you still need to specify additional keyboard and screen reader navigation for the other aspects of the UI in the web part and in the property pane. 
 
-In addition, many [Office UI Fabric components](https://developer.microsoft.com/en-us/fabric#/components) have built-in support for accessibility options, to make it quick to configure keyboard and screen reader navigation when you use the components in a web part.
+In addition, many [Office UI Fabric components](https://developer.microsoft.com/fabric#/components) have built-in support for accessibility options, to make it quick to configure keyboard and screen reader navigation when you use the components in a web part.
 
 The following image shows keyboard  navigation on a web part.
 
@@ -25,7 +25,7 @@ The following image shows keyboard  navigation on a web part.
 
 ## Accessibility testing
 
-Test your web part first with [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) and Microsoft Edge, and then verify the accessibility experience with [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS).
+Test your web part first with [Narrator](https://support.microsoft.com/help/22798/windows-10-narrator-get-started) and Microsoft Edge, and then verify the accessibility experience with [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS).
 
 Narrator and Microsoft Edge are standards compliant. When you test with that combination, you are more likely to find issues, and you can validate that your site meets accessibility standards. 
 

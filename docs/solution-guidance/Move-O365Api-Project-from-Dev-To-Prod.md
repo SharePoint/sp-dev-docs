@@ -11,7 +11,7 @@ When developing any type of web application, most development is done locally us
 
 Web projects that leverage the Office 365 APIs are no different. These projects leverage the Microsoft Azure Active Directory (Azure AD) service to authenticate the applications and obtain OAuth 2.0 access tokens. These tokens are used by the web applications to authenticate with the Office 365 APIs.
 
-This page explains the steps involved in taking an Office 365 API development project and launching it to a working sample hosted entirely in Azure by using [Office 365](https://products.office.com/en-us/business/explore-office-365-for-business), [Azure AD](https://azure.microsoft.com/en-us/services/active-directory/), and the [Web Apps feature of Azure App Service](https://azure.microsoft.com/en-us/services/app-service/web/).
+This page explains the steps involved in taking an Office 365 API development project and launching it to a working sample hosted entirely in Azure by using [Office 365](https://products.office.com/business/explore-office-365-for-business), [Azure AD](https://azure.microsoft.com/services/active-directory/), and the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
 Deploying an Office 365 API web application to Azure from a local development environment requires four high-level steps to be performed as outlined on this page:
 
@@ -113,7 +113,7 @@ At this point the web application, Azure website, and application in Azure AD ar
 In this step, you publish the Office 365 API web application to the Azure website. After the site has been deployed, you test it to ensure everything works as desired.
 
 > [!NOTE] 
-> This step assumes that you have the Microsoft [Azure SDK](https://azure.microsoft.com/en-us/downloads/), version 2.0 or higher, installed. 
+> This step assumes that you have the Microsoft [Azure SDK](https://azure.microsoft.com/downloads/), version 2.0 or higher, installed. 
 
 ### Deploy the ASP.NET web application
 

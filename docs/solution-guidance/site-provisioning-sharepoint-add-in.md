@@ -6,8 +6,7 @@ localization_priority: Normal
 Site provisioning in the SharePoint Add-in model
 ================================================
 
-Summary
--------
+## Summary
 
 The approach you take to provision site collections and sub sites is different in the new SharePoint Add-in model, compared to how it was in Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, you would create site collections and sub sites with the site definitions and web templates and then use declarative code to configure the sites and apply customizations. In this model, you would typically use declarative code to create site columns, content types, and lists defined in XML and then use SharePoint's feature framework elements to package and deploy them.
 
@@ -117,7 +116,7 @@ This option works well when you need to provide your end users with a self-servi
 
 The following articles describe the override create site link pattern and provide code samples to get you started.
 
-- [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
+- [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](https://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
 	+ End-to-end article about this pattern with accompanying video.
 - [Provisioning.Cloud.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.Cloud.Sync)
 	+ This solution shows the model for providing synchronous site collection or sub site creation experience to introduce model for site templates without using actual sandbox solutions or stp files. 
@@ -167,7 +166,7 @@ In this pattern, CSOM code running in a Provider-hosted SharePoint Add-in is exe
 
 This option works well when you need to provide your end users with a self-service ability to create SharePoint site collections and sub sites based on custom templates. *Note that you will need to provide your users a link to the Provider-hosted application so they can access it.*
 
-- [Async provisioning with hybrid scenarios (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2015/03/05/hybrid-site-collection-provisioning-from-azure-to-on-premises-sharepoint.aspx)
+- [Async provisioning with hybrid scenarios (MSDN Blog Article)](https://blogs.msdn.com/b/vesku/archive/2015/03/05/hybrid-site-collection-provisioning-from-azure-to-on-premises-sharepoint.aspx)
 - [Provisioning.Hybrid.Simple (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Hybrid.Simple)
 	+ This sample demonstrates the simplest possible hybrid setup with Azure storage queues, WebJobs and Service Bus relay. This is a demonstration of hosting a provider SharePoint Add-in in the Azure website, which can be used to provision new custom branded site collections to on-premises farm without any SharePoint Add-in infrastructure requirements on-premises.
 - [Provisioning.Services.SiteManager (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Services.SiteManager)
@@ -193,22 +192,20 @@ In this pattern, CSOM code is executed via .NET/Objective-C/iOS applications or 
 
 This option works well in Dev-Ops scenarios. It allows you to create custom applications or scripts that are specifically built to work with your Dev-Ops processes. This option provides the ultimate level of automation because the SharePoint Add-ins and scripts can be built to run without any user interaction. 
 
--   [Async provisioning for Office 365 with WebJobs (MSDN Blog Article)](http://blogs.msdn.com/b/vesku/archive/2015/03/04/asynchronous-on-demand-site-collection-provisioning-to-office-365-with-azure-webjobs.aspx) 
+-   [Async provisioning for Office 365 with WebJobs (MSDN Blog Article)](https://blogs.msdn.com/b/vesku/archive/2015/03/04/asynchronous-on-demand-site-collection-provisioning-to-office-365-with-azure-webjobs.aspx) 
 - [Provisioning.Cloud.Async.WebJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Async.WebJob)
 	+ Solution demonstrating how to build an asynchronous self-service site collection provisioning solution using Azure Storage Queues and Azure WebJobs.
 -	[Provisioning.Framework.Console (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console) – Site Provisioning Framework sample to show the power of the new engine.
 -	[Provisioning.Cloud.Async (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Async) - Demonstrates how to create site collections in Office 365/SharePoint asynchronously. Requests are saved in a list within the SharePoint host web. The console application included in this sample is deployed to Azure or an on-premises environment & scheduled. 
  
 
-Related links
-=============
-- [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](http://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+## Related links
+- [Self-Service Site Provisioning using add-ins for SharePoint 2013 (MSDN Blog)](https://blogs.msdn.com/b/richard_dizeregas_blog/archive/2013/04/04/self-service-site-provisioning-using-apps-for-sharepoint-2013.aspx)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Provisioning.Cloud.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Provisioning.Cloud.Sync)
 - [Provisioning.SubSiteCreationApp (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SubSiteCreationApp)
@@ -216,8 +213,8 @@ Related PnP samples
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

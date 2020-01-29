@@ -1,11 +1,12 @@
 ---
+title: LobSystemInstances Element in LobSystem
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystemInstances
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 122e419a-0497-afdf-1117-a82ab429f3eb
 ---
@@ -18,7 +19,7 @@ ms.assetid: 122e419a-0497-afdf-1117-a82ab429f3eb
 
 Specifies a list of external system instances.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

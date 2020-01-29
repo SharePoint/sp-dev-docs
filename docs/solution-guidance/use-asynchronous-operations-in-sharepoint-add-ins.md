@@ -19,7 +19,7 @@ Use this solution to:
     
 - Implement long-running operations that you want to run against your SharePoint environment. For example:
     
-	-  **AppInstalled** events that run longer than the 30-second time-out interval. There are asynchronous processes in add-in event handlers. For more information, see [Handle events in SharePoint Add-ins](http://msdn.microsoft.com/library/c050d056-8548-4496-a053-016779d723d9%28Office.15%29.aspx) and [Create an add-in event receiver in SharePoint Add-ins](http://msdn.microsoft.com/library/f40c910f-12a2-4caa-8e91-c7a61ae540db%28Office.15%29.aspx).
+	-  **AppInstalled** events that run longer than the 30-second time-out interval. There are asynchronous processes in add-in event handlers. For more information, see [Handle events in SharePoint Add-ins](https://msdn.microsoft.com/library/c050d056-8548-4496-a053-016779d723d9%28Office.15%29.aspx) and [Create an add-in event receiver in SharePoint Add-ins](https://msdn.microsoft.com/library/f40c910f-12a2-4caa-8e91-c7a61ae540db%28Office.15%29.aspx).
     
 	- Custom site collection provisioning.
 	
@@ -122,7 +122,7 @@ The following table describes all the Visual Studio projects in the Core.QueueWe
 
 |**Visual Studio project**|**Description**|
 |:-----|:-----|
-|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="http://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
+|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="https://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
 |Core.QueueWebJobUsage.Common|Contains the business objects and business logic code &mdash; such as the methods to add messages to the storage queue &mdash; for this solution. This project is included to share business objects and business logic between different projects. You may not need this in your implementation.|
 |Core.QueueWebJobUsage.Job|The Azure WebJob that runs when a new message is added to the Azure Storage queue. This project contains your custom business logic code. |
 |Core.QueueWebJobUsageWeb|The provider-hosted add-in that contains the UI for the Core.QueueWebJobUsage project. |

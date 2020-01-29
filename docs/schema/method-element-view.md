@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - View schema
@@ -57,13 +57,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 The **Method** element is required for the **Batch** element, which is embedded within HTTP protocol and allows the client application to post more than one command at a time to the server. 
   
-In operations where the [SetVar](setvar-element-view.md) element is used within the **Method** element to post commands, the **Cmd** attribute can contain methods in the [Windows SharePoint Services RPC Protocol](http://msdn.microsoft.com/library/1af2791b-f17f-42f3-95ea-1a4df9b8e3d0%28Office.15%29.aspx) protocol. 
+In operations where the [SetVar](setvar-element-view.md) element is used within the **Method** element to post commands, the **Cmd** attribute can contain methods in the [Windows SharePoint Services RPC Protocol](https://msdn.microsoft.com/library/1af2791b-f17f-42f3-95ea-1a4df9b8e3d0%28Office.15%29.aspx) protocol. 
   
 When used with the [UpdateListItems](https://msdn.microsoft.com/library/WebSvcLists.Lists.UpdateListItems.aspx) method of the [Lists](https://msdn.microsoft.com/library/WebSvcLists.Lists.aspx) Web service, each **Method** element contains [Field](field-element-list.md) elements that specify the column values for each item being updated. 
   
 ## Example
 
-The following example uses the **Method** element to post the remote procedure call (RPC) [ExportList](http://msdn.microsoft.com/library/0e3b38ed-34de-4a16-a178-66a750de92c8%28Office.15%29.aspx) command and return the schema of a specified list. 
+The following example uses the **Method** element to post the remote procedure call (RPC) [ExportList](https://msdn.microsoft.com/library/0e3b38ed-34de-4a16-a178-66a750de92c8%28Office.15%29.aspx) command and return the schema of a specified list. 
   
 ```XML
 <Batch OnError="Return">

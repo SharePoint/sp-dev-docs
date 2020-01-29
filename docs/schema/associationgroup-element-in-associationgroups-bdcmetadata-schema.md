@@ -1,11 +1,12 @@
 ---
+title: AssociationGroup element in AssociationGroups
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AssociationGroup
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: db30622e-3c2b-2735-9360-a702196cbcff
 ---
@@ -18,7 +19,7 @@ ms.assetid: db30622e-3c2b-2735-9360-a702196cbcff
 
 Specifies an **AssociationGroup**, which is a construct that ties the related **AssociationMethods** together. For example, **GetOrdersForCustomer**, **GetCustomerForOrder**, and **AssociateCustomerToOrder** are all association methods that work on the same relationship between Customer and Order.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

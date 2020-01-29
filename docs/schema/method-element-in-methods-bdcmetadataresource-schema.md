@@ -1,9 +1,10 @@
 ---
+title: Method element in Methods (BDCMetadataResource)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 533c94af-e18a-75af-1ef8-e42811534a12
 ---
@@ -14,7 +15,7 @@ ms.assetid: 533c94af-e18a-75af-1ef8-e42811534a12
 
 Specifies localized display names, properties, and permissions, in any combination, for a [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

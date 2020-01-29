@@ -123,7 +123,7 @@ In this example, the SharePoint list data is only displayed, but you might use t
 
 - [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md)
 
-- [Persisting add-in state and settings](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/persisting-add-in-state-and-settings)
+- [Persisting add-in state and settings](https://docs.microsoft.com/office/dev/add-ins/develop/persisting-add-in-state-and-settings)
 
 ### To consume SharePoint data in the task pane
 
@@ -260,12 +260,12 @@ When you are ready to package your add-in for publishing, open the Publish Offic
 ## See also
 <a name="AdditionalResources"> </a>
 
-- [Office Add-in host and platform availability](https://docs.microsoft.com/en-us/office/dev/add-ins/overview/office-add-in-availability)
-- [Design your Office Add-ins](https://docs.microsoft.com/en-us/office/dev/add-ins/design/add-in-design)
-- [Office Add-ins development lifecycle](https://docs.microsoft.com/en-us/office/dev/add-ins/concepts/add-in-development-lifecycle)
-- [Publish your Office Add-in](https://docs.microsoft.com/en-us/office/dev/add-ins/publish/publish)
-- [Understanding the JavaScript API for Office](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/understanding-the-javascript-api-for-office)
-- [Office Add-ins XML manifest](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests)
+- [Office Add-in host and platform availability](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-in-availability)
+- [Design your Office Add-ins](https://docs.microsoft.com/office/dev/add-ins/design/add-in-design)
+- [Office Add-ins development lifecycle](https://docs.microsoft.com/office/dev/add-ins/concepts/add-in-development-lifecycle)
+- [Publish your Office Add-in](https://docs.microsoft.com/office/dev/add-ins/publish/publish)
+- [Understanding the JavaScript API for Office](https://docs.microsoft.com/office/dev/add-ins/develop/understanding-the-javascript-api-for-office)
+- [Office Add-ins XML manifest](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests)
 - [JavaScript API for Office reference](https://dev.office.com/reference/add-ins/javascript-api-for-office)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     

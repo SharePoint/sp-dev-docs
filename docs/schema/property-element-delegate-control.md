@@ -1,9 +1,10 @@
 ---
+title: Property element (Delegate Control)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 6ae5810a-4bc9-417e-945d-dd39a0eeb350
 ---
@@ -93,7 +94,7 @@ When the control is instantiated, the properties specified in this element are a
 
 ## See also
 
-- [How to: Customize a Delegate Control](http://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
+- [How to: Customize a Delegate Control](https://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
 
 
 

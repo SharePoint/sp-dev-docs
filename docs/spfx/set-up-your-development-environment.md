@@ -1,39 +1,36 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 08/20/2018
+ms.date: 11/01/2019
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
-
-
 # Set up your SharePoint Framework development environment
 
 You can use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
 
-> [!NOTE] 
+> [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Office 365 tenant](./set-up-your-developer-tenant.md).
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<br/>
-
 > [!Video https://www.youtube.com/embed/B7vLIrm2XKY]
-
-<br/> 
 
 ## Install developer tools
 
 ### Install NodeJS
 
-Install [NodeJS LTS version 10](https://nodejs.org). 
+Install [NodeJS LTS version 10](https://nodejs.org/dist/latest-v10.x/).
 
-- If you are in Windows, you can use the msi installers in this link for the easiest way to set up NodeJS.
-- If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org). 
-- If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
+- If you are in Windows, you can use the msi installers ([x86](https://nodejs.org/dist/latest-v10.x/node-v10.18.1-x86.msi) or [x64](https://nodejs.org/dist/latest-v10.x/node-v10.18.1-x64.msi)) in this link for the easiest way to set up NodeJS.Typical insta
+- If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org).
+
+> [!IMPORTANT]
+> The current supported LTS version of NodeJS for the SharePoint Framework is  **Node.js v8.x** and **Node.js v10.x**. Notice that 9.x, 11.x or 12.x versions are currently not supported with SharePoint Framework development.
 
 > [!NOTE]
-> The current supported LTS version of NodeJS for the SharePoint Framework is both 8.x and 10.x. Notice that 9.x or 11.x versions are currently not supported with SharePoint Framework development.
+> If you are building SharePoint Framework components for SharePoint Server 2016, refer to additional details in the **SPFx & SharePoint Server 2016** section for additional details on which version of NodeJS you should install.
 
 ### Install a code editor
 
@@ -71,7 +68,7 @@ For more information about the Yeoman SharePoint generator, see [Scaffold projec
 
 The SharePoint Framework's local webserver, used when testing your custom solutions from your development environment, uses HTTPS by default. This is implemented using a development self-signed SSL certificate. Self-signed SSL certificates are not trusted by your developer environment. You must first configure your development environment to trust the certificate.
 
-A utility task is included in every SharePoint Framework project in the form of a gulp task. You can elect to do this now, or wait until you create your first project as covered in the [Build your first SharePoint client-side web part (Hello World part 1): Preview the web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) tutorial.
+A utility task is included in every SharePoint Framework project in the form of a gulp task. You can elect to do this now, or wait until you create your first project as covered in the [Build your first SharePoint client-side web part (Hello World part 1): Preview the web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) tutorial.
 
 Once a project has been created with the Yeoman generator for the SharePoint Framework, execute the following command from within the root folder of the project.
 
@@ -86,11 +83,21 @@ gulp trust-dev-cert
 
 Following are some tools that might come in handy as well:
 
-* [Fiddler](https://www.telerik.com/fiddler)
-* [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
-* [Cmder for Windows](http://cmder.net/)
-* [Oh My Zsh for Mac](http://ohmyz.sh/)
-* [Git source control tools](https://git-scm.com/)
+- [Fiddler](https://www.telerik.com/fiddler)
+- [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
+- [Cmder for Windows](http://cmder.net/)
+- [Oh My Zsh for Mac](http://ohmyz.sh/)
+- [Git source control tools](https://git-scm.com/)
+
+## SPFx & SharePoint Server 2016
+
+SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1. Around this the time of the v1.1 release, NodeJS was transitioning from NodeJS v6.x to v8.x. In this update, NodeJS introduced a change where the default HTTP protocol switched from HTTP1 to HTTP2. SPFx v1.1 was written for HTTP1, not HTTP2, so this change impacted the local web server for SPFx v1.1 projects.
+
+In NodeJS v8.x, you can force HTTP1 by setting the following environment variable to instruct NodeJS to use HTTP1 instead of the default HTTP2: `NODE_NO_HTTP2=1`. This environment variable only exists in NodeJS v8.x. Therefore, if you are building SPFx solutions for SharePoint Server 2016, you should use NodeJS v8.x.
+
+This issue does not impact later versions of SPFx because they have been updated to support HTTPs.
+
+For more information, refer to [issue #1002](https://github.com/SharePoint/sp-dev-docs/issues/1002).
 
 ## Next steps
 
@@ -98,15 +105,9 @@ You are now ready to [build your first client-side web part](web-parts/get-start
 
 ## Troubleshooting
 
-### SPFx Development for SharePoint Server 2016
-
-SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1. Around this the time of the v1.1 release, NodeJS was transitioning from NodeJS v6.x to v8.x. In this update, NodeJS introduced a change where the default changed from HTTP1 to HTTP2. For some, this caused issues with SPFx. A later version of SPFx resolved these issues, but those who are still working with SPFx v1.1 (such as those working with SharePoint Server 2016) may run into issues.
-
-To resolve this, set the following environment variable to instruct NodeJS to use HTTP1 instead of the default HTTP2: `NODE_NO_HTTP2=1`.
-
-For more information, refer to [issue #1002](https://github.com/SharePoint/sp-dev-docs/issues/1002).
-
 ### Unable to Trust the Self-signed Development Certificate
+
+If you are working with SharePoint Server 2016 / SPFx v1.1, first check the **SPFx & SharePoint Server 2016** section above to ensure you are running a supported version of NodeJS.
 
 In some cases, executing the command `gulp trust-dev-cert`, does not have the desired effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder. Locate & delete the folder `<homedir>/.gcb-serve-data` and then try to trust the self-signed development certificate again.
 

@@ -1,9 +1,10 @@
 ---
+title: Gallery element (CommandUIDefinitionType complexType)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c7d94a88-407f-5ef6-d6dd-dbc4084f6df7
 ---
@@ -17,26 +18,11 @@ ms.assetid: c7d94a88-407f-5ef6-d6dd-dbc4084f6df7
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p>GalleryType</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>apphostwebfeatures.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  | GalleryType |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file**  | apphostwebfeatures.xsd |
 
 ## Definition 
 

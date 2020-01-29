@@ -28,9 +28,9 @@ In accordance with these goals, following are the key design principles:
 
 There are two parts of the Office UI Fabric that are available for use by developers:
 
-* [Office UI Fabric Core](https://developer.microsoft.com/en-us/fabric). A set of core styles, typography, a responsive grid, animations, icons, and other fundamental building blocks of the overall design language.
+* [Office UI Fabric Core](https://developer.microsoft.com/fabric). A set of core styles, typography, a responsive grid, animations, icons, and other fundamental building blocks of the overall design language.
 
-* [Office UI Fabric React](https://developer.microsoft.com/en-us/fabric#/components). A set of React components built on top of the Fabric design language for use in React-based projects.
+* [Office UI Fabric React](https://developer.microsoft.com/fabric#/components). A set of React components built on top of the Fabric design language for use in React-based projects.
 
 ## Office UI Fabric Core package
 
@@ -47,7 +47,7 @@ The following are not yet supported in the package:
 - Animations
 - Icons
 
-Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new **@microsoft/sp-office-ui-fabric-core** package and consume core styles from the package instead of using global CSS styles.
+Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new **\@microsoft/sp-office-ui-fabric-core** package and consume core styles from the package instead of using global CSS styles.
 
 ### Update existing projects
 
@@ -64,7 +64,7 @@ After it's installed, you can then import the Fabric Core Sass declarations in y
 To use the Fabric Core styles, you need to import the `SPFabricCore` declarations into your Sass file.
 
 > [!NOTE] 
-> Make sure you have the **@microsoft/sp-office-ui-fabric-core** npm package installed.
+> Make sure you have the **\@microsoft/sp-office-ui-fabric-core** npm package installed.
 
 ```css
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
@@ -106,9 +106,9 @@ render() {
 }
 ```
 
-The Fabric React package includes the supported Fabric Core styles used in the Fabric React components. We recommend that you import the Fabric Core styles from the Fabric React package instead of from the **@microsoft/sp-office-ui-fabric-core** package to ensure that the right styles are used in your component.
+The Fabric React package includes the supported Fabric Core styles used in the Fabric React components. We recommend that you import the Fabric Core styles from the Fabric React package instead of from the **\@microsoft/sp-office-ui-fabric-core** package to ensure that the right styles are used in your component.
 
-Because the **@microsoft/sp-office-ui-fabric-core** package is already installed in your solution by the Yeoman generator, we recommend that you uninstall that package if you decide to use Fabric components and reduce your component bundle size.
+Because the **\@microsoft/sp-office-ui-fabric-core** package is already installed in your solution by the Yeoman generator, we recommend that you uninstall that package if you decide to use Fabric components and reduce your component bundle size.
 
 ```
 npm uninstall @microsoft/sp-office-ui-fabric-core --save
@@ -133,16 +133,16 @@ The following concepts and references provide insights on the challenge with usi
 
 How to avoid Global CSS styles at all costs is a big problem. Today, both Fabric Core and Fabric React have global styles. A lack of any native solutions from the browser to manage the style scoping makes this a very difficult problem.
   
-  - [Scope CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope) is in early stages of discussion.
+  - [Scope CSS](https://developer.mozilla.org/docs/Web/CSS/:scope) is in early stages of discussion.
   - iframes are not a good option to isolate styles.
-  - [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is another standard that talks about scoped styles but is still in the discussion stage.
+  - [Web Components](https://developer.mozilla.org/docs/Web/Web_Components) is another standard that talks about scoped styles but is still in the discussion stage.
   - [The React: CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) discussion explains the problem well. 
   
 There is plenty of other documentation on the web about the solutions to the global namespace menace.
 
 ### CSS specificity
 
-How [CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) applies to web UI. Higher specificity styles override lower specificity styles, but the key thing to understand is how the specificity rules apply. In general, the precedence order from highest to lowest is as follows:
+How [CSS specificity](https://developer.mozilla.org/docs/Web/CSS/Specificity) applies to web UI. Higher specificity styles override lower specificity styles, but the key thing to understand is how the specificity rules apply. In general, the precedence order from highest to lowest is as follows:
   - The style attribute (for example, `style="background:red;"`)
   - ID selectors (`#myDiv { }`)
   - Class selectors (`.myCssClass{}`), attribute selectors (`[type="radio"]`), and pseudo-classes (`:hover`)
@@ -293,7 +293,7 @@ There are changes on how to use Office UI Fabric icons in the rendering of the S
 <i className={css('ms-Icon', 'ms-Icon--RecurringEvent')}></i>
 ```
 
-### Updated way to use incons (after SPFx 1.8.2)
+### Updated way to use icons (after SPFx 1.8.2)
 
 Solutions build with *no JavaScript framework* option.
 

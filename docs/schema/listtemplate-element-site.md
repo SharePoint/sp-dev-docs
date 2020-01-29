@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Site schema
@@ -75,7 +75,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**AllowEveryoneViewItems** <br/> |Optional **Boolean**. **TRUE** to allow any user to view items in the library. The **AllowEveryoneViewItems** attribute is used, for example, in the Master Page gallery to give all users access to master pages.  <br/> |
 |**AlwaysIncludeContent** <br/> |Optional **Boolean**. **TRUE** to specify that list content be included by default when lists created through the list definition are saved as list templates in the user interface; otherwise, **FALSE**.  <br/> |
 |**BaseType** <br/> |Required **Integer**. Specifies the base type, or default schema, for lists created from the definition. In SharePoint Foundation, this can be 0, 1, 3, 4, or 5. It cannot be 2.  <br/> |
-|**CacheSchema** <br/> |Optional **Boolean**. **TRUE** to enable schema caching of the list when provisioning a site. The **CacheSchema** attribute is used, for example, in the global [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file to enable caching of the user list for the current site collection.  <br/> |
+|**CacheSchema** <br/> |Optional **Boolean**. **TRUE** to enable schema caching of the list when provisioning a site. The **CacheSchema** attribute is used, for example, in the global [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file to enable caching of the user list for the current site collection.  <br/> |
 |**Catalog** <br/> |Optional **Boolean**. **TRUE** to specify that the list definition is for a site gallery, a list gallery, or a web part gallery.  <br/> |
 |**Category** <br/> | Optional **Text**. Specifies the category with which to associate lists created through the list definition.<br/><br/>Possible values include the following:  <br/> **Libraries** <br/> **Communications** <br/> **Tracking** <br/> **Custom Lists** <br/> |
 |**Default** <br/> |Optional **Boolean**. **TRUE** to specify that new SharePoint sites will include this list.  <br/> |

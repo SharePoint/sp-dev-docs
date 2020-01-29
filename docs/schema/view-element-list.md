@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - List schema
@@ -18,10 +18,10 @@ description: In a list definition (Schema.xml), defines a view for a list in a w
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-In a list definition ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), defines a view for a list in a website based on Microsoft SharePoint Foundation, where each list can contain a number of views.
+In a list definition ([Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), defines a view for a list in a website based on Microsoft SharePoint Foundation, where each list can contain a number of views.
   
 > [!NOTE]
-> SharePoint Foundation 2010 uses XSLT to define list views, and the [View schema](view-schema.md) is maintained for backward compatibility. For information about XSLT list views, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
+> SharePoint Foundation 2010 uses XSLT to define list views, and the [View schema](view-schema.md) is maintained for backward compatibility. For information about XSLT list views, see [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx). 
   
 ```XML
 <View
@@ -151,7 +151,7 @@ The following sections describe attributes, child elements, and parent elements.
    
 ### Remarks
 
-The principal view type for list and document summary information is the HTML view. An HTML view is generally a columnar view that displays information from one or more lists. The data to be displayed is described by the fields that are shown in the view. For information about how views work in Microsoft SharePoint Foundation 2010, see [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx).
+The principal view type for list and document summary information is the HTML view. An HTML view is generally a columnar view that displays information from one or more lists. The data to be displayed is described by the fields that are shown in the view. For information about how views work in Microsoft SharePoint Foundation 2010, see [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx).
   
 The primary attributes that define an HTML view are as follows:
   
@@ -276,5 +276,5 @@ The next view example displays a sequence of paragraphs. The **Query** element s
 
 ## See also
 
-- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

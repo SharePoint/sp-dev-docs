@@ -1,9 +1,10 @@
 ---
+title: Business connectivity services (BCS) schemas
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b02774df-6ce9-45d5-ae5b-88bebf6d441a
 ---
@@ -26,7 +27,7 @@ This section provides reference documentation for the Microsoft Business Connect
 
 - [BDCMetadataResource schema](bdcmetadataresource-schema.md)
 
-<!-- [BDCSchemaAnnotations schema](http://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
+<!-- [BDCSchemaAnnotations schema](https://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
 
  
 

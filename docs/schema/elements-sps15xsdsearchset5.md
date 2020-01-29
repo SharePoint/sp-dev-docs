@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 9ada0028-fb30-4109-1a81-19f7cbd7df32
 description: Lists the elements in the schema_Microsoft.Office.Server.Search.Query XML schema.

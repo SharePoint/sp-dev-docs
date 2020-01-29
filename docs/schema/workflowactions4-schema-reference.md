@@ -1,9 +1,10 @@
 ---
+title: WorkflowActions4 schema reference
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 1c0112de-0139-e64d-d3d6-658541695391
 ---
@@ -31,9 +32,9 @@ The SharePoint workflow actions schema (Action4.xsd) lets you create custom acti
 - [Workflow actions available using the workflow interop bridge](../general-development/workflow-actions-available-using-the-workflow-interop-bridge.md)
 - [Workflows in SharePoint](../general-development/workflows-in-sharepoint.md)
 - [Workflow development in SharePoint Designer and Visio](../general-development/workflow-development-in-sharepoint-designer-and-visio.md)
-- [Microsoft.SharePoint.WorkflowServices](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflowservices.aspx)
-- [Microsoft.SharePoint.WorkflowServices.Activities](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflowservices.activities.aspx)
-- [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](https://msdn.microsoft.com/en-us/library/ee342461.aspx)
+- [Microsoft.SharePoint.WorkflowServices](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflowservices.aspx)
+- [Microsoft.SharePoint.WorkflowServices.Activities](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflowservices.activities.aspx)
+- [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](https://msdn.microsoft.com/library/ee342461.aspx)
 
 
 

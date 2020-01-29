@@ -1,9 +1,10 @@
 ---
+title: Delegate Controls
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f07f0d06-2d14-4c6d-bb87-b44ec98b50e6
 ---

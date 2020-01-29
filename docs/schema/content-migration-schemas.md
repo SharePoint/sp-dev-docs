@@ -1,11 +1,12 @@
 ---
+title: Content migration schemas
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content migration [sharepoint 2010],content migration schema
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 6741b149-815d-48eb-91d9-691a47195faf
 ---
@@ -92,7 +93,7 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 
 ## See also
 
-- [Content Migration](http://msdn.microsoft.com/library/626286f9-71b3-4b3c-9bac-a7bca059463f(Office.15).aspx)
+- [Content Migration](https://msdn.microsoft.com/library/626286f9-71b3-4b3c-9bac-a7bca059463f(Office.15).aspx)
 
 
 

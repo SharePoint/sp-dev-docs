@@ -1,11 +1,12 @@
 ---
+title: Entity Element in Entities
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Entity
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 ---
@@ -18,7 +19,7 @@ ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 
 Specifies an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 
@@ -202,7 +203,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ## See also
 
-- [What Are External Content Types?](http://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
+- [What Are External Content Types?](https://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
 
 
 

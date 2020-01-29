@@ -1,9 +1,10 @@
 ---
+title: ContextActivated Element in ContextEventHandlers
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 8b341a8d-7046-e1e9-c63f-5f33347861b8
 ---
@@ -16,7 +17,7 @@ ms.assetid: 8b341a8d-7046-e1e9-c63f-5f33347861b8
 
 The **ContextActivated** element enables you to execute a specified action when a context becomes active.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

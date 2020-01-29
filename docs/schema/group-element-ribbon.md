@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Server Ribbon schema
@@ -103,5 +103,5 @@ The following XML fragment defines a group that contains two buttons.
 
 ## See also
 
-- [Walkthrough: Adding a Group to the Server Ribbon](http://msdn.microsoft.com/library/0696705f-e805-49e7-90c5-0e9e5f894d6a%28Office.15%29.aspx)
+- [Walkthrough: Adding a Group to the Server Ribbon](https://msdn.microsoft.com/library/0696705f-e805-49e7-90c5-0e9e5f894d6a%28Office.15%29.aspx)
 

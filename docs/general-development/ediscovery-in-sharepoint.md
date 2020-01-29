@@ -121,7 +121,7 @@ SharePoint provides a Microsoft .NET server programming model that you can use t
 -  [What's new in SharePoint eDiscovery and compliance](what-s-new-in-sharepoint-ediscovery-and-compliance.md)
     
   
--  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](https://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
 

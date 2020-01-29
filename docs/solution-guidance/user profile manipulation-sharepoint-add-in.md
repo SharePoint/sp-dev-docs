@@ -6,15 +6,13 @@ localization_priority: Normal
 User profile manipulation in the SharePoint Add-in model
 ========================================================
 
-Summary
--------
+## Summary
 
 The approach you take to perform Create, Read, Update and Delete (CRUD) operations in the user profile service is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, UPS CRUD operations were performed with the SharePoint server-side object model code or the User Profile web service and deployed via Farm Solutions. 
 
 In a SharePoint Add-in model scenario, UPS CRUD operations are performed with the client-side object model (CSOM) or the User Profile web service.  
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we recommend the following high-level guidelines for performing UPS CRUD operations.
 
@@ -36,7 +34,7 @@ As a rule of a thumb, we recommend the following high-level guidelines for perfo
 - Using AppOnly authentication is not supported for any User Profile service operations.
 - Execute the CSOM code with an account that has the appropriate permissions to perform UPS CRUD operations.
 - When synchronizing Active Directory to the user profile service some attributes are synchronized by default.
-	+ The [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/en-us/library/hh147510.aspx) contains a list of the attributes synchronized by default.
+	+ The [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/library/hh147510.aspx) contains a list of the attributes synchronized by default.
 	+ If you need to synchronize additional attributes you will need to create a custom tool using one of the approaches described in this article.
 
 Options to copy and synchronize UPS data
@@ -119,25 +117,23 @@ Hybrid Environments
 
 In a scenario where you have both on-premises and Office 365 SharePoint environments and User Profile Information needs to be maintained in both environments you can use a combination of the User Profile Web Service and the CSOM to provide you the ability to perform CUD operations on UPS data.
 
-Related links
-=============
+## Related links
 - [User profile CSOM for reading and updates (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/User-profile-CSOM-for-reading-and-updates)
 - [Remote timer jobs (SharePoint Add-in Model Recipe)](remote-timer-jobs-sharepoint-add-in.md)
-- [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/en-us/library/hh147510.aspx)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- [Default user profile property mappings in SharePoint Server 2013 (TechNet article)](https://technet.microsoft.com/library/hh147510.aspx)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 - [Core.UserProfilePropertyUpdater (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfilePropertyUpdater)
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 - [UserProfile.Manipulation.CSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
 - [Core.UserProfiles.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfiles.Sync) 
-- Samples and content at [http://aka.ms/OfficeDevPnP](http://aka.ms/OfficeDevPnP)
+- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

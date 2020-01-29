@@ -1,9 +1,10 @@
 ---
+title: DeclarativeAssociation Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: a5458eec-878b-4b20-715f-245660d09069
 ---
@@ -17,7 +18,7 @@ ms.assetid: a5458eec-878b-4b20-715f-245660d09069
 The **DeclarativeAssociation** element derives from the **Association** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to describe an association of the external content type that the Outlook folder contains. Specifically, this element is used to set or get the Outlook property that maps to the entity instance reference of the association. If set, this is used by the External Item Picker functionality.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

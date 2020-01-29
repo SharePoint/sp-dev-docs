@@ -1,7 +1,7 @@
 ---
-title: Transform classic pages to modern client-side pages using .NET
-description: Explains how to transform classic wiki and web part pages into modern client side pages using the SharePoint .NET
-ms.date: 06/24/2019
+title: Transform classic pages to modern pages using .NET
+description: Explains how to transform classic wiki and web part pages into modern modern pages using the SharePoint .NET
+ms.date: 12/13/2019
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -75,7 +75,7 @@ Consult the [web part transformation list](modernize-userinterface-site-pages-we
 
 ### I want to transform pages into another site collection (as of March 2019 release, version 1.0.1903.*)
 
-The default transformation behavior is doing an in-place transformation, meaning the modern client side page is created in the same location as the classic page was. You can however also create the modern version of the page in another site collection by providing a client context object for the target site collection.
+The default transformation behavior is doing an in-place transformation, meaning the modern page is created in the same location as the classic page was. You can however also create the modern version of the page in another site collection by providing a client context object for the target site collection.
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestsite";
@@ -115,7 +115,7 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 ### I want to transform publishing pages (as of April 2019 release, version 1.0.1904.*)
 
-Publishing page transformation always will be a cross site transformation as mixing modern client side pages with publishing pages is unsupported. Below sample shows how all publishing pages starting with an "a" are transformed to client side pages in the https://contoso.sharepoint.com/sites/mycommunicationsite site. This sample also shows how to provide a custom page layout mapping file.
+Publishing page transformation always will be a cross site transformation as mixing modern pages with publishing pages is unsupported. Below sample shows how all publishing pages starting with an "a" are transformed to modern pages in the https://contoso.sharepoint.com/sites/mycommunicationsite site. This sample also shows how to provide a custom page layout mapping file.
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
@@ -205,14 +205,14 @@ using (var cc = new ClientContext(siteUrl))
 ```
 
 > [!NOTE]
-> - This feature is still in preview in the June 2019 release...it should support SharePoint 2013, 2016 and 2019
+> - This feature supports SharePoint 2010, 2013, 2016 and 2019 as source. Target is always SharePoint Online
 > - It's important to run your code on a machine that is able to connect to both the on-premises SharePoint server as the SharePoint Online environment
 > - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
 > - This approach can also be used for page transformation across tenants (whenever that would make sense)
 
 ### I want to use the logging features (as of April 2019 release, version 1.0.1904.*)
 
-By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a client side page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .NET:
+By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a modern page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .NET:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
@@ -319,4 +319,4 @@ Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web -F
 - [Modernization.PageTransformation sample on GitHub](https://github.com/SharePoint/PnP/tree/dev/Samples/Modernization.PageTransformation)
 - [YouTube recording from May 3rd SIG call containing a page transformation demo](https://youtu.be/Uf2f8ISBpVg?t=15m31s)
 - [Understanding and configuring the page transformation model](modernize-userinterface-site-pages-model.md)
-- [Classic and modern web part experiences](https://support.office.com/en-us/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64)
+- [Classic and modern web part experiences](https://support.office.com/article/classic-and-modern-web-part-experiences-3fdae6c3-8fc1-49ab-8708-8c104b882e64)

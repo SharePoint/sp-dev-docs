@@ -1,9 +1,10 @@
 ---
+title: Query Element in Queries
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 2de9afb8-7c23-7f22-a48b-07a4f31154cc
 ---
@@ -16,7 +17,7 @@ ms.assetid: 2de9afb8-7c23-7f22-a48b-07a4f31154cc
 
 Specifies a **Finder** or **IDEnumerator** method instance to execute to populate the cache.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

@@ -6,8 +6,7 @@ localization_priority: Normal
 Modules in the SharePoint Add-in model
 ======================================
 
-Summary
--------
+## Summary
 
 The approach you take to deploy artifacts to a SharePoint environment is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, modules defined in declarative code (feature framework XML files) were added to SharePoint features. The modules included the list of artifacts to deploy to the SharePoint server. The modules were added to SharePoint features and deployed via SharePoint Solutions. Upon feature activation, the artifacts defined in the modules were deployed to the SharePoint environment.
 
@@ -25,8 +24,7 @@ The term *artifacts* is referred to throughout this article. Artifacts refers to
 - Page Layouts
 - List Items
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines to deploy artifacts to SharePoint environments.
 
@@ -515,24 +513,22 @@ This sample has a little of everythign in it.  It demonstrates how to activate t
 	    	}
 		```
 	
-Related links
-=============
+## Related links
 
 - [Master Pages (SharePoint Add-in Recipe)](master-pages-sharepoint-add-in.md)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Branding.ClientSideRendering (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
 - [Branding.ApplyBranding (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ApplyBranding)
 - [Branding.ClientSideRendering (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

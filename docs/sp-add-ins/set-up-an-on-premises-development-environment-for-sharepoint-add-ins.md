@@ -13,9 +13,9 @@ The requirements for a development environment are less stringent and costly tha
 
 For the instructions to set up a production environment installation of SharePoint, see:
 
-- [Overview of SharePoint installation and configuration](http://technet.microsoft.com/en-us/library/ee667264%28v=office.15%29)
-- [Hardware and software requirements for SharePoint](http://technet.microsoft.com/en-us/library/cc262485%28v=office.15%29)
-- [Configure an environment for SharePoint Add-ins](http://technet.microsoft.com/en-us/library/fp161236%28office.15%29.aspx) 
+- [Overview of SharePoint installation and configuration](https://technet.microsoft.com/library/ee667264%28v=office.15%29)
+- [Hardware and software requirements for SharePoint](https://technet.microsoft.com/library/cc262485%28v=office.15%29)
+- [Configure an environment for SharePoint Add-ins](https://technet.microsoft.com/library/fp161236%28office.15%29.aspx) 
 
 <a name="bk_installOS"> </a>
 ## Install the operating system for your development environment for SharePoint Add-ins
@@ -26,7 +26,7 @@ Depending on your specific requirements and budget, you can choose from the foll
 
 - Install SharePoint on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012.
  
-- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or a Windows Server 2012 guest operating system. For guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint, see [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](http://technet.microsoft.com/en-US/library/ff621103%28v=office.15%29.aspx). 
+- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or a Windows Server 2012 guest operating system. For guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint, see [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](https://technet.microsoft.com/library/ff621103%28v=office.15%29.aspx). 
     
 > [!NOTE]
 > Installation of SharePoint is supported only on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012. If you want to develop SharePoint Add-ins for SharePoint on Windows 7 or Windows 8, you can sign up for an Office 365 developer site and develop add-ins remotely. 
@@ -107,9 +107,9 @@ Ensure that at least one profile is created in the **User profile service applic
 <a name="SP15Appdevonprem_bk_installVS"> </a> 
 ## Install Visual Studio and Office Developer Tools for Visual Studio
 
-- If you don't already have **Visual Studio** 2013 or later installed, install it with the instructions at [Install Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+- If you don't already have **Visual Studio** 2013 or later installed, install it with the instructions at [Install Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
 
-- Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**, but sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013) or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015).
+- Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**, but sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](https://aka.ms/OfficeDevToolsForVS2013) or the [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015).
 
 ### Verbose logging in Visual Studio
 
@@ -133,7 +133,7 @@ You must create an isolated domain in your test SharePoint farm. Also, your Shar
 For development purposes, you can modify your hosts file as you need to route your development computer to a test instance of a SharePoint Add-in. Visual Studio modifies your hosts file automatically when you build and deploy the add-in. 
  
 > [!NOTE]
-> For production farms, you would have to create a DNS routing strategy within your intranet and optionally configure your firewall. For more information about how to create and configure a production environment for SharePoint Add-ins, see [Install and Manage SharePoint Add-ins](http://technet.microsoft.com/en-us/library/fp161232%28v=office.15%29).
+> For production farms, you would have to create a DNS routing strategy within your intranet and optionally configure your firewall. For more information about how to create and configure a production environment for SharePoint Add-ins, see [Install and Manage SharePoint Add-ins](https://technet.microsoft.com/library/fp161232%28v=office.15%29).
 
 Perform the steps in the following procedure to create an isolated add-in domain.
  
@@ -219,7 +219,7 @@ Perform the steps in the following procedure to create an isolated add-in domain
 For information about your options for deploying your add-ins, see [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md).
  
 > [!TIP]
-> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a website that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](http://support.microsoft.com/kb/896861).
+> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a website that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](https://support.microsoft.com/kb/896861).
  
 
 ## See also
@@ -228,6 +228,6 @@ For information about your options for deploying your add-ins, see [Deploying an
 - [SharePoint Add-ins](sharepoint-add-ins.md)
 - [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
 - [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
-- [Install earlier versions of Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx)
-- [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/)    
+- [Install earlier versions of Visual Studio](https://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx)
+- [Visual Studio documentation](https://docs.microsoft.com/visualstudio/)    
  

@@ -1,9 +1,10 @@
 ---
+title: MapFile element (Feature)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 9e5e6eb7-89c7-4fb8-baff-e08cdce7ba18
 ---

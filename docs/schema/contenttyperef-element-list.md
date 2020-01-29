@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - List schema
@@ -34,7 +34,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**ID** <br/> |Required **Text**. Specifies the ID of the content type. For information about the format of content type IDs, see [Content Type IDs](http://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf%28Office.15%29.aspx).  <br/> |
+|**ID** <br/> |Required **Text**. Specifies the ID of the content type. For information about the format of content type IDs, see [Content Type IDs](https://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf%28Office.15%29.aspx).  <br/> |
    
 ### Child elements
 

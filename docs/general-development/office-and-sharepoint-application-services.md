@@ -94,7 +94,7 @@ Not all services and scenarios are represented in this section. For links to dev
 -  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](http://msdn.microsoft.com/en-us/library/hh231671)
+-  [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](https://msdn.microsoft.com/library/hh231671)
     
   
 

@@ -34,7 +34,7 @@ Also note that this change also applies to SharePoint REST-based calls. Review t
  
 The following table shows the new APIs that we introduced to replace the existing APIs to support # and %. We listed the old API and the new API side-by-side for your comparison. The core functionality of these APIs does not change, but how to represent the location of the item does change.
  
-For documentation about the new APIs, see [.NET client API reference for SharePoint Online](https://msdn.microsoft.com/en-us/library/jj193041.aspx). We have listed the .NET CSOM APIs, but the new methods are also available in equivalent form in our JavaScript CSOM libraries.
+For documentation about the new APIs, see [.NET client API reference for SharePoint Online](https://msdn.microsoft.com/library/jj193041.aspx). We have listed the .NET CSOM APIs, but the new methods are also available in equivalent form in our JavaScript CSOM libraries.
  
 ### Assembly Microsoft.SharePoint.Client.dll 
 

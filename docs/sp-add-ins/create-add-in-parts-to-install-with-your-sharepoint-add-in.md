@@ -319,7 +319,7 @@ In most cases, a webpage can't be displayed in a frame if it sends an **X-Frame-
 
 <br/>
 
-Be aware that certain scenarios are susceptible to [ClickJacking](http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx) attacks when the webpages are displayed in a frame. Carefully evaluate your add-in part scenarios to make sure there is no risk of **ClickJacking** attacks.
+Be aware that certain scenarios are susceptible to [ClickJacking](https://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx) attacks when the webpages are displayed in a frame. Carefully evaluate your add-in part scenarios to make sure there is no risk of **ClickJacking** attacks.
 
 If your page hosted on the add-in web is not susceptible to ClickJacking attacks, you can use the **AllowFraming** web part to suppress the **X-Frame-Options** header from your page's response. The following code example shows how to use the **AllowFraming** web part on a SharePoint page. Copy this markup into the page that is hosted on the add-in web. Put it just above the first **asp:content** element in the page. It should not be a child of any other element.
 

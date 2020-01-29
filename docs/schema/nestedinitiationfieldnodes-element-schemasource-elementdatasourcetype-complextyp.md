@@ -1,9 +1,10 @@
 ---
+title: NestedInitiationFieldNodes element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b39e8e21-490b-f498-1ac1-7d88f72532b9
 ---

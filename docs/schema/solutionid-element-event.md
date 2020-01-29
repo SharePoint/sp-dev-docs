@@ -1,9 +1,10 @@
 ---
+title: SolutionId Element (Event)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 44b66b3e-09b2-4e31-b51a-2e2c263e2b5a
 ---

@@ -24,6 +24,7 @@ The following REST commands are available for working with site designs and site
 
 - **CreateSiteScript** &ndash; Creates a new site script.
 - **GetSiteScripts** &ndash; Gets a list of information on existing site scripts.
+- **GetSiteScriptFromWeb** &ndash; Creates site script syntax from an existing SharePoint site.
 - **GetSiteScriptFromList** &ndash; Creates site script syntax from an existing SharePoint list.
 - **GetSiteScriptMetadata** &ndash; Gets information about a specific site script.
 - **UpdateSiteScript** &ndash; Updates a site script with new values.
@@ -151,6 +152,115 @@ Here is an example of the JSON returned after calling **GetSiteScripts**.
     }
   ]
 }
+```
+
+## GetSiteScriptFromWeb
+
+Gets the site script syntax for a specific SharePoint site.
+
+### Parameters
+
+|Parameter   | Description  |
+|------------|--------------|
+| webUrl         | The url that starts with HTTPS of the site to retrieve site script.  |
+| IncludeBranding         | (Optional) True if branding will be extracted; otherwise false. |
+| IncludedLists         | (Optional) An array of one or more lists. Each is identified by the list url. |
+| IncludeRegionalSettings         | (Optional) True if regional settings will be extracted; otherwise false. |
+| IncludeSiteExternalSharingCapability         | (Optional) True if external sharing capability will be extracted; otherwise false. |
+| IncludeTheme         | (Optional) True if custom theme will be extracted; otherwise false. |
+| IncludeLinksToExportedItems         | (Optional) True if navigation links will be extracted; otherwise false. In order to export navigation links pointing to lists, the list needs to be included in the request as well. |
+
+>**Note:** At least one **include** parameter must be provided when using this API, otherwise request fails.
+
+### Examples
+
+Here is an example of retrieving a site script JSON object from the Contoso site collection.
+
+```javascript
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromWeb", { 
+   "webUrl":"https://contoso.sharepoint.com/",
+   "info":{ 
+      "IncludeBranding":true,
+      "IncludedLists":[ 
+         "Lists/Contoso customer list"
+      ],
+      "IncludeRegionalSettings":true,
+      "IncludeSiteExternalSharingCapability":true,
+      "IncludeTheme":true,
+      "IncludeLinksToExportedItems":true
+   }
+});
+```
+<br/>
+
+Here is an example of the JSON returned after calling **GetSiteScriptFromWeb**.
+
+>**Note:** The response object shown here might be shortened for readability.
+
+```json
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
+    "actions": [
+      {
+        "verb": "createSPList",
+        "listName": "Contoso customer list",
+        "templateType": 100,
+        "subactions": [
+          {
+            "verb": "addSPView",
+            "name": "All Items",
+            "viewFields": [
+              "LinkTitle"
+            ],
+            "query": "",
+            "rowLimit": 30,
+            "isPaged": true,
+            "makeDefault": true,
+            "addLink": "Contoso customer list"
+          }
+        ]
+      },
+      {
+        "verb": "setSiteBranding",
+        "navigationLayout": "Cascade",
+        "headerLayout": "Standard",
+        "headerBackground": "None",
+        "showFooter": false
+      },
+      {
+        "verb": "applyTheme",
+        "themeJson": {
+          "version": "2",
+          "isInverted": false,
+          "palette": {
+            "neutralPrimaryAlt": "#ff4b4b4b",
+            "themeLighterAlt": "#fff1faf0",
+            "black": "#ff1d1d1d",
+            "themeTertiary": "#ff55ae48",
+            "primaryBackground": "#ffffffff"
+          }
+        }
+      },
+      {
+        "verb": "setSiteExternalSharingCapability",
+        "capability": "ExternalUserSharingOnly"
+      },
+      {
+        "verb": "setRegionalSettings",
+        "timeZone": 13,
+        "locale": 1033,
+        "sortOrder": 25,
+        "hourFormat": "12"
+      },
+      {
+        "verb": "addNavLink",
+        "url": "/Lists/Contoso customer list",
+        "displayName": "Contoso customer list",
+        "isWebRelative": true,
+        "navComponent": "QuickLaunch"
+      }
+    ]
+  }
 ```
 
 ## GetSiteScriptFromList

@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 32745c56-f2cf-a263-4873-cf0dd2a3c5c2
 description: Specifies XML that represents administrative types and members for managing a Shared Service Provider's instance of SharePoint Enterprise Search.

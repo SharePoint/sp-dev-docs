@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - View schema
@@ -54,7 +54,7 @@ None
 > [!NOTE]
 > The [View](view-element-list.md) element cannot have a **ProjectedFields** element unless it has a [Joins](joins-element-view.md) element that has at least one [Join](join-element-view.md) child element. However, a **ProjectedFields** element that forms the value of a **SPQuery.ProjectedFields** property, and therefore, is not a child of a [View](view-element-list.md) element, can be used to support an implicit join without a [Joins](joins-element-view.md) element. 
 >
-> We do not recommend working without a [Joins](joins-element-view.md) element. You will maximize your solution's chances of being compatible with future releases of Microsoft SharePoint Foundation by always using an explicit **Join** element. For more information about implicit joins with **ProjectedFields** elements, see [List Joins and Projections](http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b%28Office.15%29.aspx). 
+> We do not recommend working without a [Joins](joins-element-view.md) element. You will maximize your solution's chances of being compatible with future releases of Microsoft SharePoint Foundation by always using an explicit **Join** element. For more information about implicit joins with **ProjectedFields** elements, see [List Joins and Projections](https://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b%28Office.15%29.aspx). 
    
 ### Remarks
 
@@ -89,6 +89,6 @@ The **Type** attribute does not indicate the data type of the field as it usuall
 </ProjectedFields>
 ```
 
-For an example of a **ProjectedFields** element whose child **Field** element has a **FieldRef** attribute instead of a **List** attribute, see [List Joins and Projections](http://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b%28Office.15%29.aspx).
+For an example of a **ProjectedFields** element whose child **Field** element has a **FieldRef** attribute instead of a **List** attribute, see [List Joins and Projections](https://msdn.microsoft.com/library/f8e07793-3053-4930-97aa-556e38b9f21b%28Office.15%29.aspx).
   
 

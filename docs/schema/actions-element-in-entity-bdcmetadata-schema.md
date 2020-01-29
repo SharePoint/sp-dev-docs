@@ -1,11 +1,12 @@
 ---
+title: Actions element in Entity
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Actions
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c5a6c08d-a3df-61db-3ce3-1e6837bbf221
 ---
@@ -18,7 +19,7 @@ ms.assetid: c5a6c08d-a3df-61db-3ce3-1e6837bbf221
 
 Specifies a list of actions of an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

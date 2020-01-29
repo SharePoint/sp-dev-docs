@@ -8,7 +8,7 @@ localization_priority: Priority
 
 
 # SharePoint Composites Handbook
-Without using code, SharePoint Composites can help you create effective business solutions rapidly by assembling, connecting, and configuring the basic functionality available in SharePoint and Office 2013. Download the  [SharePoint Composites Handbook, Version 2.0](http://www.microsoft.com/en-us/download/details.aspx?id=36055) (approximately 90 pages) for in-depth guidance.
+Without using code, SharePoint Composites can help you create effective business solutions rapidly by assembling, connecting, and configuring the basic functionality available in SharePoint and Office 2013. Download the  [SharePoint Composites Handbook, Version 2.0](https://www.microsoft.com/download/details.aspx?id=36055) (approximately 90 pages) for in-depth guidance.
 ## What is a SharePoint Composite?
 
 A SharePoint Composite combines data, documents, and business process in a "do-it-yourself" business solution. A SharePoint Composite could be as simple as a custom webpage that uses a site list and several connected web parts to track mileage in a small business. Or, a SharePoint Composite could be as sophisticated as a corporate-wide absence reporting system connected to a Human Resource database by using Business Connectivity Services. A SharePoint Composite bears close resemblance to a mashup, a quick Web application that incorporates data into a simple, visual, and interactive solution. However, the term "composite" emphasizes the breadth and depth of solutions you can build on the SharePoint platform.
@@ -81,7 +81,7 @@ The download provides the handbook in both.docx and .pdf file formats.
   
     
     
- [SharePoint Composites Handbook, Version 2.0](http://www.microsoft.com/en-us/download/details.aspx?id=36055)
+ [SharePoint Composites Handbook, Version 2.0](https://www.microsoft.com/download/details.aspx?id=36055)
   
     
     
@@ -95,4 +95,4 @@ The download provides the handbook in both.docx and .pdf file formats.
   
     
     
- [No code solutions using SharePoint Composites](http://msdn.microsoft.com/en-us/sharepoint/fp161345)
+ [No code solutions using SharePoint Composites](https://msdn.microsoft.com/sharepoint/fp161345)

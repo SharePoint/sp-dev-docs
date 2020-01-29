@@ -11,7 +11,7 @@ localization_priority: Normal
 
 Presents workflow forms in SharePoint. This article uses SharePoint with the March 2013 Public Update applied and Office Developer tools for Visual Studio 2012. Everything in this article applies to both SharePoint on-premises deployments as well as Office 365.
 
-**Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
+**Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
 
 Since the release of Microsoft SharePoint 2007, the SharePoint platform has supported using workflows to automate business processes. The SharePoint workflow platform is built on the Windows Workflow Foundation, which is part of the .NET Framework. While the Workflow Foundation provides many capabilities for authoring custom workflows and managing automated business processes, SharePoint also adds end-user integration. This integration is implemented in two parts: 
 - **Tasks** assigned to users and groups that can be created and monitored by the workflows.
@@ -77,7 +77,7 @@ Prior the release of SharePoint, there were three types of custom workflow forms
   
     
     
-SharePoint improves how you work with workflow tasks in that you can create custom outcome buttons for specific scenarios. You can also customize the rendering and behavior of specific columns in task items using the new Client Side Rendering (CSR), which was introduced in SharePoint. Note that CSR uses JavaScript executed in the client. These topics are covered in the article  [Working with Tasks in SharePoint Workflows using Visual Studio 2012](working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md). You can also get more information in the article  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
+SharePoint improves how you work with workflow tasks in that you can create custom outcome buttons for specific scenarios. You can also customize the rendering and behavior of specific columns in task items using the new Client Side Rendering (CSR), which was introduced in SharePoint. Note that CSR uses JavaScript executed in the client. These topics are covered in the article  [Working with Tasks in SharePoint Workflows using Visual Studio 2012](working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md). You can also get more information in the article  [Customize a list view in SharePoint Add-ins using client-side rendering](https://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
   
     
     
@@ -658,13 +658,13 @@ SharePoint introduced several improvements to workflows. This article detailed t
 <a name="sec7"> </a>
 
 
--  [Workflow Association and Initiation Forms (SharePoint Foundation)](http://msdn.microsoft.com/en-us/library/office/ms481192%28v=office.14%29.aspx)
+-  [Workflow Association and Initiation Forms (SharePoint Foundation)](https://msdn.microsoft.com/library/office/ms481192%28v=office.14%29.aspx)
     
   
 -  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md)
     
   
--  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx)
+-  [Customize a list view in SharePoint Add-ins using client-side rendering](https://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx)
     
   
 

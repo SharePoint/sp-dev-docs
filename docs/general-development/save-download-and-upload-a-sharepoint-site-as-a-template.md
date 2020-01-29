@@ -7,7 +7,7 @@ localization_priority: Priority
 ---
 
 > [!NOTE]
-> The functionality of saving a site as a template described in this article is **only supported** in SharePoint Server 2013, SharePoint Server 2016, and SharePoint Server 2019 (classic sites only). It is **not supported** in SharePoint Online or SharePoint Server 2019 (modern sites).
+> The functionality of saving a site as a template described in this article is **only supported** in SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019 **(classic sites only)**, and SharePoint Online **(classic sites only)**. It is **not supported** in SharePoint Online **(modern sites)** or SharePoint Server 2019 **(modern sites)**.
 
 # Save, download, and upload a SharePoint site as a template
 Learn how to design and build robust applications by using SharePoint site templates.
@@ -177,22 +177,22 @@ After you add a site template to the solutions gallery and the template is activ
 <a name="bkmk_additionalresources"> </a>
 
 
--  [Site Types: WebTemplates and Site Definitions](http://msdn.microsoft.com/en-us/library/ms434313.aspx)
+-  [Site Types: WebTemplates and Site Definitions](https://msdn.microsoft.com/library/ms434313.aspx)
     
   
--  [Understanding how to package and deploy workflow in SharePoint](http://msdn.microsoft.com/en-us/library/jj819316%28v=office.15%29.aspx)
+-  [Understanding how to package and deploy workflow in SharePoint](https://msdn.microsoft.com/library/jj819316%28v=office.15%29.aspx)
     
   
--  [Build farm solutions in SharePoint](http://msdn.microsoft.com/en-us/library/jj163902%28v=office.15%29.aspx)
+-  [Build farm solutions in SharePoint](https://msdn.microsoft.com/library/jj163902%28v=office.15%29.aspx)
     
   
--  [Copy or move lists by using list templates](http://office.com/redir/HA101782479.aspx)
+-  [Copy or move lists by using list templates](https://office.com/redir/HA101782479.aspx)
     
   
--  [Copy or move a library by using a library template](http://office.com/redir/HA101814157.aspx)
+-  [Copy or move a library by using a library template](https://office.com/redir/HA101814157.aspx)
     
   
--  [Copy or move library files by using Windows Explorer](http://office.com/redir/HA101811182.aspx)
+-  [Copy or move library files by using Windows Explorer](https://office.com/redir/HA101811182.aspx)
     
   
 

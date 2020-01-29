@@ -1,11 +1,12 @@
 ---
+title: Methods Element in Entity
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Methods
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 42a24b32-bd97-4067-2e25-681d876d29fd
 ---
@@ -18,7 +19,7 @@ ms.assetid: 42a24b32-bd97-4067-2e25-681d876d29fd
 
 Specifies a list of methods of an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

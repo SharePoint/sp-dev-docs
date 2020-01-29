@@ -1,9 +1,10 @@
 ---
+title: ContextEventHandlers Element in DeclarativeContextDefinition
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 4c8a77e8-9c71-14cb-051a-170978ecc32a
 ---
@@ -16,7 +17,7 @@ ms.assetid: 4c8a77e8-9c71-14cb-051a-170978ecc32a
 
 The **ContextEventHandlers** element is used to specify the actions to be executed when a context becomes active, and the actions to be taken when a context is deactivated.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

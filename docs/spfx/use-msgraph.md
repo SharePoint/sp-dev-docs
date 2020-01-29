@@ -1,7 +1,7 @@
 ---
 title: Use the MSGraphClient to connect to Microsoft Graph
 description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
-ms.date: 08/28/2018
+ms.date: 01/18/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -26,50 +26,50 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
 
 1. To use the **MSGraphClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
-  ```typescript
-  import { MSGraphClient } from '@microsoft/sp-http';
-  ```
+    ```typescript
+    import { MSGraphClient } from '@microsoft/sp-http';
+    ```
+    
+1. **MSGraphClient** is exposed through the **MSGraphClientFactory** available on the web part context. To get a reference to MSGraphClient, in your code add:
 
-2. **MSGraphClient** is exposed through the **MSGraphClientFactory** available on the web part context. To get a reference to MSGraphClient, in your code add:
-
-  ```typescript
-  export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-    public render(): void {
-      // ...
-
-      this.context.msGraphClientFactory
-        .getClient()
-        .then((client: MSGraphClient): void => {
-          // use MSGraphClient here
-        });
-    }
-
-    // ...
-  }
-  ```
-
-3. After you have the reference to the **MSGraphClient** instance, start communicating with the Microsoft Graph by using its JavaScript Client Library syntax:
-
-  ```typescript
-  export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-    public render(): void {
-      // ...
-
-      this.context.msGraphClientFactory
-        .getClient()
-        .then((client: MSGraphClient): void => {
-          // get information about the current user from the Microsoft Graph
-          client
-            .api('/me')
-            .get((error, response: any, rawResponse?: any) => {
-              // handle the response
+    ```typescript
+    export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+      public render(): void {
+        // ...
+    
+        this.context.msGraphClientFactory
+          .getClient()
+          .then((client: MSGraphClient): void => {
+            // use MSGraphClient here
           });
-        });
+      }
+    
+      // ...
     }
+    ```
+    
+1. After you have the reference to the **MSGraphClient** instance, start communicating with the Microsoft Graph by using its JavaScript Client Library syntax:
 
-    // ...
-  }
-  ```
+    ```typescript
+    export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+      public render(): void {
+        // ...
+    
+        this.context.msGraphClientFactory
+          .getClient()
+          .then((client: MSGraphClient): void => {
+            // get information about the current user from the Microsoft Graph
+            client
+              .api('/me')
+              .get((error, response: any, rawResponse?: any) => {
+                // handle the response
+            });
+          });
+      }
+    
+      // ...
+    }
+    ```
 
 ### Use the Microsoft Graph TypeScript types
 
@@ -77,38 +77,38 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
 
 1. Install the Microsoft Graph TypeScript types:
 
-  ```sh
-  npm install @microsoft/microsoft-graph-types --save-dev
-  ```
+    ```sh
+    npm install @microsoft/microsoft-graph-types --save-dev
+    ```
 
-2. After installing the package in your project, import it to your web part file:
+1. After installing the package in your project, import it to your web part file:
 
-  ```typescript
-  import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
-  ```
+    ```typescript
+    import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
+    ```
 
-3. Enter the objects retrieved from the Microsoft Graph, for example:
+1. Enter the objects retrieved from the Microsoft Graph, for example:
 
-  ```typescript
-  export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-    public render(): void {
-      // ...
-
-      this.context.msGraphClientFactory
-        .getClient()
-        .then((client: MSGraphClient): void => {
-          // get information about the current user from the Microsoft Graph
-          client
-            .api('/me')
-            .get((error, user: MicrosoftGraph.User, rawResponse?: any) => {
-              // handle the response
+    ```typescript
+    export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+      public render(): void {
+        // ...
+    
+        this.context.msGraphClientFactory
+          .getClient()
+          .then((client: MSGraphClient): void => {
+            // get information about the current user from the Microsoft Graph
+            client
+              .api('/me')
+              .get((error, user: MicrosoftGraph.User, rawResponse?: any) => {
+                // handle the response
+            });
           });
-        });
+      }
+    
+      // ...
     }
-
-    // ...
-  }
-  ```
+    ```
 
 ## Available permission scopes
 

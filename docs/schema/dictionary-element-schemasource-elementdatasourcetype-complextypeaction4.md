@@ -1,9 +1,10 @@
 ---
+title: Dictionary element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c3fa67ee-c8f0-d66c-751f-856b92932ab4
 ---

@@ -1,11 +1,12 @@
 ---
+title: AccessControlList element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AccessControlList
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b7f97740-5d2c-f91a-1028-10e2890d4a99
 ---
@@ -18,9 +19,9 @@ ms.assetid: b7f97740-5d2c-f91a-1028-10e2890d4a99
 
 Specifies an access control list (ACL) for the parent element.
 
-To learn about Business Connectivity Services and security, see [Business Connectivity Services Security Overview](http://technet.microsoft.com/en-us/library/ee661734(office.14).aspx).
+To learn about Business Connectivity Services and security, see [Business Connectivity Services Security Overview](https://technet.microsoft.com/library/ee661734(office.14).aspx).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

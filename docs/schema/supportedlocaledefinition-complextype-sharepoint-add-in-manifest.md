@@ -1,9 +1,10 @@
 ---
+title: SupportedLocaleDefinition complexType
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f3affad3-4ac8-2124-57fc-b3599899997b
 ---
@@ -21,26 +22,11 @@ Identifies a locale in [Internet Engineering Task Force (IETF)](http://tools.iet
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>appmanifest.xsd</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Extension base</span></p></td>
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
+| **Extension base**  | None |
 
 ## Definition
 

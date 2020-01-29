@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - solution schema - [sharepoint 2010],XML schema - [SharePoint 2010]
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_type:
 - schema

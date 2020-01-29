@@ -1,9 +1,10 @@
 ---
+title: TypeDescriptor Element in Parameter
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: caba1444-c21c-b1c4-b10e-295647a81e6d
 ---
@@ -16,7 +17,7 @@ ms.assetid: caba1444-c21c-b1c4-b10e-295647a81e6d
 
 Specifies localized display names and properties, in any combination, for a [TypeDescriptor Element (BDCMetadata Schema)](typedescriptor-element-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

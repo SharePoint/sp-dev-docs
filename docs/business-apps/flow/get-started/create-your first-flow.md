@@ -1,3 +1,11 @@
+---
+title: Send an email when a new item is created or modified in a SharePoint list
+description: Send an email when a new item is created or modified in a SharePoint list
+ms.date: 12/12/2018
+ms.prod: sharepoint
+localization_priority: Priority
+---
+
 # Send an email when a new item is created or modified in a SharePoint list
 
 Using Microsoft Flow you can easily automate day-to-day tasks or build repetetive tasks in SharePoint that help you stay productive.

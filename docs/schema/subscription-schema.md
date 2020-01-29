@@ -1,9 +1,10 @@
 ---
+title: Subscription schema
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 43e40fe9-ac57-e09d-b7b2-f8ef2ba5b7a4
 ---
@@ -12,7 +13,7 @@ ms.assetid: 43e40fe9-ac57-e09d-b7b2-f8ef2ba5b7a4
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-This section contains the documentation for the [Subscription schema (Subscription.xsd)](http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog). Explore the topics in this section to learn about each element in this schema.
+This section contains the documentation for the **Subscription schema (Subscription.xsd)**. Explore the topics in this section to learn about each element in this schema.
 
 - [Association element in Associations (Subscription schema)](association-element-in-associations-subscription-schema.md)
 

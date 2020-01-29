@@ -29,9 +29,9 @@ The main example in this article shows how to build an add-in that reads data on
 
 To follow the examples in this article, you need the following:
 
-- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) installed either remotely or on the computer where you installed SharePoint.
+- [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) installed either remotely or on the computer where you installed SharePoint.
     
-- Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015).  
+- Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](https://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015).  
     
 - An on-premises SharePoint development environment. See [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md).
 
@@ -346,7 +346,7 @@ With the cross-domain library, you can access data across site collections in th
 
 - Add the add-in to the add-in catalog.
 
-- Deploy the add-in as a tenant-scoped add-in to a website. For an example on how to deploy as a tenant-scoped add-in, see the description of the [Use the cross-domain library in a tenant-scoped add-in (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-6b3e4c1e) code sample.
+- Deploy the add-in as a tenant-scoped add-in to a website. For an example on how to deploy as a tenant-scoped add-in, see the description of the [Use the cross-domain library in a tenant-scoped add-in (REST)](https://code.msdn.microsoft.com/SharePoint-2013-Use-the-6b3e4c1e) code sample.
 
 Your add-in also needs permission to access data from the tenant. The following example shows a manifest section that declares a permission request to read data from the tenant:
 
@@ -362,11 +362,11 @@ To switch the context site in your code, use the **AppContextSite** endpoint (RE
 
 Here is a reminder of the REST endpoint: /_api/SP.AppContextSite(@target)/web/title?@target='weburl', and an example on how to instantiate the object in JSOM: `appContextSite = new SP.AppContextSite(context, weburl);`.
  
-As a developer, you can only deploy tenant-scoped add-ins from the add-in catalog. You can provision an add-in catalog to your on-premises or SharePoint Online environments. Uploading your add-in to the add-in catalog is as simple as uploading a file to a document library. For detailed instructions, see [Use the app catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/en-us/article/Use-the-App-Catalog-to-make-custom-business-apps-available-for-your-SharePoint-Online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0?CorrelationId=94979966-ff7b-4e00-985a-5c9e614b35c9&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA102772362).
+As a developer, you can only deploy tenant-scoped add-ins from the add-in catalog. You can provision an add-in catalog to your on-premises or SharePoint Online environments. Uploading your add-in to the add-in catalog is as simple as uploading a file to a document library. For detailed instructions, see [Use the app catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/article/Use-the-App-Catalog-to-make-custom-business-apps-available-for-your-SharePoint-Online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0?CorrelationId=94979966-ff7b-4e00-985a-5c9e614b35c9&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA102772362).
 
-From the add-in catalog, you can deploy the add-in to one or more websites in the tenant. Because your add-in has permissions to access data in the tenant, you only have to deploy to one website to access data on the whole tenant. For instructions on how to deploy an add-in from the add-in catalog, see [Deploy a custom add-in](https://support.office.com/en-us/article/Use-the-App-Catalog-to-make-custom-business-apps-available-for-your-SharePoint-Online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0?CorrelationId=94979966-ff7b-4e00-985a-5c9e614b35c9&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA102772362) 
+From the add-in catalog, you can deploy the add-in to one or more websites in the tenant. Because your add-in has permissions to access data in the tenant, you only have to deploy to one website to access data on the whole tenant. For instructions on how to deploy an add-in from the add-in catalog, see [Deploy a custom add-in](https://support.office.com/article/Use-the-App-Catalog-to-make-custom-business-apps-available-for-your-SharePoint-Online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0?CorrelationId=94979966-ff7b-4e00-985a-5c9e614b35c9&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA102772362) 
 
-To download a code sample that shows how to access data across site collections, see [Use the cross-domain library in a tenant-scoped add-in (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-6b3e4c1e).
+To download a code sample that shows how to access data across site collections, see [Use the cross-domain library in a tenant-scoped add-in (REST)](https://code.msdn.microsoft.com/SharePoint-2013-Use-the-6b3e4c1e).
  
 
 <a name="SP15Accessdatafromremoteapp_IEZones"> </a> 
@@ -383,16 +383,16 @@ However, there is a solution for these scenarios. The solution is the **apphost 
 
 By default, a SharePoint-hosted add-in is allowed to issue cross-domain calls to the host web, provided that it has proper permissions. However, a SharePoint-hosted add-in can also specify a remote host in the **AllowedRemoteHostUrl** attribute of its **AppPrincipal**. This effectively lets you issue cross-domain calls from the add-in web and from another host elsewhere.
 
-To download a sample of a SharePoint-hosted add-in that uses the cross-domain library, see [Code sample: Use the cross-domain library in a SharePoint-hosted add-in (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-00c37814).
+To download a sample of a SharePoint-hosted add-in that uses the cross-domain library, see [Code sample: Use the cross-domain library in a SharePoint-hosted add-in (REST)](https://code.msdn.microsoft.com/SharePoint-2013-Use-the-00c37814).
 
 ## See also
 <a name="SP15Accessdatafromremoteapp_Addresources"> </a>
 
-- [Code sample: Get the host web title using the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Get-the-0ec36bb6)
-- [Code sample: Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/office/SharePoint-2013-Get-the-563f2a3d)
-- [Code sample: Use the chrome control and the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-a759e9f8)
-- [Code sample: Use the chrome control and the cross-domain library (JSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-97c30a2e)
-- [Code sample: Use custom actions and the cross-domain library to order books](http://code.msdn.microsoft.com/SharePoint-2013-Open-a-36d1598d)
+- [Code sample: Get the host web title using the cross-domain library (REST)](https://code.msdn.microsoft.com/SharePoint-2013-Get-the-0ec36bb6)
+- [Code sample: Get the host web title using the cross-domain library (JSOM)](https://code.msdn.microsoft.com/office/SharePoint-2013-Get-the-563f2a3d)
+- [Code sample: Use the chrome control and the cross-domain library (REST)](https://code.msdn.microsoft.com/SharePoint-2013-Use-the-a759e9f8)
+- [Code sample: Use the chrome control and the cross-domain library (JSOM)](https://code.msdn.microsoft.com/SharePoint-2013-Use-the-97c30a2e)
+- [Code sample: Use custom actions and the cross-domain library to order books](https://code.msdn.microsoft.com/SharePoint-2013-Open-a-36d1598d)
 - [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md) 
 - [Create a custom proxy page for the cross-domain library in SharePoint](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md)
 - [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint.md)

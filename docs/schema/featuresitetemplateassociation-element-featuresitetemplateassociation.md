@@ -1,9 +1,10 @@
 ---
+title: FeatureSiteTemplateAssociation Element (FeatureSiteTemplateAssociation)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: ef7dc9b4-3009-40d8-b15b-24cd60d99d7c
 ---
@@ -12,7 +13,7 @@ ms.assetid: ef7dc9b4-3009-40d8-b15b-24cd60d99d7c
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Associates the specified Features with the specified [site definition configuration](http://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3(Office.15).aspx) so that when websites are provisioned, the Features are automatically included.
+Associates the specified Features with the specified [site definition configuration](https://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3(Office.15).aspx) so that when websites are provisioned, the Features are automatically included.
 
 ## Definition
 

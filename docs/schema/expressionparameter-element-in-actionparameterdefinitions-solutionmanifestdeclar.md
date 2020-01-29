@@ -1,9 +1,10 @@
 ---
+title: ExpressionParameter Element in ActionParameterDefinitions
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 696dbdc0-f11d-5cab-1ff0-8d5512018d42
 ---
@@ -17,7 +18,7 @@ ms.assetid: 696dbdc0-f11d-5cab-1ff0-8d5512018d42
 The **ExpressionParameter** element defines a parameter for an action that can take a value from the context of the current item.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 

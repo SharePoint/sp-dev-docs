@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: fb008d30-a447-4c8c-a315-eac2bab8874b
 description: Returns the HTTP path to the images directory for the project, including the trailing forward slash.

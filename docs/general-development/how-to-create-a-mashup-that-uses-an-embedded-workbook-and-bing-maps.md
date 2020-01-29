@@ -57,10 +57,10 @@ To create this mashup, we followed 3 basic steps:
     
     
 
-1. Store the workbook on OneDrive. Find more information on the  [OneDrive](https://onedrive.live.com/about/en-us/) page.
+1. Store the workbook on OneDrive. Find more information on the  [OneDrive](https://onedrive.live.com/about/) page.
     
   
-2. Embed the workbook on the page. Find more information on embedding workbooks from OneDrive  [here](http://office.microsoft.com/en-us/excel-help/share-it-embed-an-excel-workbook-on-your-blog-HA102029502.aspx?CTT=5&amp;origin=HA102775335).
+2. Embed the workbook on the page. Find more information on embedding workbooks from OneDrive  [here](https://office.microsoft.com/excel-help/share-it-embed-an-excel-workbook-on-your-blog-HA102029502.aspx?CTT=5&amp;origin=HA102775335).
     
   
 3. Mash it up with Bing Maps. This step is covered in more detail in the following sections.
@@ -117,7 +117,7 @@ The integration happens in the following 3 steps:
 
 2. **Initialize the embedded workbook charts and the Bing Map**
     
-    The next step is to initialize the Excel components and the Bing Map when the page loads. In order to access an embedded Excel workbook programmatically, you need to refer to it by a file token. See  [http://msdn.microsoft.com/en-us/library/hh315812.aspx](http://msdn.microsoft.com/en-us/library/hh315812.aspx) for information on how to get the appropriate file token for your workbook.
+    The next step is to initialize the Excel components and the Bing Map when the page loads. In order to access an embedded Excel workbook programmatically, you need to refer to it by a file token. See  [https://msdn.microsoft.com/library/hh315812.aspx](https://msdn.microsoft.com/library/hh315812.aspx) for information on how to get the appropriate file token for your workbook.
     
     The code in **Snippet 2** completes three main tasks inside the **Page_Load** event handler. First, it establishes a reference to the Travel workbook to display the chart named *Chart 1*  inside the **chartDiv** element on the webpage. Second, it calls a simple function named **GetMap** to initialize the Bing Map. Third, it creates a second reference to the Travel workbook to display the chart named *Chart 2*  inside the **chartDiv2** element.
     

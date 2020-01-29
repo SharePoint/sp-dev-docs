@@ -1,9 +1,10 @@
 ---
+title: parametersType complexType (Action4)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 35bb99bb-066d-0876-f257-4abeed4f4e04
 ---

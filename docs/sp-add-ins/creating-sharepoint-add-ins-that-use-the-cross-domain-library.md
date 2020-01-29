@@ -18,7 +18,7 @@ Examples:
     
 - The SharePoint Add-in relies mainly on server-to-server calls to access SharePoint data (and is authorized by either the low-trust or high-trust systems), but it needs to be supplemented with some JavaScript calls. For example, a graphics-heavy page can use JavaScript to make minor updates to displayed data without having to reload the entire page.
     
-However, [for security](https://msdn.microsoft.com/en-us/library(d=robot)/cc709423(d=robot,l=en-us,v=vs.85).aspx), browsers do not allow JavaScript that is hosted on one domain to access resources on another domain, so a special technique is required to allow the remote JavaScript to access SharePoint resources. The SharePoint cross-domain JavaScript library makes it easy for your remote web application to use the technique.
+However, [for security](https://msdn.microsoft.com/library(d=robot)/cc709423(d=robot,l=en-us,v=vs.85).aspx), browsers do not allow JavaScript that is hosted on one domain to access resources on another domain, so a special technique is required to allow the remote JavaScript to access SharePoint resources. The SharePoint cross-domain JavaScript library makes it easy for your remote web application to use the technique.
  
 > [!NOTE] 
 > The cross-domain library is also used to allow access to data in the reverse direction; that is, to allow JavaScript on a SharePoint page to access data in a remote domain. For more information, see [Access remote data from a SharePoint page](#ReverseDirection).

@@ -6,15 +6,13 @@ localization_priority: Normal
 Remote timer jobs in the SharePoint Add-in model
 ================================================
 
-Summary
--------
+## Summary
 
 The approach you take to implement timer jobs is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration website. SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
 
 In the SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for creating timer jobs.
 
@@ -84,7 +82,7 @@ When you have access to an Azure subscription to schedule timer jobs with Azure 
 
 The following articles describe the Azure WebJob pattern and provide code samples to get you started.
 
-- [Getting Started with Azure WebJobs ("timer jobs") for your Office 365 Sites (O365 PnP Article)](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
+- [Getting Started with Azure WebJobs ("timer jobs") for your Office 365 Sites (O365 PnP Article)](https://docs.microsoft.com/sharepoint/dev/solution-guidance/getting-started-with-building-azure-webjobs-for-your-office365-sites)
 	+ Describes how to build an Azure WebJob to act as a scheduled job for your Office 365 or on-premises SharePoint environment. Includes publishing and monitoring information.
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
 	+ Excellent code samples encompassing 10 different examples. *Note: Not all ten code examples are applicable to the Azure WebJob pattern.*
@@ -126,7 +124,7 @@ In this pattern, you define one or more service accounts used to authenticate ti
 
 The following articles describe how to use a service account authentication pattern and provide code samples to get you started.
 
-- [Building a SharePoint App as a Timer Job (MSDN Blog)](http://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
+- [Building a SharePoint App as a Timer Job (MSDN Blog)](https://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
 	+ End-to-end article about this pattern.
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SimpleTimerJob)
 	+ End-to-end article about this pattern with accompanying video.
@@ -168,21 +166,19 @@ In this pattern, you define an application in SharePoint or Azure Active Directo
 
 The following articles describe the OAUth authentication pattern and provide code samples to get you started.
 
-- [Building a SharePoint App as a Timer Job (MSDN Blog)](http://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
+- [Building a SharePoint App as a Timer Job (MSDN Blog)](https://blogs.msdn.com/b/kaevans/archive/2014/03/02/building-a-sharepoint-app-as-a-timer-job.aspx)
 	+ End-to-end article about this pattern.
 - [Core.TimerJobs.Samples (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
 	+ Excellent code samples encompassing 10 different examples. *Note: Not all ten code examples are applicable to the OAUth authentication pattern.*
 
-Related links
-=============
-- [Azure WebJob resources (Azure Documentation)](http://azure.microsoft.com/en-us/documentation/articles/websites-webjobs-resources/)
-- [Deploy WebJobs using Visual Studio (Azure Documentation)](http://azure.microsoft.com/en-us/documentation/articles/websites-dotnet-deploy-webjobs/)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+## Related links
+- [Azure WebJob resources (Azure Documentation)](https://azure.microsoft.com/documentation/articles/websites-webjobs-resources/)
+- [Deploy WebJobs using Visual Studio (Azure Documentation)](https://azure.microsoft.com/documentation/articles/websites-dotnet-deploy-webjobs/)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Core.SimpleTimerJob (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SimpleTimerJob)
 - [Core.TimerJobs.Samples (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples)
@@ -190,8 +186,8 @@ Related PnP samples
 - [Provisioning.SiteCollectionCreation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteCollectionCreation)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

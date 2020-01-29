@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure DevOps
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 11/02/2018
+ms.date: 12/19/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,6 +11,17 @@ localization_priority: Priority
 Azure DevOps (Visual Studio Team Services / Team Foundation Server) consists of a set of tools and services that help developers implement DevOps, Continuous Integration, and Continuous Deployment processes for their development projects.
 
 This article explains the steps involved in setting up your Azure DevOps environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
+
+## Chosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
+
+There are currently two approaches available to implement continuous integration, and deployement in Azure DevOps.  
+Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
+Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history and repeatability.  
+Both approaches are decribed for the SharePoint Framework:
+
+- Azure Build and Release (this article)
+- [Azure Multi-stage Pipelines](./implement-ci-cd-with-azure-pipelines.md)
+
 
 ## Continuous Integration
 
@@ -30,8 +41,11 @@ Setting up Azure DevOps for Continuous Integration with a SharePoint Framework s
 1. Publishing the artifacts
 
 ### Creating the Build Definition
+
 The Build Definition, as its name suggests, includes all the definitions and their configurations for the build.  Start setting up your Continuous Integration by creating a new build definition and link it to your repository.
+
 ![linking the build definition to the repository](../../images/azure-devops-spfx-01.png)
+
 > [!NOTE] 
 > Build definitions can be described as a process template. It is a set of configured tasks that will be executed one after another on the source code every time a build is triggered. Tasks can be grouped in phases, by default a build definition contains at least one phase. You can add new tasks to the phase by clicking on the big plus sign next to the phase name.
 
@@ -60,7 +74,7 @@ The SharePoint Framework does not provide a testing framework by default (since 
 By default SharePoint Framework projects does not include a testing Framework. We will leverage Jest in this sample.
 
 ```shell
-npm i chai@4.X jest jest-junit @voitanos/jest-preset-spfx-react16 -D
+npm i jest jest-junit @voitanos/jest-preset-spfx-react16 -D
 ```
 
 > [!NOTE] 
@@ -81,55 +95,56 @@ You also need to configure Jest, to do so create a file `config/jest.config.json
   ],
   "reporters": [
     "default",
-    "jest-junit"
+    ["jest-junit", {
+      "suiteName": "jest tests",
+      "outputDirectory": "temp/test/junit",
+      "outputName": "junit.xml"
+    }]
   ]
 }
 ```
+
 You also need to configure your project to leverage jest when typing commands. To do so edit the `package.json` file and add/replace these two `scripts` with the following values:
+
 ```JSON
     "test": "./node_modules/.bin/jest --config ./config/jest.config.json",
     "test:watch": "./node_modules/.bin/jest --config ./config/jest.config.json --watchAll"
 ```
-Finally you need to modify the `package.json` to configure the reporter. Reporters are plugins that provide new export formats for test results to test runners. To do so edit `package.json` and add these lines after the `scripts` property.
 
-```JSON
-  "jest-junit": {
-    "output": "temp/test/junit/junit.xml",
-    "usePathForSuiteName": "true"
-  }
-```
 #### Writing a unit test
+
 To write your first unit test, create a new file `src/webparts/webPartName/tests/webPartName.spec.ts` and add the following content:
+
 ```TS
-/// <reference types="mocha" />
-import {assert, expect} from 'chai';
+import 'jest'
 
 describe("webPartName", () => {
-  it("should do something", () => {
-    assert.ok(true, 'should be true');
-  });
-  it("should add numbers Sync fluent", () => {
-    const result:number = 1 + 3;
-    expect(result).to.eq(4); // fluent API
+  test("should add numbers Sync fluent", () => {
+    const result = 1 + 3;
+    expect(result).toBe(4); // fluent API
   });
 });
 ```
+
 > [!NOTE] 
-> You can learn more about writing unit tests using Jest and Chai [here](https://jestjs.io/docs/en/getting-started.html).
+> You can learn more about writing unit tests using Jest [here](https://jestjs.io/docs/en/getting-started.html). You can learn more about testing react applications with Jest and Enzyme [here](https://jestjs.io/docs/en/tutorial-react) (you can ignore the setup part).
 
 ### Importing test results
-In order to get test results information attached with the build results, you need to import these test results from the test runner into Azure DevOps. To do so, add a new `Publish Test Results` task. Set the `Test results files` field to `temp/test/junit/junit.xml` and the `Search folder` to `$(Build.SourcesDirectory)`.  
+
+In order to get test results information attached with the build results, you need to import these test results from the test runner into Azure DevOps. To do so, add a new `Publish Test Results` task. Set the `Test results files` field to `**/junit.xml` and the `Search folder` to `$(Build.SourcesDirectory)`.  
+
 ![importing test results](../../images/azure-devops-spfx-04b.png)
 
 ### Importing code coverage information
 
-In order to get code coverage reported with the build status you need to add a task to import that information. To configure the code coverage information, add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/temp/test/cobertura-coverage.xml` and `Report Directory` to `$(Build.SourcesDirectory)/temp/test`.
+In order to get code coverage reported with the build status you need to add a task to import that information. To configure the code coverage information, add the `publish code coverage results` tasks. Make sure you set the tool to `Cobertura`, `Summary files` to `$(Build.SourcesDirectory)/**/*-coverage.xml`.
 
 ![importing coverage information](../../images/azure-devops-spfx-05.png)
 
 ### Bundling the solution
 
 You first need to bundle your solution in order to get static assets that can be understood by a web browser.  Add another `gulp` task, set the `gulpfile` path, set the `Gulp Tasks` field to bundle and add `--ship` in the `Arguments`.
+
 ![bundling the assets](../../images/azure-devops-spfx-06.png)
 
 ### Packaging the solution
@@ -148,8 +163,8 @@ Add a `Copy Files` task and set the `Contents` to `**\*.sppkg` (the SharePoint P
 ### Publishing the artifacts
 
 Now that you have collected all the files needed for deployment in a special artifacts folder, you still need to instruct Azure DevOps to keep these files after the execution of the build. To do so add a `Publish artifacts` task and set the `Path to publish` to `$(build.artifactstagingdirectory)/drop` and the `Artifact name` to `drop`.
-![publishing the artifacts](../../images/azure-devops-spfx-09.png)
 
+![publishing the artifacts](../../images/azure-devops-spfx-09.png)
 
 ## Continuous Deployment
 
@@ -205,13 +220,17 @@ The Office 365 Common Language Interface (CLI) is an open source project built b
 > [!NOTE] 
 > Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
 
-### Connecting to the App Catalog
-Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 spo login https://$(tenant).sharepoint.com/$(catalogsite) --authType password --userName $(username) --password $(password)
-`
+### Connecting to SharePoint Online
+
+Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 login -t password -u $(username) -p $(password)`.
+
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
 > [!NOTE] 
-> If you are using Office CLI to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by Office CLI to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on Office 365 CLI [User Guide](https://pnp.github.io/office365-cli/user-guide/connecting-office-365/)
+> If you are using Office CLI to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by Office CLI to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on Office 365 CLI [User Guide](https://pnp.github.io/office365-cli/user-guide/connecting-office-365/).
+
+> [!NOTE]
+> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
 
 ### Adding the Solution Package to the App Catalog
 
@@ -220,14 +239,20 @@ Upload the solution package to your App Catalog by adding another `Command Line`
 > [!NOTE] 
 > The path of the package depends on your solution name (see your project configuration) as well as the `Source Alias` you defined earlier, make sure they match.
 
+> [!NOTE] 
+> You can upload a solution to a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope sitecollection`
+
 ![uploading the package to the catalog](../../images/azure-devops-spfx-16.png)
 
 ### Deploying the Application
 
-The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg --appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite)`
+The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg`
 
 > [!NOTE] 
 > Make sure you update the package name.
+
+> [!NOTE] 
+> You can deploy a solution from a site collection app catalog by adding `--appCatalogUrl https://$(tenant).sharepoint.com/$(catalogsite) --scope sitecollection`
 
 ![Deploying the package to the catalog](../../images/azure-devops-spfx-17.png)
 
@@ -235,12 +260,13 @@ The final step in the setup is to deploy the application to the App Catalog to m
 
 The tasks you configured in the last step rely on Azure DevOps process variables (easily identified with the `$(variableName)` syntax). You need to define those variables before being able to run the build definition. To do so, click on the `Variables` tab.  
 Add the following variables
+
 | Name | Value |
 | ------ | ------ |
-| catalogsite | Server relative Path of the App Catalog Site eg `sites/appcatalog` |
+| catalogsite | Optional. Server relative Path of the App Catalog Site eg `sites/appcatalog` when uploading to a [site collection App Catalog](../../general-development/site-collection-app-catalog.md) |
 | password | Password of the user with administrative permissions on the tenant, do not forget to check the lockpad to mask it to other users |
 | username | Username of the user with administrative permissions on the tenant |
-| tenant | Tenant name in https://tenant.sharepoint.com eg `tenant` |
+| tenant | Optional. Tenant name in https://tenant.sharepoint.com eg `tenant` when uploading to a site collection App Catalog |
 
 ![Variables setup](../../images/azure-devops-spfx-18.png)  
 

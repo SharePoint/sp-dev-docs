@@ -9,7 +9,7 @@ localization_priority: Priority
  
 Responsive experiences seamlessly scale across devices to better display your content on a range of different screen sizes. Responsive design also eliminates the need to build multiple versions of your site pages to support different devices.  
 
-The design guidance for responsive pages in the SharePoint authoring environment incorporates a responsive grid system that is based on [Office UI Fabric](https://developer.microsoft.com/en-us/fabric). This article describes the underlying page grid system and the breakpoints, or key screen sizes where the layout of the pages will change. 
+The design guidance for responsive pages in the SharePoint authoring environment incorporates a responsive grid system that is based on [Office UI Fabric](https://developer.microsoft.com/fabric). This article describes the underlying page grid system and the breakpoints, or key screen sizes where the layout of the pages will change. 
 
 
 ![SharePoint page on multiple devices](../images/design-grid-responsive-overview.png)
@@ -180,7 +180,7 @@ The responsive grid for both team sites and communication sites adjusts when goi
 
 ## See also
 
-- [Design toolkit and assets](https://developer.microsoft.com/en-us/fabric#/resources)
+- [Design toolkit and assets](https://developer.microsoft.com/fabric#/resources)
 - [Designing great SharePoint experiences](design-guidance-overview.md)
 
 

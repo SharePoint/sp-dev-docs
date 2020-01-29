@@ -1,9 +1,10 @@
 ---
+title: ElementManifest Element (Feature)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 5a6a2865-5d31-45a2-a402-6da6e0f5567a
 ---

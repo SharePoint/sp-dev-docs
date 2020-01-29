@@ -1,7 +1,7 @@
 ---
 title: URL mapping during cross site page transformation
 description: Explains how to the default URL mapping works when transforming pages cross site collection + also explains how to use a custom URL mapping file
-ms.date: 06/24/2019
+ms.date: 11/04/2019
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -16,6 +16,7 @@ URL mapping/rewriting applies to the following locations:
 
 - All content ending up as text parts on the modern page (as of May 2019 release)
 - SummaryLinks transformation into either text content or the modern QuickLinks web part (as of May 2019 release)
+- Anchor tags of images (as of November 2019 release)
 
 ## Default URL mapping logic
 
@@ -50,5 +51,5 @@ To use this custom URL mapping file you simply point the page transformation eng
 When you use custom URL mapping it's important to understand how it works together with the default URL mapping:
 
 - Custom URL mapping is executed **before** the default URL mapping, which allows you to change the default URL mapping behavior by specifying a custom mapping for the default rewritten urls
-- When you disable URL mapping you also disable custom URL mapping
+- When you disable URL mapping you also disable custom URL mapping. If you only want to use your custom URL mapping then use the `-SkipDefaultUrlRewriting` parameter of the `ConvertTo-ClientSidePage` cmdlet or the `SkipDefaultUrlRewrite` attribute of the .Net page transformation configuration objects (`PageTransformationInformation` and `PublishingPageTransformationInformation`).
 

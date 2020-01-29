@@ -1,9 +1,10 @@
 ---
+title: Association element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 0a4f3b7e-b3c7-4ffd-be1d-d97333f2df8e
 ---
@@ -14,7 +15,7 @@ ms.assetid: 0a4f3b7e-b3c7-4ffd-be1d-d97333f2df8e
 
 The **Association** element is used to describe an association.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

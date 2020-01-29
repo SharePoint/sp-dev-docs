@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Server Ribbon schema
@@ -52,5 +52,5 @@ The following sections describe attributes, child elements, and parent elements.
    
 ## See also
 
-- [Walkthrough: Adding a Tab to the Server Ribbon](http://msdn.microsoft.com/library/3d1fb8b6-4c9b-4801-9bba-6d2f5caee0d9%28Office.15%29.aspx)
+- [Walkthrough: Adding a Tab to the Server Ribbon](https://msdn.microsoft.com/library/3d1fb8b6-4c9b-4801-9bba-6d2f5caee0d9%28Office.15%29.aspx)
 

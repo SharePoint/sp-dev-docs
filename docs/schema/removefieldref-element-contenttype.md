@@ -1,9 +1,10 @@
 ---
+title: RemoveFieldRef element (ContentType)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 5f06a5ba-0b74-497d-a88c-9a104225c0a5
 ---
@@ -141,8 +142,8 @@ The following example shows **RemoveFieldRef** elements specifying several colum
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-- [Fields and Field References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Fields and Field References](https://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
 - [FieldRef element (ContentType)](fieldref-element-contenttype.md)
 
 

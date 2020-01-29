@@ -1,11 +1,12 @@
 ---
+title: AccessControlEntry element in AccessControlList
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AccessControlEntry
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 85e24489-0a6b-dfda-fb03-474fe7b0d947
 ---
@@ -18,9 +19,9 @@ ms.assetid: 85e24489-0a6b-dfda-fb03-474fe7b0d947
 
 Contains an access control entry (ACE) which specifies access rights for the parent element.
 
-To learn more about the Business Connectivity Services and security, see [Business Connectivity Services Security Overview](http://technet.microsoft.com/en-us/library/ee661734(office.14).aspx).
+To learn more about the Business Connectivity Services and security, see [Business Connectivity Services Security Overview](https://technet.microsoft.com/library/ee661734(office.14).aspx).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

@@ -1,9 +1,10 @@
 ---
+title: Layout Element in Layouts
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 3cb10648-a1ac-9aba-5273-efc0aa34041c
 ---
@@ -17,7 +18,7 @@ ms.assetid: 3cb10648-a1ac-9aba-5273-efc0aa34041c
 The **Layout** element is used to specify the location of the layout file that contains layout information for the external data part.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
@@ -85,7 +86,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx">Properties</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx">Properties</a></p></td>
 <td align="left"><p>Can contain a property named **AssociatedActionType** to specify the type of action that is associated with this layout. Accepted values are Edit, Create, and ViewDetails.</p></td>
 </tr>
 </tbody>

@@ -1,9 +1,10 @@
 ---
+title: Property Element in Properties (Subscription)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: ac84b248-6d84-3815-5f66-03e431fa9221
 ---
@@ -16,7 +17,7 @@ This element is not used by Microsoft Business Connectivity Services (BCS) in th
 
 The **Property** element can contain a mix of character data and child elements.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

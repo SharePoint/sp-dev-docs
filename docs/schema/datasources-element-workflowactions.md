@@ -1,11 +1,12 @@
 ---
+title: DataSources Element (WorkflowActions)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 0e9831a1-2815-4a74-bcc4-9760aef7e3d2
 ---
@@ -62,8 +63,8 @@ None
 
 ## See also
 
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

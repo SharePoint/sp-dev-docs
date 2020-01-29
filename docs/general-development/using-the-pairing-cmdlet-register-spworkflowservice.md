@@ -68,12 +68,12 @@ PS> Register-SPWorkflowService -SPSite "https://myserver/mysitecollection" -Work
 <a name="bk_addresources"> </a>
 
 
--  [Install and configure workflow for SharePoint](http://technet.microsoft.com/en-us/library/jj658588.aspx)
+-  [Install and configure workflow for SharePoint](https://technet.microsoft.com/library/jj658588.aspx)
     
   
--  [Video series: Install and configure Workflow in SharePoint](http://technet.microsoft.com/en-us/library/dn201724.aspx)
+-  [Video series: Install and configure Workflow in SharePoint](https://technet.microsoft.com/library/dn201724.aspx)
     
   
--  [Workflow Manager 1.0](http://msdn.microsoft.com/en-us/library/jj193528%28Azure.10%29)
+-  [Workflow Manager 1.0](https://msdn.microsoft.com/library/jj193528%28Azure.10%29)
     
   

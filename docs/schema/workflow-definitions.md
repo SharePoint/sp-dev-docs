@@ -1,11 +1,12 @@
 ---
+title: Workflow Definitions
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow schemas, overview
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 34e1e631-e1b5-437b-a861-029ef327d3d3
 ---
