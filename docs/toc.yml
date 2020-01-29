@@ -159,7 +159,7 @@
     items:
     - name: Connect to SharePoint APIs
       href: spfx/connect-to-sharepoint.md
-    - name: Connect to Microsoft Graph
+    - name: Connect to Microsoft Graph 
       href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD
       href: spfx/use-aadhttpclient.md
@@ -168,7 +168,7 @@
     - name: Subscribe to list notifications
       href: spfx/subscribe-to-list-notifications.md
     - name: Tutorials
-      items:
+      items:        
       - name: Consume Microsoft Graph (tutorial)
         href: spfx/use-aad-tutorial.md
       - name: Consume enterprise APIs
@@ -188,17 +188,17 @@
     - name: Tenant-scoped solution deployment
       href: spfx/tenant-scoped-deployment.md
     - name: Tenant properties
-      href: spfx/tenant-properties.md
+      href: spfx/tenant-properties.md         
     - name: Provision SharePoint assets
       href: spfx/toolchain/provision-sharepoint-assets.md
     - name: Optimize builds for production
-      href: spfx/toolchain/optimize-builds-for-production.md
+      href: spfx/toolchain/optimize-builds-for-production.md        
     - name: Localize web parts
-      href: spfx/web-parts/guidance/localize-web-parts.md
+      href: spfx/web-parts/guidance/localize-web-parts.md 
     - name: SharePoint 2016 support
-      href: spfx/sharepoint-2016-support.md
+      href: spfx/sharepoint-2016-support.md        
     - name: Use preview capabilities
-      href: spfx/try-preview-capabilities.md
+      href: spfx/try-preview-capabilities.md           
   - name: Design
     href: design/design-guidance-overview.md
     items:
@@ -222,19 +222,19 @@
       - name: Placeholders and fallbacks
         href: design/placeholders-and-fallbacks.md
       - name: Empty state of a web part
-        href: design/empty-states.md
+        href: design/empty-states.md     
       - name: Accessibility
         href: design/accessibility.md
       - name: Key web part examples
-        href: design/key-web-part-examples.md
+        href: design/key-web-part-examples.md     
       - name: Web part showcase
         href: design/showcase-web-part.md
       - name: Designing a web part icon
         href: design/designing-a-web-part-icon.md
       - name: Using semantic slots
-        href: design/semantic_slots.md
+        href: design/semantic_slots.md        
     - name: Authoring pages
-      href: design/authoring-pages.md
+      href: design/authoring-pages.md          
     - name: Design considerations
       href: spfx/web-parts/basics/design-considerations-for-web-parts.md
     - name: Custom dialogs
@@ -242,7 +242,7 @@
     - name: Work with CSS
       href: spfx/css-recommendations.md
     - name: Themes and colors
-      href: design/themes-colors.md
+      href: design/themes-colors.md      
     - name: Use themes
       href: spfx/use-theme-colors-in-your-customizations.md
     - name: Office UI Fabric integration
@@ -285,7 +285,7 @@
       href: features/hub-site/hub-site-powershell.md
     - name: REST API
       href: features/hub-site/hub-site-rest-api.md
-      items:
+      items: 
       - name: SP.HubSites.CanCreate
         href: features/hub-site/REST-cancreate-method.md
       - name: GetById
@@ -305,7 +305,7 @@
       - name: SPHubSite type
         href: features/hub-site/REST-sphubsite-type.md
       - name: SPHubSiteData type
-        href: features/hub-site/REST-sphubsitedata-type.md
+        href: features/hub-site/REST-sphubsitedata-type.md         
   - name: SharePoint APIs
     items:
     - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
@@ -349,21 +349,21 @@
         href: apis/onenote-migration-service.md
       - name: Migration API
         items:
-        - name: Import Migration API
+        - name: Import Migration API     
           items:
           - name: Import Migration API (CreateMigrationJob)
             href: apis/migration-api-overview.md
             items:
             - name: Sharing
-              href: apis/migration-api-shared.md
+              href: apis/migration-api-shared.md  
             - name: Migrate web parts using the Migration API
               href: apis/migrate-webparts-with-migrationapi.md
-        - name: Export Migration API (Asynchronous Metadata Read)
-          href: apis/export-amr-api.md
+        - name: Export Migration API (Asynchronous Metadata Read)         
+          href: apis/export-amr-api.md        
         - name: Azure container and queue
           href: apis/migration-api-azure-container-and-queue.md
         - name: Encryption
-          href: apis/migration-api-encryption.md
+          href: apis/migration-api-encryption.md       
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
@@ -397,7 +397,7 @@
     - name: CSOM API
       href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
     - name: REST API
-      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
+      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md            
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
@@ -419,24 +419,24 @@
       - name: Get subscription
         href: apis/webhooks/lists/get-subscription.md
   - name: Application Lifecycle Management (ALM) APIs
-    href: apis/alm-api-for-spfx-add-ins.md
+    href: apis/alm-api-for-spfx-add-ins.md         
   - name: Column formatting
-    href: declarative-customization/column-formatting.md
+    href: declarative-customization/column-formatting.md   
   - name: View formatting
-    href: declarative-customization/view-formatting.md
+    href: declarative-customization/view-formatting.md       
   - name: Creating modern sites
     href: apis/site-creation-rest.md
   - name: Site Footer
-    href: features/site-footer.md
+    href: features/site-footer.md    
   - name: Shorter share links
     href: spfx/shorter-share-link-format.md
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
   - name: What's new for developers in SharePoint 2019
-    href: general-development/sharepoint-2019-development-platform.md
+    href: general-development/sharepoint-2019-development-platform.md  
   - name: SharePoint glossary
-    href: general-development/sharepoint-glossary.md
+    href: general-development/sharepoint-glossary.md  
   - name: Protocol handler error in SharePoint 2016
     href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Programming models
@@ -1481,7 +1481,7 @@
     - name: Development and design tools and practices
       href: solution-guidance/SharePoint-development-and-design-tools-and-practices.md
     - name: Metadata, site navigation, and publishing site features
-      href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md
+      href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md      
     - name: Site branding
       href: solution-guidance/SharePoint-site-branding-and-page-customization-solutions.md
       items:
@@ -1544,7 +1544,7 @@
     - name: Work with sites
       href: solution-guidance/multigeo-sites.md
     - name: Provision classic team sites
-      href: solution-guidance/multigeo-sites-provisioning.md
+      href: solution-guidance/multigeo-sites-provisioning.md         
     - name: Manage apps/add-ins
       href: solution-guidance/multigeo-apps.md
     - name: Work with user profiles
@@ -1558,7 +1558,7 @@
     - name: Connect to external data using BCS and Secure Store Service
       href: solution-guidance/multigeo-bcsandsecurestore.md
     - name: Set up a sample application
-      href: solution-guidance/multigeo-sampleapplicationsetup.md
+      href: solution-guidance/multigeo-sampleapplicationsetup.md   
   - name: Building classic publishing portals for SharePoint Online
     href: solution-guidance/portal-overview.md
     items:
@@ -1629,9 +1629,9 @@
       href: solution-guidance/security-apponly.md
       items:
       - name: Grant access using Azure AD app-only
-        href: solution-guidance/security-apponly-azuread.md
+        href: solution-guidance/security-apponly-azuread.md      
       - name: Grant access using SharePoint app-only
-        href: solution-guidance/security-apponly-azureacs.md
+        href: solution-guidance/security-apponly-azureacs.md      
     - name: Implement a web app policy alternative
       href: solution-guidance/security-webapppolicies.md
     - name: Migrate from permissive to strict tenant setting
@@ -1786,7 +1786,7 @@
     - name: PnP Open XML File format
       href: solution-guidance/the-pnp-office-open-xml-file-format.md
     - name: PnP provisioning schema
-      href: solution-guidance/pnp-provisioning-schema.md
+      href: solution-guidance/pnp-provisioning-schema.md      
     - name: Provisioning console application sample
       href: solution-guidance/provisioning-console-application-sample.md
   - name: PnP remote timer job framework
@@ -2768,19 +2768,19 @@
         href: schema/contenttype-element-contenttype.md
       - name: DocumentTemplate element
         href: schema/documenttemplate-element-contenttype.md
-      - name: Elements element
+      - name: Elements element 
         href: schema/elements-element-contenttype.md
-      - name: FieldRef element
+      - name: FieldRef element 
         href: schema/fieldref-element-contenttype.md
-      - name: FieldRefs element
+      - name: FieldRefs element 
         href: schema/fieldrefs-element-contenttype.md
-      - name: Folder element
+      - name: Folder element 
         href: schema/folder-element-contenttype.md
-      - name: RemoveFieldRef element
+      - name: RemoveFieldRef element 
         href: schema/removefieldref-element-contenttype.md
-      - name: XmlDocument element
+      - name: XmlDocument element 
         href: schema/xmldocument-element-contenttype.md
-      - name: XmlDocuments element
+      - name: XmlDocuments element 
         href: schema/xmldocuments-element-contenttype.md
     - name: Custom Action Definition schema
       href: schema/custom-action-definition-schema.md
@@ -2979,31 +2979,31 @@
       - name: WebTemplate element
         href: schema/webtemplate-element-web-template.md
       - name: Elements
-        href: schema/elements-web-template.md
+        href: schema/elements-web-template.md    
     - name: Workflow Definitions
       href: schema/workflow-definitions.md
       items:
-      - name: AssociationCategories element
+      - name: AssociationCategories element 
         href: schema/associationcategories-element-workflow.md
-      - name: AssociationData element
+      - name: AssociationData element 
         href: schema/associationdata-element-workflow.md
-      - name: Categories element
+      - name: Categories element 
         href: schema/categories-element-workflow.md
-      - name: Elements element
+      - name: Elements element 
         href: schema/elements-element-workflow.md
-      - name: ExtendedStatusColumnValues element
+      - name: ExtendedStatusColumnValues element 
         href: schema/extendedstatuscolumnvalues-element-workflow.md
-      - name: InitiationCategories element
+      - name: InitiationCategories element 
         href: schema/initiationcategories-element-workflow.md
-      - name: InitiationType element
+      - name: InitiationType element 
         href: schema/initiationtype-element-workflow.md
-      - name: MetaData element
+      - name: MetaData element 
         href: schema/metadata-element-workflow.md
-      - name: Modification_GUID_Name element
+      - name: Modification_GUID_Name element 
         href: schema/modification_guid_name-element-workflow.md
-      - name: StatusColumnValue element
+      - name: StatusColumnValue element 
         href: schema/statuscolumnvalue-element-workflow.md
-      - name: StatusPageUrl element
+      - name: StatusPageUrl element 
         href: schema/statuspageurl-element-workflow.md
       - name: Workflow element (Elements)
         href: schema/workflow-element-elements.md
@@ -3282,7 +3282,7 @@
       - name: SPExportMethodType Simple Type
         href: schema/spexportmethodtype-simple-type-deploymentexportsettings.md
       - name: SPIncludeDescendents Simple Type
-        href: schema/spincludedescendents-simple-type-deploymentexportsettings.md
+        href: schema/spincludedescendents-simple-type-deploymentexportsettings.md                                        
       - name: SPIncludeSecurity Simple Type
         href: schema/spincludesecurity-simple-type-deploymentexportsettings.md
       - name: SPIncludeVersions Simple Type
@@ -3291,7 +3291,7 @@
       href: schema/deploymentlookuplistmap-schema.md
       items:
       - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentlookuplistmap.md
+        href: schema/guid-simple-type-deploymentlookuplistmap.md      
       - name: LookupItem element
         href: schema/lookupitem-element-deploymentlookuplistmap.md
       - name: LookupItems element
@@ -3313,7 +3313,7 @@
       href: schema/deploymentrootobjectmap-schema.md
       items:
       - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentrootobjectmap.md
+        href: schema/guid-simple-type-deploymentrootobjectmap.md      
       - name: RootObject element
         href: schema/rootobject-element-deploymentrootobjectmap.md
       - name: RootObjects element
@@ -3324,7 +3324,7 @@
       href: schema/deploymentsystemdata-schema.md
       items:
       - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentsystemdata.md
+        href: schema/guid-simple-type-deploymentsystemdata.md      
       - name: ManifestFile element
         href: schema/manifestfile-element-deploymentsystemdata.md
       - name: ManifestFiles element
@@ -3334,7 +3334,7 @@
       - name: SPDeploymentObjectType Simple Type
         href: schema/spdeploymentobjecttype-simple-type-deploymentsystemdata.md
       - name: SystemData element
-        href: schema/systemdata-element-deploymentsystemdata.md
+        href: schema/systemdata-element-deploymentsystemdata.md                
       - name: SystemObject element
         href: schema/systemobject-element-deploymentsystemdata.md
       - name: SystemObjects element
@@ -3347,7 +3347,7 @@
       - name: Groups element
         href: schema/groups-element-deploymentusergroupmap.md
       - name: Member element
-        href: schema/member-element-deploymentusergroupmap.md
+        href: schema/member-element-deploymentusergroupmap.md        
       - name: User element
         href: schema/user-element-deploymentusergroupmap.md
       - name: Users element
@@ -4631,11 +4631,11 @@
       - name: PropertySchema element
         href: schema/propertyschema-element-field-types.md
         items:
-        - name: Fields element
+        - name: Fields element 
           href: schema/fields-element-field-types-property-schema.md
-        - name: Field element
+        - name: Field element 
           href: schema/field-element-field-types-property-schema.md
-        - name: Default element
+        - name: Default element 
           href: schema/default-element-field-types-property-schema.md
       - name: RenderPattern element
         href: schema/renderpattern-element-field-types.md
@@ -4701,13 +4701,13 @@
     - name: Mobile Document Viewer schema
       href: schema/mobile-document-viewer-schema.md
       items:
-      - name: MobileDocViewers element
+      - name: MobileDocViewers element 
         href: schema/mobiledocviewers-mobile-document-viewer.md
-      - name: MobileDocViewer element
+      - name: MobileDocViewer element 
         href: schema/mobiledocviewer-mobile-document-viewer.md
-      - name: BrowserCondition element
+      - name: BrowserCondition element 
         href: schema/browsercondition-mobile-document-viewer.md
-      - name: Override element
+      - name: Override element 
         href: schema/override-mobile-document-viewer.md
     - name: Server Ribbon schema
       href: schema/server-ribbon-schema.md
@@ -4882,29 +4882,29 @@
       items:
       - name: Column element
         href: schema/column-spmetal.md
-      - name: ContentType element
+      - name: ContentType element 
         href: schema/contenttype-spmetal.md
-      - name: ExcludeColumn element
+      - name: ExcludeColumn element 
         href: schema/excludecolumn-spmetal.md
-      - name: ExcludeContentType element
+      - name: ExcludeContentType element 
         href: schema/excludecontenttype-spmetal.md
-      - name: ExcludeList element
+      - name: ExcludeList element 
         href: schema/excludelist-spmetal.md
-      - name: ExcludeOtherColumns element
+      - name: ExcludeOtherColumns element 
         href: schema/excludeothercolumns-spmetal.md
-      - name: ExcludeOtherContentTypes element
+      - name: ExcludeOtherContentTypes element 
         href: schema/excludeothercontenttypes-spmetal.md
-      - name: ExcludeOtherLists element
+      - name: ExcludeOtherLists element 
         href: schema/excludeotherlists-spmetal.md
-      - name: IncludeHiddenColumns element
+      - name: IncludeHiddenColumns element 
         href: schema/includehiddencolumns-spmetal.md
-      - name: IncludeHiddenContentTypes element
+      - name: IncludeHiddenContentTypes element 
         href: schema/includehiddencontenttypes-spmetal.md
-      - name: IncludeHiddenLists element
+      - name: IncludeHiddenLists element 
         href: schema/includehiddenlists-spmetal.md
-      - name: List element
+      - name: List element 
         href: schema/list-spmetal.md
-      - name: Web element
+      - name: Web element 
         href: schema/web-spmetal.md
     - name: Upgrade Definition schema
       href: schema/upgrade-definition-schema.md
@@ -4935,7 +4935,7 @@
       - name: Rows element
         href: schema/rows-dsqueryresponse.md
       - name: Row element
-        href: schema/row-dsqueryresponse.md
+        href: schema/row-dsqueryresponse.md    
 - name: Community
   href: community/community.md
   items:
