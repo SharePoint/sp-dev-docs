@@ -131,7 +131,7 @@ Your **package-solution.json** should look somewhat following after the needed e
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "app-extension-client-side-solution",
     "id": "98a9fe4f-175c-48c1-adee-63fb927faa70",
