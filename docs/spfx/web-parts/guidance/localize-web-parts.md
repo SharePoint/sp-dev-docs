@@ -231,9 +231,9 @@ Properties that support localization are of type **ILocalizedString**. Each loca
     // ...
     "preconfiguredEntries": [{
       "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-      "group": { "default": "Other", "nl-nl": "Anders" },
-      "title": { "default": "Greeting", "nl-nl": "Begroeting" },
-      "description": { "default": "Greets the user", "nl-nl": "Begroet de gebruiker" },
+      "group": { "default": "Other", "nl-NL": "Anders" },
+      "title": { "default": "Greeting", "nl-NL": "Begroeting" },
+      "description": { "default": "Greets the user", "nl-NL": "Begroet de gebruiker" },
       "officeFabricIconFontName": "Page",
       "properties": {
         "greeting": "Hello"
@@ -241,6 +241,9 @@ Properties that support localization are of type **ILocalizedString**. Each loca
     }]
   }
   ```
+
+> [!IMPORTANT]
+> You should pay attention to the correct spelling of the locales. The first part needs to be in lowercase letters while the last part has to be written in uppercase ("nl-NL").
 
 1. Run the following command to verify that the project is working:
 
@@ -596,9 +599,9 @@ Originally, the Greeting web part had the **greeting** property defined where th
 
       "preconfiguredEntries": [{
         "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
-        "group": { "default": "Other", "nl-nl": "Anders" },
-        "title": { "default": "Greeting", "nl-nl": "Begroeting" },
-        "description": { "default": "Greets the user", "nl-nl": "Begroet de gebruiker" },
+        "group": { "default": "Other", "nl-NL": "Anders" },
+        "title": { "default": "Greeting", "nl-NL": "Begroeting" },
+        "description": { "default": "Greets the user", "nl-NL": "Begroet de gebruiker" },
         "officeFabricIconFontName": "Page",
         "properties": {
         }
