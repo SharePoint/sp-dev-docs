@@ -1194,6 +1194,7 @@ Operators specify the type of operation to perform. The following operators are 
 - \*
 - <
 - \>
+- \%
 - ==
 - !=
 - <=
@@ -1205,7 +1206,8 @@ Operators specify the type of operation to perform. The following operators are 
 - Date()
 - cos
 - sin
-- ? 
+- ?
+- :
 - toLocaleString()
 - toLocaleDateString()
 - toLocaleTimeString()
