@@ -441,14 +441,13 @@ Copy the declaration of the **webApiPermissionRequests** property.
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "spfx-api-scopes-tutorial-client-side-solution",
     "id": "841cd609-d821-468d-a6e4-2d207b966cd8",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
-    "isDomainIsolated": false,
     "webApiPermissionRequests": [
       {
         "resource": "Microsoft Graph",
