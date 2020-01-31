@@ -22,7 +22,7 @@ By default, SharePoint Framework client-side web parts cannot be placed in full-
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "34f6d7f2-262f-460a-8b65-152d784127cb",
   "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
