@@ -32,7 +32,7 @@ For a list of available Office UI Fabric icons, see [Icons](https://developer.mi
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
     "id": "bcae7077-85cb-41a0-b3d3-2084f268a211",
     "alias": "WeatherWebPart",
     "componentType": "WebPart",
@@ -82,7 +82,7 @@ In addition to using Office UI Fabric icons, SharePoint Framework also allows yo
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
     "id": "bcae7077-85cb-41a0-b3d3-2084f268a211",
     "alias": "WeatherWebPart",
     "componentType": "WebPart",
@@ -134,7 +134,7 @@ A number of services are available online that you can use to base64-encode your
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
     "id": "bcae7077-85cb-41a0-b3d3-2084f268a211",
     "alias": "WeatherWebPart",
     "componentType": "WebPart",
