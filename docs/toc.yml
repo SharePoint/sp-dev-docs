@@ -141,7 +141,7 @@
       href: spfx/hyperlinking.md
     - name: Building Office add-ins
       href: spfx/office-addins-create.md
-    - name: Intercepting query string changes in web parts
+    - name: Intercepting query string changes
       href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
   - name: External libraries
     items:
