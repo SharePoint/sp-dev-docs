@@ -158,7 +158,7 @@ In this step, you implement validation logic that checks if the list with the na
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
     "id": "1ec8f92d-ea55-4584-bf50-bac435c916bf",
     "alias": "ListInfoWebPart",
     "componentType": "WebPart",
