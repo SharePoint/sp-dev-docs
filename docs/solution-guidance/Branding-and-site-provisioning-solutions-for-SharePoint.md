@@ -223,7 +223,7 @@ Part of planning a SharePoint branding project is deciding which types of sites 
 
 #### Table 7. Site options in SharePoint Online
 
-|Office 365 edition|Team site|Public website|Notes|
+|Office 365 edition|Team site|Publishing site|Notes|
 |:-----|:-----|:-----|:-----|
 |Small business|Yes|No||
 |Enterprise|Yes|Yes|Includes a team site collection at the root web application for the domain that doesn't include publishing, and you can create new publishing site collections under that root web application. |
