@@ -45,7 +45,7 @@ You can also follow the steps in this article by watching the video on the Share
     * Accept the default **app-extension** as your solution name, and select Enter.
     * Select **SharePoint Online only (latest)**, and select Enter.
     * Select **Use the current folder**, and select Enter.
-    * Select **N** to allow solution to be deployed to all sites immediately.
+    * Select **N** to not allow solution to be deployed to all sites immediately.
     * Select **N** on the question if solution contains unique permissions.
     * Select **Extension** as the client-side component type to be created. 
     * Select **Application Customizer** as the extension type to be created.
