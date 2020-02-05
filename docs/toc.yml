@@ -1,5 +1,76 @@
 - name: SharePoint development
   href: index.md
+- name: Capabilities & features
+  items:
+  - name: Connect to Office 365 group
+    href: features/groupify/groupify-overview.md
+    items:
+    - name: CSOM development
+      href: features/groupify/groupify-csom.md
+  - name: Hub sites
+    items:
+    - name: Overview
+      href: features/hub-site/hub-site-overview.md
+    - name: Create hub sites with PowerShell
+      href: features/hub-site/create-hub-site-with-powershell.md
+    - name: PowerShell cmdlets for hub sites
+      href: features/hub-site/hub-site-powershell.md
+    - name: REST API
+      items:
+      - name: Overview
+        href: features/hub-site/hub-site-rest-api.md
+      - name: SP.HubSites.CanCreate
+        href: features/hub-site/REST-cancreate-method.md
+      - name: GetById
+        href: features/hub-site/REST-getbyid-method.md
+      - name: HubSiteData
+        href: features/hub-site/REST-hubsitedata-method.md
+      - name: HubSites
+        href: features/hub-site/REST-hubsites-method.md
+      - name: JoinHubSite
+        href: features/hub-site/REST-joinhubsite-method.md
+      - name: RegisterHubSite
+        href: features/hub-site/REST-registerhubsite.method.md
+      - name: SyncHubSiteTheme
+        href: features/hub-site/REST-synchubsitetheme-method.md
+      - name: UnRegisterHubSite
+        href: features/hub-site/REST-unregisterhubsite-method.md
+      - name: SPHubSite type
+        href: features/hub-site/REST-sphubsite-type.md
+      - name: SPHubSiteData type
+        href: features/hub-site/REST-sphubsitedata-type.md
+  - name: Webhooks
+    href: apis/webhooks/overview-sharepoint-webhooks.md
+    items:
+    - name: Get started
+      href: apis/webhooks/get-started-webhooks.md
+    - name: Reference implementation
+      href: apis/webhooks/webhooks-reference-implementation.md
+    - name: Use Azure Functions
+      href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
+    - name: List webhooks
+      href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
+      items:
+      - name: Create subscription
+        href: apis/webhooks/lists/create-subscription.md
+      - name: Update subscription
+        href: apis/webhooks/lists/update-subscription.md
+      - name: Delete subscription
+        href: apis/webhooks/lists/delete-subscription.md
+      - name: Get subscription
+        href: apis/webhooks/lists/get-subscription.md
+  - name: Application Lifecycle Management (ALM) APIs
+    href: apis/alm-api-for-spfx-add-ins.md
+  - name: Creating modern sites
+    href: apis/site-creation-rest.md
+  - name: Site Footer
+    href: features/site-footer.md
+  - name: Shorter share links
+    href: spfx/shorter-share-link-format.md
+  - name: Use the site collection app catalog
+    href: general-development/site-collection-app-catalog.md
+  - name: Use the Office 365 content delivery network (CDN)
+    href: general-development/office-365-cdn.md
 - name: SharePoint Framework
   items:
   - name: Overview
@@ -283,47 +354,12 @@
       href: general-development/client-side-web-parts-maintenance-mode.md
   - name: Roadmap
     href: spfx/roadmap.md
-- name: Capabilities & features
+- name: Declarative customizations
   items:
-  - name: Connect to Office 365 group
-    href: features/groupify/groupify-overview.md
-    items:
-    - name: CSOM development
-      href: features/groupify/groupify-csom.md
-  - name: Hub sites
+  - name: Site designs & site scripts
     items:
     - name: Overview
-      href: features/hub-site/hub-site-overview.md
-    - name: Create hub sites with PowerShell
-      href: features/hub-site/create-hub-site-with-powershell.md
-    - name: PowerShell cmdlets for hub sites
-      href: features/hub-site/hub-site-powershell.md
-    - name: REST API
-      href: features/hub-site/hub-site-rest-api.md
-      items:
-      - name: SP.HubSites.CanCreate
-        href: features/hub-site/REST-cancreate-method.md
-      - name: GetById
-        href: features/hub-site/REST-getbyid-method.md
-      - name: HubSiteData
-        href: features/hub-site/REST-hubsitedata-method.md
-      - name: HubSites
-        href: features/hub-site/REST-hubsites-method.md
-      - name: JoinHubSite
-        href: features/hub-site/REST-joinhubsite-method.md
-      - name: RegisterHubSite
-        href: features/hub-site/REST-registerhubsite.method.md
-      - name: SyncHubSiteTheme
-        href: features/hub-site/REST-synchubsitetheme-method.md
-      - name: UnRegisterHubSite
-        href: features/hub-site/REST-unregisterhubsite-method.md
-      - name: SPHubSite type
-        href: features/hub-site/REST-sphubsite-type.md
-      - name: SPHubSiteData type
-        href: features/hub-site/REST-sphubsitedata-type.md
-  - name: Site design
-    href: declarative-customization/site-design-overview.md
-    items:
+      href: declarative-customization/site-design-overview.md
     - name: Get started
       href: declarative-customization/get-started-create-site-design.md
     - name: Set scope
@@ -334,7 +370,7 @@
       href: declarative-customization/site-design-json-schema.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
-    - name: Calling Power Automate from a site script
+    - name: Call Power Automate from site scripts
       href: declarative-customization/site-design-trigger-flow-tutorial.md
     - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md
@@ -345,8 +381,9 @@
     - name: Office 365 CLI commands
       href: declarative-customization/site-design-o365cli.md
   - name: Site theming
-    href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     items:
+    - name: Overview
+      href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     - name: JSON schema reference
       href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
     - name: PowerShell cmdlets
@@ -355,49 +392,15 @@
       href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
     - name: REST API
       href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
-  - name: Webhooks
-    href: apis/webhooks/overview-sharepoint-webhooks.md
-    items:
-    - name: Get started
-      href: apis/webhooks/get-started-webhooks.md
-    - name: Reference implementation
-      href: apis/webhooks/webhooks-reference-implementation.md
-    - name: Use Azure Functions
-      href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
-    - name: List webhooks
-      href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
-      items:
-      - name: Create subscription
-        href: apis/webhooks/lists/create-subscription.md
-      - name: Update subscription
-        href: apis/webhooks/lists/update-subscription.md
-      - name: Delete subscription
-        href: apis/webhooks/lists/delete-subscription.md
-      - name: Get subscription
-        href: apis/webhooks/lists/get-subscription.md
-  - name: Application Lifecycle Management (ALM) APIs
-    href: apis/alm-api-for-spfx-add-ins.md
   - name: Column formatting
     href: declarative-customization/column-formatting.md
   - name: View formatting
     href: declarative-customization/view-formatting.md
-  - name: Creating modern sites
-    href: apis/site-creation-rest.md
-  - name: Site Footer
-    href: features/site-footer.md
-  - name: Shorter share links
-    href: spfx/shorter-share-link-format.md
-  - name: Use the site collection app catalog
-    href: general-development/site-collection-app-catalog.md
-  - name: Use the Office 365 content delivery network (CDN)
-    href: general-development/office-365-cdn.md
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
-  - name: What's new for developers in SharePoint 2019
+  - name: What's new in SharePoint Server 2019
     href: general-development/sharepoint-2019-development-platform.md
-  - name: Protocol handler error in SharePoint 2016
-    href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Programming models
     href: general-development/programming-models-in-sharepoint.md
     items:
@@ -1099,6 +1102,8 @@
     href: general-development/how-to-detect-the-installed-sku-of-sharepoint.md
   - name: Avoid getting throttled or blocked in SharePoint Online
     href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
+  - name: Protocol handler error in SharePoint 2016
+    href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Volume Shadow Copy Service (VSS)
     href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
     items:
