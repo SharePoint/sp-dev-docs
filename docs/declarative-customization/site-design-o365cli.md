@@ -22,7 +22,7 @@ To run the Office 365 CLI commands, you'll need to do the following:
 
 3. Follow the instructions at [Logging in to Office 365](https://pnp.github.io/office365-cli/user-guide/connecting-office-365/) to connect to your SharePoint tenant.
 
-To verify your setup and connection, try using the [sitedesign list](https:/pnp.github.io/office365-cli/cmd/spo/sitedesign/sitedesign-list) command to read the current list of site designs. If the cmdlet runs and returns with no errors, you're ready to proceed.
+To verify your setup and connection, try using the [sitedesign list](https://pnp.github.io/office365-cli/cmd/spo/sitedesign/sitedesign-list) command to read the current list of site designs. If the cmdlet runs and returns with no errors, you're ready to proceed.
 
 ## Site design commands
 
