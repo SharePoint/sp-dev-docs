@@ -13,13 +13,13 @@ _**Applies to:** Office 365 | SharePoint Online | SharePoint Server 2013_
 > [!NOTE]
 > This page references the **Core.Throttling** sample project from the SharePoint PnP group. While this project does demonstrate the exponential backoff strategy, you should make yourself aware of the `Retry-After` HTTP header that is also returned. This was added to the SharePoint REST API after the **Core.Throttling** project was created.
 >
-> You can learn more about this HTTP header in the following article: [How to: Avoid getting throttled or blocked in SharePoint Online](/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md)
+> You can learn more about this HTTP header in the following article: [How to: Avoid getting throttled or blocked in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)
 
 SharePoint Online uses throttling to prevent users from over-consuming resources. When a user runs CSOM or REST code that exceeds usage limits, SharePoint Online throttles any further request from the user for a period of time.
 
 The [Core.Throttling](https://github.com/SharePoint/PnP/tree/master/Samples/Core.Throttling) code sample in the [SharePoint Patterns and Practices](https://github.com/SharePoint/PnP) organization shows how to implement the exponential back off technique to handle throttling in SharePoint Online. When you get throttled in SharePoint Online, the exponential back off technique waits progressively longer periods of time before retrying the code that was throttled.
 
-For more information about throttling in SharePoint Online (*for example, causes, limits, and so on), and an explanation of the Core.Throttling code sample, see [How to: Avoid getting throttled or blocked in SharePoint Online](/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md)*).
+For more information about throttling in SharePoint Online (*for example, causes, limits, and so on), and an explanation of the Core.Throttling code sample, see [How to: Avoid getting throttled or blocked in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)*).
 
 Also, in the [ClientContextExtensions.cs](https://github.com/SharePoint/PnP/blob/dev/Samples/Core.Throttling/Core.Throttling/ClientContextExtensions.cs) sample, check out the `ExecuteQueryImplementation` extension method. `ExecuteQueryImplementation` is included in [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core).
 
