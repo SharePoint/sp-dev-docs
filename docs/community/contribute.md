@@ -46,4 +46,3 @@ Awesome! Here are a few suggestions:
 * Suggest a live demo in one of the community calls.
 
 If you have other ideas on how you might contribute, don't hesitate to reach out and let us know.
-
