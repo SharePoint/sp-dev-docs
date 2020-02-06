@@ -398,7 +398,7 @@ See [Page Transformation Functions and Selectors](modernize-userinterface-site-p
 </WebParts>
 ```
 
-### I want to populate a managed metadata field with one or more terms
+### I want to populate a managed metadata field with one or more terms (as of February 2020 release)
 
 When you have a managed metadata field in the source page metadata then you might want to have a similar managed metadata field for the target page. Given page transformation currently does have a managed metadata mapping feature this poses a problem. A possible workaround is to populate the target managed metadata field with a chosen term or a set of terms in case of a multi-value managed metadata field. This can be done using the `DefaultTaxonomyFieldValue` function as shown in below example:
 
