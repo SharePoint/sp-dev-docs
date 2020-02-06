@@ -1,7 +1,7 @@
 ---
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
-ms.date: 12/13/2019
+ms.date: 02/06/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -120,6 +120,40 @@ Name|Description
 Name|Description
 :-----|:----------
 {CompleteString}|Concatenation of the passed strings
+### ConcatenateWithSemiColonDelimiter
+
+**Description:** Concatenates 2 strings with a semicolon in between.
+
+**Example:** `{CompleteString} = ConcatenateWithSemiColonDelimiter({String1},{String2})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{String1}|First string
+{String2}|Second string
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{CompleteString}|Concatenation of the passed strings
+### ConcatenateWithPipeDelimiter
+
+**Description:** Concatenates 2 strings with a pipe character in between.
+
+**Example:** `{CompleteString} = ConcatenateWithSemiColonDelimiter({String1},{String2})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{String1}|First string
+{String2}|Second string
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{CompleteString}|Concatenation of the passed strings
 ### StaticString
 
 **Description:** Returns an the (static) string provided as input
@@ -138,7 +172,7 @@ Name|Description
 {return value}|String provided as input
 ### TextCleanup
 
-**Description:** Rewrites wiki page html to be compliant with the html supported by the modern text part.
+**Description:** Rewrites wiki page html to be compliant with the html supported by the client side text part.
 
 **Example:** `{CleanedText} = TextCleanup({Text},{UsePlaceHolders})`
 
@@ -152,7 +186,7 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{CleanedText}|Html compliant with modern text part
+{CleanedText}|Html compliant with client side text part
 ### ContainsScript
 
 **Description:** Checks if the provided html contains JavaScript
@@ -303,7 +337,7 @@ Name|Description
 {Anchor}|The url after url rewrite. If the anchor and original image url were the same then the anchor will be set to the new image url
 ### ExtractWebpartProperties
 
-**Description:** Extracts the modern web part properties so they can be reused.
+**Description:** Extracts the client side web part properties so they can be reused.
 
 **Example:** `{JsonProperties} = ExtractWebpartProperties({ClientSideWebPartData})`
 
@@ -311,12 +345,12 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{ClientSideWebPartData}|Web part data defining the modern web part configuration
+{ClientSideWebPartData}|Web part data defining the client side web part configuration
 #### Output parameters
 
 Name|Description
 :-----|:----------
-{JsonProperties}|Json properties to configure the modern web part
+{JsonProperties}|Json properties to configure the client side web part
 ### DocumentEmbedLookup
 
 **Description:** Does lookup a file based on the given server relative path and return needed properties of the file. Returns null if file was not found.
@@ -447,7 +481,7 @@ Name|Description
 {ImageSources}|ImageSources nodes to be added in the serverProcessedContent node
 ### TextCleanUpSummaryLinks
 
-**Description:** Rewrites summarylinks web part html to be compliant with the html supported by the modern modern text part.
+**Description:** Rewrites summarylinks web part html to be compliant with the html supported by the client side text part.
 
 **Example:** `{CleanedText} = TextCleanUpSummaryLinks({Text})`
 
@@ -460,7 +494,7 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{CleanedText}|Html compliant with modern text part
+{CleanedText}|Html compliant with client side text part
 ### SummaryLinksToQuickLinksProperties
 
 **Description:** Maps summarylinks web part data into a properties collection and supporting serverProcessedContent nodes for the quicklinks web part
@@ -530,6 +564,61 @@ Name|Description
 Name|Description
 :-----|:----------
 {return value}|String provided as input
+### Prefix
+
+**Description:** Prefixes the input text with another text. The applyIfContentIsEmpty parameter controls if the prefix also needs to happen when the actual content is empty
+
+**Example:** `Prefix('&lt;H1&gt;Prefix some extra text&lt;/H1&gt;', {PublishingPageContent}, 'false')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'prefix string'}|Static input string which will be used as prefix
+{PublishingPageContent}|The actual publishing page HTML field content to prefix
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the prefixing still needs to happen when the {PublishingPageContent} field content is emty
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Value of {PublishingPageContent} prefixed with the provided prefix value
+### Suffix
+
+**Description:** Suffixes the input text with another text. The applyIfContentIsEmpty parameter controls if the suffix also needs to happen when the actual content is empty
+
+**Example:** `Suffix('&lt;H1&gt;Suffix some extra text&lt;/H1&gt;', {PublishingPageContent}, 'false')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'suffix string'}|Static input string which will be used as suffix
+{PublishingPageContent}|The actual publishing page HTML field content to suffix
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the suffixing still needs to happen when the {PublishingPageContent} field content is emty
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Value of {PublishingPageContent} suffixed with the provided suffix value
+### PrefixAndSuffix
+
+**Description:** Prefixes and suffixes the input text with another text. The applyIfContentIsEmpty parameter controls if the prefix/suffix also needs to happen when the actual content is empty
+
+**Example:** `PrefixAndSuffix('&lt;H1&gt;Prefix some extra text&lt;/H1&gt;','&lt;H1&gt;Suffix some extra text&lt;/H1&gt;',{PublishingPageContent},'false')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'prefix string'}|Static input string which will be used as prefix
+{'suffix string'}|Static input string which will be used as suffix
+{PublishingPageContent}|The actual publishing page HTML field content to prefix/suffix
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the prefixing/suffixing still needs to happen when the {PublishingPageContent} field content is emty
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Value of {PublishingPageContent} prefixed/suffixed with the provided values
 ### ToImageUrl
 
 **Description:** Returns the server relative image url of a Publishing Image field value.
@@ -626,6 +715,24 @@ Name|Description
 Name|Description
 :-----|:----------
 {return value}|A formatted json blob describing the user's details
+### DefaultTaxonomyFieldValue
+
+**Description:** Populate a taxonomy field based upon provided term id's. You can configure to optionally overwrite existing values
+
+**Example:** `DefaultTaxonomyFieldValue({TaxField2},'a65537e8-aa27-4b3a-bad6-f0f61f84b9f7|69524923-a5a0-44d1-b5ec-7f7c6d0ec160','true')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{Taxonomy Field}|The taxonomy field to update
+{'term ids split by |'}|List of term id's to set, multiple values can also be used when the taxonomy field is configured to accept multiple terms
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the default term values have to be set in case the fiels already contains terms
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|String with term information needed to set the taxonomy field
 ## Selectors
 ### TextSelector
 
@@ -637,7 +744,7 @@ Name|Description
 
 Name|Description
 :-----|:----------
-{CleanedText}|modern text part compliant html (cleaned via TextCleanup function)
+{CleanedText}|Client side text part compliant html (cleaned via TextCleanup function)
 #### Output values
 
 Name|Description

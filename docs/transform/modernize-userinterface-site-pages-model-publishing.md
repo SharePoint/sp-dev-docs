@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 12/13/2019
+ms.date: 02/06/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -344,45 +344,18 @@ Now that the assembly has been defined you can use your functions and selectors 
 
 ## Page layout mapping FAQ
 
-### I want to keep the source page creation information (as of September 2019 release)
+### I want to keep the source page creation information (as of October 2019 release)
 
-You can do this by altering your page layout mapping like shown in below sample:
+When using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md) then use the `-KeepPageCreationModificationInformation` cmdlet in the `ConvertTo-PnPClientSidePage` cmdlet. When you're using the [.Net approach](modernize-userinterface-site-pages-dotnet.md) then set the `KeepPageCreationModificationInformation` parameter to true. Using this option will give the target page the Created, Modified, Author and Editor field values from the source page.
 
-```XML
-<MetaData>
-  ...
-  <!-- Use below 4 fields to retain user created/date created, user modified/date modified will be overwritten afterwards, but you need to include them to make this "override" work -->
-  <Field Name="Created" TargetFieldName="Created" Functions="" />
-  <Field Name="Modified" TargetFieldName="Modified" Functions="" />
-  <Field Name="Author" TargetFieldName="Author" Functions="" />
-  <Field Name="Editor" TargetFieldName="Editor" Functions="" />
-  ...
-</MetaData>
-```
+> [!Note]
+> When you, as part of page transformation, promote the page as news or publish the page the Editor field will be set to the account running page transformation
 
-On publishing this page the modification data will change again. If you want to keep the modification date shown correctly in the modern page header you should set this field as well:
+### I want to promote the created pages as news (as of October 2019 release)
 
-```XML
-<MetaData>
-  ...
-  <Field Name="Modified" TargetFieldName="FirstPublishedDate" Functions=""/>
-  ...
-</MetaData>
-```
+Promoting pages created from a page layout as news pages can be be done by using the `-PostAsNews` parameter on the `-KeepPageCreationModificationInformation` cmdlet (when you're using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md)) or alternatively by setting the `PostAsNews` parameter to true (when using the [.Net approach](modernize-userinterface-site-pages-dotnet.md)).
 
-In above sample the page modification date is taken as FirstPublishedDate, but you can also take other DateTime fields like ArticleStartDate.
-
-### I want to promote the created pages as news
-
-Promoting pages created from a page layout as news pages can be be done by adding the below fields to your page layout mapping:
-
-```XML
-<MetaData>
-  ...
-  <Field Name="ID" TargetFieldName="PromotedState" Functions="StaticString('2')" />
-  ...
-</MetaData>
-```
+When you use the `PostAsNews` option in conjunction with the `KeepPageCreationModificationInformation` option then `FirstPublishedDateField` field will be set to the source page modification date. The `FirstPublishedDateField` field is the date value shown during news rollup.
 
 ### I want to insert hard coded text on the created page (as of September 2019 release)
 
@@ -400,6 +373,44 @@ Sometimes a page layout contains text snippets, which since they're not content 
 
 > [!Note]
 > The HTML provided in the StaticString function must be XML encoded and must be formatted like the source page HTML as this HTML will still be converted to HTML which is compliant with the modern text editor
+
+### I want to prefix or suffix the content from field (as of February 2020 release)
+
+The approach used in the previous chapter allows you to add extra text on a page, but has as downside that the extra text will be added in it's own text part. If you want the extra text to be integrated with the actual text being transformed then the below approach allows you to do that. You can either prefix and/or suffix existing field content and optionally you can only have the prefixing/suffixing done when the the field contains content. The bool parameter in the `Prefix`, `Suffix` and `PrefixAndSuffix` functions defines whether the prefixing/suffixing needs to happen when the field content is empty: 'true' means to apply the action even when the field is empty.
+
+See [Page Transformation Functions and Selectors](modernize-userinterface-site-pages-api.md) for more details on the below functions.
+
+```Xml
+<WebParts>
+...
+  <Field Name="PublishingPageContent" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="2">
+    <Property Name="Text" Type="string" Functions="PrefixAndSuffix('&lt;H1&gt;Prefix some extra text&lt;/H1&gt;','&lt;H1&gt;Suffix some extra text&lt;/H1&gt;',{PublishingPageContent},'false')" />
+  </Field>
+  ...
+  <Field Name="PublishingPageContent" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="2">
+    <Property Name="Text" Type="string" Functions="Prefix('&lt;H1&gt;Prefix some extra text&lt;/H1&gt;',{PublishingPageContent},'true')" />
+  </Field>
+  ...
+  <Field Name="PublishingPageContent" TargetWebPart="SharePointPnP.Modernization.WikiTextPart" Row="1" Column="2">
+    <Property Name="Text" Type="string" Functions="Suffix('&lt;H1&gt;Suffix some extra text&lt;/H1&gt;',{PublishingPageContent},'false')" />
+  </Field>
+...
+</WebParts>
+```
+
+### I want to populate a managed metadata field with one or more terms
+
+When you have a managed metadata field in the source page metadata then you might want to have a similar managed metadata field for the target page. Given page transformation currently does have a managed metadata mapping feature this poses a problem. A possible workaround is to populate the target managed metadata field with a chosen term or a set of terms in case of a multi-value managed metadata field. This can be done using the `DefaultTaxonomyFieldValue` function as shown in below example:
+
+```Xml
+<MetaData ShowPageProperties="true" PagePropertiesRow="1" PagePropertiesColumn="4" PagePropertiesOrder="1">
+...
+  <Field Name="TaxField2" TargetFieldName="Metadata2" Functions="DefaultTaxonomyFieldValue({TaxField2},'a65537e8-aa27-4b3a-bad6-f0f61f84b9f7|69524923-a5a0-44d1-b5ec-7f7c6d0ec160','true')" ShowInPageProperties="true"/>
+...
+</MetaData>
+```
+
+See [Page Transformation Functions and Selectors](modernize-userinterface-site-pages-api.md) for more details on the `DefaultTaxonomyFieldValue` function.
 
 ### I want to add an extra web part on the created page
 
