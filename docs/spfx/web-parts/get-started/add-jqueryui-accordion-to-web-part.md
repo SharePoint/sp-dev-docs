@@ -22,7 +22,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/watch?v=N0C9azIyiTo]
+> [!Video https://www.youtube.com/embed/N0C9azIyiTo]
 
 <br/>
 

@@ -12,7 +12,7 @@ Connect your web part to SharePoint to access functionality and data in SharePoi
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/watch?v=4F65TmsHucY]
+> [!Video https://www.youtube.com/embed/4F65TmsHucY]
 
 ## Run gulp serve
 

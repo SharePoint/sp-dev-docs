@@ -21,7 +21,7 @@ Before you start, complete the procedures in the following articles to ensure th
 
 <br/>
 
-> [!Video https://www.youtube.com/watch?v=JoTAC2i-XeU]
+> [!Video https://www.youtube.com/embed/JoTAC2i-XeU]
 
 <br/>
 

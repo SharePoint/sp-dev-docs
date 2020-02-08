@@ -22,7 +22,7 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
 
 <br/>
 
-> [!Video https://www.youtube.com/watch?v=QtGjTAjbIKU]
+> [!Video https://www.youtube.com/embed/QtGjTAjbIKU]
 
 <br/>
 
