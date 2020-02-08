@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 1993dd62-6c1a-3f9a-af11-073f9d848d33
 description: "Last modified: March 09, 2015"

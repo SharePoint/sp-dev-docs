@@ -1,11 +1,12 @@
 ---
+title: Association element (WorkflowConfig)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 7f3e7e9f-256f-4570-ba3f-745bbdfbc5b8
 ---
@@ -106,21 +107,21 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Remarks
 
-After the workflow has been associated with a specific SharePoint list, the values of the following attributes are stored in the [SPWorkflowAssociation](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowassociation.aspx) object for the workflow:
+After the workflow has been associated with a specific SharePoint list, the values of the following attributes are stored in the [SPWorkflowAssociation](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowassociation.aspx) object for the workflow:
 
-- The StartManually attribute value is stored in the [AllowManual](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowassociation.allowmanual.aspx) property.
+- The StartManually attribute value is stored in the [AllowManual](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowassociation.allowmanual.aspx) property.
 
-- The StartOnCreate attribute value is stored in the [AutoStartCreate](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowassociation.autostartcreate.aspx) property.
+- The StartOnCreate attribute value is stored in the [AutoStartCreate](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowassociation.autostartcreate.aspx) property.
 
-- The StartOnChange attribute value is stored in the [AutoStartChange](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowassociation.autostartchange.aspx) property.
+- The StartOnChange attribute value is stored in the [AutoStartChange](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowassociation.autostartchange.aspx) property.
 
-- The HistoryListID attribute value is stored in the [HistoryListId](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowassociation.historylistid.aspx) property.
+- The HistoryListID attribute value is stored in the [HistoryListId](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowassociation.historylistid.aspx) property.
 
-- The TaskListID attribute value is stored in the [TaskListId](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.workflow.spworkflowassociation.tasklistid.aspx) property.
+- The TaskListID attribute value is stored in the [TaskListId](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflow.spworkflowassociation.tasklistid.aspx) property.
 
 Applications created to work as a declarative rules-based, code-free workflow editor can use the **AssociateWorkflowMarkup(String, String)** method of the **websvcWebPartPages** Web Service to create a workflow template and associate it to a SharePoint list specifying a workflow markup file, a workflow configuration file, and optionally, a workflow rules markup file.
 
-For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx).
+For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx).
 
 ## Example
 
@@ -138,9 +139,9 @@ The following example shows an Association element for a workflow configuration.
 ## See also
 
 - [Workflow configuration schema reference](workflow-configuration-schema-reference.md)
-- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/en-us/library/office/ms414613.aspx)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Office SharePoint Designer Overview](https://msdn.microsoft.com/en-us/library/office/ms454098.aspx)
+- [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
 
 
 

@@ -1,11 +1,12 @@
 ---
+title: Parameter Element in Parameters
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Parameter
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 811cad0b-ba71-8be0-0765-3e0dec18a0d3
 ---
@@ -18,7 +19,7 @@ ms.assetid: 811cad0b-ba71-8be0-0765-3e0dec18a0d3
 
 Specifies a parameter of a method.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 
@@ -127,7 +128,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>The properties of the parameter.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/en-us/sharepoint/dev/schema/typedescriptor-element-bdcmetadata-schema">TypeDescriptor</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/sharepoint/dev/schema/typedescriptor-element-bdcmetadata-schema">TypeDescriptor</a></p></td>
 <td align="left"><p>The root type descriptor of the parameter.</p></td>
 </tr>
 </tbody>

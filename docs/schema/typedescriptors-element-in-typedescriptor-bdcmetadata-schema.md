@@ -1,11 +1,12 @@
 ---
+title: TypeDescriptors Element in TypeDescriptor
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.TypeDescriptors
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 322b2d3f-c92d-3c24-9f22-07b56396275b
 ---
@@ -18,7 +19,7 @@ ms.assetid: 322b2d3f-c92d-3c24-9f22-07b56396275b
 
 Specifies a list of **TypeDescriptors** of a parent **TypeDescriptor**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 
@@ -74,7 +75,7 @@ None.
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

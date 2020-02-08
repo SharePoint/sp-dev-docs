@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: cbafc593-010d-4278-af89-e38295da9a67
 description: Returns the URL to the icon that is used to indicate filtering on a list.
@@ -44,7 +44,7 @@ Numerous
    
 ### Remarks
 
-This element is used in the [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file in the HeaderPattern sections. 
+This element is used in the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file in the HeaderPattern sections. 
   
 ## Example
 

@@ -1,9 +1,10 @@
 ---
+title: Types (Workflow actions)
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b08aeead-5898-8758-99fd-90fac82f058f
 ---

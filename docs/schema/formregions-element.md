@@ -1,9 +1,10 @@
 ---
+title: FormRegions Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: d4539cb9-2313-4d0a-9201-70350721964f
 ---
@@ -14,7 +15,7 @@ ms.assetid: d4539cb9-2313-4d0a-9201-70350721964f
 
 Describes the properties of the form region used to display the external data.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

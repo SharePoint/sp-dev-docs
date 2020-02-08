@@ -22,7 +22,7 @@ SharePoint Framework offers you a number of ways to define the icon for your web
 
 One way to define the icon for your web part is by using the **officeFabricIconFontName** property. This property allows you to choose one of the icons offered as a part of Office UI Fabric.
 
-For a list of available Office UI Fabric icons, see [Icons](https://developer.microsoft.com/en-us/fabric#/styles/icons).
+For a list of available Office UI Fabric icons, see [Icons](https://developer.microsoft.com/fabric#/styles/icons).
 
 ### To use a specific icon
 
@@ -32,7 +32,7 @@ For a list of available Office UI Fabric icons, see [Icons](https://developer.mi
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
     "id": "bcae7077-85cb-41a0-b3d3-2084f268a211",
     "alias": "WeatherWebPart",
     "componentType": "WebPart",
@@ -41,7 +41,7 @@ For a list of available Office UI Fabric icons, see [Icons](https://developer.mi
     "manifestVersion": 2,
     // If true, the component can only be installed on sites where Custom Script is allowed.
     // Components that allow authors to embed arbitrary script code should set this to true.
-    // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+    // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
     "requiresCustomScript": false,
     "preconfiguredEntries": [
       {
@@ -82,7 +82,7 @@ In addition to using Office UI Fabric icons, SharePoint Framework also allows yo
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
     "id": "bcae7077-85cb-41a0-b3d3-2084f268a211",
     "alias": "WeatherWebPart",
     "componentType": "WebPart",
@@ -91,7 +91,7 @@ In addition to using Office UI Fabric icons, SharePoint Framework also allows yo
     "manifestVersion": 2,
     // If true, the component can only be installed on sites where Custom Script is allowed.
     // Components that allow authors to embed arbitrary script code should set this to true.
-    // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+    // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
     "requiresCustomScript": false,
     "preconfiguredEntries": [
       {
@@ -134,7 +134,7 @@ A number of services are available online that you can use to base64-encode your
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
     "id": "bcae7077-85cb-41a0-b3d3-2084f268a211",
     "alias": "WeatherWebPart",
     "componentType": "WebPart",
@@ -143,7 +143,7 @@ A number of services are available online that you can use to base64-encode your
     "manifestVersion": 2,
     // If true, the component can only be installed on sites where Custom Script is allowed.
     // Components that allow authors to embed arbitrary script code should set this to true.
-    // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+    // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
     "requiresCustomScript": false,
     "preconfiguredEntries": [
       {

@@ -1,9 +1,10 @@
 ---
+title: Subscription element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 1eaeefb2-8b18-bf8c-3594-f72ac27cd74d
 ---
@@ -16,7 +17,7 @@ ms.assetid: 1eaeefb2-8b18-bf8c-3594-f72ac27cd74d
 
 The top-level (root) element that defines a cache subscription.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **schema**: Subscription
 

@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - View schema
@@ -66,7 +66,7 @@ This element does not require any particular parent element.
   
 ## Example
 
-The following example from the [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file defines two different rendering patterns for a **Note** field, depending on whether the field has rich text formatting. 
+The following example from the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file defines two different rendering patterns for a **Note** field, depending on whether the field has rich text formatting. 
   
 ```XML
 <RenderPattern Name="DisplayPattern" DisplayName="DisplayPattern">

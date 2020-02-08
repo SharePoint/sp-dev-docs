@@ -56,7 +56,7 @@ Option | Description
 --help|Print the generator's options and usage.
 --skip-cache|Do not remember prompt answers. Default: *false*.
 --skip-install|Do not automatically install dependencies. Default: *false*.
---component-type|The type of component. Currently "webpart" or "extension" is supported.
+--component-type|The type of component. Currently "webpart", "extension", or "library" is supported.
 --component-description|Description of the component.
 --component-name|Name of the component.
 --framework|Framework to use for the solution. Choose one from "none", "react", "knockout".

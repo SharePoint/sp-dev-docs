@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: faf4b117-a392-4d91-9259-085506d57832
 description: The page (HTML) rendering CAML elements are designed for use in rendering pages, such as when you need to extract the property of a specific field and render it on a page.
@@ -38,7 +38,7 @@ The following table describes some of the prominent CAML HTML-rendering elements
 |[IfEqual](ifequal-element-view.md) <br/> |Allows for conditional rendering based on the comparison of two CAML expressions.  <br/> |
 |[ListProperty](listproperty-element-view.md) <br/> |Returns the value of a specified column from the database.  <br/> |
 |[Now](now-element-query.md) <br/> |Renders the current time.  <br/> |
-|[Project](project-element-site.md) <br/> |The top-level element in [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
+|[Project](project-element-site.md) <br/> |The top-level element in [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
 |[ProjectProperty](projectproperty-element-view.md) <br/> |Returns a global property of the current team website.  <br/> |
 |[Property](property-element-view.md) <br/> |Returns the property from the current **ForEach** context.  <br/> |
 |[SetList](setlist-element-view.md) <br/> |Designates the current list.  <br/> |

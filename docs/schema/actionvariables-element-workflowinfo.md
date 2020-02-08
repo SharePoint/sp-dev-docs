@@ -1,11 +1,12 @@
 ---
+title: ActionVariables element (WorkflowInfo)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f48251a8-eea3-43d5-8970-c5d1412791ca
 ---
@@ -61,8 +62,8 @@ None
 - [.ACTIONS File Example](actions-file-example-workflowinfo.md)
 - [Default Workflow Actions](default-workflow-actions-workflowinfo.md)
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
-- [Creating Declarative, No-Code Workflow Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
-- [Workflow Actions Schema Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
 
 
 

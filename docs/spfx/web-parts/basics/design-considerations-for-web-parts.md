@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # Design considerations for SharePoint client-side web parts
 
-To get started designing web parts, you need to be familiar with [Office UI Fabric](https://developer.microsoft.com/en-us/fabric). All of the styles from [Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core), including icons, typography, color usage, animation, and the responsive grid, are loaded by default and available to your web part. 
+To get started designing web parts, you need to be familiar with [Office UI Fabric](https://developer.microsoft.com/fabric). All of the styles from [Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core), including icons, typography, color usage, animation, and the responsive grid, are loaded by default and available to your web part. 
 
 Do not import a copy of Fabric for your web part because this may conflict with the global copy. These classes provide a foundation to your web part's styling, which you can always depart from if you require different visuals to match your company's brand.
 
@@ -21,7 +21,7 @@ The following To Do list example uses Fabric components in the property pane tha
 
 ![Example of a Todo web part that uses Fabric](../../../images/design-wp-todo-example.png)
 
-You can find a complete list of the Office UI Fabric styles, typography, color, icons, and animations at [Office UI Fabric styles](https://developer.microsoft.com/en-us/fabric#/styles).
+You can find a complete list of the Office UI Fabric styles, typography, color, icons, and animations at [Office UI Fabric styles](https://developer.microsoft.com/fabric#/styles).
 
 
 ## Responsive behavior

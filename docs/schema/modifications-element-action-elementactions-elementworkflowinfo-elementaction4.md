@@ -1,9 +1,10 @@
 ---
+title: Modifications element
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c2c25f2d-f252-6769-5924-c13571a0c763
 ---

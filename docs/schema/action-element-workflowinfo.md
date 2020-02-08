@@ -1,11 +1,12 @@
 ---
+title: Action element (WorkflowInfo)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: cd9ce74a-ac5a-4ebc-8e4c-3b16bcad828e
 ---

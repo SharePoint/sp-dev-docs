@@ -1,5 +1,5 @@
 ---
-title: Convert an HTML file into a master page in SharePoint
+title: Convert an .html file into a master page in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a76ab289-3256-45de-ac63-d5112a74e3c7
@@ -7,69 +7,69 @@ localization_priority: Priority
 ---
 
 
-# Convert an HTML file into a master page in SharePoint
+# Convert an .html file into a master page in SharePoint
 
-With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
+With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the .html file and master page are associated, so that when you edit and save the .html file, the changes are synced to the associated master page.
 
 ## Introduction to converting a master page
 <a name="Introduction"> </a>
 
- With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
+ With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the .html file and master page are associated, so that when you edit and save the .html file, the changes are synced to the associated master page.
   
     
     
-Why do you want to convert an HTML file, instead of creating a .master file from scratch? In SharePoint, master pages work exactly as they do in ASP.NET, but SharePoint also requires that certain elements, such as controls and content placeholders that are specific to SharePoint, must be present on the page for SharePoint to correctly render that master page. By using Design Manager to convert an HTML file into a fully functioning SharePoint master page, you don't have to know about ASP.NET or the SharePoint-specific markup; instead, you can focus on designing your site in HTML, CSS, and JavaScript.
+Why do you want to convert an .html file, instead of creating a .master file from scratch? In SharePoint, master pages work exactly as they do in ASP.NET, but SharePoint also requires that certain elements, such as controls and content placeholders that are specific to SharePoint, must be present on the page for SharePoint to correctly render that master page. By using Design Manager to convert an .html file into a fully functioning SharePoint master page, you don't have to know about ASP.NET or the SharePoint-specific markup; instead, you can focus on designing your site in HTML, CSS, and JavaScript.
   
     
     
-When you convert an HTML file into a master page:
+When you convert an .html file into a master page:
   
     
     
 
-- A .master file with the same name as your HTML file is created in the Master Page Gallery.
+- A .master file with the same name as your .html file is created in the Master Page Gallery.
     
   
 - All markup required by SharePoint is added to the .master file so that the master page renders correctly.
     
   
-- Markup such as comments, **\<div\>** tags, snippets, and content placeholders are added to your original HTML file.
+- Markup such as comments, **\<div\>** tags, snippets, and content placeholders are added to your original .html file.
     
   
-- The HTML file and master page are associated, so that any later edits to the HTML file are synced to the .master file when the HTML file is saved.
+- The .html file and master page are associated, so that any later edits to the .html file are synced to the .master file when the .html file is saved.
     
 > [!NOTE]
-> The syncing goes in one direction only. Changes to the HTML master page are synced to the associated .master file, but if you choose to edit the .master file directly the changes are not synced to the HTML file. Every HTML master page (and every HTML page layout) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.
+> The syncing goes in one direction only. Changes to the .html master page are synced to the associated .master file, but if you choose to edit the .master file directly the changes are not synced to the .html file. Every HTML master page (and every .html page layout) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.
   
     
     
 
-If you have a pair of associated files (HTML and .master) and you edit the .master file without breaking the association, the changes to the .master file will be saved, but you can't check in or publish the .master file, so those changes are not saved in a meaningful way. Any changes to the HTML file override the .master file. If you check in or publish the HTML file, the HTML file changes override any changes that were made to the .master file. The changes to the .master file are lost.
+If you have a pair of associated files (HTML and .master) and you edit the .master file without breaking the association, the changes to the .master file will be saved, but you can't check in or publish the .master file, so those changes are not saved in a meaningful way. Any changes to the .html file override the .master file. If you check in or publish the .html file, the .html file changes override any changes that were made to the .master file. The changes to the .master file are lost.
   
     
     
-If you're a developer comfortable working with ASP.NET, you can choose to work only with the .master file by breaking the association between the files. To break the association between the HTML file and the .master file, in Design Manager, choose **Edit Properties** for the HTML file, and then clear the **Associated File** check box. You can later re-associate the files by editing the properties and selecting this check box, in which case the HTML file will again overwrite the .master file, and changes made to the .master file will be lost.
+If you're a developer comfortable working with ASP.NET, you can choose to work only with the .master file by breaking the association between the files. To break the association between the .html file and the .master file, in Design Manager, choose **Edit Properties** for the .html file, and then clear the **Associated File** check box. You can later re-associate the files by editing the properties and selecting this check box, in which case the .html file will again overwrite the .master file, and changes made to the .master file will be lost.
   
     
     
 
-## Prepare the HTML file for conversion
+## Prepare the .html file for conversion
 <a name="Prepare"> </a>
 
-Before you convert your HTML file, here are some best practices and guidance to consider:
+Before you convert your .html file, here are some best practices and guidance to consider:
   
     
     
 
-- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains web parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
+- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). As you design the .html mockups of your site, you'll probably have several .html files for different types of pages, such as an article page or a category page that contains web parts that display a category of items from a catalog. But, only one .html file will be converted into the master page. An .html file can be converted into a master page, but an .html file can't be converted directly into a page layout because a page layout requires page fields.
     
   
-- Make sure your HTML file is XML-compliant. For the conversion to work, the HTML file must be XML-compliant. Unfortunately, this requirement overrides some HTML 5 standards—for example, in HTML 5 you can specify the **doctype** in lowercase, but in XML the **doctype** must be uppercase. Also, you should remove any **\<form\>** tags from your HTML file. Consider running your HTML file through an external XML validator to identify XML errors before conversion.
+- Make sure your .html file is XML-compliant. For the conversion to work, the .html file must be XML-compliant. Unfortunately, this requirement overrides some HTML 5 standards—for example, in HTML 5 you can specify the **doctype** in lowercase, but in XML the **doctype** must be uppercase. Also, you should remove any **\<form\>** tags from your .html file. Consider running your .html file through an external XML validator to identify XML errors before conversion.
     
   
 - Consider these important guidelines for your CSS references:
     
-  - Don't put **\<style\>** blocks in the **\<head\>** tag. These styles are removed during conversion. Instead, link from your HTML file to an external CSS file.
+  - Don't put **\<style\>** blocks in the **\<head\>** tag. These styles are removed during conversion. Instead, link from your .html file to an external CSS file.
     
   
   - Add  `ms-design-css-conversion="no"` to the **\<CSS link\>** tag if you're using a web font.
@@ -111,15 +111,15 @@ Do not put them on the same line, like this.
     
   
 
-## Convert the HTML file into a master page
+## Convert the .html file into a master page
 <a name="Convert"> </a>
 
-Before you convert an HTML file, you first have to upload all of your design files, including your HTML file. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+Before you convert an .html file, you first have to upload all of your design files, including your .html file. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
 
-### To convert the HTML file into a .master file
+### To convert the .html file into a .master file
 
 
 1. Browse to your publishing site.
@@ -131,18 +131,18 @@ Before you convert an HTML file, you first have to upload all of your design fil
 3. In Design Manager, in the left navigation pane, choose **Edit Master Pages**.
     
   
-4. Choose **Convert an HTML file to a SharePoint master page**.
+4. Choose **Convert an .html file to a SharePoint master page**.
     
   
-5. In the **Select an Asset** dialog box, browse to and select the HTML file that you want to convert.
+5. In the **Select an Asset** dialog box, browse to and select the .html file that you want to convert.
     
     > [!NOTE]
     > When you upload your design files, you should keep all files that are related to a single design in their own folder in the Master Page Gallery. When you copy your design folder into the mapped network drive, the Master Page Gallery retains whatever folder structure you created. 
 6. Choose **Insert**.
     
-    At this point, SharePoint converts your HTML file into a .master file with the same name.
+    At this point, SharePoint converts your .html file into a .master file with the same name.
     
-    In Design Manager, your HTML file now appears with a Status column that shows one of two possible statuses:
+    In Design Manager, your .html file now appears with a Status column that shows one of two possible statuses:
     
   - **Warnings and Errors**
     
@@ -152,7 +152,7 @@ Before you convert an HTML file, you first have to upload all of your design fil
   
 7. Follow the link in the Status column to preview the file and to view any errors or warnings about the master page.
     
-    The preview page is a live server-side preview of your master page. The top of the preview displays any warnings or errors that you may have to resolve by editing the HTML file in an HTML editor. Errors must be fixed before the preview will display the master page correctly.
+    The preview page is a live server-side preview of your master page. The top of the preview displays any warnings or errors that you may have to resolve by editing the .html file in an HTML editor. Errors must be fixed before the preview will display the master page correctly.
     
     For more information about resolving errors and warnings, see  [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md).
     
@@ -161,32 +161,32 @@ Before you convert an HTML file, you first have to upload all of your design fil
     The preview page also contains a Snippets link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mockup controls in your design with dynamic SharePoint controls. For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
-8. To fix any errors, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time you save the HTML file, any changes are synced to the associated .master file.
+8. To fix any errors, edit the .html file that resides directly on the server by using an HTML editor to open and edit the .html file in the mapped drive. Each time you save the .html file, any changes are synced to the associated .master file.
     
   
-9. After your master page previews successfully, you will see a **\<div\>** tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the **\<div\>** tag.
+9. After your master page previews successfully, you will see a **\<div\>** tag that gets added to your .html file. You may have to scroll to the bottom of the page to see the **\<div\>** tag.
     
     This **\<div\>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **\<div\>** where you want your page layouts to appear on the master page.
     
-    If your HTML file contains static or mockup content in the body of the page, now you begin the process of removing that static content from the HTML master page and applying those styles to other elements of the SharePoint page model, such as page layouts, page field controls, snippets, and display templates. For an example, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
+    If your .html file contains static or mockup content in the body of the page, now you begin the process of removing that static content from the HTML master page and applying those styles to other elements of the SharePoint page model, such as page layouts, page field controls, snippets, and display templates. For an example, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
     
   
 
-## Understanding the HTML file after conversion
+## Understanding the .html file after conversion
 <a name="Understand"> </a>
 
-When you convert an HTML file into a master page, many lines of markup get added to your HTML file. You can safely ignore most of this markup, and most of it will not appear in the final markup of your site when you view source in the browser, but this markup is critical for converting your HTML file into the .master file that SharePoint actually uses. Each time you save a change to your HTML file, this SharePoint markup makes it possible for that same change to be made to the associated .master file in the background.
+When you convert an .html file into a master page, many lines of markup get added to your .html file. You can safely ignore most of this markup, and most of it will not appear in the final markup of your site when you view source in the browser, but this markup is critical for converting your .html file into the .master file that SharePoint actually uses. Each time you save a change to your .html file, this SharePoint markup makes it possible for that same change to be made to the associated .master file in the background.
   
     
     
-The markup that gets added includes tags before and in the **\<head\>** tag, snippets, and content placeholders. Most of the markup is enclosed within comment tags: Whenever you save a change to the HTML file, the conversion process strips out the comments to use the ASP.NET markup within.
+The markup that gets added includes tags before and in the **\<head\>** tag, snippets, and content placeholders. Most of the markup is enclosed within comment tags: Whenever you save a change to the .html file, the conversion process strips out the comments to use the ASP.NET markup within.
   
     
     
 
 ### Types of markup
 
-The following is a breakdown of the types of markup that are added to the HTML file:
+The following is a breakdown of the types of markup that are added to the .html file:
   
     
     
@@ -279,7 +279,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
         <!--ME:</SharePoint:AjaxDelta>-->
 ```
 
-- **Preview blocks** The **\<PS\>** and **\<PE\>** ("Preview start" and "preview end") tags surround a section of HTML code that you shouldn't edit because this section affects only the design-time preview. These preview sections are a snapshot in time of the SharePoint control that snippet is inserting. A preview makes it possible for you to work more meaningfully on the HTML file in a client-side HTML editor. But, changing the content or styling within that preview has no lasting effect on the .master file, which is what SharePoint is ultimately using. To style a snippet, you have to identify and override the SharePoint styles with your own custom CSS.
+- **Preview blocks** The **\<PS\>** and **\<PE\>** ("Preview start" and "preview end") tags surround a section of HTML code that you shouldn't edit because this section affects only the design-time preview. These preview sections are a snapshot in time of the SharePoint control that snippet is inserting. A preview makes it possible for you to work more meaningfully on the .html file in a client-side HTML editor. But, changing the content or styling within that preview has no lasting effect on the .master file, which is what SharePoint is ultimately using. To style a snippet, you have to identify and override the SharePoint styles with your own custom CSS.
     
 ```HTML
   
@@ -288,7 +288,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
 <!--PE: End of READ-ONLY PREVIEW -->
 ```
 
-- **SharePoint IDs** Two of the snippets added to your HTML file during the conversion (the Page Head Contents snippet and the SharePoint Ribbon) have an associated SharePoint ID, or SID (00 and 02, respectively). These IDs make it possible to shorten the snippets and make the HTML in the page easier to read.
+- **SharePoint IDs** Two of the snippets added to your .html file during the conversion (the Page Head Contents snippet and the SharePoint Ribbon) have an associated SharePoint ID, or SID (00 and 02, respectively). These IDs make it possible to shorten the snippets and make the HTML in the page easier to read.
     
 ```HTML
   
@@ -300,7 +300,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
 
 ### Added snippets
 
-It's important to know about two of the snippets that are added to your HTML file. These snippets are added automatically during the conversion, but they're not available for you to add from the Snippet Gallery.
+It's important to know about two of the snippets that are added to your .html file. These snippets are added automatically during the conversion, but they're not available for you to add from the Snippet Gallery.
   
     
     
@@ -337,10 +337,10 @@ It's important to know about two of the snippets that are added to your HTML fil
 ```
 
 
-## Reference: Examples of SharePoint markup added to the HTML file
+## Reference: Examples of SharePoint markup added to the .html file
 <a name="Reference"> </a>
 
-The following is an example of markup added to an HTML file after it is converted to a master page.
+The following is an example of markup added to an .html file after it is converted to a master page.
   
     
     

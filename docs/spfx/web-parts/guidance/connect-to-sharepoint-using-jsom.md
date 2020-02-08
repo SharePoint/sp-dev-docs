@@ -375,13 +375,22 @@ Having loaded the titles of SharePoint lists in the current site, the final step
 
   ![SharePoint Framework client-side web part showing titles of SharePoint lists in the current site](../../../images/tutorial-spjsom-web-part-list-titles.png)
 
-Referencing SharePoint JSOM scripts declaratively as external scripts is convenient and allows you to keep your code clean. One disadvantage, however, is that it requires specifying absolute URLs to the location from which SharePoint JSOM scripts should be loaded. If you're using separate SharePoint tenants for development, testing, and production, it requires some additional work to change these URLs for the different environments accordingly. In such cases, you may consider referencing JSOM imperatively by using the [SPComponentLoader](https://docs.microsoft.com/en-us/javascript/api/sp-application-base) to load the scripts in the SPFx component's code.
+Referencing SharePoint JSOM scripts declaratively as external scripts is convenient and allows you to keep your code clean. One disadvantage, however, is that it requires specifying absolute URLs to the location from which SharePoint JSOM scripts should be loaded. If you're using separate SharePoint tenants for development, testing, and production, it requires some additional work to change these URLs for the different environments accordingly. In such cases, you may consider referencing JSOM imperatively by using the [SPComponentLoader](https://docs.microsoft.com/javascript/api/sp-loader/spcomponentloader) to load the scripts in the SPFx component's code.
 
 ## Reference JSOM imperatively
 
 Another way to load JavaScript libraries in SharePoint Framework projects is to use the `SPComponentLoader`, a utility class provided with the SharePoint Framework designed to help you load scripts and other resources in your components. One benefit of using the `SPComponentLoader` over loading scripts declaratively is that it allows you to use server-relative URLs, which is more convenient when using different SharePoint tenants for the different stages of your development process.
 
 For this portion of the tutorial, we'll be adjusting the code we created previously in the Declarative section.
+
+### Install @microsoft/sp-loader Module
+`SPComponentLoader` is declared in a separate module `@microsoft/sp-loader` that should be installed to your project.
+
+1. From the console, execute the following command within your project directory:
+
+  ```sh
+  npm install @microsoft/sp-loader --save
+  ```
 
 ### Declarative reference cleanup
 

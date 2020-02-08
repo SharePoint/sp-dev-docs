@@ -109,7 +109,7 @@ In the following code, the method shows how to find lists that were created by u
  
 To create a new list, **CreateReplacementList** uses [ListCreationInformation](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.listcreationinformation.aspx). 
 
-The title of the new list is set to the title of the existing list, with Add-in appended to it. The [ListTemplateType](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.listtemplatetype.aspx) enumeration is used to set the list's template type to a document library. If you are creating a list based on a different template type, make sure to use the correct template type. For example, if you are creating a calendar list, use **ListTemplateType.Events** instead of **ListTemplateType.DocumentLibrary**.
+The title of the new list is set to the title of the existing list, with Add-in appended to it. The [ListTemplateType](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.listtemplatetype.aspx) enumeration is used to set the list's template type to a document library. If you are creating a list based on a different template type, make sure to use the correct template type. For example, if you are creating a calendar list, use **ListTemplateType.Events** instead of **ListTemplateType.DocumentLibrary**.
 
 ```csharp
 private static List CreateReplacementList(ClientContext clientContext, ListCollection lists,List listToBeReplaced)

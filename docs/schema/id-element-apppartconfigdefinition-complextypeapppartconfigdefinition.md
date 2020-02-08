@@ -1,9 +1,10 @@
 ---
+title: ID element (AppPartConfigDefinition complexType)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 9c9dd6a2-8f5c-28be-3a7a-77e2a6c9a87f
 ---
@@ -21,26 +22,11 @@ The unique identifier of the app part.
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="guid-simpletype-apppartconfigdefinition.md">GUID</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>apppartconfig.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  | GUID |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration` |
+| **Schema file**  | apppartconfig.xsd |
 
 ## Definition
 

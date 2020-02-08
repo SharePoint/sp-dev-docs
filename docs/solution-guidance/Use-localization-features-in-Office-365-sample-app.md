@@ -13,7 +13,7 @@ The [Core.CreateContentTypes](https://github.com/SharePoint/PnP/tree/master/Samp
 - Localize the content type, site column, list, and a user-supplied site.
 
 > [!NOTE] 
-> The localization features described in this article are only available in Office 365. For information about the localization features that are available in Office 365 Dedicated or SharePoint Server on-premises, see [Localize SharePoint Add-ins](../sp-add-ins/localize-sharepoint-add-ins.md) and [Localizing SharePoint solutions](https://msdn.microsoft.com/en-us/library/ee696750.aspx).
+> The localization features described in this article are only available in Office 365. For information about the localization features that are available in Office 365 Dedicated or SharePoint Server on-premises, see [Localize SharePoint Add-ins](../sp-add-ins/localize-sharepoint-add-ins.md) and [Localizing SharePoint solutions](https://msdn.microsoft.com/library/ee696750.aspx).
 
 ## Before you begin
 

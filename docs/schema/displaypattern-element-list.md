@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - List schema
@@ -48,9 +48,9 @@ Numerous
    
 ### Remarks
 
-The **DisplayPattern** element is used in [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx), [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) and [Base.xml](major-caml-files.md) files. 
+The **DisplayPattern** element is used in [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx), [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) and [Base.xml](major-caml-files.md) files. 
   
-The built-in data types (such as **Integer** and **Text**) also have display patterns, which are defined in the [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file. The [Field](field-element-list.md) element can contain display patterns and, for this reason, can be used to apply rich formatting to values (unlike the [Column](column-element-view.md) element, which simply returns raw data). 
+The built-in data types (such as **Integer** and **Text**) also have display patterns, which are defined in the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file. The [Field](field-element-list.md) element can contain display patterns and, for this reason, can be used to apply rich formatting to values (unlike the [Column](column-element-view.md) element, which simply returns raw data). 
   
 ## Example
 

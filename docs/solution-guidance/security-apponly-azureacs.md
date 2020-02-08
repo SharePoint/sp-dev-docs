@@ -1,3 +1,14 @@
+---
+title: Granting access using SharePoint App-Only
+description: Granting access using SharePoint App-Only
+ms.date: 12/12/2018
+ms.prod: sharepoint
+author: vesajuvonen
+ms.author: vesaj
+ms.topic: sharepoint
+localization_priority: normal
+---
+
 # Granting access using SharePoint App-Only
 SharePoint App-Only is the older, but still very relevant, model of setting up app-principals. This model works for both SharePoint Online and SharePoint 2013/2016 on-premises and is ideal to prepare your applications for migration from SharePoint on-premises to SharePoint Online. Below steps show how to setup an app principal with tenant full control permissions, but obviously you could also grant just read permissions using this approach.
 

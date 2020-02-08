@@ -15,7 +15,7 @@ You can also see the required steps to enable debugging in Visual Studio Code in
 
 <br/>
 
-> [!Video https://www.youtube.com/watch?v=oNChcluMrm8]
+> [!VIDEO https://www.youtube.com/embed/oNChcluMrm8]
 
 <br/> 
 
@@ -48,6 +48,9 @@ The launch.json contains two debug configurations:
 When building SharePoint Framework solutions, you can use the local workbench to verify that your web part is working correctly. Using the local workbench is convenient for testing all scenarios that do not require communicating with SharePoint as well as for offline development.
 
 With Visual Studio Code configured for debugging SharePoint Framework solutions by using Google Chrome and the local workbench, you can verify that everything is working as expected.
+
+> [!IMPORTANT]
+> Local workbench does not support using Internet Explorer 11. Please use more modern browser.
 
 ### Configure a breakpoint
 

@@ -1,9 +1,10 @@
 ---
+title: Feature.xml Files
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: caa75c38-9788-4727-a2a8-ab92df90a256
 ---
@@ -99,7 +100,7 @@ The following example shows how to use a Feature.xml file to specify activation 
 
 ## See also
 
-- [Using Features in SharePoint Foundation](https://msdn.microsoft.com/en-us/library/office/ms460318.aspx)
+- [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/office/ms460318.aspx)
 
 
 

@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e873b640-c1ee-436a-81ef-ae8f6a439e61
 description:  CAML field rendering elements are designed for use when rendering individual field values.
@@ -14,7 +14,7 @@ description:  CAML field rendering elements are designed for use when rendering 
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Collaborative Application Markup Language (CAML) has two major kinds of elements: those for page rendering, and those for field rendering and schema definition. The CAML field rendering elements are designed for use when rendering individual field values. These can appear in field type definitions or, more commonly, in [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) at  `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATES\XML`.
+Collaborative Application Markup Language (CAML) has two major kinds of elements: those for page rendering, and those for field rendering and schema definition. The CAML field rendering elements are designed for use when rendering individual field values. These can appear in field type definitions or, more commonly, in [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) at  `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATES\XML`.
   
 ## Field rendering and schema definition
 
@@ -27,7 +27,7 @@ A field is a column or an attribute containing information that a user can add t
 </Fields>
 ```
 
-To simplify the implementation of the various field types, and to allow for a higher degree of flexibility in rendering the various fields, [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) contains information about the rendering and behavior of each field type. The [Field](field-element-list.md) element renders different HTML depending on the data type of the field in question, and FldTypes.xml defines the data types and rendering patterns for each kind of field. The following table presents the schema used in this file. 
+To simplify the implementation of the various field types, and to allow for a higher degree of flexibility in rendering the various fields, [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) contains information about the rendering and behavior of each field type. The [Field](field-element-list.md) element renders different HTML depending on the data type of the field in question, and FldTypes.xml defines the data types and rendering patterns for each kind of field. The following table presents the schema used in this file. 
   
 |**Name**|**Data type**|**Description**|
 |:-----|:-----|:-----|
@@ -57,9 +57,9 @@ For each display mode there is a display pattern, or CAML-rendering expression. 
 |[Column](column-element-view.md) <br/> |Returns the raw data value for a particular field.  <br/> |
 |[Column2](column2-element-view.md) <br/> |Used in rendering a Link field type.  <br/> |
 |[Escape](escape-element.md) <br/> |Used to escape certain characters in strings.  <br/> |
-|[FieldFilterOptions](fieldfilteroptions-element.md) <br/> |Used in the **HeaderPattern** sections of [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) to display filter drop-down menus.  <br/> |
+|[FieldFilterOptions](fieldfilteroptions-element.md) <br/> |Used in the **HeaderPattern** sections of [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) to display filter drop-down menus.  <br/> |
 |[FieldPrefix](fieldprefix-element-view.md) <br/> |Returns the Microsoft Office namespace, `urn:schemas-microsoft-com:office:office#`.  <br/> |
-|[FieldRef](http://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7%28Office.15%29.aspx) <br/> |Used in computed fields to refer to the constituent fields and in views to define what fields are present.  <br/> |
+|[FieldRef](https://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7%28Office.15%29.aspx) <br/> |Used in computed fields to refer to the constituent fields and in views to define what fields are present.  <br/> |
 |[FieldSortImageURL](fieldsortimageurl-element.md) <br/> |Returns the URL to the image file used to indicate how a column is sorted.  <br/> |
 |[FieldSortParams](fieldsortparams-element-view.md) <br/> |Returns the sort direction on a list, rendering **Asc** or **Desc** based on whether the field has been sorted, and the current default sort direction for the field.  <br/> |
 |[IfEqual](ifequal-element-view.md) <br/> |Allows for conditional rendering based on the comparison of two CAML expressions.  <br/> |

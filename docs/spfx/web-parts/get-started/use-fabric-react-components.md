@@ -1,9 +1,10 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
 description: Build a simple web part that uses the DocumentCard component of Office UI Fabric React.
-ms.date: 11/08/2018
+ms.date: 02/08/2020
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 # Use Office UI Fabric React components in your SharePoint client-side web part
@@ -19,7 +20,11 @@ This article describes how to build a simple web part like in the following imag
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/RnXD10a-2ww]
+<br/>
+
+> [!Video https://www.youtube.com/embed/kNrYd8nYaZY]
+
+<br/>
 
 ## Create a new web part project
 
@@ -61,7 +66,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     Starting from 1.8.2 version, Yeoman will automatically associate the recommended `@microsoft/sp-office-ui-fabric-core` package version to your solution when you select the **React** as the framework.
 
     > [!NOTE]
-    > Starting with SharePoint Framework 1.8, you can use either Office UI Fabric React v5 or v6. In this case we are using specifically Office UI Fabric React version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric React v6.x, you'd also need to update the used TypeScript version of the solution. To use Office UI Fabric React v6, you need to be on at least rush-stack-compiler-2.9. The default project created with SPFx v1.8.2 for SharePoint Online will use rush-stack-compiler-2.9 and Office UI Fabric React v6 (*it won't need the step to add office-ui-fabric-react to your package.json file*). Previous versions use either rush-stack-compiler-2.7 or a build system that is locked to TypeScript 2.4. In those cases, you'll need to reference Office UI FabricReact v5.132.0. If you are targeting SharePoint Server 2016 / SharePoint Server 2019 on-prem, you will also want to use Office UI Fabric React v5.132.0.
+    > Starting with SharePoint Framework 1.8, you can use either Office UI Fabric React v5 or v6. In this case we are using specifically Office UI Fabric React version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric React v6.x, you'd also need to update the used TypeScript version of the solution. To use Office UI Fabric React v6, you need to be on at least rush-stack-compiler-2.9. The default project created with SPFx v1.8.2 for SharePoint Online will use rush-stack-compiler-2.9 and Office UI Fabric React v6 (*it won't need the step to add office-ui-fabric-react to your package.json file*). Previous versions use either rush-stack-compiler-2.7 or a build system that is locked to TypeScript 2.4. In those cases, you'll need to reference Office UI FabricReact v5.132.0. If you are targeting SharePoint Server 2016 / SharePoint Server 2019 on-premises, you will also want to use Office UI Fabric React v5.132.0.
 
 1. Next, execute the following command to open the web part project in Visual Studio Code:
 

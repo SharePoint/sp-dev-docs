@@ -63,7 +63,7 @@ When Default.aspx loads, **Page_Load** runs and does the following:
 
 **GetImage** does the following:
 
-1. Uses **url** to store the GetFolderByServerRelativeUrl REST endpoint URI, which will be used to retrieve the image from SharePoint. You can learn more at [Files and folders REST API reference](http://msdn.microsoft.com/library/2c3d2545-1cd7-497e-b535-12199d8edfbb%28Office.15%29.aspx).
+1. Uses **url** to store the GetFolderByServerRelativeUrl REST endpoint URI, which will be used to retrieve the image from SharePoint. You can learn more at [Files and folders REST API reference](https://msdn.microsoft.com/library/2c3d2545-1cd7-497e-b535-12199d8edfbb%28Office.15%29.aspx).
     
 2. Instantiates an [HttpWebRequest](https://msdn.microsoft.com/library/system.net.httpwebrequest.aspx) object by using **url** .
     

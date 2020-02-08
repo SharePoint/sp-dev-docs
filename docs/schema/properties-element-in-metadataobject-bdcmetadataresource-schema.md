@@ -1,9 +1,10 @@
 ---
+title: Properties Element in MetadataObject
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 65a8fe10-08f8-0464-682b-35ea71842eed
 ---
@@ -16,7 +17,7 @@ ms.assetid: 65a8fe10-08f8-0464-682b-35ea71842eed
 
 For more information, see [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

@@ -1,9 +1,10 @@
 ---
+title: SolutionDefinition Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 1e7a8225-6a52-ba74-e109-2ec7eddaca3d
 ---
@@ -18,7 +19,7 @@ Specifies the root element of a Microsoft Business Connectivity Services (BCS) s
 
 For example, in the manifest file, a solution developer would be able to indicate that for an Outlook Item Type of Contact, a certain UI should be used (example, an Office External Part) and a specific method from the external system (for example, **UpdateCustomerInstance(ID, NewInstanceValues)** should be called when the data in the item changes. There will always be at least one namespace declaration on the **SolutionDefinition** element, typically:
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

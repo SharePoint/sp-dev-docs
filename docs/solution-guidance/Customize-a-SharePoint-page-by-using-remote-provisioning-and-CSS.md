@@ -129,6 +129,6 @@ namespace AlternateCSSAppAutohostedWeb.Services
 
 ## See also
      
-- [ScriptEditorWebPart class](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webpartpages.scripteditorwebpart.aspx)
+- [ScriptEditorWebPart class](https://msdn.microsoft.com/library/office/microsoft.sharepoint.webpartpages.scripteditorwebpart.aspx)
 - [SharePoint site branding and page customization solutions](sharepoint-site-branding-and-page-customization-solutions.md)    
 - [Branding and site provisioning solutions for SharePoint](branding-and-site-provisioning-solutions-for-sharepoint.md)

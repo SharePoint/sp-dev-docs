@@ -1,8 +1,10 @@
 ---
 title: Host your client-side web part from Office 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Office 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online. 
-ms.date: 03/14/2019
+ms.date: 02/08/2020
 ms.prod: sharepoint
+localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 
@@ -26,16 +28,26 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/GNukiGIQZfk]
+> [!Video https://www.youtube.com/embed/wl2ur1SBp3Q]
 
 <br/>
 
 ## Enable CDN in your Office 365 tenant
 
-1. Ensure that you have the latest version of the SharePoint Online Management Shell by downloading it from the [Microsoft Download site](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
+1. Ensure that you have the latest version of the SharePoint Online Management Shell by running the PowerShell in Administrator role and executing following PowerShell cmdlet to download latest version of the cmdlets from [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell).
 
+    ![Run as administarator](../../../images/tutorial-get-started-4-run-spo-shell-admin.png)
+
+    ```powershell
+    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
+    ```
     > [!TIP]
     > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
+
+    > [!NOTE]
+    > You can also install SharePoint Online Management Shell using [an installer](https://www.microsoft.com/en-us/download/details.aspx?id=35588) available from the Microsoft download center, but in general PowerShell gallery option is recommended.
+
+1. Confirm module installation if asked in the PowerShell window
 
 1. Connect to your SharePoint Online tenant with a PowerShell session.
 

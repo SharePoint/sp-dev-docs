@@ -6,7 +6,6 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-
 # SharePoint Framework toolchain
 
 The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client-side projects. 
@@ -17,6 +16,9 @@ The toolchain:
 - Helps you test client-side components in your local development environment by using tools such as the SharePoint Workbench. 
 - Enables you to package and deploy to SharePoint. 
 - Provides you with a set of build commands that help you complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package, and more. 
+
+> [!IMPORTANT]
+> Local workbench does not support using Internet Explorer 11. Please use more modern browser.
 
 ## Use npm packages
 

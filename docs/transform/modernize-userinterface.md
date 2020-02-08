@@ -15,10 +15,13 @@ But what if your site today still has lists and libraries, wiki pages, or web pa
 To make the switch to a modern user interface, you need to focus on the following:
  
 - Transitioning your **lists and libraries** to use the modern user interface (also referred to as the modern list and library experience)
-- Transforming your **site pages** from classic wiki and web part pages into modern client-side pages
+- Transforming your **site pages** from classic wiki and web part pages into modern pages
 
 > [!IMPORTANT]
 > The "classic" experience is not being deprecated; both "classic" and "modern" will coexist.
+
+> [!IMPORTANT]
+> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 Where do you start when you want to modernize the user interface of your sites? What sites should be modernized first? These are very relevant questions and are addressed in the following steps.
 
@@ -52,7 +55,7 @@ After you analyze the sites that you want to modernize, you can continue with th
 - **Replace incompatible customizations with equivalents that work in a modern user interface**. Following are some samples. For more information, see [Modernize customizations](modernize-customizations.md).
 
   - Replace JSLink with a [column formatter](../declarative-customization/column-formatting.md) or with a [SharePoint Framework Field Customizer extension](../spfx/extensions/get-started/building-simple-field-customizer.md).
-  - Replace existing first-party web parts with [SharePoint Framework client-side web parts](../spfx/web-parts/overview-client-side-web-parts.md) in case there's no out-of-the-box client-side web part available that provides similar capabilities.
+  - Replace existing first-party web parts with [SharePoint Framework web parts](../spfx/web-parts/overview-client-side-web-parts.md) in case there's no out-of-the-box modern web part available that provides similar capabilities.
   - Replace JavaScript embedding via user custom actions with a [SharePoint Framework Application Customizer extension](../spfx/extensions/get-started/build-a-hello-world-extension.md).
   - Replace list commands (user custom actions) with [SharePoint Framework ListView Command Set extensions](../spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md).
 
@@ -60,7 +63,7 @@ After you analyze the sites that you want to modernize, you can continue with th
 
   - **[Enabling lists and libraries to show in the modern user interface](modernize-userinterface-lists-and-libraries.md)** by replacing customizations, removing incompatible columns from the used views, or (as a last resort) moving data into a modern user interface-compatible list type.
   - **[Connecting your site to an Office 365 group](modernize-connect-to-office365-group.md)**, which gives your site a modern home page and enables your site to use, for example, a mailbox or Microsoft Planner, which then enables you to use a modern version of a calendar and task list.
-  - **[Creating modern client-side pages](modernize-classic-sites.md)** and configuring these to be "similar" to your key classic wiki and web part pages. Programmatic page transformation should be done for the key pages of your sites; transforming all pages is resource-intensive and often not needed. To assist in this triage, the SharePoint Modernization scanner can give you usage information about the current wiki and web part pages.
+  - **[Creating modern pages](modernize-classic-sites.md)** and configuring these to be "similar" to your key classic wiki and web part pages. Programmatic page transformation should be done for the key pages of your sites; transforming all pages is resource-intensive and often not needed. To assist in this triage, the SharePoint Modernization scanner can give you usage information about the current wiki and web part pages.
 
 - **Communicate to your end users about the completed changes**; the site will work differently in a modern version, so your users need to be aware of that.
 
@@ -68,5 +71,5 @@ After you analyze the sites that you want to modernize, you can continue with th
 
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
 - [Maximize use of modern lists and libraries](modernize-userinterface-lists-and-libraries.md)
-- [Transform classic pages to modern client-side pages](modernize-userinterface-site-pages.md)
+- [Transform classic pages to modern pages](modernize-userinterface-site-pages.md)
 - [Connecting your site to an Office 365 group](modernize-connect-to-office365-group.md)

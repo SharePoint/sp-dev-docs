@@ -23,11 +23,11 @@ When you create and publish a content type in the content type hub of the defaul
 
 Most organizations want to have consistent content types across a SharePoint tenant. As a best practice, use the content type hub in the default geo location to create and publish content types. 
 
-If you don't want all content types in the default geo location content type hub to be published to all geo locations, you can use the `Set-SPOTenantContentTypeReplicationParameters` PowerShell cmdlet to configure the content types that you do want to publish. This cmdlet is part of the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
+If you don't want all content types in the default geo location content type hub to be published to all geo locations, you can use the `Set-SPOTenantContentTypeReplicationParameters` PowerShell cmdlet to configure the content types that you do want to publish. This cmdlet is part of the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588).
 
 As an alternative to using a content type hub, organizations can integrate content type provisioning into their site provisioning solutions. This offers more flexibility and can be fully automated.
 
 ## See also
 
-- [Content type publishing](https://support.office.com/en-US/article/Introduction-to-content-types-and-content-type-publishing-E1277A2E-A1E8-4473-9126-91A0647766E5#__toc256601764)
+- [Content type publishing](https://support.office.com/article/Introduction-to-content-types-and-content-type-publishing-E1277A2E-A1E8-4473-9126-91A0647766E5#__toc256601764)
 - [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)

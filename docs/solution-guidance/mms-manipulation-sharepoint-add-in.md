@@ -6,8 +6,7 @@ localization_priority: Normal
 MMS manipulation in the SharePoint Add-in model
 ===============================================
 
-Summary
--------
+## Summary
 
 The approach you take to perform Create, Read, Update and Delete (CRUD) operations in the Managed Metadata Service (MMS) is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, MMS CRUD operations were performed with the SharePoint server-side object model code and deployed via Farm Solutions. 
 
@@ -15,8 +14,7 @@ In a SharePoint Add-in model scenario, MMS CRUD operations are performed with th
 
 **The CSOM provides all of the operations necessary to replicate and synchronize data in the MMS.**
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we recommend the following high-level guidelines for performing MMS CRUD operations.
 
@@ -74,22 +72,20 @@ The following sample demonstrates how to build a synchronization tool for MMS da
 
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 
-Related links
-=============
+## Related links
 - [SharePoint 2013: Synchronize term sets with the term store (CSOM)](https://code.msdn.microsoft.com/office/SharePoint-2013-Synchronize-d40638d1)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Core.MMS (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS)
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

@@ -1,9 +1,10 @@
 ---
+title: Properties Element (Feature)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 5fda72f7-0f87-423f-9893-819bc03f2a6d
 ---

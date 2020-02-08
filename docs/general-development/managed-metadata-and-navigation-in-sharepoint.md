@@ -227,7 +227,7 @@ A term store manager can enhance and expand term usage models based on more flex
 - SharePoint does not support the use of taxonomy fields (managed metadata site columns) in site templates.
     
   
-- For more information, see Microsoft Support Article #898631:  [Supported and unsupported scenarios](http://support2.microsoft.com/default.aspx?scid=kb;EN-US;898631
+- For more information, see Microsoft Support Article #898631:  [Supported and unsupported scenarios](https://support2.microsoft.com/default.aspx?scid=kb;EN-US;898631
 )
     
   

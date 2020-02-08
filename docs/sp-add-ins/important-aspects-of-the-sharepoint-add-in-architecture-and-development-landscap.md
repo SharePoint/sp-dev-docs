@@ -50,7 +50,7 @@ Another tool you can use to help your add-ins maintain a consistent look and fee
 <a name="SPAppModelArch_Package"> </a>
 ## Add-in package structure
 
-A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](http://msdn.microsoft.com/en-us/magazine/cc163372.aspx). (You can open the file by adding ".zip" as an extra extension on the filename and then opening it in Windows Explorer.) It contains an add-in manifest that specifies certain properties of the add-in and instructions to the SharePoint installation infrastructure. For more information about the add-in manifest and package, see [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md).
+A SharePoint Add-in package is a file that has an ".app" extension and that complies with the [Open Packaging Conventions (OPC)](https://msdn.microsoft.com/magazine/cc163372.aspx). (You can open the file by adding ".zip" as an extra extension on the filename and then opening it in Windows Explorer.) It contains an add-in manifest that specifies certain properties of the add-in and instructions to the SharePoint installation infrastructure. For more information about the add-in manifest and package, see [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md).
 
 <a name="SPAppModelArch_Running"> </a>
 ## Permissions, authentication, and authorization for SharePoint add-ins
@@ -124,12 +124,12 @@ Your options for secure data access, of course, depend on your choice of storage
 
 Site collection administrators and tenant administrators can monitor add-ins and change the resources allocated to them. In addition, Microsoft personnel for the add-in store can flag add-ins and disable them.
 
-For more information about managing add-ins, see [Install and manage SharePoint Add-ins](http://msdn.microsoft.com/en-us/library/733647a3-a5d3-475b-967d-3bb627c2a0c2) on TechNet.
+For more information about managing add-ins, see [Install and manage SharePoint Add-ins](https://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2) on TechNet.
 
 <a name="SPAppModelArch_Monitoring"> </a>
 ### Monitoring add-ins
 
-SharePoint provides health monitoring of add-ins and makes this information available in the UI to website owners, tenant administrators, and farm administrators. Most documentation for the monitoring system is on TechNet; for example [Monitor SharePoint Add-ins](http://technet.microsoft.com/library/3adafdd2-f276-4a9d-8a74-e06b8916bbc2). This section is just a quick introduction to explain how add-ins that you sell are monitored.
+SharePoint provides health monitoring of add-ins and makes this information available in the UI to website owners, tenant administrators, and farm administrators. Most documentation for the monitoring system is on TechNet; for example [Monitor SharePoint Add-ins](https://technet.microsoft.com/library/3adafdd2-f276-4a9d-8a74-e06b8916bbc2). This section is just a quick introduction to explain how add-ins that you sell are monitored.
 
 Some kinds of data are reported per-app and other kinds are reported per-app-instance. The primary items that the monitoring framework reports are as follows:
 
@@ -176,7 +176,7 @@ There are three possible prerequisite values for **Type**: `Feature`, `Capablili
 
 The optional **MinimumVersion** specifies the lowest version of the Feature or capability that your add-in requires. The attribute values are of the form n.n.n.n; for example `15.0.0.0`.
 
-The **ID** specifies which Feature or capability is required. If **Type** is `Feature`, the **ID** is the bracketed, hyphenated GUID of the Feature; for example `{151D22D9-95A8-4904-A0A3-22E4DB85D1E0}`. If **Type** is `Capability`, the **ID** is the GUID of the capability. The capabilities are listed below. To get the find the GUID of a capability, see [AppPrerequisite element (AppPrerequisiteCollection complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/791be402-981f-519e-fcde-f24cc3cb4139%28Office.15%29.aspx).
+The **ID** specifies which Feature or capability is required. If **Type** is `Feature`, the **ID** is the bracketed, hyphenated GUID of the Feature; for example `{151D22D9-95A8-4904-A0A3-22E4DB85D1E0}`. If **Type** is `Capability`, the **ID** is the GUID of the capability. The capabilities are listed below. To get the find the GUID of a capability, see [AppPrerequisite element (AppPrerequisiteCollection complexType) (SharePoint Add-in Manifest)](https://msdn.microsoft.com/library/791be402-981f-519e-fcde-f24cc3cb4139%28Office.15%29.aspx).
 
 - Access Services 2010
 - Access Services
@@ -210,7 +210,7 @@ The following is an example of raw **AppPrerequisites** markup that registers th
 <a name="SPAppModelArch_AdditionalResources"> </a>
 
 -  [SharePoint Add-ins](sharepoint-add-ins.md)
--  [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx)
+-  [SharePoint Add-ins compared with SharePoint solutions](https://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx)
 -  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md)
 -  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)
 -  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)

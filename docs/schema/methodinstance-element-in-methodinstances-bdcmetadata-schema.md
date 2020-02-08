@@ -1,11 +1,12 @@
 ---
+title: MethodInstance Element in MethodInstances
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.MethodInstance
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 577ff9d0-706b-be7d-af5b-883e137cada8
 ---
@@ -18,13 +19,13 @@ ms.assetid: 577ff9d0-706b-be7d-af5b-883e137cada8
 
 Specifies a **MethodInstance**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 
 > [!NOTE] 
 > The following two cases in a BDC model result in an
-[InvalidOperationException](http://msdn.microsoft.com/library/frlrfSystemInvalidOperationExceptionClassTopic.aspx)
+[InvalidOperationException](https://msdn.microsoft.com/library/frlrfSystemInvalidOperationExceptionClassTopic.aspx)
 at run time:
 > 
 > - Two **SpecificFinder** method instances that return the same set of fields.

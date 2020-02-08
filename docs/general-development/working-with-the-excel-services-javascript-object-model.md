@@ -30,14 +30,14 @@ Table 1 lists the difference between the two scenarios available when you write 
 |**OneDrive** <br/> |In this scenario, you embed a workbook that is stored on OneDrive into the host webpage using an HTML <div> element. Then you include code in the page that interacts with the embedded workbook.  <br/> |
 |**SharePoint** <br/> |In this scenario, you have a SharePoint page served by SharePoint. You insert an web part into the SharePoint page that contains a workbook that is stored in an trusted location. Then you include code in the SharePoint page that interacts with the web part.  <br/> |
    
-The main difference between writing code for the two scenarios is how you get a reference to the  [Ewa.EwaControl](http://msdn.microsoft.com/library/6e441406-d67a-0da9-f996-71f4e4b4c144%28Office.15%29.aspx) object. Because the **[Ewa.EwaControl]** is the entry point to the JavaScript object model, you must get a reference to it to work with the JSOM.
+The main difference between writing code for the two scenarios is how you get a reference to the  [Ewa.EwaControl](https://msdn.microsoft.com/library/6e441406-d67a-0da9-f996-71f4e4b4c144%28Office.15%29.aspx) object. Because the **[Ewa.EwaControl]** is the entry point to the JavaScript object model, you must get a reference to it to work with the JSOM.
   
     
     
 
 ### Getting a reference to the EwaControl object (SharePoint)
 
-When writing code that interacts with an web part on a SharePoint page, you get a reference to the **[Ewa.EwaControl]** object by using the method, [Ewa.EwaControlCollection.getItem(index)](http://msdn.microsoft.com/library/11dd3a65-f914-4b34-bbaf-0206c8153d2b%28Office.15%29.aspx), as shown in the following code example.
+When writing code that interacts with an web part on a SharePoint page, you get a reference to the **[Ewa.EwaControl]** object by using the method, [Ewa.EwaControlCollection.getItem(index)](https://msdn.microsoft.com/library/11dd3a65-f914-4b34-bbaf-0206c8153d2b%28Office.15%29.aspx), as shown in the following code example.
   
     
     
@@ -85,7 +85,7 @@ function ewaApplicationReady()
 
 ### Getting a reference to the EwaControl object (OneDrive)
 
-When writing code that interacts with an embedded workbook that is stored on OneDrive, you get a reference to the **[Ewa.EwaControl]** object through the [AsyncResult](http://msdn.microsoft.com/library/1da51396-834c-d85b-a9b0-ce21e4329946%28Office.15%29.aspx) object. The **[AsyncResult]** object is passed in as the single parameter to the callback method that you specify in the [Ewa.EwaControl.loadEwaAsync](http://msdn.microsoft.com/library/a7ee4d6d-5472-b942-c78e-b368d30bcb0e%28Office.15%29.aspx) static method. When the callback is invoked, a reference to the **[Ewa.EwaControl]** object is included in the **[AsyncResult]** object. The following code example shows how you get a reference to the **[Ewa.EwaControl]** object through the **[AsyncResult]** object.
+When writing code that interacts with an embedded workbook that is stored on OneDrive, you get a reference to the **[Ewa.EwaControl]** object through the [AsyncResult](https://msdn.microsoft.com/library/1da51396-834c-d85b-a9b0-ce21e4329946%28Office.15%29.aspx) object. The **[AsyncResult]** object is passed in as the single parameter to the callback method that you specify in the [Ewa.EwaControl.loadEwaAsync](https://msdn.microsoft.com/library/a7ee4d6d-5472-b942-c78e-b368d30bcb0e%28Office.15%29.aspx) static method. When the callback is invoked, a reference to the **[Ewa.EwaControl]** object is included in the **[AsyncResult]** object. The following code example shows how you get a reference to the **[Ewa.EwaControl]** object through the **[AsyncResult]** object.
   
     
     
@@ -98,7 +98,7 @@ When writing code that interacts with an embedded workbook that is stored on One
     /*
     * This code uses the Microsoft Office Excel JavaScript object model to programmatically insert the
     * Excel Web App into a div with id=myExcelDiv. The full API is documented at
-    * http://msdn.microsoft.com/en-us/library/hh315812.aspx. There you can find out how to programmatically get
+    * https://msdn.microsoft.com/library/hh315812.aspx. There you can find out how to programmatically get
     * values from your Excel file and how to use the rest of the object model. 
     */
 
@@ -165,13 +165,13 @@ Writing a solution that uses the JavaScript object model is basically the same w
 <a name="SP15DevKitchenCon_AnatomyofanappSignupsheets_Additionalresources"> </a>
 
 
--  [Using the Excel Services JavaScript API to Work with Embedded Excel Workbooks](http://msdn.microsoft.com/en-us/library/hh315812.aspx)
+-  [Using the Excel Services JavaScript API to Work with Embedded Excel Workbooks](https://msdn.microsoft.com/library/hh315812.aspx)
     
   
--  [Ewa.EwaControl.loadEwaAsync](http://msdn.microsoft.com/library/a7ee4d6d-5472-b942-c78e-b368d30bcb0e%28Office.15%29.aspx)
+-  [Ewa.EwaControl.loadEwaAsync](https://msdn.microsoft.com/library/a7ee4d6d-5472-b942-c78e-b368d30bcb0e%28Office.15%29.aspx)
     
   
--  [Ewa.EwaControlCollection.getItem(index)](http://msdn.microsoft.com/library/11dd3a65-f914-4b34-bbaf-0206c8153d2b%28Office.15%29.aspx)
+-  [Ewa.EwaControlCollection.getItem(index)](https://msdn.microsoft.com/library/11dd3a65-f914-4b34-bbaf-0206c8153d2b%28Office.15%29.aspx)
     
   
 

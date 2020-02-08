@@ -1,9 +1,10 @@
 ---
+title: Content Type Definitions
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: edb7c69f-736d-4808-b137-48b6861b4caa
 ---

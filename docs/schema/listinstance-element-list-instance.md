@@ -1,9 +1,10 @@
 ---
+title: ListInstance Element (List Instance)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: cfefe8e5-2656-4d71-bb4e-5f991a800598
 ---

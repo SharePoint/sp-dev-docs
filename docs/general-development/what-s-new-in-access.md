@@ -20,7 +20,7 @@ Access 2013 features a new application model that is designed for one purpose―
 ## Architecture
 <a name="SP15_access15overview_Architecture"> </a>
 
-In an on-premise environment, Access 2013 apps are hosted by SharePoint while the data is stored in SQL Server 2012. SharePoint provides authentication, authorization, and security for Access 2013 apps. The back-end tables, views, macros, and queries are stored in an SQL Server 2012 database.
+In an on-premises environment, Access 2013 apps are hosted by SharePoint while the data is stored in SQL Server 2012. SharePoint provides authentication, authorization, and security for Access 2013 apps. The back-end tables, views, macros, and queries are stored in an SQL Server 2012 database.
   
     
     
@@ -66,7 +66,7 @@ Unlike many of the SharePointapplication services, Access Services 2013 doesn't 
   
     
     
-For more information about how to develop Access 2013 apps, see  [How to: Create and customize a web app in Access](http://msdn.microsoft.com/library/628745f4-82e9-4838-9726-6f3e506a654f%28Office.15%29.aspx)
+For more information about how to develop Access 2013 apps, see  [How to: Create and customize a web app in Access](https://msdn.microsoft.com/library/628745f4-82e9-4838-9726-6f3e506a654f%28Office.15%29.aspx)
   
     
     
@@ -75,10 +75,10 @@ For more information about how to develop Access 2013 apps, see  [How to: Create
 <a name="SP15_access15overview_addres"> </a>
 
 
--  [New in Access for developers](http://msdn.microsoft.com/library/df778f51-d65e-4c30-b618-65003ceb39b3%28Office.15%29.aspx)
+-  [New in Access for developers](https://msdn.microsoft.com/library/df778f51-d65e-4c30-b618-65003ceb39b3%28Office.15%29.aspx)
     
   
--  [Access custom web app reference](http://msdn.microsoft.com/library/8d696fa4-a6f2-4fb1-8662-a313bf0b5989%28Office.15%29.aspx)
+-  [Access custom web app reference](https://msdn.microsoft.com/library/8d696fa4-a6f2-4fb1-8662-a313bf0b5989%28Office.15%29.aspx)
     
   
 

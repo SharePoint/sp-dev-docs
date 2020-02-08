@@ -6,15 +6,13 @@ localization_priority: Normal
 Site columns and content types in the SharePoint Add-in model
 =============================================================
 
-Summary
--------
+## Summary
 
 The approach you take to create site columns and content types in SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, you use declarative code to create site columns and content types. In the declarative code approach, you define the site columns and content types in XML and then use  SharePoint's feature framework elements to package and deploy them.
 
 In an SharePoint Add-in model scenario, you use the SharePoint Client Side Object Model (CSOM) or SharePoint REST APIs to create site columns and content types.
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we recommend the following high-level guidelines for creating site columns and content types.
 
@@ -97,15 +95,13 @@ This option works well in Dev-Ops scenarios. It allows you to create custom appl
 - [Core.CreateDocumentContentType (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.CreateDocumentContentType)
 	+ This sample shows how you can create document content types and add then associate a document template to the content type.
 
-Related links
-=============
+## Related links
 - [Site provisioning in the SharePoint Add-in model (O365 PnP Recipe)](site-provisioning-sharepoint-add-in.md)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Core.CreateContentTypes (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.CreateContentTypes)
 - [Core.ContentTypesAndFields (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ContentTypesAndFields)
@@ -114,8 +110,8 @@ Related PnP samples
 - [Core.DataStorageModels (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.DataStorageModels)
 - Samples and content at [https://github.com/SharePoint/PnP](https://github.com/SharePoint/PnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

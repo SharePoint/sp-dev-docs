@@ -1,9 +1,10 @@
 ---
+title: coercionParametersType complexType (Action4)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 32ff0f7e-0527-50df-225c-07d990687441
 ---
@@ -14,26 +15,11 @@ ms.assetid: 32ff0f7e-0527-50df-225c-07d990687441
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>Actions4.xsd</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Extension base</span></p></td>
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  |  |
+| **Namespace**     |  |
+| **Schema file**   | Actions4.xsd |
 
 ## Definition
 

@@ -14,9 +14,12 @@ For scenarios where you automatically instantiate a custom web part on a modern 
 
 By default a SharePoint Framework client-side web part will be displayed in the web part toolbox when a user edit a page. To allow hiding the web part from the toolbox, you add set the `hiddenFromToolbox` property to `true` in the web part manifest.
 
+> [!NOTE]
+> this is the location of the file `<WebPartName>\src\webparts\<WebPartFolderName>\<WebPartName>.manifest.json`
+
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "34f6d7f2-262f-460a-8b65-152d784127cb",
   "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
@@ -27,7 +30,7 @@ By default a SharePoint Framework client-side web part will be displayed in the 
 
   // If true, the component can only be installed on sites where Custom Script is allowed.
   // Components that allow authors to embed arbitrary script code should set this to true.
-  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
   "hiddenFromToolbox": true,
 

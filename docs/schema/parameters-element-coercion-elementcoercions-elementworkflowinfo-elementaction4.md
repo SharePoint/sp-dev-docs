@@ -1,9 +1,10 @@
 ---
+title: Parameters element (Coercion element)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e7990cac-8f21-2881-3428-3aa9866d666e
 ---

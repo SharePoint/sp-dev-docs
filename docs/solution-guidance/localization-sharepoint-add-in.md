@@ -6,15 +6,13 @@ localization_priority: Normal
 Localization in the SharePoint Add-in model
 ===========================================
 
-Summary
--------
+## Summary
 
 The approach you take to implement localization for Add-ins is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, localization for custom components such as web parts, User Controls, and Web Controls was implemented with a combination of resource files, .Net managed code, properties, and declarative code.  All the artifacts were packaged in features deployed via SharePoint Solutions.
 
 In an SharePoint Add-in model scenario, you use JavaScript or the localization capabilities associated with the web technology you build your Add-ins with to implement localization. Depending on the localized resource, you might also use classic resources files, for example when you need to lozalize elements deployed to add-in web using feature framework elements in the add-in definition.
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for implementing localization.
 
@@ -44,7 +42,7 @@ When you are creating a SharePoint-hosted Add-in, using JavaScript is your best 
 
 Scenario 2 in the [Core.JavaScriptCustomization (O365 PnP Sample))](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization) demonstrates how to use JavaScript to localize the text in an Add-in as well as attributes associated with the HTML elements in the Add-in.
 
-The [Localize SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/fp179919(v=office.15).aspx) also demonstrates how to use JavaScript to localize assets in the add-in web.
+The [Localize SharePoint Add-ins](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx) also demonstrates how to use JavaScript to localize assets in the add-in web.
 
 Remote components
 -------------------------
@@ -61,26 +59,24 @@ When you are creating a Provider-hosted Add-in, using the localization technolog
 
 The following articles describes how to localize Provider-hosted Add-ins with resource files and JavaScript.
 
-- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/en-us/library/fp179919(v=office.15).aspx)
+- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx)
 - [Localize the add-in web, host web, and remote components of an add-in  (MSDN Code Sample)](https://code.msdn.microsoft.com/office/SharePoint-2013-Bookstore-328060fc)
 
-Related links
-=============
+## Related links
 
-- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/en-us/library/fp179919(v=office.15).aspx)
+- [Localize SharePoint Add-ins (MSDN Article)](https://msdn.microsoft.com/library/fp179919(v=office.15).aspx)
 - [Localize the add-in web, host web, and remote components of an add-in  (Office Dev GitHub sample)](https://github.com/OfficeDev/SharePoint-Add-in-Localization)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [VariationsExtensions.cs class (O365 PnP Sample)](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Extensions/VariationExtensions.cs)
-- Samples and content at [http://aka.ms/OfficeDevPnP](http://aka.ms/OfficeDevPnP)
+- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

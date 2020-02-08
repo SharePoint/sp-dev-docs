@@ -50,9 +50,9 @@ The following table describes the BDC model properties that are applicable to Se
 |**Name**|**Metadata Object**|**Description**|
 |:-----|:-----|:-----|
 |ShowInSearchUI  <br/> |Model  <br/> |Specifies that an **LobSystemInstance** element in the model file should be displayed in the search user interface. This value is ignored for custom connectors. <br/> |
-|InputUriProcessor  <br/> |LobSystem  <br/> |Specifies the name of the class that processes the input URL before passing it to the connector. Applies to .NET and custom BCS indexing connectors. For more information, see  [Creating a Custom Indexing Connector](http://msdn.microsoft.com/library/ec2df34d-178c-4ae1-a2b0-a6af04ee57bd%28Office.15%29.aspx).  <br/> |
-|OutputUriProcessor  <br/> |LobSystem  <br/> |Specifies the name of the class that processes the output URL before passing it to the search system from the connector. Applies to .NET and custom BCS indexing connectors. For more information, see  [Creating a Custom Indexing Connector](http://msdn.microsoft.com/library/ec2df34d-178c-4ae1-a2b0-a6af04ee57bd%28Office.15%29.aspx).  <br/> |
-|SystemUtilityTypeName  <br/> |LobSystem  <br/> |Specifies the name of the class that implements the **StructuredRepositorySystemUtility** class. Applies to custom BCS indexing connectors. For more information, see [Creating a Custom Indexing Connector](http://msdn.microsoft.com/library/ec2df34d-178c-4ae1-a2b0-a6af04ee57bd%28Office.15%29.aspx).  <br/> |
+|InputUriProcessor  <br/> |LobSystem  <br/> |Specifies the name of the class that processes the input URL before passing it to the connector. Applies to .NET and custom BCS indexing connectors. For more information, see  [Creating a Custom Indexing Connector](https://msdn.microsoft.com/library/ec2df34d-178c-4ae1-a2b0-a6af04ee57bd%28Office.15%29.aspx).  <br/> |
+|OutputUriProcessor  <br/> |LobSystem  <br/> |Specifies the name of the class that processes the output URL before passing it to the search system from the connector. Applies to .NET and custom BCS indexing connectors. For more information, see  [Creating a Custom Indexing Connector](https://msdn.microsoft.com/library/ec2df34d-178c-4ae1-a2b0-a6af04ee57bd%28Office.15%29.aspx).  <br/> |
+|SystemUtilityTypeName  <br/> |LobSystem  <br/> |Specifies the name of the class that implements the **StructuredRepositorySystemUtility** class. Applies to custom BCS indexing connectors. For more information, see [Creating a Custom Indexing Connector](https://msdn.microsoft.com/library/ec2df34d-178c-4ae1-a2b0-a6af04ee57bd%28Office.15%29.aspx).  <br/> |
 |Title  <br/> |Entity  <br/> |Specifies the title of the external content type to display in search results.  <br/> |
 |DefaultLocale  <br/> |Entity  <br/> |Specifies the locale string. You can override this value by using the **LCIDField** property or the **CultureField** property. <br/> |
 |RootFinder  <br/> |Method  <br/> |Specifies the **Finder** method to use to enumerate the items to crawl. For example, when connecting to a database, this could be the **SELECT** statement or the list of tables to crawl. <br/> |
@@ -180,16 +180,16 @@ Profile pages may require that you use the Secure Store Service because of the m
 -  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
--  [BDC Model Infrastructure](http://msdn.microsoft.com/library/2818ebdd-6cda-4d8f-82b2-7fde9fbf2633%28Office.15%29.aspx)
+-  [BDC Model Infrastructure](https://msdn.microsoft.com/library/2818ebdd-6cda-4d8f-82b2-7fde9fbf2633%28Office.15%29.aspx)
     
   
--  [Authoring BDC Models](http://msdn.microsoft.com/library/170d1cfd-cf19-4162-b79f-ba6d3b4ad23b%28Office.15%29.aspx)
+-  [Authoring BDC Models](https://msdn.microsoft.com/library/170d1cfd-cf19-4162-b79f-ba6d3b4ad23b%28Office.15%29.aspx)
     
   
 -  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint.md)
     
   
--  [How to: Use SharePoint Designer to Create a BDC Model File for a Custom Connector](http://msdn.microsoft.com/library/8f239482-0c82-4b60-817d-b0c4392e7e2e%28Office.15%29.aspx)
+-  [How to: Use SharePoint Designer to Create a BDC Model File for a Custom Connector](https://msdn.microsoft.com/library/8f239482-0c82-4b60-817d-b0c4392e7e2e%28Office.15%29.aspx)
     
   
 

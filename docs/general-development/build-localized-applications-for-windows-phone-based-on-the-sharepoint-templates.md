@@ -14,9 +14,9 @@ The SharePoint SDK for Windows Phone 7.1 installs Windows Phone project template
     
     
 
-Visual Studio uses language-specific resource files to create assemblies that allow your mobile application to support many languages. For more information about this process, see  [Packaging and Deploying Resources in Desktop Apps](http://msdn.microsoft.com/library/b224d7c0-35f8-4e82-a705-dd76795e8d16%28Office.15%29.aspx).
+Visual Studio uses language-specific resource files to create assemblies that allow your mobile application to support many languages. For more information about this process, see  [Packaging and Deploying Resources in Desktop Apps](https://msdn.microsoft.com/library/b224d7c0-35f8-4e82-a705-dd76795e8d16%28Office.15%29.aspx).
 > **Important:**
-> If you plan to localize your application for East Asian languages, be sure to read the "Fonts and Your Application" section of  [Font Support for Windows Phone](http://msdn.microsoft.com/library/b0d855ad-3fd2-4872-9a88-7f5d0a270ff9%28Office.15%29.aspx)
+> If you plan to localize your application for East Asian languages, be sure to read the "Fonts and Your Application" section of  [Font Support for Windows Phone](https://msdn.microsoft.com/library/b0d855ad-3fd2-4872-9a88-7f5d0a270ff9%28Office.15%29.aspx)
   
     
     
@@ -44,7 +44,7 @@ For the previous example, the **SupportedCultures** element should appear as fol
   
     
     
-To see a step-by-step process of how to build a localized application for Windows Phone, see  [How to: Build a Localized Application for Windows Phone](http://msdn.microsoft.com/library/9306a6ed-6efb-4f32-b850-d2e508431eeb%28Office.15%29.aspx).
+To see a step-by-step process of how to build a localized application for Windows Phone, see  [How to: Build a Localized Application for Windows Phone](https://msdn.microsoft.com/library/9306a6ed-6efb-4f32-b850-d2e508431eeb%28Office.15%29.aspx).
   
     
     
@@ -56,10 +56,10 @@ To see a step-by-step process of how to build a localized application for Window
 -  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Build a Localized Application for Windows Phone](http://msdn.microsoft.com/library/9306a6ed-6efb-4f32-b850-d2e508431eeb%28Office.15%29.aspx).
+-  [How to: Build a Localized Application for Windows Phone](https://msdn.microsoft.com/library/9306a6ed-6efb-4f32-b850-d2e508431eeb%28Office.15%29.aspx).
     
   
--  [Globalization and Localization for Windows Phone](http://msdn.microsoft.com/library/e82118a4-6247-4d75-a16f-749677349be4%28Office.15%29.aspx)
+-  [Globalization and Localization for Windows Phone](https://msdn.microsoft.com/library/e82118a4-6247-4d75-a16f-749677349be4%28Office.15%29.aspx)
     
   
 

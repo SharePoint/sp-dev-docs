@@ -1,11 +1,12 @@
 ---
+title: .ACTIONS File Example (WorkflowInfo)</td>
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 8c6e3c71-4e1b-4068-bb03-6d5b0dcdd888
 ---
@@ -96,8 +97,8 @@ The following XML is an example of how an .ACTIONS file could be constructed to 
 
 - [Default Workflow Actions](default-workflow-actions-workflowinfo.md)
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
-- [Creating Declarative, No-Code Workflow Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
-- [Workflow Actions Schema Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
 
 
 

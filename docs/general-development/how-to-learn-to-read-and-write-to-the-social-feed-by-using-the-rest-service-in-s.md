@@ -17,7 +17,7 @@ Create a SharePoint-hosted app that uses the REST service to publish a post and 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
   
 > [!NOTE]
-> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to find out how to sign up for a Developer Site and start using Napa.
+> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](https://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to find out how to sign up for a Developer Site and start using Napa.
   
     
     
@@ -36,7 +36,7 @@ If you're not using Napa on a Developer Site, you'll need the following:
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
 > [!NOTE]
-> For guidance about how to set up a development environment that fits your needs, see  [Start building apps for Office and SharePoint](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx). 
+> For guidance about how to set up a development environment that fits your needs, see  [Start building apps for Office and SharePoint](https://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx). 
   
     
     
@@ -55,7 +55,7 @@ The SharePoint-hosted app that you create in this article uses JavaScript to bui
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn about SharePoint Add-ins and fundamental concepts for building them.  <br/> |
+| [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn about SharePoint Add-ins and fundamental concepts for building them.  <br/> |
 | [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md) <br/> |Find out how to start programming with social feeds and microblog posts, following people and content (documents, sites, and tags.md), and working with user profiles.  <br/> |
 | [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md) <br/> |Learn about common programming tasks for working with social feeds and the API that you use to perform the tasks.  <br/> |
    

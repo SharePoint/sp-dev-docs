@@ -1,11 +1,12 @@
 ---
+title: Right Element in AccessControlEntry
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Right
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: a2e4bd6c-2306-b657-7290-cc9c9b262911
 ---
@@ -19,7 +20,7 @@ ms.assetid: a2e4bd6c-2306-b657-7290-cc9c9b262911
 
 Specifies a single access permission for an access control entry (ACE).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

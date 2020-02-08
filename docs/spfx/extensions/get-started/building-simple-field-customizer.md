@@ -3,6 +3,7 @@ title: Build your first Field Customizer extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
 ms.date: 03/14/2019
 ms.prod: sharepoint
+ms.custom: scenarios:getting-started
 ---
 
 # Build your first Field Customizer extension
@@ -212,7 +213,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
 Now that we have successfully tested the out-of-the-box starting point of the Field Customizer, let's modify the logic slightly to have a more polished rendering of the field value.
 
-1. Open the **HelloWorld.module.scss** file in the **src\extensions\helloWorld** folder, and update the styling definition as follows.
+1. Open the **HelloWorldFieldCustomizer.module.scss** file in the **src\extensions\helloWorld** folder, and update the styling definition as follows.
 
     ```
     .HelloWorld {
@@ -275,7 +276,7 @@ Now that we have tested our solution properly in debug mode, we can package this
 
     Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible.
 
-    You can use for example [Set-PnPField cmdlet](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/set-pnpfield?view=sharepoint-ps) from PnP PowerShell cmdlets to programatically associate an extension to existing fields in your sites.
+    You can use for example [Set-PnPField cmdlet](https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpfield?view=sharepoint-ps) from PnP PowerShell cmdlets to programatically associate an extension to existing fields in your sites.
 
     In the following steps, we review the default field definition, which was automatically created and will then be used to automatically deploy needed configurations when the solution package is installed on a site.
 
@@ -294,7 +295,7 @@ Open the **elements.xml** file inside the **sharepoint\assets** folder.
 Note the following XML structure in **elements.xml**.  The **ClientSideComponentId** property has been automatically updated to the unique ID of your Field Customizer available in the **HelloWorldFieldCustomizer.manifest.json** file in the **src\extensions\helloWorld** folder. You will need to adjust this file matching on your field type and details. 
 
 > [!NOTE]
-> You can find more details on supported xml structures for SharePoint Feature Framework from the [SharePoint schema reference](https://docs.microsoft.com/en-us/sharepoint/dev/schema/field-definitions).
+> You can find more details on supported xml structures for SharePoint Feature Framework from the [SharePoint schema reference](https://docs.microsoft.com/sharepoint/dev/schema/field-definitions).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -417,7 +418,7 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
 The process for publishing your app is identical among the different extension types.
 
 > [!NOTE]
-> This was a relatively simple field customizer with functionality that could also have been achieved with [column formatting capability](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
+> This was a relatively simple field customizer with functionality that could also have been achieved with [column formatting capability](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.

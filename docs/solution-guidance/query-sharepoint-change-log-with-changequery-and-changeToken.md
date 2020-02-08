@@ -9,7 +9,7 @@ Use  **ChangeQuery** and **ChangeToken** to query the SharePoint change log for 
 
 _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
-You can query the SharePoint change log by using [ChangeQuery](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.changequery.aspx) and [ChangeToken](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.changetoken.aspx) to find and process changes made on a SharePoint content database, site collection, site, or list.
+You can query the SharePoint change log by using [ChangeQuery](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.changequery.aspx) and [ChangeToken](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.changetoken.aspx) to find and process changes made on a SharePoint content database, site collection, site, or list.
 
 The [Core.ListItemChangeMonitor](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.ListItemChangeMonitor) code sample shows you how to use SharePoint's change log to find and process changes made on a SharePoint list. Use this code sample to:
 

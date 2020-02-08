@@ -133,12 +133,12 @@ The following table shows a list of all the shapes that are contained in the Sha
 -  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
--  [SharePoint Workflow template shapes guide](http://office.microsoft.com/en-us/visio-help/sharepoint-workflow-template-shapes-guide-HA101903894.aspx)
+-  [SharePoint Workflow template shapes guide](https://office.microsoft.com/visio-help/sharepoint-workflow-template-shapes-guide-HA101903894.aspx)
     
   
--  [SharePoint Developer Center](http://msdn.microsoft.com/en-us/sharepoint/default.aspx)
+-  [SharePoint Developer Center](https://msdn.microsoft.com/sharepoint/default.aspx)
     
   
--  [Visio Developer Center](http://msdn.microsoft.com/en-us/office/aa905478)
+-  [Visio Developer Center](https://msdn.microsoft.com/office/aa905478)
     
   

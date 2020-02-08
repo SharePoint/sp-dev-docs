@@ -12,7 +12,7 @@ Provides sample workflows to help illustrate how to create and implement SharePo
 ## Workflow samples for SharePoint
 <a name="bkm_wfsamples"> </a>
 
-This series of sample workflows was developed to demonstrate the large range of workflow capabilities in SharePoint. They were developed using Visual Studio 2012 and are available in the  [MSDN Samples Gallery](http://code.msdn.microsoft.com/). Links to the individual samples are provided.
+This series of sample workflows was developed to demonstrate the large range of workflow capabilities in SharePoint. They were developed using Visual Studio 2012 and are available in the  [MSDN Samples Gallery](https://code.msdn.microsoft.com/). Links to the individual samples are provided.
   
     
     
@@ -23,7 +23,7 @@ This sample uses Visual Studio to demonstrate creating a workflow that calls an 
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Call an external web service](http://code.msdn.microsoft.com/SharePoint-2013-workflow-48ea87d4)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Call an external web service](https://code.msdn.microsoft.com/SharePoint-2013-workflow-48ea87d4)
   
     
     
@@ -34,7 +34,7 @@ This sample uses Visual Studio to demonstrate creating a workflow that calls an 
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Create a custom action](https://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9)
   
     
     
@@ -45,7 +45,7 @@ In this end-to-end sample, the workflow uses a web service to obtain the appropr
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Sales tax calculator](http://code.msdn.microsoft.com/SharePoint-2013-workflow-f7a1a8ba)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Sales tax calculator](https://code.msdn.microsoft.com/SharePoint-2013-workflow-f7a1a8ba)
   
     
     
@@ -56,7 +56,7 @@ An extended walkthrough of the process of implementing task actions in a workflo
   
     
     
-The sample, along with a readme file, is available here:  [SharePoint workflow: Using a task action in SharePoint Designer](http://code.msdn.microsoft.com/SharePoint-2013-workflow-942a5441)
+The sample, along with a readme file, is available here:  [SharePoint workflow: Using a task action in SharePoint Designer](https://code.msdn.microsoft.com/SharePoint-2013-workflow-942a5441)
   
     
     
@@ -67,7 +67,7 @@ The **SharePoint workflow: Workflow OM in a SharePoint app** code sample is an e
   
     
     
-You can locate the sample code here:  [SharePoint workflow: Workflow OM in a SharePoint app](http://code.msdn.microsoft.com/SharePoint-2013-workflow-050f5211).
+You can locate the sample code here:  [SharePoint workflow: Workflow OM in a SharePoint app](https://code.msdn.microsoft.com/SharePoint-2013-workflow-050f5211).
   
     
     
@@ -88,7 +88,7 @@ You can locate the sample code here:  [SharePoint workflow: Workflow OM in a Sha
 -  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
+-  [SharePoint Add-ins](https://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
 

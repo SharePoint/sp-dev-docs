@@ -1,11 +1,12 @@
 ---
+title: Interpretation Element in TypeDescriptor
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Interpretation
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 730f9590-ab40-85b8-eb97-8fd9d8e33c8a
 ---
@@ -20,7 +21,7 @@ Specifies the rules to apply to the data stored in the data structures represent
 
 The first rule must be applied to the data value received from the external system; the consecutive rules apply to the data value that result from the application of the previous rule. When the data value is sent to external system, the specified rules must be applied in the reverse order they are specified in the **Interpretation** element. The first rule must be applied to the data value received from the user; the consecutive rules apply to the data value that result from the application of the previous rule.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 
@@ -80,7 +81,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
 <td align="left"><p>The **TypeDescriptor** element.</p></td>
 </tr>
 <tr class="even">

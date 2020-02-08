@@ -1,9 +1,10 @@
 ---
+title: Property element (propertiesType complexType)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 86e5f37b-d8ec-2825-2d4d-03da34be47d0
 ---

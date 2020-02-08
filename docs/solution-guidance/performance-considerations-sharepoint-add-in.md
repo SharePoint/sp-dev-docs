@@ -6,8 +6,7 @@ localization_priority: Normal
 Performance considerations in the SharePoint Add-in model
 =========================================================
 
-Summary
--------
+## Summary
 
 The approaches you take to ensure optimal performance with SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario most code operations took place in the SharePoint Server-side Object Model code.
 
@@ -17,8 +16,7 @@ The major difference between the two models is server-side code versus client-si
 
 Additionally, in the SharePoint Add-in model, because code is executed via clients there could be long delays before a response is received. Caching data for long running operations (like the User Profile APIs) can reduce the amount of time it takes to return information or receive confirmation a process is complete.
 
-High-level guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines to ensure optimal performance with SharePoint in the new SharePoint Add-in model.
 
@@ -149,19 +147,17 @@ Azure has many different storage mechanisms that may be used to store informatio
 
 The [Performance.Caching (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Performance.Caching) describes how to implement both LocalStorage and cookie-based client-side caching in the Add-in model and provides links to several samples and articles.
 
-Related links
-=============
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+## Related links
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
-- Samples and content at [http://aka.ms/OfficeDevPnP](http://aka.ms/OfficeDevPnP)
+- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

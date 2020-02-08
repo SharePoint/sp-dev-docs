@@ -1,8 +1,10 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 03/14/2019
+ms.date: 02/08/2020
 ms.prod: sharepoint
+localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 # Build your first SharePoint client-side web part (Hello World part 1)
@@ -21,7 +23,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/S3tG2DE8tR8]
+> [!Video https://www.youtube.com/embed/_O2Re5uRLoo]
 
 <br/>
 
@@ -101,10 +103,11 @@ Now that we have installed the developer certificate, enter the following comman
 gulp serve
 ```
 
-This command executes a series of gulp tasks to create a local, node-based HTTPS server on `localhost:4321` and launches your default browser to preview web parts from your local dev environment.
+This command executes a series of gulp tasks to create a local, node-based HTTPS server on `localhost:4321` and `localhost:5432`. The workbench is then launched in your default browser to preview web parts from your local dev environment.
 
 > [!NOTE]
 > If you are seeing issues with the certificate in browser, please see details on installing a developer certificate from the [Set up your development environment](../../set-up-your-development-environment.md) article.
+> If you are still seeing issues, please check nothing else is listening on the port numbers, by using resmon.exe, the network tab and looking at Listening Ports.
 
 ![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
 
@@ -341,7 +344,7 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 
   // If true, the component can only be installed on sites where Custom Script is allowed.
   // Components that allow authors to embed arbitrary script code should set this to true.
-  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
   "supportedHosts": ["SharePointWebPart"],
 

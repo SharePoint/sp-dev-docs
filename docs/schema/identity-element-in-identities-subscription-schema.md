@@ -1,9 +1,10 @@
 ---
+title: Identity element in Identities
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: de3b9e21-c45c-b6fc-8c5d-e5e3cf55bd1e
 ---
@@ -16,7 +17,7 @@ ms.assetid: de3b9e21-c45c-b6fc-8c5d-e5e3cf55bd1e
 
 Specifies an explicit identity contained by this cache subscription.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

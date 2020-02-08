@@ -1,9 +1,10 @@
 ---
+title: DeploymentLookupListMap schema
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 14383af3-0e57-443a-97eb-3e0a714d9639
 ---

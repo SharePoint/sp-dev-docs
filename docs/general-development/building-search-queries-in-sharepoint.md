@@ -43,7 +43,7 @@ To enable FQL, use the **EnableFQL** property. Then, copy the default result sou
 - Replace the Query Transformation string with an FQL equivalent, such as  `{?andnot({searchTerms},filter(contentclass:"urn:content-class:SPSPeople*"))}`.
     
   
-For more information about result sources and how they work, see to:  [Understanding result sources](http://office.microsoft.com/en-us/support/sharepoint/sharepointsearch/understanding-result-sources-HA102848849.aspx) and [Configure result sources for search in SharePoint](http://technet.microsoft.com/en-us/library/jj683115%28v=office.15%29.aspx).
+For more information about result sources and how they work, see to:  [Understanding result sources](https://office.microsoft.com/support/sharepoint/sharepointsearch/understanding-result-sources-HA102848849.aspx) and [Configure result sources for search in SharePoint](https://technet.microsoft.com/library/jj683115%28v=office.15%29.aspx).
   
     
     
@@ -69,10 +69,10 @@ For more information about result sources and how they work, see to:  [Understan
 -  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [Overview of query processing in SharePoint](http://technet.microsoft.com/en-us/library/jj219620%28v=office.15%29.aspx)
+-  [Overview of query processing in SharePoint](https://technet.microsoft.com/library/jj219620%28v=office.15%29.aspx)
     
   
--  [Query variables in SharePoint](http://technet.microsoft.com/en-us/library/jj683123.aspx)
+-  [Query variables in SharePoint](https://technet.microsoft.com/library/jj683123.aspx)
     
   
 

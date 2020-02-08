@@ -1,9 +1,10 @@
 ---
+title: Entities Element in LobSystem
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 67b9e2e8-b769-9d79-478e-acb613617513
 ---
@@ -16,7 +17,7 @@ ms.assetid: 67b9e2e8-b769-9d79-478e-acb613617513
 
 For more information, see [Entities Element in LobSystem (BDCMetadata Schema)](entities-element-in-lobsystem-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

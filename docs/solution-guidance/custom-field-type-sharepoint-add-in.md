@@ -6,8 +6,7 @@ localization_priority: Normal
 Custom field type in the SharePoint Add-in model
 ================================================
 
-Summary
--------
+## Summary
 
 The approach you take to provide customized end user experiences is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, custom field types were created with the SharePoint server-side object model code by inheriting from one of the built-in field type classes and creating a field type deployment file (XML). These components were deployed via SharePoint solutions. 
 
@@ -22,16 +21,15 @@ Here are some examples of custom field type that implements a Google map. These 
 
 **Thumbnail Google map images displayed in a list view:**
 
-![Two Google map views showing the Microsoft Campus Location Point, and Location Area.](https://github.com/SharePoint/PnP/blob/master/Samples/Branding.JSLink/readme-images/GoogleMaps.png)
+![Two Google map views showing the Microsoft Campus Location Point, and Location Area.](https://raw.githubusercontent.com/SharePoint/PnP/master/Samples/Branding.JSLink/readme-images/GoogleMaps.png)
 
 **Inline editing showing a larger Google map thumbnail:**
-![Two Google maps. One view showing the Microsoft Campus Location Point with a link to Select Location, the other view showing the Microsoft Campus Location Area with a link to Edit Shape.](https://github.com/SharePoint/PnP/blob/master/Samples/Branding.JSLink/readme-images/GoogleMaps_Edit.png)
+![Two Google maps. One view showing the Microsoft Campus Location Point with a link to Select Location, the other view showing the Microsoft Campus Location Area with a link to Edit Shape.](https://raw.githubusercontent.com/SharePoint/PnP/master/Samples/Branding.JSLink/readme-images/GoogleMaps_Edit.png)
 
 **A dialog enabling inline editing:**
-![A Google Map showing the Microsoft Campus Shape. Text on the image reads, Click on the map to place markers and create your shape. Finish by clicking on the first marker. You can drag each of the markers around, or click on them for more options. You can use the Clear Map button above to remove all markers.](https://github.com/SharePoint/PnP/blob/master/Samples/Branding.JSLink/readme-images/GoogleMaps_Shape_Edit.png)
+![A Google Map showing the Microsoft Campus Shape. Text on the image reads, Click on the map to place markers and create your shape. Finish by clicking on the first marker. You can drag each of the markers around, or click on them for more options. You can use the Clear Map button above to remove all markers.](https://raw.githubusercontent.com/SharePoint/PnP/master/Samples/Branding.JSLink/readme-images/GoogleMaps_Shape_Edit.png)
 
-High-Level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for implementing client-side rendering.
 
@@ -92,7 +90,7 @@ When you need to define a specific view for a given SharePoint field and ensure 
 The following articles demonstrate how to set the JSLink property on a SPField.
 
 - [Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 (Tobias Zimmergren)](http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013)
-- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/en-us/magazine/dn745867.aspx)
+- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/magazine/dn745867.aspx)
 
 Challenges with implementing client-side rendering with JavaScript files via the JSLink property
 ------------------------------------------------------------------------------------------------
@@ -122,24 +120,22 @@ As you develop custom client-side rendering components, keep in mind the followi
 	~sitecollection/Style Library/JSLink-Samples/MainLibrary.js|~sitecollection/Style Library/JSLink-Samples/SpecificField.js**(d)**
 	```
 
-Related links
-=============
-- [SPField.JSLink property (MSDN API Docs)](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfield.jslink.aspx)
+## Related links
+- [SPField.JSLink property (MSDN API Docs)](https://msdn.microsoft.com/library/microsoft.sharepoint.spfield.jslink.aspx)
 - [Using the JSLink property to change the way your field or views are rendered in SharePoint 2013 (Tobias Zimmergren)](http://zimmergren.net/technical/sp-2013-using-the-spfield-jslink-property-to-change-the-way-your-field-is-rendered-in-sharepoint-2013)
-- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/en-us/magazine/dn745867.aspx)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+- [Using JSLink with SharePoint 2013 (MSDN Magazine)](https://msdn.microsoft.com/magazine/dn745867.aspx)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - [Branding.ClientSideRendering (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ClientSideRendering)
 - [Branding.JSLink (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.JSLink)
 - Samples and content at https://github.com/SharePoint/PnP
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

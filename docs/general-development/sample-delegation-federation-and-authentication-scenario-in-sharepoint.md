@@ -41,7 +41,7 @@ This scenario describes an application that needs to access back-end resources t
   
     
     
-With the Kerberos delegation model on the Windows platform today, the back-end resources have access only to the identity of the immediate caller and not to that of the initial caller. This model is commonly referred to as the trusted subsystem model. Windows Identity Foundation (WIF) maintains the identity of the initial caller and the immediate caller in the delegation chain by using the  [Delegate()](https://msdn.microsoft.com/en-us/library/cc310252.aspx) property.
+With the Kerberos delegation model on the Windows platform today, the back-end resources have access only to the identity of the immediate caller and not to that of the initial caller. This model is commonly referred to as the trusted subsystem model. Windows Identity Foundation (WIF) maintains the identity of the initial caller and the immediate caller in the delegation chain by using the  [Delegate()](https://msdn.microsoft.com/library/cc310252.aspx) property.
   
     
     
@@ -82,12 +82,12 @@ The components involved in this scenario are:
 - sts2: An STS that is in the role of identity provider for Fabrikam.com and that provides an endpoint that the Fabrikam employee uses to authenticate. It has established trust with Contoso.com so that Fabrikam employees are allowed to access resources on Contoso.com.
     
   
-Note that the term "ActAs token" refers to a token that is issued by an STS and that contains the user's identity. The  [Delegate()](https://msdn.microsoft.com/en-us/library/cc310252.aspx) property contains the STS's identity.As shown in Figure 1, the flow in this scenario is:
+Note that the term "ActAs token" refers to a token that is issued by an STS and that contains the user's identity. The  [Delegate()](https://msdn.microsoft.com/library/cc310252.aspx) property contains the STS's identity.As shown in Figure 1, the flow in this scenario is:
   
     
     
 
-1. The Contoso application is configured to obtain an ActAs token that contains both the Fabrikam employee's identity and the immediate caller's identity in the  [Delegate()](https://msdn.microsoft.com/en-us/library/cc310252.aspx) property. Daniel implements these changes to the application.
+1. The Contoso application is configured to obtain an ActAs token that contains both the Fabrikam employee's identity and the immediate caller's identity in the  [Delegate()](https://msdn.microsoft.com/library/cc310252.aspx) property. Daniel implements these changes to the application.
     
   
 2. The Contoso application is configured to pass the ActAs token to the back-end service. Daniel implements these changes to the application.

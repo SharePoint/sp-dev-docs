@@ -1,7 +1,7 @@
 ---
 title: Performance guidance for SharePoint Online portals
 description: Describes the evolution of the SharePoint Online customization model, general performance guidelines for client-side web applications, and the Client-Side Data Access Layer (DAL) Framework.
-ms.date: 42/12/2019
+ms.date: 06/19/2019
 localization_priority: Priority
 ---
 
@@ -143,7 +143,7 @@ Capture critical information application metrics such as:
 
 Establish an objective performance baseline for your client-side web application, and use that baseline to validate/tune your initial design decisions.  After the application has been deployed, monitor ongoing performance and use the metrics to identify and resolve any issues that might arise.
 
-Consider using [Azure Application Insights](https://azure.microsoft.com/en-us/blog/understand-your-sharepoint-usage-with-application-insights-2/), which provides a JavaScript module that makes it easy to add telemetry to any client-side web application. You can also build your own telemetry back-end service, but do know that we don't recommend storing the telemetry data in SharePoint because it negatively impacts your portal performance.
+Consider using [Azure Application Insights](https://azure.microsoft.com/blog/understand-your-sharepoint-usage-with-application-insights-2/), which provides a JavaScript module that makes it easy to add telemetry to any client-side web application. You can also build your own telemetry back-end service, but do know that we don't recommend storing the telemetry data in SharePoint because it negatively impacts your portal performance.
 
 <a name="bk_clientBrowser"> </a>
 
@@ -161,7 +161,7 @@ When dealing with a legacy browser constraint:
 - Degrade/disable modern functionality in the new application when a legacy browser is detected at run-time.
 - Consider using the legacy browser only for the constrained LOB application; use a modern browser for everything else, including the new client-side web applications.
 
-For the latest Office 365 browser requirements, see [Which browsers work with Office Online](https://support.office.com/en-us/article/which-browsers-work-with-office-online-ad1303e0-a318-47aa-b409-d3a5eb44e452?ui=en-US&rs=en-US&ad=US).
+For the latest Office 365 browser requirements, see [Which browsers work with Office Online](https://support.office.com/article/which-browsers-work-with-office-online-ad1303e0-a318-47aa-b409-d3a5eb44e452).
 
 <a name="bk_clientEnvironment"> </a>
 
@@ -173,7 +173,7 @@ In the ideal scenario, the client environment is comprised of up-to-date client 
 
 As such, tailor the initial design of your client-side web application to adhere to the present constraints, with a plan to take advantage of client environment improvements as they are deployed. In such a scenario, you will eventually encounter a mix of client machines, so ensure that your client-side web application can detect client capabilities at run-time and adjust its behavior accordingly.
 
-For guidance about network performance planning, see [Network planning and performance tuning for Office 365](https://support.office.com/en-us/article/Network-planning-and-performance-tuning-for-Office-365-e5f1228c-da3c-4654-bf16-d163daee8848).
+For guidance about network performance planning, see [Network planning and performance tuning for Office 365](https://support.office.com/article/Network-planning-and-performance-tuning-for-Office-365-e5f1228c-da3c-4654-bf16-d163daee8848).
 
 <a name="bk_dataRequestPatterns"> </a>
 
@@ -196,7 +196,7 @@ The proper management of client-side data request traffic is critical to the per
 	- For static content, or content that is updated infrequently, like site navigation, consider writing this content to a JSON file and serving it from a CDN.
 	- To reduce costs at the middle-tier, clients can also cache the responses to LocalStorage.
 
-For additional information, see [Caching](https://docs.microsoft.com/en-us/azure/architecture/best-practices/caching).
+For additional information, see [Caching](https://docs.microsoft.com/azure/architecture/best-practices/caching).
 
 #### Call the server (or other back-end data source) only when a cache miss occurs
 
@@ -261,7 +261,7 @@ In general, use SharePoint REST APIs for client-side data requests. When perform
 
 - The SharePoint client library allows a developer to specify the fields needed for their application and return only this data. This reduces costs at all layers.
 
-For code samples demonstrating this technique, please see [Complete basic operations using SharePoint client library code](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code#retrieve-only-selected-properties-of-a-website)
+For code samples demonstrating this technique, please see [Complete basic operations using SharePoint client library code](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code#retrieve-only-selected-properties-of-a-website)
 
 #### Be mindful of aggregate request volumes
 
@@ -325,7 +325,7 @@ A Content Delivery Network (CDN) is a geo-dispersed network that allows an end-u
 - Leverage existing CDNs to deliver third-party client-side frameworks (for example, jQuery, Bootstrap, Knockout, AJAX).
 
 - Consider using a CDN to deliver your custom resource files:
-	- [Azure CDN](https://azure.microsoft.com/en-us/services/cdn/)
+	- [Azure CDN](https://azure.microsoft.com/services/cdn/)
 	- [Office 365 Public/Private CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn)
 	- SharePoint Portal Style Library (default option when a CDN is not used)
 
@@ -483,7 +483,7 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 
 ## See also
 
-- [Introduction to performance tuning for SharePoint Online](https://support.office.com/en-US/article/Introduction-to-performance-tuning-for-SharePoint-Online-81c4be5f-327e-435d-a568-526d68cffef0)
-- [Tune SharePoint Online performance](https://support.office.com/en-us/article/Tune-SharePoint-Online-performance-f0522d4a-fbf4-41f9-854e-c9b59555091d)
+- [Introduction to performance tuning for SharePoint Online](https://support.office.com/article/Introduction-to-performance-tuning-for-SharePoint-Online-81c4be5f-327e-435d-a568-526d68cffef0)
+- [Tune SharePoint Online performance](https://support.office.com/article/Tune-SharePoint-Online-performance-f0522d4a-fbf4-41f9-854e-c9b59555091d)
 - [Learn how to build a fast, responsive SharePoint portal in SharePoint Online](https://channel9.msdn.com/Events/Ignite/2016/BRK3026) (Channel 9 video)
 - [Building SharePoint Online portals](portal-overview.md)

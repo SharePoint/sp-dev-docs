@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - View schema
@@ -27,7 +27,7 @@ Universal attributes include the following.
   
 ### AutoHyperLink
 
-When **TRUE**, scans the rendering for strings that appear to be hyperlinks (for example, www.microsoft.com). When it finds these strings, it automatically adds an appropriate `<A>` tag around the text so that the user can follow the hyperlink. **HTMLEncode** is assumed **TRUE** when **AutoHyperLink** is set to **TRUE**.
+When **TRUE**, scans the rendering for strings that appear to be hyperlinks (for example, `www.microsoft.com`). When it finds these strings, it automatically adds an appropriate `<A>` tag around the text so that the user can follow the hyperlink. **HTMLEncode** is assumed **TRUE** when **AutoHyperLink** is set to **TRUE**.
     
 ### AutoNewLine
 

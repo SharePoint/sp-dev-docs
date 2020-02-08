@@ -1,11 +1,12 @@
 ---
+title: Folder Element (ContentType)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, folder element
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 381be88e-111d-4e23-b851-0d38c38cc415
 ---
@@ -97,9 +98,9 @@ The resource folder is the storage location for any file, such as a document tem
 
 ## See also
 
-- [ResourceFolder](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.spcontenttype.resourcefolder.aspx)
+- [ResourceFolder](https://msdn.microsoft.com/library/office/microsoft.sharepoint.spcontenttype.resourcefolder.aspx)
 - [Content Type Definitions](content-type-definitions.md)
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 
 
 

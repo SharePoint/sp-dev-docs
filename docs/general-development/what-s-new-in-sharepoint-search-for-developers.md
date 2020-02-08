@@ -20,7 +20,7 @@ The Search CSOM includes a Microsoft .NET Framework managed client object model 
   
     
     
-To use the Search .NET Framework managed CSOM, you must get a  [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then, use the object model in the [Microsoft.SharePoint.Client.Search.Query](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.aspx) namespace in the Microsoft.Office.Server.Search.Client.dll. For more information about the SharePoint CSOM, see [SharePoint 2010 Client Object Model](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the **ClientContext** object, which is the entry point to the CSOM, see [Client Context as Central Object](http://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx).
+To use the Search .NET Framework managed CSOM, you must get a  [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then, use the object model in the [Microsoft.SharePoint.Client.Search.Query](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.aspx) namespace in the Microsoft.Office.Server.Search.Client.dll. For more information about the SharePoint CSOM, see [SharePoint 2010 Client Object Model](https://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the **ClientContext** object, which is the entry point to the CSOM, see [Client Context as Central Object](https://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx).
   
     
     
@@ -32,7 +32,7 @@ The Search CSOM returns the search results data from the server in JavaScript Ob
 ## SQL Syntax Support Removed
 <a name="SP15Searchnew_support"> </a>
 
-Custom search solutions in SharePoint do not support  [SQL syntax](http://msdn.microsoft.com/en-us/library/ee558869). Search in SharePoint supports FQL syntax and KQL syntax for custom search solutions. You cannot use SQL syntax in custom search solutions using any technologies, including the Query server object model, the client object model, and the Search REST service. Custom search solutions that use SQL syntax with the Query server object model and the Query web service that were created in earlier versions of SharePoint Server will not work when you upgrade them to SharePoint. Queries submitted via these applications will return an error. For more information about using FQL syntax and KQL syntax, see  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL.md) syntax reference](fast-query-language-fql-syntax-reference.md).
+Custom search solutions in SharePoint do not support  [SQL syntax](https://msdn.microsoft.com/library/ee558869). Search in SharePoint supports FQL syntax and KQL syntax for custom search solutions. You cannot use SQL syntax in custom search solutions using any technologies, including the Query server object model, the client object model, and the Search REST service. Custom search solutions that use SQL syntax with the Query server object model and the Query web service that were created in earlier versions of SharePoint Server will not work when you upgrade them to SharePoint. Queries submitted via these applications will return an error. For more information about using FQL syntax and KQL syntax, see  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL.md) syntax reference](fast-query-language-fql-syntax-reference.md).
   
     
     
@@ -60,7 +60,7 @@ Use the following access point to access the service metadata:
   
     
     
-For general information about the REST service in SharePoint, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
+For general information about the REST service in SharePoint, see  [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
   
     
     

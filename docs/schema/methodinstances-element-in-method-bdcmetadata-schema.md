@@ -1,11 +1,12 @@
 ---
+title: MethodInstances Element in Method
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.MethodInstances
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: dae3aeae-e72a-0b52-1348-f5e5cd31109f
 ---
@@ -18,7 +19,7 @@ ms.assetid: dae3aeae-e72a-0b52-1348-f5e5cd31109f
 
 Specifies a list of associations and method instances of a method.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

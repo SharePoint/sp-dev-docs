@@ -1,9 +1,10 @@
 ---
+title: DeclarativeContextDefinition Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 3dbfc06e-ca4b-dd3e-b7ee-bc52803b3ee4
 ---
@@ -17,7 +18,7 @@ ms.assetid: 3dbfc06e-ca4b-dd3e-b7ee-bc52803b3ee4
 The **DeclarativeContextDefinition** element derives from the **ContextDefinition** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to define a context for an external content type of **Outlook Item Type**, which this context definition group defines.
 
 **Namespace**: 
-http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions
+`http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
@@ -73,11 +74,11 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/a36a61aa-3ea9-031a-88d3-706b494af5f0.aspx">Entities</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/a36a61aa-3ea9-031a-88d3-706b494af5f0.aspx">Entities</a></p></td>
 <td align="left"><p>The **Entities** element defines the external content type that this context definition is associated with. Note that in the current release of the product, a context definition can be associated with only one external type, even though the schema supports associating a context definition with more than one **Entity** element.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/476e961f-9c21-b096-2dbb-cfb87a2740f6.aspx">OfficeItemCustomizations</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/476e961f-9c21-b096-2dbb-cfb87a2740f6.aspx">OfficeItemCustomizations</a></p></td>
 <td align="left"><p>The **OfficeItemCustomizations** element lists the Outlook user interface customizations that are defined for this context definition.</p></td>
 </tr>
 <tr class="odd">

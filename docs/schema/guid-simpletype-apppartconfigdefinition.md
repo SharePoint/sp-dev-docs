@@ -1,9 +1,10 @@
 ---
+title: GUID simpleType (AppPartConfigDefinition)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c535cb42-5748-92ea-b258-cca570ca6e51
 ---
@@ -17,26 +18,11 @@ ms.assetid: c535cb42-5748-92ea-b258-cca570ca6e51
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Base type</span></p></td>
-<td align="left"><p>xs:string</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>apppartconfig.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Base type**  | xs:string |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration` |
+| **Schema file**  | apppartconfig.xsd |
 
 ## Definition
 
@@ -47,13 +33,3 @@ ms.assetid: c535cb42-5748-92ea-b258-cca570ca6e51
         </xs:restriction>
     </xs:simpleType>
 ```
-
-<br/>
-
-<br/>
-
-
-
-
-
-

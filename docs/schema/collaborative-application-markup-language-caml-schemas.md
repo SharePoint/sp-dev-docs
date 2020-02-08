@@ -5,7 +5,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e21daeee-6580-4d13-a448-6f515155d1e8
 ---
@@ -48,7 +48,7 @@ This section provides overview topics as well as information and reference docum
 
 ## See also
 
-- [Other CAML schemas](http://msdn.microsoft.com/library/cee9f788-89a3-4fe1-92d8-10517c8904cf(Office.15).aspx)
+- [Other CAML schemas](https://msdn.microsoft.com/library/cee9f788-89a3-4fe1-92d8-10517c8904cf(Office.15).aspx)
 
 
 

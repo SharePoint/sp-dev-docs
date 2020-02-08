@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e31bb3ca-bec2-4e56-89c5-8eceaa116368
 description: Contains a Boolean value that specifies whether the current user has permissions to manage attendees in a Meeting Workspace.

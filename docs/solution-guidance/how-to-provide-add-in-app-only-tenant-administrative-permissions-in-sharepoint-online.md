@@ -28,7 +28,7 @@ Notice that this operation has to be completed under the tenant administration s
 ## See also
 <a name="bk_addresources"> </a>
 
-- [Register SharePoint Add-ins 2013](https://msdn.microsoft.com/en-us/library/office/jj687469.aspx)
+- [Register SharePoint Add-ins 2013](https://msdn.microsoft.com/library/office/jj687469.aspx)
     
-- [Add-in permissions in SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/fp142383.aspx)
+- [Add-in permissions in SharePoint 2013](https://msdn.microsoft.com/library/office/fp142383.aspx)
 

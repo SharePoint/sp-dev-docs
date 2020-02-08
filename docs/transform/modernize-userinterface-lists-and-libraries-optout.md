@@ -14,7 +14,7 @@ In 2016, we introduced a new “modern” experience for SharePoint, bringing ex
 
 ### Opting out at site collection level
 
-You can opt out a site collection from using the "modern" experience by enabling a feature with ID **E3540C7D-6BEA-403C-A224-1A12EAFEE4C4**. Use the following [PnP PowerShell](http://aka.ms/sppnp-powershell) to enable/disable the needed feature:
+You can opt out a site collection from using the "modern" experience by enabling a feature with ID **E3540C7D-6BEA-403C-A224-1A12EAFEE4C4**. Use the following [PnP PowerShell](https://aka.ms/sppnp-powershell) to enable/disable the needed feature:
 
 ```powershell
 # Connect to a site
@@ -29,7 +29,7 @@ Enable-PnPFeature -Identity E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 -Scope Site
 
 ### Opting out at web level
 
-You can opt out a web from using the "modern" experience by enabling a feature with ID **52E14B6F-B1BB-4969-B89B-C4FAA56745EF**. Use the following [PnP PowerShell](http://aka.ms/sppnp-powershell) to enable/disable the needed feature:
+You can opt out a web from using the "modern" experience by enabling a feature with ID **52E14B6F-B1BB-4969-B89B-C4FAA56745EF**. Use the following [PnP PowerShell](https://aka.ms/sppnp-powershell) to enable/disable the needed feature:
 
 ```powershell
 # Connect to a site
@@ -48,7 +48,7 @@ To control the experience at the library level, you can go to **List settings** 
 
 ![List experience configuration](media/modernize/list-experience-setting.png)
 
-The same can also be done by using [PnP PowerShell](http://aka.ms/sppnp-powershell) as shown in this snippet:
+The same can also be done by using [PnP PowerShell](https://aka.ms/sppnp-powershell) as shown in this snippet:
 
 ```powershell
 # Connect to a site

@@ -1,11 +1,12 @@
 ---
+title: LocalizedDisplayName Element in LocalizedDisplayNames
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LocalizedDisplayName
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 93fb80ef-6347-b463-da90-4980d872678e
 ---
@@ -18,7 +19,7 @@ ms.assetid: 93fb80ef-6347-b463-da90-4980d872678e
 
 Specifies a localized name.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

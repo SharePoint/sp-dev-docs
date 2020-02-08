@@ -1,7 +1,7 @@
 ---
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
-ms.date: 06/24/2019
+ms.date: 02/06/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -120,11 +120,45 @@ Name|Description
 Name|Description
 :-----|:----------
 {CompleteString}|Concatenation of the passed strings
+### ConcatenateWithSemiColonDelimiter
+
+**Description:** Concatenates 2 strings with a semicolon in between.
+
+**Example:** `{CompleteString} = ConcatenateWithSemiColonDelimiter({String1},{String2})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{String1}|First string
+{String2}|Second string
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{CompleteString}|Concatenation of the passed strings
+### ConcatenateWithPipeDelimiter
+
+**Description:** Concatenates 2 strings with a pipe character in between.
+
+**Example:** `{CompleteString} = ConcatenateWithSemiColonDelimiter({String1},{String2})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{String1}|First string
+{String2}|Second string
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{CompleteString}|Concatenation of the passed strings
 ### StaticString
 
 **Description:** Returns an the (static) string provided as input
 
-**Example:** `EmptyString('static string')`
+**Example:** `StaticString('static string')`
 
 #### Input parameters
 
@@ -283,6 +317,24 @@ Name|Description
 Name|Description
 :-----|:----------
 {ServerRelativeFileName}|New target location for the asset if transferred.
+### ImageAnchorUrlRewrite
+
+**Description:** Rewrite the image anchor tag url.
+
+**Example:** `ImageAnchorUrlRewrite({Anchor},{ImageUrl},{ServerRelativeFileName})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{Anchor}|Original anchor tag fetched from the source image
+{ImageUrl}|Original image url
+{ServerRelativeFileName}|New image url
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{Anchor}|The url after url rewrite. If the anchor and original image url were the same then the anchor will be set to the new image url
 ### ExtractWebpartProperties
 
 **Description:** Extracts the client side web part properties so they can be reused.
@@ -500,7 +552,7 @@ Name|Description
 
 **Description:** Returns an the (static) string provided as input
 
-**Example:** `EmptyString('static string')`
+**Example:** `StaticString('static string')`
 
 #### Input parameters
 
@@ -512,6 +564,61 @@ Name|Description
 Name|Description
 :-----|:----------
 {return value}|String provided as input
+### Prefix
+
+**Description:** Prefixes the input text with another text. The applyIfContentIsEmpty parameter controls if the prefix also needs to happen when the actual content is empty
+
+**Example:** `Prefix('&lt;H1&gt;Prefix some extra text&lt;/H1&gt;', {PublishingPageContent}, 'false')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'prefix string'}|Static input string which will be used as prefix
+{PublishingPageContent}|The actual publishing page HTML field content to prefix
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the prefixing still needs to happen when the {PublishingPageContent} field content is emty
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Value of {PublishingPageContent} prefixed with the provided prefix value
+### Suffix
+
+**Description:** Suffixes the input text with another text. The applyIfContentIsEmpty parameter controls if the suffix also needs to happen when the actual content is empty
+
+**Example:** `Suffix('&lt;H1&gt;Suffix some extra text&lt;/H1&gt;', {PublishingPageContent}, 'false')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'suffix string'}|Static input string which will be used as suffix
+{PublishingPageContent}|The actual publishing page HTML field content to suffix
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the suffixing still needs to happen when the {PublishingPageContent} field content is emty
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Value of {PublishingPageContent} suffixed with the provided suffix value
+### PrefixAndSuffix
+
+**Description:** Prefixes and suffixes the input text with another text. The applyIfContentIsEmpty parameter controls if the prefix/suffix also needs to happen when the actual content is empty
+
+**Example:** `PrefixAndSuffix('&lt;H1&gt;Prefix some extra text&lt;/H1&gt;','&lt;H1&gt;Suffix some extra text&lt;/H1&gt;',{PublishingPageContent},'false')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{'prefix string'}|Static input string which will be used as prefix
+{'suffix string'}|Static input string which will be used as suffix
+{PublishingPageContent}|The actual publishing page HTML field content to prefix/suffix
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the prefixing/suffixing still needs to happen when the {PublishingPageContent} field content is emty
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|Value of {PublishingPageContent} prefixed/suffixed with the provided values
 ### ToImageUrl
 
 **Description:** Returns the server relative image url of a Publishing Image field value.
@@ -592,6 +699,40 @@ Name|Description
 Name|Description
 :-----|:----------
 {return value}|A formatted preview image url
+### ToAuthors
+
+**Description:** Looks up user information for passed user id
+
+**Example:** `ToAuthors({PublishingContact})`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{userId}|The id (int) of a user
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|A formatted json blob describing the user's details
+### DefaultTaxonomyFieldValue
+
+**Description:** Populate a taxonomy field based upon provided term id's. You can configure to optionally overwrite existing values
+
+**Example:** `DefaultTaxonomyFieldValue({TaxField2},'a65537e8-aa27-4b3a-bad6-f0f61f84b9f7|69524923-a5a0-44d1-b5ec-7f7c6d0ec160','true')`
+
+#### Input parameters
+
+Name|Description
+:-----|:----------
+{Taxonomy Field}|The taxonomy field to update
+{'term ids split by |'}|List of term id's to set, multiple values can also be used when the taxonomy field is configured to accept multiple terms
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the default term values have to be set in case the fiels already contains terms
+#### Output parameters
+
+Name|Description
+:-----|:----------
+{return value}|String with term information needed to set the taxonomy field
 ## Selectors
 ### TextSelector
 

@@ -39,14 +39,11 @@ Your code needs to:
 1. **Create an access token.** The subtasks for creating this token vary depending on whether the remote web application makes add-in-only calls to SharePoint, user+add-in calls, or both. (For more information, see [Add-in authorization policy types in SharePoint](add-in-authorization-policy-types-in-sharepoint.md).) 
     
     - If the add-in makes user+add-in calls, creating the access token includes the following subtasks:
-    
-        1. Create an actor token that identifies the SharePoint Add-in and tells SharePoint to delegate user authentication and authorization to your add-in, and encode it in base 64 encoding. Details about the claims and structure of the actor token are in Table 2. Details about encoding and signing the token are in [Encoding and signing tokens](#EncodeTokens).
-            
-        2. Sign the actor token with credentials from an X.509 certificate that a SharePoint farm administrator has configured SharePoint to trust.
-            
-        3. Include the actor token in the access token.
-            
-        4. Add other required claims to the access token. Details about the claims and structure of the token are in Table 1.
+
+        1. Create an actor token that identifies the SharePoint Add-in and tells SharePoint to delegate user authentication and authorization to your add-in, and encode it in base 64 encoding. Details about the claims and structure of the actor token are in Table 2. Details about encoding and signing the token are in [Encoding and signing tokens](#encoding-and-signing-tokens).
+        1. Sign the actor token with credentials from an X.509 certificate that a SharePoint farm administrator has configured SharePoint to trust.
+        1. Include the actor token in the access token.
+        1. Add other required claims to the access token. Details about the claims and structure of the token are in Table 1.
         
     - If the add-in makes add-in-only calls, your code only needs to do the first two of these subtasks. The actor token serves as the access token.
         
@@ -67,7 +64,7 @@ After a token is created, it can be reused in later calls to SharePoint until it
 
 - In session state
 - In application state
-- In [Windows Server AppFabric Caching](http://msdn.microsoft.com/library/8aef3f5d-2a77-46d9-b951-0768fedd31a1%28Office.15%29.aspx).
+- In [Windows Server AppFabric Caching](https://msdn.microsoft.com/library/8aef3f5d-2a77-46d9-b951-0768fedd31a1%28Office.15%29.aspx).
 - In a database
 - In a [memcached](http://www.memcached.org/) system
     
@@ -75,7 +72,7 @@ If the cache storage is shared by different user sessions, such as the applicati
 
 If the cache is shared by multiple applications, your code must also **relativize the cache key** for that variable as well. It is also possible that your add-in accesses different SharePoint farms. You need distinct access tokens for each of them, so in that scenario your cache key would need to relativize for the farm. 
 
-Altogether you may need cache keys that are based on one or more of user ID, application ID, and SharePoint domain or realm. Consider using a cache key system similar to the one used by SharePoint Add-ins that use the low-trust authorization system. For more information, see [Understand the cache key](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md#CacheKey). 
+Altogether you may need cache keys that are based on one or more of user ID, application ID, and SharePoint domain or realm. Consider using a cache key system similar to the one used by SharePoint Add-ins that use the low-trust authorization system. For more information, see [Understand the cache key](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md#understand-the-cache-key). 
 
 Essentially, you would concatenate one or more of these three IDs (and optionally hash the result into a shorter string) to serve as a cache key. 
 
@@ -136,7 +133,7 @@ The following table provides some guidance for the properties your code should i
 
 The following shows the decoded **actortoken**. The small JavaScript Object Notation (JSON) header object at the top contains metadata about the token, including the type of token and the algorithm that is used to sign it. The **x5t** property of the header is a digest made from the thumbprint of the X.509 certificate that is officially the issuer of the token. To construct this value, your code does the following:
 
-1. Obtain the byte array (not string) version of the thumbprint of the certificate. This is a SHA-1 digest of the certificate. (In managed code, this can be done with the [GetCertHash()](https://msdn.microsoft.com/EN-US/library/4f9acc3f) method. You need something equivalent in the language you are using.)
+1. Obtain the byte array (not string) version of the thumbprint of the certificate. This is a SHA-1 digest of the certificate. (In managed code, this can be done with the [GetCertHash()](https://msdn.microsoft.com/library/4f9acc3f) method. You need something equivalent in the language you are using.)
 
 2. Encode the byte array with Base 64 URL encoding.
 
@@ -181,27 +178,18 @@ Table 2 describes the claims your code must include in the body of the token and
 After your code has added all the properties and values to the header and body JSON objects, it has to encode them, combine them into a JSON Web Token (JWT), and sign it. The following are the steps.
 
 1. Encode the header with Base 64 URL encoding.    
- 
-2. Encode the payload with Base 64 URL encoding.    
- 
-3. Concatenate the encoded body after the encoded header with a "." character in between them. This is the JWT.    
- 
-4. Create a SHA256 signature by using the JWT and the private key of the certificate.    
- 
-5. Encode the signature with Base 64 URL encoding.    
- 
-6. Append the signature to the end of the JWT, with a "." character between them.     
+1. Encode the payload with Base 64 URL encoding.    
+1. Concatenate the encoded body after the encoded header with a "." character in between them. This is the JWT.    
+1. Create a SHA256 signature by using the JWT and the private key of the certificate.    
+1. Encode the signature with Base 64 URL encoding.    
+1. Append the signature to the end of the JWT, with a "." character between them.     
  
 For an actor token that is used with an add-in-only call, the actor token serves as the access token. There is no outer token. For an access token that is used with a user+add-in call, the preceding steps are used to construct an actor token, which is then inserted into the body of an access token as the value of the **actortoken** property. The full access token is then encoded and constructed with the first three steps above, but it is not signed, so the remaining steps are not used for the outer token.
  
-
-<a name="Trouble"> </a> 
-
 ## Troubleshooting access tokens
 
 The free [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture the HTTP Requests sent by the remote component of your add-in to SharePoint. There is a [free extension to the tool](https://github.com/andrewconnell/SPOAuthFiddlerExt) that automatically decodes the tokens in the requests.
  
-
 ## See also
 
 - [Steve Peschka's Security in SharePoint Add-ins - Part 7](https://samlman.wordpress.com/2015/03/02/security-in-sharepoint-apps-part-7/)
@@ -210,5 +198,3 @@ The free [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture t
 - [Add-in authorization policy types in SharePoint](add-in-authorization-policy-types-in-sharepoint.md)
 - [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md)
 - [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
-    
- 

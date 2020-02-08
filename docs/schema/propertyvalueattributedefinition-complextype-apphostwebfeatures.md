@@ -1,9 +1,10 @@
 ---
+title: PropertyValueAttributeDefinition complexType
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 124616c4-9d87-64b7-e9e8-2f49a9a5ab58
 ---
@@ -17,26 +18,11 @@ ms.assetid: 124616c4-9d87-64b7-e9e8-2f49a9a5ab58
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>apphostwebfeatures.xsd</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Extension base</span></p></td>
-<td align="left"><p>xs:string</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file**  | apphostwebfeatures.xsd |
+| **Extension base**  | None |
 
 ## Definition
 

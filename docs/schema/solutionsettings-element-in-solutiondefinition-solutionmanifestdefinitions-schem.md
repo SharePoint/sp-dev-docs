@@ -1,9 +1,10 @@
 ---
+title: SolutionSettings Element in SolutionDefinition
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: d8930948-e804-18ee-7c4b-b0bd39ccf62a
 ---
@@ -16,7 +17,7 @@ ms.assetid: d8930948-e804-18ee-7c4b-b0bd39ccf62a
 
 Defines the settings for this Microsoft Business Connectivity Services (BCS) solution such as the ID, display name, and description.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

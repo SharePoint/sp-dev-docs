@@ -32,7 +32,7 @@ To set up your console application to run as an Azure WebJob, you need to:
 
 ## Create an organization account
 
-You need to create an account for the Azure WebJob to use when accessing SharePoint sites and content. For more information, see [Add users individually or in bulk to Office 365 - Admin Help](https://support.office.microsoft.com/en-us/article/add-users-individually-or-in-bulk-to-office-365-admin-help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US). 
+You need to create an account for the Azure WebJob to use when accessing SharePoint sites and content. For more information, see [Add users individually or in bulk to Office 365 - Admin Help](https://support.office.microsoft.com/article/add-users-individually-or-in-bulk-to-office-365-admin-help-1970f7d6-03b5-442f-b385-5880b9c256ec?ui=en-US&rs=en-US&ad=US). 
 
 When the Azure WebJob runs, the **Modified By** field stores and displays the value entered in **Display name** of the organization account. Ensure that you choose a display name that your users can easily identify as the account used by the Azure WebJob for accessing SharePoint.
 
@@ -167,10 +167,10 @@ When you are finished developing your console application, you need to deploy th
 
 - Upload your binaries to an Azure Web App, and create an Azure WebJob by using the [Microsoft Azure portal](https://ms.portal.azure.com). 
 	- The binaries for your Visual Studio project can be found in the bin/Debug or bin/Release folders of your Visual Studio project. 
-	- To create the Azure Web App and upload the binaries, follow the steps in [Create an ASP.NET Core web app in Azure](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-get-started-dotnet). 
-	- To create your on-demand, continuous, or scheduled Azure WebJob, see [Run Background tasks with WebJobs in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs).
+	- To create the Azure Web App and upload the binaries, follow the steps in [Create an ASP.NET Core web app in Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet). 
+	- To create your on-demand, continuous, or scheduled Azure WebJob, see [Run Background tasks with WebJobs in Azure App Service](https://docs.microsoft.com/azure/app-service/web-sites-create-web-jobs).
     
-- Publish your Azure WebJob from Visual Studio. For more information, see [Enable WebJobs deployment without a web project](https://docs.microsoft.com/en-us/azure/app-service/websites-dotnet-deploy-webjobs#convertnolink).
+- Publish your Azure WebJob from Visual Studio. For more information, see [Enable WebJobs deployment without a web project](https://docs.microsoft.com/azure/app-service/websites-dotnet-deploy-webjobs#convertnolink).
 
 <a name="runandverify"> </a>
 
@@ -180,7 +180,7 @@ After completing all the previous steps, your Azure WebJob should be running and
 
 - If your Azure WebJob updated a SharePoint item, like a list item, the **Modified By** field displays the organization account that the Azure WebJob used to access SharePoint.
     
-- Review the WebJob Details logs for your Azure WebJob. The WebJob Details logs let you review when a job ran, the success or failure of a job run, any output from the WebJob (for example, when Console.WriteLine was called), and other details of the job run. For more information, see the section [View the job history](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs#ViewJobHistory) in Run Background tasks with WebJobs.
+- Review the WebJob Details logs for your Azure WebJob. The WebJob Details logs let you review when a job ran, the success or failure of a job run, any output from the WebJob (for example, when Console.WriteLine was called), and other details of the job run. For more information, see the section [View the job history](https://docs.microsoft.com/azure/app-service/web-sites-create-web-jobs#ViewJobHistory) in Run Background tasks with WebJobs.
 
 ## See also
 

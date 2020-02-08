@@ -1,11 +1,12 @@
 ---
+title: Association element in MethodInstances
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Association
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0
 ---
@@ -16,7 +17,7 @@ ms.assetid: 9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

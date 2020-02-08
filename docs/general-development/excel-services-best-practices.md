@@ -76,7 +76,7 @@ Use the **maxRequestLength** attribute in the **httpRuntime** element in the **s
   
     
     
-For more information, see  [\<httpRuntime\> Element](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369.aspx) and [\<maxRequestLength\> Element](http://msdn.microsoft.com/library/fd52b2c5-5014-4e6f-b869-4ea666dc83d6.aspx).
+For more information, see  [\<httpRuntime\> Element](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369.aspx) and [\<maxRequestLength\> Element](https://msdn.microsoft.com/library/fd52b2c5-5014-4e6f-b869-4ea666dc83d6.aspx).
   
     
     
@@ -98,7 +98,7 @@ To help mitigate this threat, we recommend that you:
 - Physically protect the relevant network if a custom application using Excel Web Services is running in a confined network—for example, if Excel Web Services is deployed on a Web front-end computer within the enterprise.
     
   
-For more information, see  [Securing Your Network](http://msdn.microsoft.com/library/af62ece0-0dd7-4b8e-ad12-4d13f2d60816.aspx) and [SOAP Security](http://msdn.microsoft.com/en-us/library/aa912494.aspx).
+For more information, see  [Securing Your Network](https://msdn.microsoft.com/library/af62ece0-0dd7-4b8e-ad12-4d13f2d60816.aspx) and [SOAP Security](https://msdn.microsoft.com/library/aa912494.aspx).
   
     
     
@@ -117,7 +117,7 @@ The SSL certificate is matched against a few properties, one of which is the IP 
   
     
     
-For more information, see  [Securing Your Network](http://msdn.microsoft.com/library/af62ece0-0dd7-4b8e-ad12-4d13f2d60816.aspx).
+For more information, see  [Securing Your Network](https://msdn.microsoft.com/library/af62ece0-0dd7-4b8e-ad12-4d13f2d60816.aspx).
   
     
     
@@ -193,7 +193,7 @@ To avoid name collision, we recommend that you strongly name your dependencies, 
 
 ### Naming Managed-Code DLLs
 
-To ensure that your assembly names are unique, use the fully qualified class name, following the  [Namespace Naming Guidelines](http://msdn.microsoft.com/library/c08bc0d8-9b3a-4564-9af6-71699f62e00d.aspx).
+To ensure that your assembly names are unique, use the fully qualified class name, following the  [Namespace Naming Guidelines](https://msdn.microsoft.com/library/c08bc0d8-9b3a-4564-9af6-71699f62e00d.aspx).
   
     
     

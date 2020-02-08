@@ -8,9 +8,7 @@ localization_priority: Priority
 
 # SharePoint Online tenant properties
 
-Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. 
-
-The tenant properties can be managed by tenant administrators by using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/en-us/library/fp161372.aspx), which is a PowerShell module to manage your SharePoint Online subscription in Office 365.
+Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx), which is a PowerShell module to manage your SharePoint Online subscription in Office 365.
 
 Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) can be used to manage the tenant properties. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
 
@@ -18,7 +16,7 @@ Yet another alternative for managing tenant properties is [PnP PowerShell](https
 
 ## Use Microsoft SharePoint Online Management Shell commands to get, set and remove tenant properties
 
-Using the [Microsoft SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588), tenant administrators can use PowerShell to add and remove tenant properties. 
+Using the [Microsoft SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588), tenant administrators can use PowerShell to add and remove tenant properties. 
 
 The following PowerShell cmdlets are available to manage the tenant properties. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL in the following cmdlets.
 

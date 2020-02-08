@@ -1,9 +1,10 @@
 ---
+title: OfficeItemCustomizations element in ContextDefinition
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 79c8b258-dbc7-37f2-7ff5-4ea58eb376ca
 ---
@@ -16,7 +17,7 @@ ms.assetid: 79c8b258-dbc7-37f2-7ff5-4ea58eb376ca
 
 Describes Microsoft Outlook-specific customizations. Must be of type **OutlookItemCustomizations**.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
 

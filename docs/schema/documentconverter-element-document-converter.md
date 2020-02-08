@@ -1,9 +1,10 @@
 ---
+title: DocumentConverter Element (Document Converter)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: bfe1e739-6936-41dc-849a-ac4a7b9e664d
 ---
@@ -129,7 +130,7 @@ The following example is the document converter definition file for a custom doc
 
 ## See also
 
-- [Working with Features](http://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx)
+- [Working with Features](https://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx)
 
 
 

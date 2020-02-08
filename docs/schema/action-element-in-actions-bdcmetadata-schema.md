@@ -1,11 +1,12 @@
 ---
+title: Action element in Actions
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Action Element
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f58b96c0-77a8-69d3-8710-fff03d4970b9
 ---
@@ -18,7 +19,7 @@ ms.assetid: f58b96c0-77a8-69d3-8710-fff03d4970b9
 
 Specifies an action supported by an external content type.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

@@ -226,7 +226,7 @@ Send
 
 ```
 
-For example, if your handler needs to take action on a SQL Server database, you can install a stored procedure on the SQL Server that uses a [TRY-CATCH](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/try-catch-transact-sql) block to implement installation-rollback logic with [IF-ELSE](https://docs.microsoft.com/en-us/sql/t-sql/language-elements/if-else-transact-sql) blocks to implement "already done" logic.
+For example, if your handler needs to take action on a SQL Server database, you can install a stored procedure on the SQL Server that uses a [TRY-CATCH](https://docs.microsoft.com/sql/t-sql/language-elements/try-catch-transact-sql) block to implement installation-rollback logic with [IF-ELSE](https://docs.microsoft.com/sql/t-sql/language-elements/if-else-transact-sql) blocks to implement "already done" logic.
 
 The SharePoint Add-in model doesn't provide a way to store custom server-side code on SharePoint and invoke it from the CSOM (client-side object model). But the CSOM does provide a way to bundle try-catch and if-then-else logic and send it to the server for execution. 
 
@@ -241,7 +241,7 @@ For a sample of an add-in event handler that does not use the handler delegation
 
 ## Remote event receivers in add-ins that support multiple security zones
 
-Some restrictions on how you design an add-in support multiple security zones and have a remote event receiver. For more information, see Knowledge Base article kb3135876 [You can't add a provider-hosted add-in to a SharePoint 2013 site in non-default zones](https://support.microsoft.com/en-us/help/3135876/you-can-t-add-a-provider-hosted-add-in-to-a-sharepoint-2013-site-in-no).
+Some restrictions on how you design an add-in support multiple security zones and have a remote event receiver. For more information, see Knowledge Base article kb3135876 [You can't add a provider-hosted add-in to a SharePoint 2013 site in non-default zones](https://support.microsoft.com/help/3135876/you-can-t-add-a-provider-hosted-add-in-to-a-sharepoint-2013-site-in-no).
  
 <a name="RERFAQ"> </a>
 
@@ -297,7 +297,7 @@ For the complete code sample, see [Add list item properties with a remote event 
 
 For a detailed demo of the code sample, see [Migrating a SharePoint event receiver to a remote event receiver](https://channel9.msdn.com/Series/Reimagine-SharePoint-Development/Migrating-a-SharePoint-Event-Receiver-to-a-Remote-Event-Receiver).
 
-For more information, see [SPRemoteEventType enumeration](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.eventreceivers.spremoteeventtype.aspx)
+For more information, see [SPRemoteEventType enumeration](https://msdn.microsoft.com/library/microsoft.sharepoint.client.eventreceivers.spremoteeventtype.aspx)
  
 <a name="RER_HowDoRERWork"> </a>
  

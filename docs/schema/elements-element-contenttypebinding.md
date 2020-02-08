@@ -1,11 +1,12 @@
 ---
+title: Elements Element (ContentTypeBinding)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type binding definition schema, elements element
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 402f84f7-12b5-4f1c-8ff3-2004c3fc1759
 ---

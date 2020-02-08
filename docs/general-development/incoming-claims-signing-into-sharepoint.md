@@ -14,7 +14,7 @@ localization_priority: Normal
 When a user signs in to SharePoint Server, the user's token is validated and then used to sign in to SharePoint. The user's token is a security token issued by a claims provider.
   
 > [!NOTE]
-> For information about claims authentication for a single SharePoint farm and inter-farm SharePoint claims authentication, see  [Plan for claims authentication](http://technet.microsoft.com/en-us/library/cc262350.aspx) on TechNet.
+> For information about claims authentication for a single SharePoint farm and inter-farm SharePoint claims authentication, see  [Plan for claims authentication](https://technet.microsoft.com/library/cc262350.aspx) on TechNet.
   
     
     

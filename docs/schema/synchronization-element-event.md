@@ -1,9 +1,10 @@
 ---
+title: Synchronization Element (Event)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: d94e2c12-b543-4ae5-8c62-5e9fcef2cfe8
 ---

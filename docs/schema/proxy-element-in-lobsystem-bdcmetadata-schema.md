@@ -1,11 +1,12 @@
 ---
+title: Proxy element in LobSystem
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Proxy
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 8ec2e7b0-156f-ff4a-a87b-fe5764e4875b
 ---
@@ -18,7 +19,7 @@ ms.assetid: 8ec2e7b0-156f-ff4a-a87b-fe5764e4875b
 
 Specifies a user-provided proxy that is identical to the one that would be generated if this element were not present. This is used to improve performance by removing the proxy generation overhead. To specify custom business logic that connects to an external system, .NET Connectivity Assembly type external systems must be used.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

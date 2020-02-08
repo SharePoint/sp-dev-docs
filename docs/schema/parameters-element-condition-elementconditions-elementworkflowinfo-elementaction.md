@@ -1,9 +1,10 @@
 ---
+title: Parameters element (Condition element)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 634793ca-8e14-818d-1e5c-3dd2b7b1626d
 ---

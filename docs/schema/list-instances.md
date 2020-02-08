@@ -1,9 +1,10 @@
 ---
+title: List Instances
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f0cb0e1e-0871-4193-b0e9-519e34d7e839
 ---
@@ -60,7 +61,7 @@ The following example shows the contents of an XML file in which the [ListInstan
 
 ## See also
 
-- [List Instance](https://msdn.microsoft.com/en-us/library/office/ms469947.aspx)
+- [List Instance](https://msdn.microsoft.com/library/office/ms469947.aspx)
 
 
 

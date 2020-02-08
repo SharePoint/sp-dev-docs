@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Regional Settings schema
@@ -18,7 +18,7 @@ description: Used in TIMEZONE.XML to contain an integer representing the month i
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain an integer representing the month in which standard time or daylight saving time begins for a time zone. If the **Month** element is empty outside the context of TIMEZONE.XML, such as in a view definition ([Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), it returns the current month.
+Used in TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG) to contain an integer representing the month in which standard time or daylight saving time begins for a time zone. If the **Month** element is empty outside the context of TIMEZONE.XML, such as in a view definition ([Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx)), it returns the current month.
   
 ```XML
 <Month>

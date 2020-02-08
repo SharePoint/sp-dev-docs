@@ -41,7 +41,7 @@ You can control the SharePoint site creation process from the SharePoint Online 
 ![Site Creation options from the SharePoint Online admin UI](media/modern-experiences/site-creation-options-admin-ui.png)
 
 For more information, see the following Office Support article:
-- [Manage site creation in SharePoint Online](https://support.office.com/en-US/article/Manage-site-creation-in-SharePoint-Online-e72844a3-0171-47c9-befb-e98b23e2dcf9)
+- [Manage site creation in SharePoint Online](https://support.office.com/article/Manage-site-creation-in-SharePoint-Online-e72844a3-0171-47c9-befb-e98b23e2dcf9)
 
 ### Provision a "modern" team site programmatically via SharePoint Online REST API
 
@@ -155,14 +155,14 @@ o365 spo propertybag list -u $siteUrl
 
 ### Provision an Office 365 group programmatically
 
-"Modern" team sites can be created programmatically by creating an [Office 365 group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create an Office 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Office 365 group and has the following default structure. 
+"Modern" team sites can be created programmatically by creating an [Office 365 group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create an Office 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Office 365 group and has the following default structure. 
 
 ```
 https://[tenant].sharepoint.com/sites/[mailNickname]
 ``` 
 
 > [!NOTE]
-> A detailed description of group creation using Microsoft Graph is available from the [official documentation](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_post_groups).
+> A detailed description of group creation using Microsoft Graph is available from the [official documentation](https://developer.microsoft.com/graph/docs/api-reference/v1.0/api/group_post_groups).
 
 #### Provision an Office 365 group using the PnP CSOM core component
 
@@ -361,8 +361,8 @@ There is also an upcoming new SharePoint Admin UI, which supports managing the n
 
 ## See also
 
-- [What is a SharePoint team site?](https://support.office.com/en-US/article/What-is-a-SharePoint-team-site-75545757-36c3-46a7-beed-0aaa74f0401e?ui=en-US&rs=en-US&ad=US)
-- [Create a team site in SharePoint Online](https://support.office.com/en-US/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d)
-- [Manage site creation in SharePoint Online](https://support.office.com/en-us/article/Manage-site-creation-in-SharePoint-Online-e72844a3-0171-47c9-befb-e98b23e2dcf9?ui=en-US&rs=en-US&ad=US)
-- [Manage your SharePoint team site settings](https://support.office.com/en-us/article/Manage-your-SharePoint-team-site-settings-8376034d-d0c7-446e-9178-6ab51c58df42?ui=en-US&rs=en-US&ad=US)
+- [What is a SharePoint team site?](https://support.office.com/article/What-is-a-SharePoint-team-site-75545757-36c3-46a7-beed-0aaa74f0401e?ui=en-US&rs=en-US&ad=US)
+- [Create a team site in SharePoint Online](https://support.office.com/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d)
+- [Manage site creation in SharePoint Online](https://support.office.com/article/Manage-site-creation-in-SharePoint-Online-e72844a3-0171-47c9-befb-e98b23e2dcf9?ui=en-US&rs=en-US&ad=US)
+- [Manage your SharePoint team site settings](https://support.office.com/article/Manage-your-SharePoint-team-site-settings-8376034d-d0c7-446e-9178-6ab51c58df42?ui=en-US&rs=en-US&ad=US)
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)

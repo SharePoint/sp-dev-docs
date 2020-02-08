@@ -1,9 +1,10 @@
 ---
+title: Feature Element (Feature)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 265cd648-1a7e-410f-a1d7-0da8c64b4006
 ---
@@ -64,7 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**AlwaysForceInstall**</p></td>
-<td align="left"><p>Optional **Boolean**. **TRUE** if the Feature is installed by force during installation even if the Feature is already installed. For example, if set to **TRUE**, <a href="http://msdn.microsoft.com/library/8d61e0ce-9f47-4320-aa19-7043e5dccedb(Office.15).aspx">Feature deployment event handlers</a> will always fire anytime a user tries to install the Feature (even if it is already installed) by using either the **scanforfeatures** or **installfeature** command-line operation. This attribute equals **FALSE** by default. The **AlwaysForceInstall** attribute affects Features of all scopes.</p></td>
+<td align="left"><p>Optional **Boolean**. **TRUE** if the Feature is installed by force during installation even if the Feature is already installed. For example, if set to **TRUE**, <a href="https://msdn.microsoft.com/library/8d61e0ce-9f47-4320-aa19-7043e5dccedb(Office.15).aspx">Feature deployment event handlers</a> will always fire anytime a user tries to install the Feature (even if it is already installed) by using either the **scanforfeatures** or **installfeature** command-line operation. This attribute equals **FALSE** by default. The **AlwaysForceInstall** attribute affects Features of all scopes.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoActivateInCentralAdmin**</p></td>
@@ -140,7 +141,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**Scope**</p></td>
-<td align="left"><p>Required **Text**. Specifies the scope in which the Feature can be activated and contains one of the following values: **Farm** (farm), **WebApplication** (Web application), **Site** (site collection), **Web** (website). For information about scope, see <a href="http://msdn.microsoft.com/library/d7f65b00-9a6f-4614-bca7-b1dbb43e3d16(Office.15).aspx">Element Scope</a>.</p></td>
+<td align="left"><p>Required **Text**. Specifies the scope in which the Feature can be activated and contains one of the following values: **Farm** (farm), **WebApplication** (Web application), **Site** (site collection), **Web** (website). For information about scope, see <a href="https://msdn.microsoft.com/library/d7f65b00-9a6f-4614-bca7-b1dbb43e3d16(Office.15).aspx">Element Scope</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SolutionId**</p></td>

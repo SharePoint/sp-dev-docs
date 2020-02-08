@@ -1,3 +1,14 @@
+---
+title: Accessing SharePoint using an application context, also known as app-only
+description: Accessing SharePoint using an application context, also known as app-only
+ms.date: 12/12/2018
+ms.prod: sharepoint
+author: vesajuvonen
+ms.author: vesaj
+ms.topic: sharepoint
+localization_priority: normal
+---
+
 # Accessing SharePoint using an application context, also known as app-only
 
 There are two approaches for doing app-only for SharePoint: 
@@ -9,10 +20,12 @@ Both methods are detailed in following articles:
  - [Granting access using SharePoint App-Only](security-apponly-azureacs.md)
 
 ## What are the limitations when using app-only
+
 App-Only does not work in following cases:
+
  - Updating taxonomy service entries (write) - read works
  - Creating modern team sites does not support app-only when you [use the SharePoint API](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Sites/SiteCollection.cs) for it. When modern team sites are created [using Microsoft Graph](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Framework/Graph/UnifiedGroupsUtility.cs) to create the group then app-only is a supported scenario
- - Creating communication sites currently does not support app-only [using the SharePoint API](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Sites/SiteCollection.cs)
+ - Creating communication sites is supported in app-only context, but owner property is required. [using the SharePoint API](https://docs.microsoft.com/sharepoint/dev/apis/site-creation-rest)
  - Search when using SharePoint On-Premises. SharePoint Online support for it has been added ([blog post](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/))
  - User Profile CSOM write operations do not work with **Azure AD application** - read operations work. Both read and write operations work through **SharePoint App-Only principal**
  - User Profile Bulk Update API can be used with app-only permissions

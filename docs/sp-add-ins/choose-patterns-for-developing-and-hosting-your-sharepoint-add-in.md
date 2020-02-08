@@ -66,7 +66,7 @@ A provider-hosted add-in interacts with a SharePoint site but also uses resource
 |**Get these benefits**|**But consider this**|
 |:-----|:-----|
 |Host the add-in on Microsoft Azure or any remote web platform, including non-Microsoft platforms. |You are responsible for creating the installation, upgrade, and uninstallation logic of the remote components.|
-|Use one of the SharePoint client object models, the JavaScript cross-domain library, or the SharePoint  [REST/OData-based web service](http://msdn.microsoft.com/magazine/dn198245.aspx) to interact with SharePoint.|Each way of interacting with SharePoint has  [corresponding options for approaches to data access](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md).|
+|Use one of the SharePoint client object models, the JavaScript cross-domain library, or the SharePoint  [REST/OData-based web service](https://msdn.microsoft.com/magazine/dn198245.aspx) to interact with SharePoint.|Each way of interacting with SharePoint has  [corresponding options for approaches to data access](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md).|
 |Gain authorization to SharePoint data using one of  [the three authorization systems](three-authorization-systems-for-sharepoint-add-ins.md).|You need to decide between OAuth and the cross-domain library to authorize your add-in's access to SharePoint.|
 
 <a name="MatchPattern"> </a>
@@ -136,11 +136,11 @@ You can host a provider-hosted SharePoint Add-in on an Azure web role instead of
 
 See the following links for more information about Azure web roles.
 
--  [What is a cloud service?](http://www.windowsazure.com/en-us/manage/services/cloud-services/what-is-a-cloud-service/)
--  [Introducing Microsoft Azure](http://www.windowsazure.com/en-us/develop/net/fundamentals/intro-to-windows-azure/)
--  [Autoscaling and Microsoft Azure](http://msdn.microsoft.com/en-us/library/hh680945%28v=pandp.50%29.aspx)
+-  [What is a cloud service?](http://www.windowsazure.com/manage/services/cloud-services/what-is-a-cloud-service/)
+-  [Introducing Microsoft Azure](http://www.windowsazure.com/develop/net/fundamentals/intro-to-windows-azure/)
+-  [Autoscaling and Microsoft Azure](https://msdn.microsoft.com/library/hh680945%28v=pandp.50%29.aspx)
 
-As a prerequisite, you will need the Microsoft Azure SDK for .NET (Visual Studio 2012) 1.8.1, which you can install by using the [Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx).
+As a prerequisite, you will need the Microsoft Azure SDK for .NET (Visual Studio 2012) 1.8.1, which you can install by using the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx).
 
 The way that you create the project in vsnv depends on whether you start with a SharePoint Add-in project and then add the Azure web role project, or you start with the Azure project and then add the SharePoint project.
 
@@ -161,7 +161,7 @@ If you already have a web role in an Azure cloud service that you want to use as
 -  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
 -  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)
 -  [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on.md)
--  [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx)
+-  [SharePoint Add-ins compared with SharePoint solutions](https://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx)
 -  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
 -  [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md)

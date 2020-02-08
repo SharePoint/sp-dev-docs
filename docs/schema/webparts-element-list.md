@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - List schema
@@ -52,6 +52,6 @@ None
    
 ### Remarks
 
-For an example of how to use this element, see [Creating Custom Form Templates](http://msdn.microsoft.com/library/b77ec86e-9568-4325-b949-13ee2fdcaabf%28Office.15%29.aspx).
+For an example of how to use this element, see [Creating Custom Form Templates](https://msdn.microsoft.com/library/b77ec86e-9568-4325-b949-13ee2fdcaabf%28Office.15%29.aspx).
   
 

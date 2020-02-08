@@ -1,9 +1,10 @@
 ---
+title: Identifiers Element in Entity
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 8a6ddfb3-7e73-be5e-fea0-e029849562c0
 ---
@@ -16,7 +17,7 @@ ms.assetid: 8a6ddfb3-7e73-be5e-fea0-e029849562c0
 
 For more information, see [Identifiers Element in Entity (BDCMetadata Schema)](identifiers-element-in-entity-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

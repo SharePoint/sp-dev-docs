@@ -1,9 +1,10 @@
 ---
+title: AppPermissionRequests element (AppDefinition complexType)
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 4e617622-78d3-3d23-677d-9957eb1fb107
 ---
@@ -21,26 +22,12 @@ A list of resources that a SharePoint Add-in needs access to.
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="apppermissionrequestsdefinition-complextype-sharepoint-add-in-manifest.md">AppPermissionRequestsDefinition</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>appmanifest.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  | AppPermissionRequestsDefinition |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
+
 
 ## Definition
 

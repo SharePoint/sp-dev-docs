@@ -1,11 +1,12 @@
 ---
+title: TypeDescriptor Element
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.TypeDescriptor
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: ae423de8-c13b-aea5-d47b-17ef786fb5a7
 ---
@@ -18,7 +19,7 @@ ms.assetid: ae423de8-c13b-aea5-d47b-17ef786fb5a7
 
 Specifies a **TypeDescriptor**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

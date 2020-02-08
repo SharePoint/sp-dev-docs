@@ -11,7 +11,6 @@ localization_priority: Normal
 > [!IMPORTANT]
 > The **GraphHttpClient** has been **deprecated** and should no longer be used. It has been replaced with [MSGraphClient](use-msgraph.md)
 
-
 You can use Microsoft Graph to build powerful solutions that access data from Office 365 and other Microsoft services. To connect SharePoint Framework (SPFx) solutions to Microsoft Graph, you have to register an Azure Active Directory (Azure AD) application and complete the authorization flow. To make this easier, you can use the SPFx **GraphHttpClient** class to call Microsoft Graph directly, without any additional setup.
 
 ## What is the GraphHttpClient class?
@@ -46,7 +45,7 @@ export default class MyApplicationCustomizer
 
 To make a request to Microsoft Graph:
 
-1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **@microsoft/sp-http** package.
+1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **\@microsoft/sp-http** package.
 
 2. Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
 
@@ -69,15 +68,12 @@ The GraphHttpClient uses the Office 365 SharePoint Online Azure AD application t
 - Read and write all groups (preview) (`Group.ReadWrite.All`)
 - Read all usage reports (`Reports.Read.All`)
 
-These are the only permissions that are available when you use **GraphHttpClient**. If you need other permissions for your solution, you can use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part.md) instead.
-
 ### Tokens are retrieved using an internal API
 
 To acquire a valid access token, **GraphHttpClient** issues a web request to the `/_api/SP.OAuth.Token/Acquire` endpoint. This API is intended for internal use. You should not communicate with it directly in your solutions.
 
 ## See also
 
-- [Use GraphHttpClient to call Microsoft Graph](call-microsoft-graph-using-graphhttpclient.md)
 - [Application Customizer GraphClient from Modern Teamsite sample](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/js-application-graph-client).
-- [Microsoft Graph Dev Center](https://developer.microsoft.com/en-us/graph/)
+- [Microsoft Graph Dev Center](https://developer.microsoft.com/graph/)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)

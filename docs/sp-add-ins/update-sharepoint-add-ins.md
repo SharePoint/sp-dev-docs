@@ -17,7 +17,7 @@ You can update your SharePoint Add-in by using the updating support built into S
 A user can install the update without first uninstalling the earlier version. The update infrastructure tests the update installation and rolls it back if there are any errors.
  
 > [!IMPORTANT]
-> You cannot change the *add-in type* by using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](sharepoint-add-ins-update-process.md#Major). In particular, because [the preview program for autohosted add-ins has been closed](http://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/.md), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md).
+> You cannot change the *add-in type* by using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](sharepoint-add-ins-update-process.md#Major). In particular, because [the preview program for autohosted add-ins has been closed](https://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/.md), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md).
 
 <a name="Prerequisites"> </a>
 ## Prerequisites for updating a SharePoint Add-in
@@ -36,7 +36,7 @@ Review the concepts in the following table before updating your add-in.
 |:-----|:-----|
 | [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)|Learn about the different types of SharePoint Add-ins. The updating process varies depending on the type.|
 | [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md)|Learn about the process for updating SharePoint Add-ins.|
-| [Upgrading Features](http://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx)|Learn how to update Features (SharePoint 2010 SDK).|
+| [Upgrading Features](https://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx)|Learn how to update Features (SharePoint 2010 SDK).|
 | [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)|Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.|
 | [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)|Learn about remote event receivers in SharePoint.|
 
@@ -47,11 +47,11 @@ The following are the major steps that may be needed when you create an update f
 
 - Update the add-in manifest.
 
-   - `**` Raise the **Version** number in the [App](http://msdn.microsoft.com/library/d5f30dfe-7500-5f85-0f08-f4f220c0c692%28Office.15%29.aspx) element of the appmanifest.xml file (add-ins were called "apps" when the schema was first released). Do *not* change the **ProductID** number.
+   - `**` Raise the **Version** number in the [App](https://msdn.microsoft.com/library/d5f30dfe-7500-5f85-0f08-f4f220c0c692%28Office.15%29.aspx) element of the appmanifest.xml file (add-ins were called "apps" when the schema was first released). Do *not* change the **ProductID** number.
    
-   - Change the [AppPermissionRequests](http://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) section of the appmanifest.xml file.
+   - Change the [AppPermissionRequests](https://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) section of the appmanifest.xml file.
    
-   - Change the [AppPrerequisites](http://msdn.microsoft.com/library/7622b55f-01a1-2c39-9daa-7cfb1a3c890f%28Office.15%29.aspx) section of the appmanifest.xml file.
+   - Change the [AppPrerequisites](https://msdn.microsoft.com/library/7622b55f-01a1-2c39-9daa-7cfb1a3c890f%28Office.15%29.aspx) section of the appmanifest.xml file.
     
    For more information, see [Update the add-in version, permission requests, and prerequisites](#UpdateManifest).
 
@@ -59,7 +59,7 @@ The following are the major steps that may be needed when you create an update f
 
 - Add or update the markup for host web components. For more information, see [Update host web components in SharePoint](update-host-web-components-in-sharepoint.md).
 
-- Add custom logic to an [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) and register it in the appmanifest.xml file. For more information, see [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md).
+- Add custom logic to an [UpgradedEventEndpoint](https://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) and register it in the appmanifest.xml file. For more information, see [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md).
     
 - Update the remote components:
     
@@ -84,7 +84,7 @@ For example, suppose that you add a button to a remote web application that read
 
 When a new version of your SharePoint Add-in becomes available in the Office Store or the organization's add-in catalog, a message appears on the add-in's tile on the **Site Contents** page informing users that an update is available. It takes no more than 24 hours for this message to appear. But nothing in the SharePoint infrastructure forces users to update. So changes that you make to remote components must not break the older versions of the add-in. A general, but not quite universal, rule is that you should *add* things to remote components, but avoid deleting, renaming, moving, or changing the schema, connection string, or URL of any existing component.
 
-If a remote component needs to know the version of the add-in instance that is calling it, you can pass this information from SharePoint. For example, you can add the add-in version as a query parameter on the [StartPage](http://msdn.microsoft.com/library/3092674c-a6c3-9021-3d7e-e716562a4a4f%28Office.15%29.aspx) URL of the add-in.
+If a remote component needs to know the version of the add-in instance that is calling it, you can pass this information from SharePoint. For example, you can add the add-in version as a query parameter on the [StartPage](https://msdn.microsoft.com/library/3092674c-a6c3-9021-3d7e-e716562a4a4f%28Office.15%29.aspx) URL of the add-in.
 
 <a name="DebugFirst"> </a>
 ### Create and debug the new version as if it were a brand new add-in
@@ -124,11 +124,11 @@ Figure 2 illustrates these steps.
 
 After making a backup copy of the Visual Studio project folder, open the add-in project. Open the add-in manifest and raise the version number on the **General** tab of the manifest designer.
 
-If the updated version of the add-in needs more (or fewer) permissions to components of the host web, make changes as needed to the [AppPermissionRequests](http://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) section of the add-in. In Visual Studio, use the **Permissions** tab of the manifest designer. 
+If the updated version of the add-in needs more (or fewer) permissions to components of the host web, make changes as needed to the [AppPermissionRequests](https://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) section of the add-in. In Visual Studio, use the **Permissions** tab of the manifest designer. 
 
-When an add-in is updated, the user is always prompted to grant permissions, whether the permissions have changed or not since the previous version. If the new version requests *fewer* permissions than the preceding version, the additional permissions of the preceding version *are not revoked*. The only way to restrict the add-in to the permissions that the latest version needs is for a user to open the page *{SharePointDomain}* `/_layouts/15/appinv.aspx` after the add-in has been updated, and then manually enter permission markup that conforms to the [AppPermissionRequests](http://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) schema.
+When an add-in is updated, the user is always prompted to grant permissions, whether the permissions have changed or not since the previous version. If the new version requests *fewer* permissions than the preceding version, the additional permissions of the preceding version *are not revoked*. The only way to restrict the add-in to the permissions that the latest version needs is for a user to open the page *{SharePointDomain}* `/_layouts/15/appinv.aspx` after the add-in has been updated, and then manually enter permission markup that conforms to the [AppPermissionRequests](https://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) schema.
 
-If the updated version of the add-in has prerequisites that the earlier versions did not have (or no longer has some prerequisites that earlier versions had), make changes as needed to the [AppPrerequisites](http://msdn.microsoft.com/library/7622b55f-01a1-2c39-9daa-7cfb1a3c890f%28Office.15%29.aspx) section of the add-in. In Visual Studio, use the **Prerequisites** tab of the manifest designer.
+If the updated version of the add-in has prerequisites that the earlier versions did not have (or no longer has some prerequisites that earlier versions had), make changes as needed to the [AppPrerequisites](https://msdn.microsoft.com/library/7622b55f-01a1-2c39-9daa-7cfb1a3c890f%28Office.15%29.aspx) section of the add-in. In Visual Studio, use the **Prerequisites** tab of the manifest designer.
 
 ## Next steps
 <a name="Next"> </a>

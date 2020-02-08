@@ -1,9 +1,10 @@
 ---
+title: SupportedLocale element (SupportedLocalesDefinition complexType)
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 099a9e03-4cb7-6ccb-83dd-756498aeeb1d
 ---
@@ -21,26 +22,12 @@ Specifies a locale that the add-in supports. This element is required for add-in
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="supportedlocaledefinition-complextype-sharepoint-add-in-manifest.md">SupportedLocaleDefinition</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>appmanifest.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  | SupportedLocaleDefinition |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
+
 
 ## Definition
 

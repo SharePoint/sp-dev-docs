@@ -1,11 +1,12 @@
 ---
+title: XmlDocument Element (ContentType)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, xmldocument element (contenttype)
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 8244b782-90c4-42b1-b603-8d858e348ae4
 ---
@@ -95,13 +96,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 You can include custom information in content type definitions by adding special XML nodes. These XML nodes are represented by the **XMLDocument** element in the content type definition and can be accessed programmatically through the object model. A content type can include any number of **XMLDocument** elements. The contents of each **XMLDocument** element can conform to any given schema; they only need be valid XML.
 
-For more information about using **XmlDocument** elements to encapsulate custom information within your content type, see [Custom Information in Content Types](http://msdn.microsoft.com/library/83cc5cea-0422-4115-b330-2283283718d7(Office.15).aspx).
+For more information about using **XmlDocument** elements to encapsulate custom information within your content type, see [Custom Information in Content Types](https://msdn.microsoft.com/library/83cc5cea-0422-4115-b330-2283283718d7(Office.15).aspx).
 
 ## Example
 
 The following example shows an **XmlDocument** element containing custom information that specifies which form templates to use in displaying this content type.
 
-For more information about the actual information contained in the **XmlDocument** element, see [FormTemplates Schema Overview](http://msdn.microsoft.com/library/88de244c-8d40-4f4d-953d-c7bbbc1dac24(Office.15).aspx).
+For more information about the actual information contained in the **XmlDocument** element, see [FormTemplates Schema Overview](https://msdn.microsoft.com/library/88de244c-8d40-4f4d-953d-c7bbbc1dac24(Office.15).aspx).
 
 ```XML
     <XmlDocuments>
@@ -118,7 +119,7 @@ For more information about the actual information contained in the **XmlDocument
 ## See also
 
 - [Content Type Definitions](content-type-definitions.md)
-- [Content Types](http://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
+- [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 
 
 

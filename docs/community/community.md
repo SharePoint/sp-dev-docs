@@ -13,8 +13,8 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 
 ## Blog posts, videos, and social media
 
-- [SharePoint Developer Blog](http://dev.office.com/blogs) - Latest developer news around SharePoint and Office 365
-- [SharePoint Developer Videos](http://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
+- [SharePoint Developer Blog](https://developer.microsoft.com/en-us/office/blogs/) - Latest developer news around SharePoint and Office 365
+- [SharePoint Developer Videos](https://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
 - [OfficeDev Twitter](https://twitter.com/officedev) - Official communication channel for SharePoint and Office 365 developer topics
 - [OfficeDevPnP Twitter](https://twitter.com/officedevpnp) - Community account for SharePoint and Office 365 developer topics
 - [OfficeDev Facebook](https://www.facebook.com/OfficeDev/) - Official communication channel for SharePoint and Office 365 developer topics
@@ -44,32 +44,24 @@ There are numerous community calls for SharePoint development, and you can choos
 
 |                                         Community call                                          |                           When                           |                                                                                    Description                                                                                    |                                Microsoft Teams Link                                |
 | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [Monthly community call](https://aka.ms/sppnp-call)                                             | Second Tuesday of each month at 8:00 AM PT / 3:00 PM GMT | Monthly community call covering the latest changes in SharePoint development-related topics within the last month, including news, UserVoice updates, and community contributions | [Direct Skype link to meeting](https://aka.ms/spdev-call-join)      |
-| [Special interest group call for SharePoint Framework](https://aka.ms/spdev-spfx-call)          | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT       | SharePoint Engineering updates, SharePoint Framework, PnPJS, Office 365 CLI, and reusable SPFx controls                                                                           | [Direct Skype link to meeting](https://aka.ms/spdev-spfx-call-join) |
-| [Special interest group call for general SharePoint development](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT       | SharePoint Engineering updates, end-to-end solution designs, provisioning, PnP CSOM, and PnP PowerShell                                                                           | [Direct Skype link to meeting](https://aka.ms/spdev-sig-call-join)  |
-
-## July 2019 Summer Camp Calls!
-
-The official Microsoft-hosted community calls listed above are taking a break for the month of July 2019. The community has organized the following calls that you can join:
-
-|                                            Community call                                             |                 When                  |                                                Description                                                 |                            Skype                            |
-| ----------------------------------------------------------------------------------------------------- | ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [JavaScript + SharePoint Framework Summer Camp Call 2](https://officedevblogs.wpengine.com/wp-content/uploads/2019/06/SharePointPnP-JSSPFxSummerCampCall2.ics) | July 18, 2019 7:00 AM PT / 2:00 PM GMT | SharePoint updates, SharePoint Framework, PnPJS, Office 365 CLI, reusable SPFx controls & community banter | [Direct Zoom link to meeting](https://zoom.us/j/533493686) |
+| [Monthly community call](https://aka.ms/sppnp-call)                                             | Second Tuesday of each month at 8:00 AM PT / 3:00 PM GMT | Monthly community call covering the latest changes in SharePoint development-related topics within the last month, including news, UserVoice updates, and community contributions | [Direct MS Teams link to meeting](https://aka.ms/spdev-call-join)      |
+| [Special interest group call for SharePoint Framework](https://aka.ms/spdev-spfx-call)          | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT       | SharePoint Engineering updates, SharePoint Framework, PnPJS, Office 365 CLI, and reusable SPFx controls                                                                           | [Direct MS Teams link to meeting](https://aka.ms/spdev-spfx-call-join) |
+| [Special interest group call for general SharePoint development](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7:00 AM PT / 2:00 PM GMT       | SharePoint Engineering updates, end-to-end solution designs, provisioning, PnP CSOM, and PnP PowerShell                                                                           | [Direct MS Teams link to meeting](https://aka.ms/spdev-sig-call-join)  |
 
 ## What’s the supportability statement around PnP open-source components and solutions?
 
 Following statements apply across all of the SharePoint PnP assets, including samples, controls, component and solutions, like SharePoint Starter Kit or the PnP Provisioning Service.
 
-- PnP assets are created by the Microsoft & the community
-- PnP assets are maintained by the Microsoft & the community
+- PnP assets are created by Microsoft & the community
+- PnP assets are maintained by Microsoft & the community
 - PnP uses supported and recommended techniques defined by Microsoft
-- PnP is NOT a product and therefore it’s not supported by Premier Support or other official support channels, but if the experienced issue(s) is caused by out-of-the-box API, it falls on the normal support patterns from Microsoft side.
+- PnP is NOT a product and therefore it’s not supported by Premier Support or other official support channels, but if the experienced issue(s) is caused by out-of-the-box API, it falls on the normal support patterns from Microsoft side
 - PnP is supported in similar ways as other open source projects done by Microsoft with support from the community by the community
 - There are numerous partners that utilize PnP within their solutions for customers. Support for this is provided by the Partner. When PnP material is used in deployments, we recommend being clear with your customer/deployment owner on the support model
 
 ## See also
 
-- [SharePoint developer portal](http://aka.ms/spdev)
-- [SharePoint developer samples](http://aka.ms/spdev-samples)
+- [SharePoint developer portal](https://aka.ms/spdev)
+- [SharePoint developer samples](https://aka.ms/spdev-samples)
 - [SharePoint PnP open-source projects](open-source-projects.md)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md) 

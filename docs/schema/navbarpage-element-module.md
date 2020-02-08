@@ -1,9 +1,10 @@
 ---
+title: NavBarPage element (Module)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 749fc52f-df5a-4fe6-9aea-6f6a6f0edd73
 ---
@@ -97,8 +98,8 @@ None
 ## See also
 
 - [Modules](modules.md)
-- [Module](http://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
-- [How to: Provision a File](http://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
+- [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
+- [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
 
 
 

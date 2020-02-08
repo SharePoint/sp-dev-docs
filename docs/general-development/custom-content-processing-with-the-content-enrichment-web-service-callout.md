@@ -69,16 +69,16 @@ To configure the web service client, you use the following Windows PowerShell cm
     
     
 
--  [Get-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219783%28office.15%29.aspx)
+-  [Get-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219783%28office.15%29.aspx)
     
   
--  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219659%28office.15%29.aspx)
+-  [Set-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219659%28office.15%29.aspx)
     
   
--  [Remove-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219742%28office.15%29.aspx)
+-  [Remove-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219742%28office.15%29.aspx)
     
   
--  [New-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219502%28office.15%29.aspx)
+-  [New-SPEnterpriseSearchContentEnrichmentConfiguration](https://technet.microsoft.com/library/jj219502%28office.15%29.aspx)
     
   
 Table 1 lists the properties you can configure through the Windows PowerShell cmdlets mentioned previously.
@@ -105,7 +105,7 @@ Table 1 lists the properties you can configure through the Windows PowerShell cm
 ### How to list all read-only managed properties for the Content Enrichment web service
 <a name="SP15contentprocess_read-only_managed_properties"> </a>
 
-Certain managed properties are read-only and cannot be output from the web service. These properties can be listed by using the  [Get-SPEnterpriseSearchServiceApplication](http://technet.microsoft.com/en-us/library/ff608050%28office.15%29.aspx) and [Get-SPEnterpriseSearchMetadataManagedProperty](http://technet.microsoft.com/en-us/library/ff607560%28office.15%29.aspx)Windows PowerShell cmdlets, shown in the following example:
+Certain managed properties are read-only and cannot be output from the web service. These properties can be listed by using the  [Get-SPEnterpriseSearchServiceApplication](https://technet.microsoft.com/library/ff608050%28office.15%29.aspx) and [Get-SPEnterpriseSearchMetadataManagedProperty](https://technet.microsoft.com/library/ff607560%28office.15%29.aspx)Windows PowerShell cmdlets, shown in the following example:
   
     
     

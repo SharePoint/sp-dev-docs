@@ -1,9 +1,10 @@
 ---
+title: Client Web Part Definition schema
 manager: soliver
 ms.date: 12/7/2015
 ms.audience: Developer
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 8924f546-44db-4308-90f9-8b5d9b2ffa4f
 ---
@@ -57,7 +58,7 @@ You can add custom properties to your Client web part. You define the custom pro
 
 You can detect when the user is editing your Client web part by using the **\_editMode\_** token. The **\_editMode\_** token returns 1 if the Client web part is in edit mode and 0 otherwise.
 
-The target page can dynamically resize the Client web part's **IFrame**. You can use JavaScript to issue a **postmessage** with the desired height and width. For a code sample that shows you how to resize an app part, see [Resize app parts dynamically in apps for SharePoint](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88).
+The target page can dynamically resize the Client web part's **IFrame**. You can use JavaScript to issue a **postmessage** with the desired height and width. For a code sample that shows you how to resize an app part, see [Resize app parts dynamically in apps for SharePoint](https://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88).
 
 Client web parts don't support web part connections.
 
@@ -125,7 +126,7 @@ The following example shows an XML file that declares a Client web part. For an 
 
 ## See also
 
-- [CustomAction](https://msdn.microsoft.com/en-us/library/office/ms458635.aspx)
+- [CustomAction](https://msdn.microsoft.com/library/office/ms458635.aspx)
 - [UX design for SharePoint Add-ins](../sp-add-ins/ux-design-for-sharepoint-add-ins.md)
 
 

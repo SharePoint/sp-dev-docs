@@ -1,9 +1,10 @@
 ---
+title: ClientWebPartDefinitionContent complexType
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: afebbc63-d86d-1133-4e8b-a58c198b5f95
 ---
@@ -17,26 +18,11 @@ ms.assetid: afebbc63-d86d-1133-4e8b-a58c198b5f95
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>apphostwebfeatures.xsd</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Extension base</span></p></td>
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file**  | apphostwebfeatures.xsd |
+| **Extension base**  | None |
 
 ## Definition
 

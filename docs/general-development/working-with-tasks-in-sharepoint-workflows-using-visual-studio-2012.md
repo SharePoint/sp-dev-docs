@@ -9,7 +9,7 @@ localization_priority: Normal
 
 # Working with Tasks in SharePoint Workflows using Visual Studio 2012
 Learn about the new and revised workflow task framework that was introduced in SharePoint, which is built on the new Workflow Manager. 
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
+ **Provided by:** [Andrew Connell](https://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
 > [!NOTE] 
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code  [here](http://assets.andrewconnell.com/media/Default/Downloads/SP2013Wf-CustomTasks.zip). 
@@ -21,7 +21,7 @@ Both SharePoint 2007 and SharePoint 2010 implemented workflow tasks in a similar
   
     
     
-However, the default rendering of the task form in SharePoint was pre-determined, even for custom workflows. For full flexibility, you needed to use ASP.NET [Web Forms](http://www.asp.net/web-forms) or [InfoPath Forms](http://msdn.microsoft.com/en-us/library/ms540731%28v=office.14%29.aspx) when you created custom form solutions to support your tasks.
+However, the default rendering of the task form in SharePoint was pre-determined, even for custom workflows. For full flexibility, you needed to use ASP.NET [Web Forms](http://www.asp.net/web-forms) or [InfoPath Forms](https://msdn.microsoft.com/library/ms540731%28v=office.14%29.aspx) when you created custom form solutions to support your tasks.
   
     
     
@@ -51,7 +51,7 @@ You may sometimes need to customize the appearance or the behavior of task field
   
     
     
-For more information about using client-side rendering, see  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](http://msdn.microsoft.com/en-us/library/jj220045.aspx).
+For more information about using client-side rendering, see  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](https://msdn.microsoft.com/library/jj220045.aspx).
   
     
     
@@ -730,13 +730,13 @@ This article discussed the changes related to workflow tasks that were driven fr
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](http://msdn.microsoft.com/en-us/library/jj163986.aspx)
+-  [Workflows in SharePoint](https://msdn.microsoft.com/library/jj163986.aspx)
     
   
--  [Authorization and authentication for apps in SharePoint](http://msdn.microsoft.com/en-us/library/office/fp142384.aspx)
+-  [Authorization and authentication for apps in SharePoint](https://msdn.microsoft.com/library/office/fp142384.aspx)
     
   
--  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](http://msdn.microsoft.com/en-us/library/jj220045.aspx)
+-  [How To Customize a List View in Apps for SharePoint Using Client-Side Rendering](https://msdn.microsoft.com/library/jj220045.aspx)
     
   
 

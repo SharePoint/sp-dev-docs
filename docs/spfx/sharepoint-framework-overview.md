@@ -25,7 +25,7 @@ Key features of the SharePoint Framework include the following:
  
 The runtime model improves on the Script Editor web part. It includes a robust client API, an HttpClient object that handles authentication to SharePoint and Office 365, contextual information, easy property definition and configuration, and more. 
 
-If you work primarily with C#, you want to learn more about client-side JavaScript development. Most of your existing JavaScript knowledge related to SharePoint, however, is completely transferable, as the data models have not changed, and you’ll use the same [REST services](https://msdn.microsoft.com/en-us/library/office/jj860569.aspx) or [JavaScript Object Model (JSOM)](https://msdn.microsoft.com/en-us/library/office/jj193034.aspx), depending on your requirements. If you are a C# developer, TypeScript is a nice transition into the JavaScript world. The choice of IDE is up to you. Many developers like to use the cross-platform IDE Visual Studio Code. Many developers also use products like Sublime and ATOM. Use what works best for you.
+If you work primarily with C#, you want to learn more about client-side JavaScript development. Most of your existing JavaScript knowledge related to SharePoint, however, is completely transferable, as the data models have not changed, and you’ll use the same [REST services](https://msdn.microsoft.com/library/office/jj860569.aspx) or [JavaScript Object Model (JSOM)](https://msdn.microsoft.com/library/office/jj193034.aspx), depending on your requirements. If you are a C# developer, TypeScript is a nice transition into the JavaScript world. The choice of IDE is up to you. Many developers like to use the cross-platform IDE Visual Studio Code. Many developers also use products like Sublime and ATOM. Use what works best for you.
 
 ## Why the SharePoint Framework?
 
@@ -68,5 +68,5 @@ You can also post issues, questions, or feedback about the docs or the SharePoin
 
 - [Overview of SharePoint client-side web parts](./web-parts/overview-client-side-web-parts.md)
 - [Overview of SharePoint Framework Extensions](./extensions/overview-extensions.md)
-- [SharePoint development](https://docs.microsoft.com/en-us/sharepoint/dev/)
+- [SharePoint development](https://docs.microsoft.com/sharepoint/dev/)
 - [SharePoint glossary](../general-development/sharepoint-glossary.md) 

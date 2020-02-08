@@ -1,9 +1,10 @@
 ---
+title: ActivitySource element (Evaluation element)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 1cea3d40-3662-8b7d-f450-637a28927fe0
 ---
@@ -26,26 +27,11 @@ Specifies that the evaluation value is retrieved from the fields of the parent d
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>Actions4.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  |  |
+| **Namespace**     |  |
+| **Schema file**   | Actions4.xsd |
 
 ## Definition
 

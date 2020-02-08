@@ -6,15 +6,13 @@ localization_priority: Normal
 User controls and Web controls in the SharePoint Add-in model
 =============================================================
 
-Summary
--------
+## Summary
 
 The approach you take to implement custom controls in your code is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, custom controls were built as user controls or web controls and deployed via SharePoint Solutions.
 
 In a SharePoint Add-in model scenario, the JavaScript is embedded in SharePoint pages to implement custom controls.
 
-High-level Guidelines
----------------------
+## High-level guidelines
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for creating custom controls in the new SharePoint Add-in model.
 
@@ -45,7 +43,7 @@ The following article and accompanying video demonstrates how to use custom user
 
 - [Core.EmbedJavaScript (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScript)
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
-- [Cross site collection navigation (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)
+- [Cross site collection navigation (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)
 
 Embed JavaScript directly into page layouts
 -------------------------------------------
@@ -73,24 +71,22 @@ In this pattern, JavaScript is embedded directly in custom master pages.
 
 When you need to embed JavaScript on a per master page basis, this is a good option because it allows you to control which master pages the JavaScript is embedded in.
 
-Related links
-=============
-- [Cross site collection navigation (O365 PnP Video)](http://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+## Related links
+- [Cross site collection navigation (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 - [Core.EmbedJavaScript (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScript)
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
 - [Core.EmbedJavaScript.WeekNumbers (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScript.WeekNumbers)
 - [Core.EmbedJavaScriptJSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScriptJSOM)
 - [Core.JavaScriptCustomization (O365 PnP Scenario using PnP Core component)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization)
-- Samples and content at [http://aka.ms/OfficeDevPnP](http://aka.ms/OfficeDevPnP)
+- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D)
 - SharePoint 2013 on-premises

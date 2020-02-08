@@ -126,7 +126,7 @@ If the guidance in the previous sections was not applicable to your InfoPath for
 
 - Build a SharePoint Add-in that leverages remote APIs to read/write SharePoint data.
 
-- Create an app by using [Azure PowerApps](https://powerapps.microsoft.com/en-us/) or [Microsoft Flow](https://flow.microsoft.com/en-us/search/?q=sharepoint).
+- Create an app by using [Azure PowerApps](https://powerapps.microsoft.com/) or [Microsoft Flow](https://flow.microsoft.com/search/?q=sharepoint).
 
    ![Azure PowerApps and Microsoft Flow](media/Sandbox-Solution-Transformation-Guidance-InfoPath/powerappsflow.png)
 

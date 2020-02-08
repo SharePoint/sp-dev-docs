@@ -121,7 +121,7 @@ interface IPackageSolutionTaskConfig {
 
 ## Custom feature XML
 
-To support provisioning of various SharePoint resources (such as List Templates, Pages, or Content Types), custom feature XML may also be injected into the package. This is used to provision resources necessary for applications, but may also be used for web parts. The documentation for Feature XML is located at [Feature.xml Files](https://msdn.microsoft.com/en-us/library/office/ms475601.aspx?f=255&MSPPError=-2147217396).
+To support provisioning of various SharePoint resources (such as List Templates, Pages, or Content Types), custom feature XML may also be injected into the package. This is used to provision resources necessary for applications, but may also be used for web parts. The documentation for Feature XML is located at [Feature.xml Files](https://msdn.microsoft.com/library/office/ms475601.aspx?f=255&MSPPError=-2147217396).
 
 By default, the packaging task looks for the custom feature XML in **./sharepoint/feature\_xml**. Every file in this folder is included in the final application package. However, the task relies on the contents of the **\_rels/** folder to determine which custom features are defined. 
 

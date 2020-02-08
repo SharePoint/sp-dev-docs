@@ -1,9 +1,10 @@
 ---
+title: Parameter Element in Parameters
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 83463153-e2f4-a9bc-7fa0-edbee2947a91
 ---
@@ -16,7 +17,7 @@ ms.assetid: 83463153-e2f4-a9bc-7fa0-edbee2947a91
 
 Specifies localized display names and properties, in any combination, for a [Parameter Element in Parameters (BDCMetadata Schema)](parameter-element-in-parameters-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

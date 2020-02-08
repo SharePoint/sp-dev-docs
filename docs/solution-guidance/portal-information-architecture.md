@@ -57,7 +57,7 @@ Consider minimizing the number of top-level site collection nodes and the number
 
 The discussions have changed around horizontal/flat site collections versus vertical/hierarchical. In the past, we promoted flattening hierarchies into potentially several separate site collections; reasons included factors such as IA best practices, menu structures, content database management, and capacity. As far as capacity is concerned, that is no longer relevant with SharePoint Online. However, there are other considerations now, such as URL limitations. 
 
-For more information, see [SharePoint Online limits](https://support.office.com/en-us/article/sharepoint-online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498?ocmsassetID=HA102694293&CorrelationId=7773acb9-7e7f-4800-86bc-9af55b7077c7&ui=en-US&rs=en-US&ad=US).
+For more information, see [SharePoint Online limits](https://support.office.com/article/sharepoint-online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498?ocmsassetID=HA102694293&CorrelationId=7773acb9-7e7f-4800-86bc-9af55b7077c7&ui=en-US&rs=en-US&ad=US).
 
 Recommended patterns include grouping site collections and sites into different logical groupings such as Enterprise level and publishing sites. These might include search centers, records centers, and ediscovery centers.  These can be either at the root level or under the "/sites" managed path. Intranet publishing/portal sites can also be at the root level or under the "/sites" managed path. For example:
 
@@ -86,7 +86,7 @@ Sites considered as publishing portal sites might be structured as:
 
 Usually, not everything migrates to the cloud immediately and all at once, so plan for a hybrid IA and evolve as necessary. Plan accordingly for hybrid scenarios.
 
-For more information, see [SharePoint hybrid sites and search](https://docs.microsoft.com/en-us/SharePoint/hybrid/sharepoint-hybrid-sites-and-search).
+For more information, see [SharePoint hybrid sites and search](https://docs.microsoft.com/SharePoint/hybrid/sharepoint-hybrid-sites-and-search).
 
 ## Permissions
 
@@ -139,11 +139,11 @@ These content types should have at a minimum, some fields such as:
 
 Create these in the content-type hub and use SharePoint CSOM to create content types using unique IDs. You still need to manually publish these content types. Don’t use the content-type hub if you think that you would need to change the content types at the site collection.
 
-For more information, see [Introduction to content types and content type publishing](https://support.office.com/en-US/article/Introduction-to-content-types-and-content-type-publishing-A5026D23-8DF8-42F6-B0D6-1920880C0D03).
+For more information, see [Introduction to content types and content type publishing](https://support.office.com/article/Introduction-to-content-types-and-content-type-publishing-A5026D23-8DF8-42F6-B0D6-1920880C0D03).
 
 ### Managed metadata
 
-This is another topic that is too big for the scope of this article. For a good start and more information, see [Introduction to managed metadata](https://support.office.com/en-us/article/Introduction-to-managed-metadata-a180fa28-6405-4679-9ec3-81d2028c4efc).
+This is another topic that is too big for the scope of this article. For a good start and more information, see [Introduction to managed metadata](https://support.office.com/article/Introduction-to-managed-metadata-a180fa28-6405-4679-9ec3-81d2028c4efc).
 
 Metadata in SharePoint enables organizations to combine the advantages of formal, managed taxonomies with the dynamic benefits of social tagging in customized ways mapping to different information usage and management scenarios.
 
@@ -160,8 +160,8 @@ Enterprise term store hierarchies are typically managed by a governance steering
 
 For planning managed metadata, the following worksheets are available:
 
-- [Managed metadata services planning worksheet](http://go.microsoft.com/fwlink/p/?LinkId=164578)
-- [Detailed term set planning worksheet](http://go.microsoft.com/fwlink/p/?LinkId=163487)
+- [Managed metadata services planning worksheet](https://go.microsoft.com/fwlink/p/?LinkId=164578)
+- [Detailed term set planning worksheet](https://go.microsoft.com/fwlink/p/?LinkId=163487)
 
 ### Navigation
 
@@ -173,8 +173,8 @@ Large files, such as videos, images, and PowerPoint files, can cause grief for u
 
 Consider these options:
 
-- [Meet Office 365 Video](https://support.office.com/en-us/article/Meet-Office-365-Video-ca1cc1a9-a615-46e1-b6a3-40dbd99939a6)
-- [Manage your Office 365 Video portal](https://support.office.com/en-us/article/Manage-your-Office-365-Video-portal-c059465b-eba9-44e1-b8c7-8ff7793ff5da?ui=en-US&rs=en-US&ad=US)
+- [Meet Office 365 Video](https://support.office.com/article/Meet-Office-365-Video-ca1cc1a9-a615-46e1-b6a3-40dbd99939a6)
+- [Manage your Office 365 Video portal](https://support.office.com/article/Manage-your-Office-365-Video-portal-c059465b-eba9-44e1-b8c7-8ff7793ff5da?ui=en-US&rs=en-US&ad=US)
 
 
 For information about CDNs, see:
@@ -188,10 +188,10 @@ For information about CDNs, see:
 
 ## See also
 
-- [Overview of document deletion policies](https://support.office.com/en-us/article/overview-of-document-deletion-policies-55e8d858-f278-482b-a198-2e62d6a2e6e5?ui=en-US&rs=en-US&ad=US)
-- [Information management policies in Office 365](https://technet.microsoft.com/en-us/library/dn792007.aspx)
-- [Introduction to information management policies](https://support.office.com/en-US/article/Introduction-to-information-management-policies-63a0b501-ba59-44b7-a35c-999f3be057b2)
-- [Manage site collection storage limits](https://support.office.com/en-US/Article/Manage-site-collection-storage-limits-77389c2c-8e7e-4b16-ab97-1c7103784b08?ui=en-US&rs=en-US&ad=US)
-- [SharePoint Online limits](https://support.office.com/en-us/article/sharepoint-online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498?CTT=1&CorrelationId=ab0c93e3-8a23-4a72-887e-bac52c0a874d&ui=en-US&rs=en-US&ad=US)
+- [Overview of document deletion policies](https://support.office.com/article/overview-of-document-deletion-policies-55e8d858-f278-482b-a198-2e62d6a2e6e5?ui=en-US&rs=en-US&ad=US)
+- [Information management policies in Office 365](https://technet.microsoft.com/library/dn792007.aspx)
+- [Introduction to information management policies](https://support.office.com/article/Introduction-to-information-management-policies-63a0b501-ba59-44b7-a35c-999f3be057b2)
+- [Manage site collection storage limits](https://support.office.com/Article/Manage-site-collection-storage-limits-77389c2c-8e7e-4b16-ab97-1c7103784b08?ui=en-US&rs=en-US&ad=US)
+- [SharePoint Online limits](https://support.office.com/article/sharepoint-online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498?CTT=1&CorrelationId=ab0c93e3-8a23-4a72-887e-bac52c0a874d&ui=en-US&rs=en-US&ad=US)
 - [Building SharePoint Online portals](portal-overview.md)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

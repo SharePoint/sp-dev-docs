@@ -14,24 +14,24 @@ Instructions for installing and configuring SharePoint workflow components are m
     
     
 
- [Install and configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586%28v=office.15%29)
--  [Installing and configuring workflow for SharePoint](http://technet.microsoft.com/en-us/library/jj658588%28v=office.15%29)
+ [Install and configure workflow in SharePoint](https://technet.microsoft.com/library/jj658586%28v=office.15%29)
+-  [Installing and configuring workflow for SharePoint](https://technet.microsoft.com/library/jj658588%28v=office.15%29)
     
   
--  [Installing Microsoft Azure Workflow certificates in SharePoint](http://technet.microsoft.com/en-us/library/jj658589%28v=office.15%29)
+-  [Installing Microsoft Azure Workflow certificates in SharePoint](https://technet.microsoft.com/library/jj658589%28v=office.15%29)
     
   
 
 ## See also
 
 
--  [Installation and Deployment for SharePoint Resource Center](http://technet.microsoft.com/en-US/sharepoint/fp142376)
+-  [Installation and Deployment for SharePoint Resource Center](https://technet.microsoft.com/sharepoint/fp142376)
     
   
--  [What's New in SharePoint Resource Center](http://technet.microsoft.com/en-US/sharepoint/fp142374)
+-  [What's New in SharePoint Resource Center](https://technet.microsoft.com/sharepoint/fp142374)
     
   
--  [Workflow Resource Center](http://technet.microsoft.com/en-US/sharepoint/jj556245)
+-  [Workflow Resource Center](https://technet.microsoft.com/sharepoint/jj556245)
     
   
 -  [Workflows in SharePoint](workflows-in-sharepoint.md)

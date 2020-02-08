@@ -14,7 +14,7 @@ After a timer job has been created, it needs to be scheduled and executed. The t
 - When Microsoft Azure is the hosting platform, timer jobs can be deployed and run as Azure WebJobs.
 - When Windows Server is the hosting platform (for example, for on-premises SharePoint), timer jobs can be deployed and run in Windows Scheduler.
 
-For a video introduction to timer jobs, see the video [Introduction to the PnP timer job framework](http://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework), which introduces the timer job framework and demonstrates the simple timer job example.
+For a video introduction to timer jobs, see the video [Introduction to the PnP timer job framework](https://channel9.msdn.com/blogs/OfficeDevPnP/Introduction-to-the-PnP-timer-job-framework), which introduces the timer job framework and demonstrates the simple timer job example.
 
 ## Simple timer job example
 
@@ -143,7 +143,7 @@ The actual deployment to Azure is based on Azure WebJobs. To deploy this timer j
 
     ![Azure portal](media/timerjob-framework/4xDUvXv.png)
 
-6. Also, the timer job can be run from the new [Azure portal](https://ms.portal.azure.com/) by selecting the job and choosing **Run**. More details about how to work with WebJobs from the new portal can be found in the article, [Run Background tasks with WebJobs in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/web-sites-create-web-jobs).
+6. Also, the timer job can be run from the new [Azure portal](https://ms.portal.azure.com/) by selecting the job and choosing **Run**. More details about how to work with WebJobs from the new portal can be found in the article, [Run Background tasks with WebJobs in Azure App Service](https://docs.microsoft.com/azure/app-service/web-sites-create-web-jobs).
 
     ![Azure portal](media/timerjob-framework/n4wGS5x.png)
 
@@ -161,7 +161,7 @@ When deployed to Windows Server, the timer job must run without user interaction
     > [!IMPORTANT] 
     > Copy all the relevant assemblies, the .exe file, and the .config file to ensure the job can run on the server without installing any additional files or programs on the server. 
 
-3. Schedule the execution of the timer job. We recommend that you use the built-in [Windows Task Scheduler](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721871(v=ws.11)). To use the Windows Task Scheduler:
+3. Schedule the execution of the timer job. We recommend that you use the built-in [Windows Task Scheduler](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721871(v=ws.11)). To use the Windows Task Scheduler:
 
     1. Open the Task Scheduler (**Control Panel** > **Task Scheduler**).
     2. Choose **Create Task** and specify a name and an account that will execute the task.
@@ -534,9 +534,9 @@ The timer job framework uses the PnP Core logging components because it's part o
 Using the above configuration file, the timer job framework uses the `System.Diagnostics.TextWriterTraceListener` to write logs to a file called trace.log in the same folder as the timer job .exe. Other trace listeners are available such as:
 
 - **ConsoleTraceListener** writes logs to the console.
-- The method described in [Cloud Diagnostics - Take Control of Logging and Tracing in Windows Azure](https://msdn.microsoft.com/en-us/magazine/ff714589.aspx). This method uses Microsoft.WindowsAzure.Diagnostics.**DiagnosticMonitorTraceListener**. Additional Azure resources can be found here:
-    - [Enable diagnostics logging for web apps in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/web-sites-enable-diagnostic-log)
-    - [Troubleshoot a web app in Azure App Service using Visual Studio](https://docs.microsoft.com/en-us/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio)
+- The method described in [Cloud Diagnostics - Take Control of Logging and Tracing in Windows Azure](https://msdn.microsoft.com/magazine/ff714589.aspx). This method uses Microsoft.WindowsAzure.Diagnostics.**DiagnosticMonitorTraceListener**. Additional Azure resources can be found here:
+    - [Enable diagnostics logging for web apps in Azure App Service](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log)
+    - [Troubleshoot a web app in Azure App Service using Visual Studio](https://docs.microsoft.com/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio)
 
 It is strongly advised to use the same logging approach for your custom timer job code as you do for the timer job framework. In your timer job code, you can use the PnP Core **Log** class:
 

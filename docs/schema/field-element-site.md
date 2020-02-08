@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Site schema
@@ -18,7 +18,7 @@ description: Defines default data to include in the specified column of a list, 
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Defines default data to include in the specified column of a list, or contains a reference to a field used in the definition of a base Microsoft SharePoint Foundation field type in [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx).
+Defines default data to include in the specified column of a list, or contains a reference to a field used in the definition of a base Microsoft SharePoint Foundation field type in [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx).
   
 ```XML
 <Field

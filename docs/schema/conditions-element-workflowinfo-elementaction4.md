@@ -1,9 +1,10 @@
 ---
+title: Conditions element
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c9b3ceac-85d2-7b04-5b1b-f16f154de9f3
 ---
@@ -27,26 +28,11 @@ In the workflow rule designer, represents corresponding, underlying functions th
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Element type</span></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Namespace</span></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>Schema file</span></p></td>
-<td align="left"><p>Actions4.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  |  |
+| **Namespace**     |  |
+| **Schema file**   | Actions4.xsd |
 
 ## Definition
 

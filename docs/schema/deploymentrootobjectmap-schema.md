@@ -1,9 +1,10 @@
 ---
+title: DeploymentRootObjectMap schema
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b754baf8-6db5-4f40-a1b3-67fb925d0319
 ---

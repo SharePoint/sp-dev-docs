@@ -22,7 +22,7 @@ First, find the location of the Master Page Gallery.
 1. On the site for which you are creating a design, start Design Manager. (For example, on the **Settings** menu, choose **Design Manager**.)
     
     > **Important:**
-      > If your site is hosted in SharePoint Online, when you sign in to the site by using your Office 365 credentials, make sure that you select the **Keep me signed in** check box. For more information, see [How to configure and to troubleshoot mapped network drives that connect to SharePoint Online sites in Office 365 for enterprises](http://support.microsoft.com/kb/2616712). 
+      > If your site is hosted in SharePoint Online, when you sign in to the site by using your Office 365 credentials, make sure that you select the **Keep me signed in** check box. For more information, see [How to configure and to troubleshoot mapped network drives that connect to SharePoint Online sites in Office 365 for enterprises](https://support.microsoft.com/kb/2616712). 
 2. In the numbered list, select **Upload Design Files**.
     
   
@@ -33,16 +33,16 @@ First, find the location of the Master Page Gallery.
     
   
 On the computer that runs your design tool or HTML editor, map a network drive to the location that you just copied. The procedure for mapping a network drive differs depending on the computer's operating system:
-- If the computer is running Windows 8, follow the steps that are described in the Windows 8 version of the article  [Create a shortcut to (map) a network drive](http://windows.microsoft.com/en-us/windows-8/create-shortcut-to-map-network-drive).
+- If the computer is running Windows 8, follow the steps that are described in the Windows 8 version of the article  [Create a shortcut to (map) a network drive](https://windows.microsoft.com/windows-8/create-shortcut-to-map-network-drive).
     
   
-- If the computer is running Windows 7, follow the steps that are described in the Windows 7 version of the article  [Create a shortcut to (map) a network drive](http://windows.microsoft.com/en-US/windows7/Create-a-shortcut-to-map-a-network-drive).
+- If the computer is running Windows 7, follow the steps that are described in the Windows 7 version of the article  [Create a shortcut to (map) a network drive](https://windows.microsoft.com/windows7/Create-a-shortcut-to-map-a-network-drive).
     
   
-- If the computer is running Windows Vista, follow the steps that are described in the version of the article  [Create a shortcut to (map) a network drive](http://windows.microsoft.com/en-US/windows-vista/Create-a-shortcut-to-map-a-network-drive).
+- If the computer is running Windows Vista, follow the steps that are described in the version of the article  [Create a shortcut to (map) a network drive](https://windows.microsoft.com/windows-vista/Create-a-shortcut-to-map-a-network-drive).
     
   
-- If the computer is running Windows XP, follow the steps that are described in the article  [How to connect and disconnect a network drive in Windows XP](http://support.microsoft.com/kb/308582).
+- If the computer is running Windows XP, follow the steps that are described in the article  [How to connect and disconnect a network drive in Windows XP](https://support.microsoft.com/kb/308582).
     
   
 - ***If the computer is running another operating system, follow the instructions for creating a shortcut to a new location for that operating system.*** You might have to provide different credentials for connecting to the SharePoint site, and you might have to specify that the connection be re-established every time that you log on to the computer.

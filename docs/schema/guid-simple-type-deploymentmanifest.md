@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: bcb1a129-684f-4ef8-a7fe-263c554a5203
 description: "Last modified: July 15, 2011"
@@ -27,6 +27,6 @@ Supports the use of globally unique identifiers (GUIDs) as attribute field value
 
 ## See also
 
-- [Guid](http://msdn2.microsoft.com/EN-US/library/cey1zx63)
+- [Guid](https://msdn2.microsoft.com/library/cey1zx63)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

@@ -1,9 +1,10 @@
 ---
+title: Actions element (WorkflowInfo element)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 9323e205-67aa-89b9-45db-2a050cead9e1
 ---
@@ -29,26 +30,11 @@ Allows you to create custom workflow activities and expand the palette of availa
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>Actions4.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  |  |
+| **Namespace**     |  |
+| **Schema file**   | Actions4.xsd |
 
 
 ## Definition

@@ -66,7 +66,7 @@ In addition to understanding the basic operations, you should understand the fun
 | [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md)|Explains how add-in manifests work and how add-in packages are built.|
 | [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)|Explores the ways in which you can build a rich user experience in SharePoint Add-ins.|
 | [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)|Explains the data access options and techniques that are available in different kinds of SharePoint Add-ins.|
-| [License your Office and SharePoint Add-ins](https://docs.microsoft.com/en-us/office/dev/store/license-your-add-ins)|Guides you through the add-in license framework for Office and SharePoint Add-ins.|
+| [License your Office and SharePoint Add-ins](https://docs.microsoft.com/office/dev/store/license-your-add-ins)|Guides you through the add-in license framework for Office and SharePoint Add-ins.|
 
 <a name="bk_integrate"> </a>
 
@@ -86,5 +86,5 @@ When you are familiar with the capabilities and features of SharePoint Add-ins, 
 -  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md) 
 -  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)
 -  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)
--  [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
+-  [SharePoint Add-ins sample pack](https://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
  

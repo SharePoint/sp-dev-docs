@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - View schema
@@ -48,7 +48,7 @@ Numerous
    
 ## Example
 
-The following excerpt from the [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file uses the **FieldPrefix** element to return the Microsoft Office namespace in defining the rendering pattern for new items of the **Threading** field type. 
+The following excerpt from the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file uses the **FieldPrefix** element to return the Microsoft Office namespace in defining the rendering pattern for new items of the **Threading** field type. 
   
 ```XML
 <RenderPattern Name="NewPattern" DisplayName="NewPattern">

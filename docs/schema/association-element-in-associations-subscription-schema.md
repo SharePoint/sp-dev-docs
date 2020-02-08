@@ -1,9 +1,10 @@
 ---
+title: Association element in Associations
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: d334d1ef-f7a4-d709-3b9b-ce564aa60890
 ---
@@ -16,7 +17,7 @@ ms.assetid: d334d1ef-f7a4-d709-3b9b-ce564aa60890
 
 Represents a subscription association.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

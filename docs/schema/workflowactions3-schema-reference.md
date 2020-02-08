@@ -1,9 +1,10 @@
 ---
+title: WorkflowActions3 schema reference
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 7a03ead8-30e0-4601-9c6f-edfb04ce57f9
 ---

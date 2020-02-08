@@ -1,11 +1,12 @@
 ---
+title: AssociationGroups element in Entity
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AssociationGroups
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b50c2648-daea-d8c0-039a-b95590b9924c
 ---
@@ -18,7 +19,7 @@ ms.assetid: b50c2648-daea-d8c0-039a-b95590b9924c
 
 Specifies a list of **AssociationGroup** elements.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

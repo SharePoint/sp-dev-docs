@@ -29,7 +29,7 @@ If you’re using Visual Studio, the NuGet package manager dialog may look sligh
 
 1. Go to **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**, and search for **App for SharePoint**.
 
-2. Install the package called **AppForSharePointWebToolkit**.
+2. Install the package called **AppForSharePointOnlineWebToolkit**.
 
 3. The toolkit installs the required helper classes for working with the SharePoint client-side object model (CSOM).
 
@@ -391,7 +391,7 @@ You can also see that the Console.WriteLine statements that we used in the conso
 ## See also
 
 -  [Original blog post on Azure WebJobs](http://zimmergren.net/technical/getting-started-with-building-azure-webjobs-timer-jobs-for-your-office-365-sites) by Tobias Zimmergren
--  [Develop and deploy WebJobs using Visual Studio - Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/websites-dotnet-deploy-webjobs)
+-  [Develop and deploy WebJobs using Visual Studio - Azure App Service](https://docs.microsoft.com/azure/app-service/websites-dotnet-deploy-webjobs)
 -  [Simple remote timer job that interacts with SharePoint Online](https://channel9.msdn.com/Blogs/Office-365-Dev/Simple-remote-timer-job-that-interacts-with-SharePoint-Online-Office-365-Developer-Patterns-and-Prac) video by Andrew Connell on Channel9
 - [Use Microsoft Azure WebJobs with Office 365](use-microsoft-azure-webjobs-with-office-365.md)
 - [PnP remote timer job framework](pnp-remote-timer-job-framework.md)

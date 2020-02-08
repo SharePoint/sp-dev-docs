@@ -1,9 +1,10 @@
 ---
+title: ActionName element in ArrayOfActions
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 3bcfca05-2eff-830a-b058-cba0184efc8d
 ---
@@ -16,7 +17,7 @@ ms.assetid: 3bcfca05-2eff-830a-b058-cba0184efc8d
 
 Specifies an action for this External Data Part.
 
-**Namespace**: http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
 

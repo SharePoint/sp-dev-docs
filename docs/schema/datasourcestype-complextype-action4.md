@@ -1,9 +1,10 @@
 ---
+title: dataSourcesType complexType (Action4)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 37824f01-75e0-6235-cdcd-8e10db69ab21
 ---

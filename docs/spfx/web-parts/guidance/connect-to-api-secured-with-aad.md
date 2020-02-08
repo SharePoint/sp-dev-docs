@@ -1,14 +1,14 @@
 ---
 title: Connect to API secured with Azure Active Directory (Azure AD)
 description: Guidance about connecting to APIs secured with Azure AD.
-ms.date: 08/30/2018
+ms.date: 01/09/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Connect to API secured with Azure Active Directory
 
-When building SharePoint Framework solutions, you might need to connect to your custom API to retrieve some data or to communicate with line of business applications. Securing custom APIs with Microsoft Azure Active Directory (Azure AD) offers you many benefits and can be done in a number of ways. After you have built the API, there are several ways in which you can access it. These ways vary in complexity and each have their specific considerations.
+When building SharePoint Framework solutions, you might need to connect to your custom API to retrieve some data or to communicate with line-of-business applications. Securing custom APIs with Microsoft Azure Active Directory (Azure AD) offers you many benefits and can be done in a number of ways. After you have built the API, there are several ways in which you can access it. These ways vary in complexity and each have their specific considerations.
 
 This article discusses the different approaches and describes the step-by-step process of securing and connecting to an API secured with Azure AD.
 
@@ -23,7 +23,7 @@ As the API developer, using Azure AD to secure your API frees you from managing 
 
 When building custom APIs, there are two main ways in which you can secure your API with Azure AD. If you host the API in Microsoft Azure App Service, you can benefit from the App Service Authentication option. If you look for more hosting flexibility for your API, such as hosting it on your own infrastructure or in Docker containers, you need to secure it in code. In such cases, the implementation depends on your programming language and framework.
 
-In this article, when discussing this option, you will use C# and the [ASP.NET Web API](https://www.asp.net/web-api) as the framework.
+In this article, when discussing this option, you'll use C# and the [ASP.NET Web API](https://www.asp.net/web-api) as the framework.
 
 ### Secure the API using Azure App Service Authentication
 
@@ -31,13 +31,13 @@ When deploying custom APIs to Azure App Service, you can benefit from the App Se
 
 ![App Service Authentication settings displayed in the Azure portal](../../../images/api-aad-azure-app-service-authentication.png)
 
-After App Service Authentication has been configured, users trying to access your API are prompted to sign in with their organizational account that belongs to the same Azure AD as the Azure AD application used to secure the API. After signing in, you are able to access the information about the current user through the `HttpContext.Current.User` property. When using Azure App Service Authentication, there is no additional configuration required in your application.
+After App Service Authentication has been configured, users trying to access your API are prompted to sign in with their organizational account that belongs to the same Azure AD as the Azure AD application used to secure the API. After signing in, you're able to access the information about the current user through the `HttpContext.Current.User` property. When using Azure App Service Authentication, there's no additional configuration required in your application.
 
 Azure App Service Authentication is a feature available only in Azure App Service. While this capability significantly simplifies implementing authentication in your API, it ties it to running inside Azure App Service. If you want to host the API with another cloud provider or inside a Docker container, you need to implement the authentication layer first.
 
 ### Secure the API using ASP.NET authentication
 
-If you want to have the maximum flexibility with regards to where your API is hosted and how it is deployed, you should consider implementing the support for Azure AD authentication in ASP.NET. Visual Studio simplifies the implementation process significantly, and after completing the authentication setup wizard, your API requires users to sign in by using their organizational account.
+If you want to have the maximum flexibility with regards to where your API is hosted and how its deployed, you should consider implementing the support for Azure AD authentication in ASP.NET. Visual Studio simplifies the implementation process significantly, and after completing the authentication setup wizard, your API requires users to sign in by using their organizational account.
 
 ![Visual Studio authentication setup wizard](../../../images/api-aad-visual-studio-authentication-wizard.png)
 
@@ -55,9 +55,9 @@ Office 365 uses Azure Active Directory (Azure AD) to secure its APIs, which are 
 
 There are different types of OAuth flows depending on the kind of application. Web applications use an OAuth flow where Azure AD redirects to the URL where the application is hosted. The redirect is an additional security measure to verify the authenticity of that application.
 
-Client applications, such as Android and iOS apps, do not have a URL and cannot use a redirect. So they complete the OAuth flow without the redirect. Both web applications and client applications use a publicly known client ID and a privately held client secret known only to Azure AD and the application.
+Client applications, such as Android and iOS apps, don't have a URL and can't use a redirect. So they complete the OAuth flow without the redirect. Both web applications and client applications use a publicly known client ID and a privately held client secret known only to Azure AD and the application.
 
-Client-side web applications are similar to web applications but are implemented using JavaScript and run in the context of a browser. These applications are incapable of using a client secret without revealing it to users. Therefore these applications use an authorization flow named **OAuth implicit flow** to access resources secured with Azure AD. In this flow, the contract between the application and Azure AD is established based on the publicly-known client ID and the URL where the application is hosted. This is the flow that SharePoint Framework client-side web parts must use in order to connect to resources secured with Azure AD.
+Client-side web applications are similar to web applications but are implemented using JavaScript and run in the context of a browser. These applications are incapable of using a client secret without revealing it to users. Therefore these applications use an authorization flow named **OAuth implicit flow** to access resources secured with Azure AD. In this flow, the contract between the application and Azure AD is established based on the publicly known client ID and the URL where the application is hosted. This is the flow that SharePoint Framework client-side web parts must use in order to connect to resources secured with Azure AD.
 
 ### Use the AadTokenProvider to retrieve access token
 
@@ -66,7 +66,7 @@ When working with JavaScript libraries that have their own services for executin
 > [!NOTE]
 > It's recommended to regularly update your SharePoint Framework solutions to the most recent version of the SharePoint Framework to benefit of the improvements and new capabilities added by Microsoft.
 
-#### Request permissions to API secured with Azure AD  
+#### Request permissions to API secured with Azure AD
 
 If your SharePoint Framework solution requires permissions to specific resources secured with Azure AD, such as enterprise API, you should specify these resources along with the necessary permissions in the configuration of your solution.
 
@@ -74,38 +74,38 @@ If your SharePoint Framework solution requires permissions to specific resources
 
 2. To the **solution** property, add the **webApiPermissionRequests** property that lists all the resources and corresponding permissions that your solution needs.
 
-  Following is an example of a SharePoint Framework solution requesting access to enterprise API:
+    Following is an example of a SharePoint Framework solution requesting access to enterprise API:
 
-  ```json
-  {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
-    "solution": {
-      "name": "spfx-client-side-solution",
-      "id": "5d16587c-5e87-44d7-b658-1148988f212a",
-      "version": "1.0.0.0",
-      "includeClientSideAssets": true,
-      "skipFeatureDeployment": true,
-      "webApiPermissionRequests": [
-        {
-          "resource": "Enterprise-API-Name",
-          "scope": "user_impersonation"
-        }
-      ]
-    },
-    "paths": {
-      "zippedPackage": "solution/spfx-api.sppkg"
+    ```json
+    {
+      "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+      "solution": {
+        "name": "spfx-client-side-solution",
+        "id": "5d16587c-5e87-44d7-b658-1148988f212a",
+        "version": "1.0.0.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "webApiPermissionRequests": [
+          {
+            "resource": "Enterprise-API-Name",
+            "scope": "user_impersonation"
+          }
+        ]
+      },
+      "paths": {
+        "zippedPackage": "solution/spfx-api.sppkg"
+      }
     }
-  }
-  ```
+    ```
 
-  > [!NOTE]
-  > For the value of the **resource** property, you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the displayName not only is more readable but also allows you to build your solution once and reuse it across multiple tenants. While the objectId of an Azure AD application is different on each tenant, the displayName stays the same.
+    > [!NOTE]
+    > For the value of the **resource** property, you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the displayName not only is more readable but also allows you to build your solution once and reuse it across multiple tenants. While the objectId of an Azure AD application is different on each tenant, the displayName stays the same.
 
-3. When this solution is deployed to the SharePoint app catalog, it prompts the administrator to verify the requested permissions and either grant or deny them. Read [Manage permission requests](../../use-aadhttpclient.md#manage-permission-requests) article to learn more about different ways of managing permission requests.
+3. When this solution is deployed to the SharePoint App Catalog, it prompts the administrator to verify the requested permissions and either grant or deny them. Read [Manage permission requests](../../use-aadhttpclient.md#manage-permission-requests) article to learn more about different ways of managing permission requests.
 
 #### Acquire an access token
 
-Following is how you would use the AadTokenProvider to retrieve an access token for an enterprise API secured with Azure AD and use it to perform a web request using jQuery:
+Following is how you would use the AadTokenProvider to retrieve an access token for an enterprise API secured with Azure AD and use it to do a web request using jQuery:
 
 ```ts
 // ...
@@ -122,7 +122,8 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
       .getTokenProvider()
       .then((tokenProvider: AadTokenProvider): Promise<string> => {
         // retrieve access token for the enterprise API secured with Azure AD
-        return tokenProvider.getToken('09c4b84d-13c4-4451-9350-3baedf70aab4');
+        // the parameter passed into getToken()is the Application ID URI
+        return tokenProvider.getToken('https://contoso.azurewebsites.net');
       })
       .then((accessToken: string): void => {
         // call the enterprise API using jQuery passing the access token
@@ -161,15 +162,15 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
 }
 ```
 
-You start, by retrieving an instance of the AadTokenProvider using the `aadTokenProviderFactory`. Next, you use the AadTokenProvider to retrieve the access token for your API secured with Azure AD. Once you have obtained the access token, you execute the AJAX request to the enterprise API including the access token in the request headers.
+You start, by retrieving an instance of the `AadTokenProvider` using the `aadTokenProviderFactory`. Next, you use the `AadTokenProvider` to retrieve the access token for your API secured with Azure AD. Once you've obtained the access token, you execute the AJAX request to the enterprise API including the access token in the request headers.
 
 ### Use ADAL JS to handle authorization and retrieve access token
 
-If you're using an older version of the SharePoint Framework that v1.6.0 and can't use the AadTokenProvider, you can use the [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) library to handle the OAuth implicit flow and retrieve the access token for the specific API secured with Azure AD. For applications built using AngularJS, ADAL JS offers an HTTP request interceptor that automatically adds required access tokens to headers of outgoing web requests. By using this requestor, developers don't need to modify web requests to APIs secured with Azure AD and can focus on building the application instead.
+If you're using an older version of the SharePoint Framework that v1.6.0 and can't use the `AadTokenProvider`, you can use the [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) library to handle the OAuth implicit flow and retrieve the access token for the specific API secured with Azure AD. For applications built using AngularJS, ADAL JS offers an HTTP request interceptor that automatically adds required access tokens to headers of outgoing web requests. By using this requestor, developers don't need to modify web requests to APIs secured with Azure AD and can focus on building the application instead.
 
 #### Limitations when using ADAL JS with client-side web parts
 
-The ADAL JS library significantly simplifies implementing the OAuth flow for Azure AD in client-side web applications. But it has a number of limitations when used with SharePoint Framework client-side web parts. These limitations are due to the fact that ADAL JS is designed to be used by client-side web applications that own the whole page and do not share the page with other applications.
+The ADAL JS library significantly simplifies implementing the OAuth flow for Azure AD in client-side web applications. But it has a number of limitations when used with SharePoint Framework client-side web parts. These limitations are due to the fact that ADAL JS is designed to be used by client-side web applications that own the whole page and don't share the page with other applications.
 
 ##### Shared storage
 
@@ -191,7 +192,7 @@ If the upcoming meetings web part loads first, ADAL JS retrieves its token with 
 
 OAuth implicit flow is based on redirects between Azure AD and the application participating in the flow. When the authentication process starts, the application redirects you to the Azure AD sign-in page. After the authentication completes, Azure AD redirects you back to the application, and sends the identity token in the URL hash for the application to process. From the perspective of a web part placed on a SharePoint page, this behavior has two drawbacks.
 
-Even though you are signed in to SharePoint, you need to separately authenticate with Azure AD in order for your web part to be able to access resources secured with Azure AD. The web part is a small part of the overall page, but to complete the authentication process, you need to leave the whole page, which is a poor user experience.
+Even though you're signed in to SharePoint, you need to separately authenticate with Azure AD in order for your web part to can access resources secured with Azure AD. The web part is a small part of the overall page, but to complete the authentication process, you need to leave the whole page, which is a poor user experience.
 
 After the authentication completes, Azure AD redirects you back to your application. In the URL hash, it includes the identity token that your application needs to process. Unfortunately, because the identity token doesn't contain any information about its origin, if you had multiple web parts on one page, all of them would try to process the identity token from the URL.
 
@@ -201,27 +202,27 @@ Aside the limitations, there are some considerations that you should take into a
 
 ##### ADAL JS is meant to be used for single-page applications
 
-ADAL JS has been designed to be used with single-page applications. As such, by default it doesn't work correctly when used with SharePoint Framework solutions. By applying a patch however, it can be successfully used in SharePoint Framework projects.
+ADAL JS is designed to be used with single-page applications. As such, by default it doesn't work correctly when used with SharePoint Framework solutions. By applying a patch however, it can be successfully used in SharePoint Framework projects.
 
 ##### Handle all possible authentication exceptions yourself
 
-When using ADAL JS and OAuth to access APIs secured with Azure AD, the authentication flow is facilitated by Azure. Any errors are handled by the Azure sign-in page. After the user has signed-in with her organizational account, the application tries to retrieve a valid access token. All errors that occur at this stage have to be explicitly handled by the developer of the application because retrieving access tokens is non-interactive and doesn't present any UI to the user.
+When using ADAL JS and OAuth to access APIs secured with Azure AD, the authentication flow is facilitated by Azure. Any errors are handled by the Azure sign-in page. After the user has signed-in with their organizational account, the application tries to retrieve a valid access token. All errors that occur at this stage have to be explicitly handled by the developer of the application because retrieving access tokens is non-interactive and doesn't present any UI to the user.
 
 ##### Register every client-side application in Azure AD
 
-Every client-side application that wants to use ADAL JS needs to be registered as an Azure AD application. A part of the registration information is the URL where the application is located. Because the application is fully client-side and is not capable of securely storing a secret, the URL is a part of the contract between the application and Azure AD to establish security. This requirement is problematic for SharePoint Framework solutions because developers cannot simply know upfront all URLs where a particular web part will be used. Additionally, at this moment, Azure AD supports specifying up to 10 reply URLs, which might not be sufficient in some scenarios.
+Every client-side application that wants to use ADAL JS needs to be registered as an Azure AD application. A part of the registration information is the URL where the application is located. Because the application is fully client-side and isn't capable of securely storing a secret, the URL is a part of the contract between the application and Azure AD to establish security. This requirement is problematic for SharePoint Framework solutions because developers can't simply know upfront all URLs where a particular web part will be used. Additionally, at this moment, Azure AD supports specifying up to 10 reply URLs, which might not be sufficient in some scenarios.
 
 ##### Implement authorization flow in each web part
 
-Before a client-side application can retrieve an access token to a specific resource, it needs to authenticate the user to obtain the ID token which can then be exchanged for an access token. Even though SharePoint Framework solutions are hosted in SharePoint, where users are already signed in using their organizational accounts, the authentication information for the current user isn't available to SharePoint Framework solutions. Instead, each solution must explicitly request the user to sign in. This can be done either by redirecting the user to the Azure sign-in page or by showing a pop-up window with the sign-in page. The latter is less intrusive in the case of a web part, which is one of the many elements on a page. If there are multiple SharePoint Framework client-side web parts on the page, each of them manages its state separately and requires the user to explicitly sign in to that particular web part.
+Before a client-side application can retrieve an access token to a specific resource, it needs to authenticate the user to obtain the ID token, which can then be exchanged for an access token. Even though SharePoint Framework solutions are hosted in SharePoint, where users are already signed in using their organizational accounts, the authentication information for the current user isn't available to SharePoint Framework solutions. Instead, each solution must explicitly request the user to sign in. This can be done either by redirecting the user to the Azure sign-in page or by showing a pop-up window with the sign-in page. The latter is less intrusive in the case of a web part, which is one of the many elements on a page. If there are multiple SharePoint Framework client-side web parts on the page, each of them manages its state separately and requires the user to explicitly sign in to that particular web part.
 
 ##### Configure Internet Explorer security zones
 
-Retrieving access tokens required to communicate with APIs secured with Azure AD is facilitated by hidden iframes that handle redirects to Azure AD endpoints. There is a known limitation in Microsoft Internet Explorer where obtaining access tokens in OAuth implicit flow fails, if the Azure AD sign-in endpoints and the SharePoint Online URL are not in the same security zone. If your organization is using Internet Explorer, ensure that the Azure AD endpoint and SharePoint Online URLs are configured in the same security zone. To maintain consistency, some organizations choose to push these settings to end-users using group policies.
+Retrieving access tokens required to communicate with APIs secured with Azure AD is facilitated by hidden IFRAMEs that handle redirects to Azure AD endpoints. There is a known limitation in Microsoft Internet Explorer were obtaining access tokens in OAuth implicit flow fails, if the Azure AD sign-in endpoints and the SharePoint Online URL are not in the same security zone. If your organization is using Internet Explorer, ensure that the Azure AD endpoint and SharePoint Online URLs are configured in the same security zone. To maintain consistency, some organizations choose to push these settings to end-users using group policies.
 
 ##### Add access token to all AJAX requests to APIs secured with Azure AD
 
-APIs secured with Azure AD cannot be accessed anonymously. Instead they require a valid credential to be presented by the application calling them. When using the OAuth implicit flow with client-side applications, this credential is the bearer access token obtained using ADAL JS. If you have built your SharePoint Framework solution using AngularJS, ADAL JS automatically ensures that you have a valid access token for the particular resource, and adds it to all outgoing requests executed by using the AngularJS `$http` service. When using other JavaScript libraries, you have to obtain a valid access token, and if necessary refresh it, and attach it to the outgoing web requests yourself.
+APIs secured with Azure AD can't be accessed anonymously. Instead they require a valid credential to be presented by the application calling them. When using the OAuth implicit flow with client-side applications, this credential is the bearer access token obtained using ADAL JS. If you have built your SharePoint Framework solution using AngularJS, ADAL JS automatically ensures that you have a valid access token for the particular resource, and adds it to all outgoing requests executed by using the AngularJS `$http` service. When using other JavaScript libraries, you have to obtain a valid access token, and if necessary refresh it, and attach it to the outgoing web requests yourself.
 
 #### Use ADAL JS with client-side web parts
 
@@ -343,7 +344,7 @@ The patch applies the following changes to ADAL JS:
 
 - All information is stored in a key specific to the web part (see the override of the `_getItem` and `_saveItem` functions).
 - Callbacks are processed only by web parts that initiated them (see the override of the `handleWindowCallback` function).
-- When verifying data from callbacks, the instance of the `AuthenticationContext` class of the specific web part is used instead of the globally registered singleton (see `_renewToken`, `getRequestInfo` and the empty registration of the `window.AuthenticationContext` function).
+- When verifying data from callbacks, the instance of the `AuthenticationContext` class of the specific web part is used instead of the globally registered singleton (see `_renewToken`, `getRequestInfo`, and the empty registration of the `window.AuthenticationContext` function).
 
 ##### Use the ADAL JS patch in SharePoint Framework web parts
 
@@ -351,57 +352,57 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
 
 1. Define a custom interface that extends the standard ADAL JS `Config` interface to expose additional properties on the configuration object.
 
-  ```ts
-  export interface IAdalConfig extends adal.Config {
-    popUp?: boolean;
-    callback?: (error: any, token: string) => void;
-    webPartId?: string;
-  }
-  ```
-
-  The `popUp` property and the `callback` function are both already implemented in ADAL JS but are not exposed in the TypeScript typings of the standard `Config` interface. You need them in order to allow users to sign in to your web parts by using a pop-up window instead of redirecting them to the Azure AD sign-in page.
-
-2. Load the ADAL JS patch, the custom configuration interface, and your configuration object into the main component of your web part.
-
-  ```ts
-  import * as AuthenticationContext from 'adal-angular';
-  import adalConfig from '../AdalConfig';
-  import { IAdalConfig } from '../../IAdalConfig';
-  import '../../WebPartAuthenticationContext';
-  ```
-
-3. In the constructor of your component, extend the ADAL JS configuration with additional properties and use it to create a new instance of the `AuthenticationContext` class.
-
-  ```ts
-  export default class UpcomingMeetings extends React.Component<IUpcomingMeetingsProps, IUpcomingMeetingsState> {
-    private authCtx: adal.AuthenticationContext;
-
-    constructor(props: IUpcomingMeetingsProps, state: IUpcomingMeetingsState) {
-      super(props);
-
-      this.state = {
-        loading: false,
-        error: null,
-        upcomingMeetings: [],
-        signedIn: false
-      };
-
-      const config: IAdalConfig = adalConfig;
-      config.webPartId = this.props.webPartId;
-      config.popUp = true;
-      config.callback = (error: any, token: string): void => {
-        this.setState((previousState: IUpcomingMeetingsState, currentProps: IUpcomingMeetingsProps): IUpcomingMeetingsState => {
-          previousState.error = error;
-          previousState.signedIn = !(!this.authCtx.getCachedUser());
-          return previousState;
-        });
-      };
-
-      this.authCtx = new AuthenticationContext(config);
-      AuthenticationContext.prototype._singletonInstance = undefined;
+    ```ts
+    export interface IAdalConfig extends adal.Config {
+      popUp?: boolean;
+      callback?: (error: any, token: string) => void;
+      webPartId?: string;
     }
-  }
-  ```
+    ```
+    
+  The `popUp` property and the `callback` function are both already implemented in ADAL JS but aren't exposed in the TypeScript typings of the standard `Config` interface. You need them in order to allow users to sign in to your web parts by using a pop-up window instead of redirecting them to the Azure AD sign-in page.
+
+1. Load the ADAL JS patch, the custom configuration interface, and your configuration object into the main component of your web part.
+
+    ```ts
+    import * as AuthenticationContext from 'adal-angular';
+    import adalConfig from '../AdalConfig';
+    import { IAdalConfig } from '../../IAdalConfig';
+    import '../../WebPartAuthenticationContext';
+    ```
+
+1. In the constructor of your component, extend the ADAL JS configuration with additional properties and use it to create a new instance of the `AuthenticationContext` class.
+
+    ```ts
+    export default class UpcomingMeetings extends React.Component<IUpcomingMeetingsProps, IUpcomingMeetingsState> {
+      private authCtx: adal.AuthenticationContext;
+    
+      constructor(props: IUpcomingMeetingsProps, state: IUpcomingMeetingsState) {
+        super(props);
+    
+        this.state = {
+          loading: false,
+          error: null,
+          upcomingMeetings: [],
+          signedIn: false
+        };
+    
+        const config: IAdalConfig = adalConfig;
+        config.webPartId = this.props.webPartId;
+        config.popUp = true;
+        config.callback = (error: any, token: string): void => {
+          this.setState((previousState: IUpcomingMeetingsState, currentProps: IUpcomingMeetingsProps): IUpcomingMeetingsState => {
+            previousState.error = error;
+            previousState.signedIn = !(!this.authCtx.getCachedUser());
+            return previousState;
+          });
+        };
+    
+        this.authCtx = new AuthenticationContext(config);
+        AuthenticationContext.prototype._singletonInstance = undefined;
+      }
+    }
+    ```
 
 The code first retrieves the standard ADAL JS configuration object and casts it to the type of the newly defined configuration interface.
 
@@ -417,22 +418,22 @@ Before you build SharePoint Framework client-side web parts that communicate wit
 
 ### SharePoint Framework web parts are highly trusted
 
-Unlike SharePoint Add-ins, web parts run with the same permissions as the current user. Whatever the user can do, the web part can do as well. This is why web parts can be installed and deployed only by tenant administrators. The tenant administrator should verify that web parts they are deploying come from a trusted source and were approved for use in the tenant.
+Unlike SharePoint Add-ins, web parts run with the same permissions as the current user. Whatever the user can do, the web part can do as well. This is why web parts can be installed and deployed only by tenant administrators. The tenant administrator should verify that web parts they're deploying come from a trusted source and were approved for use in the tenant.
 
-Web parts are a part of the page and, unlike SharePoint Add-ins, share DOM and resources with other elements on the page. Access tokens that grant access to resources secured with Azure AD, are retrieved through a callback to the same page where the web part is located. That callback can be processed by any element on the page. Also, after access tokens are processed from callbacks, they are stored in the browser's local storage or session storage from where they can be retrieved by any component on the page. A malicious web part could read the token and either expose the token or the data it retrieved using that token to an external service.
+Web parts are a part of the page and, unlike SharePoint Add-ins, share DOM and resources with other elements on the page. Access tokens that grant access to resources secured with Azure AD, are retrieved through a callback to the same page where the web part is located. That callback can be processed by any element on the page. Also, after access tokens are processed from callbacks, they're stored in the browser's local storage or session storage from where they can be retrieved by any component on the page. A malicious web part could read the token and either expose the token or the data it retrieved using that token to an external service.
 
 ### URL is a part of the OAuth implicit flow contract
 
 > [!IMPORTANT]
-> Information in this section doesn't apply to you if you use the AadTokenProvider as it handles the OAuth implicit flow for you
+> Information in this section doesn't apply to you if you use the `AadTokenProvider` as it handles the OAuth implicit flow for you
 
-Client-side applications are incapable of storing a client secret without revealing it to users. To verify the authenticity of the particular application, the URL where the application is hosted is used as a part of the trust contract between Azure AD and the application. The consequences of this are that the URL of every page with web parts using OAuth implicit flow must be registered with Azure AD. If a page is not registered, the OAuth flow fails, and the web part is denied access to the secured resource.
+Client-side applications are incapable of storing a client secret without revealing it to users. To verify the authenticity of the particular application, the URL where the application is hosted is used as a part of the trust contract between Azure AD and the application. The consequences of this are that the URL of every page with web parts using OAuth implicit flow must be registered with Azure AD. If a page isn't registered, the OAuth flow fails, and the web part is denied access to the secured resource.
 
-This necessary security measure is a significant limitation for organizations that allow users to add web parts to pages. We recommend that you limit the number of locations where web parts using OAuth implicit flow are used. Use a few well known locations such as the home page or specific landing pages, and have these locations registered with Azure AD.
+This necessary security measure is a significant limitation for organizations that allow users to add web parts to pages. We recommend that you limit the number of locations where web parts using OAuth implicit flow are used. Use a few well-known locations such as the home page or specific landing pages, and have these locations registered with Azure AD.
 
 ### Internet Explorer security zones
 
-Internet Explorer uses security zones to apply security policies to websites you visit. Websites assigned to different security zones run isolated and cannot cooperate. When using OAuth implicit flow in SharePoint Framework client-side web parts, the page with web parts that use OAuth and the Azure AD sign-in page (located at https://login.microsoftonline.com) must be in the same security zone. Without such configuration, the authentication process fails, and web parts won't be able to communicate with Azure AD-secured resources.
+Internet Explorer uses security zones to apply security policies to websites you visit. Websites assigned to different security zones run isolated and can't cooperate. When using OAuth implicit flow in SharePoint Framework client-side web parts, the page with web parts that use OAuth and the Azure AD sign-in page (located at https://login.microsoftonline.com) must be in the same security zone. Without such configuration, the authentication process fails, and web parts won't be able to communicate with Azure AD-secured resources.
 
 ### User must sign in regularly
 
@@ -445,4 +446,4 @@ Because client-side applications are incapable of securely storing secrets, and 
 - [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../../use-aadhttpclient.md)
 - [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md)
 - [Call custom APIs secured with Azure Active Directory without ADAL JS (code sample)](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/aad-api-spo-cookie)
-- [Authentication scenarios for Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
+- [Authentication scenarios for Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)

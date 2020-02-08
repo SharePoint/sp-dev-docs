@@ -6,8 +6,7 @@ localization_priority: Normal
 XYZ in the SharePoint Add-in model
 ==================================
 
-Summary
--------
+## Summary
 
 - Need to Provide context and short introduction how the capability was done using FTC
 - Summary is really important to keep small and crisp, so that we get the context of the article.
@@ -46,23 +45,21 @@ This section contains the following information:
 - Show an example of when this option works well
 - Point out any technical notes about this option
 
-Related links
-=============
-- [Customizing OneDrive for Business sites with app model (MSDN blog article)](http://blogs.msdn.com/b/vesku/archive/2015/01/01/customizing-onedrive-for-business-sites-with-app-model.aspx)
-- Guidance articles at [http://aka.ms/OfficeDevPnPGuidance](http://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
-- References in MSDN at [http://aka.ms/OfficeDevPnPMSDN](http://aka.ms/OfficeDevPnPMSDN "References in MSDN")
-- Videos at [http://aka.ms/OfficeDevPnPVideos](http://aka.ms/OfficeDevPnPVideos "Videos")
+## Related links
+- [Customizing OneDrive for Business sites with app model (MSDN blog article)](https://blogs.msdn.com/b/vesku/archive/2015/01/01/customizing-onedrive-for-business-sites-with-app-model.aspx)
+- Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
+- References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
+- Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
-Related PnP samples
-===================
+## PnP samples
 
 - Customizing OD4B sites using Async pattern
 - Classic add-in part and sync process for OD4B site customization
 - Pre-create OD4B sites for users
-- Samples and content at http://aka.ms/OfficeDevPnP
+- Samples and content at https://aka.ms/OfficeDevPnP
 
-Applies to
-==========
+## Applies to
+
 - Office 365 Multi Tenant (MT)
 - Office 365 Dedicated (D) *partly*
 - SharePoint 2013 on-premises – *partly*

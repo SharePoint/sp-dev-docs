@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: SharePoint Developer Documentation
+    url: https://docs.microsoft.com/sharepoint/dev
+    about: All developer documentatino for SharePoint can be found here.
+  - name: SharePoint TechCommunity
+    url: https://techcommunity.microsoft.com/t5/SharePoint/ct-p/SharePoint
+    about: Please submit non-developer questions/reports to the SharePoint TechCommunity site. This includes anything related to administrator, end-user, or user experience capabilities, questions, and errors.
+  - name: SharePoint Dev UserVoice
+    url: https://aka.ms/sp-dev-uservoice
+    about: Please submit feature requests and suggestions here.

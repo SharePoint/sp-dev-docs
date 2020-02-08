@@ -4,6 +4,7 @@ description: Create an extension project, and then code and debug your Applicati
 ms.date: 11/8/2018
 ms.prod: sharepoint
 localization_priority: Priority
+ms.custom: scenarios:getting-started
 ---
 
 
@@ -44,7 +45,7 @@ You can also follow the steps in this article by watching the video on the Share
     * Accept the default **app-extension** as your solution name, and select Enter.
     * Select **SharePoint Online only (latest)**, and select Enter.
     * Select **Use the current folder**, and select Enter.
-    * Select **N** to allow solution to be deployed to all sites immediately.
+    * Select **N** to not allow solution to be deployed to all sites immediately.
     * Select **N** on the question if solution contains unique permissions.
     * Select **Extension** as the client-side component type to be created. 
     * Select **Application Customizer** as the extension type to be created.
@@ -143,7 +144,7 @@ You cannot use the local Workbench to test SharePoint Framework Extensions. You 
     ```
 
     > [!NOTE] 
-    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again. This process is documented in the [Set up your development environment](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment) article.
+    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again. This process is documented in the [Set up your development environment](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment) article.
 
     When the code compiles without errors, it serves the resulting manifest from https://localhost:4321 and also starts your default browser with needed query parameters.
 

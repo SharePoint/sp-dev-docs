@@ -1,9 +1,10 @@
 ---
+title: FilterDescriptors Element in Method
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 4f62ce11-a34b-653c-846c-79f0e019c619
 ---
@@ -16,7 +17,7 @@ ms.assetid: 4f62ce11-a34b-653c-846c-79f0e019c619
 
 For more information, see [FilterDescriptors Element in Method (BDCMetadata Schema)](filterdescriptors-element-in-method-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

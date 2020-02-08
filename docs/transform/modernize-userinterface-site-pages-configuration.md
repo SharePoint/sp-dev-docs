@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 06/24/2019
+ms.date: 01/03/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -156,6 +156,72 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 > [!NOTE]
 > This option is not available for publishing page transformation.
 
+## TargetPageName option
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally override the page name of the target page. By default the page transformation engine will generate one, but sometimes it's needed to override (e.g. default.aspx will collide with the default.aspx view page of the SitePages library).
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TargetPageName = "mypage.aspx",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TargetPageName = "mypage.aspx",
+};
+```
+
+## TargetPageFolder option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify the folder in which the target page will be created. Note that if a folder was created automatically (e.g. because you were transforming from an extra wiki page library) then the folder specified by this parameter will be combined with the auto-generated folder (unless you use the `TargetPageFolderOverridesDefaultFolder` option as well). You can specify a folder like this: `MyFolder` or `MyFolder/SubFolder` when you want to create a nested folder structure. Specifying `<root>` as value allows you to target the root of the target sitepages library (as of January 2020 release).
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TargetPageFolder = "MyFolder",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TargetPageFolder = "MyFolder",
+};
+```
+
+## TargetPageFolderOverridesDefaultFolder option (as of December 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+You can force page transformation to use the folder specified via the `TargetPageFolder` property, regardless whether there was an automatically created folder or not.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TargetPageFolderOverridesDefaultFolder = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TargetPageFolderOverridesDefaultFolder = true,
+};
+```
+
 ## ReplaceHomePageWithDefaultHomePage option
 
 Type | Default value if not specified
@@ -202,7 +268,7 @@ Type | Default value if not specified
 -----|----
 Bool | false
 
-If you've extended your wiki page library with additional columns to collect page metadata and you want to copy this metadata to the created modern client side page then set this option to true
+If you've extended your wiki page library with additional columns to collect page metadata and you want to copy this metadata to the created modern page then set this option to true
 
 ```Csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
@@ -213,6 +279,9 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 
 > [!NOTE]
 > This option is not available for publishing page transformation. Use the publishing page layout mapping model to define if metadata needs to be copied and how that needs to happen.
+
+> [!NOTE]
+> As of the October 2019 release copying page metadata also works for when you do a cross site transformation, so when you create the modern page in a different site collection than the original source page.
 
 ## RemoveEmptySectionsAndColumns option (as of March 2019 release)
 
@@ -290,6 +359,53 @@ PublishingPageTransformationInformation pti = new PublishingPageTransformationIn
 };
 ```
 
+### KeepPageCreationModificationInformation option (as of October 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to not keep the author, editor, create data and modification date of the source page. Use this option to change that.
+
+> [!NOTE]
+> This option only works for when the source page is in the same SPO tenant as the target destination of the modern page.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    KeepPageCreationModificationInformation = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    KeepPageCreationModificationInformation = true,
+};
+```
+
+### PostAsNews option (as of October 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+Post the created page as news. This implies that the page also will be published, even if you've used the `PublishCreatedPage` to prevent page publishing. 
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    PostAsNews = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    PostAsNews = true,
+};
+```
+
 ## DisablePageComments option (as of April 2019 release)
 
 Type | Default value if not specified
@@ -353,6 +469,116 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     UrlMappingFile = @"c:\temp\urlmappingfile.csv",
+};
+```
+
+## SkipDefaultUrlRewrite option (as of September 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to perform default URL rewriting. In case you're using a custom URL mapping file and you do not want to apply the default URL rewrite logic then set this property. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipDefaultUrlRewrite = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipDefaultUrlRewrite = true,
+};
+```
+
+## AddTableListImageAsImageWebPart option (as of October 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | true
+
+Images living inside a table/list are also created as separate image web parts underneath that table/list. Set the `AddTableListImageAsImageWebPart` property to false if you want to stop the creation of these separate image web parts.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    AddTableListImageAsImageWebPart = false,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    AddTableListImageAsImageWebPart = false,
+};
+```
+
+## UserMappingFile option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify a file with custom user mappings. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    UserMappingFile = @"c:\temp\usermappingfile.csv",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    UserMappingFile = @"c:\temp\usermappingfile.csv",
+};
+```
+
+## LDAPConnectionString option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify a custom LDAP connection string towards your Active Directory environment. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    LDAPConnectionString = "LDAP://OU=Test,DC=CONTOSO,DC=COM",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    LDAPConnectionString = "LDAP://OU=Test,DC=CONTOSO,DC=COM",
+};
+```
+
+## SkipUserMapping option (as of November 2019 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The default behavior is to always perform user mapping when you are transforming pages coming from SharePoint on-premises, use this option to disable that. See the [URL mapping](modernize-userinterface-site-pages-urlmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipUserMapping = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipUserMapping = true,
 };
 ```
 

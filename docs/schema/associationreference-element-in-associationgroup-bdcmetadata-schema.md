@@ -1,11 +1,12 @@
 ---
+title: AssociationReference element in AssociationGroup
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AssociationReference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: e32c5267-53b0-9ff0-6e9a-1cb00d9f1d57
 ---
@@ -18,7 +19,7 @@ ms.assetid: e32c5267-53b0-9ff0-6e9a-1cb00d9f1d57
 
 Specifies an **AssociationReference** in an **AssociationGroup**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

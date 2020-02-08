@@ -31,10 +31,10 @@ To lock down the UDF assembly so that it cannot have Web access, you must explic
     
   
 For more information about configuring code groups, see the following articles on MSDN:
--  [Configuring Code Groups Using the .NET Framework Configuration Tool](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingNETConfigurationToolToWorkWithCodeGroups.asp?frame=true) (http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconUsingNETConfigurationToolToWorkWithCodeGroups.asp?frame=true)
+-  [Configuring Code Groups Using the .NET Framework Configuration Tool](https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpconUsingNETConfigurationToolToWorkWithCodeGroups.asp?frame=true) (https://msdn.microsoft.com/library/default.asp?url=/library/cpguide/html/cpconUsingNETConfigurationToolToWorkWithCodeGroups.asp?frame=true)
     
   
--  [Code Access Security in Practice](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/thcmch08.asp) (http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnnetsec/html/thcmch08.asp)
+-  [Code Access Security in Practice](https://msdn.microsoft.com/library/default.asp?url=/library/dnnetsec/html/thcmch08.asp) (https://msdn.microsoft.com/library/default.asp?url=/library/dnnetsec/html/thcmch08.asp)
     
   
 

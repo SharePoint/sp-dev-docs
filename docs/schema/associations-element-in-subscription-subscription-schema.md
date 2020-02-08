@@ -1,9 +1,10 @@
 ---
+title: Associations element in Subscription
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 6fd97a40-247a-35db-cddc-24e9401a8c71
 ---
@@ -16,7 +17,7 @@ ms.assetid: 6fd97a40-247a-35db-cddc-24e9401a8c71
 
 Lists the subscription associations in this cache subscription.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

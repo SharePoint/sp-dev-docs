@@ -7,7 +7,7 @@ localization_priority: Normal
 
 # Designing for section backgrounds using semantic slots
 
-When designing web parts for section backgrounds, you can use Office UI Fabric’s semantic slot system to guarantee accessibility and to enforce consistency across SharePoint sites. Semantic slots target customizations of specific page elements in order to align color usage and interaction patterns. They also allow you the flexibility to add or assign multiple palette colors for your components so they look great on all section backgrounds. This article will provide examples for semantic slots and how to incorporate them into your web part designs. Before getting started, you should be familiar with [how to design a SharePoint web part](https://docs.microsoft.com/en-us/sharepoint/dev/design/design-a-web-part) in order to understand the basic structure of web parts. You should also be familiar with [themes and colors in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/design/themes-colors).
+When designing web parts for section backgrounds, you can use Office UI Fabric’s semantic slot system to guarantee accessibility and to enforce consistency across SharePoint sites. Semantic slots target customizations of specific page elements in order to align color usage and interaction patterns. They also allow you the flexibility to add or assign multiple palette colors for your components so they look great on all section backgrounds. This article will provide examples for semantic slots and how to incorporate them into your web part designs. Before getting started, you should be familiar with [how to design a SharePoint web part](https://docs.microsoft.com/sharepoint/dev/design/design-a-web-part) in order to understand the basic structure of web parts. You should also be familiar with [themes and colors in SharePoint](https://docs.microsoft.com/sharepoint/dev/design/themes-colors).
 
 ## Section background
 
@@ -66,7 +66,7 @@ The current semantic slot list is defined by commonly used design patterns in Sh
 
 Semantic slots should be assigned based on the function of a page element. The name of a semantic slot can quickly tell you how it’s meant to be used. You can find all existing semantic slots and their use case examples in the [Fabric semantic colors documentation](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/styling/src/interfaces/ISemanticColors.ts).
 
-Fabric palette colors should be referenced from your site theme’s color ramp. If your site is using a SharePoint out of the box theme, you can reference [SharePoint theme color ramps](https://fluentfabric.azurewebsites.net/#/color/products). If your site is using a custom theme, you can generate a unique color ramp using the [Fabric theme generator](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator).
+Fabric palette colors should be referenced from your site theme’s color ramp. If your site is using a SharePoint out of the box theme, you can reference [SharePoint theme color ramps](https://fluentfabric.azurewebsites.net/#/color/products). If your site is using a custom theme, you can generate a unique color ramp using the [Fabric theme generator](https://developer.microsoft.com/fabric#/styles/themegenerator).
 
 ![Example of redlines for a web part in the None section background](../images/doc-semantic-slot-1.png)
 

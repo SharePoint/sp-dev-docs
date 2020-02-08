@@ -133,7 +133,7 @@ The body of the HTTP request to your service notification URL contains a webhook
 }
 ```
 
-The notification doesn't include any information about the changes that triggered it. Your application is expected to use the [GetChanges API](https://msdn.microsoft.com/EN-US/library/office/dn531433.aspx#bk_ListGetChanges) on the list to query the collection of changes from the change log and store the change token value for any subsequent calls when the application is notified.
+The notification doesn't include any information about the changes that triggered it. Your application is expected to use the [GetChanges API](https://msdn.microsoft.com/library/office/dn531433.aspx#bk_ListGetChanges) on the list to query the collection of changes from the change log and store the change token value for any subsequent calls when the application is notified.
 
 ## Event types
 

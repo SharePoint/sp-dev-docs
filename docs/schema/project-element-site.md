@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Site schema
@@ -18,7 +18,7 @@ description: Serves as the top-level element in an Onet.xml file that contains a
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
-Serves as the top-level element in an [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file that contains a site definition configuration or Web template configuration for a new website. 
+Serves as the top-level element in an [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file that contains a site definition configuration or Web template configuration for a new website. 
   
 ```XML
 <Project
@@ -75,7 +75,7 @@ None
    
 ## Example
 
-The following example shows the opening line of the [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file for the standard SharePoint Foundation site definition (**STS**).
+The following example shows the opening line of the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file for the standard SharePoint Foundation site definition (**STS**).
   
 ```XML
 <Project Title="$Resources:onet_TeamWebSite;" Revision="2" ListDir="$Resources:core,lists_Folder;" xmlns:ows="Microsoft SharePoint">

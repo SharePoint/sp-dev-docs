@@ -1,11 +1,12 @@
 ---
+title: Option Element (WorkflowInfo)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c82dc727-b3e1-4c1b-80c4-a9d689795eaa
 ---
@@ -227,8 +228,8 @@ The following XML demonstrates how to construct an **Option** element so that it
 - [.ACTIONS File Example](actions-file-example-workflowinfo.md)
 - [Default Workflow Actions](default-workflow-actions-workflowinfo.md)
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

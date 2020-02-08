@@ -12,14 +12,14 @@ SharePoint site owners have new options for applying custom styles and colors to
 These new features include:
 
 * The ability to define custom themes and make them available to site owners. Themes are defined in a [JSON schema](sharepoint-site-theming-json-schema.md) that stores color settings and related metadata for each theme.
-* An online [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) that you can use to define new custom themes.
+* An online [Theme Generator tool](https://aka.ms/themedesigner) that you can use to define new custom themes.
 * A simplified set of default themes, with six light themes and two dark themes presently available.
 * An updated color palette, with 12 light colors and 6 dark colors, as well as 16 supplementary themes.
 * Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
 
-These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the [SharePoint client-side object model (CSOM)](sharepoint-site-theming-csom.md) or the [SharePoint REST API](sharepoint-site-theming-rest-api.md). For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview)
+These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the [SharePoint client-side object model (CSOM)](sharepoint-site-theming-csom.md) or the [SharePoint REST API](sharepoint-site-theming-rest-api.md). For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview)
 
-For general information about working with themes to customize the look of your sites, see [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818).
+For general information about working with themes to customize the look of your sites, see [Change the look of your SharePoint site](https://support.office.com/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818).
 
 ## Default themes
 
@@ -90,7 +90,7 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 
     `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
 
-7. For more information about Windows PowerShell, see [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?view=powershell-6).
+7. For more information about Windows PowerShell, see [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6).
 
 ## See also
 

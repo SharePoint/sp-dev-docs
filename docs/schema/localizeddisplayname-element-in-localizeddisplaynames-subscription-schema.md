@@ -1,9 +1,10 @@
 ---
+title: LocalizedDisplayName Element in LocalizedDisplayNames
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f6fd7c82-4d2b-12f4-7c42-dd11f48919bf
 ---
@@ -16,7 +17,7 @@ ms.assetid: f6fd7c82-4d2b-12f4-7c42-dd11f48919bf
 
 Specifies a localized display name of a metadata object.
 
-**Namespace**: http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/office/2006/03/BusinessDataCatalog`
 
 **Schema**: Subscription
 

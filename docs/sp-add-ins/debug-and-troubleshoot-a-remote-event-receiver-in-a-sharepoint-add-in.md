@@ -18,14 +18,14 @@ When a SharePoint Add-in project in Visual Studio includes a remote event receiv
 
 ### To configure Azure
 
-1. If you don't already have one, get a Microsoft Azure subscription. One is included as a benefit with an [MSDN Subscription](http://azure.microsoft.com/en-us/pricing/member-offers/msdn-benefits/).
+1. If you don't already have one, get a Microsoft Azure subscription. One is included as a benefit with an [MSDN Subscription](https://azure.microsoft.com/pricing/member-offers/msdn-benefits/).
 
-2. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-resource-manager-overview).
+2. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-resource-manager-overview).
     
 
 ### To configure the SharePoint Add-in project in Visual Studio
 
-1. You should have the latest version of the Office Developer Tools for Visual Studio, so [run the WebPI installer here](http://aka.ms/OfficeDevToolsForVS2013), or  [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015).
+1. You should have the latest version of the Office Developer Tools for Visual Studio, so [run the WebPI installer here](https://aka.ms/OfficeDevToolsForVS2013), or  [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015).
 
 2. After you add an RER or add-in event handler to a SharePoint Add-in project in Visual Studio, right-click the project in **Solution Explorer** and select **Properties**.
 
@@ -37,7 +37,7 @@ When a SharePoint Add-in project in Visual Studio includes a remote event receiv
     
     1. Sign in to the Azure portal and open the **Service Bus** tab.
 
-    2. Open the namespace that you created for RER debugging and navigate to the connection strings. The Azure portal UI changes frequently. If you can't find the connection strings, see [Azure portal help](https://docs.microsoft.com/en-us/azure/).
+    2. Open the namespace that you created for RER debugging and navigate to the connection strings. The Azure portal UI changes frequently. If you can't find the connection strings, see [Azure portal help](https://docs.microsoft.com/azure/).
 
     3. Copy the **SAS** connection string. This is the string you enter in the Visual Studio project properties.
 

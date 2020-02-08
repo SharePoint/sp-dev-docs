@@ -1,9 +1,10 @@
 ---
+title: FilterDescriptor Element in FilterDescriptors
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 6817792b-e0c4-6092-a576-2759ea28045a
 ---
@@ -16,7 +17,7 @@ ms.assetid: 6817792b-e0c4-6092-a576-2759ea28045a
 
 Specifies localized display names and properties, in any combination, for a [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadata-schema.md.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

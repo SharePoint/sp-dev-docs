@@ -1,9 +1,10 @@
 ---
+title: Modules
 manager: soliver
 ms.date: 12/7/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 4f43e194-322e-4eca-9c96-8ad9f13818bd
 ---

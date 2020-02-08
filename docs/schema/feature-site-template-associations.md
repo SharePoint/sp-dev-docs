@@ -1,9 +1,10 @@
 ---
+title: Feature/Site Template Associations
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: ed2a52f8-358f-47f5-afcb-5819b288e913
 ---

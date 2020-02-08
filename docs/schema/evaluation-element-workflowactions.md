@@ -1,11 +1,12 @@
 ---
+title: Evaluation Element (WorkflowActions)
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 5b0fea56-7518-41d3-ac59-5b208a09e2bc
 ---
@@ -64,8 +65,8 @@ None
 
 ## See also
 
-- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/en-us/library/office/bb417436.aspx)
-- [Workflow Actions Schema Overview](https://msdn.microsoft.com/en-us/library/office/bb897626.aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
 
 
 

@@ -311,7 +311,7 @@ var g_navBarHelpDefaultKey = "HelpHome";
 -  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   
--  [Menu control overview (ASP.NET)](https://technet.microsoft.com/en-us/ecs0x9w5(v=vs.94))
+-  [Menu control overview (ASP.NET)](https://technet.microsoft.com/ecs0x9w5(v=vs.94))
     
   
 

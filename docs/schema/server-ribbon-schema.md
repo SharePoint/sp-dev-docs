@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Server Ribbon schema
@@ -78,5 +78,5 @@ An XML document that customizes the server ribbon must validate with the schema 
 ## See also
 
 - [CommandUIDefinition Element](commanduidefinition-element.md)
-- [Building Block: Server Ribbon](http://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8%28Office.15%29.aspx)
+- [Building Block: Server Ribbon](https://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8%28Office.15%29.aspx)
 

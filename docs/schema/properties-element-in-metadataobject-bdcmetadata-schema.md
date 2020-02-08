@@ -1,11 +1,12 @@
 ---
+title: Properties Element in MetadataObject
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Properties
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 9901904f-96ee-0cbb-64a9-c2aad9d72128
 ---
@@ -18,7 +19,7 @@ ms.assetid: 9901904f-96ee-0cbb-64a9-c2aad9d72128
 
 Specifies a list of properties of a metadata object.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 
@@ -102,7 +103,7 @@ None.
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
+<td align="left"><p><a href="https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
 <td align="left"></td>
 </tr>
 <tr class="even">

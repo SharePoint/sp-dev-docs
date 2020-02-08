@@ -1,11 +1,12 @@
 ---
+title: DestinationEntity Element in Association
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.DestinationEntity
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 15c53c3b-888d-67c7-af7d-ef36922eeebc
 ---
@@ -18,7 +19,7 @@ ms.assetid: 15c53c3b-888d-67c7-af7d-ef36922eeebc
 
 Specifies the destination external content type in the **Association**.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

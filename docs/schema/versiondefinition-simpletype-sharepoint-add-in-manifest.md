@@ -1,9 +1,10 @@
 ---
+title: VersionDefinition simpleType
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
 ms.topic: article
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 711c0dd3-1a2b-2dfb-e822-ca3edf1657d4
 ---
@@ -21,26 +22,11 @@ Identifies a version for a feature, capability, add-in, product, or other softwa
 
 ## Type information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Base type</span></p></td>
-<td align="left"><p>xs:string</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>appmanifest.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Base type**  | xs:string |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
 
 ## Definition
 
@@ -51,10 +37,3 @@ Identifies a version for a feature, capability, add-in, product, or other softwa
         </xs:restriction>
     </xs:simpleType>
 ```
-
-
-
-
-
-
-

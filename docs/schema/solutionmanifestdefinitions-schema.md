@@ -1,9 +1,10 @@
 ---
+title: SolutionManifestDefinitions schema
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f7fb29db-d6e2-8ec8-243f-93ff39a2d506
 ---
@@ -12,7 +13,7 @@ ms.assetid: f7fb29db-d6e2-8ec8-243f-93ff39a2d506
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-This section contains documentation for the [Solution Manifest Definition schema (SolutionManifestDefinitions.xsd)](http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest). Explore the topics in this section to learn about each element in this schema.
+This section contains documentation for the **Solution Manifest Definition schema (SolutionManifestDefinitions.xsd)**. Explore the topics in this section to learn about each element in this schema.
 
 - [ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)
 

@@ -20,9 +20,9 @@ An Office 365 developer site makes it easier to get set up and start creating, t
 - Office 365 Education A2, A3, or A4
 - Office 365 Government G1, G3, G4, or K1
 
-**If you have an Office 365 Small Business subscription,** it supports only a single site collection, so you can't create a developer site collection. If you would like to learn more about Office 365 plans for your business, see [SharePoint Online: software boundaries and limits](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/sharepoint-online-software-boundaries-and-limits-HA102694293.aspx).
+**If you have an Office 365 Small Business subscription,** it supports only a single site collection, so you can't create a developer site collection. If you would like to learn more about Office 365 plans for your business, see [SharePoint Online: software boundaries and limits](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/sharepoint-online-software-boundaries-and-limits-HA102694293.aspx).
     
-For more information about the Office 365 Enterprise offerings, see [Plans &amp; Pricing](http://products.office.com/en-us/business/office-365-enterprise-e1-business-software).
+For more information about the Office 365 Enterprise offerings, see [Plans &amp; Pricing](https://products.office.com/business/office-365-enterprise-e1-business-software).
 
 <a name="bk_createdevsite"> </a>
 ## Create a developer site
@@ -65,8 +65,8 @@ For more information about the Office 365 Enterprise offerings, see [Plans &amp;
 <a name="bk_addresources"> </a>
 
 -  [SharePoint Add-ins](sharepoint-add-ins.md)
--  [Create site collection](https://docs.microsoft.com/en-us/sharepoint/create-site-collection)
--  [Delete site collection](https://docs.microsoft.com/en-us/sharepoint/delete-site-collection)
+-  [Create site collection](https://docs.microsoft.com/sharepoint/create-site-collection)
+-  [Delete site collection](https://docs.microsoft.com/sharepoint/delete-site-collection)
     
  
 

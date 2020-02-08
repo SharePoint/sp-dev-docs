@@ -1,11 +1,12 @@
 ---
+title: Property element in Properties (BDCMetadata)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Property
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 2e6e8d5d-ef3b-c536-f3d1-ad2039b92c24
 ---
@@ -16,7 +17,7 @@ ms.assetid: 2e6e8d5d-ef3b-c536-f3d1-ad2039b92c24
 
 Specifies the name and type of a property of a metadata object.
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
 

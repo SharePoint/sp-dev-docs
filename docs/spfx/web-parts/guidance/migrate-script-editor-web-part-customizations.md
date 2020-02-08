@@ -98,7 +98,7 @@ SharePoint Framework gives the control back to the IT. Because SharePoint Framew
 
 When building customizations using the Script Editor web part, citizen developers owned the complete DOM of their customization. There were no guidelines related to the user experience and how such customization should work. As a result, different developers built customizations in different ways, which led to an inconsistent user experience for end users.
 
-One of the goals of the SharePoint Framework is to standardize building client-side customizations so that they are uniform from the deployment, maintenance, and user experience point of view. Using [Office UI Fabric](http://dev.office.com/fabric), developers can more easily make their custom solutions look and behave like they are an integral part of SharePoint, simplifying user adoption. SharePoint Framework toolchain generates package files for the solutions that are deployed to the app catalog, and script bundles that are deployed to the hosting location of your choice. Every solution is structured and managed in the same way.
+One of the goals of the SharePoint Framework is to standardize building client-side customizations so that they are uniform from the deployment, maintenance, and user experience point of view. Using [Office UI Fabric](https://dev.office.com/fabric), developers can more easily make their custom solutions look and behave like they are an integral part of SharePoint, simplifying user adoption. SharePoint Framework toolchain generates package files for the solutions that are deployed to the app catalog, and script bundles that are deployed to the hosting location of your choice. Every solution is structured and managed in the same way.
 
 ### Don't modify DOM outside of the customization
 
@@ -200,7 +200,7 @@ public render(): void {
 
 Many client-side customizations use jQuery for executing AJAX requests for its simplicity and cross-browser compatibility. If this is all that you're using jQuery for, you can execute the AJAX calls by using the standard HTTP client provided with the SharePoint Framework. 
 
-SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](https://docs.microsoft.com/en-us/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](https://docs.microsoft.com/en-us/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
+SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](https://docs.microsoft.com/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](https://docs.microsoft.com/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
 
 ```typescript
 this.context.spHttpClient.get(`${this.context.pageContext.web.absoluteUrl}/_api/web?$select=Title`,

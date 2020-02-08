@@ -1,9 +1,10 @@
 ---
+title: AssociationGroup element in AssociationGroups
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: f73d97e6-15d6-dae0-743c-aab2d66d741d
 ---
@@ -16,7 +17,7 @@ ms.assetid: f73d97e6-15d6-dae0-743c-aab2d66d741d
 
 Specifies localized display names and properties, in any combination, for an [AssociationGroup element in AssociationGroups (BDCMetadata Schema)](associationgroup-element-in-associationgroups-bdcmetadata-schema.md).
 
-**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+**Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources`
 
 **Schema**: BDCMetadataResource
 

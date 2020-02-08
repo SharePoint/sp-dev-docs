@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - upgrading - [sharepoint 2010], definition schema
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - Upgrade schema
@@ -30,7 +30,7 @@ The following elements and attributes are implemented within a site upgrade defi
   
     - [List](list-element-upgrade.md)
   
-  - [Files](http://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2%28Office.15%29.aspx)
+  - [Files](https://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2%28Office.15%29.aspx)
   
     - [File](file-element-upgrade.md)
   

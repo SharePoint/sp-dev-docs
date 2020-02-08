@@ -1,9 +1,10 @@
 ---
+title: Feature element (AppHostWebFeatures)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 2d490115-671e-8fa3-f90f-446d92b5bd71
 ---
@@ -15,26 +16,11 @@ ms.assetid: 2d490115-671e-8fa3-f90f-446d92b5bd71
 
 ## Element information
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span class="label">Element type</span></p></td>
-<td align="left"><p><a href="featuredefinition-complextype-apphostwebfeatures.md">FeatureDefinition</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>apphostwebfeatures.xsd</p></td>
-</tr>
-</tbody>
-</table>
+|   |   |
+|---|---|
+| **Element type**  | FeatureDefinition |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file**  | apphostwebfeatures.xsd |
 
 ## Definition
 

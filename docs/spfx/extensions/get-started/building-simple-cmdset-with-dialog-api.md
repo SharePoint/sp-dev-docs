@@ -3,6 +3,7 @@ title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
 ms.date: 03/14/2019
 ms.prod: sharepoint
+ms.custom: scenarios:getting-started
 ---
 
 # Build your first ListView Command Set extension
@@ -362,7 +363,7 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
 }
 ```
 
-## Deploy the extension to SharePoint Online and host JavaScript from local host
+## Deploy the extension to SharePoint Online
 
 Now you are ready to deploy the solution to a SharePoint site and have the `CustomAction` automatically associated on the site level.
 

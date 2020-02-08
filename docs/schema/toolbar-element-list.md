@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 api_name:
 - List schema
@@ -55,7 +55,7 @@ Numerous
    
 ## Example
 
-The following excerpt from the [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for custom lists defines the **New** command of the toolbar, displaying the option to create items only to users with permission to add list items. 
+The following excerpt from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for custom lists defines the **New** command of the toolbar, displaying the option to create items only to users with permission to add list items. 
   
 ```XML
 <Toolbar Position="After" Type="Freeform">
@@ -74,5 +74,5 @@ The following excerpt from the [Schema.xml](http://msdn.microsoft.com/library/c2
 
 ## See also
 
-- [List Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 

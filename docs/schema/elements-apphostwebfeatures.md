@@ -1,9 +1,10 @@
 ---
+title: Elements (AppHostWebFeatures)
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: office-online-server
+ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 90375774-33ca-2b50-1578-9631f3e86d1a
 ---

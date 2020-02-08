@@ -11,7 +11,7 @@ Web parts are the building blocks of your page.
 
 This is a visual overview of Communication site and Team site templates, highlighting how web parts work together to create a coherent overall design. Use these pages as reference when designing a SharePoint web part. 
 
-It is important to consider how the web part will look and function when sitting next to other web parts on a page. Follow the patterns in this documentation and on the [Office UI Fabric site](https://developer.microsoft.com/en-us/fabric) to ensure consistency in layout and grid alignment, font size and hierarchy, commanding, empty states, and more.
+It is important to consider how the web part will look and function when sitting next to other web parts on a page. Follow the patterns in this documentation and on the [Office UI Fabric site](https://developer.microsoft.com/fabric) to ensure consistency in layout and grid alignment, font size and hierarchy, commanding, empty states, and more.
 
 ## Communication sites
 
@@ -35,6 +35,6 @@ The Team site design is the default layout for any new team. It features the New
 ![Team site homepage](../images/sites_teamsite.png) 
 
 These example site and web part designs have been added to the SharePoint toolkit and can be used as reference when designing web parts.
-For more information, see the [SharePoint toolkit](https://developer.microsoft.com/en-us/fabric#/resources).
+For more information, see the [SharePoint toolkit](https://developer.microsoft.com/fabric#/resources).
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Migrating webparts using the Migration API"
+title: "Migrating web parts using the Migration API"
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
@@ -11,31 +11,31 @@ search.appverid: MET150
 msCollection: 
 - SPMigration
 - M365-collaboration
-description: "Migrating webparts using the Migration API"
+description: "Migrating web parts using the Migration API"
 ---
-# Migrating webparts using the Migration API
+# Migrating web parts using the Migration API
 
 The Migration API supports the ability to migrate web parts to SharePoint Online using the PRIME package by calling CSOM/REST/SOAP WS to get web part data and properties to build the PRIME package.
 
-An advantage in using the Migration API for your web part migration is the ability to migrate your web parts in one call and improve performance. Part of the manifest includes the web part as you import its associated page. By using the Migration API you can can put all the web parts you have on that page.
+An advantage in using the Migration API for your web part migration is the ability to migrate your web parts in one call and improve performance. Part of the manifest includes the web part as you import its associated page. By using the Migration API, you can put all the web parts you have on that page.
 
 ## Using the Serializer DLL
 
 There are two attributes that are handled in a unique way that requires using the WebPart User Properties Serializer DLL.
 
-There is a technical challenge to generate the property values for *AllUsersProperties* and *PerUserProperties* when building the PRIME package. This is because these the property values are BASE64 encoded blob, which are serialized web part properties and web part connection info.
+There is a technical challenge to generate the property values for *AllUsersProperties* and *PerUserProperties* when building the PRIME package. This challenge is because the property values are BASE64 encoded blob, which is serialized web part properties and web part connection info.
  
 
-To get the Serializer .dll, do the following:
+To get the Serializer .dll, perform following steps:
 
 
 1. Install the SPMT Client on your local computer:  [Install SPMT](https://aka.ms/spmt-GA-page).
 2. Browse to the install location of SPMT
-5. Locate and copy the *microsoft.sharepoint.migration.webpart.serializer.dll* and you can copy it into your project.
+3. Locate and copy the *microsoft.sharepoint.migration.webpart.serializer.dll* and you can copy it into your project.
 
-For a complete list of the supported webparts, see:
+For a complete list of the supported web parts, see:
 
-- [SPMT & Migration API supported SharePoint web parts](https://docs.microsoft.com/en-us/sharepointmigration/spmt-supported-webparts)
+- [SPMT & Migration API supported SharePoint web parts](https://docs.microsoft.com/sharepointmigration/spmt-supported-webparts)
 
 
 
@@ -43,7 +43,7 @@ For a complete list of the supported webparts, see:
 
 For an explanation of the **SPWebPart** fields see:
 
-- [SPWebPart](https://docs.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-primepf/25cfceeb-7769-4331-9936-ce3b9ced87ad)
+- [SPWebPart](https://docs.microsoft.com/openspecs/sharepoint_protocols/ms-primepf/25cfceeb-7769-4331-9936-ce3b9ced87ad)
 
 
 
@@ -159,7 +159,7 @@ For an explanation of the **SPWebPart** fields see:
 
 ## Security controls
 
-Due the security control design on the server side, the following behavior:
+Due to the security control design on the server side, the following behavior:
  
 - If the NoScript is off, then go on migrating all web part as currently
 - If NoScript is on, then first check web part level safety
@@ -169,7 +169,7 @@ Due the security control design on the server side, the following behavior:
         - Otherwise, go on migrating this web part
  
  
-Here is the list of web parts that will be ignored by server side code (treated as untrusted webpart) when NoScript is turned ON:
+Here is the list of web parts that will be ignored by server-side code (treated as untrusted webpart) when NoScript is turned ON:
 
 - XsltListViewWebPart
 - ContentEditorWebPart
@@ -200,7 +200,7 @@ Here is the list of web parts that will be ignored by server side code (treated 
 *Question:*  How to fetch the web part connection info as the input for serialization API?
 *Answer:*    The web part connections could be found in <SPWebPartConnection> elements from the web part page in the response of operation ‘GetWebPartPage’ in ‘WebPartPagesWebService’.
 
-View flags: refer to this https://docs.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-wssfob/252d2086-6571-430f-863d-bcaf9d267e62 , e.g. all the view flags https://docs.microsoft.com/en-us/openspecs/sharepoint_protocols/ms-wssfob/16a9d8ca-185d-40ec-956e-bb6bf3488cf7 . You will need to convert all flag values to PRIME element ‘flags’.
+View flags: refer to this https://docs.microsoft.com/openspecs/sharepoint_protocols/ms-wssfob/252d2086-6571-430f-863d-bcaf9d267e62, for example, all the view flags https://docs.microsoft.com/openspecs/sharepoint_protocols/ms-wssfob/16a9d8ca-185d-40ec-956e-bb6bf3488cf7. You will need to convert all flag values to PRIME element ‘flags’.
 
 ## Appendix
 

@@ -97,7 +97,7 @@ To create a custom object, Dashboard Designer retrieves the object's metadata fr
   
     
     
-For more information about extension metadata, see  [How to: Manually Register PerformancePoint Services Extensions](http://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
+For more information about extension metadata, see  [How to: Manually Register PerformancePoint Services Extensions](https://msdn.microsoft.com/library/3aa6d340-4b05-46b3-9648-2b6e18e04e09%28Office.15%29.aspx).
   
     
     
@@ -165,13 +165,13 @@ Custom renderers, providers, and scorecard transforms run on the application ser
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Fundamentals of PerformancePoint Services Development](http://msdn.microsoft.com/library/5d2c183b-95f8-4930-b6d0-f3ffe1ee166e%28Office.15%29.aspx)
+-  [Fundamentals of PerformancePoint Services Development](https://msdn.microsoft.com/library/5d2c183b-95f8-4930-b6d0-f3ffe1ee166e%28Office.15%29.aspx)
     
   
--  [Code Samples for PerformancePoint Services in SharePoint Server 2010](http://msdn.microsoft.com/library/97f0cbd4-03ef-44f8-9869-699df9d9c97f%28Office.15%29.aspx)
+-  [Code Samples for PerformancePoint Services in SharePoint Server 2010](https://msdn.microsoft.com/library/97f0cbd4-03ef-44f8-9869-699df9d9c97f%28Office.15%29.aspx)
     
   
--  [Troubleshooting and FAQs for PerformancePoint Services Development](http://msdn.microsoft.com/library/a90156e2-0522-46a1-9fc9-b6c8d2fffad7%28Office.15%29.aspx)
+-  [Troubleshooting and FAQs for PerformancePoint Services Development](https://msdn.microsoft.com/library/a90156e2-0522-46a1-9fc9-b6c8d2fffad7%28Office.15%29.aspx)
     
   
 

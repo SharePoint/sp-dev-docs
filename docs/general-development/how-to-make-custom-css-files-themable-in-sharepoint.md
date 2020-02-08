@@ -186,7 +186,7 @@ The following shows examples of the **RecolorImage** annotation being used in a 
 Place the custom CSS files in the Themable folder in the Style library (not the Themable folder in the Master Page Gallery). Only CSS files that are stored in the Themable folder in the Style library are recognized by the theming engine. The Themable folder is created automatically for publishing sites. Otherwise, you can create the Themable folder in the correct location (http://  _SiteCollectionName_/Style Library/ _language_/Themable/).
   
 > [!NOTE]
-> The name of the  _language_ folder must be in the 4-digit format _ll-cc_ to identify the language and culture, respectively. For example, en-us or ar-sa. For more information, see [Language identifiers and OptionState Id values in Office 2013](http://technet.microsoft.com/en-us/library/cc179219.aspx). 
+> The name of the  _language_ folder must be in the 4-digit format _ll-cc_ to identify the language and culture, respectively. For example, en-us or ar-sa. For more information, see [Language identifiers and OptionState Id values in Office 2013](https://technet.microsoft.com/library/cc179219.aspx). 
   
     
     
@@ -253,7 +253,7 @@ The following is an example of an **<SharePoint:CssRegistration>** element.
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
     
   
 -  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
