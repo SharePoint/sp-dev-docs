@@ -1310,10 +1310,10 @@ Operators specify the type of operation to perform. The following operators are 
 **Ternary operators** - The following are operators that expect three operands:
 
 - **substring**: returns the part of the string between the start and end indicies. - _Only available in SharePoint Online_
-  - `"txtContent":"=substring('DogFood', 3, 4)"` results in _Fo_
-  - `"txtContent":"=substring('DogFood', 4, 3)"` results in _Fo_
-  - `"txtContent":"=substring('DogFood', 3, 6)"` results in _Food_
-  - `"txtContent":"=substring('DogFood', 6, 3)"` results in _Food_
+  - `"txtContent":"=substring('DogFood', 3, 4)"` results in _F_
+  - `"txtContent":"=substring('DogFood', 4, 3)"` results in _F_
+  - `"txtContent":"=substring('DogFood', 3, 6)"` results in _Foo_
+  - `"txtContent":"=substring('DogFood', 6, 3)"` results in _Foo_
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 
