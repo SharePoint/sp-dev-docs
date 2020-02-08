@@ -1,7 +1,7 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
-ms.date: 10/22/2019
+ms.date: 02/08/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -12,7 +12,7 @@ Connect your web part to SharePoint to access functionality and data in SharePoi
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/zHYJ5SZsCLc]
+> [!Video https://www.youtube.com/watch?v=4F65TmsHucY]
 
 ## Run gulp serve
 

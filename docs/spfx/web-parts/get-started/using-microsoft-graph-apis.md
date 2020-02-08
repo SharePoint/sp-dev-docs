@@ -1,7 +1,8 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph APIs
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 01/9/2020
+ms.date: 02/08/2020
+localization_priority: Priority
 ms.prod: sharepoint
 ---
 
@@ -14,6 +15,9 @@ Before you start, complete the procedures in the following articles to ensure th
 * [Build your first web part](build-a-hello-world-web-part.md)
 * [Connect your web part to SharePoint](connect-to-sharepoint.md)
 * [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
+
+
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
 ## Create a SharePoint Framework project for Graph API usage
 

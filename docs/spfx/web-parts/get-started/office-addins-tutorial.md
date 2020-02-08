@@ -1,9 +1,9 @@
 ---
 title: Tutorial for creating Outlook Web Access extension using SharePoint Framework
 description: Creating Outlook add-ins using SharePoint Framework
-ms.date: 01/07/2020
+ms.date: 02/08/2020
 ms.prod: sharepoint
-localization_priority: Normal
+localization_priority: Priority
 ---
 
 # Tutorial for creating Outlook Web Access extension using SharePoint Framework
@@ -19,6 +19,12 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
 
 > [!NOTE]
 > This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the library (*see [this article for reference](https://docs.microsoft.com/sharepoint/dev/spfx/try-preview-capabilities)*)
+
+<br/>
+
+> [!Video https://www.youtube.com/watch?v=QtGjTAjbIKU]
+
+<br/>
 
 ## Create a new solution
 

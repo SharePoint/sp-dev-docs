@@ -1,8 +1,9 @@
 ---
 title: Host your client-side web part from Office 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Office 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online. 
-ms.date: 03/14/2019
+ms.date: 02/08/2020
 ms.prod: sharepoint
+localization_priority: Priority
 ms.custom: scenarios:getting-started
 ---
 
@@ -27,7 +28,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/GNukiGIQZfk]
+> [!Video https://www.youtube.com/watch?v=wl2ur1SBp3Q]
 
 <br/>
 

@@ -1,7 +1,8 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and are deployed to SharePoint sites when the solution is installed on it. 
-ms.date: 03/14/2019
+ms.date: 02/08/2020
+localization_priority: Priority
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -20,7 +21,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 <br/>
 
-> [!Video https://www.youtube.com/embed/_oHjmahz4B8]
+> [!Video https://www.youtube.com/watch?v=_oHjmahz4B8]
 
 <br/>
 

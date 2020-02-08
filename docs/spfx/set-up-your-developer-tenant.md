@@ -1,7 +1,7 @@
 ---
 title: Set up your Office 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up an Office 365 tenant.
-ms.date: 08/20/2018
+ms.date: 02/08/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -17,6 +17,14 @@ If you don't have one, you can get an Office 365 developer subscription when you
 
 > [!NOTE]
 > Make sure that you are signed out of any existing Office 365 tenants before you sign up for the Office 365 Developer Program.
+
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+
+<br/>
+
+> [!Video https://www.youtube.com/watch?v=yc1IYgYp7qQ]
+
+<br/>
 
 ## Create app catalog site
 
