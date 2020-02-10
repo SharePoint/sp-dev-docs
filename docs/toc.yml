@@ -410,8 +410,6 @@
     items:
     - name: Overview
       href: general-development/programming-models-in-sharepoint.md
-    - name: SharePoint Add-ins compared with SharePoint solutions
-      href: general-development/sharepoint-add-ins-compared-with-sharepoint-solutions.md
     - name: Build farm solutions
       href: general-development/build-farm-solutions-in-sharepoint.md
       items:
@@ -1199,6 +1197,8 @@
         href: sp-add-ins/ux-design-for-sharepoint-add-ins.md
       - name: SharePoint Add-ins UX design guidelines
         href: sp-add-ins/sharepoint-add-ins-ux-design-guidelines.md
+    - name: SharePoint Add-ins compared with SharePoint solutions
+      href: general-development/sharepoint-add-ins-compared-with-sharepoint-solutions.md
   - name: Develop
     items:
     - name: Overview
