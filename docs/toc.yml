@@ -39,6 +39,48 @@
         href: features/hub-site/REST-sphubsite-type.md
       - name: SPHubSiteData type
         href: features/hub-site/REST-sphubsitedata-type.md
+  - name: Site designs & site scripts
+    items:
+    - name: Overview
+      href: declarative-customization/site-design-overview.md
+    - name: Get started
+      href: declarative-customization/get-started-create-site-design.md
+    - name: Set scope
+      href: declarative-customization/site-design-scoping.md
+    - name: Customize default design
+      href: declarative-customization/customize-default-site-design.md
+    - name: JSON schema reference
+      href: declarative-customization/site-design-json-schema.md
+    - name: REST API
+      href: declarative-customization/site-design-rest-api.md
+    - name: Call Power Automate from site scripts
+      href: declarative-customization/site-design-trigger-flow-tutorial.md
+    - name: PnP provisioning engine
+      href: declarative-customization/site-design-pnp-provisioning.md
+    - name: SPO PowerShell cmdlets
+      href: declarative-customization/site-design-powershell.md
+    - name: PnP PowerShell cmdlets
+      href: declarative-customization/site-design-pnppowershell.md
+    - name: Office 365 CLI commands
+      href: declarative-customization/site-design-o365cli.md
+  - name: Site theming
+    items:
+    - name: Overview
+      href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
+    - name: JSON schema reference
+      href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
+    - name: PowerShell cmdlets
+      href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
+    - name: CSOM API
+      href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
+    - name: REST API
+      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
+  - name: List formatting
+    items:
+    - name: Column formatting
+      href: declarative-customization/column-formatting.md
+    - name: View formatting
+      href: declarative-customization/view-formatting.md
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
@@ -354,48 +396,6 @@
       href: general-development/client-side-web-parts-maintenance-mode.md
   - name: Roadmap
     href: spfx/roadmap.md
-- name: Declarative customizations
-  items:
-  - name: Site designs & site scripts
-    items:
-    - name: Overview
-      href: declarative-customization/site-design-overview.md
-    - name: Get started
-      href: declarative-customization/get-started-create-site-design.md
-    - name: Set scope
-      href: declarative-customization/site-design-scoping.md
-    - name: Customize default design
-      href: declarative-customization/customize-default-site-design.md
-    - name: JSON schema reference
-      href: declarative-customization/site-design-json-schema.md
-    - name: REST API
-      href: declarative-customization/site-design-rest-api.md
-    - name: Call Power Automate from site scripts
-      href: declarative-customization/site-design-trigger-flow-tutorial.md
-    - name: PnP provisioning engine
-      href: declarative-customization/site-design-pnp-provisioning.md
-    - name: SPO PowerShell cmdlets
-      href: declarative-customization/site-design-powershell.md
-    - name: PnP PowerShell cmdlets
-      href: declarative-customization/site-design-pnppowershell.md
-    - name: Office 365 CLI commands
-      href: declarative-customization/site-design-o365cli.md
-  - name: Site theming
-    items:
-    - name: Overview
-      href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
-    - name: JSON schema reference
-      href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
-    - name: PowerShell cmdlets
-      href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
-    - name: CSOM API
-      href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
-    - name: REST API
-      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
-  - name: Column formatting
-    href: declarative-customization/column-formatting.md
-  - name: View formatting
-    href: declarative-customization/view-formatting.md
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
