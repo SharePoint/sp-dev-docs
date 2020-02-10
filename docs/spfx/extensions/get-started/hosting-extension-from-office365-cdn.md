@@ -1,7 +1,7 @@
 ---
 title: Host extension from Office 365 CDN (Hello World part 4)
 description: Deploy your SharePoint Framework Application Customizer to be hosted from an Office 365 CDN and deploy that to SharePoint for end users. 
-ms.date: 08/27/2018
+ms.date: 01/28/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -29,15 +29,28 @@ You can also follow these steps by watching the video on the SharePoint PnP YouT
 
 Office 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
 
-1. Download the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) to ensure that you have the latest version.
+1. Ensure that you have the latest version of the SharePoint Online Management Shell by running the PowerShell in Administrator role and executing following PowerShell cmdlet to download latest version of the cmdlets from [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell).
 
-2. Connect to your SharePoint Online tenant by using PowerShell:
+    ![Run as administarator](../../../images/tutorial-get-started-4-run-spo-shell-admin.png)
+
+    ```powershell
+    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
+    ```
+    > [!TIP]
+    > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
+
+    > [!NOTE]
+    > You can also install SharePoint Online Management Shell using [an installer](https://www.microsoft.com/en-us/download/details.aspx?id=35588) available from the Microsoft download center, but in general PowerShell gallery option is recommended.
+
+1. Confirm module installation if asked in the PowerShell window
+   
+1. Connect to your SharePoint Online tenant by using PowerShell:
     
     ```powershell
     Connect-SPOService -Url https://contoso-admin.sharepoint.com
     ```
     
-3. Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one: 
+1. Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one: 
     
     ```powershell
     Get-SPOTenantCdnEnabled -CdnType Public
@@ -45,7 +58,7 @@ Office 365 CDN is the easiest way to host SharePoint Framework solutions directl
     Get-SPOTenantCdnPolicies -CdnType Public
     ```
     
-4. Enable public CDN in the tenant:
+1. Enable public CDN in the tenant:
     
     ```powershell
     Set-SPOTenantCdnEnabled -CdnType Public
@@ -53,7 +66,7 @@ Office 365 CDN is the easiest way to host SharePoint Framework solutions directl
     
     Public CDN has now been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
     
-5. Execute the following command to get the list of CDN origins from your tenant:
+1. Execute the following command to get the list of CDN origins from your tenant:
     
     ```powershell
     Get-SPOTenantCdnOrigins -CdnType Public
@@ -80,7 +93,7 @@ Office 365 CDN is the easiest way to host SharePoint Framework solutions directl
         ...
     ```
 
-2. Open **write-manifests.json** file from the **config** folder. This file should be only updated when you are using external CDN system. Ensure that the **cdnBasePath** attribute is exactly as shown below. If it has any other entry, automatic hosting with Office 365 Public CDN will not work.
+1. Open **write-manifests.json** file from the **config** folder. This file should be **only** updated when you are using external CDN system. Ensure that the **cdnBasePath** attribute is exactly as shown below. If it has any other entry, automatic hosting with Office 365 Public CDN will not work.
 
     ```json
     {
@@ -89,23 +102,23 @@ Office 365 CDN is the easiest way to host SharePoint Framework solutions directl
     }
     ```
 
-3. Execute the following tasks to bundle your solution. This executes a release build of your project. Due the configurations which were applied in the previous steps, it means that all assets are inside of the **sppkg** file and there is not other actions to be performed.
+1. Execute the following tasks to bundle your solution. This executes a release build of your project. Due the configurations which were applied in the previous steps, it means that all assets are inside of the **sppkg** file and there is not other actions to be performed.
     
     ```
     gulp bundle --ship
     ```
     
-4. Execute the following task to package your solution. This command creates an **app-extension.sppkg** package in the **sharepoint/solution** folder.
+1. Execute the following task to package your solution. This command creates an **app-extension.sppkg** package in the **sharepoint/solution** folder.
     
     ```
     gulp package-solution --ship
     ```
     
-6. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button. Notice how the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Office 365 CDN.
+1. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button. Notice how the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Office 365 CDN.
 
     ![app catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
 
-7. Install the new version of the solution to your site, and ensure that it's working properly without your *locahost* hosting the JavaScript file. Notice that if you did NOT remove the package with localhost installation before updating it in the app catalog, your site is automatically running the updated version and placeholders are rendered from the CDN.
+1. Install the new version of the solution to your site, and ensure that it's working properly without your *locahost* hosting the JavaScript file. Notice that if you did NOT remove the package with localhost installation before updating it in the app catalog, your site is automatically running the updated version and placeholders are rendered from the CDN.
 
     ![Custom header and footer elements rendered in the page](../../../images/ext-app-header-footer-visible.png)
 
