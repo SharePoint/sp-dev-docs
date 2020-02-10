@@ -313,6 +313,8 @@
       href: spfx/toolchain/optimize-builds-for-production.md
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md
+    - name: SharePoint 2019 support
+      href: spfx/sharepoint-2019-support.md
   - name: Concepts & scenarios
     items:
     - name: Localize web parts
