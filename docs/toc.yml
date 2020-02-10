@@ -401,13 +401,15 @@
   - name: Roadmap
     href: spfx/roadmap.md
 - name: SharePoint development overview
-  href: general-development/sharepoint-development-overview.md
   items:
+  - name: Overview
+    href: general-development/sharepoint-development-overview.md
   - name: What's new in SharePoint Server 2019
     href: general-development/sharepoint-2019-development-platform.md
   - name: Programming models
-    href: general-development/programming-models-in-sharepoint.md
     items:
+    - name: Overview
+      href: general-development/programming-models-in-sharepoint.md
     - name: SharePoint Add-ins compared with SharePoint solutions
       href: general-development/sharepoint-add-ins-compared-with-sharepoint-solutions.md
     - name: Build farm solutions
@@ -565,8 +567,9 @@
       - name: Optimize site accessibility
         href: general-development/optimize-sharepoint-site-accessibility.md
   - name: Add SharePoint capabilities
-    href: general-development/add-sharepoint-capabilities.md
     items:
+    - name: Overview
+      href: general-development/add-sharepoint-capabilities.md
     - name: Workflows
       href: general-development/workflows-in-sharepoint.md
       items:
@@ -1075,15 +1078,17 @@
     - name: XLIFF interchange file format
       href: general-development/the-xliff-interchange-file-format-in-sharepoint.md
   - name: Create no-code solutions
-    href: general-development/create-sharepoint-no-code-solutions.md
     items:
+    - name: Overview
+      href: general-development/create-sharepoint-no-code-solutions.md
     - name: SharePoint Composites
       href: general-development/sharepoint-composites-handbook.md
     - name: Save a site as a template
       href: general-development/save-download-and-upload-a-sharepoint-site-as-a-template.md
   - name: Upgrade site customizations
-    href: general-development/upgrade-site-customizations-for-sharepoint.md
     items:
+    - name: Overview
+      href: general-development/upgrade-site-customizations-for-sharepoint.md
     - name: Upgrade web templates
       href: general-development/upgrade-web-templates-for-sharepoint.md
     - name: Use Feature upgrade to apply new master pages
@@ -1109,8 +1114,9 @@
   - name: Protocol handler error in SharePoint 2016
     href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Volume Shadow Copy Service (VSS)
-    href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
     items:
+    - name: Overview
+      href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
     - name: VSS Writer
       href: general-development/sharepoint-vss-writer.md
     - name: VSS requestors
@@ -1346,14 +1352,17 @@
     - name: Create add-ins in Visual Studio
       href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
 - name: Scenario guidance
-  href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   items:
+  - name: Overview
+    href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   - name: Modernizing your classic SharePoint sites
-    href: transform/modernize-classic-sites.md
     items:
+    - name: Overview
+      href: transform/modernize-classic-sites.md
     - name: Modernize the user interface
-      href: transform/modernize-userinterface.md
       items:
+      - name: Overview
+        href: transform/modernize-userinterface.md
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
         items:
@@ -1390,12 +1399,14 @@
           href: transform/modernize-userinterface-site-pages-urlmapping.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
-    - name: The SharePoint Modernization scanner
-      href: transform/modernize-scanner.md
+    - name: SharePoint Modernization scanner
       items:
+      - name: Overview
+        href: transform/modernize-scanner.md
       - name: Understand the created reports
-        href: transform/modernize-scanner-reports.md
         items:
+        - name: Overview
+          href: transform/modernize-scanner-reports.md
         - name: Office 365 Group connect report
           href: transform/modernize-scanner-reports-groupconnect.md
         - name: Modern list and libraries report
@@ -1413,18 +1424,19 @@
       - name: Scanner FAQ
         href: transform/modernize-scanner-faq.md
     - name: SharePoint modernization guidance
-      href: transform/modernize-guidance.md
       items:
-        - name: Assessment
-          href: transform/modernize-guidance-assessment.md
-        - name: Strategy
-          href: transform/modernize-guidance-strategy.md
-        - name: Execution
-          href: transform/modernize-guidance-execution.md
-        - name: Support
-          href: transform/modernize-guidance-support.md
-        - name: Partner modernization guidance
-          href: transform/modernize-partner-guidance.md
+      - name: Overview
+        href: transform/modernize-guidance.md
+      - name: Assessment
+        href: transform/modernize-guidance-assessment.md
+      - name: Strategy
+        href: transform/modernize-guidance-strategy.md
+      - name: Execution
+        href: transform/modernize-guidance-execution.md
+      - name: Support
+        href: transform/modernize-guidance-support.md
+      - name: Partner modernization guidance
+        href: transform/modernize-partner-guidance.md
     - name: Modernization scripts
       href: transform/modernize-sample-scripts.md
     - name: Modernize customizations
@@ -1432,8 +1444,9 @@
     - name: Modernize site branding
       href: transform/modernize-branding.md
     - name: Connect to an Office 365 group
-      href: transform/modernize-connect-to-office365-group.md
       items:
+      - name: Overview
+        href: transform/modernize-connect-to-office365-group.md
       - name: Analyze and use the scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
       - name: Subsites versus Office 365 group connection
@@ -1443,15 +1456,17 @@
       - name: External sharing after Office 365 group connection
         href: transform/modernize-connect-to-office365-group-externalsharing.md
     - name: Modernize publishing portals
-      href: transform/modernize-publishing-portal.md
       items:
+      - name: Overview
+        href: transform/modernize-publishing-portal.md
       - name: Analyze and use the scanner data
         href: transform/modernize-publishing-portal-scanner.md
     - name: Modernize classic blogs
       href: transform/modernize-blogs.md
   - name: Branding and site provisioning solutions
-    href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
+    - name: Overview
+      href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     - name: Page model
       href: solution-guidance/SharePoint-pages-and-the-page-model.md
     - name: Development and design tools and practices
@@ -1459,8 +1474,9 @@
     - name: Metadata, site navigation, and publishing site features
       href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md
     - name: Site branding
-      href: solution-guidance/SharePoint-site-branding-and-page-customization-solutions.md
       items:
+      - name: Overview
+        href: solution-guidance/SharePoint-site-branding-and-page-customization-solutions.md
       - name: Use composed looks to brand sites
         href: solution-guidance/Use-composed-looks-to-brand-SharePoint-sites.md
       - name: Use remote provisioning to brand pages
@@ -1474,8 +1490,9 @@
       - name: Customize OneDrive for Business sites
         href: solution-guidance/customize-onedrive-for-business-sites.md
     - name: Site provisioning
-      href: solution-guidance/sharepoint-site-provisioning-solutions.md
       items:
+      - name: Overview
+        href: solution-guidance/sharepoint-site-provisioning-solutions.md
       - name: Implement a site classification solution
         href: solution-guidance/implement-a-sharepoint-site-classification-solution.md
       - name: Modify host web lists at creation time
@@ -1487,8 +1504,9 @@
       - name: Manage users and groups
         href: solution-guidance/manage-sharepoint-users-and-groups.md
     - name: UX components
-      href: solution-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
       items:
+      - name: Overview
+        href: solution-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
       - name: Customize the UX
         href: solution-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
       - name: Create UX controls
@@ -1496,8 +1514,9 @@
       - name: Improve performance
         href: solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
   - name: Customizing the "modern" experiences in SharePoint Online
-    href: solution-guidance/modern-experience-customizations.md
     items:
+    - name: Overview
+      href: solution-guidance/modern-experience-customizations.md
     - name: Provision "modern" team sites programmatically
       href: solution-guidance/modern-experience-customizations-provisioning-sites.md
     - name: Customize "modern" team sites
@@ -1509,8 +1528,9 @@
     - name: SharePoint "modern" sites classification
       href: solution-guidance/modern-experience-site-classification.md
   - name: OneDrive and SharePoint Online Multi-Geo
-    href: solution-guidance/multigeo-introduction.md
     items:
+    - name: Overview
+      href: solution-guidance/multigeo-introduction.md
     - name: Permissions model
       href: solution-guidance/multigeo-permissions.md
     - name: Discover your tenant configuration
@@ -1536,8 +1556,9 @@
     - name: Set up a sample application
       href: solution-guidance/multigeo-sampleapplicationsetup.md
   - name: Building classic publishing portals for SharePoint Online
-    href: solution-guidance/portal-overview.md
     items:
+    - name: Overview
+      href: solution-guidance/portal-overview.md
     - name: Performance
       href: solution-guidance/portal-performance.md
     - name: Information architecture
@@ -1551,8 +1572,9 @@
     - name: Deployment
       href: solution-guidance/portal-rollout.md
   - name: Composite business add-ins
-    href: solution-guidance/composite-business-apps-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/composite-business-apps-for-sharepoint.md
     - name: Migrate InfoPath forms
       href: solution-guidance/migrate-infopath-forms-to-sharepoint.md
     - name: Data storage options
@@ -1562,8 +1584,9 @@
     - name: Call web services from workflows
       href: solution-guidance/call-web-services-from-sharepoint-workflows.md
   - name: ECM solutions
-    href: solution-guidance/enterprise-content-management-solutions-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/enterprise-content-management-solutions-for-sharepoint.md
     - name: Document library templates
       href: solution-guidance/document-library-templates-sample-app-for-sharepoint.md
     - name: Auto-tagging
@@ -1583,20 +1606,23 @@
     - name: 'Support % and # in files and folders with ResourcePath API'
       href: solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
   - name: Localization solutions
-    href: solution-guidance/localization-solutions-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/localization-solutions-for-sharepoint.md
     - name: Use localization features
       href: solution-guidance/use-localization-features-in-office-365-sample-app.md
     - name: Localize UI elements
       href: solution-guidance/localize-ui-elements-sample-app-for-sharepoint.md
   - name: Search solutions
-    href: solution-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
     items:
+    - name: Overview
+      href: solution-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
     - name: Search customizations
       href: solution-guidance/search-customizations-for-sharepoint.md
   - name: Security and performance
-    href: solution-guidance/security-and-performance.md
     items:
+    - name: Overview
+      href: solution-guidance/security-and-performance.md
     - name: Authorization considerations for tenants hosted in Germany, China, or US
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
     - name: Handle SharePoint Online throttling
@@ -1628,8 +1654,9 @@
     - name: JavaScript patterns and performance
       href: solution-guidance/javascript-patterns-and-performance.md
   - name: SharePoint Add-in recipes
-    href: solution-guidance/sharepoint-add-in-recipes.md
     items:
+    - name: Overview
+      href: solution-guidance/sharepoint-add-in-recipes.md
     - name: App-only and elevated privileges
       href: solution-guidance/app-only-elevated-privileges-sharepoint-add-in.md
     - name: Branding sites
@@ -1703,8 +1730,9 @@
     - name: Yammer integration
       href: solution-guidance/yammer-integration-sharepoint-add-in.md
   - name: Transforming farm solutions
-    href: solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model.md
     items:
+    - name: Overview
+      href: solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model.md
     - name: Replace content types and site columns
       href: solution-guidance/replace-sharepoint-content-types-and-site-columns.md
     - name: Replace files
@@ -1714,8 +1742,9 @@
     - name: Replace web parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
   - name: Transforming sandbox solutions
-    href: solution-guidance/sandbox-solution-transformation-guidance.md
     items:
+    - name: Overview
+      href: solution-guidance/sandbox-solution-transformation-guidance.md
     - name: Replace web parts
       href: solution-guidance/sandbox-solution-transformation-guidance-webparts.md
     - name: Replace event receivers
@@ -1725,8 +1754,9 @@
     - name: Fix code-based InfoPath forms
       href: solution-guidance/sandbox-solution-transformation-guidance-infopath.md
   - name: User profile solutions
-    href: solution-guidance/user-profile-solutions-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/user-profile-solutions-for-sharepoint.md
     - name: Read or update user profile properties
       href: solution-guidance/read-or-update-user-profile-properties-sample-app-for-sharepoint.md
     - name: Bulk update custom user profile properties
@@ -1738,8 +1768,9 @@
     - name: Upload user profile pictures
       href: solution-guidance/upload-user-profile-pictures-sample-app-for-sharepoint.md
   - name: Deploying your SharePoint Add-ins
-    href: solution-guidance/deploying-your-sharepoint-add-ins.md
     items:
+    - name: Overview
+      href: solution-guidance/deploying-your-sharepoint-add-ins.md
     - name: Deploy sites to Azure
       href: solution-guidance/move-o365api-project-from-dev-to-prod.md
     - name: Use Azure WebJobs with Office 365
@@ -1749,8 +1780,9 @@
     - name: Configure Office 365 projects for distribution
       href: solution-guidance/configure-o365api-project-for-distribution.md
   - name: PnP remote provisioning
-    href: solution-guidance/pnp-remote-provisioning.md
     items:
+    - name: Overview
+      href: solution-guidance/pnp-remote-provisioning.md
     - name: PnP provisioning engine
       href: solution-guidance/introducing-the-pnp-provisioning-engine.md
     - name: PnP provisioning framework
@@ -1766,8 +1798,9 @@
     - name: Provisioning console application sample
       href: solution-guidance/provisioning-console-application-sample.md
   - name: PnP remote timer job framework
-    href: solution-guidance/pnp-remote-timer-job-framework.md
     items:
+    - name: Overview
+      href: solution-guidance/pnp-remote-timer-job-framework.md
     - name: PnP timer job framework
       href: solution-guidance/timerjob-framework.md
     - name: Create remote timer jobs
@@ -1791,8 +1824,9 @@
   - name: "Complete basic operations: JSOM"
     href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
   - name: SharePoint REST API v1
-    href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
     items:
+    - name: Overview
+      href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
     - name: Complete basic operations
       href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
     - name: Work with lists and list items
@@ -1846,11 +1880,13 @@
   href: schema/schema-reference-for-sharepoint.md
   items:
   - name: SharePoint Add-in schemas
-    href: schema/sharepoint-add-in-schemas.md
     items:
+    - name: Overview
+      href: schema/sharepoint-add-in-schemas.md
     - name: Schema reference for manifests of SharePoint Add-ins
-      href: schema/schema-reference-for-manifests-of-sharepoint-add-ins.md
       items:
+      - name: Overview
+        href: schema/schema-reference-for-manifests-of-sharepoint-add-ins.md
       - name: Schema map (SharePoint Add-in Manifest)
         href: schema/schema-map-sharepoint-add-in-manifest.md
       - name: Elements (SharePoint Add-in Manifest)
@@ -1970,8 +2006,9 @@
         - name: WebTemplateIdDefinition simpleType
           href: schema/webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md
     - name: AppHostWebFeatures schema reference
-      href: schema/apphostwebfeatures-schema-reference.md
       items:
+      - name: Overview
+        href: schema/apphostwebfeatures-schema-reference.md
       - name: Schema map (AppHostWebFeatures)
         href: schema/schema-map-apphostwebfeatures.md
       - name: Elements (AppHostWebFeatures)
@@ -2177,8 +2214,9 @@
         - name: WebPartPersonalizationScope simpleType
           href: schema/webpartpersonalizationscope-simpletype-apphostwebfeatures.md
     - name: AppPartConfigDefinition schema reference
-      href: schema/apppartconfigdefinition-schema-reference.md
       items:
+      - name: Overview
+        href: schema/apppartconfigdefinition-schema-reference.md
       - name: Schema map (AppPartConfigDefinition)
         href: schema/schema-map-apppartconfigdefinition.md
       - name: Elements (AppPartConfigDefinition)
@@ -2196,8 +2234,9 @@
         - name: GUID simpleType
           href: schema/guid-simpletype-apppartconfigdefinition.md
   - name: Business connectivity services (BCS) schemas
-    href: schema/business-connectivity-services-bcs-schemas.md
     items:
+    - name: Overview
+      href: schema/business-connectivity-services-bcs-schemas.md
     - name: SolutionManifestDefinitions schema
       href: schema/solutionmanifestdefinitions-schema.md
       items:
@@ -2491,8 +2530,9 @@
       - name: TypeDescriptors element
         href: schema/typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md
   - name: Workflow schemas
-    href: schema/workflow-schemas.md
     items:
+    - name: Overview
+      href: schema/workflow-schemas.md
     - name: WorkflowActions4 schema reference
       href: schema/workflowactions4-schema-reference.md
       items:
@@ -2786,20 +2826,23 @@
       - name: WorkflowInfo element
         href: schema/workflowinfo-element-workflowinfo.md
   - name: SharePoint Features schemas
-    href: schema/sharepoint-features-schemas.md
     items:
+    - name: Overview
+      href: schema/sharepoint-features-schemas.md
     - name: Client Web Part Definition schema
       href: schema/client-web-part-definition-schema.md
     - name: Content Type Bindings
-      href: schema/content-type-bindings.md
       items:
+      - name: Overview
+        href: schema/content-type-bindings.md
       - name: ContentTypeBinding element
         href: schema/contenttypebinding-element-contenttypebinding.md
       - name: Elements element
         href: schema/elements-element-contenttypebinding.md
     - name: Content Type Definitions
-      href: schema/content-type-definitions.md
       items:
+      - name: Overview
+        href: schema/content-type-definitions.md
       - name: ContentType element
         href: schema/contenttype-element-contenttype.md
       - name: DocumentTemplate element
@@ -2819,8 +2862,9 @@
       - name: XmlDocuments element
         href: schema/xmldocuments-element-contenttype.md
     - name: Custom Action Definition schema
-      href: schema/custom-action-definition-schema.md
       items:
+      - name: Overview
+        href: schema/custom-action-definition-schema.md
       - name: CommandUIDefinitions element
         href: schema/commanduidefinitions-element.md
       - name: CommandUIDefinition element
@@ -2844,8 +2888,9 @@
       - name: Default Custom Action Locations and IDs
         href: schema/default-custom-action-locations-and-ids.md
     - name: Delegate Controls
-      href: schema/delegate-controls.md
       items:
+      - name: Overview
+        href: schema/delegate-controls.md
       - name: Control element
         href: schema/control-element-delegate-control.md
       - name: Elements element
@@ -2853,15 +2898,17 @@
       - name: Property element
         href: schema/property-element-delegate-control.md
     - name: Document Converter
-      href: schema/document-converter.md
       items:
+      - name: Overview
+        href: schema/document-converter.md
       - name: DocumentConverter element
         href: schema/documentconverter-element-document-converter.md
       - name: Elements element
         href: schema/elements-element-document-converter.md
     - name: Event Registrations
-      href: schema/event-registrations.md
       items:
+      - name: Overview
+        href: schema/event-registrations.md
       - name: Assembly element
         href: schema/assembly-element-event.md
       - name: Class element
@@ -2891,8 +2938,9 @@
       - name: SourceType element
         href: schema/sourcetype-element-events.md
     - name: Feature.xml Files
-      href: schema/feature-xml-files.md
       items:
+      - name: Overview
+        href: schema/feature-xml-files.md
       - name: ActivationDependencies element
         href: schema/activationdependencies-element-feature.md
       - name: ActivationDependency element
@@ -2926,8 +2974,9 @@
       - name: VersionRange element
         href: schema/versionrange-element-feature.md
     - name: Feature/Site Template Associations
-      href: schema/feature-site-template-associations.md
       items:
+      - name: Overview
+        href: schema/feature-site-template-associations.md
       - name: Elements element
         href: schema/elements-element-featuresitetemplateassociation.md
       - name: FeatureSiteTemplateAssociation element
@@ -2935,15 +2984,17 @@
       - name: Property element
         href: schema/property-element-featuresitetemplateassociation.md
     - name: Field Definitions
-      href: schema/field-definitions.md
       items:
+      - name: Overview
+        href: schema/field-definitions.md
       - name: Elements element
         href: schema/elements-element-field.md
       - name: Field element
         href: schema/field-element-field.md
     - name: List Instances
-      href: schema/list-instances.md
       items:
+      - name: Overview
+        href: schema/list-instances.md
       - name: Data element
         href: schema/data-element-list-instance.md
       - name: Elements element
@@ -2961,8 +3012,9 @@
       - name: Property element
         href: schema/property-element-list-instance.md
     - name: List Template Files
-      href: schema/list-template-files.md
       items:
+      - name: Overview
+        href: schema/list-template-files.md
       - name: Elements element
         href: schema/elements-element-list-template.md
       - name: ListTemplate element
@@ -2970,8 +3022,9 @@
       - name: List Definition (Schema.xml) Files
         href: schema/list-definition-schema-xml-files.md
     - name: Modules
-      href: schema/modules.md
       items:
+      - name: Overview
+        href: schema/modules.md
       - name: AllUsersWebPart element
         href: schema/alluserswebpart-element-module.md
       - name: BinarySerializedWebPart element
@@ -2999,8 +3052,9 @@
       - name: WebPartTransformer element
         href: schema/webparttransformer-element-module.md
     - name: Property Bag schema
-      href: schema/property-bag-schema.md
       items:
+      - name: Overview
+        href: schema/property-bag-schema.md
       - name: Elements element
         href: schema/elements-element-property-bag.md
       - name: PropertyBag element
@@ -3010,15 +3064,17 @@
     - name: Site Definition (Onet.xml) Files
       href: schema/site-definition-onet-xml-files.md
     - name: Web Template XML
-      href: schema/web-template-xml.md
       items:
+      - name: Overview
+        href: schema/web-template-xml.md
       - name: WebTemplate element
         href: schema/webtemplate-element-web-template.md
       - name: Elements
         href: schema/elements-web-template.md
     - name: Workflow Definitions
-      href: schema/workflow-definitions.md
       items:
+      - name: Overview
+        href: schema/workflow-definitions.md
       - name: AssociationCategories element
         href: schema/associationcategories-element-workflow.md
       - name: AssociationData element
@@ -3044,8 +3100,9 @@
       - name: Workflow element (Elements)
         href: schema/workflow-element-elements.md
   - name: Content migration schemas
-    href: schema/content-migration-schemas.md
     items:
+    - name: Overview
+      href: schema/content-migration-schemas.md
     - name: DeploymentManifest schema
       href: schema/deploymentmanifest-schema.md
       items:
@@ -3398,8 +3455,9 @@
       - name: ViewFormsList element
         href: schema/viewformslist-element-deploymentviewformslist.md
   - name: Collaborative Application Markup Language (CAML) schemas
-    href: schema/collaborative-application-markup-language-caml-schemas.md
     items:
+    - name: Overview
+      href: schema/collaborative-application-markup-language-caml-schemas.md
     - name: Introduction to Collaborative Application Markup Language (CAML)
       href: schema/introduction-to-collaborative-application-markup-language-caml.md
     - name: Major CAML Files
@@ -4010,8 +4068,9 @@
         - name: WriteSecurity element
           href: schema/writesecurity-element.md
   - name: SharePoint search settings portability schemas
-    href: schema/sharepoint-search-settings-portability-schemas.md
     items:
+    - name: Overview
+      href: schema/sharepoint-search-settings-portability-schemas.md
     - name: SPS15XSDSearchSet1
       href: schema/sps15xsdsearchset1.md
       items:
@@ -4653,11 +4712,13 @@
         - name: LocStringId simpleType
           href: schema/locstringid-simpletype-sps15xsdsearchset6.md
   - name: Other SharePoint schemas
-    href: schema/other-sharepoint-schemas.md
     items:
+    - name: Overview
+      href: schema/other-sharepoint-schemas.md
     - name: Field Types schema
-      href: schema/field-types-schema.md
       items:
+      - name: Overview
+        href: schema/field-types-schema.md
       - name: FieldTypes element
         href: schema/fieldtypes-element-field-types.md
       - name: FieldType element
@@ -4676,8 +4737,9 @@
       - name: RenderPattern element
         href: schema/renderpattern-element-field-types.md
     - name: AlertTemplates schema
-      href: schema/alerttemplates-schema.md
       items:
+      - name: Overview
+        href: schema/alerttemplates-schema.md
       - name: AlertTemplate element
         href: schema/alerttemplate-element-alerttemplates.md
       - name: AlertTemplates element
@@ -4735,8 +4797,9 @@
       - name: UpdateHandlerClassName element
         href: schema/updatehandlerclassname-element-alerttemplates.md
     - name: Mobile Document Viewer schema
-      href: schema/mobile-document-viewer-schema.md
       items:
+      - name: Overview
+        href: schema/mobile-document-viewer-schema.md
       - name: MobileDocViewers element
         href: schema/mobiledocviewers-mobile-document-viewer.md
       - name: MobileDocViewer element
@@ -4746,8 +4809,9 @@
       - name: Override element
         href: schema/override-mobile-document-viewer.md
     - name: Server Ribbon schema
-      href: schema/server-ribbon-schema.md
       items:
+      - name: Overview
+        href: schema/server-ribbon-schema.md
       - name: Button element
         href: schema/button-element.md
       - name: CheckBox element
@@ -4845,8 +4909,9 @@
       - name: UnitAbbreviation element
         href: schema/unitabbreviation-element.md
     - name: Solution schema
-      href: schema/solution-schema.md
       items:
+      - name: Overview
+        href: schema/solution-schema.md
       - name: ActivationDependencies element
         href: schema/activationdependencies-element-solution.md
       - name: ActivationDependency element
@@ -4914,8 +4979,9 @@
       - name: WebTempFile element
         href: schema/webtempfile-element-solution.md
     - name: SPMetal Parameters schema
-      href: schema/spmetal-parameters-schema.md
       items:
+      - name: Overview
+        href: schema/spmetal-parameters-schema.md
       - name: Column element
         href: schema/column-spmetal.md
       - name: ContentType element
@@ -4943,8 +5009,9 @@
       - name: Web element
         href: schema/web-spmetal.md
     - name: Upgrade Definition schema
-      href: schema/upgrade-definition-schema.md
       items:
+      - name: Overview
+        href: schema/upgrade-definition-schema.md
       - name: AppliedSiteFeatures element
         href: schema/appliedsitefeatures-element-upgrade.md
       - name: AppliedWebFeatures element
@@ -4964,8 +5031,9 @@
       - name: WebTemplate element
         href: schema/webtemplate-element-upgrade.md
     - name: dsQueryResponse schema
-      href: schema/dsqueryresponse-schema.md
       items:
+      - name: Overview
+        href: schema/dsqueryresponse-schema.md
       - name: dsQueryResponse element
         href: schema/dsqueryresponse.md
       - name: Rows element
