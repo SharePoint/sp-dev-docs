@@ -1811,10 +1811,6 @@
     href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
   - name: PnP PowerShell reference
     href: https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps
-  - name: PnP Sites Core API reference
-    href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
-  - name: PnP Sites Core API reference - Extension methods
-    href: https://docs.microsoft.com/dotnet/api/?term=microsoft.sharepoint
 - name: SharePoint APIs
   items:
   - name: Overview
@@ -1876,6 +1872,10 @@
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
         href: apis/migration-api-encryption.md
+  - name: PnP Sites Core API reference
+    href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
+  - name: PnP Sites Core API reference - Extension methods
+    href: https://docs.microsoft.com/dotnet/api/?term=microsoft.sharepoint
 - name: SharePoint schema reference
   href: schema/schema-reference-for-sharepoint.md
   items:
