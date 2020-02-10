@@ -167,10 +167,16 @@
         href: spfx/web-parts/isolated-web-parts.md
       - name: Single Part App Pages
         href: spfx/web-parts/single-part-app-pages.md
-      - name: Build Microsoft Teams channel/group tabs with SPFx
-        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
-      - name: Build Office add-ins with SPFx
-        href: spfx/web-parts/get-started/office-addins-tutorial.md
+      - name: Microsoft Teams and SPFx Web parts
+        items:
+        - name: Building Microsoft Teams Tabs
+          href: spfx/integrate-with-teams-introduction.md
+        - name: Creating Teams manifest manually
+          href: spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md
+        - name: Hosting Microsoft Teams Tabs in SharePoint
+          href: spfx/using-teams-solutions-in-sharepoint.md
+      - name: Building Office add-ins
+        href: spfx/office-addins-create.md
     - name: Tutorials
       items:
       - name: Add jQueryUI Accordion to a web part
@@ -179,6 +185,10 @@
         href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
       - name: Provision assets from a web part
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
+      - name: Build Microsoft Teams channel/group tabs with SPFx
+        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
+      - name: Build Office add-ins with SPFx
+        href: spfx/web-parts/get-started/office-addins-tutorial.md
   - name: Extensions
     items:
     - name: Overview
@@ -243,20 +253,12 @@
       href: spfx/dynamic-loading.md
     - name: Connecting components with Dynamic Data
       href: spfx/dynamic-data.md
-    - name: Building Microsoft Teams Tabs
-      href: spfx/integrate-with-teams-introduction.md
-    - name: Creating Teams manifest manually
-      href: spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md
-    - name: Hosting Microsoft Teams Tabs in SharePoint
-      href: spfx/using-teams-solutions-in-sharepoint.md
     - name: Library component overview
       href: spfx/library-component-overview.md
     - name: Library component tutorial
       href: spfx/library-component-tutorial.md
     - name: Hyperlinking considerations
       href: spfx/hyperlinking.md
-    - name: Building Office add-ins
-      href: spfx/office-addins-create.md
     - name: Intercepting query string changes
       href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
   - name: External libraries
