@@ -32,7 +32,7 @@ To create a self signed certificate with this script:
 ```
 
 > [!NOTE]
-> The dates are provided in US date format: YYYY-MM-dd
+> The dates are provided in ISO date format: YYYY-MM-dd
 
 The actual script can be copied from here:
 
