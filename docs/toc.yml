@@ -217,6 +217,12 @@
         href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
       - name: Pre-allocated placeholders
         href: spfx/extensions/basics/preallocated-space-placeholders.md
+  - name: Library components
+    items:
+    - name: Overview
+      href: spfx/library-component-overview.md
+    - name: Library component tutorial
+      href: spfx/library-component-tutorial.md
   - name: Migrate existing customizations
     items:
     - name: Script Editor web part
@@ -253,10 +259,6 @@
       href: spfx/dynamic-loading.md
     - name: Connecting components with Dynamic Data
       href: spfx/dynamic-data.md
-    - name: Library component overview
-      href: spfx/library-component-overview.md
-    - name: Library component tutorial
-      href: spfx/library-component-tutorial.md
     - name: Hyperlinking considerations
       href: spfx/hyperlinking.md
     - name: Intercepting query string changes
