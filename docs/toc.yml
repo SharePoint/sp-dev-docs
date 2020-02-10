@@ -101,8 +101,6 @@
         href: apis/webhooks/lists/delete-subscription.md
       - name: Get subscription
         href: apis/webhooks/lists/get-subscription.md
-  - name: Application Lifecycle Management (ALM) APIs
-    href: apis/alm-api-for-spfx-add-ins.md
   - name: Creating modern sites
     href: apis/site-creation-rest.md
   - name: Site Footer
@@ -1813,6 +1811,8 @@
       href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
   - name: SharePoint REST API v2
     href: apis/sharepoint-rest-graph.md
+  - name: Application Lifecycle Management (ALM) APIs
+    href: apis/alm-api-for-spfx-add-ins.md
   - name: SharePoint Migration Guidance
     items:
     - name: Migration Guidance for ISVs
