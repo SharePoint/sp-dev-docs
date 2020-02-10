@@ -8,7 +8,7 @@ ms.custom: scenarios:getting-started
 
 # Build your first ListView Command Set extension
 
-Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
+Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them. 
 
 You can follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
