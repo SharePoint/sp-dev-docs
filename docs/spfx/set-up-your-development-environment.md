@@ -27,7 +27,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 Install [NodeJS LTS version 10](https://nodejs.org/dist/latest-v10.x/).
 
-- If you are in Windows, you can use the msi installers ([x86](https://nodejs.org/dist/latest-v10.x/node-v10.18.1-x86.msi) or [x64](https://nodejs.org/dist/latest-v10.x/node-v10.18.1-x64.msi)) in this link for the easiest way to set up NodeJS.Typical insta
+- If you are in Windows, you can use the msi installers ([x86](https://nodejs.org/dist/latest-v10.x/node-v10.19.0-x86.msi) or [x64](https://nodejs.org/dist/latest-v10.x/node-v10.19.0-x64.msi)) in this link for the easiest way to set up NodeJS.Typical insta
 - If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org).
 
 > [!IMPORTANT]
