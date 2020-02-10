@@ -1345,7 +1345,7 @@
       href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
     - name: Create add-ins in Visual Studio
       href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
-- name: Solution guidance
+- name: Scenario guidance
   href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   items:
   - name: Modernizing your classic SharePoint sites
