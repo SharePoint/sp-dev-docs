@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from UserCustomAction to SharePoint Framework Extensions
 description: Migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
-ms.date: 01/11/2018
+ms.date: 02/11/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -382,7 +382,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
 
     ```JSON
     {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
         "name": "spfx-react-custom-footer-client-side-solution",
         "id": "911728a5-7bde-4453-97b2-2eba59277ed3",
