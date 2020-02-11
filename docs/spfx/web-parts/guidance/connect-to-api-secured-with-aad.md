@@ -1,7 +1,7 @@
 ---
 title: Connect to API secured with Azure Active Directory (Azure AD)
 description: Guidance about connecting to APIs secured with Azure AD.
-ms.date: 01/09/2020
+ms.date: 02/11/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -78,7 +78,7 @@ If your SharePoint Framework solution requires permissions to specific resources
 
     ```json
     {
-      "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
       "solution": {
         "name": "spfx-client-side-solution",
         "id": "5d16587c-5e87-44d7-b658-1148988f212a",
