@@ -12,7 +12,7 @@ Feel free to use [Issues]((https://github.com/SharePoint/sp-dev-docs/issues)) li
 
 We’ll also monitor [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
 
-You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@officedevpnp](https://twitter.com/officedevpnp).
+You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365Dev) or [@officedevpnp](https://twitter.com/officedevpnp).
 
 ## SharePoint Framework Releases
 
@@ -94,7 +94,7 @@ You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@off
 
 To keep track of improvements to the Office 365 Framework, please take a look at:
 
-* [@SharePoint](https://twitter.com/sharepoint), [@OfficeDev](https://twitter.com/officedev) and [@OfficeDevPnP](https://twitter.com/officedevpnp) on Twitter
+* [@SharePoint](https://twitter.com/sharepoint), [@Microsoft365Dev](https://twitter.com/Microsoft365Dev) and [@OfficeDevPnP](https://twitter.com/officedevpnp) on Twitter
 * [Office Developer Blog](https://developer.microsoft.com/en-us/office/blogs/)
 
 Provide Feedback:
@@ -111,4 +111,4 @@ The SharePoint Framework is now generally available at Office 365.
 
 ## Have Fun
 
-We look forward to seeing what you build! Please tweet us at @OfficeDev, @OfficeDevPnP or @SharePoint with the #SPFx tag!
+We look forward to seeing what you build! Please tweet us at @Microsoft365Dev, @OfficeDevPnP or @SharePoint with the #SPFx tag!
