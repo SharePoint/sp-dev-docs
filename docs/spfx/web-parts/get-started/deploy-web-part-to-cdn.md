@@ -1,7 +1,7 @@
 ---
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
-ms.date: 03/14/2019
+ms.date: 02/11/2020
 ms.prod: sharepoint
 ---
 
@@ -152,7 +152,7 @@ Note, however, that you have not yet deployed the files.
 
     ```json
     {
-      "$schema": "https://dev.office.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
       "workingDir": "./temp/deploy/",
       "account": "<!-- STORAGE ACCOUNT NAME -->",
       "container": "azurehosted-webpart",
