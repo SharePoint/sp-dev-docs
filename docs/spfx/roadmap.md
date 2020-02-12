@@ -103,5 +103,5 @@ The following sections list older items that have already shipped.
 ## See also
 
 - [dev.office.com blog](https://dev.office.com/blogs)
-- [OfficeDev Twitter account](https://twitter.com/officedev)
+- [Microsoft365Dev Twitter account](https://twitter.com/Microsoft365Dev)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)
