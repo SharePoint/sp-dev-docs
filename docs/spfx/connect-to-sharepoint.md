@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Connect to SharePoint APIs
 
-In your SharePoint Framework solutions, you will likely want to interact with data stored in SharePoint. SharePoint offers a rich set of APIs that can be consumed in various ways. This article outlines what options you have, how they work and what their advantages and disadvantages are.
+In your SharePoint Framework solutions, you will likely want to interact with data stored in SharePoint. SharePoint offers a rich set of APIs that can be consumed in various ways. This article outlines what options you have, how they work and what their advantages and disadvantages are. 
 
 ## Connect to SharePoint API using the SPHttpClient
 
