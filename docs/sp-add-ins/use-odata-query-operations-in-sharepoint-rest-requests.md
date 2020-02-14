@@ -91,8 +91,8 @@ Accept: "application/json;odata=verbose"
 |                               **Supported**                               |                                                **Not supported**                                                 |
 | :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------- |
 | **Numeric comparisons** (lt le gt ge eq ne)                               | **Arithmetic operators** (add, sub, mul, div, mod)<br/>**Basic math functions** (round, floor, ceiling)          |
-| **String comparisons** startswith substringof eq ne                       | endswith replace substring tolower toupper trim concat                                                           |
-| **Date and time functions** day() month() year() hour() minute() second() | DateTimeRangesOverlap operator<br/>Querying as to whether a date time falls inside a recurrent date time pattern |
+| **String comparisons** startswith, substringof, eq, ne                       | endswith, replace, substring, tolower, toupper, trim, concat                                                           |
+| **Date and time functions** day(), month(), year(), hour(), minute(), second() | DateTimeRangesOverlap operator<br/>Querying as to whether a date time falls inside a recurrent date time pattern |
 
 The following figure shows the supported OData query options.
 
