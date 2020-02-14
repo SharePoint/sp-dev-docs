@@ -1,7 +1,7 @@
 ---
 title:  SharePoint Developer Community open source projects
 description: Open-source projects coordinated by the SharePoint PnP initiative
-ms.date: 06/18/2018
+ms.date: 02/14/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,13 +10,10 @@ localization_priority: Priority
 
 There are numerous open-source projects that are coordinated by the SharePoint PnP initiative. These are open-source, community-driven initiatives that are still closely involved with SharePoint engineering, but are not part of the standard product or service offerings.
 
-<br/>
-
 | Repository | Description |
 |--------|--------|
 | [SharePoint Starter kit](https://github.com/SharePoint/sp-starter-kit) | A starter kit for showing how to extend modern experiences in SharePoint Online by extending them with modern extensibility options. |
 | [SharePoint Provisioning Service templates](https://github.com/SharePoint/sp-dev-provisioning-templates) | Tenant templates used by the [SharePoint Provisioning Service](https://provisioning.sharepointpnp.com) to easily provision sample content and structures demonstrating what's possible with modern SharePoint experiences. |
-| [GDPR Activity Hub](https://github.com/SharePoint/sp-dev-gdpr-activity-hub) | A starter kit for building a management hub for EU GDPR (European Global Data Protection Regulation). |
 | [Office 365 CLI](https://sharepoint.github.io/office365-cli/) | A cross-platform command-line interface (CLI) that allows users on any platform to manage various configuration settings of Office 365. |
 | [Office 365 Developer PnP Core Component](https://github.com/SharePoint/PnP-Sites-Core) | An extension component that encapsulates commonly used remote CSOM/REST operations as reusable extension methods on out-of-the box CSOM objects.  |
 | [PnP PowerShell cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) | Allow you to perform complex provisioning and artifact management actions for SharePoint. The commands use CSOM and can work against both SharePoint Online as well as SharePoint on-premises. |
