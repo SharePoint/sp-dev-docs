@@ -1,9 +1,8 @@
 ---
 title:  SharePoint Developer Community (SharePoint PnP) resources
 description: The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. 
-ms.date: 04/02/2019
+ms.date: 02/04/2020
 ms.prod: sharepoint
-
 localization_priority: Priority
 ---
 
@@ -15,10 +14,10 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 
 - [SharePoint Developer Blog](https://developer.microsoft.com/en-us/office/blogs/) - Latest developer news around SharePoint and Office 365
 - [SharePoint Developer Videos](https://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
-- [OfficeDev Twitter](https://twitter.com/officedev) - Official communication channel for SharePoint and Office 365 developer topics
-- [OfficeDevPnP Twitter](https://twitter.com/officedevpnp) - Community account for SharePoint and Office 365 developer topics
-- [OfficeDev Facebook](https://www.facebook.com/OfficeDev/) - Official communication channel for SharePoint and Office 365 developer topics
-- [OfficeDevPnP Facebook](https://www.facebook.com/OfficeDevPnP/) - Community account for SharePoint and Office 365 developer topics
+- [Microsoft365Dev Twitter](https://twitter.com/Microsoft365Dev) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
+- [Microsoft 365 PnP Twitter](https://twitter.com/officedevpnp) - Community account for Microsoft 365 and SharePoint topics
+- [Microsoft365Dev Facebook](https://www.facebook.com/Microsoft365Dev) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
+- [Microsoft 365 PnP](https://www.facebook.com/OfficeDevPnP/) - Community account for SharePoint and Office 365 developer topics
 
 ## GitHub
 
