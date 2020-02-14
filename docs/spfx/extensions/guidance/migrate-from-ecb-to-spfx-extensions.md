@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extension
 description: Migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
-ms.date: 01/11/2018
+ms.date: 02/11/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -236,7 +236,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
 
   ```JSON
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
       "name": "spfx-ecb-extension-client-side-solution",
       "id": "b8ff6fdf-16e9-4434-9fdb-eac6c5f948ee",
