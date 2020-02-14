@@ -10,26 +10,26 @@ localization_priority: Priority
 
 Article contains details around supported development capabilities in the SharePoint 2019.
 
-**Supported capabilities**
+## Supported capabilities
 
-* Modern and classic pages
-* Modern sites - modern team and communication site
-    * Classic sites are also supported
-* Column formatting - Only supports "Basic Styled Syntax", "Excel Styled Syntax" is not supported. 
-* SharePoint Framework client-side web parts with SharePoint Framework v1.4.x
-* SharePoint Framework extensions in modern experiences with SharePoint Framework v1.4.x
-* Webhooks for list items
-* Asset packaging and automatic JavaScript file hosting from app catalog
-* "Tenant" scoped deployment of SharePoint Framework solutions
-* ALM APIs for add-in and SharePoint Framework solution management
+- Modern and classic pages
+- Modern sites - modern team and communication site
+  - Classic sites are also supported
+- Column formatting - Only supports "Basic Styled Syntax", "Excel Styled Syntax" is not supported.
+- SharePoint Framework client-side web parts with SharePoint Framework v1.4.x
+- SharePoint Framework extensions in modern experiences with SharePoint Framework v1.4.x
+- Webhooks for list items
+- Asset packaging and automatic JavaScript file hosting from app catalog
+- "Tenant" scoped deployment of SharePoint Framework solutions
+- ALM APIs for add-in and SharePoint Framework solution management
 
-**Not supported capabilities**
+## Not supported capabilities
 
-* Site Designs and Site Scripts
-* Hub sites
-* Site collection app catalog
-* "Tenant" properties
-* Custom modern themes for communication site or modern team site
+- Site Designs and Site Scripts
+- Hub sites
+- Site collection app catalog
+- "Tenant" properties
+- Custom modern themes for communication site or modern team site
 
 You should always have the latest SharePoint Framework version installed and choose the target environment for the newly created solution to be **SharePoint 2019**. This option will create you an optimal solution structure with the matching SharePoint Framework version for SharePoint 2019.
 

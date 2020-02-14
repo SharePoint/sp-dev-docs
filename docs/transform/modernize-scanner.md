@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 01/17/2020
+ms.date: 02/13/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -52,9 +52,9 @@ The easiest approach is to simply launch SharePoint.Modernization.Scanner.exe as
 
 #### Authenticate via Azure AD app-only
 
-The first page of the modernization scanner wizard asks you for authentication information. The scanner supports three options, select the one you need and fill in the needed information as described below. Ideally you use an app-only model as that will ensure the scanner has access to all sites it needs to scan.
+The first page of the modernization scanner wizard asks you for authentication information. The scanner supports four options, select the one you need and fill in the needed information as described below. Ideally you use an app-only model as that will ensure the scanner has access to all sites it needs to scan.
 
-![Azure AD App-Only](media/modernize/scanner_p1_1_2.6.png)
+![Azure AD App-Only](media/modernize/scanner_p1_1_2.9.png)
 
 If you've [setup access via Azure AD App-Only](../solution-guidance/security-apponly-azuread.md), you do have created an Azure App and configured a certificate for accessing it. This information needs to be provided to the tool:
 
@@ -71,7 +71,7 @@ If you've [setup access via Azure AD App-Only](../solution-guidance/security-app
 
 #### Authenticate via SharePoint AD app-only
 
-![SharePoint App-only](media/modernize/scanner_p1_2_2.6.png)
+![SharePoint App-only](media/modernize/scanner_p1_2_2.9.png)
 
 In case you used the "classic" [SharePoint App-Only](../solution-guidance/security-apponly-azureacs.md) approach then you need to specify:
 
@@ -80,8 +80,21 @@ In case you used the "classic" [SharePoint App-Only](../solution-guidance/securi
 
 #### Authenticate via credentials
 
-![Credentials](media/modernize/scanner_p1_3_2.6.png)
-Using a regular user/password combo works fine as well, assuming the provided user does have the needed permissions
+![Credentials](media/modernize/scanner_p1_3_2.9.png)
+
+Using a regular user/password combo works fine as well, assuming the provided user does have the needed permissions. As of version 2.9 of the scanner the user/password based authentication does not rely anymore of legacy auth being enabled on the scanned tenant. The only reason why this type of authentication would not work is when the used account requires multi-factor authentication. If that's the case then please use the Multi Factor Auth option introduced as of version 2.9.
+
+#### Authenticate via Multi Factor Authentication (as of version 2.9)
+
+![MFA](media/modernize/scanner_p1_4_2.9.png)
+
+Depending on the tenant and account you're using your admin might require multi-factor authentication for logging into to SharePoint Online. If that's the case you'll need to use this option if you want to use the scanner via user credentials. Using an app-only approach is still recommended, but if you do not have the needed permissions for setting up app-only this approach will allow you to scan the site collections you as a user have permissions for. To use this you'll need to:
+
+- Enter the URL of a site you want to scan (any site you've access to will be fine)
+- Click on the **Login** button which will trigger the multi factor authentication flow
+
+> [!NOTE]
+> The multi factor authentication will give the scanner an access token after you've successfully logged on. Since an access token has limited lifetime (typically 1 hour) this means that scan will only be able to access SharePoint sites while the token is still valid.
 
 ### Page 2: Scanner site scope configuration
 
@@ -89,13 +102,13 @@ Using a regular user/password combo works fine as well, assuming the provided us
 
 This page allows you to define which sites are being scanned. The scanner supports scanning the full tenant up to individually selected site collections.
 
-![Full tenant](media/modernize/scanner_p2_1_2.6.png)
+![Full tenant](media/modernize/scanner_p2_1_2.9.png)
 
 Scanning the complete tenant is often the recommended approach as that will give you modernization reports for all. If that's your choice, then simply fill your tenant name. This approach doesn't work if your tenant is **using URLs that do not end on sharepoint.com**, if that's the case you need to use one of the two below options.
 
 #### Scan a defined list of site collections
 
-![Wildcard urls](media/modernize/scanner_p2_2_2.6.png)
+![Wildcard urls](media/modernize/scanner_p2_2_2.9.png)
 
 This option makes it possible to select one or more site collections by either providing
 
@@ -106,7 +119,7 @@ If you're using URLs that do not end on sharepoint.com (so called vanity URLs), 
 
 #### Scan a list of site collections defined in a CSV file
 
-![CSV file](media/modernize/scanner_p2_3_2.6.png)
+![CSV file](media/modernize/scanner_p2_3_2.9.png)
 
 As a third option you can provide the scanner with a CSV file listing the site collections to scan. This CSV file is a simple list of site collections, the file doesn't have a header as shown in this sample:
 
@@ -128,7 +141,7 @@ Select the option you want in the dropdown and then the checkboxes will show whi
 
 As a last step you can tweak the scanner options. Depending on the earlier chosen scanner mode, some options might be disabled.
 
-![scanner options](media/modernize/scanner_p4_1_2.6.png)
+![scanner options](media/modernize/scanner_p4_1_2.9.png)
 
 Following scan options are available:
 
@@ -186,7 +199,7 @@ Mode                      | Description
 ### Command-line parameter overview
 
 ```text
-SharePoint PnP Modernization scanner 2.8.0.0
+SharePoint PnP Modernization scanner 2.9.0.0
 Copyright (C) 2020 SharePoint PnP
 ==========================================================
 

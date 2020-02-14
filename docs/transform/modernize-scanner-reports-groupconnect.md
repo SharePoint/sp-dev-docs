@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the Office 365 group connect scanner mode
 description: Explains the Office 365 group connect output created by the modernization scanner
-ms.date: 11/27/2019
+ms.date: 02/13/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -35,6 +35,7 @@ Column | Description
 **MasterPage** | Was a custom master page used?
 **AlternateCSS** | Was alternate CSS defined?
 **UserCustomActions** | Are there incompatible user custom actions used?
+**SearchCenterUrl** | Contains the site custom search center URL or custom search results page if they're set. If both are set then the custom search center URL will be listed
 **SubSites** | Does the site have sub sites?
 **SubSitesWithBrokenPermissionInheritance** | Does the site have sub sites with unique permissions?
 **ModernPageWebFeatureDisabled** | Was the modern page feature disabled for this site?
@@ -92,6 +93,7 @@ Column | Description
 **CustomMasterPage** | Value of the custom master page if customized
 **AlternateCSS** | Value of the alternate CSS if set
 **UserCustomActions** | Are there incompatible user custom actions used in this web?
+**SearchCenterUrl** | Contains the web custom search center URL or custom search results page if they're set. If both are set then the custom search center URL will be listed
 **Everyone(ExceptExternalUsers)Claim** | Is the `everyone` or `everyone except external users` claim used at web level?
 **UniqueOwners** | Comma delimited list of owners if this web has unique permissions defined.
 **UniqueMembers** | Comma delimited list of members if this web has unique permissions defined.

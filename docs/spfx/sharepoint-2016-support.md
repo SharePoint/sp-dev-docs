@@ -56,11 +56,8 @@ The [Team-based development on the SharePoint Framework](team-based-development-
 If you have existing SharePoint Framework solutions and you'd like to confirm which version of the SharePoint Framework was used for them, you'll need to check the following locations:
 
 - **.yo-rc.json**. File in the solution's root folder that stores the SharePoint Framework Yeoman template version used when the solution was created.
-
 - **package.json**. File in the solution's root folder that contains references to package versions used in the solution.
-
 - **npm-shrinkwrap.json**. File in the solution's root folder that contains information about the exact versions used (if you used the `npm shrinkwrap` command to lock down the exact versions of the solution).
-
 - **package.json**. File in the *node_modules/@microsoft/sp-webpart-base* folder that contains a *version* attribute matching the used SharePoint Framework version, if you have installed packages to your solution.
 
 ## See also

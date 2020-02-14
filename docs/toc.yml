@@ -1,275 +1,6 @@
 - name: SharePoint development
   href: index.md
-- name: SharePoint Framework
-  href: spfx/sharepoint-framework-overview.md
-  items:
-  - name: Getting started
-    items:
-    - name: Set up Office 365 tenant
-      href: spfx/set-up-your-developer-tenant.md
-    - name: Set up development environment
-      href: spfx/set-up-your-development-environment.md
-  - name: Web parts
-    href: spfx/web-parts/overview-client-side-web-parts.md
-    items:
-    - name: Getting started
-      items:
-      - name: Build your first web part
-        href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
-      - name: Connect your web part to SharePoint
-        href: spfx/web-parts/get-started/connect-to-sharepoint.md
-      - name: Deploy your web part to a SharePoint page
-        href: spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md
-      - name: Host your web part from Office 365 CDN
-        href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
-      - name: Add jQueryUI Accordion to your web part
-        href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
-      - name: Use Office UI Fabric React components in your web part
-        href: spfx/web-parts/get-started/use-fabric-react-components.md
-      - name: Provision assets from your web part
-        href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
-      - name: Deploy your web part to an Azure CDN
-        href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
-      - name: Using Microsoft Graph APIs
-        href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
-      - name: Building Microsoft Teams tab using SharePoint Framework
-        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
-      - name: Building Office add-ins using SharePoint Framework
-        href: spfx/web-parts/get-started/office-addins-tutorial.md
-    - name: Basics
-      items:
-      - name: Integrate properties with SharePoint
-        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
-      - name: Configure custom properties
-        href: spfx/web-parts/basics/integrate-with-property-pane.md
-      - name: Configure web part icon
-        href: spfx/web-parts/basics/configure-web-part-icon.md
-      - name: Using full-width column
-        href: spfx/web-parts/basics/use-web-parts-full-width-column.md
-      - name: Hide from the toolbox
-        href: spfx/web-parts/basics/hide-web-part-from-toolbox.md
-      - name: Preconfigure web parts
-        href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
-      - name: Validate properties
-        href: spfx/web-parts/guidance/validate-web-part-property-values.md
-      - name: Isolated web parts
-        href: spfx/web-parts/isolated-web-parts.md
-      - name: Single Part App Pages
-        href: spfx/web-parts/single-part-app-pages.md
-      - name: Supporting section backgrounds
-        href: spfx/web-parts/guidance/supporting-section-backgrounds.md
-      - name: Extend property pane
-        items:
-        - name: Build custom controls
-          href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
-        - name: Use cascading dropdowns
-          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
-    - name: Migrate existing customizations
-      items:
-      - name: Script Editor web part
-        href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
-      - name: jQuery and DataTables
-        href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
-      - name: jQuery and FullCalendar
-        href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
-      - name: AngularJS applications
-        href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
-      - name: Work with __REQUESTDIGEST
-        href: spfx/web-parts/basics/working-with-requestdigest.md
-      - name: Use JSOM
-        href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md
-  - name: Extensions
-    href: spfx/extensions/overview-extensions.md
-    items:
-    - name: Tenant Wide Deployment
-      href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
-    - name: Pre-allocated placeholders
-      href: spfx/extensions/basics/preallocated-space-placeholders.md
-    - name: Building Search Extensions
-      href: spfx/building-search-extensions.md
-    - name: Getting started
-      items:
-      - name: Build your first extension
-        href: spfx/extensions/get-started/build-a-hello-world-extension.md
-      - name: Use page placeholders
-        href: spfx/extensions/get-started/using-page-placeholder-with-extensions.md
-      - name: Deploy your extension to SharePoint
-        href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
-      - name: Host extension from CDN
-        href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
-      - name: Build Field Customizer
-        href: spfx/extensions/get-started/building-simple-field-customizer.md
-      - name: Build ListView Command Set
-        href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
-      - name: Configure extension icon
-        href: spfx/extensions/basics/configure-extension-icon.md
-    - name: Migrate existing customizations
-      items:
-      - name: Client Side Rendering (JSLink)
-        href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
-      - name: JavaScript embedding (UserCustomAction)
-        href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
-      - name: Edit Control Block (ECB) menu item tutorial
-        href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
-      - name: Client Side Rendering (JSLink) tutorial
-        href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
-      - name: JavaScript embedding (UserCustomAction) tutorial
-        href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md
-  - name: Guidance
-    items:
-    - name: Enterprise guidance
-      href: spfx/enterprise-guidance.md
-    - name: Team-based development
-      href: spfx/team-based-development-on-sharepoint-framework.md
-    - name: Governance considerations
-      href: spfx/web-parts/guidance/governance-considerations.md
-    - name: Dynamic loading of packages
-      href: spfx/dynamic-loading.md
-    - name: Connecting components with Dynamic Data
-      href: spfx/dynamic-data.md
-    - name: Building Microsoft Teams Tabs
-      href: spfx/integrate-with-teams-introduction.md
-    - name: Creating Teams manifest manually
-      href: spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md
-    - name: Hosting Microsoft Teams Tabs in SharePoint
-      href: spfx/using-teams-solutions-in-sharepoint.md
-    - name: Library component overview
-      href: spfx/library-component-overview.md
-    - name: Library component tutorial
-      href: spfx/library-component-tutorial.md
-    - name: Hyperlinking considerations
-      href: spfx/hyperlinking.md
-    - name: Building Office add-ins
-      href: spfx/office-addins-create.md
-    - name: Intercepting query string changes
-      href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
-  - name: External libraries
-    items:
-    - name: Add external libraries
-      href: spfx/web-parts/basics/add-an-external-library.md
-    - name: JavaScript libraries
-      href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
-    - name: CSS styles
-      href: spfx/web-parts/guidance/reference-third-party-css-styles.md
-    - name: SP PnP JS
-      href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
-    - name: AngularJS
-      href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
-  - name: Connect to APIs
-    items:
-    - name: Connect to SharePoint APIs
-      href: spfx/connect-to-sharepoint.md
-    - name: Connect to Microsoft Graph 
-      href: spfx/use-msgraph.md
-    - name: Connect to APIs secured with Azure AD
-      href: spfx/use-aadhttpclient.md
-    - name: Connect to anonymous APIs
-      href: spfx/connect-to-anonymous-apis.md
-    - name: Subscribe to list notifications
-      href: spfx/subscribe-to-list-notifications.md
-    - name: Tutorials
-      items:        
-      - name: Consume Microsoft Graph (tutorial)
-        href: spfx/use-aad-tutorial.md
-      - name: Consume enterprise APIs
-        href: spfx/use-aadhttpclient-enterpriseapi.md
-      - name: Consume multi-tenant enterprise APIs
-        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
-  - name: Setup and deployment
-    items:
-    - name: Package solution
-      href: spfx/web-parts/basics/notes-on-solution-packaging.md
-    - name: Custom build tasks
-      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-    - name: Extend Webpack
-      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
-    - name: Update packages
-      href: spfx/toolchain/update-latest-packages.md
-    - name: Tenant-scoped solution deployment
-      href: spfx/tenant-scoped-deployment.md
-    - name: Tenant properties
-      href: spfx/tenant-properties.md         
-    - name: Provision SharePoint assets
-      href: spfx/toolchain/provision-sharepoint-assets.md
-    - name: Optimize builds for production
-      href: spfx/toolchain/optimize-builds-for-production.md        
-    - name: Localize web parts
-      href: spfx/web-parts/guidance/localize-web-parts.md 
-    - name: SharePoint 2016 support
-      href: spfx/sharepoint-2016-support.md        
-    - name: Use preview capabilities
-      href: spfx/try-preview-capabilities.md           
-  - name: Design
-    href: design/design-guidance-overview.md
-    items:
-    - name: Design a web part
-      href: design/design-a-web-part.md
-      items:
-      - name: Reactive and nonreactive web parts
-        href: design/reactive-and-nonreactive-web-parts.md
-      - name: Responsive design
-        href: design/grid-and-responsive-design.md
-      - name: Titles and descriptions
-        href: design/web-part-titles-and-descriptions.md
-      - name: Commanding within a web part
-        href: design/web-part-commanding.md
-      - name: Web part layouts
-        href: design/layout-patterns.md
-      - name: Web part levels
-        href: design/web-part-levels.md
-      - name: UI text
-        href: design/ui-text-for-web-parts.md
-      - name: Placeholders and fallbacks
-        href: design/placeholders-and-fallbacks.md
-      - name: Empty state of a web part
-        href: design/empty-states.md     
-      - name: Accessibility
-        href: design/accessibility.md
-      - name: Key web part examples
-        href: design/key-web-part-examples.md     
-      - name: Web part showcase
-        href: design/showcase-web-part.md
-      - name: Designing a web part icon
-        href: design/designing-a-web-part-icon.md
-      - name: Using semantic slots
-        href: design/semantic_slots.md        
-    - name: Authoring pages
-      href: design/authoring-pages.md          
-    - name: Design considerations
-      href: spfx/web-parts/basics/design-considerations-for-web-parts.md
-    - name: Custom dialogs
-      href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
-    - name: Work with CSS
-      href: spfx/css-recommendations.md
-    - name: Themes and colors
-      href: design/themes-colors.md      
-    - name: Use themes
-      href: spfx/use-theme-colors-in-your-customizations.md
-    - name: Office UI Fabric integration
-      href: spfx/office-ui-fabric-integration.md
-  - name: Tools and libraries
-    href: spfx/tools-and-libraries.md
-    items:
-    - name: Toolchain
-      href: spfx/toolchain/sharepoint-framework-toolchain.md
-    - name: Yeoman generator
-      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
-    - name: CI and CD with Azure DevOps
-      href: spfx/toolchain/implement-ci-cd-with-azure-devops.md
-    - name: CI and CD with Azure Pipelines (preview)
-      href: spfx/toolchain/implement-ci-cd-with-azure-pipelines.md
-  - name: Debugging
-    href: spfx/debug-in-vscode.md
-    items:
-    - name: Debug in Visual Studio Code
-      href: spfx/debug-in-vscode.md
-    - name: Debug on modern pages
-      href: spfx/debug-modern-pages.md
-    - name: Use the developer dashboard
-      href: spfx/use-developer-dashboard.md
-  - name: Roadmap
-    href: spfx/roadmap.md
-- name: Features
+- name: Capabilities & features
   items:
   - name: Connect to Office 365 group
     href: features/groupify/groupify-overview.md
@@ -277,15 +8,17 @@
     - name: CSOM development
       href: features/groupify/groupify-csom.md
   - name: Hub sites
-    href: features/hub-site/hub-site-overview.md
     items:
+    - name: Overview
+      href: features/hub-site/hub-site-overview.md
     - name: Create hub sites with PowerShell
       href: features/hub-site/create-hub-site-with-powershell.md
     - name: PowerShell cmdlets for hub sites
       href: features/hub-site/hub-site-powershell.md
     - name: REST API
-      href: features/hub-site/hub-site-rest-api.md
-      items: 
+      items:
+      - name: Overview
+        href: features/hub-site/hub-site-rest-api.md
       - name: SP.HubSites.CanCreate
         href: features/hub-site/REST-cancreate-method.md
       - name: GetById
@@ -305,68 +38,11 @@
       - name: SPHubSite type
         href: features/hub-site/REST-sphubsite-type.md
       - name: SPHubSiteData type
-        href: features/hub-site/REST-sphubsitedata-type.md         
-  - name: SharePoint APIs
+        href: features/hub-site/REST-sphubsitedata-type.md
+  - name: Site designs & site scripts
     items:
-    - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
-      href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
-    - name: Complete basic operations using SharePoint client library code
-      href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
-    - name: Complete basic operations using JavaScript library code in SharePoint
-      href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
-    - name: SharePoint REST API v1
-      href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
-      items:
-      - name: Complete basic operations
-        href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
-      - name: Work with lists and list items
-        href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
-      - name: Work with folders and files
-        href: sp-add-ins/working-with-folders-and-files-with-rest.md
-      - name: Retrieve the URL of the tenant app catalog
-        href: sp-add-ins/retrieve-tenant-app-catalog-url-rest.md
-      - name: Determine endpoint URIs
-        href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
-      - name: Use OData query operations
-        href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
-      - name: Navigate data structure
-        href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-      - name: Synchronize items
-        href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
-      - name: Upload a file
-        href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
-      - name: Set custom permissions
-        href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
-      - name: Make batch requests
-        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
-    - name: SharePoint REST API v2
-      href: apis/sharepoint-rest-graph.md
-    - name: SharePoint Migration Guidance
-      items:
-      - name: Migration Guidance for ISVs
-        href: apis/migration-isv-guidance.md
-      - name: Migrating OneNote folders
-        href: apis/onenote-migration-service.md
-      - name: Migration API
-        items:
-        - name: Import Migration API     
-          items:
-          - name: Import Migration API (CreateMigrationJob)
-            href: apis/migration-api-overview.md
-            items:
-            - name: Sharing
-              href: apis/migration-api-shared.md  
-            - name: Migrate web parts using the Migration API
-              href: apis/migrate-webparts-with-migrationapi.md
-        - name: Export Migration API (Asynchronous Metadata Read)         
-          href: apis/export-amr-api.md        
-        - name: Azure container and queue
-          href: apis/migration-api-azure-container-and-queue.md
-        - name: Encryption
-          href: apis/migration-api-encryption.md       
-  - name: Site design
-    href: declarative-customization/site-design-overview.md
-    items:
+    - name: Overview
+      href: declarative-customization/site-design-overview.md
     - name: Get started
       href: declarative-customization/get-started-create-site-design.md
     - name: Set scope
@@ -377,7 +53,7 @@
       href: declarative-customization/site-design-json-schema.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
-    - name: Calling Power Automate from a site script
+    - name: Call Power Automate from site scripts
       href: declarative-customization/site-design-trigger-flow-tutorial.md
     - name: PnP provisioning engine
       href: declarative-customization/site-design-pnp-provisioning.md
@@ -388,8 +64,9 @@
     - name: Office 365 CLI commands
       href: declarative-customization/site-design-o365cli.md
   - name: Site theming
-    href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     items:
+    - name: Overview
+      href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     - name: JSON schema reference
       href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
     - name: PowerShell cmdlets
@@ -397,7 +74,13 @@
     - name: CSOM API
       href: declarative-customization/site-theming/sharepoint-site-theming-csom.md
     - name: REST API
-      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md            
+      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
+  - name: List formatting
+    items:
+    - name: Column formatting
+      href: declarative-customization/column-formatting.md
+    - name: View formatting
+      href: declarative-customization/view-formatting.md
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
@@ -418,32 +101,541 @@
         href: apis/webhooks/lists/delete-subscription.md
       - name: Get subscription
         href: apis/webhooks/lists/get-subscription.md
-  - name: Application Lifecycle Management (ALM) APIs
-    href: apis/alm-api-for-spfx-add-ins.md         
-  - name: Column formatting
-    href: declarative-customization/column-formatting.md   
-  - name: View formatting
-    href: declarative-customization/view-formatting.md       
   - name: Creating modern sites
     href: apis/site-creation-rest.md
   - name: Site Footer
-    href: features/site-footer.md    
+    href: features/site-footer.md
   - name: Shorter share links
     href: spfx/shorter-share-link-format.md
-- name: SharePoint development overview
-  href: general-development/sharepoint-development-overview.md
+  - name: Use the site collection app catalog
+    href: general-development/site-collection-app-catalog.md
+  - name: Use the Office 365 content delivery network (CDN)
+    href: general-development/office-365-cdn.md
+- name: SharePoint Framework
   items:
-  - name: What's new for developers in SharePoint 2019
-    href: general-development/sharepoint-2019-development-platform.md  
-  - name: SharePoint glossary
-    href: general-development/sharepoint-glossary.md  
-  - name: Protocol handler error in SharePoint 2016
-    href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
-  - name: Programming models
-    href: general-development/programming-models-in-sharepoint.md
+  - name: Overview
+    href: spfx/sharepoint-framework-overview.md
+  - name: Getting started
     items:
+    - name: Set up Office 365 tenant
+      href: spfx/set-up-your-developer-tenant.md
+    - name: Set up development environment
+      href: spfx/set-up-your-development-environment.md
+  - name: Web parts
+    items:
+    - name: Overview
+      href: spfx/web-parts/overview-client-side-web-parts.md
+    - name: Getting started
+      items:
+      - name: Build & deploy your first web part
+        href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
+      - name: Connect your web part to SharePoint
+        href: spfx/web-parts/get-started/connect-to-sharepoint.md
+      - name: Deploy your web part to a SharePoint page
+        href: spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md
+      - name: Host your web part from Office 365 CDN
+        href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
+    - name: Web part properties & property pane
+      items:
+      - name: Integrate web part properties with SharePoint
+        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
+      - name: Configure custom properties
+        href: spfx/web-parts/basics/integrate-with-property-pane.md
+      - name: Validate web part properties
+        href: spfx/web-parts/guidance/validate-web-part-property-values.md
+      - name: Extend property pane
+        items:
+        - name: Build custom controls
+          href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
+        - name: Use cascading dropdowns
+          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+    - name: Concepts & scenarios
+      items:
+      - name: Preconfigure web parts
+        href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
+      - name: Configure web part icon
+        href: spfx/web-parts/basics/configure-web-part-icon.md
+      - name: Hide from the toolbox
+        href: spfx/web-parts/basics/hide-web-part-from-toolbox.md
+      - name: Use Office UI Fabric React components
+        href: spfx/web-parts/get-started/use-fabric-react-components.md
+      - name: Use full-width column
+        href: spfx/web-parts/basics/use-web-parts-full-width-column.md
+      - name: Support section backgrounds
+        href: spfx/web-parts/guidance/supporting-section-backgrounds.md
+      - name: Isolated web parts
+        href: spfx/web-parts/isolated-web-parts.md
+      - name: Single Part App Pages
+        href: spfx/web-parts/single-part-app-pages.md
+      - name: Microsoft Teams and SPFx Web parts
+        items:
+        - name: Building Microsoft Teams Tabs
+          href: spfx/integrate-with-teams-introduction.md
+        - name: Creating Teams manifest manually
+          href: spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md
+        - name: Hosting Microsoft Teams Tabs in SharePoint
+          href: spfx/using-teams-solutions-in-sharepoint.md
+      - name: Building Office add-ins
+        href: spfx/office-addins-create.md
+    - name: Tutorials
+      items:
+      - name: Add jQueryUI Accordion to a web part
+        href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
+      - name: Use Microsoft Graph in web parts
+        href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
+      - name: Provision assets from a web part
+        href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
+      - name: Build Microsoft Teams channel/group tabs with SPFx
+        href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
+      - name: Build Office add-ins with SPFx
+        href: spfx/web-parts/get-started/office-addins-tutorial.md
+  - name: Extensions
+    items:
+    - name: Overview
+      href: spfx/extensions/overview-extensions.md
+    - name: Getting started
+      items:
+      - name: Build your first application customizer extension
+        href: spfx/extensions/get-started/build-a-hello-world-extension.md
+      - name: Use page placeholders
+        href: spfx/extensions/get-started/using-page-placeholder-with-extensions.md
+      - name: Deploy your extension to SharePoint
+        href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
+      - name: Host extension from CDN
+        href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md
+    - name: Field Customizer extension
+      href: spfx/extensions/get-started/building-simple-field-customizer.md
+    - name: ListView Command Set extension
+      href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+    - name: Search Query extension
+      href: spfx/building-search-extensions.md
+    - name: Concepts & scenarios
+      items:
+      - name: Tenant wide deployment
+        href: spfx/extensions/basics/tenant-wide-deployment-extensions.md
+      - name: Pre-allocated placeholders
+        href: spfx/extensions/basics/preallocated-space-placeholders.md
+  - name: Library components
+    items:
+    - name: Overview
+      href: spfx/library-component-overview.md
+    - name: Library component tutorial
+      href: spfx/library-component-tutorial.md
+  - name: Migrate existing customizations
+    items:
+    - name: Script Editor web part
+      href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
+    - name: jQuery and DataTables
+      href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
+    - name: jQuery and FullCalendar
+      href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
+    - name: AngularJS applications
+      href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
+    - name: Work with __REQUESTDIGEST
+      href: spfx/web-parts/basics/working-with-requestdigest.md
+    - name: Connect to SharePoint with the JSOM
+      href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md
+    - name: Client Side Rendering (JSLink)
+      href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
+    - name: JavaScript embedding (UserCustomAction)
+      href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
+    - name: Edit Control Block (ECB) menu item tutorial
+      href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
+    - name: Client Side Rendering (JSLink) tutorial
+      href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
+    - name: JavaScript embedding (UserCustomAction) tutorial
+      href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md
+  - name: Guidance
+    items:
+    - name: Enterprise guidance
+      href: spfx/enterprise-guidance.md
+    - name: Team-based development
+      href: spfx/team-based-development-on-sharepoint-framework.md
+    - name: Governance considerations
+      href: spfx/web-parts/guidance/governance-considerations.md
+    - name: Dynamic loading of packages
+      href: spfx/dynamic-loading.md
+    - name: Connecting components with Dynamic Data
+      href: spfx/dynamic-data.md
+    - name: Hyperlinking considerations
+      href: spfx/hyperlinking.md
+    - name: Intercepting query string changes
+      href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
+  - name: External libraries
+    items:
+    - name: Add external libraries
+      href: spfx/web-parts/basics/add-an-external-library.md
+    - name: JavaScript libraries
+      href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
+    - name: CSS styles
+      href: spfx/web-parts/guidance/reference-third-party-css-styles.md
+    - name: SP PnP JS
+      href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
+    - name: AngularJS
+      href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
+  - name: Connect to APIs
+    items:
+    - name: Connect to SharePoint APIs
+      href: spfx/connect-to-sharepoint.md
+    - name: Connect to Microsoft Graph
+      href: spfx/use-msgraph.md
+    - name: Connect to APIs secured with Azure AD
+      href: spfx/use-aadhttpclient.md
+    - name: Connect to anonymous APIs
+      href: spfx/connect-to-anonymous-apis.md
+    - name: Subscribe to list notifications
+      href: spfx/subscribe-to-list-notifications.md
+    - name: Tutorials
+      items:
+      - name: Consume Microsoft Graph (tutorial)
+        href: spfx/use-aad-tutorial.md
+      - name: Consume enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi.md
+      - name: Consume multi-tenant enterprise APIs
+        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
+  - name: Setup & deployment
+    items:
+    - name: Package solutions
+      href: spfx/web-parts/basics/notes-on-solution-packaging.md
+    - name: Update packages
+      href: spfx/toolchain/update-latest-packages.md
+    - name: Deploy web parts to Azure CDN
+      href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
+    - name: Custom build tasks
+      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+    - name: Extend Webpack
+      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
+    - name: Tenant-scoped solution deployment
+      href: spfx/tenant-scoped-deployment.md
+    - name: Optimize builds for production
+      href: spfx/toolchain/optimize-builds-for-production.md
+    - name: SharePoint 2016 support
+      href: spfx/sharepoint-2016-support.md
+    - name: SharePoint 2019 support
+      href: spfx/sharepoint-2019-support.md
+  - name: Concepts & scenarios
+    items:
+    - name: Localize web parts
+      href: spfx/web-parts/guidance/localize-web-parts.md
+    - name: Use preview capabilities
+      href: spfx/try-preview-capabilities.md
+    - name: Tenant properties
+      href: spfx/tenant-properties.md
+    - name: Provision SharePoint assets
+      href: spfx/toolchain/provision-sharepoint-assets.md
+    - name: Continuous integration & continuous deployment (CI/CD)
+      items:
+      - name: Azure DevOps build & release stages
+        href: spfx/toolchain/implement-ci-cd-with-azure-devops.md
+      - name: Azure DevOps Multi-stage pipelines
+        href: spfx/toolchain/implement-ci-cd-with-azure-pipelines.md
+  - name: Design
+    items:
+    - name: Overview
+      href: design/design-guidance-overview.md
+    - name: Design a web part
+      href: design/design-a-web-part.md
+      items:
+      - name: Reactive and nonreactive web parts
+        href: design/reactive-and-nonreactive-web-parts.md
+      - name: Responsive design
+        href: design/grid-and-responsive-design.md
+      - name: Titles and descriptions
+        href: design/web-part-titles-and-descriptions.md
+      - name: Commanding within a web part
+        href: design/web-part-commanding.md
+      - name: Web part layouts
+        href: design/layout-patterns.md
+      - name: Web part levels
+        href: design/web-part-levels.md
+      - name: UI text
+        href: design/ui-text-for-web-parts.md
+      - name: Placeholders and fallbacks
+        href: design/placeholders-and-fallbacks.md
+      - name: Empty state of a web part
+        href: design/empty-states.md
+      - name: Accessibility
+        href: design/accessibility.md
+      - name: Key web part examples
+        href: design/key-web-part-examples.md
+      - name: Web part showcase
+        href: design/showcase-web-part.md
+      - name: Designing a web part icon
+        href: design/designing-a-web-part-icon.md
+      - name: Using semantic slots
+        href: design/semantic_slots.md
+    - name: Authoring pages
+      href: design/authoring-pages.md
+    - name: Design considerations
+      href: spfx/web-parts/basics/design-considerations-for-web-parts.md
+    - name: Custom dialogs
+      href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
+    - name: Work with CSS
+      href: spfx/css-recommendations.md
+    - name: Themes and colors
+      href: design/themes-colors.md
+    - name: Use themes
+      href: spfx/use-theme-colors-in-your-customizations.md
+    - name: Office UI Fabric integration
+      href: spfx/office-ui-fabric-integration.md
+  - name: Tools & libraries
+    items:
+    - name: Overview
+      href: spfx/tools-and-libraries.md
+    - name: Toolchain
+      href: spfx/toolchain/sharepoint-framework-toolchain.md
+    - name: Yeoman generator
+      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+  - name: Debugging
+    items:
+    - name: Debug in Visual Studio Code
+      href: spfx/debug-in-vscode.md
+    - name: Debug on modern pages
+      href: spfx/debug-modern-pages.md
+    - name: Use the developer dashboard
+      href: spfx/use-developer-dashboard.md
+    - name: Maintenance mode for client-side web parts
+      href: general-development/client-side-web-parts-maintenance-mode.md
+  - name: Roadmap
+    href: spfx/roadmap.md
+- name: SharePoint Add-ins
+  items:
+  - name: Overview
+    href: sp-add-ins/sharepoint-add-ins.md
+  - name: Build SharePoint-hosted add-ins
+    items:
+    - name: Overview
+      href: sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md
+    - name: 1. Deploy and install add-ins
+      href: sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 2. Add custom columns
+      href: sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 3. Add a custom content type
+      href: sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 4. Add a web part to a page
+      href: sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 5. Add a workflow
+      href: sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 6. Add a custom page and style
+      href: sp-add-ins/add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 7. Add custom client-side rendering
+      href: sp-add-ins/add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 8. Create a custom ribbon button in the host web
+      href: sp-add-ins/create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md
+    - name: 9. Use the SharePoint JavaScript APIs to work with SharePoint data
+      href: sp-add-ins/use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md
+    - name: 10. Work with host web data from JavaScript in the add-in web
+      href: sp-add-ins/work-with-host-web-data-from-javascript-in-the-add-in-web.md
+  - name: Build provider-hosted add-ins
+    items:
+    - name: Overview
+      href: sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md
+    - name: 1. Give your add-in the SharePoint look-and-feel
+      href: sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md
+    - name: 2. Include a custom button
+      href: sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in.md
+    - name: 3. Get an overview of the SharePoint object model
+      href: sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model.md
+    - name: 4. Add write operations
+      href: sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in.md
+    - name: 5. Include an add-in part
+      href: sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in.md
+    - name: 6. Handle add-in events
+      href: sp-add-ins/handle-add-in-events-in-the-provider-hosted-add-in.md
+    - name: 7. Add first-run logic
+      href: sp-add-ins/add-first-run-logic-to-the-provider-hosted-add-in.md
+    - name: 8. Programmatically deploy a custom button
+      href: sp-add-ins/programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md
+    - name: 9. Handle list item events
+      href: sp-add-ins/handle-list-item-events-in-the-provider-hosted-add-in.md
+  - name: Design
+    items:
+    - name: Overview
+      href: sp-add-ins/design-sharepoint-add-ins.md
+    - name: Design options for add-ins
+      href: sp-add-ins/three-ways-to-think-about-design-options-for-sharepoint-add-ins.md
+    - name: Add-in architecture and development landscape
+      items:
+      - name: Overview
+        href: sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md
+      - name: Patterns for developing and hosting an add-in
+        href: sp-add-ins/choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md
+      - name: Host webs, add-in webs, and SharePoint components
+        href: sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md
+    - name: Secure data access and client object models for add-ins
+      href: sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins.md
+    - name: UX design for add-ins
+      items:
+      - name: Overview
+        href: sp-add-ins/ux-design-for-sharepoint-add-ins.md
+      - name: SharePoint Add-ins UX design guidelines
+        href: sp-add-ins/sharepoint-add-ins-ux-design-guidelines.md
     - name: SharePoint Add-ins compared with SharePoint solutions
       href: general-development/sharepoint-add-ins-compared-with-sharepoint-solutions.md
+  - name: Develop
+    items:
+    - name: Overview
+      href: sp-add-ins/develop-sharepoint-add-ins.md
+    - name: Explore the app manifest structure and the package of an add-in
+      items:
+      - name: Overview
+        href: sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md
+      - name: URL strings and tokens in add-ins
+        href: sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md
+    - name: Create UX components in SharePoint
+      items:
+      - name: Overview
+        href: sp-add-ins/create-ux-components-in-sharepoint.md
+      - name: Use a SharePoint website's style sheet in add-ins
+        href: sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md
+      - name: Use the client chrome control in add-ins
+        href: sp-add-ins/use-the-client-chrome-control-in-sharepoint-add-ins.md
+      - name: Create add-in parts to install with your add-in
+        href: sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md
+      - name: Create custom actions to deploy with add-ins
+        href: sp-add-ins/create-custom-actions-to-deploy-with-sharepoint-add-ins.md
+      - name: Customize a list view in add-ins using client-side rendering
+        href: sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering.md
+      - name: Use the client-side People Picker control in SharePoint-hosted add-ins
+        href: sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in.md
+      - name: Highlight content and enhance the functionality of SharePoint-hosted add-ins with the callout control
+        href: sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint.md
+      - name: Include a web part in a webpage on the add-in web
+        href: sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web.md
+      - name: Office Web Widgets - Experimental overview
+        href: sp-add-ins/office-web-widgetsexperimental-overview.md
+        items:
+        - name: Use the experimental People Picker widget in add-ins
+          href: sp-add-ins/use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md
+        - name: Use the experimental Desktop List View widget in add-ins
+          href: sp-add-ins/use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md
+        - name: Office Web Widgets - Experimental License Terms
+          href: sp-add-ins/office-web-widgetsexperimental-license-terms.md
+    - name: Work with external data in SharePoint
+      items:
+      - name: Overview
+        href: sp-add-ins/work-with-external-data-in-sharepoint.md
+      - name: Create a custom proxy page for the cross-domain library
+        href: sp-add-ins/create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md
+      - name: Query a remote service using the web proxy
+        href: sp-add-ins/query-a-remote-service-using-the-web-proxy-in-sharepoint.md
+    - name: Handle events in add-ins
+      items:
+      - name: Overview
+        href: sp-add-ins/handle-events-in-sharepoint-add-ins.md
+      - name: Create a remote event receiver
+        href: sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins.md
+      - name: Create an add-in event receiver
+        href: sp-add-ins/create-an-add-in-event-receiver-in-sharepoint-add-ins.md
+      - name: Debug and troubleshoot a remote event receiver
+        href: sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md
+    - name: Create a provider-hosted add-in that includes a custom SharePoint list and content type
+      href: sp-add-ins/create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md
+    - name: Get user identity and properties in SharePoint
+      href: sp-add-ins/get-user-identity-and-properties-in-sharepoint.md
+    - name: Localize SharePoint Add-ins
+      href: sp-add-ins/localize-sharepoint-add-ins.md
+    - name: Authorization and authentication of add-ins
+      items:
+      - name: Overview
+        href: sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins.md
+      - name: Add-in permissions in SharePoint
+        href: sp-add-ins/add-in-permissions-in-sharepoint.md
+      - name: Register add-ins
+        href: sp-add-ins/register-sharepoint-add-ins.md
+      - name: Add-in authorization policy types in SharePoint
+        href: sp-add-ins/add-in-authorization-policy-types-in-sharepoint.md
+      - name: Three authorization systems for add-ins
+        href: sp-add-ins/three-authorization-systems-for-sharepoint-add-ins.md
+        items:
+        - name: Creating add-ins that use low-trust authorization
+          href: sp-add-ins/creating-sharepoint-add-ins-that-use-low-trust-authorization.md
+          items:
+          - name: Context Token OAuth flow for add-ins
+            href: sp-add-ins/context-token-oauth-flow-for-sharepoint-add-ins.md
+          - name: Authorization Code OAuth flow for add-ins
+            href: sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins.md
+          - name: Handle security tokens in provider-hosted low-trust add-ins
+            href: sp-add-ins/handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md
+          - name: Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
+            href: sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on.md
+          - name: Replace an expiring client secret in an add-in
+            href: sp-add-ins/replace-an-expiring-client-secret-in-a-sharepoint-add-in.md
+        - name: Creating add-ins that use high-trust authorization
+          href: sp-add-ins/creating-sharepoint-add-ins-that-use-high-trust-authorization.md
+          items:
+          - name: Create high-trust add-ins
+            href: sp-add-ins/create-high-trust-sharepoint-add-ins.md
+          - name: Create and use access tokens in provider-hosted high-trust add-ins
+            href: sp-add-ins/create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md
+          - name: Troubleshooting high-trust add-ins
+            href: sp-add-ins/troubleshooting-high-trust-sharepoint-add-ins.md
+          - name: Package and publish high-trust add-ins
+            href: sp-add-ins/package-and-publish-high-trust-sharepoint-add-ins.md
+            items:
+            - name: High-trust configuration scripts for SharePoint
+              href: sp-add-ins/high-trust-configuration-scripts-for-sharepoint.md
+        - name: Creating add-ins that use the cross-domain library
+          href: sp-add-ins/creating-sharepoint-add-ins-that-use-the-cross-domain-library.md
+          items:
+          - name: Access SharePoint data from add-ins using the cross-domain library
+            href: sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md
+          - name: Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins
+            href: sp-add-ins/work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md
+    - name: Convert an autohosted add-in to a provider-hosted add-in
+      href: sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md
+    - name: Create add-ins for the SAP Gateway for Microsoft
+      href: sp-add-ins/create-provider-hosted-sharepoint-add-ins-to-access-sap-data-by-using-the-sap-ga.md
+    - name: Create an add-in that contains a document template and a task pane add-in
+      href: sp-add-ins/create-a-sharepoint-add-in-that-contains-a-document-template-and-a-task-pane-add.md
+  - name: Publish
+    items:
+    - name: Overview
+      href: sp-add-ins/publish-sharepoint-add-ins.md
+    - name: Deploy and install add-ins
+      href: sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md
+    - name: Tenancies and deployment scopes for add-ins
+      href: sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins.md
+    - name: SharePoint Add-ins update process
+      items:
+      - name: Overview
+        href: sp-add-ins/sharepoint-add-ins-update-process.md
+      - name: Update SharePoint add-ins
+        href: sp-add-ins/update-sharepoint-add-ins.md
+      - name: Update add-in web components in SharePoint
+        href: sp-add-ins/update-add-in-web-components-in-sharepoint.md
+      - name: Update host web components in SharePoint
+        href: sp-add-ins/update-host-web-components-in-sharepoint.md
+      - name: Update remote components in add-ins
+        href: sp-add-ins/update-remote-components-in-sharepoint-add-ins.md
+      - name: Create a handler for the update event in add-ins
+        href: sp-add-ins/create-a-handler-for-the-update-event-in-sharepoint-add-ins.md
+    - name: Publish add-ins with Visual Studio
+      href: sp-add-ins/publish-sharepoint-add-ins-by-using-visual-studio.md
+  - name: Tools
+    items:
+    - name: Overview
+      href: sp-add-ins/tools-and-environments-for-developing-sharepoint-add-ins.md
+    - name: Set up a development environment for add-ins on Office 365
+      href: sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md
+    - name: Create a developer site on an existing Office 365 subscription
+      href: sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription.md
+    - name: Set up an on-premises development environment for add-ins
+      href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
+    - name: Create add-ins in Visual Studio
+      href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
+- name: Archive
+  items:
+  - name: Overview
+    href: general-development/sharepoint-development-overview.md
+  - name: What's new in SharePoint Server 2019
+    href: general-development/sharepoint-2019-development-platform.md
+  - name: Programming models
+    items:
+    - name: Overview
+      href: general-development/programming-models-in-sharepoint.md
     - name: Build farm solutions
       href: general-development/build-farm-solutions-in-sharepoint.md
       items:
@@ -599,8 +791,9 @@
       - name: Optimize site accessibility
         href: general-development/optimize-sharepoint-site-accessibility.md
   - name: Add SharePoint capabilities
-    href: general-development/add-sharepoint-capabilities.md
     items:
+    - name: Overview
+      href: general-development/add-sharepoint-capabilities.md
     - name: Workflows
       href: general-development/workflows-in-sharepoint.md
       items:
@@ -1109,15 +1302,17 @@
     - name: XLIFF interchange file format
       href: general-development/the-xliff-interchange-file-format-in-sharepoint.md
   - name: Create no-code solutions
-    href: general-development/create-sharepoint-no-code-solutions.md
     items:
+    - name: Overview
+      href: general-development/create-sharepoint-no-code-solutions.md
     - name: SharePoint Composites
       href: general-development/sharepoint-composites-handbook.md
     - name: Save a site as a template
       href: general-development/save-download-and-upload-a-sharepoint-site-as-a-template.md
   - name: Upgrade site customizations
-    href: general-development/upgrade-site-customizations-for-sharepoint.md
     items:
+    - name: Overview
+      href: general-development/upgrade-site-customizations-for-sharepoint.md
     - name: Upgrade web templates
       href: general-development/upgrade-web-templates-for-sharepoint.md
     - name: Use Feature upgrade to apply new master pages
@@ -1130,12 +1325,6 @@
     href: general-development/code-samples-for-sharepoint.md
   - name: Choose the right API set
     href: general-development/choose-the-right-api-set-in-sharepoint.md
-  - name: Use the Office 365 content delivery network (CDN)
-    href: general-development/office-365-cdn.md
-  - name: Use the site collection app catalog
-    href: general-development/site-collection-app-catalog.md
-  - name: Maintenance mode for client-side web parts
-    href: general-development/client-side-web-parts-maintenance-mode.md
   - name: SharePoint Workflow Manager
     href: general-development/set-up-and-configure-sharepoint-workflow-manager.md
   - name: SharePoint Application Lifecycle Management
@@ -1146,9 +1335,12 @@
     href: general-development/how-to-detect-the-installed-sku-of-sharepoint.md
   - name: Avoid getting throttled or blocked in SharePoint Online
     href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
+  - name: Protocol handler error in SharePoint 2016
+    href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Volume Shadow Copy Service (VSS)
-    href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
     items:
+    - name: Overview
+      href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
     - name: VSS Writer
       href: general-development/sharepoint-vss-writer.md
     - name: VSS requestors
@@ -1159,225 +1351,18 @@
       href: general-development/how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md
     - name: Back up and restore a search service application
       href: general-development/how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md
-- name: SharePoint Add-ins
-  href: sp-add-ins/sharepoint-add-ins.md
+- name: Scenario guidance
   items:
-  - name: Get started creating SharePoint-hosted add-ins
-    href: sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md
-    items:
-    - name: 1. Deploy and install add-ins
-      href: sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 2. Add custom columns
-      href: sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 3. Add a custom content type
-      href: sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 4. Add a web part to a page
-      href: sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 5. Add a workflow
-      href: sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 6. Add a custom page and style
-      href: sp-add-ins/add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 7. Add custom client-side rendering
-      href: sp-add-ins/add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 8. Create a custom ribbon button in the host web
-      href: sp-add-ins/create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md
-    - name: 9. Use the SharePoint JavaScript APIs to work with SharePoint data
-      href: sp-add-ins/use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md
-    - name: 10. Work with host web data from JavaScript in the add-in web
-      href: sp-add-ins/work-with-host-web-data-from-javascript-in-the-add-in-web.md
-  - name: Get started creating provider-hosted add-ins
-    href: sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md
-    items:
-    - name: 1. Give your add-in the SharePoint look-and-feel
-      href: sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md
-    - name: 2. Include a custom button
-      href: sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in.md
-    - name: 3. Get an overview of the SharePoint object model
-      href: sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model.md
-    - name: 4. Add write operations
-      href: sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in.md
-    - name: 5. Include an add-in part
-      href: sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in.md
-    - name: 6. Handle add-in events
-      href: sp-add-ins/handle-add-in-events-in-the-provider-hosted-add-in.md
-    - name: 7. Add first-run logic
-      href: sp-add-ins/add-first-run-logic-to-the-provider-hosted-add-in.md
-    - name: 8. Programmatically deploy a custom button
-      href: sp-add-ins/programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md
-    - name: 9. Handle list item events
-      href: sp-add-ins/handle-list-item-events-in-the-provider-hosted-add-in.md
-  - name: Design
-    href: sp-add-ins/design-sharepoint-add-ins.md
-    items:
-    - name: Design options for add-ins
-      href: sp-add-ins/three-ways-to-think-about-design-options-for-sharepoint-add-ins.md
-    - name: Add-in architecture and development landscape
-      href: sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md
-      items:
-      - name: Patterns for developing and hosting an add-in
-        href: sp-add-ins/choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md
-      - name: Host webs, add-in webs, and SharePoint components
-        href: sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md
-    - name: Secure data access and client object models for add-ins
-      href: sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins.md
-    - name: UX design for add-ins
-      href: sp-add-ins/ux-design-for-sharepoint-add-ins.md
-      items:
-      - name: SharePoint Add-ins UX design guidelines
-        href: sp-add-ins/sharepoint-add-ins-ux-design-guidelines.md
-  - name: Develop
-    href: sp-add-ins/develop-sharepoint-add-ins.md
-    items:
-    - name: Explore the app manifest structure and the package of an add-in
-      href: sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md
-      items:
-      - name: URL strings and tokens in add-ins
-        href: sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md
-    - name: Create UX components in SharePoint
-      href: sp-add-ins/create-ux-components-in-sharepoint.md
-      items:
-      - name: Use a SharePoint website's style sheet in add-ins
-        href: sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md
-      - name: Use the client chrome control in add-ins
-        href: sp-add-ins/use-the-client-chrome-control-in-sharepoint-add-ins.md
-      - name: Create add-in parts to install with your add-in
-        href: sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md
-      - name: Create custom actions to deploy with add-ins
-        href: sp-add-ins/create-custom-actions-to-deploy-with-sharepoint-add-ins.md
-      - name: Customize a list view in add-ins using client-side rendering
-        href: sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering.md
-      - name: Use the client-side People Picker control in SharePoint-hosted add-ins
-        href: sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in.md
-      - name: Highlight content and enhance the functionality of SharePoint-hosted add-ins with the callout control
-        href: sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint.md
-      - name: Include a web part in a webpage on the add-in web
-        href: sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web.md
-      - name: Office Web Widgets - Experimental overview
-        href: sp-add-ins/office-web-widgetsexperimental-overview.md
-        items:
-        - name: Use the experimental People Picker widget in add-ins
-          href: sp-add-ins/use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md
-        - name: Use the experimental Desktop List View widget in add-ins
-          href: sp-add-ins/use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md
-        - name: Office Web Widgets - Experimental License Terms
-          href: sp-add-ins/office-web-widgetsexperimental-license-terms.md
-    - name: Work with external data in SharePoint
-      href: sp-add-ins/work-with-external-data-in-sharepoint.md
-      items:
-      - name: Create a custom proxy page for the cross-domain library
-        href: sp-add-ins/create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md
-      - name: Query a remote service using the web proxy
-        href: sp-add-ins/query-a-remote-service-using-the-web-proxy-in-sharepoint.md
-    - name: Handle events in add-ins
-      href: sp-add-ins/handle-events-in-sharepoint-add-ins.md
-      items:
-      - name: Create a remote event receiver
-        href: sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins.md
-      - name: Create an add-in event receiver
-        href: sp-add-ins/create-an-add-in-event-receiver-in-sharepoint-add-ins.md
-      - name: Debug and troubleshoot a remote event receiver
-        href: sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md
-    - name: Create a provider-hosted add-in that includes a custom SharePoint list and content type
-      href: sp-add-ins/create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md
-    - name: Get user identity and properties in SharePoint
-      href: sp-add-ins/get-user-identity-and-properties-in-sharepoint.md
-    - name: Localize SharePoint Add-ins
-      href: sp-add-ins/localize-sharepoint-add-ins.md
-    - name: Authorization and authentication of add-ins
-      href: sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins.md
-      items:
-      - name: Add-in permissions in SharePoint
-        href: sp-add-ins/add-in-permissions-in-sharepoint.md
-      - name: Register add-ins
-        href: sp-add-ins/register-sharepoint-add-ins.md
-      - name: Add-in authorization policy types in SharePoint
-        href: sp-add-ins/add-in-authorization-policy-types-in-sharepoint.md
-      - name: Three authorization systems for add-ins
-        href: sp-add-ins/three-authorization-systems-for-sharepoint-add-ins.md
-        items:
-        - name: Creating add-ins that use low-trust authorization
-          href: sp-add-ins/creating-sharepoint-add-ins-that-use-low-trust-authorization.md
-          items:
-          - name: Context Token OAuth flow for add-ins
-            href: sp-add-ins/context-token-oauth-flow-for-sharepoint-add-ins.md
-          - name: Authorization Code OAuth flow for add-ins
-            href: sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins.md
-          - name: Handle security tokens in provider-hosted low-trust add-ins
-            href: sp-add-ins/handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md
-          - name: Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
-            href: sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on.md
-          - name: Replace an expiring client secret in an add-in
-            href: sp-add-ins/replace-an-expiring-client-secret-in-a-sharepoint-add-in.md
-        - name: Creating add-ins that use high-trust authorization
-          href: sp-add-ins/creating-sharepoint-add-ins-that-use-high-trust-authorization.md
-          items:
-          - name: Create high-trust add-ins
-            href: sp-add-ins/create-high-trust-sharepoint-add-ins.md
-          - name: Create and use access tokens in provider-hosted high-trust add-ins
-            href: sp-add-ins/create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md
-          - name: Troubleshooting high-trust add-ins
-            href: sp-add-ins/troubleshooting-high-trust-sharepoint-add-ins.md
-          - name: Package and publish high-trust add-ins
-            href: sp-add-ins/package-and-publish-high-trust-sharepoint-add-ins.md
-            items:
-            - name: High-trust configuration scripts for SharePoint
-              href: sp-add-ins/high-trust-configuration-scripts-for-sharepoint.md
-        - name: Creating add-ins that use the cross-domain library
-          href: sp-add-ins/creating-sharepoint-add-ins-that-use-the-cross-domain-library.md
-          items:
-          - name: Access SharePoint data from add-ins using the cross-domain library
-            href: sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md
-          - name: Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins
-            href: sp-add-ins/work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md
-    - name: Convert an autohosted add-in to a provider-hosted add-in
-      href: sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md
-    - name: Create add-ins for the SAP Gateway for Microsoft
-      href: sp-add-ins/create-provider-hosted-sharepoint-add-ins-to-access-sap-data-by-using-the-sap-ga.md
-    - name: Create an add-in that contains a document template and a task pane add-in
-      href: sp-add-ins/create-a-sharepoint-add-in-that-contains-a-document-template-and-a-task-pane-add.md
-  - name: Publish
-    href: sp-add-ins/publish-sharepoint-add-ins.md
-    items:
-    - name: Deploy and install add-ins
-      href: sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md
-    - name: Tenancies and deployment scopes for add-ins
-      href: sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins.md
-    - name: SharePoint Add-ins update process
-      href: sp-add-ins/sharepoint-add-ins-update-process.md
-      items:
-      - name: Update add-ins
-        href: sp-add-ins/update-sharepoint-add-ins.md
-        items:
-        - name: Update add-in web components in SharePoint
-          href: sp-add-ins/update-add-in-web-components-in-sharepoint.md
-        - name: Update host web components in SharePoint
-          href: sp-add-ins/update-host-web-components-in-sharepoint.md
-        - name: Update remote components in add-ins
-          href: sp-add-ins/update-remote-components-in-sharepoint-add-ins.md
-        - name: Create a handler for the update event in add-ins
-          href: sp-add-ins/create-a-handler-for-the-update-event-in-sharepoint-add-ins.md
-    - name: Publish add-ins by using Visual Studio
-      href: sp-add-ins/publish-sharepoint-add-ins-by-using-visual-studio.md
-  - name: Tools
-    href: sp-add-ins/tools-and-environments-for-developing-sharepoint-add-ins.md
-    items:
-    - name: Set up a development environment for add-ins on Office 365
-      href: sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md
-    - name: Create a developer site on an existing Office 365 subscription
-      href: sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription.md
-    - name: Set up an on-premises development environment for add-ins
-      href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
-    - name: Create add-ins in Visual Studio
-      href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
-- name: Solution guidance
-  href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
-  items:
+  - name: Overview
+    href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   - name: Modernizing your classic SharePoint sites
-    href: transform/modernize-classic-sites.md
     items:
+    - name: Overview
+      href: transform/modernize-classic-sites.md
     - name: Modernize the user interface
-      href: transform/modernize-userinterface.md
       items:
+      - name: Overview
+        href: transform/modernize-userinterface.md
       - name: Maximize use of modern lists and libraries
         href: transform/modernize-userinterface-lists-and-libraries.md
         items:
@@ -1416,12 +1401,14 @@
           href: transform/modernize-userinterface-site-pages-urlmapping.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
-    - name: The SharePoint Modernization scanner
-      href: transform/modernize-scanner.md
+    - name: SharePoint Modernization scanner
       items:
+      - name: Overview
+        href: transform/modernize-scanner.md
       - name: Understand the created reports
-        href: transform/modernize-scanner-reports.md
         items:
+        - name: Overview
+          href: transform/modernize-scanner-reports.md
         - name: Office 365 Group connect report
           href: transform/modernize-scanner-reports-groupconnect.md
         - name: Modern list and libraries report
@@ -1439,18 +1426,19 @@
       - name: Scanner FAQ
         href: transform/modernize-scanner-faq.md
     - name: SharePoint modernization guidance
-      href: transform/modernize-guidance.md
       items:
-        - name: Assessment
-          href: transform/modernize-guidance-assessment.md
-        - name: Strategy
-          href: transform/modernize-guidance-strategy.md
-        - name: Execution
-          href: transform/modernize-guidance-execution.md
-        - name: Support
-          href: transform/modernize-guidance-support.md
-        - name: Partner modernization guidance
-          href: transform/modernize-partner-guidance.md
+      - name: Overview
+        href: transform/modernize-guidance.md
+      - name: Assessment
+        href: transform/modernize-guidance-assessment.md
+      - name: Strategy
+        href: transform/modernize-guidance-strategy.md
+      - name: Execution
+        href: transform/modernize-guidance-execution.md
+      - name: Support
+        href: transform/modernize-guidance-support.md
+      - name: Partner modernization guidance
+        href: transform/modernize-partner-guidance.md
     - name: Modernization scripts
       href: transform/modernize-sample-scripts.md
     - name: Modernize customizations
@@ -1458,8 +1446,9 @@
     - name: Modernize site branding
       href: transform/modernize-branding.md
     - name: Connect to an Office 365 group
-      href: transform/modernize-connect-to-office365-group.md
       items:
+      - name: Overview
+        href: transform/modernize-connect-to-office365-group.md
       - name: Analyze and use the scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
       - name: Subsites versus Office 365 group connection
@@ -1469,24 +1458,27 @@
       - name: External sharing after Office 365 group connection
         href: transform/modernize-connect-to-office365-group-externalsharing.md
     - name: Modernize publishing portals
-      href: transform/modernize-publishing-portal.md
       items:
+      - name: Overview
+        href: transform/modernize-publishing-portal.md
       - name: Analyze and use the scanner data
         href: transform/modernize-publishing-portal-scanner.md
     - name: Modernize classic blogs
       href: transform/modernize-blogs.md
   - name: Branding and site provisioning solutions
-    href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
+    - name: Overview
+      href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     - name: Page model
       href: solution-guidance/SharePoint-pages-and-the-page-model.md
     - name: Development and design tools and practices
       href: solution-guidance/SharePoint-development-and-design-tools-and-practices.md
     - name: Metadata, site navigation, and publishing site features
-      href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md      
+      href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md
     - name: Site branding
-      href: solution-guidance/SharePoint-site-branding-and-page-customization-solutions.md
       items:
+      - name: Overview
+        href: solution-guidance/SharePoint-site-branding-and-page-customization-solutions.md
       - name: Use composed looks to brand sites
         href: solution-guidance/Use-composed-looks-to-brand-SharePoint-sites.md
       - name: Use remote provisioning to brand pages
@@ -1500,8 +1492,9 @@
       - name: Customize OneDrive for Business sites
         href: solution-guidance/customize-onedrive-for-business-sites.md
     - name: Site provisioning
-      href: solution-guidance/sharepoint-site-provisioning-solutions.md
       items:
+      - name: Overview
+        href: solution-guidance/sharepoint-site-provisioning-solutions.md
       - name: Implement a site classification solution
         href: solution-guidance/implement-a-sharepoint-site-classification-solution.md
       - name: Modify host web lists at creation time
@@ -1513,8 +1506,9 @@
       - name: Manage users and groups
         href: solution-guidance/manage-sharepoint-users-and-groups.md
     - name: UX components
-      href: solution-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
       items:
+      - name: Overview
+        href: solution-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
       - name: Customize the UX
         href: solution-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
       - name: Create UX controls
@@ -1522,8 +1516,9 @@
       - name: Improve performance
         href: solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
   - name: Customizing the "modern" experiences in SharePoint Online
-    href: solution-guidance/modern-experience-customizations.md
     items:
+    - name: Overview
+      href: solution-guidance/modern-experience-customizations.md
     - name: Provision "modern" team sites programmatically
       href: solution-guidance/modern-experience-customizations-provisioning-sites.md
     - name: Customize "modern" team sites
@@ -1535,8 +1530,9 @@
     - name: SharePoint "modern" sites classification
       href: solution-guidance/modern-experience-site-classification.md
   - name: OneDrive and SharePoint Online Multi-Geo
-    href: solution-guidance/multigeo-introduction.md
     items:
+    - name: Overview
+      href: solution-guidance/multigeo-introduction.md
     - name: Permissions model
       href: solution-guidance/multigeo-permissions.md
     - name: Discover your tenant configuration
@@ -1546,7 +1542,7 @@
     - name: Work with sites
       href: solution-guidance/multigeo-sites.md
     - name: Provision classic team sites
-      href: solution-guidance/multigeo-sites-provisioning.md         
+      href: solution-guidance/multigeo-sites-provisioning.md
     - name: Manage apps/add-ins
       href: solution-guidance/multigeo-apps.md
     - name: Work with user profiles
@@ -1560,10 +1556,11 @@
     - name: Connect to external data using BCS and Secure Store Service
       href: solution-guidance/multigeo-bcsandsecurestore.md
     - name: Set up a sample application
-      href: solution-guidance/multigeo-sampleapplicationsetup.md   
+      href: solution-guidance/multigeo-sampleapplicationsetup.md
   - name: Building classic publishing portals for SharePoint Online
-    href: solution-guidance/portal-overview.md
     items:
+    - name: Overview
+      href: solution-guidance/portal-overview.md
     - name: Performance
       href: solution-guidance/portal-performance.md
     - name: Information architecture
@@ -1577,8 +1574,9 @@
     - name: Deployment
       href: solution-guidance/portal-rollout.md
   - name: Composite business add-ins
-    href: solution-guidance/composite-business-apps-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/composite-business-apps-for-sharepoint.md
     - name: Migrate InfoPath forms
       href: solution-guidance/migrate-infopath-forms-to-sharepoint.md
     - name: Data storage options
@@ -1588,8 +1586,9 @@
     - name: Call web services from workflows
       href: solution-guidance/call-web-services-from-sharepoint-workflows.md
   - name: ECM solutions
-    href: solution-guidance/enterprise-content-management-solutions-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/enterprise-content-management-solutions-for-sharepoint.md
     - name: Document library templates
       href: solution-guidance/document-library-templates-sample-app-for-sharepoint.md
     - name: Auto-tagging
@@ -1609,20 +1608,23 @@
     - name: 'Support % and # in files and folders with ResourcePath API'
       href: solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
   - name: Localization solutions
-    href: solution-guidance/localization-solutions-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/localization-solutions-for-sharepoint.md
     - name: Use localization features
       href: solution-guidance/use-localization-features-in-office-365-sample-app.md
     - name: Localize UI elements
       href: solution-guidance/localize-ui-elements-sample-app-for-sharepoint.md
   - name: Search solutions
-    href: solution-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
     items:
+    - name: Overview
+      href: solution-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
     - name: Search customizations
       href: solution-guidance/search-customizations-for-sharepoint.md
   - name: Security and performance
-    href: solution-guidance/security-and-performance.md
     items:
+    - name: Overview
+      href: solution-guidance/security-and-performance.md
     - name: Authorization considerations for tenants hosted in Germany, China, or US
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
     - name: Handle SharePoint Online throttling
@@ -1631,9 +1633,9 @@
       href: solution-guidance/security-apponly.md
       items:
       - name: Grant access using Azure AD app-only
-        href: solution-guidance/security-apponly-azuread.md      
+        href: solution-guidance/security-apponly-azuread.md
       - name: Grant access using SharePoint app-only
-        href: solution-guidance/security-apponly-azureacs.md      
+        href: solution-guidance/security-apponly-azureacs.md
     - name: Implement a web app policy alternative
       href: solution-guidance/security-webapppolicies.md
     - name: Migrate from permissive to strict tenant setting
@@ -1654,8 +1656,9 @@
     - name: JavaScript patterns and performance
       href: solution-guidance/javascript-patterns-and-performance.md
   - name: SharePoint Add-in recipes
-    href: solution-guidance/sharepoint-add-in-recipes.md
     items:
+    - name: Overview
+      href: solution-guidance/sharepoint-add-in-recipes.md
     - name: App-only and elevated privileges
       href: solution-guidance/app-only-elevated-privileges-sharepoint-add-in.md
     - name: Branding sites
@@ -1729,8 +1732,9 @@
     - name: Yammer integration
       href: solution-guidance/yammer-integration-sharepoint-add-in.md
   - name: Transforming farm solutions
-    href: solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model.md
     items:
+    - name: Overview
+      href: solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model.md
     - name: Replace content types and site columns
       href: solution-guidance/replace-sharepoint-content-types-and-site-columns.md
     - name: Replace files
@@ -1740,8 +1744,9 @@
     - name: Replace web parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
   - name: Transforming sandbox solutions
-    href: solution-guidance/sandbox-solution-transformation-guidance.md
     items:
+    - name: Overview
+      href: solution-guidance/sandbox-solution-transformation-guidance.md
     - name: Replace web parts
       href: solution-guidance/sandbox-solution-transformation-guidance-webparts.md
     - name: Replace event receivers
@@ -1751,8 +1756,9 @@
     - name: Fix code-based InfoPath forms
       href: solution-guidance/sandbox-solution-transformation-guidance-infopath.md
   - name: User profile solutions
-    href: solution-guidance/user-profile-solutions-for-sharepoint.md
     items:
+    - name: Overview
+      href: solution-guidance/user-profile-solutions-for-sharepoint.md
     - name: Read or update user profile properties
       href: solution-guidance/read-or-update-user-profile-properties-sample-app-for-sharepoint.md
     - name: Bulk update custom user profile properties
@@ -1764,8 +1770,9 @@
     - name: Upload user profile pictures
       href: solution-guidance/upload-user-profile-pictures-sample-app-for-sharepoint.md
   - name: Deploying your SharePoint Add-ins
-    href: solution-guidance/deploying-your-sharepoint-add-ins.md
     items:
+    - name: Overview
+      href: solution-guidance/deploying-your-sharepoint-add-ins.md
     - name: Deploy sites to Azure
       href: solution-guidance/move-o365api-project-from-dev-to-prod.md
     - name: Use Azure WebJobs with Office 365
@@ -1775,8 +1782,9 @@
     - name: Configure Office 365 projects for distribution
       href: solution-guidance/configure-o365api-project-for-distribution.md
   - name: PnP remote provisioning
-    href: solution-guidance/pnp-remote-provisioning.md
     items:
+    - name: Overview
+      href: solution-guidance/pnp-remote-provisioning.md
     - name: PnP provisioning engine
       href: solution-guidance/introducing-the-pnp-provisioning-engine.md
     - name: PnP provisioning framework
@@ -1788,12 +1796,13 @@
     - name: PnP Open XML File format
       href: solution-guidance/the-pnp-office-open-xml-file-format.md
     - name: PnP provisioning schema
-      href: solution-guidance/pnp-provisioning-schema.md      
+      href: solution-guidance/pnp-provisioning-schema.md
     - name: Provisioning console application sample
       href: solution-guidance/provisioning-console-application-sample.md
   - name: PnP remote timer job framework
-    href: solution-guidance/pnp-remote-timer-job-framework.md
     items:
+    - name: Overview
+      href: solution-guidance/pnp-remote-timer-job-framework.md
     - name: PnP timer job framework
       href: solution-guidance/timerjob-framework.md
     - name: Create remote timer jobs
@@ -1804,6 +1813,67 @@
     href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
   - name: PnP PowerShell reference
     href: https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps
+- name: SharePoint APIs
+  items:
+  - name: Overview
+    href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
+  - name: "Complete basic operations: CSOM"
+    href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
+  - name: "Complete basic operations: JSOM"
+    href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
+  - name: SharePoint REST API v1
+    items:
+    - name: Overview
+      href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
+    - name: Complete basic operations
+      href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
+    - name: Work with lists and list items
+      href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
+    - name: Work with folders and files
+      href: sp-add-ins/working-with-folders-and-files-with-rest.md
+    - name: Retrieve the URL of the tenant app catalog
+      href: sp-add-ins/retrieve-tenant-app-catalog-url-rest.md
+    - name: Determine endpoint URIs
+      href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
+    - name: Use OData query operations
+      href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
+    - name: Navigate data structure
+      href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
+    - name: Synchronize items
+      href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
+    - name: Upload a file
+      href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
+    - name: Set custom permissions
+      href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
+    - name: Make batch requests
+      href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+  - name: SharePoint REST API v2
+    href: apis/sharepoint-rest-graph.md
+  - name: Application Lifecycle Management (ALM) APIs
+    href: apis/alm-api-for-spfx-add-ins.md
+  - name: SharePoint Migration Guidance
+    items:
+    - name: Migration Guidance for ISVs
+      href: apis/migration-isv-guidance.md
+    - name: Migrating OneNote folders
+      href: apis/onenote-migration-service.md
+    - name: Migration API
+      items:
+      - name: Import Migration API
+        items:
+        - name: Import Migration API (CreateMigrationJob)
+          href: apis/migration-api-overview.md
+          items:
+          - name: Sharing
+            href: apis/migration-api-shared.md
+          - name: Migrate web parts using the Migration API
+            href: apis/migrate-webparts-with-migrationapi.md
+      - name: Export Migration API (Asynchronous Metadata Read)
+        href: apis/export-amr-api.md
+      - name: Azure container and queue
+        href: apis/migration-api-azure-container-and-queue.md
+      - name: Encryption
+        href: apis/migration-api-encryption.md
   - name: PnP Sites Core API reference
     href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
@@ -1812,11 +1882,13 @@
   href: schema/schema-reference-for-sharepoint.md
   items:
   - name: SharePoint Add-in schemas
-    href: schema/sharepoint-add-in-schemas.md
     items:
+    - name: Overview
+      href: schema/sharepoint-add-in-schemas.md
     - name: Schema reference for manifests of SharePoint Add-ins
-      href: schema/schema-reference-for-manifests-of-sharepoint-add-ins.md
       items:
+      - name: Overview
+        href: schema/schema-reference-for-manifests-of-sharepoint-add-ins.md
       - name: Schema map (SharePoint Add-in Manifest)
         href: schema/schema-map-sharepoint-add-in-manifest.md
       - name: Elements (SharePoint Add-in Manifest)
@@ -1936,8 +2008,9 @@
         - name: WebTemplateIdDefinition simpleType
           href: schema/webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md
     - name: AppHostWebFeatures schema reference
-      href: schema/apphostwebfeatures-schema-reference.md
       items:
+      - name: Overview
+        href: schema/apphostwebfeatures-schema-reference.md
       - name: Schema map (AppHostWebFeatures)
         href: schema/schema-map-apphostwebfeatures.md
       - name: Elements (AppHostWebFeatures)
@@ -2143,8 +2216,9 @@
         - name: WebPartPersonalizationScope simpleType
           href: schema/webpartpersonalizationscope-simpletype-apphostwebfeatures.md
     - name: AppPartConfigDefinition schema reference
-      href: schema/apppartconfigdefinition-schema-reference.md
       items:
+      - name: Overview
+        href: schema/apppartconfigdefinition-schema-reference.md
       - name: Schema map (AppPartConfigDefinition)
         href: schema/schema-map-apppartconfigdefinition.md
       - name: Elements (AppPartConfigDefinition)
@@ -2162,8 +2236,9 @@
         - name: GUID simpleType
           href: schema/guid-simpletype-apppartconfigdefinition.md
   - name: Business connectivity services (BCS) schemas
-    href: schema/business-connectivity-services-bcs-schemas.md
     items:
+    - name: Overview
+      href: schema/business-connectivity-services-bcs-schemas.md
     - name: SolutionManifestDefinitions schema
       href: schema/solutionmanifestdefinitions-schema.md
       items:
@@ -2457,8 +2532,9 @@
       - name: TypeDescriptors element
         href: schema/typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md
   - name: Workflow schemas
-    href: schema/workflow-schemas.md
     items:
+    - name: Overview
+      href: schema/workflow-schemas.md
     - name: WorkflowActions4 schema reference
       href: schema/workflowactions4-schema-reference.md
       items:
@@ -2752,41 +2828,45 @@
       - name: WorkflowInfo element
         href: schema/workflowinfo-element-workflowinfo.md
   - name: SharePoint Features schemas
-    href: schema/sharepoint-features-schemas.md
     items:
+    - name: Overview
+      href: schema/sharepoint-features-schemas.md
     - name: Client Web Part Definition schema
       href: schema/client-web-part-definition-schema.md
     - name: Content Type Bindings
-      href: schema/content-type-bindings.md
       items:
+      - name: Overview
+        href: schema/content-type-bindings.md
       - name: ContentTypeBinding element
         href: schema/contenttypebinding-element-contenttypebinding.md
       - name: Elements element
         href: schema/elements-element-contenttypebinding.md
     - name: Content Type Definitions
-      href: schema/content-type-definitions.md
       items:
+      - name: Overview
+        href: schema/content-type-definitions.md
       - name: ContentType element
         href: schema/contenttype-element-contenttype.md
       - name: DocumentTemplate element
         href: schema/documenttemplate-element-contenttype.md
-      - name: Elements element 
+      - name: Elements element
         href: schema/elements-element-contenttype.md
-      - name: FieldRef element 
+      - name: FieldRef element
         href: schema/fieldref-element-contenttype.md
-      - name: FieldRefs element 
+      - name: FieldRefs element
         href: schema/fieldrefs-element-contenttype.md
-      - name: Folder element 
+      - name: Folder element
         href: schema/folder-element-contenttype.md
-      - name: RemoveFieldRef element 
+      - name: RemoveFieldRef element
         href: schema/removefieldref-element-contenttype.md
-      - name: XmlDocument element 
+      - name: XmlDocument element
         href: schema/xmldocument-element-contenttype.md
-      - name: XmlDocuments element 
+      - name: XmlDocuments element
         href: schema/xmldocuments-element-contenttype.md
     - name: Custom Action Definition schema
-      href: schema/custom-action-definition-schema.md
       items:
+      - name: Overview
+        href: schema/custom-action-definition-schema.md
       - name: CommandUIDefinitions element
         href: schema/commanduidefinitions-element.md
       - name: CommandUIDefinition element
@@ -2810,8 +2890,9 @@
       - name: Default Custom Action Locations and IDs
         href: schema/default-custom-action-locations-and-ids.md
     - name: Delegate Controls
-      href: schema/delegate-controls.md
       items:
+      - name: Overview
+        href: schema/delegate-controls.md
       - name: Control element
         href: schema/control-element-delegate-control.md
       - name: Elements element
@@ -2819,15 +2900,17 @@
       - name: Property element
         href: schema/property-element-delegate-control.md
     - name: Document Converter
-      href: schema/document-converter.md
       items:
+      - name: Overview
+        href: schema/document-converter.md
       - name: DocumentConverter element
         href: schema/documentconverter-element-document-converter.md
       - name: Elements element
         href: schema/elements-element-document-converter.md
     - name: Event Registrations
-      href: schema/event-registrations.md
       items:
+      - name: Overview
+        href: schema/event-registrations.md
       - name: Assembly element
         href: schema/assembly-element-event.md
       - name: Class element
@@ -2857,8 +2940,9 @@
       - name: SourceType element
         href: schema/sourcetype-element-events.md
     - name: Feature.xml Files
-      href: schema/feature-xml-files.md
       items:
+      - name: Overview
+        href: schema/feature-xml-files.md
       - name: ActivationDependencies element
         href: schema/activationdependencies-element-feature.md
       - name: ActivationDependency element
@@ -2892,8 +2976,9 @@
       - name: VersionRange element
         href: schema/versionrange-element-feature.md
     - name: Feature/Site Template Associations
-      href: schema/feature-site-template-associations.md
       items:
+      - name: Overview
+        href: schema/feature-site-template-associations.md
       - name: Elements element
         href: schema/elements-element-featuresitetemplateassociation.md
       - name: FeatureSiteTemplateAssociation element
@@ -2901,15 +2986,17 @@
       - name: Property element
         href: schema/property-element-featuresitetemplateassociation.md
     - name: Field Definitions
-      href: schema/field-definitions.md
       items:
+      - name: Overview
+        href: schema/field-definitions.md
       - name: Elements element
         href: schema/elements-element-field.md
       - name: Field element
         href: schema/field-element-field.md
     - name: List Instances
-      href: schema/list-instances.md
       items:
+      - name: Overview
+        href: schema/list-instances.md
       - name: Data element
         href: schema/data-element-list-instance.md
       - name: Elements element
@@ -2927,8 +3014,9 @@
       - name: Property element
         href: schema/property-element-list-instance.md
     - name: List Template Files
-      href: schema/list-template-files.md
       items:
+      - name: Overview
+        href: schema/list-template-files.md
       - name: Elements element
         href: schema/elements-element-list-template.md
       - name: ListTemplate element
@@ -2936,8 +3024,9 @@
       - name: List Definition (Schema.xml) Files
         href: schema/list-definition-schema-xml-files.md
     - name: Modules
-      href: schema/modules.md
       items:
+      - name: Overview
+        href: schema/modules.md
       - name: AllUsersWebPart element
         href: schema/alluserswebpart-element-module.md
       - name: BinarySerializedWebPart element
@@ -2965,8 +3054,9 @@
       - name: WebPartTransformer element
         href: schema/webparttransformer-element-module.md
     - name: Property Bag schema
-      href: schema/property-bag-schema.md
       items:
+      - name: Overview
+        href: schema/property-bag-schema.md
       - name: Elements element
         href: schema/elements-element-property-bag.md
       - name: PropertyBag element
@@ -2976,42 +3066,45 @@
     - name: Site Definition (Onet.xml) Files
       href: schema/site-definition-onet-xml-files.md
     - name: Web Template XML
-      href: schema/web-template-xml.md
       items:
+      - name: Overview
+        href: schema/web-template-xml.md
       - name: WebTemplate element
         href: schema/webtemplate-element-web-template.md
       - name: Elements
-        href: schema/elements-web-template.md    
+        href: schema/elements-web-template.md
     - name: Workflow Definitions
-      href: schema/workflow-definitions.md
       items:
-      - name: AssociationCategories element 
+      - name: Overview
+        href: schema/workflow-definitions.md
+      - name: AssociationCategories element
         href: schema/associationcategories-element-workflow.md
-      - name: AssociationData element 
+      - name: AssociationData element
         href: schema/associationdata-element-workflow.md
-      - name: Categories element 
+      - name: Categories element
         href: schema/categories-element-workflow.md
-      - name: Elements element 
+      - name: Elements element
         href: schema/elements-element-workflow.md
-      - name: ExtendedStatusColumnValues element 
+      - name: ExtendedStatusColumnValues element
         href: schema/extendedstatuscolumnvalues-element-workflow.md
-      - name: InitiationCategories element 
+      - name: InitiationCategories element
         href: schema/initiationcategories-element-workflow.md
-      - name: InitiationType element 
+      - name: InitiationType element
         href: schema/initiationtype-element-workflow.md
-      - name: MetaData element 
+      - name: MetaData element
         href: schema/metadata-element-workflow.md
-      - name: Modification_GUID_Name element 
+      - name: Modification_GUID_Name element
         href: schema/modification_guid_name-element-workflow.md
-      - name: StatusColumnValue element 
+      - name: StatusColumnValue element
         href: schema/statuscolumnvalue-element-workflow.md
-      - name: StatusPageUrl element 
+      - name: StatusPageUrl element
         href: schema/statuspageurl-element-workflow.md
       - name: Workflow element (Elements)
         href: schema/workflow-element-elements.md
   - name: Content migration schemas
-    href: schema/content-migration-schemas.md
     items:
+    - name: Overview
+      href: schema/content-migration-schemas.md
     - name: DeploymentManifest schema
       href: schema/deploymentmanifest-schema.md
       items:
@@ -3284,7 +3377,7 @@
       - name: SPExportMethodType Simple Type
         href: schema/spexportmethodtype-simple-type-deploymentexportsettings.md
       - name: SPIncludeDescendents Simple Type
-        href: schema/spincludedescendents-simple-type-deploymentexportsettings.md                                        
+        href: schema/spincludedescendents-simple-type-deploymentexportsettings.md
       - name: SPIncludeSecurity Simple Type
         href: schema/spincludesecurity-simple-type-deploymentexportsettings.md
       - name: SPIncludeVersions Simple Type
@@ -3293,7 +3386,7 @@
       href: schema/deploymentlookuplistmap-schema.md
       items:
       - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentlookuplistmap.md      
+        href: schema/guid-simple-type-deploymentlookuplistmap.md
       - name: LookupItem element
         href: schema/lookupitem-element-deploymentlookuplistmap.md
       - name: LookupItems element
@@ -3315,7 +3408,7 @@
       href: schema/deploymentrootobjectmap-schema.md
       items:
       - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentrootobjectmap.md      
+        href: schema/guid-simple-type-deploymentrootobjectmap.md
       - name: RootObject element
         href: schema/rootobject-element-deploymentrootobjectmap.md
       - name: RootObjects element
@@ -3326,7 +3419,7 @@
       href: schema/deploymentsystemdata-schema.md
       items:
       - name: Guid Simple Type
-        href: schema/guid-simple-type-deploymentsystemdata.md      
+        href: schema/guid-simple-type-deploymentsystemdata.md
       - name: ManifestFile element
         href: schema/manifestfile-element-deploymentsystemdata.md
       - name: ManifestFiles element
@@ -3336,7 +3429,7 @@
       - name: SPDeploymentObjectType Simple Type
         href: schema/spdeploymentobjecttype-simple-type-deploymentsystemdata.md
       - name: SystemData element
-        href: schema/systemdata-element-deploymentsystemdata.md                
+        href: schema/systemdata-element-deploymentsystemdata.md
       - name: SystemObject element
         href: schema/systemobject-element-deploymentsystemdata.md
       - name: SystemObjects element
@@ -3349,7 +3442,7 @@
       - name: Groups element
         href: schema/groups-element-deploymentusergroupmap.md
       - name: Member element
-        href: schema/member-element-deploymentusergroupmap.md        
+        href: schema/member-element-deploymentusergroupmap.md
       - name: User element
         href: schema/user-element-deploymentusergroupmap.md
       - name: Users element
@@ -3364,8 +3457,9 @@
       - name: ViewFormsList element
         href: schema/viewformslist-element-deploymentviewformslist.md
   - name: Collaborative Application Markup Language (CAML) schemas
-    href: schema/collaborative-application-markup-language-caml-schemas.md
     items:
+    - name: Overview
+      href: schema/collaborative-application-markup-language-caml-schemas.md
     - name: Introduction to Collaborative Application Markup Language (CAML)
       href: schema/introduction-to-collaborative-application-markup-language-caml.md
     - name: Major CAML Files
@@ -3976,8 +4070,9 @@
         - name: WriteSecurity element
           href: schema/writesecurity-element.md
   - name: SharePoint search settings portability schemas
-    href: schema/sharepoint-search-settings-portability-schemas.md
     items:
+    - name: Overview
+      href: schema/sharepoint-search-settings-portability-schemas.md
     - name: SPS15XSDSearchSet1
       href: schema/sps15xsdsearchset1.md
       items:
@@ -4619,11 +4714,13 @@
         - name: LocStringId simpleType
           href: schema/locstringid-simpletype-sps15xsdsearchset6.md
   - name: Other SharePoint schemas
-    href: schema/other-sharepoint-schemas.md
     items:
+    - name: Overview
+      href: schema/other-sharepoint-schemas.md
     - name: Field Types schema
-      href: schema/field-types-schema.md
       items:
+      - name: Overview
+        href: schema/field-types-schema.md
       - name: FieldTypes element
         href: schema/fieldtypes-element-field-types.md
       - name: FieldType element
@@ -4633,17 +4730,18 @@
       - name: PropertySchema element
         href: schema/propertyschema-element-field-types.md
         items:
-        - name: Fields element 
+        - name: Fields element
           href: schema/fields-element-field-types-property-schema.md
-        - name: Field element 
+        - name: Field element
           href: schema/field-element-field-types-property-schema.md
-        - name: Default element 
+        - name: Default element
           href: schema/default-element-field-types-property-schema.md
       - name: RenderPattern element
         href: schema/renderpattern-element-field-types.md
     - name: AlertTemplates schema
-      href: schema/alerttemplates-schema.md
       items:
+      - name: Overview
+        href: schema/alerttemplates-schema.md
       - name: AlertTemplate element
         href: schema/alerttemplate-element-alerttemplates.md
       - name: AlertTemplates element
@@ -4701,19 +4799,21 @@
       - name: UpdateHandlerClassName element
         href: schema/updatehandlerclassname-element-alerttemplates.md
     - name: Mobile Document Viewer schema
-      href: schema/mobile-document-viewer-schema.md
       items:
-      - name: MobileDocViewers element 
+      - name: Overview
+        href: schema/mobile-document-viewer-schema.md
+      - name: MobileDocViewers element
         href: schema/mobiledocviewers-mobile-document-viewer.md
-      - name: MobileDocViewer element 
+      - name: MobileDocViewer element
         href: schema/mobiledocviewer-mobile-document-viewer.md
-      - name: BrowserCondition element 
+      - name: BrowserCondition element
         href: schema/browsercondition-mobile-document-viewer.md
-      - name: Override element 
+      - name: Override element
         href: schema/override-mobile-document-viewer.md
     - name: Server Ribbon schema
-      href: schema/server-ribbon-schema.md
       items:
+      - name: Overview
+        href: schema/server-ribbon-schema.md
       - name: Button element
         href: schema/button-element.md
       - name: CheckBox element
@@ -4811,8 +4911,9 @@
       - name: UnitAbbreviation element
         href: schema/unitabbreviation-element.md
     - name: Solution schema
-      href: schema/solution-schema.md
       items:
+      - name: Overview
+        href: schema/solution-schema.md
       - name: ActivationDependencies element
         href: schema/activationdependencies-element-solution.md
       - name: ActivationDependency element
@@ -4880,37 +4981,39 @@
       - name: WebTempFile element
         href: schema/webtempfile-element-solution.md
     - name: SPMetal Parameters schema
-      href: schema/spmetal-parameters-schema.md
       items:
+      - name: Overview
+        href: schema/spmetal-parameters-schema.md
       - name: Column element
         href: schema/column-spmetal.md
-      - name: ContentType element 
+      - name: ContentType element
         href: schema/contenttype-spmetal.md
-      - name: ExcludeColumn element 
+      - name: ExcludeColumn element
         href: schema/excludecolumn-spmetal.md
-      - name: ExcludeContentType element 
+      - name: ExcludeContentType element
         href: schema/excludecontenttype-spmetal.md
-      - name: ExcludeList element 
+      - name: ExcludeList element
         href: schema/excludelist-spmetal.md
-      - name: ExcludeOtherColumns element 
+      - name: ExcludeOtherColumns element
         href: schema/excludeothercolumns-spmetal.md
-      - name: ExcludeOtherContentTypes element 
+      - name: ExcludeOtherContentTypes element
         href: schema/excludeothercontenttypes-spmetal.md
-      - name: ExcludeOtherLists element 
+      - name: ExcludeOtherLists element
         href: schema/excludeotherlists-spmetal.md
-      - name: IncludeHiddenColumns element 
+      - name: IncludeHiddenColumns element
         href: schema/includehiddencolumns-spmetal.md
-      - name: IncludeHiddenContentTypes element 
+      - name: IncludeHiddenContentTypes element
         href: schema/includehiddencontenttypes-spmetal.md
-      - name: IncludeHiddenLists element 
+      - name: IncludeHiddenLists element
         href: schema/includehiddenlists-spmetal.md
-      - name: List element 
+      - name: List element
         href: schema/list-spmetal.md
-      - name: Web element 
+      - name: Web element
         href: schema/web-spmetal.md
     - name: Upgrade Definition schema
-      href: schema/upgrade-definition-schema.md
       items:
+      - name: Overview
+        href: schema/upgrade-definition-schema.md
       - name: AppliedSiteFeatures element
         href: schema/appliedsitefeatures-element-upgrade.md
       - name: AppliedWebFeatures element
@@ -4930,31 +5033,39 @@
       - name: WebTemplate element
         href: schema/webtemplate-element-upgrade.md
     - name: dsQueryResponse schema
-      href: schema/dsqueryresponse-schema.md
       items:
+      - name: Overview
+        href: schema/dsqueryresponse-schema.md
       - name: dsQueryResponse element
         href: schema/dsqueryresponse.md
       - name: Rows element
         href: schema/rows-dsqueryresponse.md
       - name: Row element
-        href: schema/row-dsqueryresponse.md    
+        href: schema/row-dsqueryresponse.md
+- name: SharePoint glossary
+  href: general-development/sharepoint-glossary.md
 - name: Community
-  href: community/community.md
   items:
-  - name: Contribute
-    href: community/contribute.md
+  - name: Overview
+    href: community/community.md
+  - name: Public (GitHub) repositories
+    href: community/repositories.md
   - name: Open source projects
     href: community/open-source-projects.md
-  - name: GitHub repositories
-    href: community/repositories.md
-  - name: Submit issues
-    href: https://aka.ms/spdev-issues
-  - name: Submit feature requests
-    href: https://aka.ms/spdev-uservoice
-  - name: SharePoint developer videos on YouTube
+  - name: SharePoint developer videos
     href: https://aka.ms/spdev-videos
-  - name: Microsoft 365 Developer on Twitter
-    href: https://twitter.com/Microsoft365Dev
+  - name: SharePoint development on social media
+    href: community/social-media.md
+- name: Support & feedback
+  items:
+  - name: Overview
+    href: support-feedback.md
+  - name: How to contribute
+    href: community/contribute.md
+  - name: How to submit issues
+    href: https://aka.ms/spdev-issues
+  - name: How to submit feature requests
+    href: https://aka.ms/spdev-uservoice
   - name: SharePoint developer forum
     href: https://aka.ms/spdev-community
 - name: Tutorials

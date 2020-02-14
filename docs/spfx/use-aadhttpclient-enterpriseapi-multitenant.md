@@ -1,7 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 01/09/2020
+ms.date: 02/11/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -317,7 +317,7 @@ To the **solution** property, add a new section named `webApiPermissionRequests`
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "contoso-api-client-side-solution",
     "id": "8cbc01fb-bab6-48fc-afec-2c2053759771",
