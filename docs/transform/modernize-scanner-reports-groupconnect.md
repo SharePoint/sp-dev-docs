@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the Office 365 group connect scanner mode
 description: Explains the Office 365 group connect output created by the modernization scanner
-ms.date: 02/13/2020
+ms.date: 02/14/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
