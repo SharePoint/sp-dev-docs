@@ -209,7 +209,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-btn-click.png)
 
-### More details about serve.config options
+### More details about serve.json options
 
 * **customActions** simulates a custom action. You can set many properties on this `CustomAction` object that affect the look, feel, and location of your button; we’ll cover them all later.
   * **GUID**: GUID of the extension.
