@@ -26,7 +26,7 @@ There are following benefits on using SharePoint Framework as the platform for y
 
 ## Development process
 
-You can start developing Microsoft Teams tabs simply by using the SharePoint Framework 1.10 or later packages. As this feature is on preview status, you'll need to execute the Yeoman generator using the `--plusbeta` switch as demonstrated below.
+You can start developing Outlook add-ins simply by using the SharePoint Framework 1.10 or later packages. As this feature is on preview status, you'll need to execute the Yeoman generator using the `--plusbeta` switch as demonstrated below.
 
 ```shell
 yo @microsoft/sharepoint --plusbeta
