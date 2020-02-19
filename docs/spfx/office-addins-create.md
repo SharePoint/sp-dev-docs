@@ -44,7 +44,7 @@ You will need to deploy the solution to tenant using the **tenant scoped deploym
 Before you can use the Office JavaScript SDK in your code, you'll need to include correct types for the solution. You can install latest types by adding `@types/office-js` package from the npm to your solution with following command:
 
 ```shell
-npm install @types/office-js
+npm install @types/office-js --save-dev
 ```
 
 You can detect if the web part is on the Office context by using page context as shown on the following property, which refers to the Office JavaScript SDK. This property value is dependent on the context where the code is being executed.
