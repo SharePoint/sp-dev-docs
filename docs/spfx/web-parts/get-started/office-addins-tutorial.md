@@ -172,7 +172,7 @@ Next, you need to deploy the package that was generated to the tenant App Catalo
 
     Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the App Catalog, depending on the tenant settings.
 
-    Ensure that the **Make this solution available to all sites in the organization** option is selected, so that the web part can be used from the Microsoft Teams side.
+    Ensure that the **Make this solution available to all sites in the organization** option is selected, so that the web part can be used from the Outlook Web Access side.
 
     ![Trust client-side solution deployment](../../../images/add-in-upload-solution-deploy.png)
 
