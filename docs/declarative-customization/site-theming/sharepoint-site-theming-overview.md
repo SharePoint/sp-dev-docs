@@ -67,30 +67,30 @@ For the simplest experience, we recommend that you use modern themes with modern
 
 The modern site theming experience has been rolled out to classic site templates, too. While the new client-side theming architecture is more performant, if you have customizations on classic sites that aren’t rendering properly after you change the site’s theme, you can opt the site out of the new theming experience by disabling the feature. Please note, this opt-out only applies to classic sites where you have custom theme references that aren't rendering properly. By enabling this site-level opt-out you will disable the modern theming - and also lose the fast theming benefits it provides.
 
-To do this, you must use a Windows PowerShell script with a CSOM (client-side object model) wrapper. We recommend using the PnP enable feature command:
+To do this, you must use a Windows PowerShell script with a CSOM (client-side object model) wrapper. We recommend using the PnP PowerShell enable feature command:
 
 1. Verify that you meet the following minimum requirements:  
-    * You are a global administrator. 
-    * You have read about [Execution Policies](https://technet.microsoft.com/library/dd347641.aspx).
+    * You are at least a site collection owner on the site where you want to disable modern site themes 
+    * You have read about [Execution Policies](https://technet.microsoft.com/library/dd347641.aspx)
 
 2. Download the latest PnP PowerShell from https://github.com/SharePoint/PnP-PowerShell/releases.
 
-3. Enter `Connect-PnPOnline -Url <SiteUrl> -Credentials getCredentials` (replacing `<SiteUrl>` with the url of the site you wish to opt out of).
+3. Enter `Connect-PnPOnline -Url <SiteUrl> -UseWebLogin` (replacing `<SiteUrl>` with the url of the site you wish to opt out of).
 
 4. Enter your credentials when prompted.
 
 5. To opt out of the site, you need to enable a feature:
 
-    * Enter `“Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B”`
+    * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
     * Verify that nothing is returned from the previous command (this confirms the feature isn’t enabled yet) 
-    * Enter `“Enable-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B”`
-    * Enter `“Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B”`
+    * Enter `Enable-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
+    * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
 
 6. Verify that the following is returned: 
 
     `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
 
-7. For more information about Windows PowerShell, see [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6).
+For more information about Windows PowerShell, see [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6).
 
 ## See also
 
@@ -98,5 +98,3 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
-
-
