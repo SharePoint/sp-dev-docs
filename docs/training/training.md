@@ -13,17 +13,17 @@ Here are the different tutorials and training assets available for you to get st
 
 ## Setting up your development environment
 
-- [Set up your Office 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant) | [video](https://www.youtube.com/watch?v=yc1IYgYp7qQ&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq) - Includes how to get a free tenant from Microsoft 365 developer program
-- [Set up development environment](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment) | [video](https://www.youtube.com/watch?v=-2-jWsEa2Yw&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=2) - Install needed tooling to get started
+- [Set up your Office 365 tenant](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant) | [video](https://www.youtube.com/watch?v=yc1IYgYp7qQ&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq) - Includes how to get a free tenant from Microsoft 365 developer program
+- [Set up development environment](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment) | [video](https://www.youtube.com/watch?v=-2-jWsEa2Yw&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=2) - Install needed tooling to get started
 
 ## Getting started tutorials for SharePoint Framework
 
 - [Getting started with SharePoint Framework client-side web parts](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) | [video](https://www.youtube.com/watch?v=_O2Re5uRLoo&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=3) - Tutorial series with 4 parts
-- [Using Microsoft Graph APIs in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis) | [video](https://www.youtube.com/watch?v=tHzbh5JoC-A&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=7)
-- [Building Microsoft Teams tab using SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab) | [video](https://www.youtube.com/watch?v=JoTAC2i-XeU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=8)
-- [Add jQueryUI Accordion to your SharePoint client-side web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part) | [video](https://www.youtube.com/watch?v=N0C9azIyiTo&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=10)
-- [Use Office UI Fabric React components in your SharePoint client-side web part](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/use-fabric-react-components) | [video](https://www.youtube.com/watch?v=kNrYd8nYaZY&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=11)
-- [Tutorial for creating Outlook Web App extension using SharePoint Framework - Preview](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/office-addins-tutorial) | [video](https://www.youtube.com/watch?v=QtGjTAjbIKU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=9)
+- [Using Microsoft Graph APIs in your solution](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis) | [video](https://www.youtube.com/watch?v=tHzbh5JoC-A&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=7)
+- [Building Microsoft Teams tab using SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab) | [video](https://www.youtube.com/watch?v=JoTAC2i-XeU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=8)
+- [Add jQueryUI Accordion to your SharePoint client-side web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part) | [video](https://www.youtube.com/watch?v=N0C9azIyiTo&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=10)
+- [Use Office UI Fabric React components in your SharePoint client-side web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/use-fabric-react-components) | [video](https://www.youtube.com/watch?v=kNrYd8nYaZY&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=11)
+- [Tutorial for creating Outlook Web App extension using SharePoint Framework - Preview](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/office-addins-tutorial) | [video](https://www.youtube.com/watch?v=QtGjTAjbIKU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=9)
 
 ## Getting started tutorials for SharePoint Framework extensions
 
