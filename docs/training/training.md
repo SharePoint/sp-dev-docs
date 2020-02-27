@@ -47,7 +47,7 @@ Migration tutorials from classic customizations to SharePoint Framework
 
 ## Getting started training modules for SharePoint Framework
 
-These are "presentations in a box" that include slides, demos, videos & hands-on labs for self-paced learning or for user group presentations. You can find more detailed description of this training package from http://aka.ms/spfx-training.
+These are "presentations in a box" that include slides, demos, videos & hands-on labs for self-paced learning or for user group presentations. You can find more detailed description of this training package from https://aka.ms/spfx-training.
 
 - [Getting Started with the SharePoint Framework](https://github.com/SharePoint/sp-dev-training-spfx-getting-started) | [video](https://www.youtube.com/watch?v=_Pt5cnU4MpU&index=1&list=PLR9nK3mnD-OV-RPXQ3Lco845qoEy7VJoc)
 - [Developing with the SharePoint Framework: Web Parts](https://github.com/SharePoint/sp-dev-training-spfx-web-parts) | [video](https://www.youtube.com/watch?v=m1l_sgSwKek&list=PLR9nK3mnD-OV-RPXQ3Lco845qoEy7VJoc&index=2)
