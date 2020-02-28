@@ -118,6 +118,69 @@ GET https://{site_url}/_api/web/GetFileByServerRelativeUrl('/Folder Name/{file_n
 Authorization: "Bearer " + accessToken
 ```
 
+The following code sample shows how to **retrieve a file when you know its URL by using the REST endpoint above and C#**.
+
+```csharp
+/// <summary>
+/// Download File Via Rest API
+/// </summary>
+/// <param name="webUrl">https://xxxxx/sites/DevSite</param>
+/// <param name="credentials"></param>
+/// <param name="documentLibName">MyDocumentLibrary</param>
+/// <param name="fileName">test.docx</param>
+/// <param name="path">C:\\</param>
+public static void DownloadFileViaRestAPI(string webUrl, ICredentials credentials, string documentLibName, string fileName, string path)
+{
+    webUrl = webUrl.EndsWith("/") ? webUrl.Substring(0, webUrl.Length - 1) : webUrl;
+    string webRelativeUrl = null;
+    if (webUrl.Split('/').Length > 3)
+    {
+        webRelativeUrl = "/" + webUrl.Split(new char[] { '/' }, 4)[3];
+    }
+    else
+    {
+        webRelativeUrl = "";
+    }
+
+    using (WebClient client = new WebClient())
+    {
+        client.Headers.Add("X-FORMS_BASED_AUTH_ACCEPTED", "f");
+        client.Credentials = credentials;
+        Uri endpointUri = new Uri(webUrl + "/_api/web/GetFileByServerRelativeUrl('" + webRelativeUrl + "/" + documentLibName + "/" + fileName + "')/$value");
+
+        byte[] data = client.DownloadData(endpointUri);
+        FileStream outputStream = new FileStream(path + fileName, FileMode.OpenOrCreate | FileMode.Append, FileAccess.Write, FileShare.None);
+        outputStream.Write(data, 0, data.Length);
+        outputStream.Flush(true);
+        outputStream.Close();
+    }
+}
+
+static void Main(string[] args)
+{
+    string siteURL = "https://xxxxx/sites/DevSite";
+
+    //set credential of SharePoint online
+    SecureString secureString = new SecureString();
+    foreach (char c in "Password".ToCharArray())
+    {
+        secureString.AppendChar(c);
+    }
+    ICredentials credentials = new SharePointOnlineCredentials("xxxxxx.onmicrosoft.com", secureString);
+
+    //set credential of SharePoint 2013(on-premise)
+    //string userName = "Administrator";
+    //string password = "xxxxxxx";
+    //string domain = "CONTOSO";
+    //ICredentials credentials = new NetworkCredential(userName, password, domain);
+
+    DownloadFileViaRestAPI(siteURL, credentials, "MyDocumentLib", "test.docx", "c:\\");
+
+    Console.WriteLine("success");
+    Console.ReadLine();
+}
+```
+
 The following example shows how to **create a file and add it to a folder**.
 
 ```http
