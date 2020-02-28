@@ -21,11 +21,8 @@ If your users also expect results from OneDrive for Business content that only t
 <a name="bk_queryrest"> </a>
 
 ## Content Delivery Network (CDN) Support
-If the Office 365 Private or Public CDN is enabled to optimize performance for assets the this section applies to you. If your search results contain images that are served from the CDN, then the URL for the image will be the CDN URL that is returned in the results and not the asset library location. For more information on CDN please review [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](https://docs.microsoft.com/en-us/office365/enterprise/use-office-365-cdn-with-spo).
 
-Public CDN URLs are URLs that can be reused but Private CDN URLs have a limited lifespan, so Private CDN URLs can only be utilized for a short time frame (currently 60 minutes). The URLs would be prefixed with "https://privatecdn" prefix for Private CDN and "https://publiccdn" prefix for Public CDN but any prefix code checks should not be hard-coded.
-As this prefix is subject to change in the future, please utilize the following page context property for Modern pages (this.context.pageContext.legacyPageContext.publicCdnBaseUrl) and for Classic pages (window._spPageContextInfo.publicCdnBaseUrl) to utilize the correct prefix URL. You can also view Season 1 Episode 4 in the [SharePoint performance series playlist](https://aka.ms/sppnp-perfvideos) which provides an example on how the property is used.
-For further information on Private CDN review [Using assets in Private CDN](https://docs.microsoft.com/en-us/office365/enterprise/use-office-365-cdn-with-spo#using-assets-in-private-origins).
+If the Office 365 Private or Public CDN is enabled to optimize performance for assets then this section applies to you. If your search results contain images that are served from the CDN, then the URL for the image will be the CDN URL that is returned in the results and not the asset library location. For more information on CDN please review [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](https://aka.ms/spocdn).
 
 
 ## Querying with the Search REST service
