@@ -1,7 +1,7 @@
 ---
 title: Tutorial for creating Outlook Web Access extension using SharePoint Framework
 description: Creating Outlook add-ins using SharePoint Framework
-ms.date: 02/08/2020
+ms.date: 02/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -86,7 +86,7 @@ Manifest file contains by default definition to expose your add-in as a tool pan
 In the console, enter the following to install the types for the Office JavaScript SDK from the npm:
 
 ```shell
-npm install @types/office-js
+npm install @types/office-js --save-dev
 ```
 
 This adds the needed intelligence for the Office JavaScript SDK types when you develop your solution in TypeScript.

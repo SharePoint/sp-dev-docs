@@ -1,7 +1,7 @@
 ---
 title: Use existing JavaScript libraries in SharePoint Framework client-side web parts
 description: Ensure that your web parts won't negatively impact the performance of SharePoint pages that they are being used on.
-ms.date: 01/29/2018
+ms.date: 02/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -24,7 +24,7 @@ The most common way of referencing existing JavaScript libraries in SharePoint F
 2. To use Angular with TypeScript, you would install typings using **npm**:
 
   ```sh
-  npm install @types/angular --save
+  npm install @types/angular --save-dev
   ```
 
 3. Reference Angular in your web part by using the `import` statement:
@@ -97,7 +97,7 @@ Referencing existing JavaScript libraries in the SharePoint Framework is easy an
 Using Angular as an example, to reference it as an external resource in your client-side web part, you start by installing its TypeScript typings using **npm**:
 
 ```sh
-  npm install @types/angular --save
+  npm install @types/angular --save-dev
 ```
 
 <br/>
