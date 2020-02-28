@@ -13,7 +13,7 @@ Tenant Wide Deployment option for SharePoint Framework Extensions is supported f
 > [!NOTE]
 > SharePoint Framework extensions are supported with modern experiences regardless of the actual site template used when content site was created.
 
-When developers create a new SharePoint Framework extension solution using standard SharePoint Framework Yeoman packages, automation is included in the solution package to activate extension cross the tenant.
+When developers create a new SharePoint Framework extension solution using standard SharePoint Framework Yeoman packages, automation is included in the solution package to activate extension across the tenant.
 
 > [!WARNING]
 > Starting from SharePoint Framework v1.6, default scaffolding will automatically create example files in SharePoint Solution to activate extension across the tenant if you chose to use the tenant-scoped deployment option.
@@ -143,4 +143,4 @@ When an administrator adds a  solution that has a ClientSideInstance.xml file in
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/ext-tenant-wide-solution-deployment.png)
 
-After solution deployment, administrator can change the deployment settings from the **Tenant Wide Extension** list.
+After solution deployment, an administrator can change the deployment settings from the **Tenant Wide Extension** list.
