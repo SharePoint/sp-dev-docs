@@ -46,18 +46,37 @@ The following theme tokens are available for you to use:
 
 |        Token         | Default value on a modern team site using the red palette |                            Remarks                             |
 | -------------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
-| `backgroundImageUri` | `none`                                                    |                                                                |
-| `accent`             | `#ee0410`                                                 |                                                                |
-| `themeDark`          | `#b3030c`                                                 | Used for action icons in the command bar and as a hover color. |
-| `themeDarkAlt`       | `#b3030c`                                                 |                                                                |
-| `themeDarker`        | `#770208`                                                 |                                                                |
-| `themeLight`         | `#fd969b`                                                 |                                                                |
+| `themeDark`          | `#b3030c`                                                 | Some button onclick and link color (e.g., “Return to classic SharePoint”). Header “Follow” star icon if the third header background color option is used. System pages: OK button border and hover. |
+| `themeDarkAlt`       | `#b3030c`                                                 | Many icons (e.g., in the command bar), some borders, button/link hovers, spinner background, range element focus, checkbox background hover, web parts and lists, button hover, range element focus, add web part icon when the third section background color is selected. |
+| `themeDarker`        | `#770208`                                                 | Hover color for some links. System pages: Visited link color. |
+| `themeLight`         | `#fd969b`                                                 | Range selector hover and focus background. Loading spinner background color in site contents view. |
 | `themeLightAlt`      | `#fd969b`                                                 |                                                                |
-| `themeLighter`       | `#fecacd`                                                 |                                                                |
-| `themeLighterAlt`    | `#fecacd`                                                 |                                                                |
-| `themePrimary`       | `#ee0410`                                                 | Primary theme color. Used for icons and default buttons.       |
-| `themeSecondary`     | `#fc6169`                                                 |                                                                |
-| `themeTertiary`      | `#fd969b`                                                 |                                                                |
+| `themeLighter`       | `#fecacd`                                                 | Navigation edit menu background color, add web part panel hover background color, image background color in some web parts when the third section background color option is selected. System pages: Navigation hover background, cancel button hover background. |
+| `themeLighterAlt`    | `#fecacd`                                                 | One of the section background options. Cogwheel menu hover background in site contents view. |
+| `themePrimary`       | `#ee0410`                                                 | Some button and checkbox backgrounds, links, texts, borders and icons, icon and link hovers. Also the footer background color, and one of the section background options. System pages: OK button background, link texts.       |
+| `themeSecondary`     | `#fc6169`                                                 | The suite bar text color in site contents view. Hover color for some links. Image background color in some web parts when the fourth section background color is selected. The second color in the palette icon in the “Change the look panel” (hence the token name) |
+| `themeTertiary`      | `#fd969b`                                                 | Add web part icon when the fourth selection background color is selected. The third color in the palette icon in the “Change the look panel” (hence the token name) |
+| `neutralDark`        | ``                                                 | Some button, link and border hover text color, some icons. System pages: page breadcrumb, header texts. |
+| `neutralLight`       | ``                                                 | Some web part borders, command bar action hover, command bar background when a list item is selected, list view category header background when an item is selected, button hover. System pages: Ribbon tab background, OK button border, selected navigation element background, disabled text box border. Divider web part. Image background color in some web parts when the second section background color option is selected. |
+| `neutralLighter`     | ``                                                 | Some menu backgrounds (e.g., the command bar), selected left navigation element, some button backgrounds, ome option for a section background color. |
+| `neutralLighterAlt`  | ``                                                 | Left navigation hover background color, list info panel text background, image background color in some webparts when the first section background color is selected, some icons and texts when editing web parts. System pages: Cancel button background, disabled text box background. |
+| `neutralPrimary`  | ``                                                 | Site header texts, texts in navigation menux, command bar, buttons and web parts, web part related icon backgrounds when the page is in edit mode, add web part panel icons and texts, web part settings panel texts. System pages: dropdown arrow color, some texts. |
+| `neutralPrimaryAlt`  | ``                                                 | The suite bar background color in site contents view. |
+| `neutralSecondary`  | ``                                                 | Some menu texts, empty library text, some icon hover backgrounds, some texts in web parts, command bar arrows, range selector. System pages: link color, some icons, and borders. |
+| `neutralTertiary`  | ``                                                 | Some button texts, some web part titles, some web part setting texts, some web part icons, border hover color in some web parts, dashed section border color in edit mode, web part settings panel control border color. Most visible when editing web parts. System pages: text box, dropdown, and button border color. |
+| `neutralTertiaryAlt`  | ``                                                 | Some texts, e.g., in web part property pane, some icons in web parts, range selector background, some button onclick background color, yes/no toggle control background, change section background color setting border color. |
+| `neutralQuaternary`  | ``                                                 | Command bar action hover background when a list item is selected. System pages: Borders |
+| `neutralQuaternaryAlt`  | ``                                                 | Info icon and selected ellipses background in lists, some web part element backgrounds when in edit mode, web part property pane dropdown item background color, selected list item background. |
+| `backgroundImageUri` | `none`                                                    |                                                                |
+| `accent`             | `#ee0410`                                                 | The fourth color in the palette in the “Change the look” panel. |
+| `black`  | ``                                                 | Web part settings panel dropdown text color, carousel controls, site contents tab text hover, “Change the look” panel texts. |
+| `white`  | ``                                                 | Primary body background color, some icon hover color, one of the available section background colors. System pages: Body background color |
+| `whiteTranslucent40`  | ``                                                 | Covers the rest of page when a modal dialog is opened. A solid color can be specified to get rid of transparency. |
+| `backgroundOverlay`  | ``                                                 | Header background, comment section background, some borders, site contents primary background color |
+| `primaryBackground`  | ``                                                 | Some backgrounds when editing web part settings, some text field backgrounds, cogwheel menu background in site contents view. |
+| `primaryText`  | ``                                                 | Edit section icons. Cogwheel menu texts in site contents view. |
+
+
 
 > [!NOTE]
 > There are more tokens registered with the SharePoint Framework. While all of them have values specified on classic sites, only the subset mentioned earlier has values on modern SharePoint sites. For the complete list of available tokens, see the value of the `window.__themeState__.theme` property by using the console in your web browser's developer tools.
@@ -107,3 +126,4 @@ When you scaffold a new SharePoint Framework client-side web part, by default, i
 
 - [SharePoint themes and colors](../design/themes-colors.md)
 - [How to use Theme Colors in SPFX web parts](https://n8d.at/blog/how-to-use-theme-colors-in-spfx-web-parts/) by Stefan Bauer (Office Development MVP)
+- [How to Create a Multicolored Theme for a Modern SharePoint Online Site](https://laurakokkarinen.com/how-to-create-a-multicolored-theme-for-a-modern-sharepoint-online-site/) by Laura Kokkarinen (SharePoint PnP Core MVP)
