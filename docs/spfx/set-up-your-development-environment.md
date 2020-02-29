@@ -93,6 +93,7 @@ Following are some tools that might come in handy as well:
 
 - [Fiddler](https://www.telerik.com/fiddler)
 - [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
+- [Windows Terminal](https://github.com/Microsoft/Terminal)
 - [Cmder for Windows](http://cmder.net/)
 - [Oh My Zsh for Mac](http://ohmyz.sh/)
 - [Git source control tools](https://git-scm.com/)
