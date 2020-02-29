@@ -150,7 +150,7 @@ ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -Ta
 Save-PnPClientSidePageConversionLog
 ```
 
-### Transform a pages that lives at the root of the site (so outside of a library)
+### Transform a page that lives at the root of the site (so outside of a library)
 
 Some older sites might have web part pages living outside of a library. If you want to modernize these you need to indicate that the page lives in the root of the site via `-Folder "<root>"` as shown below:
 
