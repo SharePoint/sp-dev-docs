@@ -15,7 +15,7 @@ You can build client-side web parts using modern script development tools and th
 
 In addition to plain JavaScript projects, you can build web parts alongside common scripting frameworks, such as AngularJS and React. For example, you can use React along with components from Office UI Fabric React to quickly create experiences based on the same components used in Office 365.
 
-For more information, see the Getting started, Basics, and Concepts sections (in the TOC).
+For more information, see the Getting Started, Basics, and Concepts sections (in the TOC).
 
 ## See also
 
