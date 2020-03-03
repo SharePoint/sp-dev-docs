@@ -140,7 +140,7 @@ The easiest way to reference a third-party library in SharePoint Framework proje
 2. Because you are building your web part in TypeScript, you also need TypeScript typings for jQuery that you can install by running the following command:
 
   ```sh
-  npm install @types/jquery --save
+  npm install @types/jquery --save-dev
   ```
 
 ### Reference libraries in the web part
@@ -217,7 +217,7 @@ When you reference third-party libraries from a URL, you don't need to install t
 Assuming you start with an empty project created as described previously in this article, install TypeScript typings for jQuery by running the following command:
 
 ```sh
-npm install @types/jquery --save
+npm install @types/jquery --save-dev
 ```
 
 ### Specify URLs of libraries
