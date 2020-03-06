@@ -1399,6 +1399,8 @@
           href: transform/modernize-userinterface-site-pages-usermapping.md
         - name: URL mapping
           href: transform/modernize-userinterface-site-pages-urlmapping.md
+        - name: Term mapping
+          href: transform/modernize-userinterface-site-pages-termmapping.md
         - name: Page layout mapping
           href: transform/modernize-userinterface-site-pages-layout.md
     - name: SharePoint Modernization scanner

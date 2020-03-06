@@ -1,7 +1,7 @@
 ---
 title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
-ms.date: 01/03/2020
+ms.date: 03/06/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -579,6 +579,50 @@ PageTransformationInformation pti = new PageTransformationInformation(page)
 PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
 {
     SkipUserMapping = true,
+};
+```
+
+## TermMappingFile option (as of March 2020 release)
+
+Type | Default value if not specified
+-----|----
+String | empty
+
+You can optionally specify a file with custom term mappings. See the [Term mapping](modernize-userinterface-site-pages-termmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    TermMappingFile = @"c:\temp\termmappingfile.csv",
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    TermMappingFile = @"c:\temp\termmappingfile.csv",
+};
+```
+
+## SkipTermStoreMapping option (as of March 2020 release)
+
+Type | Default value if not specified
+-----|----
+Bool | false
+
+The standard behavior is to perform default term mapping. In case you don't want any term mapping to happen then set this property. See the [Term mapping](modernize-userinterface-site-pages-termmapping.md) article to learn more.
+
+```Csharp
+PageTransformationInformation pti = new PageTransformationInformation(page)
+{
+    SkipTermStoreMapping = true,
+};
+```
+
+```Csharp
+PublishingPageTransformationInformation pti = new PublishingPageTransformationInformation(page)
+{
+    SkipTermStoreMapping = true,
 };
 ```
 
