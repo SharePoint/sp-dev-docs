@@ -192,6 +192,9 @@ Copy the following provisioning template XML to a new file and save the file as 
 
 Next, you'll upload the PnP PowerShell module so that you can use it in the Azure Function.
 
+> [!NOTE]
+> The Storage account must be in the same region as of Azure Function App, because the resources that talk to one another should be co-located in the same region. This is a requirement for Azure Functions. 
+
 ## Upload the PnP PowerShell module for your Azure Function
 
 You'll need to download the PnP PowerShell module so that you can upload it for your Azure Function.
