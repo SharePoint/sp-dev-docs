@@ -1142,6 +1142,37 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;summarylength=
 }
 ```
 
+<a name="bk_ProcessPersonalFavorites"> </a>
+
+### EnableDynamicGroups
+
+A Boolean value that specifies whether to include the results from private Office 365 groups.
+
+**true** to include results from private Office 365 groups; otherwise, **false**. The default value is **false**.
+
+#### Sample GET request
+
+```http
+GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;Properties='EnableDynamicGroups:true'
+```
+
+#### Sample POST request
+
+```json
+{
+  '__metadata': {
+    'type': 'Microsoft.Office.Server.Search.REST.SearchRequest'
+  },
+  'Querytext': 'sharepoint',
+  'Properties': { 
+	'results': [ { 
+		'Name': 'EnableDynamicGroups', 
+		'Value': { 'BoolVal': true } 
+		}
+	]
+}
+```
+
 <a name="bk_ContentSetting"> </a>
 
 ### ContentSetting
