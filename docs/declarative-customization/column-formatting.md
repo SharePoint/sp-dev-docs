@@ -1270,7 +1270,7 @@ Operators specify the type of operation to perform. The following operators are 
 - **abs**: returns the absolute value for a given number - _Only available in SharePoint Online_
   - `"txtContent":"=abs(-45)"` results in _45_
   
-- **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value. - _Only available in SharePoint Online_
+- **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value (*see the `indexOf` workaround explained later on for such operation*). - _Only available in SharePoint Online_
   - `"txtContent":"=length(@currentField)"` might result in _2_ if there are 2 selected values
   - `"txtContent":"=length('Some Text')"` results in _1_
   - `"txtContent":"=length('')"` results in _0_
@@ -1336,6 +1336,15 @@ Operators specify the type of operation to perform. The following operators are 
 `loopIndex`, when provided with a name of iterator variable, returns the current index (starting from 0) of the iterator. The name of iterator must be provided as a string literal. `loopIndex` would only work within the element with respective `forEach` enabled or its children elements.
 
 See [here](#formatting-multi-value-fields) for examples.
+
+**String related operators** - Some of the previously detailed operators can be used when working with string values
+
+- \+
+- indexOf ( *for string length workaround* )
+
+`+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text"`
+
+`indexOf` Since the operator `length` doesnt work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string. 
 
 ### operands
 
