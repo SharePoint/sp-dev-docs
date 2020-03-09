@@ -91,8 +91,8 @@ At this point, Yeoman installs the required dependencies and scaffolds the solut
 1. Open your console and install the needed types:
 
     ```shell
-    npm install @types/jquery@2
-    npm install @types/jqueryui
+    npm install @types/jquery@2 --save-dev
+    npm install @types/jqueryui --save-dev
     ```
 
 ### To unbundle external dependencies from web part bundle
