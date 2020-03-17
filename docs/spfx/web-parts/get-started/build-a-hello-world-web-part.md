@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 02/08/2020
+ms.date: 03/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -54,7 +54,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     * Accept the default **helloworld-webpart** as your solution name, and then select Enter.
     * Select **SharePoint Online only (latest)**, and select Enter.
     * Select **Use the current folder** for where to place the files.
-    * Select **N** to allow the solution to be deployed to all sites immediately.
+    * Select **N** to not allow the solution to be deployed to all sites immediately.
     * Select **N** on the question if solution contains unique permissions.
     * Select **WebPart** as the client-side component type to be created.
 
