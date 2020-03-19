@@ -170,7 +170,8 @@ If your SharePoint Framework solution requires permissions to specific resources
 4. When this solution is deployed to the SharePoint app catalog, it prompts the administrator to verify the requested permissions and either grant or deny them.
 
  > [!NOTE]
- > No matter if the administrator denies or approves the requested permissions, the solution can be deployed and used on sites. When building solutions that require additional permissions, you should never assume that the requested permissions have been granted.
+ > If you have the "App Registrations" option set to No under Azure Active Directory - User Settings AND the "Users can consent apps accessing company data on their behalf" option set to No under Azure Active Directory - Enterprise Applications - User Settings, you will not be able to upload/deploy the solution to the App Catalog. For this to work, you will need to have the either Role "Global Admin" or "Application Developer" assigned to the user .
+When building solutions that require additional permissions, you should never assume that the requested permissions have been granted.
 
 ## Manage permission requests
 
@@ -377,7 +378,8 @@ Revoking previously granted permissions doesn't invalidate access tokens issued 
 
 ### Permission request doesn't affect solution deployment
 
-No matter if the administrator denies or approves permissions requested by the solution, the solution can be deployed and used on sites. When building solutions that require additional permissions, you should never assume that the requested permissions have been granted.
+If you have the "App Registrations" option set to No under Azure Active Directory - User Settings AND the "Users can consent apps accessing company data on their behalf" option set to No under Azure Active Directory - Enterprise Applications - User Settings, you will not be able to upload/deploy the solution to the App Catalog. For this to work, you will need to have the either Role "Global Admin" or "Application Developer" assigned to the user .
+When building solutions that require additional permissions, you should never assume that the requested permissions have been granted.
 
 ### Control the SharePoint Online Client service principal
 
