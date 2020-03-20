@@ -130,7 +130,7 @@ Available actions include:
 - Applying a theme
 - Setting a site logo
 - Adding links to quick launch or hub navigation
-- Triggering a Microsoft Flow
+- Triggering a Power Automate flow
 - Installing a deployed solution from the app catalog
 - Setting regional settings for the site
 - Adding principals (users and groups) to SharePoint roles
@@ -248,11 +248,11 @@ The **WebTemplate** parameter set to the value 64 indicates registering this sit
 
 For step-by-step information about creating a site design, see [Get started creating site designs](get-started-create-site-design.md).
 
-## PnP provisioning and customization using Microsoft Flow
+## PnP provisioning and customization using Power Automate
 
-One action provided by site scripts is the ability to trigger a Microsoft Flow. This allows you to specify any custom action that you need beyond the actions provided natively in site scripts.
+One action provided by site scripts is the ability to trigger a Power Automate flow. This allows you to specify any custom action that you need beyond the actions provided natively in site scripts.
 
-If you use the PnP provisioning engine to automate site creation, you can use a Microsoft Flow to integrate with site designs. You can maintain all your existing provisioning scripts as well as create new custom provisioning scripts by using this technique.
+If you use the PnP provisioning engine to automate site creation, you can use a Power Automate flow to integrate with site designs. You can maintain all your existing provisioning scripts as well as create new custom provisioning scripts by using this technique.
 
 <br/>
 
@@ -260,7 +260,7 @@ If you use the PnP provisioning engine to automate site creation, you can use a 
 
 The process works as follows:
 
-1. The script instantiates your Microsoft Flow using a URL with additional details. 
+1. The script instantiates your Power Automate flow using a URL with additional details. 
 
 2. The flow sends a message to an Azure storage queue that you have configured. 
 
@@ -268,7 +268,7 @@ The process works as follows:
 
 4. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations. 
 
-For a step-by-step tutorial about how to configure your own Microsoft Flow with PnP provisioning, see [Build a complete site design using the PnP provisioning engine](site-design-pnp-provisioning.md).
+For a step-by-step tutorial about how to configure your own Power Automate flow with PnP provisioning, see [Build a complete site design using the PnP provisioning engine](site-design-pnp-provisioning.md).
 
 ## Scoping
 
