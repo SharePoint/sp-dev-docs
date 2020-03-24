@@ -1,7 +1,7 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 11/27/2018
+ms.date: 03/24/2020
 localization_priority: Priority
 ---
 
@@ -14,7 +14,7 @@ This article describes how to create a site design that applies a PnP provisioni
 The steps in this article use the following components:
 
 - A site design and a site script
-- Microsoft Flow
+- Power Automate
 - Azure Queue storage
 - Azure Functions
 - A SharePoint Framework (SPFx) solution
@@ -67,7 +67,7 @@ Next, trust the app, so that it has the appropriate access to your tenant:
 
 ## Create the Azure Queue storage
 
-In this section, you will use Azure Queue storage to receive messages from Microsoft Flow. Every time a message shows up in the Queue storage, an Azure function is triggered to run a PowerShell script. 
+In this section, you will use Azure Queue storage to receive messages from Power Automate. Every time a message shows up in the Queue storage, an Azure function is triggered to run a PowerShell script. 
 
 To set up the Azure Queue storage:
 
@@ -85,7 +85,7 @@ To set up the Azure Queue storage:
 
 To put a message in the queue, you need to create a flow. 
 
-1. Go to the [Microsoft Flow](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page.
+1. Go to the [Power Automate](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page.
 1. Choose **Search hundreds of connectors and triggers** to select your trigger.
 1. Search for **Request**, and select **Request - When a HTTP Request is received**.
 1. Enter the following JSON as your request body:
@@ -313,7 +313,7 @@ The **Add-SPOSiteDesign** cmdlet associates the site design with the team site. 
 
 ## Verify the results
 
-After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Microsoft Flow from the site design. 
+After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Power Automate flow from the site design. 
 
 To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. Notice that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
 
