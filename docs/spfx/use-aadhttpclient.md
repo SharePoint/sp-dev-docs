@@ -1,7 +1,7 @@
 ---
 title: Connect to Azure AD-secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 02/11/2020
+ms.date: 03/25/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -39,25 +39,25 @@ One way to see the available applications in Azure AD is by navigating to the [A
 
 1. In the Azure AD admin center, in the left navigation, choose the **Enterprise applications** link.
 
-  ![The 'Enterprise applications' link highlighted in the Azure AD portal](../images/webapipermissions-aadportal-enterpriseappslink.png)
+    ![The 'Enterprise applications' link highlighted in the Azure AD portal](../images/webapipermissions-aadportal-enterpriseappslink.png)
 
-2. On the **Enterprise applications** blade, in the **Manage** group, choose the **All applications** link.
+1. On the **Enterprise applications** blade, in the **Manage** group, choose the **All applications** link.
 
-  ![The 'All applications' link highlighted in the Azure AD portal](../images/webapipermissions-aadportal-allappslink.png)
+    ![The 'All applications' link highlighted in the Azure AD portal](../images/webapipermissions-aadportal-allappslink.png)
 
-3. To quickly find the application to which you want to connect, you can filter the overview either by application type (_Microsoft Applications_ or _Enterprise Applications_), or you can search for it by using its name or ID.
+1. To quickly find the application to which you want to connect, you can filter the overview either by application type (_Microsoft Applications_ or _Enterprise Applications_), or you can search for it by using its name or ID.
 
-  For example, if you want to request additional permissions to the Microsoft Graph, in the search box you would search for `graph`.
+      For example, if you want to request additional permissions to the Microsoft Graph, in the search box you would search for `graph`.
 
-  ![Searching for 'graph' in the list of available Azure AD applications in the Azure AD portal](../images/webapipermissions-aadportal-searchgraph.png)
+    ![Searching for 'graph' in the list of available Azure AD applications in the Azure AD portal](../images/webapipermissions-aadportal-searchgraph.png)
 
-4. After you find the application, choose it to get additional information. On the application's blade, in the **Manage** group, choose **Properties** to open the application's properties.
+1. After you find the application, choose it to get additional information. On the application's blade, in the **Manage** group, choose **Properties** to open the application's properties.
 
-  ![The 'Properties' link highlighted on the application blade in the Azure AD portal](../images/webapipermissions-aadportal-graphpropertieslink.png)
+    ![The 'Properties' link highlighted on the application blade in the Azure AD portal](../images/webapipermissions-aadportal-graphpropertieslink.png)
 
-5. From the list of properties, copy the value of the **Object ID** property, which you need to request additional permission scopes to the Microsoft Graph. Alternatively, you can copy the application's **Name** and use it in the permission request instead.
+1. From the list of properties, copy the value of the **Object ID** property, which you need to request additional permission scopes to the Microsoft Graph. Alternatively, you can copy the application's **Name** and use it in the permission request instead.
 
-  ![The value of the 'Object ID' property copied to the clipboard in the Azure AD portal](../images/webapipermissions-aadportal-graphobjectidcopied.png)
+    ![The value of the 'Object ID' property copied to the clipboard in the Azure AD portal](../images/webapipermissions-aadportal-graphobjectidcopied.png)
 
  > [!NOTE]
  > While the **Object ID** is unique for each tenant, the application's **Name** is the same across all tenants. If you want to build your solution once and deploy it to different tenants, you should use the application's **Name** when requesting additional permissions in your solution.
@@ -69,17 +69,17 @@ One way to see the available applications in Azure AD is by navigating to the [A
 
 1. Sign in to your Azure subscription by executing in PowerShell (this is not necessary if you're using the Azure Cloud Shell):
 
-  ```powershell
-  Login-AzureRmAccount
-  ```
+    ```powershell
+    Login-AzureRmAccount
+    ```
 
-2. Enter the following to list the applications available in your tenant:
+1. Enter the following to list the applications available in your tenant:
 
-  ```powershell
-  Get-AzureRmADServicePrincipal | sort DisplayName | ft DisplayName, Id
-  ```
+    ```powershell
+    Get-AzureRmADServicePrincipal | sort DisplayName | ft DisplayName, Id
+    ```
 
-  Running this cmdlet lists all applications available in your tenant. For each application, its display name and object ID are displayed, which you can use in your SharePoint Framework solution to request application permissions.
+    Running this cmdlet lists all applications available in your tenant. For each application, its display name and object ID are displayed, which you can use in your SharePoint Framework solution to request application permissions.
 
 ### Use Azure CLI
 
@@ -88,17 +88,17 @@ One way to see the available applications in Azure AD is by navigating to the [A
 
 1. If you're running the CLI on your machine or in a Docker container, start by connecting to your Azure subscription by executing:
 
-  ```sh
-  azure login
-  ```
+    ```sh
+    azure login
+    ```
 
-2. After you're connected, execute the following command to list all available Azure AD applications:
+1. After you're connected, execute the following command to list all available Azure AD applications:
 
-  ```sh
-  azure ad sp list --query "sort_by([*].{displayName: displayName, objectId: objectId}, &displayName)" -o table
-  ```
+    ```sh
+    azure ad sp list --query "sort_by([*].{displayName: displayName, objectId: objectId}, &displayName)" -o table
+    ```
 
-  Running this command lists all Azure AD applications available in your tenant, sorted by displayName. For each application, the command displays its displayName and objectId. Additionally, the output is formatted as a table.
+    Running this command lists all Azure AD applications available in your tenant, sorted by displayName. For each application, the command displays its displayName and objectId. Additionally, the output is formatted as a table.
 
 ### Get the list of permission scopes exposed by the application
 
@@ -109,68 +109,67 @@ Each Azure AD application exposes a number of permission scopes. These permissio
 If your SharePoint Framework solution requires permissions to specific resources secured with Azure AD, such as Microsoft Graph or enterprise applications, you can specify these resources along with the necessary permissions in the configuration of your solution.
 
 1. In your SharePoint Framework project, open the **config/package-solution.json** file.
+1. To the **solution** property, add the **webApiPermissionRequests** property that lists all the resources and corresponding permissions that your solution needs.
 
-2. To the **solution** property, add the **webApiPermissionRequests** property that lists all the resources and corresponding permissions that your solution needs.
+    Following is an example of a SharePoint Framework solution requesting access to read user calendars by using the Microsoft Graph:
 
-  Following is an example of a SharePoint Framework solution requesting access to read user calendars by using the Microsoft Graph:
-
-  ```json
-  {
-    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-    "solution": {
-      "name": "spfx-graph-client-side-solution",
-      "id": "5d16587c-5e87-44d7-b658-1148988f212a",
-      "version": "1.0.0.0",
-      "includeClientSideAssets": true,
-      "skipFeatureDeployment": true,
-      "webApiPermissionRequests": [
-        {
-          "resource": "Microsoft Graph",
-          "scope": "Calendars.Read"
-        }
-      ]
-    },
-    "paths": {
-      "zippedPackage": "solution/spfx-graph.sppkg"
+    ```json
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+      "solution": {
+        "name": "spfx-graph-client-side-solution",
+        "id": "5d16587c-5e87-44d7-b658-1148988f212a",
+        "version": "1.0.0.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "webApiPermissionRequests": [
+          {
+            "resource": "Microsoft Graph",
+            "scope": "Calendars.Read"
+          }
+        ]
+      },
+      "paths": {
+        "zippedPackage": "solution/spfx-graph.sppkg"
+      }
     }
-  }
-  ```
+    ```
 
-  > [!NOTE]
-  > For the value of the **resource** property, you need to specify the **displayName** of the application to which you want to request permissions. If you specify the resource using its **objectId**, you will get an error when trying to approve the permission request.
+    > [!NOTE]
+    > For the value of the **resource** property, you need to specify the **displayName** of the application to which you want to request permissions. If you specify the resource using its **objectId**, you will get an error when trying to approve the permission request.
 
-3. If you want to request multiple permission scopes for the given resource, specify each scope in a separate entry, for example:
+1. If you want to request multiple permission scopes for the given resource, specify each scope in a separate entry, for example:
 
-  ```json
-  {
-    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-    "solution": {
-      "name": "spfx-graph-client-side-solution",
-      "id": "5d16587c-5e87-44d7-b658-1148988f212a",
-      "version": "1.0.0.0",
-      "includeClientSideAssets": true,
-      "skipFeatureDeployment": true,
-      "webApiPermissionRequests": [
-        {
-          "resource": "Microsoft Graph",
-          "scope": "Calendars.Read"
-        },
-        {
-          "resource": "Microsoft Graph",
-          "scope": "User.ReadBasic.All"
-        }
-      ]
-    },
-    "paths": {
-      "zippedPackage": "solution/spfx-graph.sppkg"
+    ```json
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+      "solution": {
+        "name": "spfx-graph-client-side-solution",
+        "id": "5d16587c-5e87-44d7-b658-1148988f212a",
+        "version": "1.0.0.0",
+        "includeClientSideAssets": true,
+        "skipFeatureDeployment": true,
+        "webApiPermissionRequests": [
+          {
+            "resource": "Microsoft Graph",
+            "scope": "Calendars.Read"
+          },
+          {
+            "resource": "Microsoft Graph",
+            "scope": "User.ReadBasic.All"
+          }
+        ]
+      },
+      "paths": {
+        "zippedPackage": "solution/spfx-graph.sppkg"
+      }
     }
-  }
-  ```
+    ```
 
-4. When this solution is deployed to the SharePoint app catalog, it prompts the administrator to verify the requested permissions and either grant or deny them.
+1. When this solution is deployed to the SharePoint app catalog, it prompts the administrator to verify the requested permissions and either grant or deny them.
 
- > [!NOTE]
- > No matter if the administrator denies or approves the requested permissions, the solution can be deployed and used on sites. When building solutions that require additional permissions, you should never assume that the requested permissions have been granted.
+    > [!NOTE]
+    > No matter if the administrator denies or approves the requested permissions, the solution can be deployed and used on sites. When building solutions that require additional permissions, you should never assume that the requested permissions have been granted.
 
 ## Manage permission requests
 
@@ -181,57 +180,52 @@ When deploying SharePoint Framework solutions that request permissions to Azure 
 Office 365 tenant administrators can manage permission grants and requests through the web UI from the modern SharePoint admin center.
 
 1. Open the modern SharePoint admin center by navigating to the [Office 365 portal landing page](https://portal.office.com).  Sign in with your organizational account.
-
-2. From the list of apps, choose **Admin**.
-
-3. In the Office 365 Admin center, in the **Admin centers** group, choose **SharePoint**.
-
-4. In the SharePoint admin center, choose the **Try the new SharePoint admin center** link.
-
-<br/>
+1. From the list of apps, choose **Admin**.
+1. In the Office 365 Admin center, in the **Admin centers** group, choose **SharePoint**.
+1. In the SharePoint admin center, choose the **Try the new SharePoint admin center** link.
 
 Following are some ways that Office 365 tenant administrators can manage permission grants and requests through the web UI from the modern SharePoint admin center.
 
 - To **view pending permission requests**, in the modern SharePoint admin center, in the left pane, choose **WebApiPermission management** (**API management** in the screenshot).
 
-  ![The 'WebApiPermission management' link highlighted in the modern SharePoint admin center](./../images/webapipermissions-o365portal-webapipermissionslink.png)
+    ![The 'WebApiPermission management' link highlighted in the modern SharePoint admin center](./../images/webapipermissions-o365portal-webapipermissionslink.png)
 
-  All pending permissions requests will be highlighted in the list of web API permissions.
+    All pending permissions requests will be highlighted in the list of web API permissions.
 
-  ![Pending permission request highlighted in the list of web API permissions](./../images/webapipermissions-o365portal-pendingpermissions.png)
+    ![Pending permission request highlighted in the list of web API permissions](./../images/webapipermissions-o365portal-pendingpermissions.png)
 
 - To **approve a pending permission request**, select the request in the list of permissions, and on the toolbar, choose **Approve or reject**. In the **Approve or reject access** pane, choose **Approve**.
 
-  ![The 'Approve or reject access' pane visible for the selected web API permission request](./../images/webapipermissions-o365portal-approve.png)
+    ![The 'Approve or reject access' pane visible for the selected web API permission request](./../images/webapipermissions-o365portal-approve.png)
 
-  After the request has been approved, the permission changes in the list, indicating that it has been granted.
+    After the request has been approved, the permission changes in the list, indicating that it has been granted.
 
-  > [!NOTE]
-  > If you try to approve a permission request for a resource that already has some permissions granted (for example, granting additional permissions to the Microsoft Graph), the requested scopes are added to the previously granted permissions.
+    > [!NOTE]
+    > If you try to approve a permission request for a resource that already has some permissions granted (for example, granting additional permissions to the Microsoft Graph), the requested scopes are added to the previously granted permissions.
 
 - To **reject a pending permission request**, select the request in the list of permissions, and on the toolbar, choose **Approve or reject**. In the **Approve or reject access** pane, choose **Reject**.
 
-  ![The 'Approve or reject access' panel visible for the selected web API permission request](./../images/webapipermissions-o365portal-deny.png)
+    ![The 'Approve or reject access' panel visible for the selected web API permission request](./../images/webapipermissions-o365portal-deny.png)
 
-  After the request has been rejected, it is no longer visible in the list of web API permissions.
+    After the request has been rejected, it is no longer visible in the list of web API permissions.
 
-  > [!NOTE]
-  > Rejecting a permission request issued by a solution deployed in the app catalog doesn't affect that solution, and it remains deployed in the app catalog. Because the requested permissions have been denied, the solution might not be working as expected. Developers should never assume that all requested permissions have been granted and should fail gracefully if this is not the case.
+    > [!NOTE]
+    > Rejecting a permission request issued by a solution deployed in the app catalog doesn't affect that solution, and it remains deployed in the app catalog. Because the requested permissions have been denied, the solution might not be working as expected. Developers should never assume that all requested permissions have been granted and should fail gracefully if this is not the case.
 
 - To **revoke a previously granted set of permissions**, select the grant in the list of permissions, and on the toolbar, choose **Remove access**. In the **Remove access** pane, choose **Remove**.
 
-  ![The 'Remove access' pane visible for the selected web API permission grant](./../images/webapipermissions-o365portal-remove.png)
+    ![The 'Remove access' pane visible for the selected web API permission grant](./../images/webapipermissions-o365portal-remove.png)
 
-  After the grant has been removed, it is no longer visible in the list of web API permissions.
+    After the grant has been removed, it is no longer visible in the list of web API permissions.
 
-  > [!NOTE]
-  > Removing a previously granted set of permissions could yield errors in all solutions used in your tenant that rely on those permissions unless they handle it gracefully. Before removing the specific permission grant, you should closely examine the impact that it will have on your tenant. If you accidentally removed a permission grant, you can restore it by issuing a new permission request with the same resource and scope.
-  >
-  > Revoking granted permissions doesn't invalidate previously issued access tokens. Instead, they remain valid until they expire.
+    > [!NOTE]
+    > Removing a previously granted set of permissions could yield errors in all solutions used in your tenant that rely on those permissions unless they handle it gracefully. Before removing the specific permission grant, you should closely examine the impact that it will have on your tenant. If you accidentally removed a permission grant, you can restore it by issuing a new permission request with the same resource and scope.
+    >
+    > Revoking granted permissions doesn't invalidate previously issued access tokens. Instead, they remain valid until they expire.
 
 - To **view all previously granted permissions**, in the modern SharePoint admin center, in the left pane, choose **API management**. All granted permissions are displayed in the **Approved** section.
 
-  ![Granted permissions displayed on the WebApiPermission management page](./../images/webapipermissions-o365portal-grantedpermissions.png)
+    ![Granted permissions displayed on the WebApiPermission management page](./../images/webapipermissions-o365portal-grantedpermissions.png)
 
 ### Manage permissions with PowerShell
 
@@ -244,16 +238,15 @@ SharePoint tenant administrators can use the SharePoint Online Management Shell 
 
 - To **approve the specific permission request**, use the `Approve-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>` cmdlet, specifying the ID of the permission request that you want to approve.
 
-  > [!NOTE]
-  > If you try to approve a request for a permission that has already been granted, you get an error.
+    > [!NOTE]
+    > If you try to approve a request for a permission that has already been granted, you get an error.
 
 - To **deny a permission request** (if the requested permission has already been granted, or the request is against your organizational policies), use the `Deny-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>` cmdlet, specifying the ID of the permission request that you want to deny.
 
-  > [!NOTE]
-  > Denying a permission request issued by a SharePoint Framework application doesn't prevent that application from being deployed in the app catalog and installed on sites.
+    > [!NOTE]
+    > Denying a permission request issued by a SharePoint Framework application doesn't prevent that application from being deployed in the app catalog and installed on sites.
 
 - To **view which permissions have been granted** in your tenant, use the `Get-SPOTenantServicePrincipalPermissionGrants` cmdlet. For each grant, the cmdlet displays the following information:
-
   - **ClientId**: The objectId of the service principal granted consent to impersonate the user when accessing the resource (represented by the resourceId).
   - **ConsentType**: Whether consent was provided by the administrator on behalf of the organization or whether consent was provided by an individual. The possible values are "AllPrincipals" or "Principal".
   - **ObjectId**: The unique identifier for the permission grant.
@@ -263,8 +256,8 @@ SharePoint tenant administrators can use the SharePoint Online Management Shell 
 
 - To **revoke a previously granted permission**, use the `Revoke-SPOTenantServicePrincipalPermission -ObjectId <String>` cmdlet. In the `ObjectId` parameter, you should specify the objectId of the grant that you want to revoke, which you can obtain by using the `Get-SPOTenantServicePrincipalPermissionGrants` cmdlet.
 
-  > [!NOTE]
-  > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.
+    > [!NOTE]
+    > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.
 
 ### Manage permissions using the Office 365 CLI
 
@@ -272,30 +265,30 @@ SharePoint tenant administrators can use the [Office 365 CLI](https://aka.ms/o36
 
 - To **view all pending permission requests**, use the [spo serviceprincipal permissionrequest list](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-list/) command. For each permission request, the command lists its ID (required to either approve or deny the request), the resource for which permissions have been requested, and the requested permissions.
 
-  > [!NOTE]
-  > SharePoint doesn't verify if the requested permissions have already been granted or not, so before approving or rejecting a permission request, check which permissions have already been granted in your tenant.
+    > [!NOTE]
+    > SharePoint doesn't verify if the requested permissions have already been granted or not, so before approving or rejecting a permission request, check which permissions have already been granted in your tenant.
 
 - To **approve a specific permission request**, use the [spo serviceprincipal permissionrequest approve](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-approve/) command, specifying the ID of the permission request that you want to approve.
 
-  > [!NOTE]
-  > If you try to approve a request for a permission that has already been granted, you get an error.
+    > [!NOTE]
+    > If you try to approve a request for a permission that has already been granted, you get an error.
 
 - To **deny a permission request** (if the requested permission has already been granted, or the request is against your organizational policies), use the [spo serviceprincipal permissionrequest deny](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-deny/) command, specifying the ID of the permission request that you want to deny.
 
-  > [!NOTE]
-  > Denying a permission request issued by a SharePoint Framework application doesn't prevent that application from being deployed in the app catalog and installed on sites.
+    > [!NOTE]
+    > Denying a permission request issued by a SharePoint Framework application doesn't prevent that application from being deployed in the app catalog and installed on sites.
 
 - To **view which permissions have been granted** in your tenant, use the [spo serviceprincipal grant list](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-list/) command. For each grant, the command displays the following information:
 
-  - **ObjectId**: The unique identifier for the permission grant.
-  - **Resource**: The resource to which access has been granted.
-  - **ResourceId**: The objectId of the resource service principal to which access has been granted.
-  - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
+    - **ObjectId**: The unique identifier for the permission grant.
+    - **Resource**: The resource to which access has been granted.
+    - **ResourceId**: The objectId of the resource service principal to which access has been granted.
+    - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 
 - To **revoke a previously granted permission**, use the [spo serviceprincipal grant revoke](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-revoke/) command. In the `grantId` parameter, specify the objectId of the grant that you want to revoke, which you can obtain by using the `spo serviceprincipal grant list` command.
 
-  > [!NOTE]
-  > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.
+    > [!NOTE]
+    > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.
 
 ## Connect to Azure AD applications using the AadHttpClient
 
@@ -305,55 +298,55 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
 
 1. To use the **AadHttpClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
-  ```typescript
-  import { AadHttpClient, HttpClientResponse } from '@microsoft/sp-http';
-  ```
+    ```typescript
+    import { AadHttpClient, HttpClientResponse } from '@microsoft/sp-http';
+    ```
 
-2. Get a new instance of the **AadHttpClient**, passing the resource to which you want to connect as parameters:
+1. Get a new instance of the **AadHttpClient**, passing the resource to which you want to connect as parameters:
 
-  ```typescript
-  export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-    public render(): void {
+    ```typescript
+    export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+      public render(): void {
+        // ...
+
+        this.context.aadHttpClientFactory
+          .getClient('https://contoso.azurewebsites.net')
+          .then((client: AadHttpClient): void => {
+            // connect to the API
+          });
+      }
+
       // ...
-
-      this.context.aadHttpClientFactory
-        .getClient('https://contoso.azurewebsites.net')
-        .then((client: AadHttpClient): void => {
-          // connect to the API
-        });
     }
+    ```
 
-    // ...
-  }
-  ```
+    > [!NOTE]
+    > Each instance of the **AadHttpClient** is linked to the specific resource, which is why you need to create a new instance of the client for each resource that you want to connect to.
 
-  > [!NOTE]
-  > Each instance of the **AadHttpClient** is linked to the specific resource, which is why you need to create a new instance of the client for each resource that you want to connect to.
+1. After you instantiate the **AadHttpClient** for your resource, you can issue a web request to communicate with your API; in this example, the API returns a list of orders represented by the custom **Order** interface defined elsewhere in the project:
 
-3. After you instantiate the **AadHttpClient** for your resource, you can issue a web request to communicate with your API; in this example, the API returns a list of orders represented by the custom **Order** interface defined elsewhere in the project:
+    ```typescript
+    export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+      public render(): void {
+        // ...
 
-  ```typescript
-  export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-    public render(): void {
+        this.context.aadHttpClientFactory
+          .getClient('https://contoso.azurewebsites.net')
+          .then((client: AadHttpClient): void => {
+            client
+              .get('https://contoso.azurewebsites.net/api/orders', AadHttpClient.configurations.v1)
+              .then((response: HttpClientResponse): Promise<Order[]> => {
+                return response.json();
+              })
+              .then((orders: Order[]): void => {
+                // process data
+              });
+          });
+      }
+
       // ...
-
-      this.context.aadHttpClientFactory
-        .getClient('https://contoso.azurewebsites.net')
-        .then((client: AadHttpClient): void => {
-          client
-            .get('https://contoso.azurewebsites.net/api/orders', AadHttpClient.configurations.v1)
-            .then((response: HttpClientResponse): Promise<Order[]> => {
-              return response.json();
-            })
-            .then((orders: Order[]): void => {
-              // process data
-            });
-        });
     }
-
-    // ...
-  }
-  ```
+    ```
 
 ## Considerations
 
@@ -384,4 +377,3 @@ No matter if the administrator denies or approves permissions requested by the s
 All permissions granted through web API requests are stored with the **SharePoint Online Client Extensibility** Azure AD application. If tenant administrators don't want developers to use the web API request model and the **MSGraphClient** and **AadHttpClient** in their solutions, they can disable the **SharePoint Online Client Extensibility** service principal through PowerShell by using the `Disable-SPOTenantServicePrincipal` cmdlet.
 
 The service principal can be re-enabled by using the `Enable-SPOTenantServicePrincipal` cmdlet. Alternatively, it's also possible to enable and disable the **SharePoint Online Client Extensibility** service principal through the Office 365 CLI by using the [spo serviceprincipal set](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-set/) command.
-
