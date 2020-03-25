@@ -101,7 +101,8 @@ In the context of modern SharePoint sites, the values associated with theme toke
 
 The following theme tokens are available for you to use:
 
-_Note: default values below correspond to the defaults on a modern team site when using the **red palette**._
+[!NOTE]
+Default values below correspond to the defaults on a modern team site when using the **red palette**.
 
 | Token                  | Default                  | Remarks                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---------------------- | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
