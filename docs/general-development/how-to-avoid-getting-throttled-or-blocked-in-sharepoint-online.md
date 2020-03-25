@@ -144,7 +144,7 @@ Following sample is in c# format, but the similar User Agent information is reco
 HttpWebRequest endpointRequest = (HttpWebRequest)HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
 endpointRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
-endpointRequest.Accept = "application/json;odata=verbose";
+endpointRequest.Accept = "application/json;odata=nometadata";
 endpointRequest.Headers.Add("Authorization", "Bearer " + accessToken);
 HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse();
 ```
