@@ -726,11 +726,13 @@ The following image shows a list with a custom hover added to a List:
 
 On hover - Metadata on the column "Status" is made available in view formatting
 
-![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](file:///C:\Users\nikj\Desktop\docsupdate\doc-update-hovercard\sp-dev-docs\docs\images\HoverImage-1.png)
+![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](../images/HoverImage-1.png)
+)
 
 On hover - Metadata on the column "Status" is made available in column formatting
 
-![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](file:///C:\Users\nikj\Desktop\docsupdate\doc-update-hovercard\sp-dev-docs\docs\images\HoverImage-2.png)
+![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](../images/HoverImage-2.png)
+
 
 
 You can use column and view formatting to define custom call out that can be commissioned basis user defined actions like click or hover
@@ -763,10 +765,11 @@ Users can now have profile card or file hover card on formatters too, some of th
 
 Hover on a filename with formatting with default file card 
 
-![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](file:///C:\Users\nikj\Desktop\docsupdate\doc-update-hovercard\sp-dev-docs\docs\images\HoverImage-3.png)
+![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](../images/HoverImage-3.png)
+
 
 Hover on a person column with formatting with default Profile card 
-![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](file:///C:\Users\nikj\Desktop\docsupdate\doc-update-hovercard\sp-dev-docs\docs\images\HoverImage-4.png)
+![List with name "Owners" and 3 rows where each user in the field has a profile picture, name and email displayed, and a small gray counter of owners at top left corner that has a different color when it says 0.](../images/HoverImage-4.png)
 
 Both the example uses defaultHoverField 
 
