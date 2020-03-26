@@ -1524,7 +1524,7 @@ The location field object has the following properties (with example values):
       "Longitude": "-83.92420959472656"
    },
    "DisplayName": "World's Fair Park",
-   "LocationUri: "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
+   "LocationUri": "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
 }
 ```
 
@@ -1757,7 +1757,7 @@ Defalut File hover Card via tokens thumbnail of a file
   "defaultHoverField": "[$FileLeafRef]"
   }
   ```
-  
+
 ## See also
 
 - [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)
