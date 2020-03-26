@@ -1756,6 +1756,8 @@ Defalut File hover Card via tokens thumbnail of a file
   },
   "defaultHoverField": "[$FileLeafRef]"
   }
+  ```
+  
 ## See also
 
 - [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)
