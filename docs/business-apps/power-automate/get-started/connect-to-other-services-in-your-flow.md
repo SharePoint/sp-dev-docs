@@ -1,6 +1,6 @@
 ---
 title: Connect your flow to other services
-description: Connect your flow to 200+ services available in Microsoft Flow and build an integrated experience to perform actions in the services.
+description: Connect your flow to 200+ services available in Power Automate, and build an integrated experience to perform actions in the services.
 ms.date: 12/12/2018
 ms.prod: sharepoint
 localization_priority: Priority
@@ -8,73 +8,71 @@ localization_priority: Priority
 
 # Connect your flow to other services
 
-Connect your flow to 200+ services available in Microsoft Flow and build an integrated experience to perform actions in the services. This article continues building the *Projects* list flow built in the previous article *Create your first flow*.
+Connect your flow to 200+ services available in Power Automate and build an integrated experience to perform actions in the services. This article continues building the *Projects* list flow built in the previous article *Create your first flow*.
 
 ## Connect to Microsoft Teams
 
 In this article, we will connect to Microsoft Teams and post a message to one of the channels.
 
-> **Note:** While this article focusses on Microsoft Teams, you can connect to various other services as well in your flow.
+> **Note:** While this article focuses on Microsoft Teams, you can also connect to various other services in your flow.
 
 ### Edit the flow
 
-1. Switch to the flow designer tab in your browser.
+1. In your browser, switch to the **flow designer** tab.
 
-2. If you do not have the flow designer tab opened, then follow the steps to open the flow:
-    * Browse to the *Projects* list.
-    * Click on *Flow* and then *See your flows*.
-    * If promoted, sign in with your Office 365 account.
-    * Click on *Send an email for new projects* flow in the *My flows* tab.
-    * Click on *Edit flow* to edit the flow.
+2. If you do not have the flow designer tab opened, to open the flow, follow these steps:
+    * Browse to the **Projects** list.
+    * Select **Flow**, and then select **See your flows**.
+    * If promoted, sign in with your Microsoft 365 account.
+    * In the **My flows** tab, select **Send an email for new projects** flow.
+    * To edit the flow, select **Edit flow**.
 
-3. Click on *+ New step* in the flow designer.
+3. In the flow designer, select **+ New step**.
 
-4. Click on *Add an action*.
+4. Select **Add an action**. The actions list opens where you can search and browse for various actions available in your flow in Power Automate.
 
-5. This will open the actions list where you can search and browse for various actions available in Flow.
+6. In the search box, to search for Teams-based actions, enter **Teams**.
 
-6. In the search box, type *Teams* to search for Teams based actions.
+7. In the results, to filter the actions to just Teams, select the **Microsoft Teams** connector.
 
-7. In the results, click on *Microsoft Teams* connector to filter the actions to just Teams.
-
-8. In the available actions list, click on *Microsoft Teams - Post message*.
-    > Click on the information icon to read more about the action and what it does.
+8. In the available actions list, select **Microsoft Teams - Post message**.
+    > To read more about the action and what it does, select the **information** icon.
 
     ![Add Team connector actions in your flow](../../../images/gs02-microsoft-teams-connector.png)
 
-9. As soon as the action is added, Flow will try to create the Teams connection. Once the connection is created successfully, you should see the action with the available inputs.
+9. As soon as the action is added, Power Automate begins to create the Teams connection. After the connection is created successfully, the action with the available inputs appears.
 
     ![Microsoft Teams post messsage action](../../../images/gs02-microsoft-teams-post-message-action.png)
 
-10. To see the connection information, click on the `...` button and check the *My connections* section to see the connection information the Teams action is using.
+10. To see the connection information, select the **...** (ellipsis) button. To see the connection information the Teams action is using, check the **My connections** section.
 
-11. Enter the inputs for the Teams action.
-    * Team Id: Pick a team from the picker.
-    * Channel Id: Pick a channel from the picker.
+11. For the Teams action, enter the inputs.
+    * Team Id: From the picker, select a team.
+    * Channel Id: From the picker, select a channel.
 
-12. In order to construct a message that includes the project information, we will need to interact with the dynamic conetent panel. In the *Message*, type the following in the same order as below:
-    * First type the text: *A new project *
-    * In the dynamic content list, search and pick the following property: *Title*
-    * Then type the text: * was added to the Projects list by *
-    * In the dynamic content list, search and pick the following property: *Created By DisplayName.*
+12. To construct a message that includes the project information, we must interact with the dynamic content panel. In the **Message**, enter the following in this same order:
+    * Enter: **A new project**.
+    * In the dynamic content list, search and select the following property: **Title**.
+    * Enter: **was added to the Projects list by**.
+    * In the dynamic content list, search and select the following property: **Created By DisplayName.**
 
     ![Microsoft Teams post messsage action with input values](../../../images/gs02-microsoft-teams-post-message-with-inputs.png)
 
-13. Click *Save* on the command bar to save your flow.
+13. To save your flow, on the command bar, select **Save**.
 
 ## Test your flow
 
-1. Click *Test* on the command bar.
+1. On the command bar, select **Test**.
 
-2. Click on Using data from previous runs*. Since* we already had previous runs of this flow in the previous article, we can select the same data for this flow run as well.
+2. Select **Using data from previous runs**. Because you already had previous runs of this flow in the previous article, you can select the same data for this flow run as well.
 
     ![Test your flow using data from previous runs](../../../images/gs02-test-your-flow-previous-runs.png)
 
-3. Click on the flow run that says *Succeeded* and then click *Save & Test*.
+3. Select the flow run identified as **Succeeded**, and then select **Save & Test**.
 
-4. Flow will now run and you should see the status of each action updated successfully in the designer.
+4. Power Automate runs, and the status of each action updated successfully in the designer appears.
 
-5. As a result of this flow run, you should have received an email and a message should be posted on the selected Teams channel.
+5. As a result of this flow run, you receive an email, and a message is posted on the selected Teams channel.
 
 ## Next steps
 
