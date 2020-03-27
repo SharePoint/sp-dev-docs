@@ -747,13 +747,15 @@ This example uses customCardProps, openOnEvent, directionalHint and isBeakVisibl
     },
     "txtContent": "[$Status]",
     "customCardProps": {
-        "formatter": { "": "Define your formatter options" },
+        "formatter": {
+            "elmType": "div",
+            "txtContent": "Define your formatter options inside the customCarProps/formatter property"
+        },
         "openOnEvent": "hover",
         "directionalHint": "bottomCenter",
         "isBeakVisible": true
     }
 }
-
 ```
 ## Default cards on hover via formatting 
 
