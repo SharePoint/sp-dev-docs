@@ -1468,7 +1468,7 @@ The people field object has the following properties (with example values):
    "jobTitle":"HR Manager"
 }
 ```
-People filed object can have profile hover cards along with formatting
+People feild object can have profile hover cards along with formatting
 
 ```json
 {
@@ -1741,23 +1741,24 @@ These tokens will yield no value on non-file items including folders.
    }
 }
 ```
-Defalut File hover Card via tokens thumbnail of a file
+Defalut File hover Card FileLeafRef
 
 ```json
  {
   "elmType": "img",
   "style": {
-  "width": "100%",
-  "height": "100%",
-  "display": "=if([$File_x0020_Type] == '', 'none', '')"
+    "width": "100%",
+    "height": "100%",
+    "display": "=if([$File_x0020_Type] == '', 'none', '')"
   },
   "attributes": {
-  "src": "@thumbnail.300x300"
+    "src": "@thumbnail.300x300"
   },
   "defaultHoverField": "[$FileLeafRef]"
   }
-  ```
 
+  ```
+  
 ## See also
 
 - [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)
