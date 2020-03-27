@@ -739,21 +739,20 @@ You can use column and view formatting to define custom call out that can be com
 
 This example uses customCardProps, openOnEvent, directionalHint and isBeakVisible
 
-```json
+```JSON
 
 {
-  "elmType": "div",
-  "style": {
-    "font-size": "12px"
-  },
-  "txtContent": "[$Status]",
-  "customCardProps": {
-  "formatter": {                    "": "Define your formatter options",
-},
-    "openOnEvent": "hover",
-    "directionalHint": "bottomCenter",
-    "isBeakVisible": true
-  }
+    "elmType": "div",
+    "style": {
+        "font-size": "12px"
+    },
+    "txtContent": "[$Status]",
+    "customCardProps": {
+        "formatter": { "": "Define your formatter options" },
+        "openOnEvent": "hover",
+        "directionalHint": "bottomCenter",
+        "isBeakVisible": true
+    }
 }
 
 ```
@@ -773,36 +772,36 @@ Hover on a person column with formatting with default Profile card
 
 Both the example uses defaultHoverField 
 
-```json
+```JSON
 
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-  "elmType": "div",
-  "children": [
-    {
-      "elmType": "img",
-      "style": {
-        "width": "32px",
-        "height": "32px",
-        "overflow": "hidden",
-        "border-radius": "50%",
-        "margin": "2px"
-      },
-      "attributes": {
-        "src": "='/_layouts/15/userphoto.aspx?size=S&accountname=' + [$Editor.email]",
-        "title": "[$Editor.title]"
-      }
-    },
-    {
-      "elmType": "span",
-      "style": {
-        "vertical-align": "middle",
-        "margin-left": "2px"
-      },
-      "txtContent": "[$Editor.title]"
-    }
-  ],
-  "defaultHoverField": "[$Editor]"
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "children": [
+        {
+            "elmType": "img",
+            "style": {
+                "width": "32px",
+                "height": "32px",
+                "overflow": "hidden",
+                "border-radius": "50%",
+                "margin": "2px"
+            },
+            "attributes": {
+                "src": "='/_layouts/15/userphoto.aspx?size=S&accountname=' + [$Editor.email]",
+                "title": "[$Editor.title]"
+            }
+        },
+        {
+            "elmType": "span",
+            "style": {
+                "vertical-align": "middle",
+                "margin-left": "2px"
+            },
+            "txtContent": "[$Editor.title]"
+        }
+    ],
+    "defaultHoverField": "[$Editor]"
 }
 
 ```
@@ -1745,18 +1744,17 @@ Default file hover card using FileLeafRef
 
 ```JSON
  {
-  "elmType": "img",
-  "style": {
-    "width": "100%",
-    "height": "100%",
-    "display": "=if([$File_x0020_Type] == '', 'none', '')"
-  },
-  "attributes": {
-    "src": "@thumbnail.300x300"
-  },
-  "defaultHoverField": "[$FileLeafRef]"
+    "elmType": "img",
+    "style": {
+        "width": "100%",
+        "height": "100%",
+        "display": "=if([$File_x0020_Type] == '', 'none', '')"
+    },
+    "attributes": {
+        "src": "@thumbnail.300x300"
+    },
+    "defaultHoverField": "[$FileLeafRef]"
 }
-
   ```
   
 ## See also
