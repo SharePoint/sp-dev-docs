@@ -767,6 +767,7 @@ Hover on a filename with formatting with default file card
 
 
 Hover on a person column with formatting with default Profile card 
+
 ![](../images/HoverImage-4.png)
 
 Both the example uses defaultHoverField 
