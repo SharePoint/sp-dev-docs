@@ -748,7 +748,7 @@ This example uses customCardProps, openOnEvent, directionalHint and isBeakVisibl
   },
   "txtContent": "[$Status]",
   "customCardProps": {
-"formatter": {                    "": "Define your formatter options",
+  "formatter": {                    "": "Define your formatter options",
 },
     "openOnEvent": "hover",
     "directionalHint": "bottomCenter",
@@ -1468,7 +1468,7 @@ The people field object has the following properties (with example values):
    "jobTitle":"HR Manager"
 }
 ```
-People feild can have profile hover cards along with formatting
+People field can have profile hover cards along with formatting
 
 ```json
 {
@@ -1746,16 +1746,16 @@ Default file hover card using FileLeafRef
 ```JSON
  {
   "elmType": "img",
-      "style": {
-      "width": "100%",
-      "height": "100%",
-      "display": "=if([$File_x0020_Type] == '', 'none', '')"
+  "style": {
+    "width": "100%",
+    "height": "100%",
+    "display": "=if([$File_x0020_Type] == '', 'none', '')"
   },
   "attributes": {
-      "src": "@thumbnail.300x300"
+    "src": "@thumbnail.300x300"
   },
   "defaultHoverField": "[$FileLeafRef]"
-  }
+}
 
   ```
   
