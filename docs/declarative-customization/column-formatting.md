@@ -1468,7 +1468,7 @@ The people field object has the following properties (with example values):
    "jobTitle":"HR Manager"
 }
 ```
-People feild object can have profile hover cards along with formatting
+People feild can have profile hover cards along with formatting
 
 ```json
 {
@@ -1727,7 +1727,7 @@ These tokens will yield no value on non-file items including folders.
 > [!TIP]
 > Thumbnails are only available for a list of supported file formats. It means that sometimes the URL generated is not accessible due to lack of support on certain formats. However, if a valid thumbnail token is set as the _only_ `src` attribute of an `img` tag, we will take care of it and hide the image when it is not available.
 
-```json
+```JSON
 {
    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "img",
@@ -1741,18 +1741,18 @@ These tokens will yield no value on non-file items including folders.
    }
 }
 ```
-Defalut File hover Card FileLeafRef
+Default file hover card using FileLeafRef
 
-```json
+```JSON
  {
   "elmType": "img",
-  "style": {
-    "width": "100%",
-    "height": "100%",
-    "display": "=if([$File_x0020_Type] == '', 'none', '')"
+      "style": {
+      "width": "100%",
+      "height": "100%",
+      "display": "=if([$File_x0020_Type] == '', 'none', '')"
   },
   "attributes": {
-    "src": "@thumbnail.300x300"
+      "src": "@thumbnail.300x300"
   },
   "defaultHoverField": "[$FileLeafRef]"
   }
