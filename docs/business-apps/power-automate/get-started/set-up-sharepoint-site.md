@@ -8,46 +8,52 @@ localization_priority: Priority
 
 # Set up your SharePoint site with lists and libraries
 
-In order to successfully complete the getting started tutorials, set up your SharePoint site with the following.
+To successfully complete the *Getting Started* tutorials, set up your SharePoint site with the following items.
 
 ## Projects list
-
-Create a new SharePoint list called *Projects*. Follow the steps below to create a new SharePoint list.
+Create a new SharePoint list called **Projects**. To create a new SharePoint list, follow these steps.
 
 ### Create a new list
 
-1. Browse to a modern SharePoint site in your Office 365 tenant.
+1. In your Microsoft 365 tenant, browse to a modern SharePoint site.
 
-> **Note:** You can choose to use either a modern Team Site or a Communications Site.
+> **Note:** You can use either a modern Teams site or a Communications site.
   
-1. In the command bar, click on *New->List*
-2. In the *Create list* panel, enter the following and click *Create* to create the list:
+2. In the command bar, select **New** > **List**.
 
-    * **Name:** Projects
-    * **Description:** Projects list.
-3. You will be automatically redirected to the *Projects* list.
-4. Click on *+ Add column* and then select *Person* column type to add an *Owner* column to the list.
-5. In the *Create a column* panel, enter the following and click *Save* to add the column to the Projects list:
+3. In the **Create list** panel, enter the following:
 
-    * **Name:** Owner
-    * **Description:** Project owner.
-6. The new *Owner* column will now be available in the Projects list.
+    * **Name**: Projects
+    * **Description**: Projects list
+    
+4. To create the list, select **Create**
+    
+    You are automatically redirected to the **Projects** list.
+
+5. Select **+ Add column**, and to add an **Owner** column to the list, and then select the **Person** column type.
+
+6. In the **Create a column** panel, enter the following:
+
+    * **Name**: Owner
+    * **Description**: Project owner
+    
+7. To add the column to the Projects list, select **Save**. The new **Owner** column becomes available in the **Projects** list.
 
 ### Add new project items
 
-Click on *New* button in the list command bar and add the following list items:
+In the List command bar, select **New**, and add the following list items:
 
 * Item 1
-  * **Title:** Project 1
-  * **Owner:** pick a user from people picker
+  * **Title**: Project 1
+  * **Owner**: Select a user from people picker
 
 * Item 2
-  * **Title:** Project 2
-  * **Owner:** pick a user from people picker
+  * **Title**: Project 2
+  * **Owner**: Select a user from people picker
 
 * Item 3
-  * **Title:** Project 3
-  * **Owner:** pick a user from people picker
+  * **Title**: Project 3
+  * **Owner**: pick a user from people picker
 
 ## Next steps
 
