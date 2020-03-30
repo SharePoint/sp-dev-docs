@@ -116,7 +116,7 @@ Locate the manifest json file for the web part you want to make available to Tea
 ```
 
 > [!NOTE]
-> Starting from the SharePoint Framework 1.10 version, you can also expose SharePoint Framework web parts as personal Microsoft Teams apps. This can be controlled by including `"TeamsPersonalApp"` in the `supportedHosts` value.
+> Starting from the SharePoint Framework 1.10 version, you can also expose SharePoint Framework web parts as personal Microsoft Teams apps. This can be controlled by including `"TeamsPersonalApp"` in the `supportedHosts` value. Personal tabs do not have a configuration option, and so web parts added to Teams as personal apps will not expose the web part property pane. If you need to configure the web part in this situation you will have to implement it within the web part UI.
 
 ## Updating code to be aware of the Microsoft Teams context
 
