@@ -141,7 +141,7 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 Following sample is in c# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
 
 ```cs
-HttpWebRequest endpointRequest = (HttpWebRequest)HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
+HttpWebRequest endpointRequest = (HttpWebRequest) HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
 endpointRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
 endpointRequest.Accept = "application/json;odata=nometadata";
