@@ -1,6 +1,6 @@
 ---
 title: SharePoint Framework development tools and libraries compatibility
-description: Use client-side JavaScript libraries to build your solutions and develop client-side web parts.
+description: Find which versions of the SharePoint Framework are compatible with each version of SharePoint, development tools and libraries.
 ms.date: 03/20/2020
 ms.prod: sharepoint
 localization_priority: Priority
