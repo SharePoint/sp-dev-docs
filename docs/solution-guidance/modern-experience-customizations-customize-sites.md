@@ -104,8 +104,7 @@ The following elements are ignored when a remote template is applied to a "moder
 ```powershell
 
 # Connect to a previously created Modern Site
-$cred = Get-Credential
-Connect-PnPOnline https://[tenant].sharepoint.com/sites/siteurl -Credentials $cred
+Connect-PnPOnline https://[tenant].sharepoint.com/sites/siteurl -UseWebLogin
 
 # Apply a custom theme to a Modern Site
 
@@ -114,16 +113,7 @@ Add-PnPFile -Path .\sppnp.spcolor -Folder SiteAssets
 Add-PnPFile -Path .\sppnp-bg.png -Folder SiteAssets
 
 # Second, apply the theme assets to the site
-$web = Get-PnPWeb
-$palette = $web.ServerRelativeUrl + "/SiteAssets/sppnp.spcolor"
-$background = $web.ServerRelativeUrl + "/SiteAssets/sppnp-bg.png"
-
-# We use OOTB CSOM operation for this
-$web.ApplyTheme($palette, [NullString]::Value, $background, $true)
-$web.Update()
-# Set timeout as high as possible and execute
-$web.Context.RequestTimeout = [System.Threading.Timeout]::Infinite
-$web.Context.ExecuteQuery()
+Set-PnPTheme -ColorPaletteUrl "SiteAssets/sppnp.spcolor" -BackgroundImageUrl "SiteAssets/sppnp-bg.png" -ResetSubwebsToInherit
 
 ```
 
