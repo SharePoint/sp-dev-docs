@@ -12,7 +12,7 @@ Sometimes you do not want to extract all artifacts from a site, or only even a s
 ## Extraction Configuration
 
 There is a JSON schema available at https://aka.ms/sppnp-extract-configuration-schema. We will automatically update the schema referred to by that URL to a later version if new functionality comes available. 
-If you create a JSON file use a modern editor, like Visual Studio Code, and you reference this schema will there willl be intellisense and descriptions of all the properties you can set.
+If you create a JSON file use a modern editor, like Visual Studio Code, and you reference this schema, there will be intellisense and descriptions of all the properties you can set.
 
 Let's have a look at the following sample configuration
 
