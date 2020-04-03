@@ -47,7 +47,7 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 | [pnp-js-core](https://github.com/SharePoint/PnP-JS-Core) | Office Dev PnP Core component for JavaScript |
 | [pnp-transformation](https://github.com/SharePoint/PnP-Transformation) | Material specifically for the transformation process. Currently, includes samples around InfoPath replacement and transformation tooling from farm solutions to the add-in model |
 | [pnp-js-provisioning](https://github.com/SharePoint/pnp-js-provisioning) | Repository for planned JavaScript provisioning library |
-| [pnp-provisioning-templates](https://github.com/SharePoint/PnP-Provisioning-Templates) | Repository for provisioning templates, 
+| [pnp-provisioning-templates](https://github.com/SharePoint/PnP-Provisioning-Templates) | Repository for provisioning templates. 
 | [pnp-guidance](https://github.com/SharePoint/PnP-Guidance) | Old repository on guidance, presentations, and articles that were partially synced to MSDN |
 | [pnp-identitymodel](https://github.com/SharePoint/PnP-IdentityModel) | Open source replacement of Microsoft.IdentityModel.Extensions.dll |
 
