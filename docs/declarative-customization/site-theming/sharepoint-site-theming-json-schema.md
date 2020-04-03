@@ -54,44 +54,44 @@ The colors in the **theme** element are specified as 6-digit or 3-digit hexadeci
 The following is an example of a JSON object that defines a theme.
 
 ```json
-{ 
-    name: 'Blue', 
-    isInverted: true, 
-    backgroundImageUri: '', 
-    theme: { 
-        themePrimary: "#00bcf2", 
-        themeLighterAlt: "#00090c", 
-        themeLighter: "#001318", 
-        themeLight: "#002630", 
-        themeTertiary: "#005066", 
-        themeSecondary: "#00abda", 
-        themeDarkAlt: "#0ecbff", 
-        themeDark: "#44d6ff", 
-        themeDarker: "#6cdfff", 
-        neutralLighterAlt: "#2e3340", 
-        neutralLighter: "#353a49", 
-        neutralLight: "#404759", 
-        neutralQuaternaryAlt: "#474e62", 
-        neutralQuaternary: "#4c546a", 
-        neutralTertiaryAlt: "#646e8a", 
-        neutralTertiary: "#c8c8c8", 
-        neutralSecondaryAlt: "#d0d0d0", 
-        neutralSecondary: "#dadada", 
-        neutralPrimaryAlt: "#eaeaea", 
-        neutralPrimary: "#ffffff", 
-        neutralDark: "#f4f4f4", 
-        black: "#f8f8f8", 
-        white: "#262a35", 
-        primaryBackground: "#262a35", 
-        primaryText: "#ffffff", 
-        bodyBackground: "#ffffff";
-        bodyText: "#333333";
-        disabledBackground: "#f4f4f4";
-        disabledText: "#c8c8c8";
-        error: "#ff5f5f";
-        accent: "#ffb900";
-    } 
-} 
+{
+  "name": "Blue",
+  "isInverted": true,
+  "backgroundImageUri": "",
+  "theme": {
+    "themePrimary": "#00bcf2",
+    "themeLighterAlt": "#00090c",
+    "themeLighter": "#001318",
+    "themeLight": "#002630",
+    "themeTertiary": "#005066",
+    "themeSecondary": "#00abda",
+    "themeDarkAlt": "#0ecbff",
+    "themeDark": "#44d6ff",
+    "themeDarker": "#6cdfff",
+    "neutralLighterAlt": "#2e3340",
+    "neutralLighter": "#353a49",
+    "neutralLight": "#404759",
+    "neutralQuaternaryAlt": "#474e62",
+    "neutralQuaternary": "#4c546a",
+    "neutralTertiaryAlt": "#646e8a",
+    "neutralTertiary": "#c8c8c8",
+    "neutralSecondaryAlt": "#d0d0d0",
+    "neutralSecondary": "#dadada",
+    "neutralPrimaryAlt": "#eaeaea",
+    "neutralPrimary": "#ffffff",
+    "neutralDark": "#f4f4f4",
+    "black": "#f8f8f8",
+    "white": "#262a35",
+    "primaryBackground": "#262a35",
+    "primaryText": "#ffffff",
+    "bodyBackground": "#ffffff",
+    "bodyText": "#333333",
+    "disabledBackground": "#f4f4f4",
+    "disabledText": "#c8c8c8",
+    "error": "#ff5f5f",
+    "accent": "#ffb900"
+  }
+}
 ```
 
 <br/>
