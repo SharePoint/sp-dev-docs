@@ -4,10 +4,10 @@ ms.date: 03/13/2020
 ---
 
 # Microsoft SharePoint Connector in Power Automate
-
 Microsoft SharePoint Connector in Power Automate supports the following flow triggers and actions.
 
 ## SharePoint triggers
+SharePoint triggers allows you to create flows that monitor for changes in a SharePoint list or library. If one or more changes occur in that subscribed list, then that flow will be triggered to run. 
 
 ### When an item is created
 
@@ -238,3 +238,21 @@ Updates the properties stored in columns in a library for the item specified by 
 ### Update item
 
 Updates an item in a SharePoint list.
+
+## Known limitations
+
+### Supported list and library templates
+Power Automate flows for lists are only supported in generic lists (100) and generic document libraries (101). Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
+
+### Flow runs
+When a Power Automate flow is built to be triggered for an item or a file creation and/or modification, Power Automate periodically checks for changes in the list or library, configured in the flow trigger. In most cases, if there is a single change in the list or library, the flow run may occur within minutes after that change. However, it is expected that the flow may batch more than one change in subsequent flow runs when the flow interval is large since its last valid change or subsequent edits to an item or a file.
+
+### File move and flow runs
+When users move one or more files from one document library to another, the custom metadata of the file will not change including when the file was created and modified. Hence, this action will not trigger any flows for those file updates associated in the library where it was moved. 
+
+### File copy and flow runs
+When users copy one or more files from one document library to another, a new file is created in the library where it is copied along with its custom metadata. Hence, this action will trigger any flows for those file updates associated in the library where it was copied. 
+
+
+
+
