@@ -34,7 +34,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
                     "templateType": 100,
                     "subactions": [
                         {
-                            "verb": "SetDescription",
+                            "verb": "setDescription",
                             "description": "List of Customers and Orders"
                         },
                         {
