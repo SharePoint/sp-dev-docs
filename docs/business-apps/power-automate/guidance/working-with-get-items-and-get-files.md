@@ -60,7 +60,9 @@ Other examples:
 * Location eq 'Midwest' and Status eq 'Approved'
 * startswith(Title, 'A')
 * startswith(Title, 'A') and Start_x0020_Date gt 'formatDateTime(utcNow(),'yyyy-MM-dd')'
-  * formatDateTime(utcNow(),'yyyy-MM-dd') is an expression
+  * formatDateTime(utcNow(),'yyyy-MM-dd') is an expression.
+* Country/Title eq 'New Zealand'
+  * Country is a lookup column in the list and Title is a column in the referenced list. 
 
 ![ODATA filter queries in Get items action](../../../images/flow-get-items-filter-query.png)
 

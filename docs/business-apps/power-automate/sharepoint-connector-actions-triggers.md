@@ -198,9 +198,7 @@ When you move one or more files from one document library to another, the origin
 When users sync one or more files from one document library to another, the original file is moved (synced) from your client to the destination library. Syncing the file will not alter any custom metadata including when the file was created and modified. Hence, this action will not trigger any flows for those file syncs in that library or in your OneDrive for business. 
 
 ### Supported lookup columns
-If your list/library has lookup columns, **Get items** and **Get files** actions support returning items with a maximum of 12 lookup columns, excluding the out-of-the-box **Created by** and **Modified by** fields. If your list or library exceeds this threshold, the flow in Power Automate fails.
-
-We do not support lookup columns in both **filter by** and **order by** queries in the action. These include fields such as person fields, lookup columns to another list, taxonomy fields, and so on.
+If your list/library has lookup columns, **Get items** and **Get files** actions support returning items with a maximum of 12 lookup columns. If your list or library exceeds this threshold, the flow in Power Automate fails.
 
 
 
