@@ -1,23 +1,20 @@
 ---
 title: Send an email when a new item is created or modified in a SharePoint list
 description: Send an email when a new item is created or modified in a SharePoint list
-ms.date: 12/12/2018
+ms.date: 04/07/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Send an email when a new item is created or modified in a SharePoint list
-
 Using Power Automate, you can easily automate day-to-day tasks or build repetitive tasks in SharePoint that help you stay productive.
 
 In this tutorial, you will create a flow that sends an email when a new item is added or modified in a SharePoint list.
 
 ## Required setup
-
-Before proceeding with these instructions, make sure your SharePoint site is set up with the required lists and libraries.
+Before proceeding with these instructions, make sure your SharePoint site is set up with the [required lists and libraries](../../../business-apps/get-started/set-up-sharepoint-site-lists-libraries).
 
 ## Create a flow
-
 1. In your SharePoint site, browse to the **Projects** list.
 
 2. To create and manage flows for a list or a library, from the command bar, on the list or library page, select **Automate** > **Power Automate**. Selecting **Power Automate** expands to show you more options:
@@ -49,16 +46,16 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
     ![Flow template - send email when an item is added in a list](../../../images/gs01-create-a-flow-when-item-is-added-template.png)
 
-6. To create the flow, select **Create Flow**. Any connections that require a connection is also attempted during this step. After the flow is created successfully, you are redirected to the flow designer where you can edit and modifify the flow if needed.
+6. To create the flow, select **Create Flow**. Any connections that require a connection are also attempted during this step. After you successfully create the flow, the flow details page appears where you can edit and modify the flow, if needed.
+    >In this case, this flow that sends an email when new items are added to the list is now active, and runs whenever new items are added to the **Projects** list in the specified SharePoint site.
+
+    ![Flow designer - send email when an item is added in a list](../../../images/gs01-when-item-is-added-template-flow-created.png)
+
+7. Click **Edit** in the top command bar to edit the flow in the flow designer.
 
     ![Flow designer - send email when an item is added in a list](../../../images/gs01-designer-when-item-is-added-template.png)
 
-7. Select the name of the flow that reads **Send a customized email when a new SharePoint list item is added**, and enter the following name for the flow:
-    * Send an email for new projects
-
-   The SharePoint actions are represented with the SharePoint logo in the flow designer.
-
-8. In the **When the new item is created** action, to expand the action, select **Edit**. Note the input configured to the SharePoint site address and list name from where you created the flow.
+8. To expand and view the configured properties, select the When the new item is created trigger. Note the input configured to the SharePoint site address and list name from where you created the flow.
 
 9. In the **Send Email** action, to expand the action, select **Edit**. All the input is filled in with dynamic values from the **Get my profile** and **When the new item is created** actions.
 
@@ -68,17 +65,14 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
 11. To save the flow, select **Save**.
 
-Your flow is active as soon as you save the flow. In this case, this flow **Send an email for new projects** is now active, and runs whenever new items are added to the **Projects** list in the specified SharePoint site.
-
 ## Test your flow
-
 To test your flow, either add a new item in SharePoint list by adding a new item, or initiate the test run directly from the flow designer. To test the flow from the designer, follow these steps. Testing the flow from the designer helps you to quickly see the flow run as the flow is executed.
 
 1. In the flow designer, on the top command bar, select **Test**.
 
 2. In the **Test Flow** panel, select **I'll perform the trigger action**, and then select **Save & Test**.
 
-    ![Flow designer - hover to see dynamic content](../../../images/gs01-designer-test-flow.png)
+    ![Flow designer - Test flow](../../../images/gs01-designer-test-flow.png)
 
    A message appears instructing you to add a new list item to the SharePoint list you selected.
 
@@ -127,7 +121,6 @@ To test your flow, either add a new item in SharePoint list by adding a new item
    You receive an email with the updated owner information in it.
 
 ## Next steps
-
 Congratulations on creating your first flow!
 
 In the next topic, we will use the same flow, and add the ability to interact with Microsoft Teams.

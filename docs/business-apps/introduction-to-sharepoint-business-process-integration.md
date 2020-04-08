@@ -1,7 +1,7 @@
 ---
 title: Business apps and business process automation
 description: Business apps and business process automation.
-ms.date: 04/02/2030
+ms.date: 04/07/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -63,3 +63,7 @@ Power Apps also lets you easily customize the form for a SharePoint list. For ex
 * Add formatted text and graphics.
 
 When you publish your changes, the form is embedded within the SharePoint list for use by all of its users.
+
+## Next steps
+* [Get started with Power Automate and SharePoint](./power-automate/get-started/create-your-first-flow.md)
+* [Get started with Power Apps and SharePoint](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
