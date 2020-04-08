@@ -13,7 +13,7 @@ Application customizers can be used to add structures and content on the modern 
 > [!NOTE]
 > This feature is only supported in SharePoint Online.
 
-To reduce the page movement, you can **pre-allocate** the extension area already in the server side when page structure is created. This configuration can be applied by using new **HostProperties** property at the **UserCustomAction** collection. which is used in the server side to indicate which application customizers are loaded to the page.
+To reduce the page movement, you can **pre-allocate** the extension area already in the server side when page structure is created. This configuration can be applied by using new **HostProperties** property at the **UserCustomAction** collection to indicate in the server side which application customizers are loaded to the page.
 
 There are two different specific properties, which can be used with the **HostProperties** configuration
 
