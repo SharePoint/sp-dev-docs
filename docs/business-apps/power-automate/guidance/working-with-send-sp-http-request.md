@@ -4,11 +4,11 @@ ms.date: 03/11/2020
 ---
 
 # Working with the SharePoint Send HTTP Request flow action in Power Automate
-The SharePoint Send HTTP Request flow action in Power Automate lets you construct and execute SharePoint REST API queries. This action is particularly useful in cases where the existing SharePoint flow actions do not handle your requirements, or the action you are looking for is not yet available in the SharePoint connector.
+In Power Automate, the SharePoint Send HTTP Request flow action lets you construct and execute SharePoint REST API queries. This action is particularly useful in cases where the existing SharePoint flow actions do not handle your requirements, or the action you are looking for is not yet available in the SharePoint connector.
 
 ![Send an HTTP Request to SharePoint action](../../../images/flow-send-http-request-to-sp-action.png)
 
-See the following tips about how to work effectively with the SharePoint Send HTTP Request action.
+To work effectively with the SharePoint Send HTTP Request action, see the following tips.
 
 > [!NOTE]
 > This is a developer-focused action. You must understand how SharePoint REST API works and also how to parse JSON strings in Power Automate.

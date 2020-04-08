@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint site with lists and libraries
 description: Set up your SharePoint site with lists and libraries
-ms.date: 3/11/2020
+ms.date: 4/07/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,11 +10,11 @@ localization_priority: Priority
 To successfully complete the *Getting Started* tutorials, set up your SharePoint site with the following items.
 
 ## Microsoft 365 tenant
-To use Power Automate and build flows, you need an Office 365 tenant.
+To use Power Automate and build flows, you need an Microsoft 365 tenant.
 
 If you already have an Office 365 tenant, see section **Create Projects list** below.
 
-If you don't have one, you can get an Office 365 developer subscription when you join the [Office 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
+For step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription, see the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program).
 
 ## Create Projects list
 Create a new SharePoint list called **Projects**. To create a new SharePoint list, follow these steps.
@@ -22,7 +22,7 @@ Create a new SharePoint list called **Projects**. To create a new SharePoint lis
 ### Create a new list
 1. In your Microsoft 365 tenant, browse to a modern SharePoint site.
 
-> **Note:** You can use either a modern Teams site or a Communications site.
+> [!NOTE] You can use either a modern Teams site or a Communications site.
   
 2. In the command bar, select **New** > **List**.
 
@@ -30,7 +30,7 @@ Create a new SharePoint list called **Projects**. To create a new SharePoint lis
 
     * **Name**: Projects
     
-4. To create the list, select **Create**
+4. To create the list, select **Create**.
     
     You are automatically redirected to the **Projects** list.
 

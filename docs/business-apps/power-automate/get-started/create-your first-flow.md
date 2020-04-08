@@ -1,7 +1,7 @@
 ---
 title: Send an email when a new item is created or modified in a SharePoint list
 description: Send an email when a new item is created or modified in a SharePoint list
-ms.date: 3/11/2020
+ms.date: 04/07/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -46,8 +46,8 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
     ![Flow template - send email when an item is added in a list](../../../images/gs01-create-a-flow-when-item-is-added-template.png)
 
-6. To create the flow, select **Create Flow**. Any connections that require a connection is also attempted during this step. After the flow is created successfully, you are redirected to the flow details page where you can edit and modifify the flow if needed.
-    >Your flow is active as soon as you save the flow. In this case, this flow that will send an email when new items are added to the list is now active, and runs whenever new items are added to the **Projects** list in the specified SharePoint site.
+6. To create the flow, select **Create Flow**. Any connections that require a connection are also attempted during this step. After you successfully create the flow, the flow details page appears where you can edit and modify the flow, if needed.
+    >In this case, this flow that sends an email when new items are added to the list is now active, and runs whenever new items are added to the **Projects** list in the specified SharePoint site.
 
     ![Flow designer - send email when an item is added in a list](../../../images/gs01-when-item-is-added-template-flow-created.png)
 
@@ -55,7 +55,7 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
     ![Flow designer - send email when an item is added in a list](../../../images/gs01-designer-when-item-is-added-template.png)
 
-8. Click on **When the new item is created** trigger to expand and view the configured properties.Note the input configured to the SharePoint site address and list name from where you created the flow.
+8. To expand and view the configured properties, select the When the new item is created trigger. Note the input configured to the SharePoint site address and list name from where you created the flow.
 
 9. In the **Send Email** action, to expand the action, select **Edit**. All the input is filled in with dynamic values from the **Get my profile** and **When the new item is created** actions.
 

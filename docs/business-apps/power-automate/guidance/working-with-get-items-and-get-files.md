@@ -9,7 +9,7 @@ The **Get items** and **Get files** SharePoint actions for flows in Power Automa
 
 ## Decide if you are working with lists or libraries
 
-**IMPORTANT:** First, and of primary consideration, the **Get items** action only works with lists, whereas the **Get files** action only works with libraries.
+First, and of primary consideration, the **Get items** action only works with lists, whereas the **Get files** action only works with libraries.
 
 ## Item limits
 The default item limit is 100 and items are paginated by default as well. 
@@ -25,14 +25,14 @@ To specify the number of items to be returned, expand the **Advanced options**, 
 If you go beyond 5,000 item limit, Power Automate fails and generates an error dialog.
 
 ## Limit items to a specific folder
-By default, the action will return all items or files in the list or library, recursively from all folders if available. You can change this behavior with the following:
-* Use _Limit Entries to Folder_ property to select a speific folder in the list or library
-* Use _Include Nested Items_ property to limit entries to that specific folder or within all sub-folders
+By default, this action returns all items or files in the list or library, recursively, from all folders, if available. You can change this behavior by doing the following:
+* To select a specific folder in the list or library, use _Limit Entries_ to Folder property. 
+* To limit entries to that specific folder or within all sub-folders, use _Include Nested Items_ property.
 
 ![Limit entries to folder in Get items action](../../../images/flow-get-items-limit-entries-to-folder.png)
 
 ## Limit columns returned by view
-List views are a useful configuration where you can customize what columns to show along with any other conditions or groupings of list items. This is not only useful for users, but also for any other computation you want to do using that view data.
+List views is a useful configuration where you can customize what columns to show along with any other conditions or groupings of list items. This is not only useful for users, but also for any other computation you want to do using that view data.
 
 To retrieve the list items along with their columns, select the **Get items** and **Get files** actions. However, retrieving the columns retrieves all the columns. While this is useful, it could be excessive when you only need to work with a specific set of columns configured in a specific view.
 
@@ -95,7 +95,7 @@ We support the following query methods and operators.
 * second()
 
 ## Order by query
-You can also specify an order by query to order items based off of a column either in ascending or descending order. For example:
+To order items based off of a column either in ascending or descending order, you can also specify an order by query. For example:
 
 * Start_x0020_Date desc
 * Title asc

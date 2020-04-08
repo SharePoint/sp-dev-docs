@@ -4,10 +4,10 @@ ms.date: 03/13/2020
 ---
 
 # Microsoft SharePoint Connector in Power Automate
-Microsoft SharePoint Connector in Power Automate supports the following flow triggers and actions.
+In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
 
 ## SharePoint triggers
-SharePoint triggers allows you to create flows that monitor for changes in a SharePoint list or library. If one or more changes occur in that subscribed list, then that flow will be triggered to run. 
+SharePoint triggers let you create flows that monitor for changes in a SharePoint list or library. If one or more changes occur in a subscribed list, that flow is triggered to run.
 
 ### When an item is created
 Triggers the flow when you create an item in a SharePoint list.
@@ -120,7 +120,7 @@ Gets info about the file, such as size, etag, created date, and so on. Uses a fi
 Gets the properties saved in the columns in the library for the item specified by the item id. To get to the contents of the file, add a "Get file content" step, and use the "File identifier" property returned by this action. When using this with the On-Premises Data Gateway, you may need to manually enter the name of the library to connect to.
 
 ### Get files (properties only)
-Gets the properties saved in the columns in the library for all folders and files stored in the library. You can also filter down to the items that match a condition. To work with the output from this action, use the **Apply to each** section. When using this with the On-Premises Data Gateway, you may need to be manually enter the name of the library to connect to. For more information about this action, visit the following documentation: [In-depth analysis into **Get items** and **Get files** SharePoint actions for flows in Power Automate](../power-automate/guidance/working-with-get-items-and-get-files.md).
+Gets the properties saved in the columns in the library for all folders and files stored in the library. You can also filter down to the items that match a condition. To work with the output from this action, use the **Apply to each** section. When using this with the On-Premises Data Gateway, you may need to manually enter the name of the library to connect to. For more info about this action, see: [In-depth analysis into **Get items** and **Get files** SharePoint actions for flows in Power Automate](../power-automate/guidance/working-with-get-items-and-get-files.md).
 
 ### Get folder metadata
 Gets info about the folder. Uses a file identifier to select the folder.
@@ -132,7 +132,7 @@ Gets info about the folder. Uses a folder path to select the folder.
 Gets a single item by its ID from a SharePoint list.
 
 ### Get items
-Gets items from a SharePoint list. For more information about this action, visit the following documentation: [In-depth analysis into **Get items** and **Get files** SharePoint actions for flows in Power Automate](../power-automate/guidance/working-with-get-items-and-get-files.md).
+Gets items from a SharePoint list. For more info about this action, see: [In-depth analysis into **Get items** and **Get files** SharePoint actions for flows in Power Automate](../power-automate/guidance/working-with-get-items-and-get-files.md).
 
 ### Get list views
 Gets views from a SharePoint list.
@@ -162,9 +162,9 @@ Moves a folder. Works similarly to the **Move to** command in SharePoint librari
 Returns a single matching user value so it can be assigned to a column of type person. If there are no matches, or multiple matches, this action errors out.
 
 ### Send an HTTP request to SharePoint
-Constructs a SharePoint REST API to invoke.For more information about this action, visit the following documentation: [Working with the SharePoint Send HTTP Request flow action in Power Automate](../power-automate/guidance/working-with-send-sp-http-request.md).
+Constructs a SharePoint REST API to invoke. For more info about this action, see: [Working with the SharePoint Send HTTP Request flow action in Power Automate](../power-automate/guidance/working-with-send-sp-http-request.md).
 
-> **Note**: This action may execute any SharePoint REST API you have access to. Proceed with caution. 
+> [!IMPORTANT] This action may execute any SharePoint REST API you have access to. Proceed with caution. 
 
 ### Set content approval status
 Sets the content approval status for an item in a list or library that has content approval turned on. You must provide an ETag for pages and files. You can get the ETag using the Get File Metadata action. This action is only available for SharePoint Online and SharePoint 2019.
@@ -186,18 +186,18 @@ Updates an item in a SharePoint list.
 
 ## Known limitations
 ### Supported list and library templates
-Power Automate flows for lists are only supported in generic lists (100) and generic document libraries (101). Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
+Power Automate flows for lists are only supported in generic lists (100) and generic document libraries (101). We do not currently support custom list and library templates, including but not limited to, lists such as Announcements, Contacts and Tasks.
 
 ### Flow runs
-When a Power Automate flow is built to be triggered for an item or a file creation and/or modification, Power Automate periodically checks for changes in the list or library, configured in the flow trigger. In most cases, if there is a single change in the list or library, the flow run may occur within minutes after that change. However, it is expected that the flow may batch more than one change in subsequent flow runs when the flow interval is large since its last valid change or subsequent edits to an item or a file.
+When you build a Power Automate flow to be triggered for an item, or for creating or modifying a file, Power Automate periodically checks for changes in the list or library, configured in the flow's trigger. In most cases, if there is a single change in the list or library, the flow run may occur within minutes after that change. However, expect that the flow may gather more than one change in subsequent flow runs due to the time between the flow interval since its last valid change, or subsequent edits to an item or a file.
 
-### File move and flow runs
-When users move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file will not alter any custom metadata including when the file was created and modified. Hence, this action will not trigger any flows for those file updates associated in the library where it was moved. 
+### Move files and flow runs
+When you move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file does not alter any custom metadata, including when the file was created and modified. Hence, this action does not trigger any flows for those file updates associated in the library where it was moved. 
 
 ### Syncing files to your OneDrive for business and SharePoint document libraries
 When users sync one or more files from one document library to another, the original file is moved (synced) from your client to the destination library. Syncing the file will not alter any custom metadata including when the file was created and modified. Hence, this action will not trigger any flows for those file syncs in that library or in your OneDrive for business. 
 
-### Lookup columns support
+### Supported lookup columns
 If your list/library has lookup columns, **Get items** and **Get files** actions support returning items with a maximum of 12 lookup columns, excluding the out-of-the-box **Created by** and **Modified by** fields. If your list or library exceeds this threshold, the flow in Power Automate fails.
 
 We do not support lookup columns in both **filter by** and **order by** queries in the action. These include fields such as person fields, lookup columns to another list, taxonomy fields, and so on.
