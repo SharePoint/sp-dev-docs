@@ -63,3 +63,8 @@ The queue can be reused across multiple migration jobs so this call should not b
 ### After getting the Container and the Queue:
 
 Once those calls have been made, the rest of the flow remains the same for using the Migration API.
+
+>[!Important]
+>If your tenant is hosted in a government cloud (GCC) you must have the proper endpoints set when calling the API. 
+>
+>*Example:*    usgovcloudapi.net 
