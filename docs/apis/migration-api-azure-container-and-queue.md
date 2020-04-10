@@ -64,7 +64,12 @@ The queue can be reused across multiple migration jobs so this call should not b
 
 Once those calls have been made, the rest of the flow remains the same for using the Migration API.
 
->[!Important]
->If your tenant is hosted in a government cloud (GCC) you must have the proper endpoints set when calling the API. 
->
->*Example:*    usgovcloudapi.net 
+### Required endpoints for goverment cloud
+
+If your tenant is hosted in a government cloud (GCC) you must have the proper endpoints set when calling the API. 
+*Example:*    usgovcloudapi.net 
+
+|**Required Endpoint**|**Why**|
+|:-----|:-----|
+|https://<spam><spam>*.blob.core.usgovcloudapi.<spam><spam>net|Migration API Azure Government requirement|
+|https://<spam><spam>*.queue.core.usgovcloudapi.<spam><spam>net|Migration API Azure Government requirement|   
