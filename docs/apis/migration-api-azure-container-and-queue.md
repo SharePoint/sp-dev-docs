@@ -66,7 +66,7 @@ Once those calls have been made, the rest of the flow remains the same for using
 
 ### Required endpoints for goverment cloud
 
-If your tenant is hosted in a government cloud (GCC) you must have the proper endpoints set when calling the API. 
+If your tenant is hosted in a government cloud (GCC), you must have the proper endpoints set when calling the API. 
 *Example:*    usgovcloudapi.net 
 
 |**Required Endpoint**|**Why**|
