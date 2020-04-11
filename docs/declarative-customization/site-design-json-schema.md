@@ -529,6 +529,7 @@ Use **createContentType** to define a new content type that can then be associat
 - `parentId`: ID of the parent content type.
 - `id`: ID of the content type.
 - `hidden`: Specifies whether the content type is visible or hidden.
+- `group`: Group of the content type.
 - `subactions`: Specifies subactions to run on the content type. These are used to designate the site columns to add.
 
 #### Example
