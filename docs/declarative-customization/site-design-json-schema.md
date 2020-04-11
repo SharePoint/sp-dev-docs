@@ -541,6 +541,7 @@ Use **createContentType** to define a new content type that can then be associat
   "description": "custom list content type",
   "parentName": "Item",
   "hidden": false,
+  "group": "Contoso",
   "subactions":
     [
       {
