@@ -27,8 +27,8 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 Install [NodeJS LTS version 10](https://nodejs.org/dist/latest-v10.x/).
 
-- If you are in Windows, you can use the msi installers ([x86](https://nodejs.org/dist/latest-v10.x/node-v10.19.0-x86.msi) or [x64](https://nodejs.org/dist/latest-v10.x/node-v10.19.0-x64.msi)) in this link for the easiest way to set up NodeJS (notice that these direct links evolve over time, so check the latest v10 from the above directory).
-- If you have NodeJS already installed, check that you have the correct version by using `node -v`. It should return version 10.19.0.
+- If you are in Windows, you can use the msi installers ([x86](https://nodejs.org/dist/latest-v10.x/node-v10.20.1-x86.msi) or [x64](https://nodejs.org/dist/latest-v10.x/node-v10.20.1-x64.msi)) in this link for the easiest way to set up NodeJS (notice that these direct links evolve over time, so check the latest v10 from the above directory).
+- If you have NodeJS already installed, check that you have the correct version by using `node -v`. It should return version 10.20.1.
 
 > [!IMPORTANT]
 > The current supported LTS version of NodeJS for the SharePoint Framework is  **Node.js v8.x** and **Node.js v10.x**. Notice that 9.x, 11.x or 12.x versions are currently not supported with SharePoint Framework development.
