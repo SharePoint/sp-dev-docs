@@ -26,13 +26,10 @@ Following picture demonstrates a footer with a logo, footer name and labels and 
 
 You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps):
 
-```ps
+```powershell
 
 Connect-PnPOnline -Url "<SiteURL>" –Credentials (Get-Credential) 
-$web = Get-PnPWeb 
-$web.FooterEnabled = $false 
-$web.Update() 
-Invoke-PnPQuery  
+Set-PnPFooter -Enabled:$false
 
 ```
 
