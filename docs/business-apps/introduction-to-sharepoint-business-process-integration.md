@@ -43,5 +43,5 @@ When you publish your changes, the form is embedded within the SharePoint list f
 Cross-tool functionality seamlessly moves your data from one operation to another. With SharePoint being a core component of the Microsoft 365 suite, your data easily integrates with tools like Excel or Power BI reporting. And because it uses an Excel-inspired expression language, these tools talk with each other, using formula language you already recognize and understand to integrate your data from one function to the next.
 
 ## Next steps
-* [Get started with Power Automate and SharePoint](./power-automate/get-started/create-your-first-flow.md)
+* [Get started with Power Automate and SharePoint](./power-automate/get-started/create-your%20first-flow.md)
 * [Get started with Power Apps and SharePoint](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/customize-list-form)
