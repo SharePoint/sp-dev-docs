@@ -35,7 +35,7 @@ As each new version of the SharePoint Framework is released, support for newer v
 The following table lists each version of SharePoint Framework along with each library versions are compatible:
 
 |SPFx|Node.js|NPM|TypeScript|React
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 |[1.10.0](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.10-release-notes)|LTS v10.x|v5|v3.3|v16.8.5|
 |[1.9.1](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9.1-release-notes)|LTS v10.x| v5|v2.9|v16.8.5|
 |[1.9.0](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9-release-notes) | LTS 8.x, LTS 10.x |v5 |v2.9|v16.8.5|
