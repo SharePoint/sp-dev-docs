@@ -12,7 +12,8 @@ Connect your flow to 200+ services available in Power Automate and build an inte
 ## Connect to Microsoft Teams
 In this article, we will connect to Microsoft Teams and post a message to one of the channels.
 
-> [!NOTE] While this article focuses on Microsoft Teams, you can also connect to various other services in your flow.
+> [!NOTE] 
+> While this article focuses on Microsoft Teams, you can also connect to various other services in your flow.
 
 ### Edit the flow
 1. In your browser, switch to the **flow designer** tab.
