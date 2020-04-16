@@ -36,7 +36,7 @@ The following table lists each version of SharePoint Framework along with each l
 
 |SPFx|Node.js|NPM|TypeScript|React
 |---|---|---|---|---|
-|[1.10.0](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.10-release-notes)|LTS v10.x|v5|v3.3|v16.8.5|
+|[1.10.0](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.10-release-notes)|LTS v10.x|v5, v6|v3.3|v16.8.5|
 |[1.9.1](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9.1-release-notes)|LTS v10.x| v5|v2.9|v16.8.5|
 |[1.9.0](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9-release-notes) | LTS 8.x, LTS 10.x |v5 |v2.9|v16.8.5|
 |[1.8.2](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8.2-release-notes)| LTS 8.x, LTS 10.x | v5 |v2.9|v16.7.0|
