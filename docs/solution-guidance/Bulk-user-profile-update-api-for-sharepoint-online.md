@@ -1,7 +1,7 @@
 ---
 title: Bulk update custom user profile properties for SharePoint Online
 description: To replicate custom attributes to the SharePoint user profile service, use the UserProfile.BatchUpdate.API.
-ms.date: 4/3/2020
+ms.date: 04/17/2020
 localization_priority: Priority
 ---
 
@@ -327,7 +327,9 @@ You can take advantage of the user profile service bulk import API by using Powe
 
 By using PowerShell, you do not need to compile your code within Visual Studio, which may be a more suitable model for some customers.
 
-### Sample PowerShell script
+Alternatively, you can make use of [PnP PowerShell](https://aka.ms/pnp-powershell) which will allow you to make use of the user profile service bulk import API without needing any additional libraries installed on your system.
+
+### Sample PowerShell script using CSOM libraries
 
 Following is a sample PowerShell script that performs the same operations as the previous code: 
 
@@ -367,6 +369,39 @@ $context.ExecuteQuery();
 # Output the unique identifier of the job
 Write-Host "Import job created with the following identifier:" $workItemId.Value 
 ```
+
+### Sample PowerShell script using PnP PowerShell
+
+To initiate a bulk import using [PnP PowerShell](https://aka.ms/pnp-powershell), you can use:
+
+```powershell
+@" 
+ {
+  "value": [
+    {
+      "IdName": "mikaels@contoso.com",
+      "Department": "PnP",
+    },
+	{
+      "IdName": "vesaj@contoso.com",
+      "Department": "PnP",
+    }    
+  ]
+}
+"@ > profiles.json
+
+New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
+```
+
+For more information, see https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpupabulkimportjob
+
+To check on the processing status of a bulk import job, you can use:
+
+```powershell
+Get-PnPUPABulkImportStatus
+```
+
+For more information, see https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpupabulkimportstatus
 
 ## Handle exceptions
 
