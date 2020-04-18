@@ -1,7 +1,7 @@
 ---
 title: Creating SharePoint Add-ins that use low-trust authorization
 description: A provider-hosted SharePoint Add-in can get access to resources in the SharePoint tenancy or farm on which the add-in is installed. Primarily intended for add-ins whose remote components are hosted in the cloud.
-ms.date: 12/27/2017
+ms.date: 04/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,7 +11,7 @@ localization_priority: Priority
 Remote components in a SharePoint Add-in (or external application) can gain authorization to SharePoint resources by passing an access token to SharePoint with each HTTP request. The remote components obtain the access token from a Microsoft Azure Access Control Service (ACS) account that is associated with the customer's Office 365 tenancy. Azure ACS acts as the authorization server in an [OAuth 2.0](http://oauth.net/) transaction, called a flow, with SharePoint as the resource server and the remote components as the client. For related protocol specifications, see [Web Authorization Protocol (oauth)](http://datatracker.ietf.org/doc/active/#oauth). 
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins/).
  
 Provider-hosted SharePoint Add-ins that use the low-trust authorization system can be sold in the Office Store and installed on either Microsoft SharePoint Online or an on-premises SharePoint farm that has been configured to use the customer's Office 365 tenancy to establish trust with Azure ACS. The customer must have an Office 365 tenancy to install SharePoint Add-ins that use the low-trust system. However, it is not necessary for the customer to use the tenancy for any other purpose. For instructions about linking an on-premises farm to an Office 365 tenancy, see [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on.md).
  

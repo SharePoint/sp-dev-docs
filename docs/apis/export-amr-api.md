@@ -1,5 +1,6 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
+ms.date: 04/17/2020
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
@@ -85,7 +86,7 @@ As there is a fixed overhead, AMR is most effective when there is a large number
 
 *Example:* The document library URL, `https://www.contoso.com/Shared%20Document`, has folders A through J . The customer only wants to migrate folders A, B, C, D, and E. Instead of issuing a single read at the root level and returning large unnecessary content, or issuing AMR per individual folder, which is not effective, the software can issue URI [A, B, C, D, E] in the input parameters returning only required metadata.
 
-There are no limits on the number of URI attached in the parameter as long as the call can fit into a single HTTP request.
+Currently there is a maximum of 5000 URL aggregation limits per call.
 
 #### readOptions Flag
 
@@ -102,6 +103,17 @@ IncludeSecurity{ get; set; }
 ```
 
 This flag indicates whether to include all user or group information from a site. By default, it assumes the security is not set, hence no user or group information is provided.
+
+If you use this flag, all users in the site collection will be included. If you are issuing AMR calls for different document libraries that are under the same site collection, the same set of users will be included each time, unless there has been a change.
+ 
+For large number of objects in a document library, it is faster to do the following two calls for reading the security setting and its child folders: 
+ 
+1. To get user/group info, call the AMR job on the top root folder with security on using this setting:
+("IncludeSecurity=true" & "IncludeDirectDescendantsOnly=true").   
+</br>
+2. For the rest of the structure, call the AMR job with the security off with this setting:
+("IncludeSecurity=false" & "IncludeDirectDescendantsOnly=false") 
+
 
 ```c#
 public bool IncludeDirectDescendantsOnly { get; set;}
@@ -300,12 +312,6 @@ Suggestion:
 
 >[!IMPORTANT]
 >This scenario is only recommended for top level folders or if the sub-folder contains greater than one million objects. The performance of the AMR API is *not as effective* when reading a small set of items.
-
-#### Scenario: Tenant to tenant or large SharePoint Migration
- 
-1. Issue CreateSPAsyncReadJob:
-   1. URL = root URL (for example, `www.contoso.com/my-resource-item1`)
-   1. Optional Flag: `IncludeDirectDescendantsOnly(true) , IncludeFullMetadata(true)`
 
 
 #### Scenario: Incremental Migration of FileShare for a sub folder
