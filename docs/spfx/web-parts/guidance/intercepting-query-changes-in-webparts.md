@@ -26,28 +26,30 @@ We can use the following changes to trigger our web part to re-render in the eve
 ```typescript
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   public onInit(): Promise<void> {
-    (function (history) {
+    ((history) => {
       var pushState = history.pushState;
-      history.pushState = function (state, key, path) {
-          this._onUrlChange();
-          return pushState.apply(history, arguments);
+      history.pushState = (state, key, path)=> {          
+          pushState.apply(history, [state, key, path]);
+          this._onUrlChange(path);
       };
     })(window.history);
 
     window.addEventListener('popstate', function (e) {
-      this._onUrlChange();
+      //Currently browsing by the browser history buttons ( back / forward ) doesnt cause any effect on a sp conditionally loaded page.
+      //this._onUrlChange();
     });
 
     return Promise.resolve();
   }
 
   public render(): void {
-    this.domElement.innerHTML = window.location.query;
+    this.domElement.innerHTML = window.location.search;
   }
 
-  private _onUrlChange(): void {
+  private _onUrlChange(newpath==window.location.href): void {    
     // any logic you might want to trigger when the query string updates
     // e.g. fetching data
+    // e.g. logging the URL changes // console.log(newpath)
     this.render();
   }
 }
