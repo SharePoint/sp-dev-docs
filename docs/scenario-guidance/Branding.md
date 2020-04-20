@@ -1,7 +1,7 @@
 ---
 title: Scenario Guidance - Branding
 description: Scenario guidance on branding options with SharePoint.
-ms.date: 03/26/2018
+ms.date: 04/21/2020
 localization_priority: Priority
 ---
 
@@ -158,7 +158,7 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 
 - [PnP Webcast - Customizations options with SharePoint Online “modern” experiences](https://www.youtube.com/watch?v=724Spxu3hF4)
 - [Learn best practices for customizing and branding SharePoint Team Sites](https://www.youtube.com/watch?v=2AxN-G56-d4)
-- [Office Dev PnP Web Cast – Branding SharePoint using add-in model techniques](https://dev.office.com/blogs/branding-sharepoint-using-add-in-model-techniques)
+- [Office Dev PnP Web Cast – Branding SharePoint using add-in model techniques](https://developer.microsoft.com/office/blogs/branding-sharepoint-using-add-in-model-techniques)
 
 ### Solutions
 
