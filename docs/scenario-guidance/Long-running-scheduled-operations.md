@@ -56,7 +56,7 @@ In this pattern, the Azure WebJob handles the scheduling aspects associated with
 - [Create remote timer jobs in SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/create-remote-timer-jobs-in-sharepoint)
 - [Use Microsoft Azure WebJobs with Office 365](https://docs.microsoft.com/sharepoint/dev/solution-guidance/use-microsoft-azure-webjobs-with-office-365)
 - [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
-- [Transforming your SharePoint customizations to add-in model - Resources](https://dev.office.com/blogs/transforming-your-sharePoint-customizations)
+- [Transforming your SharePoint customizations to add-in model - Resources](https://developer.microsoft.com/office/blogs/transforming-your-sharePoint-customizations)
 - [Use asynchronous operations in SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/solution-guidance/use-asynchronous-operations-in-sharepoint-add-ins)
 - [Azure WebJobs SDK](https://github.com/Azure/azure-webjobs-sdk/wiki)
 
@@ -123,7 +123,7 @@ In this pattern, the Windows Scheduler handles the scheduling aspects associated
 - [PnP remote timer job framework](https://docs.microsoft.com/sharepoint/dev/solution-guidance/timerjob-framework)
 - [Create remote timer jobs in SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/create-remote-timer-jobs-in-sharepoint)
 - [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
-- [Transforming your SharePoint customizations to add-in model - Resources](https://dev.office.com/blogs/transforming-your-sharePoint-customizations)
+- [Transforming your SharePoint customizations to add-in model - Resources](https://developer.microsoft.com/office/blogs/transforming-your-sharePoint-customizations)
 
 ##### Videos
 
