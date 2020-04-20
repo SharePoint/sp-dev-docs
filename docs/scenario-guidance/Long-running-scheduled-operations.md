@@ -1,6 +1,6 @@
 ---
 title: Long-running and scheduled operations
-ms.date: 03/21/2018
+ms.date: 04/21/2020
 localization_priority: Normal
 ---
 # Long-running and scheduled operations
