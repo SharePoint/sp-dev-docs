@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 04/06/2018
+ms.date: 04/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -27,7 +27,7 @@ When you add a new SharePoint Framework extension to your project, the SharePoin
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/core-build/serve.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
   "port": 4321,
   "https": true,
   "serveConfigurations": {
