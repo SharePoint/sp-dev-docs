@@ -1,6 +1,6 @@
 ---
 title: Performance
-ms.date: 02/01/2018
+ms.date: 04/21/2020
 localization_priority: Normal
 ---
 # Performance
@@ -59,7 +59,7 @@ The approaches you take to ensure optimal performance with SharePoint is differe
 
 ### Videos
 
-- [Office Dev PnP Web Cast – JavaScript performance considerations with SharePoint](https://dev.office.com/blogs/javascript-performance-considerations-with-sharepoint)
+- [Office Dev PnP Web Cast – JavaScript performance considerations with SharePoint](https://developer.microsoft.com/office/blogs/javascript-performance-considerations-with-sharepoint)
 
 ### Samples
 
