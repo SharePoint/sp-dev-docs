@@ -16,7 +16,7 @@ First let's assume you have a basic web part class that renders the current quer
 ```typescript
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   public render(): void {
-    this.domElement.innerHTML = window.location.query;
+    this.domElement.innerHTML = window.location.search;
   }
 }
 ```
@@ -46,7 +46,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     this.domElement.innerHTML = window.location.search;
   }
 
-  private _onUrlChange(newpath==window.location.href): void {    
+  private _onUrlChange(newpath=window.location.search): void {    
     // any logic you might want to trigger when the query string updates
     // e.g. fetching data
     // e.g. logging the URL changes // console.log(newpath)
