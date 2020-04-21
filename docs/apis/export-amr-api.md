@@ -54,14 +54,28 @@ Key supported features:
 
 More detailed information about the features and the API description is covered in the section below.
 
-The new Migration Asynchronous Read API is:
 
-```c#
+The Migration Asynchronous Read APIs are:
+
+Single
+
+```cs
     public SPAsyncReadJobInfo CreateSPAsyncReadJob(
-            Uri[] rootObjectUri,            
+            Uri url,           
             SPAsyncReadOptions readOptions,
             EncryptionOption encryptionOption,
             string azureContainerManifestUri,
+            string azureQueueReportUri)
+```
+
+Multiple
+
+```cs
+    public SPAsyncReadJobInfo CreateSPAsyncReadJobWithMultiUrl( 
+            Uri[] urls, 
+            SPAsyncReadOptions readOptions, 
+            EncryptionOption encryptionOption, 
+            string azureContainerManifestUri, 
             string azureQueueReportUri)
 ```
 

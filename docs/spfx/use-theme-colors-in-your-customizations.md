@@ -85,7 +85,7 @@ When you scaffold a new SharePoint Framework client-side web part, by default, i
 
 ### Support section backgrounds
 
-A customziation utilizing theme colors may still stand out if it doesn't respond to section background changes via theme variants support. See [Supporting Section Backgrounds](./webparts/guidance/supporting-section-backgrounds.md) for more information.
+A customziation utilizing theme colors may still stand out if it doesn't respond to section background changes via theme variants support. See [Supporting Section Backgrounds](./web-parts/guidance/supporting-section-backgrounds.md) for more information.
 
 A web part without theme variants support uses a white background regardless of the selected section background color.
 

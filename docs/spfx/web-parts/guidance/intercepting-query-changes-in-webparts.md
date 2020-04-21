@@ -16,7 +16,7 @@ First let's assume you have a basic web part class that renders the current quer
 ```typescript
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   public render(): void {
-    this.domElement.innerHTML = window.location.query;
+    this.domElement.innerHTML = window.location.search;
   }
 }
 ```

@@ -1,4 +1,5 @@
 ## Category
+
 - [ ] Question
 - [ ] Typo
 - [ ] Additional article idea
@@ -12,11 +13,13 @@
 
 > **DELETE THIS LINE BEFORE SUBMITTING** - Complete the following (*if ignored you'll be prompted for it before we can address your issue... save the time and provide it in your initial submission*). If this section is not relevant to your issue, please delete it.
 
-- OS: [e.g. Windows 10, MacOS 10.15.x]
-- Framework: [e.g. .NET Framework v3.x, .NET Core v3.x, Node.js v6/v8/v10/v12]
-- Browser(s): [e.g. Chrome v79, Safari v22, FireFox v31, IE v11, Edge, Chromium Edge v79]
-- Tooling: [e.g. VS Code, SPFx v1.10.0, Visual Studio 2019] 
- 
+- **OS**: [e.g. Windows 10 | MacOS 10.15.x]
+- **Target Environment**: [e.g. SharePoint Server 2016 | SharePoint Server 2019 | SharePoint Online]
+- **Framework**: [e.g. .NET Framework v3.x | .NET Core v3.x | Node.js v6/v8/v10/v12]
+- **Browser(s)**: [e.g. Chrome v79 | Safari v22 | FireFox v31 | IE v11 | Edge | Chromium Edge v79]
+- **Tooling**: [e.g. VS Code | SPFx v1.10.0 | Visual Studio 2019]
+- **Additional details**: *The more context you can provide, the easier it is (and therefore quicker) to help.*
+
 ## Submission guidelines (delete this section before submitting)
 
 > - All suggestions or bugs are welcome!
