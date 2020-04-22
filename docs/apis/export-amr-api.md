@@ -116,17 +116,20 @@ If set, this indicates all the files and list item version history is to be incl
 IncludeSecurity{ get; set; }
 ```
 
-This flag indicates whether to include all user or group information from a site. By default, it assumes the security is not set, hence no user or group information is provided.
+This flag indicates whether to include all user or group information from a site. By default, users and groups that are part of the object metadata will be returned, such as author or modifier. 
 
 If you use this flag, all users in the site collection will be included. If you are issuing AMR calls for different document libraries that are under the same site collection, the same set of users will be included each time, unless there has been a change.
  
-For large number of objects in a document library, it is faster to do the following two calls for reading the security setting and its child folders: 
+>[!Important]
+>Using this option can result in very slow performance. Use it only as described in the steps below.
+
+If you have a large number of objects in a document library, it is faster to do the following two calls to read the security setting and its child folders: 
  
 1. To get user/group info, call the AMR job on the top root folder with security on using this setting:
 ("IncludeSecurity=true" & "IncludeDirectDescendantsOnly=true").   
 </br>
-2. For the rest of the structure, call the AMR job with the security off with this setting:
-("IncludeSecurity=false" & "IncludeDirectDescendantsOnly=false") 
+2. For the rest of the structure, call the AMR job with the security off:
+"IncludeSecurity=false"
 
 
 ```c#
