@@ -1,6 +1,6 @@
 ---
 title: User information
-ms.date: 01/18/2018
+ms.date: 04/21/2020
 localization_priority: Normal
 ---
 # User information
@@ -17,7 +17,7 @@ _**Applies to:** Office 365_
 
 - [Working with users in Microsoft Graph](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/users)
 - [Work with user profiles in a SharePoint Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-userprofileexperience)
-- [Adding custom app data to Microsoft Graph now in preview](https://dev.office.com/blogs/adding-customer-data-to-resources-in-Microsoft-Graph-preview)
+- [Adding custom app data to Microsoft Graph now in preview](https://developer.microsoft.com/office/blogs/adding-customer-data-to-resources-in-Microsoft-Graph-preview)
 
 ### Videos
 
