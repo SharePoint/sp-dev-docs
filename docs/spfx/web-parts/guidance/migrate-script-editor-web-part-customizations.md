@@ -1,7 +1,7 @@
 ---
 title: Migrate existing Script Editor web part customizations to the SharePoint Framework
 description: The benefits of migrating existing client-side customizations to the SharePoint Framework and things to consider when planning the migration.
-ms.date: 01/09/2018
+ms.date: 04/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -74,7 +74,7 @@ One of the benefits of building SharePoint customizations using Script Editor we
 
 While hosting SharePoint Framework solutions on a CDN offers a number of advantages, it is not required, and you could choose to host their code in a regular SharePoint document library. SharePoint Framework packages (.sppkg files) deployed to the app catalog specify the URL at which SharePoint Framework can find the solution's code. There are no restrictions with regards to what that URL must be, as long as the user browsing the page with the web part on it can download the script from the specified location.
 
-[Office 365 offers the public CDN capability](https://dev.office.com/blogs/office-365-public-cdn-developer-preview-release) that allows you to publish files from a specific SharePoint document library to a CDN. Office 365 public CDN strikes a nice balance between the benefits of using a CDN and the simplicity of hosting code files in a SharePoint document library. If your organization doesn't mind their code files being publicly available, using the Office 365 public CDN is an option worth considering.
+[Office 365 offers the public CDN capability](https://developer.microsoft.com/office/blogs/office-365-public-cdn-developer-preview-release) that allows you to publish files from a specific SharePoint document library to a CDN. Office 365 public CDN strikes a nice balance between the benefits of using a CDN and the simplicity of hosting code files in a SharePoint document library. If your organization doesn't mind their code files being publicly available, using the Office 365 public CDN is an option worth considering.
 
 ## Differences between SharePoint Framework solutions and Script Editor web part customizations
 
@@ -98,7 +98,7 @@ SharePoint Framework gives the control back to the IT. Because SharePoint Framew
 
 When building customizations using the Script Editor web part, citizen developers owned the complete DOM of their customization. There were no guidelines related to the user experience and how such customization should work. As a result, different developers built customizations in different ways, which led to an inconsistent user experience for end users.
 
-One of the goals of the SharePoint Framework is to standardize building client-side customizations so that they are uniform from the deployment, maintenance, and user experience point of view. Using [Office UI Fabric](https://dev.office.com/fabric), developers can more easily make their custom solutions look and behave like they are an integral part of SharePoint, simplifying user adoption. SharePoint Framework toolchain generates package files for the solutions that are deployed to the app catalog, and script bundles that are deployed to the hosting location of your choice. Every solution is structured and managed in the same way.
+One of the goals of the SharePoint Framework is to standardize building client-side customizations so that they are uniform from the deployment, maintenance, and user experience point of view. Using [Office UI Fabric](https://developer.microsoft.com/fluentui#/), developers can more easily make their custom solutions look and behave like they are an integral part of SharePoint, simplifying user adoption. SharePoint Framework toolchain generates package files for the solutions that are deployed to the app catalog, and script bundles that are deployed to the hosting location of your choice. Every solution is structured and managed in the same way.
 
 ### Don't modify DOM outside of the customization
 

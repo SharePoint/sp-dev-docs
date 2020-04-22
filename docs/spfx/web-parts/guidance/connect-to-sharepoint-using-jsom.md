@@ -1,7 +1,7 @@
 ---
 title: Connect to SharePoint using the JavaScript Object Model (JSOM)
 description: How to use SharePoint JSOM when building solutions on the SharePoint Framework.
-ms.date: 01/09/2018
+ms.date: 04/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -400,7 +400,7 @@ If you followed the steps in the declarative reference sections earlier, you nee
 
   ```json
   {
-    "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
     "version": "2.0",
     "bundles": {
       "share-point-lists-web-part": {

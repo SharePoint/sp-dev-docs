@@ -1,7 +1,7 @@
 ---
 title: Configure extension icon in SharePoint Framework (SPFx) Extensions
 description: Options for configuring the icon for your commands in SharePoint Framework (SPFx) Extensions.
-ms.date: 01/11/2018
+ms.date: 04/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -39,7 +39,7 @@ When building SharePoint Framework command sets, you can specify an icon for eac
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
 
   "id": "6cdfbff6-714f-4c26-a60c-0b18afe60837",
   "alias": "WeatherCommandSet",
@@ -85,7 +85,7 @@ After encoding the image, copy the base64 string and use it as the value for the
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
 
   "id": "6cdfbff6-714f-4c26-a60c-0b18afe60837",
   "alias": "WeatherCommandSet",
