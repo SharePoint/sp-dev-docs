@@ -1,6 +1,6 @@
 ---
 title: App-only and elevated privileges in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 04/22/2020
 localization_priority: Priority
 ---
 
@@ -121,7 +121,7 @@ The following article demonstrates how to use AllowAppOnlyPolicy with ACS.
 - [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 ### Service Account
 
