@@ -71,5 +71,5 @@ If your tenant is hosted in a government cloud (GCC), you must have the proper e
 
 |**Required Endpoint**|**Why**|
 |:-----|:-----|
-|https://<spam><spam>*.blob.core.usgovcloudapi.<spam><spam>net|Migration API Azure Government requirement|
-|https://<spam><spam>*.queue.core.usgovcloudapi.<spam><spam>net|Migration API Azure Government requirement|   
+|https://<span><span>*.blob.core.usgovcloudapi.<span><span>net|Migration API Azure Government requirement|
+|https://<span><span>*.queue.core.usgovcloudapi.<span><span>net|Migration API Azure Government requirement|   
