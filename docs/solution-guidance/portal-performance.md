@@ -1,7 +1,7 @@
 ---
 title: Performance guidance for SharePoint Online portals
 description: Describes the evolution of the SharePoint Online customization model, general performance guidelines for client-side web applications, and the Client-Side Data Access Layer (DAL) Framework.
-ms.date: 06/19/2019
+ms.date: 04/22/2020
 localization_priority: Priority
 ---
 
@@ -326,11 +326,11 @@ A Content Delivery Network (CDN) is a geo-dispersed network that allows an end-u
 
 - Consider using a CDN to deliver your custom resource files:
 	- [Azure CDN](https://azure.microsoft.com/services/cdn/)
-	- [Office 365 Public/Private CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn)
+	- [Office 365 Public/Private CDN](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn)
 	- SharePoint Portal Style Library (default option when a CDN is not used)
 
 > [!NOTE] 
-> The [Office 365 private CDN capability](https://dev.office.com/blogs/general-availability-of-office-365-cdn) has a publishing feature auto URL rewriting to CDN URLs. So after private CDN is enabled, SharePoint returns your publishing pages with links pointing to your private CDN location without you as a developer having to build this. This applies to publishing pages, but also to data returned by the content by a search web part, the picture library slideshow, image fields in SPList REST queries, and SharePoint Image renditions. Your publishing portal can also combine both private and public CDN on the same portal.
+> The [Office 365 private CDN capability](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn) has a publishing feature auto URL rewriting to CDN URLs. So after private CDN is enabled, SharePoint returns your publishing pages with links pointing to your private CDN location without you as a developer having to build this. This applies to publishing pages, but also to data returned by the content by a search web part, the picture library slideshow, image fields in SPList REST queries, and SharePoint Image renditions. Your publishing portal can also combine both private and public CDN on the same portal.
 
 <a name="bk_ajax"> </a>
 
@@ -362,7 +362,7 @@ Extensive performance guidelines for JavaScript are outside the scope of this ar
 For in-depth guidelines about JavaScript performance: 
 
 - [JavaScript Patterns and Performance](javascript-patterns-and-performance.md)
-- [Office Dev PnP webcast – JavaScript performance considerations with SharePoint](https://dev.office.com/blogs/javascript-performance-considerations-with-sharepoint)
+- [Office Dev PnP webcast – JavaScript performance considerations with SharePoint](https://developer.microsoft.com/office/blogs/javascript-performance-considerations-with-sharepoint)
 
 <a name="bk_highVolumePages"> </a>
 
