@@ -1,7 +1,7 @@
 ---
 title: Replace feature receivers in sandbox solutions
 description: Learn about the options and strategies of converting existing functionality to the SharePoint Add-in model or alternative solutions.
-ms.date: 5/7/2018
+ms.date: 4/22/2020
 localization_priority: Normal
 ---
 
@@ -69,7 +69,7 @@ web.SetComposedLookByUrl("Green");
 ```
 
 > [!TIP] 
-> When you use code-based approaches, we recommend using the [PnP provisioning engine](https://dev.office.com/blogs/sharepoint-pnp-remote-provisioning-engine-august-2016) for template management, which dramatically simplifies the development effort. 
+> When you use code-based approaches, we recommend using the [PnP provisioning engine](https://developer.microsoft.com/office/blogs/sharepoint-pnp-remote-provisioning-engine-august-2016) for template management, which dramatically simplifies the development effort. 
 
 ## Removing sandbox solution containing feature receiver code from your site
 
