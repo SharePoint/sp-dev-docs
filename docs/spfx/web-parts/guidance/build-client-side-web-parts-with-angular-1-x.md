@@ -835,7 +835,7 @@ In the previous step, you defined a web part property that allows users to choos
 
 #### Broadcast AngularJS event on web part property change
 
-1. In the code editor, open the **ToDoWebPart.ts** file. Right before the web part's constructor, add the following line:
+1. In the code editor, open the **ToDoWebPart.ts** file. Right above the render method, add the following line:
 
   ```typescript
   private $injector: angular.auto.IInjectorService;

@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Site footer
 description: SharePoint Site footers can be used to show a logo or set of links/labels in a modern SharePoint site. They can be configured using the UI settings or by using APIs.
-ms.date: 1/22/2019
+ms.date: 04/17/2020
 localization_priority: Priority
 ---
 
@@ -26,14 +26,9 @@ Following picture demonstrates a footer with a logo, footer name and labels and 
 
 You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps):
 
-```ps
-
+```powershell
 Connect-PnPOnline -Url "<SiteURL>" –Credentials (Get-Credential) 
-$web = Get-PnPWeb 
-$web.FooterEnabled = $false 
-$web.Update() 
-Invoke-PnPQuery  
-
+Set-PnPFooter -Enabled:$false
 ```
 
 > [!NOTE]

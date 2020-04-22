@@ -216,7 +216,7 @@ To confirm that the certificate was successfully registered, click on "Manifest"
 
 If you see a section looking somewhat similar to this, the certificate has been added successfully.
 
-In this sample the Sites.FullControl.All application permission require admin consent in a tenant before it can be used. In order to do this, click on "API permissions" in the left menu again. At the bottom you will see a section "Grand consent". Click on the "Grand admin constent for <organization name>" button and confirm the action by clicking on the "Yes" button that appears at the top.
+In this sample the Sites.FullControl.All application permission require admin consent in a tenant before it can be used. In order to do this, click on "API permissions" in the left menu again. At the bottom you will see a section "Grant consent". Click on the "Grant admin consent for <organization name>" button and confirm the action by clicking on the "Yes" button that appears at the top.
 
 ![granting permissions to azure ad application](media/apponly/azureadapponly5.png)
 

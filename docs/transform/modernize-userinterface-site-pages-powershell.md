@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern pages using the SharePoint PowerShell
-ms.date: 01/16/2020
+ms.date: 03/06/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -64,6 +64,8 @@ LDAPConnectionString (as of November 2019 release, version 3.15.1911.*) |  | All
 SkipUserMapping (as of November 2019 release, version 3.15.1911.*) | $false  | All page types | Skips the user mapping. For SPO transformations user mapping is off unless you specify a mapping file, for on-premises SharePoint user mapping is always on unless you set this flag. See the [User mapping](modernize-userinterface-site-pages-usermapping.md) article to learn more.
 DelveBlogPage (as of December 2019 release, version 3.16.1912.*) | $false | Delve blog pages | Set the `-DelveBlogPage` parameter if you're transforming a Delve blog page. For wiki,web part, classic blog and publishing pages this parameter must be omitted or set to false.
 DelveKeepSubtitle (as of December 2019 release, version 3.16.1912.*) | $false | Delve blog pages | When the `-DelveKeepSubtitle` parameter is set then the sub title of a Delve blog page will be used for the modern page topic header. This value will be truncated at 40 characters.
+TermMappingFile (as of March 2020 release, version 3.19.2003.*) |  | Cross site transformation | File with custom term mapping definitions allow you to do more than just the default term mapping. See the [Term mapping](modernize-userinterface-site-pages-termmapping.md) article to learn more.
+SkipTermStoreMapping (as of March 2020 release, version 3.19.2003.*) | $false | Cross site transformation | During page transformation terms are mapped to be valid in the target site collection, but using the `-SkipTermStoreMapping` parameter you can disable the term mapping. See the [Term mapping](modernize-userinterface-site-pages-termmapping.md) article to learn more.
 
 (`*`) Mandatory command line parameter / (`**`) Mandatory when the `-PublishingPage`, `-BlogPage` or `-DelveBlogPage` parameter was set (either `-TargetWebUrl` or `-TargetConnection`)
 
@@ -150,7 +152,7 @@ ConvertTo-PnPClientSidePage -PublishingPage -Identity mypage.aspx -Overwrite -Ta
 Save-PnPClientSidePageConversionLog
 ```
 
-### Transform a pages that lives at the root of the site (so outside of a library)
+### Transform a page that lives at the root of the site (so outside of a library)
 
 Some older sites might have web part pages living outside of a library. If you want to modernize these you need to indicate that the page lives in the root of the site via `-Folder "<root>"` as shown below:
 

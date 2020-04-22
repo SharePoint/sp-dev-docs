@@ -1,7 +1,7 @@
 ---
 title: Bulk update custom user profile properties for SharePoint Online
 description: To replicate custom attributes to the SharePoint user profile service, use the UserProfile.BatchUpdate.API.
-ms.date: 5/8/2018
+ms.date: 04/17/2020
 localization_priority: Priority
 ---
 
@@ -327,7 +327,9 @@ You can take advantage of the user profile service bulk import API by using Powe
 
 By using PowerShell, you do not need to compile your code within Visual Studio, which may be a more suitable model for some customers.
 
-### Sample PowerShell script
+Alternatively, you can make use of [PnP PowerShell](https://aka.ms/pnp-powershell) which will allow you to make use of the user profile service bulk import API without needing any additional libraries installed on your system.
+
+### Sample PowerShell script using CSOM libraries
 
 Following is a sample PowerShell script that performs the same operations as the previous code: 
 
@@ -368,6 +370,39 @@ $context.ExecuteQuery();
 Write-Host "Import job created with the following identifier:" $workItemId.Value 
 ```
 
+### Sample PowerShell script using PnP PowerShell
+
+To initiate a bulk import using [PnP PowerShell](https://aka.ms/pnp-powershell), you can use:
+
+```powershell
+@" 
+ {
+  "value": [
+    {
+      "IdName": "mikaels@contoso.com",
+      "Department": "PnP",
+    },
+	{
+      "IdName": "vesaj@contoso.com",
+      "Department": "PnP",
+    }    
+  ]
+}
+"@ > profiles.json
+
+New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
+```
+
+For more information, see https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpupabulkimportjob
+
+To check on the processing status of a bulk import job, you can use:
+
+```powershell
+Get-PnPUPABulkImportStatus
+```
+
+For more information, see https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpupabulkimportstatus
+
 ## Handle exceptions
 
 There are two levels of validation when this API is used. When you queue the import process with CSOM, there is an initial level of validation of the provided values. This includes confirmation that the provided mapping properties exist in the user profile service and that these properties are not editable by the end user. When the queue API is called, only an initial level of validation is applied, and final validation of the provided information is performed when the import job is actually executed.
@@ -400,7 +435,18 @@ _DataFileNotJson - JsonToken EndObject is not valid for closing JsonType Array. 
 
 ### Can I execute the code using app-only/add-in only permissions?
 
-Yes, you need to register the client ID and secret to be able to execute the APIs. Because the actual import of the file does not occur synchronously with the identity of the caller, this works without any issues.
+Yes, the actual import of the file does not occur synchronously with the identity of the caller, so this works with app-only context without any issues.
+
+In order to use an app-only context with the SharePoint add-in model, you need to register a client ID and secret to be able to execute the APIs following [this guidance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azureacs). Moreover, while registering the SharePoint add-in you will have to grant the permissions using the following XML snippet:
+
+```xml
+<AppPermissionRequests AllowAppOnlyPolicy="true">
+  <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
+  <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="FullControl" /> 
+</AppPermissionRequests>
+```
+
+In order to use app-only with an application registered in Azure Active Directory, you need to [register the application](https://docs.microsoft.com/en-us/graph/auth-register-app-v2), [provide a X.509 certificate for authentication](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-microsoft-identity-platform), which is a requirement for SharePoint Online app-only authentication within Azure Active Directory, and grant the following SharePoint Online permissions scopes for Application: Sites.FullControl.All and User.ReadWrite.All .
 
 ### This API is updating properties in the user profile service, but how would I create those properties in the tenant?
 
@@ -420,7 +466,7 @@ No, this is not currently supported with this API.
 
 ### What permissions are required for executing this API?
 
-You must have Global Admin permissions currently. SharePoint Admin is not sufficient.
+You must have Global Admin permissions currently, unless you use an app-only authentication context. SharePoint Admin is not sufficient.
 
 ### Can I import taxonomy based properties?
 

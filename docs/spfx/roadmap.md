@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 12/10/2019
+ms.date: 4/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -20,7 +20,7 @@ The first release of the SharePoint Framework contained only support for client-
 - [SharePoint Framework Extensions](./extensions/overview-extensions.md)
 - [Tenant properties](./tenant-properties.md)
 - [Application Lifecycle Management (ALM) APIs for SPFx solutions and add-ins](../apis/alm-api-for-spfx-add-ins.md)
-- [Office UI Fabric Core support](https://dev.office.com/blogs/improved-support-for-office-ui-fabric-core)
+- [Office UI Fabric Core support](https://developer.microsoft.com/office/blogs/improved-support-for-office-ui-fabric-core)
 - [Asset packaging and site collection app catalog](../general-development/site-collection-app-catalog.md)
 - [Improved MS Graph integration with additional scopes](./use-msgraph.md)
 - [Call securely Azure AD secured applications from SharePoint Framework](./use-aadhttpclient.md)
@@ -102,6 +102,6 @@ The following sections list older items that have already shipped.
 
 ## See also
 
-- [dev.office.com blog](https://dev.office.com/blogs)
+- [Office Developer Blog](https://developer.microsoft.com/office/blogs)
 - [Microsoft365Dev Twitter account](https://twitter.com/Microsoft365Dev)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)

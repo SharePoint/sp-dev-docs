@@ -1,7 +1,7 @@
 ---
 title: Development models
 description: Development models
-ms.date: 12/12/2018
+ms.date: 04/21/2020
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
@@ -87,7 +87,7 @@ Code-based sandbox solutions were deprecated back in 2014 and in SharePoint Onli
 
 * [Sandbox Solutions in SharePoint 2010](https://msdn.microsoft.com/library/office/ee536577.aspx)
 * [Sandbox Solutions Architecture in SharePoint 2010](https://msdn.microsoft.com/library/office/ee539417.aspx)
-* [Removing Code-Based Sandbox Solutions in SharePoint Online](https://dev.office.com/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
+* [Removing Code-Based Sandbox Solutions in SharePoint Online](https://developer.microsoft.com/office/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
 * [Sandbox solution transformation guidance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance)
 
 ### Solutions

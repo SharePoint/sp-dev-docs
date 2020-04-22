@@ -20,6 +20,11 @@ If your users also expect results from OneDrive for Business content that only t
 
 <a name="bk_queryrest"> </a>
 
+## Content Delivery Network (CDN) Support
+
+If the Office 365 Private or Public CDN is enabled to optimize performance for assets then this section applies to you. If your search results contain images that are served from the CDN, then the URL for the image will be the CDN URL that is returned in the results and not the asset library location. For more information on CDN please review [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](https://aka.ms/spocdn).
+
+
 ## Querying with the Search REST service
 
 Search in SharePoint includes a Search REST service you can use to add search functionality to your client and mobile applications by using any technology that supports REST web requests. You can use the Search REST service to submit Keyword Query Language (KQL) or FAST Query Language (FQL) queries in your SharePoint Add-ins, remote client applications, mobile applications, and other applications.
@@ -1139,6 +1144,37 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;summarylength=
   },
   'Querytext ': 'sharepoint',
   'Summarylength': '150'
+}
+```
+
+<a name="bk_ProcessPersonalFavorites"> </a>
+
+### EnableDynamicGroups
+
+A Boolean value that specifies whether to include the results from private Office 365 groups.
+
+**true** to include results from private Office 365 groups; otherwise, **false**. The default value is **false**.
+
+#### Sample GET request
+
+```http
+GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;Properties='EnableDynamicGroups:true'
+```
+
+#### Sample POST request
+
+```json
+{
+  '__metadata': {
+    'type': 'Microsoft.Office.Server.Search.REST.SearchRequest'
+  },
+  'Querytext': 'sharepoint',
+  'Properties': { 
+	'results': [ { 
+		'Name': 'EnableDynamicGroups', 
+		'Value': { 'BoolVal': true } 
+		}
+	]
 }
 ```
 

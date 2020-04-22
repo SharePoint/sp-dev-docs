@@ -134,7 +134,7 @@ The following image shows an example of conditional formatting applied to a text
 
 ![Status field with done colored green, blocked colored red, and in review colored orange](../images/sp-columnformatting-conditionaladvanced.png)
 
-You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Has Issues, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--severeWarning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. It then outputs a `<span />` element with an `IconName` attribute. This attribute automatically applies another CSS class to that `<span />` that shows an [Office UI Fabric](https://dev.office.com/fabric#/) icon inside that element. Finally, another `<span />` element is output that contains the value inside the field.
+You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Has Issues, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--severeWarning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. It then outputs a `<span />` element with an `IconName` attribute. This attribute automatically applies another CSS class to that `<span />` that shows an [Office UI Fabric](https://developer.microsoft.com/fluentui#/) icon inside that element. Finally, another `<span />` element is output that contains the value inside the field.
 
 This pattern is useful when you want different values to map to different levels of urgency or severity. You can start from this example and edit it to specify your own field values and the styles and icons that should map to those values.
 
@@ -720,6 +720,97 @@ This examples uses operator `loopIndex` to control the margins all rows but the 
 }
 ```
 
+### Custom cards on hover 
+
+The following image shows a list with a custom hover added to a List:
+
+On hover - Metadata on the column "Status" is made available in view formatting
+
+![](../images/HoverImage-1.png)
+
+On hover - Metadata on the column "Status" is made available in column formatting
+
+![](../images/HoverImage-2.png)
+
+
+
+You can use column and view formatting to define custom call out that can be commissioned basis user defined actions like click or hover
+
+This example uses customCardProps, openOnEvent, directionalHint and isBeakVisible
+
+```JSON
+
+{
+    "elmType": "div",
+    "style": {
+        "font-size": "12px"
+    },
+    "txtContent": "[$Status]",
+    "customCardProps": {
+        "formatter": {
+            "elmType": "div",
+            "txtContent": "Define your formatter options inside the customCarProps/formatter property"
+        },
+        "openOnEvent": "hover",
+        "directionalHint": "bottomCenter",
+        "isBeakVisible": true
+    }
+}
+```
+## Default cards on hover via formatting 
+
+Users can now have profile card or file hover card on formatters too, some of the things users can now do -
+	1) Profile card or File Hover card on any column 
+	2) Profile card or Hover card with view formatting
+
+Hover on a filename with formatting with default file card 
+
+![](../images/HoverImage-3.png)
+
+
+Hover on a person column with formatting with default Profile card 
+
+![](../images/HoverImage-4.png)
+
+Both the example uses defaultHoverField 
+
+```JSON
+
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "children": [
+        {
+            "elmType": "img",
+            "style": {
+                "width": "32px",
+                "height": "32px",
+                "overflow": "hidden",
+                "border-radius": "50%",
+                "margin": "2px"
+            },
+            "attributes": {
+                "src": "='/_layouts/15/userphoto.aspx?size=S&accountname=' + [$Editor.email]",
+                "title": "[$Editor.title]"
+            }
+        },
+        {
+            "elmType": "span",
+            "style": {
+                "vertical-align": "middle",
+                "margin-left": "2px"
+            },
+            "txtContent": "[$Editor.title]"
+        }
+    ],
+    "defaultHoverField": "[$Editor]"
+}
+
+```
+
+
+
+
 ## Supported column types
 
 The following column types support column formatting:
@@ -773,11 +864,11 @@ You can use the following predefined classes for several common scenarios.
 > [!NOTE]
 > The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
 
-In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/colors). 
+In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://developer.microsoft.com/fluentui#/styles/web/colors/products). 
 
 ### Predefined icons
 
-You can use predefined icons from Office UI Fabric. For details, see the [Fabric website](https://dev.office.com/fabric#/styles/icons). 
+You can use predefined icons from Office UI Fabric. For details, see the [Fabric website](https://developer.microsoft.com/fluentui#/styles/web/icons). 
 
 ## Creating custom JSON
 
@@ -1270,7 +1361,7 @@ Operators specify the type of operation to perform. The following operators are 
 - **abs**: returns the absolute value for a given number - _Only available in SharePoint Online_
   - `"txtContent":"=abs(-45)"` results in _45_
   
-- **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value. - _Only available in SharePoint Online_
+- **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value (*see the `indexOf` workaround explained later on for such operation*). - _Only available in SharePoint Online_
   - `"txtContent":"=length(@currentField)"` might result in _2_ if there are 2 selected values
   - `"txtContent":"=length('Some Text')"` results in _1_
   - `"txtContent":"=length('')"` results in _0_
@@ -1337,6 +1428,15 @@ Operators specify the type of operation to perform. The following operators are 
 
 See [here](#formatting-multi-value-fields) for examples.
 
+**String related operators** - Some of the previously detailed operators can be used when working with string values
+
+- \+
+- indexOf ( *for string length workaround* )
+
+`+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text"`
+
+`indexOf` Since the operator `length` doesnt work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string. 
+
 ### operands
 
 Specifies the parameters, or operands for an expression. This is an array of Expression objects or base values.
@@ -1369,7 +1469,15 @@ The people field object has the following properties (with example values):
    "jobTitle":"HR Manager"
 }
 ```
+People field can have profile hover cards along with formatting
 
+```json
+{
+   "elmType": "div",
+   "txtContent": "[$Editor.title]",
+   "defaultHoverField": "[$Editor]"  
+}
+```
 **Date/Time fields**
 
 The value of Date/Time fields can be retrieved a few different ways, depending on the date format you'd like to display. The following methods for converting date values to specific formats are supported: 
@@ -1417,7 +1525,7 @@ The location field object has the following properties (with example values):
       "Longitude": "-83.92420959472656"
    },
    "DisplayName": "World's Fair Park",
-   "LocationUri: "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
+   "LocationUri": "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
 }
 ```
 
@@ -1620,7 +1728,7 @@ These tokens will yield no value on non-file items including folders.
 > [!TIP]
 > Thumbnails are only available for a list of supported file formats. It means that sometimes the URL generated is not accessible due to lack of support on certain formats. However, if a valid thumbnail token is set as the _only_ `src` attribute of an `img` tag, we will take care of it and hide the image when it is not available.
 
-```json
+```JSON
 {
    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
    "elmType": "img",
@@ -1634,7 +1742,23 @@ These tokens will yield no value on non-file items including folders.
    }
 }
 ```
+Default file hover card using FileLeafRef
 
+```JSON
+ {
+    "elmType": "img",
+    "style": {
+        "width": "100%",
+        "height": "100%",
+        "display": "=if([$File_x0020_Type] == '', 'none', '')"
+    },
+    "attributes": {
+        "src": "@thumbnail.300x300"
+    },
+    "defaultHoverField": "[$FileLeafRef]"
+}
+  ```
+  
 ## See also
 
 - [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)

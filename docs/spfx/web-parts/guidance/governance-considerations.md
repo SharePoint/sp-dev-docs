@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework solutions governance considerations
 description: To get the most benefit from SharePoint Framework solutions, your organization should have an actionable governance plan covering the most important project management considerations.
-ms.date: 01/26/2018
+ms.date: 04/21/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -15,7 +15,7 @@ With the SharePoint Framework, your organization can easily build solutions that
 
 ![Diagram illustrating the composition of SharePoint Framework solutions](../../../images/guidance-governance-spfx-structure-schema.png)
 
-SharePoint Framework solutions consist of two parts: code (often referred to as a web part bundle) deployed to a URL, and an .sppkg file that contains a web part manifest with a URL pointing to the location where the web part code is deployed. There are no particular restrictions to where the code is deployed, as long as users working with the web part can access the web part code. Organizations can choose, for example, to have their web parts deployed to the [Office 365 public CDN](https://dev.office.com/blogs/office-365-public-cdn-developer-preview-release), [Azure storage](../get-started/deploy-web-part-to-cdn.md), or a privately-owned web server.
+SharePoint Framework solutions consist of two parts: code (often referred to as a web part bundle) deployed to a URL, and an .sppkg file that contains a web part manifest with a URL pointing to the location where the web part code is deployed. There are no particular restrictions to where the code is deployed, as long as users working with the web part can access the web part code. Organizations can choose, for example, to have their web parts deployed to the [Office 365 public CDN](https://developer.microsoft.com/office/blogs/office-365-public-cdn-developer-preview-release), [Azure storage](../get-started/deploy-web-part-to-cdn.md), or a privately-owned web server.
 
 ## Web part code-hosting location considerations
 

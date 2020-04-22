@@ -1,7 +1,7 @@
 ---
 title: Add jQueryUI Accordion to your SharePoint client-side web part
 description: Adding the jQueryUI Accordion to your web part project involves creating a new web part.
-ms.date: 02/08/2020
+ms.date: 04/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -91,8 +91,8 @@ At this point, Yeoman installs the required dependencies and scaffolds the solut
 1. Open your console and install the needed types:
 
     ```shell
-    npm install @types/jquery@2
-    npm install @types/jqueryui
+    npm install @types/jquery@2 --save-dev
+    npm install @types/jqueryui --save-dev
     ```
 
 ### To unbundle external dependencies from web part bundle
@@ -143,7 +143,7 @@ By default, any dependencies you add are bundled into the web part bundle. In so
 
     ```json
     {
-      "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
       "version": "2.0",
       "bundles": {
         "j-query-web-part": {

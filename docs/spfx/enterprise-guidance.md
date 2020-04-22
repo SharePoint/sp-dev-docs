@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework (SPFx) enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 09/07/2018
+ms.date: 04/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -26,7 +26,7 @@ This new model is built from the ground-up by using a modern web stack that uses
 The SharePoint Framework reached the [General Available (GA) milestone](
 https://www.microsoft.com/microsoft-365/blog/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/), with version 1.0.0, in February 2017.
 
-Latest release news about the SharePoint Framework: https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9.1-release-notes with version 1.9.1
+Latest release news about the SharePoint Framework: https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.10-release-notes with version 1.10.0
 
 ## From a developer's point of view
 
@@ -121,7 +121,7 @@ A recommendation is for IT administrators to keep track of what CDNs are used an
 
 ### Office 365 Public CDN
 
-The [Office 365 Public CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn) is a new capability in Office 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images, and CSS styles in a CDN to provide better performance. The Office 365 Public CDN is a geo-distributed caching feature that keeps static assets as close to the end-users' browsers requesting them.
+The [Office 365 Public CDN](https://developer.microsoft.com/blogs/general-availability-of-office-365-cdn) is a new capability in Office 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images, and CSS styles in a CDN to provide better performance. The Office 365 Public CDN is a geo-distributed caching feature that keeps static assets as close to the end-users' browsers requesting them.
 
 Administrators can enable the Office 365 Public CDN capability on one or more designated document libraries, which will serve as the origin for the static assets. Administration of the libraries and the CDN are done by using the SharePoint Online PowerShell cmdlets. The assets in the document library will be replicated to the Office 365 CDN and be accessible through the Office 365 Public CDN URLs generated and associated with the document library. Any updates to the assets will be reflected on the CDN end-points within 15 minutes. Note that any assets within the document libraries will be available for anonymous users, through the CDN end-point.
 
@@ -146,7 +146,7 @@ Given that the above mentioned *Custom Script* control methods are in place, the
 
 For web developers or user experience/interface designers, the SharePoint Framework will be very valuable. The Workbench allows front-end developers to work with a SharePoint Framework solution on any operating system and by using their preferred editing tools without SharePoint, given that they use mock data, and focus on the user experience. 
 
-The SharePoint Framework is released in parallel with [Office UI Fabric](https://developer.microsoft.com/fabric), which is the official front-end development framework for Office and Office 365, and allows the user experience designers to create a seamless experience across Office, Office 365, and the custom-built solutions.
+The SharePoint Framework is released in parallel with [Office UI Fabric](https://developer.microsoft.com/fluentui#/), which is the official front-end development framework for Office and Office 365, and allows the user experience designers to create a seamless experience across Office, Office 365, and the custom-built solutions.
 
 ### System Integrators (SI)
 
@@ -218,7 +218,7 @@ What you cannot back up is the actual solution artifacts such as script bundles 
 
 The SharePoint Framework reached General Availability (GA) in February 2017. General Availability means that IT and developers can use SharePoint Framework in production in a supported manner. Beyond General Availability, we would expect that the set of scenarios where we would see SharePoint Framework-based components built and used will expand beyond web part scenarios, and into areas like list and site customizations. For more information about the SharePoint Framework, see the dedicated [SharePoint Framework Roadmap article](./roadmap.md).
 
-Major changes or introductions of new major features will be announced through the Office 365 Message Center, found in your tenant admin, something that an Office 365 administrator already should have on their daily routine to check. Another important resource is the [Office Developer blog](https://dev.office.com/blogs) where you will find even more details and updates.
+Major changes or introductions of new major features will be announced through the Office 365 Message Center, found in your tenant admin, something that an Office 365 administrator already should have on their daily routine to check. Another important resource is the [Office Developer blog](https://developer.microsoft.com/office/blogs) where you will find even more details and updates.
 
 ## Support and SLA
 

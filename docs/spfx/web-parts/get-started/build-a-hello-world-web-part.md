@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 02/08/2020
+ms.date: 03/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -54,7 +54,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     * Accept the default **helloworld-webpart** as your solution name, and then select Enter.
     * Select **SharePoint Online only (latest)**, and select Enter.
     * Select **Use the current folder** for where to place the files.
-    * Select **N** to allow the solution to be deployed to all sites immediately.
+    * Select **N** to not allow the solution to be deployed to all sites immediately.
     * Select **N** on the question if solution contains unique permissions.
     * Select **WebPart** as the client-side component type to be created.
 
@@ -82,7 +82,7 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 * [Atom](https://atom.io)
 * [Webstorm](https://www.jetbrains.com/webstorm)
 
-SharePoint Framework documentation uses Visual Studio code in the steps and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft that runs on your desktop and is available for Windows, Mac, and Linux. It comes with built-in support for JavaScript, TypeScript, and Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
+SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft that runs on your desktop and is available for Windows, Mac, and Linux. It comes with built-in support for JavaScript, TypeScript, and Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
 
 ## Preview the web part
 
@@ -223,7 +223,7 @@ When the properties are defined, you can access them in your web part by using `
 
 Notice that we are performing an HTML escape on the property's value to ensure a valid string. To learn more about how to work with the property pane and property pane field types, see [Make your SharePoint client-side web part configurable](../basics/integrate-with-property-pane.md). 
 
-Let's now add a few more properties to the property pane: a check box, a drop-down list, and a toggle. We first start by importing the respective property pane fields from the framework.
+Let's now add a few more properties to the property pane: a checkbox, a drop-down list, and a toggle. We first start by importing the respective property pane fields from the framework.
 
 1. Scroll to the top of the file and add the following to the import section from `@microsoft/sp-property-pane`:
 
