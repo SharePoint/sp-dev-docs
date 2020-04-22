@@ -2,7 +2,7 @@
 title: Intercepting Query String Changes in Web Parts
 description: Building web parts that respond to query string changes.
 ms.author: bekaise
-ms.date: 01/28/2020
+ms.date: 04/22/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -28,7 +28,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
   public onInit(): Promise<void> {
     ((history) => {
       var pushState = history.pushState;
-      history.pushState = (state, key, path)=> {          
+      history.pushState = (state, key, path) => {          
           pushState.apply(history, [state, key, path]);
           this._onUrlChange(path);
       };
@@ -46,7 +46,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     this.domElement.innerHTML = window.location.search;
   }
 
-  private _onUrlChange(newpath=window.location.search): void {    
+  private _onUrlChange(newpath = window.location.search): void {    
     // any logic you might want to trigger when the query string updates
     // e.g. fetching data
     // e.g. logging the URL changes // console.log(newpath)
