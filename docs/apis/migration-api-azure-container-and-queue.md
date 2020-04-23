@@ -3,7 +3,7 @@ title: SPO provided Migration Azure container and queue
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
-ms.date: 6/20/2018
+ms.date: 04/23/2020
 description: "One of the Main requirement for using our Migration API is the usage of an Azure container as a temporary storage. We now provide a default container that can be used for using the migration API."
 localization_priority: Normal
 ---
@@ -31,7 +31,7 @@ For the Migration API to accept a Migration Job coming from a SPO provided Azure
 ### Getting Containers
 
 ```csharp
-    public SPProvisionedMigrationContainersInfo ProvisionMigrationContainers()
+public SPProvisionedMigrationContainersInfo ProvisionMigrationContainers()
 ```
 
 The call will return an object that contains two strings containing two SAS tokens for accessing the two required containers and a byte array for the AES256CBC encryption. 
@@ -39,17 +39,17 @@ The call will return an object that contains two strings containing two SAS toke
 This key will need to be used when encrypting the data. We forget the key once we give it out, therefore you must keep it to pass it again for the Submit Migration Job call.
 
 ```csharp
-    Uri DataContainerUri 
+Uri DataContainerUri 
 
-    Uri MetadataContainer Uri
+Uri MetadataContainer Uri
 
-    byte[] EncryptionKey 
+byte[] EncryptionKey 
 ```
 
 ### Getting Queue
 
 ```csharp
-    public SPProvisionedMigrationQueueInfo ProvisionMigrationQueue()
+public SPProvisionedMigrationQueueInfo ProvisionMigrationQueue()
 ```
 
 This method will return a string containing the SAS token for accessing the Azure queue.
@@ -57,7 +57,7 @@ This method will return a string containing the SAS token for accessing the Azur
 The queue can be reused across multiple migration jobs so this call should not be that frequently as the `SPProvisionedMigrationContainersInfo()` call.
 
 ```csharp
-    Uri JobQueueUri
+Uri JobQueueUri
 ```
 
 ### After getting the Container and the Queue:
@@ -71,5 +71,5 @@ If your tenant is hosted in a government cloud (GCC), you must have the proper e
 
 |**Required Endpoint**|**Why**|
 |:-----|:-----|
-|https://<span><span>*.blob.core.usgovcloudapi.<span><span>net|Migration API Azure Government requirement|
-|https://<span><span>*.queue.core.usgovcloudapi.<span><span>net|Migration API Azure Government requirement|   
+|https://<span>*.blob.core.usgovcloudapi.</span>net|Migration API Azure Government requirement|
+|https://<span>*.queue.core.usgovcloudapi.</span>net|Migration API Azure Government requirement|   
