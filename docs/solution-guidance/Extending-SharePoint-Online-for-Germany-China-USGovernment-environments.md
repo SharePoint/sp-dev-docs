@@ -1,6 +1,6 @@
 ---
 title: Authorization considerations for tenants hosted in the Germany, China or US Government environments
-ms.date: 6/19/2017
+ms.date: 4/22/2020
 localization_priority: Normal
 ---
 # Authorization considerations for tenants hosted in the Germany, China or US Government environments
@@ -10,7 +10,7 @@ When your Office 365 tenant is hosted in an specific environment like the German
 _**Applies to:** Office 365 hosted in the Germany, China or US Government environments_
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 ## Introduction
 <a name="introduction"> </a>

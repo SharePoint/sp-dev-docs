@@ -1,7 +1,7 @@
 ---
 title: Branding guidance for SharePoint Online portals
 description: Describes branding requirements and general principles when branding portals in a SharePoint Online environment.
-ms.date: 4/30/2018
+ms.date: 4/22/2020
 localization_priority: Priority
 ---
 
@@ -157,11 +157,11 @@ There are several approaches on how these files can be deployed:
 
 - **Publish files to CDN (web application, Azure CDN, or Office 365 CDN)**. In this case, all site collections can use the single latest version of branding assets. Updated files must be uploaded to one location only. Using CDNs can improve performance; however, the content is stored outside of SharePoint, and that's why assets cannot be protected by using standard SharePoint security mechanisms (with the exception of the Office 365 private CDN capability, which can secure files on a CDN).
 
-The [PnP provisioning engine](https://dev.office.com/blogs/introduction-to-office-365-dev-pnp-provisioning-engine) can be used to deploy branding assets to SharePoint libraries. When using the Office 365 CDN capability, the files are automatically provisioned in the CDN. When you use alternative CDN solutions, a custom provisioning approach is needed to publish files to CDNs.
+The [PnP provisioning engine](https://developer.microsoft.com/office/blogs/introduction-to-office-365-dev-pnp-provisioning-engine) can be used to deploy branding assets to SharePoint libraries. When using the Office 365 CDN capability, the files are automatically provisioned in the CDN. When you use alternative CDN solutions, a custom provisioning approach is needed to publish files to CDNs.
 
 For more information about CDNs, see:
 
-- [Office 365 Public/Private CDN capability](https://dev.office.com/blogs/general-availability-of-office-365-cdn)
+- [Office 365 Public/Private CDN capability](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn)
 - [Using content delivery networks with SharePoint Online](https://support.office.com/en-gb/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
 - [CDN Manager](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 

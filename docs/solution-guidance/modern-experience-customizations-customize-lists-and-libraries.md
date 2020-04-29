@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" lists and libraries
 description: Get a faster, more intuitive, and responsive SharePoint Online experience by customizing your lists and libraries to the "modern" experience using user custom actions and custom branding.
-ms.date: 03/04/2019
+ms.date: 04/22/2020
 localization_priority: Priority
 ---
 
@@ -59,7 +59,7 @@ These customizations are currently not supported for "modern" lists and librarie
  - SharePoint server publishing
 
 > [!NOTE]
-> In June 2017, [SharePoint Framework Extensions went into developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions). 
+> In June 2017, [SharePoint Framework Extensions went into developer preview](https://developer.microsoft.com/office/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions). 
 
 <a name="supportedcustomactions"> </a>
 
@@ -203,7 +203,7 @@ If you want to extend the toolbar in the "modern" list and library experiences, 
             <CommandUIHandlers>
               <CommandUIHandler Command="CustomButton1.Command" CommandAction="https://contoso.azurewebsites.net/pages/index.aspx" />
               <CommandUIHandler Command="CustomButton2.Command" CommandAction="http://www.bing.com" />
-              <CommandUIHandler Command="CustomButton3.Command" CommandAction="https://dev.office.com/sharepoint" />
+              <CommandUIHandler Command="CustomButton3.Command" CommandAction="https://developer.microsoft.com/sharepoint" />
             </CommandUIHandlers>
         </pnp:CommandUIExtension>
       </pnp:CustomAction>
@@ -319,7 +319,7 @@ using (var cc = new ClientContext(siteUrl))
 <br/>
 
 > [!NOTE]
-> The PageRenderType property was introduced in [January 2017 CSOM release (16.1.6112.1200)](https://dev.office.com/blogs/new-sharepoint-csom-version-released-for-Office-365-january-2017).
+> The PageRenderType property was introduced in [January 2017 CSOM release (16.1.6112.1200)](https://developer.microsoft.com/office/blogs/new-sharepoint-csom-version-released-for-Office-365-january-2017).
 
 <br/>
 

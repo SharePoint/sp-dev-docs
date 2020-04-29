@@ -1,7 +1,7 @@
 ---
 title: Customizing the "modern" experiences in SharePoint Online
 description: An overview to get you started using the "modern" experiences in SharePoint Online.
-ms.date: 03/04/2019
+ms.date: 04/22/2020
 localization_priority: Priority
 ---
 
@@ -95,6 +95,6 @@ The SharePoint "modern" experiences are supported in SharePoint 2019 in on-premi
 - [Create a team site in SharePoint Online](https://support.office.com/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d?ui=en-US)
 -  [Turn scripting capabilities on or off](https://support.office.com/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US)
 -  ["Modern" SharePoint lists are here - including integration with Microsoft Flow and PowerApps](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/)
--  [Update on "Modern" Document Libraries and Extensibility](https://dev.office.com/blogs/update-on-modern-document-libraries-and-extensiblity)
+-  [Update on "Modern" Document Libraries and Extensibility](https://developer.microsoft.com/office/blogs/update-on-modern-document-libraries-and-extensiblity)
 -  [Switch the default experience for lists or document libraries from "modern" or "classic"](https://support.office.com/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9?ui=en-US&rs=en-US&ad=US)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

@@ -1,7 +1,7 @@
 ---
 title: Transform sandbox solutions to the SharePoint Add-in model
 description: Learn about the options and strategies for converting existing code-based functionalities to SharePoint Add-in model or alternative solutions.
-ms.date: 5/7/2018
+ms.date: 4/22/2020
 localization_priority: Priority
 ---
 
@@ -111,5 +111,5 @@ All declarative definitions in the sandbox solution will continue working after 
 
 ## See also
 
-- [Removing Code-Based Sandbox Solutions in SharePoint Online](https://dev.office.com/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
+- [Removing Code-Based Sandbox Solutions in SharePoint Online](https://developer.microsoft.com/office/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)

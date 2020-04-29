@@ -1,7 +1,7 @@
 ---
 title: Set up a Multi-Geo sample application
 description: Configure sample applications for a Multi-Geo tenant.
-ms.date: 6/18/2019
+ms.date: 04/22/2020
 localization_priority: Normal
 ---
 
@@ -111,7 +111,7 @@ From a permission point of view there are two modes:
 
 - **Using an app-only principal**
 
-  When using app-only, you must grant the created app principal **full control** for the [http://sharepoint/social/tenant](https://dev.office.com/sharepoint/docs/general-development/get-started-developing-with-social-features-in-sharepoint#bkmk_AppPerms) permission scope. 
+  When using app-only, you must grant the created app principal **full control** for the [http://sharepoint/social/tenant](https://developer.microsoft.com/office/sharepoint/docs/general-development/get-started-developing-with-social-features-in-sharepoint#bkmk_AppPerms) permission scope. 
   
 The following instructions show you how to use appregnew.aspx and appinv.aspx to register an app principal and consent to it.
 
@@ -133,7 +133,7 @@ The following instructions show you how to use appregnew.aspx and appinv.aspx to
   > Store the retrieved information (client ID and client secret) because you'll need these in the next step.
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 
 ### Grant permissions to the created principal
