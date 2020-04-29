@@ -14,8 +14,9 @@ You can create a library component solution by selecting **Component Type** to b
 
 Library components have following characteristics:
 
-* You can only host one library component version at the time in a tenant
-* It is not supported to have other component types included in a solution which contains library component
-* You will need to reference library component type during development time from a package manager or using `npm link` to be able to bundle solutions which are dependent on it
+* You can only host one library component version at the time in a tenant.
+* You can host library components either on the tenant app catalog, or from the site independent app catalog ( if enabled ).
+* It is not supported to have other component types included in a solution which contains library component.
+* You will need to reference library component type during development time from a package manager or using `npm link` to be able to bundle solutions which are dependent on it.
 
 You can reference library component dependency in the SharePoint solution by defining the dependency in the package.json file. When this kind of dependency exists in a solution package, SharePoint will automatically load the dependent component for the page. If library reference is not resolved, that can cause an exception in the component which was referring it.
