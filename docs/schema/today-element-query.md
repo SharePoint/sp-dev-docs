@@ -21,7 +21,7 @@ description: In CAML, renders the current date in the format that is relative to
 Renders the current date in the format that is relative to the server's local time zone. For servers in the United States, the format is MM/DD/YYYY (for example, 1/21/2001).
   
 ```XML
-<Today  Offset = "Integer">
+<Today  OffsetDays = "Integer">
 </Today>
 ```
 
@@ -33,7 +33,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Offset** <br/> |Optional **Integer**. Adds or subtracts the number of days that are specified by the positive or negative integer value.  <br/> |
+|**OffsetDays** <br/> |Optional **Integer**. Adds or subtracts the number of days that are specified by the positive or negative integer value.  <br/> |
    
 ### Child elements
 
