@@ -149,6 +149,6 @@ In order to customize theme colors, a custom theme should be created and added t
 
 - [SharePoint themes and colors](../design/themes-colors.md)
 - [Designing for section backgrounds using semantic slots](../design/semantic_slots.md)
-- [SharePoint section backgrounds](./webparts/guidance/supporting-section-backgrounds.md)
+- [SharePoint section backgrounds](./web-parts/guidance/supporting-section-backgrounds.md)
 - [How to use Theme Colors in SPFX web parts](https://n8d.at/blog/how-to-use-theme-colors-in-spfx-web-parts/) by Stefan Bauer (Office Development MVP)
 - [How to Create a Multicolored Theme for a Modern SharePoint Online Site](https://laurakokkarinen.com/how-to-create-a-multicolored-theme-for-a-modern-sharepoint-online-site/) by Laura Kokkarinen (SharePoint PnP Core MVP)
