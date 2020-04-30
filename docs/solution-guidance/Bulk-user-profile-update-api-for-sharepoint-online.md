@@ -1,7 +1,7 @@
 ---
 title: Bulk update custom user profile properties for SharePoint Online
 description: To replicate custom attributes to the SharePoint user profile service, use the UserProfile.BatchUpdate.API.
-ms.date: 04/17/2020
+ms.date: 04/30/2020
 localization_priority: Priority
 ---
 
@@ -18,25 +18,16 @@ Many enterprises need to replicate custom attributes to the SharePoint user prof
 The following list describes the flow of the bulk user profile update process:
 
 1. User attributes are synchronized from the corporate Active Directory to the Azure Active Directory (Azure AD). You can select which attributes are replicated across on-premises and Azure.
+1. A standardized set of attributes are replicated from Azure AD to the SharePoint Online User Profile Store within Office 365. Unlike on-premises SharePoint, these attributes cannot be customized.
+1. A custom synchronization tool takes advantage of the bulk update APIs. This tool uploads a JSON file to the Office 365 tenant and queues the import process. This tool can be implemented by using managed code (.NET) or as a PowerShell script by using the CSOM APIs.
+1. A line-of-business (LOB) system, or any external system, is the source of the information in the JSON file. This could also be a combination of data from Active Directory and any external system. Notice that from an API perspective, the LOB system could even be an on-premises SharePoint farm.
+1. An out-of-the-box server-side timer job running in SharePoint Online checks for queued import requests and performs the actual import operation based on the API calls and the information within the provided JSON file.
+1. Extended user profile information is available within user profiles and can be used for any out-of-the-box or custom functionality in SharePoint Online.
 
-2. A standardized set of attributes are replicated from Azure AD to the SharePoint Online User Profile Store within Office 365. Unlike on-premises SharePoint, these attributes cannot be customized.
-
-3. A custom synchronization tool takes advantage of the bulk update APIs. This tool uploads a JSON file to the Office 365 tenant and queues the import process. This tool can be implemented by using managed code (.NET) or as a PowerShell script by using the CSOM APIs.
-
-4. A line-of-business (LOB) system, or any external system, is the source of the information in the JSON file. This could also be a combination of data from Active Directory and any external system. Notice that from an API perspective, the LOB system could even be an on-premises SharePoint farm.
-
-5. An out-of-the-box server-side timer job running in SharePoint Online checks for queued import requests and performs the actual import operation based on the API calls and the information within the provided JSON file.
-
-6. Extended user profile information is available within user profiles and can be used for any out-of-the-box or custom functionality in SharePoint Online.
-
-> [!NOTE] 
+> [!NOTE]
 > The import only works for user profile properties that have **not** been set to be editable by end users. This is to prevent the user profile import process from overriding any information that an end user has already updated. Additionally, the import only allows custom properties that are not Active Directory core properties. These must be synchronized to Azure AD. For the list of these core directory properties, see the table listed in the FAQ section later in this article.
 
-<br/>
-
 Following is a brief video that demonstrates how to use the CSOM API [UserProfile.BatchUpdate.API](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.BatchUpdate.API) from both managed code (.NET) and from PowerShell.
-
-<br/>
 
 > [!VIDEO https://www.youtube.com/embed/-X_2T0SRUBk]
 
@@ -45,19 +36,19 @@ Following is a brief video that demonstrates how to use the CSOM API [UserProfil
 Following is the full process:
 
 1. Create or synchronize users in an Office 365 tenant or to the Azure AD associated to it.
-	 - When users are synchronized to Azure AD, it also synchronizes a standardized set of attributes to the SharePoint Online user profile service.
-2. Create any needed custom properties within the user profile service.
-	 - Because there are no remote APIs for creating custom properties in the user profile service, this step must be performed manually for each of the tenants where custom user profile properties are needed (this only needs to be done once per tenant).
-	 - Only user profile properties that are not “allowed to be edited by end users” can be imported. Trying to import a JSON object property to a user profile property that is marked as “editable by end users” results in an exception when the CSOM API is called.
-3. [Create and upload the JSON file](#create-and-upload-json-file) to the Office 365 tenant.
-	 - You must upload the JSON data file containing the information to be updated to the Office 365 tenant.
-	 - In the case of any exception during the import process, SharePoint provides additional logging information saved in the same document library where the file existed within a new sub folder.
-	 - Cleaning of the log files and JSON files is not done automatically and is the responsibility of the custom solution using the API. You should consider the life cycle of these files within your implementation. These files are stored in document libraries, so they consume a portion of the assigned storage for the site collection.
-4. Call the bulk UPA Import API for queuing the import job.
-	 - Use the CSOM API to [queue the import process](#queue-the-import-process). This can be achieved by executing CSOM code by using either managed code (.NET) or [PowerShell](#call-the-import-api-from-powershell).
-	 - The method to queue the job requires property mapping information and the location of the data file. This method quickly executes because it queues the actual import process, which later is executed as part of a back-end process in SharePoint Online.
-5. [Check the status of the import job](#check-the-status-of-an-import-job).
-	 - You can also use remote APIs to check the status of a specific import job or all the recent import jobs. To be able to check the status of a specific call, you should store the unique job identifier received as a return value when the job is queued.
+    - When users are synchronized to Azure AD, it also synchronizes a standardized set of attributes to the SharePoint Online user profile service.
+1. Create any needed custom properties within the user profile service.
+    - Because there are no remote APIs for creating custom properties in the user profile service, this step must be performed manually for each of the tenants where custom user profile properties are needed (this only needs to be done once per tenant).
+    - Only user profile properties that are not “allowed to be edited by end users” can be imported. Trying to import a JSON object property to a user profile property that is marked as “editable by end users” results in an exception when the CSOM API is called.
+1. [Create and upload the JSON file](#create-and-upload-json-file) to the Office 365 tenant.
+    - You must upload the JSON data file containing the information to be updated to the Office 365 tenant.
+    - In the case of any exception during the import process, SharePoint provides additional logging information saved in the same document library where the file existed within a new sub folder.
+    - Cleaning of the log files and JSON files is not done automatically and is the responsibility of the custom solution using the API. You should consider the life cycle of these files within your implementation. These files are stored in document libraries, so they consume a portion of the assigned storage for the site collection.
+1. Call the bulk UPA Import API for queuing the import job.
+    - Use the CSOM API to [queue the import process](#queue-the-import-process). This can be achieved by executing CSOM code by using either managed code (.NET) or [PowerShell](#call-the-import-api-from-powershell).
+    - The method to queue the job requires property mapping information and the location of the data file. This method quickly executes because it queues the actual import process, which later is executed as part of a back-end process in SharePoint Online.
+1. [Check the status of the import job](#check-the-status-of-an-import-job).
+    - You can also use remote APIs to check the status of a specific import job or all the recent import jobs. To be able to check the status of a specific call, you should store the unique job identifier received as a return value when the job is queued.
 
 ## Create and upload JSON file
 
@@ -127,8 +118,6 @@ The following are restrictions on individual source data files:
 > [!NOTE] 
 > The update file must have the Byte Order Mark (BOM) specified if any characters are not part of the Western European encoding (iso-8859-1) which is the default. International characters may not be interpreted correctly with the default encoding, so it is recommended to use the UTF-8 encoding. This encoding has a BOM of 'EF BB BF' in hex. This would be placed at the beginning of the byte array of the file when creating the file stream. If using a text editor, select the endoding type as UTF-8 before saving.
 
-<br/>
-
 ## Queue the import process
 
 You can queue the CSOM API for the bulk import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later. 
@@ -151,11 +140,11 @@ public ClientResult<Guid> QueueImportProfileProperties(
 
   Property mapping between ID type and Azure AD property:
 
-  |UPA bulk import ID type | Azure AD attribute |
-  |:----|:----|
-  |CloudId | ObjectID |
-  |PrincipalName | userPrincipalName |
-  |Email | mail |
+  | UPA bulk import ID type | Azure AD attribute |
+  | :---------------------- | :----------------- |
+  | CloudId                 | ObjectID           |
+  | PrincipalName           | userPrincipalName  |
+  | Email                   | mail               |
 
 - **sourceDataIdProperty**: System.String
 
@@ -298,7 +287,6 @@ An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/library/office/mi
 
   The Uri to the folder where the logs have been written.
 
-
 #### Return value
 
 An [ImportProfilePropertiesJobStatusCollection](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobstatuscollection.aspx) object, which is a collection of [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.importprofilepropertiesjobinfo.aspx) objects with high level status information about each of the jobs.
@@ -319,7 +307,6 @@ foreach (var item in jobs)
    var state = item.State;
 }
 ```
-
 
 ## Call the import API from PowerShell
 
@@ -382,7 +369,7 @@ To initiate a bulk import using [PnP PowerShell](https://aka.ms/pnp-powershell),
       "IdName": "mikaels@contoso.com",
       "Department": "PnP",
     },
-	{
+  {
       "IdName": "vesaj@contoso.com",
       "Department": "PnP",
     }    
@@ -412,8 +399,6 @@ If there are any exceptions during the actual import job execution, a logging fi
 Following is an example of the results of running an import job. In the following image, you can see two sub folders for two different executions created in the document library where the import file is stored.
 
 ![Job exception sub folders](media/bulkuserprofileupdateapi/UserProfileBulkAPIProcess-folders.png)
-
-<br/>
 
 The actual log file is saved in the sub folder, and you can download that from Office 365 for detailed analysis.
 
