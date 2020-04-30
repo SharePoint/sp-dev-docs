@@ -58,7 +58,7 @@ Example:
 
 ## Extra requirement
 
-For the encryption, each file must be encrypted and have an IV assigned to it. The encryption method should follow the AES CBC 256 Standard. The IV should be different for every file including the manifests in the package and should be stored as a property on each files. 
+For the encryption, each file must be encrypted and have an IV assigned to it. The encryption method should follow the AES CBC 256 Standard. A unique, cryptographically-random IV must be generated for every file including the manifests in the package and should be stored as a property on each files. Use the AesCryptoServiceProvider.GenerateIV method to generate a unique random IV for each file. 
 
 - Name = [IV] 
 - Value = [Base64encoded byte array of the IV]
