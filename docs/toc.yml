@@ -413,9 +413,9 @@
     - name: Overview
       href: business-apps/power-automate/sharepoint-connector-actions-triggers.md
     - name: Get started
-      items: 
+      items:
       - name: Create your first flow
-        href: business-apps/power-automate/get-started/create-your first-flow.md
+        href: business-apps/power-automate/get-started/create-your-first-flow.md
       - name: Connect your flow to other services
         href: business-apps/power-automate/get-started/connect-to-other-services-in-your-flow.md
     - name: Concepts & scenarios
