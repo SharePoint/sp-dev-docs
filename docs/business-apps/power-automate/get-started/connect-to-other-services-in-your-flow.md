@@ -1,7 +1,7 @@
 ---
 title: Connect your flow to other services
 description: Connect your flow to 200+ services available in Power Automate, and build an integrated experience to perform actions in the services.
-ms.date: 04/07/2020
+ms.date: 04/30/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -72,4 +72,4 @@ In this article, we will connect to Microsoft Teams and post a message to one of
 5. As a result of this flow run, you receive an email, and a message is posted on the selected Teams channel.
 
 ## Next steps
-Learn new skills and discover Power Automate with step-by-step guidance by exploring learning paths and modules available here: [Power Automate Learning Paths](https://docs.microsoft.com/en-us/learn/browse/?term=Power%20Automate&products=power-automate).
+Learn new skills and discover Power Automate with step-by-step guidance by exploring learning paths and modules available here: [Power Automate Learning Paths](https://docs.microsoft.com/learn/browse/?term=Power%20Automate&products=power-automate).

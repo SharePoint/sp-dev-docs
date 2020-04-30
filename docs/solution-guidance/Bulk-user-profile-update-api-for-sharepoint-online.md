@@ -437,7 +437,7 @@ _DataFileNotJson - JsonToken EndObject is not valid for closing JsonType Array. 
 
 Yes, the actual import of the file does not occur synchronously with the identity of the caller, so this works with app-only context without any issues.
 
-In order to use an app-only context with the SharePoint add-in model, you need to register a client ID and secret to be able to execute the APIs following [this guidance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azureacs). Moreover, while registering the SharePoint add-in you will have to grant the permissions using the following XML snippet:
+In order to use an app-only context with the SharePoint add-in model, you need to register a client ID and secret to be able to execute the APIs following [this guidance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-apponly-azureacs). Moreover, while registering the SharePoint add-in you will have to grant the permissions using the following XML snippet:
 
 ```xml
 <AppPermissionRequests AllowAppOnlyPolicy="true">
@@ -446,7 +446,7 @@ In order to use an app-only context with the SharePoint add-in model, you need t
 </AppPermissionRequests>
 ```
 
-In order to use app-only with an application registered in Azure Active Directory, you need to [register the application](https://docs.microsoft.com/en-us/graph/auth-register-app-v2), [provide a X.509 certificate for authentication](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-microsoft-identity-platform), which is a requirement for SharePoint Online app-only authentication within Azure Active Directory, and grant the following SharePoint Online permissions scopes for Application: Sites.FullControl.All and User.ReadWrite.All .
+In order to use app-only with an application registered in Azure Active Directory, you need to [register the application](https://docs.microsoft.com/graph/auth-register-app-v2), [provide a X.509 certificate for authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-microsoft-identity-platform), which is a requirement for SharePoint Online app-only authentication within Azure Active Directory, and grant the following SharePoint Online permissions scopes for Application: Sites.FullControl.All and User.ReadWrite.All .
 
 ### This API is updating properties in the user profile service, but how would I create those properties in the tenant?
 
