@@ -1,7 +1,7 @@
 ---
 title: Migrate existing Script Editor web part customizations to the SharePoint Framework
 description: The benefits of migrating existing client-side customizations to the SharePoint Framework and things to consider when planning the migration.
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -122,7 +122,7 @@ SharePoint Framework allows developers to benefit from the TypeScript type syste
 
 When building reusable client-side customizations, in the past developers used the **spPageContextInfo** JavaScript object to get information about the current page, site, or user. This object offered them an easy way to make their solution reusable across the different sites in SharePoint and not have to use fixed URLs.
 
-While the **spPageContextInfo** object is still present on classic SharePoint pages, it cannot be reliably used with modern SharePoint pages and libraries. When building solutions on the SharePoint Framework, developers are recommended to use the **[IWebPartContext.pageContext](https://dev.office.com/sharepoint/reference/spfx/sp-webpart-base/iwebpartcontext)** object instead, which contains the context information for the particular solution.
+While the **spPageContextInfo** object is still present on classic SharePoint pages, it cannot be reliably used with modern SharePoint pages and libraries. When building solutions on the SharePoint Framework, developers are recommended to use the **[IWebPartContext.pageContext](https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base/iwebpartcontext?view=sp-typescript-latest)** object instead, which contains the context information for the particular solution.
 
 ### No access to SharePoint JavaScript Object Model by default
 
