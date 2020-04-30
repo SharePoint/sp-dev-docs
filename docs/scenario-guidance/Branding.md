@@ -1,7 +1,7 @@
 ---
 title: Scenario Guidance - Branding
 description: Scenario guidance on branding options with SharePoint.
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 localization_priority: Priority
 ---
 
