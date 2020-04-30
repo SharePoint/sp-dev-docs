@@ -224,7 +224,7 @@ Script Embedding means a pattern where custom JavaScript is added on the page wh
 
 - [JavaScript injection in SharePoint Online - Office 365 Developer Patterns and Practices](https://channel9.msdn.com/Blogs/Office-365-Dev/JavaScript-injection-in-SharePoint-Online-Office-365-Developer-Patterns-and-Practices)
 - [How to update your SharePoint pages via the embedding of JavaScript](https://channel9.msdn.com/blogs/OfficeDevPnP/JavaScript-embedding-demo)
-- [Office Dev PnP Web Cast – JavaScript development patterns with SharePoint](https://dev.office.com/blogs/javascript-development-patterns-with-sharepoint)
+- [Office Dev PnP Web Cast – JavaScript development patterns with SharePoint](https://developer.microsoft.com/office/blogs/javascript-development-patterns-with-sharepoint)
 
 ### Samples
 
