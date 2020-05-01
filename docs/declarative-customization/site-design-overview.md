@@ -81,7 +81,7 @@ The following example is a script that has two top-level actions. First, it appl
       "templateType": 100,
       "subactions": [
         {
-          "verb": "SetDescription",
+          "verb": "setDescription",
           "description": "List of Customers and Orders"
         },
         {
