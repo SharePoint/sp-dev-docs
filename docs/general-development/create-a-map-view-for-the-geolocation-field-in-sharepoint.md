@@ -96,8 +96,9 @@ The following steps demonstrate how to create a map view from the SharePoint UI.
   
 
     
-    > [!NOTE]
-    > At least one **Geolocation** field is required to create a map view. You cannot select multiple **Geolocation** fields for a map view, although you can create two different map views that use two different **Geolocation** fields.
+> [!NOTE]
+> At least one **Geolocation** field is required to create a map view. You cannot select multiple **Geolocation** fields for a map view, although you can create two different map views that use two different **Geolocation** fields.
+
 5. After you add the required **Geolocation** field and any other field you need, choose **OK**. A map view is created, as shown in Figure 4.
     
    **Figure 4. Completed map view**
