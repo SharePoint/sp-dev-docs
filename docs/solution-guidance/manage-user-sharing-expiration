@@ -18,17 +18,17 @@ You can change expiration time for existing user using client side object model:
 
 ```powershell
 
-#Grab the tenant information and credentials
+## DISCLAIMER:
+## Copyright (c) Microsoft Corporation. All rights reserved. This
+## script is made available to you without any express, implied or
+## statutory warranty, not even the implied warranty of
+## merchantability or fitness for a particular purpose, or the
+## warranty of title or non-infringement. The entire risk of the
+## use or the results from the use of this script remains with you.
 
 param(
     [Parameter(Mandatory = $true)]
     [string] $SiteUrl,
-
-    [Parameter(Mandatory = $true)]
-    [string] $AdminUser,
-
-    [Parameter(Mandatory=$true)]
-    [securestring]$Password,
     
     [Parameter(Mandatory = $true)]
     [string] $UserEmail,
@@ -37,27 +37,31 @@ param(
     [int] $DaysToExpiration
 )
 
-    #Context to the site
-    $ctx = New-Object Microsoft.SharePoint.client.ClientContext($siteurl)
-    $ctx.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($adminuser, $password)
+
+#Connect to PNP 
+Connect-PnPOnline -Url $SiteUrl
+
+#ctx to the site
+$ctx = Get-PnPContext 
+
+#Get the User and check current expiration
+$user = Get-PnPUser | ? Email -eq $UserEmail
+$ctx.Load($user)
+$ctx.ExecuteQuery()
+
+Write-Host "Current Expiration: $($user.Expiration)"
+
+ #Update Expiration for the user
+$user.Expiration = [DateTime]::UtcNow.AddDays($DaysToExpiration).ToString("yyyy-MM-ddTHH:mm:ssZ")
+$user.Update()
+$ctx.ExecuteQuery()
  
-    #Get the User
-    $User = $ctx.Web.SiteUsers.GetByEmail($UserEmail)
-    $ctx.Load($user)
-    $Ctx.ExecuteQuery()
+ #Check new user Expiration for the user
+ $ctx.Load($user)
+ $ctx.ExecuteQuery()
 
-    Write-Host "Current Expiration: $($user.Expiration)"
-         
-    #Update Expiration for the user
-    $User.Expiration = [DateTime]::UtcNow.AddDays($DaysToExpiration).ToString("yyyy-MM-ddTHH:mm:ssZ")
-    $User.Update()
-    $Ctx.ExecuteQuery()
+Write-Host "New Expiration: $($user.Expiration)"
 
-     #Get the User to check update
-     $User = $ctx.Web.SiteUsers.GetByEmail($UserEmail)
-     $ctx.Load($user)
-     $Ctx.ExecuteQuery()
 
-     Write-Host "New Expiration: $($user.Expiration)"
 ```
 
