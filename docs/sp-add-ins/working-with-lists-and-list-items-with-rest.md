@@ -498,8 +498,8 @@ The following example shows how to create a list item.
 ```http
 POST https://{site_url}/_api/web/lists/GetByTitle('Test')/items
 Authorization: "Bearer " + accessToken
-Accept: "application/json;odata=nometadata"
-Content-Type: "application/json"
+Accept: "application/json;odata=verbose"
+Content-Type: "application/json;odata=verbose"
 Content-Length: {length of request body as integer}
 X-RequestDigest: "{form_digest_value}"
 
