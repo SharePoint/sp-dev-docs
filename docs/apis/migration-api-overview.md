@@ -39,11 +39,11 @@ public Guid CreateMigrationJob(
 
 ##### gWebID
 
-The unique identifier of the destination web targeted for the package import. Addition information and identifiers for the import are specified within the import package itself. This identifier can be found programmatically by querying the target web using CSOM calls.
+The unique identifier of the destination web targeted for the package import. Additional information and identifiers for the import are specified within the import package itself. This identifier can be found programmatically by querying the target web using CSOM calls.
 
 ##### azureContainerSourceUri
 
-The valid URL including SAS token for accessing the Azure Blob Storage Container which contains the binary files of type block. The SAS token must have been created with only Read and List permissions or the migration job will fail. The SAS token should at least have a lifetime that starts at from no later than when the job was submitted, until a reasonable time for successful import to have concluded.<br>
+The valid URL including SAS token for accessing the Azure Blob Storage Container which contains the binary files of type block. The SAS token must have been created with only Read and List permissions or the migration job will fail. The SAS token should at least have a lifetime that starts no later than when the job was submitted, until a reasonable time for successful import to have concluded.<br>
 
 The required permissions are as follows in the Azure Storage API:
 
@@ -53,7 +53,7 @@ The required permissions are as follows in the Azure Storage API:
 
 **Note:** The change to enforce Read and List permissions on the SAS token is coming in a future build. Until then it will not be enforced. However, it is a best practice to use these values.
 
-All files in the container must have at least a single snapshot applied to them to ensure that no file modification can occur from the customer during import. Any file that does not have a snapshot will be skipped during import and an error thrown, although the job will attempt to continue to import. The import pipeline will use the latest snapshot of the file available at the time of import. The following is an example of code that might be used to create a snapshot on a file after it is uploaded to Azure Blob Storage:
+All files in the container must have at least a single snapshot applied to them to ensure that no file modification is made by the customer during the import. Any file that does not have a snapshot will be skipped during import and have an error thrown, although the job will attempt to continue the import. The import pipeline will use the latest snapshot of the file available at the time of import. The following is an example of the code that might be used to create a snapshot on a file after it is uploaded to Azure Blob Storage:
 
 ```csharp
 CloudBlockBlob blob = blobContainerObj.GetBlockBlobReference(file);
@@ -66,19 +66,19 @@ blob.CreateSnapshot();
 
 ##### azureContainerManifestUri
 
-The valid URL including SAS token for accessing the Azure Blob Storage Container which contains the block blobs for the manifest and other package describing XML files. This location will also be used for the log output. This container cannot be the same as the one used for the azureContainerSourceUri. The SAS token must have been created with only Read, List and Write permissions or the migration job will fail. The SAS token should at least have a lifetime that starts at from no later than when the job was submitted, until a reasonable time for successful import to have concluded.
+The valid URL including SAS token for accessing the Azure Blob Storage Container which contains the block blobs for the manifest and other package describing XML files. This location will also be used for the log output. This container cannot be the same as the one used for the azureContainerSourceUri. The SAS token must have been created with only Read, List and Write permissions or the migration job will fail. The SAS token should at least have a lifetime that starts no later than when the job was submitted, until a reasonable time for successful import to have concluded.
 
 > [!NOTE]
 > The change to enforce Read, List and Write permissions on the SAS token is coming in a future build, and until then will be not be enforced, however it is best practice to use these values. If an issue arises using a current build, try removing the List permission as a temporary workaround, noting that it will become required soon.
 
-All files in the container must have at least a single snapshot applied to them to ensure that no file modification can occur from the customer during import. Any file that does not have a snapshot will cause failures during import and errors thrown, potentially failing the entire migration job.
+All files in the container must have at least a single snapshot applied to them to ensure that no file modification is made by the customer during the import. Any file that does not have a snapshot will cause failures during the import and have errors thrown, potentially failing the entire migration job.
 
 > [!NOTE]
 > The change to require and use the latest SnapShots on all files is coming in a future build.  Until then they will be ignored.
 
 ##### azureQueueReportUri
 
-The valid URL including SAS token for accessing the user provided Azure Queue used for returning notifications of migration job progress. This value can be null if no notification queue will be used during import. If this value is not null and proper access is granted in the SAS token in this URI, it will be used for real time status update. The SAS token must have been created with only Add, Read and Update permissions or the migration job will be unable to add events to the queue. The required permissions are as follows in the Azure Storage API:
+The valid URL including SAS token for accessing the user provided Azure Queue used for returning notifications of migration job progress. This value can be null if no notification queue will be used during the import. If this value is not null and proper access is granted in the SAS token in this URI, it will be used for real time status update. The SAS token must have been created with only Add, Read and Update permissions or the migration job will be unable to add events to the queue. The required permissions are as follows in the Azure Storage API:
 
     (SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read | SharedAccessQueuePermissions.Update)
 
@@ -147,7 +147,7 @@ XML file|Schema File|Description
 :-----|:-----|:-----
 ExportSettings.XML|DeploymentExportSettings Schema |Provides validation for the ExportSettings.XML file exported into the content migration package. ExportSettings.XML does the following: <br> - Contains the export settings specified by using the SPExportSettings class and other classes that are part of the content migration object model. <br> - Ensures that the subsequent import process (at the migration target site) enforces the directives specified in the export settings. <br> - Maintains a catalog of all objects exported to the migration package.
 LookupListMap.XML|DeploymentLookupListMap Schema |Provides validation for the LookupListMap.XML file exported into the content migration package. LookupListMap.XML maintains a simple lookup list that records SharePoint list item (list item to list item) references.
-Manifest.XML|DeploymentManifest Schema|Provides validation for the Manifest.xml file that is exported into the content migration package.Provides a comprehensive manifest containing listings of both the contents and the structure of the source site. The migration operation uses the manifest file to reconstitute the source site and its components when it is imported to the destination site.
+Manifest.XML|DeploymentManifest Schema|Provides validation for the Manifest.xml file that is exported into the content migration package. Provides a comprehensive manifest containing listings of both the contents and the structure of the source site. The migration operation uses the manifest file to reconstitute the source site and its components when it is imported to the destination site.
 Requirements.XML|DeploymentRequirements Schema|Provides validation for the Requirements.xml file exported into the content migration package. Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, Web Part assemblies, language packs, and so forth.
 RootObjectMap.XML|DeploymentRootObjectMap Schema|Provides validation for the RootObjectMap.xml file exported into the content migration package.RootObjectMap.xml maintains a list of mappings of secondary (dependent) objects, which allows the import phase of the migration operation to correctly place the dependent objects relative to the locations of the root object mappings.
 SystemData.XML|DeploymentSystemData Schema|Provides validation for the SystemData.xml file exported into the content migration package.SystemData.xml does the following: Collects a variety of low-level system data. Records the number and names of Manifest.xml files (in cases where the migration uses multiple manifests).
@@ -178,13 +178,13 @@ All instances of the **Manifest.XML** file for a package are expected to be at t
 
 The **Manifest.XML** is the primary descriptor for metadata within the package, and provides the list/folder/item hierarchy, along with metadata for the items including references back to users and groups defined in the **UserGroupMap.XML** file. There may be more than one **Manifest.XML** file (which can be identified using different file names to uniquely identify them), and all are found by the import pipeline through references within the **SystemData.XML** file’s ManifestFile entries.
 
-The main requirements for **Manifest.XML** to be possible to successfully import through the pipeline is that the Web Id and Document Library ID/List ID be consistent with the target location. If a Web ID is used which doesn’t match the target location, errors will occur because the parent web for the import operation cannot be found.
+The main requirements for **Manifest.XML** to be able to successfully import through the pipeline is that the Web Id and Document Library ID/List ID be consistent with the target location. If a Web ID is used which doesn’t match the target location, errors will occur because the parent web for the import operation cannot be found.
 
 Likewise, an incorrect Document Library ID/List ID will prevent the importation into the target Document Library or List. IDs should never be reused within the same site collection, so same packages should not be imported to the same target site collection regardless of the destination web.
 
-For individual files and folders within the document library or list, their identifiers should be consistent between import events to the same location. Specifically, performing an import of a package generated form a file share would initially require generating new GUIDs for each file and folder, along with matching GUIDs for the list items that represent them. Therefore, performing a second import against the same target using the same package would keep the same IDs, but performing a second import against the same target using a new package for the same content would result in ID conflicts and import errors for all items in conflict.
+For individual files and folders within the document library or list, their identifiers should be consistent between import events to the same location. Specifically, performing an import of a package generated from a file share would initially require generating new GUIDs for each file and folder, along with matching GUIDs for the list items that represent them. Therefore, performing a second import against the same target using the same package would keep the same IDs, but performing a second import against the same target using a new package for the same content would result in ID conflicts and import errors for all items in conflict.
 
-The initial generated package from a file share is effectively a form of record for the original generated IDs and can potentially be used as a reference for follow up package generation to prevent ID collisions when unintended, and to allow like IDs to ensure correct overwrite, deletion or move activities.
+The package generated initially from a file share is effectively a form of record for the original generated IDs and can potentially be used as a reference for follow up package generation to prevent ID collisions when unintended, and to allow like IDs to ensure correct overwrite, deletion or move activities.
 
 ### Requirements.XML
 
@@ -277,11 +277,11 @@ Example:
 
 ### Package size
 
-Even if the API support 15GB files, we recommend package sizes of up to 250 MB OR 250 items (depending which one comes first). If you have one large files larger than that recommended size limit you should send it in its own package.  The same applies to versions; each version counts against the size limit and item count. Additionally all the versions of a file should be in the same package.
+Even if the API support 15GB files, we recommend package sizes of up to 250 MB OR 250 items (depending which one comes first). If you have a file larger than that recommended size limit then you should send it in its own package.  The same applies to versions; each version counts against the size limit and item count. Additionally, all the versions of a file should be in the same package.
 
 ### File size
 
-Currently the import pipeline supports individual files of **15 GB** maximum size.
+Currently, the import pipeline supports individual files of **15 GB** maximum size.
 
 ### Only un-compressed packages are supported
 
