@@ -58,7 +58,5 @@ $ctx.ExecuteQuery()
  $ctx.ExecuteQuery()
 
 Write-Host "New Expiration: $($user.Expiration)"
-
-
 ```
 
