@@ -15,7 +15,7 @@ You can use the SharePoint Framework (starting from v.1.4.1) to consume Microsof
 In this article, you'll learn how to create a SharePoint Framework solution that uses the Microsoft Graph API with a custom set of permissions. For a conceptual overview of this technology, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 > [!IMPORTANT]
-> You can consume the Microsoft Graph API with versions of SharePoint Framework earlier than v.1.4.1, either via the native __graphHttpClient__, or via a manual [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) implicit OAuth flow. However, the former approach is bound to a predefined set of permissions, which presents some limitations, and the latter is complex from a development perspective. For details about how to implement an implicit OAuth flow, see [Connect to APIs secured with Azure Active Directory](./web-parts/guidance/connect-to-api-secured-with-aad.md).
+> You can consume the Microsoft Graph API with versions of SharePoint Framework earlier than v.1.4.1, either via the native **graphHttpClient**, or via a manual [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) implicit OAuth flow. However, the former approach is bound to a predefined set of permissions, which presents some limitations, and the latter is complex from a development perspective. For details about how to implement an implicit OAuth flow, see [Connect to APIs secured with Azure Active Directory](./web-parts/guidance/connect-to-api-secured-with-aad.md).
 
 <a name="SolutionOverview"></a>
 
@@ -25,7 +25,7 @@ The steps in this article show you how to build a client-side web part that enab
 
 ![A client-side web part that has a text box and search button for searching for users within a tenant](../images/use-aad-tutorial-video.gif)
 
-The client-side web part enables searching for users based on their name, and provides all the matching users through a __DetailsList__ Office UI Fabric component. The web part has an option in the property pane to choose how to access Microsoft Graph. In versions of the SharePoint Framework starting with v.1.4.1, you can access Microsoft Graph by using either the native graph client (__MSGraphClient__), or the low-level type used to access any Azure AD-secured REST API (__AadHttpClient__).
+The client-side web part enables searching for users based on their name, and provides all the matching users through a **DetailsList** Office UI Fabric component. The web part has an option in the property pane to choose how to access Microsoft Graph. In versions of the SharePoint Framework starting with v.1.4.1, you can access Microsoft Graph by using either the native graph client (**MSGraphClient**), or the low-level type used to access any Azure AD-secured REST API (**AadHttpClient**).
 
 > [!NOTE]
 > To get the source code for this solution, see the [api-scopes](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/api-scopes) GitHub repo.
@@ -54,12 +54,12 @@ Next, create a new SharePoint Framework solution:
 
 1. In your solution, do the following:
 
-   - Provide a name for the solution (for example __spfx-api-scopes-tutorial__).
-   - Target the solution for __SharePoint Online only (latest)__.
+   - Provide a name for the solution (for example **spfx-api-scopes-tutorial**).
+   - Target the solution for **SharePoint Online only (latest)**.
    - Use the current folder.
    - Decide whether you want to globally deploy the solution to the target tenant.
    - Choose to create a web part.
-   - Call the web part __GraphConsumer__.
+   - Call the web part **GraphConsumer**.
    - Provide a description.
    - Choose to use React as the development framework.
 
@@ -81,8 +81,8 @@ Next, configure the initial elements of the client-side web part.
 
 ### Configure the custom properties
 
-1.  Create a new source code file under the _src/webparts/graphConsumer/components_ folder of the solution.
-    Call the new file __ClientMode.ts__ and use it to declare a TypeScript `enum` with the available options for the __ClientMode__ property of the web part.
+1.  Create a new source code file under the *src/webparts/graphConsumer/components* folder of the solution.
+    Call the new file **ClientMode.ts** and use it to declare a TypeScript `enum` with the available options for the **ClientMode** property of the web part.
 
         ```typescript
         export enum ClientMode {
@@ -91,8 +91,8 @@ Next, configure the initial elements of the client-side web part.
         }
         ```
 
-1.  Open the _GraphConsumerWebPart.ts_ file in the _src/webparts/graphConsumer_ folder of the solution.
-    Change the definition of the __IGraphConsumerWebPartProps__ interface to accept a value of type __ClientMode__.
+1.  Open the *GraphConsumerWebPart.ts* file in the *src/webparts/graphConsumer* folder of the solution.
+    Change the definition of the **IGraphConsumerWebPartProps** interface to accept a value of type **ClientMode**.
 
         ```typescript
         export interface IGraphConsumerWebPartProps {
@@ -100,7 +100,7 @@ Next, configure the initial elements of the client-side web part.
         }
         ```
 
-1.  Update the __getPropertyPaneConfiguration()__ method of the client-side web part to support the choice selection in the property pane. The following example shows the new implementation of the method.
+1.  Update the **getPropertyPaneConfiguration()** method of the client-side web part to support the choice selection in the property pane. The following example shows the new implementation of the method.
 
     ```typescript
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -130,7 +130,7 @@ Next, configure the initial elements of the client-side web part.
     }
     ```
 
-1.  In addition, you need to update the __render__ method of the client-side web part to create a properly configured instance of the React component for rendering. The following code shows the updated method definition.
+1.  In addition, you need to update the **render** method of the client-side web part to create a properly configured instance of the React component for rendering. The following code shows the updated method definition.
 
     ```typescript
     public render(): void {
@@ -146,7 +146,7 @@ Next, configure the initial elements of the client-side web part.
     }
     ```
 
-1.  For this code to work, you need to add some import statements at the beginning of the _GraphConsumerWebPart.ts_ file, as shown in the following example. Note the import for the __PropertyPaneChoiceGroup__ control, as well as the import of the __ClientMode__ enum.
+1.  For this code to work, you need to add some import statements at the beginning of the *GraphConsumerWebPart.ts* file, as shown in the following example. Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
 
     ```typescript
     import * as React from "react";
@@ -168,7 +168,7 @@ Next, configure the initial elements of the client-side web part.
 
 ### Update the resource strings
 
-To compile the solution, you need to update the _mystrings.d.ts_ file under the _src/webparts/graphConsumer/loc_ folder of the solution.
+To compile the solution, you need to update the *mystrings.d.ts* file under the *src/webparts/graphConsumer/loc* folder of the solution.
 
 1. Rewrite the interface that defines the resource strings with the following code.
 
@@ -182,7 +182,7 @@ To compile the solution, you need to update the _mystrings.d.ts_ file under the 
    }
    ```
 
-1. Configure proper values for the newly created resource strings by updating the _en-us.js_ file within the same folder.
+1. Configure proper values for the newly created resource strings by updating the *en-us.js* file within the same folder.
 
    ```typescript
    define([], function () {
@@ -202,7 +202,7 @@ To compile the solution, you need to update the _mystrings.d.ts_ file under the 
 
 You also need to update the SCSS style file.
 
-Open the _GraphConsumer.module.scss_ under the _src/webparts/graphConsumer/components_ folder of the solution. Add the following style classes, right after the __.title__ class:
+Open the *GraphConsumer.module.scss* under the *src/webparts/graphConsumer/components* folder of the solution. Add the following style classes, right after the **.title** class:
 
 ```scss
 .form {
@@ -219,9 +219,9 @@ label {
 
 ### Update the React component rendering the web part
 
-Now you can update the __GraphConsumer__ React component under the _src/webparts/graphConsumer/components_ folder of the solution.
+Now you can update the **GraphConsumer** React component under the *src/webparts/graphConsumer/components* folder of the solution.
 
-1. Update the _IGraphConsumerProps.ts_ file to accept the custom properties required by the web part implementation. The following example shows the updated content of the _IGraphConsumerProps.ts_ file. Notice the import of the __ClientMode__ enum definition, as well as the import of the __WebPartContext__ type. You will use that later.
+1. Update the *IGraphConsumerProps.ts* file to accept the custom properties required by the web part implementation. The following example shows the updated content of the *IGraphConsumerProps.ts* file. Notice the import of the **ClientMode** enum definition, as well as the import of the **WebPartContext** type. You will use that later.
 
    ```typescript
    import { WebPartContext } from "@microsoft/sp-webpart-base";
@@ -233,7 +233,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
    }
    ```
 
-1. Create a new interface to hold the React component state. Create a new file in the _src/webparts/graphConsumer/components_ folder, and call it _IGraphConsumerState.ts_. The following is the interface definition.
+1. Create a new interface to hold the React component state. Create a new file in the *src/webparts/graphConsumer/components* folder, and call it *IGraphConsumerState.ts*. The following is the interface definition.
 
    ```typescript
    import { IUserItem } from "./IUserItem";
@@ -244,7 +244,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
    }
    ```
 
-1. Define the __IUserItem__ interface (within a file called _IUserItem.ts_ stored in the _src/webparts/graphConsumer/components_ folder). That interface is imported in the state file. The interface is used to define the outline of the users retrieved from the current tenant and bound to the __DetailsList__ in the UI.
+1. Define the **IUserItem** interface (within a file called *IUserItem.ts* stored in the *src/webparts/graphConsumer/components* folder). That interface is imported in the state file. The interface is used to define the outline of the users retrieved from the current tenant and bound to the **DetailsList** in the UI.
 
    ```typescript
    export interface IUserItem {
@@ -254,7 +254,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
    }
    ```
 
-1. Update the _GraphConsumer.tsx_ file. First, add some import statements to import the types you defined earlier. Notice the import for __IGraphConsumerProps__, __IGraphConsumerState__, __ClientMode__, and __IUserItem__. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
+1. Update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier. Notice the import for **IGraphConsumerProps**, **IGraphConsumerState**, **ClientMode**, and **IUserItem**. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
 
    ```typescript
    import * as strings from "GraphConsumerWebPartStrings";
@@ -280,7 +280,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
    import { IUserItem } from "./IUserItem";
    ```
 
-1. After the imports, define the outline of the columns for the __DetailsList__ component of Office UI Fabric.
+1. After the imports, define the outline of the columns for the **DetailsList** component of Office UI Fabric.
 
    ```typescript
    // Configure the columns for the DetailsList component
@@ -312,7 +312,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
    ];
    ```
 
-   This array is used in the settings of the __DetailsList__ component, as you can see in the __render()__ method of the React component.
+   This array is used in the settings of the **DetailsList** component, as you can see in the **render()** method of the React component.
 
 1. Replace this component with the following code.
 
@@ -379,7 +379,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
      }
    ```
 
-   There are some validation rules and handling events for the __TextField__ component to collect the search criteria. The following are the method implementations.
+   There are some validation rules and handling events for the **TextField** component to collect the search criteria. The following are the method implementations.
 
    Add these two methods to the end of the `GraphConsumer` class:
 
@@ -400,7 +400,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
    }
    ```
 
-   The __PrimaryButton__ fires a __\_search()__ function, which determines what client technology to use to consume Microsoft Graph. Add this method to the end of the `GraphConsumer` class:
+   The **PrimaryButton** fires a **\_search()** function, which determines what client technology to use to consume Microsoft Graph. Add this method to the end of the `GraphConsumer` class:
 
    ```typescript
    private _search = (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement | HTMLDivElement | BaseButton | Button, MouseEvent>) : void => {
@@ -419,7 +419,7 @@ Now you can update the __GraphConsumer__ React component under the _src/webparts
    }
    ```
 
-The __DetailsList__ component instance is rendered in the __render()__ method, in case there are items in the __users__ property of the component's state.
+The **DetailsList** component instance is rendered in the **render()** method, in case there are items in the **users** property of the component's state.
 
 <a name="ConfiguringApiPermissions"></a>
 
@@ -427,9 +427,9 @@ The __DetailsList__ component instance is rendered in the __render()__ method, i
 
 To consume Microsoft Graph or any other third-party REST API, you need to explicitly declare the permission requirements from an OAuth perspective in the manifest of your solution.
 
-In the SharePoint Framework v.1.4.1 or later, you can do that by configuring the __webApiPermissionRequests__ property in the _package-solution.json_ under the _config_ folder of the solution. The following example shows an excerpt of that file for the current solution.
+In the SharePoint Framework v.1.4.1 or later, you can do that by configuring the **webApiPermissionRequests** property in the *package-solution.json* under the *config* folder of the solution. The following example shows an excerpt of that file for the current solution.
 
-Copy the declaration of the __webApiPermissionRequests__ property.
+Copy the declaration of the **webApiPermissionRequests** property.
 
 ```json
 {
@@ -453,18 +453,18 @@ Copy the declaration of the __webApiPermissionRequests__ property.
 }
 ```
 
-Notice the __webApiPermissionRequests__, which is an array of __webApiPermissionRequest__ items. Each item defines the _resource_ and the _scope_ of the permission request.
+Notice the **webApiPermissionRequests**, which is an array of **webApiPermissionRequest** items. Each item defines the *resource* and the *scope* of the permission request.
 
-The _resource_ can be the name or the ObjectId (in Azure AD) of the resource for which you want to configure the permission request. For Microsoft Graph, the name is __Microsoft Graph__. The ObjectId is not unique and varies on a per tenant basis.
+The *resource* can be the name or the ObjectId (in Azure AD) of the resource for which you want to configure the permission request. For Microsoft Graph, the name is **Microsoft Graph**. The ObjectId is not unique and varies on a per tenant basis.
 
-The _scope_ can be the name of the permission, or the unique ID of that permission. You can get the permission name from the API documentation. You can get the permission ID from the API manifest file.
+The *scope* can be the name of the permission, or the unique ID of that permission. You can get the permission name from the API documentation. You can get the permission ID from the API manifest file.
 
 > [!NOTE]
 > For a list of the permissions that are available in Microsoft Graph, see [Microsoft Graph permissions reference](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
 >
 > By default, the service principal has no explicit permissions granted to access Microsoft Graph. However, if you request an access token for Microsoft Graph, you get a token with the `user_impersonation` permission that you can use to read information about the users (User.Read.All). You can request additional permissions to be granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
-The User.ReadBasic.All permission is sufficient for searching for users and getting their __displayName__, __mail__, and __userPrincipalName__.
+The User.ReadBasic.All permission is sufficient for searching for users and getting their **displayName**, **mail**, and **userPrincipalName**.
 
 When you package and deploy your solution, you (or an admin) will have to grant the requested permissions to your solution. For details, see [Deploy the solution and grant permissions](#DeploymentAndPermissionsGrant).
 
@@ -474,28 +474,28 @@ When you package and deploy your solution, you (or an admin) will have to grant 
 
 You can now implement the methods to consume the Microsoft Graph. You have two options:
 
-- Use the __AadHttpClient__ client object
-- Use the __MSGraphClient__ client object
+- Use the **AadHttpClient** client object
+- Use the **MSGraphClient** client object
 
-The __AadHttpClient__ client object is useful for consuming any REST API. You can use it to consume Microsoft Graph or any other third-party (or first-party) REST API.
+The **AadHttpClient** client object is useful for consuming any REST API. You can use it to consume Microsoft Graph or any other third-party (or first-party) REST API.
 
-The __MSGraphClient__ client object can consume the Microsoft Graph only. Internally it uses the __AadHttpClient__ client object and supports the fluent syntax of the Microsoft Graph SDK.
+The **MSGraphClient** client object can consume the Microsoft Graph only. Internally it uses the **AadHttpClient** client object and supports the fluent syntax of the Microsoft Graph SDK.
 
 <a name="AadHttpClient"></a>
 
 ### Using AadHttpClient
 
-To consume any REST API using the __AadHttpClient__ client object, create a new instance of the __AadHttpClient__ type by calling the `context.aadHttpClientFactory.getClient()` method and providing the URI of the target service.
+To consume any REST API using the **AadHttpClient** client object, create a new instance of the **AadHttpClient** type by calling the `context.aadHttpClientFactory.getClient()` method and providing the URI of the target service.
 
 The object created provides methods to make the following requests:
 
-- __get__: makes an HTTP GET request
-- __post__: makes an HTTP POST request
-- __fetch__: makes any other kind of HTTP request, based on the _HttpClientConfiguration_ and _IHttpClientOptions_ arguments provided.
+- **get**: makes an HTTP GET request
+- **post**: makes an HTTP POST request
+- **fetch**: makes any other kind of HTTP request, based on the *HttpClientConfiguration* and *IHttpClientOptions* arguments provided.
 
 Because all these methods support the asynchronous development model of JavaScript/TypeScript, you can handle their result with promises.
 
-The following example shows the __\_searchWithAad()__ method of the sample solution.
+The following example shows the **\_searchWithAad()** method of the sample solution.
 
 ```typescript
 private _searchWithAad = (): void => {
@@ -546,15 +546,15 @@ private _searchWithAad = (): void => {
 }
 ```
 
-The __get()__ method gets the URL of the OData request as the input argument. A successful request returns a JSON object with the response.
+The **get()** method gets the URL of the OData request as the input argument. A successful request returns a JSON object with the response.
 
 <a name="MSGraphClient"></a>
 
 ### Using MSGraphClient
 
-If you are targeting Microsoft Graph, you can use the __MSGraphClient__ client object, which provides a more fluent syntax.
+If you are targeting Microsoft Graph, you can use the **MSGraphClient** client object, which provides a more fluent syntax.
 
-The following example shows the implementation of the __\_searchWithGraph()__ method of the sample solution.
+The following example shows the implementation of the **\_searchWithGraph()** method of the sample solution.
 
 ```typescript
 private _searchWithGraph = () : void => {
@@ -601,7 +601,7 @@ private _searchWithGraph = () : void => {
 }
 ```
 
-You get an instance of the __MSGraphClient__ type by calling the `context.msGraphClientFactory.getClient()` method.
+You get an instance of the **MSGraphClient** type by calling the `context.msGraphClientFactory.getClient()` method.
 
 You then use the fluent API of the Microsoft Graph SDK to define the OData query that runs against the target Microsoft Graph endpoint.
 
@@ -629,17 +629,17 @@ You're now ready to build, bundle, package, and deploy the solution.
    gulp package-solution
    ```
 
-1. Browse to the app catalog of your target tenant and upload the solution package. You can find the solution package under the _sharepoint/solution_ folder of your solution. It is the .sppkg file. After you upload the solution package, the app catalog prompts you with a dialog box, similar to the one shown in the following screenshot.
+1. Browse to the app catalog of your target tenant and upload the solution package. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file. After you upload the solution package, the app catalog prompts you with a dialog box, similar to the one shown in the following screenshot.
 
    ![Screenshot of the app catalog UI when uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
 
-   A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the __webApiPermissionRequests__ property in the _package-solution.json_ file.
+   A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the **webApiPermissionRequests** property in the *package-solution.json* file.
 
-1. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, choose __Try the preview__.
+1. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, choose **Try the preview**.
 
    ![Screenshot of the Try the new SharePoint admin center link](../images/use-aadhttpclient-enterpriseapi-grant-trypreview.png)
 
-1. In the new Admin Center, in the left quick launch menu, choose the __API management__ menu item. You will see a page similar to the following.
+1. In the new Admin Center, in the left quick launch menu, choose the **API management** menu item. You will see a page similar to the following.
 
    ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
@@ -648,14 +648,14 @@ You're now ready to build, bundle, package, and deploy the solution.
    > [!NOTE]
    > For more information about how the tenant-level permission scopes work internally, see the articles in the [See also](#SeeAlso) section.
 
-1. Choose the permission that you requested in the _package-solution.json_ file of your solution, choose __Approve or reject access__, and then choose __Approve__. The following screenshot shows the panel in the Admin UI.
+1. Choose the permission that you requested in the *package-solution.json* file of your solution, choose **Approve or reject access**, and then choose **Approve**. The following screenshot shows the panel in the Admin UI.
 
    ![Screenshot of the WebApiPermission management page during the approval process](../images/use-aadhttpclient-enterpriseapi-grant-approve.png)
 
 And you're now ready to go.
 
 > [!WARNING]
-> If you are getting an unexpected exception when trying to approve the permission (`[HTTP]:400 - [CorrelationId]`), update the `resource` attribute in your _package-solution.json_ to use the value `Microsoft.Azure.AgregatorService` rather than `Microsoft Graph`, which was instructed earlier in this tutorial. Reject the existing request and update the solution package in the app catalog with the update value.
+> If you are getting an unexpected exception when trying to approve the permission (`[HTTP]:400 - [CorrelationId]`), update the `resource` attribute in your *package-solution.json* to use the value `Microsoft.Azure.AgregatorService` rather than `Microsoft Graph`, which was instructed earlier in this tutorial. Reject the existing request and update the solution package in the app catalog with the update value.
 
 <a name="SolutionTesting"></a>
 
@@ -673,7 +673,7 @@ And you're now ready to go.
    https://<your-tenant>.sharepoint.com/_layouts/15/Workbench.aspx
    ```
 
-1. Add the _GraphConsumer_ client-side web part, configure the _Client Mode_, and search for users.
+1. Add the *GraphConsumer* client-side web part, configure the *Client Mode*, and search for users.
 
    When you make your first request, you will see a pop-up window appear and disappear. That's the sign-in window used by ADAL JS, which is used internally by the SharePoint Framework to get the access token from Azure AD by using an OAuth implicit flow.
 
