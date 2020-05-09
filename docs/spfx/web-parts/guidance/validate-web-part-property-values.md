@@ -287,34 +287,29 @@ In this step, you validate the provided list name and check if it corresponds to
   export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
     // ...
 
-    private validateListName(value: string): Promise<string> {
-      return new Promise<string>((resolve: (validationErrorMessage: string) => void, reject: (error: any) => void): void => {
-        if (value === null ||
-          value.length === 0) {
-          resolve('Provide the list name');
-          return;
-        }
-
-        this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getByTitle('${escape(value)}')?$select=Id`, SPHttpClient.configurations.v1)
-          .then((response: SPHttpClientResponse): void => {
-            if (response.ok) {
-              resolve('');
-              return;
-            }
-            else if (response.status === 404) {
-              resolve(`List '${escape(value)}' doesn't exist in the current site`);
-              return;
-            }
-            else {
-              resolve(`Error: ${response.statusText}. Please try again`);
-              return;
-            }
-          })
-          .catch((error: any): void => {
-            resolve(error);
-          });
-      });
+   private async validateListName(value: string): Promise<string> {
+    if (value === null || value.length === 0) {
+      return "Provide the list name";
     }
+
+    try {
+      let response = await this.context.spHttpClient.get(
+        this.context.pageContext.web.absoluteUrl +
+          `/_api/web/lists/getByTitle('${escape(value)}')?$select=Id`,
+        SPHttpClient.configurations.v1
+      );
+
+      if (response.ok) {
+        return "";
+      } else if (response.status === 404) {
+        return `List '${escape(value)}' doesn't exist in the current site`;
+      } else {
+        return `Error: ${response.statusText}. Please try again`;
+      }
+    } catch (error) {
+      return error.message;
+    }
+  }
   }
   ```
 
