@@ -17,43 +17,43 @@ The first step you need to do is create an Azure Function App, which is a specia
 
 1. Navigate to [https://portal.azure.com](https://portal.azure.com), search for **function app**.  Select **Function App** from the search results.
 
-    ![Creating an Azure Function App](../../images/webhook-azure-function-2020-03-30-01.png)
+    ![Creating an Azure Function App](../../images/webhook-azure-function00.png)
 
 1. Click the **Add** option.
 
-    ![Add Azure Function App](../../images/webhook-azure-function-2020-03-30-02.png)
+    ![Add Azure Function App](../../images/webhook-azure-function01.png)
 
 1. Complete the information needed to create the Function App, then click **Review + create**.
 
-    ![Fill in Azure Function App details](../../images/webhook-azure-function-2020-03-30-03.png)
+    ![Fill in Azure Function App details](../../images/webhook-azure-function08.png)
 
 1. Click **Create**
 
-    ![Azure Function App Confirmation Page](../../images/webhook-azure-function-2020-03-30-04.png)
+    ![Azure Function App Confirmation Page](../../images/webhook-azure-function09.png)
 
 1. Once your deployment is completed click **Go to resource**.
 
-    ![Azure Function App Completed Page](../../images/webhook-azure-function-2020-03-30-05.png)
+    ![Azure Function App Completed Page](../../images/webhook-azure-function10.png)
 
 ## Create an Azure Function
 
 Now that the app to host the functions is ready, you can continue with creating your first Azure Function by clicking the **New function** link.
 
-![Azure Function App Landing Page](../../images/webhook-azure-function-2020-03-30-06.png)
+![Azure Function App Landing Page](../../images/webhook-azure-function02.png)
 
 This offers you to start your function from a template; in the case of SharePoint webhooks, we need an HTTP triggered function, and because we are writing C# code in our sample, this means we're using the **HttpTrigger-CSharp** function template.
 
 1. Select the **In-portal** development environment option then click **Continue**.
 
-    ![Select Development Environment Page](../../images/webhook-azure-function-2020-03-30-07.png)
+    ![Select Development Environment Page](../../images/webhook-azure-function03.png)
 
 1. Select **Webhook + API** trigger type then click **Create**.
 
-    ![Select Trigger Type Page](../../images/webhook-azure-function-2020-03-30-08.png)
+    ![Select Trigger Type Page](../../images/webhook-azure-function11.png)
 
     The result is a "default" Azure Function written in C#.
 
-    ![Development Environment Page Showing Default C# Code](../../images/webhook-azure-function-2020-03-30-09.png)
+    ![Development Environment Page Showing Default C# Code](../../images/webhook-azure-function04.png)
 
 In our case, we want this Azure Function to behave as a SharePoint webhook service, so we need to implement the following in C#:
 
@@ -168,15 +168,15 @@ Because we've chosen the correct template to start from, our configuration is al
 
 1. Select **Integrate** and then **New Output** to add the output binding.
 
-    ![Azure Function Integration Settings](../../images/webhook-azure-function-2020-03-30-10.png)
+    ![Azure Function Integration Settings](../../images/webhook-azure-function12.png)
 
 1. Select **Azure Queue Storage** as the binding type and then click **Select**.
 
-    ![Azure Function Binding Selection](../../images/webhook-azure-function-2020-03-30-11.png)
+    ![Azure Function Binding Selection](../../images/webhook-azure-function13.png)
 
 1. Click **Save**.
 
-    ![Azure Function Azure Queue Storage Settings](../../images/webhook-azure-function-2020-03-30-12.png)
+    ![Azure Function Azure Queue Storage Settings](../../images/webhook-azure-function05.png)
 
 ## Test your Azure Function (Validation Token Test)
 
@@ -184,7 +184,7 @@ You're now all set for your first Azure Function test.
 
 1. Navigate back to the code screen by clicking on the name of the function **HttpTrigger1** in the navigation panel.  Then click the **Test** tab to open the test panel on the right.
 
-    ![Navigate To Azure Function Test Panel](../../images/webhook-azure-function-2020-03-30-13.png)
+    ![Navigate To Azure Function Test Panel](../../images/webhook-azure-function14.png)
 
 1. Add a URL parameter **validationtoken** with a random string as value.
 
@@ -192,17 +192,17 @@ Using this setup, we're mimicking the behavior of SharePoint by calling your web
 
 Click **Run** to test...
 
-![Set Up Azure Function validationToken Test](../../images/webhook-azure-function-2020-03-30-14.png)
+![Set Up Azure Function validationToken Test](../../images/webhook-azure-function15.png)
 
 If everything goes well, you'll see in the logs section that your service was called and that it returned the passed value with an HTTP 200 response.
 
-![validationToken Test Results](../../images/webhook-azure-function-2020-03-30-15.png)
+![validationToken Test Results](../../images/webhook-azure-function16.png)
 
 ## Test your Azure Function (SharePoint List Event Test)
 
 Now for the second test.  This will test your function as if it was called by a SharePoint list event.
 
-1. In the Test panel, clear the validationtoken URL parameter and replace the Request body with the following JSON object.  Then click **Run**.
+1. In the Test panel, clear the **validationtoken** URL parameter and replace the Request body with the following JSON object.  Then click **Run**.
 
 ```Json
 {
@@ -218,7 +218,7 @@ Now for the second test.  This will test your function as if it was called by a 
 
 If everything is OK, you should see all the log messages including the one that indicates that the message was added to the queue.
 
-![Webhook Notification Test Results](../../images/webhook-azure-function-2020-03-30-16.png)
+![Webhook Notification Test Results](../../images/webhook-azure-function17.png)
 
 ## Grab the webhook URL to use in your implementation
 
@@ -226,11 +226,11 @@ We'll need to let SharePoint know what webhook URL we're using. To do so, let's 
 
 1. Click **Get function URL**.
 
-    ![Get Function URL Link](../../images/webhook-azure-function-2020-03-30-17.png)
+    ![Get Function URL Link](../../images/webhook-azure-function07.png)
 
 1. Click **Copy** to copy the Azure Function App URL to your clipboard.
 
-    ![Get Function URL Link](../../images/webhook-azure-function-2020-03-30-18.png)
+    ![Get Function URL Link](../../images/webhook-azure-function18.png)
 
 So in our case the webhook URL to use is the following:
 
