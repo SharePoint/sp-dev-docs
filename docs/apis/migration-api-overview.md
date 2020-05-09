@@ -1,5 +1,6 @@
 ---
 title: "SharePoint Online Import Migration API"
+ms.date: 05/08/2020
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
@@ -16,8 +17,8 @@ The following API description is based upon use of the SharePoint Client Side Ob
 > [!NOTE]
 > You can find latest version of the SharePoint Online Client Side Object Model from [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/).
 
->[!NOTE]
->The **SharePoint Migration Tool** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
+> [!NOTE]
+> The **SharePoint Migration Tool** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
 
 ## Methods
 
@@ -80,8 +81,9 @@ All files in the container must have at least a single snapshot applied to them 
 
 The valid URL including SAS token for accessing the user provided Azure Queue used for returning notifications of migration job progress. This value can be null if no notification queue will be used during the import. If this value is not null and proper access is granted in the SAS token in this URI, it will be used for real time status update. The SAS token must have been created with only Add, Read and Update permissions or the migration job will be unable to add events to the queue. The required permissions are as follows in the Azure Storage API:
 
-    (SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read | SharedAccessQueuePermissions.Update)
-
+```
+(SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read | SharedAccessQueuePermissions.Update)
+```
 Once accepted, the job ID will be written to the notification queue if it was provided and access is valid. The notification queue can be used for multiple migration jobs at the same time, as each job will identify itself in values sent back to the notification queue.
 
 #### Return values
@@ -92,10 +94,10 @@ The unique identifier for the migration job is returned if the job is successful
 
 ```csharp
 Guid MigrationJobId = TargetSite.CreateMigrationJob(
-	TargetWebId,
-	azureContainerSourceUri,
-	azureContainerManifestUri,
-	azureQueueReportUri);
+  TargetWebId,
+  azureContainerSourceUri,
+  azureContainerManifestUri,
+  azureQueueReportUri);
 ```
 
 ### GetMigrationJobStatus
@@ -124,7 +126,7 @@ The migration job status is returned using a SPMigrationJobState object if the j
 ```csharp
 SPMigrationJobState CurrentJobState = TargetSite.GetMigrationJobStatus(MigrationJobId);
 ```
- 
+
 ## Enumerations
 
 ### SPMigrationJobState
@@ -133,26 +135,26 @@ SPMigrationJobState is an enumeration that tracks possible major states in the i
 
 #### Members
 
-Member name|Description
-:-----|:-----
-None|Migration job is currently unknown to the queue, either through completion and removal, or invalid job identifier. Value=0.
-Queued|Migration job is currently known by the queue and not being processed. Value=2.
-Processing|Migration job is currently known by the queue and is being actively processed. Value=4.
- 
+| Member name |                                                         Description                                                         |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| None        | Migration job is currently unknown to the queue, either through completion and removal, or invalid job identifier. Value=0. |
+| Queued      | Migration job is currently known by the queue and not being processed. Value=2.                                             |
+| Processing  | Migration job is currently known by the queue and is being actively processed. Value=4.                                     |
+
 ## Import Package Structure
 
 Package structure is based on a constrained version of the Content Deployment package schema. Documentation for the original full schema can be found at [docs.microsoft.com](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). Until published on docs.microsoft.com, the constrained structure can be found in this document in the appendix.
 
-XML file|Schema File|Description
-:-----|:-----|:-----
-ExportSettings.XML|DeploymentExportSettings Schema |Provides validation for the ExportSettings.XML file exported into the content migration package. ExportSettings.XML does the following: <br> - Contains the export settings specified by using the SPExportSettings class and other classes that are part of the content migration object model. <br> - Ensures that the subsequent import process (at the migration target site) enforces the directives specified in the export settings. <br> - Maintains a catalog of all objects exported to the migration package.
-LookupListMap.XML|DeploymentLookupListMap Schema |Provides validation for the LookupListMap.XML file exported into the content migration package. LookupListMap.XML maintains a simple lookup list that records SharePoint list item (list item to list item) references.
-Manifest.XML|DeploymentManifest Schema|Provides validation for the Manifest.xml file that is exported into the content migration package. Provides a comprehensive manifest containing listings of both the contents and the structure of the source site. The migration operation uses the manifest file to reconstitute the source site and its components when it is imported to the destination site.
-Requirements.XML|DeploymentRequirements Schema|Provides validation for the Requirements.xml file exported into the content migration package. Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, Web Part assemblies, language packs, and so forth.
-RootObjectMap.XML|DeploymentRootObjectMap Schema|Provides validation for the RootObjectMap.xml file exported into the content migration package.RootObjectMap.xml maintains a list of mappings of secondary (dependent) objects, which allows the import phase of the migration operation to correctly place the dependent objects relative to the locations of the root object mappings.
-SystemData.XML|DeploymentSystemData Schema|Provides validation for the SystemData.xml file exported into the content migration package.SystemData.xml does the following: Collects a variety of low-level system data. Records the number and names of Manifest.xml files (in cases where the migration uses multiple manifests).
-UserGroupMap.XML|DeploymentUserGroupMap Schema|Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.
-ViewFormsList.XML|DeploymentViewFormsList Schema|Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.
+|      XML file      |           Schema File           |                                                                                                                                                                                                                                                       Description                                                                                                                                                                                                                                                        |
+| ------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ExportSettings.xml | DeploymentExportSettings Schema | Provides validation for the ExportSettings.XML file exported into the content migration package. ExportSettings.XML does the following: <br> - Contains the export settings specified by using the SPExportSettings class and other classes that are part of the content migration object model. <br> - Ensures that the subsequent import process (at the migration target site) enforces the directives specified in the export settings. <br> - Maintains a catalog of all objects exported to the migration package. |
+| LookupListMap.xml  | DeploymentLookupListMap Schema  | Provides validation for the LookupListMap.XML file exported into the content migration package. LookupListMap.XML maintains a simple lookup list that records SharePoint list item (list item to list item) references.                                                                                                                                                                                                                                                                                                  |
+| Manifest.xml       | DeploymentManifest Schema       | Provides validation for the Manifest.xml file that is exported into the content migration package. Provides a comprehensive manifest containing listings of both the contents and the structure of the source site. The migration operation uses the manifest file to reconstitute the source site and its components when it is imported to the destination site.                                                                                                                                                       |
+| Requirements.xml   | DeploymentRequirements Schema   | Provides validation for the Requirements.xml file exported into the content migration package. Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, Web Part assemblies, language packs, and so forth.                                                                                                                                                                                           |
+| RootObjectMap.xml  | DeploymentRootObjectMap Schema  | Provides validation for the RootObjectMap.xml file exported into the content migration package.RootObjectMap.xml maintains a list of mappings of secondary (dependent) objects, which allows the import phase of the migration operation to correctly place the dependent objects relative to the locations of the root object mappings.                                                                                                                                                                                 |
+| SystemData.xml     | DeploymentSystemData Schema     | Provides validation for the SystemData.xml file exported into the content migration package.SystemData.xml does the following: Collects a variety of low-level system data. Records the number and names of Manifest.xml files (in cases where the migration uses multiple manifests).                                                                                                                                                                                                                                   |
+| UserGroupMap.xml   | DeploymentUserGroupMap Schema   | Provides validation for the UserGroup.xml file exported into the content migration package. UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.                                                                                                                                                                                                                                                                                                            |
+| ViewFormsList.xml  | DeploymentViewFormsList Schema  | Provides validation for the ViewFormsList.xml file exported into the content migration package.ViewFormsList.xml maintains a list of Web Parts and tracks whether each is a view or form.                                                                                                                                                                                                                                                                                                                                |
 
 ### Content structure
 
@@ -253,9 +255,9 @@ Since the MD5 is generated at the source instead of at the upload time in Azure,
 
 The Migration API requires the Azure Container for content passing and also for log and queue reporting. It can be split down as a summary as follows:<br>
 
-     Content      | Manifest
-:---------------- | :--------
-Files and folders | XML files
+|      Content      | Manifest  |
+| ----------------- | --------- |
+| Files and folders | XML files |
 
 There are two new optional parameters in manifest.xml:
 
@@ -338,13 +340,13 @@ If the migration API was unable to resolve a user using the login provided in th
 
 ### Acronyms Defined
 
-Acronym |                        Definition
-:------ | :--------------------------------------------------------
-BOT     | SharePoint server running timer jobs
-CDB     | Content database, containing site collections and content
-CFE     | Content farm front end server
-SPO     | SharePoint Online
-ABS     | Azure Blob Storage
+| Acronym |                        Definition                         |
+| ------- | --------------------------------------------------------- |
+| BOT     | SharePoint server running timer jobs                      |
+| CDB     | Content database, containing site collections and content |
+| CFE     | Content farm front end server                             |
+| SPO     | SharePoint Online                                         |
+| ABS     | Azure Blob Storage                                        |
 
 ### Helpful Resources
 
@@ -440,113 +442,107 @@ Included below are the XSD files used for package validation in the import pipel
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema
-	targetNamespace="urn:deployment-exportsettings-schema"
-	elementFormDefault="qualified"
-	xmlns="urn:deployment-exportsettings-schema"
-	xmlns:mstns="urn:deployment-exportsettings-schema"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema targetNamespace="urn:deployment-exportsettings-schema" elementFormDefault="qualified" 
+  xmlns="urn:deployment-exportsettings-schema" 
+  xmlns:mstns="urn:deployment-exportsettings-schema" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<!-- Guid SimpleType definition -->
-	<xs:simpleType name="Guid">
-		<xs:restriction base="xs:string"></xs:restriction>
-	</xs:simpleType>
+  <!-- Guid SimpleType definition -->
+  <xs:simpleType name="Guid">
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
 
-	<!-- Used for SPExportObjects -->
-	<xs:simpleType name="SPDeploymentObjectType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Folder" />
-			<xs:enumeration value="List" />
-			<xs:enumeration value="ListItem" />
-			<xs:enumeration value="File" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- Used for SPExportObjects -->
+  <xs:simpleType name="SPDeploymentObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Folder" />
+      <xs:enumeration value="List" />
+      <xs:enumeration value="ListItem" />
+      <xs:enumeration value="File" />
+    </xs:restriction>
+  </xs:simpleType>
 
-	<!-- Used for SPExportObjects -->
-	<xs:simpleType name="SPIncludeDescendants">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="None" />
-			<xs:enumeration value="Content" />
-			<xs:enumeration value="All" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- Used for SPExportObjects -->
+  <xs:simpleType name="SPIncludeDescendants">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Content" />
+      <xs:enumeration value="All" />
+    </xs:restriction>
+  </xs:simpleType>
 
-	<!-- From SPDeploymentSettings -->
-	<xs:simpleType name="SPIncludeSecurity">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="None" />
-			<xs:enumeration value="WssOnly" />
-			<xs:enumeration value="All" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- From SPDeploymentSettings -->
+  <xs:simpleType name="SPIncludeSecurity">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="WssOnly" />
+      <xs:enumeration value="All" />
+    </xs:restriction>
+  </xs:simpleType>
 
-	<!-- From SPExportSettings -->
-	<xs:simpleType name="SPIncludeVersions">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="LastMajor" />
-			<xs:enumeration value="CurrentVersion" />
-			<xs:enumeration value="LastMajorAndMinor" />
-			<xs:enumeration value="All" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- From SPExportSettings -->
+  <xs:simpleType name="SPIncludeVersions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LastMajor" />
+      <xs:enumeration value="CurrentVersion" />
+      <xs:enumeration value="LastMajorAndMinor" />
+      <xs:enumeration value="All" />
+    </xs:restriction>
+  </xs:simpleType>
 
-	<!-- From SPExportSettings -->
-	<xs:simpleType name="SPExportMethodType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="ExportAll" />
-			<xs:enumeration value="ExportChanges" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- From SPExportSettings -->
+  <xs:simpleType name="SPExportMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ExportAll" />
+      <xs:enumeration value="ExportChanges" />
+    </xs:restriction>
+  </xs:simpleType>
 
-	<!-- This defines that the XML can contain 0-N instances of the -->
-	<!-- SPExportObjects element -->
-	<xs:complexType name="SPExportSettings">
-		<xs:sequence>
-			<xs:element
-				name="ExportObjects" type="SPExportObjectCollection"
-				minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
+  <!-- This defines that the XML can contain 0-N instances of the -->
+  <!-- SPExportObjects element -->
+  <xs:complexType name="SPExportSettings">
+    <xs:sequence>
+      <xs:element name="ExportObjects" type="SPExportObjectCollection" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
 
-		<!-- SPDeploymentSettings -->
-		<xs:attribute name="SiteUrl" type="xs:string" use="required" />
-		<xs:attribute name="FileLocation" type="xs:string" />
-		<xs:attribute name="BaseFileName" type="xs:string" />
-		<xs:attribute name="IncludeSecurity" type="SPIncludeSecurity" />
+    <!-- SPDeploymentSettings -->
+    <xs:attribute name="SiteUrl" type="xs:string" use="required" />
+    <xs:attribute name="FileLocation" type="xs:string" />
+    <xs:attribute name="BaseFileName" type="xs:string" />
+    <xs:attribute name="IncludeSecurity" type="SPIncludeSecurity" />
 
-		<!-- SPExportSettings -->
-		<xs:attribute name="IncludeVersions" type="SPIncludeVersions" />
-		<xs:attribute name="ExportMethod" type="SPExportMethodType" />
-		<xs:attribute name="ExportChangeToken" type="xs:string" />
-		<xs:attribute name="ExportPublicSchema" type="xs:boolean" default="true" />
-		<xs:attribute name="ExportFrontEndFileStreams" type="xs:boolean" default="true" />
-		<xs:attribute name="ExcludeDependencies" type="xs:boolean" />
+    <!-- SPExportSettings -->
+    <xs:attribute name="IncludeVersions" type="SPIncludeVersions" />
+    <xs:attribute name="ExportMethod" type="SPExportMethodType" />
+    <xs:attribute name="ExportChangeToken" type="xs:string" />
+    <xs:attribute name="ExportPublicSchema" type="xs:boolean" default="true" />
+    <xs:attribute name="ExportFrontEndFileStreams" type="xs:boolean" default="true" />
+    <xs:attribute name="ExcludeDependencies" type="xs:boolean" />
 
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
 
-	<xs:complexType name="SPExportObjectCollection">
-		<xs:sequence>
-			<xs:element
-				name="DeploymentObject" type="SPExportObject"
-				minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
+  <xs:complexType name="SPExportObjectCollection">
+    <xs:sequence>
+      <xs:element name="DeploymentObject" type="SPExportObject" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
 
-	<xs:complexType name="SPExportObject">
-		<!-- SPDeploymentObject -->
-		<xs:attribute name="Id" type="Guid" />
-		<xs:attribute name="Type" type="SPDeploymentObjectType" />
-		<xs:attribute name="ParentId" type="Guid" />
+  <xs:complexType name="SPExportObject">
+    <!-- SPDeploymentObject -->
+    <xs:attribute name="Id" type="Guid" />
+    <xs:attribute name="Type" type="SPDeploymentObjectType" />
+    <xs:attribute name="ParentId" type="Guid" />
 
-		<!-- SPExportObject -->
-		<xs:attribute name="Url" type="xs:string" />
-		<xs:attribute name="ExcludeChildren" type="xs:boolean" />
-		<xs:attribute name="IncludeDescendants" type="SPIncludeDescendants" />
-		<xs:attribute name="ExportChangeToken" type="xs:string" />
-	</xs:complexType>
+    <!-- SPExportObject -->
+    <xs:attribute name="Url" type="xs:string" />
+    <xs:attribute name="ExcludeChildren" type="xs:boolean" />
+    <xs:attribute name="IncludeDescendants" type="SPIncludeDescendants" />
+    <xs:attribute name="ExportChangeToken" type="xs:string" />
+  </xs:complexType>
 
-	<!--This defines that the XML can contain 0-N instances of the ExportSettings element-->
-	<xs:element name="ExportSettings" type="SPExportSettings" />
+  <!--This defines that the XML can contain 0-N instances of the ExportSettings element-->
+  <xs:element name="ExportSettings" type="SPExportSettings" />
 </xs:schema>
 ```
 
@@ -559,791 +555,760 @@ There is no change from current published full 2013 package schema.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema
-	targetNamespace="urn:deployment-manifest-schema"
-	elementFormDefault="qualified"
-	xmlns="urn:deployment-manifest-schema"
-	xmlns:mstns="urn:deployment-manifest-schema"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-	<!-- From CoreDefinitions.xsd -->
-	<xs:simpleType name="TRUEFALSE">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="TRUE" />
-			<xs:enumeration value="FALSE" />
-			<xs:enumeration value="true" />
-			<xs:enumeration value="false" />
-	</xs:restriction>
-	</xs:simpleType>
-
-	<!-- Guid SimpleType definition -->
-	<xs:simpleType name="Guid">
-		<xs:restriction base="xs:string"></xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPGenericObjectCollection definition -->
-	<xs:complexType name="SPGenericObjectCollection">
-		<xs:sequence>
-			<xs:element name="SPObject" type="SPGenericObject" minOccurs="0"
-maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- Generic complex Type definition that wraps a Sharepoint top-level element -->
-	<xs:complexType name="SPGenericObject">
-		<xs:sequence>
-			<xs:choice minOccurs="0" maxOccurs="1">
-				<xs:element name="List" type="SPList" />
-				<xs:element name="DocumentLibrary" type="SPDocumentLibrary" />
-				<xs:element name="ListItem" type="SPListItem" />
-				<xs:element name="Folder" type="SPFolder" />
-				<xs:element name="File" type="SPFile" />
-				<xs:element name="ContentType" type="SPContentType" />
-				<xs:element name="UserX" type="DeploymentUserX" />
-				<xs:element name="GroupX" type="DeploymentGroupX" />
-				<xs:element name="Roles" type="DeploymentRoles" />
-				<xs:element name="RoleX" type="DeploymentRoleX" />
-				<xs:element name="RoleAssignments" type="DeploymentRoleAssignments" />
-				<xs:element name="RoleAssignmentX" type="DeploymentRoleAssignmentX" />
-			</xs:choice>
-		</xs:sequence>
-
-		<xs:attribute name="ObjectType" type="SPObjectType" />
-		<xs:attribute name="Id" type="Guid" />
-		<xs:attribute name="ParentId" type="Guid" />
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="IsDeleted" type="xs:boolean" />
-		<xs:attribute name="IsSiteRename" type="xs:boolean" />
-		<xs:attribute name="ParentWebId" type="Guid" />
-		<xs:attribute name="ParentWebUrl" type="xs:string" use="optional" />
-		<xs:attribute name="ContentTypeId" type="xs:string" use ="optional" />
-		<xs:attribute name="Url" type="xs:string" />
-	</xs:complexType>
-
-	<xs:simpleType name="SPDictionaryEntryValueType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="String" />
-			<xs:enumeration value="Integer" />
-			<xs:enumeration value="Time" />
-			<xs:enumeration value="StringVector" />
-			<xs:enumeration value="Boolean" />
-			<xs:enumeration value="FileSystemTime" />
-			<xs:enumeration value="IntVector" />
-			<xs:enumeration value="Double" />
-			<xs:enumeration value="LongText" />
-			<xs:enumeration value="Empty" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="SPDictionaryEntryAccess">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="ReadOnly" />
-			<xs:enumeration value="ReadWrite" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- Enumeration of all the top-level serialized Sharepoint Types -->
-	<xs:simpleType name="SPObjectType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="SPList" />
-			<xs:enumeration value="SPDocumentLibrary" />
-			<xs:enumeration value="SPListItem" />
-			<xs:enumeration value="SPFolder" />
-			<xs:enumeration value="SPFile" />
-			<xs:enumeration value="SPContentType" />
-			<xs:enumeration value="SPDocumentTemplate" />
-			<xs:enumeration value="DeploymentUserX" />
-			<xs:enumeration value="DeploymentGroupX" />
-			<xs:enumeration value="DeploymentRoles" />
-			<xs:enumeration value="DeploymentRoleX" />
-			<xs:enumeration value="DeploymentRoleAssignments" />
-			<xs:enumeration value="DeploymentRoleAssignmentX" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- Enumeration of all the non-top level serialized Sharepoint Types -->
-	<xs:simpleType name="OtherObjectType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="SPFileVersion" />
-			<xs:enumeration value="SPListEvent" />
-			<xs:enumeration value="SPListItemVersion" />
-			<xs:enumeration value="SPModerationInfo" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- DeploymentRole definition -->
-	<xs:complexType name="DeploymentRole">
-		<xs:attribute name="RoleId" type="xs:string" use="required" />
-		<xs:attribute name="Title" type="xs:string" use="required" />
-		<xs:attribute name="Description" type="xs:string" use="optional" />
-		<xs:attribute name="PermMask" type="xs:string" use="required" />
-		<xs:attribute name="Hidden" type="xs:boolean" use="required" />
-		<xs:attribute name="RoleOrder" type="xs:string" use="optional" />
-		<xs:attribute name="Type" type="xs:string" use="optional" />
-	</xs:complexType>
-
-	<!-- DeploymentRoles definition -->
-	<xs:complexType name="DeploymentRoles">
-		<xs:sequence>
-			<xs:element name="Role" type="DeploymentRole" minOccurs="0" maxOccurs="unbounded"
-/>
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- DeploymentAssignment definition -->
-	<xs:complexType name="DeploymentAssignment">
-		<xs:attribute name="RoleId" type="xs:string" use="required" />
-		<xs:attribute name="PrincipalId" type="xs:string" use="required" />
-	</xs:complexType>
-
-	<!-- DeploymentRoleAssignment Definition -->
-	<xs:complexType name="DeploymentRoleAssignment">
-		<xs:sequence>
-			<xs:element name="Assignment" type="DeploymentAssignment" minOccurs="0"
-maxOccurs="unbounded" />
-		</xs:sequence>
-
-		<xs:attribute name="ScopeId" type="xs:string" use="required" />
-		<xs:attribute name="RoleDefWebId" type="xs:string" use="required" />
-		<xs:attribute name="RoleDefWebUrl" type="xs:string" use="required" />
-		<xs:attribute name="ObjectId" type="xs:string" use="required" />
-		<xs:attribute name="ObjectType" type="xs:string" use="required" />
-		<xs:attribute name="ObjectUrl" type="xs:string" use="required" />
-		<xs:attribute name="AnonymousPermMask" type="xs:string" />
-	</xs:complexType>
-
-	<xs:complexType name="DeploymentRoleAssignments">
-		<xs:sequence>
-			<xs:element name="RoleAssignment" type="DeploymentRoleAssignment" minOccurs="0"
-maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- SPProperty definition -->
-	<xs:complexType name="DictionaryEntry">
-		<xs:attribute name="Name" type="xs:string" use="required" />
-		<xs:attribute name="Value" type="xs:string" use="optional" />
-		<xs:attribute name="Value2" type="xs:string"  use="optional" />
-		<xs:attribute name="Id" type="Guid" use="optional" />
-		<xs:attribute name="Type" type="SPDictionaryEntryValueType" default="String"
-use="optional" />
-		<xs:attribute name="Access" type="SPDictionaryEntryAccess" default="ReadWrite"
-use="optional" />
-	</xs:complexType>
-
-	<!-- Dictionary definition -->
-	<xs:complexType name="Dictionary">
-		<xs:sequence>
-			<xs:element name="Property" type="DictionaryEntry" minOccurs="0"
-maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- SPAttachment definition -->
-	<xs:complexType name="SPAttachment">
-		<xs:sequence>
-			<xs:element name="Properties" type="Dictionary" minOccurs="0" />
-		</xs:sequence>
-
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="DirName" type="xs:string" />
-		<xs:attribute name="Url" type="xs:string" />
-		<xs:attribute name="Id" type="Guid" />
-		<xs:attribute name="ParentWebId" type="Guid" />
-
-		<!-- Map to file on disk -->
-		<xs:attribute name="FileValue" type="xs:string" />
-
-		<xs:attribute name="MetaInfo" type="xs:string" use="optional" />
-
-		<xs:attribute name="Author" type="xs:string" use="optional" />
-		<xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
-		<xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
-		<xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
-
-		<!-- Case where it fails at export time but too late to ignore -->
-		<xs:attribute name="FailureMessage" type="xs:string" use="optional" />
-	</xs:complexType>
-
-	<!-- SPAttachmentCollection definition -->
-	<xs:complexType name="SPAttachmentCollection">
-		<xs:sequence>
-			<xs:element name="Attachment" type="SPAttachment" minOccurs="0"
-maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- SPLink definition -->
-	<xs:complexType name="SPLink">
-		<xs:sequence></xs:sequence>
-		<xs:attribute name="TargetId" type="Guid" use="required" />
-		<xs:attribute name="TargetUrl" type="xs:string" use="required" />
-		<xs:attribute name="IsDirty" type="xs:boolean" use="required" />
-		<xs:attribute name="WebPartId" type="Guid" use="optional" />
-		<xs:attribute name="LinkNumber" type="xs:int" use="optional" />
-		<xs:attribute name="Type" type="xs:unsignedByte" use="optional" />
-		<xs:attribute name="Security" type="xs:unsignedByte" use="optional" />
-		<xs:attribute name="Dynamic" type="xs:unsignedByte" use="optional" />
-		<xs:attribute name="ServerRel" type="xs:boolean" use="optional" />
-		<xs:attribute name="Level" type="xs:unsignedByte" use="optional" />
-		<xs:attribute name="Search" type="xs:string" use="optional" />
-	</xs:complexType>
-
-	<!-- SPLinkCollection definition -->
-	<xs:complexType name="SPLinkCollection">
-		<xs:sequence>
-			<xs:element name="Link" type="SPLink" minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- AnonymousState definition -->
-	<xs:simpleType name="AnonymousState">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Disabled" />
-			<xs:enumeration value="Enabled" />
-			<xs:enumeration value="On" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPModerationStatusType definition -->
-	<xs:simpleType name="SPModerationStatusType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Approved" />
-			<xs:enumeration value="Denied" />
-			<xs:enumeration value="Pending" />
-			<xs:enumeration value="Draft" />
-			<xs:enumeration value="Scheduled" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPModerationInformation definition -->
-	<xs:complexType name="SPModerationInformation">
-		<xs:attribute name="Comment" type="xs:string" />
-		<xs:attribute name="ModerationStatus" type="SPModerationStatusType" />
-	</xs:complexType>
-
-	<!-- SPBaseType definition -->
-	<xs:simpleType name="SPBaseType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="UnspecifiedBaseType" />
-			<xs:enumeration value="GenericList" />
-			<xs:enumeration value="DocumentLibrary" />
-			<xs:enumeration value="Unused" />
-			<xs:enumeration value="DiscussionBoard" />
-			<xs:enumeration value="Survey" />
-			<xs:enumeration value="Issue" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPListTemplateType definition -->
-	<xs:simpleType name="SPListTemplateType">
-		<xs:restriction base="xs:string"></xs:restriction>
-	</xs:simpleType>
-
-	<!-- DraftVisibilityType definition -->
-	<xs:simpleType name="DraftVisibilityType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Reader" />
-			<xs:enumeration value="Author" />
-			<xs:enumeration value="Approver" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPEventHostType definition -->
-	<xs:simpleType name="SPEventHostType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Site" />
-			<xs:enumeration value="Web" />
-			<xs:enumeration value="List" />
-			<xs:enumeration value="ListItem" />
-			<xs:enumeration value="ContentType" />
-			<xs:enumeration value="Feature" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPEventReceiverSynchronization definition -->
-	<xs:simpleType name="SPEventReceiverSynchronization">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Default" />
-			<xs:enumeration value="Synchronous" />
-			<xs:enumeration value="Asynchronous" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPEventReceiverType definition -->
-	<xs:simpleType name="SPEventReceiverType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="ItemAdding" />
-			<xs:enumeration value="ItemUpdating" />
-			<xs:enumeration value="ItemDeleting" />
-			<xs:enumeration value="ItemCheckingIn" />
-			<xs:enumeration value="ItemCheckingOut" />
-			<xs:enumeration value="ItemUncheckingOut" />
-			<xs:enumeration value="ItemAttachmentAdding" />
-			<xs:enumeration value="ItemAttachmentDeleting" />
-			<xs:enumeration value="ItemFileMoving" />
-			<xs:enumeration value="ItemVersionDeleting" />
-			<xs:enumeration value="FieldAdding" />
-			<xs:enumeration value="FieldUpdating" />
-			<xs:enumeration value="FieldDeleting" />
-			<xs:enumeration value="ListAdding" />
-			<xs:enumeration value="ListDeleting" />
-			<xs:enumeration value="SiteDeleting" />
-			<xs:enumeration value="WebDeleting" />
-			<xs:enumeration value="WebMoving" />
-			<xs:enumeration value="WebAdding" />
-			<xs:enumeration value="GroupAdding" />
-			<xs:enumeration value="GroupUpdating" />
-			<xs:enumeration value="GroupDeleting" />
-			<xs:enumeration value="GroupUserAdding" />
-			<xs:enumeration value="GroupUserDeleting" />
-			<xs:enumeration value="RoleDefinitionAdding" />
-			<xs:enumeration value="RoleDefinitionUpdating" />
-			<xs:enumeration value="RoleDefinitionDeleting" />
-			<xs:enumeration value="RoleAssignmentAdding" />
-			<xs:enumeration value="RoleAssignmentDeleting" />
-			<xs:enumeration value="InheritanceBreaking" />
-			<xs:enumeration value="InheritanceResetting" />
-			<xs:enumeration value="ItemAdded" />
-			<xs:enumeration value="ItemUpdated" />
-			<xs:enumeration value="ItemDeleted" />
-			<xs:enumeration value="ItemCheckedIn" />
-			<xs:enumeration value="ItemCheckedOut" />
-			<xs:enumeration value="ItemUncheckedOut" />
-			<xs:enumeration value="ItemAttachmentAdded" />
-			<xs:enumeration value="ItemAttachmentDeleted" />
-			<xs:enumeration value="ItemFileMoved" />
-			<xs:enumeration value="ItemFileConverted" />
-			<xs:enumeration value="ItemFileTransformed" />
-			<xs:enumeration value="ItemVersionDeleted" />
-			<xs:enumeration value="FieldAdded" />
-			<xs:enumeration value="FieldUpdated" />
-			<xs:enumeration value="FieldDeleted" />
-			<xs:enumeration value="ListAdded" />
-			<xs:enumeration value="ListDeleted" />
-			<xs:enumeration value="SiteDeleted" />
-			<xs:enumeration value="WebDeleted" />
-			<xs:enumeration value="WebMoved" />
-			<xs:enumeration value="WebProvisioned" />
-			<xs:enumeration value="WebRestored" />
-			<xs:enumeration value="GroupAdded" />
-			<xs:enumeration value="GroupUpdated" />
-			<xs:enumeration value="GroupDeleted" />
-			<xs:enumeration value="GroupUserAdded" />
-			<xs:enumeration value="GroupUserDeleted" />
-			<xs:enumeration value="RoleDefinitionAdded" />
-			<xs:enumeration value="RoleDefinitionUpdated" />
-			<xs:enumeration value="RoleDefinitionDeleted" />
-			<xs:enumeration value="RoleAssignmentAdded" />
-			<xs:enumeration value="RoleAssignmentDeleted" />
-			<xs:enumeration value="InheritanceBroken" />
-			<xs:enumeration value="InheritanceReset" />
-			<xs:enumeration value="EmailReceived" />
-			<xs:enumeration value="ContextEvent" />
-			<xs:enumeration value="InvalidReceiver" />
-			<xs:enumeration value="WorkflowCompleted" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="DefaultItemOpen">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Browser" />
-			<xs:enumeration value="PreferClient" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPList definition -->
-	<xs:complexType name="SPList">
-		<xs:sequence >
-			<xs:choice minOccurs="0" maxOccurs="11">
-				<xs:element name="ContentTypes" type="SPContentTypeCollection" minOccurs="0"
-maxOccurs="1" />
-				<xs:element name="DeletedContentTypes" type="ListDeletedContentTypes"
-minOccurs="0" maxOccurs="1" />
-			</xs:choice>
-		</xs:sequence>
-
-		<xs:attribute name="Id" type="Guid" use="required" />
-		<xs:attribute name="Title" type="xs:string" use="required" />
-
-		<xs:attribute name="RootFolderId" type="Guid" />
-		<xs:attribute name="RootFolderUrl" type="xs:string" use="required" />
-		<xs:attribute name="ParentWebId" type="Guid" use="required" />
-		<xs:attribute name="ParentWebUrl" type="xs:string" use="optional" />
-
-		<xs:attribute name="BaseType" type="SPBaseType" />
-		<xs:attribute name="BaseTemplate" type="SPListTemplateType" use="required" />
-	</xs:complexType>
-
-	<xs:complexType name="SPFieldCollection" mixed="true">
-		<xs:sequence minOccurs="0" maxOccurs="unbounded">
-			<xs:element name="FieldRef" type="SPFieldLink" minOccurs="0" maxOccurs="unbounded"
-/>
-			<xs:element name="Field" type="SPField" minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="SPField">
-		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
-processContents="skip" />
-		</xs:sequence>
-		<xs:attribute name="ID" type="Guid" />
-		<xs:attribute name="FieldId" type="Guid" use="optional" />
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="Value" type="xs:string" />
-		<xs:attribute name="DisplayName" type="xs:string" />
-		<xs:attribute name="RowOrdinal" type="xs:int" />
-		<xs:attribute name="RowOrdinal2" type="xs:int" use="optional" />
-		<xs:attribute name="Type" type="xs:string" />
-		<xs:attribute name="ColName" type="xs:string" />
-		<xs:attribute name="ColName2" type="xs:string" use="optional" />
-		<xs:attribute name="Title" type="xs:string" use="optional" />
-		<xs:attribute name="Description" type="xs:string" use="optional" />
-		<xs:attribute name="DefaultValue" type="xs:string" use="optional" />
-		<xs:attribute name="DefaultFormula" type="xs:string" use="optional" />
-		<xs:attribute name="FromBaseType" type="xs:string" use="optional" />
-		<xs:attribute name="Sealed" type="xs:string" />
-		<xs:attribute name="CanToggleHidden" type="xs:string" use="optional" />
-		<xs:attribute name="DisplaySize" type="xs:string" use="optional" />
-		<xs:attribute name="Required" type="xs:string" use="optional" />
-		<xs:attribute name="ReadOnly" type="xs:string" use="optional" />
-		<xs:attribute name="Hidden" type="xs:string" use="optional" />
-		<xs:attribute name="Direction" type="xs:string" use="optional" />
-		<xs:attribute name="IMEMode" type="xs:string" use="optional" />
-		<xs:attribute name="SortableBySchema" type="xs:string" use="optional" />
-		<xs:attribute name="Sortable" type="xs:string" use="optional" />
-		<xs:attribute name="FilterableBySchema" type="xs:string" use="optional" />
-		<xs:attribute name="Filterable" type="xs:string" use="optional" />
-		<xs:attribute name="FilterableNoRecurrenceBySchema" type="xs:string" use="optional" />
-		<xs:attribute name="FilterableNoRecurrence" type="xs:string" use="optional" />
-		<xs:attribute name="Reorderable" type="xs:string" use="optional" />
-		<xs:attribute name="Format" type="xs:string" use="optional" />
-		<xs:attribute name="FillInChoice" type="xs:string" use="optional" />
-		<xs:attribute name="SchemaXml" type="xs:string" use="optional" />
-		<xs:attribute name="JSLink" type="xs:string" use="optional" />
-		<xs:attribute name="CAMLRendering" type="xs:string" use="optional" />
-		<xs:attribute name="ServerRender" type="xs:string" use="optional" />
-		<xs:attribute name="ListItemMenu" type="xs:string" use="optional" />
-		<xs:attribute name="ListItemMenuAllowed" type="xs:string" use="optional" />
-		<xs:attribute name="LinkToItem" type="xs:string" use="optional" />
-		<xs:attribute name="LinkToItemAllowed" type="xs:string" use="optional" />
-		<xs:attribute name="CalloutMenu" type="xs:string" use="optional" />
-		<xs:attribute name="CalloutMenuAllowed" type="xs:string" use="optional" />
-		<!-- Label definition  -->
-		<xs:attribute name="ListDefaultCompliancetagWrittenTime" type="xs:dateTime" use="optional" />
-		<xs:attribute name="ListDefaultComplianceTagUserId" type="xs:int" use="optional" />
-		<!-- ListDefaultComplianceFlags is a Flags dependes on the Label, if the Label has Keep or KeepAndDelete ( that will have the 0x01 bit set). If the Label is a record label, that will have 0x01 and 0x04 set -->
-		<xs:attribute name="ListDefaultComplianceFlags" type="xs:int" use="optional" />
-		<xs:attribute name="ListDefaultComplianceTag" type="xs:string" use="optional" />
-		<!-- end of Label definition  -->
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<!-- FieldDataCollection definition -->
-	<xs:complexType name="FieldDataCollection">
-		<xs:sequence>
-			<xs:element name="Field" type="DictionaryEntry" minOccurs="0" maxOccurs="unbounded"
-/>
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- SPEventReceiverDefinitionCollection definition -->
-	<xs:complexType name="SPEventReceiverDefinitionCollection">
-		<xs:sequence>
-			<xs:element name="EventReceiver" type="SPEventReceiverDefinition" minOccurs="0"
-maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- SPEventReceiverDefinition definition -->
-	<xs:complexType name="SPEventReceiverDefinition">
-		<xs:attribute name="Id" type="Guid" use="required" />
-		<xs:attribute name="Name" type="xs:string" use="required" />
-		<xs:attribute name="WebId" type="Guid" use="required" />
-		<xs:attribute name="HostId" type="Guid" use="required" />
-		<xs:attribute name="HostType" type="SPEventHostType" use="required" />
-		<xs:attribute name="Synchronization" type="SPEventReceiverSynchronization"
-use="optional" />
-		<xs:attribute name="Type" type="SPEventReceiverType" use="required" />
-		<xs:attribute name="SequenceNumber" type="xs:int" use="required" />
-		<xs:attribute name="Url" type="xs:string" use="optional" />
-		<xs:attribute name="Assembly" type="xs:string" use="optional" />
-		<xs:attribute name="Class" type="xs:string" use="optional" />
-		<xs:attribute name="SolutionId" type="Guid" use="optional" />
-		<xs:attribute name="Data" type="xs:string" use="optional" />
-		<xs:attribute name="Filter" type="xs:string" use="optional" />
-		<xs:attribute name="Credential" type="xs:int" use="optional" />
-		<xs:attribute name="ItemId" type="xs:int" use="optional" />
-	</xs:complexType>
-
-	<!-- ListDeletedContentTypes definition -->
-	<xs:complexType name="ListDeletedContentTypes">
-		<xs:sequence>
-			<xs:element name="DeletedContentType" type="DeletedContentType" minOccurs="0"
-maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- DeletedContentType definition -->
-	<xs:complexType name="DeletedContentType">
-		<xs:attribute name="ContentTypeId" type="xs:string" use="required" />
-	</xs:complexType>
-
-	<!-- SPDocumentLibrary definition -->
-	<xs:complexType name="SPDocumentLibrary">
-		<xs:complexContent>
-			<xs:extension base="SPList">
-				<xs:attribute name="DocumentTemplateUrl" type="xs:string" />
-				<xs:attribute name="IsCatalog" type="xs:boolean" />
-				<xs:attribute name="ThumbnailSize" type="xs:int" />
-				<xs:attribute name="WebImageHeight" type="xs:int" />
-				<xs:attribute name="WebImageWidth" type="xs:int" />
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<!-- SPFolder definition -->
-	<xs:complexType name="SPFolder">
-		<xs:sequence>
-			<xs:element name="Properties" type="Dictionary" minOccurs="0" />
-		</xs:sequence>
-		<xs:attribute name="Id" type="Guid" />
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="Url" type="xs:string" />
-		<xs:attribute name="ParentFolderId" type="Guid" />
-		<xs:attribute name="ParentWebId" type="Guid" />
-		<xs:attribute name="ParentWebUrl" type="xs:string" use="optional" />
-		<xs:attribute name="ContainingDocumentLibrary" type="Guid" />
-		<xs:attribute name="WelcomePageUrl" type="xs:string" use="optional" />
-		<xs:attribute name="WelcomePageParameters" type="xs:string" use="optional" />
-		<xs:attribute name="ListItemIntId" type="xs:int" use="optional" />
-		<xs:attribute name="Author" type="xs:string" use="optional" />
-		<xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
-		<xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
-		<xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
-		<xs:attribute name="ProgId" type="xs:string" use="optional" />
-		<xs:attribute name="SortBehavior" type="xs:string" use="optional" />
-	</xs:complexType>
-
-	<!-- SPFileVersion Collection definition -->
-	<xs:complexType name="SPFileVersionCollection">
-		<xs:sequence>
-			<xs:element name="File" type="SPFile" minOccurs="1" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- SPListItemVersion Collection definition -->
-	<xs:complexType name="SPListItemVersionCollection">
-		<xs:sequence>
-			<xs:element name="ListItem" type="SPListItem" minOccurs="1" maxOccurs="unbounded"
-/>
-		</xs:sequence>
-	</xs:complexType>
-
-	<!-- SPFileVersionEvent Collection definition -->
-	<xs:complexType name="SPFileVersionEventCollection">
-		<xs:sequence>
-			<xs:element name="VersionEvent" type="SPFileVersionEvent" minOccurs="1"
-maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="SPFileVersionEvent">
-		<xs:attribute name="Id" type="xs:int" />
-		<xs:attribute name="UIVersion" type="xs:int" />
-		<xs:attribute name="Type" type="xs:int" />
-		<xs:attribute name="Time" type="xs:dateTime" />
-		<xs:attribute name="UserId" type="xs:int" />
-	</xs:complexType>
-
-	<!-- SPFile definition -->
-	<xs:complexType name="SPFile">
-		<xs:sequence>
-			<xs:element name="Properties" type="Dictionary" minOccurs="0" />
-			<xs:element name="Versions" type="SPFileVersionCollection" minOccurs="0"
-maxOccurs="1" />
-			<xs:element name="Links" type="SPLinkCollection" minOccurs="0" maxOccurs="1" />
-			<xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection"
-minOccurs="0" maxOccurs="1" />
-			<xs:element name="VersionEvents" type="SPFileVersionEventCollection" minOccurs="0"
-maxOccurs="1" />
-		</xs:sequence>
-
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="Id" type="Guid" />
-		<xs:attribute name="Url" type="xs:string" />
-		<xs:attribute name="ListItemIntId" type="xs:int" />
-		<xs:attribute name="InDocumentLibrary" type="xs:boolean" />
-
-		<xs:attribute name="ParentWebId" type="Guid" />
-		<xs:attribute name="ParentWebUrl" type="xs:string" />
-
-		<xs:attribute name="ParentId" type="Guid" />
-		<xs:attribute name="ListId" type="Guid" use="optional" />
-
-		<!-- Map to file on disk -->
-		<xs:attribute name="FileValue" type="xs:string" use="optional" />
-
-		<xs:attribute name="CheckinComment" type="xs:string" use="optional" />
-		<xs:attribute name="Version" type="xs:string" use="optional" default="1.0" />
-
-		<xs:attribute name="Author" type="xs:string" use="optional" />
-		<xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
-		<xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
-		<xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
-
-		<!-- Case where it fails at export time but too late to ignore -->
-		<xs:attribute name="FailureMessage" type="xs:string" use="optional" />
-
-		<!-- Setup Path Information -->
-		<xs:attribute name="IsGhosted" type="xs:boolean" use="optional" />
-		<xs:attribute name="SetupPath" type="xs:string" use="optional" />
-		<xs:attribute name="SetupPathUser" type="xs:string" use="optional" />
-		<!-- Use: 2, 3, 4 OR 15 -->
-		<xs:attribute name="SetupPathVersion" type="xs:byte" default="15" />
-
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<!-- Doc Type of List Item -->
-	<xs:simpleType name="ListItemDocType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="File" />
-			<xs:enumeration value="Folder" />
-			<xs:enumeration value="Unknown" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- SPListItem definition -->
-	<xs:complexType name="SPListItem">
-		<xs:sequence>
-			<xs:choice minOccurs="0" maxOccurs="5">
-				<xs:element name="Fields" type="SPFieldCollection" minOccurs="0" maxOccurs="1"
-/>
-				<xs:element name="Versions" type="SPListItemVersionCollection" minOccurs="0"
-maxOccurs="1" />
-				<xs:element name="Attachments" type="SPAttachmentCollection" minOccurs="0"
-maxOccurs="1" />
-				<xs:element name="Links" type="SPLinkCollection" minOccurs="0" maxOccurs="1" />
-				<xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection"
-minOccurs="0" maxOccurs="1" />
-			</xs:choice>
-		</xs:sequence>
-
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="DirName" type="xs:string" />
-		<xs:attribute name="FileUrl" type="xs:string" use="optional" />
-		<xs:attribute name="Version" type="xs:string" use="optional" default="1.0" />
-		<xs:attribute name="Id" type="Guid" />
-		<xs:attribute name="IntId" type="xs:int" />
-		<xs:attribute name="DocId" type="Guid" use="optional" />
-
-		<xs:attribute name="Author" type="xs:string" use="optional" />
-		<xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
-		<xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
-		<xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
-
-		<xs:attribute name="ParentWebId" type="Guid" />
-		<xs:attribute name="ParentListId" type="Guid" />
-		<xs:attribute name="ParentFolderId" type="Guid" use="optional" />
-
-		<xs:attribute name="ModerationStatus" type="SPModerationStatusType" use="optional" />
-		<xs:attribute name="ModerationComment" type="xs:string" use="optional" />
-		<xs:attribute name="ContentTypeId" type="xs:string" />
-		<xs:attribute name="ProgId" type="xs:string" use="optional" />
-		<xs:attribute name="Order" type="xs:float" use="optional" />
-		<xs:attribute name="ThreadIndex" type="xs:string" use="optional" />
-		<xs:attribute name="UserSolutionActivated" type="xs:boolean" use="optional" />
-		<xs:attribute name="DocType" type="ListItemDocType" default="File" />
-
-		<!-- UserInfo -->
-		<xs:attribute name="UserLoginName" type="xs:string" use="optional" />
-		<xs:attribute name="GroupName" type="xs:string" use="optional" />
-
-		<!-- Case where it fails at export time but too late to ignore -->
-		<xs:attribute name="FailureMessage" type="xs:string" use="optional" />
-
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<xs:complexType name="SPFieldLink">
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="ID" type="Guid" use="optional" />
-		<xs:attribute name="Customization" type="xs:string" use="optional" />
-		<xs:attribute name="Default" type="xs:string" use="optional" />
-		<xs:attribute name="ColName" type="xs:string" use="optional" />
-		<xs:attribute name="ColName2" type="xs:string" use="optional" />
-		<xs:attribute name="RowOrdinal" type="xs:int" use="optional" />
-		<xs:attribute name="RowOrdinal2" type="xs:int" use="optional" />
-
-		<xs:attribute name="Hidden" type="TRUEFALSE" use="optional" />
-		<xs:attribute name="Required" type="TRUEFALSE" use="optional" />
-		<xs:attribute name="Explicit" type="xs:string" use="optional" />
-		<xs:attribute name="ShowInNewForm" type="xs:string" use="optional" />
-		<xs:attribute name="ShowInEditForm" type="xs:string" use="optional" />
-		<xs:attribute name="DisplayName" type="xs:string" use="optional" />
-		<xs:attribute name="Node" type="xs:string" use="optional" />
-
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<xs:complexType name="SPXmlDocumentCollection">
-		<xs:sequence >
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
-processContents="skip" />
-		</xs:sequence>
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<xs:complexType name="SPContentType">
-		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
-processContents="skip" />
-		</xs:sequence>
-
-		<xs:attribute name="ID" type="Guid" />
-		<xs:attribute name="Name" type="xs:string" />
-		<xs:attribute name="Scope" type="xs:string" />
-		<xs:attribute name="NextChildByte" type="xs:short" />
-		<xs:attribute name="ParentWebId" type="Guid" />
-		<xs:attribute name="ListId" type="Guid" use="optional" />
-		<xs:attribute name="Description" type="xs:string" use="optional" />
-		<xs:attribute name="Hidden" type="TRUEFALSE" use="optional" />
-		<xs:attribute name="ReadOnly" type="TRUEFALSE" use="optional" />
-		<xs:attribute name="Group" type="xs:string" use="optional" />
-		<xs:attribute name="PushDownChanges" type="xs:boolean" use="optional" />
-		<xs:attribute name="RequireClientRenderingOnNew" type="xs:string" use="optional" />
-
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<xs:complexType name="SPContentTypeRef">
-		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
-processContents="skip" />
-		</xs:sequence>
-
-		<xs:attribute name="ID" type="Guid" />
-
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<xs:complexType name="SPContentTypeFolder">
-		<xs:attribute name="TargetName" type="xs:string" />
-
-		<xs:anyAttribute namespace="##any" processContents="skip" />
-	</xs:complexType>
-
-	<xs:complexType name="SPContentTypeCollection">
-		<xs:sequence>
-			<xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any"
-processContents="skip" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<!--This defines that the XML can contain 0-N instances of the SPGenericObject element-->
-	<xs:element name="SPObjects" type="SPGenericObjectCollection"></xs:element>
+<xs:schema targetNamespace="urn:deployment-manifest-schema" elementFormDefault="qualified" 
+  xmlns="urn:deployment-manifest-schema" 
+  xmlns:mstns="urn:deployment-manifest-schema" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- From CoreDefinitions.xsd -->
+  <xs:simpleType name="TRUEFALSE">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TRUE" />
+      <xs:enumeration value="FALSE" />
+      <xs:enumeration value="true" />
+      <xs:enumeration value="false" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Guid SimpleType definition -->
+  <xs:simpleType name="Guid">
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPGenericObjectCollection definition -->
+  <xs:complexType name="SPGenericObjectCollection">
+    <xs:sequence>
+      <xs:element name="SPObject" type="SPGenericObject" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Generic complex Type definition that wraps a Sharepoint top-level element -->
+  <xs:complexType name="SPGenericObject">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="1">
+        <xs:element name="List" type="SPList" />
+        <xs:element name="DocumentLibrary" type="SPDocumentLibrary" />
+        <xs:element name="ListItem" type="SPListItem" />
+        <xs:element name="Folder" type="SPFolder" />
+        <xs:element name="File" type="SPFile" />
+        <xs:element name="ContentType" type="SPContentType" />
+        <xs:element name="UserX" type="DeploymentUserX" />
+        <xs:element name="GroupX" type="DeploymentGroupX" />
+        <xs:element name="Roles" type="DeploymentRoles" />
+        <xs:element name="RoleX" type="DeploymentRoleX" />
+        <xs:element name="RoleAssignments" type="DeploymentRoleAssignments" />
+        <xs:element name="RoleAssignmentX" type="DeploymentRoleAssignmentX" />
+      </xs:choice>
+    </xs:sequence>
+
+    <xs:attribute name="ObjectType" type="SPObjectType" />
+    <xs:attribute name="Id" type="Guid" />
+    <xs:attribute name="ParentId" type="Guid" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="IsDeleted" type="xs:boolean" />
+    <xs:attribute name="IsSiteRename" type="xs:boolean" />
+    <xs:attribute name="ParentWebId" type="Guid" />
+    <xs:attribute name="ParentWebUrl" type="xs:string" use="optional" />
+    <xs:attribute name="ContentTypeId" type="xs:string" use ="optional" />
+    <xs:attribute name="Url" type="xs:string" />
+  </xs:complexType>
+
+  <xs:simpleType name="SPDictionaryEntryValueType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Integer" />
+      <xs:enumeration value="Time" />
+      <xs:enumeration value="StringVector" />
+      <xs:enumeration value="Boolean" />
+      <xs:enumeration value="FileSystemTime" />
+      <xs:enumeration value="IntVector" />
+      <xs:enumeration value="Double" />
+      <xs:enumeration value="LongText" />
+      <xs:enumeration value="Empty" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SPDictionaryEntryAccess">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ReadOnly" />
+      <xs:enumeration value="ReadWrite" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Enumeration of all the top-level serialized Sharepoint Types -->
+  <xs:simpleType name="SPObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SPList" />
+      <xs:enumeration value="SPDocumentLibrary" />
+      <xs:enumeration value="SPListItem" />
+      <xs:enumeration value="SPFolder" />
+      <xs:enumeration value="SPFile" />
+      <xs:enumeration value="SPContentType" />
+      <xs:enumeration value="SPDocumentTemplate" />
+      <xs:enumeration value="DeploymentUserX" />
+      <xs:enumeration value="DeploymentGroupX" />
+      <xs:enumeration value="DeploymentRoles" />
+      <xs:enumeration value="DeploymentRoleX" />
+      <xs:enumeration value="DeploymentRoleAssignments" />
+      <xs:enumeration value="DeploymentRoleAssignmentX" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Enumeration of all the non-top level serialized Sharepoint Types -->
+  <xs:simpleType name="OtherObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SPFileVersion" />
+      <xs:enumeration value="SPListEvent" />
+      <xs:enumeration value="SPListItemVersion" />
+      <xs:enumeration value="SPModerationInfo" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- DeploymentRole definition -->
+  <xs:complexType name="DeploymentRole">
+    <xs:attribute name="RoleId" type="xs:string" use="required" />
+    <xs:attribute name="Title" type="xs:string" use="required" />
+    <xs:attribute name="Description" type="xs:string" use="optional" />
+    <xs:attribute name="PermMask" type="xs:string" use="required" />
+    <xs:attribute name="Hidden" type="xs:boolean" use="required" />
+    <xs:attribute name="RoleOrder" type="xs:string" use="optional" />
+    <xs:attribute name="Type" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- DeploymentRoles definition -->
+  <xs:complexType name="DeploymentRoles">
+    <xs:sequence>
+      <xs:element name="Role" type="DeploymentRole" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DeploymentAssignment definition -->
+  <xs:complexType name="DeploymentAssignment">
+    <xs:attribute name="RoleId" type="xs:string" use="required" />
+    <xs:attribute name="PrincipalId" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <!-- DeploymentRoleAssignment Definition -->
+  <xs:complexType name="DeploymentRoleAssignment">
+    <xs:sequence>
+      <xs:element name="Assignment" type="DeploymentAssignment" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+
+    <xs:attribute name="ScopeId" type="xs:string" use="required" />
+    <xs:attribute name="RoleDefWebId" type="xs:string" use="required" />
+    <xs:attribute name="RoleDefWebUrl" type="xs:string" use="required" />
+    <xs:attribute name="ObjectId" type="xs:string" use="required" />
+    <xs:attribute name="ObjectType" type="xs:string" use="required" />
+    <xs:attribute name="ObjectUrl" type="xs:string" use="required" />
+    <xs:attribute name="AnonymousPermMask" type="xs:string" />
+  </xs:complexType>
+
+  <xs:complexType name="DeploymentRoleAssignments">
+    <xs:sequence>
+      <xs:element name="RoleAssignment" type="DeploymentRoleAssignment" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SPProperty definition -->
+  <xs:complexType name="DictionaryEntry">
+    <xs:attribute name="Name" type="xs:string" use="required" />
+    <xs:attribute name="Value" type="xs:string" use="optional" />
+    <xs:attribute name="Value2" type="xs:string" use="optional" />
+    <xs:attribute name="Id" type="Guid" use="optional" />
+    <xs:attribute name="Type" type="SPDictionaryEntryValueType" default="String" use="optional" />
+    <xs:attribute name="Access" type="SPDictionaryEntryAccess" default="ReadWrite" use="optional" />
+  </xs:complexType>
+
+  <!-- Dictionary definition -->
+  <xs:complexType name="Dictionary">
+    <xs:sequence>
+      <xs:element name="Property" type="DictionaryEntry" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SPAttachment definition -->
+  <xs:complexType name="SPAttachment">
+    <xs:sequence>
+      <xs:element name="Properties" type="Dictionary" minOccurs="0" />
+    </xs:sequence>
+
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="DirName" type="xs:string" />
+    <xs:attribute name="Url" type="xs:string" />
+    <xs:attribute name="Id" type="Guid" />
+    <xs:attribute name="ParentWebId" type="Guid" />
+
+    <!-- Map to file on disk -->
+    <xs:attribute name="FileValue" type="xs:string" />
+
+    <xs:attribute name="MetaInfo" type="xs:string" use="optional" />
+
+    <xs:attribute name="Author" type="xs:string" use="optional" />
+    <xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
+    <xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
+    <xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
+
+    <!-- Case where it fails at export time but too late to ignore -->
+    <xs:attribute name="FailureMessage" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- SPAttachmentCollection definition -->
+  <xs:complexType name="SPAttachmentCollection">
+    <xs:sequence>
+      <xs:element name="Attachment" type="SPAttachment" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SPLink definition -->
+  <xs:complexType name="SPLink">
+    <xs:sequence></xs:sequence>
+    <xs:attribute name="TargetId" type="Guid" use="required" />
+    <xs:attribute name="TargetUrl" type="xs:string" use="required" />
+    <xs:attribute name="IsDirty" type="xs:boolean" use="required" />
+    <xs:attribute name="WebPartId" type="Guid" use="optional" />
+    <xs:attribute name="LinkNumber" type="xs:int" use="optional" />
+    <xs:attribute name="Type" type="xs:unsignedByte" use="optional" />
+    <xs:attribute name="Security" type="xs:unsignedByte" use="optional" />
+    <xs:attribute name="Dynamic" type="xs:unsignedByte" use="optional" />
+    <xs:attribute name="ServerRel" type="xs:boolean" use="optional" />
+    <xs:attribute name="Level" type="xs:unsignedByte" use="optional" />
+    <xs:attribute name="Search" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- SPLinkCollection definition -->
+  <xs:complexType name="SPLinkCollection">
+    <xs:sequence>
+      <xs:element name="Link" type="SPLink" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- AnonymousState definition -->
+  <xs:simpleType name="AnonymousState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Enabled" />
+      <xs:enumeration value="On" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPModerationStatusType definition -->
+  <xs:simpleType name="SPModerationStatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Approved" />
+      <xs:enumeration value="Denied" />
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="Draft" />
+      <xs:enumeration value="Scheduled" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPModerationInformation definition -->
+  <xs:complexType name="SPModerationInformation">
+    <xs:attribute name="Comment" type="xs:string" />
+    <xs:attribute name="ModerationStatus" type="SPModerationStatusType" />
+  </xs:complexType>
+
+  <!-- SPBaseType definition -->
+  <xs:simpleType name="SPBaseType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnspecifiedBaseType" />
+      <xs:enumeration value="GenericList" />
+      <xs:enumeration value="DocumentLibrary" />
+      <xs:enumeration value="Unused" />
+      <xs:enumeration value="DiscussionBoard" />
+      <xs:enumeration value="Survey" />
+      <xs:enumeration value="Issue" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPListTemplateType definition -->
+  <xs:simpleType name="SPListTemplateType">
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
+
+  <!-- DraftVisibilityType definition -->
+  <xs:simpleType name="DraftVisibilityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Reader" />
+      <xs:enumeration value="Author" />
+      <xs:enumeration value="Approver" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPEventHostType definition -->
+  <xs:simpleType name="SPEventHostType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Site" />
+      <xs:enumeration value="Web" />
+      <xs:enumeration value="List" />
+      <xs:enumeration value="ListItem" />
+      <xs:enumeration value="ContentType" />
+      <xs:enumeration value="Feature" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPEventReceiverSynchronization definition -->
+  <xs:simpleType name="SPEventReceiverSynchronization">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Default" />
+      <xs:enumeration value="Synchronous" />
+      <xs:enumeration value="Asynchronous" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPEventReceiverType definition -->
+  <xs:simpleType name="SPEventReceiverType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ItemAdding" />
+      <xs:enumeration value="ItemUpdating" />
+      <xs:enumeration value="ItemDeleting" />
+      <xs:enumeration value="ItemCheckingIn" />
+      <xs:enumeration value="ItemCheckingOut" />
+      <xs:enumeration value="ItemUncheckingOut" />
+      <xs:enumeration value="ItemAttachmentAdding" />
+      <xs:enumeration value="ItemAttachmentDeleting" />
+      <xs:enumeration value="ItemFileMoving" />
+      <xs:enumeration value="ItemVersionDeleting" />
+      <xs:enumeration value="FieldAdding" />
+      <xs:enumeration value="FieldUpdating" />
+      <xs:enumeration value="FieldDeleting" />
+      <xs:enumeration value="ListAdding" />
+      <xs:enumeration value="ListDeleting" />
+      <xs:enumeration value="SiteDeleting" />
+      <xs:enumeration value="WebDeleting" />
+      <xs:enumeration value="WebMoving" />
+      <xs:enumeration value="WebAdding" />
+      <xs:enumeration value="GroupAdding" />
+      <xs:enumeration value="GroupUpdating" />
+      <xs:enumeration value="GroupDeleting" />
+      <xs:enumeration value="GroupUserAdding" />
+      <xs:enumeration value="GroupUserDeleting" />
+      <xs:enumeration value="RoleDefinitionAdding" />
+      <xs:enumeration value="RoleDefinitionUpdating" />
+      <xs:enumeration value="RoleDefinitionDeleting" />
+      <xs:enumeration value="RoleAssignmentAdding" />
+      <xs:enumeration value="RoleAssignmentDeleting" />
+      <xs:enumeration value="InheritanceBreaking" />
+      <xs:enumeration value="InheritanceResetting" />
+      <xs:enumeration value="ItemAdded" />
+      <xs:enumeration value="ItemUpdated" />
+      <xs:enumeration value="ItemDeleted" />
+      <xs:enumeration value="ItemCheckedIn" />
+      <xs:enumeration value="ItemCheckedOut" />
+      <xs:enumeration value="ItemUncheckedOut" />
+      <xs:enumeration value="ItemAttachmentAdded" />
+      <xs:enumeration value="ItemAttachmentDeleted" />
+      <xs:enumeration value="ItemFileMoved" />
+      <xs:enumeration value="ItemFileConverted" />
+      <xs:enumeration value="ItemFileTransformed" />
+      <xs:enumeration value="ItemVersionDeleted" />
+      <xs:enumeration value="FieldAdded" />
+      <xs:enumeration value="FieldUpdated" />
+      <xs:enumeration value="FieldDeleted" />
+      <xs:enumeration value="ListAdded" />
+      <xs:enumeration value="ListDeleted" />
+      <xs:enumeration value="SiteDeleted" />
+      <xs:enumeration value="WebDeleted" />
+      <xs:enumeration value="WebMoved" />
+      <xs:enumeration value="WebProvisioned" />
+      <xs:enumeration value="WebRestored" />
+      <xs:enumeration value="GroupAdded" />
+      <xs:enumeration value="GroupUpdated" />
+      <xs:enumeration value="GroupDeleted" />
+      <xs:enumeration value="GroupUserAdded" />
+      <xs:enumeration value="GroupUserDeleted" />
+      <xs:enumeration value="RoleDefinitionAdded" />
+      <xs:enumeration value="RoleDefinitionUpdated" />
+      <xs:enumeration value="RoleDefinitionDeleted" />
+      <xs:enumeration value="RoleAssignmentAdded" />
+      <xs:enumeration value="RoleAssignmentDeleted" />
+      <xs:enumeration value="InheritanceBroken" />
+      <xs:enumeration value="InheritanceReset" />
+      <xs:enumeration value="EmailReceived" />
+      <xs:enumeration value="ContextEvent" />
+      <xs:enumeration value="InvalidReceiver" />
+      <xs:enumeration value="WorkflowCompleted" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DefaultItemOpen">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Browser" />
+      <xs:enumeration value="PreferClient" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPList definition -->
+  <xs:complexType name="SPList">
+    <xs:sequence >
+      <xs:choice minOccurs="0" maxOccurs="11">
+        <xs:element name="ContentTypes" type="SPContentTypeCollection" minOccurs="0" maxOccurs="1" />
+        <xs:element name="DeletedContentTypes" type="ListDeletedContentTypes" minOccurs="0" maxOccurs="1" />
+      </xs:choice>
+    </xs:sequence>
+
+    <xs:attribute name="Id" type="Guid" use="required" />
+    <xs:attribute name="Title" type="xs:string" use="required" />
+
+    <xs:attribute name="RootFolderId" type="Guid" />
+    <xs:attribute name="RootFolderUrl" type="xs:string" use="required" />
+    <xs:attribute name="ParentWebId" type="Guid" use="required" />
+    <xs:attribute name="ParentWebUrl" type="xs:string" use="optional" />
+
+    <xs:attribute name="BaseType" type="SPBaseType" />
+    <xs:attribute name="BaseTemplate" type="SPListTemplateType" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="SPFieldCollection" mixed="true">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="FieldRef" type="SPFieldLink" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="Field" type="SPField" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SPField">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="skip" />
+    </xs:sequence>
+    <xs:attribute name="ID" type="Guid" />
+    <xs:attribute name="FieldId" type="Guid" use="optional" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Value" type="xs:string" />
+    <xs:attribute name="DisplayName" type="xs:string" />
+    <xs:attribute name="RowOrdinal" type="xs:int" />
+    <xs:attribute name="RowOrdinal2" type="xs:int" use="optional" />
+    <xs:attribute name="Type" type="xs:string" />
+    <xs:attribute name="ColName" type="xs:string" />
+    <xs:attribute name="ColName2" type="xs:string" use="optional" />
+    <xs:attribute name="Title" type="xs:string" use="optional" />
+    <xs:attribute name="Description" type="xs:string" use="optional" />
+    <xs:attribute name="DefaultValue" type="xs:string" use="optional" />
+    <xs:attribute name="DefaultFormula" type="xs:string" use="optional" />
+    <xs:attribute name="FromBaseType" type="xs:string" use="optional" />
+    <xs:attribute name="Sealed" type="xs:string" />
+    <xs:attribute name="CanToggleHidden" type="xs:string" use="optional" />
+    <xs:attribute name="DisplaySize" type="xs:string" use="optional" />
+    <xs:attribute name="Required" type="xs:string" use="optional" />
+    <xs:attribute name="ReadOnly" type="xs:string" use="optional" />
+    <xs:attribute name="Hidden" type="xs:string" use="optional" />
+    <xs:attribute name="Direction" type="xs:string" use="optional" />
+    <xs:attribute name="IMEMode" type="xs:string" use="optional" />
+    <xs:attribute name="SortableBySchema" type="xs:string" use="optional" />
+    <xs:attribute name="Sortable" type="xs:string" use="optional" />
+    <xs:attribute name="FilterableBySchema" type="xs:string" use="optional" />
+    <xs:attribute name="Filterable" type="xs:string" use="optional" />
+    <xs:attribute name="FilterableNoRecurrenceBySchema" type="xs:string" use="optional" />
+    <xs:attribute name="FilterableNoRecurrence" type="xs:string" use="optional" />
+    <xs:attribute name="Reorderable" type="xs:string" use="optional" />
+    <xs:attribute name="Format" type="xs:string" use="optional" />
+    <xs:attribute name="FillInChoice" type="xs:string" use="optional" />
+    <xs:attribute name="SchemaXml" type="xs:string" use="optional" />
+    <xs:attribute name="JSLink" type="xs:string" use="optional" />
+    <xs:attribute name="CAMLRendering" type="xs:string" use="optional" />
+    <xs:attribute name="ServerRender" type="xs:string" use="optional" />
+    <xs:attribute name="ListItemMenu" type="xs:string" use="optional" />
+    <xs:attribute name="ListItemMenuAllowed" type="xs:string" use="optional" />
+    <xs:attribute name="LinkToItem" type="xs:string" use="optional" />
+    <xs:attribute name="LinkToItemAllowed" type="xs:string" use="optional" />
+    <xs:attribute name="CalloutMenu" type="xs:string" use="optional" />
+    <xs:attribute name="CalloutMenuAllowed" type="xs:string" use="optional" />
+    <!-- Label definition  -->
+    <xs:attribute name="ListDefaultCompliancetagWrittenTime" type="xs:dateTime" use="optional" />
+    <xs:attribute name="ListDefaultComplianceTagUserId" type="xs:int" use="optional" />
+    <!-- ListDefaultComplianceFlags is a Flags dependes on the Label, if the Label has Keep or KeepAndDelete ( that will have the 0x01 bit set). If the Label is a record label, that will have 0x01 and 0x04 set -->
+    <xs:attribute name="ListDefaultComplianceFlags" type="xs:int" use="optional" />
+    <xs:attribute name="ListDefaultComplianceTag" type="xs:string" use="optional" />
+    <!-- end of Label definition  -->
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <!-- FieldDataCollection definition -->
+  <xs:complexType name="FieldDataCollection">
+    <xs:sequence>
+      <xs:element name="Field" type="DictionaryEntry" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SPEventReceiverDefinitionCollection definition -->
+  <xs:complexType name="SPEventReceiverDefinitionCollection">
+    <xs:sequence>
+      <xs:element name="EventReceiver" type="SPEventReceiverDefinition" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SPEventReceiverDefinition definition -->
+  <xs:complexType name="SPEventReceiverDefinition">
+    <xs:attribute name="Id" type="Guid" use="required" />
+    <xs:attribute name="Name" type="xs:string" use="required" />
+    <xs:attribute name="WebId" type="Guid" use="required" />
+    <xs:attribute name="HostId" type="Guid" use="required" />
+    <xs:attribute name="HostType" type="SPEventHostType" use="required" />
+    <xs:attribute name="Synchronization" type="SPEventReceiverSynchronization" use="optional" />
+    <xs:attribute name="Type" type="SPEventReceiverType" use="required" />
+    <xs:attribute name="SequenceNumber" type="xs:int" use="required" />
+    <xs:attribute name="Url" type="xs:string" use="optional" />
+    <xs:attribute name="Assembly" type="xs:string" use="optional" />
+    <xs:attribute name="Class" type="xs:string" use="optional" />
+    <xs:attribute name="SolutionId" type="Guid" use="optional" />
+    <xs:attribute name="Data" type="xs:string" use="optional" />
+    <xs:attribute name="Filter" type="xs:string" use="optional" />
+    <xs:attribute name="Credential" type="xs:int" use="optional" />
+    <xs:attribute name="ItemId" type="xs:int" use="optional" />
+  </xs:complexType>
+
+  <!-- ListDeletedContentTypes definition -->
+  <xs:complexType name="ListDeletedContentTypes">
+    <xs:sequence>
+      <xs:element name="DeletedContentType" type="DeletedContentType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- DeletedContentType definition -->
+  <xs:complexType name="DeletedContentType">
+    <xs:attribute name="ContentTypeId" type="xs:string" use="required" />
+  </xs:complexType>
+
+  <!-- SPDocumentLibrary definition -->
+  <xs:complexType name="SPDocumentLibrary">
+    <xs:complexContent>
+      <xs:extension base="SPList">
+        <xs:attribute name="DocumentTemplateUrl" type="xs:string" />
+        <xs:attribute name="IsCatalog" type="xs:boolean" />
+        <xs:attribute name="ThumbnailSize" type="xs:int" />
+        <xs:attribute name="WebImageHeight" type="xs:int" />
+        <xs:attribute name="WebImageWidth" type="xs:int" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- SPFolder definition -->
+  <xs:complexType name="SPFolder">
+    <xs:sequence>
+      <xs:element name="Properties" type="Dictionary" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="Id" type="Guid" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Url" type="xs:string" />
+    <xs:attribute name="ParentFolderId" type="Guid" />
+    <xs:attribute name="ParentWebId" type="Guid" />
+    <xs:attribute name="ParentWebUrl" type="xs:string" use="optional" />
+    <xs:attribute name="ContainingDocumentLibrary" type="Guid" />
+    <xs:attribute name="WelcomePageUrl" type="xs:string" use="optional" />
+    <xs:attribute name="WelcomePageParameters" type="xs:string" use="optional" />
+    <xs:attribute name="ListItemIntId" type="xs:int" use="optional" />
+    <xs:attribute name="Author" type="xs:string" use="optional" />
+    <xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
+    <xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
+    <xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
+    <xs:attribute name="ProgId" type="xs:string" use="optional" />
+    <xs:attribute name="SortBehavior" type="xs:string" use="optional" />
+  </xs:complexType>
+
+  <!-- SPFileVersion Collection definition -->
+  <xs:complexType name="SPFileVersionCollection">
+    <xs:sequence>
+      <xs:element name="File" type="SPFile" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SPListItemVersion Collection definition -->
+  <xs:complexType name="SPListItemVersionCollection">
+    <xs:sequence>
+      <xs:element name="ListItem" type="SPListItem" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SPFileVersionEvent Collection definition -->
+  <xs:complexType name="SPFileVersionEventCollection">
+    <xs:sequence>
+      <xs:element name="VersionEvent" type="SPFileVersionEvent" minOccurs="1" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SPFileVersionEvent">
+    <xs:attribute name="Id" type="xs:int" />
+    <xs:attribute name="UIVersion" type="xs:int" />
+    <xs:attribute name="Type" type="xs:int" />
+    <xs:attribute name="Time" type="xs:dateTime" />
+    <xs:attribute name="UserId" type="xs:int" />
+  </xs:complexType>
+
+  <!-- SPFile definition -->
+  <xs:complexType name="SPFile">
+    <xs:sequence>
+      <xs:element name="Properties" type="Dictionary" minOccurs="0" />
+      <xs:element name="Versions" type="SPFileVersionCollection" minOccurs="0" maxOccurs="1" />
+      <xs:element name="Links" type="SPLinkCollection" minOccurs="0" maxOccurs="1" />
+      <xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection" minOccurs="0" maxOccurs="1" />
+      <xs:element name="VersionEvents" type="SPFileVersionEventCollection" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Id" type="Guid" />
+    <xs:attribute name="Url" type="xs:string" />
+    <xs:attribute name="ListItemIntId" type="xs:int" />
+    <xs:attribute name="InDocumentLibrary" type="xs:boolean" />
+
+    <xs:attribute name="ParentWebId" type="Guid" />
+    <xs:attribute name="ParentWebUrl" type="xs:string" />
+
+    <xs:attribute name="ParentId" type="Guid" />
+    <xs:attribute name="ListId" type="Guid" use="optional" />
+
+    <!-- Map to file on disk -->
+    <xs:attribute name="FileValue" type="xs:string" use="optional" />
+
+    <xs:attribute name="CheckinComment" type="xs:string" use="optional" />
+    <xs:attribute name="Version" type="xs:string" use="optional" default="1.0" />
+
+    <xs:attribute name="Author" type="xs:string" use="optional" />
+    <xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
+    <xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
+    <xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
+
+    <!-- Case where it fails at export time but too late to ignore -->
+    <xs:attribute name="FailureMessage" type="xs:string" use="optional" />
+
+    <!-- Setup Path Information -->
+    <xs:attribute name="IsGhosted" type="xs:boolean" use="optional" />
+    <xs:attribute name="SetupPath" type="xs:string" use="optional" />
+    <xs:attribute name="SetupPathUser" type="xs:string" use="optional" />
+    <!-- Use: 2, 3, 4 OR 15 -->
+    <xs:attribute name="SetupPathVersion" type="xs:byte" default="15" />
+
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <!-- Doc Type of List Item -->
+  <xs:simpleType name="ListItemDocType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="File" />
+      <xs:enumeration value="Folder" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- SPListItem definition -->
+  <xs:complexType name="SPListItem">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="5">
+        <xs:element name="Fields" type="SPFieldCollection" minOccurs="0" maxOccurs="1" />
+        <xs:element name="Versions" type="SPListItemVersionCollection" minOccurs="0" maxOccurs="1" />
+        <xs:element name="Attachments" type="SPAttachmentCollection" minOccurs="0" maxOccurs="1" />
+        <xs:element name="Links" type="SPLinkCollection" minOccurs="0" maxOccurs="1" />
+        <xs:element name="EventReceivers" type="SPEventReceiverDefinitionCollection" minOccurs="0" maxOccurs="1" />
+      </xs:choice>
+    </xs:sequence>
+
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="DirName" type="xs:string" />
+    <xs:attribute name="FileUrl" type="xs:string" use="optional" />
+    <xs:attribute name="Version" type="xs:string" use="optional" default="1.0" />
+    <xs:attribute name="Id" type="Guid" />
+    <xs:attribute name="IntId" type="xs:int" />
+    <xs:attribute name="DocId" type="Guid" use="optional" />
+
+    <xs:attribute name="Author" type="xs:string" use="optional" />
+    <xs:attribute name="ModifiedBy" type="xs:string" use="optional" />
+    <xs:attribute name="TimeCreated" type="xs:dateTime" use="optional" />
+    <xs:attribute name="TimeLastModified" type="xs:dateTime" use="optional" />
+
+    <xs:attribute name="ParentWebId" type="Guid" />
+    <xs:attribute name="ParentListId" type="Guid" />
+    <xs:attribute name="ParentFolderId" type="Guid" use="optional" />
+
+    <xs:attribute name="ModerationStatus" type="SPModerationStatusType" use="optional" />
+    <xs:attribute name="ModerationComment" type="xs:string" use="optional" />
+    <xs:attribute name="ContentTypeId" type="xs:string" />
+    <xs:attribute name="ProgId" type="xs:string" use="optional" />
+    <xs:attribute name="Order" type="xs:float" use="optional" />
+    <xs:attribute name="ThreadIndex" type="xs:string" use="optional" />
+    <xs:attribute name="UserSolutionActivated" type="xs:boolean" use="optional" />
+    <xs:attribute name="DocType" type="ListItemDocType" default="File" />
+
+    <!-- UserInfo -->
+    <xs:attribute name="UserLoginName" type="xs:string" use="optional" />
+    <xs:attribute name="GroupName" type="xs:string" use="optional" />
+
+    <!-- Case where it fails at export time but too late to ignore -->
+    <xs:attribute name="FailureMessage" type="xs:string" use="optional" />
+
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="SPFieldLink">
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="ID" type="Guid" use="optional" />
+    <xs:attribute name="Customization" type="xs:string" use="optional" />
+    <xs:attribute name="Default" type="xs:string" use="optional" />
+    <xs:attribute name="ColName" type="xs:string" use="optional" />
+    <xs:attribute name="ColName2" type="xs:string" use="optional" />
+    <xs:attribute name="RowOrdinal" type="xs:int" use="optional" />
+    <xs:attribute name="RowOrdinal2" type="xs:int" use="optional" />
+
+    <xs:attribute name="Hidden" type="TRUEFALSE" use="optional" />
+    <xs:attribute name="Required" type="TRUEFALSE" use="optional" />
+    <xs:attribute name="Explicit" type="xs:string" use="optional" />
+    <xs:attribute name="ShowInNewForm" type="xs:string" use="optional" />
+    <xs:attribute name="ShowInEditForm" type="xs:string" use="optional" />
+    <xs:attribute name="DisplayName" type="xs:string" use="optional" />
+    <xs:attribute name="Node" type="xs:string" use="optional" />
+
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="SPXmlDocumentCollection">
+    <xs:sequence >
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="skip" />
+    </xs:sequence>
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="SPContentType">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="skip" />
+    </xs:sequence>
+
+    <xs:attribute name="ID" type="Guid" />
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="Scope" type="xs:string" />
+    <xs:attribute name="NextChildByte" type="xs:short" />
+    <xs:attribute name="ParentWebId" type="Guid" />
+    <xs:attribute name="ListId" type="Guid" use="optional" />
+    <xs:attribute name="Description" type="xs:string" use="optional" />
+    <xs:attribute name="Hidden" type="TRUEFALSE" use="optional" />
+    <xs:attribute name="ReadOnly" type="TRUEFALSE" use="optional" />
+    <xs:attribute name="Group" type="xs:string" use="optional" />
+    <xs:attribute name="PushDownChanges" type="xs:boolean" use="optional" />
+    <xs:attribute name="RequireClientRenderingOnNew" type="xs:string" use="optional" />
+
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="SPContentTypeRef">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="skip" />
+    </xs:sequence>
+
+    <xs:attribute name="ID" type="Guid" />
+
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="SPContentTypeFolder">
+    <xs:attribute name="TargetName" type="xs:string" />
+
+    <xs:anyAttribute namespace="##any" processContents="skip" />
+  </xs:complexType>
+
+  <xs:complexType name="SPContentTypeCollection">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="skip" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!--This defines that the XML can contain 0-N instances of the SPGenericObject element-->
+  <xs:element name="SPObjects" type="SPGenericObjectCollection"></xs:element>
 </xs:schema>
 ```
 
@@ -1357,45 +1322,41 @@ There is no change from current published [full 2013 package schema](https://doc
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema
-	targetNamespace="urn:deployment-rootobjectmap-schema"
-	elementFormDefault="qualified"
-	xmlns="urn:deployment-rootobjectmap-schema"
-	xmlns:mstns="urn:deployment-rootobjectmap-schema"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema targetNamespace="urn:deployment-rootobjectmap-schema" elementFormDefault="qualified" 
+  xmlns="urn:deployment-rootobjectmap-schema" 
+  xmlns:mstns="urn:deployment-rootobjectmap-schema" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<!-- Guid SimpleType definition -->
-	<xs:simpleType name="Guid">
-		<xs:restriction base="xs:string"></xs:restriction>
-	</xs:simpleType>
+  <!-- Guid SimpleType definition -->
+  <xs:simpleType name="Guid">
+    <xs:restriction base="xs:string"></xs:restriction>
+  </xs:simpleType>
 
-	<xs:simpleType name="SPDeploymentObjectType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Folder" />
-			<xs:enumeration value="List" />
-			<xs:enumeration value="ListItem" />
-			<xs:enumeration value="File" />
-		</xs:restriction>
-	</xs:simpleType>
+  <xs:simpleType name="SPDeploymentObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Folder" />
+      <xs:enumeration value="List" />
+      <xs:enumeration value="ListItem" />
+      <xs:enumeration value="File" />
+    </xs:restriction>
+  </xs:simpleType>
 
-	<xs:complexType name="SPRootObject">
-		<xs:attribute name="Id" type="Guid" />
-		<xs:attribute name="Type" type="SPDeploymentObjectType" />
-		<xs:attribute name="ParentId" type="Guid" />
-		<xs:attribute name="WebUrl" type="xs:string" />
-		<xs:attribute name="Url" type="xs:string" />
-		<xs:attribute name="IsDependency" type="xs:boolean" />
-	</xs:complexType>
+  <xs:complexType name="SPRootObject">
+    <xs:attribute name="Id" type="Guid" />
+    <xs:attribute name="Type" type="SPDeploymentObjectType" />
+    <xs:attribute name="ParentId" type="Guid" />
+    <xs:attribute name="WebUrl" type="xs:string" />
+    <xs:attribute name="Url" type="xs:string" />
+    <xs:attribute name="IsDependency" type="xs:boolean" />
+  </xs:complexType>
 
-	<xs:complexType name="SPRootObjects">
-		<xs:sequence>
-			<xs:element
-				name="RootObject" type="SPRootObject"
-				minOccurs="0" maxOccurs="unbounded" />
-		</xs:sequence>
-	</xs:complexType>
+  <xs:complexType name="SPRootObjects">
+    <xs:sequence>
+      <xs:element name="RootObject" type="SPRootObject" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
 
-	<xs:element name="RootObjects" type="SPRootObjects" />
+  <xs:element name="RootObjects" type="SPRootObjects" />
 </xs:schema>
 ```
 
@@ -1432,8 +1393,5 @@ For the container:
 https://{site_url}/_api/site/ProvisionMigrationContainers
 ```
 
-
->[!NOTE]
->The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
-
-
+> [!NOTE]
+> The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
