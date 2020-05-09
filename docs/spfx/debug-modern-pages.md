@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 04/21/2020
+ms.date: 05/09/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -59,13 +59,13 @@ When you add a new SharePoint Framework extension to your project, the SharePoin
 
 Next to the default configuration, the SharePoint Framework Yeoman generator will create an entry for each extension that you add to your project. Each entry contains a URL of the modern page that should be used to test the particular extension, the list of extensions that should be loaded and for each extension, the list of properties that should be set on them. To use the particular serve configuration, execute in the command line:
 
-```sh
+```shell
 gulp serve --config=<name>
 ```
 
 for example:
 
-```sh
+```shell
 gulp serve --config=helloWorld
 ```
 
@@ -75,11 +75,15 @@ After running this command, gulp will start your web browser with the modern pag
 
 Once you confirm, the page will load with the extensions you specified in your serve configuration.
 
+### Disabling debug scripts
+
+By default, when debug scripts are enabled and allowed once on a page, they will be allowed throughout the browser session. To disable the debug scripts from loading without ending your browser session or manually deleting the session data, include the URL parameter `reset=true` in the request.
+
 ### Debug extensions by manually building the debug URL
 
 If you're working with a version of the SharePoint Framework older than 1.3.0, and you want to debug an extension on a modern page, you have to manually construct the URL with the required parameters. First, start the local gulp server, by in the command line changing the working directory to your project folder and then executing:
 
-```sh
+```shell
 gulp serve --nobrowser
 ```
 
@@ -91,14 +95,14 @@ To debug an Application Customizer, to the URL of your modern page, add `?loadSP
 
 Following are the query string parameters that you need to add:
 
-Parameter|Description
----------|-----------
-`loadSPFX=true`|Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
-`debugManifestsFile`|Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
-`customActions`|Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it.
-`key`|Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.
-`location`|The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.
-`properties`|An optional JSON object that contains properties that are available via the this.properties member
+|      Parameter       |                                                                                                                 Description                                                                                                                  |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework. |
+| `debugManifestsFile` | Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                 |
+| `customActions`      | Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it.                                                    |
+| `key`                | Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.                                                      |
+| `location`           | The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.                                                                                                                         |
+| `properties`         | An optional JSON object that contains properties that are available via the this.properties member                                                                                                                                           |
 
 With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
 
@@ -112,14 +116,14 @@ To debug a field customizer, to the URL of your list view page, add `?loadSPFX=t
 
 Following are the query string parameters that you need to add:
 
-Parameter|Description
----------|-----------
-`loadSPFX=true`|Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
-`debugManifestsFile`|Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
-`fieldCustomizers`|indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that is deserialized into `this.properties` for your extension.
-`key`|Use the internal name of the field as the key.
-`id`|The GUID of the Field Customizer extension associated with this field.
-`properties`|The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.
+|Parameter|Description|
+|---------|-----------|
+|`loadSPFX=true`|Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.|
+|`debugManifestsFile`|Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).|
+|`fieldCustomizers`|indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that is deserialized into `this.properties` for your extension.|
+|`key`|Use the internal name of the field as the key.|
+|`id`|The GUID of the Field Customizer extension associated with this field.|
+|`properties`|The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.|
 
 With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
 
@@ -133,14 +137,14 @@ To debug a list view command set, to the URL of your list view page, add `?loadS
 
 Following are the query string parameters that you need to add:
 
-Parameter|Description
----------|-----------
-`loadSPFX=true`|Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
-`debugManifestsFile`|Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
-`customActions`|simulates a custom action. You can set many properties on this CustomAction object that affect the look, feel, and location of your button; we’ll cover them all later.
-`key`|GUID of the extension.
-`Location`|Where the commands are displayed. The possible values are: `ClientSideExtension.ListViewCommandSet.ContextMenu`: The context menu of the item(s), `ClientSideExtension.ListViewCommandSet.CommandBar`: The top command set menu in a list or library. `ClientSideExtension.ListViewCommandSet`: Both the context menu and the command bar (corresponds to `SPUserCustomAction.Location="CommandUI.Ribbon"`).
-`properties`|An optional JSON object containing properties that are available via the this.properties member.
+|      Parameter       |                                                                                                                                                                                                 Description                                                                                                                                                                                                  |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.                                                                                                                                                                 |
+| `debugManifestsFile` | Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                                                                                                                                                                                 |
+| `customActions`      | simulates a custom action. You can set many properties on this CustomAction object that affect the look, feel, and location of your button; we’ll cover them all later.                                                                                                                                                                                                                                      |
+| `key`                | GUID of the extension.                                                                                                                                                                                                                                                                                                                                                                                       |
+| `Location`           | Where the commands are displayed. The possible values are: `ClientSideExtension.ListViewCommandSet.ContextMenu`: The context menu of the item(s), `ClientSideExtension.ListViewCommandSet.CommandBar`: The top command set menu in a list or library. `ClientSideExtension.ListViewCommandSet`: Both the context menu and the command bar (corresponds to `SPUserCustomAction.Location="CommandUI.Ribbon"`). |
+| `properties`         | An optional JSON object containing properties that are available via the this.properties member.                                                                                                                                                                                                                                                                                                             |
 
 With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
 
@@ -152,7 +156,7 @@ Once you confirm, the page will load with the extensions you specified in your s
 
 To test the local versions of your SharePoint Framework client-side web parts on modern SharePoint pages in your tenant, first, start the local gulp server, by changing the working directory to your project folder and executing in the command line:
 
-```sh
+```shell
 gulp serve --nobrowser
 ```
 
@@ -180,25 +184,24 @@ Using the SharePoint workbench, you can only test web parts from your solution. 
 
 ## Debug SharePoint Framework web parts -- an alternative approach
 
-If you build your spfx webpart solution without the --ship parameter as following
+If you build your SPFx webpart solution without the --ship parameter as following
 
-```sh
+```shell
 gulp bundle
 gulp package-solution
 ```
 
-the packages generated will reference the code from your local computer (https://localhost:4321). You can deploy the solution to the app catalog as you normally would. 
+the packages generated will reference the code from your local computer (https://localhost:4321). You can deploy the solution to the app catalog as you normally would.
 
-You can then start your local server  by running 
+You can then start your local server  by running
 
-```sh
+```shell
 gulp serve --nobrowser
 ```
 
-Now you can go back to a SharePoint site where the solution has been deployed and add the webparts to any page -- modern or classic-- and the webpart code will be loaded from your local development environment. You can debug your webparts just as you would if you ran 'gulp serve' and added your webpart to the workbench.
+Now you can go back to a SharePoint site where the solution has been deployed and add the webparts to any page, modern or classic, and the webpart code will be loaded from your local development environment. You can debug your webparts just as you would if you ran 'gulp serve' and added your webpart to the workbench.
 
 This approach should only be used when you are in development mode. If you deploy an app to the app catalog that points to your local host, it will fail to run if your development environment is not running.
-
 
 ## See also
 
