@@ -1,7 +1,7 @@
 ---
 title: Validate web part property values
 description: Validate property values in SharePoint Framework client-side web parts by validating the value directly inside a web part's code, or by calling an external API. 
-ms.date: 01/09/2018
+ms.date: 05/09/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -43,12 +43,6 @@ When working with SharePoint Framework client-side web parts, users can configur
   - **Shows information about the selected list** as your web part description
 
   ![SharePoint Framework Yeoman generator with the default choices](../../../images/property-validation-yeoman-generator.png)
-
-5. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-  ```sh
-  npm shrinkwrap
-  ```
 
 6. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
