@@ -18,19 +18,19 @@ When working with SharePoint Framework client-side web parts, users can configur
 
 1. Start by creating a new folder for your project.
 
-    ```sh
+    ```shell
     md react-listinfo
     ```
 
 1. Go to the project folder.
 
-    ```sh
+    ```shell
     cd react-listinfo
     ```
 
 1. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project.
 
-    ```sh
+    ```shell
     yo @microsoft/sharepoint
     ```
 
@@ -122,7 +122,7 @@ In this step, you verify that the description web part property is specified and
 
 1. Run the following command to see the result of the validation:
 
-    ```sh
+    ```shell
     gulp serve
     ```
 
@@ -250,7 +250,7 @@ In this step, you implement validation logic that checks if the list with the na
 
 1. Run the following command to verify that the project is running and that the newly added list name property is displayed in the web part property pane:
 
-    ```sh
+    ```shell
     gulp serve
     ```
 
@@ -351,7 +351,7 @@ In this step, you validate the provided list name and check if it corresponds to
 
 1. Run the following command to see the result of the validation:
 
-    ```sh
+    ```shell
     gulp serve --nobrowser
     ```
 
@@ -421,6 +421,6 @@ You can configure the validation delay for each property separately, depending o
 1. The `deferredValidationTime` property specifies the number of milliseconds that the SharePoint Framework waits before starting the validation process.
 1. Run the following command to see that the applied delay is working as expected:
 
-  ```sh
+  ```shell
   gulp serve --nobrowser
   ```
