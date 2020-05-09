@@ -48,12 +48,6 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
     - **What is your Web part description?** Shows list items from the selected list
     - **Which framework would you like to use?** React
 
-1. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-    ```sh
-    npm shrinkwrap
-    ```
-
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
     ![SharePoint Framework project open in Visual Studio Code](../../../images/custom-property-pane-control-visual-studio-code.png)
