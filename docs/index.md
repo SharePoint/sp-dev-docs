@@ -2,7 +2,7 @@
 title: "SharePoint Development"
 ms.author: vesaj
 author: VesaJuvonen
-ms.date: 4/13/2018
+ms.date: 5/01/2020
 layout: LandingPage
 ms.audience: Developer
 ms.topic: landing-page
@@ -70,7 +70,7 @@ Build SharePoint Framework solutions, apps, add-ins, and solutions for SharePoin
         </a>
     </li>
     <li>
-        <a href="https://dev.office.com/blogs">
+        <a href="https://developer.microsoft.com/office/blogs/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">

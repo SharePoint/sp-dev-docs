@@ -1,7 +1,7 @@
 ---
 title: Create a SharePoint Add-in that contains a document template and a task pane add-in
 description: Use Visual Studio to develop an Office Add-in that appears in a document that is opened from a SharePoint Add-in.
-ms.date: 12/27/2017
+ms.date: 05/01/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -266,7 +266,7 @@ When you are ready to package your add-in for publishing, open the Publish Offic
 - [Publish your Office Add-in](https://docs.microsoft.com/office/dev/add-ins/publish/publish)
 - [Understanding the JavaScript API for Office](https://docs.microsoft.com/office/dev/add-ins/develop/understanding-the-javascript-api-for-office)
 - [Office Add-ins XML manifest](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests)
-- [JavaScript API for Office reference](https://dev.office.com/reference/add-ins/javascript-api-for-office)
+- [JavaScript API for Office reference](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/understanding-the-javascript-api-for-office)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     
  

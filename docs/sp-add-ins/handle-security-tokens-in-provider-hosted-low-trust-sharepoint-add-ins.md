@@ -1,7 +1,7 @@
 ---
 title: Handle security tokens in provider-hosted low-trust SharePoint Add-ins
 description: The context, access, and refresh tokens that are used for authorization by low-trust, provider-hosted SharePoint Add-ins, and how to work with them in your code.
-ms.date: 1/29/2020
+ms.date: 05/01/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -14,7 +14,7 @@ localization_priority: Priority
 SharePoint Add-ins that use the [low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) to gain access to SharePoint data participate in an OAuthflow that involves the passing of security tokens (in [JSON Web Token](https://datatracker.ietf.org/doc/rfc7519/) format) among SharePoint, Microsoft Azure Access Control Service (ACS), the remote components of the SharePoint Add-in, and, in some cases, the user's browser.
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the **https://accounts.accesscontrol.windows.net** hostname (which isn't impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the **https://accounts.accesscontrol.windows.net** hostname (which isn't impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 There are different flows depending on the design of the add-in, but all of them involve at least the following two types of tokens:
 
