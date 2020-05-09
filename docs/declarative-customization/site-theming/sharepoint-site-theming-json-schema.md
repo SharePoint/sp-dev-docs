@@ -15,7 +15,7 @@ The new [SharePoint site theming](sharepoint-site-theming-overview.md) features 
 
 * __backgroundImageUri__ &ndash; The URI of an optional background image for the theme (value can be blank if no background image).
 
-* __theme__ &ndash; The RGB color settings for the theme, stored as a nested JSON object with the following keys:
+* __palette__ &ndash; The RGB color settings for the theme, stored as a nested JSON object with the following keys:
 
     * themePrimary
     * themeLighterAlt
