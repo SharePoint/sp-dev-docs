@@ -1,7 +1,7 @@
 ---
 title: Using Azure Functions with SharePoint webhooks
 description: Set up and use Azure Functions for your webhooks to take care of the hosting and scaling of your function.
-ms.date: 02/08/2018
+ms.date: 05/09/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,198 +9,235 @@ localization_priority: Priority
 
 # Using Azure Functions with SharePoint webhooks
 
-[Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) offers an easy way to host your SharePoint webhooks: you can simply add your webhook C# or JavaScript code via the browser, and Azure takes care of the hosting and scaling of your function. This guide shows how to set up and use Azure Functions for your webhooks.
+[Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) offers an easy way to host your SharePoint webhooks: you can add your webhook C# or JavaScript code via the browser, and Azure takes care of the hosting and scaling of your function. This guide shows how to set up and use Azure Functions for your webhooks.
 
 ## Create an Azure Function App
 
-The first step you need to do is create an Azure Function App, which is a special kind of Azure Web App focused on hosting Azure Functions. 
+The first step you need to do is create an Azure Function App, which is a special Azure Web App focused on hosting Azure Functions.
 
-1. Navigate to [https://portal.azure.com](https://portal.azure.com), select **New**, and then search for **Function App**.
+1. Navigate to [https://portal.azure.com](https://portal.azure.com), search for **function app**.  Select **Function App** from the search results.
 
-    ![Creating an Azure Function App](../../images/webhook-azure-function0.png)
+    ![Creating an Azure Function App](../../images/webhook-azure-function00.png)
 
-2. Select **Function App**, and then complete the information needed to create the Function App:
+1. Click the **Add** option.
 
-    ![Complete Azure Function App details](../../images/webhook-azure-function1.png)
+    ![Add Azure Function App](../../images/webhook-azure-function01.png)
+
+1. Complete the information needed to create the Function App, then click **Review + create**.
+
+    ![Fill in Azure Function App details](../../images/webhook-azure-function08.png)
+
+1. Click **Create**
+
+    ![Azure Function App Confirmation Page](../../images/webhook-azure-function09.png)
+
+1. When the deployment is completed click **Go to resource**.
+
+    ![Azure Function App Completed Page](../../images/webhook-azure-function10.png)
 
 ## Create an Azure Function
 
-1. Now that the app to host the functions is ready, you can continue with creating your first Azure Function by selecting the **New Function** link.
+Now that the app to host the functions is ready, you can continue with creating your first Azure Function by clicking the **New function** link.
 
-    ![Adding an Azure Function](../../images/webhook-azure-function2.png)
+![Azure Function App Landing Page](../../images/webhook-azure-function02.png)
 
-    This offers you to start your function from a template; in the case of SharePoint webhooks, we need an HTTP triggered function, and because we are writing C# code in our sample, this means we're using the **HttpTrigger-CSharp** function template. Given that SharePoint webhook services need to be anonymously callable, it's important to switch the **Authorization level** to **Anonymous**.
+This offers you to start your function from a template; for SharePoint webhooks, we need an HTTP triggered function, and because we're writing C# code in our sample, this means we're using the **HttpTrigger-CSharp** function template.
 
-    ![Choosing an Azure Function template](../../images/webhook-azure-function3.png)
+1. Select the **In-portal** development environment option then click **Continue**.
 
-    > [!NOTE]
-    > - Using the **GenericWebHook** template does not yet work for SharePoint webhooks, but the SharePoint product team is aware of this problem and will address it.
-    > - If you get "Failed to validate the notification URL" errors when using your Azure function-based webhook, you might be able to resolve this by setting the Authorization level to **Function** and defining your function for anonymous access.
-    > - Java language functions cannot currently validate the webhook callback due to lack of asynchronous support. This should be added by Azure Functions v2 general avalibility as seen [here](https://github.com/Azure/azure-functions-java-worker/issues/83)
+    ![Select Development Environment Page](../../images/webhook-azure-function03.png)
 
-    <br/>
+1. Select **Webhook + API** trigger type then click **Create**.
+
+    ![Select Trigger Type Page](../../images/webhook-azure-function11.png)
 
     The result is a "default" Azure Function written in C#.
 
-    ![The default Azure Function](../../images/webhook-azure-function4.png)
+    ![Development Environment Page Showing Default C# Code](../../images/webhook-azure-function04.png)
 
-2. In our case, we want this Azure Function to behave as a SharePoint webhook service, so we need to implement the following in C#:
-    - Return the validationtoken if specified as a URL parameter to the call. This is needed as described at [Create a new subscription](./lists/create-subscription.md), and SharePoint expects the reply to happen within 5 seconds. 
-    - Process the JSON webhook notification. In the following sample, we've opted to store the JSON in a storage queue so that an Azure Web Job can pick it up and process it asynchronously. Depending on your needs, you could also process the notification directly in your webhook service, but keep in mind that all webhook service calls need to complete in 5 seconds; hence, using an asynchronous model is recommended.
+In our case, we want this Azure Function to behave as a SharePoint webhook service, so we need to implement the following in C#:
 
-3. You can achieve this by replacing the default code with the following code (please enter your storage account connection string and update the queue name if you're using a different one):
+- Return the **validationtoken** if specified as a URL parameter to the call. This is needed as described at [Create a new subscription](./lists/create-subscription.md), and SharePoint expects the reply to happen within 5 seconds.
+- Process the JSON webhook notification. In the following sample, we've opted to store the JSON in a storage queue so that an Azure Web Job can pick it up and process it asynchronously.
+- Depending on your needs, you could also process the notification directly in your webhook service, but keep in mind that all webhook service calls need to complete in 5 seconds; so using an asynchronous model is recommended.
+
+You can achieve this by replacing the default code with the following code:
 
 ```cs
 #r "Newtonsoft.Json"
-#r "Microsoft.WindowsAzure.Storage"
 
-using System;
 using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
-using Microsoft.WindowsAzure;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Queue;
 
-public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
+public static async Task<IActionResult> Run(HttpRequest req,
+  ICollector<string> outputQueueItem, ILogger log)
 {
-    log.Info($"Webhook was triggered!");
+  log.LogInformation($"Webhook was triggered!");
 
-    // Grab the validationToken URL parameter
-    string validationToken = req.GetQueryNameValuePairs()
-        .FirstOrDefault(q => string.Compare(q.Key, "validationtoken", true) == 0)
-        .Value;
-    
-    // If a validation token is present, we need to respond within 5 seconds by  
-    // returning the given validation token. This only happens when a new 
-    // web hook is being added
-    if (validationToken != null)
+  // Grab the validationToken URL parameter
+  string validationToken = req.Query["validationtoken"];
+
+  // If a validation token is present, we need to respond within 5 seconds by
+  // returning the given validation token. This only happens when a new
+  // webhook is being added
+  if (validationToken != null)
+  {
+    log.LogInformation($"Validation token {validationToken} received");
+    return (ActionResult)new OkObjectResult(validationToken);
+  }
+
+  log.LogInformation($"SharePoint triggered our webhook...great :-)");
+  var content = await new StreamReader(req.Body).ReadToEndAsync();
+  log.LogInformation($"Received following payload: {content}");
+
+  var notifications = JsonConvert.DeserializeObject<ResponseModel<NotificationModel>>(content).Value;
+  log.LogInformation($"Found {notifications.Count} notifications");
+
+  if (notifications.Count > 0)
+  {
+    log.LogInformation($"Processing notifications...");
+    foreach(var notification in notifications)
     {
-      log.Info($"Validation token {validationToken} received");
-      var response = req.CreateResponse(HttpStatusCode.OK);
-      response.Content = new StringContent(validationToken);
-      return response;
+      // add message to the queue
+      string message = JsonConvert.SerializeObject(notification);
+      log.LogInformation($"Before adding a message to the queue. Message content: {message}");
+      outputQueueItem.Add(message);
+      log.LogInformation($"Message added :-)");
     }
+  }
 
-    log.Info($"SharePoint triggered our webhook...great :-)");
-    var content = await req.Content.ReadAsStringAsync();
-    log.Info($"Received following payload: {content}");
-
-    var notifications = JsonConvert.DeserializeObject<ResponseModel<NotificationModel>>(content).Value;
-    log.Info($"Found {notifications.Count} notifications");
-
-    if (notifications.Count > 0)
-    {
-        log.Info($"Processing notifications...");
-        foreach(var notification in notifications)
-        {
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("<YOUR STORAGE ACCOUNT>");
-            // Get queue... create if does not exist.
-            CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
-            CloudQueue queue = queueClient.GetQueueReference("sharepointlistwebhookeventazuread");
-            queue.CreateIfNotExists();
-
-            // add message to the queue
-            string message = JsonConvert.SerializeObject(notification);
-            log.Info($"Before adding a message to the queue. Message content: {message}");
-            queue.AddMessage(new CloudQueueMessage(message));
-            log.Info($"Message added :-)");
-        }
-    }
-
-    // if we get here we assume the request was well received
-    return new HttpResponseMessage(HttpStatusCode.OK);
+  // if we get here we assume the request was well received
+  return (ActionResult)new OkObjectResult($"Added to queue");
 }
-
 
 // supporting classes
 public class ResponseModel<T>
 {
-    [JsonProperty(PropertyName = "value")]
-    public List<T> Value { get; set; }
+  [JsonProperty(PropertyName = "value")]
+  public List<T> Value { get; set; }
 }
 
 public class NotificationModel
 {
-    [JsonProperty(PropertyName = "subscriptionId")]
-    public string SubscriptionId { get; set; }
+  [JsonProperty(PropertyName = "subscriptionId")]
+  public string SubscriptionId { get; set; }
 
-    [JsonProperty(PropertyName = "clientState")]
-    public string ClientState { get; set; }
+  [JsonProperty(PropertyName = "clientState")]
+  public string ClientState { get; set; }
 
-    [JsonProperty(PropertyName = "expirationDateTime")]
-    public DateTime ExpirationDateTime { get; set; }
+  [JsonProperty(PropertyName = "expirationDateTime")]
+  public DateTime ExpirationDateTime { get; set; }
 
-    [JsonProperty(PropertyName = "resource")]
-    public string Resource { get; set; }
+  [JsonProperty(PropertyName = "resource")]
+  public string Resource { get; set; }
 
-    [JsonProperty(PropertyName = "tenantId")]
-    public string TenantId { get; set; }
+  [JsonProperty(PropertyName = "tenantId")]
+  public string TenantId { get; set; }
 
-    [JsonProperty(PropertyName = "siteUrl")]
-    public string SiteUrl { get; set; }
+  [JsonProperty(PropertyName = "siteUrl")]
+  public string SiteUrl { get; set; }
 
-    [JsonProperty(PropertyName = "webId")]
-    public string WebId { get; set; }
+  [JsonProperty(PropertyName = "webId")]
+  public string WebId { get; set; }
 }
 
 public class SubscriptionModel
 {
-    [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-    public string Id { get; set; }
+  [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+  public string Id { get; set; }
 
-    [JsonProperty(PropertyName = "clientState", NullValueHandling = NullValueHandling.Ignore)]
-    public string ClientState { get; set; }
+  [JsonProperty(PropertyName = "clientState", NullValueHandling = NullValueHandling.Ignore)]
+  public string ClientState { get; set; }
 
-    [JsonProperty(PropertyName = "expirationDateTime")]
-    public DateTime ExpirationDateTime { get; set; }
+  [JsonProperty(PropertyName = "expirationDateTime")]
+  public DateTime ExpirationDateTime { get; set; }
 
-    [JsonProperty(PropertyName = "notificationUrl")]
-    public string NotificationUrl {get;set;}
+  [JsonProperty(PropertyName = "notificationUrl")]
+  public string NotificationUrl {get;set;}
 
-    [JsonProperty(PropertyName = "resource", NullValueHandling = NullValueHandling.Ignore)]
-    public string Resource { get; set; }
+  [JsonProperty(PropertyName = "resource", NullValueHandling = NullValueHandling.Ignore)]
+  public string Resource { get; set; }
 }
 ```
 
 ## Configure your Azure Function
 
-Because we've chosen the correct template to start from, our configuration is almost complete. The only thing you still need to do is to switch the **Allowed HTTP methods** to **Selected methods**, and then only allow the **POST** HTTP method. Also cross-check that **Mode** is equal to **Standard**, and **Authorization level** is set to **Anonymous**.
+Because we've chosen the correct template to start from, our configuration is almost complete. The only thing you still need to do is to configure the Azure Queue Storage as an Output binding so that we can add messages to the queue as they come in.
 
-![Azure Function settings](../../images/webhook-azure-function5.png)
+1. Select **Integrate** and then **New Output** to add the output binding.
 
-## Test your Azure Function
+    ![Azure Function Integration Settings](../../images/webhook-azure-function12.png)
+
+1. Select **Azure Queue Storage** as the binding type and then click **Select**.
+
+    ![Azure Function Binding Selection](../../images/webhook-azure-function13.png)
+
+1. Click **Save**.
+
+    ![Azure Function Azure Queue Storage Settings](../../images/webhook-azure-function05.png)
+
+## Test your Azure Function (Validation Token Test)
+
 You're now all set for your first Azure Function test.
 
-1. Navigate to the **Develop** screen. 
+1. Navigate back to the code screen by clicking on the name of the function **HttpTrigger1** in the navigation panel.  Then click the **Test** tab to open the test panel on the right.
 
-2. Select the **Test** icon to open the test pane on the right, and add a URL parameter "validationtoken" with a random string as value. 
+    ![Navigate To Azure Function Test Panel](../../images/webhook-azure-function14.png)
 
-3. Using this setup, we're mimicking the behavior of SharePoint by calling your web hook service when validating a new webhook addition. Select **Run** to test...if everything goes well, you'll see in the logs section that your service was called and that it returned the passed value with an HTTP 200 response.
+1. Add a URL parameter **validationtoken** with a random string as value.
 
-![Azure Function testing](../../images/webhook-azure-function6.png)
+Using this setup, we're mimicking the behavior of SharePoint by calling your webhook service when validating a new webhook addition.
+
+Click **Run** to test...
+
+![Set Up Azure Function validationToken Test](../../images/webhook-azure-function15.png)
+
+If everything goes well, you'll see in the logs section that your service was called and that it returned the passed value with an HTTP 200 response.
+
+![validationToken Test Results](../../images/webhook-azure-function16.png)
+
+## Test your Azure Function (SharePoint List Event Test)
+
+Now for the second test.  This will test your function as if it was called by a SharePoint list event.
+
+1. In the Test panel, clear the **validationtoken** URL parameter and replace the Request body with the following JSON object.  Then click **Run**.
+
+```Json
+{
+  "value": [{
+    "subscriptionId":"1111111111-3ef7-4917-ada1-xxxxxxxxxxxxx",
+    "clientState":null,
+    "expirationDateTime":"2020-06-14T16:22:51.2160000Z","resource":"xxxxxx-c0ba-4063-a078-xxxxxxxxx","tenantId":"4e2a1952-1ed1-4da3-85a6-xxxxxxxxxx",
+    "siteUrl":"/sites/webhooktest",
+    "webId":"xxxxx-3a7c-417b-964e-39f421c55d59"
+  }]
+}
+```
+
+If everything is OK, you should see all the log messages including the one that indicates that the message was added to the queue.
+
+![Webhook Notification Test Results](../../images/webhook-azure-function17.png)
 
 ## Grab the webhook URL to use in your implementation
 
 We'll need to let SharePoint know what webhook URL we're using. To do so, let's start by copying the Azure Function URL.
 
-![Azure Function authorization codes](../../images/webhook-azure-function8.png)
+1. Click **Get function URL**.
 
-<br/>
+    ![Get Function URL Link](../../images/webhook-azure-function07.png)
 
-To avoid unathorized usage of your Azure Function, the caller needs to specify a code when calling your function. This code can be retrieved via the **Manage** screen.
+1. Click **Copy** to copy the Azure Function App URL to your clipboard.
 
-![Azure Function webhook URL](../../images/webhook-azure-function7.png)
-
-<br/>
+    ![Get Function URL Link](../../images/webhook-azure-function18.png)
 
 So in our case the webhook URL to use is the following:
 
-```https://pnp-functions.azurewebsites.net/api/spwebhookfunction?code=wyx9iAxp3o7fdGFZTbnp9Kfc5o2UhlzwgSOT/XGGM6QZcdYYa/o9aw==
+```https
+https://fa-acto-spwebhook-dev-westus.azurewebsites.net/api/HttpTrigger1?code=LTFbMHrbVVQkhbL2xUplGRmY5XnAI9q/E4s5jvfeIh00KsF9Y7QsJw==
 ```
 
 ## See also
 
 - [Overview of SharePoint webhooks](overview-sharepoint-webhooks.md)
-
-
-
