@@ -9,11 +9,11 @@ localization_priority: Priority
 
 # Using Azure Functions with SharePoint webhooks
 
-[Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) offers an easy way to host your SharePoint webhooks: you can simply add your webhook C# or JavaScript code via the browser, and Azure takes care of the hosting and scaling of your function. This guide shows how to set up and use Azure Functions for your webhooks.
+[Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) offers an easy way to host your SharePoint webhooks: you can add your webhook C# or JavaScript code via the browser, and Azure takes care of the hosting and scaling of your function. This guide shows how to set up and use Azure Functions for your webhooks.
 
 ## Create an Azure Function App
 
-The first step you need to do is create an Azure Function App, which is a special kind of Azure Web App focused on hosting Azure Functions.
+The first step you need to do is create an Azure Function App, which is a special Azure Web App focused on hosting Azure Functions.
 
 1. Navigate to [https://portal.azure.com](https://portal.azure.com), search for **function app**.  Select **Function App** from the search results.
 
@@ -31,7 +31,7 @@ The first step you need to do is create an Azure Function App, which is a specia
 
     ![Azure Function App Confirmation Page](../../images/webhook-azure-function09.png)
 
-1. Once your deployment is completed click **Go to resource**.
+1. When the deployment is completed click **Go to resource**.
 
     ![Azure Function App Completed Page](../../images/webhook-azure-function10.png)
 
@@ -41,7 +41,7 @@ Now that the app to host the functions is ready, you can continue with creating 
 
 ![Azure Function App Landing Page](../../images/webhook-azure-function02.png)
 
-This offers you to start your function from a template; in the case of SharePoint webhooks, we need an HTTP triggered function, and because we are writing C# code in our sample, this means we're using the **HttpTrigger-CSharp** function template.
+This offers you to start your function from a template; for SharePoint webhooks, we need an HTTP triggered function, and because we're writing C# code in our sample, this means we're using the **HttpTrigger-CSharp** function template.
 
 1. Select the **In-portal** development environment option then click **Continue**.
 
@@ -59,7 +59,7 @@ In our case, we want this Azure Function to behave as a SharePoint webhook servi
 
 - Return the **validationtoken** if specified as a URL parameter to the call. This is needed as described at [Create a new subscription](./lists/create-subscription.md), and SharePoint expects the reply to happen within 5 seconds.
 - Process the JSON webhook notification. In the following sample, we've opted to store the JSON in a storage queue so that an Azure Web Job can pick it up and process it asynchronously.
-- Depending on your needs, you could also process the notification directly in your webhook service, but keep in mind that all webhook service calls need to complete in 5 seconds; hence, using an asynchronous model is recommended.
+- Depending on your needs, you could also process the notification directly in your webhook service, but keep in mind that all webhook service calls need to complete in 5 seconds; so using an asynchronous model is recommended.
 
 You can achieve this by replacing the default code with the following code:
 
