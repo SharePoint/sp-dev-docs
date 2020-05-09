@@ -44,13 +44,8 @@ When working with SharePoint Framework client-side web parts, users can configur
 
   ![SharePoint Framework Yeoman generator with the default choices](../../../images/property-validation-yeoman-generator.png)
 
-5. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
-  ```sh
-  npm shrinkwrap
-  ```
-
-6. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
+5. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
   ![SharePoint Framework project open in Visual Studio Code](../../../images/property-validation-visual-studio-code.png)
 
