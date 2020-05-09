@@ -447,7 +447,7 @@ The `scope` can be the name of the permission, or the unique ID of that permissi
 
 The **User.ReadBasic.All** permission is sufficient for searching for users and getting their `displayName`, `mail`, and `userPrincipalName`.
 
-When you package and deploy your solution, you (or an admin) will have to grant the requested permissions to your solution. For details, see [Deploy the solution and grant permissions](#DeploymentAndPermissionsGrant).
+When you package and deploy your solution, you (or an admin) will have to grant the requested permissions to your solution. For details, see [Deploy the solution and grant permissions](#deploy-the-solution-and-grant-permissions).
 
 ## Consume Microsoft Graph
 
