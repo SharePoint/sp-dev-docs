@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - JSON schema
 description: The new SharePoint site theming features use a JSON schema to store color settings and other information about each theme.
-ms.date: 04/20/2018
+ms.date: 05/09/2020
 localization_priority: Priority
 ---
 
@@ -9,47 +9,43 @@ localization_priority: Priority
 
 The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Theme settings are stored in a JSON object that contains the following keys:
 
-* __name__ &ndash; The name of the theme, which appears in the theme picker UI and is also used by administrators and developers to refer to the theme in PowerShell cmdlets or calls to the SharePoint REST API.
+- **name**: The name of the theme, which appears in the theme picker UI and is also used by administrators and developers to refer to the theme in PowerShell cmdlets or calls to the SharePoint REST API.
+- **isInverted**: This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
+- **backgroundImageUri**: The URI of an optional background image for the theme (value can be blank if no background image).
+- **palette**: The RGB color settings for the theme, stored as a nested JSON object with the following keys:
+  - themePrimary
+  - themeLighterAlt
+  - themeLighter
+  - themeLight
+  - themeTertiary
+  - themeSecondary
+  - themeDarkAlt
+  - themeDark
+  - themeDarker
+  - neutralLighterAlt
+  - neutralLighter
+  - neutralLight
+  - neutralQuaternaryAlt
+  - neutralQuaternary
+  - neutralTertiaryAlt
+  - neutralTertiary
+  - neutralSecondaryAlt
+  - neutralSecondary
+  - neutralPrimaryAlt
+  - neutralPrimary
+  - neutralDark
+  - black
+  - white
+  - primaryBackground
+  - primaryText
+  - bodyBackground
+  - bodyText
+  - disabledBackground
+  - disabledText
+  - error
+  - accent
 
-* __isInverted__ &ndash; This value should be false for light themes and true for dark themes; it controls whether SharePoint uses dark or light theme colors to render text on colored backgrounds.
-
-* __backgroundImageUri__ &ndash; The URI of an optional background image for the theme (value can be blank if no background image).
-
-* __palette__ &ndash; The RGB color settings for the theme, stored as a nested JSON object with the following keys:
-
-    * themePrimary
-    * themeLighterAlt
-    * themeLighter
-    * themeLight
-    * themeTertiary
-    * themeSecondary
-    * themeDarkAlt
-    * themeDark
-    * themeDarker
-    * neutralLighterAlt
-    * neutralLighter
-    * neutralLight
-    * neutralQuaternaryAlt
-    * neutralQuaternary
-    * neutralTertiaryAlt
-    * neutralTertiary
-    * neutralSecondaryAlt
-    * neutralSecondary
-    * neutralPrimaryAlt
-    * neutralPrimary
-    * neutralDark
-    * black
-    * white
-    * primaryBackground
-    * primaryText
-    * bodyBackground
-    * bodyText
-    * disabledBackground
-    * disabledText
-    * error
-    * accent
-
-The colors in the **theme** element are specified as 6-digit or 3-digit hexadecimal RGB string values.
+The colors in the `palette` element are specified as 6-digit or 3-digit hexadecimal RGB string values.
 
 The following is an example of a JSON object that defines a theme.
 
@@ -58,7 +54,7 @@ The following is an example of a JSON object that defines a theme.
   "name": "Blue",
   "isInverted": true,
   "backgroundImageUri": "",
-  "theme": {
+  "palette": {
     "themePrimary": "#00bcf2",
     "themeLighterAlt": "#00090c",
     "themeLighter": "#001318",
@@ -94,8 +90,6 @@ The following is an example of a JSON object that defines a theme.
 }
 ```
 
-<br/>
-
 The SharePoint Framework includes eight built-in themes: six on light backgrounds, and two on dark backgrounds. You might find it useful to create a custom theme by starting from one of the built-in themes and adjusting it to suit your needs.
 
 Another option is to use the [Theme Generator tool](https://aka.ms/themedesigner) to build a custom theme. It provides an interactive UI for selecting theme colors, and automatically generates the JSON, SASS, and PowerShell definitions for your custom theme.
@@ -110,8 +104,6 @@ The following is a summary of the built-in themes, including JSON definitions fo
 ## Red theme
 
 The following table shows the color palette used by the Red theme.
-
-<br/>
 
 <table>
 <tr>
@@ -157,9 +149,8 @@ The following table shows the color palette used by the Red theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Red theme's color palette.
+
 ```powershell
 { 
     themeDarker: '#751b1e', 
@@ -190,13 +181,9 @@ The following code shows how to define a dictionary in PowerShell for the Red th
 }
 ```
 
-<br/>
-
 ## Orange theme
 
 The following table shows the color palette used by the Orange theme.
-
-<br/>
 
 <table>
 <tr>
@@ -243,8 +230,6 @@ The following table shows the color palette used by the Orange theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Orange theme's color palette.
 
 ```powershell
@@ -277,13 +262,9 @@ The following code shows how to define a dictionary in PowerShell for the Orange
 }
 ```
 
-<br/>
-
 ## Green theme
 
 The following table shows the color palette used by the Green theme.
-
-<br/>
 
 <table>
 <tr>
@@ -330,8 +311,6 @@ The following table shows the color palette used by the Green theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Green theme's color palette.
 
 ```powershell
@@ -364,13 +343,9 @@ The following code shows how to define a dictionary in PowerShell for the Green 
 }
 ```
 
-<br/>
-
 ## Blue theme
 
 The following table shows the color palette used by the Blue theme.
-
-<br/>
 
 <table>
 <tr>
@@ -417,8 +392,6 @@ The following table shows the color palette used by the Blue theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Blue theme's color palette.
 
 ```powershell
@@ -451,13 +424,9 @@ The following code shows how to define a dictionary in PowerShell for the Blue t
 }
 ```
 
-<br/>
-
 ## Purple theme
 
 The following table shows the color palette used by the Purple theme.
-
-<br/>
 
 <table>
 <tr>
@@ -504,8 +473,6 @@ The following table shows the color palette used by the Purple theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Purple theme's color palette.
 
 ```powershell
@@ -538,13 +505,9 @@ The following code shows how to define a dictionary in PowerShell for the Purple
 }
 ```
 
-<br/>
-
 ## Gray theme
 
 The following table shows the color palette used by the Gray theme.
-
-<br/>
 
 <table>
 <tr>
@@ -591,8 +554,6 @@ The following table shows the color palette used by the Gray theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Gray theme's color palette.
 
 ```powershell
@@ -625,13 +586,9 @@ The following code shows how to define a dictionary in PowerShell for the Gray t
 }
 ```
 
-<br/>
-
 ## Dark Yellow theme
 
 The following table shows the color palette used by the Dark Yellow theme.
-
-<br/>
 
 <table>
 <tr>
@@ -678,8 +635,6 @@ The following table shows the color palette used by the Dark Yellow theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Dark Yellow theme's color palette.
 
 ```powershell
@@ -713,13 +668,9 @@ The following code shows how to define a dictionary in PowerShell for the Dark Y
 }
 ```
 
-<br/>
-
 ## Dark Blue theme
 
 The following table shows the color palette used by the Dark Blue theme.
-
-<br/>
 
 <table>
 <tr>
@@ -766,8 +717,6 @@ The following table shows the color palette used by the Dark Blue theme.
 </tr>
 </table>
 
-<br/>
-
 The following code shows how to define a dictionary in PowerShell for the Dark Blue theme's color palette.
 
 ```powershell
@@ -801,11 +750,9 @@ The following code shows how to define a dictionary in PowerShell for the Dark B
 }
 ```
 
-<br/>
-
 ## See also
 
-* [SharePoint site theming overview](sharepoint-site-theming-overview.md)
-* [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
-* [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
-* [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
+- [SharePoint site theming overview](sharepoint-site-theming-overview.md)
+- [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
+- [SharePoint site theming: CSOM API](sharepoint-site-theming-csom.md)
+- [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
