@@ -1,7 +1,7 @@
 ---
 title: Validate web part property values
 description: Validate property values in SharePoint Framework client-side web parts by validating the value directly inside a web part's code, or by calling an external API.
-ms.date: 05/09/2020
+ms.date: 05/11/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -273,35 +273,29 @@ In this step, you validate the provided list name and check if it corresponds to
     export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
       // ...
 
-      private validateListName(value: string): Promise<string> {
-        return new Promise<string>((resolve: (validationErrorMessage: string) => void, reject: (error: any) => void): void => {
-          if (value === null ||
-            value.length === 0) {
-            resolve('Provide the list name');
-            return;
-          }
-
-          this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getByTitle('${escape(value)}')?$select=Id`, SPHttpClient.configurations.v1)
-            .then((response: SPHttpClientResponse): void => {
-              if (response.ok) {
-                resolve('');
-                return;
-              }
-              else if (response.status === 404) {
-                resolve(`List '${escape(value)}' doesn't exist in the current site`);
-                return;
-              }
-              else {
-                resolve(`Error: ${response.statusText}. Please try again`);
-                return;
-              }
-            })
-            .catch((error: any): void => {
-              resolve(error);
-            });
-        });
-      }
+  private async validateListName(value: string): Promise<string> {
+    if (value === null || value.length === 0) {
+      return "Provide the list name";
     }
+
+    try {
+      let response = await this.context.spHttpClient.get(
+        this.context.pageContext.web.absoluteUrl +
+          `/_api/web/lists/getByTitle('${escape(value)}')?$select=Id`,
+        SPHttpClient.configurations.v1
+      );
+
+      if (response.ok) {
+        return "";
+      } else if (response.status === 404) {
+        return `List '${escape(value)}' doesn't exist in the current site`;
+      } else {
+        return `Error: ${response.statusText}. Please try again`;
+      }
+    } catch (error) {
+      return error.message;
+    }
+  }
     ```
 
     First, the `validateListName` method checks if a list name has been provided. If not, it resolves the promise with a relevant validation error. If the user has provided a list name, the `validateListName` method uses the `SPHttpClient` to call the SharePoint REST API and check if the list with the specified name exists.
