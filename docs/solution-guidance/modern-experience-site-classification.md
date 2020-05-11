@@ -258,3 +258,4 @@ using (var clientContext = new ClientContext("https://[tenant].sharepoint.com/si
 ## See also
 
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
+- [Implement a SharePoint site classification solution](implement-a-sharepoint-site-classification-solution.md)
