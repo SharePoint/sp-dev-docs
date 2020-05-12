@@ -1,6 +1,6 @@
 ---
 title: Search in SharePoint
-ms.date: 09/25/2017
+ms.date: 05/12/2020
 ms.prod: sharepoint
 ms.assetid: 59220f81-0e5e-4945-8056-cf0a116446cb
 localization_priority: Priority
@@ -308,10 +308,7 @@ SharePoint provides two new REST interfaces: Navigation and Event Logging. You c
   
 
 ## See also
-
-
--  [Changes from SharePoint 2010 to SharePoint](https://technet.microsoft.com/library/ff607742.aspx)
-    
+   
   
 -  [Technical Diagrams -- Search](https://technet.microsoft.com/library/cc263199.aspx#search)
     
