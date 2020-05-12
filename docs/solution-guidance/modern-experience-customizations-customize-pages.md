@@ -7,13 +7,13 @@ localization_priority: Priority
 
 # Customizing "modern" site pages
 
-In 2016, the "modern" page experience was released by the SharePoint team. Modern team site pages are fast, easy to author, and support rich multimedia content. Additionally, pages look great on any device, in a browser, or from within the SharePoint mobile app. 
+In 2016, the "modern" page experience was released by the SharePoint team. Modern team site pages are fast, easy to author, and support rich multimedia content. Additionally, pages look great on any device, in a browser, or from within the SharePoint mobile app.
 
 SharePoint pages are built with web parts, which you can customize according to your needs. You can add documents, videos, images, site activities, Yammer feeds, and more. Just select the + sign and pick a web part from the toolbox to add content to your page. The new “highlighted content” web part lets you set criteria so that specific content automatically and dynamically populates in that area of the page. By using the SharePoint Framework, developers can build custom web parts that show up right in the toolbox.
 
 This article focuses on the extensibility options within the "modern" page experience. However, if you want to learn more about the functionalities offered by the "modern" experiences, see [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://www.microsoft.com/microsoft-365/blog/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/).
 
-In the remainder of this article, we'll use "modern" for the new user experience and "classic" for the legacy user experience. 
+In the remainder of this article, we'll use "modern" for the new user experience and "classic" for the legacy user experience.
 
 > [!IMPORTANT]
 > We're not deprecating the "classic" experience; both "classic" and "modern" will coexist.
@@ -38,8 +38,8 @@ These customizations are currently not supported for "modern" pages:
 
 > [!NOTE]
 > - We don't recommend combining "modern" page functionality with "classic" SharePoint publishing portals. By default, the "modern" page functionality is not enabled on "classic" SharePoint publishing portals.
-> - In June 2017, [SharePoint Framework Extensions went into developer preview](https://developer.microsoft.com/office/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions). 
-> - In May 2017, during the SharePoint Virtual Summit, we announced [communication sites with configurable page layouts](https://blogs.office.com/2017/05/16/new-sharepoint-and-onedrive-capabilities-accelerate-your-digital-transformation/).  
+> - In June 2017, [SharePoint Framework Extensions went into developer preview](https://developer.microsoft.com/office/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions).
+> - In May 2017, during the SharePoint Virtual Summit, we announced [communication sites with configurable page layouts](https://blogs.office.com/2017/05/16/new-sharepoint-and-onedrive-capabilities-accelerate-your-digital-transformation/).
 
 <a name="themingimpact"> </a>
 
@@ -54,9 +54,9 @@ If your site happens to use a custom theme, this theme is respected in the "mode
 <a name="sitesversusmodernpages"> </a>
 ## Why a site may not have "modern" pages functionality
 
-The "modern" pages are delivered by using the Site Pages web scoped feature (B6917CB1-93A0-4B97-A84D-7CF49975D4EC), so when this feature is activated, your site has the option to use "modern" pages. When Microsoft rolled out this feature, we enabled this for all "modern" team sites (GROUP#0 sites) and for most "classic" team sites (STS#0). 
+The "modern" pages are delivered by using the Site Pages web scoped feature (B6917CB1-93A0-4B97-A84D-7CF49975D4EC), so when this feature is activated, your site has the option to use "modern" pages. When Microsoft rolled out this feature, we enabled this for all "modern" team sites (GROUP#0 sites) and for most "classic" team sites (STS#0).
 
-If a "classic" team site had a high count of web parts or wiki pages, the feature was not automatically enabled, and the same applies to "classic" team sites with the publishing feature enabled. If you want "modern" page functionality on these sites, you can still activate the Site Pages feature. This also implies that sites based on other templates do not have the "modern" pages functionality enabled. 
+If a "classic" team site had a high count of web parts or wiki pages, the feature was not automatically enabled, and the same applies to "classic" team sites with the publishing feature enabled. If you want "modern" page functionality on these sites, you can still activate the Site Pages feature. This also implies that sites based on other templates do not have the "modern" pages functionality enabled.
 
 The previous paragraph talked about how the "modern" page feature was enabled on existing sites. When you create a new "modern" or "classic" team site (GROUP#0 or STS#0), the "modern" Site Pages feature is enabled at provisioning time. The "modern" Site Pages feature is not enabled on sites that are based on other templates.
 
@@ -64,7 +64,7 @@ The previous paragraph talked about how the "modern" page feature was enabled on
 
 ## Configuring the end user experience
 
-You have multiple options to control whether the "modern" or "classic" page experience is used. 
+You have multiple options to control whether the "modern" or "classic" page experience is used.
 
 ### Tenant level configuration
 
@@ -90,13 +90,13 @@ $cred = Get-Credential
 Connect-PnPOnline -Url https://[tenant].sharepoint.com/sites/siteurl -Credentials $cred
 
 # Prevent site pages at web level
-Disable-PnPFeature -Identity B6917CB1-93A0-4B97-A84D-7CF49975D4EC -Scope Web 
+Disable-PnPFeature -Identity B6917CB1-93A0-4B97-A84D-7CF49975D4EC -Scope Web
 # And again enable site pages at web
-#Enable-PnPFeature -Identity B6917CB1-93A0-4B97-A84D-7CF49975D4EC -Scope Web 
+#Enable-PnPFeature -Identity B6917CB1-93A0-4B97-A84D-7CF49975D4EC -Scope Web
 ```
 
 > [!NOTE]
-> When you disable the feature, you can no longer create new "modern" pages, but the already created pages stay working using the "modern" user experience. 
+> When you disable the feature, you can no longer create new "modern" pages, but the already created pages stay working using the "modern" user experience.
 
 ### Commenting configuration
 
@@ -108,7 +108,7 @@ By default, users can add comments (July 2017) on "modern" pages. If your organi
 
 > [!NOTE]
 > You can also programmatically manage the commenting behavior by using site and tenant level APIs (requires SharePoint Client-Side Object Model (CSOM) version 16.1.6621.1200 or later):
-> - Microsoft.Online.SharePoint.TenantAdministration.SiteProperties.CommentsOnSitePagesDisabled 
+> - Microsoft.Online.SharePoint.TenantAdministration.SiteProperties.CommentsOnSitePagesDisabled
 > - Microsoft.SharePoint.Client.Site.CommentsOnSitePagesDisabled
 
 
@@ -163,7 +163,7 @@ myPage.AddControl(txt1, 0);
 myPage.Save("mypage.aspx");
 ```
 
-#### Load an existing page 
+#### Load an existing page
 
 When you want to modify or copy an existing page, you can load that page into the PnP client-side object model; the loading "transforms" the HTML content into an object model that you can manipulate. Loading an existing page is done by using the `Load` method.
 
@@ -188,7 +188,7 @@ page2.AddSection(CanvasSectionTemplate.ThreeColumn, 5);
 page2.AddSection(CanvasSectionTemplate.TwoColumn, 10);
 ```
 
-#### Add an out-of-the-box web part 
+#### Add an out-of-the-box web part
 
 The following sample shows how you can add an out-of-the-box **image** client-side web part on a page. Note that we instantiate the web part object by using the `InstantiateDefaultWebPart` method call. After the web part is initiated, its properties are set to the default properties defined in the web part manifest. For most web parts, you need to update the properties as shown in this sample.
 
@@ -257,7 +257,7 @@ deleteDemoPage.Controls[0].Delete();
 deleteDemoPage.Save();
 ```
 
-#### Delete a page 
+#### Delete a page
 
 Finally, you can delete a client-side page.
 
