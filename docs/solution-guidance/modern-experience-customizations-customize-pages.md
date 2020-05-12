@@ -96,7 +96,7 @@ Disable-PnPFeature -Identity B6917CB1-93A0-4B97-A84D-7CF49975D4EC -Scope Web
 ```
 
 > [!NOTE]
-> When you disable the feature, you can no longer create new "modern" pages, but the already created pages stay working using the "modern" user experience.
+> When you disable the feature, the existing "modern" pages work as is. Besides, the disable only blocks the new "modern" page creation from classic page, users can still create new "modern" page from existing "modern" pages. If you want to completely block the "modern" page creation, you need to delete all existing "modern" pages.
 
 ### Commenting configuration
 
