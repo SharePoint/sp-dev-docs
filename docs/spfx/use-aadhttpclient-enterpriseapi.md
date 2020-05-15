@@ -403,9 +403,7 @@ Add the newly generated .sppkg file by dragging and dropping it from explorer to
 
 ![macOS Finder window displayed on top of the web browser showing the tenant app catalog](../images/use-aadhttpclient-enterpriseapi-deploy-draganddrop.png)
 
-When prompted, select the **Make this solution available to all sites in the organization** checkbox. Also, take note of the remark that you should go to the **Service Principal Permissions Management Page** to approve pending permission requests. Confirm the deployment by pressing the **Deploy** button:
-
-![Dialog prompting for confirming deployment of a SharePoint Framework solution package displayed in a web browser](../images/use-aadhttpclient-enterpriseapi-deploy-dialog.png)
+When prompted, select the **Make this solution available to all sites in the organization** checkbox. Also, take note of the remark that you should go to the **Service Principal Permissions Management Page** to approve pending permission requests. Confirm the deployment by pressing the **Deploy** button.
 
 ### Grant access to the enterprise API
 

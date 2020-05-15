@@ -8,7 +8,7 @@ localization_priority: Normal
 
 # Manage per user expiration for existing users on a site
 
-If you are a site administrator, you may need to [manage expiring access](https://https://support.office.com/article/manage-guest-expiration-for-a-site) for users that have access to content on your site. If your administrator has set an expiration time for access, each guest that you invite to the site or with whom you share individual files and folders will be given access for a certain number of days. If you want them to continue to have access, you must extend their access on a regular basis. There also may be times you want to change an exisiting users expiration time and that can be done via the below method. 
+If you are a site administrator, you may need to [manage expiring access](https://https://support.office.com/article/manage-guest-expiration-for-a-site) for users that have access to content on your site. If your administrator has set an expiration time for access, each guest that you invite to the site or with whom you share individual files and folders will be given access for a certain number of days. If you want them to continue to have access, you must extend their access on a regular basis. There also may be times you want to change an exisiting users expiration time and that can be done via the below method.
 
 ## Change expiration time for existing user
 
@@ -24,22 +24,22 @@ You can change expiration time for existing user using client side object model:
 ## use or the results from the use of this script remains with you.
 
 param(
-    [Parameter(Mandatory = $true)]
-    [string] $SiteUrl,
-    
-    [Parameter(Mandatory = $true)]
-    [string] $UserEmail,
-    
-    [Parameter(Mandatory = $true)]
-    [int] $DaysToExpiration
+  [Parameter(Mandatory = $true)]
+  [string] $SiteUrl,
+
+  [Parameter(Mandatory = $true)]
+  [string] $UserEmail,
+
+  [Parameter(Mandatory = $true)]
+  [int] $DaysToExpiration
 )
 
 
-#Connect to PNP 
+#Connect to PNP
 Connect-PnPOnline -Url $SiteUrl
 
 #ctx to the site
-$ctx = Get-PnPContext 
+$ctx = Get-PnPContext
 
 #Get the User and check current expiration
 $user = Get-PnPUser | ? Email -eq $UserEmail
@@ -52,11 +52,10 @@ Write-Host "Current Expiration: $($user.Expiration)"
 $user.Expiration = [DateTime]::UtcNow.AddDays($DaysToExpiration).ToString("yyyy-MM-ddTHH:mm:ssZ")
 $user.Update()
 $ctx.ExecuteQuery()
- 
- #Check new user Expiration for the user
- $ctx.Load($user)
- $ctx.ExecuteQuery()
+
+#Check new user Expiration for the user
+$ctx.Load($user)
+$ctx.ExecuteQuery()
 
 Write-Host "New Expiration: $($user.Expiration)"
 ```
-
