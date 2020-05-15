@@ -1,6 +1,6 @@
 ---
 title: Upgrade custom themes and CSS to SharePoint
-ms.date: 09/25/2017
+ms.date: 05/15/2020
 ms.prod: sharepoint
 ms.assetid: 8d1a4e3a-ae6f-41a5-bd80-3398ba541207
 localization_priority: Normal
@@ -114,7 +114,7 @@ Unmodified SharePoint 2010 CSS files and custom CSS files cannot be used on Shar
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 -  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
