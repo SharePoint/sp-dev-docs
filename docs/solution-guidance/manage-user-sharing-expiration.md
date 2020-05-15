@@ -1,14 +1,14 @@
 ---
 title: Manage per user expiration for existing users on a site
 description: Explains how using client side object model to change a users expiration date for sharing links
-ms.date: 04/01/2020
+ms.date: 05/15/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
 # Manage per user expiration for existing users on a site
 
-If you are a site administrator, you may need to [manage expiring access](https://https://support.office.com/article/manage-guest-expiration-for-a-site) for users that have access to content on your site. If your administrator has set an expiration time for access, each guest that you invite to the site or with whom you share individual files and folders will be given access for a certain number of days. If you want them to continue to have access, you must extend their access on a regular basis. There also may be times you want to change an exisiting users expiration time and that can be done via the below method.
+If you are a site administrator, you may need to [manage expiring access](https://support.office.com/article/manage-guest-expiration-for-a-site-25bee24f-42ad-4ee8-8402-4186eed74dea) for users that have access to content on your site. If your administrator has set an expiration time for access, each guest that you invite to the site or with whom you share individual files and folders will be given access for a certain number of days. If you want them to continue to have access, you must extend their access on a regular basis. There also may be times you want to change an exisiting users expiration time and that can be done via the below method.
 
 ## Change expiration time for existing user
 
