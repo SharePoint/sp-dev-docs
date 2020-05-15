@@ -1,6 +1,6 @@
 ---
 title: Create a master page preview file in SharePoint
-ms.date: 09/25/2017
+ms.date: 05/15/2020
 ms.prod: sharepoint
 ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
 localization_priority: Normal
@@ -245,7 +245,7 @@ To create a master page preview file, use an existing master page preview as a s
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 
