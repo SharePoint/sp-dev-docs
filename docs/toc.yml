@@ -266,7 +266,7 @@
     - name: Intercepting query string changes
       href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
     - name: Tools and libraries compatibility
-      href: spfx/compatibility
+      href: spfx/compatibility.md
   - name: External libraries
     items:
     - name: Add external libraries
