@@ -1,6 +1,6 @@
 ---
 title: Make custom CSS files themable in SharePoint
-ms.date: 09/25/2017
+ms.date: 05/15/2020
 ms.prod: sharepoint
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
 localization_priority: Priority
@@ -253,7 +253,7 @@ The following is an example of an **<SharePoint:CssRegistration>** element.
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 -  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
