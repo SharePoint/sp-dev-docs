@@ -1,7 +1,7 @@
 ---
 title: Building solutions with the library component type in SharePoint Framework
 description: Building solutions with the library component type in SharePoint Framework
-ms.date: 2/3/2020
+ms.date: 05/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
