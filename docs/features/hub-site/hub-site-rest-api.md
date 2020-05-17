@@ -22,7 +22,7 @@ Before you get started, make sure that you're familiar with the following:
 
 ## REST commands
 
-The following REST commands are available for working with site designs and site scripts:
+The following REST commands are available for working with hub sites:
 
 - [SP.HubSites.CanCreate](REST-cancreate-method.md) &ndash; Returns whether the current user can create a hub site. Only tenant admins can create hub sites.
 - [GetById](REST-getbyid-method.md) &ndash; Gets or updates information about a hub site.
