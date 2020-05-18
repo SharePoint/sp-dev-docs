@@ -428,6 +428,8 @@
         href: business-apps/power-automate/guidance/working-with-get-items-and-get-files.md
       - name: Working with the SharePoint Send HTTP Request action
         href: business-apps/power-automate/guidance/working-with-send-sp-http-request.md
+      - name: Customize SharePoint page approvals
+        href: business-apps/power-automate/guidance/customize-page-approvals.md
 - name: SharePoint Add-ins
   items:
   - name: Overview
