@@ -26,25 +26,25 @@ As a site owner, you are not limited to just one approval flow. You can create m
 
 This approach is much easier than trying to implement all the logic into one flow.
 
-![Multiple page approvals flow](multiple-page-approvals-flow.png)
+![Multiple page approvals flow](../../../images/multiple-page-approvals-flow.png)
 
 ## Handle news post
 
 With the read-only **Promoted State** property, you can easily check if the page submitted for approval is a news or standard page. For example, this is useful for scenarios where you check or enforce approvals for only news, but not for pages.
 
-![Promoted state](promoted-state.png)
+![Promoted state](../../../images/promoted-state.png)
 
 ## Auto approve pages
 
 Its a flow in Power Automate, so you can easily orchestrate it to auto approve requests. In the following scenario, see how you can easily auto approve a page request if the user is a manager who has direct reports. If you're not a manager, the flow goes through the approval process defined in the flow.
 
-![Auto approve requests for managers in flow](auto-approve-requests-for managers-in-flow.png)
+![Auto approve requests for managers in flow](../../../images/auto-approve-requests-for managers-in-flow.png)
 
 ## Parallel approvals
 
 Occasionally, the default approval action may not help in tracking and auditing each approval. Alternatively, you can use parallel approvals, include constraints, or apply other processes. You can track, audit and perform other actions within these parallel branches and check if the approval has been approved or rejected.
 
-![Parallel approvals in flow](parallel-approvals-in-flow.png)
+![Parallel approvals in flow](../../../images/parallel-approvals-in-flow.png)
 
 To learn more, see [Create parallel approval workflows with Power Automate](https://docs.microsoft.com/power-automate/parallel-modern-approvals).
 
