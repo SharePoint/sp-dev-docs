@@ -430,6 +430,8 @@
         href: business-apps/power-automate/guidance/working-with-send-sp-http-request.md
       - name: Customize SharePoint page approvals
         href: business-apps/power-automate/guidance/customize-page-approvals.md
+      - name: Require approval of documents in SharePoint using Power automate
+        href: business-apps/power-automate/guidance/require-doc-approval.md
 - name: SharePoint Add-ins
   items:
   - name: Overview
