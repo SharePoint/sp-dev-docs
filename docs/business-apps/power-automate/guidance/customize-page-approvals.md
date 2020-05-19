@@ -9,13 +9,6 @@ With the help of flows in Power Automate, you can configure page approval to add
 
 However, you can add more processes, or even modify how the approval process works. Because page approvals create a flow, you, as the author of the flow, can modify and add whatever business processes you want.
 
-**Approval flow contents**:
-
-- [Associate multiple approval workflows](#create-more-than-one-approval-flow)
-- [Handle news posts](handle-news-posts)
-- [Auto approve pages](auto-approve-pages)
-- [Parallel approvals](parallel-approvals)
-
 To customize the default page approval flow, for a few scenarios, check out the following video:
 
 > [!VIDEO https://youtu.be/pKrHoG70FrM]
@@ -38,7 +31,7 @@ With the read-only **Promoted State** property, you can easily check if the page
 
 Its a flow in Power Automate, so you can easily orchestrate it to auto approve requests. In the following scenario, see how you can easily auto approve a page request if the user is a manager who has direct reports. If you're not a manager, the flow goes through the approval process defined in the flow.
 
-![Auto approve requests for managers in flow](../../../images/auto-approve-requests-for managers-in-flow.png)
+![Auto approve requests for managers in flow](../../../images/auto-approve-requests-for-managers-in-flow.png)
 
 ## Parallel approvals
 
