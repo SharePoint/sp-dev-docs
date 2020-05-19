@@ -111,7 +111,7 @@ We recommend that you become familiar with the following set of REST APIs:
 
 ## Patterns and Practices
 
-The [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)](https://aka.ms/officedevpnp) initiative provides code samples, patterns, and other resources to help you transform your existing solution to the SharePoint Framework. Be sure to become familiar with the code samples and guidance that is available through the PnP effort.
+The [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)](https://aka.ms/sppnp) initiative provides code samples, patterns, and other resources to help you transform your existing solution to the SharePoint Framework. Be sure to become familiar with the code samples and guidance that is available through the PnP effort.
 
 ## See also
 
