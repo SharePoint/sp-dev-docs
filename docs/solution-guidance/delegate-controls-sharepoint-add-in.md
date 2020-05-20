@@ -31,7 +31,7 @@ See the [User controls and web controls (SharePoint Add-in Model Recipe)](user-c
 
 ## PnP samples
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
