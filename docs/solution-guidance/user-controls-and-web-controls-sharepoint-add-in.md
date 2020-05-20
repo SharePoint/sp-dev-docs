@@ -83,7 +83,7 @@ When you need to embed JavaScript on a per master page basis, this is a good opt
 - [Core.EmbedJavaScript.WeekNumbers (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScript.WeekNumbers)
 - [Core.EmbedJavaScriptJSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EmbedJavaScriptJSOM)
 - [Core.JavaScriptCustomization (O365 PnP Scenario using PnP Core component)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization)
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
