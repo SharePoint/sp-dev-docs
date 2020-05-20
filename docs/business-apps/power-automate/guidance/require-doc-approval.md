@@ -31,29 +31,29 @@ To set the content approval status of the document, with the SharePoint connecto
 The following actions occur:
 
 1. Power Automate uses a SharePoint *trigger* when a new file is added to the library.
-2. *Get file metadata* provides the *ETag* property (along with many others) required when dealing with content approvals.
-    a. ETag is a special identifier that identifies the specific version of that item pending approval.
-3. Start an approval action:
-    a. Include people for approving the documents.
-    b. Approvers should be either **Site Owners** or **Site Members**.
-    c. If you are managing users in SharePoint groups, make sure approvers are part of the **Design** permission-level group.
-4. If approval response is approved:
-    a. Set content approval status of the document to **Approved**.
-    b. Send an email to the document author regarding the approval along with any comments.
-5. If approval response is not approved:
-    a. Set content approval status of the document to **Rejected**.
-    b. Send an email to the document author regarding the rejection along with any comments.
+1. *Get file metadata* provides the *ETag* property (along with many others) required when dealing with content approvals.
+    - ETag is a special identifier that identifies the specific version of that item pending approval.
+1. Start an approval action:
+    - Include people for approving the documents.
+    - Approvers should be either **Site Owners** or **Site Members**.
+    - If you are managing users in SharePoint groups, make sure approvers are part of the **Design** permission-level group.
+1. If approval response is approved:
+    - Set content approval status of the document to **Approved**.
+    - Send an email to the document author regarding the approval along with any comments.
+1. If approval response is not approved:
+    - Set content approval status of the document to **Rejected**.
+    - Send an email to the document author regarding the rejection along with any comments.
 
 ## Setting up the flow in Power Automate
 
 Using the following template, create a flow in Power Automate.
 
 1. In the SharePoint library, from the command bar, select **Automate** > **Power Automate** > **Create a flow**.
-2. Next, select the template: **When a new file is added in SharePoint, complete a custom action**.
+1. Next, select the template: **When a new file is added in SharePoint, complete a custom action**.
 
 ![File add custom action](../../../images/new-file-custom-action.png)
 
-3. Add the actions as described in the previous steps.
+1. Add the actions as described in the previous steps.
 
 ![Flow content approval full](../../../images/promoted-state.png)
 
@@ -88,11 +88,11 @@ You can now use the content approval status action to approve and reject the doc
 The end result is that:
 
 1. After the flow is triggered, approvers get an email to approve/reject the document with the document link.
-2. Approvers can now:
-    a. If your email client supports Outlook-actionable messages: Approve it within the email using actionable messages if your Outlook client supports it.
-    b. If your email client does not support Outlook-actionable messages: Select **Approve** or **Reject** that takes you to Power Automate site where you can approve or reject the document.
-3. After approval or rejection:
-    a. Document creator receives an email with the approval status along with the approval comments.
+1. Approvers can now:
+    - If your email client supports Outlook-actionable messages: Approve it within the email using actionable messages if your Outlook client supports it.
+    - If your email client does not support Outlook-actionable messages: Select **Approve** or **Reject** that takes you to Power Automate site where you can approve or reject the document.
+1. After approval or rejection:
+    - Document creator receives an email with the approval status along with the approval comments.
 
 ![Email approval status](../../../images/email-approval-status.png)
 
