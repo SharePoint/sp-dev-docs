@@ -552,7 +552,7 @@ There are also few other environment variables for WebJobs, which might help you
 - [OD4B.Configuration.Async (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Solutions/OD4B.Configuration.Async)
 - [Provisioning.OneDriveProvisioning (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.OneDriveProvisioning)
 - [Office PnP Core component](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core)
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
