@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" site pages
 description: Use custom branding in SharePoint Online, add "modern" pages programmatically, and add, delete, or update client-side web parts on "modern" pages.
-ms.date: 04/22/2020
+ms.date: 05/20/2020
 localization_priority: Priority
 ---
 
@@ -39,7 +39,7 @@ These customizations are currently not supported for "modern" pages:
 > [!NOTE]
 > - We don't recommend combining "modern" page functionality with "classic" SharePoint publishing portals. By default, the "modern" page functionality is not enabled on "classic" SharePoint publishing portals.
 > - In June 2017, [SharePoint Framework Extensions went into developer preview](https://developer.microsoft.com/office/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions).
-> - In May 2017, during the SharePoint Virtual Summit, we announced [communication sites with configurable page layouts](https://blogs.office.com/2017/05/16/new-sharepoint-and-onedrive-capabilities-accelerate-your-digital-transformation/).
+> - In May 2017, during the SharePoint Virtual Summit, we announced [communication sites with configurable page layouts](https://www.microsoft.com/en-us/microsoft-365/blog/2017/05/16/new-sharepoint-and-onedrive-capabilities-accelerate-your-digital-transformation-2/).
 
 <a name="themingimpact"> </a>
 
