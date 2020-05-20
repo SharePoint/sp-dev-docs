@@ -1,6 +1,6 @@
 ---
 title: Custom actions in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 05/20/2020
 localization_priority: Normal
 ---
 # Custom actions in the SharePoint Add-in model
@@ -45,7 +45,7 @@ The following sample demonstrates how to add a custom action to the site setting
 ## PnP samples
 
 - [Provisioning.SiteModifier (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteModifier)
-- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
+- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
