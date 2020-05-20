@@ -1,6 +1,6 @@
 ---
 title: User profile manipulation in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 05/20/2020
 localization_priority: Normal
 ---
 User profile manipulation in the SharePoint Add-in model
@@ -130,7 +130,7 @@ In a scenario where you have both on-premises and Office 365 SharePoint environm
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 - [UserProfile.Manipulation.CSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
 - [Core.UserProfiles.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfiles.Sync) 
-- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
+- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
