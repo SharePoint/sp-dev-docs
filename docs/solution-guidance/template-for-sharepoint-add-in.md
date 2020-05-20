@@ -56,7 +56,7 @@ This section contains the following information:
 - Customizing OD4B sites using Async pattern
 - Classic add-in part and sync process for OD4B site customization
 - Pre-create OD4B sites for users
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
