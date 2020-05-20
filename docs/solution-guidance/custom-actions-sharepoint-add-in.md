@@ -45,7 +45,7 @@ The following sample demonstrates how to add a custom action to the site setting
 ## PnP samples
 
 - [Provisioning.SiteModifier (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SiteModifier)
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
