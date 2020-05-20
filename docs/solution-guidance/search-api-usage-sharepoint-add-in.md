@@ -1,6 +1,6 @@
 ---
 title: Search API usage in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 05/20/2020
 localization_priority: Normal
 ---
 Search API usage in the SharePoint Add-in model
@@ -243,7 +243,7 @@ The following code example demonstrates how to execute searches with the SharePo
 
 ## PnP samples
 - [Search.PersonalizedResults (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults)
-- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
+- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
