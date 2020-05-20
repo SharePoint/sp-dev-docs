@@ -8,7 +8,6 @@ ms.date: 05/19/2020
 Flows in Power Automate let you share your flows with others as owners or run-only users. Owners can modify flows, whereas run-only users can run or execute flows. Users' ability to run flows depends entirely on the trigger, specifically:
 
 - For a selected item
-
 - For a selected file
 
 ## Managing owners
