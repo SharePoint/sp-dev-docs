@@ -65,11 +65,11 @@ Using the following template, create a flow in Power Automate.
 
 2. Next, select the template: **When a new file is added in SharePoint, complete a custom action**.
 
-![File add custom action](../../../images/file-add-custom-action.png)
+![File add custom action](../../../images/new-file-custom-action.png)
 
 3. Add the actions as described in the previous steps.
 
-![Flow content approval full](../../../images/flow-content-approval-full.png)
+![Flow content approval full](../../../images/promoted-state.png)
 
 ## Set content approval status action
 
