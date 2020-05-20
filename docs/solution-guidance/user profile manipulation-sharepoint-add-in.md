@@ -130,7 +130,7 @@ In a scenario where you have both on-premises and Office 365 SharePoint environm
 - [Core.MMSSync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 - [UserProfile.Manipulation.CSOM (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
 - [Core.UserProfiles.Sync (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.UserProfiles.Sync) 
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
