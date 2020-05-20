@@ -53,7 +53,7 @@ The following video walks you through the code sample.
 
 - [Core.AppPartPropertyUIOverride (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppPartPropertyUIOverride)
 - [Core.AppScriptPart (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppScriptPart)
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
