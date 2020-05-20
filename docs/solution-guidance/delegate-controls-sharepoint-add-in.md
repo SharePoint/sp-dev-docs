@@ -1,6 +1,6 @@
 ---
 title: Delegate controls in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 05/20/2020
 localization_priority: Normal
 ---
 Delegate controls in the SharePoint Add-in model
@@ -31,7 +31,7 @@ See the [User controls and web controls (SharePoint Add-in Model Recipe)](user-c
 
 ## PnP samples
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
-- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
+- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
