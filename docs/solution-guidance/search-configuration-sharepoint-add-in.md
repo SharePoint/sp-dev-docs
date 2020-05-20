@@ -37,7 +37,7 @@ The following sample demonstrates how to import and export search settings betwe
 ## PnP samples
 
 - [Core.SearchSettingsPortability (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SearchSettingsPortability)
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
