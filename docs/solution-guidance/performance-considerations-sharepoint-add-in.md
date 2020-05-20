@@ -1,6 +1,6 @@
 ---
 title: Performance considerations in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 05/20/2020
 localization_priority: Normal
 ---
 Performance considerations in the SharePoint Add-in model
@@ -154,7 +154,7 @@ The [Performance.Caching (O365 PnP Sample)](https://github.com/SharePoint/PnP/tr
 
 ## PnP samples
 
-- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
+- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
