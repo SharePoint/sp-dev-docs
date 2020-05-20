@@ -243,7 +243,7 @@ The following code example demonstrates how to execute searches with the SharePo
 
 ## PnP samples
 - [Search.PersonalizedResults (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Search.PersonalizedResults)
-- Samples and content at [Microsoft 365 Pattern and Practices (PnP)](https://aka.ms/sppnp)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
