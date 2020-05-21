@@ -9,6 +9,9 @@ localization_priority: Priority
 
 # Overview of SharePoint webhooks
 
+> [!NOTE]
+> SharePoint webhooks are currently only supported by SharePoint Online.
+
 SharePoint webhooks enable developers to build applications that subscribe to receive notifications on specific events that occur in SharePoint. When an event is triggered, SharePoint sends an HTTP POST payload to the subscriber. Webhooks are easier to develop and consume than Windows Communication Foundation (WCF) services used by SharePoint Add-in remote event receivers because webhooks are regular HTTP services (web API).
 
 Currently webhooks are only enabled for SharePoint list items. SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so that your application can be aware of changes to a SharePoint list without polling the service. For more information, see [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks.md). 
