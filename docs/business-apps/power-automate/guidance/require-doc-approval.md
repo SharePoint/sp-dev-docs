@@ -9,7 +9,7 @@ Documents that contain sensitive information often require approvals. With the c
 
 Manage the content approval settings in the library settings page:
 
-![Content approval settings](../../../images/content-approval-settings.png)
+![Content approval settings](../../../images/setup-content-approval-settings.png)
 
 Settings > Versioning settings > Require content approval for submitted items
 
@@ -51,11 +51,11 @@ Using the following template, create a flow in Power Automate.
 1. In the SharePoint library, from the command bar, select **Automate** > **Power Automate** > **Create a flow**.
 1. Next, select the template: **When a new file is added in SharePoint, complete a custom action**.
 
-![File add custom action](../../../images/new-file-custom-action.png)
+![File add custom action](../../../images/create-flow-template-file-added.png)
 
 1. Add the actions as described in the previous steps.
 
-![Flow content approval full](../../../images/promoted-state.png)
+![Flow content approval full](../../../images/flow-content-approval-full.png)
 
 ## Set content approval status action
 
@@ -72,7 +72,7 @@ To see the *ETag*, expand **Show advanced options**.
 > [!NOTE]
 > While the content approval action help says that ETag is optional, it is required for documents and pages while it may be optional for list items.
 
-![Content approval status Approve](../../../images/content-approval-status-approve.png)
+![Content approval status Approve](../../../images/action-content-approval-status.png)
 
 You must ensure you enter the correct site and library name. However, you can get the rest of the values from the previous actions in the flow.
 
@@ -94,7 +94,7 @@ The end result is that:
 1. After approval or rejection:
     - Document creator receives an email with the approval status along with the approval comments.
 
-![Email approval status](../../../images/email-approval-status.png)
+![Email approval status](../../../images/output-content-approval-status.png)
 
 This is an effective way to automate document approval in SharePoint using Power Automate! Use this procedure for list items and pages as well.
 
