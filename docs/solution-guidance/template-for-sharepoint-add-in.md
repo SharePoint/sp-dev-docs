@@ -1,6 +1,6 @@
 ---
 title: XYZ in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 05/20/2020
 localization_priority: Normal
 ---
 XYZ in the SharePoint Add-in model
@@ -56,7 +56,7 @@ This section contains the following information:
 - Customizing OD4B sites using Async pattern
 - Classic add-in part and sync process for OD4B site customization
 - Pre-create OD4B sites for users
-- Samples and content at https://aka.ms/OfficeDevPnP
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
