@@ -47,5 +47,3 @@ As an added bonus, you can also select the option for run-only users to provide 
 After you share a flow, the flow becomes a Team flow. These flows appear under the **Team flows** tab on the Power Automate site.
 
 ![Team flows](../../../images/team-flows.png)
-
-
