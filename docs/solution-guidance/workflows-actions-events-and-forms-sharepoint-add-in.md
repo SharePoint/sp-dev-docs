@@ -1,6 +1,6 @@
 ---
 title: Workflows, actions (activities), events, and forms in the SharePoint Add-in model
-ms.date: 11/03/2017
+ms.date: 05/20/2020
 localization_priority: Normal
 ---
 
@@ -265,7 +265,7 @@ See the [Query a remote service using the web proxy in SharePoint 2013 (MSDN Art
 - [Workflow.CustomTasks (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CustomTasks)
 - [Workflow.CallCustomService (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallCustomService)
 - [Workflow.CallServiceUpdateSPViaProxy (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallServiceUpdateSPViaProxy)
-- Samples and content at [https://aka.ms/OfficeDevPnP](https://aka.ms/OfficeDevPnP)
+- Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 
 ## Applies to
 
