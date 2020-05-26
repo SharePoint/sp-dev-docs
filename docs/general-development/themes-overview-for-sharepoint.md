@@ -1,6 +1,6 @@
 ---
 title: Themes overview for SharePoint
-ms.date: 09/25/2017
+ms.date: 05/20/2020
 ms.prod: sharepoint
 ms.assetid: ae585dd3-82fe-46bb-ac93-065edc0a16f4
 localization_priority: Priority
@@ -127,7 +127,7 @@ You can create new designs by creating new list items in the Composed Looks list
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 
