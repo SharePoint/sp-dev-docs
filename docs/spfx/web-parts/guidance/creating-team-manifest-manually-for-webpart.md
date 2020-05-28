@@ -107,6 +107,9 @@ Notice the `componentId` query parameter in the `configurationUrl`. You should n
 
 See more details around the Microsoft Teams manifest options from the [Microsoft Teams developer guidance](https://docs.microsoft.com/microsoftteams/platform/concepts/apps/apps-package).
 
+> [!IMPORTANT]
+> Everytime `/_layouts/15/TeamsLogon.aspx` is specified in the manifest, the `dest` attribute value must be URL encoded. A Non encoded value might prevent the component from loading properly in Teams.
+
 Below json structure demonstrates sample manifest file content.
 
 ```json
