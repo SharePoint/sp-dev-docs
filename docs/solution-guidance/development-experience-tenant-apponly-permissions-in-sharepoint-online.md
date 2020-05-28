@@ -55,6 +55,8 @@ Since you want to debug the add-in, ensure that you supply https://localhost.com
 
 Now deploy the add-in in the app catalog site.
 
+Feedback: Need to include information on the App Permissions - Manage app access to this tenant option in SharePoint Admin Center. Need more information about this. For example, will the apps discussed in this document show up under App Permissions, etc? 
+
 ### Step 5: Install your add-in in your developer site collection
 
 Navigate to the developer site and add the app. Click on **App Details**.
