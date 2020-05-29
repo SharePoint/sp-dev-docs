@@ -1369,8 +1369,6 @@
     href: general-development/accessibility-in-sharepoint.md
   - name: Detect the installed SKU
     href: general-development/how-to-detect-the-installed-sku-of-sharepoint.md
-  - name: Avoid getting throttled or blocked in SharePoint Online
-    href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
   - name: Protocol handler error in SharePoint 2016
     href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Volume Shadow Copy Service (VSS)
@@ -1665,6 +1663,8 @@
       href: solution-guidance/security-and-performance.md
     - name: Authorization considerations for tenants hosted in Germany, China, or US
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
+    - name: Avoid getting throttled or blocked in SharePoint Online
+      href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
     - name: Handle SharePoint Online throttling
       href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
     - name: Set up app-only access to SharePoint
