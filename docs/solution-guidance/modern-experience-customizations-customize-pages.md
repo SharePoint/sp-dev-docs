@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" site pages
 description: Use custom branding in SharePoint Online, add "modern" pages programmatically, and add, delete, or update client-side web parts on "modern" pages.
-ms.date: 05/20/2020
+ms.date: 05/29/2020
 localization_priority: Priority
 ---
 
@@ -68,15 +68,8 @@ You have multiple options to control whether the "modern" or "classic" page expe
 
 ### Tenant level configuration
 
-If you want to completely disable the "modern" experience, it's best to use the tenant setting for this. Go to your tenant admin center (for example, contoso-admin.sharepoint.com), go to Settings, and select the "classic" experience.
+If you want to prevent users from creating new modern pages on all sites that don't already have modern pages, you can use the tenant-level setting in the new SharePoint admin center. Go to the [Settings page](https://admin.microsoft.com/sharepoint?page=settings&modern=true), select **Pages**, and then clear **Allow users to create new modern pages**. For more info, see [Allow users to create modern pages](/sharepoint/let-users-create-modern-site-pages).
 
-**Site Pages section in the SharePoint tenant scoped settings in Admin UI**
-
-![Site Pages section in the SharePoint tenant scoped settings in Admin UI](media/modern-experiences/site-pages-setting-admin-ui.png)
-
-> [!NOTE]
-> - The tenant level setting can be a little confusing; **Prevent users from creating Site Pages** actually brings back the "classic" experience.
-> - The current configuration is cached, and signing off the session immediately shows the effect of this change.
 
 ### Web level configuration
 
