@@ -63,9 +63,12 @@ The column is represented by specifying the **internal name** of the field surro
 
 While the formula supports many of the available column types, we do not currently support the following column types:
 
+* Person columns with multiple selections
+* Time calculations in DateTime column
 * Currency columns
 * Location columns
 * Calculated columns
+* Managed Metadata columns
 
 #### Quick formula reference
 
@@ -110,3 +113,20 @@ An example checking if the dates from [$StartDate] and [$EndDate] columns are be
 ```
 =if([$StartDate] >= Date('4/6/2020') && [$EndDate] <= Date('6/10/2020'),'true','false')
 ```
+
+##### Person column
+
+The following formula checks if the person column [$Owner] is equal to a specific user's email.
+
+```
+=if([$Owner.email]=='chaksc@microsoft.com', 'true', 'false')
+```
+
+##### Boolean (Yes/No) column
+
+The following formula checks if the Yes/No column [$Promoted] is equal to a Yes. To do so, it checks for the value _true_ which maps to _Yes_ for users. 
+
+```
+=if([$Promoted]==true,'true','false')
+```
+

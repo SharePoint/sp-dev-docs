@@ -81,6 +81,10 @@
       href: declarative-customization/column-formatting.md
     - name: View formatting
       href: declarative-customization/view-formatting.md
+    - name: Forms configuration
+      items:
+      - name: Show or hide columns in a form
+        href: declarative-customization/list-form-conditional-show-hide.md
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
