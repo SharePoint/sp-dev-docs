@@ -196,7 +196,7 @@ Accept: "application/json;odata=verbose"
 The following example shows how to retrieve a specific list item.
 
 ```http
-GET https://{site_url}/_api/web/lists/GetByTitle('Test')/items{item_id}
+GET https://{site_url}/_api/web/lists/GetByTitle('Test')/items({item_id})
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 ```
