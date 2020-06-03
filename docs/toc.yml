@@ -1889,10 +1889,14 @@
     href: apis/sharepoint-rest-graph.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md
+  - name: Microsoft 365 Copy and Move API
+    name: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
+    - name: Migration permission guidance
+      href: apis/migration-perm-guidance.md
     - name: Migrating OneNote folders
       href: apis/onenote-migration-service.md
     - name: Migration API
