@@ -1,5 +1,6 @@
 ---
 title: Migration permission guidance
+ms.date: 6/2/2020
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
@@ -17,11 +18,9 @@ description: "Migration permission guidance"
 ---
 # Migration permission guidance
 
-## Understanding security scope, role assignments and item limits during migration
-
 You need to be aware of three key numbers as you plan your migration to OneDrive or SharePoint especially when you have a hierarchy of deeply nested folders. They are: (1) the number of SharePoint unique permission scopes, (2) the number of role assignments, and (3) the total number of items in a list or library.
 
-### Permissions: Inherited and unique
+## Permissions: Inherited and unique
 
 Inherited permissions are set as the default at the root site collection level and are applied to the other locations and objects within that site collection. Unique permissions are all other permissions that differ (or “break”) from what is set at the root. In SharePoint, you can set unique permissions all the way down to the item level.
 
@@ -32,13 +31,13 @@ Each time you break inheritance by granting access to a new user account or grou
 When the number of unique security scopes exceeds the value of the list view threshold, added SQL server round trips take place that can affect performance. 
 When migrating, we recommend that you have less than 5,000 unique scopes per library. 
 
-### Role assignments
+## Role assignments
  
 A role assignment is a mapping between a user, a SharePoint object (Web, list, file) and a role (Design, Full Control, Contribute, etc.). The role assignment ties together the role definition (permission level) with the specific user or group, and the scope that that permission level will be applied to (such as list, folder, item).
 
 There is a role assignment limit of 5,000 per security scope.
 
-### Item limits 
+## Item limits 
 
 When a library (or list) contains more than 100,000 items (files and folders or list items), you cannot break permissions inheritance on the list itself.  There is a limit of 100,000 items that can be updated or removed as a part of creating a new SharePoint security scope. 
 
@@ -76,7 +75,7 @@ After all the content and incremental migrations are completed, apply the proper
 
 After the incremental migration has completed, and only if you previously set the scope to NULL, you can reapply the unique scope for folders A, B, C, D separately. When you reapply the scope, evaluate your folder size starting at the lowest level of hierarchy.  
 
-### Other Sharing/Permission related considerations
+## Other Sharing/Permission related considerations
  
 The REST share link or any other permission-modifying function will not take effect if you attempt to update the permission on a file that is checked out by a user.
 Finally, if a SharePoint site or OneDrive location is being actively used during migration, the existing permissions applied on that site, user or document will be enforced.
