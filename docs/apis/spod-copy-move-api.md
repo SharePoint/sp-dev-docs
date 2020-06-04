@@ -38,9 +38,8 @@ This method creates a new copy or move job that lets you  copy or move a file or
 
 #### Syntax
 
-```cs
-public List<SPCopyMigrationInfo> CreateCopyJobs(Uri[] exportObjectUris, Uri destinationUri, SPCopyMigrationOptions options)
- ```  
+`public List<SPCopyMigrationInfo> CreateCopyJobs(Uri[] exportObjectUris, Uri destinationUri, SPCopyMigrationOptions options)`
+
 
 #### Parameters
 
