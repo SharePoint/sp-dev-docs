@@ -82,5 +82,3 @@ Finally, if a SharePoint site or OneDrive location is being actively used during
  
 **Example:** If you attempt to modify the permission on a site that only allows access to existing users already defined on the site, and the user you are trying to add to a file or folder does not already have permissions on the site itself, the permission call (e.g. VROOM Invite) will not be able to make the modification. 
 
-
-
