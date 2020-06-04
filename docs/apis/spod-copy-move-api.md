@@ -52,77 +52,53 @@ public List<SPCopyMigrationInfo> CreateCopyJobs(Uri[] exportObjectUris, Uri dest
 ##### SPCopyMigrationOptions
 
 
-```cs
-public bool IsMoveMode { get; set; }
-```
+`public bool IsMoveMode { get; set; }`
+
 >[!IMPORTANT]
 >By default, this is set to copy. For a move operation, set this parameter to true.
 
 
-
-```cs
-public bool IgnoreVersionHistory { get; set; }
-```
+`public bool IgnoreVersionHistory { get; set; }`
 
 If not specified, the version history will be ignored and not moved to the destination.
 
 
+`public bool AllowSchemaMismatch { get; set; }`
 
-```cs
-public bool AllowSchemaMismatch { get; set; }
-```
 This allows the item to move even if the target has a mismatched schema definition from the source list.
  
 
-
-```CS
-public bool AllowSmallerVersionLimitOnDestination { get; set; }
-```
+`public bool AllowSmallerVersionLimitOnDestination { get; set; }`
 
 This allows the move to take place if the target file has older version. By default it’s disallowed to prevent data loss.
 
 
-
-```cs
-public SPMigrationNameConflictBehavior NameConflictBehavior { get; set; }
-```
+`public SPMigrationNameConflictBehavior NameConflictBehavior { get; set; }`
 
 If a name conflict occurs at the target site, the default reports a failure.
 
 
+`public bool IncludeItemPermissions { get; set; }`
 
-```cs
-public bool IncludeItemPermissions { get; set; }
-```
 Reserved for interal use only.
 
 
+`public SPMoveAndShareFileInfo MoveAndShareFileInfo { get; set; }`
 
-```cs
-public SPMoveAndShareFileInfo MoveAndShareFileInfo { get; set; }
-```
 Reserved for internal use only.
 
 
+`public bool BypassSharedLock { get; set; }`
 
-```cs
-public bool BypassSharedLock { get; set; }
-```
 This indicates whether a file with a share lock can still be moved in a move job. If you want to move a file that is locked, you need to set this.
 
 
-
-```cs
-public string[] ClientEtags { get; set; }
-```
+`public string[] ClientEtags { get; set; }`
 
 If set, and the source eTag doesn’t match the eTag specified, the copy and move won’t take place. If left NULL, no check will take place.
 
 
-
-```cs
-public bool MoveButKeepSource { get; set; }
-```
+`public bool MoveButKeepSource { get; set; }`
 
 Once set, this move operation is similar to copy. The file will move to destination, but the source content will not be deleted. If set, this will make a copy with the version history and preserve the original metadata. No source item deletions occurs at the end. 
 
@@ -130,12 +106,8 @@ Once set, this move operation is similar to copy. The file will move to destinat
 >This is not like the normal copy, which only copies the most recent major version and doesn't maintain all the metadata.
 
 
+`public bool ExcludeChildren { get; set; }`
 
-
-
-```cs
-public bool ExcludeChildren { get; set; }
-```
 For this operation, only the root level folder of the URL is copied. The sub-folders or files within the folder will not be moved or copied.
 
 
@@ -149,9 +121,7 @@ For this operation, only the root level folder of the URL is copied. The sub-fol
 |EncryptionKey|	AES256CBC encryption key used to decrypt messages from job/manifest queue|
 
 
-```cs
-public Uri JobQueueUri { get; set; }
-```
+`public Uri JobQueueUri { get; set; }`
 
 The reporting features are the same as they are for CreateMigrationJob. Logging tracks the status of the createCopyJobs. By default, blob queue permissions and settings are set to "all access”. It gives the job status as follows: job start, job end, and job error information. 
 
