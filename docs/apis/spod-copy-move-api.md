@@ -1,5 +1,6 @@
 ---
 title: Microsoft 365 Copy and Move API (CreateCopyJobs)
+ms.date: 6/2/2020
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
@@ -17,7 +18,7 @@ description: "Microsoft 365 Copy and Move API (CreateCopyJobs)"
 ---
 # Microsoft 365 Copy and Move API (CreateCopyJobs)
 
->[!Important]
+>[!IMPORTANT]
 >SharePoint & OneDrive Copy and Move API replaces the CreateCopyJob API.  The CreateCopyJob API has been deprecated. 
 
 
@@ -25,7 +26,7 @@ The following API is based on the use of the SharePoint Client Side Object Model
 
 You can find the latest version of the SharePoint Online CSOM package from the [NuGet library](https://www.nuget.org/) using the ID *Microsoft.SharePointOnline.CSOM*. 
 
->[!Important]
+>[!IMPORTANT]
 >Learn more about [limitations](#limitations) of this API before you begin.
 
 
@@ -54,7 +55,7 @@ public List<SPCopyMigrationInfo> CreateCopyJobs(Uri[] exportObjectUris, Uri dest
 ```cs
 public bool IsMoveMode { get; set; }
 ```
->[!Important]
+>[!IMPORTANT]
 >By default, this is set to copy. For a move operation, set this parameter to true.
 
 </br>
@@ -135,7 +136,7 @@ public bool MoveButKeepSource { get; set; }
 
 Once set, this move operation is similar to copy. The file will move to destination, but the source content will not be deleted. If set, this will make a copy with the version history and preserve the original metadata. No source item deletions occurs at the end. 
 
->[!Note]
+>[!NOTE]
 >This is not like the normal copy, which only copies the most recent major version and doesn't maintain all the metadata.
 
 
