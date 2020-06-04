@@ -1,5 +1,5 @@
 ---
-title: MMicrosoft 365 Copy and Move API (CreateCopyJobs)
+title: Microsoft 365 Copy and Move API (CreateCopyJobs)
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
