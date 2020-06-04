@@ -44,7 +44,7 @@ public List<SPCopyMigrationInfo> CreateCopyJobs(Uri[] exportObjectUris, Uri dest
 
 #### Parameters
 
-|**Parameter**|**Description**|
+|Parameter|Description|
 |:-----|:-----|
 |exportObjectUris|The URL of a file or folders in a list that you want to copy or move|
 |destinationUri|URL for the destination location.|
@@ -58,8 +58,7 @@ public bool IsMoveMode { get; set; }
 >[!IMPORTANT]
 >By default, this is set to copy. For a move operation, set this parameter to true.
 
-</br>
-</br>
+
 
 ```cs
 public bool IgnoreVersionHistory { get; set; }
@@ -67,16 +66,14 @@ public bool IgnoreVersionHistory { get; set; }
 
 If not specified, the version history will be ignored and not moved to the destination.
 
-</br>
-</br>
+
 
 ```cs
 public bool AllowSchemaMismatch { get; set; }
 ```
 This allows the item to move even if the target has a mismatched schema definition from the source list.
  
-</br>
-</br>
+
 
 ```CS
 public bool AllowSmallerVersionLimitOnDestination { get; set; }
@@ -84,8 +81,7 @@ public bool AllowSmallerVersionLimitOnDestination { get; set; }
 
 This allows the move to take place if the target file has older version. By default it’s disallowed to prevent data loss.
 
-</br>
-</br>
+
 
 ```cs
 public SPMigrationNameConflictBehavior NameConflictBehavior { get; set; }
@@ -93,8 +89,6 @@ public SPMigrationNameConflictBehavior NameConflictBehavior { get; set; }
 
 If a name conflict occurs at the target site, the default reports a failure.
 
-</br>
-</br>
 
 
 ```cs
@@ -102,24 +96,21 @@ public bool IncludeItemPermissions { get; set; }
 ```
 Reserved for interal use only.
 
-</br>
-</br>
+
 
 ```cs
 public SPMoveAndShareFileInfo MoveAndShareFileInfo { get; set; }
 ```
 Reserved for internal use only.
 
-</br>
-</br>
+
 
 ```cs
 public bool BypassSharedLock { get; set; }
 ```
 This indicates whether a file with a share lock can still be moved in a move job. If you want to move a file that is locked, you need to set this.
 
-</br>
-</br>
+
 
 ```cs
 public string[] ClientEtags { get; set; }
@@ -127,8 +118,7 @@ public string[] ClientEtags { get; set; }
 
 If set, and the source eTag doesn’t match the eTag specified, the copy and move won’t take place. If left NULL, no check will take place.
 
-</br>
-</br>
+
 
 ```cs
 public bool MoveButKeepSource { get; set; }
@@ -140,20 +130,18 @@ Once set, this move operation is similar to copy. The file will move to destinat
 >This is not like the normal copy, which only copies the most recent major version and doesn't maintain all the metadata.
 
 
-</br>
-</br>
+
 
 
 ```cs
 public bool ExcludeChildren { get; set; }
 ```
 For this operation, only the root level folder of the URL is copied. The sub-folders or files within the folder will not be moved or copied.
-</br>
-</br>
+
 
 ### Output
 
-|**Output parameter**|**Description**|
+|Output parameter|Description|
 |:-----|:-----|
 |JobID/GUID|Return a unique Job ID associated with this asynchronous read|
 |SourceListItemUniqueIds|Return the source |
@@ -171,7 +159,7 @@ The reporting features are the same as they are for CreateMigrationJob. Logging 
 ## Limitations 
 Currently, the following limitations are:
 
-|**What**|**Limitation**|
+|What|Limitation|
 |:-----|:-----|
 |File size|	A file must be less than 2 GB.|
 |Number of items|	No more than 30,000 items in a job.|
