@@ -63,7 +63,7 @@ In this example, at the source, break up the structure into four folders, A, B, 
 
 ![Hierarchy ABCD](../images/hierarchy-abcd.png)
  
->[!Note]
+>[!NOTE]
 >There are other limits that must be considered during migration. See [SharePoint Limits](https://docs.microsoft.com/en-us/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries) for details. 
 
 ### Method 2: Create your destination layout to avoid exceeding limits
