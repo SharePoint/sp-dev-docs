@@ -1,5 +1,5 @@
 ---
-title: Migration API permission guidance
+title: MMicrosoft 365 Copy and Move API (CreateCopyJobs)
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
@@ -13,7 +13,7 @@ ms.collection:
 - SPMigration
 - M365-collaboration
 search.appverid: MET150
-description: "Migration API permission guidance"
+description: "Microsoft 365 Copy and Move API (CreateCopyJobs)"
 ---
 # Microsoft 365 Copy and Move API (CreateCopyJobs)
 
