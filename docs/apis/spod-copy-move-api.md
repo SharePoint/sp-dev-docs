@@ -6,7 +6,7 @@ manager: pamgreen
 audience: ITPro
 f1.keywords:
 - NOCSH
-ms.topic: troubleshooting
+ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Priority
 ms.collection: 
