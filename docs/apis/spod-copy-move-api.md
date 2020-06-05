@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Copy and Move API (CreateCopyJobs)
-ms.date: 6/2/2020
+ms.date: 06/02/2020
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
