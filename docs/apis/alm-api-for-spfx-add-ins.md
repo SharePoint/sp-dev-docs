@@ -545,6 +545,8 @@ spo app upgrade --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ### Add and publish your app to the app catalog
 
 This action is the inverse of the **install** command above.

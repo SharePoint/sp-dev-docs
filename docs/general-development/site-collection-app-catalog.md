@@ -51,6 +51,8 @@ Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/off
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ### Create a site collection app catalog
 
 > [!NOTE]
