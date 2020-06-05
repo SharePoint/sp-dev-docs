@@ -126,6 +126,6 @@ Before deploying solutions to site collection app catalogs, site collection admi
 
 ## See also
 
-- [Manage the Organizational App Catalog](https://docs.microsoft.com/en-us/sharepoint/use-app-catalog)
+- [Manage the Organizational App Catalog](https://docs.microsoft.com/sharepoint/use-app-catalog)
 - [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog)
 
