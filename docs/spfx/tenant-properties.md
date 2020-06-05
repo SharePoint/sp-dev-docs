@@ -1,200 +1,238 @@
 ---
 title: SharePoint Online tenant properties
 description: Manage and read tenant properties, which allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components.
-ms.date: 02/02/2018
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # SharePoint Online tenant properties
 
-Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx), which is a PowerShell module to manage your SharePoint Online subscription in Office 365.
+Tenant properties allow tenant administrators to add properties in the app catalog that can be read using the SharePoint REST API.
 
-Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) can be used to manage the tenant properties. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
+## Options for working with tenant properties
 
-Yet another alternative for managing tenant properties is [PnP PowerShell](https://aka.ms/sppnp-powershell). The advantage of PnP PowerShell is that it does not require tenant administrator privileges to set those properties. Any member of the Owners group of an app catalog site can do this. This applies to the tenant app catalog site as well as [site collection app catalogs](../general-development/site-collection-app-catalog.md).
+The tenant properties are managed by tenant administrators by using one of the following options:
 
-## Use Microsoft SharePoint Online Management Shell commands to get, set and remove tenant properties
+### SharePoint REST API
 
-Using the [Microsoft SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588), tenant administrators can use PowerShell to add and remove tenant properties. 
+Learn more here: [SharePoint REST API](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 
-The following PowerShell cmdlets are available to manage the tenant properties. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL in the following cmdlets.
+### Microsoft SharePoint Online Management Shell
 
-Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet when using the SharePoint Online PowerShell.
+The tenant properties are managed by tenant administrators by using the **Microsoft SharePoint Online Management Shell**, a PowerShell module from Microsoft used to manage your SharePoint Online subscription in Office 365.
 
-### Get-SPOStorageEntity
+Before using any of the cmdlets in the Microsoft SharePoint Online Management Shell module, you must first connect to SharePoint Online using the `Connect-SPOService` cmdlet. All tenant properties are managed using the `*-SPOStorageEntity` cmdlets.
 
-- **Applies to** Office 365, SharePoint Online
+Learn more here: [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx)
 
-- **Syntax** Get-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
+### PnP PowerShell
 
-### Set-SPOStorageEntity
+The advantage of PnP PowerShell is that it doesn't require tenant administrator privileges to set those properties. Any member of the Owners group of an app catalog site can do this. This applies to the tenant app catalog site and [site collection app catalogs](../general-development/site-collection-app-catalog.md).
 
-- **Applies to** Office 365, SharePoint Online
+Prior to using any of the cmdlets in the PnP PowerShell module, you must first connect to SharePoint Online using the `Connect-PnPOnline` cmdlet. All tenant properties are managed using the `*-PnPStorageEntity` cmdlets.
 
-- **Syntax** Set-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String> [-Value] <String> [-Description] <String> [-Comments] <String>
+Learn more here: [PnP PowerShell](https://aka.ms/sppnp-powershell)
 
-### Remove-SPOStorageEntity
+> [!IMPORTANT]
+> You can connect to any site using the `Connect-PnPOnline` cmdlet. When you omit the `-Scope` parameter or set it to `Tenant`, which is the default value, all cmdlets apply to the tenant app catalog regardless of the site you connected to. If you set the `-Scope` parameter to `Site` all cmdlets will apply to the site collection app catalog of the site you connected to.
 
-- **Applies to** Office 365, SharePoint Online
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
-- **Syntax** Remove-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
+### Office 365 CLI
 
-## Use Office 365 CLI commands to get, set, remove and list tenant properties cross-platform
+The Office 365 CLI can be used to manage the tenant properties. The Office 365 CLI is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux.
 
-Using the [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties), tenant administrators can use shell commands to manage tenant properties.
+Before using any of the commands in the Office 365 CLI, you must first connect to SharePoint Online using the `login` command. All tenant properties are managed using the `spo storageentity` commands.
 
-Before using the commands, connect to a SharePoint Online site, using the `spo connect` command.
+Learn more here: [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
 
-### Get details for the specified tenant property
+> [!IMPORTANT]
+> To set or remove a tenant property, you have to first connect to a tenant admin site using the `spo connect` command. If you are connected to a different site and will try to manage tenant properties, you will get an error.
+>
+> Tenant properties are stored in the app catalog site associated with that tenant. To set or remove a property, you have to specify the absolute URL of the app catalog site. If you specify the URL of a site different than the app catalog, you will get an access denied error.
 
-The [spo storageentity get](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to get details for Office 365, SharePoint Online tenant property
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
-```shell
-spo storageentity get --key <key>
+## List tenant properties
+
+The following options demonstrate how to list tenant properties from SharePoint Online.
+
+# [SharePoint REST API](#tab/sprest)
+
+### Request
+
+```http
+GET https://tenant.sharepoint.com/sites/site/_api/web/AllProperties?$select=storageentitiesindex
 ```
 
-### List tenant properties stored on the specified SharePoint Online app catalog
-
-The [spo storageentity list](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to list all the tenant properties.
-
-```shell
-spo storageentity list --appCatalogUrl <appCatalogUrl>
-```
-
-### Set tenant property on a specified SharePoint Online app catalog
-
-The [spo storageentity set](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to set tenant property
-
-```shell
-spo storageentity set --appCatalogUrl <appCatalogUrl> --key <key> --value <value>
-```
-
-### Remove tenant property stored on the specified SharePoint Online app catalog
-
-The [spo storageentity remove](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) command can be used to remove tenant property
-
-```shell
-spo storageentity remove --appCatalogUrl <appCatalogUrl> --key <key>
-```
-
-### Remarks when using the Office 365 CLI set and remove commands
-
-To set or remove a tenant property, you have to first connect to a tenant admin site using the spo connect command, eg. spo connect https://contoso-admin.sharepoint.com. If you are connected to a different site and will try to manage tenant properties, you will get an error.
-
-Tenant properties are stored in the app catalog site associated with that tenant. To set or remove a property, you have to specify the absolute URL of the app catalog site. If you specify the URL of a site different than the app catalog, you will get an access denied error.
-
-
-## Use PnP PowerShell cmdlets to get, set, remove and list tenant properties
-
-Using [PnP PowerShell](https://aka.ms/sppnp-powershell), site owners and site collection administrators can use PowerShell cmdlets to manage tenant properties.
-
-Before using the cmdlets, connect to a SharePoint Online site, using the `Connect-PnPOnline` cmdlet.
-
-### Get details for the specified tenant property
-
-The [Get-PnPStorageEntity](/powershell/module/sharepoint-pnp/get-pnpstorageentity) cmdlet can be used to get details for a SharePoint Online tenant property
-
-Get property from tenant app catalog:
-```powershell
-Get-PnPStorageEntity -Key <key>
-```
-
-Get property from a site collection app catalog:
-```powershell
-Get-PnPStorageEntity -Key <key> -Scope Site
-```
-
-### List tenant properties stored on a SharePoint Online app catalog
-
-The [Get-PnPStorageEntity](/powershell/module/sharepoint-pnp/get-pnpstorageentity) cmdlet can be used to list all the tenant properties.
-
-List properties of tenant app catalog:
-```powershell
-Get-PnPStorageEntity
-```
-List properties of site collection app catalog:
-```powershell
-Get-PnPStorageEntity -Scope Site
-```
-
-### Set tenant property on a SharePoint Online app catalog
-
-The [Set-PnPStorageEntity](/powershell/module/sharepoint-pnp/set-pnpstorageentity) cmdlet can be used to set a tenant property.
-
-Set property for tenant app catalog:
-```powershell
-Set-PnPStorageEntity -Key <key> -Value <value>
-```
-Set property for site collection app catalog:
-```powershell
-Set-PnPStorageEntity -Key <key> -Value <value> -Scope Site
-```
-
-### Remove tenant property stored on a SharePoint Online app catalog
-
-The [Remove-PnPStorageEntity](/powershell/module/sharepoint-pnp/remove-pnpstorageentity) cmdlet can be used to remove a tenant property.
-
-Remove property from tenant app catalog:
-```powershell
-Remove-PnPStorageEntity -Key <key>
-```
-Remove property from site collection app catalog:
-```powershell
-Remove-PnPStorageEntity -Key <key> -Scope Site
-```
-
-### Remarks when using the PnP PowerShell cmdlets
-
-You can connect to any site using the `Connect-PnPOnline` cmdlet, eg. Connect-PnPOnline https://contoso.sharepoint.com/sites/marketing. When you omit the `-Scope` parameter or set it to `Tenant` (which is the default value) all cmdlets apply to the tenant app catalog regardless of the site you connected to. If you set the `-Scope` parameter to `Site` all cmdlets will apply to the site collection app catalog of the site you connected to. 
-
-## Read tenant properties
-
-Developers can read tenant properties by using the SharePoint REST APIs and use them in SharePoint Framework components such as web parts and extensions.
-
-## HTTP request
-
-### Get a tenant property
-
-```text
-GET _api/web/GetStorageEntity('key')
-```
-
-#### Example
-
-```text
-GET _api/web/GetStorageEntity('AnalyticsKey')
-```
-
-#### Request body
-
-Do not supply a request body for this method.
-
-#### Response
-
-This returns the storage entity information for the given key.
+### Response
 
 ```text
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
+  "key": {
     "Comment":"Tenant property comment.",
     "Description":"Tenant property description",
     "Value":"Tenant property key value"
+  }
 }
 ```
 
+# [Microsoft SPO Management Shell](#tab/msposh)
+
+*Not supported*
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Get-PnPStorageEntity
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/get-pnpstorageentity) for details on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo storageentity list
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+
+---
+
+## Get/read tenant properties
+
+The following options demonstrate how to get tenant properties from SharePoint Online.
+
+# [SharePoint REST API](#tab/sprest)
+
+### Request
+
+```http
+GET https://tenant.sharepoint.com/sites/site/_api/web/GetStorageEntity('key')
+```
+
+### Response
+
+```text
+HTTP/1.1 200 OK
+Content-Type: application/json
+{
+  "Comment":"Tenant property comment.",
+  "Description":"Tenant property description",
+  "Value":"Tenant property key value"
+}
+```
+
+# [Microsoft SPO Management Shell](#tab/msposh)
+
+```powershell
+Get-SPOStorageEntity -Site <AppCatalogSiteURL> -Key <String>
+```
+
+> Refer to the [Microsoft SPO Management Shell](/powershell/module/sharepoint-online/get-spostorageentity) for details on this cmdlet.
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Get-PnPStorageEntity -Key <key>
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/get-pnpstorageentity) for details on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo storageentity get --key <key>
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+
+---
+
+## Set/write tenant properties
+
+The following options demonstrate how to write tenant properties from SharePoint Online.
+
+# [SharePoint REST API](#tab/sprest)
+
+*Not supported*
+
+# [Microsoft SPO Management Shell](#tab/msposh)
+
+```powershell
+Set-SPOStorageEntity -Site <AppCatalogSiteURL> -Key <String> -Value <String> -Description <string> -Comments <String>
+```
+
+> Refer to the [Microsoft SPO Management Shell](/powershell/module/sharepoint-online/set-spostorageentity) for details on this cmdlet.
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Set-PnPStorageEntity -Key <key> -Value <value>
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/set-pnpstorageentity) for details on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo storageentity set --key <key> --value <value>
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+
+---
+
+## Remove tenant properties
+
+The following options demonstrate how to remove tenant properties from SharePoint Online.
+
+# [SharePoint REST API](#tab/sprest)
+
+*Not supported*
+
+# [Microsoft SPO Management Shell](#tab/msposh)
+
+```powershell
+Remove-SPOStorageEntity -Site <AppCatalogSiteURL> -Key <String>
+```
+
+> Refer to the [Microsoft SPO Management Shell](/powershell/module/sharepoint-online/remove-spostorageentity) for details on this cmdlet.
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Remove-PnPStorageEntity -Key <key>
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/remove-pnpstorageentity) for details on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo storageentity remove --key <key>
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+
+---
+
 ## Custom script and site collection app catalogs
 
-It is only allowed to set tenant properties on site collection app catalogs in sites that have custom scripts enabled. When you try to set a tenant property in a "no-script site" the following error will be shown: 
+It's only allowed to set tenant properties on site collection app catalogs in sites that have custom scripts enabled. When you try to set a tenant property in a "no-script site", the following error will be shown:
 
-> Access denied. You do not have permission to perform this action or access this resource.
+`Access denied. You do not have permission to perform this action or access this resource.`
 
 You can learn more about custom scripts here: [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
 
-Note that above error message will also be shown if you are not owner or site collection administrator of the site.
+The error message will also be shown if you aren't owner or site collection administrator of the site.
 
 ## See also
 
 - [Overview of the SharePoint Framework](sharepoint-framework-overview.md)
+- [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx)
+- [PnP PowerShell](https://aka.ms/sppnp-powershell)
 - [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
