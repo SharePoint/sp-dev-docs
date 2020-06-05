@@ -9,7 +9,7 @@ localization_priority: Priority
 
 Use the Office 365 CLI commands to create and manage SharePoint hub sites.
 
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [pnp-o365cli](../../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ## Get started
 
