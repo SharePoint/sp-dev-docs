@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure DevOps
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 12/19/2019
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -229,8 +229,7 @@ Before using the App Catalog in your deployment environment, you first need to a
 > [!NOTE] 
 > If you are using Office CLI to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by Office CLI to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on Office 365 CLI [User Guide](https://pnp.github.io/office365-cli/user-guide/connecting-office-365/).
 
-> [!NOTE]
-> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ### Adding the Solution Package to the App Catalog
 

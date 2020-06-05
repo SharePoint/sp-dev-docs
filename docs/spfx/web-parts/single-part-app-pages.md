@@ -77,9 +77,7 @@ Set-PnPClientSidePage -Identity "Page" -LayoutType SingleWebPartAppPage
 
 You can also use [Office 365 CLI](https://pnp.github.io/office365-cli/) to update the page layout for the existing page with following script.
 
-> [!NOTE]
-> Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
-[!INCLUDE [pnp-o365cli](../../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ```shell
 o365 spo login https://contoso.sharepoint.com/sites/marketing
