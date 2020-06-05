@@ -13,9 +13,10 @@ When you are developing SharePoint add-ins and want to register them using the A
 
 Steps to provide tenant admin permission for app only add-in:
 
-- Register app id for the add-in under normal site collection in the tenant where add-in will be deployed. 
+- Register app id for the add-in under normal site collection in the tenant. 
   - URL: *https://[tenant].sharepoint.com/_layouts/15/appregnew.aspx*
 - Provide necessary details for the add-in registration and register ID and secret for your add-in
+- Upload the .app add-in to tenant app catalog. It won't work if you upload in site collection catalogs since we're requesting app-only administrative tenant permissions
 - Move to appinv.aspx page under your tenant admin site
   - URL: *https://[tenant]-admin.sharepoint.com/_layouts/15/appinv.aspx*
 - Perform a lookup for the app id registered in previous steps in appinv.aspx page
