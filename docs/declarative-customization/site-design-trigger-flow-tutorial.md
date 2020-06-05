@@ -1,7 +1,7 @@
 ---
 title: Using site designs and Power Automate to track site creation requests
 description: Invoke a Power Automate flow using the site script triggerFlow action to capture the site creation event and build a site directory. This tutorial is intended to illustrate a simple example of using site designs and Power Automate.
-ms.date: 11/25/2019
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -28,12 +28,11 @@ You need to first set up the list that will be used to record all the sites crea
 2. Create a new list named "Site Directory"
 
 3. Configure the following fields:
-
-- webUrl (Hyperlink or Picture)
-- webDescription (Single line of text)
-- creatorName (Single line of text)
-- creatorEmail (Single line of text)
-- createdTimeUTC (Single line of text)
+    - webUrl (Hyperlink or Picture)
+    - webDescription (Single line of text)
+    - creatorName (Single line of text)
+    - creatorEmail (Single line of text)
+    - createdTimeUTC (Single line of text)
 
 
 ## Create the flow
@@ -50,39 +49,39 @@ In order to capture the site creation event and create the corresponding list it
 
 4. Enter the following JSON as your request body:
 
-  ```
+  ```json
   {
-    "type": "object",
-    "properties": {
+      "type": "object",
+      "properties": {
         "webUrl": {
-            "type": "string"
+          "type": "string"
         },
         "parameters": {
-            "type": "object",
-            "properties": {
-                "event": {
-                    "type": "string"
-                },
-                "product": {
-                    "type": "string"
-                }
+          "type": "object",
+          "properties": {
+            "event": {
+              "type": "string"
+            },
+            "product": {
+              "type": "string"
             }
+          }
         },
         "webDescription": {
-            "type": "string"
+          "type": "string"
         },
         "creatorName": {
-            "type": "string"
+          "type": "string"
         },
         "creatorEmail": {
-            "type": "string"
+          "type": "string"
         },
         "createdTimeUTC": {
-            "type": "string"
+          "type": "string"
         }
+      }
     }
-}
-```
+  ```
 
 5. Select **+ New Step**. 
 
@@ -130,18 +129,18 @@ To create a site design, you first need to create a site script. A site design i
 
    ```json
     {
-        "$schema": "schema.json",
-        "actions": [
+      "$schema": "schema.json",
+      "actions": [
         {
-                "verb": "triggerFlow",
-                "url": "[paste the workflow trigger URL here]",
-                "name": "Record site creation event",
-                "parameters": {
-                    "event":"site creation",
-                    "product":"SharePoint Online"
-                }
+          "verb": "triggerFlow",
+          "url": "[paste the workflow trigger URL here]",
+          "name": "Record site creation event",
+          "parameters": {
+            "event": "site creation",
+            "product": "SharePoint Online"
+          }
         }
-        ]
+      ]
     }
    ```
 
