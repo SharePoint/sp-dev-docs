@@ -3,8 +3,8 @@ title: How to provide add-in app only tenant administrative permissions in Share
 ms.date: 06/05/2020
 localization_priority: Priority
 ---
-How to provide add-in app only tenant administrative permissions in SharePoint Online
-================================================
+
+# How to provide add-in app only tenant administrative permissions in SharePoint Online
 
 When you are developing SharePoint add-ins and want to register them using the ACS model (**appregnew.aspx** and **appinv.aspx**), you will need to follow a special process, when an add-in is requesting tenant admin permissions and in app-only mode. 
 
