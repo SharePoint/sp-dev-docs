@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint hub sites using PowerShell
 description: Example code for creating a SharePoint hub site by using PowerShell.
-ms.date: 6/20/2019
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -21,6 +21,8 @@ The samples below can be performed using [PnP PowerShell](https://www.powershell
 
 > [!NOTE]
 > In the remainder of this exercise, **contoso** will be used as the tenant name. Continue to use your own tenant name in place of **contoso**.
+
+[!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Create a new hub site
 

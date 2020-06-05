@@ -1,7 +1,7 @@
 ---
 title: User mapping during page transformation
 description: Explains how to the user mapping works when transforming pages
-ms.date: 11/08/2019
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -20,6 +20,8 @@ Default user mapping does require a connection the your on-premises Active Direc
 > Given the mapping depends on domain lookups it will only work if the machine/account running the page transformation are joined to the same Active Directory domain as the one holding the accounts/groups that are used to authorize access to the on-premises SharePoint environment.
 
 If you want to completely disable user mapping for your SharePoint on-premises to SharePoint transformations then you can use the `-SkipUserMapping` parameter to the `ConvertTo-PnPClientSidePage` cmdlet if you're using PnP PowerShell. If you're using .Net then you can skip user mapping via the `SkipUserMapping` attribute of the .Net page transformation configuration objects (`PageTransformationInformation` and `PublishingPageTransformationInformation`).
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Mapping based upon a mapping file
 

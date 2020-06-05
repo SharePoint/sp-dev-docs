@@ -1,7 +1,7 @@
 ---
 title: Granting access using SharePoint App-Only
 description: Granting access using SharePoint App-Only
-ms.date: 04/17/2020
+ms.date: 06/05/2020
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
@@ -53,6 +53,8 @@ If you want to utilize the generated app-only registration with [PnP PowerShell]
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/demo -AppId [Your Client ID] -AppSecret "[Your Client Secret]"
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 

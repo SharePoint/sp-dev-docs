@@ -1,6 +1,6 @@
 ---
 title: Set the Bing Maps key at the web and farm level in SharePoint
-ms.date: 09/25/2017
+ms.date: 06/05/2020
 ms.prod: sharepoint
 ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
 localization_priority: Normal
@@ -25,6 +25,8 @@ To follow the steps in this example, you should have the following:
 
 > [!IMPORTANT]
 > Please note that you are responsible for compliance with terms and conditions applicable to your use of the Bing Maps key, and any necessary disclosures to users of your application regarding data passed to the Bing Maps service.
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Code example: Set the Bing Maps key at the farm or web level
 <a name="SP15Setbing_farm"> </a>

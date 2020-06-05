@@ -32,7 +32,8 @@ ALM APIs are supported for the tenant-scoped site collections and [site collecti
 
 ## Options for working with ALM APIs
 
-ALM APIs are natively provided by using REST APIs, but there are additional client-side object model (CSOM) extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
+> [!TIP]
+> ALM APIs are also supported for the [site collection app catalog](../general-development/site-collection-app-catalog.md). URLs for the site collection app catalog operations are exactly the same, but you can change the `tenantappcatalog` to `sitecollectionappcatalog`. Notice also that you will need to enable the site collection app catalog in your site collection or you will get an exception when trying to use these APIs.
 
 ### SharePoint REST API
 
@@ -185,7 +186,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 ```
 
 > [!NOTE]
-> This operation can only be completed after calling the `Add` endpoint and before you can install packages to specific sites.
+> This operation is required to be completed after Add, before you can install packages to specific sites.
 
 > [!IMPORTANT]
 > Deploying multiple packages in parallel is not supported. Make sure to serialize your deployment operations to avoid deployment errors.
@@ -463,7 +464,11 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 | Accept                  | `application/json;odata=nometadata` |
 | X-RequestDigest         | `{form digest}`                     |
 
-# [PnP CSOM](#tab/pnpcsom)
+## SharePoint PnP PowerShell cmdlets
+
+By using [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), you can automate deploying, publishing, installing, upgrading, and retracting your apps.
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ```cs
 // get an app package

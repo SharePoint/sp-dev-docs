@@ -1,7 +1,7 @@
 ---
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
-ms.date: 05/13/2019
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -18,11 +18,7 @@ App pages have following characteristics:
 * Developers can change page layout programatically from normal page layout to a Single Page App Page
 * There's no New experience in a Single Page App Page. End users can create new Article pages or Single Page App pages by using the New/page experience present in the ribbon of any modern article pages.
 
-<br/>
-
 > [!Video https://www.youtube.com/embed/8BATz6LD6tA]
-
-<br/>
 
 App pages are exposed as an option in the modern page creation capability when you chose the used page layout for your page. All web parts which have been configured to be available also as an app page are available on the **Create page** capability.
 
@@ -58,21 +54,21 @@ Following web part manifest demonstrates scenario where the web part is included
     }
   }]
 }
-``` 
+```
 
 ## How to provision Single Part App page in your tenant
+
 As a developer, the two most common way to provision Single Part App pages is o use PnP PowerShell or Office 365 ClI
 
 ### Changing page layout using PnP PowerShell
 
 You can use [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to update the page layout for the existing page with following script.
 
-> [!NOTE]
-> PnP PowerShell is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
 You will need to adjust tenant and page name based on your environment.
 
-```ps
+```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/marketing
 Set-PnPClientSidePage -Identity "Page" -LayoutType SingleWebPartAppPage
 ```
@@ -83,8 +79,9 @@ You can also use [Office 365 CLI](https://pnp.github.io/office365-cli/) to updat
 
 > [!NOTE]
 > Office 365 CLI is an open-source tool with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-o365cli](../../../includes/snippets/open-source/pnp-o365cli.md)]
 
-```
+```shell
 o365 spo login https://contoso.sharepoint.com/sites/marketing
 o365 spo listitem set --webUrl https://contoso.sharepoint.com/sites/marketing --listTitle 'Site Pages' --id 3 --PageLayoutType SingleWebPartAppPage
 ```

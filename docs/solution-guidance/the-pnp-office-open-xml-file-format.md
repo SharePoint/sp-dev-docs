@@ -1,7 +1,7 @@
 ---
 title: The PnP Office Open XML File format
 description: 
-ms.date: 10/29/2019
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -79,6 +79,8 @@ The easiest way to create a PnP file is to extract a template from a site and sp
 Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yoursite
 Get-PnPProvisioningTemplate -Out myfile.pnp
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 This will however not give you the ability to modify the template easily. The better way is:
 

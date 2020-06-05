@@ -1,7 +1,7 @@
 ---
 title: PnP provisioning engine and the Core library
 description: Take a high-level look at the remote provisioning process, including a closer look at the OfficeDevPnP.Core library.
-ms.date: 5/9/2018
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -9,9 +9,7 @@ localization_priority: Priority
 
 The PnP provisioning engine is the heart of the provisioning framework, and at its foundation is the OfficeDevPnP.Core library. The provisioning engine is part of the Core library and it leverages the Core library extensions in the implementation of provisioning tasks.
 
-> [!NOTE] 
-> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
-
+[!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
 Comprised of extension methods on the SharePoint CSOM/REST object model, the Core library enables provisioning tasks such as enumerating and getting provisioning templates as well as storing and then applying templates to new and existing sites. It also allows you to automate provisioning tasks and to introduce coded logic into your provisioning routines.
 
@@ -32,6 +30,8 @@ To use Windows PowerShell scripts with the provisioning engine, you first must d
 
 > [!NOTE] 
 > The PnP PowerShell Commands repository contains four versions: one for SharePoint 2013, one for SharePoint 2016, one for SharePoint 2019 and one for SharePoint Online. 
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 The recommended way to install the cmdlet is by using the PowerShell gallery:
 

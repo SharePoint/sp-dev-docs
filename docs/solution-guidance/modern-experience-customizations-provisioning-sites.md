@@ -1,7 +1,7 @@
 ---
 title: Provisioning "modern" team sites programmatically
 description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
-ms.date: 5/10/2018
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -129,6 +129,8 @@ $context.Load($web, $web.WebTemplate)
 Execute-PnPQuery
 $web.WebTemplate + "#" + $web.Configuration
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Provision a "modern" team site using the Office 365 CLI
 

@@ -1,13 +1,13 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 03/24/2020
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
 # Calling the PnP provisioning engine from a site script
 
-Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page. 
+Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page.
 
 This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an Application Customizer to render a footer.
 
@@ -24,28 +24,27 @@ The steps in this article use the following components:
 
 You'll use these components to trigger the PnP provisioning code after you create the site and apply the site design.
 
-> [!NOTE]
-> PnP Provisioning Engine is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
 ## Set up app-only access to your tenant
 
 To set up app-only access, you need to have two different pages on your tenant&mdash;one on the regular site, and the other on your SharePoint administration site.
 
-1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/15/appregnew.aspx` (you can go to any site, but for now pick the root site). 
+1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/15/appregnew.aspx` (you can go to any site, but for now pick the root site).
 
-2. Next to the **Client Id** and **Client Secret** fields, choose the **Generate** button. 
+2. Next to the **Client Id** and **Client Secret** fields, choose the **Generate** button.
 
-3. Enter a title for your app, such as **Site Provisioning**. 
+3. Enter a title for your app, such as **Site Provisioning**.
 
-4. In the **App Domain** box, enter **localhost**. 
+4. In the **App Domain** box, enter **localhost**.
 
-5. In the **Redirect URI** box, enter **https://localhost**. 
+5. In the **Redirect URI** box, enter **https://localhost**.
 
     ![Create app page, showing the Client Id, Client Secret, Title, App Domain, and Redirect URI fields](images/pnpprovisioning-createapponly.png)
 
-6. Choose **Create**. 
+6. Choose **Create**.
 
-7. Copy the values for **Client Id** and **Client Secret** because you will need them later. 
+7. Copy the values for **Client Id** and **Client Secret** because you will need them later.
 
 <br/>
 
@@ -67,7 +66,7 @@ Next, trust the app, so that it has the appropriate access to your tenant:
 
 ## Create the Azure Queue storage
 
-In this section, you will use Azure Queue storage to receive messages from Power Automate. Every time a message shows up in the Queue storage, an Azure function is triggered to run a PowerShell script. 
+In this section, you will use Azure Queue storage to receive messages from Power Automate. Every time a message shows up in the Queue storage, an Azure function is triggered to run a PowerShell script.
 
 To set up the Azure Queue storage:
 
@@ -83,7 +82,7 @@ To set up the Azure Queue storage:
 
 ## Create the flow
 
-To put a message in the queue, you need to create a flow. 
+To put a message in the queue, you need to create a flow.
 
 1. Go to the [Power Automate](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page.
 1. Choose **Search hundreds of connectors and triggers** to select your trigger.
@@ -110,7 +109,7 @@ To put a message in the queue, you need to create a flow.
             }
         }
     }
-    ``` 
+    ```
 
 1. Select **+ New Step** and choose **Add an action**.
 1. Search for **Azure Queues** and select **Azure Queues - Put a message on a queue**.
@@ -186,14 +185,14 @@ Copy the following provisioning template XML to a new file and save the file as 
 
     ![Screenshot of the Azure portal with the new Queue Triggered function highlighted](images/pnpprovisioning-create-function-queue.png)
 
-1. Name the function **ApplyPnPProvisioningTemplate**. 
+1. Name the function **ApplyPnPProvisioningTemplate**.
 1. Enter the name of the queue you created earlier.
-1. Choose **Create**. An editor where you can enter PowerShell cmdlets will open. 
+1. Choose **Create**. An editor where you can enter PowerShell cmdlets will open.
 
 Next, you'll upload the PnP PowerShell module so that you can use it in the Azure Function.
 
 > [!NOTE]
-> The Storage account must be in the same region as of Azure Function App, because the resources that talk to one another should be co-located in the same region. This is a requirement for Azure Functions. 
+> The Storage account must be in the same region as of Azure Function App, because the resources that talk to one another should be co-located in the same region. This is a requirement for Azure Functions.
 
 ## Upload the PnP PowerShell module for your Azure Function
 
@@ -205,7 +204,7 @@ You'll need to download the PnP PowerShell module so that you can upload it for 
     Save-Module -Name SharePointPnPPowerShellOnline -Path [pathtoyourfolder]
     ```
 
-The PowerShell module files will download to a folder within the folder that you created. 
+The PowerShell module files will download to a folder within the folder that you created.
 
 Next, upload the files so that your Azure Function can use the module.
 
@@ -220,11 +219,11 @@ Next, upload the files so that your Azure Function can use the module.
 1. On the main Kudu page, select **Debug Console** and pick either **CMD** or **PowerShell**.
 1. Choose the file explorer on the upper part of the page, and go to **site\wwwroot\\[nameofyourazurefunction]**.
 1. Create a new folder named **modules**.
-    
+
     ![Screenshot with the new folder option highlighted](images/pnpprovisioning-kudu-create-folder.png)
 
 1. In the modules folder, create another folder called **SharePointPnPPowerShellOnline** and go to that folder.
-1. In File Explorer on your computer, go to the folder where you downloaded the PnP PowerShell module files. Open the 
+1. In File Explorer on your computer, go to the folder where you downloaded the PnP PowerShell module files. Open the
 **SharePointPnPPowerShellOnline\2.20.1711.0** folder (notice that the version number might be different).
 1. Drag and drop all the files from this folder into the folder in Kudu to upload them.
 
@@ -262,7 +261,7 @@ Connect to your tenant using **Connect-SPOService**.
 Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
 ```
 
-Now you can get the existing site designs. 
+Now you can get the existing site designs.
 
 ```powershell
 Get-SPOSiteDesign
@@ -313,7 +312,7 @@ The **Add-SPOSiteDesign** cmdlet associates the site design with the team site. 
 
 ## Verify the results
 
-After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Power Automate flow from the site design. 
+After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Power Automate flow from the site design.
 
 To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. Notice that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
 
