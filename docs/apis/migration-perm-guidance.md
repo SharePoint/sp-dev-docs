@@ -1,6 +1,6 @@
 ---
 title: Migration permission guidance
-ms.date: 6/2/2020
+ms.date: 06/02/2020
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
