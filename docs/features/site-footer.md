@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Site footer
 description: SharePoint Site footers can be used to show a logo or set of links/labels in a modern SharePoint site. They can be configured using the UI settings or by using APIs.
-ms.date: 04/17/2020
+ms.date: 06/06/2020
 localization_priority: Priority
 ---
 
