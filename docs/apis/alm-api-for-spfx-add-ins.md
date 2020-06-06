@@ -32,8 +32,7 @@ ALM APIs are supported for the tenant-scoped site collections and [site collecti
 
 ## Options for working with ALM APIs
 
-> [!TIP]
-> ALM APIs are also supported for the [site collection app catalog](../general-development/site-collection-app-catalog.md). URLs for the site collection app catalog operations are exactly the same, but you can change the `tenantappcatalog` to `sitecollectionappcatalog`. Notice also that you will need to enable the site collection app catalog in your site collection or you will get an exception when trying to use these APIs.
+ALM APIs are natively provided by using REST APIs, but there are additional client-side object model (CSOM) extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
 
 ### SharePoint REST API
 
@@ -78,8 +77,6 @@ appManager.Install('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx', AppCatalogScope.Site);
 ```
 
 Learn more here: [PnP PowerShell](https://github.com/pnp/PnP-Sites-Core)
-
-[!INCLUDE [pnp-sites-core](../../includes/snippets/open-source/pnp-sites-core.md)]
 
 ### PnP PowerShell
 
@@ -188,7 +185,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 ```
 
 > [!NOTE]
-> This operation is required to be completed after Add, before you can install packages to specific sites.
+> This operation can only be completed after calling the `Add` endpoint and before you can install packages to specific sites.
 
 > [!IMPORTANT]
 > Deploying multiple packages in parallel is not supported. Make sure to serialize your deployment operations to avoid deployment errors.
@@ -466,11 +463,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 | Accept                  | `application/json;odata=nometadata` |
 | X-RequestDigest         | `{form digest}`                     |
 
-## SharePoint PnP PowerShell cmdlets
-
-By using [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), you can automate deploying, publishing, installing, upgrading, and retracting your apps.
-
-[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
+# [PnP CSOM](#tab/pnpcsom)
 
 ```cs
 // get an app package
@@ -543,11 +536,7 @@ spo app upgrade --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 
 ---
 
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
-
-### Add and publish your app to the app catalog
+## Uninstall solution packages from a site
 
 This action is the inverse of the **install** command above.
 
