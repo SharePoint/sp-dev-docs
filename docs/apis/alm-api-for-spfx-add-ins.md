@@ -79,6 +79,8 @@ appManager.Install('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx', AppCatalogScope.Site);
 
 Learn more here: [PnP PowerShell](https://github.com/pnp/PnP-Sites-Core)
 
+[!INCLUDE [pnp-sites-core](../../includes/snippets/open-source/pnp-sites-core.md)]
+
 ### PnP PowerShell
 
 PnP PowerShell implements the ALM APIs by calling the PnP CSOM.
