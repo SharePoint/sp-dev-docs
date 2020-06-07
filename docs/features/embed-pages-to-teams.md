@@ -78,7 +78,7 @@ You will need to use **App Studio** or other editor for creating the Microsoft T
    1. **Partner information** – Leave empty
    1. **App URLs** – These could be pages in your portal, but you can randomize the value for this tutorial
    1. **Terms of use** – Could be also a page in your portal, but let us use random value in this tutorial
-   1. **Branding** – These would be visible on the left navigation and in the app installation user interfaces. You can leave them as they are for the tutorial, but we absolutely recommend to update them for the official configuration  
+   1. **Branding** – These would be visible on the left navigation and in the app installation user interfaces. You can leave them as they are for the tutorial, but we absolutely recommend updating them for the official configuration  
       1. See branding guidance from the Microsoft Teams official documentation related on the image and outline settings.
 
 1.	Navigate to Tabs under Capabilities
