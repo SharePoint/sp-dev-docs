@@ -195,7 +195,7 @@ You can also publish the app to be visible by default for all employees in your 
 
 See more information on these options from the office Microsoft Teams documentation.
 
-- [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/en-us/microsoftteams/teams-app-setup-policies)
+- [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
 
 ## See also
 
