@@ -1,7 +1,7 @@
 ---
-title:  Application Lifecycle Management (ALM) APIs 
+title:  Application Lifecycle Management (ALM) APIs
 description: ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant.
-ms.date: 11/16/2019
+ms.date: 06/05/2020
 ms.prod: sharepoint
 ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
 localization_priority: Priority
@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # Application Lifecycle Management (ALM) APIs
 
-ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant. ALM APIs support the following capabilities: 
+ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant. ALM APIs support the following capabilities:
 
 - Add SharePoint Framework solution or SharePoint Add-in to tenant or site collection app catalog.
 - Remove SharePoint Framework solution or SharePoint Add-in from tenant or site collection app catalog.
@@ -23,29 +23,98 @@ ALM APIs provide simple APIs to manage deployment of your SharePoint Framework s
 ALM APIs can be used to perform exactly the same operations that are available from a UI perspective. When these APIs are used, all typical actions are performed. Following are some of the characteristics of ALM APIs:
 
 - `Install` and `UnInstall` events are being fired for provider-hosted add-ins when corresponding operations occur.
-- ALM APIs support app-only-based operations for SharePoint Framework solutions only. 
+- ALM APIs support app-only-based operations for SharePoint Framework solutions only.
 
-ALM APIs are natively provided by using REST APIs, but there are additional CSOM extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
+ALM APIs are supported for the tenant-scoped site collections and [site collection app catalog](../general-development/site-collection-app-catalog.md). Use the corresponding app catalog's URL to target a specific app catalog. You must first enabled a site collection app catalog before targeting it with the actions documented on this page.
 
 > [!IMPORTANT]
 > Tenant-scoped permissions which require [tenant administrative approval](https://docs.microsoft.com/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online) are not supported with the ALM APIs.
 
-## REST API
+## Options for working with ALM APIs
 
-> [!TIP] 
-> ALM APIs are also supported for the [site collection app catalog](../general-development/site-collection-app-catalog.md). URLs for the site collection app catalog operations are exactly the same, but you can change the `tenantappcatalog` to `sitecollectionappcatalog`. Notice also that you will need to enable the site collection app catalog in your site collection or you will get an exception when trying to use these APIs.
+ALM APIs are natively provided by using REST APIs, but there are additional client-side object model (CSOM) extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
 
-### Add solution package to the app catalog
+### SharePoint REST API
 
-This API is designed to be executed in the context of the app catalog site.
+The ALM APIs are natively provided as endpoints on the SharePoint REST API.
 
-#### HTTP Request
+The app catalog must be included in all HTTP requests when using the REST API as shown in the examples below. Replace the `{app-catalog-scope}` placeholder in the endpoint with the scope of the app catalog. The available scope options are `tenantappcatalog` and `sitecollectionappcatalog`.
 
-```http
-POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
+For example:
+
+|      Scope      |                                            Endpoint                                            |
+| :-------------- | :--------------------------------------------------------------------------------------------- |
+| tenant          | **https://contoso.sharepoint.com/sites/AppCatalog/_api/web/tenantappcatalog/{command}**        |
+| site collection | **https://contoso.sharepoint.com/sites/Marketing/_api/web/sitecollectionappcatalog/{command}** |
+
+- when targeting the tenant app catalog located at **https://contoso.sharepoint.com/sites/AppCatalog**, the endpoint would be **
+
+Learn more here: [SharePoint REST API](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
+
+### PnP CSOM (also known as: PnP Sites Core)
+
+The PnP CSOM implements the ALM APIs by calling the SharePoint REST API.
+
+Before using any of the ALM APIs in PnP CSOM, you need to obtain an authenticated client context using the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM). Then use the authenticated client context to get an instance of the PnP CSOM's **AppManager** object to call the ALM commands:
+
+```cs
+using Microsoft.SharePoint.Client;
+using OfficeDevPnP.Core.ALM;
+
+// ...
+
+using (var context = new ClientContext(webURL)) {
+  context.Credentials = new SharePointOnlineCredentials(username, securePassword);
+  var appManager = new AppManager(context);
+  // execute PnP CSOM ALM command
+}
 ```
 
-#### Request headers
+In all PnP Core methods, it's assumed the request targets the tenant app catalog in the tenant you connect to using the SharePoint CSOM `ClientContext` object. you can override the scope of all commands with an optional scope argument, for example
+
+```cs
+appManager.Install('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx', AppCatalogScope.Site);
+```
+
+Learn more here: [PnP PowerShell](https://github.com/pnp/PnP-Sites-Core)
+
+### PnP PowerShell
+
+PnP PowerShell implements the ALM APIs by calling the PnP CSOM.
+
+Before using any of the cmdlets in the PnP PowerShell module, you must first connect to SharePoint Online using the `Connect-PnPOnline` cmdlet.
+
+In all PnP PowerShell cmdlets, it's assumed the request targets the tenant app catalog in the tenant you connect to using the `Connect-PnPOnline` cmdlet. You can override the scope of the command using the `-Scope` parameter to target a site collection app catalog.
+
+Learn more here: [PnP PowerShell](https://aka.ms/sppnp-powershell)
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
+
+### Office 365 CLI
+
+The Office 365 CLI is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the ALM APIs by calling the SharePoint REST API.
+
+Before using any of the commands in the Office 365 CLI, you must first connect to SharePoint Online using the `login` command.
+
+In all Office 365 commands, it's assumed the request targets the tenant app catalog in the tenant you connect to using the `login` command. You can override the scope of the command using the `--scope` option to target a site collection app catalog.
+
+Learn more here: [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
+## Add solution package
+
+First add an app package (**\*.sppkg** or **\*.app**) to an app catalog in order to make it available to SharePoint sites.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
+
+```http
+POST /_api/web/{scope}appcatalog/Add(overwrite=true, url='sharepoint-solution-package.sppkg')
+```
+
+### Request headers
 
 |         Header          |                Value                |
 | :---------------------- | :---------------------------------- |
@@ -55,21 +124,50 @@ POST /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 | X-RequestDigest         | `{form digest}`                     |
 | binaryStringRequestBody | `true`                              |
 
-#### Request body
+### Request body
 
 Byte array of the file
 
-### Deploy solution packages in the app catalog
+# [PnP CSOM](#tab/pnpcsom)
 
-This enables the solution to be available to install to specific sites. This API is designed to be executed in the context of the app catalog site.
-
-#### HTTP Request
-
-```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+```cs
+// read file
+var filePath = "c:\path\to\file\sharepoint-solution-package.sppkg";
+// get an instance of the PnP CSOM's AppManager as shown above
+var result = appManager.Add(filePath);
 ```
 
-#### Request headers
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Add-PnPApp -Path ./sharepoint-solution-package.sppkg
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/add-pnpapp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo app add --filePath ./sharepoint-solution-package.sppkg
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
+
+## Deploy solution packages
+
+Deployment of the solution makes it available to install in sites.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
+
+```http
+POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+```
+
+### Request headers
 
 |     Header      |                       Value                       |
 | :-------------- | :------------------------------------------------ |
@@ -78,29 +176,57 @@ POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 | Content-Type    | `application/json;odata=nometadata;charset=utf-8` |
 | X-RequestDigest | `{form digest}`                                   |
 
-#### Request body
+### Request body
 
 ```json
-{"skipFeatureDeployment":true}
+{
+  "skipFeatureDeployment": true
+}
 ```
 
 > [!NOTE]
-> This operation is required to be completed after Add, before you can install packages to specific sites. 
+> This operation can only be completed after calling the `Add` endpoint and before you can install packages to specific sites.
 
-> [!NOTE]
-> It is currently not supported to deploy several packages in parallel - make sure to serialize your deployment operations to avoid deployment errors.
+> [!IMPORTANT]
+> Deploying multiple packages in parallel is not supported. Make sure to serialize your deployment operations to avoid deployment errors.
 
-### Retract solution packages in the app catalog
+# [PnP CSOM](#tab/pnpcsom)
 
-This retracts the solution to be available from the sites. This API is designed to be executed in the context of the app catalog site.
+```cs
+appManager.Deploy('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
+```
 
-#### HTTP Request
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Publish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Publish-PnPApp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo app deploy --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-deploy/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
+
+## Retract solution packages
+
+This is the inverse of the **deploy** step above. Once retracted, the solution can't be installed in sites.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
 
 ```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
+POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
 ```
 
-#### Request headers
+### Request headers
 
 |         Header          |                Value                |
 | :---------------------- | :---------------------------------- |
@@ -109,265 +235,396 @@ POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 | X-RequestDigest         | `{form digest}`                     |
 
 > [!NOTE]
-> If you run this operation after you have installed solutions to the site, they stop working because the solution is disabled from the tenant level.
+> This operation will block installing the solution in sites and disable existing installations.
 
-### Remove solution packages from the app catalog
+# [PnP CSOM](#tab/pnpcsom)
 
-This API is designed to be executed in the context of the app catalog site.
-
-#### HTTP Request
-
-```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
+```cs
+// get an app package
+appManager.Retract('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
 
-#### Request headers
+# [PnP PowerShell](#tab/pnpposh)
 
-|         Header          |                Value                |
-| :---------------------- | :---------------------------------- |
-| Authorization           | `Bearer {token}`                    |
-| Accept                  | `application/json;odata=nometadata` |
+```powershell
+Unpublish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
 
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Unpublish-PnPApp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo app retract --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-retract/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for complete details and examples on this command.
+
+---
+
+## Remove solution packages
+
+This is the inverse of the **add** step above. One removed from the app catalog, the solution can't be deployed.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
+
+```http
+POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
+```
+
+# [PnP CSOM](#tab/pnpcsom)
+
+```cs
+appManager.Remove('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
+```
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Remove-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Remove-PnPApp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo app remove --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
 
 > [!NOTE]
 > If the Retract operation is not performed before the Remove operation, the solution is automatically retracted.
 
-### List available packages from the app catalog
+## List available packages
 
-Use this REST API for getting a list of available SharePoint Framework solutions or add-ins in the app catalog.
+This operation will return a list of all available SharePoint Framework solutions or add-ins in the app catalog.
 
-#### HTTP Request
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
 
 ```http
-GET /_api/web/tenantappcatalog/AvailableApps
+GET /_api/web/{scope}appcatalog/AvailableApps
 ```
 
-#### Request headers
+### Request headers
 
 |         Header          |                Value                |
 | :---------------------- | :---------------------------------- |
 | Authorization           | `Bearer {token}`                    |
 | Accept                  | `application/json;odata=nometadata` |
 
-### Get details about individual solution packages in the app catalog
+### Response
 
-Use this REST API for getting details about individual SharePoint Framework solutions or add-ins available in the app catalog.
-
-#### HTTP Request
-
-```http
-GET /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
+```json
+{
+  "value": [
+    {
+      "AadAppId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx",
+      "ContainsTenantWideExtension": false,
+      "CurrentVersionDeployed": true,
+      "Deployed": true,
+      "ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx",
+      "IsClientSideSolution": true,
+      "IsEnabled": true,
+      "IsPackageDefaultSkipFeatureDeployment": false,
+      "IsValidAppPackage": true,
+      "ShortDescription": "",
+      "SkipDeploymentFeature": false,
+      "Title": "sharepoint-solution-package"
+    },
+    {
+      "AadAppId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx",
+      "ContainsTenantWideExtension": false,
+      "CurrentVersionDeployed": true,
+      "Deployed": true,
+      "ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx",
+      "IsClientSideSolution": true,
+      "IsEnabled": true,
+      "IsPackageDefaultSkipFeatureDeployment": false,
+      "IsValidAppPackage": true,
+      "ShortDescription": "",
+      "SkipDeploymentFeature": false,
+      "Title": "sharepoint-solution-package2"
+    }
+  ]
+}
 ```
 
-#### Request headers
+# [PnP CSOM](#tab/pnpcsom)
 
-|         Header          |                Value                |
-| :---------------------- | :---------------------------------- |
-| Authorization           | `Bearer {token}`                    |
-| Accept                  | `application/json;odata=nometadata` |
-
-### Install solution package from the app catalog to a SharePoint site
-
-Install a solution package with a specific identifier from the app catalog to the site based on URL context. This REST call can be executed in the context of the site where the install operation should happen.
-
-#### HTTP Request
-
-```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
+```cs
+var allAppPackages = appManager.GetAvailable();
 ```
 
-#### Request headers
-
-|         Header          |                Value                |
-| :---------------------- | :---------------------------------- |
-| Authorization           | `Bearer {token}`                    |
-| Accept                  | `application/json;odata=nometadata` |
-| X-RequestDigest         | `{form digest}`                     |
-
-### Upgrade solution packages on the SharePoint site
-
-Upgrade a solution package from the site to a newer version available in the app catalog. This REST call can be executed in the context of the site where the upgrade operation should happen.
-
-#### HTTP Request
-
-```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade
-```
-
-#### Request headers
-
-|         Header          |                Value                |
-| :---------------------- | :---------------------------------- |
-| Authorization           | `Bearer {token}`                    |
-| Accept                  | `application/json;odata=nometadata` |
-| X-RequestDigest         | `{form digest}`                     |
-
-### Uninstall solution packages from the SharePoint site
-
-This REST call can be executed in the context of the site where the uninstall operation should happen.
-
-#### HTTP Request
-
-```http
-POST /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall
-```
-
-#### Request headers
-
-|         Header          |                Value                |
-| :---------------------- | :---------------------------------- |
-| Authorization           | `Bearer {token}`                    |
-| Accept                  | `application/json;odata=nometadata` |
-| X-RequestDigest         | `{form digest}`                     |
-
-> [!NOTE]
-> When you use the REST API to uninstall a solution package from the site, it is not relocated to the recycle bin.
-
-### Synchronize a solution to the Microsoft Teams App Catalog
-
-This REST call requires that you refer the **list item id** of the solution in the app catalog site.
-
-#### HTTP Request
-
-```http
-POST /_api/web/tenantappcatalog/SyncSolutionToTeams(id=xxxxx)
-```
-
-#### Request headers
-
-|         Header          |                Value                |
-| :---------------------- | :---------------------------------- |
-| Authorization           | `Bearer {token}`                    |
-| Accept                  | `application/json;odata=nometadata` |
-| X-RequestDigest         | `{form digest}`                     |
-
-## SharePoint PnP PowerShell cmdlets 
-
-By using [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), you can automate deploying, publishing, installing, upgrading, and retracting your apps. 
-
-> [!NOTE]
-> Support for scope option was released on the April 2018 release of PnP PowerShell.
-
-### Add and publish your app to the app catalog
-
-Adding your app (.sppkg file, .app file) to the app catalog is a prerequisite to making your app available for use on your SharePoint sites. You can do this by using the following cmdlet:
+# [PnP PowerShell](#tab/pnpposh)
 
 ```powershell
-Add-PnPApp -Path ./myapp.sppkg -Scope Tenant
+Get-PnPApp
 ```
 
-Once added, you need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. The following PnP PowerShell cmdlet shows how this can be done:
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Get-PnPApp) for complete details and examples on this cmdlet.
 
-```powershell
-Publish-PnPApp -Identity <app id> -SkipFeatureDeployment -Scope Tenant
-```
-
-> [!NOTE]
-> Use the `SkipFeatureDeployment` flag to allow an app that was developed for tenant-wide deployment to be actually available as a tenant-wide deployed app.
-
-### Remove the app from the app catalog
-
-To remove an app added earlier, use the following cmdlet:
-
-```powershell
-Remove-PnPApp -Identity <app id> -Scope Tenant
-```
-
-### Use apps on your site
-
-After the app is added to the app catalog and published, you can install the app to your site:
-
-```powershell
-Install-PnPApp -Identity <app id> -Scope Tenant
-```
-
-To upgrade the app:
-
-```powershell
-Update-PnPApp -Identity <app id> -Scope Tenant
-```
-
-To uninstall the app from your site:
-
-```powershell
-Uninstall-PnPApp -Identity <app id> -Scope Tenant
-```
-> [!NOTE]
-> When you uninstall an app from your site, the app is completely deleted, so it does not end up in the site's recycle bin.
-
-### Know which apps are there for you to use
-
-You can get a list of apps that can be added to the site by using:
-
-```powershell
-Get-PnPApp -Scope Tenant
-```
-
-## Office 365 CLI commands to add, deploy, and manage SharePoint apps cross-platform
-
-Using the [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs), you can automate deploying, publishing, installing, upgrading, and retracting your apps. The Office 365 CLI is a cross-platform command-line interface that can be used on any platform, including Windows, MacOS, and Linux. To learn more about these commands, see the following sections.
-
-### Add and publish your app to the app catalog
-
-Adding your app (.sppkg file, .app file) to the tenant app catalog is a prerequisite to making your app available for use on your SharePoint sites. Use the [add](https://pnp.github.io/office365-cli/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command to do this:
-
-```shell
-spo app add --filePath ./spfx.sppkg
-```
-
-Once added, you need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. Use the [deploy](https://pnp.github.io/office365-cli/cmd/spo/app/app-deploy/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command to do this:
-
-```shell
-spo app deploy --id <app id> --skipFeatureDeployment
-```
-
-> [!NOTE]
-> Use the **SkipFeatureDeployment** flag to allow an app that was developed for tenant-wide deployment to be actually available as a tenant-wide deployed app.
-
-### Remove the app from the app catalog
-
-You may want to remove an app that you added earlier, and you can do this by using the [remove](https://pnp.github.io/office365-cli/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
-
-```shell
-spo app remove --id <app id>
-```
-
-### Use apps on your site
-
-After the app is added to the app catalog and published, you can install the app to your site by using the [install](https://pnp.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
-
-```shell
-spo app install --id <app id> --siteUrl <url>
-```
-
-To upgrade the app, use the [upgrade](https://pnp.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
-
-```shell
-spo app upgrade --id <app id> --siteUrl <url>
-```
-
-To uninstall the app from your site, use the [uninstall](https://pnp.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
-
-```shell
-spo app uninstall --id <app id> --siteUrl <url>
-```
-
-> [!NOTE]
-> When you uninstall an app from your site, the app is completely deleted, so it will not end up in the site's recycle bin.
-
-### List and get apps in the app catalog
-You can see what apps have been added to the app catalog by using the [list](https://pnp.github.io/office365-cli/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+# [Office 365 CLI](#tab/o365cli)
 
 ```shell
 spo app list
 ```
 
-You can get a single app's details by using the [get](https://pnp.github.io/office365-cli/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
+
+## Get a specific solution
+
+This action will return details about a specific SharePoint Framework solution or add-in available in the app catalog.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
+
+```http
+GET /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
+```
+
+### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+
+### Response
+
+```json
+{
+  "AadAppId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx",
+  "ContainsTenantWideExtension": false,
+  "CurrentVersionDeployed": true,
+  "Deployed": true,
+  "ID": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx",
+  "IsClientSideSolution": true,
+  "IsEnabled": true,
+  "IsPackageDefaultSkipFeatureDeployment": false,
+  "IsValidAppPackage": true,
+  "ShortDescription": "",
+  "SkipDeploymentFeature": false,
+  "Title": "sharepoint-solution-package"
+}
+```
+
+# [PnP CSOM](#tab/pnpcsom)
+
+```cs
+var appPackage = appManager.GetAvailable('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx');
+```
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Get-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Get-PnpApp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
 
 ```shell
-spo app get --id <app id>
+spo app get --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
+
+## Install solution package in a site
+
+Install a solution package with a specific identifier from the app catalog to the site based on URL context.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP Request
+
+```http
+POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
+```
+
+### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
+
+# [PnP CSOM](#tab/pnpcsom)
+
+```cs
+// get an app package
+appManager.Install('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
+```
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Install-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Install-PnPApp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo app install --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
+
+## Upgrade installed solution packages
+
+Upgrade a solution package from the site to a newer version available in the app catalog.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
+
+```http
+POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade
+```
+
+### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
+
+# [PnP CSOM](#tab/pnpcsom)
+
+```cs
+// get an app package
+var appPackage = appManager.GetAvailable('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx');
+if (appPackage.CanUpgrade) {
+  appManager.Upgrade(appPackage)
+}
+```
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Update-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/update-pnpapp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo app upgrade --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
+
+## Uninstall solution packages from a site
+
+This action is the inverse of the **install** command above.
+
+> [!NOTE]
+> When you use the uninstall a solution package from the site with any of the methods below, it's permanently deleted; it'sn't placed in the recycle bin.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
+
+```http
+POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall
+```
+
+### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
+
+# [PnP CSOM](#tab/pnpcsom)
+
+```cs
+appManager.Uninstall('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
+```
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Uninstall-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Uninstall-PnPApp) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+```shell
+spo app uninstall --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
+```
+
+> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+
+---
+
+## Synchronize a solution to the Microsoft Teams app catalog
+
+This action requires that you refer the **list item ID** of the solution in the app catalog site.
+
+# [SharePoint REST API](#tab/sprest)
+
+### HTTP request
+
+```http
+POST /_api/web/{scope}appcatalog/SyncSolutionToTeams(id=xxxxx)
+```
+
+### Request headers
+
+|         Header          |                Value                |
+| :---------------------- | :---------------------------------- |
+| Authorization           | `Bearer {token}`                    |
+| Accept                  | `application/json;odata=nometadata` |
+| X-RequestDigest         | `{form digest}`                     |
+
+# [PnP CSOM](#tab/pnpcsom)
+
+```cs
+appManager.SyncToTeams('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
+```
+
+# [PnP PowerShell](#tab/pnpposh)
+
+```powershell
+Sync-PnPAppToTeams -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/sync-pnpapptoteams) for complete details and examples on this cmdlet.
+
+# [Office 365 CLI](#tab/o365cli)
+
+*Not Supported*
+
+---
 
 ## See also
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
+- [PnP PowerShell](https://aka.ms/sppnp-powershell)
+- [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
