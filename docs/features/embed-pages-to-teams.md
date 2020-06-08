@@ -1,43 +1,44 @@
 ---
-title: Embedding modern SharePoint pages to Microsoft Teams as personal apps (preview)
-description: SharePoint pages can be embedded to be visible in the Microsoft Teams as personal applications.
+title: Embedding modern SharePoint pages in Microsoft Teams as personal apps (preview)
+description: SharePoint pages can be embedded as personal apps in the Microsoft Teams.
 ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
-# Embedding modern SharePoint pages to Microsoft Teams as personal apps (preview)
+# Embedding modern SharePoint pages in Microsoft Teams as personal apps (preview)
 
-You can use the Microsoft Teams personal app model to pin any modern SharePoint page to the left navigation in the Microsoft Team. This provides a great opportunity to expose intranet landing pages to serve corporate communication needs, directly accessible by Microsoft Teams users. Example scenarios could include:
+You can use the Microsoft Teams personal app model to pin any modern SharePoint page to the left navigation of Microsoft Teams. This provides a great opportunity to expose intranet landing pages to serve corporate communication needs, directly accessible by Microsoft Teams users. Example scenarios could include:
 
-- Adding your corporate intranet landing page to the Microsoft Teams for easy discovery and access of news and content
-- Add Learning Pathways solution to Microsoft Teams left navigation to provide easy access on the learning materials
+- Adding your corporate intranet landing page to Teams for easy discovery of news and content
+- Add the Learning Pathways solution to Teams to embed learning and adoption materials
 - Add single page communications on important topics for your company
 
-Use the steps defined in this article on embedding any modern SharePoint Portal to Microsoft Teams for easily accessing the corporate communicational information from the Microsoft Teams.
+Use the steps defined in this article to embed any modern SharePoint page or site in Teams.
 
 ![Image showing a site footer with a logo](../images/teams-pages-embed.png)
 
 VIDEO
 
-You can embed any modern page on Microsoft Teams by creating a Teams Personal App and manually create the needed configuration for this custom setup. Be aware of the following considerations.  
+You can embed any modern SharePoint page in Microsoft Teams by creating a Teams personal app and manually creating the needed configuration for this custom setup. Be aware of the following considerations:  
 
-- This capability is provided as a preview integration path until more native solution will be available
-- You must use a modern SharePoint site or page to make this work. Embedding classic publishing portals or other classic sites is not supported and will not work  
-- A personal app exposing SharePoint sites and pages   can be pinned to Microsoft Teams using normal app management capabilities, which can be also controlled centrally from the Microsoft Teams admin user interface
-- We do acknowledge that there are some experience gaps with this approach, including the following, which we are actively looking to address:
-    - There is no navigation, headers, or footer visible natively on the embedded pages
-    - Search initiated from the suite navigation bar will leverage existing Teams search results, not those configured for the pinned site
-    - Content creation cannot be performed through the Microsoft Teams, rather will happen from the native SharePoint Online portal
-- All users accessing the target SharePoint page will need to have at least read permissions to access the target page
-- If a tenant, SharePoint site or page name or URL is changed, Teams Personal App manifest will need to be updated
-- If changes are made to the pinning model for modern SP pages or sites, it could require deletion of existing pinned personal apps and redeploying 
+- This capability is provided as a PREVIEW INTEGRATION PATH  unti a native solution becomes available.
+- The target must be a modern SharePoint site or page. Embedding classic publishing portals or other classic sites or pages is not supported and will not work . 
+- A user can add a personal app from the APPS link in Teams. A user can pin an app to the app bar (the left-most navigation in Teams) by right-clicking it and choosing PIN.
+- Administrators can deploy and pinn an app to all or targeted users from the Microsoft Teams admin center.
+- There are some gaps in user experience including the following, which we are actively looking to address in a future, integrated solution:
+    - There is no native navigation, header, or footer on embedded pages.
+    - Search initiated from Teams will return search results from Teams, not search results from the embedded site.
+    - You cannot create content (news, pages, lists or libraries) in Teams. You must create content from the SharePoint site using a web browser or SharePoint mobile app.
+- All users accessing the embedded SharePoint page will need to have at least read permission to access the page.
+- If a tenant, SharePoint site or page name or URL is changed, the Teams personal app manifest will need to be updated.
+- If changes are made to the pinning model for modern SP pages or sites, it could require you to delete existing pinned personal apps and redeploy them.
 
 > [!IMPORTANT]
-> This option is provided as a preview integration path and can evolve with a requirement to delete the existing configuration and re-adding native solution. This will not however require recreation or deletion of any content from the Microsoft Teams or from SharePoint side.  
+> This option is provided as a preview integration path. Microsoft reserves the right to make changes to the model, which could require you to delete existing pinned apps and re-deploy them with an updated solution. Changes to the integration path will not require you to delete or recreate the targeted SharePoint site or page.  
 
 ## Embed SharePoint modern sites & pages into Microsoft Teams with App Studio 
 
-We will be using following tags in the below steps, which you should be updating based on the SharePoint modern page or site, which you want to embed to Microsoft Teams:
+We will be using following tags in the steps below, which you should update based on the modern SharePoint page or site that you want to embed in Teams:
 
 - [domainUrl] – Root URL of the domain
   - Example – https://contoso.sharepoint.com
@@ -45,41 +46,41 @@ We will be using following tags in the below steps, which you should be updating
   - Example - /sites/theperspective/SitePages/Home.aspx
 
 > [!TIP]
-> If you are looking into creating a demo or sample content around this area, you can use the [https://lookbook.microsoft.com](https://lookbook.microsoft.com) service for creating sample portals for your usage.
+> If you want to create a sample to demonstrate this integration, you can use the [https://lookbook.microsoft.com](https://lookbook.microsoft.com) service to create sample apps and pages in your tenant.
 
-You will need to use **App Studio** or other editor for creating the Microsoft Teams manifest file for the creating an app file with the necessary URLs to your SharePoint pages. Follow the next steps to complete the steps in App Studio.
+You will need to use **App Studio** or another editor to create the Teams manifest file with the necessary URLs to your SharePoint pages. Complete the following steps in App Studio.
 
-1. Navigate to Microsoft Teams
-1. Navigate to Teams store by clicking Apps on the Teams left menu
+1. Open Microsoft Teams.
+1. Navigate to Teams store by clicking Apps on the Teams app bar (left navigation).
 
     ![teams menu apps](../images/teams-menu-apps.png)
 
-1. Use search to find App Studio
+1. Use search to find App Studio.
 
     ![teams menu apps](../images/teams-apps-studio.png)
 
-1. Install or open App Studio depending on whether you have previously installed the app. 
+1. Install or open App Studio. 
 
     ![teams menu apps](../images/teams-install-app-studio.png)
 
-1. Open App Studio
-1. Navigate  to the Manifest editor tab
-1. Select Create a new app
-1. Provide required app information on the form
+1. Open App Studio.
+1. Navigate to the Manifest editor tab.
+1. Click Create a new app.
+1. Provide required app information on the form:
    1. **Short name** – Company Intranet  [use something descriptive that supports your scenario]  
    1. **Full name** – Contoso Intranet
-   1. Click **Generate** to randomize unique App ID
-   1. **Package Name** – com.contoso.portal.app – Use unique value here for your own setup
+   1. Click **Generate** to create a unique, random App ID
+   1. **Package Name** – com.contoso.portal.app – Use a value that is unique to your environment
    1. **Version** – 1.0.0
    1. **Description** – My first intranet application
-   1. **Full description** – My awesome intranet application to embed modern SharePoint to our Teams setup
+   1. **Full description** – My awesome intranet application to embed modern SharePoint in Teams
    1. **Developer Information - Name** – Your name
    1. **Developer Information - Website** – Your web site – company web site or whatever is your preference
    1. **Partner information** – Leave empty
    1. **App URLs** – These could be pages in your portal, but you can randomize the value for this tutorial
    1. **Terms of use** – Could be also a page in your portal, but let us use random value in this tutorial
-   1. **Branding** – These would be visible on the left navigation and in the app installation user interfaces. You can leave them as they are for the tutorial, but we absolutely recommend updating them for the official configuration  
-      1. See branding guidance from the Microsoft Teams official documentation related on the image and outline settings.
+   1. **Branding** – These would be visible on the app bar (left navigation) and in the app installation user interface. You can leave them as they are for the tutorial, but we absolutely recommend updating them for your production configuration  
+      1. See branding guidance for the image and outline settings in  the Microsoft Teams official documentation
 
 1.	Navigate to Tabs under Capabilities
 
@@ -90,8 +91,8 @@ You will need to use **App Studio** or other editor for creating the Microsoft T
    1. **Name** – Intranet
    1. **Entity ID** – 19991 (Use random number)  
    1. **Content URL** – https:// [domainUrl] /_layouts/15/teamslogon.aspx?SPFX=true&dest=[pageUrl]  
-      1. Update provided URL based on your own tenant details. Example URL would be https://contoso.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/theperspective/SitePages/Home.aspx
-      1. Used URL will need to be encoded to avoid issues on accessing is across different devices.
+      1. Update the URL based on your own tenant details. Example URL would be https://contoso.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/theperspective/SitePages/Home.aspx
+      1. The URL will need to be encoded to avoid issues accessing it across different devices.
    1. **Website URL** – You can leave this optional value empty 
 
 1. Navigate to **Domains and Permissions** under **Finish**
@@ -124,17 +125,17 @@ You will need to use **App Studio** or other editor for creating the Microsoft T
 
     ![teams menu apps](../images/teams-intranet-app-embedded.png)
 
-Notice that you can modify the settings by going back to the **App Studio** and edit the manifest by using the **Manifest editor**.
+Notice that you can modify the settings by going back to **App Studio** and editing the manifest using the **Manifest editor**.
 
-You can deploy the portal configuration available for your company employees by downloading the manifest from the **App Studio** and publishing it to be available from your company catalog.
+You can deploy the app to all users or to targeted users by downloading the manifest from the **App Studio** and publishing it to the app catalog in Teams administration.
 
 
 > [!IMPORTANT]
-> To be able to deploy this solution to your tenant for other users, you will need to have sufficient permissions to perform the app deployment to your tenant Microsoft Teams app catalog.
+> To deploy this solution to users in your tenant, you must have sufficient permissions to deploy apps in the Microsoft Teams app catalog.
 
 ## Sample manifest of the solution
 
-If you download the solution file from the App Studio and see the detailed configuration of the manifest file, it has the following configurations to enable it work properly in web and in desktop modes.
+If you download the solution file from the App Studio and see the detailed configuration of the manifest file, it has the following configuration to enable it to work properly in web and in desktop modes.
 
 ```json
 {
