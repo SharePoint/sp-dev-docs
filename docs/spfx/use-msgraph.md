@@ -116,6 +116,16 @@ By default, the service principal has no explicit permissions granted to access 
 
 Additional permission scopes can be requested by developers and granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](./use-aadhttpclient.md).
 
+## Known issues
+
+### Azure AD roles with delegated authentication
+
+The MSGraphClient currently uses implicit authentication flow when requesting delegated permissions from Microsoft Graph.  As stated in [Microsoft identity platform access tokens](https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens#payload-claims), the `wids` claim may not be present when using implicit authentication flow due to length concerns.  The `wids` claim contains the listing of Azure AD tenant-wide roles that have been assigned to the delegated user.
+
+As a result, queries to Microsoft Graph endpoints that rely on Azure AD roles in addition to delegated permissions may fail due to the `wids` claim not being present.  At the time of writing this includes the following endpoints:
+
+  - [Office 365 usage reports](https://docs.microsoft.com/en-us/graph/reportroot-authorization)
+
 ## See also
 
 - [Microsoft Graph](https://graph.microsoft.com)
