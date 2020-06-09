@@ -38,7 +38,7 @@ Before proceeding with these instructions, make sure your SharePoint site is set
       * Template information
          * Name and description of the template.
       * Connection information
-         * Varioius services this flow connect to.
+         * Various services this flow connect to.
          * The credentials those services will use to connect to.
          
 5. Using the dropdowns, verify the connection information (**SharePoint Site Address** and **SharePoint List Name**) is accurate to ensure it uses your credentials.
