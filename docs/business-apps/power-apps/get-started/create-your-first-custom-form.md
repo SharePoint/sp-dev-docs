@@ -68,7 +68,7 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
     The user photo from the owner's Office 365 user profile will appear in **Image1**.
 
-### Make a field read-only
+### Set a field to be read-only
 
 1. Let us make the **Title** field read-only.
 
@@ -92,7 +92,7 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
     **DataCardValue1** is now a view-only field.
 
-### Make a conditionally visible field
+### Set the visibility of a field based on a condition
 
 1. Let us hide the **Attachments** field if the project owner is Nestor Wilke.
 
