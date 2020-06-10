@@ -13,7 +13,7 @@ Find out about throttling in SharePoint Online, and learn how to avoid being thr
 - [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling)
 - [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#common-throttling-scenarios-in-sharepoint-online)
 - [Why can't you just tell me the exact throttling limits?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#why-cant-you-just-tell-me-the-exact-throttling-limits)
-- [Search query volume limits when using app-only authentication with Sites.Read.All permission](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#Search-query-volume-limits-when-using-app-only-authentication-with-Sites.Read.All-permission)
+- [Search query volume limits when using app-only authentication with Sites.Read.All permission](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#search-query-volume-limits-when-using-app-only-authentication-with-sitesreadall-permission)
 - [Best practices to handle throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#best-practices-to-handle-throttling)
 - [How to decorate your traffic to avoid getting throttled?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#how-to-decorate-your-http-traffic-to-avoid-throttling)
 - [GitHub CSOM code samples: SharePoint Online Throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md)
