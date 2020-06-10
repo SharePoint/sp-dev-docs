@@ -1,6 +1,6 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
-ms.date: 01/15/2020
+ms.date: 06/10/2020
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 localization_priority: Priority
@@ -26,7 +26,7 @@ Does this sound familiar? You're running a CSOM process - for example, to migrat
 
 SharePoint Online uses throttling to maintain optimal performance and reliability of the SharePoint Online service. Throttling limits the number of user actions or concurrent calls (by script or code) to prevent overuse of resources.
 
-That said, its rare for a user to get throttled in SharePoint Online. The service is robust, and its designed to handle high volume. If you do get throttled, 99% of the time its because of custom code. That doesn't mean that there aren't other ways to get throttled, just that they're less common. For example, you spin up 10 machines and have a sync client going on all 10. On each sync 1 TB of content. This would likely get you throttled.
+That said, it is rare for a user to get throttled in SharePoint Online. The service is robust, and it is designed to handle high volume. If you do get throttled, 99% of the time it is because of custom code. That doesn't mean that there aren't other ways to get throttled, just that they're less common. For example, you spin up 10 machines and have a sync client going on all 10. On each sync 1 TB of content. This would likely get you throttled.
 
 ![How throttling happens](../images/3b9184db-99a4-416e-ba1e-7f8653484cee.png)
 
@@ -74,12 +74,11 @@ That's why it's so important for your CSOM or REST code to honor the `Retry-Afte
 
 ## Search query volume limits when using app-only authentication with Sites.Read.All permission
 
-In Sharepoint and OneDrive, we process multiple billions of documents and enable our customers to issue large query volumes per second. 
-When you are using SharePoint Online search APIs with app-only authentication and the app having Sites.Read.All permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content). 
+In Sharepoint and OneDrive, we process multiple billions of documents and enable our customers to issue large query volumes per second. When you are using SharePoint Online search APIs with app-only authentication and the app having `Sites.Read.All` permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content).
 
-We want to let our customers know that SharePoint Online search queries using such permission will be throttled at 25 QPS. The search query will return with a 429 response and you can simply retry the query. When waiting for 429 recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making additional calls while receiving throttle responses will extend the time it takes for your app to become unthrottled. 
+We want to let our customers know that SharePoint Online search queries using such permission will be throttled at 25 QPS. The search query will return with a 429 response and you can retry the query after 2 minutes. When waiting for 429 recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making additional calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
 
-As we scale our system, we realize the importance of hardening the system to run it efficiently and also to protect the system and hence this change. This change is expected to rollout to tenants starting Aug into the Fall of 2020. 
+As we scale our system, we realize the importance of hardening the system to run it efficiently and also to protect the system and hence this change. This change is expected to roll out to tenants starting Aug into the Fall of 2020.
 
 ## Best practices to handle throttling
 
@@ -148,7 +147,7 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 
 ### Example of decorating traffic with User agent when using REST APIs
 
-Following sample is in c# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
+Following sample is in C# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
 
 ```cs
 HttpWebRequest endpointRequest = (HttpWebRequest) HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
