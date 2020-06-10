@@ -10,7 +10,7 @@ localization_priority: Priority
 You can use the Microsoft Teams personal app model to pin any modern SharePoint page to the left navigation of Microsoft Teams. This provides a great opportunity to expose intranet landing pages to serve corporate communication needs, directly accessible by Microsoft Teams users. Example scenarios could include:
 
 - Adding your corporate intranet landing page to Teams for easy discovery of news and content
-- Add the Learning Pathways solution to Teams to embed learning and adoption materials
+- Add the [https://lookbook.microsoft.com/details/3df8bd55-b872-4c9d-88e3-6b2f05344239] (Learning Pathways) solution to Teams to embed Microsoft 365 learning paths for your users 
 - Add single page communications on important topics for your company
 
 Use the steps defined in this article to embed any modern SharePoint page or site in Teams.
@@ -22,9 +22,9 @@ VIDEO
 You can embed any modern SharePoint page in Microsoft Teams by creating a Teams personal app and manually creating the needed configuration for this custom setup. Be aware of the following considerations:  
 
 - This capability is provided as a PREVIEW INTEGRATION PATH  unti a native solution becomes available.
-- The target must be a modern SharePoint site or page. Embedding classic publishing portals or other classic sites or pages is not supported and will not work . 
+- The target must be a modern SharePoint site or page. Embedding classic publishing portals or other classic sites or pages is not supported and will not work. 
 - A user can add a personal app from the APPS link in Teams. A user can pin an app to the app bar (the left-most navigation in Teams) by right-clicking it and choosing PIN.
-- Administrators can deploy and pinn an app to all or targeted users from the Microsoft Teams admin center.
+- Administrators can deploy and pin an app to all or targeted users from the Microsoft Teams admin center.
 - There are some gaps in user experience including the following, which we are actively looking to address in a future, integrated solution:
     - There is no native navigation, header, or footer on embedded pages.
     - Search initiated from Teams will return search results from Teams, not search results from the embedded site.
@@ -194,7 +194,7 @@ You can also publish the app to be visible by default for all employees in your 
 
 ![teams-pp-policies](../images/teams-app-policies.png)
 
-See more information on these options from the office Microsoft Teams documentation.
+See more information on these options from the following Microsoft Teams documentation.
 
 - [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies)
 
