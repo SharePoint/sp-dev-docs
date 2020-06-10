@@ -10,7 +10,7 @@ localization_priority: Priority
 You can use the Microsoft Teams personal app model to pin any modern SharePoint page to the left navigation of Microsoft Teams. This provides a great opportunity to expose intranet landing pages to serve corporate communication needs, directly accessible by Microsoft Teams users. Example scenarios could include:
 
 - Adding your corporate intranet landing page to Teams for easy discovery of news and content
-- Add the [https://lookbook.microsoft.com/details/3df8bd55-b872-4c9d-88e3-6b2f05344239](Learning Pathways) solution to Teams to embed Microsoft 365 learning paths for your users
+- Add the [Learning Pathways](https://lookbook.microsoft.com/details/3df8bd55-b872-4c9d-88e3-6b2f05344239) solution to Teams to embed Microsoft 365 learning paths for your users
 - Add single page communications on important topics for your company
 
 Use the steps defined in this article to embed any modern SharePoint page or site in Teams.
@@ -28,7 +28,7 @@ You can embed any modern SharePoint page in Microsoft Teams by creating a Teams 
 - There are some gaps in user experience including the following, which we are actively looking to address in a future, integrated solution:
     - There is no native navigation, header, or footer on embedded pages.
     - Search initiated from Teams will return search results from Teams, not search results from the embedded site.
-    - You cannot create content (news, pages, lists or libraries) in Teams. You must create content from the SharePoint site using a web browser or SharePoint mobile app.
+    - You cannot create content (news, pages, lists, or libraries) in Teams. You must create content from the SharePoint site using a web browser or SharePoint mobile app.
 - All users accessing the embedded SharePoint page will need to have at least read permission to access the page.
 - If a tenant, SharePoint site or page name or URL is changed, the Teams personal app manifest will need to be updated.
 - If changes are made to the pinning model for modern SP pages or sites, it could require you to delete existing pinned personal apps and redeploy them.
@@ -99,7 +99,7 @@ You will need to use **App Studio** or another editor to create the Teams manife
 
     ![teams menu apps](../images/teams-app-studio-domains.png)
 
-1. Make sure that **Domains from your tabs** has your domain on it
+1. Make sure that **Domains from your tabs have your domain on it
    1. Example domain value `contoso.sharepoint.com`
 
 1. Update **AAD App ID** as 00000003-0000-0ff1-ce00-000000000000
