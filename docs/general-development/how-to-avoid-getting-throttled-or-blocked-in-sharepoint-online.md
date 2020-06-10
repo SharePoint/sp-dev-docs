@@ -13,6 +13,7 @@ Find out about throttling in SharePoint Online, and learn how to avoid being thr
 - [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling)
 - [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#common-throttling-scenarios-in-sharepoint-online)
 - [Why can't you just tell me the exact throttling limits?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#why-cant-you-just-tell-me-the-exact-throttling-limits)
+- [Search query volume limits when using app-only authentication with Sites.Read.All permission](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#Search-query-volume-limits-when-using-app-only-authentication-with-Sites.Read.All-permission)
 - [Best practices to handle throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#best-practices-to-handle-throttling)
 - [How to decorate your traffic to avoid getting throttled?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#how-to-decorate-your-http-traffic-to-avoid-throttling)
 - [GitHub CSOM code samples: SharePoint Online Throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md)
@@ -70,6 +71,15 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 Setting and publishing exact throttling limits sounds straightforward, but in fact it would result in more restrictive limits. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online.
 
 That's why it's so important for your CSOM or REST code to honor the `Retry-After` HTTP header value; this lets your code run as fast as possible on any given day, and it lets your code back off "just enough" if it hits throttling limits. The code samples later in this article show you how to use the `Retry-After` HTTP header.
+
+## Search query volume limits when using app-only authentication with Sites.Read.All permission
+
+In Sharepoint and OneDrive, we process multiple billions of documents and enable our customers to issue large query volumes per second. 
+When you are using SharePoint Online search APIs with app-only authentication and the app having Sites.Read.All permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content). 
+
+We want to let our customers know that SharePoint Online search queries using such permission will be throttled at 25 QPS. The search query will return with a 429 response and you can simply retry the query. When waiting for 429 recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making additional calls while receiving throttle responses will extend the time it takes for your app to become unthrottled. 
+
+As we scale our system, we realize the importance of hardening the system to run it efficiently and also to protect the system and hence this change. This change is expected to rollout to tenants starting Aug into the Fall of 2020. 
 
 ## Best practices to handle throttling
 
