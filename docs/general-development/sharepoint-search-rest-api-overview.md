@@ -12,7 +12,7 @@ Add search functionality to client and mobile applications using the Search REST
 When you query in the context of a SharePoint Online user, you get results from:
 
 - Content in SharePoint Online site collections 
-- Content in Office 365 Groups 
+- Content in Microsoft 365 groups 
 - Shared OneDrive for Business content (content that's accessible for others than the owner of the OneDrive for Business) 
 - Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](https://docs.microsoft.com/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint) 
 
@@ -1151,9 +1151,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;summarylength=
 
 ### EnableDynamicGroups
 
-A Boolean value that specifies whether to include the results from private Office 365 groups.
+A Boolean value that specifies whether to include the results from private Microsoft 365 groups.
 
-**true** to include results from private Office 365 groups; otherwise, **false**. The default value is **false**.
+**true** to include results from private Microsoft 365 groups; otherwise, **false**. The default value is **false**.
 
 #### Sample GET request
 

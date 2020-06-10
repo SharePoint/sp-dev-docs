@@ -42,7 +42,7 @@ Following are the key scenarios currently supported by the "modern" experiences.
 |Customization/Article|Description|
 |:-----|:-----|
 |[Provisioning "modern" team sites programmatically](modern-experience-customizations-provisioning-sites.md)| "Modern" team sites can be provisioned by an end user, but you can also create these sites programmatically. |
-|[Customizing "modern" team sites](modern-experience-customizations-customize-sites.md) | "Modern" team sites are sites that bring a fresh, new responsive user experience to SharePoint Online,<br/>showing relevant information on the home page. Typically, these sites also have an associated Office 365 group. |
+|[Customizing "modern" team sites](modern-experience-customizations-customize-sites.md) | "Modern" team sites are sites that bring a fresh, new responsive user experience to SharePoint Online,<br/>showing relevant information on the home page. Typically, these sites also have an associated Microsoft 365 group. |
 |[Customizing "modern" lists and libraries](modern-experience-customizations-customize-lists-and-libraries.md) | "Modern" lists and document libraries bring a better user experience that is faster, more intuitive, and responsive.<br/>This article focuses on the extensibility options, such as user custom actions and branding, which are supported for the "modern" library and list experiences. |
 |[Customizing "modern" site pages](modern-experience-customizations-customize-pages.md) | "Modern" team site pages are fast, easy to author, and support rich multimedia content. Additionally, these pages<br/>look great on any device, in a browser, or from within the SharePoint mobile app.<br/>This article focuses on the extensibility options available within the "modern" page experience. |
 |[SharePoint "modern" sites classification](modern-experience-site-classification.md)|Configure out-of-the-box site classification for modern SharePoint sites. |
@@ -51,7 +51,7 @@ Following are the key scenarios currently supported by the "modern" experiences.
 
 ## Converting existing sites to "modern" team sites
 
-Existing collaboration sites cannot be converted to "modern" team sites with an associated Office 365 group, but you can however [associate a new Office 365 group](https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group) to existing collaboration site. You can also start using modern page and list experiences in the classic sites, which will make them look like a modern group associated team sites.
+Existing collaboration sites cannot be converted to "modern" team sites with an associated Microsoft 365 group, but you can however [associate a new Microsoft 365 group](https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group) to existing collaboration site. You can also start using modern page and list experiences in the classic sites, which will make them look like a modern group associated team sites.
 
 "Modern" lists and library usage can be controlled at site, web, and list/library level. You can find more details about the available options in our ["modern" list and libraries](modern-experience-customizations-customize-lists-and-libraries.md) article.
 
@@ -91,7 +91,7 @@ The SharePoint "modern" experiences are supported in SharePoint 2019 in on-premi
 ## See also
 
 -  [Create connected SharePoint Online team sites in seconds](https://blogs.office.com/2016/11/08/create-connected-sharepoint-online-team-sites-in-seconds/)
--  [New capabilities in SharePoint Online team sites including integration with Office 365 Groups](https://blogs.office.com/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/)
+-  [New capabilities in SharePoint Online team sites including integration with Microsoft 365 groups](https://blogs.office.com/2016/08/31/new-capabilities-in-sharepoint-online-team-sites-including-integration-with-office-365-groups/)
 - [Create a team site in SharePoint Online](https://support.office.com/article/Create-a-team-site-in-SharePoint-Online-ef10c1e7-15f3-42a3-98aa-b5972711777d?ui=en-US)
 -  [Turn scripting capabilities on or off](https://support.office.com/article/Allow-or-prevent-custom-script-1f2c515f-5d7e-448a-9fd7-835da935584f?ui=en-US&rs=en-US&ad=US)
 -  ["Modern" SharePoint lists are here - including integration with Microsoft Flow and PowerApps](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps/)

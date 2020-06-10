@@ -17,30 +17,30 @@ The output you'll depends on the chosen scan mode. Below table lists the availab
 Mode | Description
 -----|------------
 `Full` | All components will be included, omitting -m has the same result
-`GroupifyOnly` | Only use the Office 365 group connection readiness component, this component is part of each scan
-`ListOnly` | Includes a deep list scan + includes the Office 365 group connection readiness component
-`PageOnly` | Includes a scan from wiki and web part pages + includes the Office 365 group connection readiness component
-`PublishingOnly` | Includes a classic publishing portal scan at site and web level + includes the Office 365 group connection readiness component
-`PublishingWithPagesOnly` | Includes a classic publishing portal scan at site,web and page level + includes the Office 365 group connection readiness component
-`WorkflowOnly` | Includes the classic workflow scan + includes the Office 365 group connection readiness component
-`InfoPathOnly` | Includes the InfoPath scan + includes the Office 365 group connection readiness component
-`BlogOnly` | Includes the Blog scan + includes the Office 365 group connection readiness component
+`GroupifyOnly` | Only use the Microsoft 365 group connection readiness component, this component is part of each scan
+`ListOnly` | Includes a deep list scan + includes the Microsoft 365 group connection readiness component
+`PageOnly` | Includes a scan from wiki and web part pages + includes the Microsoft 365 group connection readiness component
+`PublishingOnly` | Includes a classic publishing portal scan at site and web level + includes the Microsoft 365 group connection readiness component
+`PublishingWithPagesOnly` | Includes a classic publishing portal scan at site,web and page level + includes the Microsoft 365 group connection readiness component
+`WorkflowOnly` | Includes the classic workflow scan + includes the Microsoft 365 group connection readiness component
+`InfoPathOnly` | Includes the InfoPath scan + includes the Microsoft 365 group connection readiness component
+`BlogOnly` | Includes the Blog scan + includes the Microsoft 365 group connection readiness component
 
 After the run you'll find a new sub folder (e.g. 636530041937506713) which contains the following files. Depending on the optional mode you specified you'll get more or less reports.
 
 Report | Include in following modes | Content
 ---------|----------|----------
-**Office 365 Group Connection Readiness.xlsx** | All modes | The report that summarizes the data you need to know to help with assessing the readiness for "Office 365 group connection" also called "Groupify". Checkout [Analyze and use the scanner data](https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-scanner) to learn more on how to use the scanner results.
+**Microsoft 365 group Connection Readiness.xlsx** | All modes | The report that summarizes the data you need to know to help with assessing the readiness for "Microsoft 365 group connection" also called "Groupify". Checkout [Analyze and use the scanner data](https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-scanner) to learn more on how to use the scanner results.
 **office 365 List Readiness.xlsx** | Full, ListOnly | An Excel report using PowerQuery and PowerPivot to make it easier for to analyze the lists that will not render in modern.
 **Office 365 Page Transformation Readiness.xlsx** | Full, PageOnly| The report that summarizes the data you need to know to help with assessing the readiness for "Page Transformation" (so transforming from classic pages into modern pages)
 **Office 365 Publishing Portal Transformation Readiness.xlsx** | Full, PublishingOnly, PublishingWithPagesOnly | The report that summarizes the data you need to understand for transforming your classic publishing portals into modern publishing portals
 **Office 365 Classic workflow inventory.xlsx** | Full, WorkflowOnly | Details on available workflows, their Microsoft Flow upgradability score and information on when the workflow was last changed
 **Office 365 InfoPath inventory.xlsx** | Full, InfoPathOnly | Shows the detected InfoPath forms and their type of usage complemented with information on when the form was last used
 **Office 365 Blog inventory.xlsx** | Full, BlogOnly | This report summarizes the blog sites and blog posts in your tenant complemented with usage information
-**ModernizationSiteScanResults.csv** | All modes | The main "Office 365 group connection" report contains one row per site collection explaining which sites are ready to "Office 365 group connection" with which warnings. It will also tell which "Office 365 group connection" blockers it found and provide extensive information on the applied permission model.
-**ModernizationWebScanResults.csv** | All modes | Having sub sites is a potential "Office 365 group connection" warning and this report contains "Office 365 group connection" relevant information about each web. This information is also rolled up to the ModernizationSiteScanResults.csv report, so you only need this report if you want to get more details on the found warnings/blockers.
+**ModernizationSiteScanResults.csv** | All modes | The main "Microsoft 365 group connection" report contains one row per site collection explaining which sites are ready to "Microsoft 365 group connection" with which warnings. It will also tell which "Microsoft 365 group connection" blockers it found and provide extensive information on the applied permission model.
+**ModernizationWebScanResults.csv** | All modes | Having sub sites is a potential "Microsoft 365 group connection" warning and this report contains "Microsoft 365 group connection" relevant information about each web. This information is also rolled up to the ModernizationSiteScanResults.csv report, so you only need this report if you want to get more details on the found warnings/blockers.
 **ModernizationListScanResults.csv** | Full, ListOnly | Contains all lists which are not using the "modern" experience.
-**ModernizationUserCustomActionScanResults.csv** | All modes | When a site is "Office 365 group connected" it will get a "modern" home page...and  user custom actions that embed script do not work on modern pages. This report contains all the site/web scoped user custom actions that do not work on modern pages. This information is also rolled up to the ModernizationSiteScanResults.csv report, so you only need this report if you want to get more details on the actual found user custom actions.
+**ModernizationUserCustomActionScanResults.csv** | All modes | When a site is "Microsoft 365 group connected" it will get a "modern" home page...and  user custom actions that embed script do not work on modern pages. This report contains all the site/web scoped user custom actions that do not work on modern pages. This information is also rolled up to the ModernizationSiteScanResults.csv report, so you only need this report if you want to get more details on the actual found user custom actions.
 **PageScanResults.csv** | Full, PageOnly | Contains a row per page in the site pages library of the scanned sites. This contains a ton of details on the scanned page like type, used layout and detailed web part information.
 **UniqueWebParts.csv** | Full, PageOnly | Contains a list of uniquely found web parts during the scan.
 **ModernizationPublishingSiteScanResults.csv** | Full, PublishingOnly, PublishingWithPagesOnly | One row per publishing portal (= site collection) containing a summary of the found information.

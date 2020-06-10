@@ -2,7 +2,7 @@
   href: index.md
 - name: Capabilities & features
   items:
-  - name: Connect to Office 365 group
+  - name: Connect to Microsoft 365 group
     href: features/groupify/groupify-overview.md
     items:
     - name: CSOM development
@@ -1449,7 +1449,7 @@
         items:
         - name: Overview
           href: transform/modernize-scanner-reports.md
-        - name: Office 365 Group connect report
+        - name: Microsoft 365 group connect report
           href: transform/modernize-scanner-reports-groupconnect.md
         - name: Modern list and libraries report
           href: transform/modernize-scanner-reports-lists.md
@@ -1485,17 +1485,17 @@
       href: transform/modernize-customizations.md
     - name: Modernize site branding
       href: transform/modernize-branding.md
-    - name: Connect to an Office 365 group
+    - name: Connect to a Microsoft 365 group
       items:
       - name: Overview
         href: transform/modernize-connect-to-office365-group.md
       - name: Analyze and use the scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
-      - name: Subsites versus Office 365 group connection
+      - name: Subsites versus Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-subsites.md
-      - name: Site permissions after Office 365 group connection
+      - name: Site permissions after Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-permissions.md
-      - name: External sharing after Office 365 group connection
+      - name: External sharing after Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-externalsharing.md
     - name: Modernize publishing portals
       items:

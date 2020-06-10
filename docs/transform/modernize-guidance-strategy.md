@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Strategy
 
-This step provides a detailed explanation of how a classic SharePoint site will be transformed to a modern SharePoint site. Next to that it will touch upon key topics like Office 365 Group naming strategy, setting up tenant themes and configuring [Office 365 Learning Pathways](https://aka.ms/learningpathways).
+This step provides a detailed explanation of how a classic SharePoint site will be transformed to a modern SharePoint site. Next to that it will touch upon key topics like Microsoft 365 group naming strategy, setting up tenant themes and configuring [Office 365 Learning Pathways](https://aka.ms/learningpathways).
 
 ## What's the impact of Modernization on my sites
 
@@ -50,22 +50,22 @@ The classic SharePoint site can use a custom theme to show the company brand and
 
 - **Script:** The modernization script will allow you to set a pre-defined modern tenant theme + it will switch back to the default master page and alternate CSS settings. You can learn more via https://docs.microsoft.com/sharepoint/dev/transform/modernize-branding.
 
-### Office 365 Group connect impact
+### Microsoft 365 group connect impact
 
-![Office 365 group connect](media/modernize/teamwork_impact_5.png)
+![Microsoft 365 group connect](media/modernize/teamwork_impact_5.png)
 
-A site collection needs to be connected with an Office 365 Group before this site collection can use or be used by other group connected services like Microsoft Teams, Yammer, Planner, … A common question is about sub sites: there’s only one Office 365 Group per site collection, see https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-subsites for the sub site impact.
+A site collection needs to be connected with a Microsoft 365 group before this site collection can use or be used by other group connected services like Microsoft Teams, Yammer, Planner, … A common question is about sub sites: there’s only one Microsoft 365 group per site collection, see https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-subsites for the sub site impact.
 
-- **Script:** The script will perform the Office 365 Group connection. This will trigger the creation of a new Office 365 group which will be connected to SharePoint site. Existing Office 365 Groups cannot be connected to a SharePoint site because each Office 365 Group already has a SharePoint site connected.
+- **Script:** The script will perform the Microsoft 365 group connection. This will trigger the creation of a new Microsoft 365 group which will be connected to SharePoint site. Existing Microsoft 365 groups cannot be connected to a SharePoint site because each Microsoft 365 group already has a SharePoint site connected.
 - **Script:** The group connection process will create a new standard modern home page. Optionally the script can be configured to keep using the modernized classic home page.
 
-### Office 365 Group connect security impact
+### Microsoft 365 group connect security impact
 
-![Office 365 group connect security impact](media/modernize/teamwork_impact_6.png)
+![Microsoft 365 group connect security impact](media/modernize/teamwork_impact_6.png)
 
-After Office 365 Group connection the default setup will be that Office 365 Group owners will be part of the site’s Owners SharePoint group and the site collection administrators group. Group owners as such will be able to see all site collection content. The Office 365 Group members will be part of the site’s Members SharePoint group. By default the Office 365 Group owners will contain the account running the Office 365 group connect. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-permissions to learn more.
+After Microsoft 365 group connection the default setup will be that Microsoft 365 group owners will be part of the site’s Owners SharePoint group and the site collection administrators group. Group owners as such will be able to see all site collection content. The Microsoft 365 group members will be part of the site’s Members SharePoint group. By default the Microsoft 365 group owners will contain the account running the Microsoft 365 group connect. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-permissions to learn more.
 
-- **Script:** The script will, besides running the Office 365 Group connect, also copy over the user accounts from the current SharePoint site administrators and owners to the Office 365 Group owners and the current SharePoint site members to the Office 365 Group members.
+- **Script:** The script will, besides running the Microsoft 365 group connect, also copy over the user accounts from the current SharePoint site administrators and owners to the Microsoft 365 group owners and the current SharePoint site members to the Microsoft 365 group members.
 
 ### Teams team provisioning impact
 
@@ -76,12 +76,12 @@ A key reason to group connected a site is using that existing site linked to Mic
 - **Script:** You can manually do the “teamify” step from the SharePoint UI, but this can also be handled by the modernization script.
 - **Optional:** Optionally you can apply a PnP Tenant template that allows you to further pre-populate the Teams team by adding additional channels, by adding messages in the chat, by adding SharePoint modern pages as tabs or by adding additional SharePoint lists and libraries as tab.
 
-## Office 365 Group naming strategy
+## Microsoft 365 group naming strategy
 
-The Office 365 Group names you’ll be using during the Office 365 Group Connect step will have to be unique across your Azure AD environment. Therefore it’s important that you think about a group naming convention.
+The Microsoft 365 group names you’ll be using during the Microsoft 365 group Connect step will have to be unique across your Azure AD environment. Therefore it’s important that you think about a group naming convention.
 
 - **Task:** Define a group naming convention that you can apply to the sites that will be modernized.
-- **Task:** Consider configuring Office 365 Group naming policies in Azure AD to help enforce group naming. See https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-naming-policy and https://docs.microsoft.com/office365/admin/create-groups/groups-naming-policy?redirectSourcePath=%252fen-us%252farticle%252foffice-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552&view=o365-worldwide to learn more.
+- **Task:** Consider configuring Microsoft 365 group naming policies in Azure AD to help enforce group naming. See https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-naming-policy and https://docs.microsoft.com/office365/admin/create-groups/groups-naming-policy?redirectSourcePath=%252fen-us%252farticle%252foffice-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552&view=o365-worldwide to learn more.
 
 ### Frequently Asked Questions
 

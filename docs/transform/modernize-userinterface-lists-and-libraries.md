@@ -12,7 +12,7 @@ This article discusses how to get the maximum number of lists and libraries when
 
 You can't yet transform all lists and libraries to the modern experience because:
 
-- Certain types of lists and libraries are not yet built by the SharePoint team to show up in a modern user interface; for example, a Task list or an Events list. For these you could either wait for the SharePoint team to implement a modern version, or switch over to an equivalent option. Options include using Microsoft Planner instead of a classic Task list, or using the calendar of your Office 365 group instead of a classic SharePoint Events list calendar. 
+- Certain types of lists and libraries are not yet built by the SharePoint team to show up in a modern user interface; for example, a Task list or an Events list. For these you could either wait for the SharePoint team to implement a modern version, or switch over to an equivalent option. Options include using Microsoft Planner instead of a classic Task list, or using the calendar of your Microsoft 365 group instead of a classic SharePoint Events list calendar. 
 
 - Certain types of lists and libraries can be shown in modern, but are blocked due to an incompatible configuration or customization; you can take action here.
 
