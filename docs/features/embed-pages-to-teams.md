@@ -1,7 +1,7 @@
 ---
 title: Embedding modern SharePoint pages in Microsoft Teams as personal apps (preview)
 description: SharePoint pages can be embedded as personal apps in the Microsoft Teams.
-ms.date: 06/05/2020
+ms.date: 06/11/2020
 localization_priority: Priority
 ---
 
@@ -15,9 +15,9 @@ You can use the Microsoft Teams personal app model to pin any modern SharePoint 
 
 Use the steps defined in this article to embed any modern SharePoint page or site in Teams.
 
-![Image showing a site footer with a logo](../images/teams-pages-embed.png)
+![SharePoint portal embedded to Teams](../images/teams-pages-embed.png)
 
-> [!VIDEO https://www.youtube.com/watch?v=G73jxqtjuIE]
+> [!VIDEO https://www.youtube.com/embed/G73jxqtjuIE]
 
 You can embed any modern SharePoint page in Microsoft Teams by creating a Teams personal app and manually creating the needed configuration for this custom setup. Be aware of the following considerations:  
 
@@ -192,7 +192,7 @@ If you download the solution file from the App Studio and see the detailed confi
 
 You can also publish the app to be visible by default for all employees in your tenant by using the Teams app setup policies in the Microsoft Teams admin center. This provides you options to control which apps are visible to which users.  NOTE:  App policies do not apply to Guests of the tenant.
 
-![teams-pp-policies](../images/teams-app-policies.png)
+![Teams app policies in Teams admin user interface](../images/teams-app-policies.png)
 
 See more information on these options from the following Microsoft Teams documentation.
 
@@ -200,6 +200,4 @@ See more information on these options from the following Microsoft Teams documen
 
 ## See also
 
-- [Topic 1](#)
-- [Topic 1](#)
-- [Topic 1](#)
+- [Building Microsoft Teams tab using SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
