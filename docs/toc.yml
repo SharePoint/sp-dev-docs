@@ -117,6 +117,8 @@
     href: general-development/office-365-cdn.md
   - name: Manage User Expiration
     href: solution-guidance/manage-user-sharing-expiration.md
+  - name: Embed SharePoint pages to Microsoft Teams
+    href: features/embed-pages-to-teams.md
 - name: SharePoint Framework
   items:
   - name: Overview
