@@ -432,7 +432,7 @@ Creates a new site design available to users when they create a new site from th
 | id         | The ID of the site design to apply. |
 |Title                 | The display name of the site design. |
 |WebTemplate           | Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template. |
-|SiteScripts           | An array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
+|SiteScriptIds           | An array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
 |Description         | (Optional) The display description of site design. |
 |PreviewImageUrl     | (Optional) The URL of a preview image. If none is specified, SharePoint uses a generic image. |
 |PreviewImageAltText | (Optional) The alt text description of the image for accessibility. |
