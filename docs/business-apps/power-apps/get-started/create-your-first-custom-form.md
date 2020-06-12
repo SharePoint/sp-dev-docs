@@ -28,33 +28,27 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Create a custom form from Projects list](../../../images/gs01-create-a-custom-form-command-bar.png)
 
-3. Select **Customize forms**. The Power Apps studio appears and loads your form onto the canvas.
+3. Select **Customize forms**. The Power Apps studio appears and loads your form onto the canvas. If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
 
     ![Power Apps studio with custom form](../../../images/gs01-power-apps-studio-custom-form.png)
 
-    If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
-
 ### Add a user profile photo
 
-1. On the **Insert** tab, select **Media** > **Image**.
+1. On the **Insert** tab, select **Media** > **Image**. An [Image](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-image) control named **Image1** is added to the canvas and to the [Tree view](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/using-tree-view-on-form) on the left-hand panel.
 
     ![Add an image in Power Apps studio](../../../images/gs01-power-apps-studio-add-image.png)
 
-    An [Image](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-image) control named **Image1** is added to the canvas and to the [Tree View](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/using-tree-view-on-form) on the left-hand panel.
-
 2. To customize the appearance of the image, you can set its properties.
-
-    1. When you select a control on the canvas, on the right-hand panel, the **Properties** pane associated with the control appears.
+    
+    a. When you select a control on the canvas, on the right-hand panel, the **Properties** pane associated with the control appears.
 
     ![Image control with Properties panel](../../../images/gs01-image-control-selected.png)
 
-    2. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-cards).
+    b. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-cards).
 
-    3. With **Image1** selected, in the [formula bar](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter **"Owner_DataCard1.Height"** as the formula.
+    c. With **Image1** selected, in the [formula bar](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter **"Owner_DataCard1.Height"** as the formula. **Image1** now has the same height as **Owner_DataCard1**.
 
     ![Set image height](../../../images/gs01-set-image-height.png)
-
-    **Image1** now has the same height as **Owner_DataCard1**.
          
 3. Set the width of **Image1** to be the same as its height. In the formula bar, change the property to **Width**, and enter **"Self.Height"** as the formula.
 
@@ -66,11 +60,9 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Set image border radius](../../../images/gs01-set-image-border-radius.png)
 
-6. To change the image of **Image1** from the sample image to the owner's profile photo, make sure you select **Image1**. In the formula bar, change the property to **Image**, and enter **"SharePointIntegration.Selected.Owner.Picture"** as the formula.
+6. To change the image of **Image1** from the sample image to the owner's profile photo, make sure you select **Image1**. In the formula bar, change the property to **Image**, and enter **"SharePointIntegration.Selected.Owner.Picture"** as the formula. The user photo from the owner's Microsoft 365 user profile appears in **Image1**.
 
     ![Set image picture](../../../images/gs01-set-image-picture.png)
-
-    The user photo from the owner's Microsoft 365 user profile appears in **Image1**.
 
 ### Set a field to be view-only
 
@@ -83,7 +75,7 @@ To make the **Title** field view-only, follow these steps.
 
     ![Unlock title data card](../../../images/gs01-unlock-title-data-card.png)
 
-    Alternatively, in the tree view, right-click **Title_DataCard1**, and select **Unlock**.
+    Alternatively, in the Tree view, right-click **Title_DataCard1**, and select **Unlock**.
 
 2. Toggle back to the **Properties** pane, and select the **Display mode** field. The formula bar updates to display this property.
 
@@ -108,7 +100,7 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 
     ![Unlock attachments data card](../../../images/gs01-unlock-attachments-data-card.png)
 
-    Alternatively, in the tree view, right-click **Attachments_DataCard1**, and select **Unlock**.
+    Alternatively, in the Tree view, right-click **Attachments_DataCard1**, and select **Unlock**.
 
 2. Toggle back to the **Properties** pane, and select the **Visible** field. The formula bar updates to display this property.
 
