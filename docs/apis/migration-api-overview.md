@@ -239,7 +239,7 @@ Since an import package for the pipeline does not include defining fields or vie
 
 ## Logging
 
-The logs that the import pipeline creates must be easily parsed by machine with a goal of being able to pinpoint when and where failures occur, including errors and warnings, and will tell the consumer or the ISV where and why the failure occurred. As the import is processed by the import pipeline, the job results are placed into log files at the server side file system.
+The logs that the import pipeline creates must be easily parsed by machine with a goal of being able to pinpoint when and where failures occur, including errors and warnings, and will tell the consumer or the ISV where and why the failure occurred.
 
 Upon completion, these logs will be copied to the `azureContainerManifestUri` location as the SAS token specified in the URI allows write access. The same output logs are also placed at the *“_catalogs/Maintenance Logs”* location of the target site collection as a text file. The logs will only be copied to the destination locations once the job has finished and removed from the queue.
 
