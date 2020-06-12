@@ -48,7 +48,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Image control with Properties panel](../../../images/gs01-image-control-selected.png)
 
-    2. Because the image is the profile photo of you (the owner), we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-cards).
+    2. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-cards).
 
     3. With **Image1** selected, in the [formula bar](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter **"Owner_DataCard1.Height"** as the formula.
 
