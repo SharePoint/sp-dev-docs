@@ -74,8 +74,8 @@ You can achieve the same result by either granting the permissions to a user or 
 > Granting permissions using a group is a more flexible model.
 
 #### What about modern team sites (a.k.a. group sites)?
-Modern team sites are SharePoint team sites which are connected to an Office 365 group. This Office 365 group acts as a central model for granting access to all the services on top of that group (e.g. SharePoint Site, Exchange mailbox, Planner, …). For these sites, you do have 2 options for granting access:
- - Add user accounts (no groups) to either the members or owners of the Office 365 group connected to the modern team site. The advantage of this approach is that the granted permission applies to all services that use this group, but when evaluating web app policies this typically is not relevant
+Modern team sites are SharePoint team sites which are connected to a Microsoft 365 group. This Microsoft 365 group acts as a central model for granting access to all the services on top of that group (e.g. SharePoint Site, Exchange mailbox, Planner, …). For these sites, you do have 2 options for granting access:
+ - Add user accounts (no groups) to either the members or owners of the Microsoft 365 group connected to the modern team site. The advantage of this approach is that the granted permission applies to all services that use this group, but when evaluating web app policies this typically is not relevant
  - Treat the modern team site like a “normal” site and grant permission like described in earlier chapters
 
 > [!IMPORTANT]

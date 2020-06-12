@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design and site script overview
 description: Use SharePoint site scripts and site designs to provide custom configurations to apply when new sites are created.
-ms.date: 03/24/2020
+ms.date: 05/03/2020
 localization_priority: Priority
 ---
 
@@ -81,7 +81,7 @@ The following example is a script that has two top-level actions. First, it appl
       "templateType": 100,
       "subactions": [
         {
-          "verb": "SetDescription",
+          "verb": "setDescription",
           "description": "List of Customers and Orders"
         },
         {

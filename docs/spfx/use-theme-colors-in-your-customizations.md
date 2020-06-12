@@ -1,7 +1,7 @@
 ---
 title: Use theme colors in your SharePoint Framework customizations
 description: Use theme colors so that your customizations look like a part of the site by referring to the theme colors of the context site in your SharePoint Framework solution.
-ms.date: 10/22/2019
+ms.date: 04/30/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -143,12 +143,12 @@ Occurance of theme tokens within SharePoint UI may differ depending upon selecte
 
 ### Customizing theme colors
 
-In order to customize theme colors, a custom theme should be created and added to a SharePoint tenant for selection on a target site or hub. See [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview) for more information.
+In order to customize theme colors, a custom theme should be created and added to a SharePoint tenant for selection on a target site or hub. See [SharePoint site theming](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview) for more information.
 
 ## See also
 
 - [SharePoint themes and colors](../design/themes-colors.md)
 - [Designing for section backgrounds using semantic slots](../design/semantic_slots.md)
-- [SharePoint section backgrounds](./webparts/guidance/supporting-section-backgrounds.md)
+- [SharePoint section backgrounds](./web-parts/guidance/supporting-section-backgrounds.md)
 - [How to use Theme Colors in SPFX web parts](https://n8d.at/blog/how-to-use-theme-colors-in-spfx-web-parts/) by Stefan Bauer (Office Development MVP)
 - [How to Create a Multicolored Theme for a Modern SharePoint Online Site](https://laurakokkarinen.com/how-to-create-a-multicolored-theme-for-a-modern-sharepoint-online-site/) by Laura Kokkarinen (SharePoint PnP Core MVP)

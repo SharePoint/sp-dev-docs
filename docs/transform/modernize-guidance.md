@@ -23,7 +23,7 @@ Check the [Assessment page](modernize-guidance-assessment.md) to learn more.
 
 ## Step 2: Strategy
 
-This step provides a detailed explanation of how a classic SharePoint site will be transformed to a modern SharePoint site. Next to that it will touch upon key topics like Office 365 Group naming strategy, setting up tenant themes and configuring [Office 365 Learning Pathways](https://aka.ms/learningpathways).
+This step provides a detailed explanation of how a classic SharePoint site will be transformed to a modern SharePoint site. Next to that it will touch upon key topics like Microsoft 365 group naming strategy, setting up tenant themes and configuring [Office 365 Learning Pathways](https://aka.ms/learningpathways).
 
 Check the [Strategy page](modernize-guidance-strategy.md) to learn more.
 
@@ -44,4 +44,4 @@ Check the [Support page](modernize-guidance-support.md) to learn more.
 Resource | Description
 ---------|------------
 [Delivery guide (PowerPoint)](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Modernization%20partner%20guidance/Microsoft%20Teamwork%20Transformation%20Delivery%20Guide.pptx?raw=true) | Deck that describes the 4 step approach in great detail.
-[Modernization scripts](https://aka.ms/sppnp-modernization-sitecollectionscripts) | Scripts for modernizing a site collection by combining Office 365 Group Connect, page transformation, cleaning up branding, creating a Teams team,... The scripts can work for a single site collection, but you can also provide a list of site collections to be modernized.
+[Modernization scripts](https://aka.ms/sppnp-modernization-sitecollectionscripts) | Scripts for modernizing a site collection by combining Microsoft 365 group Connect, page transformation, cleaning up branding, creating a Teams team,... The scripts can work for a single site collection, but you can also provide a list of site collections to be modernized.

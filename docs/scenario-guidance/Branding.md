@@ -1,7 +1,7 @@
 ---
 title: Scenario Guidance - Branding
 description: Scenario guidance on branding options with SharePoint.
-ms.date: 04/21/2020
+ms.date: 05/01/2020
 localization_priority: Priority
 ---
 
@@ -22,11 +22,11 @@ Resources in this article will help you consider the short and long-term impact 
 
 _**Applies to:** Office 365_
 
-In 2016, the SharePoint Online team released "modern" collaboration sites. These "modern" team sites are integrated with Office 365 groups and bring a greatly improved end user experience. "Modern" team sites are responsive by design and are much faster to create and use from an end user perspective. Following are some of the key benefits of the "modern" team sites:
+In 2016, the SharePoint Online team released "modern" collaboration sites. These "modern" team sites are integrated with Microsoft 365 groups and bring a greatly improved end user experience. "Modern" team sites are responsive by design and are much faster to create and use from an end user perspective. Following are some of the key benefits of the "modern" team sites:
 
 - Designed to scale for any device natively without customizations for a fully responsive experience.
 - Contain native news, quick links, and activity capabilities.
-- Integrated with Office 365 groups.
+- Integrated with Microsoft 365 groups.
 - Significantly faster site creation compared to "classic" team sites.
 - Include "modern" lists and libraries with support for Microsoft Flow and PowerApps.
 - Contain "modern" page editing capabilities.
@@ -224,7 +224,7 @@ Script Embedding means a pattern where custom JavaScript is added on the page wh
 
 - [JavaScript injection in SharePoint Online - Office 365 Developer Patterns and Practices](https://channel9.msdn.com/Blogs/Office-365-Dev/JavaScript-injection-in-SharePoint-Online-Office-365-Developer-Patterns-and-Practices)
 - [How to update your SharePoint pages via the embedding of JavaScript](https://channel9.msdn.com/blogs/OfficeDevPnP/JavaScript-embedding-demo)
-- [Office Dev PnP Web Cast – JavaScript development patterns with SharePoint](https://dev.office.com/blogs/javascript-development-patterns-with-sharepoint)
+- [Office Dev PnP Web Cast – JavaScript development patterns with SharePoint](https://developer.microsoft.com/office/blogs/javascript-development-patterns-with-sharepoint)
 
 ### Samples
 

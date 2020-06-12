@@ -57,7 +57,7 @@ A scan can take a long time to run (up to days), so ideally, it’s ran from a m
 
 ### Configure the scan mode
 
-**Task:** Select the **Office 365 Group connection readiness** mode and press **Next**.
+**Task:** Select the **Microsoft 365 group connection readiness** mode and press **Next**.
 
 ### Configure the scanner options
 
@@ -79,7 +79,7 @@ Yes, in the Selected site collections option you can use wildcards to scope the 
 
 #### Can I run a scan for everything?
 
-Yes, you can via selecting the All of the above (full scan) option. However, be aware that the scan run time will be substantially longer. It’s recommended to first run the scanner with the requested Office 365 Group connection readiness option and then run a second full scan.
+Yes, you can via selecting the All of the above (full scan) option. However, be aware that the scan run time will be substantially longer. It’s recommended to first run the scanner with the requested Microsoft 365 group connection readiness option and then run a second full scan.
 
 #### I’m in Europe, can I format my data accordingly?
 

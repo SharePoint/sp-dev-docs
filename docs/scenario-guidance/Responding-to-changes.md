@@ -24,7 +24,7 @@ Before digging into the details of the various options that you have to handle c
 
 _**Applies to:** Office 365 | SharePoint Online_
 
-The Webhooks are a modern option, available in SharePoint Online only at the time of this writing. They leverage a REST based endpoint, which is published by a custom application and which can be registered for any list or library in SharePoint. Whenever it happens something like a new item creation, an item update, or an item deletion the SharePoint infrastructure will callback the REST endpoint, providing a JSON message with some generic information about the just happened event. The webhook will have to retrive all the details about the happening using the *GetChanges* method of CSOM. The model supports post-event notifications, and does not provide notifications during the happening (i.e. supports the so called -ed events and not the so called -ing events). Because of the asynchronous architecture of webhooks, they can be used to keep track of events, but they cannot be used to cancel or block events while they are happening.
+The Webhooks are a modern option, available in SharePoint Online only at the time of this writing. They leverage a REST based endpoint, which is published by a custom application and which can be registered for any list or library in SharePoint. Whenever it happens something like a new item creation, an item update, or an item deletion the SharePoint infrastructure will callback the REST endpoint, providing a JSON message with some generic information about the just happened event. The webhook will have to retrieve all the details about the happening using the *GetChanges* method of CSOM. The model supports post-event notifications, and does not provide notifications during the happening (i.e. supports the so called -ed events and not the so called -ing events). Because of the asynchronous architecture of webhooks, they can be used to keep track of events, but they cannot be used to cancel or block events while they are happening.
 For further details about Webhooks you can read the following articles, inspect the following samples and solutions, or watch the following videos.
 
 ### Articles
@@ -32,7 +32,6 @@ For further details about Webhooks you can read the following articles, inspect 
 * [Get started with SharePoint webhooks](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/get-started-webhooks)
 * [Using Azure Functions with SharePoint webhooks](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/sharepoint-webhooks-using-azure-functions)
 * [SharePoint list webhooks](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks)
-* []()
 
 ### Samples
 * [SharePoint webhooks sample reference implementation](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/webhooks-reference-implementation)
@@ -49,7 +48,7 @@ For further details about Webhooks you can read the following articles, inspect 
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 
-The Remote Event Receivers are a capability introduced with the SharePoint Add-In model, and they target both SharePoint on-premises 2013/2016 and SharePoint Online. The idea is to have a SOAP endpoint, usually implemented using Windows Communication Foundation (WCF), which can be invoked by SharePoint upon the happening of events. The Remote Event Receivers provide both -ing events, which are notified while somethig is happening, and -ed events, which are notified after something already happened. As such, a Remote Event Receiver can even cancel an event that is happening. The family of events that can be tracked are related to lists, items, sites, permissions, and many others. Here follows a list of topics that you can inspect to dig into the Remote Event Receivers.
+The Remote Event Receivers are a capability introduced with the SharePoint Add-In model, and they target both SharePoint on-premises 2013/2016 and SharePoint Online. The idea is to have a SOAP endpoint, usually implemented using Windows Communication Foundation (WCF), which can be invoked by SharePoint upon the happening of events. The Remote Event Receivers provide both -ing events, which are notified while something is happening, and -ed events, which are notified after something already happened. As such, a Remote Event Receiver can even cancel an event that is happening. The family of events that can be tracked are related to lists, items, sites, permissions, and many others. Here follows a list of topics that you can inspect to dig into the Remote Event Receivers.
 
 ### Articles
 * [Create a remote event receiver in SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins)
@@ -88,7 +87,7 @@ _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 
 Workflows are yet another option that you have in order to react to happenings on the SharePoint side. There are many flavors of workflows that you can rely on.
 
-For example, you can create a workflow based on the SharePoint 2010 workflow engine, which is the one based on Workflow Foundation 3.x (WF3.x). Such kind of workflows are still supported, just for backward compatibility, both on-premises and in SharePoint Online, as long as they are defined in SharePoint Designer and they don't require server-side code. Indeed, in SharePoint on-premises you can even use FTC developmnet to extend the WF3.x engine, but it is not a suggests path because it would be a road block for migrating to SharePoint Online.
+For example, you can create a workflow based on the SharePoint 2010 workflow engine, which is the one based on Workflow Foundation 3.x (WF3.x). Such kind of workflows are still supported, just for backward compatibility, both on-premises and in SharePoint Online, as long as they are defined in SharePoint Designer and they don't require server-side code. Indeed, in SharePoint on-premises you can even use FTC development to extend the WF3.x engine, but it is not a suggests path because it would be a road block for migrating to SharePoint Online.
 
 Another option that you have are the workflows for SharePoint 2013/2016, which are developed using the Workflow Manager (WFM) service that is based on Workflow Foundation 4.x (WF4.x). They still target both SharePoint on-premises or SharePoint Online, as long as you defined markup-only declarative-only workflow solutions, avoiding to rely on server-side code, which again is available in on-premises, but would be a road block for the cloud.
 

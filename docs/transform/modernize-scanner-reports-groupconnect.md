@@ -1,18 +1,18 @@
 ---
-title: The SharePoint modernization scanner reports for the Office 365 group connect scanner mode
-description: Explains the Office 365 group connect output created by the modernization scanner
+title: The SharePoint modernization scanner reports for the Microsoft 365 group connect scanner mode
+description: Explains the Microsoft 365 group connect output created by the modernization scanner
 ms.date: 02/14/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# SharePoint Modernization scanner reports: Office 365 Group Connect reports
+# SharePoint Modernization scanner reports: Microsoft 365 group Connect reports
 
-The Office 365 Group connect (mode `GroupifyOnly`) is always run as this mode is responsible for creating the main Site and Web reports. 
+The Microsoft 365 group connect (mode `GroupifyOnly`) is always run as this mode is responsible for creating the main Site and Web reports. 
 
 ## Excel dashboard
 
-![Office 365 Group connecting dashboard](media/modernize/excel_groupconnection.png)
+![Microsoft 365 group connecting dashboard](media/modernize/excel_groupconnection.png)
 
 ## Understanding the ModernizationSiteScanResults.csv file ##
 
@@ -22,16 +22,16 @@ Column | Description
 ---------|----------
 **Site Collection Url** | Url of the scanned site collection.
 **Site Url** | Url of the scanned web.
-**ReadyForGroupify** | Can this site be "Office 365 group connected"? If value is FALSE then it's strongly discouraged to "Office 365 group connect" this site collection.
-**GroupifyBlockers** | Lists the found blocking issues which is either `SiteHasOffice365Group` (site is already "Office 365 group connected"), `PublishingFeatureEnabled` (publishing features are enabled) or `IsTenantRootSite` (Site is tenant root site collection).
-**GroupifyWarnings** | List of the found warnings: these indicate non optimal conditions for "Office 365 group connection" the site but these are not considered a blocker for "Office 365 group connection". Following can be potential warnings: `PermissionWarnings` (There's one or more permission related warning), `SiteHasSubSites` (sub sites are discouraged in modern sites), `ModernUIIssues` (parts of the modern UI capability has been disabled or we've incompatible customizations) or `DefaultHomePageImpacted` ("Office 365 group connection" will add a new modern home page which is too different from the default home page of the used web template).
+**ReadyForGroupify** | Can this site be "Microsoft 365 group connected"? If value is FALSE then it's strongly discouraged to "Microsoft 365 group connect" this site collection.
+**GroupifyBlockers** | Lists the found blocking issues which is either `SiteHasOffice365Group` (site is already "Microsoft 365 group connected"), `PublishingFeatureEnabled` (publishing features are enabled) or `IsTenantRootSite` (Site is tenant root site collection).
+**GroupifyWarnings** | List of the found warnings: these indicate non optimal conditions for "Microsoft 365 group connection" the site but these are not considered a blocker for "Microsoft 365 group connection". Following can be potential warnings: `PermissionWarnings` (There's one or more permission related warning), `SiteHasSubSites` (sub sites are discouraged in modern sites), `ModernUIIssues` (parts of the modern UI capability has been disabled or we've incompatible customizations) or `DefaultHomePageImpacted` ("Microsoft 365 group connection" will add a new modern home page which is too different from the default home page of the used web template).
 **GroupMode** | Proposed group mode (private/public) based on the found security setup (presence of EveryOne claims).
-**PermissionWarnings** | Consolidates permission related warnings. Following values can be shown: `ADGroupWillNotBeExpanded` (site uses AD groups which do not expand inside an Office 365 group), `SharingDisabledForSiteButGroupWillAllowExternalSharing` (External sharing was disabled for the SharePoint site, but an Office 365 group will by default allow external sharing) or `SubSiteWithBrokenPermissionInheritance` (site has sub sites with unique permissions).
-**ModernHomePage** | Does the site have a modern home page or not: if not "Office 365 group connection" will create a default modern home page. Use this indicator to assess which sites you still want to give your customized modern home page before running "Office 365 group connection"
+**PermissionWarnings** | Consolidates permission related warnings. Following values can be shown: `ADGroupWillNotBeExpanded` (site uses AD groups which do not expand inside a Microsoft 365 group), `SharingDisabledForSiteButGroupWillAllowExternalSharing` (External sharing was disabled for the SharePoint site, but a Microsoft 365 group will by default allow external sharing) or `SubSiteWithBrokenPermissionInheritance` (site has sub sites with unique permissions).
+**ModernHomePage** | Does the site have a modern home page or not: if not "Microsoft 365 group connection" will create a default modern home page. Use this indicator to assess which sites you still want to give your customized modern home page before running "Microsoft 365 group connection"
 **ModernUIWarnings** | This is a collection of warnings indicating either some modern UI component was turned off or incompatible features/customizations have been detected. Possible values are `ModernPageFeatureDisabled` (modern pages are disabled for this site), `ModernListsBlockedAtSiteLevel` (modern UI for lists has been purposely been blocked at site collection level), `ModernListsBlockedAtWebLevel` (modern UI for lists has been purposely been blocked at web collection level), `MasterPageUsed` (a custom master page has been used), `AlternateCSSUsed` (alternate CSS was defined), `UserCustomActionUsed` (incompatible user custom actions have been found) and `PublishingFeatureEnabled` (publishing features are enabled).
 **WebTemplate** | The web template used by the site.
-**Office365GroupId** | If this site is already connected to an Office 365 group is shows the id if that group.
-**HasTeamsTeam** | Is there a Teams team created for the Office 365 Group connected to this site collection (as of version 2.7)
+**Office365GroupId** | If this site is already connected to a Microsoft 365 group is shows the id if that group.
+**HasTeamsTeam** | Is there a Teams team created for the Microsoft 365 group connected to this site collection (as of version 2.7)
 **MasterPage** | Was a custom master page used?
 **AlternateCSS** | Was alternate CSS defined?
 **UserCustomActions** | Are there incompatible user custom actions used?
@@ -71,10 +71,10 @@ Load the ModernizationSiteScanResults.csv into Microsoft Excel and use below fil
 Filter | Takeaway
 ---------|----------
 **No filter** | Will give you one row per site collection in your tenant
-**ReadyForGroupify = TRUE** | Will give you all the site collections that can be "Office 365 group connected". There might still be warnings to check, but we did not find any blocking issues
-**ReadyForGroupify = FALSE AND Office365GroupId = ""** | Will give you all the sites which do not yet have an Office 365 group connected and which can't be "Office 365 group connected"
-**ReadyForGroupify = TRUE AND GroupMode = PUBLIC** | Will give you all the site collections that can be "Office 365 group connected" and for which we'll default to a public group (based on the presence of the `everyone` or `everyone except external users` in the site members or site owners
-**HasTeamsTeam = FALSE AND WebTemplate = GROUP#0** | Modern group connected team sites that do not yet have a Teams team created for their Office 365 group (as of version 2.7)
+**ReadyForGroupify = TRUE** | Will give you all the site collections that can be "Microsoft 365 group connected". There might still be warnings to check, but we did not find any blocking issues
+**ReadyForGroupify = FALSE AND Office365GroupId = ""** | Will give you all the sites which do not yet have a Microsoft 365 group connected and which can't be "Microsoft 365 group connected"
+**ReadyForGroupify = TRUE AND GroupMode = PUBLIC** | Will give you all the site collections that can be "Microsoft 365 group connected" and for which we'll default to a public group (based on the presence of the `everyone` or `everyone except external users` in the site members or site owners
+**HasTeamsTeam = FALSE AND WebTemplate = GROUP#0** | Modern group connected team sites that do not yet have a Teams team created for their Microsoft 365 group (as of version 2.7)
 
 ## Understanding the ModernizationWebScanResults.csv file ##
 

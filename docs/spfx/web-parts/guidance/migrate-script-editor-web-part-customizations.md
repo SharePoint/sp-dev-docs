@@ -1,7 +1,7 @@
 ---
 title: Migrate existing Script Editor web part customizations to the SharePoint Framework
 description: The benefits of migrating existing client-side customizations to the SharePoint Framework and things to consider when planning the migration.
-ms.date: 04/21/2020
+ms.date: 05/09/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,12 +9,12 @@ localization_priority: Priority
 
 # Migrate existing Script Editor web part customizations to the SharePoint Framework
 
-SharePoint Framework is a model for building SharePoint customizations. If you have been building client-side SharePoint solutions by using the Script Editor web part, you might be wondering what the possible advantages are of migrating them to the SharePoint Framework. 
+SharePoint Framework is a model for building SharePoint customizations. If you have been building client-side SharePoint solutions by using the Script Editor web part, you might be wondering what the possible advantages are of migrating them to the SharePoint Framework.
 
 This article highlights the benefits of migrating existing client-side customizations to the SharePoint Framework and points out a number of considerations that you should take into account when planning the migration.
 
-> [!NOTE] 
-> The information in this article applies to customizations built using both the Content- and the Script Editor web part. Wherever there is a reference to the Script Editor web part, you should read _Content Editor web part and Script Editor Web Part_.
+> [!NOTE]
+> The information in this article applies to customizations built using both the Content- and the Script Editor web part. Wherever there is a reference to the Script Editor web part, you should read *Content Editor web part and Script Editor Web Part*.
 
 ## Benefits of migrating existing client-side customizations to the SharePoint Framework
 
@@ -122,7 +122,7 @@ SharePoint Framework allows developers to benefit from the TypeScript type syste
 
 When building reusable client-side customizations, in the past developers used the **spPageContextInfo** JavaScript object to get information about the current page, site, or user. This object offered them an easy way to make their solution reusable across the different sites in SharePoint and not have to use fixed URLs.
 
-While the **spPageContextInfo** object is still present on classic SharePoint pages, it cannot be reliably used with modern SharePoint pages and libraries. When building solutions on the SharePoint Framework, developers are recommended to use the **[IWebPartContext.pageContext](https://dev.office.com/sharepoint/reference/spfx/sp-webpart-base/iwebpartcontext)** object instead, which contains the context information for the particular solution.
+While the **spPageContextInfo** object is still present on classic SharePoint pages, it cannot be reliably used with modern SharePoint pages and libraries. When building solutions on the SharePoint Framework, developers are recommended to use the **[IWebPartContext.pageContext](https://docs.microsoft.com/javascript/api/sp-webpart-base/iwebpartcontext?view=sp-typescript-latest)** object instead, which contains the context information for the particular solution.
 
 ### No access to SharePoint JavaScript Object Model by default
 
@@ -164,7 +164,7 @@ SharePoint customizations built using the Script Editor web part often consist o
 
 To reference functions from script files, these functions need to be defined as an export. Consider an existing JavaScript file that you would like to use in a SharePoint Framework client-side web part:
 
-```js
+```javascript
 var greeting = function() {
   alert('How are you doing?');
   return false;
@@ -173,13 +173,13 @@ var greeting = function() {
 
 To be able to call the **greeting** function from the web part class, you would need to change the JavaScript file to:
 
-```js
-var greeting = function() {  
+```javascript
+var greeting = function() {
   alert('How are you doing?');
   return false;
 }
 
-module.exports = {  
+module.exports = {
   greeting: greeting
 };
 ```
@@ -187,9 +187,8 @@ module.exports = {
 Then, in the web part class, you can refer to the script and call the **greeting** function:
 
 ```typescript
-public render(): void {  
-  this.domElement.innerHTML = `
-    <input type="button" value="Click me"/>`;
+public render(): void {
+  this.domElement.innerHTML = `<input type="button" value="Click me"/>`;
 
   const myScript = <any> require('./my-script.js');
   this.domElement.querySelector('input').addEventListener('click', myScript.greeting);
@@ -198,7 +197,7 @@ public render(): void {
 
 #### Execute AJAX calls
 
-Many client-side customizations use jQuery for executing AJAX requests for its simplicity and cross-browser compatibility. If this is all that you're using jQuery for, you can execute the AJAX calls by using the standard HTTP client provided with the SharePoint Framework. 
+Many client-side customizations use jQuery for executing AJAX requests for its simplicity and cross-browser compatibility. If this is all that you're using jQuery for, you can execute the AJAX calls by using the standard HTTP client provided with the SharePoint Framework.
 
 SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](https://docs.microsoft.com/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](https://docs.microsoft.com/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
 

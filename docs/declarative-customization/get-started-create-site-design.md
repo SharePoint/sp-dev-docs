@@ -142,7 +142,7 @@ You can also apply a published site design to an existing site collection using 
 
 You can apply a published site design to:
 1. Group-connected Team site
-2. Team site not connected to an Office 365 Group
+2. Team site not connected to a Microsoft 365 group
 3. Communication site
 4. Classic team site
 5. Classic publishing site

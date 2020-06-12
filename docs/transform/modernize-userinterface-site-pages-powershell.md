@@ -11,7 +11,7 @@ localization_priority: Priority
 > [!IMPORTANT]
 > The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
 
-The page transformation engine can also be used from PowerShell. This allows it to be integrated in a site modernization script that besides page transformation also does other things like installing solution, connecting the site to an Office 365 group and applying tenant branding. A good example of an all-up modernization script can be found [in the Office 365 Group connect article](modernize-connect-to-office365-group.md).
+The page transformation engine can also be used from PowerShell. This allows it to be integrated in a site modernization script that besides page transformation also does other things like installing solution, connecting the site to a Microsoft 365 group and applying tenant branding. A good example of an all-up modernization script can be found [in the Microsoft 365 group connect article](modernize-connect-to-office365-group.md).
 
 > [!NOTE]
 > Below script shows how to transform pages. It requires [PnP PowerShell](https://aka.ms/sppnp-powershell) version 3.16.1912.* (December 2019) or higher. There are additional sample scripts (e.g. for transforming publishing page, for transforming from on-premises SharePoint) available in our [GitHub scripts location](https://github.com/SharePoint/sp-dev-modernization/tree/dev/Scripts/PageTransformation).

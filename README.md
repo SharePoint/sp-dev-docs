@@ -72,17 +72,6 @@ You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365D
 * [Setup your Machine](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
 * [Go build your first web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
 
-## Reference
-* [sp-application-base](https://docs.microsoft.com/javascript/api/sp-application-base)
-* [sp-component-base](https://docs.microsoft.com/javascript/api/sp-component-base)
-* [sp-core-library](https://docs.microsoft.com/javascript/api/sp-core-library)
-* [sp-dialog](https://docs.microsoft.com/javascript/api/sp-dialog)
-* [sp-extension-base](https://docs.microsoft.com/javascript/api/sp-extension-base)
-* [sp-http](https://docs.microsoft.com/javascript/api/sp-http)
-* [sp-listview-extensibility](https://docs.microsoft.com/javascript/api/sp-listview-extensibility)
-* [sp-odata-types](https://docs.microsoft.com/javascript/api/sp-odata-types)
-* [sp-page-context](https://docs.microsoft.com/javascript/api/sp-page-context)
-* [sp-webpart-base](https://docs.microsoft.com/javascript/api/sp-webpart-base)
 
 ## Learn More
 
@@ -108,6 +97,14 @@ Provide Feedback:
 The SharePoint Framework is now generally available at Office 365.
 
 - [SharePoint Framework reaches general availability—build and deploy engaging web parts today](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/)
+
+## Contribute on the SharePoint Dev Docs
+
+Please see following guidance if you are planning to submit changes on the SharePoint developer documentation. We do welcome your pull requests!
+
+* [Contribution guidance](https://github.com/SharePoint/sp-dev-docs/blob/master/.github/CONTRIBUTING.md)
+* [How to Create Good Pull Requests](https://github.com/SharePoint/sp-dev-docs/wiki/How-to-Create-Good-Pull-Requests)
+* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.docs.microsoft.com/en-us/help/contribute/?branch=master) for docs.microsoft.com contributors
 
 ## Have Fun
 

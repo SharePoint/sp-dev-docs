@@ -11,7 +11,7 @@ localization_priority: Priority
 Using the SharePoint Modernization scanner you can prepare your classic sites for modernization. The scanner will help you prepare for the following modernization efforts:
 
 - Optimizing the usage of modern list and libraries
-- Connecting these sites to an Office 365 group
+- Connecting these sites to a Microsoft 365 group
 - Modernizing the wiki and web part pages by creating modern site pages
 - Rebuilding classic publishing portals as modern publishing portals
 - Understanding where classic workflow is used
@@ -135,7 +135,7 @@ The SharePoint modernization scanner does support multiple modes, depending on y
 
 ![scanner modes](media/modernize/scanner_p3_1_2.8.png)
 
-Select the option you want in the dropdown and then the checkboxes will show which components will be included in the scan. The "Office 365 Group connection readiness" component is the main component that will be included all scan modes.
+Select the option you want in the dropdown and then the checkboxes will show which components will be included in the scan. The "Microsoft 365 group connection readiness" component is the main component that will be included all scan modes.
 
 ### Page 4: Scanner options
 
@@ -186,15 +186,15 @@ SharePoint.Modernization.Scanner.exe -m GroupifyOnly -t contoso -i 7a5c1615-997a
 Mode                      | Description
 ------------------------- | -----------------------------------------------------------------------------------------------------------------------------------
 `Full`                    | All components will be included, omitting -m has the same result
-`GroupifyOnly`            | Only use the Office 365 group connection readiness component, this component is part of each scan
-`ListOnly`                | Includes a deep list scan + includes the Office 365 group connection readiness component
-`HomePageOnly`            | Includes a scan from wiki and web part pages home pages + includes the Office 365 group connection readiness component
-`PageOnly`                | Includes a scan from wiki and web part pages + includes the Office 365 group connection readiness component
-`PublishingOnly`          | Includes a classic publishing portal scan at site and web level + includes the Office 365 group connection readiness component
-`PublishingWithPagesOnly` | Includes a classic publishing portal scan at site, web and page level + includes the Office 365 group connection readiness component
-`WorkflowOnly`            | Includes the classic workflow scan + includes the Office 365 group connection readiness component
-`InfoPathOnly`            | Includes the InfoPath scan + includes the Office 365 group connection readiness component
-`BlogOnly`                | Includes the Blog scan + includes the Office 365 group connection readiness component
+`GroupifyOnly`            | Only use the Microsoft 365 group connection readiness component, this component is part of each scan
+`ListOnly`                | Includes a deep list scan + includes the Microsoft 365 group connection readiness component
+`HomePageOnly`            | Includes a scan from wiki and web part pages home pages + includes the Microsoft 365 group connection readiness component
+`PageOnly`                | Includes a scan from wiki and web part pages + includes the Microsoft 365 group connection readiness component
+`PublishingOnly`          | Includes a classic publishing portal scan at site and web level + includes the Microsoft 365 group connection readiness component
+`PublishingWithPagesOnly` | Includes a classic publishing portal scan at site, web and page level + includes the Microsoft 365 group connection readiness component
+`WorkflowOnly`            | Includes the classic workflow scan + includes the Microsoft 365 group connection readiness component
+`InfoPathOnly`            | Includes the InfoPath scan + includes the Microsoft 365 group connection readiness component
+`BlogOnly`                | Includes the Blog scan + includes the Microsoft 365 group connection readiness component
 
 ### Command-line parameter overview
 

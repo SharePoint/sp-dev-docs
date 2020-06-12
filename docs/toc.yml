@@ -2,7 +2,7 @@
   href: index.md
 - name: Capabilities & features
   items:
-  - name: Connect to Office 365 group
+  - name: Connect to Microsoft 365 group
     href: features/groupify/groupify-overview.md
     items:
     - name: CSOM development
@@ -81,6 +81,10 @@
       href: declarative-customization/column-formatting.md
     - name: View formatting
       href: declarative-customization/view-formatting.md
+    - name: Forms configuration
+      items:
+      - name: Show or hide columns in a form
+        href: declarative-customization/list-form-conditional-show-hide.md
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
@@ -111,6 +115,10 @@
     href: general-development/site-collection-app-catalog.md
   - name: Use the Office 365 content delivery network (CDN)
     href: general-development/office-365-cdn.md
+  - name: Manage User Expiration
+    href: solution-guidance/manage-user-sharing-expiration.md
+  - name: Embed SharePoint pages to Microsoft Teams
+    href: features/embed-pages-to-teams.md
 - name: SharePoint Framework
   items:
   - name: Overview
@@ -263,6 +271,8 @@
       href: spfx/hyperlinking.md
     - name: Intercepting query string changes
       href: spfx/web-parts/guidance/intercepting-query-changes-in-webparts.md
+    - name: Tools and libraries compatibility
+      href: spfx/compatibility.md
   - name: External libraries
     items:
     - name: Add external libraries
@@ -413,9 +423,9 @@
     - name: Overview
       href: business-apps/power-automate/sharepoint-connector-actions-triggers.md
     - name: Get started
-      items: 
+      items:
       - name: Create your first flow
-        href: business-apps/power-automate/get-started/create-your first-flow.md
+        href: business-apps/power-automate/get-started/create-your-first-flow.md
       - name: Connect your flow to other services
         href: business-apps/power-automate/get-started/connect-to-other-services-in-your-flow.md
     - name: Concepts & scenarios
@@ -424,6 +434,14 @@
         href: business-apps/power-automate/guidance/working-with-get-items-and-get-files.md
       - name: Working with the SharePoint Send HTTP Request action
         href: business-apps/power-automate/guidance/working-with-send-sp-http-request.md
+      - name: Customize SharePoint page approvals
+        href: business-apps/power-automate/guidance/customize-page-approvals.md
+      - name: Require approval of documents in SharePoint using Power Automate
+        href: business-apps/power-automate/guidance/require-doc-approval.md
+      - name: Manage owners and users in your SharePoint lists flows
+        href: business-apps/power-automate/guidance/manage-list-flows.md
+      - name: Require approval of documents in SharePoint using Power automate
+        href: business-apps/power-automate/guidance/require-doc-approval.md
 - name: SharePoint Add-ins
   items:
   - name: Overview
@@ -1357,8 +1375,6 @@
     href: general-development/accessibility-in-sharepoint.md
   - name: Detect the installed SKU
     href: general-development/how-to-detect-the-installed-sku-of-sharepoint.md
-  - name: Avoid getting throttled or blocked in SharePoint Online
-    href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
   - name: Protocol handler error in SharePoint 2016
     href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Volume Shadow Copy Service (VSS)
@@ -1435,7 +1451,7 @@
         items:
         - name: Overview
           href: transform/modernize-scanner-reports.md
-        - name: Office 365 Group connect report
+        - name: Microsoft 365 group connect report
           href: transform/modernize-scanner-reports-groupconnect.md
         - name: Modern list and libraries report
           href: transform/modernize-scanner-reports-lists.md
@@ -1471,17 +1487,17 @@
       href: transform/modernize-customizations.md
     - name: Modernize site branding
       href: transform/modernize-branding.md
-    - name: Connect to an Office 365 group
+    - name: Connect to a Microsoft 365 group
       items:
       - name: Overview
         href: transform/modernize-connect-to-office365-group.md
       - name: Analyze and use the scanner data
         href: transform/modernize-connect-to-office365-group-scanner.md
-      - name: Subsites versus Office 365 group connection
+      - name: Subsites versus Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-subsites.md
-      - name: Site permissions after Office 365 group connection
+      - name: Site permissions after Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-permissions.md
-      - name: External sharing after Office 365 group connection
+      - name: External sharing after Microsoft 365 group connection
         href: transform/modernize-connect-to-office365-group-externalsharing.md
     - name: Modernize publishing portals
       items:
@@ -1653,6 +1669,8 @@
       href: solution-guidance/security-and-performance.md
     - name: Authorization considerations for tenants hosted in Germany, China, or US
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
+    - name: Avoid getting throttled or blocked in SharePoint Online
+      href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
     - name: Handle SharePoint Online throttling
       href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
     - name: Set up app-only access to SharePoint
@@ -1877,10 +1895,14 @@
     href: apis/sharepoint-rest-graph.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md
+  - name: Microsoft 365 Copy and Move API
+    name: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
+    - name: Migration permission guidance
+      href: apis/migration-perm-guidance.md
     - name: Migrating OneNote folders
       href: apis/onenote-migration-service.md
     - name: Migration API
@@ -5071,17 +5093,7 @@
 - name: SharePoint glossary
   href: general-development/sharepoint-glossary.md
 - name: Community
-  items:
-  - name: Overview
-    href: community/community.md
-  - name: Public (GitHub) repositories
-    href: community/repositories.md
-  - name: Open source projects
-    href: community/open-source-projects.md
-  - name: SharePoint developer videos
-    href: https://aka.ms/spdev-videos
-  - name: SharePoint development on social media
-    href: community/social-media.md
+  href: https://aka.ms/m365pnp
 - name: Support & feedback
   items:
   - name: Overview

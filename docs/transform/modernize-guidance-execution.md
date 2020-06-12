@@ -12,20 +12,20 @@ Next is using the scan results from step 1 to build your modernization plan: you
 
 ## Identify sites for Modernization
 
-The scan results will help you identify site collections which are good candidates for Modernization. The **Office 365 Group connect** reports will contain information about all the scanned site collections, so a filtering is needed to identify the sites that are Modernization candidates. Once there’s a list of sites for Modernization the next step is splitting them up in waves. The recommended approach is to start with a pilot wave that runs Modernization on a relatively small amount of sites. Goal is to gather customer feedback and finetune the modernization script if needed. Depending on the amount of sites and the input from the customer the remaining sites are handled in a series of additional waves. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner-reports-groupconnect to learn more about the Office 365 Group connect reports.
+The scan results will help you identify site collections which are good candidates for Modernization. The **Microsoft 365 group connect** reports will contain information about all the scanned site collections, so a filtering is needed to identify the sites that are Modernization candidates. Once there’s a list of sites for Modernization the next step is splitting them up in waves. The recommended approach is to start with a pilot wave that runs Modernization on a relatively small amount of sites. Goal is to gather customer feedback and finetune the modernization script if needed. Depending on the amount of sites and the input from the customer the remaining sites are handled in a series of additional waves. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner-reports-groupconnect to learn more about the Microsoft 365 group connect reports.
 
-Filtering the Office 365 Group connect (= “groupify”) report to identify sites for Modernization:
+Filtering the Microsoft 365 group connect (= “groupify”) report to identify sites for Modernization:
 
-- **Task:** copy the Office 365 Group connect report files to the computer used for analysis:
-  - Office 365 Group Connection Readiness.xlsx
+- **Task:** copy the Microsoft 365 group connect report files to the computer used for analysis:
+  - Microsoft 365 group Connection Readiness.xlsx
   - ModernizationSiteScanResults.csv
   - ModernizationWebScanResults.csv
   - ModernizationUserCustomActionScanResults.csv
 - **Task:** Right click the Dashboard sheet and unhide the ReadyForGroupify sheet.
-- **Task:** Applying “ReadyForGroupify = TRUE” and “WebTemplate = STS#0” does give you a good starting point as these are team sites without an Office 365 Group connect blocker.
+- **Task:** Applying “ReadyForGroupify = TRUE” and “WebTemplate = STS#0” does give you a good starting point as these are team sites without a Microsoft 365 group connect blocker.
 - **Task:** Applying “WebTemplate = GROUP#0” and “HasTeamsTeam = FALSE” does give you the modern team sites that do not yet have a Teams team.
 
-### What about warnings in the Office 365 Group Connect report?
+### What about warnings in the Microsoft 365 group Connect report?
 
 #### The SiteHasSubSites warnings?
 
@@ -42,21 +42,21 @@ These warnings are triggered if there are settings on the site that prevent opti
 
 #### The Permission warnings?
 
-Sites with a security setting that might be impacted by the security changes created by the Office 365 Group connect are listed here. The modernization script will not address any of these warnings.
+Sites with a security setting that might be impacted by the security changes created by the Microsoft 365 group connect are listed here. The modernization script will not address any of these warnings.
 
-- **Task:** Sites with the ADGroupWillNotBeExpanded warning do have AD groups in their default SharePoint groups and since the Office 365 Group owners and members can’t contain other groups these are not copied over. Quite often the groups are used to give a large people read-only access to the SharePoint site and that’s fine. If it’s important that the people in the AD group also have access to the other Office 365 Group connected services, then these people have to be added individually to the Office 365 Group owners and members.
-- **Task:** SharingDisabled implies that the SharePoint site is not shared with external users while the Office 365 Group can be. The SharePoint settings are not overridden by the Office 365 Group settings, so this should be fine. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-externalsharing to learn more.
+- **Task:** Sites with the ADGroupWillNotBeExpanded warning do have AD groups in their default SharePoint groups and since the Microsoft 365 group owners and members can’t contain other groups these are not copied over. Quite often the groups are used to give a large people read-only access to the SharePoint site and that’s fine. If it’s important that the people in the AD group also have access to the other Microsoft 365 group connected services, then these people have to be added individually to the Microsoft 365 group owners and members.
+- **Task:** SharingDisabled implies that the SharePoint site is not shared with external users while the Microsoft 365 group can be. The SharePoint settings are not overridden by the Microsoft 365 group settings, so this should be fine. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-externalsharing to learn more.
 - **Task:** Review the sites that have SubSitesWithBrokenPermissions: since group owners are also site collection administrators, they also will be able to see all SharePoint objects (sites, libraries, items) with specific permissions. If this is not desired, then it’s recommended to move the impacted subsites to their own modern group connected site collection.
 
 #### Frequently Asked Questions
 
-##### Can I have an Office 365 Group for a sub site?
+##### Can I have a Microsoft 365 group for a sub site?
 
-No, this is not possible. There can only be one Office 365 Group per site collection.
+No, this is not possible. There can only be one Microsoft 365 group per site collection.
 
-##### Can sub sites still use Office 365 Group connected services?
+##### Can sub sites still use Microsoft 365 group connected services?
 
-Yes, depending on the Office 365 Group connected service, there options to use the service at sub site level. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-subsites to learn more.
+Yes, depending on the Microsoft 365 group connected service, there options to use the service at sub site level. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-connect-to-office365-group-subsites to learn more.
 
 ##### Can I automatically convert the sub sites in individual site collections?
 
@@ -100,8 +100,8 @@ The modernization scripts take a CSV file as input. This CSV drives the script�
 
 - **Task:** Prepare CSV files for your transformation needs. You can have multiple CSV files per transformation wave. The CSV needs to contain these columns:
   - SiteUrl: the url of the site collection
-  - O365GroupAlias: the alias for the Office 365 Group
-  - AddTeamsTeam: true to create a Teams team (if not yet available) for the Office 365 group linked to this site collection
+  - O365GroupAlias: the alias for the Microsoft 365 group
+  - AddTeamsTeam: true to create a Teams team (if not yet available) for the Microsoft 365 group linked to this site collection
   - ModernizePages: modernizes the classic pages in the site to become modern pages. The classic pages are not deleted but renamed and are still available in the SitePages library
   - ModernizeBranding: cleans the old branding settings (master pages, alternate css)
   - TenantTheme: if set this tenant theme will be configured for the site collection
@@ -117,7 +117,7 @@ Before running the Modernization it’s important to validate the input (alias m
 
 #### Where can I learn more about the validation details?
 
-- Office 365 Group naming policy: https://docs.microsoft.com/office365/admin/create-groups/groups-naming-policy?redirectSourcePath=%252fen-us%252farticle%252foffice-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552&view=o365-worldwide
+- Microsoft 365 group naming policy: https://docs.microsoft.com/office365/admin/create-groups/groups-naming-policy?redirectSourcePath=%252fen-us%252farticle%252foffice-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552&view=o365-worldwide
 - Who can create Groups: https://docs.microsoft.com/office365/admin/create-groups/manage-creation-of-groups?redirectSourcePath=%252fen-us%252farticle%252fmanage-who-can-create-office-365-groups-4c46c8cb-17d0-44b5-9776-005fced8e618&view=o365-worldwide
 - Group classifications: https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-groups-with-powershell
 - Tenant themes: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme?view=sharepoint-ps

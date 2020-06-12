@@ -1,6 +1,6 @@
 ---
 title: Create scorecard transforms for PerformancePoint Services in SharePoint
-ms.date: 09/25/2017
+ms.date: 05/01/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -229,7 +229,7 @@ namespace Microsoft.PerformancePoint.SDK.Samples
 <a name="bk_addResources"> </a>
 
 
--  [PerformancePoint Services in SharePoint](https://dev.office.com/sharepoint/docs/general-development/performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/performancepoint-services-in-sharepoint)
     
   
 -  [PerformancePoint Services Scorecards](https://msdn.microsoft.com/library/e77eccdb-82b3-483a-bb91-dfdc716400dd%28Office.15%29.aspx)

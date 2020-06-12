@@ -16,9 +16,9 @@ localization_priority: Priority
 
 Before digging into the details about how to provision "modern" sites, let's discuss a little bit about the two main flavors available: team sites and communication sites.
 
-A "modern" team site is a place where a group of people can work together, collaborate, and share documents and messages. Every "modern" team site has a backing Office 365 group to improve the overall collaboration experience. In fact, thanks to the Office 365 group, members of the team can benefit from services such as Planner, a shared Calendar, a shared OneDrive for Business storage, and custom Office 365 connectors. In a "modern" team site, typically the members can contribute to the content (read/write). Moreover, the Office 365 group backing a "modern" team site can be private or public, and by default it is public.
+A "modern" team site is a place where a group of people can work together, collaborate, and share documents and messages. Every "modern" team site has a backing Microsoft 365 group to improve the overall collaboration experience. In fact, thanks to the Microsoft 365 group, members of the team can benefit from services such as Planner, a shared Calendar, a shared OneDrive for Business storage, and custom Office 365 connectors. In a "modern" team site, typically the members can contribute to the content (read/write). Moreover, the Microsoft 365 group backing a "modern" team site can be private or public, and by default it is public.
 
-A "modern" communication site is a place where you can share news, showcase a story, or broadcast a message. The idea of a communication site is to have few editors that create and maintain the content, and a wide audience that consumes that content. However, a communication site does not have a backing Office 365 group. Users can access the target communication site with the well-known set of permissions of any other SharePoint site, and by default every communication site is private.
+A "modern" communication site is a place where you can share news, showcase a story, or broadcast a message. The idea of a communication site is to have few editors that create and maintain the content, and a wide audience that consumes that content. However, a communication site does not have a backing Microsoft 365 group. Users can access the target communication site with the well-known set of permissions of any other SharePoint site, and by default every communication site is private.
 
 Thus, if you have to create a site for team collaboration, most likely the "modern" team site is the right choice. On the contrary, if you want to communicate something to a broad set of people, probably the communication site is your best choice.
 
@@ -28,11 +28,11 @@ In this section you learn how to provision a "modern" team site, and what the av
 
 ### Provision a "modern" team site from the user interface
 
-There are numerous routes for a "modern" team site to get provisioned. You can start the provisioning directly from the SharePoint Online site, or alternatively provision an Office 365 group from other locations (for example, from Outlook), which then also triggers the provisioning of a "modern" team site. 
+There are numerous routes for a "modern" team site to get provisioned. You can start the provisioning directly from the SharePoint Online site, or alternatively provision a Microsoft 365 group from other locations (for example, from Outlook), which then also triggers the provisioning of a "modern" team site. 
 
 - If your administrator enabled "modern" team sites in your tenant, you can create "modern" team sites from the SharePoint start page.
 
-- You can also create an Office 365 group from Office 365 Outlook, and when you access the site tab of that group, you land on a "modern" team site. 
+- You can also create a Microsoft 365 group from Office 365 Outlook, and when you access the site tab of that group, you land on a "modern" team site. 
 
 #### Control default provisioning flow
 
@@ -49,7 +49,7 @@ For more information, see the following Office Support article:
 
 The URI of the "modern" team site is determined by the **mailNickname** parameter and the managed path you select for team sites in your tenant administration (this defaults to 'sites').
 
-The following would create an Office 365 group and an associated "modern" team site with a URL of ```https://[tenant].sharepoint.com/sites/mymodernteamsite```
+The following would create a Microsoft 365 group and an associated "modern" team site with a URL of ```https://[tenant].sharepoint.com/sites/mymodernteamsite```
 
 ```
 POST https://graph.microsoft.com/v1.0/groups
@@ -153,9 +153,9 @@ echo $siteUrl
 o365 spo propertybag list -u $siteUrl
 ```
 
-### Provision an Office 365 group programmatically
+### Provision a Microsoft 365 group programmatically
 
-"Modern" team sites can be created programmatically by creating an [Office 365 group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create an Office 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Office 365 group and has the following default structure. 
+"Modern" team sites can be created programmatically by creating an [Microsoft 365 group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create a Microsoft 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Microsoft 365 group and has the following default structure. 
 
 ```
 https://[tenant].sharepoint.com/sites/[mailNickname]
@@ -164,13 +164,13 @@ https://[tenant].sharepoint.com/sites/[mailNickname]
 > [!NOTE]
 > A detailed description of group creation using Microsoft Graph is available from the [official documentation](https://developer.microsoft.com/graph/docs/api-reference/v1.0/api/group_post_groups).
 
-#### Provision an Office 365 group using the PnP CSOM core component
+#### Provision a Microsoft 365 group using the PnP CSOM core component
 
 The PnP CSOM Core component, available as a [NuGet package](https://www.nuget.org/packages/SharePointPnPCoreOnline), has simplified methods for the "modern" group handling. 
 
 ```csharp
 /// <summary>
-/// Let's use the UnifiedGroupsUtility class from PnP CSOM Core to simplify managed code operations for Office 365 groups
+/// Let's use the UnifiedGroupsUtility class from PnP CSOM Core to simplify managed code operations for Microsoft 365 groups
 /// </summary>
 /// <param name="accessToken">Azure AD Access token with Group.ReadWrite.All permission</param>
 public static void ManipulateModernTeamSite(string accessToken)
@@ -203,9 +203,9 @@ public static void ManipulateModernTeamSite(string accessToken)
 }
 ```
 
-#### Provision an Office 365 group using PnP PowerShell
+#### Provision a Microsoft 365 group using PnP PowerShell
 
-You can also create an Office 365 group using [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/releases), which will let you easily authenticate with the Microsoft Graph using Azure Active Directory. The following script creates an Office 365 group, together with a "modern" team site, and then returns the actual SharePoint site URL for further manipulation. After you have access to the URL of the created site, you can use CSOM (with the SharePoint PnP Core component) or SharePoint PnP-PowerShell to automate other operations on the created site.
+You can also create a Microsoft 365 group using [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/releases), which will let you easily authenticate with the Microsoft Graph using Azure Active Directory. The following script creates a Microsoft 365 group, together with a "modern" team site, and then returns the actual SharePoint site URL for further manipulation. After you have access to the URL of the created site, you can use CSOM (with the SharePoint PnP Core component) or SharePoint PnP-PowerShell to automate other operations on the created site.
 
 ```powershell
 # Connect to your SharePoint admin center, credentials will be asked
@@ -231,9 +231,9 @@ New-SPOSite -Title $_title -Url $_url -Owner $owner -StorageQuota 512 -Template 
 New-PnPTenantSite -Url $_url -Description $_title -Title $_title -Template STS#3 -Owner $owner
 ```
 
-#### Provision an Office 365 Group using the Office 365 CLI
+#### Provision a Microsoft 365 group using the Office 365 CLI
 
-Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create an Office 365 Group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
+Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create a Microsoft 365 group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
 The example below shows how it can be done using the [Office 365 CLI immersive mode](https://pnp.github.io/office365-cli/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
 
 ```bash
@@ -242,7 +242,7 @@ The example below shows how it can be done using the [Office 365 CLI immersive m
 # This command will prompt a sign-in confirmation message to authenticate
 graph connect
 
-# Create an Office 365 Group
+# Create a Microsoft 365 group
 # The newly created SharePoint site for that group will has URL
 # https://[tenant].sharepoint.com/sites/awesome-group
 graph o365group add --displayName 'Awesome Group' --description 'Awesome Group' --mailNickname awesome-group
@@ -355,7 +355,7 @@ If you don't want to allow users to create a "classic" subsite under a "modern" 
 
 ### Sites are not listed in the classic SharePoint Admin UI / Tenant API
 
-"Modern" team sites are not visible in the SharePoint admin UI. You can access the list of "modern" team sites from the Office 365 Groups admin user interface under Office 365 admin portal. SharePoint Online admin user interface only list "classic" SharePoint sites. This same limitation does not apply to the tenant API: you can use this API to enumerate "modern" team sites together with "classic" team sites. To obtain a list of only "modern" team sites, you can also use the Groups endpoint from Microsoft Graph API.
+"Modern" team sites are not visible in the SharePoint admin UI. You can access the list of "modern" team sites from the Microsoft 365 groups admin user interface under Office 365 admin portal. SharePoint Online admin user interface only list "classic" SharePoint sites. This same limitation does not apply to the tenant API: you can use this API to enumerate "modern" team sites together with "classic" team sites. To obtain a list of only "modern" team sites, you can also use the Groups endpoint from Microsoft Graph API.
 
 There is also an upcoming new SharePoint Admin UI, which supports managing the new "modern" site collections, together with the "classic" ones.
 

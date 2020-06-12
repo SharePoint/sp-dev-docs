@@ -467,8 +467,6 @@ Add the newly generated.sppkg** file by dragging and dropping it from explorer t
 
 When prompted, select the **Make this solution available to all sites in the organization** checkbox. Also, take note of the remark, that you should go to the **Service Principal Permissions Management Page** to approve pending permission requests. Confirm the deployment by selecting the **Deploy** button.
 
-![Dialog prompting for confirming deployment of a SharePoint Framework solution package displayed in a web browser](../images/use-aadhttpclient-enterpriseapi-deploy-dialog.png)
-
 ### Grant access to the enterprise API
 
 In the web browser, navigate to the tenant admin site by choosing from the Office 365 app launcher, the **Admin** option.

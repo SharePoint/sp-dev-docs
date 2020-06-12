@@ -1,7 +1,7 @@
 ---
 title: Build custom controls for the property pane
 description: Build a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface of the SharePoint client-side web part.
-ms.date: 10/22/2019
+ms.date: 05/11/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -47,12 +47,6 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
     - **What is your Web part name?** List items
     - **What is your Web part description?** Shows list items from the selected list
     - **Which framework would you like to use?** React
-
-1. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-    ```sh
-    npm shrinkwrap
-    ```
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 

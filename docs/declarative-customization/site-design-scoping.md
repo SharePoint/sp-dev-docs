@@ -16,7 +16,7 @@ This article explains how you can control which users and groups can see specifi
 When a site design is first created, it is available to everyone. You can grant **View** rights to the site design. After rights are granted, only the users or groups (principals) specified have access. You can continue granting rights to more principals with subsequent API calls.
 
 > [!NOTE]
-> Scoping is currently only available for mail-enabled security groups and users. We are planning to provide support for Office 365 Groups in the future.
+> Scoping is currently only available for mail-enabled security groups and users. We are planning to provide support for Microsoft 365 groups in the future.
 
 ## Grant rights to security groups
 

@@ -1,7 +1,7 @@
 ---
 title: Context Token OAuth flow for SharePoint Add-ins
 description: The OAuth authentication and authorization flow for low-trust, provider-hosted add-ins in SharePoint.
-ms.date: 1/29/2020
+ms.date: 05/01/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,7 +11,7 @@ localization_priority: Priority
 In SharePoint, the OAuth authentication and authorization flow for a provider-hosted, low-trust, add-in involves a series of interactions among your add-in, SharePoint, the authorization server, and the browser at runtime. The authorization server in this scenario is Microsoft Azure Access Control Service (ACS).
 
 > [!IMPORTANT]
-> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://dev.office.com/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
+> Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
 With a provider-hosted add-in, you have a remote web application or service that is separate from SharePoint, and not part of the SharePoint farm or SharePoint Online tenancy. It can be hosted in the cloud or on an on-premises server. In this article, the remote component is called Contoso.com.
 

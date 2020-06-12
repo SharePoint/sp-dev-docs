@@ -1,7 +1,7 @@
 ---
 title: Use the MSGraphClient to connect to Microsoft Graph
 description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
-ms.date: 01/18/2020
+ms.date: 06/11/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -115,6 +115,16 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
 By default, the service principal has no explicit permissions granted to access the Microsoft Graph. However, if you request an access token for the Microsoft Graph, you get a token with the `user_impersonation` permission scope that can be used for reading information about the users (that is, `User.Read.All`).
 
 Additional permission scopes can be requested by developers and granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](./use-aadhttpclient.md).
+
+## Known issues
+
+### Azure AD roles with delegated authentication
+
+The MSGraphClient currently uses implicit authentication flow when requesting delegated permissions from Microsoft Graph.  As stated in [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens#payload-claims), the `wids` claim may not be present when using implicit authentication flow due to length concerns.  The `wids` claim contains the listing of Azure AD tenant-wide roles that have been assigned to the delegated user.
+
+As a result, queries to Microsoft Graph endpoints that rely on Azure AD roles in addition to delegated permissions may fail due to the `wids` claim not being present.  At the time of writing this includes the following endpoints:
+
+  - [Office 365 usage reports](https://docs.microsoft.com/graph/reportroot-authorization)
 
 ## See also
 
