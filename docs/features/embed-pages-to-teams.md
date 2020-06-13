@@ -7,6 +7,8 @@ localization_priority: Priority
 
 # Embedding modern SharePoint pages in Microsoft Teams as personal apps (preview)
 
+_**Applies to:** Office 365_
+
 You can use the Microsoft Teams personal app model to pin any modern SharePoint page to the left navigation of Microsoft Teams. This provides a great opportunity to expose intranet landing pages to serve corporate communication needs, directly accessible by Microsoft Teams users. Example scenarios could include:
 
 - Adding your corporate intranet landing page to Teams for easy discovery of news and content
