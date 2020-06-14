@@ -205,4 +205,4 @@ See more information on these options from the following Microsoft Teams documen
 
 ## See also
 
-- [Building Microsoft Teams tab using SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Building Microsoft Teams tab using SharePoint Framework](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
