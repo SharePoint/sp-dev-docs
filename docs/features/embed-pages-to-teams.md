@@ -45,7 +45,7 @@ We will be using following tags in the steps below, which you should update base
 
 - [domainUrl] – Root URL of the domain
   - Example – https://contoso.sharepoint.com
-- [PageUrl] – Page, which should be shown in the tab relative to the root of the tenant
+- [pageUrl] – Page, which should be shown in the tab relative to the root of the tenant
   - Example - /sites/theperspective/SitePages/Home.aspx
 
 > [!TIP]
@@ -93,7 +93,7 @@ You will need to use **App Studio** or another editor to create the Teams manife
 1. Fill in the **Personal tab** details based on your own setup
    1. **Name** – Intranet
    1. **Entity ID** – 19991 (Use random number)  
-   1. **Content URL** – https:// [domainUrl] /_layouts/15/teamslogon.aspx?SPFX=true&dest=[pageUrl]  
+   1. **Content URL** – https://[domainUrl]/_layouts/15/teamslogon.aspx?SPFX=true&dest=[pageUrl]  
       1. Update the URL based on your own tenant details. Example URL would be https://contoso.sharepoint.com/_layouts/15/teamslogon.aspx?SPFX=true&dest=/sites/theperspective/SitePages/Home.aspx
       1. The URL will need to be encoded to avoid issues accessing it across different devices.
    1. **Website URL** – You can leave this optional value empty 
@@ -102,7 +102,7 @@ You will need to use **App Studio** or another editor to create the Teams manife
 
     ![teams menu apps](../images/teams-app-studio-domains.png)
 
-1. Make sure that **Domains from your tabs have your domain on it
+1. Make sure that **Domains from your tabs** have your domain on it
    1. Example domain value `contoso.sharepoint.com`
 
 1. Update **AAD App ID** as 00000003-0000-0ff1-ce00-000000000000
