@@ -1,7 +1,7 @@
 ---
 title: Provisioning "modern" team sites programmatically
 description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
-ms.date: 5/10/2018
+ms.date: 6/14/2020
 localization_priority: Priority
 ---
 
@@ -45,7 +45,7 @@ For more information, see the following Office Support article:
 
 ### Provision a "modern" team site programmatically via SharePoint Online REST API
 
-"Modern" team sites can be created programmatically by using a REST API provided by SharePoint Online, and also used by the Create Site UI of SharePoint Online. To provision a "modern" team site via REST, make a POST reqeust to the Microsoft Graph "groups" endpoint: ```https://graph.microsoft.com/v1.0/groups```
+"Modern" team sites can be created programmatically by using a REST API provided by SharePoint Online, and also used by the Create Site UI of SharePoint Online. To provision a "modern" team site via REST, make a POST request to the Microsoft Graph "groups" endpoint: ```https://graph.microsoft.com/v1.0/groups```
 
 The URI of the "modern" team site is determined by the **mailNickname** parameter and the managed path you select for team sites in your tenant administration (this defaults to 'sites').
 
