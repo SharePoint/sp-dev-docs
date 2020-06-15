@@ -34,6 +34,8 @@ Set-PnPFooter -Enabled:$false
 > [!NOTE]
 > Above PowerShell scripts assumes that you have already installed PnP PowerShell cmdlets for your environment and you are not using multi-factor authentication. You can install PnP PowerShell cmdlets to your computer by opening PowerShell console in administrative mode and executing following command: `Install-Module SharePointPnPPowerShellOnline`. If you are using multi-factor authentication, you can enable MFA login by updating the `Connect-PnPOnline` line as follows: `Connect-PnPOnline -Url "<SiteURL>" -UseWebLogin`.
 
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
+
 ## Controlling footer using the user interface
 
 Site owner can control the footer visibility using the **Change the look** functionality of the site, which exposes the different user interface configuration options.

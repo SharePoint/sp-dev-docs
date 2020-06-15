@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" lists and libraries
 description: Get a faster, more intuitive, and responsive SharePoint Online experience by customizing your lists and libraries to the "modern" experience using user custom actions and custom branding.
-ms.date: 04/22/2020
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -105,6 +105,8 @@ Connect-PnPOnline -Url https://[tenant].sharepoint.com/sites/siteurl -Credential
 Apply-PnPProvisioningTemplate -Path c:\customaction_modern_editcontrolblock.xml -Handlers CustomActions
 
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 If you refresh the "modern" view of a document library on your site, you'll see the new entries appear.
 

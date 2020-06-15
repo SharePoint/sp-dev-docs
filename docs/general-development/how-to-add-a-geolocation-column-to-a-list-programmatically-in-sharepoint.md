@@ -1,6 +1,6 @@
 ---
 title: Add a Geolocation column to a list programmatically in SharePoint
-ms.date: 09/25/2017
+ms.date: 06/05/2020
 ms.prod: sharepoint
 ms.assetid: f31a3594-c328-4731-b8eb-5da6b85103ad
 localization_priority: Priority
@@ -34,7 +34,7 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
 - SharePoint Online Management Shell - https://www.microsoft.com/download/details.aspx?id=35588 
 - SharePoint PnP PowerShell - https://github.com/SharePoint/PnP-PowerShell/ 
     
-  
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Code example: Add a Geolocation column to an existing list programmatically
 <a name="SP15addgeo_addcolumn"> </a>

@@ -49,10 +49,15 @@ You can configure and manage site collection app catalogs using the SharePoint O
 
 Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Using [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to [create the app catalog](https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnpsitecollectionappcatalog?view=sharepoint-ps) or [remove the app catalog](https://docs.microsoft.com/powershell/module/sharepoint-pnp/remove-pnpsitecollectionappcatalog?view=sharepoint-ps) is also an option when using Windows.
 
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+
 ### Create a site collection app catalog
 
 > [!NOTE]
 > Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet when using the SharePoint Online PowerShell. Also ensure that you have a tenant app catalog created in your tenant (Multi-geo customers will need to create a tenant app catalog for each geo they wish to use a site collection app catalog). If you don't, the cmdlet will fail with the following error:
+>
 > ```text
 > Cannot invoke method or retrieve property from null object. Object returned by the
 > following call stack is null. "TenantAppCatalog

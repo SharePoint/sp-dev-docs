@@ -1,7 +1,7 @@
 ---
 title: Bulk update custom user profile properties for SharePoint Online
 description: To replicate custom attributes to the SharePoint user profile service, use the UserProfile.BatchUpdate.API.
-ms.date: 04/30/2020
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -389,6 +389,8 @@ Get-PnPUPABulkImportStatus
 ```
 
 For more information, see https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpupabulkimportstatus
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Handle exceptions
 

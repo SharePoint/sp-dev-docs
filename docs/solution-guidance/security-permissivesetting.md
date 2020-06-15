@@ -1,6 +1,6 @@
 ---
 title: Migrating from the permissive browser file handling to the default strict browser file handling
-ms.date: 07/02/2017
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -47,6 +47,8 @@ For these html/html files the remediation is simple: if a user/app with site own
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/permissive -Verbose
 Rename-PnPFile -ServerRelativeUrl /sites/permissive/html/newfile.html -TargetFileName newfile.aspx -OverwriteIfAlreadyExists
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 Later on this article a script will be shown that can perform a full "remediation" of a complete site collection.
 

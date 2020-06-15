@@ -1,7 +1,7 @@
 ---
 title: Alternative model for web app policies in SharePoint Online
 description: Alternative model for web app policies in SharePoint Online
-ms.date: 12/12/2018
+ms.date: 06/05/2020
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
@@ -88,6 +88,8 @@ Below scripts show an easy way to grant access via using PnP PowerShell and they
  - Performance is not optimal since the scripts are sequentially running, there’s no parallel execution
 
 Since users continuously create new site collections it’s important to run these scripts on regular basis, ideally as a scheduled task.
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 > [!IMPORTANT]
 > If your tenant has a lot of site collections, then the approach using a custom developed application is a better solution for you.

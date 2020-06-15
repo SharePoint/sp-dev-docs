@@ -1,7 +1,7 @@
 ---
 title: Replace feature receivers in sandbox solutions
 description: Learn about the options and strategies of converting existing functionality to the SharePoint Add-in model or alternative solutions.
-ms.date: 4/22/2020
+ms.date: 06/05/2020
 localization_priority: Normal
 ---
 
@@ -37,6 +37,8 @@ Connect-SPOnline –Url https://yoursite.sharepoint.com/ –Credentials (Get-Cre
 Add-SPOFile -Path c:\temp\company.spcolor -Folder /_catalogs/theme/15/
 Set-SPOTheme -ColorPaletteUrl /_catalogs/theme/15/company.spcolor
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Using code
 

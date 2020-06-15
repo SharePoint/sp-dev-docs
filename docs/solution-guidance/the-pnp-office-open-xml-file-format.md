@@ -1,7 +1,7 @@
 ---
 title: The PnP Office Open XML File format
 description: 
-ms.date: 10/29/2019
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -9,8 +9,7 @@ localization_priority: Priority
 
 If you have a template which contains file references (through the ```<pnp:Files />``` element) you will have to distribute both the xml file _and_ the files that are referred to. While this of course works, it is very easy to miss files when copying them to another location.
 
-> [!NOTE] 
-> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
 For this reason we introduced a specific Office Open XML format called a 'pnp file'. Effectively it is a zip file with a specific structure in it. If you rename the .pnp file to have a .zip extension you can simply open the file and have a look in it.
 
@@ -79,6 +78,8 @@ The easiest way to create a PnP file is to extract a template from a site and sp
 Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yoursite
 Get-PnPProvisioningTemplate -Out myfile.pnp
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 This will however not give you the ability to modify the template easily. The better way is:
 

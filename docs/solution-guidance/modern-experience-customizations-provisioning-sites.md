@@ -130,9 +130,13 @@ Execute-PnPQuery
 $web.WebTemplate + "#" + $web.Configuration
 ```
 
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
+
 ### Provision a "modern" team site using the Office 365 CLI
 
 Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/) can be used to create "modern" sites. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 The following bash script will create a "modern" team site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use it to automate other operations on the created site.
 

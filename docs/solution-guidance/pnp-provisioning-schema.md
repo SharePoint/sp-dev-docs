@@ -1,7 +1,7 @@
 ---
 title: PnP provisioning schema
 description: PnP resources and sample XML schema.
-ms.date: 5/9/2018
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -9,8 +9,7 @@ localization_priority: Priority
 
 As you learned in [PnP provisioning framework](pnp-provisioning-framework.md) and elsewhere, the format for provisioning templates has been decoupled from the persistence format so that you can use any format you prefer. Nevertheless, because using the XML provisioning schema for persisting templates is such a common scenario, we're providing some additional information about how to use the XML schema to serialize and save your provisioning templates.
 
-> [!NOTE] 
-> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
 > [!IMPORTANT] 
 > While the provisioning schema obviously supports XML serialization of provisioning templates, it also provides the structure for serialization in JSON format. More generally, the schema provides the model for defining provisioning structures.

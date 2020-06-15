@@ -1,7 +1,7 @@
 ---
 title: Performance guidance for SharePoint Online portals
 description: Describes the evolution of the SharePoint Online customization model, general performance guidelines for client-side web applications, and the Client-Side Data Access Layer (DAL) Framework.
-ms.date: 04/22/2020
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -113,6 +113,8 @@ Disable-PnPFeature -Scope Site -Identity 17415b1d-5339-42f9-a10b-3fef756b84d1 -F
 Disable-PnPFeature -Scope Web -Identity 7201D6A4-A5D3-49A1-8C19-19C4BAC6E668 -Force
 ```
 <a name="bk_Telemetry"> </a>
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Avoid XSLT based webparts
 

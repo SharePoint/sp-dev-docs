@@ -1,7 +1,7 @@
 ---
 title: PnP remote provisioning
 description: Remote provisioning for your Office 365, SharePoint, and SharePoint Online site collections using features of the add-in model.
-ms.date: 10/29/2019
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -9,8 +9,7 @@ localization_priority: Priority
 
 The current recommendation when it comes to provisioning artifacts like sites, lists, content types, pages is to use something called "remote provisioning". In a nutshell, remote provisioning means that you utilize one of the available APIs (SharePoint REST, the SharePoint Client Side Object Model or the Microsoft Graph) to create those artifacts. Your code runs on your own machine or on a separate server.
 
-> [!NOTE]
-> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
 In order for you to create a repeatable process, with known parameters, the [SharePoint Developer Community](../community/community.md) created an engine, called the PnP Provisioning Engine, which allows you to easily create templates and apply those templates to sites or your tenant. The PnP Provisioning Engine can be called from C# code or by using PnP PowerShell.
 

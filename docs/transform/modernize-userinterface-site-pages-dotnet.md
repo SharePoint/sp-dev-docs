@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using .NET
 description: Explains how to transform classic wiki and web part pages into modern modern pages using the SharePoint .NET
-ms.date: 12/13/2019
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -312,6 +312,8 @@ Connect-PnPOnline -Url "<your web url>"
 # Enable modern page feature
 Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web -Force
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## See also
 
