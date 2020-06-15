@@ -1861,8 +1861,12 @@
   items:
   - name: Overview
     href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
-  - name: "Complete basic operations: CSOM"
-    href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
+  - name: SharePoint CSOM API
+    items:
+    - name: Complete basic operations
+      href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
+    - name: Using CSOM for .NET Standard
+      href: sp-add-ins/using-csom-for-dotnet-standard.md
   - name: "Complete basic operations: JSOM"
     href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
   - name: SharePoint REST API v1
