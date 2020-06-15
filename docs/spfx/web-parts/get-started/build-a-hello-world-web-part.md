@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 03/17/2020
+ms.date: 06/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -9,124 +9,117 @@ ms.custom: scenarios:getting-started
 
 # Build your first SharePoint client-side web part (Hello World part 1)
 
-Client-side web parts are client-side components that run inside the context of a SharePoint page. Client-side web parts can be deployed to SharePoint Online, and you can also use modern JavaScript tools and libraries to build them.
+Client-side web parts are client-side components that run in the context of a SharePoint page. Client-side web parts can be deployed to SharePoint environments that support the SharePoint Framework. You can also use modern JavaScript web frameworks, tools, and libraries to build them.
 
 Client-side web parts support:
 
-* Building with HTML and JavaScript.
-* Both SharePoint Online and on-premises environments.
+- Building with HTML and JavaScript.
+- Both SharePoint Online and on-premises environments.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<br/>
-
 > [!Video https://www.youtube.com/embed/_O2Re5uRLoo]
-
-<br/>
 
 ## Create a new web part project
 
-### To create a new web part project
-
 1. Create a new project directory in your favorite location.
 
-    ```shell
+    ```console
     md helloworld-webpart
     ```
 
 1. Go to the project directory.
 
-    ```shell
+    ```console
     cd helloworld-webpart
     ```
 
 1. Create a new HelloWorld web part by running the Yeoman SharePoint Generator.
 
-  ```shell
-  yo @microsoft/sharepoint
-  ```
+    ```console
+    yo @microsoft/sharepoint
+    ```
 
 1. When prompted:
 
-    * Accept the default **helloworld-webpart** as your solution name, and then select Enter.
-    * Select **SharePoint Online only (latest)**, and select Enter.
-    * Select **Use the current folder** for where to place the files.
-    * Select **N** to not allow the solution to be deployed to all sites immediately.
-    * Select **N** on the question if solution contains unique permissions.
-    * Select **WebPart** as the client-side component type to be created.
+    - **What is your solution name?**: helloworld-webpart
+    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
+    - **Where do you want to place the files?**: Use the current folder
+    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: N
+    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?**: N
+    - **Which type of client-side component to create?**: WebPart
 
 1. The next set of prompts ask for specific information about your web part:
 
-    * Accept the default **HelloWorld** as your web part name, and then select Enter.
-    * Accept the default **HelloWorld description** as your web part description, and then select Enter.
-    * Accept the default **No javascript web framework** as the framework you would like to use, and then select Enter.
+    - **What is your Web part name?**: HelloWorld
+    - **What is your Web part description?**: HelloWorld description
+    - **Which framework would you like to use?**: No JavaScript web framework
 
-    ![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../images/yeoman-sp-prompts.png)
+At this point, Yeoman creates the project scaffolding (folders & files) and installs the required dependencies by running `npm install`. This usually takes 1-3 minutes depending on your internet connection.
 
-At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** web part. This might take a few minutes.
-
-When the scaffold is complete, you should see the following message indicating a successful scaffold.
+When the project scaffolding and dependency install process is complete, Yeoman will display a message similar to the following indicating it was successful:
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/yeoman-sp-complete.png)
 
+> [!IMPORTANT]
+> NPM may display warnings and error messages during the installation of dependencies while it runs the `npm install` command. You can safely ignore these log warnings & error messages.
+>
+> NPM may display a message about running `npm audit` at the end of the process. Don't run this command as it will upgrade packages and nested dependencies that may not have been tested by the SharePoint Framework.
+
 For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-### Using your favorite Code Editor
+### Use your favorite code editor
 
 Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your web part, such as:
 
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [Atom](https://atom.io)
-* [Webstorm](https://www.jetbrains.com/webstorm)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Atom](https://atom.io)
+- [Webstorm](https://www.jetbrains.com/webstorm)
 
-SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft that runs on your desktop and is available for Windows, Mac, and Linux. It comes with built-in support for JavaScript, TypeScript, and Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
+The SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code (VS Code) is a lightweight but powerful source code editor from Microsoft that runs on your desktop. VS Code available for Windows, macOS, and Linux. It comes with built-in support for JavaScript, TypeScript, Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
 
 ## Preview the web part
 
-To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. This setting can be configured in the **serve.json** file located in the **config** folder, but we do recommend using the default values.
+You can preview and test your client-side web part locally on your questions. The client-side toolchain uses HTTPS endpoint by default. Part of the [Set up your development environment](../../set-up-your-development-environment.md) process included trusting the development SSL certificate included in the toolchain on your local environment. This is required so your browser will trust the certificate.
 
-Switch to your console, ensure that you are still in the **helloworld-webpart** directory, and then enter the following command:
+> [!IMPORTANT]
+> Trusting the developer certificate is required. This is a one-time process and is only required when you run your first SharePoint Framework project on a new workstation. You don't need to do this for every SharePoint Framework project.
+>
+> If you didn't trust the dev cert, follow the steps outlined on this page: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
 
-> [!NOTE]
-> Developer certificate has to be installed **ONLY once in your development environment**, so you can skip this step, if you have already executed that in your environment.
+Now that we've installed the developer certificate, enter the following command in the console to build and preview your web part:
 
-```shell
-gulp trust-dev-cert
-```
-
-Now that we have installed the developer certificate, enter the following command in the console to build and preview your web part:
-
-```shell
+```console
 gulp serve
 ```
 
-This command executes a series of gulp tasks to create a local, node-based HTTPS server on `localhost:4321` and `localhost:5432`. The workbench is then launched in your default browser to preview web parts from your local dev environment.
+This command executes a series of gulp tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the workbench preview web parts from your local dev environment.
 
 > [!NOTE]
-> If you are seeing issues with the certificate in browser, please see details on installing a developer certificate from the [Set up your development environment](../../set-up-your-development-environment.md) article.
-> If you are still seeing issues, please check nothing else is listening on the port numbers, by using resmon.exe, the network tab and looking at Listening Ports.
+> If you're seeing issues with the certificate in browser, please see details on installing a developer certificate: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
+>
+> If you're still seeing issues, see: [SharePoint Framework known issues and frequently asked questions](../../known-issues-and-common-questions.md)
 
 ![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the task runner to handle build process tasks such as:
 
-* Bundling and minifying JavaScript and CSS files.
-* Running tools to call the bundling and minification tasks before each build.
-* Compiling SASS files to CSS.
-* Compiling TypeScript files to JavaScript.
+- Compiling TypeScript files to JavaScript.
+- Compiling SASS files to CSS.
+- Bundling and minifying JavaScript and CSS files.
 
-Visual Studio Code provides built-in support for gulp and other task runners. Select Ctrl+Shift+B on Windows or Cmd+Shift+B on Mac to debug and preview your web part.
+VS Code provides built-in support for gulp and other task runners. Select <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on Windows or <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on macOS to debug and preview your web part.
 
-SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Workbench includes the client-side page and the client-side canvas in which you can add, delete, and test your web parts in development.
+The SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Workbench includes the client-side page and the client-side canvas in which you can add, delete, and test your web parts in development.
 
 ![SharePoint Workbench running locally](../../../images/sp-workbench.png)
 
-### To use SharePoint Workbench to preview and test your web part
+### Use SharePoint Workbench to preview and test your web part
 
-1. To add the HelloWorld web part, select the **add** icon (*this icon appears when you mouse hovers over a section as shown in the previous image*). This opens the toolbox where you can see a list of web parts available for you to add. The list includes the **HelloWorld** web part as well other web parts available locally in your development environment.
+1. To add the HelloWorld web part, select the **add** icon (*this icon appears when you mouse hovers over a section as shown in the image above*). This opens the toolbox where you can see a list of web parts available for you to add. The list includes the **HelloWorld** web part as well other web parts available locally in your development environment.
 
     ![SharePoint Workbench toolbox in localhost](../../../images/sp-workbench-toolbox.png)
 
@@ -134,7 +127,7 @@ SharePoint Workbench is a developer design surface that enables you to quickly p
 
     ![HelloWorld web part in SharePoint Workbench](../../../images/sp-workbench-helloworld-wp.png)
 
-    Congratulations! You have just added your first client-side web part to a client-side page.
+    Congratulations! You've just added your first client-side web part to a client-side page.
 
 1. Select the pencil icon on the far left of the web part to reveal the web part property pane.
 
@@ -144,42 +137,41 @@ SharePoint Workbench is a developer design surface that enables you to quickly p
 
 1. Modify the text in the **Description** text box to **Client-side web parts are awesome!**
 
-    Notice how the text in the web part also changes as you type. 
+    Notice how the text in the web part also changes as you type.
 
-One of the new capabilities available to the property pane is to configure its update behavior, which can be set to reactive or non-reactive. By default, the update behavior is reactive and enables you to see the changes as you edit the properties. The changes are saved instantly when the behavior is reactive.  
+One of the capabilities of the property pane is to configure its update behavior, which can be set to *reactive* or *non-reactive*. By default, the update behavior is reactive and enables you to see the changes as you edit the properties. The changes are saved instantly when the behavior is reactive.
 
 ## Web part project structure
 
 ### To use Visual Studio Code to explore the web part project structure
 
-1. In the console, break the processing by selecting <kbd>Ctrl</kbd>+<kbd>C</kbd>.
-1. Enter the following command to open the web part project in Visual Studio Code (or use your favorite editor):
+1. In the console, stop the local web server by terminating the process. Selecting <kbd>CTRL</kbd>+<kbd>C</kbd> on Windows or macOS.
+1. Enter the following command to open the web part project in VS Code (or use your favorite editor):
 
-    ```shell
+    ```console
     code .
     ```
 
-    ![HelloWorld project structure](../../../images/helloworld-wp-vscode-project-structure.png)
+> [!NOTE]
+> If you get an error when executing this command, you might need to [install the code command in PATH](https://code.visualstudio.com/docs/editor/setup).
 
-If you get an error, you might need to [install the code command in PATH](https://code.visualstudio.com/docs/editor/setup).
-
-TypeScript is the primary language for building SharePoint client-side web parts. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. SharePoint client-side development tools are built using TypeScript classes, modules, and interfaces to help developers build robust client-side web parts. 
+TypeScript is the primary language for building SharePoint client-side web parts. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. SharePoint client-side development tools are built using TypeScript classes, modules, and interfaces to help developers build robust client-side web parts.
 
 The following are some key files in the project.
 
 ### Web part class
 
-**HelloWorldWebPart.ts** in the **src\webparts\helloworld** folder defines the main entry point for the web part. The web part class **HelloWorldWebPart** extends the **BaseClientSideWebPart**. Any client-side web part should extend the **BaseClientSideWebPart** class to be defined as a valid web part.
+**HelloWorldWebPart.ts** in the **src\webparts\helloworld** folder defines the main entry point for the web part. The web part class **HelloWorldWebPart** extends the `BaseClientSideWebPart`. Any client-side web part should extend the `BaseClientSideWebPart` class to be defined as a valid web part.
 
-**BaseClientSideWebPart** implements the minimal functionality that is required to build a web part. This class also provides many parameters to validate and access read-only properties such as **displayMode**, web part properties, web part context, web part **instanceId**, the web part **domElement**, and much more.
+`BaseClientSideWebPart` implements the minimal functionality that is required to build a web part. This class also provides many parameters to validate and access read-only properties such as `displayMode`, web part properties, web part context, web part `instanceId`, the web part `domElement`, and much more.
 
-Notice that the web part class is defined to accept a property type **IHelloWorldWebPartProps**.
+Notice that the web part class is defined to accept a property type `IHelloWorldWebPartProps`.
 
-The property type is defined as an interface before the **HelloWorldWebPart** class in the **HelloWorldWebPart.ts** file.
+The property type is defined as an interface before the `HelloWorldWebPart` class in the **HelloWorldWebPart.ts** file.
 
 ```typescript
 export interface IHelloWorldWebPartProps {
-    description: string;
+  description: string;
 }
 ```
 
@@ -187,7 +179,7 @@ This property definition is used to define custom property types for your web pa
 
 #### Web part render method
 
-The DOM element where the web part should be rendered is available in the **render** method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any: 
+The DOM element where the web part should be rendered is available in the `render()` method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any:
 
 ```typescript
 public render(): void {
@@ -209,19 +201,19 @@ public render(): void {
 }
 ```
 
-This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. 
+This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element.
 
 #### Configure the Web part property pane
 
-The property pane is defined in the **HelloWorldWebPart** class. The **getPropertyPaneConfiguration** property is where you need to define the property pane.
+The property pane is defined in the `HelloWorldWebPart` class. The `getPropertyPaneConfiguration` property is where you need to define the property pane.
 
-When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the **render** method:
+When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the `render()` method:
 
 ```typescript
 <p class="${styles.description}">${escape(this.properties.description)}</p>
 ```
 
-Notice that we are performing an HTML escape on the property's value to ensure a valid string. To learn more about how to work with the property pane and property pane field types, see [Make your SharePoint client-side web part configurable](../basics/integrate-with-property-pane.md). 
+Notice that we're executing an HTML escape on the property's value to ensure a valid string. To learn more about how to work with the property pane and property pane field types, see [Make your SharePoint client-side web part configurable](../basics/integrate-with-property-pane.md).
 
 Let's now add a few more properties to the property pane: a checkbox, a drop-down list, and a toggle. We first start by importing the respective property pane fields from the framework.
 
@@ -246,20 +238,20 @@ Let's now add a few more properties to the property pane: a checkbox, a drop-dow
     ```
 
 1. Update the web part properties to include the new properties. This maps the fields to typed objects.
-1. Replace the **IHelloWorldWebPartProps** interface with the following code.
+1. Replace the `IHelloWorldWebPartProps` interface with the following code.
 
     ```typescript
     export interface IHelloWorldWebPartProps {
-        description: string;
-        test: string;
-        test1: boolean;
-        test2: string;
-        test3: boolean;
+      description: string;
+      test: string;
+      test1: boolean;
+      test2: string;
+      test3: boolean;
     }
     ```
 
 1. Save the file.
-1. Replace the **getPropertyPaneConfiguration** method with the following code, which adds the new property pane fields and maps them to their respective typed objects.
+1. Replace the `getPropertyPaneConfiguration()` method with the following code, which adds the new property pane fields and maps them to their respective typed objects.
 
     ```typescript
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -305,15 +297,15 @@ Let's now add a few more properties to the property pane: a checkbox, a drop-dow
     }
     ```
 
-1. After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
+1. After you add your properties to the web part properties, you can now access the properties in the same way you accessed the `description` property earlier:
 
     ```typescript
     <p class="${ styles.description }">${escape(this.properties.test)}</p>
     ```
 
-    To set the default value for the properties, you need to update the web part manifest's **properties** property bag.
+    To set the default value for the properties, you need to update the web part manifest's `properties` property bag.
 
-1. Open `HelloWorldWebPart.manifest.json` and modify the `properties` to:
+1. Open **HelloWorldWebPart.manifest.json** and modify the `properties` to:
 
     ```typescript
     "properties": {
@@ -329,7 +321,7 @@ The web part property pane now has these default values for those properties.
 
 ### Web part manifest
 
-The **HelloWorldWebPart.manifest.json** file defines the web part metadata such as version, id, display name, icon, and description. Every web part must contain this manifest.
+The **HelloWorldWebPart.manifest.json** file defines the web part metadata such as version, ID, display name, icon, and description. Every web part must contain this manifest.
 
 ```json
 {
@@ -365,26 +357,24 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 }
 ```
 
-<br/>
+Now that we have introduced new properties, ensure that you're again hosting the web part from the local development environment by executing the following command. This also ensures that the previous changes were correctly applied.
 
-Now that we have introduced new properties, ensure that you are again hosting the web part from the local development environment by executing the following command. This also ensures that the previous changes were correctly applied.
-
-```shell
+```console
 gulp serve
 ```
 
-### Preview the web part in SharePoint
+### Preview the web part in SharePoint's hosted workbench
 
-SharePoint Workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and you are able to interact with SharePoint data.
+SharePoint Workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you're running in SharePoint context and you're able to interact with SharePoint data.
 
-1. Go to the following URL: `https://your-sharepoint-tenant.sharepoint.com/_layouts/workbench.aspx`
+1. Go to the following URL: **https://your-sharepoint-tenant.sharepoint.com/_layouts/workbench.aspx**
 
     > [!NOTE]
-    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running the `gulp serve`command again. See details on installing a developer certificate from the [Set up your development environment](../../set-up-your-development-environment.md) article.
+    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the **gulp trust-dev-cert** command in your project directory console to install the developer certificate before running the **gulp serve**command again. For more information, see [Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate)
 
     ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
 
-1. Notice that the SharePoint Workbench now has the Office 365 Suite navigation bar. 
+1. Notice that the SharePoint Workbench now has the Office 365 Suite navigation bar.
 1. Select the **add** icon in the canvas to reveal the toolbox. The toolbox now shows the web parts available on the site where the SharePoint Workbench is hosted along with your **HelloWorldWebPart**.
 
     ![Toolbox in SharePoint Workbench running in SharePoint Online site](../../../images/sp-workbench-o365-toolbox.png)
@@ -396,13 +386,10 @@ SharePoint Workbench is also hosted in SharePoint to preview and test your local
 > [!NOTE]
 > The color of the web part depends on the colors of the site. By default, web parts inherit the core colors from the site by dynamically referencing Office UI Fabric Core styles used in the site where the web part is hosted.
 
-Because you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint.
+Because you're still developing and testing your web part, there is no need to package and deploy your web part to SharePoint.
 
 ## Next steps
 
 Congratulations on getting your first Hello World web part running!
 
-Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you are using that as editor). You can continue to let it run while you go to the next article.
-
-> [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.
+Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect your web part to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the **gulp serve** command is still running in your console window (or in Visual Studio Code if you're using that as editor). You can continue to let it run while you go to the next article.
