@@ -145,7 +145,7 @@
         href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
     - name: Web part properties & property pane
       items:
-      - name: Integrate web part properties with SharePoint
+      - name: Overview
         href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
       - name: Configure custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
