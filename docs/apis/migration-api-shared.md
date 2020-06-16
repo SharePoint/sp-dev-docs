@@ -19,24 +19,16 @@ For an item that is shared with a user, add the **SharedWithEvents** block withi
 Add a SharedWithMember block for each person that the item was shared with during that occurrence.  All user ids must be valid entries in the UserGroup.xml.
 
 ```XML
-<ListItem ParentWebId="79f949a2-f38b-40e3-91ef-ffdbe6214bef" 
-Id="a4bbc3c7-7ef1-47ef-8451-ea8e1a69cb88" 
-TimeLastModified="2018-11-06T22:43:49" 
-TimeCreated="2018-11-06T22:25:32" 
-
-
-<SharedWithEvents> 
-<SharedWithEvent SharedTime="2018-10-29T04:06:09.1385321Z" 
-SharingInitiatorId="2" 
-SharedById="2"> 
-<SharedWithMembers> 
-<SharedWithMember SharedWithId="1"/> 
-<SharedWithMember SharedWithId="2"/> 
-</SharedWithMembers> 
-</SharedWithEvent> 
-</SharedWithEvents> 
-</ListItem> 
-
+<ListItem ParentWebId="79f949a2-f38b-40e3-91ef-ffdbe6214bef" Id="a4bbc3c7-7ef1-47ef-8451-ea8e1a69cb88" TimeLastModified="2018-11-06T22:43:49" TimeCreated="2018-11-06T22:25:32">
+	<SharedWithEvents> 
+		<SharedWithEvent SharedTime="2018-10-29T04:06:09.1385321Z" SharingInitiatorId="2" SharedById="2"> 
+		<SharedWithMembers> 
+				<SharedWithMember SharedWithId="1"/> 
+				<SharedWithMember SharedWithId="2"/> 
+		</SharedWithMembers> 
+		</SharedWithEvent> 
+	</SharedWithEvents> 
+</ListItem>
 ```
 ## Best Practices
 ### The basics
