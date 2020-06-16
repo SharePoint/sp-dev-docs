@@ -1,7 +1,7 @@
 ---
 title: Modernize site branding
 description: Guidance on moving to modern customization experiences within SharePoint, including how to handle the custom master pages and alternate CSS configurations.
-ms.date: 04/17/2018
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -41,6 +41,8 @@ $web = Get-PnPWeb -Includes AlternateCssUrl
 $web.AlternateCssUrl = ""
 $web.Context.ExecuteQuery()
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Use a tenant-controlled SharePoint theme
 

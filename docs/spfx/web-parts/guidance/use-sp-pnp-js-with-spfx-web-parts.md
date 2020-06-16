@@ -10,6 +10,8 @@ localization_priority: Priority
 
 You may choose to use the [@pnp/sp](https://www.npmjs.com/package/@pnp/sp) library when building your SharePoint Framework (SPFx) web parts. This library provides a fluent API to make building your REST queries intuitive and supports batching and caching. For more information, see the [project's homepage](https://github.com/pnp/pnpjs/), which has links to documentation, samples, and other resources to help you get started.
 
+[!INCLUDE [pnp-js](../../../../includes/snippets/open-source/pnp-js.md)]
+
 You can download the [full source](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/knockout-sp-pnp-js) for this article from the samples site.
 
 > [!NOTE] 

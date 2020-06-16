@@ -95,6 +95,8 @@ sp.web
   });
 ```
 
+[!INCLUDE [pnp-js](../../includes/snippets/open-source/pnp-js.md)]
+
 Notice, how less verbose the code is comparing to the SharePoint Framework SPHttpClient and how all elements of the requests, except for the names of the properties to retrieve, are strongly-typed lowering the risk of runtime errors.
 
 For more information about how to setup and use PnPjs in the SharePoint Framework see the PnPjs documentation at [https://pnp.github.io/pnpjs/](https://pnp.github.io/pnpjs/).

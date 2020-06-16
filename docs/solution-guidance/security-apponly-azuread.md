@@ -1,7 +1,7 @@
 ---
 title: Granting access via Azure AD App-Only
 description: Granting access via Azure AD App-Only
-ms.date: 04/22/2020
+ms.date: 06/05/2020
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
@@ -230,9 +230,13 @@ Connect-PnPOnline -ClientId <$application client id as copied over from the AAD 
 
 You can now perform operations through PnP PowerShell against your SharePoint Online environment using this certificate App Only trust.
 
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
+
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 
-In a first step, you add the SharePointPnPCoreOnline library nuget package: https://www.nuget.org/packages/SharePointPnPCoreOnline. Once that’s done you can use below code construct:
+In a first step, you add the SharePointPnPCoreOnline library NuGet package: https://www.nuget.org/packages/SharePointPnPCoreOnline.
+
+Once that’s done you can use below code construct:
 
 ```csharp
 using OfficeDevPnP.Core;
@@ -255,6 +259,9 @@ namespace AzureADCertAuth
     }
 }
 ```
+
+[!INCLUDE [pnp-sites-core](../../includes/snippets/open-source/pnp-sites-core.md)]
+
 ## Using this principal in your Powershell script using the PnP Sites core library
 
 When making use of Azure Automation Runbooks, first add the certificate (.pfx) using the Certificates option (under Shared Resources), then use the Get-AutomationCertificate cmdlet to retrieve the certificate to be used in the script.

@@ -1,7 +1,7 @@
 ---
 title: Opting out of the modern list and library experience 
 description: Explains how to correctly opt out from modern list and libraries
-ms.date: 12/21/2018
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -41,6 +41,8 @@ Enable-PnPFeature -Identity 52E14B6F-B1BB-4969-B89B-C4FAA56745EF  -Scope Web
 # And again enable modern lists and libraries at web level
 #Disable-PnPFeature -Identity 52E14B6F-B1BB-4969-B89B-C4FAA56745EF  -Scope Web
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Opting out at list level
 

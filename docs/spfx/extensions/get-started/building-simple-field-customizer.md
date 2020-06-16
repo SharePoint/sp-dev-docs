@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 03/17/2020
+ms.date: 06/05/2020
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -277,6 +277,8 @@ Now that we have tested our solution properly in debug mode, we can package this
     Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible.
 
     You can use for example [Set-PnPField cmdlet](https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpfield?view=sharepoint-ps) from PnP PowerShell cmdlets to programatically associate an extension to existing fields in your sites.
+
+    [!INCLUDE [pnp-powershell](../../../../includes/snippets/open-source/pnp-powershell.md)]
 
     In the following steps, we review the default field definition, which was automatically created and will then be used to automatically deploy needed configurations when the solution package is installed on a site.
 

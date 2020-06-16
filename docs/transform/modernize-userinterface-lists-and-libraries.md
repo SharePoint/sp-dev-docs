@@ -1,7 +1,7 @@
 ---
 title: Maximize use of modern lists and libraries
 description: Get the maximum number of lists and libraries when using the SharePoint modern user interface.
-ms.date: 03/04/2019
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -92,6 +92,8 @@ Disable-PnPFeature -Identity "E3540C7D-6BEA-403C-A224-1A12EAFEE4C4" -Scope Site 
 # Disable the modern list web level blocking feature
 Disable-PnPFeature -Identity "52E14B6F-B1BB-4969-B89B-C4FAA56745EF" -Scope Web -Force
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Modern and library user interface blocking at list level
 

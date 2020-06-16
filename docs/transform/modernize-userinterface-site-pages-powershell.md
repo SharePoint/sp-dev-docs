@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern pages using the SharePoint PowerShell
-ms.date: 03/06/2020
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -92,6 +92,8 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/portaltomodernize
 
 Export-PnPClientSidePageMapping -CustomPageLayoutMapping -Folder c:\temp
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 If you want to generate the mapping files for OOB page layouts then specify the `AnalyzeOOBPageLayouts` switch.
 

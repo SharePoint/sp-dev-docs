@@ -1,7 +1,7 @@
 ---
 title: Customizing the "modern" experiences in SharePoint Online
 description: An overview to get you started using the "modern" experiences in SharePoint Online.
-ms.date: 04/22/2020
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -80,6 +80,8 @@ Get-PnPListItem -List SitePages
 # Change layout from "Article" to "Home" to remove top banner
 Set-PnPListItem -List SitePages –Identity <id> -Values @{"PageLayoutType"="Home"}
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 <a name="onpremisessupport"> </a>
 

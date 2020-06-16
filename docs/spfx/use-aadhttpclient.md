@@ -1,7 +1,7 @@
 ---
 title: Connect to Azure AD-secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 03/25/2020
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -262,6 +262,8 @@ SharePoint tenant administrators can use the SharePoint Online Management Shell 
 ### Manage permissions using the Office 365 CLI
 
 SharePoint tenant administrators can use the [Office 365 CLI](https://aka.ms/o365cli) to manage permissions and permission requests in SharePoint Online.
+
+[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 - To **view all pending permission requests**, use the [spo serviceprincipal permissionrequest list](https://pnp.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-list/) command. For each permission request, the command lists its ID (required to either approve or deny the request), the resource for which permissions have been requested, and the requested permissions.
 

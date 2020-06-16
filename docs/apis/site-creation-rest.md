@@ -1,14 +1,14 @@
 ---
 title: Create Modern SharePoint Sites using REST
 description: Create and get the status of a new modern SharePoint site by using the REST interface.
-ms.date: 4/19/2018
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Manage modern SharePoint sites using REST
 
-This topic assumes that you are already familiar with the following topics: 
+This topic assumes that you are already familiar with the following topics:
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
@@ -29,8 +29,8 @@ Using the following REST api you can create both Communication sites and non-gro
 
 To specify which type of site to create you use the WebTemplate attribute. Use one of the following templates to select which type of site to create:
 
-* Communication Site: `SITEPAGEPUBLISHING#0`
-* non-group associated Team Site: `STS#3`
+- Communication Site: `SITEPAGEPUBLISHING#0`
+- non-group associated Team Site: `STS#3`
 
 ```json
 url: /_api/SPSiteManager/create
@@ -62,6 +62,8 @@ The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell
 - Topic: null
 - Showcase: `6142d2a0-63a5-4ba0-aede-d9fefca2c767`
 - Blank: `f6cc5403-0d63-442e-96c0-285923709ffc`
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Response
 
@@ -108,7 +110,7 @@ body: none
 ### Response
 
 If successful, this method returns a `200, OK` response code and simple JSON object in the response body with the following details.
- 
+
 If the site exists, the response returns the site status and site URL:
 
 ```json
@@ -123,7 +125,7 @@ If the site exists, the response returns the site status and site URL:
 If the site does not exist, the response returns a site status of 0 with no URL and no site id.
 
 ```json
-{ 
+{
   "SiteId":,
   "SiteStatus":0,
   "SiteUrl":

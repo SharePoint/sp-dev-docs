@@ -410,6 +410,16 @@
       href: general-development/client-side-web-parts-maintenance-mode.md
   - name: Roadmap
     href: spfx/roadmap.md
+- name: Build for Microsoft Teams
+  items:
+  - name: Overview
+    href: spfx/build-for-teams-overview.md
+  - name: Expose web parts in Microsoft Teams
+    href: spfx/build-for-teams-expose-webparts-teams.md
+  - name: Configure web parts in Microsoft Teams
+    href: spfx/build-for-teams-configure-in-teams.md
+  - name: Considerations
+    href: spfx/build-for-teams-considerations.md
 - name: Business Apps & Process Automation
   items:
   - name: Overview
@@ -1861,8 +1871,12 @@
   items:
   - name: Overview
     href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
-  - name: "Complete basic operations: CSOM"
-    href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
+  - name: SharePoint CSOM API
+    items:
+    - name: Complete basic operations
+      href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
+    - name: Using CSOM for .NET Standard
+      href: sp-add-ins/using-csom-for-dotnet-standard.md
   - name: "Complete basic operations: JSOM"
     href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
   - name: SharePoint REST API v1
@@ -1896,7 +1910,7 @@
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md
   - name: Microsoft 365 Copy and Move API
-    name: apis/spod-copy-move-api.md
+    href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
     - name: Migration Guidance for ISVs

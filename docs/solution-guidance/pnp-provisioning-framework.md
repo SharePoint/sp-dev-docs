@@ -1,7 +1,7 @@
 ---
 title: PnP provisioning framework
 description: Get a high-level overview of remote provisioning features available for your Office 365 and SharePoint Online site collections as well as an understanding about why creating sandboxed and full-trust solutions is no longer recommended.
-ms.date: 5/9/2018
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -9,8 +9,7 @@ localization_priority: Priority
 
 The PnP provisioning framework provides a code-centric and template-based platform for provisioning your site collections. The new provisioning engine allows you to persist and reuse provisioning models in Office 365 and SharePoint Online as well as on-premises site collections.
 
-> [!NOTE] 
-> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
 ## Why the new approach?
 

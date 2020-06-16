@@ -1,7 +1,7 @@
 ---
 title: Modernize Delve blogs and classic blogs
 description: Modernize your Delve blogs and classic blogs
-ms.date: 11/27/2019
+ms.date: 06/05/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -49,6 +49,8 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com
 # Create a new communication site based upon an English template
 New-PnPSite -Type CommunicationSite -SiteDesign Topic -Url https://contoso.sharepoint.com/sites/modernblog -Title "Blog site" -Lcid 1033
 ```
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Step 2.2: Configuring the communication site
 

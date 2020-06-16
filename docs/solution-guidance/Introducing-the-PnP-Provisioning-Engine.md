@@ -1,7 +1,7 @@
 ---
 title: Introducing the PnP provisioning engine
-description: 
-ms.date: 10/29/2019
+description: This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library. 
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -9,9 +9,7 @@ localization_priority: Priority
 
 This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library. 
 
-> [!NOTE] 
-> PnP remote provisioning is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
-
+[!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 <a name="thegoal"> </a>
 
 ## The goal
@@ -52,6 +50,8 @@ To export that site as a provisioning template, you can either use PowerShell or
 
 > [!NOTE] 
 > This article focuses on using PnP PowerShell to work with the Provisioning Engine. If you prefer using C#, please refer to [PnP Provisioning Engine and the Core Library](./pnp-provisioning-engine-and-the-core-library.md).
+
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 To use the PowerShell cmdlets for SharePoint Online or SharePoint, go to [PnP PowerShell overview](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), and install the SharePoint PnP PowerShell module. 
 

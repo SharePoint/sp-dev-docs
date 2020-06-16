@@ -1,7 +1,7 @@
 ---
 title: Authorization Code OAuth flow for SharePoint Add-ins
 description: The OAuth flow for add-ins that request permission to access SharePoint resources on the fly, and how to use the **OAuthAuthorize.aspx** page and the SharePoint redirect URI.
-ms.date: 05/01/2020
+ms.date: 06/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -105,11 +105,11 @@ https://fabrikam.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?
 As the example shows, the Contoso photo-printing add-in sends the OAuth client ID and redirect URI to the Fabrikam site as query string parameters. The following is an example of the GET request with sample query string values. The actual target URL is a single line.
 
 ```http
-GET /authcode HTTP/1.1
-Host: fabrikam.sharepoint.com/oauthauthorize.aspx?client_id= c78d058c-7f82-44ca-a077-fba855e14d38&scope=list.read&response_type=code&redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx
+GET /_layouts/15/OAuthAuthorize.aspx?client_id=c78d058c-7f82-44ca-a077-fba855e14d38&scope=list.read&response_type=code&redirect_uri=https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx HTTP/1.1
+Host: fabrikam.sharepoint.com
 ```
 
-If you want a separate consent pop-up dialog, you can add the query parameter **IsDlg=1** to the URL construct as shown here: `/oauthauthorize.aspx?IsDlg=1&amp;client_id= c78d058c-7f82-44ca-a077-fba855e14d38&amp;scope=list.read&amp;response_type=code&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`
+If you want a separate consent pop-up dialog, you can add the query parameter **IsDlg=1** to the URL construct as shown here: `/oauthauthorize.aspx?IsDlg=1&client_id=c78d058c-7f82-44ca-a077-fba855e14d38&scope=list.read&response_type=code&redirect_uri=https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`
 
 #### Step 3: SharePoint displays the consent page so the user can grant the add-in permissions
 
@@ -186,7 +186,7 @@ The _scope_ parameter value, `Web.Read List.Write`, is an example of how you wou
 If you're not using managed code, the scope aliases are used in the scope field in the redirect URL. For example:
 
 ```http
-https://fabrikam.sharepoint.com/_layout/15/OAuthAuthorize.aspx?client_id=c78d058c-7f82-44ca-a077-fba855e14d38&amp;scope=list.write&amp;response_type=code&amp;redirect_uri=https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx
+https://fabrikam.sharepoint.com/_layout/15/OAuthAuthorize.aspx?client_id=c78d058c-7f82-44ca-a077-fba855e14d38&scope=list.write&response_type=code&redirect_uri=https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx
 ```
 
 > [!NOTE]

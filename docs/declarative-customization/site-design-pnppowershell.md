@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - PnP PowerShell cmdlets
 description: Use PnP PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 01/18/2019
+ms.date: 06/05/2020
 localization_priority: Priority
 ---
 
@@ -9,8 +9,7 @@ localization_priority: Priority
 
 Use PnP PowerShell cmdlets to create, retrieve, update, and remove site designs and site scripts to new and existing modern site collections.
 
-> [!NOTE]
-> PnP PowerShell is an open-source solution with active community providing support for it. There is no SLA for the open-source tool support from Microsoft.
+[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ## Getting started
 
