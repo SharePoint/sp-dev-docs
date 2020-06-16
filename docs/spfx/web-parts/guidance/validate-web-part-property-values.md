@@ -1,11 +1,10 @@
 ---
 title: Validate web part property values
 description: Validate property values in SharePoint Framework client-side web parts by validating the value directly inside a web part's code, or by calling an external API.
-ms.date: 05/11/2020
+ms.date: 06/16/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
 
 # Validate web part property values
 
@@ -16,43 +15,39 @@ When working with SharePoint Framework client-side web parts, users can configur
 
 ## Create a new web part project
 
-1. Start by creating a new folder for your project.
+1. Start by creating a new folder for your project:
 
-    ```shell
+    ```console
     md react-listinfo
     ```
 
-1. Go to the project folder.
+1. Go to the project folder:
 
-    ```shell
+    ```console
     cd react-listinfo
     ```
 
-1. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project.
+1. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new project:
 
-    ```shell
+    ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted, enter the following values:
+1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
-    - **react-listinfo** as your solution name
-    - **Use the current folder** for the location to place the files
-    - **React** as the starting point to build the web part
-    - **List info** as your web part name
-    - **Shows information about the selected list** as your web part description
-
-    ![SharePoint Framework Yeoman generator with the default choices](../../../images/property-validation-yeoman-generator.png)
+    - **What is your solution name?**: react-listinfo
+    - **Where do you want to place the files?**: Use the current folder
+    - **What is your Web part name?**: List info
+    - **What is your Web part description?**: Shows information about the selected list
+    - **Which framework would you like to use?**: No JavaScript framework
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
-    ![SharePoint Framework project open in Visual Studio Code](../../../images/property-validation-visual-studio-code.png)
-
 ## Options for validating web part properties
 
-SharePoint Framework offers developers two ways to validate values of web part properties. You can validate the value directly, inside a web part's code, or you can call an external API to perform the validation there.
+SharePoint Framework offers developers two ways to validate values of web part properties. You can validate the value directly, inside a web part's code, or you can call an external API to do the validation there.
 
-Validating values inline is useful for performing simple validations such as minimal/maximum length, required properties, or simple pattern recognition, like a zip code. Whenever the validation is based on business logic, such as checking a social security number or a security group membership, calling external APIs is a better approach.
+Validating values inline is useful for doing simple validations such as minimal/maximum length, required properties, or simple pattern recognition, like a zip code. Whenever the validation is based on business logic, such as checking a social security number or a security group membership, calling external APIs is a better approach.
 
 To validate the value of a web part property, you have to implement the event handler for the `onGetErrorMessage` event of that particular property. For inline validation, the event handler should return a string with the validation error or an empty string if the provided value is valid.
 
@@ -60,9 +55,9 @@ For validation using remote APIs, the event handler returns a promise of string.
 
 ## Validate web part property values inline
 
-In this step, you verify that the description web part property is specified and its value is not longer than 40 characters. You do this by using the inline validation process.
+In this step, you verify that the description web part property is specified and its value isn't longer than 40 characters. You do this by using the inline validation process.
 
-1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. In the `ListInfoWebPart` class, add the `validateDescription` method with the following code:
+1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. In the `ListInfoWebPart` class, add the `validateDescription()` method with the following code:
 
     ```typescript
     export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
@@ -83,9 +78,9 @@ In this step, you verify that the description web part property is specified and
     }
     ```
 
-    The `validateDescription` method checks if the description is provided, and if it isn't longer than 40 characters. If the provided description is invalid, the method returns an error message corresponding to the validation error. If the provided value is correct, it returns an empty string.
+    The `validateDescription()` method checks if the description is provided, and if it isn't longer than 40 characters. If the provided description is invalid, the method returns an error message corresponding to the validation error. If the provided value is correct, it returns an empty string.
 
-1. Associate the `validateDescription` method with the `description` web part property. In the `ListInfoWebPart` class, change the implementation of the `getPropertyPaneConfiguration` method to:
+1. Associate the `validateDescription()` method with the `description` web part property. In the `ListInfoWebPart` class, change the implementation of the `getPropertyPaneConfiguration()` method to:
 
     ```typescript
     export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
@@ -118,15 +113,15 @@ In this step, you verify that the description web part property is specified and
     }
     ```
 
-    You have extended the definition of the `description` web part by defining the `validateDescription` method as the event handler for the `onGetErrorMessage` event.
+    You've extended the definition of the `description` web part by defining the `validateDescription()` method as the event handler for the `onGetErrorMessage` event.
 
 1. Run the following command to see the result of the validation:
 
-    ```shell
+    ```console
     gulp serve
     ```
 
-1. In the Workbench, add the web part to the canvas and open its properties. If you remove the description, you should see the first validation error.
+1. In the workbench, add the web part to the canvas and open its properties. If you remove the description, you should see the first validation error.
 
     ![Validation error displayed on a required property without a value specified](../../../images/property-validation-empty-description-error.png)
 
@@ -137,6 +132,8 @@ In this step, you verify that the description web part property is specified and
 1. Notice that when providing an invalid value, the web part is rendered showing the last valid value. Additionally, in the non-reactive property pane mode, if one of the web part properties is invalid, the **Apply** button is disabled, preventing the user from applying the invalid configuration.
 
     ![Disabled Apply button rendered when a web part property has an invalid value](../../../images/property-validation-description-error-apply-disabled.png)
+
+1. Stop the local webserver by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console.
 
 ## Validate web part property values using remote APIs
 
@@ -183,7 +180,7 @@ In this step, you implement validation logic that checks if the list with the na
     }
     ```
 
-1. Finish adding the new web part property by opening the **./src/webparts/listInfo/ListInfoWebPart.ts** file in the code editor, and changing the implementation of the `getPropertyPaneConfiguration` method to:
+1. Finish adding the new web part property by opening the **./src/webparts/listInfo/ListInfoWebPart.ts** file in the code editor, and changing the implementation of the `getPropertyPaneConfiguration()` method to:
 
     ```typescript
     export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
@@ -250,13 +247,15 @@ In this step, you implement validation logic that checks if the list with the na
 
 1. Run the following command to verify that the project is running and that the newly added list name property is displayed in the web part property pane:
 
-    ```shell
+    ```console
     gulp serve
     ```
 
     ![The list name property displayed in the web part property pane](../../../images/property-validation-list-name-property.png)
 
-### Validate the name of the list by using the SharePoint REST API
+1. Stop the local webserver by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console.
+
+### Validate the name of the list by with the SharePoint REST API
 
 In this step, you validate the provided list name and check if it corresponds to an existing list on the current SharePoint site.
 
@@ -267,42 +266,45 @@ In this step, you validate the provided list name and check if it corresponds to
     import { escape } from '@microsoft/sp-lodash-subset';
     ```
 
-1. In the `ListInfoWebPart` class, add the `validateListName` method with the following code:
+1. In the `ListInfoWebPart` class, add the `validateListName()` method with the following code:
 
     ```typescript
     export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
       // ...
 
-  private async validateListName(value: string): Promise<string> {
-    if (value === null || value.length === 0) {
-      return "Provide the list name";
-    }
+      private async validateListName(value: string): Promise<string> {
+        if (value === null || value.length === 0) {
+          return "Provide the list name";
+        }
 
-    try {
-      let response = await this.context.spHttpClient.get(
-        this.context.pageContext.web.absoluteUrl +
-          `/_api/web/lists/getByTitle('${escape(value)}')?$select=Id`,
-        SPHttpClient.configurations.v1
-      );
+        try {
+          let response = await this.context.spHttpClient.get(
+            this.context.pageContext.web.absoluteUrl +
+              `/_api/web/lists/getByTitle('${escape(value)}')?$select=Id`,
+            SPHttpClient.configurations.v1
+          );
 
-      if (response.ok) {
-        return "";
-      } else if (response.status === 404) {
-        return `List '${escape(value)}' doesn't exist in the current site`;
-      } else {
-        return `Error: ${response.statusText}. Please try again`;
+          if (response.ok) {
+            return "";
+          } else if (response.status === 404) {
+            return `List '${escape(value)}' doesn't exist in the current site`;
+          } else {
+            return `Error: ${response.statusText}. Please try again`;
+          }
+        } catch (error) {
+          return error.message;
+        }
       }
-    } catch (error) {
-      return error.message;
+
+      // ...
     }
-  }
     ```
 
-    First, the `validateListName` method checks if a list name has been provided. If not, it resolves the promise with a relevant validation error. If the user has provided a list name, the `validateListName` method uses the `SPHttpClient` to call the SharePoint REST API and check if the list with the specified name exists.
+    First, the `validateListName()` method checks if a list name has been provided. If not, it resolves the promise with a relevant validation error. If the user has provided a list name, the `validateListName()` method uses the `SPHttpClient` to call the SharePoint REST API and check if the list with the specified name exists.
 
-    If the list with the specified name exists on the current site, the response returns a 200 OK status code, and the `validateListName` method resolves the promise with an empty string, confirming that the provided value represents a valid list.
+    If the list with the specified name exists on the current site, the response returns a 200 OK status code, and the `validateListName()` method resolves the promise with an empty string, confirming that the provided value represents a valid list.
 
-    If the list with the specified name doesn't exist, the response returns a different code. Typically, it is a 404 Not Found response, but if the request failed in some other way, a different status code can be returned. In both cases, the `validateListName` method displays a relevant error message to the user.
+    If the list with the specified name doesn't exist, the response returns a different code. Typically, it's a 404 Not Found response, but if the request failed in some other way, a different status code can be returned. In both cases, the `validateListName()` method displays a relevant error message to the user.
 
     With the list name validation method defined, the next step is to configure it as the validation handler for the `listName` web part property.
 
@@ -345,7 +347,7 @@ In this step, you validate the provided list name and check if it corresponds to
 
 1. Run the following command to see the result of the validation:
 
-    ```shell
+    ```console
     gulp serve --nobrowser
     ```
 
@@ -371,9 +373,9 @@ When validating web part properties using remote APIs, SharePoint Framework moni
 
 You can configure the validation delay for each property separately, depending on the type of value that users need to provide.
 
-#### To increase the validation delay for the listName property
+#### Increase the validation delay for the `listName` property
 
-1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. Change the code of the **getPropertyPaneConfiguration** method to:
+1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. Change the code of the `getPropertyPaneConfiguration()` method to:
 
     ```typescript
     export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
@@ -415,6 +417,8 @@ You can configure the validation delay for each property separately, depending o
 1. The `deferredValidationTime` property specifies the number of milliseconds that the SharePoint Framework waits before starting the validation process.
 1. Run the following command to see that the applied delay is working as expected:
 
-  ```shell
-  gulp serve --nobrowser
-  ```
+    ```console
+    gulp serve --nobrowser
+    ```
+
+1. After validating the delay is working as expected, stop the local webserver by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console.
