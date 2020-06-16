@@ -22,6 +22,7 @@ There are two main benefits for using the SharePoint Framework to build for Micr
 When you build solutions for Microsoft Teams, you need to host them somewhere. Typically, it means creating and monitoring an Azure App Service. It also means that you now have extra infrastructure for which you have to pay and continuously monitor.
 
 When you build Teams tabs and personal apps using SharePoint Framework, your solutions are automatically hosted for you in SharePoint. You don’t need any additional resources in Microsoft Azure. This significantly simplifies the deployment process and operations and lowers the overall cost of your solution.
+
 Additionally, if you have Office 365 CDN enabled, assets for your Teams tabs and personal apps will be served from the CDN offering your users significantly better experience without any extra cost or configuration.
 
 ### Use existing authentication features
