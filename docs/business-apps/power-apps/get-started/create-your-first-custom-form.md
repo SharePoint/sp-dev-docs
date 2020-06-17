@@ -34,23 +34,23 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
 ### Add a user profile photo
 
-1. On the **Insert** tab, select **Media** > **Image**. An [Image](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-image) control named **Image1** is added to the canvas and to the [Tree view](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/using-tree-view-on-form) on the left-hand panel.
+1. On the **Insert** tab, select **Media** > **Image**. An [Image](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-image) control named **Image1** is added to the canvas and to the [Tree view](https://docs.microsoft.com/powerapps/maker/model-driven-apps/using-tree-view-on-form) on the left-hand panel.
 
     ![Add an image in Power Apps studio](../../../images/gs01-power-apps-studio-add-image.png)
 
 2. To customize the appearance of the image, you can set its properties.
     
-    a. When you select a control on the canvas, on the right-hand panel, the **Properties** pane associated with the control appears.
+    1. When you select a control on the canvas, on the right-hand panel, the **Properties** pane associated with the control appears.
 
     ![Image control with Properties panel](../../../images/gs01-image-control-selected.png)
 
-    b. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-cards).
+    2. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-cards).
 
-    c. With **Image1** selected, in the [formula bar](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter **"Owner_DataCard1.Height"** as the formula. **Image1** now has the same height as **Owner_DataCard1**.
+    3. With **Image1** selected, in the [formula bar](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter `Owner_DataCard1.Height` as the formula. **Image1** now has the same height as **Owner_DataCard1**.
 
     ![Set image height](../../../images/gs01-set-image-height.png)
          
-3. Set the width of **Image1** to be the same as its height. In the formula bar, change the property to **Width**, and enter **"Self.Height"** as the formula.
+3. Set the width of **Image1** to be the same as its height. In the formula bar, change the property to **Width**, and enter `Self.Height` as the formula.
 
     ![Set image width](../../../images/gs01-set-image-width.png)
 
@@ -60,7 +60,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Set image border radius](../../../images/gs01-set-image-border-radius.png)
 
-6. To change the image of **Image1** from the sample image to the owner's profile photo, make sure you select **Image1**. In the formula bar, change the property to **Image**, and enter **"SharePointIntegration.Selected.Owner.Picture"** as the formula. The user photo from the owner's Microsoft 365 user profile appears in **Image1**.
+6. To change the image of **Image1** from the sample image to the owner's profile photo, make sure you select **Image1**. In the formula bar, change the property to **Image**, and enter `SharePointIntegration.Selected.Owner.Picture` as the formula. The user photo from the owner's Microsoft 365 user profile appears in **Image1**.
 
     ![Set image picture](../../../images/gs01-set-image-picture.png)
 
@@ -69,7 +69,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 To make the **Title** field view-only, follow these steps.
 
  > [!NOTE]
- > **Title** is a [predefined card](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
+ > **Title** is a [predefined card](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
 
 1. Select **Title_DataCard1**, toggle the **Properties** pane to the **Advanced** pane, and select **Unlock to manage properties**.
 
@@ -81,7 +81,7 @@ To make the **Title** field view-only, follow these steps.
 
     ![Select display mode field](../../../images/gs01-title-property-display-mode.png)
 
-3. In the formula bar, enter **"DisplayMode.View"** as the formula.
+3. In the formula bar, enter `DisplayMode.View` as the formula.
     
     ![View-only title](../../../images/gs01-title-data-card-view-only.png)
     
@@ -94,7 +94,7 @@ To make the **Title** field view-only, follow these steps.
 To hide the **Attachments** field if the project owner is Nestor Wilke, follow these steps.
 
 > [!NOTE]
-> **Attachments** is a [predefined card](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
+> **Attachments** is a [predefined card](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
 
 1. Select **Attachments**, toggle the **Properties** pane to the **Advanced** pane, and select **Unlock to manage properties**.
 
@@ -106,15 +106,13 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 
     ![Select visible field](../../../images/gs01-attachments-property-visible.png)
 
-3. In the formula bar, enter the following formula:
-
-   If(SharePointIntegration.Selected.Owner.DisplayName = "Nestor Wilke", false)
+3. In the formula bar, enter the following formula: `If(SharePointIntegration.Selected.Owner.DisplayName = "Nestor Wilke", false)`
 
     ![View-only title](../../../images/gs01-attachments-conditional-visibility.png)
     
     The **Attachments** data card is now hidden if the project owner is Nestor Wilke.
 
-    You can write the same conditional logic in multiple ways. For more info, see [Operators and Identifiers in Power Apps](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators).
+    You can write the same conditional logic in multiple ways. For more info, see [Operators and Identifiers in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/operators).
 
 ## Publish your custom form
 
