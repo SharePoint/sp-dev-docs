@@ -869,6 +869,8 @@
         href: general-development/using-the-pairing-cmdlet-register-spworkflowservice.md
       - name: Workflow samples
         href: general-development/sharepoint-workflow-samples.md
+      - name: SharePoint 2010 workflow retirement
+        href: general-development/sharepoint-2010-workflow-retirement.md
       - name: Develop SharePoint workflows using Visual Studio
         href: general-development/develop-sharepoint-workflows-using-visual-studio.md
         items:
