@@ -95,6 +95,13 @@ To query for every item in a specific folder, the query should sort by the filen
     <OrderBy Override="TRUE"><FieldRef name="FileLeafRef"/></OrderBy>
 
 
+## Permission guidance
+
+You need to be aware of three key numbers as you plan your migration to OneDrive or SharePoint especially when you have a hierarchy of deeply nested folders. They are: (1) the number of SharePoint unique permission scopes, (2) the number of role assignments, and (3) the total number of items in a list or library. Read the full guidance:
+
+- [Migration permission guidance](https://docs.microsoft.com/en-us/sharepoint/dev/apis/migration-perm-guidance)
+
+
 ## For migrations over 100TB 
 
 For customers migrating greater than 100TB of data, please follow the instructions on how to create a support ticket to help the product team to prepare the backend for the customers. 
