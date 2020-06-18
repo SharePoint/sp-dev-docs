@@ -147,6 +147,9 @@ Starting from version 1.11, the solution manifest defined in the **package-solut
 > [!IMPORTANT]
 > If you choose to expose your web parts in Microsoft Teams, users will see the information from the `developer` section when installing your app in Teams.
 
+> [!IMPORTANT]
+> Developer section is required to contain valid information for any SharePoint Framework solution which will be available from the Office store or from AppSource.
+
 Following properties are available as a part of the `developer` section:
 
 Attribute|Description|Mandatory
