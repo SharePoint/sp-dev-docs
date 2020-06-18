@@ -1,7 +1,7 @@
 ---
 title: Customize default site designs in SharePoint
 description: Customize the default site designs in either the SharePoint Team site or Communication site template.
-ms.date: 06/18/2018
+ms.date: 06/18/2020
 localization_priority: Priority
 ---
 
