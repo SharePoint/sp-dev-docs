@@ -1,28 +1,28 @@
 ---
-title: Creating Outlook add-ins using SharePoint Framework
-description: Creating Outlook Web App add-ins using SharePoint Framework
-ms.date: 06/16/2020
+title: Create Outlook add-ins using SharePoint Framework
+description: Create Outlook Web App add-ins using SharePoint Framework
+ms.date: 06/18/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Creating Outlook add-ins using SharePoint Framework
+# Create Outlook add-ins using SharePoint Framework
 
-Starting with SharePoint Framework v1.10, you can also implement your Outlook Web App add-ins using SharePoint Framework tooling and use SharePoint as a host for your solutions
+Introduced SharePoint Framework v1.10, you can implement an Outlook Web App add-ins with the SharePoint Framework and use SharePoint as a host for your solution.
 
-There are following benefits on using SharePoint Framework as the platform for your Outlook Web App add-ins:
+Using the SharePoint Framework as the platform for your Outlook Web App add-ins include the following benefits:
 
-- The development model is similar to SharePoint Framework web parts
-- Same code can work across SharePoint, Teams, and Office
-- Your add-in is automatically hosted for the tenant without any additional services
-- Simplified authentication to access different services in Microsoft 365
-- You can benefit from the same permission and access management model as within SharePoint with easy access to Microsoft Graph APIs and other services
-
-> [!NOTE]
-> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the library. See [Try SharePoint Framework preview capabilities](try-preview-capabilities.md) for more information.
+- The development model is similar to SharePoint Framework web parts.
+- Same code can work across SharePoint, Teams, and Office.
+- Your add-in is automatically hosted for the tenant without any additional services.
+- Simplified authentication to access different services in Microsoft 365.
+- You can benefit from the same permission and access management model as within SharePoint with easy access to Microsoft Graph APIs and other services.
 
 > [!NOTE]
-> During preview time frame, this feature is only supported within the context of the Outlook Web Access. Once it this feature reaches generally availability, it will be supported across all Office desktop and web clients.
+> This feature is currently in developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the package. For more information, see: [Try SharePoint Framework preview capabilities](try-preview-capabilities.md).
+
+> [!NOTE]
+> During developer preview, this feature is only supported in Outlook Web Access. Once it this feature reaches generally availability, it will be supported across all Office desktop and web clients.
 
 ## Development process
 
@@ -37,7 +37,7 @@ This will automatically generate Office Add-in manifest file for the solution wi
 You'll need to deploy the solution to tenant using the **tenant scoped deployment option** to ensure that the component can be found in the context of the add-in URL as defined in the manifest xml file. This setting can be adjusted in the **package-solution.json** file by updating the `skipFeatureDeployment` as `true`.
 
 > [!NOTE]
-> See [Office Add-ins: Office Add-ins XML manifest](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests) for more information on the manifest file.
+> For more information on the manifest file, see: [Office Add-ins: Office Add-ins XML manifest](https://docs.microsoft.com/office/dev/add-ins/develop/add-in-manifests).
 
 ## Use Office JavaScript SDK (Office.js) in the web part code
 
@@ -53,27 +53,29 @@ You can detect if the web part is on the Office context by using page context as
 this.context.sdks.office
 ```
 
-As and as an example, you can access the inbox using following property:
+For example, you can access the inbox using following property:
 
 ```javascript
 this.context.sdks.office.context.mailbox
 ```
 
 > [!NOTE]
-> See from the [Office Add-ins: API Reference documentation](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office) for more information on the Office JavaScript API capabilities.
+> For more information on the Office JavaScript API capabilities, see: [Office Add-ins: API Reference documentation](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office).
 
 ## Configuration support with Office Add-ins
 
 Office Add-ins build with SharePoint Framework support one time configuration option when the add-in is initially viewed. This is an optional capability, which can be controlled from the add-in manifest file. Configuration option is controlled in the URL of the solution at the manifest file. By default the configuration option is enabled and the URL is as follows:
 
 ```http
-https://{tenant}.sharepoint.com/_layouts/15/outlookhostedapp.aspx?componentId=c76ba09e-4068-4233-b342-aedfc75a6578&amp;isConfigureMode=true
+https://{tenant}.sharepoint.com/_layouts/15/outlookhostedapp.aspx
+  ?componentId=c76ba09e-4068-4233-b342-aedfc75a6578&amp;isConfigureMode=true
 ```
 
 If your add-in doesn't have any initial configuration options, you can remove the **isConfigureMode** query parameter and update the URL. In the example case, that would mean adjusting the URL as follows:
 
 ```http
-https://{tenant}.sharepoint.com/_layouts/15/outlookhostedapp.aspx?componentId=c76ba09e-4068-4233-b342-aedfc75a6578
+https://{tenant}.sharepoint.com/_layouts/15/outlookhostedapp.aspx
+  ?componentId=c76ba09e-4068-4233-b342-aedfc75a6578
 ```
 
 Notice that the **componentId** query parameter is solution-specific setting, which shouldn't be copied from the documentation as such.
