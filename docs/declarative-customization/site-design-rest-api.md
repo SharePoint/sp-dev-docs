@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design REST API
 description: Work with SharePoint site designs through the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations.
-ms.date: 04/20/2018
+ms.date: 06/18/2020
 localization_priority: Priority
 ---
 
@@ -94,7 +94,7 @@ var site_script =
   "version": 1
 };
 
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='Contoso theme script'", site_script);
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='Contoso theme script'", site_script);
 ```
 
 <br/>
@@ -125,7 +125,7 @@ None.
 The following example gets the site script information for all site scripts.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScripts");
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScripts");
 ```
 
 <br/>
@@ -177,7 +177,7 @@ Gets the site script syntax for a specific SharePoint site.
 Here is an example of retrieving a site script JSON object from the Contoso site collection.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromWeb", { 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromWeb", { 
    "webUrl":"https://contoso.sharepoint.com/",
    "info":{ 
       "IncludeBranding":true,
@@ -279,7 +279,7 @@ Gets the site script syntax for a specific list
 Here's an example of retrieving a site script JSON object from the Contoso customer list.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromList", {listUrl: "https://consoso.sharepoint.com/sites/projectgo/Lists/Contoso%20customer%20list"});
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptFromList", {listUrl: "https://consoso.sharepoint.com/sites/projectgo/Lists/Contoso%20customer%20list"});
 ```
 <br/>
 
@@ -327,7 +327,7 @@ Gets information about a specific site script. It also returns the JSON of the s
 | id    | The ID of the site script to get information about. |
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptMetadata",
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptMetadata",
 {id:"07702c07-0485-426f-b710-4704241caad9"});
 ```
 
@@ -378,7 +378,7 @@ var updated_site_script =
   "version": 2
 };
 
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript", 
 {updateInfo:{
   Id:"07702c07-0485-426f-b710-4704241caad9",
   Title:"New Contoso theme", 
@@ -417,7 +417,7 @@ Deletes a site script.
 Here's an example of deleting a site script.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteScript", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteScript", 
 {id:"07702c07-0485-426f-b710-4704241caad9"});
 ```
 
@@ -443,7 +443,7 @@ Creates a new site design available to users when they create a new site from th
 Here's an example of creating a new site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign",{
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign",{
   info:{
     Title:"Contoso customer tracking",
     Description:"Creates customer list and applies standard theme",
@@ -489,7 +489,7 @@ Applies a site design to an existing site collection.
 Here's an example of applying a site design to the ProjectGo site collection.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.sharepoint.com/sites/projectgo"});
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.sharepoint.com/sites/projectgo"});
 ```
 
 ## AddSiteDesignTaskToCurrentWeb
@@ -508,7 +508,7 @@ Adds a site design task on the current web to be invoked asynchronously.
 Here's an example of adding a site design task to the ProjectGo site collection.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.AddSiteDesignTaskToCurrentWeb", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca"});
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.AddSiteDesignTaskToCurrentWeb", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca"});
 ```
 <br/>
 
@@ -525,7 +525,7 @@ None
 Here's an example of getting all the site designs.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesigns");
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesigns");
 ```
 
 <br/>
@@ -577,7 +577,7 @@ Gets information about a specific site design.
 Here's an example of getting information about a specific site design by ID.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata", 
 {id:"614f9b28-3e85-4ec9-a961-5971ea086cca"});
 ```
 
@@ -626,7 +626,7 @@ Updates a site design with new values. In the REST call, all parameters are opti
 Here's an example that updates every value on an existing site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteDesign",
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteDesign",
  {updateInfo:{
    Id:"614f9b28-3e85-4ec9-a961-5971ea086cca", 
    Title:"Contoso customer site", 
@@ -673,7 +673,7 @@ Deletes a site design.
 Here's an example of deleting a site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", 
 {id:"f9e76746-5076-4bd2-bad3-e611c488fa85"});
 ```
 
@@ -693,7 +693,7 @@ Gets a list of principals that have access to a site design.
 Here's an example of getting view rights for a specific site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights", 
 {id:"dc076f7b-6c15-4d76-8f85-948a17f5dd18"});
 ```
 
@@ -742,7 +742,7 @@ Grants access to a site design for one or more principals.
 Here's an example of granting view rights to a site design for Nestor and Patti (fictional users at Contoso.)
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {
   "id": "dc076f7b-6c15-4d76-8f85-948a17f5dd18",
   "principalNames": [ "NestorW@contoso.onmicrosoft.com", "PattiF@contoso.onmicrosoft.com" ],
   "grantedRights": 1
@@ -765,7 +765,7 @@ Revokes access from a site design for one or more principals.
 Here's an example of revoking view rights from a site design for Patti (fictional user at Contoso.)
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights", 
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights", 
 {id:"5d4756e9-e1f5-42f7-afa7-5fa5aac170aa",
  principalNames:["debrab@Contoso.sharepoint.com"] });
 ```

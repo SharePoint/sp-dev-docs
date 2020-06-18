@@ -1,7 +1,7 @@
 ---
 title: Customize default site designs in SharePoint
 description: Customize the default site designs in either the SharePoint Team site or Communication site template.
-ms.date: 04/20/2018
+ms.date: 06/18/2020
 localization_priority: Priority
 ---
 
@@ -29,7 +29,7 @@ C:\> Add-SPOSiteDesign `
 <br/>
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign", {info:{Title:"Contoso company theme", Description:"Applies standard company theme to site", SiteScriptIds:["89516c6d-9f4d-4a57-ae79-36b0c95a817b"],  WebTemplate:"68", IsDefault: true}});
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign", {info:{Title:"Contoso company theme", Description:"Applies standard company theme to site", SiteScriptIds:["89516c6d-9f4d-4a57-ae79-36b0c95a817b"],  WebTemplate:"68", IsDefault: true}});
 ```
 
 ### Which default site designs are updated?
@@ -55,7 +55,7 @@ C:\> Remove-SPOSiteDesign db752673-18fd-44db-865a-aa3e0b28698e
 <br/>
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", {id:"db752673-18fd-44db-865a-aa3e0b28698e"});
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", {id:"db752673-18fd-44db-865a-aa3e0b28698e"});
 ```
 
 > [!NOTE]
