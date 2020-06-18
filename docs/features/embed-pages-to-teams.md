@@ -34,6 +34,7 @@ You can embed any modern SharePoint page in Microsoft Teams by creating a Teams 
     - There is no native navigation, header, or footer on embedded pages.
     - Search initiated from Teams will return search results from Teams, not search results from the embedded site.
     - You cannot create content (news, pages, lists, or libraries) in Teams. You must create content from the SharePoint site using a web browser or SharePoint mobile app.
+    - Page comment feature is not available from the SharePoint pages, when they are exposed in Microsoft Teams
 - All users accessing the embedded SharePoint page will need to have at least read permission to access the page.
 - If a tenant, SharePoint site or page name or URL is changed, the Teams personal app manifest will need to be updated.
 - If changes are made to the pinning model for modern SP pages or sites, it could require you to delete existing pinned personal apps and redeploy them.
