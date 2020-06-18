@@ -318,6 +318,9 @@ Another way to specify the locale to be used by the local SharePoint Workbench i
   When you open your web part's configuration, you'll see that all property pane strings are displayed in Dutch (Netherlands) rather than the default US English.
 
   ![Web part property pane string displayed in Dutch (Netherlands)](../../../images/localization-property-pane-nl-nl.png)
+  
+> [!Note]
+> The localization of the debug build is only visible in the SharePoint Workbench. For testing it in SharePoint, a production build has to be created. See the chapter "[Localization in different build types](#localization-in-different-build-types)" for further details.
 
 ## Localize web part contents
 
