@@ -1,5 +1,6 @@
 ---
 title: "Migration guide for ISVs"
+ms.date: 06/18/2020
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
@@ -88,12 +89,11 @@ There are two kinds of enumeration queries, assuming the client intends to read 
 
 To query for every item in the list, recursively – in other words, the order does not depend on which folder(s) the items are contained in – the query should sort by ID.
 
-    <OrderBy Override="TRUE"><FieldRef name="ID"/></OrderBy>
+`<OrderBy Override="TRUE"><FieldRef name="ID"/></OrderBy>`
  
 To query for every item in a specific folder, the query should sort by the filename, **FileLeafRef**.
 
-    <OrderBy Override="TRUE"><FieldRef name="FileLeafRef"/></OrderBy>
-
+`<OrderBy Override="TRUE"><FieldRef name="FileLeafRef"/></OrderBy>`
 
 ## Permission guidance
 
