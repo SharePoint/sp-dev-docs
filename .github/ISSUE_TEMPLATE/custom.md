@@ -1,6 +1,6 @@
 ---
 name: Question or generic issue (not a bug or feature request)
-about: Do you have a question that isn't a bug or feature request, or something else that doesn't fit one of our provided tempaltes? Select this option.
+about: Do you have a question that isn't a bug or feature request, or something else that doesn't fit one of our provided templates? Select this option.
 title: ''
 labels: 'Needs: Triage'
 assignees: ''
@@ -25,7 +25,7 @@ assignees: ''
 - **Your Developer Environment**: [e.g. Windows 10 | MacOS 10.15.x]
 - **Target Environment**: [e.g. SharePoint Server 2016 | SharePoint Server 2019 | SharePoint Online]
 - **Framework**: [e.g. .NET Framework v3.x | .NET Core v3.x | Node.js v6/v8/v10/v12]
-- **Browser(s)**: [e.g. Chrome v79 | Safari v22 | FireFox v31 | IE v11 | Edge | Chromium Edge v79]
+- **Browser(s)**: [e.g. Chrome v79 | Safari v22 | Firefox v31 | IE v11 | Edge | Chromium Edge v79]
 - **Tooling**: [e.g. VS Code | SPFx v1.10.0 | Visual Studio 2019]
 - **Additional details**: *The more context you can provide, the easier it is (and therefore quicker) to help.*
 
