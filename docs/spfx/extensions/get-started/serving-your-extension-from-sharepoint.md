@@ -32,9 +32,9 @@ In this example, we'll activate the extension in a single site. This means that 
 
 1. In the console window, go to the extension project directory created in [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md).
 
-  ```console
-  cd app-extension
-  ```
+    ```console
+    cd app-extension
+    ```
 
 1. If gulp serve is still running, stop it from running by selecting <kbd>CTRL</kbd>+<kbd>C</kbd>.
 

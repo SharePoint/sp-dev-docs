@@ -33,13 +33,14 @@ Follow the steps outlined in the following document to ensure the Microsoft 365 
 
     ```json
     {
-    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-    "solution": {
-      "name": "app-extension-client-side-solution",
-      "id": "831b6fac-7668-46b4-96c6-e2ee35559287",
-      "version": "1.0.0.0",
-      "includeClientSideAssets": true,
-      ...
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+      "solution": {
+        "name": "app-extension-client-side-solution",
+        "id": "831b6fac-7668-46b4-96c6-e2ee35559287",
+        "version": "1.0.0.0",
+        "includeClientSideAssets": true,
+        ...
+      }
     }
     ```
 

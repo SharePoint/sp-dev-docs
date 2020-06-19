@@ -20,9 +20,23 @@ The Command Set is the only type of SharePoint Framework Extension for which you
 
 When deploying Command Sets, you can choose whether their commands should be visible on:
 
-- Command bar: `"location": "ClientSideExtension.ListViewCommandSet.CommandBar"`
-- Context menu: `"location": "ClientSideExtension.ListViewCommandSet.ContextMenu"`
-- Both: `"location": "ClientSideExtension.ListViewCommandSet"`
+- Command bar:
+
+    ```json
+    "location": "ClientSideExtension.ListViewCommandSet.CommandBar"
+    ```
+
+- Context menu:
+
+    ```json
+    "location": "ClientSideExtension.ListViewCommandSet.ContextMenu"
+    ```
+
+- Both:
+
+    ```json
+    "location": "ClientSideExtension.ListViewCommandSet"
+    ```
 
 Icons defined for the different commands are displayed only for commands displayed in the command bar.
 

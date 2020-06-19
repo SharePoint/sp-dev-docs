@@ -43,12 +43,12 @@ When you create a new solution with the **Search Query Modifier**, following **e
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-    <CustomAction
-        Title="QueryModifyer"
-        Location="ClientSideExtension.SearchQueryModifier"
-        ClientSideComponentId="801f82d5-1a21-4b2c-94b6-f13f6672142c"
-        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
-    </CustomAction>
+  <CustomAction
+      Title="QueryModifyer"
+      Location="ClientSideExtension.SearchQueryModifier"
+      ClientSideComponentId="801f82d5-1a21-4b2c-94b6-f13f6672142c"
+      ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+  </CustomAction>
 </Elements>
 ```
 

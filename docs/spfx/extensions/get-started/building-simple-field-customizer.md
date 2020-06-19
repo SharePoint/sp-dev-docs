@@ -189,7 +189,7 @@ Now that we've successfully tested the out-of-the-box starting point of the Fiel
 
 1. Open the **./src/extensions/helloWorld/HelloWorldFieldCustomizer.module.scss** file, and update the styling definition as follows.
 
-    ```console
+    ```scss
     .HelloWorld {
       .cell {
         display: inline-block;
