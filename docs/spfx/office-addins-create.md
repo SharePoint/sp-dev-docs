@@ -18,8 +18,7 @@ Using the SharePoint Framework as the platform for your Outlook Web App add-ins 
 - Simplified authentication to access different services in Microsoft 365.
 - You can benefit from the same permission and access management model as within SharePoint with easy access to Microsoft Graph APIs and other services.
 
-> [!NOTE]
-> This feature is currently in developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the package. For more information, see: [Try SharePoint Framework preview capabilities](try-preview-capabilities.md).
+[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
 
 > [!NOTE]
 > During developer preview, this feature is only supported in Outlook Web Access. Once it this feature reaches generally availability, it will be supported across all Office desktop and web clients.

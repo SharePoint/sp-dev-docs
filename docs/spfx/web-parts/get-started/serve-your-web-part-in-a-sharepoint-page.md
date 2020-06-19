@@ -57,13 +57,13 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     gulp package-solution
     ```
 
-    The command creates the package in the `sharepoint/solution` folder: **helloworld-webpart.sppkg**
+    The command creates the following package: **./sharepoint/solution/helloworld-webpart.sppkg**.
 
 ### Package contents
 
 The package uses SharePoint Feature to package your web part. By default, the gulp task creates a feature for your web part.
 
-You can view the raw package contents in the **sharepoint/debug** folder.
+You can view the raw package contents in the **./sharepoint/solution/debug** folder.
 
 The contents are then packaged into an **.sppkg** file. The package format is similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution.
 

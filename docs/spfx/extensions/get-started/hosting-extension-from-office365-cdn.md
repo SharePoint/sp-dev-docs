@@ -1,133 +1,79 @@
 ---
-title: Host extension from Office 365 CDN (Hello World part 4)
-description: Deploy your SharePoint Framework Application Customizer to be hosted from an Office 365 CDN and deploy that to SharePoint for end users. 
-ms.date: 01/28/2020
+title: Host extension from Microsoft 365 CDN (Hello World part 4)
+description: Deploy your SharePoint Framework Application Customizer to be hosted from a Microsoft 365 CDN and deploy that to SharePoint for end users.
+ms.date: 06/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
 ---
 
-# Host extension from Office 365 CDN (Hello World part 4)
+# Host an SPFx extension from the Microsoft 365 CDN (Hello World part 4)
 
-This article describes how to deploy your SharePoint Framework Application Customizer to be hosted from an Office 365 CDN and how to deploy that to SharePoint for end users. 
+This article describes how to deploy your SharePoint Framework Application Customizer to be hosted from a Microsoft 365 CDN and how to deploy that to SharePoint for end users.
 
-Be sure you have completed the procedures in the following articles before you begin:
+Be sure you've completed the procedures in the following articles before you begin:
 
-* [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
-* [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
-* [Deploy your extension to SharePoint (Hello World part 3)](./serving-your-extension-from-sharepoint.md)
+- [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
+- [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
+- [Deploy your extension to SharePoint (Hello World part 3)](./serving-your-extension-from-sharepoint.md)
 
 You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
 
-<br/>
-
 > [!Video https://www.youtube.com/embed/xsZbRliakyM]
 
-<br/> 
+## Enable the CDN in your Microsoft 365 tenant
 
-## Enable the CDN in your Office 365 tenant
+Microsoft 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
 
-Office 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
-
-1. Ensure that you have the latest version of the SharePoint Online Management Shell by running the PowerShell in Administrator role and executing following PowerShell cmdlet to download latest version of the cmdlets from [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell).
-
-    ![Run as administarator](../../../images/tutorial-get-started-4-run-spo-shell-admin.png)
-
-    ```powershell
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-    ```
-    > [!TIP]
-    > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
-
-    > [!NOTE]
-    > You can also install SharePoint Online Management Shell using [an installer](https://www.microsoft.com/en-us/download/details.aspx?id=35588) available from the Microsoft download center, but in general PowerShell gallery option is recommended.
-
-1. Confirm module installation if asked in the PowerShell window
-   
-1. Connect to your SharePoint Online tenant by using PowerShell:
-    
-    ```powershell
-    Connect-SPOService -Url https://contoso-admin.sharepoint.com
-    ```
-    
-1. Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one: 
-    
-    ```powershell
-    Get-SPOTenantCdnEnabled -CdnType Public
-    Get-SPOTenantCdnOrigins -CdnType Public
-    Get-SPOTenantCdnPolicies -CdnType Public
-    ```
-    
-1. Enable public CDN in the tenant:
-    
-    ```powershell
-    Set-SPOTenantCdnEnabled -CdnType Public
-    ```
-    
-    Public CDN has now been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
-    
-1. Execute the following command to get the list of CDN origins from your tenant:
-    
-    ```powershell
-    Get-SPOTenantCdnOrigins -CdnType Public
-    ```
-    
-    Note that your newly added origin is listed as a valid CDN origin. Final configuration of the origin takes approximately 15 minutes, so we can continue creating your test extension, which is hosted from the origin after deployment is completed. Following picture shows status without the *pending* message. Notice that you will need to have __*/CLIENTSIDEASSETS__ entry for public CDN to be able to use automatic hosting option.
-
-    ![List of public origins in tenant](../../../images/ext-app-cdn-origins.png)
-
-    When the origin is listed without the `(configuration pending)` text, it is ready to be used in your tenant. This indicates an on-going configuration between SharePoint Online and the CDN system.
+Follow the steps outlined in the following document to ensure the Microsoft 365 CDN is enabled in your tenant: [Host your client-side web part from Office 365 CDN: Enable CDN in your Microsoft 365 tenant](../../web-parts/get-started/hosting-webpart-from-office-365-cdn.md#enable-cdn-in-your-microsoft-365-tenant)
 
 ## Update your solution project for the CDN URLs
 
-1. Return to the previously created solution and open **package-solution.json** from the **config** folder. Notice that the **includeClientSideAssets** attribute has to be set to true for automatic asset hosting through Office 365 CDN. This controls if the JavaScript assets and related files are included in the *sppkg file* when solution is packaged for shipping.
+1. Return to the previously created solution and open the **./config/package-solution.json** file. Notice that the `includeClientSideAssets` attribute has to be set to `true` for automatic asset hosting through Microsoft 365 CDN. This controls if the JavaScript assets and related files are included in the **\*.sppkg** file* when solution is packaged for shipping.
 
     ```json
     {
     "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
     "solution": {
-        "name": "app-extension-client-side-solution",
-        "id": "831b6fac-7668-46b4-96c6-e2ee35559287",
-        "version": "1.0.0.0",
-        "includeClientSideAssets": true,
-        ...
-    ```
-
-1. Open **write-manifests.json** file from the **config** folder. This file should be **only** updated when you are using external CDN system. Ensure that the **cdnBasePath** attribute is exactly as shown below. If it has any other entry, automatic hosting with Office 365 Public CDN will not work.
-
-    ```json
-    {
-        "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/write-manifests.schema.json",
-        "cdnBasePath": "<!-- PATH TO CDN -->"
+      "name": "app-extension-client-side-solution",
+      "id": "831b6fac-7668-46b4-96c6-e2ee35559287",
+      "version": "1.0.0.0",
+      "includeClientSideAssets": true,
+      ...
     }
     ```
 
-1. Execute the following tasks to bundle your solution. This executes a release build of your project. Due the configurations which were applied in the previous steps, it means that all assets are inside of the **sppkg** file and there is not other actions to be performed.
-    
+1. Open **./config/write-manifests.json** file.
+
+    This file should be updated *only* when you're using external CDN, such as Microsoft Azure. Ensure that the `cdnBasePath` attribute is exactly as shown below. If it has any other entry, automatic hosting with Microsoft 365 Public CDN won't work.
+
+    ```json
+    {
+      "cdnBasePath": "<!-- PATH TO CDN -->"
+    }
     ```
+
+1. Execute the following tasks to bundle your solution. This executes a release build of your project.
+
+    ```console
     gulp bundle --ship
     ```
-    
-1. Execute the following task to package your solution. This command creates an **app-extension.sppkg** package in the **sharepoint/solution** folder.
-    
-    ```
+
+1. Execute the following task to package your solution. This command creates the **./sharepoint/solution/app-extension.sppkg** package:
+
+    ```console
     gulp package-solution --ship
     ```
-    
-1. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button. Notice how the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Office 365 CDN.
 
-    ![app catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
+1. Upload or drag-and-drop the newly created client-side solution package to the tenant app catalog. When prompted select the **Deploy** button to trust the solution. Notice the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Microsoft 365 CDN:
 
-1. Install the new version of the solution to your site, and ensure that it's working properly without your *locahost* hosting the JavaScript file. Notice that if you did NOT remove the package with localhost installation before updating it in the app catalog, your site is automatically running the updated version and placeholders are rendered from the CDN.
+    ![App catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
+
+1. Install the new version of the solution to your site, and ensure that it's working properly. Notice that if you didn't remove the package with **https://localhost** installation before updating it in the app catalog, your site is automatically running the updated version and placeholders are rendered from the CDN.
 
     ![Custom header and footer elements rendered in the page](../../../images/ext-app-header-footer-visible.png)
 
-<br/>
-
-Congratulations, you have enabled a public CDN in your Office 365 tenant and taken advantage of it from your solution!
-
-> [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.
+Congratulations, you've enabled a public CDN in your Microsoft 365 tenant and taken advantage of it from your solution!
 
 ## See also
 
