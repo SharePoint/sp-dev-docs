@@ -27,6 +27,8 @@ Triggers the flow when you delete an item in a list. To get the properties of a 
 
 Triggers the flow when you select an item in a list.
 
+**Note:** Only flows within the default environment can be executed manually from a SharePoint list or library.
+
 ### When a file is created (properties only)
 
 Triggers the flow when you create a file in a document library, and returns only the custom file properties associated with that file.
