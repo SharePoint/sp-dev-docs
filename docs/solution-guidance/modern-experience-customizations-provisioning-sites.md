@@ -1,7 +1,7 @@
 ---
 title: Provisioning "modern" team sites programmatically
 description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
-ms.date: 6/14/2020
+ms.date: 6/20/2020
 localization_priority: Priority
 ---
 
@@ -51,7 +51,7 @@ The URI of the "modern" team site is determined by the **mailNickname** paramete
 
 The following would create a Microsoft 365 group and an associated "modern" team site with a URL of ```https://[tenant].sharepoint.com/sites/mymodernteamsite```
 
-```
+```http
 POST https://graph.microsoft.com/v1.0/groups
 Content-type: application/json
 Content-length: 200
@@ -161,7 +161,7 @@ o365 spo propertybag list -u $siteUrl
 
 "Modern" team sites can be created programmatically by creating an [Microsoft 365 group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create a Microsoft 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Microsoft 365 group and has the following default structure. 
 
-```
+```http
 https://[tenant].sharepoint.com/sites/[mailNickname]
 ``` 
 
@@ -219,7 +219,7 @@ Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 New-PnPSite -Type Team -Title "Awesome Group" -Description "Awesome Group" -Alias "awesome-group"
 ```
 
-#### Provision a modern teamsite using SharePoint Online Management Shell or PnP PowerShell
+#### Provision a modern team site using SharePoint Online Management Shell or PnP PowerShell
 
 It is also possible to create a modern site which is not connected to a Group using PowerShell. Either by using the PnP PowerShell cmdlets or the SharePoint Online Management Shell. 
 
