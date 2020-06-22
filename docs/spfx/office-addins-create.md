@@ -1,7 +1,7 @@
 ---
 title: Create Outlook add-ins using SharePoint Framework
 description: Create Outlook Web App add-ins using SharePoint Framework
-ms.date: 06/18/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -40,7 +40,7 @@ You'll need to deploy the solution to tenant using the **tenant scoped deploymen
 
 ## Use Office JavaScript SDK (Office.js) in the web part code
 
-Before you can use the Office JavaScript SDK in your code, you'll need to include correct types for the solution. You can install latest types by adding **@types/office-js** package from the npm to your solution with following command:
+Before you can use the Office JavaScript SDK in your code, you'll need to include correct types for the solution. You can install latest types by adding **\@types/office-js** package from the npm to your solution with following command:
 
 ```console
 npm install @types/office-js --save-dev

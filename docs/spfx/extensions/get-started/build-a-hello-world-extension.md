@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 06/19/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -69,7 +69,7 @@ You can also follow the steps in this article by watching the video on the Share
 
 Open the **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.ts** file.
 
-Notice that base class for the Application Customizer is imported from the **@microsoft/sp-application-base** package, which contains SharePoint framework code required by the Application Customizer.
+Notice that base class for the Application Customizer is imported from the **\@microsoft/sp-application-base** package, which contains SharePoint framework code required by the Application Customizer.
 
 The logic for your Application Customizer is contained in the `onInit()` method, which is called when the client-side extension is first activated on the page. This event occurs after `this.context` and `this.properties` are assigned. As with web parts, `onInit()` returns a promise that you can use to do asynchronous operations.
 

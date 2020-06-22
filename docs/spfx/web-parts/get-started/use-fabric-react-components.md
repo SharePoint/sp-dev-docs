@@ -1,7 +1,7 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
 description: Build a web part that uses the DocumentCard component of Office UI Fabric React.
-ms.date: 06/16/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -28,7 +28,7 @@ The transition from Office UI Fabric to Fluent UI, and the respective React comp
 
 SharePoint Framework (SPFx) packages currently reference the original Office UI Fabric NPM Packages. These packages are currently supported & will continue to work.
 
-The primary Fluent UI React package, **@fluentui/react**, simply exports components from the **office-ui-fabric-react** package used in SharePoint Framework projects. At this time, you should continue to use the **office-ui-fabric-react** package in your SharePoint Framework projects.
+The primary Fluent UI React package, **\@fluentui/react**, simply exports components from the **office-ui-fabric-react** package used in SharePoint Framework projects. At this time, you should continue to use the **office-ui-fabric-react** package in your SharePoint Framework projects.
 
 This page will continue to refer to the Office UI Fabric packages until Microsoft recommends switching to the Fluent UI packages. The documentation links on this page may point to the Fluent UI documentation but it applies to the Office UI Fabric as well.
 
@@ -50,7 +50,7 @@ This page will continue to refer to the Office UI Fabric packages until Microsof
     cd documentcardexample-webpart
     ```
 
-1. Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new web part by running the Yeoman SharePoint generator:
+1. Make sure you have the latest version of **\@microsoft/generator-sharepoint** installed and create a new web part by running the Yeoman SharePoint generator:
 
     ```console
     yo @microsoft/sharepoint
@@ -70,7 +70,7 @@ This page will continue to refer to the Office UI Fabric packages until Microsof
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files.
 
-    Starting with SPFx v1.8.2 version, Yeoman will include the recommended `@microsoft/sp-office-ui-fabric-core` package version to your solution when you select the **React** as the desired web framework.
+    Starting with SPFx v1.8.2 version, Yeoman will include the recommended **\@microsoft/sp-office-ui-fabric-core** package version to your solution when you select the **React** as the desired web framework.
 
     > [!NOTE]
     > Starting with SPFx v1.8, you can use either Office UI Fabric React v5 or v6. Each version of SPFx upgrades the version of Office UI Fabric React in new projects. For example:

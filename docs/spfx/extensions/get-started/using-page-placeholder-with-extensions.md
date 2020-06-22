@@ -1,7 +1,7 @@
 ---
 title: Use page placeholders from Application Customizer (Hello World part 2)
 description: Extend your Hello World extension to take advantage of page placeholders by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/19/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -44,7 +44,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 
 ### Modify the Application Customizer to access and modify placeholders by adding custom HTML elements
 
-1. Install the **@microsoft/sp-office-ui-fabric-core** package to enable importing from **SPFabricCore.scss**. We'll use this for defining rendering styles for our place holders.
+1. Install the **\@microsoft/sp-office-ui-fabric-core** package to enable importing from **SPFabricCore.scss**. We'll use this for defining rendering styles for our place holders.
 
     ```console
     npm install @microsoft/sp-office-ui-fabric-core
@@ -88,7 +88,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
     ```
 
 1. In Visual Studio Code (or your preferred IDE), open **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.ts.**
-1. Add the `PlaceholderContent` and `PlaceholderName` to the import statement from **@microsoft/sp-application-base** by updating the import statement as follows:
+1. Add the `PlaceholderContent` and `PlaceholderName` to the import statement from **\@microsoft/sp-application-base** by updating the import statement as follows:
 
     ```typescript
     import {
