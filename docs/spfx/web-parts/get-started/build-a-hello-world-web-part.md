@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 06/15/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -217,7 +217,7 @@ Notice that we're executing an HTML escape on the property's value to ensure a v
 
 Let's now add a few more properties to the property pane: a checkbox, a drop-down list, and a toggle. We first start by importing the respective property pane fields from the framework.
 
-1. Scroll to the top of the file and add the following to the import section from `@microsoft/sp-property-pane`:
+1. Scroll to the top of the file and add the following to the import section from **\@microsoft/sp-property-pane**:
 
     ```typescript
     PropertyPaneCheckbox,

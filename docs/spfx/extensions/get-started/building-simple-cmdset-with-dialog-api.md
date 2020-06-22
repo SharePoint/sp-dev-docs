@@ -1,7 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/19/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -57,17 +57,17 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
     ```json
     {
       "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
-    
+
       "id": "95688e19-faea-4ef1-8394-489bed1de2b4",
       "alias": "HelloWorldCommandSet",
       "componentType": "Extension",
       "extensionType": "ListViewCommandSet",
-    
+
       "version": "*",
       "manifestVersion": 2,
-    
+
       "requiresCustomScript": false,
-    
+
       "items": {
         "COMMAND_1": {
           "title": { "default": "Command One" },
@@ -82,7 +82,7 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
       }
     }
     ```
-    
+
     Note the actual command definitions in the manifest file. These are the actual buttons that are exposed based on the registration target. In the default template, you find two different buttons: **Command One** and **Command Two**.
 
 > [!NOTE]
@@ -92,7 +92,7 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
 
 Open the file **./src/extensions/helloWorld/HelloWorldCommandSet.ts**.
 
-Notice the base class for the ListView Command Set is imported from the **@microsoft/sp-listview-extensibility** package, which contains SharePoint Framework (SPFx) code required by the ListView Command Set.
+Notice the base class for the ListView Command Set is imported from the **\@microsoft/sp-listview-extensibility** package, which contains SharePoint Framework (SPFx) code required by the ListView Command Set.
 
 ```typescript
 import { override } from '@microsoft/decorators';
@@ -319,7 +319,7 @@ Possible location values that can be used with a ListView Command Set:
 
 ### Ensure that definitions are taken into account within the build pipeline
 
-Open the file **./config/package-solution.json**. 
+Open the file **./config/package-solution.json**.
 
 The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution package is created, the default scaffolding of this file is updated to include additional details for a feature definition. This feature definition is used to provision and execute the **elements.xml** file.
 

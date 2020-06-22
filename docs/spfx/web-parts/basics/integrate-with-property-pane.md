@@ -1,7 +1,7 @@
 ---
 title: Make your SharePoint client-side web part configurable
 description: Configure custom properties in your web part by using the property pane.
-ms.date: 06/16/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -65,7 +65,7 @@ The following field types are supported:
 - Toggle
 - Custom
 
-The field types are available as modules in **@microsoft/sp-property-pane**. You need to import the objects into a module before you can use them in your web parts:
+The field types are available as modules in **\@microsoft/sp-property-pane**. You need to import the objects into a module before you can use them in your web parts:
 
 ```typescript
 import {
@@ -80,7 +80,7 @@ import {
 ```
 
 > [!NOTE]
-> The property pane objects were split out into their own module, **@microsoft/sp-property-pane**, in the SharePoint Framework v1.9 release. Prior to this, they were included in the **@microsoft/sp-webpart-base** module.
+> The property pane objects were split out into their own module, **\@microsoft/sp-property-pane**, in the SharePoint Framework v1.9 release. Prior to this, they were included in the **\@microsoft/sp-webpart-base** module.
 
 Every field type method is defined as follows, taking `PropertyPaneTextField` as an example:
 
