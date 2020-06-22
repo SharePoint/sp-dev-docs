@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework toolchain
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects.
-ms.date: 06/16/2020
+ms.date: 06/22/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -139,6 +139,26 @@ npm i
 ```
 
 After you run the command, npm scans the `package.json` file and installs the required dependencies. 
+
+### Update developer information
+
+Starting from version 1.11, the solution manifest defined in the **package-solution.json** file has been extended with the `developer` section that allows you to store additional information about your organization. Information from this section is validated when you publish your solution to the marketplace. Even if you're building a solution for internal use, it's recommended that you fill in the different properties in your solution manifest. If you specify this information, in the future you might get access to additional insights into the usage of your application.
+
+> [!IMPORTANT]
+> If you choose to expose your web parts in Microsoft Teams, users will see the information from the `developer` section when installing your app in Teams.
+
+> [!IMPORTANT]
+> Developer section is required to contain valid information for any SharePoint Framework solution which will be available from the Office store or from AppSource.
+
+Following properties are available as a part of the `developer` section:
+
+Attribute|Description|Mandatory
+---|---|---
+`name`|Name of the organization that built the application|Yes
+`websiteUrl`|URL of a website with additional information about the application|Yes
+`mpnId`|Microsoft Partner Network ID (more details on [MS Partner Network](https://docs.microsoft.com/partner-center/mpn-overview))|Yes (for solutions published to the marketplace)
+`privacyUrl`|Privacy statement URL|Yes
+`termOfUseUrl`|Terms of use URL|Yes
 
 ## Build tasks
 
