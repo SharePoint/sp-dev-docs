@@ -1,22 +1,21 @@
 ---
 title: Using library component type in SharePoint Framework
 description: Using library component type in SharePoint Framework
-ms.date: 07/16/2019
+ms.date: 06/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Using library component type in SharePoint Framework
 
-Library component type enables you to have independently versioned and deployed code, which is served automatically for the SharePoint Framework components with a deployment through tenant app catalog. Library component provides you alternative option to create shared code, which can be then used and referenced cross all the components in the tenant.
+The library component type in the SharePoint Framework (SPFx) enables you to have independently versioned and deployed code served automatically for the SharePoint Framework components with a deployment through an app catalog. Library components provide you an alternative option to create shared code, which can be then used and referenced cross all the components in the tenant.
 
-You can create a library component solution by selecting **Component Type** to be `Library` in the Yeoman solution creation flow.
+You can create a library component solution by selecting **Library** as the **Component Type** when creating new projects with the SPFx Yeoman generator.
 
 Library components have following characteristics:
 
-* You can only host one library component version at the time in a tenant.
-* You can host library components either on the tenant app catalog, or from the site independent app catalog ( if enabled ).
-* It is not supported to have other component types included in a solution which contains library component.
-* You will need to reference library component type during development time from a package manager or using `npm link` to be able to bundle solutions which are dependent on it.
+- You can only host one library component version at the time in a tenant.
+- You can deploy and host library components in the tenant app catalog or the site app catalog.
+- It's not supported to have other component types included in a solution, which contains library component.
 
-You can reference library component dependency in the SharePoint solution by defining the dependency in the package.json file. When this kind of dependency exists in a solution package, SharePoint will automatically load the dependent component for the page. If library reference is not resolved, that can cause an exception in the component which was referring it.
+You can reference library component in the SharePoint solution by defining the dependency in the **package.json** file. The bundling process detects this dependency and adds it as to the consuming component's manifest. This dependency will then be detected by the SharePoint Framework at runtime and load the library before loading the component's bundle.

@@ -1,44 +1,44 @@
 ---
-title: Building solutions with the library component type in SharePoint Framework
-description: Building solutions with the library component type in SharePoint Framework
-ms.date: 05/15/2020
+title: Build solutions with the library component type in SharePoint Framework
+description: Build solutions with the library component type in SharePoint Framework
+ms.date: 06/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# Building solutions with the library component type in SharePoint Framework
+# Build solutions with the library component type in SharePoint Framework
+
+In this tutorial, you'll create a SharePoint Framework (SPFx) library component and use it within a client-side web part.
 
 ## How to create a third-party SPFx library
 
-1. Using the instructions [here](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment), set up the dev environment.
 1. Create a new project directory in your favorite location
 
-    ```shell
+    ```console
     md corporate-library
     ```
 
 1. Go to the project directory
 
-    ```shell
+    ```console
     cd corporate-library
     ```
 
 1. Create a new library by running the Yeoman SharePoint Generator
 
-    ```shell
+    ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted:
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
-    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Y
+    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
     - **Which type of client-side component to create?**: Library
     - **What is your Library name?**: CorporateLibrary
     - **What is your Library description?**: CorporateLibrary description
 
 1. Once the project is scaffolded, you'll see the library created with an **index.ts** file containing an export from the `CorporateLibrary` created.
-1. Open the solution in your favorite editor and navigate to **src\corporateLibrary\CorporateLibraryLibrary.ts**
+1. Open the solution in your favorite editor and navigate to **src/corporateLibrary/CorporateLibraryLibrary.ts**
 1. You'll notice that a default method, `name()` has been created. Rename this method as follows:
 
     ```typescript
@@ -52,19 +52,19 @@ localization_priority: Priority
 ## How to consume a third-party SPFx library (for local testing)
 
 1. Run `npm link` from the root directory of library solution. In this case, it would be from the **corporate-library** folder.
-1. Right after creating the symbolic link to your new SPFx library component, don't forget to run at least once `gulp build`. Compile your library component at least once in order to be able to import it as a module into a different project. Remember that the **package.json** says that `"main": "lib/index.js"`, therefore, that location needs to exist prior to any **import** attempt.
+1. Right after creating the symbolic link to your new SPFx library component, don't forget to run at least once `gulp build`. Compile your library component at least once in order to be able to import it as a module into a different project. Remember that the **package.json** says that `"main": "lib/index.js"`, so that location needs to exist before any **import** attempt.
 1. This will create a local npm link to the library with the name, which is provided in the **package.json**.
 1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions from [here](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part **CorporateWebPart**.
 1. From the root of the new web part folder, run the command `npm link corporate-library`
 1. This will create a symbolic link to that locally built library in to the web part and will make it available to your web part.
-1. Open the web part solution in your preferred editor and navigate to **src\webparts\corporateWebPart\CorporateWebPartWebPart.ts**
+1. Open the web part solution in your preferred editor and navigate to **src/webparts/corporateWebPart/CorporateWebPartWebPart.ts**
 1. Add an import to refer to your library:
 
-    ```ts
+    ```typescript
     import * as myLibrary from 'corporate-library';
     ```
 
-1. Change the `render` method as follows:
+1. Change the `render()` method as follows:
 
     ```typescript
     public render(): void {
@@ -92,25 +92,23 @@ localization_priority: Priority
 
 1. Test your web part by launching the local workbench and add the web part to the page:
 
-    ```shell
+    ```console
     gulp serve
     ```
 
 ## How to deploy and consume a third-party SPFx library from tenant App Catalog
 
-1. Navigate to the **corporate-library** root folder and bundle and package the solution:
+1. Navigate to the **corporate-library** root folder to bundle and package the solution:
 
-    ```shell
+    ```console
     gulp bundle --ship
     gulp package-solution --ship
     ```
 
-    This will build any local changes made and package the solution into an **\*.sppkg** file, which is located in the **sharepoint\solution** folder.
+    This will build any local changes made and package the solution into an **\*.sppkg** file in the **sharepoint/solution** folder.
 
 1. Deploy this package in the tenant App Catalog and make it tenant wide deployed by checking the **Make this solution available to all sites in the organization** option.
-
-1. Navigate to the web part solution folder, and open the **package.json** file in the root of that folder.
-
+1. Navigate to the web part solution folder, and open the **./package.json** file.
 1. Add an entry to reflect the library entry and its version to the `dependencies` section (you can find this in the **package.json** file of the library solution you're created earlier) as follows:
 
     ```json
@@ -127,7 +125,7 @@ localization_priority: Priority
 
 1. Build the web part:
 
-    ```shell
+    ```console
     gulp bundle --ship
     gulp package-solution --ship
     ```
@@ -140,19 +138,19 @@ localization_priority: Priority
 
 To unlink a SPFx library that was symlinked during development in your SPFx project, navigate to SPFx project root folder and run the command.
 
-```shell
+```console
 npm unlink corporate-library
 ```
 
 To check the folder location of SPFx library.
 
-```shell
+```console
 npm ls -g 'corporate-library'
 ```
 
 To remove local npm link to the library, navigate to the SPFx library root folder and run the command.
 
-```shell
+```console
 npm unlink
 ```
 
