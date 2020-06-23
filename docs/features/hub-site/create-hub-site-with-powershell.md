@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint hub sites using PowerShell
 description: Example code for creating a SharePoint hub site by using PowerShell.
-ms.date: 06/05/2020
+ms.date: 06/23/2020
 localization_priority: Priority
 ---
 
@@ -46,10 +46,10 @@ First, we will create the marketing site that will serve as a hub site that othe
    https://contoso.sharepoint.com/sites/marketing
    ```
 
-3. Register the new marketing site as a hub site by using the [Register-PnPHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/register-spohubsite?view=sharepoint-ps) cmdlet:
+3. Register the new marketing site as a hub site by using the [Register-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/register-spohubsite?view=sharepoint-ps) cmdlet:
 
    ```powershell
-   Register-PnPHubSite -Site https://contoso.sharepoint.com/sites/marketing
+   Register-SPOHubSite -Site https://contoso.sharepoint.com/sites/marketing
    ```
 
 ## Set properties and permissions on the hub site
