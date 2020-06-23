@@ -32,7 +32,7 @@ When building SharePoint Framework components, you can use the built-in logger t
 
 Following, is how you would log a verbose message to the SharePoint Framework developer dashboard:
 
-```ts
+```typescript
 // [...] shortened for brevity
 import { Log } from '@microsoft/sp-core-library';
 

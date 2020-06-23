@@ -14,7 +14,7 @@ In your SharePoint Framework solutions, you will likely want to interact with da
 
 SharePoint Framework offers the SPHttpClient that you can use to connect to SharePoint REST APIs. A ready-to-use instance of the SPHttpClient is available on the web part/extension context and you can use it to perform all kinds of web request. Following code snippet shows how you would use the SPHttpClient to retrieve the title of the current site:
 
-```ts
+```typescript
 this.context.spHttpClient
   .get(`${this.context.pageContext.web.absoluteUrl}/_api/web?$select=Title`, SPHttpClient.configurations.v1)
   .then((res: SPHttpClientResponse): Promise<{ Title: string; }> => {
@@ -27,7 +27,7 @@ this.context.spHttpClient
 
 The SPHttpClient offers basic functionality for performing the most common web requests. It allows you also, to configure your request by for example specifying request headers. For example, if you wanted to issue a web request without retrieving metadata, you'd use the following code:
 
-```ts
+```typescript
 this.context.spHttpClient
   .get(`${this.context.pageContext.web.absoluteUrl}/_api/web?$select=Title`,
     SPHttpClient.configurations.v1,
@@ -52,7 +52,7 @@ When using the SPHttpClient there are a few things that you should take into acc
 
 By default, the SPHttpClient uses OData v4 specification, which requires using `odata.metadata` instead of just `odata` to control the response metadata. If you use the `odata` directive in OData v4 mode, you will get an error, like: _The HTTP header ACCEPT is missing or its value is invalid._. It is  possible to set the SPHttpClient to OData v3.0 mode, by setting the `odata-version` request header to empty value:
 
-```ts
+```typescript
 this.context.spHttpClient
   .get(`${this.context.pageContext.web.absoluteUrl}/_api/web?$select=Title`,
     SPHttpClient.configurations.v1,
@@ -86,7 +86,7 @@ The SPHttpClient offers basic support for communicating with the SharePoint REST
 
 [PnPjs](https://pnp.github.io/pnpjs/) is an open-source JavaScript library for communicating with SharePoint and Office 365. It exposes a fluent API that allows you to easily consume SharePoint and Office 365 REST APIs in a type-safe way. To retrieve a the title of the current site using PnPjs, you would execute the following code:
 
-```ts
+```typescript
 sp.web
   .select('Title')
   .get<{Title: string;}>()

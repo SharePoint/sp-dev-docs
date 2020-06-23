@@ -107,7 +107,7 @@ If your SharePoint Framework solution requires permissions to specific resources
 
 Following is how you would use the AadTokenProvider to retrieve an access token for an enterprise API secured with Azure AD and use it to do a web request using jQuery:
 
-```ts
+```typescript
 // ...
 import * as $ from 'jquery';
 import { AadTokenProvider } from '@microsoft/sp-http';
@@ -352,7 +352,7 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
 
 1. Define a custom interface that extends the standard ADAL JS `Config` interface to expose additional properties on the configuration object.
 
-    ```ts
+    ```typescript
     export interface IAdalConfig extends adal.Config {
       popUp?: boolean;
       callback?: (error: any, token: string) => void;
@@ -364,7 +364,7 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
 
 1. Load the ADAL JS patch, the custom configuration interface, and your configuration object into the main component of your web part.
 
-    ```ts
+    ```typescript
     import * as AuthenticationContext from 'adal-angular';
     import adalConfig from '../AdalConfig';
     import { IAdalConfig } from '../../IAdalConfig';
@@ -373,7 +373,7 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
 
 1. In the constructor of your component, extend the ADAL JS configuration with additional properties and use it to create a new instance of the `AuthenticationContext` class.
 
-    ```ts
+    ```typescript
     export default class UpcomingMeetings extends React.Component<IUpcomingMeetingsProps, IUpcomingMeetingsState> {
       private authCtx: adal.AuthenticationContext;
     

@@ -115,7 +115,7 @@ You also need to configure your project to leverage jest when typing commands. T
 
 To write your first unit test, create a new file `src/webparts/webPartName/tests/webPartName.spec.ts` and add the following content:
 
-```TS
+```typescript
 import 'jest'
 
 describe("webPartName", () => {
