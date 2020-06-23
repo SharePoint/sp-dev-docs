@@ -51,7 +51,7 @@ The Scripts folder of the Core.PeoplePickerWeb project contains app.js and peopl
 
 The app.js file then creates and configures a people picker control.
 
-```js
+```javascript
 //Make a people picker control.
 //1. context = SharePoint Client Context object
 //2. $('#spanAdministrators') = SPAN that will 'host' the people picker control
@@ -70,7 +70,7 @@ peoplePicker.Initialize();
 
 The people picker control queries the **ClientPeoplePickerWebServiceInterface** object in the JSOM library to initiate searches for users whose names match the character strings entered.
 
-```js
+```javascript
 if (searchText.length >= parent.GetMinimalCharactersBeforeSearching()) {
                             resultDisplay = 'Searching...';
                             if (typeof resultsSearching != 'undefined') {
@@ -122,7 +122,7 @@ When you choose the **Setup term store** button, the add-in:
     
 The following code in the **TaxonomyHelper** class verifies that the required languages are enabled, and if they're not, it enables them.
 
-```js
+```javascript
 var languages = new int[] { 1031, 1033, 1036, 1053 };
             Array.ForEach(languages, l => { 
                 if (!termStore.Languages.Contains(l)) 
@@ -142,7 +142,7 @@ termGroup = termStore.CreateGroup("Taxonomy Navigation", groupId);
 
 Finally, the following code in the same **TaxonomyHelper** class creates each new term, along with labels for the German, French, and Swedish languages. It also sets a value for the **\_Sys\_Nav\_SimpleLinkUrl** property, which is equivalent to the **Simple Link or Header** property in the Term Store Management Tool. In this case, the URL for each term points back to the root site.
 
-```js
+```javascript
 var term = termSet.CreateTerm(termName, 1033, Guid.NewGuid());
 term.CreateLabel(termNameGerman, 1031, false);
 term.CreateLabel(termNameFrench, 1036, false);
@@ -156,7 +156,7 @@ Next, the add-in inserts the topnav.js file into the root folder of the host sit
 
 The following code in the topnav.js file uses JSOM to check for the user's preferred language.
 
-```js
+```javascript
 var targetUser = "i:0#.f|membership|" + _spPageContextInfo.userLoginName;
         context = new SP.ClientContext.get_current();
 var peopleManager = new SP.UserProfiles.PeopleManager(context);
@@ -167,7 +167,7 @@ var userProperty = peopleManager.getUserProfilePropertyFor(targetUser, "SPS-MUIL
 
 The add-in then determines whether the user's language preference matches one of the enabled languages. If it finds a match, the following code gets the terms and the associated labels for the user's preferred language.
 
-```js
+```javascript
 while (termEnumerator.moveNext()) {
     var currentTerm = termEnumerator.get_current();
     var label = currentTerm.getDefaultLabel(lcid);
@@ -181,7 +181,7 @@ while (termEnumerator.moveNext()) {
 
 Finally, the following code in the topnav.js file inserts links that contain the terms into the top navigational element of the host site.
 
-```js
+```javascript
 html += "<ul style='margin-top: 0px; margin-bottom: 0px;'>"
         for (var i in termItems) {
             var term = termItems[i];
@@ -230,7 +230,7 @@ The Scripts folder of the Core.TaxonomyPicker project contains app.js and taxono
 
 The app.js file then creates and configures a taxonomy picker control.
 
-```js
+```javascript
 // Load scripts for calling taxonomy APIs.
                     $.getScript(layoutsRoot + 'init.js',
                         function () {
@@ -247,7 +247,7 @@ The app.js file then creates and configures a taxonomy picker control.
 
 The taxonomy picker control uses the following code to open a **TaxonomySession** instance in the JSOM to load all the terms from the term store.
 
-```js
+```javascript
 // Get the taxonomy session by using CSOM.
             var taxSession = SP.Taxonomy.TaxonomySession.getTaxonomySession(spContext);
             //Use the default term store...this could be extended here to support additional term stores.

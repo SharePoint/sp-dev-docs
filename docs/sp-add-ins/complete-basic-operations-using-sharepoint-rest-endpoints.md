@@ -68,7 +68,7 @@ This request would look a little different if you are writing your add-in in Jav
 
 The following code demonstrates how this request would look if you are using the cross-domain library and want to receive the OData representation of the lists as XML instead of JSON. (Because Atom is the default response format, you don't have to include an **Accept** header.) For more information about using the cross-domain library, see [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
 
-```js
+```javascript
 var executor = new SP.RequestExecutor(appweburl);
 executor.executeAsync(
   {
@@ -126,7 +126,7 @@ If you're using the JavaScript cross-domain library, SP.RequestExecutor handles 
 
 If you're creating a SharePoint-hosted SharePoint Add-in, you don't have to make a separate HTTP request to retrieve the form digest value. Instead, you can retrieve the value in JavaScript code from the SharePoint page (if the page uses the default master page), as shown in the following example, which uses JQuery and creates a list.
 
-```js
+```javascript
 jQuery.ajax({
         url: "http://<site url>/_api/web/lists",
         type: "POST",
@@ -146,7 +146,7 @@ jQuery.ajax({
 
 The following example shows how to update the list that is created in the previous example. The example changes the title of the list, uses JQuery, and assumes that you are doing this operation in a SharePoint-hosted add-in.
 
-```js
+```javascript
 jQuery.ajax({
         url: "http://<site url>/_api/web/lists/GetByTitle('Test')",
         type: "POST",
@@ -181,7 +181,7 @@ The following example shows the opening `<entry>` tag for the XML node that cont
 
 The following example shows how to create a site in JavaScript.
 
-```js
+```javascript
 jQuery.ajax({
     url: "http://<site url>/_api/web/webinfos/add",
     type: "POST",
@@ -269,7 +269,7 @@ Cross-domain library requests use this format when they access data on the add-i
 
 SharePoint Add-ins can get the add-in web URL and host web URL from the query string of the add-in page, as shown in the following code example. The example also shows how to reference the cross-domain library, which is defined in the SP.RequestExecutor.js file on the host web. The example assumes that your add-in launches from SharePoint. For guidance about setting your SharePoint context correctly when your add-in does not launch from SharePoint, see [Authorization Code OAuth flow for SharePoint Add-ins](authorization-code-oauth-flow-for-sharepoint-add-ins.md).
 
-```js
+```javascript
 var hostweburl;
 var appweburl;
 

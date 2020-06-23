@@ -233,7 +233,7 @@ You can add an indicator to a site page to show its classification. The Core.Sit
 
 The following method is defined in the Core.SiteClassificationWeb project, scripts, and classifier.js. The images are stored in a Microsoft Azure website. You will have to change the hard-coded URLs to match your environment.
 
-```js
+```javascript
 function setClassifier() {
     if (!classified)
     {

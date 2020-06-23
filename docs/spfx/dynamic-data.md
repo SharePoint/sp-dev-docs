@@ -21,7 +21,7 @@ Dynamic data in the SharePoint Framework is based on the source-notification mod
 
 Every dynamic data source implements the `IDynamicDataCallables` interface. Following, is an example of a web part that displays a list of upcoming events. For each event, it includes some information such as its name, description, and location. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
 
-```ts
+```typescript
 import {
   IDynamicDataPropertyDefinition,
   IDynamicDataCallables
@@ -157,7 +157,7 @@ In the example code, the web part displays upcoming events in a list. Each time,
 
 Web parts can consume data exposed by dynamic data sources present on the page. Following is the code of a web part showing on a map the location of the event selected in the events list web part showed previously.
 
-```ts
+```typescript
 import { DynamicProperty } from '@microsoft/sp-component-base';
 import {
   DynamicDataSharedDepth,
@@ -329,7 +329,7 @@ SharePoint Framework offers standard UI for connecting web parts to dynamic data
 
 Each web part property, for which the data can be retrieved from a dynamic data source, should be defined as `DynamicProperty<T>` where the `T` type denotes the type of data stored in the property, for example:
 
-```ts
+```typescript
 /**
  * Map web part properties
  */
@@ -349,7 +349,7 @@ In this example, the address is a string, but other types of data such as boolea
 
 For each dynamic property, you have to specify the type of data it holds. This is necessary, so that the instance of the web part added to a page can be properly serialized. For each dynamic web part property, in the `propertiesMetadata` getter, specify the `dynamicPropertyType` value:
 
-```ts
+```typescript
 protected get propertiesMetadata(): IWebPartPropertiesMetadata {
   return {
     // Specify the web part properties data type to allow the address
@@ -377,7 +377,7 @@ To allow users to connect web parts to dynamic data sources available on the pag
 
 In its simplest form, the UI could be defined as follows:
 
-```ts
+```typescript
 protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
   return {
     pages: [
@@ -406,7 +406,7 @@ For each set of dynamic properties, add a new group using the `PropertyPaneDynam
 
 If your dynamic data field set consists of multiple dynamic properties, you can specify how the connection data is shared using the `sharedConfiguration.depth`  property:
 
-```ts
+```typescript
 groupFields: [
   PropertyPaneDynamicFieldSet({
     label: 'Address',
@@ -433,7 +433,7 @@ When building web parts, you can allow users to connect web parts to other compo
 
 To allow users to choose if they want to load data from a dynamic property or enter the value themselves in the web part properties, you can define the web part properties group as a `IPropertyPaneConditionalGroup` group.
 
-```ts
+```typescript
 protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
   return {
     pages: [

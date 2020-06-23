@@ -140,7 +140,7 @@ Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/) can be
 
 The following bash script will create a "modern" team site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use it to automate other operations on the created site.
 
-```bash
+```console
 #!/usr/bin/env bash
 # Connect to SharePoint Online
 # This command will prompt a sign-in confirmation message to authenticate
@@ -240,7 +240,7 @@ New-PnPTenantSite -Url $_url -Description $_title -Title $_title -Template STS#3
 Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create a Microsoft 365 group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
 The example below shows how it can be done using the [Office 365 CLI immersive mode](https://pnp.github.io/office365-cli/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
 
-```bash
+```console
 # Use the Office 365 CLI immersive mode by typing o365 in the terminal
 # Connect to Microsoft Graph using the Office 365 CLI
 # This command will prompt a sign-in confirmation message to authenticate
@@ -330,7 +330,7 @@ $web.Title
 
 Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/spo/site/site-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" Communication site. The following bash script will create the site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL you can use it to automate other operations on the created site.
 
-```bash
+```console
 #!/usr/bin/env bash
 # Connect to SharePoint Online
 # This command will prompt a sign-in confirmation message to authenticate

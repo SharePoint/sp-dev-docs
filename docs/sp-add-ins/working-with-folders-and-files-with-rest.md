@@ -257,7 +257,7 @@ Contents of binary file
 
 The following code sample shows how to **create a file by using this REST endpoint and the JSOM cross-domain library**.
 
-```js
+```javascript
 function uploadFileBinary() {
   XDomainTestHelper.clearLog();
   var requestExecutor;

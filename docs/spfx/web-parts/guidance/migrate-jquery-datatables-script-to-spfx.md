@@ -240,7 +240,7 @@ The next step is to define the Moment.js plug-in for DataTables so that dates in
 
 1. In the **./src/webparts/itRequests** folder, create a new file named **moment-plugin.js**, and paste the following code:
 
-    ```js
+    ```javascript
     // UMD
     (function (factory) {
         "use strict";
@@ -312,7 +312,7 @@ The last step is to include the code that initiates the data table and loads the
 
 1. In the **./src/webparts/itRequests** folder, create a new file named **script.js**, and paste the following code:
 
-    ```js
+    ```javascript
     $(document).ready(function () {
         $('#requests').DataTable({
             'ajax': {
@@ -415,7 +415,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 4. Open the **./src/webparts/itRequests/loc/en-us.js** file, and change its contents to:
 
-    ```js
+    ```javascript
     define([], function() {
     return {
         "PropertyPaneDescription": "IT Requests settings",

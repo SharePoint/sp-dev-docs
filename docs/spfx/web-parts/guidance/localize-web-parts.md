@@ -61,7 +61,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file, and update the definition of the `IGreetingWebPartProps` interface to the following code:
 
-    ```ts
+    ```typescript
     export interface IGreetingWebPartProps {
       greeting: string;
     }
@@ -69,7 +69,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 1. In the same file, change the **GreetingWebPart** class to:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
 
       public render(): void {
@@ -113,7 +113,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 1. Update the main React component by opening the **./src/webparts/greeting/components/Greeting.tsx** file and changing its code to:
 
-    ```ts
+    ```typescript
     import * as React from 'react';
     import styles from './Greeting.module.scss';
     import { IGreetingProps } from './IGreetingProps';
@@ -158,7 +158,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 1. Update the localization TypeScript type definition file by opening the **./src/webparts/greeting/loc/mystrings.d.ts** file and changing its code to:
 
-    ```ts
+    ```typescript
     declare interface IGreetingWebPartStrings {
       PropertyPaneDescription: string;
       DisplayGroupName: string;
@@ -173,7 +173,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 1. Update the US English locale file by opening the **./src/webparts/greeting/loc/en-us.js** file and changing its code to:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Greeting web part configuration",
@@ -285,7 +285,7 @@ You can override this behavior by creating a locale file named **default.js** wi
 
 1. In the **./src/webparts/greetings/loc** folder, create a new file named **nl-nl.js**, and enter the following code:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Instellingen van het begroeting webonderdeel",
@@ -330,13 +330,13 @@ The default web part provided with the scaffolded SharePoint Framework project h
 1. In the code editor, open the **./src/webparts/greeting/components/Greetings.tsx** file.
 1. In the top section of the file, directly after the last `import` statement, add a reference to the localized strings:
 
-    ```ts
+    ```typescript
     import * as strings from 'GreetingWebPartStrings';
     ```
 
 1. Replace the contents of the **Greeting** class with the following code:
 
-    ```ts
+    ```typescript
     // ...
     export default class Greeting extends React.Component<IGreetingProps, {}> {
       public render(): JSX.Element {
@@ -372,7 +372,7 @@ Having replaced the string with a reference, the next step is to add that string
 
 - In the code editor, open the **./src/webparts/greetings/loc/mystrings.d.ts** file, and change its code to:
 
-    ```ts
+    ```typescript
     declare interface IGreetingWebPartStrings {
       PropertyPaneDescription: string;
       DisplayGroupName: string;
@@ -393,7 +393,7 @@ The last step is to provide localized versions for the new string in all locales
 
 1. In the code editor, open the **./src/webparts/greeting/loc/en-us.js** file, and change its code to:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Greeting web part configuration",
@@ -406,7 +406,7 @@ The last step is to provide localized versions for the new string in all locales
 
 1. Open the **./src/webparts/greeting/loc/nl-nl.js** file, and change its code to:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Instellingen van het begroeting webonderdeel",
@@ -442,7 +442,7 @@ Finding out about all these issues late in the project will likely lead to delay
 
 1. In the **./src/webparts/greeting/loc** folder, add a new file named **qps-ploc.js**, and paste the following code:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "[!!! Gřèèƭïñϱ ωèβ ƥářƭ çôñƒïϱúřáƭïôñ ℓôřè₥ ïƥƨú !!!]",
@@ -496,7 +496,7 @@ However, the currently used language is returned as a string, for example, **en-
 1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file.
 1. Add a new class variable named **locales** in the existing **GreetingWebPart** with the following code:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       private locales = {
         1025: 'ar-SA',
@@ -560,7 +560,7 @@ However, the currently used language is returned as a string, for example, **en-
 
 1. Add two class methods that allow you to get the LCID from the locale name, and the locale name from the LCID:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
 
@@ -612,14 +612,14 @@ Originally, the Greeting web part had the **greeting** property defined where th
 1. Open the **./src/webparts/greeting/GreetingWebPart.ts** file.
 1. Remove the **greeting** property from the `IGreetingWebPartProps` interface definition:
 
-    ```ts
+    ```typescript
     export interface IGreetingWebPartProps {
     }
     ```
 
 1. Because the main React component should display a greeting, open the **./src/webparts/greeting/components/IGreetingProps.ts** file, and change the **IGreetingProps** interface to:
 
-    ```ts
+    ```typescript
     export interface IGreetingProps {
       greeting: string;
     }
@@ -638,7 +638,7 @@ The first step is to load the information about all languages enabled on the cur
 1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file.
 1. Add a new class variable named **supportedLanguageIds**:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
       private supportedLanguageIds: number[];
@@ -650,7 +650,7 @@ The first step is to load the information about all languages enabled on the cur
 
 1. Add the following imports just above the **GreetingWebPart**.
 
-    ```ts
+    ```typescript
     import {
       SPHttpClient,
       SPHttpClientResponse
@@ -659,7 +659,7 @@ The first step is to load the information about all languages enabled on the cur
 
 1. In the **GreetingWebPart** class, add a new method named **getSupportedLanguageIds**:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
 
@@ -693,7 +693,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file.
 1. Add a new class variable named **greetingFields** to the **GreetingWebPart** class:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
       private greetingFields: IPropertyPaneField<any>[] = [];
@@ -703,7 +703,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
 1. Change the **import** statement for the **\@microsoft/sp-webpart-base** package to:
 
-    ```ts
+    ```typescript
     import {
       BaseClientSideWebPart,
       IPropertyPaneConfiguration,
@@ -714,7 +714,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
 1. Change the **propertyPaneSettings** getter to get the list of text fields from the newly added **greetingFields** class variable:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
 
@@ -744,7 +744,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
 1. In the code editor, open the **./src/webparts/greeting/loc/mystrings.d.ts** file, and change its code to:
 
-    ```ts
+    ```typescript
     declare interface IGreetingWebPartStrings {
       PropertyPaneDescription: string;
       GreetingGroupName: string;
@@ -761,7 +761,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
     **./src/webparts/greeting/loc/en-us.js**
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Greeting web part configuration",
@@ -773,7 +773,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
     **./src/webparts/greeting/loc/nl-nl.js**
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Instellingen van het begroeting webonderdeel",
@@ -785,7 +785,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
     **./src/webparts/greeting/loc/qps-ploc.js**
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "[!!! Gřèèƭïñϱ ωèβ ƥářƭ çôñƒïϱúřáƭïôñ ℓôřè₥ ïƥƨú !!!]",
@@ -797,7 +797,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
 1. In the **./src/webparts/greeting/GreetingWebPart.ts** file, override the **onPropertyPaneConfigurationStart** method by using the following code:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
       protected onPropertyPaneConfigurationStart(): void {
@@ -836,7 +836,7 @@ Originally, the web part showed the same greeting for all users no matter what t
 
 1. In the **./src/webparts/greeting/GreetingWebPart.ts** file, change the web part's **render** method to:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
 
@@ -852,7 +852,7 @@ Originally, the web part showed the same greeting for all users no matter what t
 
 1. In the **GreetingWebPart**, add a new method named **getGreeting**:
 
-    ```ts
+    ```typescript
     export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
       // ...
 

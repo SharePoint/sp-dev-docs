@@ -26,7 +26,7 @@ In this case, the information and actions are relatively simple, but you can alr
 
 This example uses the `SP.SOD.executeFunc` method to ensure that the script file loads before you run any code that depends on it.
 
-```js
+```javascript
 SP.SOD.executeFunc("callout.js", "Callout", function () {
     });
 ```
@@ -41,7 +41,7 @@ You can, for example, create or get a `div` element on your page and pass it as 
 
 This example shows you how to create the simplest possible callout control with only the two required members and a title string.
 
-```js
+```javascript
 var calloutPageElement = document.createElement("div");
 var callout = CalloutManager.createNew({
    ID: "unique identifier",
@@ -53,13 +53,13 @@ var callout = CalloutManager.createNew({
 
 This particular callout appears and displays a title at the top of the control whenever a user selects the page element. You use the optional members to customize the control's appearance, behavior, positioning, and actions in some very powerful ways. The callout control also has a set method that you can use to set a value for any parameter after you create an instance of the control.
 
-```js
+```javascript
 callout.set({openOptions:{event: "hover"}});
 ```
 
 You can also set values for all of the callout members in a `CalloutOptions` object, and then pass that object to the `createNew` method.
 
-```js
+```javascript
 var calloutPageElement = document.createElement("div");
 var calloutOptions = new CalloutOptions();
 calloutOptions.ID = unique identifier;
@@ -129,7 +129,7 @@ You can use these methods to customize the behavior of the callout control.
 
 You add actions after you've created an instance of the callout control. A callout action can consist of either a single action or a menu of actions. You can add up to three actions to a callout control. After you have created a callout action, you add it to the `CalloutControl` object with its `addAction` method. This sample action opens a new window in your browser after the user selects the text.
  
-```js
+```javascript
 //Create CalloutAction
 var calloutAction = new CalloutAction({
             text: "Open window"
@@ -146,7 +146,7 @@ var calloutAction = new CalloutAction({
 
 You can also set values for all of the `CalloutAction` members in a `CalloutActionOptions` object and pass that object to the `CalloutAction` constructor.
 
-```js
+```javascript
 //Create CalloutAction
 var calloutActionOptions = new CalloutActionOptions();
 calloutActionOptions.text = "Open window";
@@ -185,7 +185,7 @@ When a callout action contains a menu instead of a single action, the user sees 
  
 You can create as many menu entries as you want and add them to the callout action by passing them in an array as the value of the `menuEntries` member of the `CalloutAction` object.
 
-```js
+```javascript
 //Create two menu entries.
 var menuEntry1 = new CalloutActionMenuEntry("Entry One", calloutActionCallbackFunction, "/_layouts/images/DOC16.GIF");
 var menuEntry2 = new CalloutActionMenuEntry("Some Other Entry", calloutActionCallbackFunction, "/_layouts/images/XLS16.GIF");
@@ -243,7 +243,7 @@ The following section describes how to use the `calloutPositioningProxy` object 
 
 The `calloutPositioningProxy` object contains methods and properties that you can use to override the positioning logic that the callout control uses by default. For example, if you want the control to appear below and to the right of the `launchPoint` element all the time, you write a positioning algorithm that looks like the following.
 
-```js
+```javascript
 function alwaysGoDownAndRight(calloutPositioningProxy)  {
     calloutPositioningProxy.moveDownAndRight();
 } 
@@ -252,14 +252,14 @@ function alwaysGoDownAndRight(calloutPositioningProxy)  {
 
 You would then pass that function as the value of the  `Callout` object's `positionAlgorithm` member. You can do that when you create the `Callout`, or later by setting the value.
 
-```js
+```javascript
 callout.set({positionAlgorithm: alwaysGoDownAndRight});
 
 ```
 
 You can always take a look at the default positioning logic by launching your browser's JavaScript console (the Internet Explorer F12 Developer Tools, for example).
 
-```js
+```javascript
 CalloutOptions.prototype.positionAlgorithm.toString()
 ```
 
@@ -290,7 +290,7 @@ You can use these methods in the  `CalloutPositioningProxy` object to write your
 
 This positioning algorithm makes the control go above or below the text. The  `isRTL` property of the `CalloutPositioningProxy` tells you whether the text is displaying a right-to-left language. You check for this property to ensure that the control is always positioned correctly in relation to the text on the page.
 
-```js
+```javascript
 function examplePositionAlgorithm(calloutPositioningProxy) {
     if (!calloutPositioningProxy.isRTL) {
         calloutPositioningProxy.moveDownAndRight();
@@ -311,7 +311,7 @@ callout.set({positionAlgorithm: examplePositionAlgorithm});
 
 This positioning algorithm changes the default direction of the control to `downAndRight` instead of `upAndRight`, but it uses the default algorithm if there are any collisions.
 
-```js
+```javascript
 function tryDownAndRightThenGoDefault(calloutPositioningProxy) {
     if (!calloutPositioningProxy.isRTL)
         calloutPositioningProxy.moveDownAndRight();

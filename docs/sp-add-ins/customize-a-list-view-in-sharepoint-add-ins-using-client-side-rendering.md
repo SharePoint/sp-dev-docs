@@ -113,7 +113,7 @@ The following figure shows a client-side rendered view of an announcements list.
 
     - Registers the templates.
 
-    ```js
+    ```javascript
     
     (function () {
         // Initialize the variable that stores the objects.
