@@ -97,7 +97,7 @@ The following figure shows the browser window with data from the remote service 
     
     - Handles any errors, rendering the error message in the SharePoint webpage.
  
-    ```js
+    ```javascript
     Categories from the Northwind database exposed as an OData service: 
         
     <!-- Placeholder for the remote content -->
@@ -212,7 +212,7 @@ The following figure shows the browser window with data from the remote service 
     
     - Handles any errors, rendering the error message in the SharePoint webpage.
     
-    ```js
+    ```javascript
     Categories from the Northwind database exposed as an OData service: 
         
     <!-- Placeholder for the remote content -->

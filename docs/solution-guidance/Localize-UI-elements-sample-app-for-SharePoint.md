@@ -119,7 +119,7 @@ The following figure shows the start page for Scenario 1.
 
 The **AddJSLink** method is part of the JavaScriptExtensions.cs file in **OfficeDevPnP.Core**. **AddJSLink** requires that you supply a string representing the identifier to assign to the custom action, and a string containing a semicolon delimited list of URLs to the JavaScript files that you want to add to the host web. Note that this code sample adds a reference to Scripts\scenario1.js, which adds a status bar message to the host web.
 
-```js
+```javascript
 protected void btnSubmit_Click(object sender, EventArgs e)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
@@ -135,7 +135,7 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 > [!NOTE] 
 > SharePoint uses Minimal Download Strategy to reduce the amount of data the browser downloads when users navigate between pages on a SharePoint site. In scenario1.js, the following code ensures that whether Minimal Download Strategy is used on your SharePoint site, the **RemoteManager_Inject** method is always called to run the JavaScript code to add the status bar message to the host web. For more information, see [Minimal Download Strategy overview](../general-development/minimal-download-strategy-overview.md).
 > 
-> ```js
+> ```javascript
     if ("undefined" != typeof g_MinimalDownload &amp;&amp; g_MinimalDownload &amp;&amp; (window.location.pathname.toLowerCase()).endsWith("/_layouts/15/start.aspx") &amp;&amp; "undefined" != typeof asyncDeltaManager) {
         // Register script for MDS if possible.
         RegisterModuleInit("scenario1.js", RemoteManager_Inject); //MDS registration
@@ -150,7 +150,7 @@ protected void btnSubmit_Click(object sender, EventArgs e)
 > [!NOTE] 
 > Some JavaScript files may depend on other JavaScript files to be loaded first before they can run and complete successfully. The following code construct from **RemoteManager_Inject** uses the **loadScript** function in scenario1.js to first load jQuery, and then continue running the remaining JavaScript code.
 >
-> ```js
+> ```javascript
     var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";
         // Load jQuery first, and then continue running the rest of the code.
         loadScript(jQuery, function () {
@@ -195,7 +195,7 @@ Similar to Scenario 1, **btnSubmit\_Click** in scenario2.aspx.cs calls **AddJsLi
     
 - Replaces **my quicklaunch entry** with the value of the **quickLauch\_Scenario2** variable read from the JavaScript resource file.
 
-```js
+```javascript
 function RemoteManager_Inject() {
 
     var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";

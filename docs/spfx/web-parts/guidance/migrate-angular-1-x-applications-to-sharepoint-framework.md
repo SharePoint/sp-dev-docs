@@ -777,7 +777,7 @@ At this point the AngularJS application works correctly and is wrapped in a Shar
 
 6. In the **./src/webparts/toDo/loc/en-us.js** file, add translations for the newly added strings:
 
-  ```js
+  ```javascript
   define([], function() {
     return {
       "PropertyPaneDescription": "Description",

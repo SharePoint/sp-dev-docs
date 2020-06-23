@@ -247,7 +247,7 @@ The current ADAL JS functionality is unsuitable for use in web parts. Use the fo
 
 **WebPartAuthenticationContext.js**
 
-```js
+```javascript
 const AuthenticationContext = require('adal-angular');
 
 AuthenticationContext.prototype._getItemSuper = AuthenticationContext.prototype._getItem;

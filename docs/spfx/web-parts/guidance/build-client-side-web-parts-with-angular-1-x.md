@@ -803,7 +803,7 @@ To allow users to configure the value of your newly added property, you have to 
 
 5. Provide the actual values for the newly defined strings. In the code editor, open the **loc/en-us.js** file, and change its contents to:
 
-  ```js
+  ```javascript
   define([], function() {
     return {
       "PropertyPaneDescription": "Manage configuration of the To do web part",

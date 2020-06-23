@@ -194,7 +194,7 @@ To read data from the remote service, you must do the following:
 
 6. Copy the following code and paste it in the **PlaceHolderMain** content tag.
         
-    ```js
+    ```javascript
     <!-- The page dynamically loads the cross-domain library's
         js file, rescript acts as the placeholder. -->
     <script 

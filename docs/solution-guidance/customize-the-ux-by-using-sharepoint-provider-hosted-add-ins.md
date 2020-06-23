@@ -43,7 +43,7 @@ This sample uses the default site pages library and existing out-of-the-box layo
 
 The sample code for the first scenario determines whether you already created the wiki page. If not, it adds the file to the site pages library and returns its URL.
 
-```js
+```javascript
 var newpage = pageLibrary.RootFolder.Files.AddTemplateFile(newWikiPageUrl, TemplateFileType.WikiPage);
 ctx.Load(newpage);
 ctx.ExecuteQuery();
@@ -54,7 +54,7 @@ wikiPageUrl = String.Format("sitepages/{0}", wikiPageName);
 
 In both scenarios, the sample adds the HTML entered via the text box on the start page by using the **AddHtmlToWikiPage** method in a helper class named **LabHelper**. This method inserts the HTML from the form inside the _WikiField_ field of the wiki page.
 
-```js
+```javascript
 public void AddHtmlToWikiPage(ClientContext ctx, Web web, string folder, string html, string page)
         {
             Microsoft.SharePoint.Client.Folder pagesLib = web.GetFolderByServerRelativeUrl(folder);
@@ -94,7 +94,7 @@ public void AddHtmlToWikiPage(ClientContext ctx, Web web, string folder, string 
 
 The sample code for the second scenario creates a new **WebPartEntity** instance. It then uses methods in a helper class to populate the web part with XML. The XML displays a promoted links list, including both [http://www.bing.com](http://www.bing.com) and the home page of the [Office 365 Developer Patterns and Practices](https://github.com/SharePoint/PnP) GitHub repository.
 
-```js
+```javascript
 WebPartEntity wp2 = new WebPartEntity();
 wp2.WebPartXml = new LabHelper().WpPromotedLinks(linksID, string.Format("{0}/Lists/{1}", 
                                                                 Request.QueryString["SPHostUrl"], "Links"), 
@@ -121,7 +121,7 @@ The helper code displays the promoted links with a table inside an **XsltListVie
 
 The **WpPromotedLinks** object on the **LabHelper** instance contains XML that defines the appearance of the web part that will be embedded into the wiki page. The **AddWebPartToWikiPage** method then inserts the newly defined web part inside a new `div` tag on the wiki page.
 
-```js
+```javascript
 XmlDocument xd = new XmlDocument();
             xd.PreserveWhitespace = true;
             xd.LoadXml(wikiField);
@@ -192,7 +192,7 @@ The [Core.Dialog](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.Dialog
 
 The start page is the page that appears in the dialog box. To handle any differences in display given the display context (dialog box versus full-page), the add-in determines whether it's being displayed in a dialog box. It does this by using a query string parameter that is passed along with the links that start the dialog boxes.
 
-```js
+```javascript
 private string SetIsDlg(string isDlgValue)
         {
             var urlParams = HttpUtility.ParseQueryString(Request.QueryString.ToString());
@@ -207,7 +207,7 @@ The start page UI presents two options for creating links to the dialog box, alo
 
 When you choose the **Add menu item** button, the add-in creates a **CustomActionEntity** object that starts the dialog box. It then uses the [OfficeDevPnP Core extension](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core) method named **AddCustomAction** to add the new custom action to the **Site Settings** menu.
 
-```js
+```javascript
 StringBuilder modelDialogScript = new StringBuilder(10);
 modelDialogScript.Append("javascript:var dlg=SP.UI.ModalDialog.showModalDialog({url: '");
 modelDialogScript.Append(String.Format("{0}", SetIsDlg("1")));
@@ -232,7 +232,7 @@ cc.Web.AddCustomAction(customAction);
 
 The **AddCustomAction** method adds the custom action to the **UserCustomActions** collection that is associated with the SharePoint site.
 
-```js
+```javascript
 var newAction = existingActions.Add();
             newAction.Description = customAction.Description;
             newAction.Location = customAction.Location;
@@ -261,7 +261,7 @@ var newAction = existingActions.Add();
 
 When you choose the **Add page with Script Editor web part** button, the add-in uses the methods **AddWikiPage** and **AddWebPartToWikiPage** to create a wiki page inside the site pages library and add a configured Script Editor web part to the page.
 
-```js
+```javascript
 string scenario1Page = String.Format("scenario1-{0}.aspx", DateTime.Now.Ticks);
 string scenario1PageUrl = cc.Web.AddWikiPage("Site Pages", scenario1Page);
 cc.Web.AddLayoutToWikiPage("SitePages", WikiPageLayout.OneColumn, scenario1Page);
@@ -276,7 +276,7 @@ cc.Web.AddWebPartToWikiPage("SitePages", scriptEditorWp, scenario1Page, 1, 1, fa
 
 The **AddWikiPage** method loads the site pages library. If the wiki page specified by the add-in [OfficeDevPnP Core](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core) doesn't already exist, it creates the page.
 
-```js
+```javascript
 public static string AddWikiPage(this Web web, string wikiPageLibraryName, string wikiPageName)
         {
             string wikiPageUrl = "";
@@ -313,7 +313,7 @@ public static string AddWikiPage(this Web web, string wikiPageLibraryName, strin
 
 The **AddWebPartToWikiPage** method inserts the newly defined web part inside a new `<div>` tag on the wiki page. It then uses JSOM and the cross-domain library to retrieve the information that populates the list of SharePoint lists on the host web.
 
-```js
+```javascript
 function printAllListNamesFromHostWeb() {
         var context;
         var factory;
@@ -345,7 +345,7 @@ The sample's start page prompts you to add one of three strings (XX, YY, or ZZ) 
 
 The add-in has already deployed three images and a SharePoint list that contains titles and URLs for each image, along with an additional field that ties each image to one of the three strings. After you choose the **Inject customization** button, the add-in embeds the personalize.js file into the user custom actions collection.
 
-```js
+```javascript
 public void AddPersonalizeJsLink(ClientContext ctx, Web web)
         {
             string scenarioUrl = String.Format("{0}://{1}:{2}/Scripts", this.Request.Url.Scheme,
@@ -394,7 +394,7 @@ public void AddPersonalizeJsLink(ClientContext ctx, Web web)
 
 Because SharePoint team sites by default use the [Minimal Download Strategy (MDS)](../general-development/minimal-download-strategy-overview.md), the code in the personalize.js file first attempts to register itself with MDS. This way, when you load the page that contains the JavaScript, the MDS engine starts the main function (**RemoteManager_Inject**). If MDS is disabled, this function starts right away.
 
-```js
+```javascript
 // Register script for MDS, if possible.
 RegisterModuleInit("personalize.js", RemoteManager_Inject); //MDS registration
 RemoteManager_Inject(); //non-MDS run
@@ -424,7 +424,7 @@ function RemoteManager_Inject() {
 
 The **personalizeIt()** function checks HTML5 local storage before it looks up user profile information. If it goes to user profile information, it stores the information that it retrieves in HTML5 local storage.
 
-```js
+```javascript
 function personalizeIt() {
     clientContext = SP.ClientContext.get_current();
 
@@ -483,7 +483,7 @@ function personalizeIt() {
 
 The personalize.js file also contains code that checks to determine whether the local storage key has expired. This isn't built into HTML5 local storage.
 
-```js
+```javascript
 // Check to see if the key has expired
 function isKeyExpired(TimeStampKey) {
 
@@ -525,7 +525,7 @@ When you start the sample, the start page prompts you to provision all the sampl
 
 When you choose **Provision Samples**, the add-in deploys an image as well as all the SharePoint lists, list views, list items, forms, and JavaScript files that are used in each sample. The add-in creates a folder named JSLink-Samples in the Style Library, and then uploads the JavaScript files into that folder. The **UploadFileToFolder** method does the work of uploading and checking in each JavaScript file.
 
-```js
+```javascript
 public static void UploadFileToFolder(Web web, string filePath, Folder folder)
         {
             using (FileStream fs = new FileStream(filePath, FileMode.Open))
@@ -555,7 +555,7 @@ Sample 1 shows how to apply formatting to a list column based on the field value
 
 The following JavaScript overrides the default field display and creates a new display template for the **Priority** list field. The technique in the anonymous function that loads the contextual information about the field whose display you want to override is used in all the samples.
 
-```js
+```javascript
 (function () {
 
     // Create object that has the context information about the field that you want to render differently.
@@ -599,7 +599,7 @@ Sample 2 shows you how to truncate long text stored in the **Body** field of an 
 
 The following JavaScript shortens the **Body** field text and causes the full text to appear as a popup via the **title** attribute on the **span** tag.
 
-```js
+```javascript
 function bodyFiledTemplate(ctx) {
 
     var bodyValue = ctx.CurrentItem[ctx.CurrentFieldSchema.Name];
@@ -631,7 +631,7 @@ Sample 3 shows you how to display an image next to a document name inside a docu
 
 The following JavaScript checks the **Confidential** field value and then customizes the **Name** field display based on the value of another field. The sample uses the image that is uploaded when you choose **Provision Samples**. 
 
-```js
+```javascript
 function linkFilenameFiledTemplate(ctx) {
 
     var confidential = ctx.CurrentItem["Confidential"];
@@ -662,7 +662,7 @@ Sample 4 shows you how to display a bar chart in the **% Complete** field of a t
 
 The following code creates the bar chart display and associates it with the view and display forms (**percentCompleteViewFiledTemplate**) and then with the new and edit forms (**percentCompleteEditFiledTemplate**).
 
-```js
+```javascript
 // This function provides the rendering logic for View and Display forms.
 function percentCompleteViewFiledTemplate(ctx) {
 
@@ -701,7 +701,7 @@ Sample 5 shows you how to change the rendering template for a list view. This vi
 
 The following code sets up the template and registers it with the list template. It sets up the overall layout, and then uses the **OnPostRender** event handler to register the JavaScript function that executes when the list is rendered. This function associates the event with the CSS and event handling that implements the accordion functionality.
 
-```js
+```javascript
 (function () {
 
     // jQuery library is required in this sample.
@@ -756,7 +756,7 @@ Sample 6 shows you how to use regular expressions to validate field values suppl
 
 The following code sets up the template with a placeholder for displaying the error message and registers the callback functions that fire whenever the user tries to submit the forms. The first callback returns the value of the **Email** column, and the second callback uses regular expressions to validate the string value.
 
-```js
+```javascript
 function emailFiledTemplate(ctx) {
 
     var formCtx = SPClientTemplates.Utility.GetFormContextForCurrentField(ctx);
@@ -814,7 +814,7 @@ Sample seven shows you how to make list item edit form fields read-only. The rea
 
 The following code example modifies the **Title**, **AssignedTo**, and **Priority** fields in the list item edit form so that they show the field values only with no editing controls. The code shows how to handle the parsing requirements for different field types.
 
-```js
+```javascript
 function readonlyFieldTemplate(ctx) {
 
     // Reuse SharePoint JavaScript libraries.
@@ -922,7 +922,7 @@ This sample deploys as the edit and new form for a list called **CSR-Hide-Contro
 
 The following code finds the **Predecessors** field in the HTML of the form and hides it. The field remains present in the HTML, but the user can't see it in the browser.
 
-```js
+```javascript
 (function () {
 
     // jQuery library is required in this sample.
@@ -968,7 +968,7 @@ An add-in script part is like a web part in that you can add it to a SharePoint 
 
 The start page includes a **Run Scenario** button that deploys the add-in script part to the Web Part Gallery. The following code example constructs a **FileCreationInformationObject** instance that contains the contents of the .webpart file and then uploads the new file into the Web Part Gallery. Note that you can also run this code automatically when the add-in part installs or as part of the site collection provisioning process.
 
-```js
+```javascript
 var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
 using (var clientContext = spContext.CreateUserClientContextForSPHost())
 {
@@ -1014,7 +1014,7 @@ After you finish this step, you can locate the **User profile information** add-
 
 When you view the add-in script part in edit mode, you'll see that it embeds the JavaScript file that is running remotely. The userprofileinformation.js script uses the JSON to get user profile information from the host site. 
 
-```js
+```javascript
 function sharePointReady() {
   clientContext = SP.ClientContext.get_current();
 
@@ -1080,7 +1080,7 @@ The sample displays this user's information on the page. It also adds a page, al
 
 The sample adds a new page layout by uploading a file to the Master Page Gallery and assigning it the page layout content type. The following code takes the path to a *.aspx file (which you can deploy as a resource in your Visual Studio project) and adds it as a page layout in the Master Page Gallery.
 
-```js
+```javascript
 // Get the path to the file that you are about to deploy.
             List masterPageGallery = web.GetCatalog((int)ListTemplateType.MasterPageCatalog);
             Folder rootFolder = masterPageGallery.RootFolder;
@@ -1139,7 +1139,7 @@ Scenario 2 shows you how to deploy and set master pages and themes for the host 
 
 The sample adds a new master page by uploading a *.master file to the Master Page Gallery and assigning it the master page content type. The following code takes the path to a *.master file (which you can deploy as a resource in your Visual Studio project) and adds it as a master page in the Master Page Gallery.
 
-```js
+```javascript
 string fileName = Path.GetFileName(sourceFilePath);
 
             // Get the path to the file that you are about to deploy.
@@ -1191,7 +1191,7 @@ string fileName = Path.GetFileName(sourceFilePath);
 
 The next step is to set the URL of the new master page as the value for both the **MasterUrl** and **CustomMasterUrl** properties of the **Web** object that represents the site. The sample handles this with a single method that fetches the URL of the new master page in the Master Page Gallery and then assigns that value to the **Web.MasterUrl** and **Web.CustomMasterUrl** properties.
 
-```js
+```javascript
 // Assign master page to the host web.
                 clientContext.Web.SetMasterPagesForSiteByName("contoso.master", "contoso.master");
 
@@ -1201,7 +1201,7 @@ The next step is to set the URL of the new master page as the value for both the
 
 When you choose **Deploy theme and use it**, the sample deploys and applies a custom theme to the host site. The sample sets the color palette, background image, and font scheme of the theme by adding a new theme with those values (which you can deploy as resources inside your Visual Studio project) to the Theme Gallery. The following code creates the new theme.
 
-```js
+```javascript
 List themesOverviewList = web.GetCatalog((int)ListTemplateType.DesignCatalog);
            web.Context.Load(themesOverviewList);
            web.Context.ExecuteQuery(); 
@@ -1230,7 +1230,7 @@ List themesOverviewList = web.GetCatalog((int)ListTemplateType.DesignCatalog);
 
 The next step is to set this new theme as the theme for the site. The following code does this by fetching the theme from the Theme Gallery and then applying its values to the host site.
 
-```js
+```javascript
  CamlQuery query = new CamlQuery();
                 // Find the theme by themeName.
                 string camlString = string.Format(CAML_QUERY_FIND_BY_FILENAME, themeName);
@@ -1279,7 +1279,7 @@ Scenario 3 shows you how to limit the options that users have when they apply te
 
 The sample sets both the default and available page layouts by passing the associated *.aspx files to methods to extension methods, as shown in the code.
 
-```js
+```javascript
                 List<string> pageLayouts = new List<string>();
                 pageLayouts.Add("ContosoLinksBelow.aspx");
                 pageLayouts.Add("ContosoLinksRight.aspx");
@@ -1294,7 +1294,7 @@ The sample sets both the default and available page layouts by passing the assoc
 
 The sample sets the available site templates by doing something similar. In this case, it passes the **WebTemplateEntity** instances that define each site template to an extension method called **SetAvailableWebTemplates**.
 
-```js
+```javascript
 List<WebTemplateEntity> templates = new List<WebTemplateEntity>();
                 templates.Add(new WebTemplateEntity() { LanguageCode = "1035", TemplateName = "STS#0" });
                 templates.Add(new WebTemplateEntity() { LanguageCode = "", TemplateName = "STS#0" });
@@ -1309,7 +1309,7 @@ All three of these extension methods&mdash;**SetAvailablePageLayouts**, **SetDef
 
 Of the three methods, **SetAvailableWebTemplates** shows the full pattern.
 
-```js
+```javascript
 public static void SetAvailableWebTemplates(this Web web, List<WebTemplateEntity> availableTemplates)
         {
             string propertyValue = string.Empty;

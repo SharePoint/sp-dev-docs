@@ -248,7 +248,7 @@ Depending on your preference, you might want to use JavaScript instead of HTML t
 
 Use the following JavaScript code to instantiate the People Picker.
 
-```js
+```javascript
 new Office.Controls.PeoplePicker(
     document.getElementById("PeoplePickerDiv"), {});
 ```
@@ -276,7 +276,7 @@ You can specify options for the widget by using the **data-office-options** attr
 
 The following code shows how to specify options when you declare the PeoplePicker widget using JavaScript.
 
-```js
+```javascript
 new Office.Controls.PeoplePicker(
     document.getElementById("PeoplePickerDiv"), {
         allowMultipleSelections: true,

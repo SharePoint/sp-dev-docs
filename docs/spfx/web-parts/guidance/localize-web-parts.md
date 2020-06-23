@@ -173,7 +173,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 1. Update the US English locale file by opening the **./src/webparts/greeting/loc/en-us.js** file and changing its code to:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Greeting web part configuration",
@@ -285,7 +285,7 @@ You can override this behavior by creating a locale file named **default.js** wi
 
 1. In the **./src/webparts/greetings/loc** folder, create a new file named **nl-nl.js**, and enter the following code:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Instellingen van het begroeting webonderdeel",
@@ -393,7 +393,7 @@ The last step is to provide localized versions for the new string in all locales
 
 1. In the code editor, open the **./src/webparts/greeting/loc/en-us.js** file, and change its code to:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Greeting web part configuration",
@@ -406,7 +406,7 @@ The last step is to provide localized versions for the new string in all locales
 
 1. Open the **./src/webparts/greeting/loc/nl-nl.js** file, and change its code to:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Instellingen van het begroeting webonderdeel",
@@ -442,7 +442,7 @@ Finding out about all these issues late in the project will likely lead to delay
 
 1. In the **./src/webparts/greeting/loc** folder, add a new file named **qps-ploc.js**, and paste the following code:
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "[!!! Gřèèƭïñϱ ωèβ ƥářƭ çôñƒïϱúřáƭïôñ ℓôřè₥ ïƥƨú !!!]",
@@ -761,7 +761,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
     **./src/webparts/greeting/loc/en-us.js**
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Greeting web part configuration",
@@ -773,7 +773,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
     **./src/webparts/greeting/loc/nl-nl.js**
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Instellingen van het begroeting webonderdeel",
@@ -785,7 +785,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
     **./src/webparts/greeting/loc/qps-ploc.js**
 
-    ```js
+    ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "[!!! Gřèèƭïñϱ ωèβ ƥářƭ çôñƒïϱúřáƭïôñ ℓôřè₥ ïƥƨú !!!]",

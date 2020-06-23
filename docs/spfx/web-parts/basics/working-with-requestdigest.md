@@ -11,7 +11,7 @@ When executing non-GET REST requests to the SharePoint API, you must add a valid
 
 In classic pages, SharePoint includes a request digest token on the page in a hidden field named **__REQUESTDIGEST**. One of the most common approaches to work with the request digest is to obtain it from that field and add it to the request, for example:
 
-```js
+```javascript
 var digest = $('#__REQUESTDIGEST').val();
 $.ajax({
     url: '/_api/web/...'

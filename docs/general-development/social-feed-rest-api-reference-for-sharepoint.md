@@ -3048,7 +3048,7 @@ The following response example represents the unlocked thread. The **Attributes*
 > [!NOTE]
 > The values of thread and post **Id** properties are too long to send in a URL, so you have to send them in the request body. As a result, even read-only operations that are logically **GET** requests must be sent as **POST** requests. For example, to get a thread, you have to send a **POST** request and pass the thread **Id** as an entity in the request body.
 
-```js
+```javascript
 var endpoint = siteUrl + '/_api/social.feed/post';
 var postId = '1.655c70c348374d48839daabc24a360f0.82baa3bdfa2f481a8185802eb9c6c6cd.5d227a6fa3894f0c9dde26876b71d619.0c37852b34d0418e91c62ac25af4be5b.4316bdaa94bf4984be5dfea1ba96954e.26.26.S-1-5-21-2127521184-1604012920-1887927527-66602';
 
@@ -3083,7 +3083,7 @@ $.ajax({
 
 
 
-```js
+```javascript
 var endpoint = <site url> + '/_api/social.feed/my/feed/post';
 var postContent = 'Posted with REST.';
 
