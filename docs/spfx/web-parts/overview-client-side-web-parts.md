@@ -1,21 +1,28 @@
 ---
 title: Overview of SharePoint client-side web parts
-description: Controls that appear inside a SharePoint page but run locally in the browser; the building blocks of pages that appear on a SharePoint site. 
-ms.date: 01/08/2018
+description: Controls that appear inside a SharePoint page and run client-side browser; the building blocks of pages that appear on a SharePoint site.
+ms.date: 06/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-
 # Overview of SharePoint client-side web parts
 
-SharePoint client-side web parts are controls that appear inside a SharePoint page but run locally in the browser. They're the building blocks of pages that appear on a SharePoint site. 
+SharePoint client-side web parts are controls that appear inside a SharePoint page and execute client-side in the browser. They're the building blocks of pages that appear on a SharePoint site.
 
-You can build client-side web parts using modern script development tools and the SharePoint workbench (a development test surface), and you can deploy your client-side web parts to modern pages and classic web part pages in Office 365 tenants.  
+You can build client-side web parts using modern client-side development tools and the SharePoint workbench (*a development test surface*). You can deploy your client-side web parts to both modern pages and classic web part pages in Microsoft 365 tenants.
 
-In addition to plain JavaScript projects, you can build web parts alongside common scripting frameworks, such as AngularJS and React. For example, you can use React along with components from Office UI Fabric React to quickly create experiences based on the same components used in Office 365.
+In addition to plain JavaScript projects, you can build web parts with popular web frameworks such as React, Angular, Vue.js, and others. For example, you can use React along with components from [Office UI Fabric React](https://developer.microsoft.com/fluentui#/) to quickly create experiences based on the same components used in Microsoft 365.
 
-For more information, see the Getting Started, Basics, and Concepts sections (in the TOC).
+## Use client-side web parts beyond SharePoint
+
+Client-side web parts are the basic building block to implement other types of customizations in SharePoint, Microsoft Teams, and Microsoft Office clients! For example:
+
+- Client-side web parts can be used to deploy single page apps (SPAs) in SharePoint Online. For more information about using web parts as SPAs, see [Using single part app pages in SharePoint Online](single-part-app-pages.md).
+- Client-side web parts can be used to implement tabs in Microsoft Teams. For more information about using web parts in Microsoft Teams, see [Building Microsoft Teams Tabs using SharePoint Framework](../integrate-with-teams-introduction.md).
+- Client-side web parts can be used to implement Office add-ins in clients such as Outlook. For more information about using web parts in Office clients, see [Creating Outlook add-ins using SharePoint Framework](../office-addins-create.md).
+
+Try [building your first client-side web part today using the SharePoint Framework](get-started/build-a-hello-world-web-part.md))!
 
 ## See also
 

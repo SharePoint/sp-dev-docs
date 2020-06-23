@@ -304,7 +304,7 @@ Suggestion:
 
     **Sample source code**
 
-    ```shell
+    ```console
     $site = get-spsite https://test.sharepoint.com  # get site
     $web = get-spweb https://test.sharepoint.com  # get web
     $list = $web.GetList("Shared Documents") # get the document library under this web

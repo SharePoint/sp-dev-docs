@@ -266,7 +266,7 @@ The last step is to include the code that initiates the FullCalendar jQuery plug
 
 1.  In the **./src/webparts/tasksCalendar** folder, create a new file named **script.js**, and paste in the following code:
 
-  ```js
+  ```javascript
   var moment = require('moment');
 
   var PATH_TO_DISPFORM = window.webAbsoluteUrl + "/Lists/Tasks/DispForm.aspx";
@@ -464,7 +464,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 4. Open the **./src/webparts/tasksCalendar/loc/en-us.js** file, and change its contents to:
 
-  ```js
+  ```javascript
   define([], function() {
     return {
       "PropertyPaneDescription": "Tasks calendar settings",
@@ -881,7 +881,7 @@ Now that you have type definitions for all libraries installed in the project, y
   
   Compare plain JavaScript:
 
-  ```js
+  ```javascript
   var restQuery = "/_api/Web/Lists/GetByTitle('" + TASK_LIST + "')/items?$select=ID,Title,\
   Status,StartDate,DueDate,AssignedTo/Title&$expand=AssignedTo&\
   $filter=((DueDate ge '" + startDate + "' and DueDate le '" + endDate + "')or(StartDate ge '" + startDate + "' and StartDate le '" + endDate + "'))";

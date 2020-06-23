@@ -49,7 +49,7 @@ npm install webpack-bundle-analyzer --save-dev
 
 Next, change the contents of the **gulpfile.js** file in your project to:
 
-```js
+```javascript
 'use strict';
 
 const gulp = require('gulp');

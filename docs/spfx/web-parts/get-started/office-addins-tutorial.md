@@ -30,19 +30,19 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
 
 1. Create a new project directory in your favorite location:
 
-   ```shell
+   ```console
     md outlook-add-in
    ```
 
 1. Go to the project directory:
 
-    ```shell
+    ```console
     cd outlook-add-in
     ```
 
 1. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
 
-    ```shell
+    ```console
     yo @microsoft/sharepoint --plusbeta
     ```
 
@@ -67,7 +67,7 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
 
 1. Next, enter the following to open the web part project in Visual Studio Code:
 
-    ```shell
+    ```console
     code .
     ```
 
@@ -85,7 +85,7 @@ Manifest file contains by default definition to expose your add-in as a tool pan
 
 In the console, enter the following to install the types for the Office JavaScript SDK from the npm:
 
-```shell
+```console
 npm install @types/office-js --save-dev
 ```
 
@@ -147,13 +147,13 @@ Ensure that your console is activated in the root folder of the solution, which 
 
 1. Execute the following commands to build bundle your solution. This executes a release build of your project by using a dynamic label as the host URL for your assets.
 
-    ```shell
+    ```console
     gulp bundle --ship
     ```
 
 1. Execute the following task to package your solution. This creates an updated **outlook-add-in.sppkg** package on the **sharepoint/solution** folder.
 
-    ```shell
+    ```console
     gulp package-solution --ship
     ```
 

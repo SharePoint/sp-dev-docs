@@ -36,7 +36,7 @@ The following examples represent the contents of the App.js file in a SharePoint
 
 ### Example 1: Cross-domain library requests
 
-```js
+```javascript
 'use strict';
 
 // Change placeholder values before you run this code.
@@ -164,7 +164,7 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 
 ### Example 2: jQuery AJAX requests
 
-```js
+```javascript
 // Change placeholder values before you run this code.
 var siteUrl = 'http://server/site';
 var listTitle = 'List 1';

@@ -1,7 +1,7 @@
 ---
 title: Provisioning "modern" team sites programmatically
 description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
-ms.date: 6/14/2020
+ms.date: 6/20/2020
 localization_priority: Priority
 ---
 
@@ -51,7 +51,7 @@ The URI of the "modern" team site is determined by the **mailNickname** paramete
 
 The following would create a Microsoft 365 group and an associated "modern" team site with a URL of ```https://[tenant].sharepoint.com/sites/mymodernteamsite```
 
-```
+```http
 POST https://graph.microsoft.com/v1.0/groups
 Content-type: application/json
 Content-length: 200
@@ -140,7 +140,7 @@ Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/) can be
 
 The following bash script will create a "modern" team site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL of the created site, you can use it to automate other operations on the created site.
 
-```bash
+```console
 #!/usr/bin/env bash
 # Connect to SharePoint Online
 # This command will prompt a sign-in confirmation message to authenticate
@@ -161,7 +161,7 @@ o365 spo propertybag list -u $siteUrl
 
 "Modern" team sites can be created programmatically by creating an [Microsoft 365 group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create a Microsoft 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Microsoft 365 group and has the following default structure. 
 
-```
+```http
 https://[tenant].sharepoint.com/sites/[mailNickname]
 ``` 
 
@@ -219,7 +219,7 @@ Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 New-PnPSite -Type Team -Title "Awesome Group" -Description "Awesome Group" -Alias "awesome-group"
 ```
 
-#### Provision a modern teamsite using SharePoint Online Management Shell or PnP PowerShell
+#### Provision a modern team site using SharePoint Online Management Shell or PnP PowerShell
 
 It is also possible to create a modern site which is not connected to a Group using PowerShell. Either by using the PnP PowerShell cmdlets or the SharePoint Online Management Shell. 
 
@@ -240,7 +240,7 @@ New-PnPTenantSite -Url $_url -Description $_title -Title $_title -Template STS#3
 Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create a Microsoft 365 group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
 The example below shows how it can be done using the [Office 365 CLI immersive mode](https://pnp.github.io/office365-cli/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
 
-```bash
+```console
 # Use the Office 365 CLI immersive mode by typing o365 in the terminal
 # Connect to Microsoft Graph using the Office 365 CLI
 # This command will prompt a sign-in confirmation message to authenticate
@@ -330,7 +330,7 @@ $web.Title
 
 Alternatively, the [Office 365 CLI](https://pnp.github.io/office365-cli/cmd/spo/site/site-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create "modern" Communication site. The following bash script will create the site and then return the actual SharePoint site URL for further manipulation. Once you have access to the URL you can use it to automate other operations on the created site.
 
-```bash
+```console
 #!/usr/bin/env bash
 # Connect to SharePoint Online
 # This command will prompt a sign-in confirmation message to authenticate

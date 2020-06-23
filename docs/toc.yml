@@ -145,7 +145,7 @@
         href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
     - name: Web part properties & property pane
       items:
-      - name: Integrate web part properties with SharePoint
+      - name: Overview
         href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
       - name: Configure custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
@@ -428,16 +428,16 @@
     items:
     - name: Set up your SharePoint site
       href: business-apps/get-started/set-up-sharepoint-site-lists-libraries.md
+    - name: Create your first flow
+      href: business-apps/power-automate/get-started/create-your-first-flow.md
+    - name: Connect your flow to other services
+      href: business-apps/power-automate/get-started/connect-to-other-services-in-your-flow.md
+    - name: Customize a form for a list
+      href: business-apps/power-apps/get-started/create-your-first-custom-form.md
   - name: Power Automate
     items:
     - name: Overview
       href: business-apps/power-automate/sharepoint-connector-actions-triggers.md
-    - name: Get started
-      items:
-      - name: Create your first flow
-        href: business-apps/power-automate/get-started/create-your-first-flow.md
-      - name: Connect your flow to other services
-        href: business-apps/power-automate/get-started/connect-to-other-services-in-your-flow.md
     - name: Concepts & scenarios
       items:
       - name: Working with Get items and Get actions

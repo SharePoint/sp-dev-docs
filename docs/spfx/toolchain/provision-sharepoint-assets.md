@@ -274,7 +274,7 @@ The configurations defined in the `package-solution.json` is what maps the XML f
 
 After you have defined your feature in the `package-solution.json` and created the respective feature XML files, you can use the following gulp task to package the SharePoint items along with your `.sppkg` package.
 
-```js
+```javascript
 gulp package-solution
 ```
 

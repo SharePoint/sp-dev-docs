@@ -25,7 +25,7 @@ The app.js file, which is located in the Scripts folder of the web project, defi
 
 The following function sets the cookie and its expiration date.
 
-```js
+```javascript
 function setCookie(key, value, expiry, path, domain, secure) {
     var todaysDate = new Date();
     todaysDate.setTime(todaysDate.getTime());
@@ -58,7 +58,7 @@ The start page of the HTML5 local storage sample displays information from the *
 
 The app.js file, which is located in the Scripts folder of the web project, defines the behavior of the **Save for later** button. The add-in first verifies that local storage is enabled by using the following function.
 
-```js
+```javascript
 isHtml5StorageSupported = function () {
     try {
         return 'localStorage' in window &amp;&amp; window['localStorage'] !== null;
@@ -74,7 +74,7 @@ isHtml5StorageSupported = function () {
 
 If local storage is supported, the function determines whether the user profile information is already stored there. If it isn't, it uses JSOM to look up the **About Me** information, to store it locally, and then to display the information in the browser. The following code stores the **About Me** information in a key named `aboutMeValue`.
 
-```js
+```javascript
 var aboutMeValue = personProperties.get_userProfileProperties()['AboutMe'];
     $('#aboutMeText').val(aboutMeValue);
 
@@ -91,7 +91,7 @@ var aboutMeValue = personProperties.get_userProfileProperties()['AboutMe'];
 
 The **Clear the cache** button removes that key, looks up the **About Me** information in your user profile, and creates a fresh local storage key to store that information. The add-in doesn't set an expiration time by default, but the app.js file does contain the following function, which sets an expiration time for the cached data.
 
-```js
+```javascript
 function setLocalStorageKeyExpiry(key) {
 
     // Check for expiration config values.

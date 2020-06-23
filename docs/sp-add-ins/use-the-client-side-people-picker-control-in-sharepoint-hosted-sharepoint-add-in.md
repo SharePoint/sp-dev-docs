@@ -124,7 +124,7 @@ The first example shows the page markup for the **PlaceHolderMain asp:Content** 
 
 The following example shows the **script from the App.js file**. This script initializes and renders the picker, queries it for user information, and then gets the user ID by using the JavaScript object model.
 
-```js
+```javascript
 
 // Run your custom code when the DOM is ready.
 $(document).ready(function () {

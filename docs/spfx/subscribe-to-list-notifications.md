@@ -24,7 +24,7 @@ To subscribe to changes to files stored in a SharePoint Document Library, create
 
 Following, is an example of a list subscription for a Document Library located in the current site:
 
-```ts
+```typescript
 import { ListSubscriptionFactory, IListSubscription } from '@microsoft/sp-list-subscription';
 import { Guid } from '@microsoft/sp-core-library';
 
@@ -60,7 +60,7 @@ Depending on your solution, you might need to provide additional configuration w
 
 If you use SharePoint in a multi-geography tenancy, you need to provide the domain where the particular site collection lives in. You can do it, using the `domain` property, for example:
 
-```ts
+```typescript
 this._listSubscriptionFactory.createSubscription({
   domain: this.properties.siteDomain,
   siteId: Guid.parse(this.properties.siteId),
@@ -78,7 +78,7 @@ In some cases, you might want to get notified when the component that you're bui
 
 The list subscription API, exposes two additional callbacks which you can implement to respond to the subscription status. The following code illustrates the case, where the component will be notified when the subscription has been established and when it was disconnected.
 
-```ts
+```typescript
 private createListSubscription(): void {
   this._listSubscriptionFactory.createSubscription({
     domain: this.properties.siteDomain,

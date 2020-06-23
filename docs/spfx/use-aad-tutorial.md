@@ -34,7 +34,7 @@ If you're already familiar with how to create SharePoint Framework solutions, yo
 
 If you have an old version of the SharePoint Framework generator, you need to update it to version 1.4.1 or later. To do that, run the following command to globally install the latest version of the package.
 
-```shell
+```console
 npm install -g @microsoft/generator-sharepoint
 ```
 
@@ -44,7 +44,7 @@ Next, create a new SharePoint Framework solution:
 
 1. Run the Yeoman generator to scaffold a new solution.
 
-   ```shell
+   ```console
    yo @microsoft/sharepoint
    ```
 
@@ -58,7 +58,7 @@ Next, create a new SharePoint Framework solution:
 
 1. Start Visual Studio Code (or your favorite code editor) within the context of the current folder.
 
-   ```shell
+   ```console
    code .
    ```
 
@@ -591,13 +591,13 @@ You're now ready to build, bundle, package, and deploy the solution.
 
 1. Run the gulp commands to verify that the solution builds correctly.
 
-    ```shell
+    ```console
     gulp build
     ```
 
 1. Use the following command to bundle and package the solution.
 
-    ```shell
+    ```console
     gulp bundle
     gulp package-solution
     ```
@@ -632,7 +632,7 @@ You're now ready to build, bundle, package, and deploy the solution.
 
 1. Run your solution by using the following gulp command.
 
-    ```shell
+    ```console
     gulp serve --nobrowser
     ```
 

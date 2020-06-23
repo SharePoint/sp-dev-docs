@@ -311,7 +311,7 @@ executor.executeAsync(
 
 The following code example shows how to change the context site using JSOM:
 
-```js
+```javascript
 context = new SP.ClientContext(appweburl);
 factory = new SP.ProxyWebRequestExecutorFactory(appweburl);
 context.set_webRequestExecutorFactory(factory);

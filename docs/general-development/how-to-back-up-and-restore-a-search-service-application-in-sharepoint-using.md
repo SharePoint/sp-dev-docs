@@ -144,7 +144,7 @@ The following procedures are intended to help developers with creating a backup/
 1. Perform backups of the SSA databases and the index by following these steps:
 1. On the server with the SSA databases, execute the following command at a command line, where  _destination backup folder_ is the full path of the folder for the backup files, _backup log file_ is the full path and name of the backup log file, and _SSA manifest file_ is the path and file name of the SSA manifest file.
 
-    ```shell
+    ```console
     betest.exe /v /b /d "destination backup folder" /s "backup log file" /x "SSA manifest file"
     ```
 
@@ -157,7 +157,7 @@ The following procedures are intended to help developers with creating a backup/
 1. Verify that the file is created.
 1. On each server that has an index component, execute the following at a command line, where  _destination backup folder_ is the full path of the folder for the backup files, _backup log file_ is the full path and name of the backup log file, and _index manifest file_ is the path and file name of the index manifest.
 
-    ```shell
+    ```console
     betest.exe /v /b /d "destination backup folder" /s "backup log file" /x "index manifest file"
     ```
 
@@ -177,7 +177,7 @@ The following procedures are intended to help developers with creating a backup/
 
 1. On the same server, execute the following at a command line to restore the SSA databases, where  _destination backup folder_ is the full path of the folder for the backup files, _backup log file_ is the full path and name of the backup log file, and _SSA manifest file_ is the path and file name of the SSA manifest file.
 
-    ```shell
+    ```console
     betest.exe /v /r /d "destination backup folder" /s "backup log file" /x SSA_manifest_file
     ```
 
@@ -209,7 +209,7 @@ The following procedures are intended to help developers with creating a backup/
 
 1. On the same servers, execute the following at a command line, where  _index manifest file_ is the path and file name of the index manifest that you created in the backup procedure.
 
-    ```shell
+    ```console
     betest.exe /v /r /d "destination backup folder" /s "backup log file" /x "index manifest file"
     ```
 

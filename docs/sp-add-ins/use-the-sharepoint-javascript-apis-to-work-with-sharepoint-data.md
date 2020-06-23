@@ -49,7 +49,7 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
 1. Open **Add-in.js** and delete its content, if there's any.
 1. Add the following lines to the file.
 
-    ```js
+    ```javascript
     'use strict';
     
       var clientContext = SP.ClientContext.get_current();
@@ -71,7 +71,7 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
 
    Begin by creating a method to get the list items from the server. Add the following code to the file.
 
-    ```js
+    ```javascript
     function purgeCompletedItems() {
 
       var camlQuery = new SP.CamlQuery();
@@ -85,19 +85,19 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
 
 1. When these lines are sent to the server and executed there, they create a collection of list items, but the script must bring that collection down to the client. This is done with a call to the `SP.ClientContext.load` function, so add the following line to the end of the method.
 
-    ```js
+    ```javascript
     clientContext.load(completedItems);
     ```
 
 1. Add a call of `executeQueryAsync`. This method has two parameters, both of which are callback functions. The first runs if the server successfully executes all the commands in the batch. The second runs if the server fails for any reason. You create these two functions in later steps. Add the following line to the end of the method.
 
-    ```js
+    ```javascript
     clientContext.executeQueryAsync(deleteCompletedItems, onGetCompletedItemsFail);
     ```
 
 1. Finally, add the following line to the end of the method.
 
-    ```js
+    ```javascript
     return false;
     ```
 
@@ -114,7 +114,7 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
 
    The error message isn't literally true, because the item isn't deleted from anything until the `deleteObject` calls are bundled and sent to the server, but the JSOM is designed to mimic the exception throws that would occur on the server (where code shouldn't change a collection size while the collection is being enumerated). However, arrays have a fixed size, so calling `deleteObject` on an item in an array deletes the item from the list, but does not change the size of the array.
 
-    ```js
+    ```javascript
     function deleteCompletedItems() {
 
       var itemArray = new Array();
@@ -138,7 +138,7 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
 
    The line `location.reload(true);` causes the page to reload from the server. This is a convenience because the list view web part on the page still shows the completed items until the page is refreshed. The Add-in.js file is reloaded too, but that doesn't cause a problem because it won't do so in a way that interrupts an ongoing JavaScript function.
 
-    ```js
+    ```javascript
     function onDeleteCompletedItemsSuccess() {
       alert('Completed orientations have been deleted.');
       location.reload(true);
@@ -147,7 +147,7 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
 
 1. Add the following two callback-on-failure functions to the file.
 
-    ```js
+    ```javascript
     // Failure callbacks
 
     function onGetCompletedItemsFail(sender, args) {

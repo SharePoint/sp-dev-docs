@@ -94,7 +94,7 @@ Get-PnPStorageEntity
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo storageentity list
 ```
 
@@ -144,7 +144,7 @@ Get-PnPStorageEntity -Key <key>
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo storageentity get --key <key>
 ```
 
@@ -178,7 +178,7 @@ Set-PnPStorageEntity -Key <key> -Value <value>
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo storageentity set --key <key> --value <value>
 ```
 
@@ -212,7 +212,7 @@ Remove-PnPStorageEntity -Key <key>
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo storageentity remove --key <key>
 ```
 

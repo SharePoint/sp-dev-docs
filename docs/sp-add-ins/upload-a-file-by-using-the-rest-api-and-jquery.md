@@ -57,7 +57,7 @@ The following code example uses the SharePoint REST API and jQuery AJAX requests
 > [!NOTE]
 > You need to meet the requirements listed in the section [Running the code examples](#running-the-code-examples) to use this example.
 
-```js
+```javascript
 'use strict';
 
 var appWebUrl, hostWebUrl;
@@ -222,7 +222,7 @@ The following code example uses the SharePoint REST API and jQuery AJAX requests
 > [!NOTE]
 > You need to meet the requirements listed in the section [Running the code examples](#running-the-code-examples) to use this example.
 
-```js
+```javascript
 'use strict';
 
 jQuery(document).ready(function () {

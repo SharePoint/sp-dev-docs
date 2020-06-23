@@ -1,30 +1,26 @@
 ---
-title: Set up your Office 365 tenant
-description: Build and deploy client-side web parts using the SharePoint Framework by setting up an Office 365 tenant.
-ms.date: 02/08/2020
+title: Set up your Microsoft 365 tenant
+description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
+ms.date: 06/12/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
 ---
 
-# Set up your Office 365 tenant
+# Set up your Microsoft 365 tenant
 
-To build and deploy client-side web parts using the SharePoint Framework, you need an Office 365 tenant.
+To build and deploy client-side web parts using the SharePoint Framework, you need a Microsoft 365 tenant.
 
-If you already have an Office 365 tenant, see the section [Create app catalog site](#create-app-catalog-site).
+If you already have a Microsoft 365 tenant, see the section [Create app catalog site](#create-app-catalog-site).
 
-If you don't have one, you can get an Office 365 developer subscription when you join the [Office 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
+If you don't have one, you can get a Microsoft 365 developer subscription when you join the [Microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Microsoft 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription.
 
 > [!NOTE]
-> Make sure that you are signed out of any existing Office 365 tenants before you sign up for the Office 365 Developer Program.
+> Make sure that you are signed out of any existing Microsoft 365 tenants before you sign up for the Microsoft 365 Developer Program.
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<br/>
-
 > [!Video https://www.youtube.com/embed/yc1IYgYp7qQ]
-
-<br/>
 
 ## Create app catalog site
 
@@ -32,10 +28,10 @@ You need an app catalog to upload and deploy web parts. If you've already set up
 
 ### To create an app catalog site
 
-1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 tenant prefix.
+1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Microsoft 365 tenant prefix.
 
     ```http
-    https://yourtenantprefix-admin.sharepoint.com
+    https://{your-tenant-prefix}-admin.sharepoint.com
     ```
 
 1. In the left sidebar, select **More features**
@@ -56,40 +52,31 @@ SharePoint creates the app catalog site, and you can see its progress in the Sha
 
 You also need a site collection and a site for your testing. You can create a new site collection by using any of the available templates.
 
-### To create a new site collection
-
-1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 tenant prefix.
+1. Navigate to **SharePoint Admin Center** by entering the following URL in your browser. Replace **{your-tenant-prefix}** with your Microsoft 365 tenant prefix:
 
     ```http
-    https://yourtenantprefix-admin.sharepoint.com
+    https://{your-tenant-prefix}-admin.sharepoint.com
     ```
 
 1. In the left sidebar, select **Sites > Active sites**.
 1. Select **Create** from the toolbar at the top of the page.
 1. On the **Create a site** page, select **Team site**.
-1. In the panel that appears, enter the following details:
-
-    - **Site name**: Enter a title for your site; for example: **Developer Site**.
-    - **Group email address**: Accept the default option or modify it.
-    - **Group owner**: Specify the name / email address of the site owner.
-    - **Select a language**: Accept the default language or modify it.
-
-
+1. In the panel that appears, enter required details to create the site (*name, owner, and language*):
 1. Select **Next** to create the site collection.
 
-SharePoint creates the site and you're able to see its progress. After the site is created, you can browse to your site collection by selecting **Finish** & entering the URL of the new site.
+After SharePoint creates the site, you can browse to your site collection by selecting **Finish** & entering the URL of the new site.
 
 > [!NOTE]
 > In this case, we are creating a new group associated team site with modern user interface experience. You could just as well create a *communication site* to be used as your test site collection supporting your development.
 
 > [!NOTE]
-> You can potentially use same tenant for developing SharePoint Framework experiences, especially for initial development experiences. We do however recommend to use isolated developer tenants for each of the developers for best isolated developer experience. 
+> You can potentially use same tenant for developing SharePoint Framework experiences, especially for initial development experiences. We do however recommend to use isolated developer tenants for each of the developers for best isolated developer experience.
 
 ## SharePoint Workbench
 
 SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Framework developer toolchain contains a version of the Workbench that works locally and helps you quickly test and validate solutions that you're building.
 
-It's also hosted in your tenant to preview and test your local web parts in development. You can access the SharePoint Workbench from any SharePoint site in your tenancy by browsing to the following URL:
+It's also hosted in your tenant to preview and test your local web parts in development. You can access the **Hosted SharePoint Workbench** from any SharePoint site in your tenancy by browsing to the following URL:
 
 ```http
 https://your-sharepoint-site/_layouts/workbench.aspx

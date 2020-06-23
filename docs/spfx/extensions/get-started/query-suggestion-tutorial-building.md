@@ -26,19 +26,19 @@ Be sure you have completed the procedures in the following articles before you b
 
 1. Create a new project directory in your favorite location:
 
-    ```shell
+    ```console
     md query-extension
     ```
 
 1. Go to the project directory:
 
-    ```shell
+    ```console
     cd query-extension
     ```
 
 1. Create a new client-side web part solution by running the Yeoman SharePoint Generator:
 
-    ```shell
+    ```console
     yo @microsoft/sharepoint --plusbeta
     ```
 
@@ -67,7 +67,7 @@ Be sure you have completed the procedures in the following articles before you b
 
 1. Next, enter the following to open the web part project in Visual Studio Code:
 
-    ```shell
+    ```console
     code .
     ```
 

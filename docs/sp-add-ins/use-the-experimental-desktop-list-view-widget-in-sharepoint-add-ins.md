@@ -293,7 +293,7 @@ Depending on your preference, you might want to use JavaScript instead of HTML t
 
 Use the following JavaScript code to instantiate the List View.
 
-```js
+```javascript
 new Office.Controls.ListView(
     document.getElementById("ListViewDiv"), {
         listUrl: Office.Samples.ListViewBasic.appWebUrl + "/_api/web/lists/getbytitle('Announcements')"
@@ -324,7 +324,7 @@ If you're using HTML markup to declare the widget, you can use the following syn
 
 If you're declaring the widget using JavaScript, use the following syntax to specify a view.
 
-```js
+```javascript
 new Office.Controls.ListView(
     document.getElementById("ListViewDiv"), {
         listUrl: "list URL",

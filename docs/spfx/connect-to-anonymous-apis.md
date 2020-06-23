@@ -17,7 +17,7 @@ When building SharePoint Framework solutions, you might want to consume public A
 
 The easiest way, to connect to anonymous APIs in your SharePoint Framework solutions, is by using the HttpClient provided as a part of the SharePoint Framework. For example, to get dummy information from the Typicode service, you would execute:
 
-```ts
+```typescript
 this.context.httpClient
   .get('https://jsonplaceholder.typicode.com/todos/1', HttpClient.configurations.v1)
   .then((res: HttpClientResponse): Promise<any> => {
@@ -30,7 +30,7 @@ this.context.httpClient
 
 Similarly to the SPHttpClient you use for connecting to SharePoint APIs, the HttpClient offers you similar capabilities for performing the most common web requests. If necessary, you can use its options, to configure requests. For example, to specify request headers, you would use the following code:
 
-```ts
+```typescript
 this.context.httpClient
   .get('https://jsonplaceholder.typicode.com/todos/1', HttpClient.configurations.v1,
     {

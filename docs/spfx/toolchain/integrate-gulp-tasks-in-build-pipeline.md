@@ -21,7 +21,7 @@ One common task you can add to the SharePoint Framework toolchain is to integrat
 ## Gulp tasks
 Normally gulp tasks are defined in the `gulpfile.js` as:
 
-```js
+```javascript
 gulp.task('somename', function() {
   // Do stuff
 });
@@ -33,7 +33,7 @@ When working with the SharePoint Framework toolchain, it is necessary to define 
 
 SharePoint Framework uses a [common build toolchain](sharepoint-framework-toolchain.md#common-build-tool-packages) that consists of a set of npm packages that share common build tasks. Hence, the default tasks are defined in the common package as opposed to your client-side project's `gulpfile.js`. To see the available tasks, you can execute the following command in a console within your project directory:
 
-```js
+```javascript
 gulp --tasks
 ```
 
@@ -53,7 +53,7 @@ Open the `gulpfile.js` in your code editor. The default code initializes the Sha
 
 To add your custom gulp task, add a new subtask to the SharePoint Framework build pipeline by using the [`build.subTask`](https://github.com/Microsoft/web-build-tools/blob/master/core-build/gulp-core-build/README.md#defining-a-custom-task) function:
 
-```js
+```javascript
 let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, buildOptions, done) {
   this.log('Hello, World!');   
   // use functions from gulp task here
@@ -65,7 +65,7 @@ let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, 
 
 In the case of a stream, you return the stream:
 
-```js
+```javascript
 let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, buildOptions, done) {
   return gulp.src('images/*.png')
              .pipe(gulp.dest('public'));
@@ -75,7 +75,7 @@ let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, 
 ### Register your task with gulp command line
 After the custom task is defined, you can register this custom task with the gulp command line by using the `build.task` function:
 
-```js
+```javascript
 // Register the task with gulp command line
 let helloWorldTask = build.task('hello-world', helloWorldSubtask);
 ```
@@ -87,7 +87,7 @@ let helloWorldTask = build.task('hello-world', helloWorldSubtask);
 
 Now you can execute your custom command in the command line as follows:
 
-```js
+```javascript
 gulp hello-world
 ```
 
@@ -126,7 +126,7 @@ You can also add this custom task to be executed before or after certain availab
 
 The SharePoint Framework tasks are available in the default build rig. The build rig is a collection of tasks defined for a specific purpose, in our case, building client-side packages. You can access this default rig by using the `build.rig` object and then get access to the pre- and post-task functions:
  
-```js
+```javascript
 // execute before the TypeScript subtask
 build.rig.addPreBuildTask(helloWorldTask);
 
@@ -145,7 +145,7 @@ You can download the completed sample at [samples/js-extend-gulp/](https://aka.m
 
 In the [image resize task's documentation](https://www.npmjs.com/package/gulp-image-resize#example), it shows how to use this custom task:
 
-```js
+```javascript
 var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
  
@@ -165,7 +165,7 @@ gulp.task('default', function () {
 
 We use this information to add this task in our project by using the `build.subTask` and `build.task` functions:
 
-```js
+```javascript
 var imageResize = require('gulp-image-resize');
 
 let imageResizeSubTask = build.subTask('image-resize-subtask', function(gulp, buildOptions, done){
@@ -187,7 +187,7 @@ Because we are defining the stream, we return the stream in the `build.subTask` 
 
 Now, you can execute this task from the gulp command line as follows:
 
-```js
+```javascript
 gulp resize-images
 ```
 

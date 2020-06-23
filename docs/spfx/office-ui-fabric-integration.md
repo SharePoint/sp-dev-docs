@@ -92,7 +92,7 @@ We recommend that you use the versions of the Office UI Fabric React package inc
 
 After the Fabric React package is installed, you can import the required components from the Fabric React bundle.
 
-```js
+```javascript
 //import Button component from Fabric React Button bundle
 import { Button } from 'office-ui-fabric-react/lib/Button';
 
@@ -178,7 +178,7 @@ The rest of the page would contain unscoped Office UI Fabric Core styles. This w
 
 *Overriding* Fabric Core styles would not be supported.  
 
-```js
+```javascript
 // Sample of how the scoping would work.
 import { SPComponentLoader } from '@microsoft/sp-loader';
 
@@ -300,7 +300,7 @@ Solutions build with *no JavaScript framework* option.
 1. Add `@uifabric/styling` package to your `package.json`
 1. Make code changes similar to below code, to get the required icon into your code:
 
-```ts
+```typescript
   import { getIconClassName } from '@uifabric/styling';
 
   return `<i class="${getIconClassName('Mail')}" />`;
@@ -311,7 +311,7 @@ Solutions build with *React* option or by using *React* in general.
 1. Add `office-ui-fabric-react` package to your `package.json`, if not already added.
 2. Make code changes similar to below code, to get the required icon into your code:
 
-```ts
+```typescript
   import { Icon } from 'office-ui-fabric-react/lib/Icon';
 
   <Icon iconName='Mail' />

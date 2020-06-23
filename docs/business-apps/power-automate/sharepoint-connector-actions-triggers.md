@@ -1,6 +1,6 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
-ms.date: 04/30/2020
+ms.date: 06/23/2020
 ---
 
 # Microsoft SharePoint Connector in Power Automate
@@ -25,7 +25,10 @@ Triggers the flow when you delete an item in a list. To get the properties of a 
 
 ### For a selected item
 
-Triggers the flow when you select an item in a list.
+Allows users of lists to trigger a flow after selecting an item in a list.
+
+> [!NOTE]
+> Only flows within the default environment can be executed manually from a SharePoint list.
 
 ### When a file is created (properties only)
 
@@ -49,7 +52,10 @@ Triggers the flow when you delete a file in a document library. You can optional
 
 ### For a selected file
 
-Triggers the flow for a file you select in a document library.
+Allows users of document libraries to trigger a flow after selecting a file.
+
+> [!NOTE]
+> Only flows within the default environment can be executed manually from a SharePoint library.
 
 ### When a site has requested to join a hub site
 

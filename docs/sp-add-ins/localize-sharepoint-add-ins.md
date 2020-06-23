@@ -165,7 +165,7 @@ The following image shows the localized custom list in English.
 
 4. For each localizable string in each of your custom pages, declare a variable in the file with a name that identifies the purpose of the string, and assign it a value that is appropriate for the language. The following is the contents of the Resources.en-US.js file.
         
-    ```js
+    ```javascript
         var instructionstitle = "Instructions:";
         var step01 = "Go to any document library in the host web.";
         var step02 = "Go to the Library tab.";
@@ -201,7 +201,7 @@ The following image shows the localized custom list in English.
     > The word "INVARIANT" has been added to the first of the invariant strings. You would not do this in a production add-in, but while you are testing, it is a useful way of seeing at a glance whether invariant language strings are being used or whether the Resources._LL-CC_.js file for the language that happens to be your invariant language was loaded.
 
 
-```js
+```javascript
     <h2 id="instructionsheading">INVARIANT Instructions</h2>
         <ol>
             <li id="step01">Go to any document library in the host web.</li>
@@ -327,7 +327,7 @@ If there are localizable string values in your web application's JavaScript, you
 
 1. After you have the chrome control working, return to the `renderChrome` method where you set the chrome options.
         
-    ```js
+    ```javascript
         function renderChrome() {
             var options = {
                 "appIconUrl": "siteicon.png",
@@ -354,7 +354,7 @@ If there are localizable string values in your web application's JavaScript, you
 
 2. As noted in the comments, there are at least three localizable strings. Replace each of these with a variable name that you declare in a later step. 
     
-    ```js
+    ```javascript
         function renderChrome() {
             var options = {
                 "appIconUrl": "siteicon.png",
@@ -381,7 +381,7 @@ If there are localizable string values in your web application's JavaScript, you
 
 3. Add a JavaScript file named ChromeStrings.js to the web application project. It should declare the variables you used in the preceding step and assign them each a value in the invariant language. 
     
-    ```js
+    ```javascript
     var chromeAppTitle = "My SharePoint add-in";
     var chromeAccountLinkName = "Account settings";
     var chromeContactUsLinkName = "Contact us";
@@ -390,7 +390,7 @@ If there are localizable string values in your web application's JavaScript, you
 
 4. For each language for which you are localizing the add-in, add another JavaScript file with the name ChromeStrings._LL-CC_.js, where _LL-CC_ is the language ID. *The base of the file name, in this case "ChromeStrings," must be exactly the same as you used for the invariant language file.*  Copy the contents of the invariant language file into each of the localized files, and replace the values with translated versions.
     
-    ```js
+    ```javascript
     var chromeAppTitle = "Mi aplicación SharePoint";
     var chromeAccountLinkName = "Preferencias";
     var chromeContactUsLinkName = "Contacto";
@@ -399,7 +399,7 @@ If there are localizable string values in your web application's JavaScript, you
 
 5. In any page file where the script SP.UI.controls.js is called, add a call to the ChromeStrings.js above it. For example, if the call to SP.UI.controls.js is loaded in an intermediate file called ChromeLoader.js, the markup in the page at this point should look similar to the following.
     
-    ```js
+    ```javascript
     <Scripts>
         <asp:ScriptReference Path="Scripts/ChromeStrings.js" />
         <asp:ScriptReference Path="Scripts/ChromeLoader.js" />
@@ -408,7 +408,7 @@ If there are localizable string values in your web application's JavaScript, you
 
 6. Add a **ResourceUICultures** attribute to the **ScriptReference** element that calls your strings. Its value is a comma-delimited list of the languages that you are supporting.
     
-    ```js
+    ```javascript
     <Scripts>
         <asp:ScriptReference Path="Scripts/ChromeStrings.js" ResourceUICultures="en-US,es-ES" />
         <asp:ScriptReference Path="Scripts/ChromeLoader.js" />

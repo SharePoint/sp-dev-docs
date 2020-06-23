@@ -352,13 +352,13 @@ In the code editor, open the **src\webparts\orders\OrdersWebPart.ts** file.
 
 In the top section of the file, reference the **AadHttpClient** and **HttpClientResponse** classes, by adding the following code snippet:
 
-```ts
+```typescript
 import { AadHttpClient, HttpClientResponse } from '@microsoft/sp-http';
 ```
 
 To the **OrdersWebPart** class, add a new class variable named `ordersClient`:
 
-```ts
+```typescript
 export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartProps> {
   private ordersClient: AadHttpClient;
 
@@ -368,7 +368,7 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
 
 Next, in the **OrdersWebPart** class, override the **onInit** method to create an instance of the AadHttpClient:
 
-```ts
+```typescript
 export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartProps> {
   private ordersClient: AadHttpClient;
 
@@ -391,7 +391,7 @@ The URI passed into the `getClient()` method is the Application ID URI of the Az
 
 Finally, extend the **render** method to load and display orders retrieved from the enterprise API:
 
-```ts
+```typescript
 export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartProps> {
   private ordersClient: AadHttpClient;
 

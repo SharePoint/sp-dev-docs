@@ -157,7 +157,7 @@ The CSS class names in CSS modules are generated dynamically, which makes it imp
 
 #### todoList.module.scss.js
 
-```js
+```javascript
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable */

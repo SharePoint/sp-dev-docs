@@ -11,7 +11,7 @@ When executing non-GET REST requests to the SharePoint API, you must add a valid
 
 In classic pages, SharePoint includes a request digest token on the page in a hidden field named **__REQUESTDIGEST**. One of the most common approaches to work with the request digest is to obtain it from that field and add it to the request, for example:
 
-```js
+```javascript
 var digest = $('#__REQUESTDIGEST').val();
 $.ajax({
     url: '/_api/web/...'
@@ -53,7 +53,7 @@ The benefit of using the DigestCache service over manually obtaining a valid req
 
 1. Import the **DigestCache** and **IDigestCache** types from the **\@microsoft/sp-http** package:
 
-    ```ts
+    ```typescript
     // ...
     import { IDigestCache, DigestCache } from '@microsoft/sp-http';
 
@@ -64,7 +64,7 @@ The benefit of using the DigestCache service over manually obtaining a valid req
 
 1. Whenever you need a valid request digest token, retrieve a reference to the DigestCache service, and call its **fetchDigest** method:
 
-    ```ts
+    ```typescript
     // ...
     import { IDigestCache, DigestCache } from '@microsoft/sp-http';
 

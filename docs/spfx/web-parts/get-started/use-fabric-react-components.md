@@ -1,7 +1,7 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
-description: Build a simple web part that uses the DocumentCard component of Office UI Fabric React.
-ms.date: 02/08/2020
+description: Build a web part that uses the DocumentCard component of Office UI Fabric React.
+ms.date: 06/22/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -9,80 +9,94 @@ ms.custom: scenarios:getting-started
 
 # Use Office UI Fabric React components in your SharePoint client-side web part
 
-Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. It includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences by using the Office Design Language. 
-- [Fabric website](https://developer.microsoft.com/fabric#/controls/web) - detailed API documentation along with implementation code examples for each control.
-- [API reference](https://docs.microsoft.com/javascript/api/office-ui-fabric-react?branch=live&view=office-ui-fabric-react-latest) - detailed API reference documentation.
-- [Office UI Fabric React](https://github.com/OfficeDev/office-ui-fabric-react) - source code repository on github.
+Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. It includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences by using the Office Design Language.
 
-This article describes how to build a simple web part like in the following image, that uses the DocumentCard component of Office UI Fabric React.
+This article describes how to build a web part like in the following image, that uses the DocumentCard component of Office UI Fabric React.
 
 ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-<br/>
-
 > [!Video https://www.youtube.com/embed/kNrYd8nYaZY]
 
-<br/>
+## Office UI Fabric React & Fluent UI React
+
+> [!NOTE]
+> Microsoft renamed Office UI Fabric to Fluent UI in early 2020.
+
+The transition from Office UI Fabric to Fluent UI, and the respective React components, is currently in a state of transition. To learn more about the current state and their roadmap, see the FAQ provided by the Fluent UI team: [FAQ Fabric and Stardust to Fluent UI](https://github.com/microsoft/fluentui/wiki/FAQ---Fabric-and-Stardust-to-Fluent-UI).
+
+SharePoint Framework (SPFx) packages currently reference the original Office UI Fabric NPM Packages. These packages are currently supported & will continue to work.
+
+The primary Fluent UI React package, **\@fluentui/react**, simply exports components from the **office-ui-fabric-react** package used in SharePoint Framework projects. At this time, you should continue to use the **office-ui-fabric-react** package in your SharePoint Framework projects.
+
+This page will continue to refer to the Office UI Fabric packages until Microsoft recommends switching to the Fluent UI packages. The documentation links on this page may point to the Fluent UI documentation but it applies to the Office UI Fabric as well.
+
+- [Fluent UI website](https://developer.microsoft.com/fluentui#/controls/web) - detailed API documentation along with implementation code examples for each control.
+- [API reference](https://docs.microsoft.com/javascript/api/office-ui-fabric-react?branch=live&view=office-ui-fabric-react-latest) - detailed API reference documentation.
+- [Office UI Fabric React / Fluent UI React](https://github.com/microsoft/fluentui) - source code repository on github.
 
 ## Create a new web part project
 
 1. Create a new project directory in your favorite location:
 
-    ```shell
+    ```console
     md documentcardexample-webpart
     ```
 
 1. Go to the project directory:
 
-    ```shell
+    ```console
     cd documentcardexample-webpart
     ```
 
-1. Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new web part by running the Yeoman SharePoint generator:
+1. Make sure you have the latest version of **\@microsoft/generator-sharepoint** installed and create a new web part by running the Yeoman SharePoint generator:
 
-    ```shell
+    ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted:
+1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
-    - Accept the default **documentcardexample-webpart** as your solution name, and select Enter.
-    - Select **SharePoint Online only (latest)**, and select <kbd>ENTER</kbd>.
-    - Select **Use the current folder** for where to place the files.
-    - Select **Y** to require the extension to be installed on each site explicitly when it's being used.
-    - Select **N** on the question if solution contains unique permissions.cd
-    - Select **WebPart** as the client-side component type to be created.
+    - **What is your solution name?**: documentcardexample-webpart
+    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
+    - **Where do you want to place the files?**: Use the current folder
+    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
+    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?**: No
+    - **Which type of client-side component to create?**: Web Part
+    - **What is your Web part name?**: DocumentCardExample
+    - **What is your Web part description?**: DocumentCardExample description
+    - **Which framework would you like to use?**: React
 
-1. The next set of prompts ask for specific information about your web part:
+    At this point, Yeoman installs the required dependencies and scaffolds the solution files.
 
-    - Use **DocumentCardExample** for your web part name, and select <kbd>ENTER</kbd>.
-    - Accept the default **DocumentCardExample description**, and select <kbd>ENTER</kbd>.
-    - Select **React** as the framework, and select <kbd>ENTER</kbd>.
-
-    At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your DocumentCardExample web part as well.
-
-    Starting from 1.8.2 version, Yeoman will automatically associate the recommended `@microsoft/sp-office-ui-fabric-core` package version to your solution when you select the **React** as the framework.
+    Starting with SPFx v1.8.2 version, Yeoman will include the recommended **\@microsoft/sp-office-ui-fabric-core** package version to your solution when you select the **React** as the desired web framework.
 
     > [!NOTE]
-    > Starting with SharePoint Framework 1.8, you can use either Office UI Fabric React v5 or v6. In this case we are using specifically Office UI Fabric React version 5.132.0, so we are adding the needed dependency on it. If you would be using Office UI Fabric React v6.x, you'd also need to update the used TypeScript version of the solution. To use Office UI Fabric React v6, you need to be on at least rush-stack-compiler-2.9. The default project created with SPFx v1.8.2 for SharePoint Online will use rush-stack-compiler-2.9 and Office UI Fabric React v6 (*it won't need the step to add office-ui-fabric-react to your package.json file*). Previous versions use either rush-stack-compiler-2.7 or a build system that is locked to TypeScript 2.4. In those cases, you'll need to reference Office UI FabricReact v5.132.0. If you are targeting SharePoint Server 2016 / SharePoint Server 2019 on-premises, you will also want to use Office UI Fabric React v5.132.0.
+    > Starting with SPFx v1.8, you can use either Office UI Fabric React v5 or v6. Each version of SPFx upgrades the version of Office UI Fabric React in new projects. For example:
+    >
+    > - SPFx v1.8 projects use Office UI Fabric React v5.132.0 by default
+    > - SPFx v1.9 & v1.10 projects use Office UI Fabric React v6.189.2 by default
+    >
+    > Different versions of Office UI Fabric React have different dependencies on versions of TypeScript. If you want to upgrade an existing SPFx project to a newer version of Office UI Fabric React, see the following section: [Appendix: Upgrading Office UI Fabric React versions](#appendix-upgrading-office-ui-fabric-react-versions)
+    >
+    > This page assumes you are using the latest version of the SharePoint Framework.
 
 1. Next, execute the following command to open the web part project in Visual Studio Code:
 
-    ```shell
+    ```console
     code .
     ```
 
     You now have a web part project with the React web framework.
-  
+
 1. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder.
 
-    As you can see, the `render` method creates a react element and renders it in the web part DOM.
+    As you can see, the `render()` method creates a react element and renders it in the web part DOM.
 
     ```typescript
     public render(): void {
-      const element: React.ReactElement<IDocumentCardExampleProps > = React.createElement(
+      const element: React.ReactElement<IDocumentCardExampleProps> = React.createElement(
         DocumentCardExample,
         {
           description: this.properties.description
@@ -122,13 +136,13 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Add an Office UI Fabric component
 
-The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fabric React as the default front-end framework for building the new experiences. As a result, SharePoint Framework ships with a default version of Office UI Fabric and Fabric React that matches the version available in SharePoint. This ensures that the web part you are building uses the right version of the Fabric styles and components when deployed to SharePoint.
+The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fabric React as the default front-end framework for building the new experiences. As a result, SharePoint Framework ships with a default version of Office UI Fabric and Fabric React that matches the version available in SharePoint. This ensures that the web part you're building uses the right version of the Fabric styles and components when deployed to SharePoint.
 
 Because we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work.
 
 ### To add an Office UI Fabric component
 
-1. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
+1. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder.
 
 1. Add the following `import` statement to the top of the file to import Fabric React components that we want to use.
 
@@ -142,7 +156,7 @@ Because we chose React as our framework when creating the solution, the generato
     } from 'office-ui-fabric-react/lib/DocumentCard';
     ```
 
-1. Replace the existing `render` method with the following:
+1. Replace the existing `render()` method with the following:
 
     ```typescript
     public render(): JSX.Element {
@@ -183,7 +197,7 @@ Because we chose React as our framework when creating the solution, the generato
     - DocumentCardTitle
     - DocumentCardActivity
 
-    The `previewProps` property includes some properties of the DocumentCardPreview.
+    The `previewProps` property includes some properties of the **DocumentCardPreview** component.
 
 ## Copy the image assets
 
@@ -194,13 +208,13 @@ Copy the following images to your **src\webparts\documentCardExample\components*
 - [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
 
 > [!NOTE]
-> In the code we were referencing these images using relative path from the root location. As your reference the images in the code, it will cause them to be included in the sppkg solution package as long as you have the `includeClientSideAssets` set as `true` in the **package-solution.json** file.
+> In the code, we were referencing these images using relative path from the root location. As your reference the images in the code, it will cause them to be included in the **\*.sppkg** solution package as long as you have the `includeClientSideAssets` set as `true` in the **package-solution.json** file.
 
-## Preview the web part in Workbench
+## Preview the web part in workbench
 
-1. In the console, enter the following to preview your web part in Workbench:
+1. In the console, enter the following to preview your web part in workbench:
 
-    ```shell
+    ```console
     gulp serve
     ```
 
@@ -208,6 +222,17 @@ Copy the following images to your **src\webparts\documentCardExample\components*
 
     ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 
-## See also
+## Appendix: Upgrading Office UI Fabric React versions
 
-- [Build your first SharePoint client-side web part](build-a-hello-world-web-part.md)
+Starting with SPFx v1.8, you can use either Office UI Fabric React v5 or v6. Each version of SPFx upgrades the version of Office UI Fabric React in new projects. For example:
+
+- SPFx v1.8 and prior versions projects use Office UI Fabric React v5.x by default
+- SPFx v1.9 & v1.10 projects use Office UI Fabric React v6.x by default
+
+Different versions of Office UI Fabric React support different minimum versions of TypeScript.
+
+Office UI Fabric React v5 depends on TypeScript v2.x. SPFx v1.8 and prior projects also depend on TypeScript v2.x.
+
+Office UI Fabric React v6 require TypeScript v3.x. All SPFx v1.9 and later projects are configured to use TypeScript v3 or higher that matches the same dependency of Office UI Fabric React v6.
+
+In the case where you want to upgrade an SPFx v1.8 project to Office UI Fabric React v6, you'll also need to upgrade the version of TypeScript on the project. See the SPFx v1.8 release notes for details: [SharePoint Framework v1.8 release notes: Support for TypeScript 2.7, 2.9 and 3.x](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes#support-for-typescript-27-29-and-3x).
