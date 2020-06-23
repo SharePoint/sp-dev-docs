@@ -168,7 +168,7 @@ static void Main(string[] args)
     }
     ICredentials credentials = new SharePointOnlineCredentials("xxxxxx.onmicrosoft.com", secureString);
 
-    //set credential of SharePoint 2013(on-premise)
+    //set credential of SharePoint 2013(On-Premises)
     //string userName = "Administrator";
     //string password = "xxxxxxx";
     //string domain = "CONTOSO";
