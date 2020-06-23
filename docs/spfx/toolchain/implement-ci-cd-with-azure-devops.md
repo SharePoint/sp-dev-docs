@@ -73,7 +73,7 @@ The SharePoint Framework does not provide a testing framework by default (since 
 
 By default SharePoint Framework projects does not include a testing Framework. We will leverage Jest in this sample.
 
-```shell
+```console
 npm i jest jest-junit @voitanos/jest-preset-spfx-react16 -D
 ```
 

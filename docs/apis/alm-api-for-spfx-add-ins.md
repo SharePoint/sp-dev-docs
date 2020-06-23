@@ -147,7 +147,7 @@ Add-PnPApp -Path ./sharepoint-solution-package.sppkg
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app add --filePath ./sharepoint-solution-package.sppkg
 ```
 
@@ -206,7 +206,7 @@ Publish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app deploy --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
@@ -254,7 +254,7 @@ Unpublish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app retract --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
@@ -290,7 +290,7 @@ Remove-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app remove --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
@@ -373,7 +373,7 @@ Get-PnPApp
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app list
 ```
 
@@ -435,7 +435,7 @@ Get-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app get --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
@@ -480,7 +480,7 @@ Install-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app install --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
@@ -528,7 +528,7 @@ Update-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app upgrade --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
@@ -575,7 +575,7 @@ Uninstall-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 # [Office 365 CLI](#tab/o365cli)
 
-```shell
+```console
 spo app uninstall --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 

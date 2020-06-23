@@ -75,13 +75,13 @@ Note, however, that you have not yet deployed the files.
 
 1. Create a new project directory in your preferred location:
 
-    ```shell
+    ```console
     md azurehosted-webpart
     ```
 
 1. Go to the project directory:
 
-    ```shell
+    ```console
     cd azurehosted-webpart
     ```
 
@@ -112,7 +112,7 @@ Note, however, that you have not yet deployed the files.
 
 1. Enter the following to open the web part project in Visual Studio Code:
 
-    ```shell
+    ```console
     code .
     ```
 
@@ -209,13 +209,13 @@ Before uploading the assets to CDN, you need to build them.
 
 1. Switch to the console and execute the following `gulp` task:
 
-    ```shell
+    ```console
     gulp bundle --ship
     ```
 
     This builds the minified assets required to upload to the CDN provider. The `--ship` indicates the build tool to build for distribution. You should also notice that the output of the build tools indicate the Build Target is SHIP.
 
-    ```shell
+    ```console
     Build target: SHIP
     [21:23:01] Using gulpfile ~/apps/azurehosted-webpart/gulpfile.js
     [21:23:01] Starting gulp
@@ -229,7 +229,7 @@ Before uploading the assets to CDN, you need to build them.
 1. Switch to the console of the **azurehosted-webpart** project directory.
 1. Enter the gulp task to deploy the assets to your storage account:
 
-    ```shell
+    ```console
     gulp deploy-azure-storage
     ```
 
@@ -244,7 +244,7 @@ Because you changed the web part bundle, you need to redeploy the package to the
 1. Switch to the console of the **azurehosted-webpart** project directory.
 1. Enter the gulp task to package the client-side solution, this time with the `--ship` flag set. This forces the task to pick up the CDN base path configured in the previous step:
 
-    ```shell
+    ```console
     gulp package-solution --ship
     ```
 
@@ -276,7 +276,7 @@ Because you changed the web part bundle, you need to redeploy the package to the
 
 To deploy the assets to your favorite CDN provider, you can copy the files from **temp\deploy** folder. To generate assets for distribution, run the following gulp command as we did before with the **--ship** parameter:
 
-```shell
+```console
 gulp bundle --ship
 ```
 

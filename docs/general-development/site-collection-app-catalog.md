@@ -83,7 +83,7 @@ Add-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/marke
 
 Alternatively, use the `spo site appcatalog add` command if you are using the Office 365 CLI:
 
-```shell
+```console
 spo site appcatalog add --url https://contoso.sharepoint.com/sites/marketing
 ```
 
@@ -111,7 +111,7 @@ Remove-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/ma
 
 Alternatively, use the `spo site appcatalog remove` command if you are using the Office 365 CLI
 
-```shell
+```console
 spo site appcatalog remove --url https://contoso.sharepoint.com/sites/marketing
 ```
 

@@ -59,13 +59,13 @@ When you add a new SharePoint Framework extension to your project, the SharePoin
 
 Next to the default configuration, the SharePoint Framework Yeoman generator will create an entry for each extension that you add to your project. Each entry contains a URL of the modern page that should be used to test the particular extension, the list of extensions that should be loaded and for each extension, the list of properties that should be set on them. To use the particular serve configuration, execute in the command line:
 
-```shell
+```console
 gulp serve --config=<name>
 ```
 
 for example:
 
-```shell
+```console
 gulp serve --config=helloWorld
 ```
 
@@ -83,7 +83,7 @@ By default, when debug scripts are enabled and allowed once on a page, they will
 
 If you're working with a version of the SharePoint Framework older than 1.3.0, and you want to debug an extension on a modern page, you have to manually construct the URL with the required parameters. First, start the local gulp server, by in the command line changing the working directory to your project folder and then executing:
 
-```shell
+```console
 gulp serve --nobrowser
 ```
 
@@ -156,7 +156,7 @@ Once you confirm, the page will load with the extensions you specified in your s
 
 To test the local versions of your SharePoint Framework client-side web parts on modern SharePoint pages in your tenant, first, start the local gulp server, by changing the working directory to your project folder and executing in the command line:
 
-```shell
+```console
 gulp serve --nobrowser
 ```
 
@@ -186,7 +186,7 @@ Using the SharePoint workbench, you can only test web parts from your solution. 
 
 If you build your SPFx webpart solution without the --ship parameter as following
 
-```shell
+```console
 gulp bundle
 gulp package-solution
 ```
@@ -195,7 +195,7 @@ the packages generated will reference the code from your local computer (https:/
 
 You can then start your local server  by running
 
-```shell
+```console
 gulp serve --nobrowser
 ```
 

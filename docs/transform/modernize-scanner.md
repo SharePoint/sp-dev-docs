@@ -159,25 +159,25 @@ Following scan options are available:
 
 Below option is the default usage of the tool for most customers: you specify the mode, your tenant name, and the created client id and secret:
 
-```shell
+```console
 SharePoint.Modernization.Scanner.exe -t <tenant> -i <clientid> -s <clientsecret>
 ```
 
 A real life sample:
 
-```shell
+```console
 SharePoint.Modernization.Scanner.exe -t contoso -i 7a5c1615-997a-4059-a784-db2245ec7cc1 -s eOb6h+s805O/V3DOpd0dalec33Q6ShrHlSKkSra1FFw=
 ```
 
 The above use will run all scanning options, but you can also target the scan via the `Mode` parameter (-m):
 
-```shell
+```console
 SharePoint.Modernization.Scanner.exe -m <mode> -t <tenant> -i <clientid> -s <clientsecret>
 ```
 
 A real life sample:
 
-```shell
+```console
 SharePoint.Modernization.Scanner.exe -m GroupifyOnly -t contoso -i 7a5c1615-997a-4059-a784-db2245ec7cc1 -s eOb6h+s805O/V3DOpd0dalec33Q6ShrHlSKkSra1FFw=
 ```
 
