@@ -14,7 +14,7 @@ In this tutorial, you will create a custom form with a user profile photo, a rea
 
 ## Required setup
 
-Before starting, make sure your SharePoint site is set up with the [required lists and libraries](https://docs.microsoft.com/sharepoint/dev/business-apps/get-started/set-up-sharepoint-site-lists-libraries).
+Before starting, make sure your SharePoint site is set up with the [required lists and libraries](../../get-started/set-up-sharepoint-site-lists-libraries.md).
 
 ## Create a custom form
 
