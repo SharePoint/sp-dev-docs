@@ -23,9 +23,6 @@ After you convert a master page or create a page layout, you have an HTML versio
 - Configure the properties for that component.
     
   
-- Preview its appearance in the browser.
-    
-  
 - Copy the HTML code snippet to the Clipboard so that you can paste the snippet at the location you want in the HTML file.
     
   
@@ -74,8 +71,10 @@ The Snippet Gallery displays different options depending on the file that you're
   
 6. On the ribbon, on the **Design** tab, choose the snippet that you want to add to your page.
     
-    When you select a snippet, the Snippet Gallery refreshes so that the page shows you a preview of that snippet, the properties available for that snippet, and the HTML code snippet that you can copy into your HTML master page or page layout.
+    When you select a snippet, the Snippet Gallery refreshes so that the page shows you the properties available for that snippet and the HTML code snippet that you can copy into your HTML master page or page layout.
     
+    > [!NOTE]
+    > The Snippet Gallery preview is deprecated and does not show a preview of the selected snippet upon refresh.
   
 7. On the right side of the Snippet Gallery, under **About this Component**, click or select section headers to expand or collapse groups of properties, and then configure any custom settings that you want.
     
@@ -84,7 +83,7 @@ The Snippet Gallery displays different options depending on the file that you're
     > [!NOTE]
     > If the property grid has a header that ends with AjaxDelta, you should ignore those properties because they apply to the controls related to the Minimal Download Strategy, which is disabled for master pages and page layouts created through Design Manager. 
 
-8. After you configure any properties, choose **Update**. This updates both the preview and the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
+8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
 9. On the left side of the Snippet Gallery, under **HTML Snippet**, choose **Copy to Clipboard**.
