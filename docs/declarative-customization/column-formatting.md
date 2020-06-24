@@ -289,7 +289,7 @@ Here's the same sample from above, using the Excel-style expression syntax:
 
 ## Create clickable actions
 
-You can use column formatting to provide hyperlinks that go to other webpages, or start custom functionality. This functionality is limited to static links that can be paramaterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, or `mailto:`.
+You can use column formatting to provide hyperlinks that go to other webpages, or start custom functionality. This functionality is limited to static links that can be parameterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, or `mailto:`.
 
 ### Turn field values into hyperlinks (basic)
 
@@ -1316,7 +1316,7 @@ Operators specify the type of operation to perform. The following operators are 
 - getMonth
 - getYear
 
-**Binary arthmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
+**Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
 - \+
 - \-
@@ -1385,7 +1385,7 @@ Operators specify the type of operation to perform. The following operators are 
   
 **Binary operators** - The following are operators that expect two operands:
 
-- **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
+- **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
   - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
   - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
   - `"txtContent": "=indexOf('DogFood', 'Cat')"` results in _-1_
@@ -1400,7 +1400,7 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Ternary operators** - The following are operators that expect three operands:
 
-- **substring**: returns the part of the string between the start and end indicies. - _Only available in SharePoint Online_
+- **substring**: returns the part of the string between the start and end indices. - _Only available in SharePoint Online_
   - `"txtContent":"=substring('DogFood', 3, 4)"` results in _F_
   - `"txtContent":"=substring('DogFood', 4, 3)"` results in _F_
   - `"txtContent":"=substring('DogFood', 3, 6)"` results in _Foo_
@@ -1435,7 +1435,7 @@ See [here](#formatting-multi-value-fields) for examples.
 
 `+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text"`
 
-`indexOf` Since the operator `length` doesnt work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string. 
+`indexOf` Since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string. 
 
 ### operands
 
@@ -1636,13 +1636,13 @@ The following example shows how a hyperlink field might be used on a current fie
 
 #### "[$FieldName]"
 
-The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceeded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
+The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
 #### "@currentWeb"
 
-This will evaluate to the absolute url for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
+This will evaluate to the absolute URL for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
 
 #### "@me"
 

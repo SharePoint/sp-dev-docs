@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 06/12/2020
+ms.date: 06/24/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -58,7 +58,7 @@ The SharePoint Framework development and build toolchain leverages various popul
 Enter the following command to install Gulp:
 
 ```console
-yo install gulp --global
+npm install gulp --global
 ```
 
 ### Install Yeoman
