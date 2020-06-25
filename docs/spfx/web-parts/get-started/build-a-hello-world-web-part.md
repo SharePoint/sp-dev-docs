@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 06/22/2020
+ms.date: 06/25/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -370,7 +370,7 @@ SharePoint Workbench is also hosted in SharePoint to preview and test your local
 1. Go to the following URL: **https://your-sharepoint-tenant.sharepoint.com/_layouts/workbench.aspx**
 
     > [!NOTE]
-    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the **gulp trust-dev-cert** command in your project directory console to install the developer certificate before running the **gulp serve**command again. For more information, see [Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate)
+    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the **gulp trust-dev-cert** command in your project directory console to install the developer certificate before running the **gulp serve** command again. For more information, see [Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate)
 
     ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
 
