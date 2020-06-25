@@ -62,7 +62,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
 1. To change the image of **Image1** from the sample image to the project owner's profile photo, you can use the Office 365 Users connector to retrieve the photo by the owner's email. First, [connect your custom form to the Office 365 Users connector](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-office365-users).
 
-1. In the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Microsoft 365 user profile appears in **Image1**.
+1. To retrieve the project owner's profile photo by email, in the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Office 365 user profile appears in **Image1**. 
 
     ![Set image picture](../../../images/gs01-set-image-picture.png)
 
@@ -114,7 +114,7 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 
     ![View-only title](../../../images/gs01-attachments-conditional-visibility.png)
     
-    The **Attachments** data card is now hidden if the project owner is Nestor Wilke. Otherwise, it is visible.
+    If the project owner is Nestor Wilke, then the **Attachments** data card is hidden. Otherwise, it is visible.
 
     You can write the same conditional logic in multiple ways. For more info, see [Operators and Identifiers in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/operators).
 
