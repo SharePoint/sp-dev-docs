@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 06/22/2020
+ms.date: 06/25/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -39,6 +39,7 @@ You can also follow the steps in this article by watching the video on the Share
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: app-extension
+    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
     - **What is your Application Customizer name?** HelloWorld
     - **What is your Application Customizer description?** HelloWorld description
