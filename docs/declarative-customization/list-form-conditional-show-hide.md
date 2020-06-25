@@ -57,7 +57,7 @@ For example, the following formula checks if the value for the *Category* column
 
 Returning _true_ results in hiding the column in the form while returning _false_ does not.
 
-The column is represented by specifying the **internal name** of the field surrounded by square brackets and preceeded by a dollar sign: [$InternalName]. For example, to get the value of a field with an internal name of "ProductName", use [$ProductName].
+The column is represented by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: [$InternalName]. For example, to get the value of a field with an internal name of "ProductName", use [$ProductName].
 
 #### Supported column types in conditional show or hide
 
