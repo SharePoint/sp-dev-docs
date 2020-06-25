@@ -1,7 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/22/2020
+ms.date: 06/25/2020
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -37,6 +37,7 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: command-extension
+    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** ListView Command Set
     - **What is your Command Set name?** HelloWorld
