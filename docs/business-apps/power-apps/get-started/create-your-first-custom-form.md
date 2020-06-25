@@ -60,7 +60,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Set image border radius](../../../images/gs01-set-image-border-radius.png)
 
-1. To change the image of **Image1** from the sample image to the project owner's profile photo, you can use the Office 365 Users connector to retrieve the photo by the owner's email. First, [connect your custom form to the Office 385 Users connector](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-office365-users).
+1. To change the image of **Image1** from the sample image to the project owner's profile photo, you can use the Office 365 Users connector to retrieve the photo by the owner's email. First, [connect your custom form to the Office 365 Users connector](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-office365-users).
 
 1. In the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Microsoft 365 user profile appears in **Image1**.
 
