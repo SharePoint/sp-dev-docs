@@ -1,7 +1,7 @@
 ---
 title: Using CSOM for .Net Standard instead of CSOM for .Net Framework
 description: Explains the differences between using CSOM for .Net Standard versus CSOM for .Net Framework
-ms.date: 6/15/2020
+ms.date: 6/26/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -138,11 +138,7 @@ namespace CSOMDemo
 
         public ClientContext GetContext(Uri web, string userPrincipalName, SecureString userPassword)
         {
-            var context = new ClientContext(web)
-            {
-                // Important to turn off FormDigestHandling when using access tokens
-                FormDigestHandlingEnabled = false
-            };
+            var context = new ClientContext(web);
 
             context.ExecutingWebRequest += (sender, e) =>
             {
