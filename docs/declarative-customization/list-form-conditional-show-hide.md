@@ -55,7 +55,7 @@ For example, the following formula checks if the value for the *Category* column
 =if([$Category]=='Product Management','true', 'false')
 ```
 
-Returning _true_ results in hiding the column in the form while returning _false_ does not.
+Returning _true_ results in showing the column in the form while returning _false_ will hide it.
 
 The column is represented by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: [$InternalName]. For example, to get the value of a field with an internal name of "ProductName", use [$ProductName].
 
