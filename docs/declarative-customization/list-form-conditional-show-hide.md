@@ -37,7 +37,8 @@ You can show or hide columns in a list form based on another column's value by s
 
 To specify a conditional formula for a column, in the **Edit columns** pane:
 
-1. Navigate to the desired column for which you want to set a conditional formula and find the more options menu (...) next to that column
+1. Navigate to the desired column for which you want to set a conditional formula
+1. Click on the far right hand edge of the column name to display the options menu (...)
 1. In the more options, select **Edit conditional formula**.
 1. In the **Edit conditional formula** dialog:
     - To determine whether this column is shown or hidden, specify a conditional formula based on the value of another column.
