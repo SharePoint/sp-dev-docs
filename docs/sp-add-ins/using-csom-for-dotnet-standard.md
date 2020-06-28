@@ -104,6 +104,9 @@ public static async Task Main(string[] args)
 > [!Note]
 > Update the defaultAADAppId with the application id of the app you've registered in Azure AD
 
+> [!Note]
+> If you are using CSOM for .NET Standard with Azure Functions v3 you may encounter a runtime error related to `System.IdentityModel.Tokens.Jwt`. This can be resolved by following the workaround [here](https://github.com/Azure/azure-functions-host/issues/5756).
+
 ```csharp
 using Microsoft.SharePoint.Client;
 using System;
