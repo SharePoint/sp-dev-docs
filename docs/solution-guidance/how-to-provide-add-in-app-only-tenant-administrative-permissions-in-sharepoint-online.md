@@ -24,6 +24,8 @@ Steps to provide tenant admin permission for app only add-in:
 
 Notice that this operation has to be completed under the tenant administration site and account used for these operations will need to have tenant administrative permissions. If you are providing lower level permissions for your add-in, you can complete those under normal site collection URLs with lower permissions. 
 
+Once the steps above have been completed, the add-in can be deployed to the tenant level app catalog.
+
 
 ## See also
 <a name="bk_addresources"> </a>
