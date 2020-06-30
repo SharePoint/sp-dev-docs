@@ -472,7 +472,7 @@ The following steps illustrate how to extend the existing solution to allow user
     });
     ```
 
-5. Update the web part to use the newly defined property. In the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and change the **getPropertyPaneConfiguration** method to:
+1. Update the web part to use the newly defined property. In the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and change the **getPropertyPaneConfiguration** method to:
 
     ```typescript
     export default class TasksCalendarWebPart extends BaseClientSideWebPart<ITasksCalendarWebPartProps> {
