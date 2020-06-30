@@ -1,6 +1,6 @@
 ---
 title: How to provide add-in app only tenant administrative permissions in SharePoint Online
-ms.date: 04/22/2020
+ms.date: 06/30/2020
 localization_priority: Priority
 ---
 How to provide add-in app only tenant administrative permissions in SharePoint Online
