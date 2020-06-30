@@ -1076,7 +1076,7 @@ export default class DataService implements IDataService {
     }
     ```
 
-2. Extend the constructor of the **HomeController** class with injecting the root scope service, and change its contents to:
+1. Extend the constructor of the **HomeController** class with injecting the root scope service, and change its contents to:
 
     ```typescript
     export default class HomeController {
@@ -1098,7 +1098,7 @@ export default class DataService implements IDataService {
             }): void => {
           vm.init(args.sharePointApi, args.todoListName, args.hideFinishedTasks);
         });
-      }
+    }
 
       // ...
     }
@@ -1106,25 +1106,25 @@ export default class DataService implements IDataService {
 
 1. To the **HomeController** class, add the `init()` method:
 
-  ```typescript
-  export default class HomeController {
-    // ...
-    private init(sharePointApi: string, todoListName: string, hideFinishedTasks?: boolean): void {
-      if (sharePointApi !== undefined && sharePointApi.length > 0 &&
-        todoListName !== undefined && todoListName.length > 0) {
-        this.sharePointApi = sharePointApi;
-        this.todoListName = todoListName;
-        this.hideFinishedTasks = hideFinishedTasks;
-        this.loadTodos();
-        this.configurationNeeded = false;
+    ```typescript
+    export default class HomeController {
+      // ...
+      private init(sharePointApi: string, todoListName: string, hideFinishedTasks?: boolean): void {
+        if (sharePointApi !== undefined && sharePointApi.length > 0 &&
+          todoListName !== undefined && todoListName.length > 0) {
+          this.sharePointApi = sharePointApi;
+          this.todoListName = todoListName;
+          this.hideFinishedTasks = hideFinishedTasks;
+          this.loadTodos();
+          this.configurationNeeded = false;
+        }
+        else {
+          this.configurationNeeded = true;
+        }
       }
-      else {
-        this.configurationNeeded = true;
-      }
+      // ...
     }
-    // ...
-  }
-  ```
+    ```
 
 1. Update all remaining methods in the `HomeController` class to use the configuration values from the class properties:
 
