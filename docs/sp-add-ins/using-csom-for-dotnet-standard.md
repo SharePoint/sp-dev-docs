@@ -1,7 +1,7 @@
 ---
 title: Using CSOM for .Net Standard instead of CSOM for .Net Framework
 description: Explains the differences between using CSOM for .Net Standard versus CSOM for .Net Framework
-ms.date: 6/15/2020
+ms.date: 6/29/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -102,7 +102,10 @@ public static async Task Main(string[] args)
 #### AuthenticationManager sample class
 
 > [!Note]
-> Update the defaultAADAppId with the application id of the app you've registered in Azure AD
+> Update the `defaultAADAppId` with the application id of the app you've registered in Azure AD
+
+> [!Note]
+> If you are using CSOM for .NET Standard with Azure Functions v3 you may encounter a runtime error related to **System.IdentityModel.Tokens.Jwt**. This can be resolved by following [this workaround](https://github.com/Azure/azure-functions-host/issues/5756).
 
 ```csharp
 using Microsoft.SharePoint.Client;
@@ -138,11 +141,7 @@ namespace CSOMDemo
 
         public ClientContext GetContext(Uri web, string userPrincipalName, SecureString userPassword)
         {
-            var context = new ClientContext(web)
-            {
-                // Important to turn off FormDigestHandling when using access tokens
-                FormDigestHandlingEnabled = false
-            };
+            var context = new ClientContext(web);
 
             context.ExecutingWebRequest += (sender, e) =>
             {

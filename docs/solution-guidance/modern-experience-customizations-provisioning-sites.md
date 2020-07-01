@@ -159,7 +159,7 @@ o365 spo propertybag list -u $siteUrl
 
 ### Provision a Microsoft 365 group programmatically
 
-"Modern" team sites can be created programmatically by creating an [Microsoft 365 group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create a Microsoft 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Microsoft 365 group and has the following default structure. 
+"Modern" team sites can be created programmatically by creating a [Microsoft 365 group](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/group) using the Microsoft Graph. In fact, when you create a Microsoft 365 group, a "modern" team site is automatically provisioned for the group. The "modern" team site URI is based on the **mailNickname** parameter of the Microsoft 365 group and has the following default structure. 
 
 ```http
 https://[tenant].sharepoint.com/sites/[mailNickname]

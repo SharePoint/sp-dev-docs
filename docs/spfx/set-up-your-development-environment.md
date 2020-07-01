@@ -58,7 +58,7 @@ The SharePoint Framework development and build toolchain leverages various popul
 Enter the following command to install Gulp:
 
 ```console
-yo install gulp --global
+npm install gulp --global
 ```
 
 ### Install Yeoman

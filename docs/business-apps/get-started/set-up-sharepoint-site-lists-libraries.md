@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint site with lists and libraries
 description: Set up your SharePoint site with lists and libraries
-ms.date: 4/30/2020
+ms.date: 6/23/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -12,7 +12,7 @@ To successfully complete the *Getting Started* tutorials, set up your SharePoint
 
 ## Microsoft 365 tenant
 
-To use Power Automate and build flows, you need an Microsoft 365 tenant.
+To use Power Automate and build flows, you need a Microsoft 365 tenant.
 
 If you already have an Office 365 tenant, see section **Create Projects list** below.
 

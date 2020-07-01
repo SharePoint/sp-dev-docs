@@ -60,9 +60,13 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Set image border radius](../../../images/gs01-set-image-border-radius.png)
 
-1. To change the image of **Image1** from the sample image to the owner's profile photo, make sure you select **Image1**. In the formula bar, change the property to **Image**, and enter `SharePointIntegration.Selected.Owner.Picture` as the formula. The user photo from the owner's Microsoft 365 user profile appears in **Image1**.
+1. To change the image of **Image1** from the sample image to the project owner's profile photo, you can use the Office 365 Users connector to retrieve the photo by the owner's email. First, [connect your custom form to the Office 365 Users connector](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-office365-users).
+
+1. To retrieve the project owner's profile photo by email, in the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Office 365 user profile appears in **Image1**. 
 
     ![Set image picture](../../../images/gs01-set-image-picture.png)
+
+    When you change the project owner, **Image1** will update to the user photo of the new owner.
 
 ### Set a field to be view-only
 
@@ -106,11 +110,11 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 
     ![Select visible field](../../../images/gs01-attachments-property-visible.png)
 
-1. In the formula bar, enter the following formula: `If(SharePointIntegration.Selected.Owner.DisplayName = "Nestor Wilke", false)`
+1. In the formula bar, enter the following formula: `If(SharePointIntegration.Selected.Owner.DisplayName = "Nestor Wilke", false, true)`
 
     ![View-only title](../../../images/gs01-attachments-conditional-visibility.png)
     
-    The **Attachments** data card is now hidden if the project owner is Nestor Wilke.
+    If the project owner is Nestor Wilke, then the **Attachments** data card is hidden. Otherwise, it is visible.
 
     You can write the same conditional logic in multiple ways. For more info, see [Operators and Identifiers in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/operators).
 
@@ -136,4 +140,4 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 
 Congratulations on creating your custom form.
 
-In the next topic, we will build on top of this custom form so that the user profile photo and the visibility of the **Attachments** data card automatically update when the owner is changed.
+In the next topic, we will create a standalone app using data from a SharePoint list.
