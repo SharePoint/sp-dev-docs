@@ -7,6 +7,9 @@ localization_priority: Priority
 
 # SharePoint "modern" sites classification
 
+> [!NOTE]
+> You can now use sensitivity labels (https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels-teams-groups-sites?view=o365-worldwide) instead of sites classification to help protect your SharePoint sites.
+
 When you create "modern" sites in SharePoint Online, you can optionally select a site classification to define the sensitivity of your site data. The goal of site classification is to allow managing clusters of sites based on their classification from a governance and compliance perspective, as well as to automate governance processes based on site classification.
 
 > [!IMPORTANT]
