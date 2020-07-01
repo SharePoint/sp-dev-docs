@@ -1,25 +1,29 @@
 ---
 title: Connect SharePoint Framework components using dynamic data
 description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
-ms.date: 09/16/2019
+ms.date: 07/01/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Connect SharePoint Framework components using dynamic data
 
-Using the dynamic data capability, you can connect SharePoint Framework client-side web parts and extensions to each other and exchange information between the components. This allows you to build rich experiences and compelling end-user solutions.
+You can connect two or more SharePoint Framework components together and exchange data between them using *dynamic data*. This capability allows you to build rich experiences and compelling end-user solutions.
 
 ![Three SharePoint Framework web parts connected to each other showing information about events](../images/dynamic-data-webparts.png)
 
 > [!NOTE]
-> Dynamic Data is the recommended pattern to share data between SharePoint Framework web parts or other components. It was introduced with the release of SharePoint Framework 1.7. If you are using older version of SharePoint Framework, this option is not available.
+> Dynamic Data is the recommended pattern to share data between SharePoint Framework components, including client-side web parts and extensions. It was introduced in SharePoint Framework v1.7.
 
 ## Expose data using dynamic data source
 
-Dynamic data in the SharePoint Framework is based on the source-notification model. Component designated as a dynamic data source, provides data and notifies about its changes. Other components on the page can subscribe to notifications issued by a dynamic data source. When handling notifications, dynamic data consumers can retrieve the current value of the dynamic data set exposed by the data source.
+Dynamic data in the SharePoint Framework is based on the source-notification model. Components named as a dynamic data source, provide data and the SharePoint Framework when the data changes.
 
-Every dynamic data source implements the `IDynamicDataCallables` interface. Following, is an example of a web part that displays a list of upcoming events. For each event, it includes some information such as its name, description, and location. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
+Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source has notified it data changed. The consumer component then requests the specified data from the source component.
+
+Every dynamic data source implements the `IDynamicDataCallables` interface. 
+
+The following code demonstrates web part that displays a list of upcoming events. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
 
 ```typescript
 import {
@@ -59,14 +63,8 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
    */
   public getPropertyDefinitions(): ReadonlyArray<IDynamicDataPropertyDefinition> {
     return [
-      {
-        id: 'event',
-        title: 'Event'
-      },
-      {
-        id: 'location',
-        title: 'Location'
-      }
+      { id: 'event', title: 'Event' },
+      { id: 'location', title: 'Location' }
     ];
   }
 
@@ -79,7 +77,12 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
       case 'event':
         return this._selectedEvent;
       case 'location':
-        return this._selectedEvent ? { city: this._selectedEvent.city, address: this._selectedEvent.address } : undefined;
+        return this._selectedEvent 
+            ? { 
+                city: this._selectedEvent.city, 
+                address: this._selectedEvent.address 
+              }
+            : undefined;
     }
 
     throw new Error('Bad property id');
@@ -107,12 +110,14 @@ export default class EventsWebPart extends BaseClientSideWebPart<IEventsWebPartP
 ```
 
 > [!IMPORTANT]
-> The `IDynamicDataCallables` interface can be implemented by any class, not just web parts and extensions. If the dynamic data source requires complex logic, you should consider moving it into a separate class rather than implementing it directly inside a web part or extension.
+> The `IDynamicDataCallables` interface can be implemented by any class, not just web parts and extensions. If the dynamic data source requires complex logic, consider moving it into a separate class rather than implementing it directly inside a web part or extension.
 
-The class implementing the `IDynamicDataCallables` interface must define two methods: `getPropertyDefinitions` and `getPropertyValue`. The `getPropertyDefinitions` method returns an array of types of data that the particular dynamic data source returns. In the previous example, the web part exposes detailed information about an event and its location. Even though the information comes from a single object (`_selectedEvent`), by exposing it in two different shapes, the web part is more reusable and could be used in combination with other web parts that aren't specific to events, such as a map web part that can show a map for the specified address. The list of the data types exposed by the data source is displayed to end users when connecting web parts to the data source.
+The class that implements the `IDynamicDataCallables` interface must define two methods: `getPropertyDefinitions()` and `getPropertyValue()`.
+
+The `getPropertyDefinitions()` method returns an array of types of data that the particular dynamic data source returns. In the previous example, the web part exposes detailed information about an event and its location. Even though the information comes from a single object (`_selectedEvent`), by exposing it in two different shapes, the web part is more reusable and could be used in combination with other web parts that aren't specific to events, such as a map web part that can show a map for the specified address. The list of the data types exposed by the data source is displayed to end users when connecting web parts to the data source.
 
 > [!IMPORTANT]
-> The object returned by the `getPropertyValue` method should be flat, for example:
+> The object returned by the `getPropertyValue()` method should be flat, for example:
 >
 > ```json
 > {
@@ -123,7 +128,7 @@ The class implementing the `IDynamicDataCallables` interface must define two met
 > }
 > ```
 >
-> Object with a nested structure will be flattened during serialization, which could lead to undesired effects. For example, object like:
+> Complex objects will be flattened during serialization. This could lead to unexpected results. For example, object like the following:
 >
 > ```json
 > {
@@ -136,7 +141,7 @@ The class implementing the `IDynamicDataCallables` interface must define two met
 > }
 > ```
 >
-> would after serialization become:
+> ...would be serialization to the following:
 >
 > ```json
 > {
@@ -147,11 +152,11 @@ The class implementing the `IDynamicDataCallables` interface must define two met
 > }
 > ```
 
-The `getPropertyValue` method returns the value for the particular type of data. The value of the `propertyId` argument corresponds to the `id` of the definition specified in the `getPropertyDefinitions` method.
+The `getPropertyValue()` method returns the value for the particular type of data. The value of the `propertyId` argument corresponds to the `id` of the definition specified in the `getPropertyDefinitions()` method.
 
-To register a component as a dynamic data source, call the `this.context.dynamicDataSourceManager.initializeSource()` method, passing the instance of the dynamic data source as a parameter. In the previous example, the web part itself implements the `IDynamicDataCallables` interface, which is why the `initializeSource` method is called with `this` as its argument.
+To register a component as a dynamic data source, call the `this.context.dynamicDataSourceManager.initializeSource()` method and pass the instance of the dynamic data source as a parameter. In the previous example, the web part itself implements the `IDynamicDataCallables` interface, which is why the `initializeSource()` method is called with `this` as its argument.
 
-In the example code, the web part displays upcoming events in a list. Each time, the user selects an event from the list, the web part calls the `_eventSelected` method. In that method, the web part assigns the selected event to the `_selectedEvent` class variable and issues a notification that the information about the selected event and location has changed by calling the `this.context.dynamicDataSourceManager.notifyPropertyChanged()` method passing the `id` of the definition that represents the changed data set.
+In the example code, the web part displays upcoming events in a list. Each time, the user selects an event from the list, the web part calls the `_eventSelected()` method. In that method, the web part assigns the selected event to the `_selectedEvent` class variable and issues a notification that the information about the selected event and location has changed by calling the `this.context.dynamicDataSourceManager.notifyPropertyChanged()` method passing the `id` of the definition that represents the changed data set.
 
 ## Consume dynamic data in web parts
 
@@ -323,7 +328,7 @@ export default class MapWebPart extends BaseClientSideWebPart<IMapWebPartProps> 
 }
 ```
 
-SharePoint Framework offers standard UI for connecting web parts to dynamic data sources. This UI simplifies working with dynamic data by discovering available dynamic data sources and their properties and persisting the configured connection. To use this UI, a web part that consumes dynamic data must include a few specific building blocks.
+The SharePoint Framework includes a user experience (UX) for connecting two web parts to dynamic data sources. This UX simplifies working with dynamic data by discovering available dynamic data sources and their properties and persisting the configured connection. To use the UX, a web part that consumes dynamic data must include a few specific building blocks.
 
 ### Define dynamic web part properties
 
@@ -366,14 +371,14 @@ protected get propertiesMetadata(): IWebPartPropertiesMetadata {
 
 Possible values for the `dynamicPropertyType` property are: `boolean`, `number`, `string`, `array`, and `object`.
 
-### Use the standard UI for connecting web part to dynamic data sources
+### Use the standard UX for connecting web part to dynamic data sources
 
-To allow users to connect web parts to dynamic data sources available on the page, SharePoint Framework provides a standard UI, which can be accessed from the web part property pane.
+To allow users to connect web parts to dynamic data sources available on the page, SharePoint Framework provides a standard UX, which can be accessed from the web part property pane.
 
-![Standard UI for connecting SharePoint Framework web parts to dynamic data sources available on the page](../images/dynamic-data-connect-ui.png)
+![Standard UX for connecting SharePoint Framework web parts to dynamic data sources available on the page](../images/dynamic-data-connect-ui.png)
 
 > [!IMPORTANT]
-> When using the standard UI to connect a web part to a dynamic data source, ensure, that the dynamic data source returns a value for the given dynamic property (in the previous example, there is an event selected in the list of events). If it doesn't, the UI will not be able to determine the type of data returned by the data source and setting up the connection will fail.
+> When using the standard UX to connect a web part to a dynamic data source, ensure, that the dynamic data source returns a value for the given dynamic property (in the previous example, there is an event selected in the list of events). If it doesn't, the UX will not be able to determine the type of data returned by the data source and setting up the connection will fail.
 
 In its simplest form, the UI could be defined as follows:
 
@@ -402,7 +407,7 @@ protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
 }
 ```
 
-For each set of dynamic properties, add a new group using the `PropertyPaneDynamicFieldSet` method. For each dynamic web part property, add a `PropertyPaneDynamicField`, which will allow users to select from which property, the web part property specified in the `PropertyPaneDynamicField` should retrieve its data.
+For each set of dynamic properties, add a new group using the `PropertyPaneDynamicFieldSet()` method. For each dynamic web part property, add a `PropertyPaneDynamicField`, which will allow users to select from which property, the web part property specified in the `PropertyPaneDynamicField` should retrieve its data.
 
 If your dynamic data field set consists of multiple dynamic properties, you can specify how the connection data is shared using the `sharedConfiguration.depth`  property:
 
@@ -487,11 +492,15 @@ protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
 }
 ```
 
-A conditional web part property pane group consists of a **primary** and a **secondary** group. Using the `showSecondaryGroup` property, you can specify when the secondary group should be visible and the primary group should be hidden. In the example above, the secondary group, which is used for connecting the web part to a dynamic data source, will be visible when the user selected to connect the web part to a dynamic data source by clicking the ellipsis (...).
+A conditional web part property pane group consists of a **primary** and a **secondary** group. Using the `showSecondaryGroup` property, you can specify when the secondary group should be visible and the primary group should be hidden.
+
+In the example above, the secondary group, which is used for connecting the web part to a dynamic data source, will be visible when the user selected to connect the web part to a dynamic data source by clicking the ellipsis (**...**).
 
 ![Mouse pointer hovering over the ellipsis in the web part property pane used to connect a SharePoint Framework web part to a dynamic data source](../images/dynamic-data-conditional-group.png)
 
 ## Considerations
+
+SharePoint Framework's dynamic data capability has the following characteristics:
 
 - each page can have multiple dynamic data sources and consumers
 - each component can both provide dynamic data to other components and consume dynamic data from other components
