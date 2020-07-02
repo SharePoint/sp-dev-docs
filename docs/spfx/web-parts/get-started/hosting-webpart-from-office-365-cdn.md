@@ -1,7 +1,7 @@
 ---
 title: Host your client-side web part from Microsoft 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Microsoft 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online.
-ms.date: 06/16/2020
+ms.date: 06/29/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -30,73 +30,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Enable CDN in your Microsoft 365 tenant
 
-1. Ensure that you've the latest version of the SharePoint Online Management Shell by running the PowerShell in Administrator role and executing following PowerShell cmdlet to download latest version of the cmdlets from [PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell).
-
-    ![Run as administrator](../../../images/tutorial-get-started-4-run-spo-shell-admin.png)
-
-    ```powershell
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-    ```
-
-    > [!TIP]
-    > If you're using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
-
-    > [!NOTE]
-    > You can also install SharePoint Online Management Shell using [an installer](https://www.microsoft.com/en-us/download/details.aspx?id=35588) available from the Microsoft download center, but in general PowerShell gallery option is recommended.
-
-1. Confirm module installation if asked in the PowerShell window
-1. Connect to your SharePoint Online tenant with a PowerShell session.
-
-    ```powershell
-    Connect-SPOService -Url https://contoso-admin.sharepoint.com
-    ```
-
-1. Get the current status of public CDN settings from the tenant level by executing the following commands.
-
-    > [!IMPORTANT]
-    > Ensure you execute each commend individually and not all at the same time.
-
-    ```powershell
-    Get-SPOTenantCdnEnabled -CdnType Public
-    Get-SPOTenantCdnOrigins -CdnType Public
-    Get-SPOTenantCdnPolicies -CdnType Public
-    ```
-
-    SharePoint Framework solutions can automatically benefit from the Microsoft 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, ***/CLIENTSIDEASSETS** origin is automatically added as a valid origin.
-
-1. Enable public CDN in the tenant.
-
-    ```powershell
-    Set-SPOTenantCdnEnabled -CdnType Public
-    ```
-
-1. Confirm settings by selecting **Y** and then Enter.
-
-    ![Enable public CDN in tenant](../../../images/cdn-enable-o365-public-cdn.png)
-
-    Now the public CDN has been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.
-
-    SharePoint Framework solutions can automatically benefit from the Microsoft 365 Public CDN as long as it's enabled in your tenant. When the CDN is enabled, the ***/CLIENTSIDEASSETS** origin is automatically added as a valid origin.
-
-    > [!NOTE]
-    > If you've previously enabled Microsoft 365 CDN, you should re-enable the public CDN so that you've the ***/CLIENTSIDEASSETS**entry added as a valid CDN origin for public CDN. If this entry is not present and the public CDN is enabled in your tenant, bundle requests will contain the token hostname **spclientsideassetlibrary** in their URL, causing the requests to fail. You can add this missing entry by using
-    >
-    > ```powershell
-    > Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */CLIENTSIDEASSETS
-    > ```
-
-1. You can double-check the current setup of your end-points. Execute the following command to get the list of CDN origins from your tenant:
-
-    ```powershell
-    Get-SPOTenantCdnOrigins -CdnType Public
-    ```
-
-    Notice that when you enable the CDN for the first time, the default configuration to enable default origins will take a while (approximately 15 minutes). Configuration is completed when there's no **(configuration pending)** messages when you execute the `Get-SPOTenantCdnOrigins -CdnType Public` command.
-
-    ![List of public origins in tenant](../../../images/cdn-public-origins.png)
-
-    > [!NOTE]
-    > When the origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and the CDN system.
+For information on enabling and configuring the Microsoft 365 CDN in your SharePoint Online tenant, see [Enable the Microsoft 365 CDN](../../enable-Microsoft-365-content-delivery-network.md).
 
 ## Finalize solution for deployment
 

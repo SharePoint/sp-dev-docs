@@ -1,7 +1,7 @@
 ---
 title: Host extension from Microsoft 365 CDN (Hello World part 4)
 description: Deploy your SharePoint Framework Application Customizer to be hosted from a Microsoft 365 CDN and deploy that to SharePoint for end users.
-ms.date: 06/19/2020
+ms.date: 06/29/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -25,7 +25,7 @@ You can also follow these steps by watching the video on the SharePoint PnP YouT
 
 Microsoft 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
 
-Follow the steps outlined in the following document to ensure the Microsoft 365 CDN is enabled in your tenant: [Host your client-side web part from Office 365 CDN: Enable CDN in your Microsoft 365 tenant](../../web-parts/get-started/hosting-webpart-from-office-365-cdn.md#enable-cdn-in-your-microsoft-365-tenant)
+Follow the steps outlined in the following document to ensure the Microsoft 365 CDN is enabled in your tenant: [Enable the Microsoft 365 CDN](../../enable-Microsoft-365-content-delivery-network.md).
 
 ## Update your solution project for the CDN URLs
 

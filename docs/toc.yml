@@ -311,6 +311,8 @@
       href: spfx/web-parts/basics/notes-on-solution-packaging.md
     - name: Update packages
       href: spfx/toolchain/update-latest-packages.md
+    - name: Enable the Microsoft 365 CDN
+      href: spfx/enable-Microsoft-365-content-delivery-network.md
     - name: Deploy web parts to Azure CDN
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Custom build tasks

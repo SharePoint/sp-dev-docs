@@ -9,7 +9,7 @@ localization_priority: Priority
 
 # SharePoint Framework development tools and libraries
 
-As the SharePoint Framework evolves, so do the various development tools and libraries that it uses.
+As the SharePoint Framework (SPFx) evolves, so do the various development tools and libraries that it uses.
 
 ## SharePoint Framework version compatibility
 
@@ -23,16 +23,16 @@ SharePoint Online always uses the latest version of the SharePoint Framework, bu
 |SharePoint Server 2019|v1.4.1 or lower|SPFx client-side web parts in classic and modern pages, and extensions in modern pages.
 |SharePoint 2016 Feature Pack 2|v1.1|SPFx client-side web parts hosted in classic SharePoint pages.
 
-For more information about SharePoint Framework development with SharePoint 2016 Feature Pack 2 and SharePoint 2019, refer to the following:
+For more information about SharePoint Framework development with SharePoint 2016 Feature Pack 2 and SharePoint 2019, see:
 
-* [SharePoint Framework development with SharePoint 2016 Feature Pack 2](sharepoint-2016-support.md)
-* [SharePoint Framework development with SharePoint Server 2019](sharepoint-2019-support.md)
+- [SharePoint Framework development with SharePoint 2016 Feature Pack 2](sharepoint-2016-support.md)
+- [SharePoint Framework development with SharePoint Server 2019](sharepoint-2019-support.md)
 
 ## SPFx development environment compatibility
 
-As each new version of the SharePoint Framework is released, support for newer versions libraries is constantly added to ensure that the toolset remains up-to-date.
+As each new version of the SharePoint Framework is released, support for newer versions libraries is constantly added to ensure that the toolset remains up to date.
 
-The following table lists each version of SharePoint Framework along with each library versions are compatible:
+The following table lists SharePoint Framework and compatible versions of common tools and libraries:
 
 |SPFx|Node.js|NPM|TypeScript|React
 |---|---|---|---|---|
