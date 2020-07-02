@@ -8,6 +8,8 @@ localization_priority: Priority
 
 # Maintain and support your published app
 
+Publishing the application to the marketplace is just the first step in helping users solve their business problem. Following sections contain some tips that you should consider after publishing your application to the marketplace.
+
 ## Install applications from the marketplace in the tenant app catalog
 
 SharePoint Online allows you to create a tenant app catalog where you centrally manage applications available in your organization. Additionally, you can create site collection app catalogs, where you can deploy applications to specific sites.

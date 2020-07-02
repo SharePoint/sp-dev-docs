@@ -6,7 +6,9 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# Frequently asked questions
+# Publish SharePoint Framework applications to the marketplace - FAQ
+
+Following are some of the most frequently asked questions regarding publishing SharePoint Framework applications to the marketplace.
 
 ## Is it required to configure web parts to be isolated for publishing in the marketplace
 

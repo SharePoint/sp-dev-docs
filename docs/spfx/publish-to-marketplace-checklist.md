@@ -6,7 +6,7 @@ ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# App validation checklist
+# Prepare your SharePoint Framework application for publishing to the marketplace
 
 Before a SharePoint Framework application is published in the marketplace, it must go through an approval process. This process is executed free of charge by Microsoft and is meant to ensure that your app functions properly and that its page clearly describes its purpose and features. To help you get your application published in the marketplace, following is the list of tests executed as a part of the approval process.
 
