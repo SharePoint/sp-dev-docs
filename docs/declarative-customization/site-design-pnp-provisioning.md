@@ -172,14 +172,31 @@ Copy the following provisioning template XML to a new file and save the file as 
 1. Go to the [Azure Portal](https://portal.azure.com).
 1. Choose **+ Create a resource**.
 1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
-1. Currently Function apps are created with the V2 runtime which does not support PowerShell functions. Change the runtime of the function app to V1 by navigating selecting **Platform features**, **Function app settings** and change the Runtime version from **~2** to **~1**.
-1. Create a new function: **Functions** > **New function**.
+1. Navigate within the Function App just created to **Configuration** > **Function runtime settings** and change the runtime version from **~3** to **~1**.
+ 
+    ![Screenshot of the Azure portal with the Function runtime settings screen highlighted](images/pnpprovisioning-runtime-settings.png)
+
+    > [!NOTE]
+    > Function apps based on the runtime version ~3 or ~2 support only PowerShell Core as programming language for the functions.
+    > At this moment, PnP PowerShell cmdlets can be only executed under PowerShell (and not on PowerShell Core).
+    >
+    > First, to make available Powershell at the level of the Function App, the runtime version has to be set to **~1**.
+    >
+    > Secondly, PowerShell can be only activated from the **classic experience** of the Azure Portal, by switching on the **Experimental Language Support**, at the level of the function app.
+    >
+    > Read more about [Azure Functions runtime versions.](https://www.microsoft.com/download/details.aspx?id=35588)
+
+1. Switch temporarly the Function App user interface to the **classic experience** (previous Azure Portal experience). Choose **Overview** from the left navigation and next **Switch to Classic experience** from the command bar.
+
+   ![Screenshot of the Azure portal with the Function runtime settings screen highlighted](images/pnpprovisioning-switch-classic-experience.png)
+
+1. Create a new function: **Functions** > **New function**:
 
     ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
 
-1. Turn on experimental language support:
+1. Turn on **Experimental Language Support**:
 
-    ![Screenshot of the Azure portal with the Experimental Language Support switch highlighted](images/pnpprovisioning-experimental-features.png)
+    ![Screenshot of the Azure portal with the Experimental Language Support switch highlighted](images/pnpprovisioning-experimental-features.PNG)
 
 1. Create a new Queue Triggered function based upon PowerShell:
 
