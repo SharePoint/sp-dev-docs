@@ -1,6 +1,6 @@
 ---
 title: How to provide add-in app only tenant administrative permissions in SharePoint Online
-ms.date: 04/22/2020
+ms.date: 06/30/2020
 localization_priority: Priority
 ---
 How to provide add-in app only tenant administrative permissions in SharePoint Online
@@ -23,6 +23,8 @@ Steps to provide tenant admin permission for app only add-in:
 - Perform trust for the updated add-in registration
 
 Notice that this operation has to be completed under the tenant administration site and account used for these operations will need to have tenant administrative permissions. If you are providing lower level permissions for your add-in, you can complete those under normal site collection URLs with lower permissions. 
+
+Once the steps above have been completed, the add-in can be deployed to the tenant level app catalog.
 
 
 ## See also
