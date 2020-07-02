@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 06/24/2020
+ms.date: 07/01/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -19,10 +19,10 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Install Node.js
 
-Install [Node.js LTS version 10](https://nodejs.org/download/release/v10.20.1/).
+Install [Node.js LTS version 10](https://nodejs.org/download/release/v10.21.0/).
 
-- If you're in Windows, you can use the msi installers ([x86](https://nodejs.org/download/release/v10.20.1/node-v10.20.1-x86.msi) or [x64](https://nodejs.org/download/release/v10.20.1/node-v10.20.1-x64.msi)) in this link for the easiest way to set up Node.js (notice that these direct links evolve over time, so check the latest v10 from the above directory).
-- If you have Node.js already installed, check that you have the correct version by using `node -v`. It should return version 10.20.1.
+- If you're in Windows, you can use the msi installers ([x86](https://nodejs.org/download/release/v10.21.0/node-v10.21.0-x86.msi) or [x64](https://nodejs.org/download/release/v10.21.0/node-v10.21.0-x64.msi)) in this link for the easiest way to set up Node.js (notice that these direct links evolve over time, so check the latest v10 from the above directory).
+- If you have Node.js already installed, check that you have the correct version by using `node -v`. It should return version 10.21.0.
 
 > [!IMPORTANT]
 > The current supported LTS version of Node.js for the SharePoint Framework is  **Node.js v8.x** and **Node.js v10.x**. Node versions 9.x, 11.x, and 12.x are **not** currently supported with SharePoint Framework development.
