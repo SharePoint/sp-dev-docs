@@ -15,7 +15,7 @@ For business users building apps and process automations in SharePoint today and
 
 Current landscape
 
-![Current landscape](../../../images/current-landscape.png)
+![Current landscape](../../../images/bizapps-current-landscape.png)
 
 This article specifically provides guidance about how to plan for transitioning from classic SharePoint Workflows to Power Automate flows.
 
@@ -216,5 +216,3 @@ While the following lists show some of the most common workflow capabilities, Po
 | Save a copy of workflow to create a copy of the workflow | Not available | Yes |
 | Workflow versioning | Not available | No |
 | Create a workflow with elevated permissions | Yes, by granting permissions to workflow app and then using App Step action and SharePoint Add-ins | Not available
-
-## 
