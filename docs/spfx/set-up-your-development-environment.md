@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 07/01/2020
+ms.date: 07/02/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -19,13 +19,22 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Install Node.js
 
-Install [Node.js LTS version 10](https://nodejs.org/download/release/v10.21.0/).
+Install the latest version of [Node.js](https://www.nodejs.org) LTS **10.x**.
 
-- If you're in Windows, you can use the msi installers ([x86](https://nodejs.org/download/release/v10.21.0/node-v10.21.0-x86.msi) or [x64](https://nodejs.org/download/release/v10.21.0/node-v10.21.0-x64.msi)) in this link for the easiest way to set up Node.js (notice that these direct links evolve over time, so check the latest v10 from the above directory).
-- If you have Node.js already installed, check that you have the correct version by using `node -v`. It should return version 10.21.0.
+This version is the currently recommended and supported version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*). Node.js is frequently updated and available on multiple platforms including Windows, macOS, and Linux. That's why we are not listing all versions or direct downloads on this page.
 
 > [!IMPORTANT]
-> The current supported LTS version of Node.js for the SharePoint Framework is  **Node.js v8.x** and **Node.js v10.x**. Node versions 9.x, 11.x, and 12.x are **not** currently supported with SharePoint Framework development.
+> At this time, Node.js v12.x is the Active LTS version listed on the Node.js homepage as the default download. To download Node.js v10.x, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
+>
+> For more information about Node.js's Long Term Support (LTS) schedule, see: [Node.js > Releases](https://nodejs.org/en/about/releases/).
+>
+> - Windows users can use the **\*.msi** installers for x86 or x64 depending on your Windows installation. There are usually only two available **\*.msi** files with names similar to **node-v{version-number}-x[86|64].msi**.
+> - macOS users can use the **\*.pkg** installer that's usually is named **node-v{version-number}.pkg**.
+
+You can check if you already have Node.js already installed and the installed version by running **node -v** from the command line. You'll need this to return version **v8.x.x** (*if you're developing solutions for SharePoint Server 2016*) or **v10.x.x** (*if you're developing solutions for SharePoint Server 2019 or SharePoint Online*). If it returns a different major version, refer to the instructions above to obtain a supported version.
+
+> [!IMPORTANT]
+> Node.js v9.x, v11.x, and v12.x are **not** currently supported with SharePoint Framework development.
 
 > [!NOTE]
 > If you're building SharePoint Framework components for SharePoint Server 2016, see **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section for additional details on which version of Node.js you should install.
