@@ -89,6 +89,15 @@ While the following lists show some of the most common workflow capabilities, Po
 | Apply and perform conditional business logic in workflows | Conditions | Conditions (available under Actions) |
 | Get additional input from users when running manual workflows | Initiation form | Trigger Inputs |
 
+### Workflow types
+
+|Workflow type |Sharepoint workflow |Power Automate flow |
+|:-------|:-------|:--------|
+| List workflows   | Yes   | Yes |
+| Library workflows | Yes | Yes |
+| Reusable workflows | Yes | Not available |
+| Site workflows | Yes | Not available |
+
 ### SharePoint integrations
 
 |SharePoint integration |Sharepoint workflow |Power Automate flow |
@@ -99,15 +108,6 @@ While the following lists show some of the most common workflow capabilities, Po
 | Create and respond to classic publishing page approvals | Yes | Not available |
 | Create and respond to modern page approvals | Not available | Yes |
 | Create and manage Hub Site association approval requests | Not available | Yes |
-
-### Workflow types
-
-|Workflow type |Sharepoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| List workflows   | Yes   | Yes |
-| Library workflows | Yes | Yes |
-| Reusable workflows | Yes | Not available |
-| Site workflows | Yes | Not available |
 
 ### List triggers
 
@@ -207,31 +207,14 @@ While the following lists show some of the most common workflow capabilities, Po
 | Versioning of workflows | Not available | Not available |
 | Copy/paste actions |Yes | Yes |
 
-## Appendix
-
-### System and admin capabilities
-
-The following table shows the system and admin capability improvements using Power Automate flows compared to SharePoint Designer.
-
-|System and admin capability |Power Automate flow  | SharePoint Designer |
+## Workflow administration
+|Workflow administration |Sharepoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
-| Alerts to admins when errors occur   | - Capability defined <br/> - Capability defined <br/> - No capability <br/> | - Capability defined <br/> - No capability <br/> - No capability <br/> |
-| Centrally managed connection list | - Capability defined <br/> - Capability defined <br/> - Capability defined <br/> | - No capability <br/> |
-| Workflow management | - Capability defined <br/> - Capability defined <br/> - Capability defined <br/> | - Capability defined <br/> - Capability defined <br/> - Capability defined <br/> |  
-| Data loss prevention policies | - Capability defined <br/> - Capability defined <br/> - Capability defined <br/> | - No capability <br/> |
-| Audit logging | - Capability defined <br/> - Capability defined <br/> - Capability defined <br/> | - Capability defined <br/> - No capability <br/> - No capability <br/> |
-| System account support versus user accounts | - No capability <br/> | - Capability defined <br/> - Capability defined <br/> - Capability defined <br/> |
+| Central location to view all workflows   | Yes, only available to view for a given list or library   | Yes, 'My flows' lists user flows |
+| Share workflows with list or library users | Yes | Yes |
+| Share workflows with users | Not available | Yes |
+| Save a copy of workflow to create a copy of the workflow | Not available | Yes |
+| Workflow versioning | Not available | No |
+| Create a workflow with elevated permissions | Yes, by granting permissions to workflow app and then using App Step action and SharePoint Add-ins | Not available
 
-### Additional Power Automate flows capabilities and descriptions
-
-The following table shows additional flow capabilities within Power Automate.
-
-|Power Automate flow capability |Description |
-|:-------|:-------|:--------|
-| CDS solution support   | Solutions are packages that contain all the different aspects a project that can be deployed, upgraded, and uninstalled in environments. They also provide a unit of management during develop, much like a folder. |
-| Sandbox support | Sandboxes let users validate their entire solution end-to-end in a text environment before taking the latest version into production. Users can copy their flows in Power Automate between environments. | 
-| Leverage device signals on mobile devices | Users can create flows that can leverage mobile capabilities like geo-fencing. | 
-| Custom controls in business process flows | Business process flows support the full range of form capabilities, including custom controls and business rules. | 
-| Power Automate enhancements | Improved editing capabilities, including the ability to copy and paste actions, and a new HTML editor for rich text emails. | 
-| Distribute flows to the whole organization | IT admins can distribute automated flows through their organization, like they can today with flow buttons through Power Automate. | 
-| SharePoint experiences built on flows in Power Automate |Many SharePoint features natively use flows in Power Automate under the covers, including *Page approvals*, *Hub Join approvals*, and *Remind Me*. | 
+## 
