@@ -9,10 +9,6 @@ ms.date: 06/30/2020
 
 For business users building apps and process automations in SharePoint today and into the future, Microsoft **Power Apps** and *flows* within Microsoft **Power Automate** are your tools of choice. This natural transition is well underway as SharePoint evolves from InfoPath and SharePoint Designer workflows to the simplicity and versatility of Power Apps and flows within Power Automate.
 
-
-> [!NOTE]
-> Microsoft support staff does not support the process of migrating from classic workflows to Power Automate flows.
-
 Current landscape
 
 ![Current landscape](../../../images/bizapps-current-landscape.png)
