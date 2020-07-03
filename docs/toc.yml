@@ -232,15 +232,15 @@
     - name: Library component tutorial
       href: spfx/library-component-tutorial.md
   - name: Publish to marketplace
-      items:
-      - name: Overview
-        href: spfx/publish-to-marketplace-overview.md
-      - name: App validation checklist
-        href: spfx/publish-to-marketplace-checklist.md
-      - name: After publishing your app
-        href: spfx/publish-to-marketplace-after-publishing.md
-      - name: Frequently asked questions
-        href: spfx/publish-to-marketplace-faq.md
+    items:
+    - name: Overview
+      href: spfx/publish-to-marketplace-overview.md
+    - name: App validation checklist
+      href: spfx/publish-to-marketplace-checklist.md
+    - name: After publishing your app
+      href: spfx/publish-to-marketplace-after-publishing.md
+    - name: Frequently asked questions
+      href: spfx/publish-to-marketplace-faq.md
   - name: Migrate existing customizations
     items:
     - name: Script Editor web part
