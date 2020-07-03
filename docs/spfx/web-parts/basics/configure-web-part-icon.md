@@ -188,7 +188,7 @@ Starting from SharePoint Framework v1.11 you can specify the preview image for y
 
 ### To set the single part app page preview image
 
-Specify the image's absolute URL in the `fullPageAppIconImageUrl` property in the web part manifest.
+Specify the image's absolute URL in the `fullPageAppIconImageUrl` property in the web part manifest. 
 
 ```json
 {
