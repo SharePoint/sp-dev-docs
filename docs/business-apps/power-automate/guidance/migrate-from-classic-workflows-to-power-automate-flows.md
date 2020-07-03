@@ -1,5 +1,5 @@
 ---
-title: Guidance: Migrate from classic workflows to Power Automate flows in SharePoint
+title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
 ms.date: 06/30/2020
 ---
 
