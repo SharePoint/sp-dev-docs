@@ -40,7 +40,7 @@ You can embed any modern SharePoint page in Microsoft Teams by creating a Teams 
 - If changes are made to the pinning model for modern SP pages or sites, it could require you to delete existing pinned personal apps and redeploy them.
 
 > [!IMPORTANT]
-> This option is provided as a preview integration path. Microsoft reserves the right to make changes to the model, which could require you to delete existing pinned apps and re-deploy them with an updated solution. Changes to the integration path will not require you to delete or recreate the targeted SharePoint site or page.  
+> This option is provided as a preview integration path. Microsoft reserves the right to make changes to the model, which could require you to delete existing pinned apps and re-deploy them with an updated solution. Changes to the integration path will not require you to delete or recreate the targeted SharePoint site or page.
 
 ## Embed SharePoint modern sites & pages into Microsoft Teams with App Studio 
 
