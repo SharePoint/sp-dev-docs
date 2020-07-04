@@ -48,7 +48,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
     ```
 
 > [!TIP]
-> The [Office 365 CLI](http://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
+> The [Office 365 CLI](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 

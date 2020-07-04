@@ -51,7 +51,7 @@ We'll release more updated documentation and guidance videos during upcoming day
 1. Fix all the new and interesting tslint errors that are now getting raised with a newer compiler. For large projects, this might take a while. The default behavior of the TypeScript compilers is getting stricter, but your code will be the better for it.
 
 > [!TIP]
-> The [Office 365 CLI](http://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
+> The [Office 365 CLI](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
@@ -123,7 +123,7 @@ The following versions of the **\@microsoft/rush-stack-compiler** should be used
 - TypeScript v3.3
   - **\@microsoft/rush-stack-compiler-3.3@0.1.6**
 
-## Web part variant theming in SharePoint modern pages
+### Web part variant theming in SharePoint modern pages
 
 SharePoint modern pages recently released a feature to have section background colors. Web parts can update their theming to reflect the background color the web part is rendering over. Setting the `supportsThemeVariants` property in the web part manifest to `true` will disable the default behavior of always rendering a white background.
 
