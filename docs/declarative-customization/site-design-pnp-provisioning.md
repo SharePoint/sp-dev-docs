@@ -1,7 +1,7 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 06/05/2020
+ms.date: 07/04/2020
 localization_priority: Priority
 ---
 
@@ -172,12 +172,28 @@ Copy the following provisioning template XML to a new file and save the file as 
 1. Go to the [Azure Portal](https://portal.azure.com).
 1. Choose **+ Create a resource**.
 1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
-1. Currently Function apps are created with the V2 runtime which does not support PowerShell functions. Change the runtime of the function app to V1 by navigating selecting **Platform features**, **Function app settings** and change the Runtime version from **~2** to **~1**.
-1. Create a new function: **Functions** > **New function**.
+1. Within the Function App select **Configuration** > **Function runtime settings** and change the runtime version from **~3** to **~1**.
+
+    ![Screenshot of the Azure portal with the Function runtime settings screen highlighted](images/pnpprovisioning-runtime-settings.png)
+
+    > [!NOTE]
+    > Function Apps based on the runtime version ~3 or ~2 only support PowerShell Core as programming language. At this moment, PnP PowerShell cmdlets can be only executed under PowerShell (and not on PowerShell Core).
+    >
+    > First, to make available Powershell at the level of the Function App, the runtime version has to be set to **~1**.
+    >
+    > Secondly, PowerShell can be only activated from the **classic experience** of the Azure Portal, by enabling the **Experimental Language Support**, at the level of the Function App.
+    >
+    > Read more about [Azure Functions runtime versions.](https://www.microsoft.com/download/details.aspx?id=35588)
+
+1. Temporarly switch the Azure Function App's user interface to the **classic experience** from the current experience. Select **Overview** in the left-hand navigation and select **Switch to Classic experience** as shown in the following figure.
+
+   ![Screenshot of the Azure portal with the Function runtime settings screen highlighted](images/pnpprovisioning-switch-classic-experience.png)
+
+1. Create a new Azure Function **Functions** > **New function**:
 
     ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
 
-1. Turn on experimental language support:
+1. Enable **Experimental Language Support**:
 
     ![Screenshot of the Azure portal with the Experimental Language Support switch highlighted](images/pnpprovisioning-experimental-features.png)
 
