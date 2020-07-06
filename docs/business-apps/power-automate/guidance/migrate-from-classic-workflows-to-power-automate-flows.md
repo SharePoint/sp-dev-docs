@@ -36,7 +36,7 @@ Since the release of classic workflows, SharePoint and Microsoft 365 apps have e
 
 [Power Automate](https://docs.microsoft.com/power-automate/getting-started) helps users and businesses to create automated workflows between your favorite apps and services to get notifications, collect data, automate business policies and more.
 
-> [!VIDEO https://youtu.be/hCuxuUaGC6Y]
+> [!VIDEO https://www.youtube.com/embed/hCuxuUaGC6Y]
 
 Using Microsoft Power Automate, SharePoint users can use the SharePoint Connector to create automations for when data changes in a list or a library. Users can build simple to complex workflows such as, but not limited to:
 
