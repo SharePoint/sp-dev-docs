@@ -1,16 +1,18 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 4/21/2020
+ms.date: 07/03/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # SharePoint Framework roadmap
 
-The first release of the SharePoint Framework contained only support for client-side web parts. This was, however, just a start on the journey for providing additional modern customization capabilities to SharePoint. Following is a list of key capabilities released after General Availability:
+The first release of the SharePoint Framework in February 2017 only contained support for client-side web parts. This was just a start on the journey to provide additional modern customization capabilities to SharePoint.
 
-- Building Office add-ins using SharePoint Framework - in preview from 1.10 release
+The following is a list of key capabilities released after General Availability:
+
+- [Create Outlook add-ins using SharePoint Framework (developer preview in SPFx v1.10)](office-addins-create.md)
 - [Building Microsoft Team tabs using SharePoint Framework](./integrate-with-teams-introduction.md)
 - [Single Part App Pages](./web-parts/single-part-app-pages.md)
 - [Isolated web parts](./web-parts/isolated-web-parts.md)
@@ -29,6 +31,11 @@ The first release of the SharePoint Framework contained only support for client-
 - Relocating preview code to isolated packages
 - SPFx Yeoman package extensibility
 - React 16 and TypeScript 3.x support
+- Pre-allocate space for the extensions while rendering page in server side
+
+## Release notes
+
+Refer to the table of contents menu for details on each of the SharePoint Framework releases.
 
 > [!NOTE]
 > This is a list of areas that SharePoint engineering has in the backlog and is looking into. This does **NOT** mean that all of them will be delivered, but we are looking into getting items and topics from this list gradually released with the future releases of SharePoint Framework.
@@ -36,11 +43,10 @@ The first release of the SharePoint Framework contained only support for client-
 ## General improvements
 
 - Updated 'store' story with SharePoint Framework support in AppSource
-- 'Store' story for SharePoint Framework solutions with easy distribution channel for ISVs 
+- 'Store' story for SharePoint Framework solutions with easy distribution channel for ISVs
 - Content Security Policy (CSP) support
 - Additional placeholder, like content header, content footer, navigation extensions, search extensions
 - Improved developer experience and tooling
-- Pre-allocate space for the extensions while rendering page in server side
 
 ## Client-side web parts++ and add-ins
 
@@ -64,44 +70,3 @@ The first release of the SharePoint Framework contained only support for client-
 
 - SharePoint Framework Workbench 2.0: Development story for SharePoint Framework Extensions
 - Tool chain improvements
-
-## Already shipped capabilities
-
-The following sections list older items that have already shipped.
-
-### Improved Microsoft Graph and Azure AD secured API access
-
-- Use any tenant administrator approved Microsoft Graph scope in your SharePoint Framework solutions
-- Call securely APIs secured with Azure Active Directory - Like custom WebAPIs or Azure Functions
-
-### Asset packaging
-
-- Automatic CDN hosting for code. Package JavaScript bundle into app package, which is automatically deployed to a library that gets hosted on your tenant Office 365 CDN.
-
-### ALM REST APIs
-
-- ALM REST APIs. Deploy, activate, delete, and upgrade apps and add-ins.
-- ALM REST APIs targeted to support *everything* in the app catalog, including add-ins.
-- CSOM and PowerShell cmdlets released as an open-source community initiative.
-
-### JavaScript embedding support (JSLink, User Custom Actions) 
-
-- The same toolchain and deployment model as client-side web parts.
-- Derive from a strongly typed base class wherever possible, rather than manipulating the page DOM directly.
-- Enable modern extension usage with modern experiences similar to Custom Actions and JSLink in classic experience.
-- Work with NoScript via tenant app catalog.
-
-### On-premises support - SharePoint 2016 Feature Pack 2
-
-- Shipping as part of Feature Pack 2 for SharePoint 2016.
-- Similar feature capabilities as in SharePoint Online.
-- Target is to provide common development platform across on-premises and the cloud.
-- Leveraging modern toolchain and open source in on-premises environments.
-- Targeting SharePoint 2016 version during calendar year 2017.
-
-
-## See also
-
-- [Office Developer Blog](https://developer.microsoft.com/office/blogs)
-- [Microsoft365Dev Twitter account](https://twitter.com/Microsoft365Dev)
-- [SharePoint Framework Overview](sharepoint-framework-overview.md)
