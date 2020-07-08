@@ -1,5 +1,5 @@
 - name: SharePoint development
-  href: index.md
+  href: index.yml
 - name: Capabilities & features
   items:
   - name: Connect to Microsoft 365 group
