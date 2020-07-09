@@ -12,12 +12,12 @@ Azure DevOps (Visual Studio Team Services / Team Foundation Server) consists of 
 
 This article explains the steps involved in setting up your Azure DevOps environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
-## Chosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
+## Choosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
 
-There are currently two approaches available to implement continuous integration, and deployement in Azure DevOps.  
+There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.  
 Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
 Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history and repeatability.  
-Both approaches are decribed for the SharePoint Framework:
+Both approaches are described for the SharePoint Framework:
 
 - Azure Build and Release (this article)
 - [Azure Multi-stage Pipelines](./implement-ci-cd-with-azure-pipelines.md)
@@ -213,7 +213,7 @@ Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. 
 
 ### Installing the Office 365 CLI
 
-The Office 365 Common Language Interface (CLI) is an open source project built by the OfficeDev PnP Community. In order to leverage the  CLI as part of your Release Definition, you first need to install it.  Then, you will be able to take advantage of commands available  to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
+The Office 365 Common Language Interface (CLI) is an open source project built by the OfficeDev PnP Community. In order to leverage the  CLI as part of your Release Definition, you first need to install it.  Then, you will be able to take advantage of commands available to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
 
 ![installing office 365 cli](../../images/azure-devops-spfx-14.png)
 
