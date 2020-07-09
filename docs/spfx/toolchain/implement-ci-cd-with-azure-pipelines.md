@@ -15,7 +15,7 @@ This article explains the steps involved in setting up your Azure Pipelines envi
 
 ## Choosing between Azure Multi-stage Pipelines (preview) and Azure DevOps builds and releases
 
-There are currently two approaches available to implement continuous integration, and deployement in Azure DevOps.  
+There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.  
 Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
 
 Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history, and repeatability.  
@@ -208,7 +208,7 @@ To create the variable group, follow these steps:
 1. Under __Pipelines__ select __Library__
 1. Add a new __Variable Group__ making sure the name matches what is defined in the pipeline definition
 1. Add the following variables to the group and select __Save__
-    - o365_user_login: the user login of a SharePoint tenant administator
+    - o365_user_login: the user login of a SharePoint tenant administrator
     - o365_user_password: the user password of the account
     - o365_app_catalog_site_url: the url of the app catalog site collection
 
