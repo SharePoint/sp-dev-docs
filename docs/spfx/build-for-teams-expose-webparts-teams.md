@@ -30,6 +30,10 @@ To expose the web part as a Microsoft Teams personal app, in the web part’s ma
 
 ## Expose web part as Microsoft Teams messaging extension
 
+> [!IMPORTANT]
+> Exposing web parts as Microsoft Teams messaging extension is supported with SharePoint Framework v1.11 and newer.
+
+
 To expose your SharePoint Framework web part as a messaging extension, you don't need to use a specific host in the `supportedHosts` property. Instead, all you need to do, is to extend the teams manifest in your SharePoint Framework solution with a `composeExtension`, for example:
 
 ```json
