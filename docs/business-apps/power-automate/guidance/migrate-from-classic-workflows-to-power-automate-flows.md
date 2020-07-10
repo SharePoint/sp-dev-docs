@@ -1,6 +1,6 @@
 ---
 title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
-ms.date: 06/30/2020
+ms.date: 07/10/2020
 ---
 
 # Guidance: Migrate from classic workflows to Power Automate flows in SharePoint
@@ -47,6 +47,18 @@ Using Microsoft Power Automate, SharePoint users can use the SharePoint Connecto
 To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/en-us/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](https://docs.microsoft.com/power-automate/mobile-create-flow).
 
 To learn more about building workflows using Power Automate in SharePoint, start here: Business apps and Business process [automation in SharePoint](https://docs.microsoft.com/sharepoint/dev/business-apps/introduction-to-sharepoint-business-process-integration).
+
+## Feature gaps between classic workflows in SharePoint and Power Automate flows
+
+Many people feel there are significant feature gaps between SharePoint Designer (classic) workflows and Power Automate flows, but the list is not long. Of course, there are some gaps and workarounds you should consider in your planning as you move from classic workflows to Power Automate flows.
+	
+* **30 day run limit for flows** – SharePoint Designer workflows can run endlessly, but flows have a 30 day lifespan. Getting beyond this limitation means your flow will need to call itself in a re-entrant way to restart the clock ticking.
+* **HTTP Connector** – Flow has an HTTP connector (as an action), but it is a Premium connector. If you use HTTP calls extensively, you’ll want to create a “service account” user with a Power Automate license and run these flows with that user account to minimize your licensing costs.
+* **Custom permissions on list items** – While there is not a flow action to accomplish this, it is possible to do it with an HTTP call.
+* **Reusable Flows** – Using some modular thinking, you can create a master flow which a flow per list or library can call to do the heavy lifting. (In some ways this is even preferable, as you can edit a flow which is used in many locations centrally.) Alternatively, you can use flow actions to discover all of the lists or libraries which match some criteria and run the flow on them all on a timer.
+* **Workflow history storage** – Flows maintain a history in the context of the flow itself in the Power Automate dashboard. If you need tracking in your sites, you can have the flow log information in a list you create.
+
+While these gaps do exist, as you can see there are workarounds for each of them.
 
 ## Modern approvals with Power Automate flows
 
