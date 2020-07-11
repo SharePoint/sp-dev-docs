@@ -34,7 +34,7 @@ This release is primarily a bug fix release to address few regressions and misse
 ## Changes in this release
 
 - Update title of user data property title in dynamic data
-- Add workaround for Yarn's **@types/react** resolution issue
+- Add workaround for Yarn's **\@types/react** resolution issue
 - Don't show/provision beta components in the non-beta install.
 - Update debugger **launch.json** config.
 - Add a dependency on TypeScript to meet the peer dependency requirements of **tslint-microsoft-contrib**.
