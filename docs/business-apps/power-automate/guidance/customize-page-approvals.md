@@ -1,6 +1,6 @@
 ---
 title: Customize SharePoint page approvals to meet your needs
-ms.date: 05/14/2020
+ms.date: 07/12/2020
 ---
 
 # Customize SharePoint page approvals to meet your needs
@@ -11,7 +11,7 @@ However, you can add more processes, or even modify how the approval process wor
 
 To customize the default page approval flow, for a few scenarios, check out the following video:
 
-> [!VIDEO https://youtu.be/pKrHoG70FrM]
+> [!Video https://www.youtube.com/embed/pKrHoG70FrM]
 
 ## Create more than one approval flow
 
