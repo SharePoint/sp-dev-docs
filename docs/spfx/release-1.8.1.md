@@ -33,7 +33,7 @@ This is a _minor bump_ that fixes the issues with the Yeoman generator, projects
 
 ## Changes in this release
 
-- Fixed: Not able to set up SharePoint Server 2016 or SharePoint Server 2019 on premises using **@microsoft/sharepoint** Yeoman generator  (two issues mentioned – incorrect SupportedHosts property and incorrect reference to sp-property-pane)
+- Fixed: Not able to set up SharePoint Server 2016 or SharePoint Server 2019 on premises using **\@microsoft/sharepoint** Yeoman generator  (two issues mentioned – incorrect SupportedHosts property and incorrect reference to sp-property-pane)
   - [#3621](https://github.com/SharePoint/sp-dev-docs/issues/3621)
 - Fixed: Can't use **loadLegacyFabricCss** in SPFX 1.8
   - [#3612](https://github.com/SharePoint/sp-dev-docs/issues/3612)
