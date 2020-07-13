@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure Pipelines (preview)
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 12/19/2019
+ms.date: 07/13/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
