@@ -125,7 +125,7 @@
     href: spfx/sharepoint-framework-overview.md
   - name: Getting started
     items:
-    - name: Set up Office 365 tenant
+    - name: Set up Microsoft 365 tenant
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
