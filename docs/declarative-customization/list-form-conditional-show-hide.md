@@ -120,7 +120,7 @@ An example checking if the dates from [$StartDate] and [$EndDate] columns are be
 The following formula checks if the person column [$Owner] is equal to a specific user's email.
 
 ```
-=if([$Owner.email]=='chaksc@microsoft.com', 'true', 'false')
+=if([$Owner.email]=='nestorw@contoso.com', 'true', 'false')
 ```
 
 ##### Boolean (Yes/No) column
