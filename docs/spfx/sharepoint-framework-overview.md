@@ -18,7 +18,7 @@ Key features of the SharePoint Framework include:
 - It runs in the context of the current user and connection in the browser. There are no iFrames for the customization (JavaScript is embedded directly to the page).
 - The controls are rendered in the normal page DOM.
 - The controls are responsive and accessible by nature.
-- It enables the developer to access the lifecycle in addition to **render**, **load**, **serialize* and **deserialize**, **configuration changes**, and more.
+- It enables the developer to access the lifecycle in addition to **render**, **load**, **serialize** and **deserialize**, **configuration changes**, and more.
 - It's framework-agnostic. You can use any JavaScript framework that you like including, but not limited to, React, Handlebars, Knockout, Angular, and Vue.js.
 - The developer toolchain is based on popular open-source client development tools such as NPM, TypeScript, Yeoman, webpack, and gulp.
 - Performance is reliable.
