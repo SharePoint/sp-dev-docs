@@ -11,16 +11,16 @@ New in this release, support for additional attributes in the solution for enabl
 
 **Released:** July 16, 2020
 
-## Upgrading projects from v1.9.1 to v1.10
+## Upgrading projects from v1.10 to v1.11
 
-1. In the project's **package.json** file, identify all SPFx v1.9.1 packages. For each SPFx package:
-    1. Uninstall the existing v1.10 package:
+1. In the project's **package.json** file, identify all SPFx v1.10 packages. For each SPFx package:
+    1. Uninstall the existing v1.11 package:
 
         ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.10
+        npm uninstall @microsoft/{spfx-package-name}@1.11
         ```
 
-    1. Install the refreshed v1.10 package:
+    1. Install the refreshed v1.11 package:
 
         ```console
         npm install @microsoft/{spfx-package-name}@1.11 --save --save-exact
@@ -50,9 +50,9 @@ New in this release, support for additional attributes in the solution for enabl
 
 ## Changes and deprecations in this release
 
-- Knockout option for the SharePoint Framework web parts scaffolding has been removed. You can still use knockout if you prefer to do so, but there's no default scaffolding for it.
-- We have removed Node version 8 support in this release - use version 10 for now. Node v12 is not yet supported with SharePoint Framework development.
-- We have removed support for system.js in the local workbench
+- **REMOVED**: Knockout web framework option when creating SharePoint Framework web parts. You can still use Knockout, but there's no default scaffolding for it.
+- **REMOVED**: Node.js v8 support. For more information on the most current recommended versions, see [Set up your SharePoint Framework development environment](set-up-your-development-environment.md).
+- **REMOVED**: Support for system.js in the local workbench.
 
 > [!IMPORTANT]
 > We are planning to remove support of the local workbench within the upcoming releases of SharePoint Framework.
