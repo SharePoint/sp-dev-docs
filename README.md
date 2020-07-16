@@ -10,8 +10,6 @@ This repository contains the raw documents published to docs.microsoft.com site.
 
 Feel free to use [Issues]((https://github.com/SharePoint/sp-dev-docs/issues)) list to report us potential issues around the SharePoint Framework or gaps in our documentation. You can also submit directly pull requests towards our documentation. 
 
-We’ll also monitor [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
-
 You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365Dev) or [@m365pnp](https://twitter.com/m365pnp).
 
 ## SharePoint Framework Releases
@@ -92,14 +90,9 @@ To keep track of improvements to the Office 365 Framework, please take a look at
 Provide Feedback:
 
 * If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues).
-* [SharePoint StackExchange](http://sharepoint.stackexchange.com/) (please use [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) tags)
 * [SharePoint Developer](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev) group at Microsoft Tech Community
 * [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform)
 
-## Deployment Status
-The SharePoint Framework is now generally available at Office 365.
-
-- [SharePoint Framework reaches general availability—build and deploy engaging web parts today](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/)
 
 ## Contribute on the SharePoint Dev Docs
 
