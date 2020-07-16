@@ -424,6 +424,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.11.0 - July 16, 2020
+      href: spfx/release-1.11.0.md
     - name: SPFx v1.10.0 - January 7, 2020
       href: spfx/release-1.10.0.md
     - name: SPFx v1.9.1 - August 14, 2019
