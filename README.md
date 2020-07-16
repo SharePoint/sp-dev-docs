@@ -16,6 +16,9 @@ You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365D
 
 ## SharePoint Framework Releases
 
+* **July 16, 2020**
+   * **SPFx v1.11** - [See the release notes here](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/release-1.11.0)
+
 * **January 7, 2020**
    * **SPFx v1.10** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.10-release-notes)
 
