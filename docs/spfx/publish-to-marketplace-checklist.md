@@ -1,20 +1,20 @@
 ---
-title: Prepare your SharePoint Framework application for publishing to the marketplace
-description: Tips & tricks to help you get your SharePoint Framework application published in the marketplace
-ms.date: 06/25/2020
+title: Prepare your SharePoint Framework application for publishing to the Marketplace
+description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
+ms.date: 07/16/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# Prepare your SharePoint Framework application for publishing to the marketplace
+# Prepare your SharePoint Framework application for publishing to the Marketplace
 
-Before a SharePoint Framework application is published in the marketplace, it must go through an approval process. This process is executed free of charge by Microsoft and is meant to ensure that your app functions properly and that its page clearly describes its purpose and features. To help you get your application published in the marketplace, following is the list of tests executed as a part of the approval process.
+Before a SharePoint Framework application is published in the Marketplace, it must go through an approval process. This process is executed free of charge by Microsoft and is meant to ensure that your app functions properly and that its page clearly describes its purpose and features. To help you get your application published in the Marketplace, following is the list of tests executed as a part of the approval process.
 
 ## Prerequisites
 
 ### Use SharePoint Framework v1.11 or newer
 
-To build solutions that you want to publish to the marketplace, you need to use SharePoint Framework v1.11 or higher. Starting from version 1.11, SharePoint Framework solution manifest has additional information about your organization and solution, which is required for publishing your application in the marketplace.
+To build solutions that you want to publish to the Marketplace, you need to use SharePoint Framework v1.11 or higher. Starting from version 1.11, SharePoint Framework solution manifest has additional information about your organization and solution, which is required for publishing your application in the Marketplace.
 
 > [!TIP]
 > If your application is built using an older version of the SharePoint Framework, you can easily upgrade it to SharePoint Framework v1.11 or newer using Office 365 CLI. For more information, visit [https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/](https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/).
@@ -25,7 +25,7 @@ When testing your application, verify that it's working as intended when install
 
 ### Test application in the required browsers
 
-When testing your application against checks described in the following section, verify that it works as expected at least on Windows 10 in the latest versions of Microsoft Edge, Google Chrome, Firefox and Microsoft Teams Desktop client (if your application exposes web parts in Teams).
+When testing your application against checks described in the following section, verify that it works as expected at least on Windows 10 in the latest versions of Microsoft Edge, Google Chrome, Firefox, and Microsoft Teams Desktop client (if your application exposes web parts in Teams).
 
 ## Required checks
 
@@ -35,13 +35,13 @@ Following checks must be passed. If one or more checks from this category failed
 
 Under normal circumstances, all components (web parts and extensions) in your solution should work as intended. Preferably, before submitting your application for approval, you should verify that it's working as expected on multiple tenants and using different user accounts to ensure that it doesn't depend on any specific configuration. If your solution requires specific settings, mention it explicitly in your solution's description.
 
-### Web part should work in all hosts in which its exposed
+### Web part should work in all hosts in which it is exposed
 
 When building web parts using SharePoint Framework, you can choose [where they should be exposed](integrate-with-teams-introduction.md). Before submitting you application for review, ensure that your web part works as intended in all these hosts.
 
 ### Solution package must contain valid developer metadata
 
-In the solution's manifest (managed in the `package-solution.json` file) there is a new section named `developer` with the following properties:
+Solution's manifest (managed in the `package-solution.json` file) has to have a new section named `developer` with the following properties:
 
 Attribute|Description|Mandatory
 ---|---|---
@@ -53,7 +53,7 @@ Attribute|Description|Mandatory
 
 Including this additional information allows you to clearly communicate information about your application towards your users and in the future should allow you to access additional usage data.
 
-The developer information is displayed when installing web parts in Microsoft Teams. Information about the application and the developer that is displayed in the marketplace is managed separately in the marketplace.
+The developer information is displayed when installing web parts in Microsoft Teams. Information about the application and the developer that is displayed in the Marketplace is managed separately in the Marketplace.
 
 ### Web part metadata description text must briefly describe its functionality and value proposition
 
@@ -61,11 +61,11 @@ Ensure that your web part's description in the metadata is meaningful so that us
 
 ### Solution's description must clearly describe the different components included in the package
 
-When submitting your package to the marketplace, be sure to clearly describe what different component (web parts, application customizers, etc.) are included in the package to manage user expectations and help them understand the impact of using your application.
+When submitting your package to the Marketplace, be sure to clearly describe what different components (web parts, application customizers, etc.) are included in the package to manage user expectations and help them understand the impact of using your application.
 
 ### Don't use names of features in Teams and SharePoint in your solution's name
 
-In your solution name don't use words matching features in Microsoft Teams or SharePoint, such as **Chat**, **Contacts**, **Calendar**, **Calls**, **Files**, **Meeting**, **Activity**, **Teams**, **Apps**, **Help**, **SharePoint**, **List**, **Page**, etc. as these names could be confused with the standard functionality in Teams and SharePoint.
+In your solution name, don't use words matching features in Microsoft Teams or SharePoint, such as **Chat**, **Contacts**, **Calendar**, **Calls**, **Files**, **Meeting**, **Activity**, **Teams**, **Apps**, **Help**, **SharePoint**, **List**, **Page**, etc. as these names could be confused with the standard functionality in Teams and SharePoint.
 
 ### Don't use names of other Microsoft's products in your solution's name
 
@@ -77,7 +77,7 @@ Your solution must not use Microsoft Teams or SharePoint feature-specific keywor
 
 ### Naming your solution
 
-If your solution is named after a common word, such as **Orders**, you will need to include your company name as well to clearly differentiate it from other solutions in the marketplace, eg. **Contoso Orders**.
+If your solution is named after a common word, such as **Orders**, you will need to include your company name as well to clearly differentiate it from other solutions in the Marketplace, for example, **Contoso Orders**.
 
 ### Don't include additional advertising in your app's description and screenshots
 
@@ -87,9 +87,9 @@ Make sure that your app's description, screenshots, text, and promotional images
 
 Properties exposed in the property pane of your web part should be meaningful. Changing their settings, should clearly change the behavior of your web part.
 
-### Verify that the package file can be uploaded to App catalog without errors
+### Verify that the package file can be uploaded to App Catalog without errors
 
-Verify that the solution package can be uploaded to the App catalog in your tenant without any errors.
+Verify that the solution package can be uploaded to the App Catalog in your tenant without any errors.
 
 ### Verify that the app can be deployed without errors
 
@@ -128,11 +128,11 @@ If your application uses pop-ups, verify, that browsers with default settings do
 
 ### Correct first-launch experience
 
-If possible, your application should work when launched for the first time. If it must be configured first, clearly communicate next steps to the user. If the configuration is complex or requires additional information, provide clear instructions to help users setup your application.
+If possible, your application should work when launched for the first time. If it must be configured first, clearly communicate next steps to the user. If the configuration is complex or requires additional information, provide clear instructions to help users set up your application.
 
 ### Test syncing to Teams
 
-If your application contains web parts that are exposed as Teams tabs or personal apps, verify that they can be deployed to teams using the **Sync to Teams** option in the App catalog without any errors. After syncing the configuration to Teams, verify that all web parts are exposed in the Teams' app catalog as intended, can be installed and work as expected.
+If your application contains web parts that are exposed as Teams tabs or personal apps, verify that they can be deployed to teams using the **Sync to Teams** option in the App Catalog without any errors. After syncing the configuration to Teams, verify that all web parts are exposed in the Teams' App Catalog as intended, can be installed and work as expected.
 
 ### Verify that links with additional information are correct
 
@@ -148,7 +148,7 @@ If your offering includes a free trial of your application, then your applicatio
 
 ### Don't include malicious code
 
-Solutions that contain malicious code, links to malicious websites or otherwise illegal resources will be rejected from publishing in the marketplace.
+Solutions that contain malicious code, links to malicious websites or otherwise illegal resources will be rejected from publishing in the Marketplace.
 
 ### Don't include vulnerable resource
 
@@ -160,7 +160,7 @@ When testing your application, verify that it doesn't lead to noticeable or sust
 
 ## Recommended checks
 
-Following checks are recommended to pass. While a failed check in this category won't prevent you from publishing your application in the marketplace, it might have a negative impact on end-user experience.
+Following checks are recommended to pass. While a failed check in this category won't prevent you from publishing your application in the Marketplace, it might have a negative impact on end-user experience.
 
 ### Web part icon should be 64x64px with transparent background
 
@@ -175,7 +175,7 @@ We recommend that all web parts have a title that clearly describes the informat
 
 ### Properly handle different themes
 
-Your application should properly handle light- and dark-color themes. Switching between the different themes shouldn't have a negative effect on the usability of your application. While not supporting themes will not prevent you from publishing your app in the marketplace, it's strongly recommended that you support them to offer optimal user experience.
+Your application should properly handle light- and dark-color themes. Switching between the different themes shouldn't have a negative effect on the usability of your application. While not supporting themes will not prevent you from publishing your app in the Marketplace, it's recommended that you support them to offer optimal user experience.
 
 > [!TIP]
 > For more information about using themes in your application, see the [Use theme colors in your SharePoint Framework customizations](use-theme-colors-in-your-customizations.md) article.
