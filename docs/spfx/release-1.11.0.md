@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.11 release notes
 description: Release notes for the SharePoint Framework v1.11 release
-ms.date: 07/16/2020
+ms.date: 07/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -59,4 +59,4 @@ New in this release, support for additional attributes in the solution for enabl
 
 ## Known issues and limitations
 
-There are no known issues as such with this release. If you find any issues around the provided version, report them to our centralized SharePoint dev issues list at https://aka.ms/spfx-issues.
+There are no known issues as such with this release.
