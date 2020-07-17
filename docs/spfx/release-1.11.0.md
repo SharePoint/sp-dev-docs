@@ -14,10 +14,10 @@ New in this release, support for additional attributes in the solution for enabl
 ## Upgrading projects from v1.10 to v1.11
 
 1. In the project's **package.json** file, identify all SPFx v1.10 packages. For each SPFx package:
-    1. Uninstall the existing v1.11 package:
+    1. Uninstall the existing v1.10 package:
 
         ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.11
+        npm uninstall @microsoft/{spfx-package-name}@1.10
         ```
 
     1. Install the refreshed v1.11 package:
