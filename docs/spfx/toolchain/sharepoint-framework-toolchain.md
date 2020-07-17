@@ -134,7 +134,7 @@ If you are using `git` as your source control system, the Yeoman scaffolded web 
 
 When you check out, or clone, the web part project from your source control system the first time, run the command to initialize and install all the project dependencies locally:
 
-```
+```console
 npm i
 ```
 
@@ -181,7 +181,7 @@ The toolchain consists of the following gulp tasks defined in the [@microsoft/sp
 
 To initiate different tasks, append the task name with the gulp command. For example, to compile and then preview your web part in the SharePoint Workbench, run the following command:
 
-```
+```console
 gulp serve
 ```
 
@@ -196,7 +196,7 @@ The `serve` task runs the different tasks and finally launches SharePoint Workbe
 
 In the previous screenshot, you can see that the task indicates your build target as follows:
 
-```
+```console
 Build target: DEBUG
 ```
 
@@ -206,7 +206,7 @@ Usually, when your web part project is ready to ship or deploy in a production s
 
 To target SHIP mode, append the task with `--ship`:
 
-```
+```console
 gulp --ship
 ```
 
