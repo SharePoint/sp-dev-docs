@@ -488,8 +488,6 @@
       items:
       - name: Working with Get items and Get actions
         href: business-apps/power-automate/guidance/working-with-get-items-and-get-files.md
-      - name: Manage list item and file permissions
-        href: business-apps/power-automate/guidance/manage-list-item-file-permissions.md
       - name: Working with the SharePoint Send HTTP Request action
         href: business-apps/power-automate/guidance/working-with-send-sp-http-request.md
       - name: Customize SharePoint page approvals

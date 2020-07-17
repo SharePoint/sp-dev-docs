@@ -185,8 +185,8 @@ While the following lists show some of the most common workflow capabilities, Po
 
 |Permissions management action |Sharepoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
-| Grant access to an item or a folder   | Yes   | Yes |
-| Stop sharing an item or a file | Yes | Yes |
+| Grant access to an item or a folder   | Yes   | Yes, works only with Modern Permissions |
+| Stop sharing an item or a file | Yes | Yes, works only with Modern Permissions |
 | Create sharing link for a file or folder | Not available | Yes |
 
 ### Approval actions
