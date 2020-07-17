@@ -81,4 +81,4 @@ The 'Stop sharing an item or a file' action requires the following inputs:
 
 ![Stop sharing an item or a file flow action](../../../images/stop-sharing-item-action-flow.png)
 
-Applying this flow action will reset all permissions except on that item or the file except for site owners. 
+Applying this flow action will reset all permissions on that item or the file except for site owners. 
