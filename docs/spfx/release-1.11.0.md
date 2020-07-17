@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.11 release notes
 description: Release notes for the SharePoint Framework v1.11 release
-ms.date: 07/16/2020
+ms.date: 07/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -14,10 +14,10 @@ New in this release, support for additional attributes in the solution for enabl
 ## Upgrading projects from v1.10 to v1.11
 
 1. In the project's **package.json** file, identify all SPFx v1.10 packages. For each SPFx package:
-    1. Uninstall the existing v1.11 package:
+    1. Uninstall the existing v1.10 package:
 
         ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.11
+        npm uninstall @microsoft/{spfx-package-name}@1.10
         ```
 
     1. Install the refreshed v1.11 package:
@@ -59,4 +59,4 @@ New in this release, support for additional attributes in the solution for enabl
 
 ## Known issues and limitations
 
-There are no known issues as such with this release. If you find any issues around the provided version, report them to our centralized SharePoint dev issues list at https://aka.ms/spfx-issues.
+There are no known issues as such with this release.
