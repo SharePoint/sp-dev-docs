@@ -38,7 +38,7 @@ The permission roles map to [simplified standard SharePoint permission groups](h
 ### Using custom-defined roles to grant access
 In advanced scenarios where you need to specify a custom-defined permission role, you can do so in the flow action by entering a custom value for the *Roles* property in the following format:
 ```
-roles:<role-id>
+role:<role-id>
 ```
 
 ![Use a custom role to grant access to an item or a file](../../../images/grant-access-item-file-custom-role-flow.png)
