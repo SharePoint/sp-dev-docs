@@ -315,7 +315,7 @@ https://contoso-admin.contoso.com -u spadmin@contoso.com -p pwd
 
   -r, --urls                               List of (wildcard) urls (e.g.
                                            https://contoso.sharepoint.com/*,https://contoso-my.sharepoint.com,https://co
-                                           ntoso-my.sharepoint.com/personal/*) that you want to get scanned
+                                           ntoso-my.sharepoint.com/personal/*) that you want to get scanned. Ignored if -t or --tenant is provided.
 
   -o, --includeod4b                        (Default: False) Include OD4B sites in the scan
 
