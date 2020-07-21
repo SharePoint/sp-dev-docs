@@ -19,7 +19,7 @@ You can connect two or more SharePoint Framework components together and exchang
 
 Dynamic data in the SharePoint Framework is based on the source-notification model. Components named as a dynamic data source, provide data and notify the SharePoint Framework when the data changes.
 
-Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source has notified its data to have been changed. The consumer component then requests the data from the source component.
+Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source has notified its data has changed. The consumer component then requests the data from the source component.
 
 Every dynamic data source implements the `IDynamicDataCallables` interface. 
 
