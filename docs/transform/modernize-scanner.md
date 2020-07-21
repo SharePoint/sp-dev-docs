@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 07/13/2020
+ms.date: 07/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -28,7 +28,7 @@ This scanner is a key tool to use if you want to prepare for modernizing your cl
 
 ## Step 1: Get the latest version of the SharePoint modernization scanner
 
-Since SharePoint Online continuously evolves and more and more modern capabilities are added, it's important to always download the latest version of the scanner. [Download the SharePoint Modernization Scanner executable](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true) and get started. This page and the other pages linked to it contain all information to get you started, but also all the report details and an FAQ.
+Since SharePoint Online continuously evolves and more and more modern capabilities are added, it's important to always download the latest version of the scanner. [Download the SharePoint Modernization Scanner executable](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true) and get started. This page and the other pages linked to it contain all information to get you started, and also all the report details and an FAQ.
 
 ## Step 2: Preparing for a scan
 
