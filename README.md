@@ -16,56 +16,19 @@ You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365D
 
 ## SharePoint Framework Releases
 
-* **January 7, 2020**
-   * **SPFx v1.10** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.10-release-notes)
+Review all the SPFx releases here from the initial GA release in February 2017 in the docs: https://docs.microsoft.com/en-us/sharepoint/dev/spfx/roadmap
 
-* **August 14, 2019**
-   * **SPFx v1.9.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9.1-release-notes)
-
-* **May 7, 2019**
-   * **SPFx v1.8.2** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8.2-release-notes)
-
-* **April 16, 2019**
-   * **SPFx v1.8.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8.1-release-notes)
-
-* **March 14, 2019**
-   * **SPFx v1.8** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes)
-
-* **December 18, 2018**
-   * **SPFx v1.7.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.7.1)
-
-* **November 8, 2018**
-   * **SPFx v1.7** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.7-release-notes)
-* **September 5, 2018**
-   * **SPFx v1.6** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.6-release-notes)
-
-* **June 26, 2018**
-   * **SPFx v1.5.1** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.5.1)
-   
-* **June 5, 2018**
-   * **SPFx v1.5** - [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SharePoint-Framework-Package-v1.5)
-
-* **February 15, 2018**
-   * **SPFx v1.4.1** [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.4.1)
-
-* **December 7, 2017**
-   *  **SPFx v1.4**. [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.4)
-
-* **September 25, 2017**
-   *  **GA of Extensions and SPFx v1.3**.
+### Releases prior to general availability & other special release notes
 
 * **June 6, 2017**
-   *  **Dev Preview of extensions is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes---Extensions-Dev-Preview-Drop-1)
-
-* **Feb 22, 2017**
-   *  **GA is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA)
+  * **Dev Preview of extensions is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes---Extensions-Dev-Preview-Drop-1)
 
 * **Jan 9, 2017**
-   *  **RC0 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-RC0)
+  * **RC0 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-RC0)
 
 * **Aug 17, 2016**
-   * **Drop 1 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Drop-1)
-   
+  * **Drop 1 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Drop-1)
+
 ## Get Started
 
 * [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
