@@ -1,7 +1,7 @@
 ---
 title: Team-based development on the SharePoint Framework
 description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
-ms.date: 07/01/2020
+ms.date: 07/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -269,7 +269,7 @@ Updating your project to a newer version of the SharePoint Framework, might requ
 
 One of the ways to find out which dependencies in your project need updating, is to run the **npm outdated** command. This command will scan your dependency tree and will show you which packages could be updated. While using this command is convenient, it has to be done with caution.
 
-Starting with SPFx v1.3, the SharePoint Framework Yeoman generator allows you to choose whether you want to scaffold a project that should work only in SharePoint Online or in both SharePoint 2016 Feature Pack 2 and up and SharePoint Online. SharePoint hosted on-premises uses an older version of the SharePoint Framework than the latest version available in SharePoint Online. If you would run the **npm outdated** command on a project compatible with SharePoint on-premises, it would suggest updating all core SharePoint Framework packages to the latest versions published to Npm. Unfortunately, by updating these packages to their latest versions, your project wouldn't work with SharePoint on-premises anymore. Before updating the versions of the SharePoint Framework packages, you should always verify if your project is meant to work with SharePoint hosted on-premises and if so, what version of the SharePoint Framework you have to support.
+Starting with SPFx v1.3, the SharePoint Framework Yeoman generator allows you to choose whether you want to scaffold a project that should work only in SharePoint Online or in both SharePoint 2016 Feature Pack 2 and up and SharePoint Online. SharePoint hosted on-premises uses an older version of the SharePoint Framework than the latest version available in SharePoint Online. If you would run the **npm outdated** command on a project compatible with SharePoint on-premises, it would suggest updating all core SharePoint Framework packages to the latest versions published to npm. Unfortunately, by updating these packages to their latest versions, your project wouldn't work with SharePoint on-premises anymore. Before updating the versions of the SharePoint Framework packages, you should always verify if your project is meant to work with SharePoint hosted on-premises and if so, what version of the SharePoint Framework you have to support.
 
 ### Build and package project in release mode
 
