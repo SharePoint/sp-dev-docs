@@ -1,7 +1,7 @@
 ---
 title: Scaffold projects by using Yeoman SharePoint generator
 description: Use the Yeoman SharePoint generator to scaffold new client-side solution projects to build, package, and deploy SharePoint solutions.
-ms.date: 03/14/2019
+ms.date: 07/21/2019
 ms.prod: sharepoint
 ---
 
@@ -13,7 +13,7 @@ ms.prod: sharepoint
 
 Yeoman SharePoint generator is available as part of the framework as an [npm package](https://www.npmjs.com/package/@microsoft/generator-sharepoint). You can install the generator by executing the following command in a console:
 
-```
+```console
 npm install @microsoft/generator-sharepoint -g
 ```
 
@@ -26,7 +26,7 @@ We recommend that you follow the [set up your development environment](../set-up
 
 After the generator is installed, you can invoke the generator by just typing the following command in a console:
 
-```
+```console
 yo
 ```
 
@@ -39,7 +39,7 @@ The command lists all the generators available on your machine. Select `@microso
 
 You can use the command-line options available with the Yeoman SharePoint generator to scaffold projects in one command instead of going through the prompts. Execute the following command to see the list of command-line options available for the SharePoint generator:
 
-```
+```console
 yo @microsoft/sharepoint --help
 ```
 
@@ -81,7 +81,7 @@ Following is an example of a command that creates a solution called "hello-world
 
 Notice that some of the options have dependencies between each other. You cannot, for example, create an extension with an on-premises option.
 
-```
+```console
 yo @microsoft/sharepoint 
 --solution-name "hello-world" 
 --framework "react" 
@@ -100,14 +100,14 @@ yo @microsoft/sharepoint
 
 > If you try to build your project without installing the dependencies, you get the following error. This indicates that you need to install the dependencies before building the project:
 
-> ```
+> ```console
 > Local gulp not found in ~/<project-name>
 > Try running: npm install gulp
 > ```
 
 > You can execute the following command to install the dependencies:
 
-> ```
+> ```console
 > npm install
 > ```
 
