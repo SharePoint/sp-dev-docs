@@ -1,7 +1,7 @@
 ---
 title: Create Outlook Add-ins using SharePoint Framework
 description: Create Outlook Web App Add-ins using the SharePoint Framework
-ms.date: 06/22/2020
+ms.date: 07/21/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
