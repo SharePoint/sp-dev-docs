@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework toolchain
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects.
-ms.date: 06/22/2020
+ms.date: 07/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
