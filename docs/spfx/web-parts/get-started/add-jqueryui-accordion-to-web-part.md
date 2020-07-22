@@ -1,7 +1,7 @@
 ---
 title: Add the jQueryUI Accordion to your SharePoint client-side web part
 description: Adding the jQueryUI Accordion to your web part project involves creating a new web part.
-ms.date: 06/18/2020
+ms.date: 07/17/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -52,7 +52,7 @@ The developer toolchain uses Webpack & SystemJS to bundle and load your web part
 
     - **What is your solution name?**: jquery-webpart
     - **Which type of client-side component to create?**: WebPart
-    - **What is your Web part name?**: jQuery Web Part
+    - **What is your Web part name?**: jQuery
     - **Which framework would you like to use?**: No JavaScript framework
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **jQueryWebPart** as well.

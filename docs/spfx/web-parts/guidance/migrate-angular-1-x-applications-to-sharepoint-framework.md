@@ -1,18 +1,18 @@
 ---
 title: Migrate AngularJS applications to SharePoint Framework
 description: Migrate an existing AngularJS application styled using ngOfficeUIFabric to a SharePoint Framework client-side web part.
-ms.date: 06/27/2020
+ms.date: 07/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Migrate AngularJS applications to SharePoint Framework
 
-Many organizations have been using AngularJS v1.x for building SharePoint solutions in the past. This article shows how to migrate an existing AngularJS application styled using [ngOfficeUIFabric](http://ngofficeuifabric.com) - AngularJS directives for Office UI Fabric, to a SharePoint Framework client-side web part. The sample application used for this tutorial manages To Do items stored in a SharePoint list.
+Many organizations have been using AngularJS v1.x for building SharePoint solutions in the past. This article shows how to migrate an existing AngularJS application styled using [ngOfficeUIFabric](https://github.com/ngOfficeUIFabric/ng-officeuifabric) - AngularJS directives for Office UI Fabric, to a SharePoint Framework client-side web part. The sample application used for this tutorial manages To Do items stored in a SharePoint list.
 
 <img alt="AngularJS application for managing To Do items stored in a SharePoint list" src="../../../images/ng-migration-original-angular-application.png" width="800">
 
-The source of the AngularJS application is available on GitHub at [angular-migration/angular-todo](https://github.com/SharePoint/sp-dev-fx-webparts/tree/dev/samples/angular-migration/angular-todo).
+The source of the AngularJS application is available on GitHub at [angular-migration/angular-todo](https://github.com/pnp/sp-dev-fx-webparts/tree/master/samples/angular-migration/angular-todo).
 
 The source of the AngularJS application migrated to SharePoint Framework is available on GitHub at [samples/angular-todo](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-todo).
 
