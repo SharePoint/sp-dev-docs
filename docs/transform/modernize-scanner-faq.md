@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner FAQ
 description: he SharePoint modernization scanner FAQ
-ms.date: 10/23/2019
+ms.date: 07/22/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -12,7 +12,7 @@ localization_priority: Priority
 
 The scanner is only doing read operations and will not cause a big impact on your tenant. The scanner is also "throttling-aware" and will back off when a tenant responds with a throttle response. 
 
-If you do have a large tenant than a scan can take a long time. Some tips to speed up the scan are:
+If you do have a large tenant, then a scan can take a long time. Some tips to speed up the scan are:
 
 - Only scan for what you need. Doing a **full** scan is easy but will also take the most time
 - Partition your scans:
