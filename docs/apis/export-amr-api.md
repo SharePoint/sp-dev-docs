@@ -194,7 +194,10 @@ This function returns the changeToken associates with this query. By specifying 
 
 #### Manifest Output
 
-After the asyncMigrationRead function prepare execution, the final manifest will be placed in the container specified, under a folder named **JobId**. Manifest export package structure will be like the *createMigration* Import Package structure. The general output structure is summarized in table below.
+After the *asyncMigrationRead* function prepares execution, the final manifest will be placed in the container specified, under a folder named **JobId**. The manifest export package structure will be like the *createMigration* Import Package structure. The general output structure is summarized in table below.
+
+>[!Note]
+>Once the AMR package reaches 25MB, it will split into multiple packages per request.
 
 Below is an example on how to query the folder:
 
