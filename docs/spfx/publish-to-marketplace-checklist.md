@@ -1,7 +1,7 @@
 ---
 title: Prepare your SharePoint Framework application for publishing to the Marketplace
 description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
-ms.date: 07/16/2020
+ms.date: 07/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -37,7 +37,7 @@ Under normal circumstances, all components (web parts and extensions) in your so
 
 ### Web part should work in all hosts in which it is exposed
 
-When building web parts using SharePoint Framework, you can choose [where they should be exposed](integrate-with-teams-introduction.md). Before submitting you application for review, ensure that your web part works as intended in all these hosts.
+When building web parts using SharePoint Framework, you can choose [where they should be exposed](integrate-with-teams-introduction.md). Before submitting your application for review, ensure that your web part works as intended in all these hosts.
 
 ### Solution package must contain valid developer metadata
 

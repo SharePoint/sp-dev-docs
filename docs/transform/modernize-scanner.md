@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 07/13/2020
+ms.date: 07/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -28,7 +28,7 @@ This scanner is a key tool to use if you want to prepare for modernizing your cl
 
 ## Step 1: Get the latest version of the SharePoint modernization scanner
 
-Since SharePoint Online continuously evolves and more and more modern capabilities are added, it's important to always download the latest version of the scanner. [Download the SharePoint Modernization Scanner executable](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true) and get started. This page and the other pages linked to it contain all information to get you started, but also all the report details and an FAQ.
+Since SharePoint Online continuously evolves and more and more modern capabilities are added, it's important to always download the latest version of the scanner. [Download the SharePoint Modernization Scanner executable](https://github.com/SharePoint/sp-dev-modernization/blob/dev/Tools/SharePoint.Modernization/Releases/SharePoint.Modernization.Scanner.exe?raw=true) and get started. This page and the other pages linked to it contain all information to get you started, and also all the report details and an FAQ.
 
 ## Step 2: Preparing for a scan
 
@@ -74,7 +74,7 @@ The easiest approach is to simply launch SharePoint.Modernization.Scanner.exe as
 
 The first page of the modernization scanner wizard asks you for authentication information. The scanner supports four options, select the one you need and fill in the needed information as described below. Ideally you use an app-only model as that will ensure the scanner has access to all sites it needs to scan.
 
-![Azure AD App-Only](media/modernize/scanner_p1_1_2.9.png)
+![Azure AD App-Only](media/modernize/scanner_p1_1_2.14.png)
 
 If you've [setup access via Azure AD App-Only](../solution-guidance/security-apponly-azuread.md), you do have created an Azure App and configured a certificate for accessing it. This information needs to be provided to the tool:
 
@@ -82,12 +82,14 @@ If you've [setup access via Azure AD App-Only](../solution-guidance/security-app
 - **Azure AD Domain name**: the default domain of your Azure AD environment. You can find this from the overview page of the Azure AD admin center. Typically this domain is formatted as *.onmicrosoft.com, for example, contoso.onmicrosoft.com.
 - **Certificate file**: the certificate that you granted app-only access to the Azure AD app, this needs to be presented as a password protected PFX file
 - **Password for the PFX file**: the password used to secure the previously provided PFX file
+- **Authentication region**: if your tenant is located in the US Government (ITAR), Germany or China cloud environment then select the respective region
 
 > [!NOTE]
 > You can also opt to install the certificate on your computer and reference it via the -w command line parameters. To reference the certificate you would use this value for the -w parameter "My|CurrentUser|1FG498B468AV3895E7659C8A6F098FB701C8CDB1". You can use My/Root and CurrentUser/LocalMachine to identify the store. The last argument is the certificate thumbprint. This option is available as of the 2.7 release. If you're using LocalMachine then be aware that you'll need to ensure the scanner has permissions to read in the LocalMachine store. You can do this by either running the scanner process under administrative privileges or alternatively (and better) grant the account you're using to run the modernization scan permissions to read the private key of the certificate stored in the LocalMachine store.
->
+
 > [!IMPORTANT]
-> The default instructions mentioned to grant the Azure AD app the **Sites.FullControl.All** permission which is needed if you want to run all scan components. If you're not interested in workflow scanning you can also use **Sites.Read.All** as a permission as of version 2.6 of the SharePoint Modernization Scanner.
+> - The default instructions mentioned to grant the Azure AD app the **Sites.FullControl.All** permission which is needed if you want to run all scan components. If you're not interested in workflow scanning you can also use **Sites.Read.All** as a permission as of version 2.6 of the SharePoint Modernization Scanner.
+> - Azure AD App-Only is the only supported authentication option for tenants in the US Government (ITAR), Germany or China cloud environment.
 
 #### Authenticate via SharePoint AD app-only
 
@@ -139,7 +141,7 @@ If you're using URLs that do not end on sharepoint.com (so called vanity URLs), 
 
 #### Scan a list of site collections defined in a CSV file
 
-![CSV file](media/modernize/scanner_p2_3_2.9.png)
+![CSV file](media/modernize/scanner_p2_3_2.14.png)
 
 As a third option you can provide the scanner with a CSV file listing the site collections to scan. This CSV file is a simple list of site collections, the file doesn't have a header as shown in this sample:
 
@@ -153,7 +155,7 @@ https://contoso.sharepoint.com/sites/opensourcerocks
 
 The SharePoint modernization scanner does support multiple modes, depending on your modernization mode you might want to scope the scan to a certain area or alternatively, execute a full scan.
 
-![scanner modes](media/modernize/scanner_p3_1_2.8.png)
+![scanner modes](media/modernize/scanner_p3_1_2.14.png)
 
 Select the option you want in the dropdown and then the checkboxes will show which components will be included in the scan. The "Microsoft 365 group connection readiness" component is the main component that will be included all scan modes.
 
@@ -213,13 +215,14 @@ Mode                      | Description
 `PublishingOnly`          | Includes a classic publishing portal scan at site and web level + includes the Microsoft 365 group connection readiness component
 `PublishingWithPagesOnly` | Includes a classic publishing portal scan at site, web and page level + includes the Microsoft 365 group connection readiness component
 `WorkflowOnly`            | Includes the classic workflow scan + includes the Microsoft 365 group connection readiness component
+`WorkflowWithDetailsOnly` | Includes the classic workflow scan with workflow migration readiness analysis + includes the Microsoft 365 group connection readiness component
 `InfoPathOnly`            | Includes the InfoPath scan + includes the Microsoft 365 group connection readiness component
 `BlogOnly`                | Includes the Blog scan + includes the Microsoft 365 group connection readiness component
 
 ### Command-line parameter overview
 
 ```text
-SharePoint PnP Modernization scanner 2.9.0.0
+SharePoint PnP Modernization scanner 2.14.0.0
 Copyright (C) 2020 SharePoint PnP
 ==========================================================
 
@@ -267,9 +270,48 @@ e.g. SharePoint.Modernization.Scanner.exe -r "https://teams.contoso.com/sites/*,
 https://contoso-admin.contoso.com -u spadmin@contoso.com -p pwd
 
 
+  -i, --clientid                           Client ID of the app-only principal used to scan your site collections
+
+  -s, --clientsecret                       Client Secret of the app-only principal used to scan your site collections
+
+  -u, --user                               User id used to scan/enumerate your site collections
+
+  -p, --password                           Password of the user used to scan/enumerate your site collections
+
+  -z, --azuretenant                        Azure tenant (e.g. contoso.microsoftonline.com)
+
+  -y, --azureenvironment                   (Default: Production) Azure environment (only works for Azure AD Cert
+                                           auth!). Possible values: Production, USGovernment, Germany, China
+
+  -f, --certificatepfx                     Path + name of the pfx file holding the certificate to authenticate
+
+  -x, --certificatepfxpassword             Password of the pfx file holding the certificate to authenticate
+
+  -a, --tenantadminsite                    Url to your tenant admin site (e.g. https://contoso-admin.contoso.com): only
+                                           needed when your not using SPO MT
+
+  -t, --tenant                             Tenant name, e.g. contoso when your sites are under
+                                           https://contoso.sharepoint.com/sites. This is the recommended model for
+                                           SharePoint Online MT as this way all site collections will be scanned
+
+  -r, --urls                               List of (wildcard) urls (e.g.
+                                           https://contoso.sharepoint.com/*,https://contoso-my.sharepoint.com,https://co
+                                           ntoso-my.sharepoint.com/personal/*) that you want to get scanned. Ignored if
+                                           -t or --tenant are provided.
+
+  -o, --includeod4b                        (Default: False) Include OD4B sites in the scan
+
+  -v, --csvfile                            CSV file name (e.g. input.csv) which contains the list of site collection
+                                           urls that you want to scan
+
+  -h, --threads                            (Default: 10) Number of parallel threads, maximum = 100
+
+  -e, --separator                          (Default: ,) Separator used in output CSV files (e.g. ";")
+
   -m, --mode                               (Default: Full) Execution mode. Use following modes: Full, GroupifyOnly,
-                                           ListOnly, HomePageOnly, PageOnly, PublishingOnly, PublishingWithPagesOnly,
-                                           WorkflowOnly, InfoPathOnly or BlogOnly. Omit or use full for a full scan
+                                           ListOnly, PageOnly, HomePageOnly, PublishingOnly, PublishingWithPagesOnly,
+                                           WorkflowOnly, WorkflowWithDetailsOnly, InfoPathOnly or BlogOnly. Omit or use
+                                           full for a full scan
 
   -b, --exportwebpartproperties            (Default: False) Export the web part property data
 
@@ -291,40 +333,6 @@ https://contoso-admin.contoso.com -u spadmin@contoso.com -p pwd
 
   -q, --dateformat                         (Default: M/d/yyyy) Date format to use for date export in the CSV files. Use
                                            M/d/yyyy or d/M/yyyy
-
-  -i, --clientid                           Client ID of the app-only principal used to scan your site collections
-
-  -s, --clientsecret                       Client Secret of the app-only principal used to scan your site collections
-
-  -u, --user                               User id used to scan/enumerate your site collections
-
-  -p, --password                           Password of the user used to scan/enumerate your site collections
-
-  -z, --azuretenant                        Azure tenant (e.g. contoso.microsoftonline.com)
-
-  -f, --certificatepfx                     Path + name of the pfx file holding the certificate to authenticate
-
-  -x, --certificatepfxpassword             Password of the pfx file holding the certificate to authenticate
-
-  -a, --tenantadminsite                    Url to your tenant admin site (e.g. https://contoso-admin.contoso.com): only
-                                           needed when your not using SPO MT
-
-  -t, --tenant                             Tenant name, e.g. contoso when your sites are under
-                                           https://contoso.sharepoint.com/sites. This is the recommended model for
-                                           SharePoint Online MT as this way all site collections will be scanned
-
-  -r, --urls                               List of (wildcard) urls (e.g.
-                                           https://contoso.sharepoint.com/*,https://contoso-my.sharepoint.com,https://co
-                                           ntoso-my.sharepoint.com/personal/*) that you want to get scanned
-
-  -o, --includeod4b                        (Default: False) Include OD4B sites in the scan
-
-  -v, --csvfile                            CSV file name (e.g. input.csv) which contains the list of site collection
-                                           urls that you want to scan
-
-  -h, --threads                            (Default: 10) Number of parallel threads, maximum = 100
-
-  -e, --separator                          (Default: ,) Separator used in output CSV files (e.g. ";")
 
   -w, --storedcertificate                  (Default: ) Path to stored certificate in the form of
                                            StoreName|StoreLocation|Thumbprint. E.g.

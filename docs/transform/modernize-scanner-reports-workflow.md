@@ -26,7 +26,7 @@ Column | Description
 **Scope** | Workflows are either connected to a site, list or content type.
 **Has subscriptions** | Is this workflow being used or is it just defined.
 **Enabled** | Is the workflow enabled.
-**Is OOB** | Is this one of the OOB workflows that SharePoint Online has.
+**Is OOB** | Is this one of the OOB workflows that SharePoint Online has. (OOB workflows are never analyzed)
 **List Title** | If the workflow is scoped to a list this contains the title of that list.
 **List Url** | If the workflow is scoped to a list this contains the url of that list.
 **List Id** | If the workflow is scoped to a list this contains the id of that list.
@@ -38,16 +38,16 @@ Column | Description
 **Subscription Name** | Name of the subscription created for this workflow.
 **Subscription Id** | Id of the subscription created for this workflow.
 **Definition Changed On** | When was this workflow definition last changed.
-**Subscription Changed On** | When was the workflow subscription last changed.
-**Action Count** | Number of actions detected in this workflow.
-**Used Actions** | List of the unique actions used in this workflow.
-**Used Triggers** | List of the workflow triggers that trigger this workflow to start.
-**Flow upgradability** | % indicating how well the detected actions are upgradable to Microsoft Flow.
-**Incompatible Action Count** |  Number of actions that are not compatible with Microsoft Flow.
-**Incompatible Actions** | List of unique actions which are not compatible with Microsoft Flow.
-**Change Year** | Year of last workflow definition change.
-**Change Quarter** | Quarter of last workflow definition change.
-**Change Month** | Month of last workflow definition change.
+**Subscription Changed On** | When was the workflow subscription last changed. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode)
+**Action Count** | Number of actions detected in this workflow. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Used Actions** | List of the unique actions used in this workflow. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Used Triggers** | List of the workflow triggers that trigger this workflow to start. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Flow upgradability** | % indicating how well the detected actions are upgradable to Microsoft Flow. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Incompatible Action Count** |  Number of actions that are not compatible with Microsoft Flow. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Incompatible Actions** | List of unique actions which are not compatible with Microsoft Flow. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Change Year** | Year of last workflow definition change. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Change Quarter** | Quarter of last workflow definition change. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
+**Change Month** | Month of last workflow definition change. (only when used with the `WorkflowWithDetailsOnly` or `Full` mode
 
 ### Key takeaways from this report ###
 

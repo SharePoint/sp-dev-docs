@@ -1,6 +1,6 @@
 ---
 title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
-ms.date: 07/13/2020
+ms.date: 07/21/2020
 ---
 
 # Guidance: Migrate from classic workflows to Power Automate flows in SharePoint
@@ -90,7 +90,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### Workflow concepts
 
-|Workflow concept |Sharepoint workflow |Power Automate |
+|Workflow concept |SharePoint workflow |Power Automate |
 |:-------|:-------|:--------|
 | A condition that causes the workflow to run or execute   | Start options and events   |  Trigger   |
 | Building blocks that allow users to customize workflow with business logic | Actions | Actions |
@@ -99,7 +99,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### Workflow types
 
-|Workflow type |Sharepoint workflow |Power Automate flow |
+|Workflow type |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | List workflows   | Yes   | Yes |
 | Library workflows | Yes | Yes |
@@ -108,7 +108,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### SharePoint integrations
 
-|SharePoint integration |Sharepoint workflow |Power Automate flow |
+|SharePoint integration |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Create a custom workflow from a list or library   | Yes   |  Yes, only in Modern Experiences   |
 | Run or start a custom workflow for an item or a file or a folder | Yes | Yes, only in Modern Experiences |
@@ -119,7 +119,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### List triggers
 
-|List trigger |Sharepoint workflow |Power Automate flow |
+|List trigger |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | When an item is created   | Yes   | Yes |
 | When an item is modified | Yes | Yes, using ‘When an item is created or modified’ trigger |
@@ -130,7 +130,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### List actions
 
-|List action |Sharepoint workflow |Power Automate flow |
+|List action |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Get items   | Not available   | Yes |
 | Create an item | Yes | Yes |
@@ -145,7 +145,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### File triggers
 
-|List action |Sharepoint workflow |Power Automate flow |
+|List action |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | When a file is created   | Yes, using List triggers   | Yes |
 | When a file is created in a folder | Not available | Yes |
@@ -157,7 +157,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### File actions
 
-|File action |Sharepoint workflow |Power Automate flow |
+|File action |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Get files   | Not available   | Yes |
 | Create file content | Not available | Yes |
@@ -172,7 +172,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### Document management actions
 
-|Document management action |Sharepoint workflow |Power Automate flow |
+|Document management action |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Check in file   | Yes   | Yes |
 | Check out file | Yes | Yes |
@@ -182,7 +182,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### Permissions management actions
 
-|Permissions management action |Sharepoint workflow |Power Automate flow |
+|Permissions management action |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Grant access to an item or a folder   | Yes   | Yes |
 | Stop sharing an item or a file | Yes | Yes |
@@ -190,7 +190,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### Approval actions
 
-|Approval action |Sharepoint workflow |Power Automate flow |
+|Approval action |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Set content approval status of an item or a file or a page | Yes  | Yes |
 | Create and wait for approval for an item or a file | Yes | Yes |
@@ -205,7 +205,7 @@ While the following lists show some of the most common workflow capabilities, Po
 
 ### Workflow controls capabilities
 
-|Workflow controls capability |Sharepoint workflow |Power Automate flow |
+|Workflow controls capability |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Workflow primitives: Loops, do until, switch-case, parallels   | Yes   | Yes |
 | Workflow stage | Yes | Yes, works only with Modern Permissions |
@@ -216,7 +216,7 @@ While the following lists show some of the most common workflow capabilities, Po
 | Copy/paste actions |Yes | Yes |
 
 ## Workflow administration
-|Workflow administration |Sharepoint workflow |Power Automate flow |
+|Workflow administration |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Central location to view all workflows   | Yes, only available to view for a given list or library   | Yes, 'My flows' lists user flows |
 | Share workflows with list or library users | Yes | Yes |

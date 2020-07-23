@@ -1,7 +1,7 @@
 ---
 title: Connect SharePoint Framework components using dynamic data
 description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
-ms.date: 07/01/2020
+ms.date: 07/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -17,13 +17,13 @@ You can connect two or more SharePoint Framework components together and exchang
 
 ## Expose data using dynamic data source
 
-Dynamic data in the SharePoint Framework is based on the source-notification model. Components named as a dynamic data source, provide data and the SharePoint Framework when the data changes.
+Dynamic data in the SharePoint Framework is based on the source-notification model. Components named as a dynamic data source, provide data and notify the SharePoint Framework when the data changes.
 
-Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source has notified it data changed. The consumer component then requests the specified data from the source component.
+Other components on the page can subscribe to notifications issued by a dynamic data source. The SharePoint Framework notifies the consumer component that the source has notified its data has changed. The consumer component then requests the data from the source component.
 
 Every dynamic data source implements the `IDynamicDataCallables` interface. 
 
-The following code demonstrates web part that displays a list of upcoming events. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
+The following code demonstrates a web part that displays a list of upcoming events. The events web part exposes information about the selected event to other components on the page in two ways: the complete event information and the location address.
 
 ```typescript
 import {
@@ -378,7 +378,7 @@ To allow users to connect web parts to dynamic data sources available on the pag
 ![Standard UX for connecting SharePoint Framework web parts to dynamic data sources available on the page](../images/dynamic-data-connect-ui.png)
 
 > [!IMPORTANT]
-> When using the standard UX to connect a web part to a dynamic data source, ensure, that the dynamic data source returns a value for the given dynamic property (in the previous example, there is an event selected in the list of events). If it doesn't, the UX will not be able to determine the type of data returned by the data source and setting up the connection will fail.
+> When using the standard UX to connect a web part to a dynamic data source, ensure that the dynamic data source returns a value for the given dynamic property (in the previous example, there is an event selected in the list of events). If it doesn't, the UX will not be able to determine the type of data returned by the data source and setting up the connection will fail.
 
 In its simplest form, the UI could be defined as follows:
 
