@@ -45,7 +45,7 @@ This example applies the class `sp-field-severity--severeWarning` to a list view
 
 ```JSON
 {
-  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
    "additionalRowClass": "=if([$DueDate] <= @now, 'sp-field-severity--severeWarning', '')"
 }
 ```
@@ -56,7 +56,7 @@ This example was adopted from a column formatting example, [Conditional formatti
 
 ```JSON
 {
-  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "additionalRowClass": "=if([$Status] == 'Done', 'sp-field-severity--good', if([$Status] == 'In progress', 'sp-field-severity--low' ,if([$Status] == 'In review','sp-field-severity--warning', if([$Status] == 'Has issues','sp-field-severity--blocked', ''))))"
 }
 ```
@@ -76,7 +76,7 @@ This example uses the `rowFormatter` element, which totally overrides the render
 
 ```JSON
 {
-  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "hideSelection": true,
   "hideColumnHeader": true,
   "rowFormatter": {
@@ -145,7 +145,7 @@ Similarly, to get the below format in ‘Tile’ layout for the Feedback list, d
 
 ```JSON
 {
-  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "tileProps": {
     "height": "250",
     "width": "350",
@@ -247,7 +247,7 @@ This example applies `% (Mod)` to a list view row with alternate coloring the ro
 
 ```JSON
 {
-  "schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "additionalRowClass": "=if(@rowIndex%2==0,'ms-bgColor-themeLight','')"
 }
 ```
