@@ -38,10 +38,13 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
 
     - **What is your solution name?**: field-extension
     - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
+    - **Where do you want to place the files** Use the current folder
+    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites? (y/n)** n
+    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant? (y/n)** n
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** Field Customizer
-    - **What is your Application Customizer name?** HelloWorld
-    - **What is your Application Customizer description?** HelloWorld description
+    - **What is your Field Customizer name?** HelloWorld
+    - **What is your Field Customizer description?** HelloWorld description
     - **Which framework would you like to use?**: No JavaScript Framework
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** extension. This might take a few minutes.
