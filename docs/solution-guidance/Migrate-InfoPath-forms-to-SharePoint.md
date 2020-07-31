@@ -1,6 +1,6 @@
 ---
 title: Migrate InfoPath forms to SharePoint
-description: Migrate InfoPath forms in your SharePoint Add-ins to other supported solutions, such as Microsoft Flow, PowerApps, or the add-in model.
+description: Migrate InfoPath forms in your SharePoint Add-ins to other supported solutions, such as Microsoft Power Automate, PowerApps, or the add-in model.
 ms.date: 5/1/2018
 localization_priority: Priority
 ---
@@ -13,7 +13,7 @@ The client and the on-premises version of InfoPath Forms Services in SharePoint 
 
 To replace your InfoPath forms, you can choose one of the following alternatives:
 
-- Use Microsoft Flow and Microsoft PowerApps.
+- Use Microsoft Power Automate and Microsoft PowerApps.
     
 - Move complex behaviors to the new add-in model and client-side developments.
     
@@ -23,7 +23,7 @@ We recommend the first two solutions because information workers that don't know
 
 |**Alternative**|**Scenario**|
 |:-----|:-----|
-|Microsoft Flow and Microsoft PowerApps|This is the recommended approach for extending lists by SharePoint power users.|
+|Microsoft Power Automate and Microsoft PowerApps|This is the recommended approach for extending lists by SharePoint power users.|
 |New add-in model and client-side developments |You can convert complex forms driven by extensive code into provider-hosted add-ins or client-side web parts. This option requires developer resources.|
 
 ## See also
