@@ -1,7 +1,7 @@
 ---
 title: Prepare your SharePoint Framework application for publishing to the Marketplace
 description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
-ms.date: 07/21/2020
+ms.date: 07/31/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -30,6 +30,10 @@ When testing your application against checks described in the following section,
 ## Required checks
 
 Following checks must be passed. If one or more checks from this category failed, your application will be rejected and you will be instructed to fix the reported issues.
+
+### Ensure SharePoint Framework Contract Conformance
+
+Your webpart or customizer must only manipulate the DOM element provided through the `domElement` property. This element and the provided context object are the only approved ways to add functionality into sites through your app. Directly manipulating the page DOM will result in rejection of your solution.
 
 ### Under normal circumstances solution should work as intended
 
