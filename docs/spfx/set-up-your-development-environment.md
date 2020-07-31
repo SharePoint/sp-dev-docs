@@ -62,7 +62,7 @@ The SharePoint Framework development and build toolchain leverages various popul
 
 ### Install Gulp
 
-[Gulp](https://gulpjs.com) if a JavaScript-based task runner used to automate repetitive tasks. The SharePoint Framework build toolchain uses Gulp tasks to build projects, create JavaScript bundles, and the resulting packages used to deploy solutions.
+[Gulp](https://gulpjs.com) is a JavaScript-based task runner used to automate repetitive tasks. The SharePoint Framework build toolchain uses Gulp tasks to build projects, create JavaScript bundles, and the resulting packages used to deploy solutions.
 
 Enter the following command to install Gulp:
 
