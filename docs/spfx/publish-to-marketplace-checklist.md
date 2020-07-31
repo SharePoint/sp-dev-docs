@@ -31,6 +31,10 @@ When testing your application against checks described in the following section,
 
 Following checks must be passed. If one or more checks from this category failed, your application will be rejected and you will be instructed to fix the reported issues.
 
+### Ensure SharePoint Framework Contract Conformance
+
+Your webpart or customizer must only manipulate the DOM element provided through the "domElement" property. This element and the provided context object are the only approved ways to add functionality into sites through your app. Directly manipulating the page DOM will result in rejection of your solution.
+
 ### Under normal circumstances solution should work as intended
 
 Under normal circumstances, all components (web parts and extensions) in your solution should work as intended. Preferably, before submitting your application for approval, you should verify that it's working as expected on multiple tenants and using different user accounts to ensure that it doesn't depend on any specific configuration. If your solution requires specific settings, mention it explicitly in your solution's description.
