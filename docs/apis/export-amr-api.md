@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
-ms.date: 04/17/2020
+ms.date: 07/31/2020
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
