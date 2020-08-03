@@ -65,6 +65,7 @@ The column is represented by specifying the **internal name** of the field surro
 While the formula supports many of the available column types, we do not currently support the following column types:
 
 * Person columns with multiple selections
+* Mulitple choice column
 * Time calculations in DateTime column
 * Currency columns
 * Location columns
