@@ -688,7 +688,7 @@ The list of languages enabled on the current site should be loaded only once. If
 
 #### Dynamically render text fields for all languages
 
-Now that you can retrieve the information about the languages enabled on the current site, you wil display text fields for each of these languages so that the user can specify translated values for the greeting message.
+Now that you can retrieve the information about the languages enabled on the current site, you will display text fields for each of these languages so that the user can specify translated values for the greeting message.
 
 1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file.
 1. Add a new class variable named **greetingFields** to the **GreetingWebPart** class:
