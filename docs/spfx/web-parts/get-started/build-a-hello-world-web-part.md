@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 06/25/2020
+ms.date: 07/31/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -56,7 +56,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
     - **What is your Web part name?**: HelloWorld
     - **What is your Web part description?**: HelloWorld description
-    - **Which framework would you like to use?**: No JavaScript web framework
+    - **Which framework would you like to use?**: No JavaScript framework
 
 At this point, Yeoman creates the project scaffolding (folders & files) and installs the required dependencies by running `npm install`. This usually takes 1-3 minutes depending on your internet connection.
 
@@ -83,7 +83,7 @@ The SharePoint Framework documentation uses Visual Studio Code in the steps and 
 
 ## Preview the web part
 
-You can preview and test your client-side web part locally on your questions. The client-side toolchain uses HTTPS endpoint by default. Part of the [Set up your development environment](../../set-up-your-development-environment.md) process included trusting the development SSL certificate included in the toolchain on your local environment. This is required so your browser will trust the certificate.
+You can preview and test your client-side web part locally on your workstation. The client-side toolchain uses HTTPS endpoint by default. Part of the [Set up your development environment](../../set-up-your-development-environment.md) process included trusting the development SSL certificate included in the toolchain on your local environment. This is required so your browser will trust the certificate.
 
 > [!IMPORTANT]
 > Trusting the developer certificate is required. This is a one-time process and is only required when you run your first SharePoint Framework project on a new workstation. You don't need to do this for every SharePoint Framework project.

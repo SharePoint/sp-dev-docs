@@ -1,7 +1,7 @@
 ---
 title: Connect SharePoint Framework components using dynamic data
 description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
-ms.date: 07/15/2020
+ms.date: 07/31/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -123,8 +123,8 @@ The `getPropertyDefinitions()` method returns an array of types of data that the
 > {
 >    "date": "2018-06-01T11:21:59.446Z",
 >    "name": "Tampa Home Show",
->    "organizerEmail": "Grady Archie",
->    "organizerName": "GradyA@contoso.onmicrosoft.com"
+>    "organizerEmail": "GradyA@contoso.onmicrosoft.com",
+>    "organizerName": "Grady Archie"
 > }
 > ```
 >
@@ -135,20 +135,20 @@ The `getPropertyDefinitions()` method returns an array of types of data that the
 >    "date": "2018-06-01T11:21:59.446Z",
 >    "name": "Tampa Home Show",
 >    "organizer": {
->       "email": "Grady Archie",
->       "name": "GradyA@contoso.onmicrosoft.com"
+>       "email": "GradyA@contoso.onmicrosoft.com",
+>       "name": "Grady Archie"
 >    }
 > }
 > ```
 >
-> ...would be serialization to the following:
+> ...would be serialized to the following:
 >
 > ```json
 > {
 >    "date": "2018-06-01T11:21:59.446Z",
 >    "name": "Tampa Home Show",
->    "organizer.email": "Grady Archie",
->    "organizer.name": "GradyA@contoso.onmicrosoft.com"
+>    "organizer.email": "GradyA@contoso.onmicrosoft.com",
+>    "organizer.name": "Grady Archie"
 > }
 > ```
 
@@ -332,7 +332,7 @@ The SharePoint Framework includes a user experience (UX) for connecting two web 
 
 ### Define dynamic web part properties
 
-Each web part property, for which the data can be retrieved from a dynamic data source, should be defined as `DynamicProperty<T>` where the `T` type denotes the type of data stored in the property, for example:
+Each web part property, for which the data can be retrieved from a dynamic data source, should be defined as `DynamicProperty<T>` where `T` denotes the type of data stored in the property, for example:
 
 ```typescript
 /**

@@ -1,7 +1,7 @@
 ---
 title: Localize SharePoint Framework client-side web parts
 description: Broaden the appeal of your web part by localizing it for different languages spoken by SharePoint users all over the world.
-ms.date: 1/9/2020
+ms.date: 8/9/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -544,7 +544,6 @@ However, the currently used language is returned as a string, for example, **en-
         1164: 'prs-AF',
         2052: 'zh-CN',
         2070: 'pt-PT',
-        2074: 'sr-Latn-CS',
         2108: 'ga-IE',
         3082: 'es-ES',
         5146: 'bs-Latn-BA',
@@ -688,7 +687,7 @@ The list of languages enabled on the current site should be loaded only once. If
 
 #### Dynamically render text fields for all languages
 
-Now that you can retrieve the information about the languages enabled on the current site, you wil display text fields for each of these languages so that the user can specify translated values for the greeting message.
+Now that you can retrieve the information about the languages enabled on the current site, you will display text fields for each of these languages so that the user can specify translated values for the greeting message.
 
 1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file.
 1. Add a new class variable named **greetingFields** to the **GreetingWebPart** class:
