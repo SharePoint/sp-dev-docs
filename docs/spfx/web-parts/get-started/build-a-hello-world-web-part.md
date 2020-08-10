@@ -56,7 +56,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
     - **What is your Web part name?**: HelloWorld
     - **What is your Web part description?**: HelloWorld description
-    - **Which framework would you like to use?**: No JavaScript web framework
+    - **Which framework would you like to use?**: No JavaScript framework
 
 At this point, Yeoman creates the project scaffolding (folders & files) and installs the required dependencies by running `npm install`. This usually takes 1-3 minutes depending on your internet connection.
 
