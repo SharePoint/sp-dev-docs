@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 
 title: SharePoint Development documentation # < 60 chars
-summary: Build apps, add-ins, and solutions for SharePoint for your enterprise or customer needs. # < 160 chars
+summary: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # < 160 chars
 
 metadata:
   title: SharePoint Development documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Build apps, add-ins, and solutions for SharePoint for your enterprise or customer needs. # Required; article description that is displayed in search results. < 160 chars.
+  description: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # Required; article description that is displayed in search results. < 160 chars.
   ms.prod: sharepoint #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   ms.audience: Developer # Optional; Remove if no collection is used.
   author: VesaJuvonen #Required; your GitHub user alias, with correct capitalization.
   ms.author: vesaj #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/08/2020 #Required; mm/dd/yyyy format.
+  ms.date: 08/10/2020 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -19,7 +19,31 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: About SharePoint development
+  - title: SharePoint Framework
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview of the SharePoint Framework
+            url: /sharepoint/dev/spfx/sharepoint-framework-overview      
+      - linkListType: get-started
+        links:
+          - text: Set up your SharePoint Framework development environment
+            url: /sharepoint/dev/spfx/set-up-your-development-environment
+          - text: Build your first SharePoint Framework web part
+            url: /sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part
+          - text: Build your first SharePoint Framework extension
+            url: /sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension
+      - linkListType: tutorial
+        links:
+          - text: Build Microsoft Teams tab using SharePoint Framework - Tutorial
+            url: /sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab
+          - text: Use Microsoft Graph in your SharePoint Framework solution
+            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis
+          - text: Use Microsoft Graph in your SharePoint Framework solution
+            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis            
+  
+  # Card (optional)
+  - title: Contact us
     linkLists:
       - linkListType: video
         links:
@@ -27,36 +51,8 @@ landingContent:
             url: https://www.youtube.com/channel/UC_mKdhw-V6CeCM7gTo_Iy7w
       - linkListType: overview
         links:
-          - text: Overview of the SharePoint Framework
-            url: /sharepoint/dev/spfx/sharepoint-framework-overview
-          - text: Programming models in SharePoint
-            url: /sharepoint/dev/general-development/programming-models-in-sharepoint
-          - text: SharePoint glossary
-            url: /sharepoint/dev/general-development/sharepoint-glossary          
-      - linkListType: get-started
-        links:
-          - text: Set up your SharePoint Framework development environment
-            url: /sharepoint/dev/spfx/set-up-your-development-environment
-          - text: Build your first SharePoint client-side web part
-            url: /sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part
-      - linkListType: how-to-guide
-        links:
-          - text: Use the Office 365 Content Delivery Network (CDN) with SharePoint Online
-            url: /office365/enterprise/use-office-365-cdn-with-spo
-          - text: Use the site collection app catalog
-            url: /sharepoint/dev/general-development/site-collection-app-catalog
-      - linkListType: sample
-        links:
-          - text: SharePoint Resources
-            url: https://developer.microsoft.com/SharePoint/gallery/?filterBy=SharePoint,Samples
-  
-  # Card (optional)
-  - title: Contact us
-    linkLists:
-      - linkListType: overview
-        links:
           - text: Developer Blog
-            url: https://developer.microsoft.com/office/blogs/
+            url: https://developer.microsoft.com/microsoft-365/blogs/
           - text: Community
             url: https://pnp.github.io/
           - text: Submit a new idea
@@ -65,6 +61,79 @@ landingContent:
             url: https://github.com/SharePoint/sp-dev-docs/issues
           - text: Forum
             url: https://aka.ms/spdev-community
+
+  # Card (optional)
+  - title: Samples
+    linkLists:
+      - linkListType: sample
+        links:
+          - text: SharePoint Framework Web Part
+            url: https://aka.ms/spfx-webparts
+          - text: Column and View formatting samples
+            url: https://aka.ms/list-formatting           
+          - text: SharePoint Framework Extensions
+            url: https://aka.ms/spfx-extensions                          
+
+  # Card (optional)
+  - title: Capabilities and Features
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Embedding modern SharePoint pages in Microsoft Teams as personal apps
+            url: /sharepoint/dev/features/embed-pages-to-teams
+          - text: SharePoint site design and site script overview
+            url: /sharepoint/dev/declarative-customization/site-design-overview
+          - text: Use column formatting to customize SharePoint
+            url: /sharepoint/dev/declarative-customization/column-formatting
+          - text: Use view formatting to customize SharePoint
+            url: /sharepoint/dev/declarative-customization/view-formatting
+          - text: SharePoint site theming
+            url: /sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview
+          - text: Use the site collection app catalog
+            url: /sharepoint/dev/general-development/site-collection-app-catalog
+          - text: Use the Office 365 Content Delivery Network (CDN) with SharePoint Online
+            url: /office365/enterprise/use-office-365-cdn-with-spo
+
+  - title: Business Apps & Process Automation
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Business apps and business process automation
+            url: /sharepoint/dev/business-apps/introduction-to-sharepoint-business-process-integration
+          - text: Microsoft SharePoint Connector in Power Automate
+            url: /sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers
+          - text: Customize SharePoint page approvals to meet your needs
+            url: /sharepoint/dev/business-apps/power-automate/guidance/customize-page-approvals
+
+  # Card (optional)
+  - title: Open Source
+    linkLists:
+      - linkListType: sample
+        links:
+          - text: PnPjs - Client-side library
+            url: https://pnp.github.io/pnpjs/
+          - text: SharePoint Framework React Controls
+            url: https://pnp.github.io/sp-dev-fx-controls-react/
+          - text: SharePoint Framework Property Controls
+            url: https://pnp.github.io/sp-dev-fx-property-controls/
+          - text: SharePoint Starter Kit
+            url: https://aka.ms/sp-starter-kit
+          - text: PnP SPFx Yeoman Generator
+            url: https://pnp.github.io/generator-spfx/
+          - text: Office 365 CLI
+            url: https://pnp.github.io/office365-cli/
+          - text: Modern Search web parts
+            url: http://aka.ms/pnp-search
+          - text: PnP PowerShell
+            url: https://aka.ms/sppnp-powershell            
+
+  # Card (optional)
+  - title: SharePoint in Microsoft Graph
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: SharePoint sites and content API overview
+            url: https://docs.microsoft.com/en-us/graph/sharepoint-concept-overview
 
   # Card (optional)
   - title: SharePoint REST service
@@ -77,8 +146,6 @@ landingContent:
         links:
           - text: Complete basic operations
             url: /sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints
-          - text: SharePoint in Microsoft Graph
-            url: /graph/docs/api-reference/v1.0/resources/sharepoint
 
   # Card
   - title: SharePoint webhooks
@@ -115,7 +182,7 @@ landingContent:
         links:
           - text: Building well performing classic publishing portals
             url: /sharepoint/dev/solution-guidance/portal-overview
+          - text: Avoid getting throttled or blocked in SharePoint Online
+            url: /sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online
           - text: Modernize your classic SharePoint sites
-            url: /sharepoint/dev/transform/modernize-classic-sites
-          - text: Customizing the "modern" experiences in SharePoint Online
-            url: /sharepoint/dev/solution-guidance/modern-experience-customizations
+            url: /sharepoint/dev/transform/modernize-classic-sites            
