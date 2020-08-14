@@ -42,7 +42,7 @@ For more information about the Microsoft 365 Enterprise offerings, see [Plans &a
 
 5. In the **SharePoint admin center**, on the **Sites** menu, select **Active Sites** .
 
-   ![SharePoint Admin Center new site collection option](../images/SPAdminCenter_newSiteCollection.png)
+   ![SharePoint Admin Center Active Sites](/images/Create-a-developer-site-on-an-existing-Office-365-subscription/SharePoint-Admin-Center-Active-Sites.png)
    
 6. In the **Active Sites** list select **Create** > **Other options**
 
