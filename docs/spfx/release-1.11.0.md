@@ -9,6 +9,8 @@ localization_priority: Priority
 
 New in this release, support for additional attributes in the solution for enabling SharePoint Framework support in store and new messaging extension support for Microsoft Teams.
 
+* [Announcing SharePoint Framework 1.11: Extend more of Microsoft Teams, and publish to AppSource](https://developer.microsoft.com/en-us/microsoft-365/blogs/announcing-sharepoint-framework-1-11-extend-more-of-microsoft-teams-and-publish-to-appsource/)
+
 **Released:** July 16, 2020
 
 ## Upgrading projects from v1.10 to v1.11
