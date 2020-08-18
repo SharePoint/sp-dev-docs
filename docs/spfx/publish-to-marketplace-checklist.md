@@ -162,6 +162,10 @@ Verify, that your code doesn't contain any vulnerabilities. If you're using thir
 
 When testing your application, verify that it doesn't lead to noticeable or sustained increase in CPU usage, that it doesn't consume a lot of memory an that it doesn't lead to the browser becoming unresponsive. In general, your application should run well on an average desktop computer with internet access. Also, it shouldn't take longer than 10 seconds for your application to load.
 
+### Microsoft Teams targeted solutions will need to be tenant scoped
+
+SharePoint Framework solutions targeted to be also used in Microsoft Teams will need to be [tenant-scoped targeted](tenant-scoped-deployment.md). This setting is controlled with the `skipFeatureDeployment` attribute in the `package-solution.json` configuration file and setting should be `true` for any solution which has components targeted also to Microsoft Teams.
+
 ## Recommended checks
 
 Following checks are recommended to pass. While a failed check in this category won't prevent you from publishing your application in the Marketplace, it might have a negative impact on end-user experience.
