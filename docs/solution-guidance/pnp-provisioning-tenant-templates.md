@@ -74,6 +74,29 @@ You can easily configure a team to be created:
 
   The above sample creates a team, adds a channel, and adds 2 tabs to the channel.
 
+## Provisioning Tenant Template containing a Team with PnP PowerShell
+
+As the only way to create a team programmatically is by using the Microsoft Graph, we require an access token for the Graph when you use PnP PowerShell to provision a template with a Teams element in it. PnP PowerShell can automatically acquire such an access token for you, however, you need to provide to consent for that first for your tenant.
+
+You can do this as follows:
+
+```
+Connect-PnPOnline -Graph -LaunchBrowser
+```
+
+This will copy a so-called device code to your clipboard and it will step your through a wizard to provide consent. Notice that this is a one time action only. After you performed this consent step you can use the normal ways of connecting with PnP PowerShell as you are used to. 
+
+The flow the provisioning engine uses is as follows:
+
+1. You login using your credentials with `Connect-PnPOnline`
+2. You apply the template with Apply-PnPTenantTemplate -Path yourtemplate.pnp
+3. The Provisioning Engine will start to provision any SharePoint artifact it finds in that template
+4. The moment the engine encounters an artifact which requires an access token for the Microsoft Graph it will call back to PnP PowerShell to acquire such a token
+5. PnP PowerShell will try, using the credentials you used in step 1 and the consent you provided earlier as written above, to acquire a token using the PnP Management Shell multi-tenant Azure application registration. The moment it successfully acquired the token it will return this token to the provisioning engine which will use that token to make the appropriate calls to the Microsoft Graph API.
+
+If at a later state you want to remove this consent, login to your Azure Portal, and navigate to the Azure Active Directory. In the Enterprise Applications section you will find an entry called "PnP Management Shell". Remove this entry to clear the consent.
+
+
 ## See also
 
 - [SharePoint Patterns and Practices](https://github.com/SharePoint/PnP/)
