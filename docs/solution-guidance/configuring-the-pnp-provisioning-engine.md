@@ -59,6 +59,11 @@ For some of the handlers we can specify more detail configuration options:
 
 Using the configuration above we limit the extraction of lists to only include the list called "My Test List". We're telling the engine that we do want to export list items to the template (they will show up as DataRow elements), and we tell the engine also to include any attachments if present. However, the engine will not download those attachments unless you set the ```persistAssetFiles``` property to ```true```.
 
+Once you have a configuration file in place, you can use it like so, as described in the documentation for [Get-PnPProvisioningTemplate](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/get-pnpprovisioningtemplate?view=sharepoint-ps#parameters):
+``` powershell
+Get-PnPProvisioningTemplate -Configuration "MySchema.xml" -Out "Test.xml" 
+```
+
 Notice that you can specify more configuration options for lists, and we advice you to explore the schema further.
 
 By default the engine only exports the home page if you specify the ```Pages``` handler. If you want to include all pages, set the ```includeAllClientSidePages``` property in the ```pages``` section to true.
