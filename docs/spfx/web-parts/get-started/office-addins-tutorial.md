@@ -1,7 +1,7 @@
 ---
 title: Tutorial for creating Outlook Web Access extension using SharePoint Framework
 description: Creating Outlook add-ins using SharePoint Framework
-ms.date: 02/19/2020
+ms.date: 08/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -59,7 +59,7 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
 
     * Enter **MyFirstOWAaddin** for the web part name, and then select Enter.
     * Enter **My first Outlook add-in** as the description of the web part, and then select Enter. 
-    * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
+    * Accept the default **No JavaScript web framework** option for the framework, and then select Enter to continue.
 
     ![Yeoman prompts](../../../images/add-in-yeoman.png)
 
