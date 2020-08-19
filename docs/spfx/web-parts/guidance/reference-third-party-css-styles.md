@@ -1,7 +1,7 @@
 ---
 title: Reference third-party CSS styles in SharePoint Framework web parts
 description: Two approaches to including third-party CSS styles in web parts, and how each approach affects the resulting web part bundle.
-ms.date: 01/29/2018
+ms.date: 08/19/2018
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -42,7 +42,7 @@ To build rich SharePoint Framework client-side web parts, you can leverage many 
 
   - **js-thirdpartycss** as your solution name
   - **Use the current folder** for the location to place the files
-  - **no javaScript web framework** as the starting point to build the web part
+  - **No JavaScript framework** as the starting point to build the web part
   - **jQuery accordion** as your web part name
   - **Shows jQuery accordion** as your web part description
 
