@@ -1,7 +1,7 @@
 ---
 title: Build Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 06/18/2020
+ms.date: 08/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -50,7 +50,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: MyFirstTeamsTab
     - **What is your Web part description?**: My first Teams tab
-    - **Which framework would you like to use?**: No JavaScipt web framework
+    - **Which framework would you like to use?**: No JavaScript web framework
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyFirstTeamsTab** web part as well.
 
