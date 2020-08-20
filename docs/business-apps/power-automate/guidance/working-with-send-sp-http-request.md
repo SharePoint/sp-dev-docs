@@ -1,6 +1,9 @@
 ---
 title: Working with the SharePoint Send HTTP Request flow action in Power Automate
 ms.date: 03/11/2020
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Working with the SharePoint Send HTTP Request flow action in Power Automate

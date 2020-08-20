@@ -1,6 +1,9 @@
 ---
 title: Manage owners and users in your SharePoint list flows with Power Automate
 ms.date: 05/19/2020
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Manage owners and users in your SharePoint list flows with Power Automate

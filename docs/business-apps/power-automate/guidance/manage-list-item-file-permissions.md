@@ -1,6 +1,9 @@
 ---
 title: Manage list item and file permissions with Power Automate
 ms.date: 07/16/2020
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Manage list item and file permissions with Power Automate flows

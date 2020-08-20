@@ -1,6 +1,9 @@
 ---
 title: Require approval of documents in SharePoint using Power Automate
 ms.date: 05/19/2020
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Require approval of documents in SharePoint using Power Automate
