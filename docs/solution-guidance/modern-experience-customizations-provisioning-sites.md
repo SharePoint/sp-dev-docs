@@ -123,10 +123,7 @@ $teamSiteUrl = New-PnPSite -Type TeamSite -Title "displayName" -Alias "mymodernt
 Connect-PnPOnline $teamSiteUrl
 
 # Now we have access on the SharePoint site for any operations
-$context = Get-PnPContext
-$web = Get-PnPWeb
-$context.Load($web, $web.WebTemplate)
-Execute-PnPQuery
+$web = Get-PnPWeb -Includes WebTemplate, Configuration
 $web.WebTemplate + "#" + $web.Configuration
 ```
 

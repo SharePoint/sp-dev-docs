@@ -1891,6 +1891,8 @@
       href: solution-guidance/pnp-remote-provisioning.md
     - name: PnP provisioning engine
       href: solution-guidance/introducing-the-pnp-provisioning-engine.md
+    - name: Configuring the PnP Provisioning Engine
+      href: solution-guidance/configuring-the-pnp-provisioning-engine.md
     - name: PnP provisioning framework
       href: solution-guidance/pnp-provisioning-framework.md
     - name: PnP provisioning engine and the Core library
