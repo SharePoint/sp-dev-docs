@@ -19,6 +19,10 @@ Triggers the flow when you create an item in a SharePoint list.
 
 Triggers the flow when you create an item, and each time you modify it in a SharePoint list.
 
+### When an item or a file is modified
+
+Triggers the flow when you modify an item or a file in a SharePoint list or a document library. 
+
 ### When an item is deleted
 
 Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger must to the associated SharePoint site on which it is expected to run, using a site collection user account.
@@ -142,6 +146,17 @@ Returns file contents, using the file identifier. The contents can be copied som
 ### Get attachments
 
 Returns the list of attachments for the specified list item. To get to the contents of the file, add a **Get attachment content** step, and use the **File identifier** property returned by this action.
+
+### Get changes for an item or a file (properties only)
+
+Gets all the columns or file properties changed since and until a specified time interval. To get all the columns changed when an item or a file is modified:
+- Use the _when an item or file is modified_ trigger. 
+- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the trigger to infer what columnns changed since last time flow checked for item or file updates.
+
+> [!NOTE]
+> - The list or library should have Versioning configured in order to infer what columns or properties got modified since last change. 
+> - Only column changes are suported for lists and libraries.
+> - File content changes are not supported. 
 
 ### Get file content
 
