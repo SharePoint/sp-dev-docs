@@ -42,7 +42,7 @@ For more information about the Microsoft 365 Enterprise offerings, see [Plans &a
 
 5. In the **SharePoint admin center**, on the **Sites** menu, select **Active Sites** .
 
-   ![SharePoint Admin Center Active Sites](/images/SharePoint-Admin-Center-Active-Sites.png)
+   ![SharePoint Admin Center Active Sites](..\images\SharePoint-Admin-Center-Active-Sites.png)
    
 6. In the **Active Sites** list select **Create** > **Other options**
 
