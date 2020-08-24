@@ -1,7 +1,7 @@
 ---
 title: Create a developer site on an existing Office 365 subscription
 description: Set up an Office 365 developer site for SharePoint Add-ins.
-ms.date: 03/09/2018
+ms.date: 08/24/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -20,9 +20,9 @@ Unless otherwise noted, developer sites can be created in all plans that include
 - Microsoft 365 A3, A5
 - Microsoft 365 Government G3, G5
 
-If you would like to learn more about Microsoft 365 plans for your business, see [SharePoint Online: software boundaries and limits](https://docs.microsoft.com/en-us/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
+If you would like to learn more about Microsoft 365 plans for your business, see [SharePoint Online: software boundaries and limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
     
-For more information about the Microsoft 365 Enterprise offerings, see [Plans &amp; Pricing](https://www.microsoft.com/en-us/microsoft-365/compare-microsoft-365-enterprise-plans).
+For more information about the Microsoft 365 Enterprise offerings, see [Plans &amp; Pricing](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 <a name="bk_createdevsite"> </a>
 ## Create a developer site
@@ -42,7 +42,7 @@ For more information about the Microsoft 365 Enterprise offerings, see [Plans &a
 
 5. In the **SharePoint admin center**, on the **Sites** menu, select **Active Sites** .
 
-   ![SharePoint Admin Center Active Sites](/images/Create-a-developer-site-on-an-existing-Office-365-subscription/SharePoint-Admin-Center-Active-Sites.png)
+   ![SharePoint Admin Center Active Sites](/images/SharePoint-Admin-Center-Active-Sites.png)
    
 6. In the **Active Sites** list select **Create** > **Other options**
 
