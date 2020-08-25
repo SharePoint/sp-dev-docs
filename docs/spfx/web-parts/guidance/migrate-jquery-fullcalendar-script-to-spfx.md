@@ -1,7 +1,7 @@
 ---
 title: Migrate jQuery and FullCalendar solution built using Script Editor web part to SharePoint Framework
 description: Migrate a SharePoint customization by using FullCalendar built with the Script Editor web part to the SharePoint Framework.
-ms.date: 06/30/2020
+ms.date: 08/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -199,7 +199,7 @@ First, you migrate the solution to the SharePoint Framework with as few changes 
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: Tasks calendar
     - **What is your Web part description?**: Shows tasks in the calendar view
-    - **Which framework would you like to use?**: No JavaScript web framework
+    - **Which framework would you like to use?**: No JavaScript framework
 
 1. Open your project folder in your code editor. In this tutorial, you'll use Visual Studio Code.
 

@@ -4,6 +4,9 @@ description: Send an email when a new item is created or modified in a SharePoin
 ms.date: 04/30/2020
 ms.prod: sharepoint
 localization_priority: Priority
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Send an email when a new item is created or modified in a SharePoint list

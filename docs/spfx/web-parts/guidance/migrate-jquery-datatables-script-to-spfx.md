@@ -1,7 +1,7 @@
 ---
 title: Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework
 description: Migrate a SharePoint customization using DataTables to build powerful data overviews of data coming from SharePoint and external APIs.
-ms.date: 06/28/2018
+ms.date: 08/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -160,7 +160,7 @@ Transforming this customization to the SharePoint Framework offers a number of b
     - **Which type of client-side component to create?**: Web Part
     - **What is your Web part name?**: IT requests
     - **What is your Web part description?**: Shows overview of IT support requests
-    - **Which framework would you like to use?**: No JavaScript web framework
+    - **Which framework would you like to use?**: No JavaScript framework
 
 1. Open your project folder in your code editor. In this tutorial, you'll use Visual Studio Code.
 

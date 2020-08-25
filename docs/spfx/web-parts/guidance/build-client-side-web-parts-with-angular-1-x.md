@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Build SharePoint Framework client-side web parts with AngularJS
 description: Use AngularJS to build a client-side web part to manage To Do items and style it using Office UI Fabric.
-ms.date: 01/29/2018
+ms.date: 08/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -44,7 +44,7 @@ The source of the working web part is available on GitHub at [samples/angular-to
 
   - **angular-todo** as your solution name
   - **Use the current folder** for the location to place the files
-  - **No JavaScript web framework** as the starting point to build the web part
+  - **No JavaScript framework** as the starting point to build the web part
   - **To do** as your web part name
   - **Simple management of to do tasks** as your web part description
 
