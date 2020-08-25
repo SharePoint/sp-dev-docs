@@ -26,6 +26,8 @@ Triggers the flow when you create an item, and each time you modify it in a Shar
 
 Triggers the flow when you modify an item or a file in a SharePoint list or a document library. 
 
+For more info about how to use this trigger, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
+
 ### When an item is deleted
 
 Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger must to the associated SharePoint site on which it is expected to run, using a site collection user account.
@@ -156,10 +158,13 @@ Gets all the columns or file properties changed since and until a specified time
 - Use the _when an item or file is modified_ trigger. 
 - Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the trigger to infer what columnns changed since last time flow checked for item or file updates.
 
+For more info about how to use this action, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
+
 > [!NOTE]
-> - The list or library should have Versioning configured in order to infer what columns or properties got modified since last change. 
+> - The list or library should have versioning configured in order to infer what columns or properties got modified since last change. 
 > - Only column changes are suported for lists and libraries.
 > - File content changes are not supported. 
+> - Attachment changes are not supported.
 
 ### Get file content
 
