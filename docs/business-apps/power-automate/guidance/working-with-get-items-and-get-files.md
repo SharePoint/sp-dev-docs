@@ -1,6 +1,9 @@
 ---
 title: In-depth analysis into 'Get items' and 'Get files' SharePoint actions for flows in Power Automate
 ms.date: 03/11/2020
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # In-depth analysis into **Get items** and **Get files** SharePoint actions for flows in Power Automate

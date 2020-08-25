@@ -1,6 +1,9 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
 ms.date: 06/23/2020
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Microsoft SharePoint Connector in Power Automate
@@ -18,6 +21,12 @@ Triggers the flow when you create an item in a SharePoint list.
 ### When an item is created or modified
 
 Triggers the flow when you create an item, and each time you modify it in a SharePoint list.
+
+### When an item or a file is modified
+
+Triggers the flow when you modify an item or a file in a SharePoint list or a document library. 
+
+For more info about how to use this trigger, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
 
 ### When an item is deleted
 
@@ -142,6 +151,20 @@ Returns file contents, using the file identifier. The contents can be copied som
 ### Get attachments
 
 Returns the list of attachments for the specified list item. To get to the contents of the file, add a **Get attachment content** step, and use the **File identifier** property returned by this action.
+
+### Get changes for an item or a file (properties only)
+
+Gets all the columns or file properties changed since and until a specified time interval. To get all the columns changed when an item or a file is modified:
+- Use the _when an item or file is modified_ trigger. 
+- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the trigger to infer what columnns changed since last time flow checked for item or file updates.
+
+For more info about how to use this action, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
+
+> [!NOTE]
+> - The list or library should have versioning configured in order to infer what columns or properties got modified since last change. 
+> - Only column changes are suported for lists and libraries.
+> - File content changes are not supported. 
+> - Attachment changes are not supported.
 
 ### Get file content
 

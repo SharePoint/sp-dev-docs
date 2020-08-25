@@ -4,6 +4,9 @@ description: Connect your flow to 200+ services available in Power Automate, and
 ms.date: 04/30/2020
 ms.prod: sharepoint
 localization_priority: Priority
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Connect your flow to other services

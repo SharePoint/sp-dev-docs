@@ -1,7 +1,7 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and deployed to SharePoint sites when the solution is installed on it.
-ms.date: 06/18/2020
+ms.date: 08/19/2020
 localization_priority: Priority
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
@@ -45,7 +45,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 - **What is your solution name?**: asset-deployment-webpart
 - **Which type of client-side component to create?**: WebPart
 - **What is your Web part name?**: AssetDeployment
-- **Which framework would you like to use?**: No JavaScipt web framework
+- **Which framework would you like to use?**: No JavaScript web framework
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **AssetDeployment** web part as well.
 

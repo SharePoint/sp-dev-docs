@@ -1,7 +1,7 @@
 ---
 title: Migrate AngularJS applications to SharePoint Framework
 description: Migrate an existing AngularJS application styled using ngOfficeUIFabric to a SharePoint Framework client-side web part.
-ms.date: 07/21/2020
+ms.date: 08/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -50,7 +50,7 @@ Before you start migrating your AngularJS application, create and set up a new S
     - **Which type of client-side component to create?**: Web Part
     - **What is your Web part name?**: To do
     - **What is your Web part description?**: Simple management of to do tasks
-    - **Which framework would you like to use?**: No JavaScript web framework
+    - **Which framework would you like to use?**: No JavaScript framework
 
 1. Open your project folder in your code editor. In this tutorial, you'll use Visual Studio Code.
 

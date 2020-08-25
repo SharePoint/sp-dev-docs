@@ -1,6 +1,9 @@
 ---
 title: Customize SharePoint page approvals to meet your needs
 ms.date: 07/12/2020
+search.app: 
+  - Flow
+search.appverid: met150
 ---
 
 # Customize SharePoint page approvals to meet your needs

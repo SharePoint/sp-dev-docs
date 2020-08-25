@@ -1,7 +1,7 @@
 ---
 title: Building a query suggestion extension using SharePoint Framework
 description: Tutorial on creating a query suggestion extension with SharePoint Framework
-ms.date: 01/28/2020
+ms.date: 08/19/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -59,7 +59,7 @@ Be sure you have completed the procedures in the following articles before you b
 
     * Enter **MyQueryExtension** for the extension name, and then select Enter.
     * Enter **My first query extension** as the description of the extension, and then select Enter. 
-    * Accept the default **No JavaScript web framework** option for the framework, and then select Enter to continue.
+    * Accept the default **No JavaScript framework** option for the framework, and then select Enter to continue.
 
     ![Yeoman prompts](../../../images/query-extension-yeoman.png)
 
