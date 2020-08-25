@@ -16,6 +16,11 @@ Before you start, complete the procedures in the following articles to ensure th
 - [Connect your web part to SharePoint](connect-to-sharepoint.md)
 - [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
+
+You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+
+> [!Video https://www.youtube.com/embed/tHzbh5JoC-A]
+
 ## Create a SharePoint Framework project for Microsoft Graph usage
 
 1. Create a new project directory in your favorite location:
