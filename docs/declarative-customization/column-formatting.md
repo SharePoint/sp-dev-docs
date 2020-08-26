@@ -826,6 +826,7 @@ The following column types support column formatting:
 * Currency*
 * Date/Time
 * Hyperlink
+* Image
 * Location*
 * Lookup
 * Multi-Choice
@@ -845,6 +846,8 @@ The following are currently **not** supported:
 * Managed Metadata
 * Filename (in Document Libraries)
 * Retention Label
+* Sealed columns
+* Multi-Line Text column with enhanced rich text
 
 ## Style guidelines
 
