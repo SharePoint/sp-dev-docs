@@ -724,7 +724,7 @@ This examples uses operator `loopIndex` to control the margins all rows but the 
 }
 ```
 
-### Custom cards on hover 
+## Custom cards on hover 
 
 The following image shows a list with a custom hover added to a List:
 
@@ -757,11 +757,14 @@ This example uses customCardProps, openOnEvent, directionalHint and isBeakVisibl
         },
         "openOnEvent": "hover",
         "directionalHint": "bottomCenter",
-        "isBeakVisible": true
+        "isBeakVisible": true,
+        "beakStyle" : {
+            "backgroundColor": "white"
+        }
     }
 }
 ```
-## Default cards on hover via formatting 
+## Default cards on hover
 
 Users can now have profile card or file hover card on formatters too, some of the things users can now do -
 	1) Profile card or File Hover card on any column 
