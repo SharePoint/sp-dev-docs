@@ -309,6 +309,10 @@ This example shows how to turn a text field that contains stock ticker symbols i
 }
 ```
 
+> [!TIP]
+> In a List Web Part, the above anchor tag will navigate user to a new tab. In order to navigate within the same tab, add  `data-interception` attribute and set it to `on`. [More information about data-interception attibute.](../spfx/hyperlinking.md)
+
+
 ### Add an action button to a field (advanced)
 
 The following image shows action buttons added to a field.
@@ -1170,6 +1174,7 @@ An optional property that specifies additional attributes to add to the element 
 - iconName
 - d
 - aria
+- data-interception
 
 Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to http://finance.yahoo.com/quote/ + the value of the current field (`@currentField`). 
 
