@@ -1398,6 +1398,20 @@ Operators specify the type of operation to perform. The following operators are 
 - **pow**: returns the base to the exponent power. - _Only available in SharePoint Online_
   - `"txtContent":"=pow(2,3)"` results in _8_
 
+- **lastIndexOf**: returns the position of the last occurrence of a specified value in a string
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Dog')"` results in _8_
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'F')"` results in _11_
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Cat')"` results in _-1_
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'f')"` results in _-1_
+
+- **startsWith**: determines whether a string begins with the characters of a specified string
+  - `"txtContent":"=startsWith('DogFood', 'Dog')"` results in _true_
+  - `"txtContent":"=startsWith('DogFood', 'Food')"` results in _false_
+
+- **endsWith**: determines whether a string ends with the characters of a specified string
+  - `"txtContent":"=endsWith('DogFood', 'Dog')"` results in _false_
+  - `"txtContent":"=endsWith('DogFood', 'Food')"` results in _true_
+
 **Ternary operators** - The following are operators that expect three operands:
 
 - **substring**: returns the part of the string between the start and end indices. - _Only available in SharePoint Online_
