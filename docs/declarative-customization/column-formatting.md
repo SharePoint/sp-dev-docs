@@ -1408,6 +1408,19 @@ Operators specify the type of operation to perform. The following operators are 
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 
+- **replace**: searches a string for a specified value and returns a new string where the specified value is replaced. Only the first instance of the value will be replaced.
+  - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
+
+- **padStart**: pads the current string with another string until the resulting string reaches the given length. The padding is applied from the start of the current string.
+  - `"txtContent":"=padStart('DogFood', 10, 'A')"` results in _AAADogFood_
+  - `"txtContent":"=padStart('DogFood', 10, 'AB')"` results in _ABADogFood_
+  - `"txtContent":"=padStart('DogFood', 5, 'A')"` results in _DogFood_
+
+- **padEnd**: pads the current string with a given string until the resulting string reaches the given length. The padding is applied from the end of the current string.
+  - `"txtContent":"=padEnd('DogFood', 10, 'A')"` results in _DogFoodAAA_
+  - `"txtContent":"=padEnd('DogFood', 10, 'AB')"` results in _ABADogFoodABA_
+  - `"txtContent":"=padEnd('DogFood', 5, 'A')"` results in _DogFood_
+
 **Conditional operator** - The conditional operator is:
 
 - **?**: Conditional operations written in Abstract Tree Syntax use `?` as the operator. This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c. For Excel style expressions you write these with an `if` statement. Regardless, there are 3 operands. The first is the condition to evaluate. The second is the result when the condition is true. The third is the result when the condition is false.
