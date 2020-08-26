@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/25/2020
+ms.date: 08/26/2020
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -37,9 +37,6 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: field-extension
-    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
-    - **Where do you want to place the files** Use the current folder
-    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites? (y/n)** n
     - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant? (y/n)** n
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** Field Customizer
