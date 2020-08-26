@@ -1116,6 +1116,7 @@ An optional property that specifies style attributes to apply to the element spe
     'text-align-last'
     'text-justify'
     'text-outline'
+    'text-overflow'
     'text-shadow'
     'text-wrap'
     'word-break'
