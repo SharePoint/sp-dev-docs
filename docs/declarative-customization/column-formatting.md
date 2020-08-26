@@ -1315,6 +1315,13 @@ Operators specify the type of operation to perform. The following operators are 
 - getDate
 - getMonth
 - getYear
+- toUpperCase 
+- lastIndexOf
+- startsWith
+- endsWith
+- replace
+- padStart
+- padEnd
 
 **Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1324,8 +1331,11 @@ Operators specify the type of operation to perform. The following operators are 
 - \*
 - <
 - \>
+- \%
+- ==
+- !=
 - <=
-- \>= 
+- \>=
 
 **Unary operators** - The following are standard unary operators that expect only one operand: 
 
@@ -1382,7 +1392,10 @@ Operators specify the type of operation to perform. The following operators are 
 
 - **getYear**: returns the year of the given date. - _Only available in SharePoint Online_
   - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_ 
-  
+
+- **toUpperCase**: returns the value converted to upper case (only works on strings) - _Only available in SharePoint Online_
+  - `"txtContent":"=toUpperCase('DogFood')"` results in _"DOGFOOD"_  
+
 **Binary operators** - The following are operators that expect two operands:
 
 - **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
