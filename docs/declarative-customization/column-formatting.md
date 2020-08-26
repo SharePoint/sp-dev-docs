@@ -730,11 +730,11 @@ The following image shows a list with a custom hover added to a List:
 
 On hover - Metadata on the column "Status" is made available in view formatting
 
-![](../images/HoverImage-1.png)
+![Preview Image 1](../images/HoverImage-1.png)
 
 On hover - Metadata on the column "Status" is made available in column formatting
 
-![](../images/HoverImage-2.png)
+![Preview Image 2](../images/HoverImage-2.png)
 
 
 
@@ -772,12 +772,12 @@ Users can now have profile card or file hover card on formatters too, some of th
 
 Hover on a filename with formatting with default file card 
 
-![](../images/HoverImage-3.png)
+![Preview Image 3](../images/HoverImage-3.png)
 
 
 Hover on a person column with formatting with default Profile card 
 
-![](../images/HoverImage-4.png)
+![Preview Image 4](../images/HoverImage-4.png)
 
 Both the example uses defaultHoverField 
 
@@ -981,6 +981,7 @@ An optional property that specifies the text content of the element specified by
 
 An optional property that specifies style attributes to apply to the element specified by `elmType`. This is an object with name-value pairs that correspond to CSS names and values. The values of each property in the style object can either be a string (including special strings) or an Expression object. The following style attributes are allowed.
 
+```JS
     'background-color'
     'fill'
     'background-image'
@@ -1127,6 +1128,7 @@ An optional property that specifies style attributes to apply to the element spe
     'text-wrap'
     'word-break'
     'word-wrap'
+```
 
 The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section. 
 
