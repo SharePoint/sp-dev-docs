@@ -1758,7 +1758,28 @@ Default file hover card using FileLeafRef
     "defaultHoverField": "[$FileLeafRef]"
 }
   ```
-  
+
+#### displayValue
+
+The following column types can use displayValue property to get the default rendered value, based on the column setting
+* Date/Time
+* Number
+* Yes/No
+
+```JSON
+ {
+    "elmType": "div",
+    "txtContent": "@currentField.displayValue"
+}
+```
+This also works with field name
+```JSON
+ {
+    "elmType": "div",
+    "txtContent": "[$FieldName.displayValue]"
+}
+```
+
 ## See also
 
 - [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)
