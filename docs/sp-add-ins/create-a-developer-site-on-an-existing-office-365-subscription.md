@@ -1,7 +1,7 @@
 ---
 title: Create a developer site on an existing Office 365 subscription
 description: Set up an Office 365 developer site for SharePoint Add-ins.
-ms.date: 03/09/2018
+ms.date: 08/24/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -13,16 +13,16 @@ An Office 365 developer site makes it easier to get set up and start creating, t
 
 ### Before you start
 
-**Be sure you have an Office 365 subscription that supports a developer site.** If you have one of the following Office 365 subscription plans, you can create a developer site within your existing subscription:
+Unless otherwise noted, developer sites can be created in all plans that include SharePoint, and all SharePoint standalone plans. Including but not limited to:
     
-- Office 365 Midsize Business
-- Office 365 Enterprise E1, E3, E4, E5, or K1
-- Office 365 Education A2, A3, or A4
-- Office 365 Government G1, G3, G4, or K1
+- Microsoft 365 Business Standard
+- Microsoft 365 E3, E5
+- Microsoft 365 A3, A5
+- Microsoft 365 Government G3, G5
 
-**If you have an Office 365 Small Business subscription,** it supports only a single site collection, so you can't create a developer site collection. If you would like to learn more about Office 365 plans for your business, see [SharePoint Online: software boundaries and limits](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/sharepoint-online-software-boundaries-and-limits-HA102694293.aspx).
+If you would like to learn more about Microsoft 365 plans for your business, see [SharePoint Online: software boundaries and limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
     
-For more information about the Office 365 Enterprise offerings, see [Plans &amp; Pricing](https://products.office.com/business/office-365-enterprise-e1-business-software).
+For more information about the Microsoft 365 Enterprise offerings, see [Plans &amp; Pricing](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 <a name="bk_createdevsite"> </a>
 ## Create a developer site
@@ -40,16 +40,20 @@ For more information about the Office 365 Enterprise offerings, see [Plans &amp;
 
 4. In the navigation tree on the left, expand **Admin**, and then select **SharePoint**.
 
-5. In the **SharePoint admin center**, on the **Site Collections** tab, select **New** > **Private Site Collection**.
+5. In the **SharePoint admin center**, on the **Sites** menu, select **Active Sites** .
 
-   ![SharePoint Admin Center new site collection option](../images/SPAdminCenter_newSiteCollection.png)
+   ![SharePoint Admin Center Active Sites](..\images\SharePoint-Admin-Center-Active-Sites.png)
+   
+6. In the **Active Sites** list select **Create** > **Other options**
 
-6. In the **New Site Collection** dialog box, provide information about your developer site.
+7. In the **Choose a template** dropdown, select **More templates**
+
+8. In the **Create Site Collection** dialog box, provide information about your developer site.
     
    |**Field**|**Value**|
    |:-----|:-----|
    |**Title**|The name you want to give your developer site.|
-   |**Public Website Address** list|A domain name and a URL path—either **/sites/** or **/teams/**—and then<br/>type a URL name for the site collection.|
+   |**Web Site Address** list|A domain name and a URL path—either **/sites/** or **/teams/**—and then<br/>type a URL name for the site collection.|
    |**Select a language** list in the **Template Selection** section|A primary language to use for your developer site.<br/>*Be sure to select the appropriate language for the developer site site collection, because once you choose it, it can't be changed.*<br/>Selecting a language for your developer site does not affect the languages you can make available in your Office and SharePoint Add-ins.<br/>You can enable the SharePoint multiple language interface on your sites, but the primary language for the site collection is the one you choose here.|
    |**Template Selection** section, on the **Collaboration** tab under **Select a template**|Select **Developer Site.**|
    |**Time Zone**|Time zone that's appropriate for the locale of your developer site.|
@@ -57,7 +61,7 @@ For more information about the Office 365 Enterprise offerings, see [Plans &amp;
    |**Storage Quota**|Number of megabytes (MB) you want to allocate to this developer site site collection.|
    |**Server Resource Quota**|The amount of resources to allocate to the site collection.<br/>This number is a combination of performance metrics (such as processor time and unhandled exceptions) that pertain to code in sandboxed solutions.<br/>When the level exceeds a daily quota, the sandbox is turned off for this site collection.|
 
-7. Select **OK**. You'll see the new developer site URL in the **Site Collections** list. When the site creation is finished, you can go to the URL to open your developer site.
+9. Select **OK**. You'll see the new developer site URL in the **Site Collections** list. When the site creation is finished, you can go to the URL to open your developer site.
 
    ![New site collection provisioning](../images/SPAdminCenter_newSiteCollection_provisioning.png)
  
