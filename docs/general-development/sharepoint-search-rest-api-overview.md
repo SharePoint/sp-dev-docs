@@ -135,7 +135,7 @@ GET http://server/_api/search/query?querytext='sharepoint'&amp;querytemplate='{s
       'type': 'Microsoft.Office.Server.Search.REST.SearchRequest'
    },
   'Querytext': 'sharepoint',
-  'Querytemplate': '{searchterms} Author:johndoe'
+  'QueryTemplate': '{searchterms} Author:johndoe'
 }
 ```
 
