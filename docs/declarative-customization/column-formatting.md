@@ -309,6 +309,10 @@ This example shows how to turn a text field that contains stock ticker symbols i
 }
 ```
 
+> [!TIP]
+> In a List Web Part, the above anchor tag will navigate user to a new tab. In order to navigate within the same tab, add  `data-interception` attribute and set it to `on`. [More information about data-interception attibute.](../spfx/hyperlinking.md)
+
+
 ### Add an action button to a field (advanced)
 
 The following image shows action buttons added to a field.
@@ -720,17 +724,17 @@ This examples uses operator `loopIndex` to control the margins all rows but the 
 }
 ```
 
-### Custom cards on hover 
+## Custom cards on hover 
 
 The following image shows a list with a custom hover added to a List:
 
 On hover - Metadata on the column "Status" is made available in view formatting
 
-![](../images/HoverImage-1.png)
+![Preview Image 1](../images/HoverImage-1.png)
 
 On hover - Metadata on the column "Status" is made available in column formatting
 
-![](../images/HoverImage-2.png)
+![Preview Image 2](../images/HoverImage-2.png)
 
 
 
@@ -753,11 +757,14 @@ This example uses customCardProps, openOnEvent, directionalHint and isBeakVisibl
         },
         "openOnEvent": "hover",
         "directionalHint": "bottomCenter",
-        "isBeakVisible": true
+        "isBeakVisible": true,
+        "beakStyle" : {
+            "backgroundColor": "white"
+        }
     }
 }
 ```
-## Default cards on hover via formatting 
+## Default cards on hover
 
 Users can now have profile card or file hover card on formatters too, some of the things users can now do -
 	1) Profile card or File Hover card on any column 
@@ -765,12 +772,12 @@ Users can now have profile card or file hover card on formatters too, some of th
 
 Hover on a filename with formatting with default file card 
 
-![](../images/HoverImage-3.png)
+![Preview Image 3](../images/HoverImage-3.png)
 
 
 Hover on a person column with formatting with default Profile card 
 
-![](../images/HoverImage-4.png)
+![Preview Image 4](../images/HoverImage-4.png)
 
 Both the example uses defaultHoverField 
 
@@ -822,6 +829,7 @@ The following column types support column formatting:
 * Currency*
 * Date/Time
 * Hyperlink
+* Image
 * Location*
 * Lookup
 * Multi-Choice
@@ -841,6 +849,8 @@ The following are currently **not** supported:
 * Managed Metadata
 * Filename (in Document Libraries)
 * Retention Label
+* Sealed columns
+* Multi-Line Text column with enhanced rich text
 
 ## Style guidelines
 
@@ -971,151 +981,154 @@ An optional property that specifies the text content of the element specified by
 
 An optional property that specifies style attributes to apply to the element specified by `elmType`. This is an object with name-value pairs that correspond to CSS names and values. The values of each property in the style object can either be a string (including special strings) or an Expression object. The following style attributes are allowed.
 
-    'background-color'
-    'fill'
-    'background-image'
-    'border'
-    'border-bottom'
-    'border-bottom-color'
-    'border-bottom-style'
-    'border-bottom-width'
-    'border-color'
-    'border-left'
-    'border-left-color'
-    'border-left-style'
-    'border-left-width'
-    'border-right'
-    'border-right-color'
-    'border-right-style'
-    'border-right-width'
-    'border-style'
-    'border-top'
-    'border-top-color'
-    'border-top-style'
-    'border-top-width'
-    'border-width'
-    'outline'
-    'outline-color'
-    'outline-style'
-    'outline-width'
-    'border-bottom-left-radius'
-    'border-bottom-right-radius'
-    'border-radius'
-    'border-top-left-radius'
-    'border-top-right-radius'
-    'box-decoration-break'
-    'box-shadow'
-    'box-sizing'
+```JS
+'background-color'
+'fill'
+'background-image'
+'border'
+'border-bottom'
+'border-bottom-color'
+'border-bottom-style'
+'border-bottom-width'
+'border-color'
+'border-left'
+'border-left-color'
+'border-left-style'
+'border-left-width'
+'border-right'
+'border-right-color'
+'border-right-style'
+'border-right-width'
+'border-style'
+'border-top'
+'border-top-color'
+'border-top-style'
+'border-top-width'
+'border-width'
+'outline'
+'outline-color'
+'outline-style'
+'outline-width'
+'border-bottom-left-radius'
+'border-bottom-right-radius'
+'border-radius'
+'border-top-left-radius'
+'border-top-right-radius'
+'box-decoration-break'
+'box-shadow'
+'box-sizing'
 
-    'overflow-x'
-    'overflow-y'
-    'overflow-style'
-    'rotation'
-    'rotation-point'
+'overflow-x'
+'overflow-y'
+'overflow-style'
+'rotation'
+'rotation-point'
 
-    'opacity'
-    'cursor'
+'opacity'
+'cursor'
 
-    'height'
-    'max-height'
-    'max-width'
-    'min-height'
-    'min-width'
-    'width'
+'height'
+'max-height'
+'max-width'
+'min-height'
+'min-width'
+'width'
 
-    'flex-grow'
-    'flex-shrink'
-    'flex-flow'
-    'flex-direction'
-    'flex-wrap'
-    'flex'
-    'justify-content'
-    'align-items'
-    
-    'box-align'
-    'box-direction'
-    'box-flex'
-    'box-flex-group'
-    'box-lines'
-    'box-ordinal-group'
-    'box-orient'
-    'box-pack'
+'flex-grow'
+'flex-shrink'
+'flex-flow'
+'flex-direction'
+'flex-wrap'
+'flex'
+'justify-content'
+'align-items'
 
-    'font'
-    'font-family'
-    'font-size'
-    'font-style'
-    'font-variant'
-    'font-weight'
-    'font-size-adjust'
-    'font-stretch'
+'box-align'
+'box-direction'
+'box-flex'
+'box-flex-group'
+'box-lines'
+'box-ordinal-group'
+'box-orient'
+'box-pack'
 
-    'grid-columns'
-    'grid-rows'
+'font'
+'font-family'
+'font-size'
+'font-style'
+'font-variant'
+'font-weight'
+'font-size-adjust'
+'font-stretch'
 
-    'margin'
-    'margin-bottom'
-    'margin-left'
-    'margin-right'
-    'margin-top'
+'grid-columns'
+'grid-rows'
 
-    'column-count'
-    'column-fill'
-    'column-gap'
-    'column-rule'
-    'column-rule-color'
-    'column-rule-style'
-    'column-rule-width'
-    'column-span'
-    'column-width'
-    'columns'
+'margin'
+'margin-bottom'
+'margin-left'
+'margin-right'
+'margin-top'
 
-    'padding'
-    'padding-bottom'
-    'padding-left'
-    'padding-right'
-    'padding-top'
+'column-count'
+'column-fill'
+'column-gap'
+'column-rule'
+'column-rule-color'
+'column-rule-style'
+'column-rule-width'
+'column-span'
+'column-width'
+'columns'
 
-    'bottom'
-    'clear'
-    'clip'
-    'display'
-    'float'
-    'left'
-    'overflow'
-    'position' 
-    'right'
-    'top'
-    'visibility'
-    'z-index'
+'padding'
+'padding-bottom'
+'padding-left'
+'padding-right'
+'padding-top'
 
-    'border-collapse'
-    'border-spacing'
-    'caption-side'
-    'empty-cells'
-    'table-layout'
+'bottom'
+'clear'
+'clip'
+'display'
+'float'
+'left'
+'overflow'
+'position' 
+'right'
+'top'
+'visibility'
+'z-index'
 
-    'color'
-    'direction'
-    'letter-spacing'
-    'line-height'
-    'text-align'
-    'text-decoration'
-    'text-indent'
-    'text-transform'
-    'unicode-bidi'
-    'vertical-align'
-    'white-space'
-    'word-spacing'
-    'hanging-punctuation'
-    'punctuation-trim'
-    'text-align-last'
-    'text-justify'
-    'text-outline'
-    'text-shadow'
-    'text-wrap'
-    'word-break'
-    'word-wrap'
+'border-collapse'
+'border-spacing'
+'caption-side'
+'empty-cells'
+'table-layout'
+
+'color'
+'direction'
+'letter-spacing'
+'line-height'
+'text-align'
+'text-decoration'
+'text-indent'
+'text-transform'
+'unicode-bidi'
+'vertical-align'
+'white-space'
+'word-spacing'
+'hanging-punctuation'
+'punctuation-trim'
+'text-align-last'
+'text-justify'
+'text-outline'
+'text-overflow'
+'text-shadow'
+'text-wrap'
+'word-break'
+'word-wrap'
+```
 
 The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section. 
 
@@ -1170,6 +1183,7 @@ An optional property that specifies additional attributes to add to the element 
 - iconName
 - d
 - aria
+- data-interception
 
 Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to http://finance.yahoo.com/quote/ + the value of the current field (`@currentField`). 
 
@@ -1315,6 +1329,13 @@ Operators specify the type of operation to perform. The following operators are 
 - getDate
 - getMonth
 - getYear
+- toUpperCase 
+- lastIndexOf
+- startsWith
+- endsWith
+- replace
+- padStart
+- padEnd
 
 **Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1324,8 +1345,11 @@ Operators specify the type of operation to perform. The following operators are 
 - \*
 - <
 - \>
+- \%
+- ==
+- !=
 - <=
-- \>= 
+- \>=
 
 **Unary operators** - The following are standard unary operators that expect only one operand: 
 
@@ -1382,7 +1406,10 @@ Operators specify the type of operation to perform. The following operators are 
 
 - **getYear**: returns the year of the given date. - _Only available in SharePoint Online_
   - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_ 
-  
+
+- **toUpperCase**: returns the value converted to upper case (only works on strings) - _Only available in SharePoint Online_
+  - `"txtContent":"=toUpperCase('DogFood')"` results in _"DOGFOOD"_  
+
 **Binary operators** - The following are operators that expect two operands:
 
 - **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
@@ -1398,6 +1425,20 @@ Operators specify the type of operation to perform. The following operators are 
 - **pow**: returns the base to the exponent power. - _Only available in SharePoint Online_
   - `"txtContent":"=pow(2,3)"` results in _8_
 
+- **lastIndexOf**: returns the position of the last occurrence of a specified value in a string
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Dog')"` results in _8_
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'F')"` results in _11_
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Cat')"` results in _-1_
+  - `"txtContent": "=lastIndexOf('DogFood DogFood', 'f')"` results in _-1_
+
+- **startsWith**: determines whether a string begins with the characters of a specified string
+  - `"txtContent":"=startsWith('DogFood', 'Dog')"` results in _true_
+  - `"txtContent":"=startsWith('DogFood', 'Food')"` results in _false_
+
+- **endsWith**: determines whether a string ends with the characters of a specified string
+  - `"txtContent":"=endsWith('DogFood', 'Dog')"` results in _false_
+  - `"txtContent":"=endsWith('DogFood', 'Food')"` results in _true_
+
 **Ternary operators** - The following are operators that expect three operands:
 
 - **substring**: returns the part of the string between the start and end indices. - _Only available in SharePoint Online_
@@ -1407,6 +1448,19 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=substring('DogFood', 6, 3)"` results in _Foo_
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
+
+- **replace**: searches a string for a specified value and returns a new string where the specified value is replaced. Only the first instance of the value will be replaced.
+  - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
+
+- **padStart**: pads the current string with another string until the resulting string reaches the given length. The padding is applied from the start of the current string.
+  - `"txtContent":"=padStart('DogFood', 10, 'A')"` results in _AAADogFood_
+  - `"txtContent":"=padStart('DogFood', 10, 'AB')"` results in _ABADogFood_
+  - `"txtContent":"=padStart('DogFood', 5, 'A')"` results in _DogFood_
+
+- **padEnd**: pads the current string with a given string until the resulting string reaches the given length. The padding is applied from the end of the current string.
+  - `"txtContent":"=padEnd('DogFood', 10, 'A')"` results in _DogFoodAAA_
+  - `"txtContent":"=padEnd('DogFood', 10, 'AB')"` results in _DogFoodABA_
+  - `"txtContent":"=padEnd('DogFood', 5, 'A')"` results in _DogFood_
 
 **Conditional operator** - The conditional operator is:
 
@@ -1758,7 +1812,28 @@ Default file hover card using FileLeafRef
     "defaultHoverField": "[$FileLeafRef]"
 }
   ```
-  
+
+#### displayValue
+
+The following column types can use displayValue property to get the default rendered value, based on the column setting
+* Date/Time
+* Number
+* Yes/No
+
+```JSON
+ {
+    "elmType": "div",
+    "txtContent": "@currentField.displayValue"
+}
+```
+This also works with field name
+```JSON
+ {
+    "elmType": "div",
+    "txtContent": "[$FieldName.displayValue]"
+}
+```
+
 ## See also
 
 - [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)
