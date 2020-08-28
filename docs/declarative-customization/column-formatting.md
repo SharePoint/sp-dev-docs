@@ -1459,7 +1459,7 @@ Operators specify the type of operation to perform. The following operators are 
 
 - **padEnd**: pads the current string with a given string until the resulting string reaches the given length. The padding is applied from the end of the current string.
   - `"txtContent":"=padEnd('DogFood', 10, 'A')"` results in _DogFoodAAA_
-  - `"txtContent":"=padEnd('DogFood', 10, 'AB')"` results in _ABADogFoodABA_
+  - `"txtContent":"=padEnd('DogFood', 10, 'AB')"` results in _DogFoodABA_
   - `"txtContent":"=padEnd('DogFood', 5, 'A')"` results in _DogFood_
 
 **Conditional operator** - The conditional operator is:
