@@ -1,6 +1,6 @@
 ---
 title: SharePoint Search REST API overview
-ms.date: 09/25/2017
+ms.date: 08/28/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
