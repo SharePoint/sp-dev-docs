@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure Pipelines (preview)
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 07/13/2020
+ms.date: 08/31/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -116,7 +116,7 @@ parameters:
   job_name: deploy_sppkg
   # friendly name of the job
   display_name: Upload & deploy *.sppkg to SharePoint app catalog
-  # name of target enviroment deploying to
+  # name of target environment deploying to
   target_environment: ''
   # app catalog scope (tenant|sitecollection)
   o365cli_app_catalog_scope: 'tenant'
