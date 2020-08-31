@@ -1,6 +1,6 @@
 ---
 title: SharePoint Search REST API overview
-ms.date: 09/25/2017
+ms.date: 08/28/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -135,7 +135,7 @@ GET http://server/_api/search/query?querytext='sharepoint'&amp;querytemplate='{s
       'type': 'Microsoft.Office.Server.Search.REST.SearchRequest'
    },
   'Querytext': 'sharepoint',
-  'Querytemplate': '{searchterms} Author:johndoe'
+  'QueryTemplate': '{searchterms} Author:johndoe'
 }
 ```
 
