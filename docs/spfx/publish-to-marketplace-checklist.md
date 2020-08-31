@@ -83,6 +83,8 @@ Your solution must not use Microsoft Teams or SharePoint feature-specific keywor
 
 If your solution is named after a common word, such as **Orders**, you will need to include your company name as well to clearly differentiate it from other solutions in the Marketplace, for example, **Contoso Orders**.
 
+Ensure that the `package-solution.json` configuration file has understandable `name` entry updated based on above format as shown in the below example.
+
 ### Don't include additional advertising in your app's description and screenshots
 
 Make sure that your app's description, screenshots, text, and promotional images, describe only the app and don't contain any additional advertising.
