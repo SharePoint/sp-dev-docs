@@ -116,7 +116,7 @@ parameters:
   job_name: deploy_sppkg
   # friendly name of the job
   display_name: Upload & deploy *.sppkg to SharePoint app catalog
-  # name of target enviroment deploying to
+  # name of target environment deploying to
   target_environment: ''
   # app catalog scope (tenant|sitecollection)
   o365cli_app_catalog_scope: 'tenant'
