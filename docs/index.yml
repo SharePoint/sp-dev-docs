@@ -120,8 +120,8 @@ landingContent:
             url: https://aka.ms/sp-starter-kit
           - text: PnP SPFx Yeoman Generator
             url: https://pnp.github.io/generator-spfx/
-          - text: Office 365 CLI
-            url: https://pnp.github.io/office365-cli/
+          - text: CLI for Microsoft 365
+            url: https://pnp.github.io/cli-microsoft365/
           - text: Modern Search web parts
             url: http://aka.ms/pnp-search
           - text: PnP PowerShell
