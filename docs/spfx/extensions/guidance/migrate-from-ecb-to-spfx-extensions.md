@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extension
 description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
-ms.date: 06/29/2020
+ms.date: 09/03/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -62,6 +62,12 @@ To migrate the previous solution to the SharePoint Framework, see the following 
 
     ```console
     cd spfx-ecb-extension
+    ```
+
+1. Create a new SharePoint Framework solution web part by running the Yeoman SharePoint Generator.
+
+    ```console
+    yo @microsoft/sharepoint
     ```
 
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
