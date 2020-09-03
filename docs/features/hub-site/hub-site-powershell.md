@@ -37,4 +37,4 @@ The following PowerShell cmdlets are available for managing hub sites:
 ## See also
 
 - [SharePoint hub sites overview](hub-site-overview.md)
-- [Office 365 CLI commands for SharePoint hub sites](hub-site-o365cli.md)
+- [CLI for Microsoft 365 commands for SharePoint hub sites](hub-site-o365cli.md)

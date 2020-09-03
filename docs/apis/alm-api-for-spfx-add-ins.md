@@ -32,7 +32,7 @@ ALM APIs are supported for the tenant-scoped site collections and [site collecti
 
 ## Options for working with ALM APIs
 
-ALM APIs are natively provided by using REST APIs, but there are additional client-side object model (CSOM) extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
+ALM APIs are natively provided by using REST APIs, but there are additional client-side object model (CSOM) extensions, PowerShell cmdlets, and the cross-platform CLI for Microsoft 365 available through SharePoint PnP Community channels.
 
 ### SharePoint REST API
 
@@ -90,15 +90,15 @@ Learn more here: [PnP PowerShell](https://aka.ms/sppnp-powershell)
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
-### Office 365 CLI
+### CLI for Microsoft 365
 
-The Office 365 CLI is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the ALM APIs by calling the SharePoint REST API.
+The CLI for Microsoft 365 is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the ALM APIs by calling the SharePoint REST API.
 
-Before using any of the commands in the Office 365 CLI, you must first connect to SharePoint Online using the `login` command.
+Before using any of the commands in the CLI for Microsoft 365, you must first connect to SharePoint Online using the `login` command.
 
 In all Office 365 commands, it's assumed the request targets the tenant app catalog in the tenant you connect to using the `login` command. You can override the scope of the command using the `--scope` option to target a site collection app catalog.
 
-Learn more here: [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
+Learn more here: [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
@@ -145,13 +145,13 @@ Add-PnPApp -Path ./sharepoint-solution-package.sppkg
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/add-pnpapp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app add --filePath ./sharepoint-solution-package.sppkg
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -204,13 +204,13 @@ Publish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Publish-PnPApp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app deploy --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-deploy/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-deploy/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -252,13 +252,13 @@ Unpublish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Unpublish-PnPApp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app retract --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-retract/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-retract/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for complete details and examples on this command.
 
 ---
 
@@ -288,13 +288,13 @@ Remove-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Remove-PnPApp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app remove --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -371,13 +371,13 @@ Get-PnPApp
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Get-PnPApp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app list
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -433,13 +433,13 @@ Get-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Get-PnpApp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app get --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -478,13 +478,13 @@ Install-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Install-PnPApp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app install --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -526,13 +526,13 @@ Update-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/update-pnpapp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app upgrade --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -573,13 +573,13 @@ Uninstall-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Uninstall-PnPApp) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo app uninstall --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
 
 ---
 
@@ -617,7 +617,7 @@ Sync-PnPAppToTeams -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/sync-pnpapptoteams) for complete details and examples on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 *Not Supported*
 
@@ -627,4 +627,4 @@ Sync-PnPAppToTeams -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 - [PnP PowerShell](https://aka.ms/sppnp-powershell)
-- [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
+- [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)

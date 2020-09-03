@@ -39,13 +39,13 @@ Learn more here: [PnP PowerShell](https://aka.ms/sppnp-powershell)
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
-### Office 365 CLI
+### CLI for Microsoft 365
 
-The Office 365 CLI can be used to manage the tenant properties. The Office 365 CLI is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux.
+The CLI for Microsoft 365 can be used to manage the tenant properties. The CLI for Microsoft 365 is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux.
 
-Before using any of the commands in the Office 365 CLI, you must first connect to SharePoint Online using the `login` command. All tenant properties are managed using the `spo storageentity` commands.
+Before using any of the commands in the CLI for Microsoft 365, you must first connect to SharePoint Online using the `login` command. All tenant properties are managed using the `spo storageentity` commands.
 
-Learn more here: [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
+Learn more here: [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
 
 > [!IMPORTANT]
 > To set or remove a tenant property, you have to first connect to a tenant admin site using the `spo connect` command. If you are connected to a different site and will try to manage tenant properties, you will get an error.
@@ -92,13 +92,13 @@ Get-PnPStorageEntity
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/get-pnpstorageentity) for details on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo storageentity list
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
 
 ---
 
@@ -142,13 +142,13 @@ Get-PnPStorageEntity -Key <key>
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/get-pnpstorageentity) for details on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo storageentity get --key <key>
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/storageentity/storageentity-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
 
 ---
 
@@ -176,13 +176,13 @@ Set-PnPStorageEntity -Key <key> -Value <value>
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/set-pnpstorageentity) for details on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo storageentity set --key <key> --value <value>
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/storageentity/storageentity-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
 
 ---
 
@@ -210,13 +210,13 @@ Remove-PnPStorageEntity -Key <key>
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/remove-pnpstorageentity) for details on this cmdlet.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
 spo storageentity remove --key <key>
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/storageentity/storageentity-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/storageentity/storageentity-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for details on this command.
 
 ---
 
@@ -235,4 +235,4 @@ The error message will also be shown if you aren't owner or site collection admi
 - [Overview of the SharePoint Framework](sharepoint-framework-overview.md)
 - [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx)
 - [PnP PowerShell](https://aka.ms/sppnp-powershell)
-- [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
+- [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)

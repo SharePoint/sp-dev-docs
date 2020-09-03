@@ -29,5 +29,5 @@ For more information about creating hub sites, see [Create SharePoint hub sites 
 ## See also
 
 - [PowerShell cmdlets for SharePoint hub sites](hub-site-powershell.md)
-- [Office 365 CLI commands for SharePoint hub sites](hub-site-o365cli.md)
+- [CLI for Microsoft 365 commands for SharePoint hub sites](hub-site-o365cli.md)
 - [Get to know the SharePoint REST service](../../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)

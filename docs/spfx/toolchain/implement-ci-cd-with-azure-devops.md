@@ -176,7 +176,7 @@ Setting up Azure DevOps for Continuous Deployments with a SharePoint Framework s
 1. Linking the Build Artifact
 1. Creating the Environment
 1. Installing NodeJS
-1. Installing the Office 365 CLI
+1. Installing the CLI for Microsoft 365
 1. Connecting to the App Catalog
 1. Adding the Solution Package to the App Catalog
 1. Deploying the Application
@@ -211,14 +211,14 @@ Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. 
 
 ![installing node 10](../../images/azure-devops-spfx-13.png)
 
-### Installing the Office 365 CLI
+### Installing the CLI for Microsoft 365
 
 The Office 365 Common Language Interface (CLI) is an open source project built by the OfficeDev PnP Community. In order to leverage the  CLI as part of your Release Definition, you first need to install it.  Then, you will be able to take advantage of commands available to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
 
-![installing office 365 cli](../../images/azure-devops-spfx-14.png)
+![installing CLI for Microsoft 365](../../images/azure-devops-spfx-14.png)
 
 > [!NOTE] 
-> Learn more about the [Office 365 CLI](https://pnp.github.io/office365-cli/)
+> Learn more about the [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/)
 
 ### Connecting to SharePoint Online
 
@@ -227,7 +227,7 @@ Before using the App Catalog in your deployment environment, you first need to a
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
 > [!NOTE] 
-> If you are using Office CLI to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by Office CLI to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on Office 365 CLI [User Guide](https://pnp.github.io/office365-cli/user-guide/connecting-office-365/).
+> If you are using Office CLI to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by Office CLI to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on CLI for Microsoft 365 [User Guide](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/).
 
 [!INCLUDE [pnp-o365cli](../../../includes/snippets/open-source/pnp-o365cli.md)]
 
