@@ -222,18 +222,18 @@ The Office 365 Common Language Interface (CLI) is an open source project built b
 
 ### Connecting to SharePoint Online
 
-Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `o365 login -t password -u $(username) -p $(password)`.
+Before using the App Catalog in your deployment environment, you first need to authenticate against the App Catalog of your tenant.  To do so, add a `Command Line` task and paste in the following command into the `script` field `m365 login -t password -u $(username) -p $(password)`.
 
 ![connecting to the app catalog](../../images/azure-devops-spfx-15.png)
 
 > [!NOTE] 
-> If you are using Office CLI to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by Office CLI to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on CLI for Microsoft 365 [User Guide](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/).
+> If you are using CLI for Microsoft 365 to connect to your tenant for the first time, you need to perform an interactive logon with the account first. This is required to grant access to PnP Office 365 Management Shell application which is used by CLI for Microsoft 365 to access your tenant on the account's behalf. Your task will otherwise fail to logon non-interactively. Details available on CLI for Microsoft 365 [User Guide](https://pnp.github.io/cli-microsoft365/user-guide/connecting-office-365/).
 
 [!INCLUDE [pnp-o365cli](../../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ### Adding the Solution Package to the App Catalog
 
-Upload the solution package to your App Catalog by adding another `Command Line` task and pasting the following command line in the `Script` field `o365 spo app add -p $(System.DefaultWorkingDirectory)/SpFxDevOps/drop/SharePoint/solution/sp-fx-devops.sppkg --overwrite`
+Upload the solution package to your App Catalog by adding another `Command Line` task and pasting the following command line in the `Script` field `m365 spo app add -p $(System.DefaultWorkingDirectory)/SpFxDevOps/drop/SharePoint/solution/sp-fx-devops.sppkg --overwrite`
 
 > [!NOTE] 
 > The path of the package depends on your solution name (see your project configuration) as well as the `Source Alias` you defined earlier, make sure they match.
@@ -245,7 +245,7 @@ Upload the solution package to your App Catalog by adding another `Command Line`
 
 ### Deploying the Application
 
-The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `o365 spo app deploy --name sp-fx-devops.sppkg`
+The final step in the setup is to deploy the application to the App Catalog to make it available to all site collections within the tenant as its latest version. Add another `Command Line` task and paste the following command line in the `Script` field `m365 spo app deploy --name sp-fx-devops.sppkg`
 
 > [!NOTE] 
 > Make sure you update the package name.

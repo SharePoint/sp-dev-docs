@@ -94,9 +94,7 @@ Learn more here: [PnP PowerShell](https://aka.ms/sppnp-powershell)
 
 The CLI for Microsoft 365 is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the ALM APIs by calling the SharePoint REST API.
 
-Before using any of the commands in the CLI for Microsoft 365, you must first connect to SharePoint Online using the `login` command.
-
-In all Office 365 commands, it's assumed the request targets the tenant app catalog in the tenant you connect to using the `login` command. You can override the scope of the command using the `--scope` option to target a site collection app catalog.
+Before using any of the commands in the CLI for Microsoft 365, you must first connect your Microsoft 365 tenant using the `m365 login` command.
 
 Learn more here: [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
 
@@ -148,7 +146,7 @@ Add-PnPApp -Path ./sharepoint-solution-package.sppkg
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app add --filePath ./sharepoint-solution-package.sppkg
+m365 spo app add --filePath ./sharepoint-solution-package.sppkg
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
@@ -207,7 +205,7 @@ Publish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app deploy --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+m365 spo app deploy --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-deploy/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
@@ -255,7 +253,7 @@ Unpublish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app retract --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+m365 spo app retract --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-retract/?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties) for complete details and examples on this command.
@@ -291,7 +289,7 @@ Remove-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app remove --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+m365 spo app remove --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
@@ -374,7 +372,7 @@ Get-PnPApp
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app list
+m365 spo app list
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
@@ -436,7 +434,7 @@ Get-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app get --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+m365 spo app get --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
@@ -481,7 +479,7 @@ Install-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app install --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
+m365 spo app install --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
@@ -529,7 +527,7 @@ Update-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app upgrade --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
+m365 spo app upgrade --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.
@@ -576,7 +574,7 @@ Uninstall-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo app uninstall --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
+m365 spo app uninstall --id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx --siteUrl <url>
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) for complete details and examples on this command.

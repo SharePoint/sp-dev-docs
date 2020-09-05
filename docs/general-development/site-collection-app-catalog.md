@@ -67,7 +67,7 @@ Alternatively, you can use the [CLI for Microsoft 365](https://sharepoint.github
 > "
 > ```
 >
-> Alternatively, if you are using the CLI for Microsoft 365, you must first connect to your tenant using the `spo connect` command. With PnP PowerShell you would use `Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -UseWebLogin` to set up the connection.
+> Alternatively, if you are using the CLI for Microsoft 365, you must first connect to your Microsoft 365 tenant using the `m365 login` command. With PnP PowerShell you would use `Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -UseWebLogin` to set up the connection.
 
 To create a site collection app catalog, use the `Add-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be created as the `-Site` parameter.
 
@@ -92,7 +92,7 @@ After executing this script, the **Apps for SharePoint** library will be added t
 ### Disable the site collection app catalog
 
 > [!NOTE]
-> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet for the SharePoint Online PowerShell, `Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -UseWebLogin` for PnP PowerShell or `spo connect` command for the CLI for Microsoft 365.
+> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet for the SharePoint Online PowerShell, `Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -UseWebLogin` for PnP PowerShell or `m365 login` command for the CLI for Microsoft 365 to connect to your Microsoft 365 tenant.
 
 To disable the site collection app catalog in your site collection, use the `Remove-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be disabled as the `-Site` parameter. Alternatively, if you have your site collection's ID, you can use the `Remove-SPOSiteCollectionAppCatalogById` cmdlet instead.
 

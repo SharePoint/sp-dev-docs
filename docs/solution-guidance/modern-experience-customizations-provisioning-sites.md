@@ -139,19 +139,19 @@ The following bash script will create a "modern" team site and then return the a
 
 ```console
 #!/usr/bin/env bash
-# Connect to SharePoint Online
+# Connect to Microsoft 365 tenant
 # This command will prompt a sign-in confirmation message to authenticate
-o365 spo connect https://[tenant].sharepoint.com/
+m365 login
 
 # Create the new "modern" team site
-siteUrl=$(o365 spo site add --type TeamSite --title 'displayName' --alias 'mymodernteamsite' --description 'description' --isPublic --classification 'classification')
+siteUrl=$(m365 spo site add --type TeamSite --title 'displayName' --alias 'mymodernteamsite' --description 'description' --isPublic --classification 'classification')
 
 # Display the modern site url
 echo $siteUrl
 
-# Since the CLI for Microsoft 365 is connected to SharePoint Online we can do any operations. 
+# Since the CLI for Microsoft 365 is connected to Microsoft 365 tenant we can do any operations. 
 # As example, we can list all the properties from the site property bag:
-o365 spo propertybag list -u $siteUrl
+m365 spo propertybag list -u $siteUrl
 ```
 
 ### Provision a Microsoft 365 group programmatically
@@ -234,21 +234,19 @@ New-PnPTenantSite -Url $_url -Description $_title -Title $_title -Template STS#3
 
 #### Provision a Microsoft 365 group using the CLI for Microsoft 365
 
-Alternatively, the [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/cmd/graph/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create a Microsoft 365 group, which will let you easily authenticate with the Microsoft Graph and then create the new group.
-The example below shows how it can be done using the [CLI for Microsoft 365 immersive mode](https://pnp.github.io/cli-microsoft365/user-guide/using-cli/#start-the-cli-in-the-immersive-mode?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically).
+Alternatively, the [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/cmd/aad/o365group/o365group-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Provisioning+modern+team+sites+programmatically) can be used to create a Microsoft 365 group.
 
 ```console
-# Use the CLI for Microsoft 365 immersive mode by typing o365 in the terminal
-# Connect to Microsoft Graph using the CLI for Microsoft 365
+#!/usr/bin/env bash
+# Connect to Microsoft 365 tenant
 # This command will prompt a sign-in confirmation message to authenticate
-graph connect
+m365 login
 
 # Create a Microsoft 365 group
-# The newly created SharePoint site for that group will has URL
+# The newly created SharePoint site for that group will have the URL
 # https://[tenant].sharepoint.com/sites/awesome-group
-graph o365group add --displayName 'Awesome Group' --description 'Awesome Group' --mailNickname awesome-group
+m365 aad o365group add --displayName 'Awesome Group' --description 'Awesome Group' --mailNickname awesome-group
 ```
-
 
 ## Provisioning "modern" communication sites
 
@@ -329,19 +327,19 @@ Alternatively, the [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft36
 
 ```console
 #!/usr/bin/env bash
-# Connect to SharePoint Online
+# Connect to Microsoft 365 tenant
 # This command will prompt a sign-in confirmation message to authenticate
-o365 spo connect https://[tenant].sharepoint.com/
+m365 login
 
 # Create the new "modern" communication site
-siteUrl=$(o365 spo site add --type CommunicationSite --url https://[tenant].sharepoint.com/sites/mymoderncommunicationsite --title displayName --description description --classification classification)
+siteUrl=$(m365 spo site add --type CommunicationSite --url https://[tenant].sharepoint.com/sites/mymoderncommunicationsite --title displayName --description description --classification classification)
 
 # Display the modern site url
 echo $siteUrl
 
-# Since the CLI for Microsoft 365 is connected to SharePoint Online we can do any operations. 
+# Since the CLI for Microsoft 365 is connected to your Microsoft 365 tenant we can do any operations. 
 # As example, we can list all the properties from the site property bag:
-o365 spo propertybag list -u $siteUrl
+m365 spo propertybag list -u $siteUrl
 ```
 
 ## Additional considerations
