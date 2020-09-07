@@ -1,7 +1,7 @@
 ---
 title: Provisioning "modern" team sites programmatically
 description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
-ms.date: 6/20/2020
+ms.date: 09/07/2020
 localization_priority: Priority
 ---
 
