@@ -27,6 +27,8 @@ New in this release, support for additional attributes in the solution for enabl
         ```console
         npm install @microsoft/{spfx-package-name}@1.11 --save --save-exact
         ```
+> [!IMPORTANT]
+> Be sure you update the package-solution.json with the new developers information as described in the article [Docs: SharePoint Framework toolchain - Update developer information](toolchain/sharepoint-framework-toolchain.md). Not providing such information will generate an error during gulp package-solution process.
 
 > [!TIP]
 > The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
