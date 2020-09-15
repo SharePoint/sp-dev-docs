@@ -17,7 +17,7 @@ Before a SharePoint Framework application is published in the Marketplace, it mu
 To build solutions that you want to publish to the Marketplace, you need to use SharePoint Framework v1.11 or higher. Starting from version 1.11, SharePoint Framework solution manifest has additional information about your organization and solution, which is required for publishing your application in the Marketplace.
 
 > [!TIP]
-> If your application is built using an older version of the SharePoint Framework, you can easily upgrade it to SharePoint Framework v1.11 or newer using Office 365 CLI. For more information, visit [https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/](https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/).
+> If your application is built using an older version of the SharePoint Framework, you can easily upgrade it to SharePoint Framework v1.11 or newer using CLI for Microsoft 365. For more information, visit [https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/).
 
 ### Test application in both root and non-root sites
 

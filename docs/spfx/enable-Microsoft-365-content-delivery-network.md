@@ -1,7 +1,7 @@
 ---
 title: Enable the Microsoft 365 CDN
 description: Enable the Microsoft 365 CDN on your Microsoft 365 Tenant
-ms.date: 06/29/2020
+ms.date: 09/07/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -17,7 +17,7 @@ In this article, you'll learn how to enable the Microsoft 365 CDN on your ShareP
 
 ## Options for managing the Microsoft 365 CDN
 
-The Microsoft 365 CDN is managed using the command line and you can use PowerShell cmdlets or the cross-platform Office 365 CLI available through SharePoint PnP Community channels.
+The Microsoft 365 CDN is managed using the command line and you can use PowerShell cmdlets or the cross-platform CLI for Microsoft 365 available through SharePoint PnP Community channels.
 
 ### Microsoft SharePoint Online Management Shell
 
@@ -27,15 +27,13 @@ Before using any of the cmdlets in the Microsoft SharePoint Online Management Sh
 
 Learn more here: [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx)
 
-### Office 365 CLI
+### CLI for Microsoft 365
 
-The Office 365 CLI is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the same calls made by the SharePoint Online Management Shell without using PowerShell.
+The CLI for Microsoft 365 is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the same calls made by the SharePoint Online Management Shell without using PowerShell.
 
-Before using any of the commands in the Office 365 CLI, you must first connect to SharePoint Online using the `login` command.
+Before using any of the commands in the CLI for Microsoft 365, you must first connect to Microsoft 365 tenant using the `m365 login` command.
 
-In all Office 365 commands, it's assumed the request targets the tenant app catalog in the tenant you connect to using the `login` command. You can override the scope of the command using the `--scope` option to target a site collection app catalog.
-
-Learn more here: [Office 365 CLI](https://pnp.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
+Learn more here: [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
@@ -53,13 +51,13 @@ Get-SPOTenantCdnPolicies -CdnType Public
 
 > Refer to the [Microsoft SPO Management Shell](/powershell/module/sharepoint-online) for details on these cmdlets.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo cdn get --type Public
+m365 spo cdn get --type Public
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
 
 ---
 
@@ -75,13 +73,13 @@ Set-SPOTenantCdnEnabled -CdnType Public
 
 > Refer to the [Microsoft SPO Management Shell](/powershell/module/sharepoint-online) for details on these cmdlets.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo cdn set --type Public --enabled true
+m365 spo cdn set --type Public --enabled true
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-set/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
 
 ---
 
@@ -107,13 +105,13 @@ Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */cdn
 
 > Refer to the [Microsoft SPO Management Shell](/powershell/module/sharepoint-online) for details on these cmdlets.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo cdn origin add --origin */CDN
+m365 spo cdn origin add --origin */CDN
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-origin-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-origin-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
 
 ---
 
@@ -129,13 +127,13 @@ Get-SPOTenantCdnOrigins -CdnType Public
 
 > Refer to the [Microsoft SPO Management Shell](/powershell/module/sharepoint-online) for details on these cmdlets.
 
-# [Office 365 CLI](#tab/o365cli)
+# [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-spo cdn get --type Public
+m365 spo cdn get --type Public
 ```
 
-> Refer to the [Office 365 CLI documentation](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
 
 ---
 

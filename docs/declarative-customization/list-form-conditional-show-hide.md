@@ -1,7 +1,7 @@
 ---
 title: Show or hide columns in a list form
 description: Customize which columns to show or hide using a conditional formula in the list form by constructing a simple formula that are equations performing conditional checks on values in a SharePoint list or library.
-ms.date: 06/29/2020
+ms.date: 09/02/2020
 localization_priority: Priority
 ---
 
@@ -65,7 +65,7 @@ The column is represented by specifying the **internal name** of the field surro
 While the formula supports many of the available column types, we do not currently support the following column types:
 
 * Person columns with multiple selections
-* Mulitple choice column
+* Multiple choice column
 * Time calculations in DateTime column
 * Currency columns
 * Location columns

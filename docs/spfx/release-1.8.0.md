@@ -51,7 +51,7 @@ We'll release more updated documentation and guidance videos during upcoming day
 1. Fix all the new and interesting tslint errors that are now getting raised with a newer compiler. For large projects, this might take a while. The default behavior of the TypeScript compilers is getting stricter, but your code will be the better for it.
 
 > [!TIP]
-> The [Office 365 CLI](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/office365-cli/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
+> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
 
 [!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
