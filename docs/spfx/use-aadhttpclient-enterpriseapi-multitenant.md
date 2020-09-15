@@ -1,7 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 02/11/2020
+ms.date: 09/15/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -24,25 +24,17 @@ In the [Azure portal](https://ms.portal.azure.com/), create a new Function App.
 
 In the Function App, create new HTTP-triggered function. In this example, you'll build it using C#, but there is no restriction with regards to which programming language you can use.
 
-In the Function App, select the **Create new** button.
+In the Function App, select the **Add** button and from the list of available function types, choose **HTTP trigger**.
 
-![The 'Create new' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function.png)
+![The 'HTTP-trigger' link highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-custom-function.png)
 
-Next, select on the **Custom function** link, to create a custom HTTP-triggered function.
-
-![The 'Custom function' link highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-custom-function.png)
-
-From the list of available function types, choose **HTTP trigger**.
-
-![The 'HTTP trigger' function type highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-http-trigger.png)
-
-In the settings of the function, choose **C#** as the language, specify the function name and set the **Authorization level** to **Anonymous**.
+In the settings of the function, specify the function name and set the **Authorization level** to **Anonymous**.
 
 ![Settings for the new Azure function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
 
 Azure functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you'll secure the underlying Function App. This is why, at this stage, you set not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
 
-To confirm your settings and create the function, select the **Create** button.
+To confirm your settings and create the function, select the **Create Function** button.
 
 Once the function is created, replace its contents with the following snippet:
 
@@ -108,35 +100,26 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 }
 ```
 
-Verify, that the function is working correctly, by selecting the **Save and run** button.
+Verify, that the function is working correctly, by selecting the **Test and run** button and click on **Run**.
 
-![The 'Save and run' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-test.png)
+![The 'Test and run' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-test.png)
 
 If the function executed correctly, you should see a *Status: 200 OK* label and the list orders displayed in the test pane.
+
+![The 'Ok' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-test-ok.png)
 
 ### Secure Azure function
 
 Now that the Azure function is working, the next step is for you to secure it with Azure Active Directory so that in order to access it, you need to sign in with your organizational account.
 
-On the Function App blade, from the side panel, select the function app.
+On the Function App blade, from the side panel, select the **Authentication / Authorization** link.
 
-![Function app highlighted in the side panel of the Function App blade in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-select-function-app.png)
-
-In the top section, switch to the **Platform features** tab.
-
-![The 'Platform features' tab highlighted on the Function App blade in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-platform-features.png)
-
-Next, from the **Networking** group, select the **Authentication / Authorization** link.
 
 ![The 'Authentication / Authorization' link highlighted on the Function App blade in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-authn-authz.png)
 
 On the **Authentication / Authorization** blade, enable App Service Authentication by switching the **App Service Authentication** toggle button to **On**.
 
-![The 'On' option for the 'App Service Authentication' toggle button highlighted in the Function App authentication settings in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-authn-on.png)
-
 In the **Action to take when request not authenticated** drop-down, change the value to *Log in with Azure Active Directory*.
-
-![The 'Login with Azure Active Directory' option highlighted in the 'Action to take when request not authenticated' drop-down on the Function App authentication settings blade](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-login.png)
 
 This setting ensures that anonymous requests to the API aren't allowed.
 
@@ -144,14 +127,17 @@ Next, in the list of authentication providers select **Azure Active Directory**.
 
 !['Azure Active Directory' highlighted in the list of authentication providers for a Function App](../images/use-aadhttpclient-enterpriseapi-secure-function-aad.png)
 
+
 On the **Azure Active Directory Settings** blade, for the first **Management mode** option, choose *Express*. For the second **Management mode** option, choose *Create new AD App*.
 
-![Azure Active Directory Settings blade opened for a Function app in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-settings.png)
+![Azure Active Directory Settings blade opened for a Function app in the Azure portal](../images//use-aadhttpclient-enterpriseapi-secure-function-aad-settings.png)
+
+Confirm your selection, by selecting the **OK** button.
 
 > [!IMPORTANT]
 > Before you continue, note the value in the **Create App** field. This value represents the name of the Azure AD application that you'll use to secure the API, and which you'll need later, to request permissions to access the API from the SharePoint Framework project.
 
-Confirm your selection, by selecting the **OK** button.
+
 
 Update Function App authentication and authorization settings, by selecting the **Save** button.
 
@@ -167,31 +153,25 @@ By default, when you secure an Azure Function using an Azure AD application, tha
 
 #### Change the application to be multi-tenant
 
-In the Function App, navigate to the **Authentication** settings.
+Go to the home page of the Azure Portal and search for Azure Active Directory 
 
-![The 'Authentication' link highlighted on the Function App page](../images/use-aadhttpclient-enterpriseapi-appid-authn.png)
+![Azure AD](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-aad.png)
 
-From the list of authentication providers, select **Azure Active Directory**.
+On the left blade select **App registrations** and select the app which was automatically created when the function app was created.
 
-!['Azure Active Directory' highlighted in the list of Function App authentication providers](../images/use-aadhttpclient-enterpriseapi-appid-aad.png)
+![The 'App registrations' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-app-registrations.png)
 
-On the **Azure Active Directory Settings** blade, choose the **Manage Application** button.
+On the **Expose an API** update the **App ID URI** field, change the ID of your Azure AD app, so that it begins with **https://yourtenant.onmicrosoft.com**, for example, `https://contoso.onmicrosoft.com/contoso-api`. This change is required, because your Azure AD app will be used by other tenants, and it will be necessary to ensure its uniqueness across all Azure Active Directories. 
 
-![The 'Manage Application' button highlighted on the 'Azure Active Directory Settings' blade](../images/use-aadhttpclient-enterpriseapi-appid-manageapp.png)
+![App ID URI in the Azure portal](../images/use-aadhttpclient-enterpriseapi-appid-uri.png)
 
-On the Azure AD application blade, from the toolbar, select the **Settings** button.
+On the **Overview** click on the **Supported account types** link, which will be *My organization only*. We need to change it so as to make the app multitenanted.
 
-![The 'Settings' button highlighted on the 'Azure AD application' blade](../images/use-aadhttpclient-enterpriseapi-function-aadapp-settings.png)
+![The 'Supported account types' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-supported-types.png)
 
-On the **Settings** blade, from the **General** group, select the **Properties** option.
+Switch the value of the **Multi-tenanted** field to **Yes** 
 
-![The 'Properties' option highlighted on the 'Settings' blade](../images/use-aadhttpclient-enterpriseapi-function-aadapp-properties.png)
-
-On the **Properties** blade, in the **App ID URI** field, change the ID of your Azure AD app, so that it begins with **https://yourtenant.onmicrosoft.com**, for example, `https://contoso.onmicrosoft.com/contoso-api`. This change is required, because your Azure AD app will be used by other tenants, and it will be necessary to ensure its uniqueness across all Azure Active Directories.
-
-Next, switch the value of the **Multi-tenanted** field to **Yes**
-
-![New App ID URI and multi-tenanted setting switched to 'Yes' in the Azure AD application properties](../images/use-aadhttpclient-enterpriseapi-function-aadapp-properties-changed.png)
+![The 'Save' button highlighted in the Authentication](../images/use-aadhttpclient-enterpriseapi-authen-save.png)
 
 Finally, confirm your changes by from the toolbar selecting the **Save** button.
 
@@ -199,7 +179,7 @@ Finally, confirm your changes by from the toolbar selecting the **Save** button.
 
 Because you secured your API using the Azure AD express settings, only users from the same Azure AD, as where the application is located, are allowed to use it. Because you want the API to be used by users from other tenants as well, you have to adjust the security settings.
 
-Close all open blades, until you're back on the **Authentication / Authorization** blade. From the list of authentication providers, choose **Azure Active Directory**.
+Close all open blades, until you're back on the **Authentication / Authorization** blade of the Function app. From the list of authentication providers, choose **Azure Active Directory**.
 
 !['Azure Active Directory' highlighted in the list of Function App authentication providers](../images/use-aadhttpclient-enterpriseapi-appid-aad.png)
 
@@ -209,19 +189,15 @@ On the **Azure Active Directory Settings** blade, switch the value of the **Mana
 
 Next, clear the value in the **Issuer Url** field. This will allow users from other Azure Active Directories to authenticate against your API.
 
-![Blank value for the 'Issuer Url' field in the Azure Active Directory settings for the Function App](../images/use-aadhttpclient-enterpriseapi-function-aad-issuerurl.png)
-
 Before confirming your changes, copy the value from the **Client ID** field. You'll need it when building your web part, to request an access token for the API.
 
-Confirm your changes using the **OK** button.
+Confirm your changes using the **OK** button and confirm your changes using the **Save** button.
 
 ### Enable CORS
 
 The Function App will be called from JavaScript running on a SharePoint page. Because the API is hosted on a different domain than the SharePoint portal, cross-domain security constraints will apply to the API call. By default, APIs implemented using Azure Function Apps can't be called from other domains. You can change it, by adjusting the Function App's CORS settings.
 
-In the Function App, switch to the **Platform features** tab.
-
-From the **API** group, select the **CORS** link.
+In the Function App, click on the **CORS** link.
 
 ![The 'CORS' link highlighted on the Function App Platform features tab](../images/use-aadhttpclient-enterpriseapi-cors.png)
 
@@ -240,8 +216,6 @@ Before users in your tenant will be able to use the API from another tenant, the
 
 On the Function App blade, select your function.
 
-![The Orders function highlighted in the list of functions on the Function App blade](../images/use-aadhttpclient-enterpriseapi-function-ordersfunction.png)
-
 To get the function's URL, from the toolbar, select the **Get function URL** option.
 
 ![The 'Get function URL' option highlighted on the toolbar of the Function App blade](../images/use-aadhttpclient-enterpriseapi-function-ordersfunction-geturl-link.png)
@@ -257,8 +231,6 @@ After signing in, you'll be prompted to consent with the use of this API.
 ![Consent prompt for the enterprise API](../images/use-aadhttpclient-enterpriseapi-consent.png)
 
 This is however the user consent. To switch to the admin consent and approve the API for use by the whole organization, append to the URL `&prompt=admin_consent`. Once again, you'll be prompted with a consent dialog, but notice, that this time, the dialog states that the app will have access to the specified resources for all users in your organization and that no one else will be prompted.
-
-![Admin consent prompt for the enterprise API](../images/use-aadhttpclient-enterpriseapi-adminconsent.png)
 
 Confirm that you want users in your organization to use the API, by selecting the **Accept** button.
 
