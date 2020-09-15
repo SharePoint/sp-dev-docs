@@ -21,7 +21,7 @@ Allowing the different aspects of a SharePoint solution to be configurable makes
 
 _**Applies to:** Office 365_
 
-Tenant properties allow tenant administrators to add properties in the App Catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the Microsoft SharePoint Online Management Shell, which is a PowerShell module to manage your SharePoint Online subscription in Office 365 or using the [Office 365 CLI](https://aka.ms/o365cli).
+Tenant properties allow tenant administrators to add properties in the App Catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the Microsoft SharePoint Online Management Shell, which is a PowerShell module to manage your SharePoint Online subscription in Office 365 or using the [CLI for Microsoft 365](https://aka.ms/o365cli).
 
 ### Articles
 

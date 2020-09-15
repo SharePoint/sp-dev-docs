@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure Pipelines (preview)
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 07/13/2020
+ms.date: 09/07/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -116,10 +116,10 @@ parameters:
   job_name: deploy_sppkg
   # friendly name of the job
   display_name: Upload & deploy *.sppkg to SharePoint app catalog
-  # name of target enviroment deploying to
+  # name of target environment deploying to
   target_environment: ''
   # app catalog scope (tenant|sitecollection)
-  o365cli_app_catalog_scope: 'tenant'
+  m365cli_app_catalog_scope: 'tenant'
   variable_group_name: ''
 jobs:
 - deployment: ${{ parameters.job_name }}
@@ -128,7 +128,7 @@ jobs:
     vmImage: 'ubuntu-latest'
   environment: ${{ parameters.target_environment }}
   variables:
-  - group: ${{parameters.variable_group_name}} #o365_user_login, o365_user_password, o365_app_catalog_site_url
+  - group: ${{parameters.variable_group_name}} #m365_user_login, m365_user_password, m365_app_catalog_site_url
   strategy:
     runOnce:
       deploy:
@@ -137,18 +137,18 @@ jobs:
         - download: current
           artifact: drop
           patterns: '**/*.sppkg'
-        - script: sudo npm install --global @pnp/office365-cli
-          displayName: Install Office365 CLI
-        - script: o365 login $(o365_app_catalog_site_url) --authType password --userName $(o365_user_login) --password $(o365_user_password)
-          displayName: Login to Office365
+        - script: sudo npm install --global @pnp/cli-microsoft365
+          displayName: Install CLI for Microsoft365
+        - script: m365 login $(m365_app_catalog_site_url) --authType password --userName $(365_user_login) --password $(m365_user_password)
+          displayName: Login to Microsoft 365
         - script: |
             CMD_GET_SPPKG_NAME=$(find $(Pipeline.Workspace)/drop -name '*.sppkg' -exec basename {} \;)
             echo "##vso[task.setvariable variable=SpPkgFileName;isOutput=true]${CMD_GET_SPPKG_NAME}"
           displayName: Get generated *.sppkg filename
           name: GetSharePointPackage
-        - script: o365 spo app add --filePath "$(Pipeline.Workspace)/drop/sharepoint/solution/$(GetSharePointPackage.SpPkgFileName)" --appCatalogUrl $(o365_app_catalog_site_url) --scope ${{ parameters.o365cli_app_catalog_scope }} --overwrite
+        - script: m365 spo app add --filePath "$(Pipeline.Workspace)/drop/sharepoint/solution/$(GetSharePointPackage.SpPkgFileName)" --appCatalogUrl $(m365_app_catalog_site_url) --scope ${{ parameters.m365cli_app_catalog_scope }} --overwrite
           displayName: Upload SharePoint package to Site Collection App Catalog
-        - script: o365 spo app deploy --name $(GetSharePointPackage.SpPkgFileName) --appCatalogUrl $(o365_app_catalog_site_url) --scope ${{ parameters.o365cli_app_catalog_scope }}
+        - script: m365 spo app deploy --name $(GetSharePointPackage.SpPkgFileName) --appCatalogUrl $(m365_app_catalog_site_url) --scope ${{ parameters.m365cli_app_catalog_scope }}
           displayName: Deploy SharePoint package
 ```
 
@@ -208,9 +208,9 @@ To create the variable group, follow these steps:
 1. Under __Pipelines__ select __Library__
 1. Add a new __Variable Group__ making sure the name matches what is defined in the pipeline definition
 1. Add the following variables to the group and select __Save__
-    - o365_user_login: the user login of a SharePoint tenant administrator
-    - o365_user_password: the user password of the account
-    - o365_app_catalog_site_url: the url of the app catalog site collection
+    - m365_user_login: the user login of a SharePoint tenant administrator
+    - m365_user_password: the user password of the account
+    - m365_app_catalog_site_url: the url of the app catalog site collection
 
 > [!NOTE] 
 > You can select the lockpad icon next to the variable value input to mark it as sensitive and have Azure DevOps hide the value from other users and from the logs.
