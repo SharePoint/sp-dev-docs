@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure DevOps
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 09/07/2020
+ms.date: 09/16/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -213,7 +213,7 @@ Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. 
 
 ### Installing the CLI for Microsoft 365
 
-The Office 365 Common Language Interface (CLI) is an open source project built by the OfficeDev PnP Community. In order to leverage the  CLI as part of your Release Definition, you first need to install it.  Then, you will be able to take advantage of commands available to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/office365-cli` in the `Command and Arguments` field.
+The Microsoft 365 Common Language Interface (CLI) is an open source project built by the Microsoft 365 PnP Community. In order to leverage the  CLI as part of your Release Definition, you first need to install it.  Then, you will be able to take advantage of commands available to handle deployment. Add a `npm` task, select a `Custom` command and type `install -g @pnp/cli-microsoft365` in the `Command and Arguments` field.
 
 ![installing CLI for Microsoft 365](../../images/azure-devops-spfx-14.png)
 
