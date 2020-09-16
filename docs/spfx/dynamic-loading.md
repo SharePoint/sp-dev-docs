@@ -81,7 +81,7 @@ This can be achieved by modifying **config/config.json** so that each web part i
 
 ## Analyze your bundle
 
-In order to get an overview of where to start,  optimize, see the article [Optimize SharePoint Framework builds for production, which illustrates how you can get a visual map of which part of your code or third-party library takes up space in your bundle.
+In order to get an overview of where to start,  optimize, see the article [Optimize SharePoint Framework builds for production](https://docs.microsoft.com/sharepoint/dev/spfx/toolchain/optimize-builds-for-production), which illustrates how you can get a visual map of which part of your code or third-party library takes up space in your bundle.
 
 ## Load third-party components dynamically
 
