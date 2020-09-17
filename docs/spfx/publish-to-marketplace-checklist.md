@@ -1,7 +1,7 @@
 ---
 title: Prepare your SharePoint Framework application for publishing to the Marketplace
 description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
-ms.date: 07/31/2020
+ms.date: 09/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -33,7 +33,7 @@ Following checks must be passed. If one or more checks from this category failed
 
 ### Ensure SharePoint Framework Contract Conformance
 
-Your webpart or customizer must only manipulate the DOM element provided through the `domElement` property. This element and the provided context object are the only approved ways to add functionality into sites through your app. Directly manipulating the page DOM will result in rejection of your solution.
+Your web part or customizer must only manipulate the DOM element provided through the `domElement` property. This element and the provided context object are the only approved ways to add functionality into sites through your app. Directly manipulating the page DOM will result in rejection of your solution.
 
 ### Under normal circumstances solution should work as intended
 
@@ -77,7 +77,7 @@ Your solution will be rejected if its name contains a name of another Microsoft 
 
 ### Don't use keywords that are related to Microsoft's products
 
-Your solution must not use Microsoft Teams or SharePoint feature-specific keywords like - **Start meeting**, **Make call**, **Upload file**, **Start chat**, etc. These keywords are used in Microsoft's products and using them in your application could confuse users. If your application offers similar functionality, include the name of your name in the action, eg: **Start a Zoom Meeting**, **Upload file to Dropbox**, **Start Freshdesk chat**, etc.
+Your solution must not use Microsoft Teams or SharePoint feature-specific keywords like - **Start meeting**, **Make call**, **Upload file**, **Start chat**, etc. These keywords are used in Microsoft's products and using them in your application could confuse users. If your application offers similar functionality, include the name of your name in the action, for example: **Start a Zoom Meeting**, **Upload file to Dropbox**, **Start Freshdesk chat**, etc.
 
 ### Naming your solution
 
@@ -166,7 +166,7 @@ When testing your application, verify that it doesn't lead to noticeable or sust
 
 ### Microsoft Teams targeted solutions will need to be tenant scoped
 
-SharePoint Framework solutions targeted to be also used in Microsoft Teams will need to be [tenant-scoped targeted](tenant-scoped-deployment.md). This setting is controlled with the `skipFeatureDeployment` attribute in the `package-solution.json` configuration file and setting should be `true` for any solution which has components targeted also to Microsoft Teams.
+SharePoint Framework solutions targeted to be also used in Microsoft Teams will need to be [tenant-scoped targeted](tenant-scoped-deployment.md). This setting is controlled with the `skipFeatureDeployment` attribute in the `package-solution.json` configuration file and setting should be `true` for any solution, which has components targeted also to Microsoft Teams.
 
 ## Recommended checks
 
@@ -175,6 +175,14 @@ Following checks are recommended to pass. While a failed check in this category 
 ### Web part icon should be 64x64px with transparent background
 
 We recommend that you use a 64x64px image with transparent background for your web part's icon. This will allow it to be correctly displayed in the different UI modes in SharePoint.
+
+### Microsoft Teams logos will need to be using correct image sizes
+
+If your solution contains components targeted for Microsoft Teams, they are expected to use the official image sizes based on Microsoft Teams guidance. Outline image has to be 32x32px and color image as 192x192px.
+
+### Full page image has to be sized properly
+
+If solution contains components, which are targeted to be exposed as single part app pages, each of these components must have `fullPageAppIconImageUrl` attribute with specific image designed to be used when new page is created in SharePoint. This image must be sized as 193x158px.
 
 ### Web part should have a title that's configurable in the property pane
 

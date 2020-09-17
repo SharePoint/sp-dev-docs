@@ -155,8 +155,8 @@ Returns the list of attachments for the specified list item. To get to the conte
 ### Get changes for an item or a file (properties only)
 
 Gets all the columns or file properties changed since and until a specified time interval. To get all the columns changed when an item or a file is modified:
-- Use the _when an item or file is modified_ trigger. 
-- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the trigger to infer what columnns changed since last time flow checked for item or file updates.
+- Use the _when an item or file is modified_ trigger, and,
+- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the _when an item or file is modified_ trigger to infer what columnns changed since last time flow checked for item or file updates.
 
 For more info about how to use this action, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
 
@@ -165,6 +165,7 @@ For more info about how to use this action, see this tutorial video: [Introducin
 > - Only column changes are suported for lists and libraries.
 > - File content changes are not supported. 
 > - Attachment changes are not supported.
+> - _Trigger Window Start Token_ & _Trigger Window End Token_ are only available when you use _when an item or file is modified_ trigger.
 
 ### Get file content
 

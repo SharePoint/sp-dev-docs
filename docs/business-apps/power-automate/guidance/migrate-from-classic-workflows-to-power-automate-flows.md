@@ -125,7 +125,7 @@ While the following lists show some of the most common workflow capabilities, Po
 |List trigger |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | When an item is created   | Yes   | Yes |
-| When an item is modified | Yes | Yes, using ‘When an item is created or modified’ trigger |
+| When an item is modified | Yes | Yes |
 | When an item is created or modified | Not available | Yes |
 | Site workflows | Yes | Not available |
 | When an item is deleted | Not available | Yes |
@@ -145,6 +145,7 @@ While the following lists show some of the most common workflow capabilities, Po
 | Add attachment | Not available | Yes |
 | Delete attachment | Not available | Yes |
 | Set field value in current item | Yes | Yes, using ‘Update an item’ action |
+| Get changes for an item | No | Yes |
 
 ### File triggers
 
@@ -152,7 +153,7 @@ While the following lists show some of the most common workflow capabilities, Po
 |:-------|:-------|:--------|
 | When a file is created   | Yes, using List triggers   | Yes |
 | When a file is created in a folder | Not available | Yes |
-| When a file is modified | Yes, using List triggers | Yes, using ‘When a file is created or modified’ trigger |
+| When a file is modified | Yes, using List triggers | Yes |
 | When a file is created or modified | Not available | Yes |
 | When a file is created or modified in a folder | Not available | Yes |
 | When a file is deleted | Not available | Yes |
@@ -172,6 +173,7 @@ While the following lists show some of the most common workflow capabilities, Po
 | Copy file | Not available | Yes |
 | Copy folder | Not available | Yes |
 | Move file | Not available | Yes |
+| Get changes for a file (properties only) | No | Yes |
 
 ### Document management actions
 
