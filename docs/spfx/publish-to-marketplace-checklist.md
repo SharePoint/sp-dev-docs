@@ -1,7 +1,7 @@
 ---
 title: Prepare your SharePoint Framework application for publishing to the Marketplace
 description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
-ms.date: 07/31/2020
+ms.date: 09/15/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -166,7 +166,7 @@ When testing your application, verify that it doesn't lead to noticeable or sust
 
 ### Microsoft Teams targeted solutions will need to be tenant scoped
 
-SharePoint Framework solutions targeted to be also used in Microsoft Teams will need to be [tenant-scoped targeted](tenant-scoped-deployment.md). This setting is controlled with the `skipFeatureDeployment` attribute in the `package-solution.json` configuration file and setting should be `true` for any solution which has components targeted also to Microsoft Teams.
+SharePoint Framework solutions targeted to be also used in Microsoft Teams will need to be [tenant-scoped targeted](tenant-scoped-deployment.md). This setting is controlled with the `skipFeatureDeployment` attribute in the `package-solution.json` configuration file and setting should be `true` for any solution, which has components targeted also to Microsoft Teams.
 
 ## Recommended checks
 
@@ -182,7 +182,7 @@ If your solution contains components targeted for Microsoft Teams, they are expe
 
 ### Full page image has to be sized properly
 
-If solution contains components which are targeted to be exposed as single part app pages, each of these components must have `fullPageAppIconImageUrl` attribute with specific image designed to be used when new page is created in SharePoint. This image must be sized as 193x158px.
+If solution contains components, which are targeted to be exposed as single part app pages, each of these components must have `fullPageAppIconImageUrl` attribute with specific image designed to be used when new page is created in SharePoint. This image must be sized as 193x158px.
 
 ### Web part should have a title that's configurable in the property pane
 

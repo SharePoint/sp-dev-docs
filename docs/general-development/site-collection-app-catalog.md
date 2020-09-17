@@ -69,6 +69,9 @@ Alternatively, you can use the [CLI for Microsoft 365](https://sharepoint.github
 >
 > Alternatively, if you are using the CLI for Microsoft 365, you must first connect to your Microsoft 365 tenant using the `m365 login` command. With PnP PowerShell you would use `Connect-PnPOnline -Url https://<tenant>-admin.sharepoint.com -UseWebLogin` to set up the connection.
 
+> [!CAUTION]
+> Account used to create App Catalog Site Collection, must be Site Collection Administrators on both the tenant-level App Catalog and the target Site Collection
+
 To create a site collection app catalog, use the `Add-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be created as the `-Site` parameter.
 
 ```powershell
