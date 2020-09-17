@@ -641,7 +641,7 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
 },
 {
   "verb": "addNavLink",
-  "url": "http://linkless.header/",
+  "url": "",
   "displayName": "Linkless Heading",
   "isWebRelative": false
 }
