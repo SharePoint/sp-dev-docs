@@ -81,7 +81,7 @@ Your solution must not use Microsoft Teams or SharePoint feature-specific keywor
 
 ### Naming your solution
 
-If your solution is named after a common word, such as **Orders**, you will need to include your company name as well to clearly differentiate it from other solutions in the Marketplace, for example, **Contoso Orders**.
+If your solution is named after a common word, such as **Orders**, you will need to include your company name as well to clearly differentiate it from other solutions in the Marketplace, for example, **Contoso Orders**. Where *Contoso* refers to the name of the company submitting the solution.
 
 Ensure that the `package-solution.json` configuration file has understandable `name` entry updated based on above format as shown in the below example.
 
