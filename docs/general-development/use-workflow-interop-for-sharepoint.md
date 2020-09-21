@@ -9,17 +9,12 @@ localization_priority: Normal
 # Use workflow interop for SharePoint
 Provides a discussion of using SharePoint workflow Interop in the Visual Studio 2012 workflow designer. Workflow interop allows you to invoke a SharePoint 2010 workflow from within a SharePoint workflow. This is an important feature that allows you to reuse existing workflow features, and to call on workflow activities that are not integrated into SharePoint.
 
-  
-    
-    
-
+> [!NOTE]
+> SharePoint 2010 workflows has been retired since August 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 > **Important:**
 > To learn about using SharePoint workflow interop functionality in SharePoint Designer 2013, see  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer.md). 
   
-    
-    
-
 
 ## SharePoint workflow interop
 <a name="bkm_interop"> </a>

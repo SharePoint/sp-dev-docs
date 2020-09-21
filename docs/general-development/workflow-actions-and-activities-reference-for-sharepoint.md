@@ -9,6 +9,10 @@ localization_priority: Priority
 
 # Workflow actions and activities reference for SharePoint
 Learn about the workflow actions that are available for workflow authoring in SharePoint Designer 2013, and the workflow activity classes that are available to workflow developers using Visual Studio 2012.
+
+> [!NOTE]
+> SharePoint 2010 workflows has been retired since August 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
 ## Workflow activities and actions
 <a name="bkm_Activities"> </a>
 

@@ -11,13 +11,10 @@ localization_priority: Normal
 Provides a summary of the SharePoint workflow activity classes that are available in SharePoint.
 The palette of activity classes has been revised for SharePoint. Table 1 lists the current catalog of 49 available activities grouped by their respective activity categories.
   
-> [!NOTE] 
-> In future releases, the activities listed in this table will provide links to the API reference documentation for their respective managed classes. 
-  
-    
-    
+> [!NOTE]
+> SharePoint 2010 workflows has been retired since August 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
-
+    
 ## Workflow activity classes available in SharePoint
 <a name="bk_wfactivityclasses"> </a>
 

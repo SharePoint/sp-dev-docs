@@ -8,6 +8,10 @@ localization_priority: Normal
 
 # SharePoint workflow development best practices
 Provides a collection of best practices for developers using Visual Studio to create workflows in SharePoint.
+
+>![NOTE]
+>SharePoint 2010 workflows has been retired since August 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
 ## Workflow development best practices
 
 To develop error-free workflows for SharePoint, it is best to follow some general guidelines, or "best practices." This is the case whether you are using SharePoint Designer 2013 or Visual Studio 2012 for workflow development.

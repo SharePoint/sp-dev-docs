@@ -9,11 +9,14 @@ localization_priority: Priority
 
 # SharePoint workflow fundamentals
 Provides a high-level overview of the workflow infrastructure in SharePoint, including a view of the platform architecture and the workflow interop bridge.
+
+>![NOTE]
+>SharePoint 2010 workflows has been retired since August 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
 ## Overview of workflows in SharePoint
 <a name="bkm_overview"> </a>
 
 SharePoint workflows are powered by Windows Workflow Foundation 4, which was substantially redesigned from earlier versions. Windows Workflow Foundation (WF), in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/vstudio/ms735119%28v=vs.90%29.aspx).
-  
     
     
 Conceptually, workflows model structured business processes. Therefore, Windows Workflow Foundation 4 workflows are a structured collection of workflow "activities," each of which represents a functional component of a business process.

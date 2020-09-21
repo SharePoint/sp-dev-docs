@@ -6,7 +6,6 @@ ms.assetid: ffaccd6b-426d-4ca0-b62f-bc7b14641a49
 localization_priority: Priority
 ---
 
-
 # SharePoint workflow samples
 Provides sample workflows to help illustrate how to create and implement SharePoint workflows in the new Workflow Manager Client 1.0 framework.
 ## Workflow samples for SharePoint
@@ -14,8 +13,8 @@ Provides sample workflows to help illustrate how to create and implement SharePo
 
 This series of sample workflows was developed to demonstrate the large range of workflow capabilities in SharePoint. They were developed using Visual Studio 2012 and are available in the  [MSDN Samples Gallery](https://code.msdn.microsoft.com/). Links to the individual samples are provided.
   
-    
-    
+> [!NOTE]
+> SharePoint 2010 workflows has been retired since August 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 ### SharePoint workflow: Call an external web service
 
