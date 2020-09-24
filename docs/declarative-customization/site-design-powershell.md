@@ -43,8 +43,6 @@ The following cmdlets are available for managing site designs and site scripts f
 - [Set-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOSiteDesign?view=sharepoint-ps)
 - [Set-SPOSiteScript](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOSiteScript?view=sharepoint-ps)
 
-[!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
-
 ## See also
 
 - [JSON schema reference](site-design-json-schema.md)
