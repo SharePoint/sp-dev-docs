@@ -12,7 +12,7 @@ localization_priority: Priority
 This reference lists the workflow actions that are supported in the current build of SharePoint Designer 2013, in addition to those that are not available.
 
 > [!NOTE]
-> SharePoint 2010 workflows has been retired since August 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 ## Workflow actions in SharePoint Designer 2013
 <a name="bkm_WorkflowActions"> </a>
