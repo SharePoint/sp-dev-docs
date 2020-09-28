@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework guidance on dynamic loading of packages
 description: Techniques to optimize the run-time size and execution speed of your SharePoint Framework component.
-ms.date: 07/01/2020
+ms.date: 09/16/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -81,7 +81,7 @@ This can be achieved by modifying **config/config.json** so that each web part i
 
 ## Analyze your bundle
 
-In order to get an overview of where to start,  optimize, see the article [Optimize SharePoint Framework builds for production, which illustrates how you can get a visual map of which part of your code or third-party library takes up space in your bundle.
+In order to get an overview of where to start,  optimize, see the article [Optimize SharePoint Framework builds for production](./toolchain/optimize-builds-for-production.md), which illustrates how you can get a visual map of which part of your code or third-party library takes up space in your bundle.
 
 ## Load third-party components dynamically
 
