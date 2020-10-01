@@ -74,7 +74,7 @@ Open the **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.ts** file
 
 Notice that base class for the Application Customizer is imported from the **\@microsoft/sp-application-base** package, which contains SharePoint framework code required by the Application Customizer.
 
-![Application Customizer imports and inheritance](../../../images/ext-app-base.png)
+![Application Customizer imports and inheritance](../../../images/ext-app-vscode-app-base.png)
 
 The logic for your Application Customizer is contained in the `onInit()` method, which is called when the client-side extension is first activated on the page. This event occurs after `this.context` and `this.properties` are assigned. As with web parts, `onInit()` returns a promise that you can use to do asynchronous operations.
 
