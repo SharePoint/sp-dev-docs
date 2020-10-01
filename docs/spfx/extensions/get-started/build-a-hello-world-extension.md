@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 06/25/2020
+ms.date: 10/1/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -72,12 +72,16 @@ Open the **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.ts** file
 
 Notice that base class for the Application Customizer is imported from the **\@microsoft/sp-application-base** package, which contains SharePoint framework code required by the Application Customizer.
 
+![Application Customizer manifest json content](../../../images/ext-app-vscode-manifest.png)
+
 The logic for your Application Customizer is contained in the `onInit()` method, which is called when the client-side extension is first activated on the page. This event occurs after `this.context` and `this.properties` are assigned. As with web parts, `onInit()` returns a promise that you can use to do asynchronous operations.
 
 > [!NOTE]
 > The class constructor is called at an early stage, when `this.context` and `this.properties` are undefined. Custom initiation logic is not supported here.
 
 The following are the contents of `onInit()` in the default solution. This default solution writes a log to the Dev Dashboard, and then displays a simple JavaScript alert when the page renders.
+
+![Default onInit method in the code](../../../images/ext-app-vscode-methods.png)
 
 > [!NOTE]
 > **SharePoint Framework Dev Dashboard** is additional UI dashboard, which can be started with <kbd>CTRL</kbd>+<kbd>F12</kbd> on Windows. This is developer oriented logging information, which you can take advantage as developer.
