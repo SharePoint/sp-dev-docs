@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Copy and Move API (CreateCopyJobs)
-ms.date: 06/02/2020
+ms.date: 10/04/2020
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
@@ -97,7 +97,7 @@ This indicates whether a file with a share lock can still be moved in a move job
 If set, and the source eTag doesn’t match the eTag specified, the copy and move won’t take place. If left NULL, no check will take place.
 
 
-`public bool MoveButKeepSource { get; set; }`
+`internal bool MoveButKeepSource { get; set; }`
 
 Once set, this move operation is similar to copy. The file will move to destination, but the source content will not be deleted. If set, this will make a copy with the version history and preserve the original metadata. No source item deletions occurs at the end. 
 
