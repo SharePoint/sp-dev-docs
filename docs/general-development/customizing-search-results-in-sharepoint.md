@@ -1,6 +1,6 @@
 ---
 title: Customizing search results in SharePoint
-ms.date: 09/25/2017
+ms.date: 10/05/2020
 ms.prod: sharepoint
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
 localization_priority: Priority
@@ -273,7 +273,7 @@ The document ID,  _docid_, is used to retrieve the duplicates of a particular do
 > The  _fcoid_ managed property in FAST Search Server 2010 for SharePoint has been replaced with the _docid_ managed property in SharePoint.
   
     
-    
+In SharePoint Online, set `CollapseSpecification='DocumentSignature: 1'` to make it work.   
 
 
 ## See also
