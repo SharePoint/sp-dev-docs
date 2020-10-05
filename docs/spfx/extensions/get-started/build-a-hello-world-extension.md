@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 06/25/2020
+ms.date: 10/2/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -65,6 +65,25 @@ You can also follow the steps in this article by watching the video on the Share
 1. Open **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.manifest.json**.
 
     This file defines your extension type and a unique identifier for your extension. You’ll need this ID later when you debug and deploy your extension to SharePoint.
+    
+     ```json
+     {
+       "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
+
+        "id": "05966ad1-55c7-47f6-9ff5-4fee8bff838a",
+        "alias": "HelloWorldApplicationCustomizer",
+        "componentType": "Extension",
+        "extensionType": "ApplicationCustomizer",
+        
+        // The "*" signifies that the version should be taken from the package.json
+        "version": "*",
+        "manifestVersion": 2,
+        // If true, the component can only be installed on sites where Custom Script is allowed.
+        // Components that allow authors to embed arbitrary script code should set this to true.
+        // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+        "requiresCustomScript": false
+        }
+     ```
 
 ## Code your Application Customizer
 
@@ -72,12 +91,37 @@ Open the **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.ts** file
 
 Notice that base class for the Application Customizer is imported from the **\@microsoft/sp-application-base** package, which contains SharePoint framework code required by the Application Customizer.
 
+```typescript
+import { override } from '@microsoft/decorators';
+import { Log } from '@microsoft/sp-core-library';
+import {
+    BaseApplicationCustomizer
+} from '@microsoft/sp-application-base';
+import { Dialog } from '@microsoft/sp-dialog';
+ ```
+
 The logic for your Application Customizer is contained in the `onInit()` method, which is called when the client-side extension is first activated on the page. This event occurs after `this.context` and `this.properties` are assigned. As with web parts, `onInit()` returns a promise that you can use to do asynchronous operations.
 
 > [!NOTE]
 > The class constructor is called at an early stage, when `this.context` and `this.properties` are undefined. Custom initiation logic is not supported here.
 
 The following are the contents of `onInit()` in the default solution. This default solution writes a log to the Dev Dashboard, and then displays a simple JavaScript alert when the page renders.
+
+```typescript
+ @override
+  public onInit(): Promise<void> {
+    Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
+
+    let message: string = this.properties.testMessage;
+    if (!message) {
+      message = '(No properties were provided.)';
+    }
+
+    Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
+
+    return Promise.resolve();
+  }
+```
 
 > [!NOTE]
 > **SharePoint Framework Dev Dashboard** is additional UI dashboard, which can be started with <kbd>CTRL</kbd>+<kbd>F12</kbd> on Windows. This is developer oriented logging information, which you can take advantage as developer.
