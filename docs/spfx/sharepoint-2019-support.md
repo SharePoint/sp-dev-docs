@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development with SharePoint 2019
 description: SharePoint 2019 supports SharePoint Framework client-side web parts in classic and modern pages, as well as extensions in modern pages.
-ms.date: 05/09/2020
+ms.date: 10/05/2020
 localization_priority: Priority
 ---
 
