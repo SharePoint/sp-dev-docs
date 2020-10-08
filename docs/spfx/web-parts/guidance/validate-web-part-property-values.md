@@ -178,7 +178,7 @@ In this step, you implement validation logic that checks if the list with the na
    }
    ```
 
-1. In the code editor, open the **./src/webparts/listInfo/IListInfoWebPartProps.ts** file, and extend the interface definition with the `listName` property of type string.
+1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file, and extend the interface definition with the `listName` property of type string.
 
    ```typescript
    export interface IListInfoWebPartProps {
