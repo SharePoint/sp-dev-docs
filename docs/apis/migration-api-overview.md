@@ -1,9 +1,9 @@
 ---
 title: "SharePoint Online Import Migration API"
-ms.date: 06/14/2020
+ms.date: 10/09/2020
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
 search.appverid: MET150
 description: "This document is to give more in depth information about how to use the SPO Migration API."
 localization_priority: Priority
@@ -85,6 +85,143 @@ The valid URL including SAS token for accessing the user provided Azure Queue us
 (SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read | SharedAccessQueuePermissions.Update)
 ```
 Once accepted, the job ID will be written to the notification queue if it was provided and access is valid. The notification queue can be used for multiple migration jobs at the same time, as each job will identify itself in values sent back to the notification queue.
+
+The following are examples of all event types logged into the Azure reporting queue:
+
+**Event:JobQueued**
+JobId:845daca4-5529-4b0e-85ab-a603efee5b12
+Time:09/29/2020 19:56:02.883
+SiteId:48917234-de43-474a-9f1b-8d98ffa08425
+DbId:8fd09323-b23f-430d-8957-213586ce3861
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+CorrelationId:c8d97e9f-802f-0000-ceac-44663834d510
+
+**Event:JobPostponed**
+JobId:845daca4-5529-4b0e-85ab-a603efee5b12
+Time:09/29/2020 19:56:57.598
+NextPickupTime:09/29/2020 20:16:57.519
+SiteId:48917234-de43-474a-9f1b-8d98ffa08425
+DbId:8fd09323-b23f-430d-8957-213586ce3861
+JobsInQueue:
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+CorrelationId:d5d97e9f-702c-0000-ceb9-354fefa5e9f6
+
+**Event:JobLogFileCreate**
+JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecd
+Time:09/29/2020 19:56:29.053
+FileName:Import-071f9aad-36e6-4bef-9f09-40b5c7498ecd-1.log
+CorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68
+
+**Event:JobStart**
+JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecd
+Time:09/29/2020 19:56:29.100
+SiteId:48917234-de43-474a-9f1b-8d98ffa08425
+WebId:36b66979-4a43-4b93-9b92-909c7186ff98
+DBId:8fd09323-b23f-430d-8957-213586ce3861
+FarmId:211e600c-f48d-4319-ba92-61150c8e8e8c
+ServerId:cfd27448-822a-420b-bcc8-4f39629b01bc
+SubscriptionId:51812136-3cba-482d-9696-532cddceab31
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+CorrelationId:c308c0ea-a7f5-4be9-acd4-1ebd39867434
+
+**Event:JobProgress**
+JobId:845daca4-5529-4b0e-85ab-a603efee5b12
+Time:09/29/2020 19:56:32.265
+FilesCreated:15
+BytesProcessed:45
+ObjectsProcessed:217
+TotalExpectedSPObjects:403
+TotalErrors:0
+TotalWarnings:0
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+WaitTimeOnSqlThrottlingMilliseconds:0
+TotalDurationInMs:0
+CpuDurationInMs:0
+SqlDurationInMs:0
+SqlQueryCount:0
+CreatedOrUpdatedFileStatsBySize:{"0-1K":{"Count":15,"TotalSize":45,"TotalDownloadTime":251,"TotalCreationTime":6754}}
+ObjectsStatsByType:{"SPUser":{"Count":1,"TotalTime":289,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFolder":{"Count":2,"TotalTime":144,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPDocumentLibrary":{"Count":1,"TotalTime":173,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFile":{"Count":200,"TotalTime":6765,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPListItem":{"Count":14,"TotalTime":2111,"AccumulatedVersions":0,"ObjectsWithVersions":0}}
+TotalExpectedBytes:0
+CorrelationId:ccd97e9f-a0cc-0000-ceb9-37a900bec68d
+
+**Event:JobEnd**
+JobId:16d658cf-ecd3-485f-9c9e-1ca268565e24
+Time:09/29/2020 20:29:38.180
+FilesCreated:200
+BytesProcessed:600
+ObjectsProcessed:403
+TotalExpectedSPObjects:403
+TotalErrors:0
+TotalWarnings:0
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+WaitTimeOnSqlThrottlingMilliseconds:0
+TotalDurationInMs:372294.0861
+CpuDurationInMs:17351
+SqlDurationInMs:98359
+SqlQueryCount:1998
+CreatedOrUpdatedFileStatsBySize:{"0-1K":{"Count":200,"TotalSize":600,"TotalDownloadTime":15448,"TotalCreationTime":275662}}
+ObjectsStatsByType:{"SPUser":{"Count":1,"TotalTime":44,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFolder":{"Count":2,"TotalTime":108,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPDocumentLibrary":{"Count":1,"TotalTime":50,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPFile":{"Count":200,"TotalTime":293628,"AccumulatedVersions":0,"ObjectsWithVersions":0},"SPListItem":{"Count":200,"TotalTime":76541,"AccumulatedVersions":0,"ObjectsWithVersions":0}}
+TotalExpectedBytes:0
+CorrelationId:59db7e9f-a003-0000-ceb9-300001119ee3
+
+**Event:JobDeleted**
+JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecd
+Time:09/29/2020 19:56:29.053
+CorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68
+
+**Event:JobCancelled**
+JobId:071f9aad-36e6-4bef-9f09-40b5c7498ecd
+Time:09/29/2020 19:58:29.053
+TotalRetryCount:0
+CancelledByUser:false
+MigrationType:None
+MigrationDirection:Import
+CorrelationId:22ca20ec-23de-468b-add3-4e52e90d3a68
+
+**Event:JobError**
+JobId:b427d8d7-2b91-4da0-aee5-4b5a5a5d867e
+Time: 02/05/2019 06:56:09.732
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+ObjectType:File
+Url:Shared Documents/file.pdf
+Id:fae7b4b0-2912-11e9-b0f3-7b554a52d6ab
+ErrorCode:-2147024816
+ErrorType:Microsoft.SharePoint.SPException
+Message:ErrorMessage
+CorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
+
+**Event:JobWarning**
+JobId:b427d8d7-2b91-4da0-aee5-4b5a5a5d867e
+Time: 02/05/2019 06:56:09.732
+TotalRetryCount:0
+MigrationType:None
+MigrationDirection:Import
+ObjectType:File
+Url:Shared Documents/file.pdf
+Id:fae7b4b0-2912-11e9-b0f3-7b554a52d6ab
+ErrorCode:-2147024816
+ErrorType:Microsoft.SharePoint.SPException
+Message:ErrorMessage
+CorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
+
+**Event:FinishManifestFileUpload**
+JobId:b427d8d7-2b91-4da0-aee5-4b5a5a5d867e
+Time:02/05/2019 06:56:09.732
+ManifestFileName:Filename
+CorrelationId:d8e9bc9e-20e2-8000-aa83-48a62fc5ce75
+
 
 #### Return values
 

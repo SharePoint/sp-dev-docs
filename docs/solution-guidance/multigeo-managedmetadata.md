@@ -1,7 +1,7 @@
 ---
 title: Manage metadata in a Multi-Geo tenant
 description: Managed metadata that you define for the default geo location of a Multi-Geo tenant is automatically replicated to the tenant's satellite locations, and is only available to the sites hosted in that geo location.
-ms.date: 11/12/2019
+ms.date: 10/09/2020
 localization_priority: Normal
 ---
 
@@ -23,7 +23,9 @@ The following are important points to know about managed metadata in Multi-Geo t
 
 - Create term groups, term sets, and terms in the default geo location. This ensures that they are consistently available across all the geo locations in your tenant. 
 
-- When term groups, term sets, and terms are replicated across geo locations, they retain their ID. This allows you to reference term groups, term sets, and terms based on ID, regardless of the geo location your code is running in. 
+- When term groups, term sets, and terms are replicated across geo locations, they retain their ID. This allows you to reference term groups, term sets, and terms based on ID, regardless of the geo location your code is running in.
+
+- For term sets and terms to be replicated across geo locations, they need to be set as Available for Tagging.
 
 - The incremental replication process runs hourly. The full replication job runs every three days. 
 

@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 05/09/2020
+ms.date: 09/30/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -96,13 +96,18 @@ To debug an Application Customizer, to the URL of your modern page, add `?loadSP
 Following are the query string parameters that you need to add:
 
 |      Parameter       |                                                                                                                 Description                                                                                                                  |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework. |
 | `debugManifestsFile` | Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                 |
 | `customActions`      | Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it.                                                    |
-| `key`                | Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.                                                      |
-| `location`           | The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.                                                                                                                         |
-| `properties`         | An optional JSON object that contains properties that are available via the this.properties member                                                                                                                                           |
+
+The `customActions` parameter has the following tokens that should be replaced:
+
+| Token              | Description                                                                                                                                                                             |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<extensionId>`    | Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file. |
+| `<extensionType>`  | The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.                                                                    |
+| `<propertiesJSON>` | An optional JSON object that contains properties that are available via the this.properties member                                                                                      |
 
 With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
 
@@ -112,18 +117,23 @@ Once you confirm, the page will load with the extensions you specified in your s
 
 #### Debug field customizer
 
-To debug a field customizer, to the URL of your list view page, add `?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"<fieldName>":{"id":"<fieldCustomizerId>","properties":<properties>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}`.
+To debug a field customizer, to the URL of your list view page, add `?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"<fieldName>":{"id":"<fieldCustomizerId>","properties":<propertiesJSON>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}`.
 
 Following are the query string parameters that you need to add:
 
-|Parameter|Description|
-|---------|-----------|
-|`loadSPFX=true`|Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.|
-|`debugManifestsFile`|Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).|
-|`fieldCustomizers`|indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that is deserialized into `this.properties` for your extension.|
-|`key`|Use the internal name of the field as the key.|
-|`id`|The GUID of the Field Customizer extension associated with this field.|
-|`properties`|The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.|
+|Parameter            |Description                                                                                                                                                                                                                                                                                                                                                     |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|`loadSPFX=true`      |Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.                                                                                                                    |
+|`debugManifestsFile` |Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                                                                                                                                    |
+|`fieldCustomizers`   |indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that is deserialized into `this.properties` for your extension.|
+
+The `fieldCustomizers` parameter has the following tokens that should be replaced:
+
+| Token                 | Description                                                                                                         |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------|
+| `<fieldName>`         | The internal name of the field.                                                                                     |
+| `<fieldCustomizerId>` | The GUID of the Field Customizer extension associated with this field.                                              |
+| `<propertiesJSON>`    | The property values defined in the extension. In this example, `sampleText` is a property defined by the extension. |
 
 With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
 
@@ -133,18 +143,23 @@ Once you confirm, the page will load with the extensions you specified in your s
 
 #### Debug list view command set
 
-To debug a list view command set, to the URL of your list view page, add `?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"<extensionId>":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":<properties>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}`.
+To debug a list view command set, to the URL of your list view page, add `?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"<extensionId>":{"location":"<extensionType>","properties":<propertiesJSON>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}`.
 
 Following are the query string parameters that you need to add:
 
-|      Parameter       |                                                                                                                                                                                                 Description                                                                                                                                                                                                  |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.                                                                                                                                                                 |
-| `debugManifestsFile` | Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                                                                                                                                                                                 |
-| `customActions`      | simulates a custom action. You can set many properties on this CustomAction object that affect the look, feel, and location of your button; we’ll cover them all later.                                                                                                                                                                                                                                      |
-| `key`                | GUID of the extension.                                                                                                                                                                                                                                                                                                                                                                                       |
-| `Location`           | Where the commands are displayed. The possible values are: `ClientSideExtension.ListViewCommandSet.ContextMenu`: The context menu of the item(s), `ClientSideExtension.ListViewCommandSet.CommandBar`: The top command set menu in a list or library. `ClientSideExtension.ListViewCommandSet`: Both the context menu and the command bar (corresponds to `SPUserCustomAction.Location="CommandUI.Ribbon"`). |
-| `properties`         | An optional JSON object containing properties that are available via the this.properties member.                                                                                                                                                                                                                                                                                                             |
+|      Parameter       | Description                                                                                                                                                                                                                                  |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework. |
+| `debugManifestsFile` | Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                 |
+| `customActions`      | simulates a custom action. You can set many properties on this CustomAction object that affect the look, feel, and location of your button; we’ll cover them all later.                                                                      |
+
+The `customActions` parameter has the following tokens that should be replaced:
+
+| Token              | Description                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `<extensionId>`    | GUID of the extension.                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `<extensionType>`  | Where the commands are displayed. The possible values are:<br/> `ClientSideExtension.ListViewCommandSet.ContextMenu`: The context menu of the item(s),<br/> `ClientSideExtension.ListViewCommandSet.CommandBar`: The top command set menu in a list or library.<br/> `ClientSideExtension.ListViewCommandSet`: Both the context menu and the command bar (corresponds to `SPUserCustomAction.Location="CommandUI.Ribbon"`). |
+| `<propertiesJSON>` | An optional JSON object containing properties that are available via the this.properties member.                                                                                                                                                                                                                                                                                                                            |
 
 With the parameters added to the URL, reload the page in the web browser. The page will show a popup asking you to confirm that you now will be loading debug scripts.
 

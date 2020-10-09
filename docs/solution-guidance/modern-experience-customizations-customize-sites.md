@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" team sites
 description: Apply a custom theme to a "modern" team site in SharePoint Online. 
-ms.date: 04/17/2020
+ms.date: 10/09/2020
 localization_priority: Priority
 ---
 
@@ -55,7 +55,6 @@ In numerous areas on the "modern" team sites, the typical customizations are not
 - User custom actions / custom JavaScript; there will be a more controlled way to embed JavaScript on the pages through [SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions).
 - "Modern" subsites; subsites created on "modern" team sites use the "classic" experience, but you can change the user experience to be similar to "modern" sites.
 - Ability to control available subsite template options.
-- "Classic" publishing features (WCM).
 - Activation of community feature or creation of community subsites under "modern" team site.
 - Saving site as a template. Also not supported for sub sites in site collections which root site is a group associated team site or communication site.
 - Programmatically updating navigation elements.

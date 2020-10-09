@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 1/18/2020
+ms.date: 10/09/2020
 localization_priority: Priority
 ---
 
@@ -641,7 +641,7 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
 },
 {
   "verb": "addNavLink",
-  "url": "http://linkless.header/",
+  "url": "",
   "displayName": "Linkless Heading",
   "isWebRelative": false
 }
@@ -854,7 +854,7 @@ Use the `associateExtension` action to register a deployed SharePoint Framework 
 - `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
 - `registrationId`: An optional parameter, which indicates the type of the list the extension is associated to (if its a list extension).
 - `registrationType`: An optional parameter, which should be specified if the extension is associated with a list.
-- `scope`: Indicates whether the extension is associated with a Web or a Site.
+- `scope`: Indicates whether the extension is associated with a `Web` or a `Site`.
 
 #### Example
 
@@ -870,23 +870,23 @@ Use the `associateExtension` action to register a deployed SharePoint Framework 
 
 ## Activate a Feature
 
-Use the `activateSPFeature` action to activate a web scoped feature.
-
-> [!NOTE]
-> Site scoped features can't be activated through Site Designs at this time.
+Use the `activateSPFeature` action to activate a SharePoint feature.
 
 #### JSON values
 
-- `featureId`: The ID of the web scoped feature to activate.
+- `featureId`: The ID of the feature to activate (GUID).
+- `scope`: Indicates whether the feature is associated with a `web` or a `site`.
+
 
 #### Example
 
-To enable the web scoped feature, which allows for Events Lists to be created (feature ID 00bfea71-ec85-4903-972d-ebe475780106):
+To enable the web scoped feature that allows for Events Lists to be created (feature ID 00bfea71-ec85-4903-972d-ebe475780106):
 
 ```json
 {
   "verb": "activateSPFeature",
-  "featureId": "00bfea71-ec85-4903-972d-ebe475780106"
+  "featureId": "00bfea71-ec85-4903-972d-ebe475780106",
+  "scope": "web"
 }
 ```
 
