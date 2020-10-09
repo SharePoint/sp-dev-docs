@@ -171,7 +171,7 @@ In this step, you implement validation logic that checks if the list with the na
     }
     ```
 
-1. In the code editor, open the **./src/webparts/listInfo/IListInfoWebPartProps.ts** file, and extend the interface definition with the `listName` property of type string.
+1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file, and extend the interface definition with the `listName` property of type string.
 
     ```typescript
     export interface IListInfoWebPartProps {
@@ -219,7 +219,7 @@ In this step, you implement validation logic that checks if the list with the na
 1. Add the missing `ListNameFieldLabel` resource string by changing the code of the **./src/webparts/listInfo/loc/mystrings.d.ts** file to:
 
     ```typescript
-    declare interface IListInfoStrings {
+    declare interface IListInfoWebPartStrings {
       PropertyPaneDescription: string;
       BasicGroupName: string;
       DescriptionFieldLabel: string;
@@ -227,7 +227,7 @@ In this step, you implement validation logic that checks if the list with the na
     }
 
     declare module 'listInfoStrings' {
-      const strings: IListInfoStrings;
+      const strings: IListInfoWebPartStrings;
       export = strings;
     }
     ```
