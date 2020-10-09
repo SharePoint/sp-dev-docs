@@ -343,3 +343,4 @@ private static void ImportSearchSettings(ClientContext context, string settingsF
 ## See also
     
 - [Search solutions for SharePoint](search-solutions-in-sharepoint-2013-and-sharepoint-online.md)
+- [PnP Modern Search Web Parts](https://microsoft-search.github.io/pnp-modern-search/)
