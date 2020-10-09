@@ -1,6 +1,6 @@
 ---
 title: "SharePoint Online Import Migration API"
-ms.date: 06/14/2020
+ms.date: 10/09/2020
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
