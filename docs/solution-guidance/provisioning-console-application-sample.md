@@ -1,7 +1,7 @@
 ---
 title: Provisioning console application sample
 description: Learn the fundamentals of using the PnP provisioning engine to create and persist, and then apply provisioning templates to new SharePoint site collections.
-ms.date: 06/05/2020
+ms.date: 10/09/2020
 localization_priority: Priority
 ---
 
@@ -11,7 +11,7 @@ To support the new add-in model, the Office 365 Developer Patterns and Practices
 
 - Create custom site templates by simply pointing at a site model.
 - Persist the model as a provisioning template.
-- Apply the custom template to new or existing site collections as needed.
+- Apply the custom template to existing site collections as needed.
 
 [!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
@@ -83,7 +83,7 @@ To begin, we need to connect to the site that we wish to model as our provisioni
       ProvisioningTemplate template = GetProvisioningTemplate(defaultForeground, templateWebUrl, userName, pwd);
 
       // APPLY the template to new site from
-      ApplyProvisioningTemplate(defaultForeground, targetWebUrl, userName, pwd, template);
+      ApplyProvisioningTemplate(targetWebUrl, userName, pwd, template);
 
       // Pause and modify the UI to indicate that the operation is complete
       Console.ForegroundColor = ConsoleColor.White;
@@ -244,6 +244,42 @@ After we extract, save, and persist the provisioning template, the next and fina
     web.ApplyProvisioningTemplate(template, ptai);
     ```
 
+1. The whole `ApplyProvisioningTemplate()` method implementation is below.
+
+    ```csharp
+    private static void ApplyProvisioningTemplate(string targetWebUrl, string userName, SecureString pwd, ProvisioningTemplate template)
+    {
+      using (var ctx = new ClientContext(targetWebUrl))
+      {
+        // ctx.Credentials = new NetworkCredentials(userName, pwd);
+        ctx.Credentials = new SharePointOnlineCredentials(userName, pwd);
+        ctx.RequestTimeout = Timeout.Infinite;
+
+        Web web = ctx.Web;
+
+        ProvisioningTemplateApplyingInformation ptai = new ProvisioningTemplateApplyingInformation();
+        ptai.ProgressDelegate = delegate (String message, Int32 progress, Int32 total)
+        {
+          Console.WriteLine("{0:00}/{1:00} - {2}", progress, total, message);
+        };
+
+        // Associate file connector for assets
+        FileSystemConnector connector = new FileSystemConnector(@"c:\temp\pnpprovisioningdemo", "");
+        template.Connector = connector;
+
+        // Because the template is actual object, we can modify this using code as needed
+        template.Lists.Add(new ListInstance()
+        {
+          Title = "PnP Sample Contacts",
+          Url = "lists/PnPContacts",
+          TemplateType = (Int32)ListTemplateType.Contacts,
+          EnableAttachments = true
+        });
+
+        web.ApplyProvisioningTemplate(template, ptai);
+      }
+    }
+    ```
 ## See also
 
 - [PnP remote provisioning](pnp-remote-provisioning.md)
