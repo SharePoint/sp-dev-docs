@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 1/18/2020
+ms.date: 10/09/2020
 localization_priority: Priority
 ---
 
@@ -641,7 +641,7 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
 },
 {
   "verb": "addNavLink",
-  "url": "http://linkless.header/",
+  "url": "",
   "displayName": "Linkless Heading",
   "isWebRelative": false
 }
