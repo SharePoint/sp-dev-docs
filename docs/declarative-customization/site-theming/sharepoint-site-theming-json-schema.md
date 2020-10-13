@@ -101,6 +101,87 @@ Another option is to use the [Theme Generator tool](https://aka.ms/themedesigner
 
 The following is a summary of the built-in themes, including JSON definitions for the theme colors that you can use as a starting point for customization.
 
+## Teal theme
+
+The following table shows the color palette used by the Teal theme.
+
+<table>
+<tr>
+<td style="color:white; background-color:#014446">themeDarker: #014446</td>
+<td style="color:white; background-color:#000000">black: #000000</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#025c5f">themeDark: #025c5f</td>
+<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#026d70">themeDarkAlt: #026d70</td>
+<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+</tr>
+<tr>
+<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#03787c">themePrimary: #03787c</td>
+<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#13898d">themeSecondary: #13898d</td>
+<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#49aeb1">themeTertiary: #49aeb1</td>
+<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#98d6d8">themeLight: #98d6d8</td>
+<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td></tr>
+<tr>
+<td style="color:black; background-color:#c5e9ea">themeLighter: #c5e9ea</td>
+<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#f0f9fa">themeLighterAlt: #f0f9fa</td>
+<td style="color:black; background-color:#fff">white: #fff</td>
+</tr>
+</table>
+
+The following code shows how to define a dictionary in PowerShell for the Red theme's color palette.
+
+```powershell
+{ 
+    themeDarker: '#014446', 
+    themeDark: '#025c5f', 
+    themeDarkAlt: '#026d70', 
+    themePrimary: '#03787c', 
+    themeSecondary: '#13898d', 
+    themeTertiary: '#49aeb1', 
+    themeLight: '#98d6d8', 
+    themeLighter: '#c5e9ea', 
+    themeLighterAlt: '#f0f9fa', 
+    black: '#000000', 
+    neutralDark: '#212121', 
+    neutralPrimary: '#333', 
+    neutralPrimaryAlt: '#3c3c3c', 
+    neutralSecondary: '#666666', 
+    neutralTertiary: '#a6a6a6', 
+    neutralTertiaryAlt: '#c8c8c8', 
+    neutralLight: '#eaeaea', 
+    neutralLighter: '#f4f4f4', 
+    neutralLighterAlt: '#f8f8f8', 
+    white: '#fff', 
+    neutralQuaternaryAlt: '#dadada', 
+    neutralQuaternary: '#d0d0d0', 
+    neutralSecondaryAlt: '#767676', 
+    primaryBackground: '#fff', 
+    primaryText: '#333',
+    accent: '#4f6bed'
+}
+```
+
 ## Red theme
 
 The following table shows the color palette used by the Red theme.
@@ -177,7 +258,8 @@ The following code shows how to define a dictionary in PowerShell for the Red th
     neutralQuaternary: '#d0d0d0', 
     neutralSecondaryAlt: '#767676', 
     primaryBackground: '#fff', 
-    primaryText: '#333' 
+    primaryText: '#333',
+    accent: '#ca5010'
 }
 ```
 
@@ -258,7 +340,8 @@ The following code shows how to define a dictionary in PowerShell for the Orange
     neutralQuaternary: '#d0d0d0', 
     neutralSecondaryAlt: '#767676', 
     primaryBackground: '#fff', 
-    primaryText: '#333' 
+    primaryText: '#333',
+    accent: '#986f0b'
 }
 ```
 
@@ -339,7 +422,8 @@ The following code shows how to define a dictionary in PowerShell for the Green 
     black: '#000000', 
     white: '#fff', 
     primaryBackground: '#fff', 
-    primaryText: '#333' 
+    primaryText: '#333',
+    accent: '#038387'
 }
 ```
 
@@ -420,7 +504,8 @@ The following code shows how to define a dictionary in PowerShell for the Blue t
     black: '#000000', 
     white: '#fff', 
     primaryBackground: '#fff', 
-    primaryText: '#333' 
+    primaryText: '#333',
+    accent: '#8764b8'
 }
 ```
 
@@ -501,7 +586,8 @@ The following code shows how to define a dictionary in PowerShell for the Purple
     black: '#000000', 
     white: '#fff', 
     primaryBackground: '#fff', 
-    primaryText: '#333' 
+    primaryText: '#333',
+    accent: '#038387'
 }
 ```
 
@@ -582,7 +668,8 @@ The following code shows how to define a dictionary in PowerShell for the Gray t
     black: '#000000', 
     white: '#fff', 
     primaryBackground: '#fff', 
-    primaryText: '#333' 
+    primaryText: '#333',
+    accent: '#0078d4'
 }
 ```
 
@@ -664,7 +751,8 @@ The following code shows how to define a dictionary in PowerShell for the Dark Y
     white: '#1f1f1f', 
     primaryBackground: '#1f1f1f', 
     primaryText: '#ffffff', 
-    error: '#ff5f5f' 
+    error: '#ff5f5f',
+    accent: '#ffc83d'
 }
 ```
 
@@ -745,8 +833,9 @@ The following code shows how to define a dictionary in PowerShell for the Dark B
     black: '#f8f8f8', 
     white: '#262a35', 
     primaryBackground: '#262a35', 
-    primaryText: '#ffffff', 
-    error: '#ff5f5f' 
+    primaryText: '#ffffff',
+    error: '#ff5f5f',
+    accent: '#3a96dd'
 }
 ```
 
