@@ -140,11 +140,11 @@ The following C# properties are added to return System.Uri with unambiguous enco
   ClientContext context = new ClientContext("http://site");
   Web web = context.Web;
   // Get the parent folder
-  ResourcePath folderPath = ResourcePath.FromDecodedUrl("/Shared Documents");
+  ResourcePath folderPath = ResourcePath.FromDecodedUrl("Shared Documents");
   Folder parentFolder = web.GetFolderByServerRelativePath(folderPath);
  
   // Create the parameters used to add a folder
-  ResourcePath subFolderPath = ResourcePath.FromDecodedUrl("/Shared Documents/sub folder");
+  ResourcePath subFolderPath = ResourcePath.FromDecodedUrl("Shared Documents/sub folder");
   FolderCollectionAddParameters folderAddParameters = new FolderCollectionAddParameters();
   folderAddParameters.Overwrite = true;
  

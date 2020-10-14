@@ -25,6 +25,7 @@ For general information about working with themes to customize the look of your 
 
 The following predefined themes are available by default:
 
+* __Teal__
 * __Blue__
 * __Orange__
 * __Red__

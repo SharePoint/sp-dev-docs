@@ -1,9 +1,12 @@
 ---
 title: Search customizations for SharePoint
 description: Create customized SharePoint and SharePoint Online search scenarios by using a search-based site directory, personalized search, or search configuration portability. 
-ms.date: 5/03/2018
+ms.date: 10/09/2020
 localization_priority: Normal
 ---
+
+> [!NOTE]
+> The following page relates to classic sites in SharePoint Online. These features are not supported in modern SharePoint sites. To implement similar functionality in modern SharePoint review PnP modern search web parts at: https://microsoft-search.github.io/pnp-modern-search/
 
 # Search customizations for SharePoint
 
@@ -340,3 +343,4 @@ private static void ImportSearchSettings(ClientContext context, string settingsF
 ## See also
     
 - [Search solutions for SharePoint](search-solutions-in-sharepoint-2013-and-sharepoint-online.md)
+- [PnP Modern Search Web Parts](https://microsoft-search.github.io/pnp-modern-search/)
