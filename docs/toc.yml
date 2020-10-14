@@ -464,6 +464,8 @@
     href: spfx/build-for-teams-expose-webparts-teams.md
   - name: Configure web parts in Microsoft Teams
     href: spfx/build-for-teams-configure-in-teams.md
+  - name: 'Scenario: Build a Me-experience in Microsoft Teams'
+    href: spfx/build-for-teams-me-experience.md
   - name: Considerations
     href: spfx/build-for-teams-considerations.md
 - name: Business Apps & Process Automation
