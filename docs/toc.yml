@@ -1098,6 +1098,8 @@
         items:
         - name: Retrieve query suggestions using the Search REST service
           href: general-development/retrieving-query-suggestions-using-the-search-rest-service.md
+        - name: Pagination for large result sets
+          href: general-development/pagination-for-large-result-sets.md
       - name: Search add-ins
         href: general-development/search-add-ins-in-sharepoint.md
       - name: Customize search results

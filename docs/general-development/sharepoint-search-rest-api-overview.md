@@ -239,6 +239,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;startrow=10
 }
 ```
 
+> [!NOTE]
+> Please be aware that in order to provide search experience with high performance, we limit the maximum supported value of `StartRow` to be **50,000**. If you need to page through larger result sets, please see [Pagination for large result sets.](https://docs.microsoft.com/sharepoint/dev/general-development/pagination-for-large-result-sets)
+
 <a name="bk_RowLimit"> </a>
 
 ### RowLimit
