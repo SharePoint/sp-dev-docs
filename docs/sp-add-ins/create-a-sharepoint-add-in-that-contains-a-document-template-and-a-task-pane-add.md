@@ -43,11 +43,9 @@ Next, add an Office Add-in to the project. You can add any type of add-in that y
 
 1. In **Solution Explorer**, select the **OfficeEnabledAddin** project node.
 1. On the **Project** menu, select **Add New Item**.
-1. In the **Add New Item** dialog box, select **Office/SharePoint**, and then select **Office Add-in**.
+1. In the **Add New Item** dialog box, select **Office/SharePoint**, and then select **Word Web Add-in**.
 1. Name the task pane add-in **MyTaskPaneAddin**, and then select **Add**.
-1. In the **Create Add-in for Office** dialog box, select **Task pane**, and then select **Next**.
-1. On the next page, clear the **Word** and **PowerPoint** check boxes, and then select **Next**.
-1. On the **Would you like your Office Add-in to appear in a new document or in an existing document?** page, select **Create a new document and insert my add-in**, and then select **Finish**.
+1. In the **Create Office Add-in** dialog box, on the **Would you like your Office Add-in to appear in a new document or in an existing document?** page, select **Create a new document and insert my add-in**, and then select **Finish**.
 
 Visual Studio adds a document library and a workbook template for the library. The workbook contains a task pane add-in.
 
@@ -61,7 +59,7 @@ In this procedure, you will add a document library and make the workbook the def
 1. In the SharePoint Customization Wizard, select the **Create a customizable list template and list instance of it** option.
 1. In the list under this option, select **Document Library**, and then select **Next**.
 1. In the **Choose a template for this document library. Documents that users create in this library will be based on that template** page, select **Use the following document as the template for this library**, and then select **Browse**.
-1. In the **Open** dialog box, open the **OfficeDocuments** folder, select the **MyTaskPaneApp.xlsx** file, select **Open** > **Finish**, and then close the list designer.
+1. In the **Open** dialog box, open the **OfficeDocuments** folder, select the **MyTaskPaneApp.docx** file, select **Open** > **Finish**, and then close the list designer.
 1. In **Solution Explorer**, select the **OfficeEnabledAddin** project node.
 1. On the **View** menu, select **Properties Window**.
 1. In **Solution Explorer**, select the **AppManifest.xml** file.
