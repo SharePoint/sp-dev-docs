@@ -1,7 +1,7 @@
 ---
 title: Connect to SharePoint APIs
 description: Different approaches of connecting to SharePoint APIs from your SharePoint Framework solutions
-ms.date: 08/31/2018
+ms.date: 10/19/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -84,7 +84,7 @@ The SPHttpClient offers basic support for communicating with the SharePoint REST
 
 ## Connect to SharePoint using PnPjs
 
-[PnPjs](https://pnp.github.io/pnpjs/) is an open-source JavaScript library for communicating with SharePoint and Office 365. It exposes a fluent API that allows you to easily consume SharePoint and Office 365 REST APIs in a type-safe way. To retrieve a the title of the current site using PnPjs, you would execute the following code:
+[PnPjs](https://pnp.github.io/pnpjs/) is an open-source JavaScript library for communicating with SharePoint and Office 365. It exposes a fluent API that allows you to easily consume SharePoint and Office 365 REST APIs in a type-safe way. To retrieve the title of the current site using PnPjs, you would execute the following code:
 
 ```typescript
 sp.web
