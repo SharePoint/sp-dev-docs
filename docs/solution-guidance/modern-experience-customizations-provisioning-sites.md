@@ -1,7 +1,7 @@
 ---
 title: Provisioning "modern" team sites programmatically
 description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
-ms.date: 09/07/2020
+ms.date: 10/17/2020
 localization_priority: Priority
 ---
 
@@ -163,7 +163,7 @@ https://[tenant].sharepoint.com/sites/[mailNickname]
 ``` 
 
 > [!NOTE]
-> A detailed description of group creation using Microsoft Graph is available from the [official documentation](https://developer.microsoft.com/graph/docs/api-reference/v1.0/api/group_post_groups).
+> A detailed description of group creation using Microsoft Graph is available from the [official documentation](https://docs.microsoft.com/graph/api/group-post-groups).
 
 #### Provision a Microsoft 365 group using the PnP CSOM core component
 

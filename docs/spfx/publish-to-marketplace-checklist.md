@@ -105,6 +105,12 @@ Verify that your application can be installed in a specific site but also that i
 
 If your application requires additional API access (for example to communicate with Microsoft Graph), it should request them in the solution manifest. Additionally, prepare justification for the requested API access as we might ask for it when reviewing your app.
 
+### Supporting end users to inject scripts is not allowed
+
+Your solution cannot enable end users to embed arbitrary scripts to SharePoint pages. This means that solutions which enable classic script editor or content editor scenarios in SharePoint are not allowed to be published to SharePoint Store.
+
+This model is not allowed through the SharePoint Store as it opens security concerns by normal end users embedding scripts on the portal. You can only provide this kind of solution to customers outside fo the Microsoft hosted store.
+
 ### All URLs displayed in the web part must be working
 
 If your web part shows URLs, they must be pointing to existing resources and must not lead to non-existent or error pages.
@@ -154,7 +160,7 @@ If your offering includes a free trial of your application, then your applicatio
 
 ### Don't include malicious code
 
-Solutions that contain malicious code, links to malicious websites or otherwise illegal resources will be rejected from publishing in the Marketplace.
+Solutions that contain malicious code, link to malicious websites or otherwise illegal resources will be rejected from publishing in the Marketplace.
 
 ### Don't include vulnerable resource
 
@@ -162,7 +168,7 @@ Verify, that your code doesn't contain any vulnerabilities. If you're using thir
 
 ### Ensure that your application doesn't use resources excessively
 
-When testing your application, verify that it doesn't lead to noticeable or sustained increase in CPU usage, that it doesn't consume a lot of memory an that it doesn't lead to the browser becoming unresponsive. In general, your application should run well on an average desktop computer with internet access. Also, it shouldn't take longer than 10 seconds for your application to load.
+When testing your application, verify that it doesn't lead to noticeable or sustained increase in CPU usage, that it doesn't consume a lot of memory and that it doesn't lead to the browser becoming unresponsive. In general, your application should run well on an average desktop computer with internet access. Also, it shouldn't take longer than 10 seconds for your application to load.
 
 ### Microsoft Teams targeted solutions will need to be tenant scoped
 
