@@ -109,7 +109,7 @@ If your application requires additional API access (for example to communicate w
 
 Your solution cannot enable end users to embed arbitrary scripts to SharePoint pages. This means that solutions which enable classic script editor or content editor scenarios in SharePoint are not allowed to be published to SharePoint Store.
 
-This model is not allowed through the SharePoint Store as it opens security concerns by normal end users embedding scripts on the portal. You can only provide this kind of solution to customers outside fo the Microsoft hosted store.
+This model is not allowed through the SharePoint Store as it opens security concerns by normal end users embedding scripts on the portal. You can only provide this kind of solution to customers outside of the Microsoft hosted store.
 
 ### All URLs displayed in the web part must be working
 
