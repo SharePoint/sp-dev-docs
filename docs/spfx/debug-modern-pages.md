@@ -1,11 +1,10 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 09/30/2020
+ms.date: 10/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
 # Debug SharePoint Framework solutions on modern SharePoint pages
 
 When building SharePoint Framework solutions, you can test them on modern SharePoint pages. For building SharePoint Framework extensions, testing on modern pages is the only option, since at this moment the SharePoint Workbench doesn't support loading extensions. Testing on modern pages can however be also used for debugging web parts where it offers developers additional value.
@@ -19,11 +18,11 @@ At this moment, SharePoint Framework extension can be debugged only on modern Sh
 
 ### Debug extensions using serve configuration
 
-Starting from version 1.3.0, when you add a SharePoint Framework extension to your project, the SharePoint Framework Yeoman generator will extend your project's configuration. Using this configuration, you can automatically start a modern SharePoint page in your web browser with all parameters required to debug the extension on that page already present.
+When you add a SharePoint Framework extension to your project, the SharePoint Framework Yeoman generator will extend your project's configuration. Using this configuration, you can automatically start a modern SharePoint page in your web browser with all parameters required to debug the extension on that page already present.
 
 #### How it works
 
-When you add a new SharePoint Framework extension to your project, the SharePoint Framework Yeoman generator will add a new entry to the `config/serve.json` file in your project. A sample entry looks as follows:
+When you add a new SharePoint Framework extension to your project, the SharePoint Framework Yeoman generator will add a new entry to the **config/serve.json** file in your project. A sample entry looks as follows:
 
 ```json
 {
@@ -77,7 +76,7 @@ Once you confirm, the page will load with the extensions you specified in your s
 
 ### Disabling debug scripts
 
-By default, when debug scripts are enabled and allowed once on a page, they will be allowed throughout the browser session. To disable the debug scripts from loading without ending your browser session or manually deleting the session data, include the URL parameter `reset=true` in the request.
+By default, when debug scripts are enabled and allowed once on a page, they'll be allowed throughout the browser session. To disable the debug scripts from loading without ending your browser session or manually deleting the session data, include the URL parameter `reset=true` in the request.
 
 ### Debug extensions by manually building the debug URL
 
@@ -91,14 +90,41 @@ Next, in the web browser, navigate to the modern page, on which you want to test
 
 #### Debug Application Customizer
 
-To debug an Application Customizer, to the URL of your modern page, add `?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"<extensionId>":{"location":"<extensionType>","properties":<propertiesJSON>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}`.
+To debug an Application Customizer, add the following to the URL of your modern page:
+
+> [!CAUTION]
+> Line breaks & indentation have been added to the following snippet for readability. The following text should be on a single line with no whitespace.
+
+```json
+`?loadSPFX=true
+&debugManifestsFile=https://localhost:4321/temp/manifests.js
+&customActions={"<extensionId>":{
+    "location":"<extensionType>",
+    "properties":<propertiesJSON>
+}}
+```
+
+For example:
+
+```text
+https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
+    ?loadSPFX=true
+    &debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={
+        "e5625e23-5c5a-4007-a335-e6c2c3afa485":{
+          "location":"ClientSideExtension.ApplicationCustomizer",
+          "properties":{
+            "testMessage":"Hello as property!"
+          }
+        }
+    }
+```
 
 Following are the query string parameters that you need to add:
 
 |      Parameter       |                                                                                                                 Description                                                                                                                  |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework. |
-| `debugManifestsFile` | Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                 |
+| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework doesn't load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework. |
+| `debugManifestsFile` | Specifies that you want to load  components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                 |
 | `customActions`      | Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it.                                                    |
 
 The `customActions` parameter has the following tokens that should be replaced:
@@ -117,14 +143,43 @@ Once you confirm, the page will load with the extensions you specified in your s
 
 #### Debug field customizer
 
-To debug a field customizer, to the URL of your list view page, add `?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"<fieldName>":{"id":"<fieldCustomizerId>","properties":<propertiesJSON>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}`.
+To debug a field customizer, add the following to the URL of your modern page:
+
+> [!CAUTION]
+> Line breaks & indentation have been added to the following snippet for readability. The following text should be on a single line with no whitespace.
+
+```json
+?loadSPFX=true
+&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={
+    "<fieldName>":{
+      "id":"<fieldCustomizerId>",
+      "properties":<propertiesJSON>
+    }
+}
+```
+
+For example:
+
+```text
+https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx
+  ?loadSPFX=true
+  &debugManifestsFile=https://localhost:4321/temp/manifests.js
+  &fieldCustomizers={
+    "Percent":{
+      "id":"45a1d299-990d-4917-ba62-7cb67158be16",
+      "properties":{
+        "sampleText":"Hello!"
+      }
+    }
+  }
+```
 
 Following are the query string parameters that you need to add:
 
 |Parameter            |Description                                                                                                                                                                                                                                                                                                                                                     |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|`loadSPFX=true`      |Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.                                                                                                                    |
-|`debugManifestsFile` |Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                                                                                                                                    |
+|`loadSPFX=true`      |Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework doesn't load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.                                                                                                                    |
+|`debugManifestsFile` |Specifies that you want to load components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                                                                                                                                    |
 |`fieldCustomizers`   |indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that is deserialized into `this.properties` for your extension.|
 
 The `fieldCustomizers` parameter has the following tokens that should be replaced:
@@ -143,14 +198,41 @@ Once you confirm, the page will load with the extensions you specified in your s
 
 #### Debug list view command set
 
-To debug a list view command set, to the URL of your list view page, add `?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"<extensionId>":{"location":"<extensionType>","properties":<propertiesJSON>}}`, for example: `https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}`.
+To debug a list view command set, add the following to the URL of your modern page:
+
+> [!CAUTION]
+> Line breaks & indentation have been added to the following snippet for readability. The following text should be on a single line with no whitespace.
+
+```json
+?loadSpfx=true
+&debugManifestsFile=https://localhost:4321/temp/manifests.js
+&customActions={"<extensionId>":{
+  "location":"<extensionType>",
+  "properties":<propertiesJSON>
+}}
+```
+
+For example:
+
+```text
+https://contoso.sharepoint.com/sites/team-a/Lists/Orders/AllItems.aspx
+  ?loadSpfx=true
+  &debugManifestsFile=https://localhost:4321/temp/manifests.js
+  &customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{
+    "location":"ClientSideExtension.ListViewCommandSet.CommandBar",
+    "properties":{
+      "sampleTextOne":"One item is selected in the list.",
+      "sampleTextTwo":"This command is always visible."
+    }
+  }}
+```
 
 Following are the query string parameters that you need to add:
 
 |      Parameter       | Description                                                                                                                                                                                                                                  |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework. |
-| `debugManifestsFile` | Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                 |
+| `loadSPFX=true`      | Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework doesn't load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework. |
+| `debugManifestsFile` | Specifies that you want to load components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).                 |
 | `customActions`      | simulates a custom action. You can set many properties on this CustomAction object that affect the look, feel, and location of your button; we’ll cover them all later.                                                                      |
 
 The `customActions` parameter has the following tokens that should be replaced:
@@ -175,19 +257,36 @@ To test the local versions of your SharePoint Framework client-side web parts on
 gulp serve --nobrowser
 ```
 
-Next, in the web browser, navigate to the modern page, on which you want to test the web parts. After the page loaded, add to its URL `?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js`, for example: `https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js`. The page will reload and show a popup asking you to confirm that you now will be loading debug scripts.
+Next, in the web browser, navigate to the modern page, on which you want to test the web parts. After the page loaded, add the following to the URL:
+
+```text
+?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js
+```
+
+For example:
+
+> [!CAUTION]
+> Line breaks & indentation have been added to the following snippet for readability. The following text should be on a single line with no whitespace.
+
+```text
+https://contoso.sharepoint.com/sites/team-a/sitepages/news.aspx
+  ?loadSPFX=true
+  &debugManifestsFile=https://localhost:4321/temp/manifests.js
+```
+
+The page will reload and show a popup asking you to confirm that you now will be loading debug scripts.
 
 ![Popup to confirm loading debug scripts on a modern page in SharePoint Online](../images/ext-com-accept-debug-scripts.png)
 
-Once you confirm, that you want to load the web parts that you are developing, you can edit the page, and in the toolbox, select any of your local web parts.
+Once you confirm, that you want to load the web parts that you're developing, you can edit the page, and in the toolbox, select any of your local web parts.
 
 ![SharePoint toolbox with a local web part highlighted](../images/debug-sharepoint-toolbox-modern-page-local-webpart.png)
 
 ### Added value of testing SharePoint Framework web parts on modern pages
 
-When building SharePoint Framework web parts, you can test them using the local workbench. This is not only convenient but also efficient: each time you change something in your code, the local workbench will automatically reload and show your latest changes.
+When building SharePoint Framework web parts, you can test them using the local workbench. This isn't only convenient but also efficient: each time you change something in your code, the local workbench will automatically reload and show your latest changes.
 
-In some cases, like when building web parts that communicate with SharePoint, you cannot use the local SharePoint workbench, because you need access to the SharePoint APIs that can be called only in the context of a SharePoint site. In such cases, rather than using the local workbench, you can use the hosted SharePoint workbench which you can access by adding `/_layouts/15/workbench.aspx` to the URL of your site, for example `https://contoso.sharepoint.com/sites/team-a/_layouts/15/workbench.aspx`.
+In some cases, like when building web parts that communicate with SharePoint, you cannot use the local SharePoint workbench, because you need access to the SharePoint APIs that can be called only in the context of a SharePoint site. In such cases, rather than using the local workbench, you can use the hosted SharePoint workbench that you can access by adding `/_layouts/15/workbench.aspx` to the URL of your site, for example `https://contoso.sharepoint.com/sites/team-a/_layouts/15/workbench.aspx`.
 
 #### UI constraints
 
@@ -197,9 +296,9 @@ SharePoint Framework workbench conveniently mimics the canvas of modern SharePoi
 
 Using the SharePoint workbench, you can only test web parts from your solution. But what if you wanted to see how your web part works with other web parts on the page? Testing your local solution on modern pages using the approach outlined in this article, is way more efficient than packaging your project, deploying it to the app catalog and adding the web part to the page.
 
-## Debug SharePoint Framework web parts -- an alternative approach
+## Debug SharePoint Framework web parts - an alternative approach
 
-If you build your SPFx webpart solution without the --ship parameter as following
+If you build your web part solution without the **--ship** argument as following
 
 ```console
 gulp bundle
@@ -214,9 +313,9 @@ You can then start your local server  by running
 gulp serve --nobrowser
 ```
 
-Now you can go back to a SharePoint site where the solution has been deployed and add the webparts to any page, modern or classic, and the webpart code will be loaded from your local development environment. You can debug your webparts just as you would if you ran 'gulp serve' and added your webpart to the workbench.
+Now you can go back to a SharePoint site where the solution has been deployed and add the web parts to any page, modern or classic, and the web part code will be loaded from your local development environment. You can debug your web parts just as you would if you ran 'gulp serve' and added your web part to the workbench.
 
-This approach should only be used when you are in development mode. If you deploy an app to the app catalog that points to your local host, it will fail to run if your development environment is not running.
+This approach should only be used when you're in development mode. If you deploy an app to the app catalog that points to your local host, it will fail to run if your development environment isn't running.
 
 ## See also
 
