@@ -1,7 +1,7 @@
 ---
 title: Create a SharePoint Add-in that contains a document template and a task pane add-in
 description: Use Visual Studio to develop an Office Add-in that appears in a document that is opened from a SharePoint Add-in.
-ms.date: 05/09/2020
+ms.date: 10/21/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
