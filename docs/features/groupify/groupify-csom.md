@@ -44,6 +44,7 @@ foreach (char c in pwd.ToCharArray()) passWord.AppendChar(c);
 ctx.Credentials = new SharePointOnlineCredentials("admin@mydomain.com", passWord);
 Tenant tenant = new Tenant(ctx);
 tenant.CreateGroupForSite("https://contoso.sharepoint.com/sites/team-site", "display-name-for-group", "alias-for-group", true);
+ctx.ExecuteQuery();
 ```
 
 
