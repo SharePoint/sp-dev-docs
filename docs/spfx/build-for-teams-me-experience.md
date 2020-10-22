@@ -83,16 +83,79 @@ In this approach, you would start by putting all web parts that you want to expo
 
 ![SharePoint Framework project with the different web parts that make up the Me-experience](../images/me-experience/me-experience-spfx-project.png)
 
-Next, you'd update the Teams manifest, referencing the different web parts as tabs to the personal app.
+Next, you'd update the Teams manifest, referencing the different web parts as tabs to the personal app, for example:
 
-![Teams manifest with a multi-tab personal app using the different SharePoint Framework web parts in the project](../images/me-experience/me-experience-manifest.png)
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "packageName": "MyContoso",
+  "id": "e81a1b68-686e-412f-90ac-cb80f2544398",
+  // ... trimmed for readability
+  "staticTabs": [
+    {
+      "entityId": "com.contoso.my.meetings",
+      "name": "Meetings",
+      "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=e81a1b68-686e-412f-90ac-cb80f2544398%26forceLocale={locale}",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "com.contoso.my.mail",
+      "name": "Mail",
+      "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=e81a1b68-686e-412f-90ac-cb80f2544398%26forceLocale={locale}",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "com.contoso.my.files",
+      "name": "Files",
+      "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=e81a1b68-686e-412f-90ac-cb80f2544398%26forceLocale={locale}",
+      "scopes": [
+        "personal"
+      ]
+    },
+    {
+      "entityId": "com.contoso.my.settings",
+      "name": "Settings",
+      "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=e81a1b68-686e-412f-90ac-cb80f2544398%26forceLocale={locale}",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  // ...trimmed for readability
+}
+```
 
 > [!IMPORTANT]
 > Ensure that the web parts that you want to expose in the personal Teams app, have in their manifest, in the `supportedHosts` property the `TeamsPersonalApp` value specified.
 
 To let users configure web parts exposed on the different tabs, you could build a separate Settings web part and expose it as a tab.
 
-![Settings web part exposed as a tab in the Me personal Teams app](../images/me-experience/me-experience-settings.png)
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "packageName": "MyContoso",
+  "id": "e81a1b68-686e-412f-90ac-cb80f2544398",
+  // ... trimmed for readability
+  "staticTabs": [
+    // ... trimmed for readability
+    {
+      "entityId": "com.contoso.my.settings",
+      "name": "Settings",
+      "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=e81a1b68-686e-412f-90ac-cb80f2544398%26forceLocale={locale}",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  // ...trimmed for readability
+}
+```
 
 ### Advantages of building multi-tab personal Teams apps
 
@@ -152,9 +215,54 @@ To put it in practice, let's say you have a project with the following web parts
 
 ![Multiple web parts grouped on a single tab](../images/me-experience/me-experience-container-webpart.png)
 
-To simplify the user-experience, you can build a new web part and have its root React component reference React components of each of these web parts.
+To simplify the user-experience, you can build a new web part and have its root React component reference React components of each of these web parts, for example:
 
-![React components of personal web parts referenced in a new web part](../images/me-experience/me-experience-container-webpart-code.png)
+```tsx
+import { WebPartTitle } from '@pnp/spfx-controls-react/lib/WebPartTitle';
+import * as React from 'react';
+import { IPlanningProps } from '.';
+import PersonalCalendar from '../../personalCalendar/components/PersonalCalendar';
+import { PersonalTasks } from '../../personalTasks/components';
+import RecentlyUsedDocuments from '../../recentlyUsedDocuments/components/RecentlyUsedDocuments';
+import styles from './Planning.module.scss';
+
+export default class Planning extends React.Component<IPlanningProps, {}> {
+  public render(): React.ReactElement<IPlanningProps> {
+    return (
+      <div className={styles.planning}>
+        <WebPartTitle displayMode={this.props.displayMode}
+          title='Planning'
+          updateProperty={this.props.updateProperty} />
+        <div className={styles.column}>
+          <PersonalCalendar displayMode={this.props.displayMode}
+            graphClient={this.props.graphClient}
+            title='Upcoming meetings'
+            daysInAdvance={4}
+            numMeetings={0}
+            refreshInterval={5}
+            updateProperty={this.props.updateProperty} />
+        </div>
+        <div className={styles.column}>
+          <PersonalTasks displayMode={this.props.displayMode}
+            graphClient={this.props.graphClient}
+            updateProperty={this.props.updateProperty}
+            title='My tasks'
+            showCompleted={false}
+            userName={this.props.pageContext.user.loginName} />
+        </div>
+        <div className={styles.column}>
+          <RecentlyUsedDocuments context={this.props.pageContext}
+            title='My recent documents'
+            displayMode={this.props.displayMode}
+            graphClient={this.props.graphClient}
+            updateProperty={this.props.updateProperty}
+            nrOfItems={10} />
+        </div>
+      </div>
+    );
+  }
+}
+```
 
 Such container web part allows you to reuse your existing code without duplicating it. Additionally, you will improve the user experience by combining related information and decrease the number of different tabs exposed.
 

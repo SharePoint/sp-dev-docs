@@ -1,24 +1,21 @@
 ---
 title: Use the developer dashboard
 description: Use the developer dashboard to get more information about the SharePoint Framework components on the page
-ms.date: 08/29/2018
+ms.date: 10/21/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
-
 # Use the developer dashboard
 
 When debugging your SharePoint Framework components, you can get additional information about how they work and interact with other components on the page using the developer dashboard.
 
 ![Developer dashboard activated on a modern SharePoint page](../images/developer-dashboard-modern-page.png)
 
-Developer dashboard is available on modern SharePoint pages as well as on the hosted and local SharePoint Workbench.
+Developer dashboard is available on modern SharePoint pages and on the hosted and local SharePoint Workbench.
 
 ## Open developer dashboard
 
-To open the dashboard, on the keyboard press **CTRL+F12**. When the dashboard is open, to close it, press **CTRL+F12** again.
-
-> The **CTRL+F12** hotkey is the same on all operating systems.
+To open the dashboard, on the keyboard press <kbd>CTRL</kbd>+<kbd>F12</kbd>. When the dashboard is open, to close it, press <kbd>CTRL</kbd>+<kbd>F12</kbd> again.
 
 ## Information available in the developer dashboard
 
@@ -53,7 +50,7 @@ The logged message will appear in the developer dashboard.
 Using the built-in logger, you can log verbose (`Log.verbose()`), information (`Log.info()`), warning (`Log.warn()`) and error (`Log.error()`) messages.
 
 > [!IMPORTANT]
-> Messages logged using the built-in SharePoint Framework logger are visible only in the developer dashboard and are lost after the page is refreshed. If you need a logging solution for use in production, consider using other solutions such as Application Insights.
+> Messages logged using the built-in SharePoint Framework logger are visible only in the developer dashboard and are lost after the page is refreshed. If you need a logging solution for use in production, consider using other solutions such as Azure Application Insights.
 
 ### Performance
 
@@ -61,7 +58,7 @@ The **Performance** tab in the developer dashboard displays timing information f
 
 ![The 'Performance' tab activated in the developer dashboard](../images/developer-dashboard-performance.png)
 
-For each component, the developer dashboard shows how much time was spent on waiting on the response from the server, loading the module, initializing the component, retrieving the data and rendering the component. If the page loads slower after adding your component to the page, you can use this information to verify if any particular stage in the lifecycle of your component is slowing down the page.
+For each component, the developer dashboard shows how much time was spent on waiting on the response from the server, loading the module, initializing the component, retrieving the data, and rendering the component. If the page loads slower after adding your component to the page, you can use this information to verify if any particular stage in the lifecycle of your component is slowing down the page.
 
 ### Manifests
 
