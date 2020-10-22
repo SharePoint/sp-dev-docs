@@ -14,7 +14,7 @@ Publishing your SharePoint Framework solutions to [marketplace (also known as Ap
 > You will need to use SharePoint Framework v1.11 or later for the solutions which are submitted to store.
 
 > [!IMPORTANT]
-> All SharePoint Framework solutions will be targeted for SharePoint store. They can be also enabled for Microsoft Teams usage and the deployment will happen to Microsoft Teams gallery through the specific tenant's SharePoint app catalog. There is currently no option to only target Microsoft Teams store for SharePoint Framework based extensibility. This might be enabled based on the partner demand.
+> All SharePoint Framework solutions will be targeted for SharePoint store. They can be also enabled for Microsoft Teams usage and the deployment will happen to Microsoft Teams gallery through the specific tenant's SharePoint app catalog. There is currently no option to only target Microsoft Teams store for SharePoint Framework based extensibility. This might be enabled in future based on the partner demand.
 
 * [App validation checklist](publish-to-marketplace-checklist.md)
 * [After publishing your app](publish-to-marketplace-after-publishing.md)
