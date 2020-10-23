@@ -1704,7 +1704,7 @@ The image field object has the following properties (with example values):
 
 <br/>
 
-The following example shows how a image field might be used on a current field.
+The following example shows how an image field can be used on a current field.
 
 ```JSON
 {
