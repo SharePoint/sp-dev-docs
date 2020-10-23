@@ -1853,6 +1853,7 @@ The following column types can use displayValue property to get the default rend
 * Date/Time
 * Number
 * Yes/No
+* Currency
 
 ```JSON
  {
