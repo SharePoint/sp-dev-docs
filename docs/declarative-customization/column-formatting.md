@@ -1728,6 +1728,13 @@ The column is formatted within the context of the entire row. You can use this c
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
+#### "[!FieldName]"
+
+In column and view formatting, you can refer to any field's metadata by specifying the **internal name** of the field surrounded by square brackets and preceded by a exclamation mark: `[!InternalName]`.
+
+Currently field's display name is available in this metadata, and can be accessed using DisplayName property: `[!SalesLead.DisplayName]`.
+
+
 #### "@currentWeb"
 
 This will evaluate to the absolute URL for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
