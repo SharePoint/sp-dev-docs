@@ -1688,6 +1688,40 @@ The following example shows how a hyperlink field might be used on a current fie
 }
 ```
 
+**Image fields**
+
+The image field object has the following properties (with example values):
+
+```JSON
+{
+  "fileName": "image.png",
+  "id": "6bb1d843-0633-4c9a-9a16-90bc5abd1d8e",
+  "serverRelativeUrl": "/teams/Discovery/SiteAssets/Lists/ad6ed939-0db2-4d85-8a39-8f3497f41eee/image.png",
+  "serverUrl": "https://contoso.sharepoint.com"
+}
+
+```
+
+<br/>
+
+The following example shows how a lookup field might be used on a current field.
+
+```JSON
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+   "elmType": "img",
+   "attributes": {
+      "src": "@currentField.serverRelativeUrl",
+      "alt": "@currentField.fileName"
+   },
+   "style": {
+      "width": "100%",
+      "max-width": "100%"
+   }
+}
+```
+
+
 #### "[$FieldName]"
 
 The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
