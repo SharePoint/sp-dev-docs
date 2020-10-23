@@ -826,11 +826,11 @@ The following column types support column formatting:
 * Choice
 * ContentType
 * Counter (ID)
-* Currency*
+* Currency
 * Date/Time
 * Hyperlink
 * Image
-* Location*
+* Location
 * Lookup
 * Multi-Choice
 * Multi-Line Text
@@ -841,8 +841,6 @@ The following column types support column formatting:
 * Single line of text
 * Title (in Lists)
 * Yes/No
-
-_* Formats for these column types can only be applied through Field Settings_
 
 The following are currently **not** supported:
 
