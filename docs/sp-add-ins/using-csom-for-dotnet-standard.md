@@ -1,7 +1,7 @@
 ---
-title: Using CSOM for .Net Standard instead of CSOM for .Net Framework
-description: Explains the differences between using CSOM for .Net Standard versus CSOM for .Net Framework
-ms.date: 6/29/2020
+title: Using CSOM for .NET Standard instead of CSOM for .NET Framework
+description: Explains the differences between using CSOM for .NET Standard versus CSOM for .NET Framework
+ms.date: 10/26/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -15,7 +15,7 @@ You can use the SharePoint client object model (CSOM) to retrieve, update, and m
 - JavaScript library (JSOM)
 - REST/OData endpoints
 
-In this article we'll focus on explaining what the differences are between the .NET Framework version and the .NET Standard version redistributable. In many ways both versions are identical and if you've been writing code using the .NET Framework version then that code and everything you've learned will for the most part still be relevant when working with the .NET Standard version.
+In this article, we'll focus on explaining what the differences are between the .NET Framework version and the .NET Standard version redistributable. In many ways both versions are identical and if you've been writing code using the .NET Framework version then that code and everything you've learned is, for the most part, still relevant when working with the .NET Standard version.
 
 ## Key differences between the .NET Framework version and the .NET Standard version
 
@@ -24,46 +24,40 @@ Below table outlines the differences between both versions and provides guidelin
 CSOM feature | .NET Framework version | .NET Standard version | Guidelines
 -------------|------------------------|-----------------------|------------
 .NET supportability | .NET Framework 4.5+ | .NET Framework 4.6.1+, .NET Core 2.0+, Mono 5.4+ ([.NET docs](https://docs.microsoft.com/dotnet/standard/net-standard)) | It's recommended to use the CSOM for .NET Standard version for all your SharePoint Online CSOM developments
-Cross platform | No | Yes (can be used on any platform that support .NET Standard) | For cross platform you have to use CSOM for .NET Standard
+Cross platform | No | Yes (can be used on any platform that support .NET Standard) | For cross platform, you have to use CSOM for .NET Standard
 On-Premises SharePoint support | Yes | No | The CSOM .NET Framework versions are still fully supported and being updated, so use those for on-premises SharePoint development
 Support for legacy authentication flows (so called cookie based auth using the `SharePointOnlineCredentials` class) | Yes | No | See the **Using modern authentication with CSOM for .NET Standard** chapter. Using Azure AD applications to configure authentication for SharePoint Online is the recommended approach
-`SaveBinaryDirect` / `OpenBinaryDirect` API's (webdav based) | Yes | No | Use the regular file API's in CSOM as it's not recommended to use the BinaryDirect API's, even not when using the .NET Framework version
+`SaveBinaryDirect` / `OpenBinaryDirect` APIs (webdav based) | Yes | No | Use the regular file APIs in CSOM as it's not recommended to use the BinaryDirect APIs, even not when using the .NET Framework version
 `Microsoft.SharePoint.Client.Utilities.HttpUtility` class | Yes | No | Switch to similar classes in .NET such as `System.Web.HttpUtility`
 `Microsoft.SharePoint.Client.EventReceivers` namespace | Yes | No | Switch to modern eventing concepts such as [Web Hooks](../apis/webhooks/get-started-webhooks.md).
 
 ## Using modern authentication with CSOM for .NET Standard
 
-Using user/password based authentication, implemented via the `SharePointOnlineCredentials` class, is a common approach for developers using CSOM for .NET Framework. In CSOM for .NET Standard this is not possible anymore, it's up to the developer using CSOM for .NET Standard to obtain an OAuth access token and use that when making calls to SharePoint Online. The recommended approach for getting access tokens for SharePoint Online is by setting up an Azure AD application. For CSOM for .NET Standard the only thing that matters is that you obtain a valid access token, this can be using resource owner password credential flow, using device login, using certificate based auth,...  
+Using user/password based authentication, implemented via the `SharePointOnlineCredentials` class, is a common approach for developers using CSOM for .NET Framework. In CSOM for .NET Standard this isn't possible anymore, it's up to the developer using CSOM for .NET Standard to obtain an OAuth access token and use that when making calls to SharePoint Online. The recommended approach for getting access tokens for SharePoint Online is by setting up an Azure AD application. For CSOM for .NET Standard the only thing that matters are that you obtain a valid access token, this can be using resource owner password credential flow, using device login, using certificate based auth,...  
 
-In this chapter we'll use an OAuth resource owner password credential flow resulting in an OAuth access token that then is used by CSOM for authenticating requests against SharePoint Online as that mimics the behavior of the `SharePointOnlineCredentials` class.
+In this chapter, we'll use an OAuth resource owner password credential flow resulting in an OAuth access token that then is used by CSOM for authenticating requests against SharePoint Online as that mimics the behavior of the `SharePointOnlineCredentials` class.
 
 ### Configuring an application in Azure AD
 
 Below steps will help you create and configure an application in Azure Active Directory:
 
 - Go to Azure AD Portal via https://aad.portal.azure.com
-- Click on **Azure Active Directory** and on  **App registrations** in the left navigation
-- Click on **New registration**
-- Enter a name for your application and click on **Register**
-- Go to **API permissions** to grant permissions to your application, click on **Add a permission**, choose **SharePoint**, **Delegated permissions** and select for example **AllSites.Manage**
-- Click on **Grant admin consent** to consent the application's requested permissions
-- Click on **Authentication** in the left navigation
+- Select **Azure Active Directory** and on  **App registrations** in the left navigation
+- Select **New registration**
+- Enter a name for your application and select **Register**
+- Go to **API permissions** to grant permissions to your application, select **Add a permission**, choose **SharePoint**, **Delegated permissions** and select for example **AllSites.Manage**
+- Select **Grant admin consent** to consent the application's requested permissions
+- Select **Authentication** in the left navigation
 - Change **Default client type - Treat application as public client** from No to **Yes**
-- Click on **Overview** and copy the application id to the clipboard (you'll need it later on)
+- Select **Overview** and copy the application ID to the clipboard (you'll need it later on)
 
-### Getting an access token from Azure AD and using that in your CSOM for .NET Standard based application
+### Getting an access token from Azure AD and using that in your CSOM for .NET Standard-based application
 
-When using CSOM for .NET Standard it's the responsibility of the developer to obtain an access token for SharePoint Online and ensure it's inserted into each call made to SharePoint Online. A common code pattern to realize this is shown below:
+When using CSOM for .NET Standard it's the responsibility of the developer to obtain an access token for SharePoint Online and ensure, it's inserted into each call made to SharePoint Online. A common code pattern to realize this is shown below:
 
 ```csharp
 public ClientContext GetContext(Uri web, string userPrincipalName, SecureString userPassword)
 {
-    var context = new ClientContext(web)
-    {
-        // Important to turn off FormDigestHandling when using access tokens
-        FormDigestHandlingEnabled = false
-    };
-
     context.ExecutingWebRequest += (sender, e) =>
     {
         // Get an access token using your preferred approach
