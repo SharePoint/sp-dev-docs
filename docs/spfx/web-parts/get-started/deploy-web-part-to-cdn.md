@@ -1,11 +1,9 @@
 ---
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
-ms.date: 02/11/2020
+ms.date: 10/26/2020
 ms.prod: sharepoint
 ---
-
-
 # Deploy your SharePoint client-side web part to Azure CDN
 
 Create a new sample web part and deploy its assets to an Azure Content Delivery Network (CDN) instead of using the default Office 365 CDN as the hosting solution. You'll use an Azure Storage account integrated with a CDN to deploy your assets. SharePoint Framework build tools provide out-of-the-box support for deploying to an Azure Storage account; however, you can also manually upload the files to your favorite CDN provider or to SharePoint.
@@ -15,7 +13,7 @@ Create a new sample web part and deploy its assets to an Azure Content Delivery 
 
 ## Configure an Azure storage account
 
-To configure an Azure storage account and integrate it with the CDN, follow the instructions at [Integrate an Azure storage account with Azure CDN](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn), along with the detailed steps in this article. 
+To configure an Azure storage account and integrate it with the CDN, follow the instructions at [Integrate an Azure storage account with Azure CDN](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn), along with the detailed steps in this article.
 
 > [!NOTE]
 > As Azure UIs are evolving fast, some of the pictures and steps might be out of date, but high level process is still valid.
@@ -28,7 +26,7 @@ For example, in the following screenshot, **spfxsamples** is the storage account
 
 ![Screenshot that shows the Create a new storage account page](../../../images/deploy-create-storage-account.png)
 
-This creates a new storage account endpoint **spfxsamples.blob.core.windows.net**. 
+This creates a new storage account endpoint **spfxsamples.blob.core.windows.net**.
 
 > [!NOTE]
 > You need to create a unique storage account name for your own SharePoint Framework projects.
@@ -39,8 +37,8 @@ Create a new Blob service container. This is available in your storage account d
 
 Select the **+ Container** and create a new container with the following:
 
-* Name: **azurehosted-webpart**
-* Access type: Container
+- Name: **azurehosted-webpart**
+- Access type: Container
 
 ![Image that shows the option to create blob container - step 1](../../../images/deploy-option-blob-container1.png)
 ![Image that shows the option to create blob container - step 2](../../../images/deploy-option-blob-container2.png)
@@ -61,13 +59,13 @@ Create a new CDN profile and associate the CDN endpoint with this BLOB container
 
     ![Screenshot of create a new CDN profile](../../../images/deploy-create-cdn-profile.png)
 
-1. Create a CDN endpoint as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account). The CDN endpoint is created with the following URL: `http://spfxsamples.azureedge.net`
+1. Create a CDN endpoint as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account). The CDN endpoint is created with the following URL: **http://spfxsamples.azureedge.net**
 
     For example, in the following screenshot, **spfxsamples** is the endpoint name, **Storage** is the origin type, and **spfxsamples.blob.core.windows.net** is the storage account.
 
     ![Screenshot of create CDN endpoint](../../../images/deploy-create-cdn-endpoint.png)
 
-Because you associated the CDN endpoint with your storage account, you can also access the BLOB container at the following URL: `http://spfxsamples.azureedge.net/azurehosted-webpart/`
+Because you associated the CDN endpoint with your storage account, you can also access the BLOB container at the following URL: **http://spfxsamples.azureedge.net/azurehosted-webpart/**
 
 Note, however, that you have not yet deployed the files.
 
@@ -87,24 +85,24 @@ Note, however, that you have not yet deployed the files.
 
 1. Create a new SharePoint Framework solution by running Yeoman SharePoint Generator:
 
-    ```shell 
+    ```shell
     yo @microsoft/sharepoint
     ```
 
 1. When prompted:
 
-    * Accept the default **azurehosted-webpart** as your solution name, and select Enter.
-    * Select **SharePoint Online only (latest)**, and select Enter.
-    * Select **Use the current folder** for where to place the files.
-    * Select **y** to use the tenant-scoped deployment option, which makes the web part available across sites immediately when it's deployed. 
-    * Select **N** on the question if solution contains unique permissions.  
-    * Select **WebPart** as the client-side component type to be created. 
+    - Accept the default **azurehosted-webpart** as your solution name, and select Enter.
+    - Select **SharePoint Online only (latest)**, and select Enter.
+    - Select **Use the current folder** for where to place the files.
+    - Select **y** to use the tenant-scoped deployment option, which makes the web part available across sites immediately when it's deployed.
+    - Select **N** on the question if solution contains unique permissions.
+    - Select **WebPart** as the client-side component type to be created.
 
-1. The next set of prompts ask for specific information about your web part:
+1. The next set of prompts asks for specific information about your web part:
 
-    * Use **AzureCDN** for your web part name, and select Enter.
-    * Accept the default **AzureCDN description** as your web part description, and select Enter.
-    * Accept the default **No javascript web framework** as the framework you would like to use, and select Enter.
+    - Use **AzureCDN** for your web part name, and select Enter.
+    - Accept the default **AzureCDN description** as your web part description, and select Enter.
+    - Accept the default **No JavaScript web framework** as the framework you would like to use, and select Enter.
 
     ![Yeoman generator questions around the newly created web part](../../../images/cdn-azure-create-webpart-yo.png)
 
@@ -118,11 +116,8 @@ Note, however, that you have not yet deployed the files.
 
 ## Configure the solution not to use default settings
 
-1. Open **package-solution.json** in the **config** folder.
-
-    This is where we control the solution packaging.
-
-1. Update `includeClientSideAssets` value as **false** so that client-side assets are NOT packaged inside of the sppkg file, which is the default behavior. As we are hosting assets from an external CDN, we do not want them to be included in the solution package. Your configuration should look somewhat like the following.
+1. Open **./config/package-solution.json** file. This is where we control the solution packaging.
+1. Set the `includeClientSideAssets` value to `false` so that client-side assets are NOT packaged inside the **.sppkg** file, which is the default behavior. As we're hosting assets from an external CDN, we do not want them to be included in the solution package. Your configuration should look somewhat like the following.
 
     ```json
     {
@@ -142,13 +137,11 @@ Note, however, that you have not yet deployed the files.
     ```
 
     > [!NOTE]
-    > The `skipFeatureDeployment` setting is here **true** because the answer for the tenant-scope deployment option was said to be 'y' in the Yeoman flow. This means that you do NOT need to explicitly install the solution to the site before the web part is available. Deploying and approving the solution package in the tenant app catalog is sufficient to make the web part available across all the sites in the given tenant.
+    > The `skipFeatureDeployment` setting is here `true` because the answer for the tenant-scope deployment option was said to be 'y' in the Yeoman flow. This means that you do NOT need to explicitly install the solution to the site before the web part is available. Deploying and approving the solution package in the tenant app catalog is sufficient to make the web part available across all the sites in the given tenant.
 
 ## Configure Azure Storage account details
 
-1. Open **deploy-azure-storage.json** in the **config** folder.
-
-    This is the file that contains your Azure Storage account details.
+1. Open **./config/deploy-azure-storage.json** file. This is the file that contains your Azure Storage account details.
 
     ```json
     {
@@ -160,9 +153,9 @@ Note, however, that you have not yet deployed the files.
     }
     ```
 
-1. Replace the **account**, **container**, **accessKey** with your storage account name, BLOB container, and storage account access key respectively.
+1. Replace the `account`, `container`, `accessKey` with your storage account name, BLOB container, and storage account access key respectively.
 
-    **workingDir** is the directory where the web part assets are located.
+    `workingDir` is the directory where the web part assets are located.
 
     In this example, with the storage account created earlier, this file will look like:
 
@@ -181,8 +174,8 @@ Note, however, that you have not yet deployed the files.
 
 For the web part to load from your CDN, you need to tell it your CDN path.
 
-1. Switch to Visual Studio Code and open the **write-manifests.json** from the **config** folder.
-1. Enter your CDN base path for the **cdnBasePath** property.
+1. Switch to Visual Studio Code and open the **./config/write-manifests.json** file.
+1. Enter your CDN base path for the `cdnBasePath` property.
 
     ```json
     {
@@ -207,13 +200,13 @@ For the web part to load from your CDN, you need to tell it your CDN path.
 
 Before uploading the assets to CDN, you need to build them.
 
-1. Switch to the console and execute the following `gulp` task:
+1. Switch to the console and execute the following **gulp** task:
 
     ```console
     gulp bundle --ship
     ```
 
-    This builds the minified assets required to upload to the CDN provider. The `--ship` indicates the build tool to build for distribution. You should also notice that the output of the build tools indicate the Build Target is SHIP.
+    This builds the minified assets required to upload to the CDN provider. The **--ship** indicates the build tool to build for distribution. You should also notice that the output of the build tool indicates the *Build Target* is *SHIP*.
 
     ```console
     Build target: SHIP
@@ -222,7 +215,7 @@ Before uploading the assets to CDN, you need to build them.
     [21:23:01] Starting 'default'...
     ```
 
-    The minified assets can be found under the `temp\deploy` directory.
+    The minified assets can be found under the **temp\deploy** directory.
 
 ## Deploy assets to Azure Storage
 
@@ -242,7 +235,7 @@ Before uploading the assets to CDN, you need to build them.
 Because you changed the web part bundle, you need to redeploy the package to the app catalog. You used **--ship** to generate minified assets for distribution.
 
 1. Switch to the console of the **azurehosted-webpart** project directory.
-1. Enter the gulp task to package the client-side solution, this time with the `--ship` flag set. This forces the task to pick up the CDN base path configured in the previous step:
+1. Enter the gulp task to package the client-side solution, this time with the **--ship** flag set. This forces the task to pick up the CDN base path configured in the previous step:
 
     ```console
     gulp package-solution --ship
@@ -252,7 +245,7 @@ Because you changed the web part bundle, you need to redeploy the package to the
 
 ### To upload to your app catalog
 
-1. Upload or drag and drop the client-side solution package to the app catalog. Notice how the URL is pointing to the Azure CDN URL configured in the previous steps. 
+1. Upload or drag and drop the client-side solution package to the app catalog. Notice how the URL is pointing to the Azure CDN URL configured in the previous steps.
 1. Select the check box to indicate that the solution can be deployed automatically across all sites in the organization.
 
     ![Screenshot of trust client-side solution package prompt](../../../images/cdn-azure-trust-hosted-app-catalog.png)
@@ -268,7 +261,7 @@ Because you changed the web part bundle, you need to redeploy the package to the
 
     ![Screenshot of trust client-side solution package prompt](../../../images/cdn-azure-picker-selection-page.png)
 
-1. Notice that you are not running **gulp serve**, and therefore nothing is served from **localhost**. Content is served from the Azure CDN. You can also double-check this by selecting F12 in your browser and confirming that you can see the Azure CDN as one of the sources for the page assets.
+1. Notice that you aren't running **gulp serve**, and therefore nothing is served from **localhost**. Content is served from the Azure CDN. You can also double-check this by selecting <kbd>F12</kbd> in your browser and confirming that you can see the Azure CDN as one of the sources for the page assets.
 
     ![Sources with Azure CDN URL](../../../images/cdn-azure-sources-browser-dev-tools.png)
 
@@ -280,11 +273,11 @@ To deploy the assets to your favorite CDN provider, you can copy the files from 
 gulp bundle --ship
 ```
 
-As long as you are updating the **cdnBasePath** accordingly, your files are being properly loaded.
+As long as you're updating the `cdnBasePath` accordingly, your files are being properly loaded.
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues) or by adding a comment to this article. Thanks for your input in advance.
 
 ## See also
 
-* [Build your first SharePoint client-side web part](build-a-hello-world-web-part.md)
+- [Build your first SharePoint client-side web part](build-a-hello-world-web-part.md)
