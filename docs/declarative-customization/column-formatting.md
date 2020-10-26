@@ -922,7 +922,7 @@ Any other value will result in an error.
 
 `Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a required property, `customRowAction`, that specifies an `action` that's taken when the button is clicked. This action must be one of the following values:
 
-- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in opening the file.
+- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in opening the list item. Adding this example button to a document library simulates a click on the file or folder, which results in the file or folder being opened.
 
 ```JSON
 {
