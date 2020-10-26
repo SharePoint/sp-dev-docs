@@ -1,14 +1,13 @@
 ---
 title: Enable the Microsoft 365 CDN
 description: Enable the Microsoft 365 CDN on your Microsoft 365 Tenant
-ms.date: 09/07/2020
+ms.date: 10/26/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
-
 # Enable the Microsoft 365 CDN
 
-You can use the built-in Microsoft 365 Content Delivery Network (CDN) to host static assets to provide better performance for your SharePoint Online pages. The Microsoft 365 CDN improves performance by caching static assets closer to the browsers requesting them, which helps to speed up downloads and reduce latency. Also, the Microsoft 365 CDN uses the HTTP/2 protocol for improved compression and HTTP pipelining. The Microsoft 365 CDN service is included as part of your SharePoint Online subscription.
+You can use the built-in Microsoft 365 content delivery network (CDN) to host static assets to provide better performance for your SharePoint Online pages. The Microsoft 365 CDN improves performance by caching static assets closer to the browsers requesting them, which helps to speed up downloads and reduce latency. Also, the Microsoft 365 CDN uses the HTTP/2 protocol for improved compression and HTTP pipelining. The Microsoft 365 CDN service is included as part of your SharePoint Online subscription.
 
 > [!NOTE]
 > For more information, see [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](/office365/enterprise/use-office-365-cdn-with-spo)
@@ -23,7 +22,7 @@ The Microsoft 365 CDN is managed using the command line and you can use PowerShe
 
 The Microsoft 365 CDN is managed by tenant administrators by using the **Microsoft SharePoint Online Management Shell**, a PowerShell module from Microsoft used to manage your SharePoint Online subscription in Office 365.
 
-Before using any of the cmdlets in the Microsoft SharePoint Online Management Shell module, you must first connect to SharePoint Online using the `Connect-SPOService` cmdlet. All CDN settings are managed using the `*-SPOTenantCdn` cmdlets.
+Before using any of the cmdlets in the Microsoft SharePoint Online Management Shell module, you must first connect to SharePoint Online using the **Connect-SPOService** cmdlet. All CDN settings are managed using the ***-SPOTenantCdn** cmdlets.
 
 Learn more here: [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/library/fp161372.aspx)
 
@@ -31,7 +30,7 @@ Learn more here: [Microsoft SharePoint Online Management Shell](https://technet.
 
 The CLI for Microsoft 365 is a cross-platform command-line interface that can be used on any platform, including Windows, macOS, and Linux. The CLI implements the same calls made by the SharePoint Online Management Shell without using PowerShell.
 
-Before using any of the commands in the CLI for Microsoft 365, you must first connect to Microsoft 365 tenant using the `m365 login` command.
+Before using any of the commands in the CLI for Microsoft 365, you must first connect to Microsoft 365 tenant using the **m365 login** command.
 
 Learn more here: [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+SharePoint+Online+tenant+properties)
 
@@ -63,7 +62,7 @@ m365 spo cdn get --type Public
 
 ## Enable public CDN in the tenant
 
-Once you are connected to your Microsoft 365 tenant, use the following command to enable the Microsoft 365 CDN on your tenant:
+Once you're connected to your Microsoft 365 tenant, use the following command to enable the Microsoft 365 CDN on your tenant:
 
 # [Microsoft SPO Management Shell](#tab/msposh)
 
@@ -87,7 +86,7 @@ Public CDN has now been enabled in the tenant by using the default file type con
 
 ## Enable a custom library to be backed by the Microsoft 365 CDN
 
-You can add additional document libraries that will be managed by the Microsoft 365 CDN in addition to the ones included by default.
+You can add additional document libraries that will be managed by the Microsoft 365 CDN and the ones included by default.
 
 Open up a browser and move to a site collection where you'd like to host your CDN library. This could be any site collection in your tenant.
 
@@ -95,7 +94,7 @@ In this tutorial, we create a specific document library named **CDN** to act as 
 
 ### Add a new CDN origin
 
-In this case, we are setting the origin as **\*/cdn**, which means that any relative folder with the name of **cdn** acts as a CDN origin.
+In this case, we're setting the origin as **\*/cdn**, which means that any relative folder with the name of **cdn** acts as a CDN origin.
 
 # [Microsoft SPO Management Shell](#tab/msposh)
 
@@ -147,4 +146,4 @@ The following image displays the results from running the Microsoft SPO Manageme
 
 ![List of public origins in tenant](../images/ext-app-cdn-origins-pending.png)
 
-At this point you've configured your Microsoft 365 CDN!
+At this point, you've configured your Microsoft 365 CDN!
