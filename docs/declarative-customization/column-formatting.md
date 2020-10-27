@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 08/21/2019
+ms.date: 10/26/2020
 localization_priority: Priority
 ---
 
@@ -826,11 +826,11 @@ The following column types support column formatting:
 * Choice
 * ContentType
 * Counter (ID)
-* Currency*
+* Currency
 * Date/Time
 * Hyperlink
 * Image
-* Location*
+* Location
 * Lookup
 * Multi-Choice
 * Multi-Line Text
@@ -841,8 +841,6 @@ The following column types support column formatting:
 * Single line of text
 * Title (in Lists)
 * Yes/No
-
-_* Formats for these column types can only be applied through Field Settings_
 
 The following are currently **not** supported:
 
@@ -924,7 +922,7 @@ Any other value will result in an error.
 
 `Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a required property, `customRowAction`, that specifies an `action` that's taken when the button is clicked. This action must be one of the following values:
 
-- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in the details pane being opened.
+- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in opening the file.
 
 ```JSON
 {
@@ -1184,6 +1182,8 @@ An optional property that specifies additional attributes to add to the element 
 - d
 - aria
 - data-interception
+- viewBox
+- preserveAspectRatio
 
 Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to http://finance.yahoo.com/quote/ + the value of the current field (`@currentField`). 
 
@@ -1688,11 +1688,52 @@ The following example shows how a hyperlink field might be used on a current fie
 }
 ```
 
+**Image fields**
+
+The image field object has the following properties (with example values):
+
+```JSON
+{
+  "fileName": "image.png",
+  "id": "6bb1d843-0633-4c9a-9a16-90bc5abd1d8e",
+  "serverRelativeUrl": "/teams/Discovery/SiteAssets/Lists/ad6ed939-0db2-4d85-8a39-8f3497f41eee/image.png",
+  "serverUrl": "https://contoso.sharepoint.com"
+}
+
+```
+
+<br/>
+
+The following example shows how an image field can be used on a current field.
+
+```JSON
+{
+   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+   "elmType": "img",
+   "attributes": {
+      "src": "@currentField.serverRelativeUrl",
+      "alt": "@currentField.fileName"
+   },
+   "style": {
+      "width": "100%",
+      "max-width": "100%"
+   }
+}
+```
+
+
 #### "[$FieldName]"
 
 The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
+
+#### "[!FieldName]"
+
+In column and view formatting, you can refer to any field's metadata by specifying the **internal name** of the field surrounded by square brackets and preceded by a exclamation mark: `[!InternalName]`.
+
+Currently field's display name is available in this metadata, and can be accessed using DisplayName property: `[!SalesLead.DisplayName]`.
+
 
 #### "@currentWeb"
 
@@ -1819,6 +1860,7 @@ The following column types can use displayValue property to get the default rend
 * Date/Time
 * Number
 * Yes/No
+* Currency
 
 ```JSON
  {
