@@ -236,7 +236,7 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
 
 The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
 
-You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/feed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **\@v** alias to send a **:** character.
+You can use an **\@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/feed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **\@v** alias to send a **:** character.
 
 ### Response
 
@@ -564,7 +564,7 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
 
 The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
 
-You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/News(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
+You can use an **\@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/News(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **\@v** alias to send a **:** character.
 
 ### Response
 
@@ -769,7 +769,7 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
 
 The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
 
-You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/timelinefeed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
+You can use an **\@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/timelinefeed(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **\@v** alias to send a **:** character.
 
 ### Response
 
@@ -932,7 +932,7 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
 
 The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
 
-You can optionally specify retrieval options in the query string. You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
+You can optionally specify retrieval options in the query string. You can use an **\@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **\@v** alias to send a **:** character.
 
 ### Response
 
@@ -1114,7 +1114,7 @@ Type:  [SP.Social.SocialFeedOptions](social-feed-rest-api-reference-for-sharepoi
 
 The maximum number of threads, date-time range, and sort order. You can optionally specify any combination of these properties, for example, you can specify only the **MaxThreadCount** property.
 
-You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **@v** alias to send a **:** character.
+You can use an **\@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/my/likes(OlderThan=@v)?@v=datetime'2013-01-01T08:00'` uses the **\@v** alias to send a **:** character.
 
 ### Response
 
@@ -1537,7 +1537,7 @@ The account name of the specified user.
 
 
 
-You send the  _item_ parameter in the query string. You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)?@v='i:0"%23".f|membership|user@domain.com'` uses the **@v** alias and the **"%23"** encoding to send a **#** character.
+You send the  _item_ parameter in the query string. You can use an **\@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)?@v='i:0"%23".f|membership|user@domain.com'` uses the **\@v** alias and the **"%23"** encoding to send a **#** character.
 
 
 
@@ -1656,7 +1656,7 @@ The maximum number of threads, date-time range, and sort order. You can optional
 
 
 
-You can use an **@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)/feed(NewerThan=@x)?@v='i:0"%23".f|membership|user@domain.com'&amp;@x=datetime'2013-01-01T08:00'` uses the **@v** alias and the **"%23"** encoding to send a **#** character, and the **@x** alias to send a **:** character.
+You can use an **\@** alias to pass special characters. For example, `<siteUri>/_api/social.feed/actor(item=@v)/feed(NewerThan=@x)?@v='i:0"%23".f|membership|user@domain.com'&amp;@x=datetime'2013-01-01T08:00'` uses the **\@v** alias and the **"%23"** encoding to send a **#** character, and the **\@x** alias to send a **:** character.
 
 
 
