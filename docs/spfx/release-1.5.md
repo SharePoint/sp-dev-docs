@@ -56,7 +56,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
 
 ### Ship vs. Beta APIs are now separate packages
 
-Starting with the v1.5.0 release, the packages will only contain the final public APIs in the **\*.d.ts** files. All beta APIs are removed, and you'll need to explicitly choose the packages that contain the beta APIs in them. To use these beta APIs, you need to use the **1.5.0-plusbeta** versions of the packages. There's only one version of **@microsoft/generator-sharepoint**, and it can create both beta and not beta solutions.
+Starting with the v1.5.0 release, the packages will only contain the final public APIs in the **\*.d.ts** files. All beta APIs are removed, and you'll need to explicitly choose the packages that contain the beta APIs in them. To use these beta APIs, you need to use the **1.5.0-plusbeta** versions of the packages. There's only one version of **\@microsoft/generator-sharepoint**, and it can create both beta and not beta solutions.
 
 You can create solutions that use the beta APIs in one of two ways. You can run the yeoman generator and add a **--plusbeta** flag in the command line, and it will create a **package.json** file with the **-plusbeta** versions already, or you can update the references in **package.json** to use the **-plusbeta** version.
 
