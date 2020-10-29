@@ -30,7 +30,7 @@ After the generator is installed, you can invoke the generator by just typing th
 yo
 ```
 
-The command lists all the generators available on your machine. Select **@microsoft/sharepoint** to invoke the SharePoint generator and continue with the prompts to successfully create your client-side solution:
+The command lists all the generators available on your machine. Select **\@microsoft/sharepoint** to invoke the SharePoint generator and continue with the prompts to successfully create your client-side solution:
 
 ![Yeoman SharePoint generator](../../images/yeoman-sp-generator.png)
 
