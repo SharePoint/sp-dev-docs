@@ -55,12 +55,10 @@ One way to see the available applications in Azure AD is by navigating to the [A
 
     ![The 'Properties' link highlighted on the application blade in the Azure AD portal](../images/webapipermissions-aadportal-graphpropertieslink.png)
 
-1. From the list of properties, copy the value of the **Object ID** property, which you need to request additional permission scopes to the Microsoft Graph. Alternatively, you can copy the application's **Name** and use it in the permission request instead.
+1. From the list of properties, copy the value of the **Object ID** property, which you may need to request additional permission scopes to the Microsoft Graph or revoke permissions already granted. Alternatively, you can copy the application's **Name** and use it in the permission request instead.
 
     ![The value of the 'Object ID' property copied to the clipboard in the Azure AD portal](../images/webapipermissions-aadportal-graphobjectidcopied.png)
 
- > [!NOTE]
- > While the **Object ID** is unique for each tenant, the application's **Name** is the same across all tenants. If you want to build your solution once and deploy it to different tenants, you should use the application's **Name** when requesting additional permissions in your solution.
 
 ### Use Azure PowerShell
 
