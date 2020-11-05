@@ -16,17 +16,6 @@ You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365D
 
 Review all the SPFx releases here from the initial GA release in February 2017 in the docs: https://docs.microsoft.com/en-us/sharepoint/dev/spfx/roadmap
 
-### Releases prior to general availability & other special release notes
-
-* **June 6, 2017**
-  * **Dev Preview of extensions is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes---Extensions-Dev-Preview-Drop-1)
-
-* **Jan 9, 2017**
-  * **RC0 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-RC0)
-
-* **Aug 17, 2016**
-  * **Drop 1 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Drop-1)
-
 ## Get Started
 
 * [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
