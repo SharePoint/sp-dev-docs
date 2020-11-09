@@ -5,7 +5,7 @@ ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 localization_priority: Priority
 ---
-
+**APPLIES TO:** yes2013 yes2016 yes2019 noSharePoint in Microsoft 365
 
 # Customizing ranking models to improve relevance in SharePoint
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
