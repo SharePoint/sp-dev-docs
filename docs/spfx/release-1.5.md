@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.5 release notes
 description: Release notes for the SharePoint Framework v1.5 release
-ms.date: 07/03/2020
+ms.date: 11/10/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
