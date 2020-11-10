@@ -1,11 +1,11 @@
 ---
 title: Customizing ranking models to improve relevance in SharePoint
-ms.date: 09/25/2017
+ms.date: 11/10/2020
 ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 localization_priority: Priority
 ---
-**APPLIES TO:** ![Yes](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/yes.png) 2013 ![Yes](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/yes.png) 2016 ![Yes](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/yes.png) 2019 ![No](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/no.png) SharePoint in Microsoft 365
+**APPLIES TO:** ![Yes](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2013 ![Yes](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2016 ![Yes](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2019 ![No](https://docs.microsoft.com/sharepoint/sharepointserver/media/no.png) SharePoint in Microsoft 365
 
 
 
