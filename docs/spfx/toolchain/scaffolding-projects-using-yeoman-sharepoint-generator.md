@@ -1,7 +1,7 @@
 ---
 title: Scaffold projects by using Yeoman SharePoint generator
 description: Use the Yeoman SharePoint generator to scaffold new client-side solution projects to build, package, and deploy SharePoint solutions.
-ms.date: 10/16/2020
+ms.date: 11/10/2020
 ms.prod: sharepoint
 ---
 
