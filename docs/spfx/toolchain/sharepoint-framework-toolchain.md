@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework toolchain
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects.
-ms.date: 10/16/2020
+ms.date: 11/10/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -71,7 +71,7 @@ The SharePoint generator scaffolds a client-side project with a web part. The ge
 
 The generator installs required npm packages locally in the project folder. npm allows you to install a package either locally to your project or globally. There are benefits to both, but the [general guidance](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/) is to install the npm packages locally if your code depends on those package modules. In the case of a web part project, your web part code depends on the various SharePoint and common build packages, and thus requires those packages to be installed locally.
 
-As the packages are installed locally, npm also installs the dependencies associated with each package. You can find the packages installed under the **node_modules** folder in your project folder. This folder contains the packages along with all their dependencies. It is ideal that this folder contains dozens to hundreds of folders, because npm packages are always broken down to smaller modules, which result in dozens to hundreds of packages being installed. The key SharePoint Framework packages are located under the **node_modules\@microsoft** folder. The **@microsoft** is an npm scope that collectively represents [packages published by Microsoft](https://www.npmjs.com/~microsoft).
+As the packages are installed locally, npm also installs the dependencies associated with each package. You can find the packages installed under the **node_modules** folder in your project folder. This folder contains the packages along with all their dependencies. It is ideal that this folder contains dozens to hundreds of folders, because npm packages are always broken down to smaller modules, which result in dozens to hundreds of packages being installed. The key SharePoint Framework packages are located under the **node_modules\@microsoft** folder. The **\@microsoft** is an npm scope that collectively represents [packages published by Microsoft](https://www.npmjs.com/~microsoft).
 
 Every time you create a new project using the generator, the generator installs the SharePoint Framework packages along with its dependencies for that specific project locally. In this way, npm makes it easier to manage your web part projects without affecting other projects in the local dev environment.
 
