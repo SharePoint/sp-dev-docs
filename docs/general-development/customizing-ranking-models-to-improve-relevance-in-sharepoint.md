@@ -7,6 +7,9 @@ localization_priority: Priority
 ---
 **APPLIES TO:** ![Yes](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/yes.png) 2013 ![Yes](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/yes.png) 2016 ![Yes](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/yes.png) 2019 ![No](https://docs.microsoft.com/en-us/sharepoint/sharepointserver/media/no.png) SharePoint in Microsoft 365
 
+
+
+
 # Customizing ranking models to improve relevance in SharePoint
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
 You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint.md) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
