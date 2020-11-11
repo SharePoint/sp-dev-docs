@@ -9,14 +9,14 @@ localization_priority: Normal
 
 # Troubleshooting SharePoint Server workflow validation errors in Visio
 Use this reference to resolve validation and error-checking issues in the Microsoft SharePoint Workflow template in Microsoft Visio 2013 and Microsoft SharePoint Designer 2013.
+
+> [!NOTE]
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
 ## SharePoint workflow validation issues
 <a name="VSSPD_Trouble_Issues"> </a>
 
 The following table lists all of the validation issues that can appear in the Issues pane in Microsoft Visio 2013 or the Visual Designer in Microsoft SharePoint Designer 2013. Each error has a suggested action to take for resolving the problem.
-  
-    
-    
-
 
 |**Error text**|**Suggested action**|
 |:-----|:-----|

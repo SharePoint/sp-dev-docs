@@ -9,6 +9,10 @@ localization_priority: Normal
 
 # Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
 Learn the basic features of the Visual Designer in SharePoint Designer 2013.
+
+> [!NOTE]
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
 ## Overview of the Visual Designer in SharePoint Designer 2013
 <a name="section1"> </a>
 

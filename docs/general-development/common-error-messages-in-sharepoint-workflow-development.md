@@ -9,11 +9,15 @@ localization_priority: Priority
 
 # Common error messages in SharePoint workflow development
 A listing of common error messages that you might encounter while developing SharePoint workflows and guidance for solving the underlying problem.
+
+> [!NOTE]
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
 ## Common SharePoint workflow errors
 
 Although this list doesn't cover every possible error you may encounter when developing SharePoint workflows, it does cover those that you are most likely to face.
   
-    
+
     
 
 -  [Timeout while waiting for sandboxed code execution request to complete within the worker process](#bkmk_error01)

@@ -13,6 +13,10 @@ localization_priority: Priority
 <a name="section1"> </a>
 
 This article describes how to create SharePoint workflows that access objects in SharePoint that require elevated permissions. These solutions use two features: granting permissions to the workflow app and wrapping actions with the App Step.
+
+> [!NOTE]
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
   
 > [!IMPORTANT] 
 > This article assumes that the SharePoint Workflow platform has been installed and configured and that SharePoint has been configured for add-ins. For more information about SharePoint Workflows and SharePoint Add-ins, including installation and configuration, see [Workflows in SharePoint](workflows-in-sharepoint.md) and [Install and manage SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md). 
