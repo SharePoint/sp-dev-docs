@@ -23,7 +23,7 @@ You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nug
 
 ## CSOM code example
 
-The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __GetAllTenantThemes__ method to return a list of themes. 
+The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __CreateGroupForSite__ method to return a list of themes. 
 
 > [!NOTE]
 > * The URL used to create the context object includes the _-admin_ suffix, because **TenantAdministration** methods work with the admin site.
@@ -50,7 +50,7 @@ ctx.ExecuteQuery();
 
 ## Methods in Microsoft.Online.SharePoint.TenantAdministration.Tenant class
 
-Use the following methods to customize the set of available themes for a SharePoint tenant administration site. You can add a new custom theme, update an existing theme, or delete a theme, and you can retrieve a specific theme or all themes. You can also hide or restore the default themes that come with SharePoint.
+Use the following methods to create a new Microsoft 365 Group and attach it to an existing site.
 
 ### CreateGroupForSite method
 
