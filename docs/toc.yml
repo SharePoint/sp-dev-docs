@@ -500,8 +500,6 @@
         href: business-apps/power-automate/guidance/require-doc-approval.md
       - name: Manage owners and users in your SharePoint lists flows
         href: business-apps/power-automate/guidance/manage-list-flows.md
-      - name: Require approval of documents in SharePoint using Power Automate
-        href: business-apps/power-automate/guidance/require-doc-approval.md
       - name: Migrate from Classic workflows to Power Automate flows
         href: business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md
 - name: SharePoint Add-ins
