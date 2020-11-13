@@ -12,8 +12,8 @@ localization_priority: Normal
 Learn how to use the cmdlet **Register-SPWorkflowService** to successfully pair SharePoint with Workflow Manager.
 Installing and configuring Microsoft SharePoint to support workflow development requires "pairing" your installations of SharePoint and Workflow Manager. In most scenarios, this pairing is easily done by using the cmdlet **Register-SPWorkflowService**, which is included with your SharePoint installation.
   
-    
-    
+> [!NOTE]
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
 
 Importantly, this cmdlet is not useful for every pairing scenario. **Register-SPWorkflowService** is useful only in the following pairing scenarios:
 - One-computer server farm where SharePoint and Workflow Manager are co-located on the server box.

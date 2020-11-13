@@ -1,7 +1,7 @@
 ---
 title: Replace an expiring client secret in a SharePoint Add-in
 description: Add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
-ms.date: 1/18/2020
+ms.date: 11/10/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -64,9 +64,11 @@ Ensure the following before you begin:
     $rand.GetBytes($bytes)
     $rand.Dispose()
     $newClientSecret = [System.Convert]::ToBase64String($bytes)
-    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Sign -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
-    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Verify -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
-    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Password -Usage Verify -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
+    $dtStart = [System.DateTime]::Now
+    $dtEnd = $dtStart.AddYears(1)
+    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Sign -Value $newClientSecret -StartDate $dtStart -EndDate $dtEnd
+    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Verify -Value $newClientSecret -StartDate $dtStart -EndDate $dtEnd
+    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Password -Usage Verify -Value $newClientSecret -StartDate $dtStart -EndDate $dtEnd
     $newClientSecret
     ```
 
@@ -128,7 +130,7 @@ For expired client secrets, first you must delete all of the expired secrets for
     connect-msolservice -credential $msolcred
     ```
 
-1. Get **ServicePrincipals** and keys. Printing **$keys** returns three records. Replace each **KeyId** in **KeyId1**, **KeyId2**, and **KeyId3**. You also see the **EndDate** of each key. Confirm whether your expired key appears there.
+1. Get **ServicePrincipals** and keys. Printing **$keys** returns three records. You also see the **EndDate** of each key. Confirm whether your expired key appears there.
 
     > [!NOTE]
     > The **clientId** needs to match your expired **clientId**. It's recommended to delete all keys, both expired and unexpired, for this **clientId**.
@@ -136,7 +138,13 @@ For expired client secrets, first you must delete all of the expired secrets for
     ```powershell
     $clientId = "27c5b286-62a6-45c7-beda-abbaea6eecf2"
     $keys = Get-MsolServicePrincipalCredential -AppPrincipalId $clientId
-    Remove-MsolServicePrincipalCredential -KeyIds @("KeyId1"," KeyId2"," KeyId3") -AppPrincipalId $clientId
+    $keys
+    ```
+
+1. Remove all keys once you have confirmed that they are indeed expired.
+
+    ```powershell
+    Remove-MsolServicePrincipalCredential -KeyIds $keys.KeyId -AppPrincipalId $clientId
     ```
 
 1. Generate a new **ClientSecret** for this **clientID**. It uses the same **clientId** as set in the preceding step. The new **ClientSecret** is valid for three years.

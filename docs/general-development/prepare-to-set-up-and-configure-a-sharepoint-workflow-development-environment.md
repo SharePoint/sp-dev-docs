@@ -8,13 +8,18 @@ localization_priority: Normal
 
 
 # Prepare to set up and configure a SharePoint workflow development environment
-Learn how to set up a workflow development environment to develop SharePoint workflows as free-standing  [apps for SharePoint](https://msdn.microsoft.com/library/fp179930.aspx) by using Visual Studio 2012.
+
+Learn how to set up a workflow development environment to develop SharePoint workflows as free-standing [apps for SharePoint](https://msdn.microsoft.com/library/fp179930.aspx) by using Visual Studio 2012.
+
+> [!NOTE]
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
+
 ## Overview of workflow development in SharePoint
 
 Although workflows have been a part of SharePoint since early versions, workflows for SharePoint are a much enhanced and improved platform. 
   
-    
-    
+      
 
 - First, SharePoint workflows are now built on  [Windows Workflow Foundation 4.5](https://msdn.microsoft.com/library/dd489441%28v=vs.110%29), which is part of the .NET Framework 4.5.
     

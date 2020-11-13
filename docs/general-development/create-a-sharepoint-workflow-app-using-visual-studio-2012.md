@@ -9,13 +9,15 @@ localization_priority: Priority
 
 # Create a SharePoint workflow app using Visual Studio 2012
 Walk through the process of creating a workflow SharePoint Add-in using Microsoft Visual Studio 2012.
+
+> [!NOTE]
+> SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
+
 ## Prerequisites
 <a name="bmPreReq"> </a>
 
 This development scenario presumes that a SharePoint farm and a Workflow Manager 1.0 farm are installed and paired. These two farms can be located on the same or on separate server computers. The scenario further presumes that workflow development is taking place remotely - that is, on a computer separate from either of the server computers - and is using Microsoft Visual Studio 2012 or later.
-  
-    
-    
+      
 
 - On the server platforms:
     
