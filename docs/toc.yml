@@ -690,8 +690,6 @@
       href: sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md
     - name: Create add-ins for the SAP Gateway for Microsoft
       href: sp-add-ins/create-provider-hosted-sharepoint-add-ins-to-access-sap-data-by-using-the-sap-ga.md
-    - name: Create an add-in that contains a document template and a task pane add-in
-      href: sp-add-ins/create-a-sharepoint-add-in-that-contains-a-document-template-and-a-task-pane-add.md
   - name: Publish
     items:
     - name: Overview
