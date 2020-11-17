@@ -28,7 +28,9 @@ To show or hide a column in a list or library form:
         - Locate the **Properties** section.
         - Click **Edit all**.
 
-4. At the top of the form, expand **Edit Form** icon and then select **Configure layout**.
+4. At the top of the form, expand **Edit Form** icon and then select **Configure layout**
+
+    ![Configure list form](./images/list-form-configuration-menu.png)
 
 5. In the **Format** pane, you can choose to apply formatting to the following form sections:
     - Header
@@ -45,7 +47,7 @@ To show or hide a column in a list or library form:
 
 3. Below is an example of a custom header JSON:
 
-    //put image here
+    ![Custom list form header](./images/list-form-configuration-header.png)
 
     ```JSON
     {
@@ -127,7 +129,7 @@ To show or hide a column in a list or library form:
 
     4. Below is an example of a custom footer JSON:
 
-        //put image here
+        ![Custom list form footer](./images/list-form-configuration-footer.png)
 
         ```JSON
         {
@@ -184,6 +186,7 @@ To show or hide a column in a list or library form:
     - New columns added will be automatically referenced in the last section. 
 
 4. Below is the JSON structure to get started with defining sections and referencing columns in the sections:
+
     ```JSON
     {
         "sections": [
@@ -207,6 +210,7 @@ To show or hide a column in a list or library form:
     ```
 
 5. Below is an example of a custom body JSON with sections:
+
     ```JSON
     {
         "sections": [
@@ -238,7 +242,9 @@ To show or hide a column in a list or library form:
 
 6. Once the body is customized with one or more sections, the list or library form will switch to a multi-column layout. 
     > [!NOTE]
-    > Configuring form body will switch your form layout from single-column layout to a multi-column layout. We will add support for configuring the body with single-column layout in a future update. 
+    > Configuring form body will switch your list or library form layout from single-column to a multi-column layout. We will add support for configuring the body with single-column layout in a future update. 
+
+    ![Custom list form body with sections](./images/list-form-configuration-body.png)
 
 7. To preview your changes, click the **Preview** button.
 
