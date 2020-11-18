@@ -1,7 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 09/15/2020
+ms.date: 11/18/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -244,19 +244,19 @@ With the API configured and working, the next step is to build the SharePoint Fr
 
 Start with creating a new SharePoint Framework project. In the command line create new folder for your project:
 
-```sh
+```console
 md contoso-api
 ```
 
 Change the working directory by executing in the command line:
 
-```sh
+```console
 cd contoso-api
 ```
 
 To create new project, execute the SharePoint Framework Yeoman generator:
 
-```sh
+```console
 yo @microsoft/sharepoint
 ```
 
