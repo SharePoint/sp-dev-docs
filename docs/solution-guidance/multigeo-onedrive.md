@@ -15,10 +15,9 @@ You can use one of several APIs to access a OneDrive for Business site:
 - SharePoint CSOM API
 - SharePoint REST API
 
-
 ## Read OneDrive for Business files using Microsoft Graph
 
-When you use Microsoft Graph to read a OneDrive for Business file, you don't have to know where a user's OneDrive site is located. When you request the drive, as shown in the following examples, you'll get the files you need. 
+When you use Microsoft Graph to read a OneDrive for Business file, you don't have to know where a user's OneDrive site is located. When you request the drive, as shown in the following examples, you'll get the files you need.
 
 ```
 GET https://graph.microsoft.com/v1.0/users/bert@contoso.onmicrosoft.com/drive/root/children
@@ -48,8 +47,8 @@ GET https://graph.microsoft.com/v1.0/me/mySite
     "value": "https://contoso-my.sharepoint.com/personal/admin_contoso_onmicrosoft_com/"
 }
 ```
-For more information, see the [MultiGeo.UserProfileUpdates](https://github.com/SharePoint/PnP/tree/master/Samples/MultiGeo.UserProfileUpdates) sample.
 
+For more information, see the [MultiGeo.UserProfileUpdates](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.UserProfileUpdates) sample.
 
 ## Get the location of a user's OneDrive for Business site using CSOM and REST
 
@@ -74,18 +73,16 @@ If you're using C#, you can use CSOM to get the location of a OneDrive for Busin
 ```csharp
 public string GetUserPersonalUrlCSOM(ClientContext ctx, string userPrincipalName)
 {
-    string result = null;
+  string result = null;
 
-    PeopleManager peopleManager = new PeopleManager(ctx);
-    var userProperties = peopleManager.GetPropertiesFor(userPrincipalName);
-    this.clientContext.ExecuteQuery();
-    result = userProperties.PersonalUrl;
+  PeopleManager peopleManager = new PeopleManager(ctx);
+  var userProperties = peopleManager.GetPropertiesFor(userPrincipalName);
+  this.clientContext.ExecuteQuery();
+  result = userProperties.PersonalUrl;
 
-    return result;
+  return result;
 }
 ```
-
-
 
 ## See also
 
@@ -94,4 +91,3 @@ public string GetUserPersonalUrlCSOM(ClientContext ctx, string userPrincipalName
 - [File upload CSOM SharePoint Add-in](https://github.com/SharePoint/PnP/tree/master/Samples/Core.FileUpload)
 - [Large file upload with CSOM](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)
 - [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)
-
