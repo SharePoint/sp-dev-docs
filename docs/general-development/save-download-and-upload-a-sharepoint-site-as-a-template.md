@@ -1,6 +1,6 @@
 ---
 title: Save, download, and upload a SharePoint site as a template
-ms.date: 05/11/2020
+ms.date: 11/18/2020
 ms.prod: sharepoint
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
 localization_priority: Priority
@@ -95,9 +95,6 @@ After you add a site template to the solutions gallery and the template is activ
 
 ## See also
 
-- [Site Types: WebTemplates and Site Definitions](https://msdn.microsoft.com/library/ms434313.aspx)
-- [Understanding how to package and deploy workflow in SharePoint](https://msdn.microsoft.com/library/jj819316%28v=office.15%29.aspx)
-- [Build farm solutions in SharePoint](https://msdn.microsoft.com/library/jj163902%28v=office.15%29.aspx)
-- [Copy or move lists by using list templates](https://office.com/redir/HA101782479.aspx)
-- [Copy or move a library by using a library template](https://office.com/redir/HA101814157.aspx)
-- [Copy or move library files by using Windows Explorer](https://office.com/redir/HA101811182.aspx)
+- [Site Types: WebTemplates and Site Definitions](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms434313(v=office.14))
+- [Understanding how to package and deploy workflow in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/understanding-how-to-package-and-deploy-workflow-in-sharepoint)
+- [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
