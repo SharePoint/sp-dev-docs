@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 07/31/2020
+ms.date: 11/20/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -24,7 +24,7 @@ Install the latest version of [Node.js](https://www.nodejs.org) LTS **10.x**.
 This version is the currently recommended and supported version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*). Node.js is frequently updated and available on multiple platforms including Windows, macOS, and Linux. That's why we are not listing all versions or direct downloads on this page.
 
 > [!IMPORTANT]
-> At this time, Node.js v12.x is the Active LTS version listed on the Node.js homepage as the default download. To download Node.js v10.x, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
+> At this time, Node.js v14.x is the Active LTS version listed on the Node.js homepage as the default download. To download Node.js v10.x, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
 >
 > For more information about Node.js's Long Term Support (LTS) schedule, see: [Node.js > Releases](https://nodejs.org/en/about/releases/).
 >
@@ -34,7 +34,7 @@ This version is the currently recommended and supported version of Node.js to us
 You can check if you already have Node.js already installed and the installed version by running **node -v** from the command line. You'll need this to return version **v8.x.x** (*if you're developing solutions for SharePoint Server 2016*) or **v10.x.x** (*if you're developing solutions for SharePoint Server 2019 or SharePoint Online*). If it returns a different major version, refer to the instructions above to obtain a supported version.
 
 > [!IMPORTANT]
-> Node.js v9.x, v11.x, and v12.x are **not** currently supported with SharePoint Framework development.
+> Node.js v9.x, v11.x, , v12.x, v14.x and v15.x are **not** currently supported with SharePoint Framework development.
 
 > [!NOTE]
 > If you're building SharePoint Framework components for SharePoint Server 2016, see **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section for additional details on which version of Node.js you should install.
