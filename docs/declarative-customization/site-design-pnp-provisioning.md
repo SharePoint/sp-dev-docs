@@ -1,11 +1,14 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 07/04/2020
+ms.date: 11/25/2020
 localization_priority: Priority
 ---
 
 # Calling the PnP provisioning engine from a site script
+
+> [!NOTE]
+> This article uses a version of PnP PowerShell that is currently in pre-release and planned to GA in January 2021. As Azure Functions run PowerShell Core, you'll have to use this version of PnP PowerShell in your Azure Function. For more information about this version of PnP PowerShell see https://pnp.github.io/powershell.
 
 Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page.
 
@@ -18,9 +21,9 @@ The steps in this article use the following components:
 - Azure Queue storage
 - Azure Functions
 - A SharePoint Framework (SPFx) solution
-- A PnP provisioning template
+- A PnP site template
 - A PnP PowerShell script
-- An app ID and app secret with administrative rights on your tenant
+- An Azure AD App Registration
 
 You'll use these components to trigger the PnP provisioning code after you create the site and apply the site design.
 
@@ -28,41 +31,21 @@ You'll use these components to trigger the PnP provisioning code after you creat
 
 ## Set up app-only access to your tenant
 
-To set up app-only access, you need to have two different pages on your tenant&mdash;one on the regular site, and the other on your SharePoint administration site.
+We are going to use authentication with a clientid and a certificate in this tutorial. 
 
-1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/15/appregnew.aspx` (you can go to any site, but for now pick the root site).
-
-2. Next to the **Client Id** and **Client Secret** fields, choose the **Generate** button.
-
-3. Enter a title for your app, such as **Site Provisioning**.
-
-4. In the **App Domain** box, enter **localhost**.
-
-5. In the **Redirect URI** box, enter **https://localhost**.
-
-    ![Create app page, showing the Client Id, Client Secret, Title, App Domain, and Redirect URI fields](images/pnpprovisioning-createapponly.png)
-
-6. Choose **Create**.
-
-7. Copy the values for **Client Id** and **Client Secret** because you will need them later.
-
-<br/>
-
-Next, trust the app, so that it has the appropriate access to your tenant:
-
-1. Go to `https://[yourtenant]-admin.sharepoint.com/_layouts/appinv.aspx` (notice the `-admin` in the URL).
-1. In the **App Id** field, paste the **Client ID** that you copied, and choose **Lookup**.
-1. In the **Permission Request XML** field, paste the following XML:
-
-    ```xml
-    <AppPermissionRequests AllowAppOnlyPolicy="true" >
-        <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
-    </AppPermissionRequests>
+1. Create a new self-signed certificate with PnP PowerShell on your computer:
+    
+    ```powershell
+    Register-PnPAzureADApp -ApplicationName "PnPFlowDemo" -Tenant "contoso.onmicrosoft.com" -DeviceLogin -Out .    
     ```
 
-1. Choose **Create**.
-1. To confirm that you want to trust this app, choose **Trust It**.
+    Replace **contoso.onmicrosoft.com** with your tenant.
 
+    Follow the steps carefully. 
+
+    As a result of the command a new Azure AD Application will be registered, permissions will be set correctly, and you will have provided consent to use this application in your tenant. Notice that you require write access to the Azure AD for this.
+
+1. Copy the values the cmdlet returns as you will need the pfx file and the AzureAppId value later.
 
 ## Create the Azure Queue storage
 
@@ -78,7 +61,6 @@ To set up the Azure Queue storage:
 1. Choose **+ Queue** at the top of the screen.
 1. Enter **pnpprovisioningqueue** for the name, or enter your own value; be sure to follow the naming standard. Make note of the queue name; you will need this value when you create the Azure Function.
 1. Go to **Access Keys** and note the **Storage Account Name** and the **key1 Key value**. You will need these values when you create the flow.
-
 
 ## Create the flow
 
@@ -123,7 +105,7 @@ To put a message in the queue, you need to create a flow.
 1. Choose the first step in your flow ('When an HTTP request is received') and copy the URL.
 1. Save your flow.
 
-Your flow should look like the following.
+Your flow should look like the following:
 
 ![Screenshot of a flow named 'When an HTTP request is received', showing the URL, Request body, Queue name, and Message fields](images/pnpprovisioning-flow-overview.png)
 
@@ -137,7 +119,7 @@ $body = "{webUrl:'somesiteurl'}"
 Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
 ```
 
-When you go to the main screen of your flow, you will see a run history. If your flow worked correctly, it will show `Succeeded`.
+When you go to the main screen of your flow, you'll see a run history. If your flow worked correctly, it will show `Succeeded`.
 Now go to the queue you just created in Azure and choose **Refresh**. You should see an entry that shows that you correctly invoked the flow.
 
 ## Provision the SPFx solution
@@ -171,116 +153,81 @@ Copy the following provisioning template XML to a new file and save the file as 
 
 1. Go to the [Azure Portal](https://portal.azure.com).
 1. Choose **+ Create a resource**.
-1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
-1. Within the Function App select **Configuration** > **Function runtime settings** and change the runtime version from **~3** to **~1**.
+1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required, but make sure to select **PowerShell Core** as the **Runtime** and select **7.0** as the **Version**
 
-    ![Screenshot of the Azure portal with the Function runtime settings screen highlighted](images/pnpprovisioning-runtime-settings.png)
+    ![Screenshot of the Azure portal with the Runtime stack and Version fields hightlighted](images/pnpprovisioning-runtime-stack-selection.png)
 
-    > [!NOTE]
-    > Function Apps based on the runtime version ~3 or ~2 only support PowerShell Core as programming language. At this moment, PnP PowerShell cmdlets can be only executed under PowerShell (and not on PowerShell Core).
-    >
-    > First, to make available Powershell at the level of the Function App, the runtime version has to be set to **~1**.
-    >
-    > Secondly, PowerShell can be only activated from the **classic experience** of the Azure Portal, by enabling the **Experimental Language Support**, at the level of the Function App.
-    >
-    > Read more about [Azure Functions runtime versions.](https://www.microsoft.com/download/details.aspx?id=35588)
+1. When created, navigate to your new Function App
+1. Select **App Files** 
+    
+    ![Screenshot of the Function App with the App Files entry highlighted in the menu](images/pnpprovisioning-app-files.menu.png)
 
-1. Temporarly switch the Azure Function App's user interface to the **classic experience** from the current experience. Select **Overview** in the left-hand navigation and select **Switch to Classic experience** as shown in the following figure.
+1. In the dropdown menu, select **requirements.psd1** and add a new entry as follows
 
-   ![Screenshot of the Azure portal with the Function runtime settings screen highlighted](images/pnpprovisioning-switch-classic-experience.png)
+    ```powershell
+    # This file enables modules to be automatically managed by the Functions service.
+    # See https://aka.ms/functionsmanageddependency for additional information.
+    #
+    @{
+       # For latest supported version, go to 'https://www.powershellgallery.com/packages/Az'. 
+       'Az' = '5.*'
+       # For the latest supported version, go to 'https://www.powershellgallery.com/packages/PnP.PowerShell'.
+       'PnP.PowerShell' = '0.2.17-nightly'
+    }
+    ```
+    Save the file. Notice, that if you do no intent to use the Azure PowerShell Cmdlets you can remove that entry from this file. The requirements.psd1 file makes sure that specific PowerShell modules will be available to all functions. At the first execution of the Azure Function these modules will be downloaded and made available. You can also use wildcard references for the version. See for more information about this file here: https://docs.microsoft.com/azure/azure-functions/functions-reference-powershell?tabs=portal#dependency-management
 
-1. Create a new Azure Function **Functions** > **New function**:
+1. Create a new Azure Function **Functions** > **Add**:
 
     ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
 
-1. Enable **Experimental Language Support**:
-
-    ![Screenshot of the Azure portal with the Experimental Language Support switch highlighted](images/pnpprovisioning-experimental-features.png)
-
-1. Create a new Queue Triggered function based upon PowerShell:
+1. Create a new Azure Store Queue Trigger function:
 
     ![Screenshot of the Azure portal with the new Queue Triggered function highlighted](images/pnpprovisioning-create-function-queue.png)
 
-1. Name the function **ApplyPnPProvisioningTemplate**.
+1. Name the function **InvokePnPSiteTemplate**.
 1. Enter the name of the queue you created earlier.
-1. Choose **Create**. An editor where you can enter PowerShell cmdlets will open.
-
-Next, you'll upload the PnP PowerShell module so that you can use it in the Azure Function.
+1. Choose **Add**. A new page opens where you can modify the function.
 
 > [!NOTE]
 > The Storage account must be in the same region as of Azure Function App, because the resources that talk to one another should be co-located in the same region. This is a requirement for Azure Functions.
 
-## Upload the PnP PowerShell module for your Azure Function
-
-You'll need to download the PnP PowerShell module so that you can upload it for your Azure Function.
-
-1. Create a temporary folder on your computer.
-1. Launch PowerShell and enter the following:
-    ```powershell
-    Save-Module -Name SharePointPnPPowerShellOnline -Path [pathtoyourfolder]
-    ```
-
-The PowerShell module files will download to a folder within the folder that you created.
-
-Next, upload the files so that your Azure Function can use the module.
-
-1. Go to the main page of your Function App and select **Platform Features**.
-
-    ![Screenshot of the Function App with Platform features highlighted](images/pnpprovisioning-platform-features.png)
-
-1. Select **Advanced tools (Kudu)**.
-
-    ![Screenshot of Development Tools with Advanced Tools (Kudu) highlighted](images/pnpprovisioning-select-kudu.png)
-
-1. On the main Kudu page, select **Debug Console** and pick either **CMD** or **PowerShell**.
-1. Choose the file explorer on the upper part of the page, and go to **site\wwwroot\\[nameofyourazurefunction]**.
-1. Create a new folder named **modules**.
-
-    ![Screenshot with the new folder option highlighted](images/pnpprovisioning-kudu-create-folder.png)
-
-1. In the modules folder, create another folder called **SharePointPnPPowerShellOnline** and go to that folder.
-1. In File Explorer on your computer, go to the folder where you downloaded the PnP PowerShell module files. Open the
-**SharePointPnPPowerShellOnline\2.20.1711.0** folder (notice that the version number might be different).
-1. Drag and drop all the files from this folder into the folder in Kudu to upload them.
-
-   ![Screenshot of the Kudu folder with 40 files added](images/pnpprovisioning-module-files-uploaded.png)
 
 ## Finish the Azure Function
 
-1. Go back to your Azure Function and expand the files tab to the right.
-
-    ![Screenshot of the View files tab](images/pnpprovisioning-view-files.png)
-
-1. Select **Upload** and upload the provisioning template file that you created earlier.
+1. Go to the Function App main screen and select **Advanced Tools** in the left menu and click **Go**. A new tab will open.
+1. Select **PowerShell** from the **Debug Console** menu at the top.
+1. Navigate to **site\wwwroot\InvokePnPSiteTemplate** (or site\wwwroot\[name of your function])
+1. Drag and drop the earlier created **FlowDemoTemplate.xml** file onto the page. This will upload the file to the folder.
+1. Drag and drop the earlier generated **cert.pfx** file onto the page. This will upload the file to the folder.
+1. Navigate back to the function and select **Code + Test** to edit the function.
 1. Replace the PowerShell script with the following:
 
     ```powershell
-    $in = Get-Content $triggerInput -Raw
-    Write-Output "Incoming request for '$in'"
-    Connect-PnPOnline -AppId $env:SPO_AppId -AppSecret $env:SPO_AppSecret -Url $in
+    param([string] $QueueItem, $TriggerMetadata)
+
+    # Write out the queue message and insertion time to the information log.
+    Write-Host "PowerShell queue trigger function processed work item: $QueueItem"
+    Write-Host "Queue item insertion time: $($TriggerMetadata.InsertionTime)"
+    Connect-PnPOnline -ClientId [insertyourAzureAppIdhere]] -CertificatePath D:\home\site\wwwroot\InvokePnPSiteTemplate\cert.pfx -Url $QueueItem
     Write-Output "Connected to site"
-    Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTemplate\FlowDemoTemplate.xml
+    Invoke-PnPSiteTemplate -Path D:\home\site\wwwroot\InvokePnPSiteTemplate\FlowDemoTemplate.xml
     ```
 
-Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_AppSecret```. To set those variables, go to the main Function App page in the Azure Portal (the one with the yellow light bolt icon), select **Configuration** and add two new application settings:
-
-1. ```SPO_AppId``` - Set the value to the Client ID you copied in the first step when you created your app on your tenant.
-2. ```SPO_AppSecret``` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
+    Replace **[insertyourAppIdHere]** with the value that the `Register-PnPAzureApp` cmdlet returned for AzureAppId.
 
 ## Create the site design
 
-Open PowerShell and make sure that you have the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) installed.
-
-Connect to your tenant using **Connect-SPOService**.
+Open PowerShell and connect to your tenant using **Connect-PnPOnline**.
 
 ```powershell
-Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
+Connect-PnPOnline -Url https://[yourtenant]-admin.sharepoint.com
 ```
 
 Now you can get the existing site designs.
 
 ```powershell
-Get-SPOSiteDesign
+Get-PnPSiteDesign
 ```
 
 To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
@@ -313,18 +260,16 @@ To create a site design, you first need to create a site script. A site design i
 
     ```powershell
     $script = Get-Clipboard -Raw
-    Add-SPOSiteScript -Title "Apply PnP Provisioning Template" -Content $script
-    Get-SPOSiteScript
+    Add-PnPSiteScript -Title "Apply PnP Site Template" -Content $script
+    Get-PnPSiteScript
     ```
 
 1. You will see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you created and copy it to the clipboard.
 1. Use the following command to create the site design:
 
     ```powershell
-    Add-SPOSiteDesign -Title "Site with footer" -SiteScripts [Paste the ID of the Site Script here] -WebTemplate "64"
+    Add-PnPSiteDesign -Title "Site with footer" -SiteScriptIds [Paste the ID of the Site Script here] -WebTemplate TeamSite
     ```
-
-The **Add-SPOSiteDesign** cmdlet associates the site design with the team site. If you want to associate the design with a communication site, use the value "68".
 
 ## Verify the results
 
