@@ -30,7 +30,7 @@ For more info about how to use this trigger, see this tutorial video: [Introduci
 
 ### When an item is deleted
 
-Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger must to the associated SharePoint site on which it is expected to run, using a site collection user account.
+Triggers the flow when you delete an item in a list. To get the properties of a deleted item, you must connect this trigger to the associated SharePoint site on which it is expected to run, using a site collection user account.
 
 ### For a selected item
 
