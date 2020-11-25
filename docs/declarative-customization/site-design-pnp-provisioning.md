@@ -1,14 +1,14 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 07/04/2020
+ms.date: 11/25/2020
 localization_priority: Priority
 ---
 
 # Calling the PnP provisioning engine from a site script
 
 > [!NOTE]
-> This article uses a version of PnP PowerShell that is currently in pre-release and planned to GA in January 2021. As Azure Functions run PowerShell Core, you will have to use this version of PnP PowerShell in your Azure function. For more information about this version of PnP PowerShell see https://pnp.github.io/powershell.
+> This article uses a version of PnP PowerShell that is currently in pre-release and planned to GA in January 2021. As Azure Functions run PowerShell Core, you'll have to use this version of PnP PowerShell in your Azure Function. For more information about this version of PnP PowerShell see https://pnp.github.io/powershell.
 
 Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page.
 
@@ -25,7 +25,7 @@ The steps in this article use the following components:
 - A PnP PowerShell script
 - An Azure AD App Registration
 
-You will use these components to trigger the PnP provisioning code after you create the site and apply the site design.
+You'll use these components to trigger the PnP provisioning code after you create the site and apply the site design.
 
 [!INCLUDE [pnp-provisioning-engine](../../includes/snippets/open-source/pnp-provisioning-engine.md)]
 
@@ -38,14 +38,14 @@ We are going to use authentication with a clientid and a certificate in this tut
     ```powershell
     Register-PnPAzureADApp -ApplicationName "PnPFlowDemo" -Tenant "contoso.onmicrosoft.com" -DeviceLogin -Out .    
     ```
+
     Replace **contoso.onmicrosoft.com** with your tenant.
 
     Follow the steps carefully. 
 
     As a result of the command a new Azure AD Application will be registered, permissions will be set correctly, and you will have provided consent to use this application in your tenant. Notice that you require write access to the Azure AD for this.
-1. Copy the values the cmdlet returns as you will need the pfx file and the AzureAppId value later.
-<br/>
 
+1. Copy the values the cmdlet returns as you will need the pfx file and the AzureAppId value later.
 
 ## Create the Azure Queue storage
 
@@ -61,7 +61,6 @@ To set up the Azure Queue storage:
 1. Choose **+ Queue** at the top of the screen.
 1. Enter **pnpprovisioningqueue** for the name, or enter your own value; be sure to follow the naming standard. Make note of the queue name; you will need this value when you create the Azure Function.
 1. Go to **Access Keys** and note the **Storage Account Name** and the **key1 Key value**. You will need these values when you create the flow.
-
 
 ## Create the flow
 
@@ -106,7 +105,7 @@ To put a message in the queue, you need to create a flow.
 1. Choose the first step in your flow ('When an HTTP request is received') and copy the URL.
 1. Save your flow.
 
-Your flow should look like the following.
+Your flow should look like the following:
 
 ![Screenshot of a flow named 'When an HTTP request is received', showing the URL, Request body, Queue name, and Message fields](images/pnpprovisioning-flow-overview.png)
 
@@ -120,7 +119,7 @@ $body = "{webUrl:'somesiteurl'}"
 Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
 ```
 
-When you go to the main screen of your flow, you will see a run history. If your flow worked correctly, it will show `Succeeded`.
+When you go to the main screen of your flow, you'll see a run history. If your flow worked correctly, it will show `Succeeded`.
 Now go to the queue you just created in Azure and choose **Refresh**. You should see an entry that shows that you correctly invoked the flow.
 
 ## Provision the SPFx solution
@@ -157,11 +156,14 @@ Copy the following provisioning template XML to a new file and save the file as 
 1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required, but make sure to select **PowerShell Core** as the **Runtime** and select **7.0** as the **Version**
 
     ![Screenshot of the Azure portal with the Runtime stack and Version fields hightlighted](images/pnpprovisioning-runtime-stack-selection.png)
+
 1. When created, navigate to your new Function App
 1. Select **App Files** 
     
     ![Screenshot of the Function App with the App Files entry highlighted in the menu](images/pnpprovisioning-app-files.menu.png)
+
 1. In the dropdown menu, select **requirements.psd1** and add a new entry as follows
+
     ```powershell
     # This file enables modules to be automatically managed by the Functions service.
     # See https://aka.ms/functionsmanageddependency for additional information.
@@ -173,7 +175,7 @@ Copy the following provisioning template XML to a new file and save the file as 
        'PnP.PowerShell' = '0.2.17-nightly'
     }
     ```
-    Save the file. Notice, that if you do no intent to use the Azure PowerShell Cmdlets you can remove that entry from this file. The requirements.psd1 file makes sure that specific PowerShell modules will be available to all functions. At the first execution of the Azure Function these modules will be downloaded and made available. You can also use wildcard references for the version. See for more information about this file here: https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-powershell?tabs=portal#dependency-management
+    Save the file. Notice, that if you do no intent to use the Azure PowerShell Cmdlets you can remove that entry from this file. The requirements.psd1 file makes sure that specific PowerShell modules will be available to all functions. At the first execution of the Azure Function these modules will be downloaded and made available. You can also use wildcard references for the version. See for more information about this file here: https://docs.microsoft.com/azure/azure-functions/functions-reference-powershell?tabs=portal#dependency-management
 
 1. Create a new Azure Function **Functions** > **Add**:
 
