@@ -9,7 +9,7 @@ localization_priority: Priority
 
 You can configure the list form in a list or library with a custom header, footer and the form body with one or more sections with fields in each of those sections. The form configuration does not change the data in the list item or file; it only changes how the form is displayed to users who browse the list or library. Anyone who can create and manage views in a list can use form configuration to configure the form with header, footer and body with sections.
 
-To configure a form, you will use JSON formatters that you are already familar with when formatting a [column](../column-formatting.md) or a [view](../view-formatting.md) in a list or libary. Form configuration allows for certain predefined elements and attributes to build the custom header, footer and body with one or more sections. 
+To configure a form, you will use JSON formatters that you are already familar with when formatting a [column](./column-formatting.md) or a [view](./view-formatting.md) in a list or libary. Form configuration allows for certain predefined elements and attributes to build the custom header, footer and body with one or more sections. 
 
 ## Get started
 To configure the form in a list or library:
@@ -43,7 +43,7 @@ To show or hide a column in a list or library form:
 
 2. Paste your custom header formatter in the JSON text input area.
     > [!NOTE]
-    > Form configuration allows for certain [predefined elements and attributes](../column-formatting#creating-custom-json) to build the custom header. 
+    > Form configuration allows for certain [predefined elements and attributes](./column-formatting#creating-custom-json) to build the custom header. 
 
 3. Below is an example of a custom header JSON:
 
@@ -125,7 +125,7 @@ To show or hide a column in a list or library form:
 
     2. Paste your custom footer formatter in the JSON text input area.
         > [!NOTE]
-        > Form configuration allows for certain [predefined elements and attributes](../column-formatting#creating-custom-json) to build the custom footer. 
+        > Form configuration allows for certain [predefined elements and attributes](./column-formatting#creating-custom-json) to build the custom footer. 
 
     4. Below is an example of a custom footer JSON:
 
