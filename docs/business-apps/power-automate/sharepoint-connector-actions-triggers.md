@@ -1,6 +1,6 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
-ms.date: 06/23/2020
+ms.date: 11/30/2020
 search.app: 
   - Flow
 search.appverid: met150
