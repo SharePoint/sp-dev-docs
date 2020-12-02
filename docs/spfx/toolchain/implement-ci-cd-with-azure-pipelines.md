@@ -136,7 +136,7 @@ jobs:
           patterns: '**/*.sppkg'
         - script: sudo npm install --global @pnp/cli-microsoft365
           displayName: Install CLI for Microsoft365
-        - script: m365 login $(m365_app_catalog_site_url) --authType password --userName $(365_user_login) --password $(m365_user_password)
+        - script: m365 login $(m365_app_catalog_site_url) --authType password --userName $(m365_user_login) --password $(m365_user_password)
           displayName: Login to Microsoft 365
         - script: |
             CMD_GET_SPPKG_NAME=$(find $(Pipeline.Workspace)/drop -name '*.sppkg' -exec basename {} \;)
