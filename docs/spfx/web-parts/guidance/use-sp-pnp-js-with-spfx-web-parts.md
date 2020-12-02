@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
-description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching. 
-ms.date: 07/05/2019
+description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
+ms.date: 12/02/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -14,66 +14,66 @@ You may choose to use the [@pnp/sp](https://www.npmjs.com/package/@pnp/sp) libra
 
 You can download the [full source](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/knockout-sp-pnp-js) for this article from the samples site.
 
-> [!NOTE] 
+> [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 ## Create a new project
 
 1. Create a new folder for the project by using your console of choice:
 
-  ```sh
-  md spfx-pnp-js-example
-  ```
+    ```console
+    md spfx-pnp-js-example
+    ```
 
-2. Enter that folder:
+1. Enter that folder:
 
-  ```sh
-  cd spfx-pnp-js-example
-  ```
+    ```console
+    cd spfx-pnp-js-example
+    ```
 
-3. Run the Yeoman generator for SPFx:
+1. Run the Yeoman generator for SPFx:
 
-  ```sh
-  yo @microsoft/sharepoint
-  ```
+    ```console
+    yo @microsoft/sharepoint
+    ```
 
-4. Enter the following values when prompted during the setup of the new project:
+1. Enter the following values when prompted during the setup of the new project:
 
-  - **spfx-pnp-js-example** as the solution name (keep default)
-  - **SharePoint Online only (latest)** as the baseline packages version
-  - **Current Folder** as the solution location
-  - **Y** as allow tenant admin to deploy solution to all sites
-  - **WebPart** as the component to create
-  - **PnPJSExample** as the name of the web part
-  - **Example of using pnp-js within SPFx** as the description
-  - **Knockout** as the framework
+    - **spfx-pnp-js-example** as the solution name (keep default)
+    - **SharePoint Online only (latest)** as the baseline packages version
+    - **Current Folder** as the solution location
+    - **Y** as allow tenant admin to deploy solution to all sites
+    - **WebPart** as the component to create
+    - **PnPJSExample** as the name of the web part
+    - **Example of using pnp-js within SPFx** as the description
+    - **Knockout** as the framework
 
-  ![Completed Project Scaffolding](../../../images/sp-pnp-js-guide-completed-setup.png)
+    ![Completed Project Scaffolding](../../../images/sp-pnp-js-guide-completed-setup.png)
 
-5. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
+1. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
-  ```sh
-  npm shrinkwrap
-  ```
+    ```console
+    npm shrinkwrap
+    ```
 
-6. Open the project in the code editor of your choosing. The screenshots shown here demonstrate [Visual Studio Code](https://code.visualstudio.com/). To open the directory within Visual Studio Code, enter the following in the console:
+1. Open the project in the code editor of your choosing. The screenshots shown here demonstrate [Visual Studio Code](https://code.visualstudio.com/). To open the directory within Visual Studio Code, enter the following in the console:
 
-  ```sh
-  code .
-  ```
+    ```console
+    code .
+    ```
 
-  ![Project as first opened in Visual Studio Code](../../../images/sp-pnp-js-guide-first-open.png)
+    ![Project as first opened in Visual Studio Code](../../../images/sp-pnp-js-guide-first-open.png)
 
 ## Install and set up @pnp/sp
 
 After your project is created, you must install and set up @pnp/sp , starting with installing the package. These steps are common for any project type (React, etc).
 
-```sh
+```console
 npm install @pnp/logging @pnp/common @pnp/odata @pnp/sp --save
 ```
 
-Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within classic sites and pages, we can make use of the global `_spPageContextInfo` variable. Within SPFx, this is not available, or if it is, it may not be correct. So we need to rely on the [context](https://docs.microsoft.com/javascript/api/sp-webpart-base/webpartcontext) object 
-supplied by the framework. 
+Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within classic sites and pages, we can make use of the global `_spPageContextInfo` variable. Within SPFx, this is not available, or if it is, it may not be correct. So we need to rely on the [context](https://docs.microsoft.com/javascript/api/sp-webpart-base/webpartcontext) object
+supplied by the framework.
 
 There are [two ways](https://pnp.github.io/pnpjs/sp/docs/#getting-started-sharepoint-framework) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
 
@@ -81,56 +81,56 @@ There are [two ways](https://pnp.github.io/pnpjs/sp/docs/#getting-started-sharep
 
 1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp root object:
 
-  ```TypeScript
-  import { sp } from "@pnp/sp";
-  ```
+    ```typescript
+    import { sp } from "@pnp/sp";
+    ```
 
-2. In the `onInit` method, update the code to appear as follows. Add the block after the `super.onInit()` call. We do this after the `super.onInit` to ensure that the framework has a chance to initialize anything required, and that we are setting up the library after those steps are completed.
+1. In the `onInit()` method, update the code to appear as follows. Add the block after the `super.onInit()` call. We do this after the `super.onInit()` to ensure that the framework has a chance to initialize anything required, and that we are setting up the library after those steps are completed.
 
-  ```TypeScript
-  /**
-  * Initialize the web part.
-  */
-  protected onInit(): Promise<void> {
-    this._id = _instance++;
+    ```typescript
+    /**
+    * Initialize the web part.
+    */
+    protected onInit(): Promise<void> {
+      this._id = _instance++;
 
-    const tagName: string = `ComponentElement-${this._id}`;
-    this._componentElement = this._createComponentElement(tagName);
-    this._registerComponent(tagName);
+      const tagName: string = `ComponentElement-${this._id}`;
+      this._componentElement = this._createComponentElement(tagName);
+      this._registerComponent(tagName);
 
-    // When web part description is changed, notify view model to update.
-    this._koDescription.subscribe((newValue: string) => {
-      this._shouter.notifySubscribers(newValue, 'description');
-    });
+      // When web part description is changed, notify view model to update.
+      this._koDescription.subscribe((newValue: string) => {
+        this._shouter.notifySubscribers(newValue, 'description');
+      });
 
-    const bindings: IPnPjsExampleBindingContext = {
-      description: this.properties.description,
-      shouter: this._shouter
-    };
+      const bindings: IPnPjsExampleBindingContext = {
+        description: this.properties.description,
+        shouter: this._shouter
+      };
 
-    ko.applyBindings(bindings, this._componentElement);
+      ko.applyBindings(bindings, this._componentElement);
 
-    sp.setup({
-      spfxContext: this.context
-    });
+      sp.setup({
+        spfxContext: this.context
+      });
 
-    // optional, we are setting up the @pnp/logging for debugging
-    Logger.activeLogLevel = LogLevel.Info;
-    Logger.subscribe(new ConsoleListener());
+      // optional, we are setting up the @pnp/logging for debugging
+      Logger.activeLogLevel = LogLevel.Info;
+      Logger.subscribe(new ConsoleListener());
 
-    return super.onInit();
-  }
-  ```
+      return super.onInit();
+    }
+    ```
 
 ## Update the ViewModel
 
-Next, replace the contents of the **PnPjsExampleViewModel.ts** file with the following code. We added an import statement for the pnp items, an interface to define our list item's fields, some observables to track both our list of items and the new item form, and methods to support getting, adding, and deleting items. 
+Next, replace the contents of the **PnPjsExampleViewModel.ts** file with the following code. We added an import statement for the pnp items, an interface to define our list item's fields, some observables to track both our list of items and the new item form, and methods to support getting, adding, and deleting items.
 
-We also added an `ensureList` method, which uses the @pnp/sp `lists.ensure` method to always ensure that we have the list (and to create it if necessary). There are many ways to provision resources, but this method was chosen to demonstrate creating a list, field, and items by using batching within a single method.
+We also added an `ensureList()` method, which uses the @pnp/sp `lists.ensure()` method to always ensure that we have the list (and to create it if necessary). There are many ways to provision resources, but this method was chosen to demonstrate creating a list, field, and items by using batching within a single method.
 
 The takeaway is that by using @pnp/sp, we write much less code to handle requests and can focus on our business logic.
 
-```TypeScript
+```typescript
 import * as ko from 'knockout';
 import styles from './PnPjsExample.module.scss';
 import { IPnPjsExampleWebPartProps } from './PnPjsExampleWebPart';
@@ -302,8 +302,7 @@ export default class PnPjsExampleViewModel {
 
 ## Update the template
 
-Finally, we need to update the template to match the functionality that we added into the ViewModel. Copy the following code into the **PnPjsExample.template.html** file. We added a title row, a `foreach` repeater 
-for the items collection, and a form allowing you to add new items to the list.
+Finally, we need to update the template to match the functionality that we added into the ViewModel. Copy the following code into the **PnPjsExample.template.html** file. We added a title row, a `foreach` repeater for the items collection, and a form allowing you to add new items to the list.
 
 ```html
 <div data-bind="attr: {class:spPnPjsExampleClass}">
@@ -367,20 +366,17 @@ for the items collection, and a form allowing you to add new items to the list.
 
 Start the sample, and add the web part to your SharePoint-hosted Workbench (/_layouts/workbench.aspx) to see it in action.
 
-```sh
+```console
 gulp serve --nobrowser
 ```
-
-<br/>
 
 You can delete existing items by selecting the trashcan icon, or you can add new items by putting values in both fields and selecting **Add**.
 
 ![Project as it appears on first run](../../../images/sp-pnp-js-guide-first-run.png)
 
-
 ### Next steps
 
-The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/documentation/getting-started/). 
+The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/documentation/getting-started/).
 
 ## Deploy to production
 
@@ -435,148 +431,138 @@ Ideally, the sample should work within both the local Workbench as well as the S
 
 Add a new file named **MockPnPjsExampleViewModel.ts** alongside the other web part files. Update the content of this file using the following code. This provides the same set of functionality and works in the local environment, but does not rely on SharePoint being available.
 
-```TypeScript
+```typescript
 import * as ko from 'knockout';
 import styles from './PnPjsExample.module.scss';
 import { IPnPjsExampleBindingContext, OrderListItem } from './PnPjsExampleViewModel';
 
 export default class MockPnPjsExampleViewModel {
+  public description: KnockoutObservable<string> = ko.observable('');
+  public newItemTitle: KnockoutObservable<string> = ko.observable('');
+  public newItemNumber: KnockoutObservable<string> = ko.observable('');
+  public items: KnockoutObservableArray<OrderListItem> = ko.observableArray([]);
 
-    public description: KnockoutObservable<string> = ko.observable('');
-    public newItemTitle: KnockoutObservable<string> = ko.observable('');
-    public newItemNumber: KnockoutObservable<string> = ko.observable('');
-    public items: KnockoutObservableArray<OrderListItem> = ko.observableArray([]);
+  public labelClass: string = styles.label;
+  public helloWorldClass: string = styles.pnPjsExample;
+  public containerClass: string = styles.container;
+  public rowClass: string = `ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`;
+  public buttonClass: string = `ms-Button ${styles.button}`;
 
-    public labelClass: string = styles.label;
-    public helloWorldClass: string = styles.pnPjsExample;
-    public containerClass: string = styles.container;
-    public rowClass: string = `ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`;
-    public buttonClass: string = `ms-Button ${styles.button}`;
+  constructor(bindings: IPnPjsExampleBindingContext) {
+    this.description(bindings.description);
 
-    constructor(bindings: IPnPjsExampleBindingContext) {
-        this.description(bindings.description);
+    // When web part description is updated, change this view model's description.
+    bindings.shouter.subscribe((value: string) => {
+      this.description(value);
+    }, this, 'description');
 
-        // When web part description is updated, change this view model's description.
-        bindings.shouter.subscribe((value: string) => {
-            this.description(value);
-        }, this, 'description');
+    // call the load the items
+    this.getItems().then(items => {
+      this.items(items);
+    });
+  }
 
-        // call the load the items
-        this.getItems().then(items => {
+  /**
+   * Gets the items from the list
+   */
+  private getItems(): Promise<OrderListItem[]> {
+    return Promise.resolve([{
+      Id: 1,
+      Title: "Mock Item 1",
+      OrderNumber: "12345"
+    },
+    {
+      Id: 2,
+      Title: "Mock Item 2",
+      OrderNumber: "12345"
+    },
+    {
+      Id: 3,
+      Title: "Mock Item 3",
+      OrderNumber: "12345"
+    }]);
+  }
 
-            this.items(items);
-        });
+  /**
+   * Adds an item to the list
+   */
+  public addItem(): void {
+    if (this.newItemTitle() !== "" && this.newItemNumber() !== "") {
+      // add the new item to the display
+      this.items.push({
+        Id: this.items.length,
+        OrderNumber: this.newItemNumber(),
+        Title: this.newItemTitle(),
+      });
+
+      // clear the form
+      this.newItemTitle("");
+      this.newItemNumber("");
     }
+  }
 
-    /**
-     * Gets the items from the list
-     */
-    private getItems(): Promise<OrderListItem[]> {
-        return Promise.resolve([{
-            Id: 1,
-            Title: "Mock Item 1",
-            OrderNumber: "12345"
-        },
-        {
-            Id: 2,
-            Title: "Mock Item 2",
-            OrderNumber: "12345"
-        },
-        {
-            Id: 3,
-            Title: "Mock Item 3",
-            OrderNumber: "12345"
-        }]);
+  /**
+   * Deletes an item from the list
+   */
+  public deleteItem(data): void {
+    if (confirm("Are you sure you want to delete this item?")) {
+      this.items.remove(data);
     }
-
-    /**
-     * Adds an item to the list
-     */
-    public addItem(): void {
-
-        if (this.newItemTitle() !== "" && this.newItemNumber() !== "") {
-
-            // add the new item to the display
-            this.items.push({
-                Id: this.items.length,
-                OrderNumber: this.newItemNumber(),
-                Title: this.newItemTitle(),
-            });
-
-            // clear the form
-            this.newItemTitle("");
-            this.newItemNumber("");
-        }
-    }
-
-    /**
-     * Deletes an item from the list
-     */
-    public deleteItem(data): void {
-
-        if (confirm("Are you sure you want to delete this item?")) {
-            this.items.remove(data);
-        }
-    }
+  }
 }
-
 ```
 
 ### Update web part
 
-Finally, we need to update the web part to use the mock data when appropriate. 
+Finally, we need to update the web part to use the mock data when appropriate.
 
 1. Open the **PnPjsExampleWebPart.ts** file, and import the mock ViewModel web just created:
 
-  ```TypeScript
-  import MockSpPnPjsExampleViewModel from './MockPnPjsExampleViewModel';
-  ```
+    ```typescript
+    import MockSpPnPjsExampleViewModel from './MockPnPjsExampleViewModel';
+    ```
 
-2. Import the `Environment` and `EnvironmentType` types that you use to detect the type of
+1. Import the `Environment` and `EnvironmentType` types that you use to detect the type of
 environment the web part is running in:
 
-  ```TypeScript
-  import { Version, Environment, EnvironmentType } from '@microsoft/sp-core-library';
-  ```
+    ```typescript
+    import { Version, Environment, EnvironmentType } from '@microsoft/sp-core-library';
+    ```
 
-3. Locate the `_registerComponent` method and update it as shown:
+1. Locate the `_registerComponent` method and update it as shown:
 
-  ```TypeScript
-  private _registerComponent(tagName: string): void {
+    ```typescript
+    private _registerComponent(tagName: string): void {
+      if (Environment.type === EnvironmentType.Local) {
+        console.log("here I am.")
+        ko.components.register(
+          tagName,
+          {
+            viewModel: MockSpPnPjsExampleViewModel,
+            template: require('./PnPjsExample.template.html'),
+            synchronous: false
+          }
+        );
+      } else {
+        ko.components.register(
+          tagName,
+          {
+            viewModel: PnPjsExampleViewModel,
+            template: require('./PnPjsExample.template.html'),
+            synchronous: false
+          }
+        );
+      }
+    }
+    ```
 
-    if (Environment.type === EnvironmentType.Local) {
-      console.log("here I am.")
-      ko.components.register(
-        tagName,
-        {
-          viewModel: MockSpPnPjsExampleViewModel,
-          template: require('./PnPjsExample.template.html'),
-          synchronous: false
-        }
-      );
-    } else {
-      ko.components.register(
-        tagName,
-        {
-          viewModel: PnPjsExampleViewModel,
-          template: require('./PnPjsExample.template.html'),
-          synchronous: false
-        }
-      );
-    }    
-  }
-  ```
+1. Type **gulp serve** in the console to bring up the local Workbench, which now works with the mock data. (If you already have the server running, stop it by selecting Ctrl+C, and then restart it):
 
-4. Type `gulp serve` in the console to bring up the local Workbench, which now works with the mock data. (If you already have the server running, stop it by selecting Ctrl+C, and then restart it):
+    ```console
+    gulp serve
+    ```
 
-  ```sh
-  gulp serve
-  ```
-
-  <br/>
-
-  ![Project as it appears running in the local workbench with mock data](../../../images/sp-pnp-js-guide-with-mock-data.png)
-
+    ![Project as it appears running in the local workbench with mock data](../../../images/sp-pnp-js-guide-with-mock-data.png)
 
 ## See also
 
