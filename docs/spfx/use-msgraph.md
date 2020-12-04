@@ -1,7 +1,7 @@
 ---
 title: Use the MSGraphClient to connect to Microsoft Graph
 description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
-ms.date: 06/11/2020
+ms.date: 12/04/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -29,32 +29,32 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
     ```typescript
     import { MSGraphClient } from '@microsoft/sp-http';
     ```
-    
+
 1. **MSGraphClient** is exposed through the **MSGraphClientFactory** available on the web part context. To get a reference to MSGraphClient, in your code add:
 
     ```typescript
     export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
       public render(): void {
         // ...
-    
+
         this.context.msGraphClientFactory
           .getClient()
           .then((client: MSGraphClient): void => {
             // use MSGraphClient here
           });
       }
-    
+
       // ...
     }
     ```
-    
+
 1. After you have the reference to the **MSGraphClient** instance, start communicating with the Microsoft Graph by using its JavaScript Client Library syntax:
 
     ```typescript
     export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
       public render(): void {
         // ...
-    
+
         this.context.msGraphClientFactory
           .getClient()
           .then((client: MSGraphClient): void => {
@@ -66,7 +66,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
             });
           });
       }
-    
+
       // ...
     }
     ```
@@ -77,7 +77,7 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
 
 1. Install the Microsoft Graph TypeScript types:
 
-    ```sh
+    ```console
     npm install @microsoft/microsoft-graph-types --save-dev
     ```
 
@@ -93,7 +93,7 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
     export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
       public render(): void {
         // ...
-    
+
         this.context.msGraphClientFactory
           .getClient()
           .then((client: MSGraphClient): void => {
@@ -105,7 +105,7 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
             });
           });
       }
-    
+
       // ...
     }
     ```
@@ -120,11 +120,11 @@ Additional permission scopes can be requested by developers and granted by tenan
 
 ### Azure AD roles with delegated authentication
 
-The MSGraphClient currently uses implicit authentication flow when requesting delegated permissions from Microsoft Graph.  As stated in [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens#payload-claims), the `wids` claim may not be present when using implicit authentication flow due to length concerns.  The `wids` claim contains the listing of Azure AD tenant-wide roles that have been assigned to the delegated user.
+The MSGraphClient currently uses implicit authentication flow when requesting delegated permissions from Microsoft Graph.  As stated in [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens#payload-claims), the `wids` claim may not be present when using implicit authentication flow because of length concerns.  The `wids` claim contains the listing of Azure AD tenant-wide roles that have been assigned to the delegated user.
 
-As a result, queries to Microsoft Graph endpoints that rely on Azure AD roles in addition to delegated permissions may fail due to the `wids` claim not being present.  At the time of writing this includes the following endpoints:
+As a result, queries to Microsoft Graph endpoints that rely on Azure AD roles also to delegated permissions may fail because of the `wids` claim not being present.  At the time of writing this includes the following endpoints:
 
-  - [Office 365 usage reports](https://docs.microsoft.com/graph/reportroot-authorization)
+- [Office 365 usage reports](https://docs.microsoft.com/graph/reportroot-authorization)
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 11/18/2020
+ms.date: 12/04/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -18,11 +18,11 @@ Start with creating a multi-tenant enterprise API secured with Azure Active Dire
 
 ### Create Azure function
 
-In the [Azure portal](https://ms.portal.azure.com/), create a new Function App.
+In the [Azure portal](https://ms.portal.azure.com/), create a new **Function App**.
 
 > For more information on creating Function Apps in Azure, see the [Create a function app from the Azure portal](https://docs.microsoft.com/azure/azure-functions/functions-create-function-app-portal) help article.
 
-In the Function App, create new HTTP-triggered function. In this example, you'll build it using C#, but there is no restriction with regards to which programming language you can use.
+In the Function App, create new HTTP-triggered function. In this example, you'll build it using C#, but there's no restriction with regard to which programming language you can use.
 
 In the Function App, select the **Add** button and from the list of available function types, choose **HTTP trigger**.
 
@@ -153,11 +153,11 @@ By default, when you secure an Azure Function using an Azure AD application, tha
 
 #### Change the application to be multi-tenant
 
-Go to the home page of the Azure Portal and search for Azure Active Directory 
+Go to the home page of the Azure portal and search for Azure Active Directory 
 
 ![Azure AD](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-aad.png)
 
-On the left blade select **App registrations** and select the app which was automatically created when the function app was created.
+On the left blade, select **App registrations** and select the app that was automatically created when the function app was created.
 
 ![The 'App registrations' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-app-registrations.png)
 
@@ -169,7 +169,7 @@ On the **Overview** click on the **Supported account types** link, which will be
 
 ![The 'Supported account types' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-supported-types.png)
 
-Switch the value of the **Multi-tenanted** field to **Yes** 
+Switch the value of the **Multi-tenanted** field to **Yes**:
 
 ![The 'Save' button highlighted in the Authentication](../images/use-aadhttpclient-enterpriseapi-authen-save.png)
 
@@ -209,7 +209,7 @@ Confirm your changes using the **Save** button.
 
 ### Consent the use of the API in your tenant
 
-Before users in your tenant will be able to use the API from another tenant, the API has to be approved. The approval, also known as consent, can be done on two levels: user and admin (organization). In this scenario, you'll use the admin consent to approve the API for use by the whole organization.
+Before users in your tenant can use the API from another tenant, the API has to be approved. The approval, also known as consent, can be done on two levels: user and admin (organization). In this scenario, you'll use the admin consent to approve the API for use by the whole organization.
 
 > [!NOTE]
 > Usually, the site exposing the API takes your through the process of consenting the API in your tenant. In this example, you'll perform the necessary steps manually to better understand how the process works.
@@ -224,13 +224,13 @@ In the **Get function URL** dialog, copy the URL of the function using the **Cop
 
 ![The 'Copy' button highlighted in the 'Get function URL' dialog](../images/use-aadhttpclient-enterpriseapi-function-ordersfunction-geturl-copy.png)
 
-In a new browser window, navigate to the function URL you have copied. When prompted to sign in, use the admin account from the Office 365 tenant, where you want to use the API.
+In a new browser window, navigate to the function URL you've copied. When prompted to sign in, use the admin account from the Office 365 tenant, where you want to use the API.
 
 After signing in, you'll be prompted to consent with the use of this API.
 
 ![Consent prompt for the enterprise API](../images/use-aadhttpclient-enterpriseapi-consent.png)
 
-This is however the user consent. To switch to the admin consent and approve the API for use by the whole organization, append to the URL `&prompt=admin_consent`. Once again, you'll be prompted with a consent dialog, but notice, that this time, the dialog states that the app will have access to the specified resources for all users in your organization and that no one else will be prompted.
+This is however the user consent. To switch to the admin consent and approve the API for use by the whole organization, append to the URL **&prompt=admin_consent**. Once again, you'll be prompted with a consent dialog, but notice, that this time, the dialog states that the app will have access to the specified resources for all users in your organization and that no one else will be prompted.
 
 Confirm that you want users in your organization to use the API, by selecting the **Accept** button.
 
@@ -238,7 +238,7 @@ Confirm that you want users in your organization to use the API, by selecting th
 
 With the API configured and working, the next step is to build the SharePoint Framework solution that will consume this API.
 
-> Before you proceed, ensure that you have installed version 1.4.1 or higher of the SharePoint Framework Yeoman generator. If you have installed the generator globally, you can check the installed version by executing in the command line: `npm ls -g --depth=0`.
+> Before you proceed, ensure that you have installed version 1.4.1 or higher of the SharePoint Framework Yeoman generator. If you have installed the generator globally, you can check the installed version by executing in the command line: **npm ls -g --depth=0**.
 
 ### Create new SharePoint Framework project
 
@@ -309,7 +309,7 @@ To the **solution** property, add a new section named `webApiPermissionRequests`
 }
 ```
 
-The value of the **resource** property refers to either the name or the ID of the Azure AD application used to secure the API. Using the name is more readable and easier to maintain over time. The value of the **scope** property specifies the permission scope that your solution needs in order to communicate with the API. In this tutorial, Azure AD is used only to secure the API, so `user_impersonation` is the scope that you'll use.
+The value of the **resource** property refers to either the name or the ID of the Azure AD application used to secure the API. Using the name is more readable and easier to maintain over time. The value of the **scope** property specifies the permission scope that your solution needs to communicate with the API. In this tutorial, Azure AD is used only to secure the API, so `user_impersonation` is the scope that you'll use.
 
 > [!NOTE]
 > If you want to connect to an enterprise API that has been created previously, contact your administrator to provide you with details for the Azure AD application used to secure it. You'll need information such as the application ID, permissions the application exposes and the audience it's configured to.
@@ -421,7 +421,7 @@ After completing the implementation of the SharePoint Framework solution, the ne
 
 First, build, and package the project, by executing in the command line:
 
-```sh
+```console
 gulp bundle --ship && gulp package-solution --ship
 ```
 
