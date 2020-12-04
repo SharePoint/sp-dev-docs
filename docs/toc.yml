@@ -307,7 +307,7 @@
       href: spfx/subscribe-to-list-notifications.md
     - name: Tutorials
       items:
-      - name: Consume Microsoft Graph (tutorial)
+      - name: Consume Microsoft Graph
         href: spfx/use-aad-tutorial.md
       - name: Consume enterprise APIs
         href: spfx/use-aadhttpclient-enterpriseapi.md
