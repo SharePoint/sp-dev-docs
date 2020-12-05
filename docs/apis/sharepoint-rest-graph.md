@@ -1,8 +1,8 @@
 ---
 title: Operations using SharePoint REST v2 (Microsoft Graph) endpoints
 description: Perform basic create, read, update, and delete (CRUD) operations with the SharePoint v2 REST interface.
-ms.date: 9/10/2019
-ms.prod: sharepoint online
+ms.date: 12/05/2020
+ms.service: sharepoint-online
 localization_priority: Priority
 ---
 

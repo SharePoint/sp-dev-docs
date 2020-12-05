@@ -1,12 +1,11 @@
 ---
 title: Enterprise Content Management
-ms.date: 3/9/2015
+ms.date: 12/05/2020
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
-ms.topic: sharepoint
 localization_priority: Normal
 ms.assetid: 6f2336fc-0cdd-6596-fdb7-45607006b2c8
 description: "Last modified: March 09, 2015"
