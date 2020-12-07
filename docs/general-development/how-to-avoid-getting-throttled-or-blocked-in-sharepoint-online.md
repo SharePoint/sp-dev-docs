@@ -44,6 +44,9 @@ If the offending process continues to exceed usage limits, SharePoint Online mig
 In addition to throttling by user account, limits are also applied to each application. Every application in SharePoint Online has its own available resources, but multiple applications running against the same tenant ultimately share from the same resource bucket and in rare occurrences can cause rate limiting.
 In these cases, SharePoint Online will attempt to prioritize interactive user requests over background activities.
 
+> [!NOTE]
+> Notice that there is difference between AppOnly authentication and Delegated authentication when making use of Applications when it comes to throttling. When making use of the delegated approach, throttling is applied on an user-basis and not the used application. When making use of the AppOnly way of authenticating, throttling is applied on application-basis.  
+
 ## Common throttling scenarios in SharePoint Online
 
 The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.
@@ -74,7 +77,7 @@ That's why it's so important for your CSOM or REST code to honor the `Retry-Afte
 
 ## Search query volume limits when using app-only authentication with Sites.Read.All permission
 
-In Sharepoint and OneDrive, we process multiple billions of documents and enable our customers to issue large query volumes per second. When you are using SharePoint Online search APIs with app-only authentication and the app having `Sites.Read.All` permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content).
+In SharePoint and OneDrive, we process multiple billions of documents and enable our customers to issue large query volumes per second. When you are using SharePoint Online search APIs with app-only authentication and the app having `Sites.Read.All` permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content).
 
 We want to let our customers know that SharePoint Online search queries using such permission will be throttled at 25 QPS. The search query will return with a 429 response and you can retry the query after 2 minutes. When waiting for 429 recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making additional calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
 
