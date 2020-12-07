@@ -9,6 +9,10 @@ localization_priority: Priority
 
 # Master pages, the Master Page Gallery, and page layouts in SharePoint
 Find links to information about using Design Manager to work with master pages, page layouts, and display templates in publishing sites in SharePoint.
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
   
     

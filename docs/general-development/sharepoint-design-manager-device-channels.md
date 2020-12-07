@@ -10,6 +10,10 @@ localization_priority: Priority
 
 # SharePoint Design Manager device channels
 Learn about, plan and configure a device channels experience on a SharePoint site.
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 ## Introduction to device channels
 <a name="Int"> </a>
 

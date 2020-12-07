@@ -9,6 +9,9 @@ localization_priority: Priority
 
 # Add a web part zone snippet in SharePoint
 
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 A web part zone is a snippet that you can add to a page layout so that content authors can add, edit, or delete web parts in that zone.
 
 ## Introduction to the web part zone snippet

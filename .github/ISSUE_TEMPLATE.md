@@ -23,7 +23,7 @@
 ## Submission guidelines
 
 > - **!!IMPORTANT!!** - All submissions must complete the baseline sections included in this template. Ignoring or deleting this template may result in closing the issue with the label **type:incomplete-submission**.
-> - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/playground-repo/wiki/How-to-Create-Good-Issues).
+> - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/sp-dev-docs/wiki/How-to-Create-Good-Issues).
 > - If you are reporting an issue around any of the documents or articles, please ensure that you have referenced the specific file or URL of the related document.
 > - If you have technical questions about the framework, we monitor the tags #spfx, #spfx-webparts, and #spfx-tooling on [SharePoint StackExchange](http://sharepoint.stackexchange.com).
 > - Remember to include sufficient details and context.

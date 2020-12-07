@@ -1,7 +1,7 @@
 ---
 title: Consume enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to an enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 02/11/2020
+ms.date: 12/04/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -12,7 +12,7 @@ This article illustrates how you would connect to an enterprise API secured with
 
 ## Create an enterprise API secured with Azure AD
 
-Start with creating an enterprise API secured with Azure Active Directory. While there are no restrictions on how the API should be implemented from the SharePoint Framework point of view, in this tutorial, you will build the API using Azure Functions and secure it using Azure App Service Authentication.
+Start with creating an enterprise API secured with Azure Active Directory. While there are no restrictions on how the API should be implemented from the SharePoint Framework point of view, in this tutorial, you'll build the API using Azure Functions and secure it using Azure App Service Authentication.
 
 > While your organization most likely already has specific APIs exposing their applications, this section is meant to give you a complete overview of the implementation and configuration steps.
 
@@ -20,9 +20,9 @@ Start with creating an enterprise API secured with Azure Active Directory. While
 
 In the [Azure portal](https://portal.azure.com/), create a new Function App.
 
-> For more information on creating Function Apps in Azure see the [Create a function app from the Azure portal](https://docs.microsoft.com/azure/azure-functions/functions-create-function-app-portal) help article.
+> For more information on creating Function Apps in Azure, see the [Create a function app from the Azure portal](https://docs.microsoft.com/azure/azure-functions/functions-create-function-app-portal) help article.
 
-In the Function App, you will create a new HTTP-triggered function. In this example, you will build the function using C#, but, in general, there is no restriction on which programming language you must use.
+In the Function App, you'll create a new HTTP-triggered function. In this example, you'll build the function using C#, but, in general, there is no restriction on which programming language you must use.
 
 In the Function App, press the **New Function** button:
 
@@ -36,12 +36,12 @@ In the New Function panel, specify the function name, set the **Authorization le
 
 ![Settings for the new Azure function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
 
->Azure functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you will secure the underlying Function App. This is why, at this stage, you chose not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
+>Azure functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you'll secure the underlying Function App. This is why, at this stage, you chose not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
 
 Once the function is created, replace its contents with the following snippet:
 
 ```cs
-#r "Newtonsoft.Json" 
+#r "Newtonsoft.Json"
 
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
@@ -105,18 +105,17 @@ public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
         }
     });
 }
-
 ```
 
 Verify that the function is working correctly, by pressing the **Save and run** button:
 
 ![The 'Save and run' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-test.png)
 
-If the function executed correctly, you will see a *Status: 200 OK* label and the list orders displayed in the test pane.
+If the function executed correctly, you'll see a *Status: 200 OK* label and the list orders displayed in the test pane.
 
 ### Secure the Azure function
 
-Now that the Azure function is working, the next step is to secure it with Azure Active Directory so that you will need to sign in with your organizational account to access it.
+Now that the Azure function is working, the next step is to secure it with Azure Active Directory so that you'll need to sign in with your organizational account to access it.
 
 On the Function App blade in the side panel select the function app:
 
@@ -134,7 +133,7 @@ On the **Authentication / Authorization** blade, enable App Service Authenticati
 
 ![The 'On' option for the 'App Service Authentication' toggle button highlighted in the Function App authentication settings in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-authn-on.png)
 
-In the **Action to take when request not authenticated** drop down, change the value to *Login with Azure Active Directory*. This setting ensures that anonymous requests to the API are not allowed:
+In the **Action to take when request not authenticated** drop-down, change the value to *Login with Azure Active Directory*. This setting ensures that anonymous requests to the API are not allowed:
 
 ![The 'Login with Azure Active Directory' option highlighted in the 'Action to take when request not authenticated' drop down on the Function App authentication settings blade](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-login.png)
 
@@ -147,7 +146,7 @@ In the **Azure Active Directory Settings** blade, set the **Management mode** op
 ![Azure Active Directory Settings blade opened for a Function app in the Azure portal](../images/use-aadhttpclient-enterpriseapi-secure-function-aad-settings.png)
 
 > [!IMPORTANT]
-> Before you continue, note the value in the **Create App** field. This value represents the name of the Azure AD application that you will use to secure the API, and which you will need later to request permissions to access the API from the SharePoint Framework project.
+> Before you continue, note the value in the **Create App** field. This value represents the name of the Azure AD application that you'll use to secure the API, and which you'll need later to request permissions to access the API from the SharePoint Framework project.
 
 Confirm your selection by pressing the **OK** button.
 
@@ -161,9 +160,9 @@ Confirm that the API is correctly secured by opening a new browser window in pri
 
 ### Get an Azure AD application ID
 
-To be able to request an access token to connect to the API, you will need the application ID of the Azure AD application used to secure that API.
+To request an access token to connect to the API, you'll need the application ID of the Azure AD application used to secure that API.
 
-In the Function App, navigate to the **Authentication** settings. If the **Authentication** link is not available under the **Configured features** header, press the **Refresh** button next to the Function App in the left panel:
+In the Function App, navigate to the **Authentication** settings. If the **Authentication** link isn't available under the **Configured features** header, press the **Refresh** button next to the Function App in the left panel:
 
 ![The 'Authentication' link highlighted on the Function App page](../images/use-aadhttpclient-enterpriseapi-appid-authn.png)
 
@@ -192,7 +191,7 @@ From the **API** group, select the **CORS** link:
 
 ![The 'CORS' link highlighted on the Function App Platform features tab](../images/use-aadhttpclient-enterpriseapi-cors.png)
 
-In the list of allowed origins, add the URL of your SharePoint tenant, eg. `https://contoso.sharepoint.com`:
+In the list of allowed origins, add the URL of your SharePoint tenant, for example, `https://contoso.sharepoint.com`:
 
 ![SharePoint tenant URL added to the list of allowed origins in the Function App CORS settings](../images/use-aadhttpclient-enterpriseapi-cors-sharepoint.png)
 
@@ -210,19 +209,19 @@ Next, you'll create a new SharePoint Framework project to consume the API.
 
 In the command line create a new folder for your project:
 
-```sh
+```console
 md contoso-api
 ```
 
 Change the working directory:
 
-```sh
+```console
 cd contoso-api
 ```
 
 To create a new project, launch the SharePoint Framework Yeoman generator:
 
-```sh
+```console
 yo @microsoft/sharepoint
 ```
 
@@ -238,19 +237,19 @@ When prompted, use the following values:
 - **What is your Web part description?** Show recent orders
 - **Which framework would you like to use?** No JavaScript framework
 
-After the project is created, open it in a code editor. In this tutorial, you will use Visual Studio Code:
+After the project is created, open it in a code editor. In this tutorial, you'll use Visual Studio Code:
 
 ![SharePoint Framework project opened in Visual Studio Code](../images/use-aadhttpclient-enterpriseapi-vscode.png)
 
 ### Request permissions to the enterprise API
 
-By default, SharePoint Framework has no access to enterprise APIs even though they are registered in the same Azure Active Directory as Office 365. This is by design and allows organizations to consciously choose which APIs should be exposed to scripts and client-side solutions deployed to SharePoint. To get access to your enterprise APIs, you need to issue a permission request from the SharePoint Framework project that you're building.
+By default, SharePoint Framework has no access to enterprise APIs even though they're registered in the same Azure Active Directory as Office 365. This is by design and allows organizations to consciously choose which APIs should be exposed to scripts and client-side solutions deployed to SharePoint. To get access to your enterprise APIs, you need to issue a permission request from the SharePoint Framework project that you're building.
 
 In the code editor, open the **config/package-solution.json** file:
 
 ![The package solution file opened in Visual Studio Code](../images/use-aadhttpclient-enterpriseapi-vscode-package-solution.png)
 
-In the **solution** property, add a new property named `webApiPermissionRequests` with a reference to the Azure AD application used to secure your API:
+In the `solution` property, add a new property named `webApiPermissionRequests` with a reference to the Azure AD application used to secure your API:
 
 ```json
 {
@@ -275,7 +274,7 @@ In the **solution** property, add a new property named `webApiPermissionRequests
 }
 ```
 
-The value of the **resource** property must refer to the name of the Azure AD application used to secure the API. The value of the **scope** property specifies the permission scope that your solution needs in order to communicate with the API. In this tutorial, Azure AD is used only to secure the API, so `user_impersonation` is the scope that you will use.
+The value of the `resource` property must refer to the name of the Azure AD application used to secure the API. The value of the `scope` property specifies the permission scope that your solution needs in order to communicate with the API. In this tutorial, Azure AD is used only to secure the API, so `user_impersonation` is the scope that you'll use.
 
 > [!NOTE]
 > If you want to connect to an enterprise API that has been created previously, contact your administrator to provide you with details for the Azure AD application used to secure it. You will need information such as the application ID, permissions the application exposes, and the audience it's configured to.
@@ -288,13 +287,13 @@ In the code editor, open the **src\webparts\orders\OrdersWebPart.ts** file:
 
 ![The OrdersWebPart.ts file opened in Visual Studio Code](../images/use-aadhttpclient-enterpriseapi-vscode-orders.png)
 
-In the top section of the file, reference the **AadHttpClient** and **HttpClientResponse** classes, by adding the following code snippet:
+In the top section of the file, reference the `AadHttpClient` and `HttpClientResponse` classes, by adding the following code snippet:
 
 ```typescript
 import { AadHttpClient, HttpClientResponse } from '@microsoft/sp-http';
 ```
 
-To the **OrdersWebPart** class, add a new class variable named `ordersClient`:
+To the `OrdersWebPart` class, add a new class variable named `ordersClient`:
 
 ```typescript
 export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartProps> {
@@ -304,7 +303,7 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
 }
 ```
 
-Next, in the **OrdersWebPart** class, override the **onInit** method to create an instance of the AadHttpClient:
+Next, in the `OrdersWebPart` class, override the `onInit()` method to create an instance of the AadHttpClient:
 
 ```typescript
 export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartProps> {
@@ -325,9 +324,9 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
 }
 ```
 
-The GUID passed as the second parameter of the **AadHttpClient** constructor, is the application ID of the Azure AD application used to secure the enterprise API.
+The GUID passed as the second parameter of the `AadHttpClient` constructor, is the application ID of the Azure AD application used to secure the enterprise API.
 
-Finally, extend the **render** method to load and display orders retrieved from the enterprise API:
+Finally, extend the `render()` method to load and display orders retrieved from the enterprise API:
 
 ```typescript
 export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartProps> {
@@ -385,9 +384,9 @@ export default class OrdersWebPart extends BaseClientSideWebPart<IOrdersWebPartP
 
 After completing the implementation of the SharePoint Framework solution, the next step is to deploy it to SharePoint.
 
-First, build and package the project using the command line:
+First, build, and package the project using the command line:
 
-```sh
+```console
 gulp bundle --ship && gulp package-solution --ship
 ```
 
@@ -450,7 +449,7 @@ In the canvas, select a section to add the web part to:
 
 ![Page section highlighted in the web browser](../images/use-aadhttpclient-enterpriseapi-webpart-section.png)
 
-Select the **+** option to open the toolbox. In the search box type `Orders` to quickly find the **Orders** web part:
+Select the **+** option to open the toolbox. In the search box type **Orders** to quickly find the **Orders** web part:
 
 !['Orders' typed in the toolbox. Orders web part displayed in the toolbox](../images/use-aadhttpclient-enterpriseapi-webpart-toolbox.png)
 

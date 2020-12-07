@@ -1,15 +1,17 @@
 ---
 title: Tutorial - Build SharePoint Framework client-side web parts with AngularJS
 description: Use AngularJS to build a client-side web part to manage To Do items and style it using Office UI Fabric.
-ms.date: 08/19/2020
+ms.date: 12/02/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-
 # Build SharePoint Framework client-side web parts with AngularJS
 
-If you are familiar with AngularJS, you can also use this extremely popular framework to build client-side web parts. Thanks to its modularity, it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using AngularJS for building SharePoint solutions in the past. This article shows how to use AngularJS to build a SharePoint Framework client-side web part and have it styled using [Office UI Fabric](https://developer.microsoft.com/fabric). 
+> [!NOTE]
+> This page has been retired as AnuglarJS v1 is very old and no longer supported by Angular maintainers.
+
+If you're familiar with AngularJS, you can also use this popular framework to build client-side web parts. Thanks to its modularity, it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using AngularJS for building SharePoint solutions in the past. This article shows how to use AngularJS to build a SharePoint Framework client-side web part and have it styled using [Office UI Fabric](https://developer.microsoft.com/fabric).
 
 During this tutorial, you build a simple web part that manages To Do items.
 
@@ -17,55 +19,54 @@ During this tutorial, you build a simple web part that manages To Do items.
 
 The source of the working web part is available on GitHub at [samples/angular-todo/](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-todo).
 
-> [!NOTE] 
+> [!NOTE]
 > Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 ## Create a new project
 
 1. Create a new folder for your project
 
-  ```sh
-  md angular-todo
-  ```
+    ```console
+    md angular-todo
+    ```
 
-2. Navigate to the project folder:
+1. Navigate to the project folder:
 
-  ```sh
-  cd angular-todo
-  ```
+    ```console
+    cd angular-todo
+    ```
 
-3. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project:
+1. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project:
 
-  ```sh
-  yo @microsoft/sharepoint
-  ```
+    ```console
+    yo @microsoft/sharepoint
+    ```
 
-4. When prompted, define values as follows:
+1. When prompted, define values as follows:
 
-  - **angular-todo** as your solution name
-  - **Use the current folder** for the location to place the files
-  - **No JavaScript framework** as the starting point to build the web part
-  - **To do** as your web part name
-  - **Simple management of to do tasks** as your web part description
+    - **angular-todo** as your solution name
+    - **Use the current folder** for the location to place the files
+    - **No JavaScript framework** as the starting point to build the web part
+    - **To do** as your web part name
+    - **Simple management of to do tasks** as your web part description
 
   ![SharePoint Framework Yeoman generator with the default choices](../../../images/ng-intro-yeoman-generator.png)
 
-5. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
+1. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
-  ```sh
+  ```console
   npm shrinkwrap
   ```
 
-6. Open your project folder in your code editor. In this tutorial, you use Visual Studio Code.
+1. Open your project folder in your code editor. In this tutorial, you use Visual Studio Code.
 
-  ![SharePoint Framework project open in Visual Studio Code](../../../images/ng-intro-project-visual-studio-code.png)
-
+    ![SharePoint Framework project open in Visual Studio Code](../../../images/ng-intro-project-visual-studio-code.png)
 
 ## Add AngularJS
 
-In this tutorial, you load AngularJS from a CDN. 
+In this tutorial, you load AngularJS from a CDN.
 
-In the code editor, open the **config/config.json** file, and in the **externals** property, add the following lines:
+In the code editor, open the **config/config.json** file, and in the `externals` property, add the following lines:
 
 ```json
 "angular": {
@@ -74,17 +75,15 @@ In the code editor, open the **config/config.json** file, and in the **externals
 }
 ```
 
-<br/>
-
 ![AngularJS added to the config.json file](../../../images/ng-intro-angular-config.png)
 
-## Add AngularJS typings for TypeScript
+## Add AngularJS type declarations for TypeScript
 
-Because you are referencing AngularJS in your web part's code, you also need AngularJS typings for TypeScript. 
+Because you're referencing AngularJS in your web part's code, you also need AngularJS type declarations for TypeScript.
 
 To install them, run the following in the command line:
 
-```sh
+```console
 npm install @types/angular --save-dev
 ```
 
@@ -134,8 +133,7 @@ export default class DataService implements IDataService {
   ];
   private nextId: number = 4;
 
-  constructor(private $q: angular.IQService) {
-  }
+  constructor(private $q: angular.IQService) { }
 
   public getTodos(hideFinishedTasks: boolean): angular.IPromise<ITodo[]> {
     const deferred: angular.IDeferred<ITodo[]> = this.$q.defer();
@@ -206,14 +204,13 @@ export default class DataService implements IDataService {
 }
 ```
 
-<br/>
-
 ![The DataService.ts file opened in Visual Studio Code](../../../images/ng-intro-dataservice.png)
 
-In the previous code snippet, you implement three types: 
+In the previous code snippet, you implement three types:
+
 - The **ITodo** interface, which represents a To Do item in your application.
 - The **IDataService** interface, which defines the signature of the data service.
-- The **DataService** class, which is responsible for retrieving and manipulating To Do items. 
+- The **DataService** class, which is responsible for retrieving and manipulating To Do items.
 
 The data service implements simple methods for adding and modifying To Do items. Even though the operations are instantaneous, for consistency, each CRUD function returns a promise.
 
@@ -221,7 +218,7 @@ In this tutorial, To Do items are stored in memory. You could, however, easily e
 
 ### Implement the controller
 
-Next, implement the controller that facilitates communication between the view and the data service. 
+Next, implement the controller that makes communication between the view and the data service.
 
 In the **app** folder, create a new file named **HomeController.ts**, and paste the following code:
 
@@ -333,15 +330,13 @@ export default class HomeController {
 }
 ```
 
-<br/>
-
 ![The HomeController.ts file opened in Visual Studio Code](../../../images/ng-intro-homecontroller.png)
 
-You start by loading the previously implemented data service. The controller needs it to get the list of items and modify items as requested by the user. Using AngularJS's dependency injection, the service is injected into the controller. The controller implements a number of functions that are exposed to the view model and called from the template. Using these functions, users are able to add new items, mark items as finished or To Do, or delete items.
+You start by loading the previously implemented data service. The controller needs it to get the list of items and modify items as requested by the user. Using AngularJS's dependency injection, the service is injected into the controller. The controller implements a number of functions that are exposed to the view model and called from the template. Using these functions, users can add new items, mark items as finished or To Do, or delete items.
 
 ### Implement the main module
 
-With the data service and the controller ready, define the main module of your application and register the data service and controller with it. 
+With the data service and the controller ready, define the main module of your application and register the data service and controller with it.
 
 In the **app** folder, create a new file called **app-module.ts**, and paste the following contents:
 
@@ -357,8 +352,6 @@ todoapp
   .service('DataService', DataService);
 ```
 
-<br/>
-
 ![The app-module.ts file opened in Visual Studio Code](../../../images/ng-intro-app-module.png)
 
 You start by referencing AngularJS and by loading the previously implemented controller and data service. Next, you define the module for your application. Finally, you register the controller and data service with your application.
@@ -367,58 +360,56 @@ Now you've built an AngularJS application for your web part. In the following st
 
 ## Register AngularJS application with web part
 
-The next step is to add the AngularJS application to the web part. 
+The next step is to add the AngularJS application to the web part.
 
 1. In the code editor, open the **ToDoWebPart.ts** file.
+1. Just before the class declaration, add the following lines:
 
-2. Just before the class declaration, add the following lines:
+    ```typescript
+    import * as angular from 'angular';
+    import './app/app-module';
+    ```
 
-  ```typescript
-  import * as angular from 'angular';
-  import './app/app-module';
-  ```
+    ![Import statements in the ToDoWebPart.ts file highlighted in Visual Studio Code](../../../images/ng-intro-web-part-import-angular.png)
 
-  <br/>
+    This allows us to load a reference to AngularJS and your application, both of which you need to bootstrap your AngularJS application.
 
-  ![Import statements in the ToDoWebPart.ts file highlighted in Visual Studio Code](../../../images/ng-intro-web-part-import-angular.png)
+1. Change the web part's **render()** function to:
 
-  This allows us to load a reference to AngularJS and your application, both of which you need to bootstrap your AngularJS application.
-
-3. Change the web part's **render** function to:
-
-  ```typescript
-  public render(): void {
-    if (this.renderedOnce === false) {
-      this.domElement.innerHTML = `
-  <div class="${styles.toDo}">
-    <div data-ng-controller="HomeController as vm">
-      <div class="${styles.loading}" ng-show="vm.isLoading">
-        <div class="${styles.spinner}">
-          <div class="${styles.spinnerCircle} ${styles.spinnerLarge}"></div>
-          <div class="${styles.spinnerLabel}">Loading...</div>
+    ```typescript
+    public render(): void {
+      if (this.renderedOnce === false) {
+        this.domElement.innerHTML = `
+    <div class="${styles.toDo}">
+      <div data-ng-controller="HomeController as vm">
+        <div class="${styles.loading}" ng-show="vm.isLoading">
+          <div class="${styles.spinner}">
+            <div class="${styles.spinnerCircle} ${styles.spinnerLarge}"></div>
+            <div class="${styles.spinnerLabel}">Loading...</div>
+          </div>
         </div>
-      </div>
-      <div ng-show="vm.isLoading === false">
-        <div class="${styles.textField} ${styles.underlined}" ng-class="{'${styles.isActive}': vm.newToDoActive}">
-          <label for="newToDo" class="${styles.label}">New to do:</label>
-          <input type="text" label="New to do:" id="newToDo" value="" class="${styles.field}" aria-invalid="false" ng-model="vm.newItem" ng-keydown="vm.todoKeyDown($event)" ng-focus="vm.newToDoActive = true" ng-blur="vm.newToDoActive = false">
+        <div ng-show="vm.isLoading === false">
+          <div class="${styles.textField} ${styles.underlined}" ng-class="{'${styles.isActive}': vm.newToDoActive}">
+            <label for="newToDo" class="${styles.label}">New to do:</label>
+            <input type="text" label="New to do:" id="newToDo" value="" class="${styles.field}" aria-invalid="false" ng-model="vm.newItem" ng-keydown="vm.todoKeyDown($event)" ng-focus="vm.newToDoActive = true" ng-blur="vm.newToDoActive = false">
+          </div>
         </div>
-      </div>
-      <div class="list" ng-show="vm.isLoading === false">
-        <div class="listSurface">
-          <div class="listPage">
-            <div class="listCell" ng-repeat="todo in vm.todoCollection" uif-item="todo" ng-class="{'${styles.done}': todo.done}">
-              <div class="${styles.listItem}">
-                <span class="${styles.listItemPrimaryText}">{{todo.title}}</span>
-                <div class="${styles.listItemActions}">
-                  <div class="${styles.listItemAction}" ng-click="vm.completeTodo(todo)" ng-show="todo.done === false">
-                    <i class="${styles.icon} ${styles.iconCheckMark}"></i>
-                  </div>
-                  <div class="${styles.listItemAction}" ng-click="vm.undoTodo(todo)" ng-show="todo.done">
-                    <i class="${styles.icon} ${styles.iconUndo}"></i>
-                  </div>
-                  <div class="${styles.listItemAction}" ng-click="vm.deleteTodo(todo)">
-                    <i class="${styles.icon} ${styles.iconRecycleBin}"></i>
+        <div class="list" ng-show="vm.isLoading === false">
+          <div class="listSurface">
+            <div class="listPage">
+              <div class="listCell" ng-repeat="todo in vm.todoCollection" uif-item="todo" ng-class="{'${styles.done}': todo.done}">
+                <div class="${styles.listItem}">
+                  <span class="${styles.listItemPrimaryText}">{{todo.title}}</span>
+                  <div class="${styles.listItemActions}">
+                    <div class="${styles.listItemAction}" ng-click="vm.completeTodo(todo)" ng-show="todo.done === false">
+                      <i class="${styles.icon} ${styles.iconCheckMark}"></i>
+                    </div>
+                    <div class="${styles.listItemAction}" ng-click="vm.undoTodo(todo)" ng-show="todo.done">
+                      <i class="${styles.icon} ${styles.iconUndo}"></i>
+                    </div>
+                    <div class="${styles.listItemAction}" ng-click="vm.deleteTodo(todo)">
+                      <i class="${styles.icon} ${styles.iconRecycleBin}"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -426,281 +417,273 @@ The next step is to add the AngularJS application to the web part.
           </div>
         </div>
       </div>
-    </div>
-  </div>`;
+    </div>`;
 
-      angular.bootstrap(this.domElement, ['todoapp']);
-    }
-  }
-  ```
-
-  <br/>
-
-  ![Web part's render function in Visual Studio Code](../../../images/ng-intro-web-part-render-angular.png)
-
-4. The code first assigns the template of your application directly to the web part's DOM element. On the root element, you specify the name of the controller that handles events and data binding in the template. 
-
-5. Bootstrap your application by using the **todoapp** name you used previously when declaring the main module. 
-
-6. Using the **renderedOnce** web part property, ensure that your AngularJS application is bootstrapped only once. Without it, if you changed one of the web part's properties, the **render** function is invoked again, bootstrapping the AngularJS application again, which leads to an error.
-
-7. Implement CSS styles that you are using in the template. In the code editor, open the **ToDo.module.scss** file, and replace its contents with:
-
-  ```css
-  .toDo {
-    .loading {
-      margin: 0 auto;
-      width: 6em;
-
-      .spinner {
-        display: inline-block;
-        margin: 10px 0;
-
-        @-webkit-keyframes spinnerSpin {
-          0% {
-            -webkit-transform:rotate(0);
-            transform:rotate(0);
-          }
-          100% {
-            -webkit-transform:rotate(360deg);
-            transform:rotate(360deg);
-          }
-        }
-        @keyframes spinnerSpin {
-          0% {
-            -webkit-transform:rotate(0);
-            transform:rotate(0);
-          }
-          100% {
-            -webkit-transform:rotate(360deg);
-            transform:rotate(360deg);
-          }
-        }
-
-        .spinnerCircle {
-          margin: auto;
-          box-sizing: border-box;
-          border-radius: 50%;
-          width: 100%;
-          height: 100%;
-          border: 1.5px solid #c7e0f4;
-          border-top-color: #0078d7;
-          -webkit-animation: spinnerSpin 1.3s infinite cubic-bezier(.53, .21, .29, .67);
-          animation: spinnerSpin 1.3s infinite cubic-bezier(.53, .21, .29, .67);
-
-          &.spinnerLarge {
-            width: 28px;
-            height: 28px;
-          }
-        }
-
-        .spinnerLabel {
-          color: #0078d7;
-          margin-top: 10px;
-          text-align: center;
-        }
+        angular.bootstrap(this.domElement, ['todoapp']);
       }
     }
+    ```
 
-    .label {
-      font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      font-size: 14px;
-      font-weight: 400;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      box-shadow: none;
-      color: #333333;
-      box-sizing: border-box;
-      display: block;
-      padding: 5px 0
-    }
+    ![Web part's render function in Visual Studio Code](../../../images/ng-intro-web-part-render-angular.png)
 
-    .textField {
-      font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      box-shadow: none;
-      color: #333333;
-      font-size: 14px;
-      font-weight: 400;
-      margin-bottom: 8px;
+1. The code first assigns the template of your application directly to the web part's DOM element. On the root element, you specify the name of the controller that handles events and data binding in the template.
+1. Bootstrap your application by using the **todoapp** name you used previously when declaring the main module.
+1. Using the `renderedOnce` web part property, ensure that your AngularJS application is bootstrapped only once. Without it, if you changed one of the web part's properties, the `render()` function is invoked again, bootstrapping the AngularJS application again, which leads to an error.
+1. Implement CSS styles that you're using in the template. In the code editor, open the **ToDo.module.scss** file, and replace its contents with:
 
-      &.underlined {
-        border-bottom: 1px solid #c8c8c8;
-        display: table;
-        width: 100%;
+    ```css
+    .toDo {
+      .loading {
+        margin: 0 auto;
+        width: 6em;
 
-        &:hover {
-          border-color: #767676;
-        }
+        .spinner {
+          display: inline-block;
+          margin: 10px 0;
 
-        &.isActive, &:active {
-          border-color: #0078d7;
-        }
+          @-webkit-keyframes spinnerSpin {
+            0% {
+              -webkit-transform:rotate(0);
+              transform:rotate(0);
+            }
+            100% {
+              -webkit-transform:rotate(360deg);
+              transform:rotate(360deg);
+            }
+          }
+          @keyframes spinnerSpin {
+            0% {
+              -webkit-transform:rotate(0);
+              transform:rotate(0);
+            }
+            100% {
+              -webkit-transform:rotate(360deg);
+              transform:rotate(360deg);
+            }
+          }
 
-        .field {
-          border: 0;
-          display: table-cell;
-          padding-top: 8px;
-          padding-bottom: 3px
+          .spinnerCircle {
+            margin: auto;
+            box-sizing: border-box;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            border: 1.5px solid #c7e0f4;
+            border-top-color: #0078d7;
+            -webkit-animation: spinnerSpin 1.3s infinite cubic-bezier(.53, .21, .29, .67);
+            animation: spinnerSpin 1.3s infinite cubic-bezier(.53, .21, .29, .67);
+
+            &.spinnerLarge {
+              width: 28px;
+              height: 28px;
+            }
+          }
+
+          .spinnerLabel {
+            color: #0078d7;
+            margin-top: 10px;
+            text-align: center;
+          }
         }
       }
 
       .label {
-        padding-right: 0;
-        padding-left: 12px;
-        margin-right: 8px;
+        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
         font-size: 14px;
-        display: table-cell;
-        vertical-align: top;
-        padding-top: 9px;
-        height: 32px;
-        width: 1%;
-        white-space: nowrap;
         font-weight: 400;
-      }
-
-      .field {
-        text-align: left;
-        float: left;
         box-sizing: border-box;
         margin: 0;
         padding: 0;
         box-shadow: none;
-        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        border: 1px solid #c8c8c8;
-        border-radius: 0;
-        font-weight: 400;
-        font-size: 14px;
         color: #333333;
-        height: 32px;
-        padding: 0 12px 0 12px;
-        width: 100%;
-        outline: 0;
-        text-overflow: ellipsis;
+        box-sizing: border-box;
+        display: block;
+        padding: 5px 0
       }
 
-      .field:hover {
-        border-color: #767676;
-      }
-    }
-
-    .listItem {
-      font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
-      -webkit-font-smoothing: antialiased;
-      font-size: 14px;
-      font-weight: 400;
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      box-shadow: none;
-      padding: 9px 28px 3px;
-      position: relative;
-      display: block;
-
-      &::before {
-        display: table;
-        content: "";
-        line-height: 0;
-      }
-
-      &::after {
-        display: table;
-        content: "";
-        line-height: 0;
-        clear: both;
-      }
-
-      .listItemPrimaryText {
+      .textField {
         font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
         -webkit-font-smoothing: antialiased;
-        font-size: 21px;
-        font-weight: 100;
-        padding-right: 80px;
-        position: relative;
-        top: -4px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        display: block;
-      }
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 8px;
 
-      .listItemActions {
-        max-width: 80px;
-        position: absolute;
-        right: 30px;
-        text-align: right;
-        top: 10px;
-
-        .listItemAction {
-          color: #a6a6a6;
-          display: inline-block;
-          font-size: 15px;
-          position: relative;
-          text-align: center;
-          top: 3px;
-          cursor: pointer;
-          height: 16px;
-          width: 16px;
+        &.underlined {
+          border-bottom: 1px solid #c8c8c8;
+          display: table;
+          width: 100%;
 
           &:hover {
-            color: #666666;
-            outline: 1px solid transparent;
+            border-color: #767676;
           }
 
-          .icon {
-            vertical-align: top;
+          &.isActive, &:active {
+            border-color: #0078d7;
+          }
+
+          .field {
+            border: 0;
+            display: table-cell;
+            padding-top: 8px;
+            padding-bottom: 3px
+          }
+        }
+
+        .label {
+          padding-right: 0;
+          padding-left: 12px;
+          margin-right: 8px;
+          font-size: 14px;
+          display: table-cell;
+          vertical-align: top;
+          padding-top: 9px;
+          height: 32px;
+          width: 1%;
+          white-space: nowrap;
+          font-weight: 400;
+        }
+
+        .field {
+          text-align: left;
+          float: left;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+          font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+          -webkit-font-smoothing: antialiased;
+          border: 1px solid #c8c8c8;
+          border-radius: 0;
+          font-weight: 400;
+          font-size: 14px;
+          color: #333333;
+          height: 32px;
+          padding: 0 12px 0 12px;
+          width: 100%;
+          outline: 0;
+          text-overflow: ellipsis;
+        }
+
+        .field:hover {
+          border-color: #767676;
+        }
+      }
+
+      .listItem {
+        font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        font-weight: 400;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        padding: 9px 28px 3px;
+        position: relative;
+        display: block;
+
+        &::before {
+          display: table;
+          content: "";
+          line-height: 0;
+        }
+
+        &::after {
+          display: table;
+          content: "";
+          line-height: 0;
+          clear: both;
+        }
+
+        .listItemPrimaryText {
+          font-family: "Segoe UI WestEuropean", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+          -webkit-font-smoothing: antialiased;
+          font-size: 21px;
+          font-weight: 100;
+          padding-right: 80px;
+          position: relative;
+          top: -4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+        }
+
+        .listItemActions {
+          max-width: 80px;
+          position: absolute;
+          right: 30px;
+          text-align: right;
+          top: 10px;
+
+          .listItemAction {
+            color: #a6a6a6;
+            display: inline-block;
+            font-size: 15px;
+            position: relative;
+            text-align: center;
+            top: 3px;
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+
+            &:hover {
+              color: #666666;
+              outline: 1px solid transparent;
+            }
+
+            .icon {
+              vertical-align: top;
+            }
           }
         }
       }
-    }
 
-    .done {
-      text-decoration: line-through;
-    }
-
-    .icon {
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      font-family: FabricMDL2Icons;
-      font-style: normal;
-      font-weight: 400;
-      speak: none;
-
-      &.iconCheckMark::before {
-        content: "\E73E";
+      .done {
+        text-decoration: line-through;
       }
 
-      &.iconUndo::before {
-        content: "\E7A7";
-      }
+      .icon {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-family: FabricMDL2Icons;
+        font-style: normal;
+        font-weight: 400;
+        speak: none;
 
-      &.iconRecycleBin::before {
-        content: "\EF87";
+        &.iconCheckMark::before {
+          content: "\E73E";
+        }
+
+        &.iconUndo::before {
+          content: "\E7A7";
+        }
+
+        &.iconRecycleBin::before {
+          content: "\EF87";
+        }
       }
     }
-  }
-  ```
+    ```
 
-  <br/>
+    ![The ToDo.module.scss file open in Visual Studio Code](../../../images/ng-intro-web-part-css.png)
 
-  ![The ToDo.module.scss file open in Visual Studio Code](../../../images/ng-intro-web-part-css.png)
+1. Run the following command to confirm that everything is working as expected:
 
-8. Run the following command to confirm that everything is working as expected:
+    ```console
+    gulp serve
+    ```
 
-  ```sh
-  gulp serve
-  ```
+1. In the browser, you should see your To Do web part showing To Do items.
 
-9. In the browser, you should see your To Do web part showing To Do items.
-
-  ![To Do web part showing To Do items rendered by using Office UI Fabric](../../../images/ng-intro-workbench-office-ui-fabric.png)
+    ![To Do web part showing To Do items rendered by using Office UI Fabric](../../../images/ng-intro-workbench-office-ui-fabric.png)
 
 ## Make web part configurable
 
@@ -708,15 +691,13 @@ At this point, the To Do web part shows a fixed list of To Do items. Next, you e
 
 ### Add property in the web part manifest
 
-Start by adding a configuration property in the web part manifest. 
+Start by adding a configuration property in the web part manifest.
 
-In the code editor, open the **ToDoWebPart.manifest.json** file. In the **preconfiguredEntries** section, navigate to the **properties** array, and replace the existing **description** property with the following line:
+In the code editor, open the **ToDoWebPart.manifest.json** file. In the `preconfiguredEntries` section, navigate to the `properties` array, and replace the existing `description` property with the following line:
 
 ```json
 "hideFinishedTasks": false
 ```
-
-<br/>
 
 ![The hideFinishedTasks property highlighted in web part manifest](../../../images/ng-intro-manifest-property.png)
 
@@ -732,204 +713,190 @@ export interface IToDoWebPartProps {
 }
 ```
 
-<br/>
-
 ![The IToDoWebPartProps.ts file open in Visual Studio Code](../../../images/ng-intro-property-interface.png)
 
 ### Add the property to the web part property pane
 
 To allow users to configure the value of your newly added property, you have to expose it through the web part property pane.
 
-1. In the code editor, open the **ToDoWebPart.ts** file. 
+1. In the code editor, open the **ToDoWebPart.ts** file.
+1. In the first `import` statement, replace  `PropertyPaneTextField` with `PropertyPaneToggle`:
 
-2. In the first `import` statement, replace  `PropertyPaneTextField` with `PropertyPaneToggle`:
+    ```typescript
+    import {
+      BaseClientSideWebPart,
+      IPropertyPaneConfiguration,
+      PropertyPaneToggle
+    } from '@microsoft/sp-webpart-base';
+    ```
 
-  ```typescript
-  import {
-    BaseClientSideWebPart,
-    IPropertyPaneConfiguration,
-    PropertyPaneToggle
-  } from '@microsoft/sp-webpart-base';
-  ```
+    ![PropertyPaneToggle import statement highlighted in Visual Studio Code](../../../images/ng-intro-property-pane-toggle.png)
 
-  <br/>
+1. Change the implementation of the `propertyPaneSettings` function to:
 
-  ![PropertyPaneToggle import statement highlighted in Visual Studio Code](../../../images/ng-intro-property-pane-toggle.png)
-
-3. Change the implementation of the `propertyPaneSettings` function to:
-
-  ```typescript
-  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
-    return {
-      pages: [
-        {
-          header: {
-            description: strings.PropertyPaneDescription
-          },
-          groups: [
-            {
-              groupName: strings.ViewGroupName,
-              groupFields: [
-                PropertyPaneToggle('hideFinishedTasks', {
-                  label: strings.HideFinishedTasksFieldLabel
-                })
-              ]
-            }
-          ]
-        }
-      ]
-    };
-  }
-  ```
-
-4. To fix the missing string references, you first need to change the signature of your strings. In the code editor, open the **loc/mystrings.d.ts** file, and change its contents to:
-
-  ```typescript
-  declare interface IToDoWebPartStrings {
-    PropertyPaneDescription: string;
-    ViewGroupName: string;
-    HideFinishedTasksFieldLabel: string;
-  }
-
-  declare module 'ToDoWebPartStrings' {
-    const strings: IToDoWebPartStrings;
-    export = strings;
-  }
-  ```
-
-  <br/>
-
-  ![The loc/mystrings.d.ts file open in Visual Studio Code](../../../images/ng-intro-strings-interface.png)
-
-5. Provide the actual values for the newly defined strings. In the code editor, open the **loc/en-us.js** file, and change its contents to:
-
-  ```javascript
-  define([], function() {
-    return {
-      "PropertyPaneDescription": "Manage configuration of the To do web part",
-      "ViewGroupName": "View",
-      "HideFinishedTasksFieldLabel": "Hide finished tasks"
+    ```typescript
+    protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
+      return {
+        pages: [
+          {
+            header: {
+              description: strings.PropertyPaneDescription
+            },
+            groups: [
+              {
+                groupName: strings.ViewGroupName,
+                groupFields: [
+                  PropertyPaneToggle('hideFinishedTasks', {
+                    label: strings.HideFinishedTasksFieldLabel
+                  })
+                ]
+              }
+            ]
+          }
+        ]
+      };
     }
-  });
-  ```
+    ```
 
-  <br/>
+1. To fix the missing string references, you first need to change the signature of your strings. In the code editor, open the **loc/mystrings.d.ts** file, and change its contents to:
 
-  ![The loc/en-us.js file open in Visual Studio Code](../../../images/ng-intro-strings.png)
+    ```typescript
+    declare interface IToDoWebPartStrings {
+      PropertyPaneDescription: string;
+      ViewGroupName: string;
+      HideFinishedTasksFieldLabel: string;
+    }
 
-6. Run the following command to confirm that everything is working as expected:
+    declare module 'ToDoWebPartStrings' {
+      const strings: IToDoWebPartStrings;
+      export = strings;
+    }
+    ```
 
-  ```sh
-  gulp serve
-  ```
+    ![The loc/mystrings.d.ts file open in Visual Studio Code](../../../images/ng-intro-strings-interface.png)
 
-7. In the web part property pane, you should see a toggle button for your newly defined property.
+1. Provide the actual values for the newly defined strings. In the code editor, open the **loc/en-us.js** file, and change its contents to:
 
-  ![Toggle button displayed on the web part property pane](../../../images/ng-intro-property-pane-toggle-browser.png)
+    ```javascript
+    define([], function() {
+      return {
+        "PropertyPaneDescription": "Manage configuration of the To do web part",
+        "ViewGroupName": "View",
+        "HideFinishedTasksFieldLabel": "Hide finished tasks"
+      }
+    });
+    ```
 
-  At this point, selecting the toggle button doesn't have any effect on your web part because it hasn't been connected to AngularJS. You do that in the next step.
+    ![The loc/en-us.js file open in Visual Studio Code](../../../images/ng-intro-strings.png)
+
+1. Run the following command to confirm that everything is working as expected:
+
+    ```console
+    gulp serve
+    ```
+
+1. In the web part property pane, you should see a toggle button for your newly defined property.
+
+    ![Toggle button displayed on the web part property pane](../../../images/ng-intro-property-pane-toggle-browser.png)
+
+    At this point, selecting the toggle button doesn't have any effect on your web part because it hasn't been connected to AngularJS. You do that in the next step.
 
 ### Make the AngularJS application configurable using web part properties
 
-In the previous step, you defined a web part property that allows users to choose whether to show completed tasks or not. Next you pass the value selected by the user into the AngularJS application so that it can load items accordingly.
+In the previous step, you defined a web part property that allows users to choose whether to show completed tasks or not. Next you pass the value selected by the user into the AngularJS application so that it can load items.
 
 #### Broadcast AngularJS event on web part property change
 
-1. In the code editor, open the **ToDoWebPart.ts** file. Right above the render method, add the following line:
+1. In the code editor, open the **ToDoWebPart.ts** file. Right above the `render()` method, add the following line:
 
-  ```typescript
-  private $injector: angular.auto.IInjectorService;
-  ```
+    ```typescript
+    private $injector: angular.auto.IInjectorService;
+    ```
 
-  <br/>
+    ![$injector class variable highlighted in Visual Studio Code](../../../images/ng-intro-injector-class-variable.png)
 
-  ![$injector class variable highlighted in Visual Studio Code](../../../images/ng-intro-injector-class-variable.png)
+1. Change the web part's `render()` function to the following:
 
-2. Change the web part's **render** function to the following:
-
-  ```typescript
-  public render(): void {
-    if (this.renderedOnce === false) {
-      this.domElement.innerHTML = `
-  <div class="${styles.toDo}">
-    <div data-ng-controller="HomeController as vm">
-      <div class="${styles.loading}" ng-show="vm.isLoading">
-        <div class="${styles.spinner}">
-          <div class="${styles.spinnerCircle} ${styles.spinnerLarge}"></div>
-          <div class="${styles.spinnerLabel}">Loading...</div>
-        </div>
-      </div>
-      <div ng-show="vm.isLoading === false">
-        <div class="${styles.textField} ${styles.underlined}" ng-class="{'${styles.isActive}': vm.newToDoActive}">
-          <label for="newToDo" class="${styles.label}">New to do:</label>
-          <input type="text" label="New to do:" id="newToDo" value="" class="${styles.field}" aria-invalid="false" ng-model="vm.newItem" ng-keydown="vm.todoKeyDown($event)" ng-focus="vm.newToDoActive = true" ng-blur="vm.newToDoActive = false">
-        </div>
-      </div>
-      <div class="list" ng-show="vm.isLoading === false">
-        <div class="listSurface">
-          <div class="listPage">
-            <div class="listCell" ng-repeat="todo in vm.todoCollection" uif-item="todo" ng-class="{'${styles.done}': todo.done}">
-              <div class="${styles.listItem}">
-                <span class="${styles.listItemPrimaryText}">{{todo.title}}</span>
-                <div class="${styles.listItemActions}">
-                  <div class="${styles.listItemAction}" ng-click="vm.completeTodo(todo)" ng-show="todo.done === false">
-                    <i class="${styles.icon} ${styles.iconCheckMark}"></i>
-                  </div>
-                  <div class="${styles.listItemAction}" ng-click="vm.undoTodo(todo)" ng-show="todo.done">
-                    <i class="${styles.icon} ${styles.iconUndo}"></i>
-                  </div>
-                  <div class="${styles.listItemAction}" ng-click="vm.deleteTodo(todo)">
-                    <i class="${styles.icon} ${styles.iconRecycleBin}"></i>
+    ```typescript
+    public render(): void {
+      if (this.renderedOnce === false) {
+        this.domElement.innerHTML = `
+          <div class="${styles.toDo}">
+            <div data-ng-controller="HomeController as vm">
+              <div class="${styles.loading}" ng-show="vm.isLoading">
+                <div class="${styles.spinner}">
+                  <div class="${styles.spinnerCircle} ${styles.spinnerLarge}"></div>
+                  <div class="${styles.spinnerLabel}">Loading...</div>
+                </div>
+              </div>
+              <div ng-show="vm.isLoading === false">
+                <div class="${styles.textField} ${styles.underlined}" ng-class="{'${styles.isActive}': vm.newToDoActive}">
+                  <label for="newToDo" class="${styles.label}">New to do:</label>
+                  <input type="text" label="New to do:" id="newToDo" value="" class="${styles.field}" aria-invalid="false" ng-model="vm.newItem" ng-keydown="vm.todoKeyDown($event)" ng-focus="vm.newToDoActive = true" ng-blur="vm.newToDoActive = false">
+                </div>
+              </div>
+              <div class="list" ng-show="vm.isLoading === false">
+                <div class="listSurface">
+                  <div class="listPage">
+                    <div class="listCell" ng-repeat="todo in vm.todoCollection" uif-item="todo" ng-class="{'${styles.done}': todo.done}">
+                      <div class="${styles.listItem}">
+                        <span class="${styles.listItemPrimaryText}">{{todo.title}}</span>
+                        <div class="${styles.listItemActions}">
+                          <div class="${styles.listItemAction}" ng-click="vm.completeTodo(todo)" ng-show="todo.done === false">
+                            <i class="${styles.icon} ${styles.iconCheckMark}"></i>
+                          </div>
+                          <div class="${styles.listItemAction}" ng-click="vm.undoTodo(todo)" ng-show="todo.done">
+                            <i class="${styles.icon} ${styles.iconUndo}"></i>
+                          </div>
+                          <div class="${styles.listItemAction}" ng-click="vm.deleteTodo(todo)">
+                            <i class="${styles.icon} ${styles.iconRecycleBin}"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>`;
+          </div>`;
 
-      this.$injector = angular.bootstrap(this.domElement, ['todoapp']);
+        this.$injector = angular.bootstrap(this.domElement, ['todoapp']);
+      }
+
+      this.$injector.get('$rootScope').$broadcast('configurationChanged', {
+        hideFinishedTasks: this.properties.hideFinishedTasks
+      });
     }
+    ```
 
-    this.$injector.get('$rootScope').$broadcast('configurationChanged', {
-      hideFinishedTasks: this.properties.hideFinishedTasks
-    });
-  }
-  ```
-
-In the previous code sample, every time the web part property is changed, it broadcasts an AngularJS event to which the AngularJS application subscribes it. When the event is received by the AngularJS application, it handles that accordingly.
+In the previous code sample, every time the web part property is changed, it broadcasts an AngularJS event to which the AngularJS application subscribes it. When the event is received by the AngularJS application, it handles that correctly.
 
 #### Subscribe to web part property change event in AngularJS
 
 1. In the code editor, open the **app/HomeController.ts** file. Extend the constructor as follows:
 
-  ```typescript
-  constructor(private dataService: IDataService, private $window: angular.IWindowService, private $rootScope: angular.IRootScopeService) {
-    const vm: HomeController = this;
-    this.init();
+    ```typescript
+    constructor(private dataService: IDataService, private $window: angular.IWindowService, private $rootScope: angular.IRootScopeService) {
+      const vm: HomeController = this;
+      this.init();
 
-    $rootScope.$on('configurationChanged', (event: angular.IAngularEvent, args: { hideFinishedTasks: boolean }): void => {
-      vm.init(args.hideFinishedTasks);
-    });
-  }
-  ```
+      $rootScope.$on('configurationChanged', (event: angular.IAngularEvent, args: { hideFinishedTasks: boolean }): void => {
+        vm.init(args.hideFinishedTasks);
+      });
+    }
+    ```
 
-  <br/>
+    ![Constructor definition in the HomeController.ts file highlighted in Visual Studio Code](../../../images/ng-intro-homecontroller-event.png)
 
-  ![Constructor definition in the HomeController.ts file highlighted in Visual Studio Code](../../../images/ng-intro-homecontroller-event.png)
+1. Verify that the AngularJS application is working as expected and correctly responding to the changed property by running the following in the command line:
 
-2. Verify that the AngularJS application is working as expected and correctly responding to the changed property by running the following in the command line:
+    ```console
+    gulp serve
+    ```
 
-  ```sh
-  gulp serve
-  ```
-
-3. If you toggle the value of the **Hide finished tasks** property, the web part should show or hide finished tasks accordingly.
+1. If you toggle the value of the **Hide finished tasks** property, the web part should show or hide finished tasks correctly.
 
   ![web part showing only unfinished task with the 'Hide finished tasks' option enabled](../../../images/ng-intro-hide-finished-tasks.png)
-
 
 ## See also
 

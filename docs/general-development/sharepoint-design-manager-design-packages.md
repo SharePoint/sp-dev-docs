@@ -9,6 +9,10 @@ localization_priority: Priority
 
 
 # SharePoint Design Manager design packages
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 Learn how to build and export the visual design of a SharePoint site collection as a package.
 ## Overview of Design Packages
 <a name="int"> </a>

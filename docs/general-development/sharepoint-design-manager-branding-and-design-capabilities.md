@@ -8,6 +8,10 @@ localization_priority: Priority
 
 
 # SharePoint Design Manager branding and design capabilities
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 Find links to information about using Design Manager branding and design capabilities in SharePoint.
 Design Manager in SharePoint provides a new approach for designing websites. Several new branding and design-based capabilities available in Design Manager enable you to create a compelling look, feel, and behavior for your SharePoint site. Design Manager also supports importing and exporting a visual design, and can help you ensure a consistent visual experience across all device platforms in your organization.
   

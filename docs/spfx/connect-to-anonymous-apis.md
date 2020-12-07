@@ -1,7 +1,7 @@
 ---
 title: Connect to anonymous APIs
 description: Different approaches of connecting to anonymous APIs from your SharePoint Framework solutions
-ms.date: 10/23/2018
+ms.date: 12/04/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -28,7 +28,9 @@ this.context.httpClient
   });
 ```
 
-Similarly to the SPHttpClient you use for connecting to SharePoint APIs, the HttpClient offers you similar capabilities for performing the most common web requests. If necessary, you can use its options, to configure requests. For example, to specify request headers, you would use the following code:
+Similarly to the **SPHttpClient** you use for connecting to SharePoint APIs, the **HttpClient** offers you similar capabilities for running the most common web requests. If necessary, you can use its options, to configure requests.
+
+For example, to specify request headers, you would use the following code:
 
 ```typescript
 this.context.httpClient
@@ -48,12 +50,12 @@ this.context.httpClient
 
 ### Considerations for using the HttpClient
 
-When using the HttpClient, there are a few things that you should take into account.
+When using the **HttpClient**, there are a few things that you should take into account.
 
 #### Authentication cookies not included
 
-While the HttpClient is very similar to the SPHttpClient, it doesn't include authentication cookies in its requests. So if you were to use it to connect to SharePoint APIs, your requests would fail with a 401 Unauthorized response.
+While the **HttpClient** is similar to the **SPHttpClient**, it doesn't include authentication cookies in its requests. So if you were to use it to connect to SharePoint APIs, your requests would fail with a 401 Unauthorized response.
 
 #### Part of the SharePoint Framework
 
-The HttpClient is part of the SharePoint Framework and you don't need any additional dependencies to start using it. It is already available on the page which is why using it doesn't cause additional performance overhead on runtime.
+The **HttpClient** is part of the SharePoint Framework and you don't need any additional dependencies to start using it. It is already available on the page that is why using it doesn't cause additional performance overhead on runtime.

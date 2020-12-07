@@ -1,26 +1,26 @@
 ---
 title: Subscribe to list notifications
 description: Get notified and respond to changes to files in SharePoint Document Libraries
-ms.date: 12/10/2019
+ms.date: 12/04/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
 # Subscribe to list notifications
 
-Starting from SharePoint Framework v1.7.0, you can subscribe to changes to files stored in a SharePoint Document Library. This allows you to respond to changes when they happen, without having to regularly poll the contents of the library.
+Introduced in SharePoint Framework v1.7.0, you can subscribe to changes to files stored in a SharePoint Document Library. This allows you to respond to changes when they happen, without having to regularly poll the contents of the library.
 
 ## Prerequisites
 
-To use the SharePoint Framework list subscription capability, you first need to install the `@microsoft/sp-list-subscription` npm package. You can do it using the following code snippet:
+To use the SharePoint Framework list subscription capability, you first need to install the **@microsoft/sp-list-subscription** npm package. You can do it using the following code snippet:
 
-```sh
+```console
 npm install @microsoft/sp-list-subscription --save --save-exact
 ```
 
 ## Get notified of changes to documents stored in a SharePoint Document Library
 
-To subscribe to changes to files stored in a SharePoint Document Library, create an instance of the `ListSubscriptionFactory` class. Next, call the `createSubscription` method passing the ID of the Document Library to which you want to subscribe. If the Document Library is located in the current site, it's sufficient to specify just the library ID. If it's located in a different site or site collection, then you need to specify their ID's as well.
+To subscribe to changes to files stored in a SharePoint Document Library, create an instance of the `ListSubscriptionFactory` class. Next, call the `createSubscription()` method passing the ID of the Document Library to which you want to subscribe. If the Document Library is located in the current site, it's sufficient to specify just the library ID. If it's located in a different site or site collection, then you need to specify their IDs as well.
 
 Following, is an example of a list subscription for a Document Library located in the current site:
 
@@ -72,11 +72,11 @@ this._listSubscriptionFactory.createSubscription({
 });
 ```
 
-### Get notified when the subscription has been established or cancelled
+### Get notified when the subscription has been established or canceled
 
 In some cases, you might want to get notified when the component that you're building successfully subscribed to list notifications or if the connection has been broken. This would allow you to communicate the connection to the user through the UI.
 
-The list subscription API, exposes two additional callbacks which you can implement to respond to the subscription status. The following code illustrates the case, where the component will be notified when the subscription has been established and when it was disconnected.
+The list subscription API, exposes two additional callbacks that you can implement to respond to the subscription status. The following code illustrates the case, where the component will be notified when the subscription has been established and when it was disconnected.
 
 ```typescript
 private createListSubscription(): void {
@@ -108,7 +108,7 @@ The method for the `callbacks.disconnect` callback passes as an argument the rea
 
 - all SharePoint Framework components can use the list subscription capabilities
 - you can subscribe to events from libraries (but not lists)
-- there is a few seconds delay between the change and the notification being received by the component
+- there's a few seconds delay between the change and the notification being received by the component
 - components can subscribe to changes in multiple Document Libraries
 - the change notification doesn't pass any information about the added or changed document. To see what has changed, use the SharePoint REST API or Microsoft Graph
 

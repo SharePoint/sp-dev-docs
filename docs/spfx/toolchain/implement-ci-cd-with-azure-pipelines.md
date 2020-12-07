@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure Pipelines
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 09/07/2020
+ms.date: 12/02/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -136,7 +136,7 @@ jobs:
           patterns: '**/*.sppkg'
         - script: sudo npm install --global @pnp/cli-microsoft365
           displayName: Install CLI for Microsoft365
-        - script: m365 login $(m365_app_catalog_site_url) --authType password --userName $(365_user_login) --password $(m365_user_password)
+        - script: m365 login $(m365_app_catalog_site_url) --authType password --userName $(m365_user_login) --password $(m365_user_password)
           displayName: Login to Microsoft 365
         - script: |
             CMD_GET_SPPKG_NAME=$(find $(Pipeline.Workspace)/drop -name '*.sppkg' -exec basename {} \;)

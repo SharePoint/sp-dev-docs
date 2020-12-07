@@ -9,6 +9,9 @@ localization_priority: Priority
 
 # Convert an .html file into a master page in SharePoint
 
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the .html file and master page are associated, so that when you edit and save the .html file, the changes are synced to the associated master page.
 
 ## Introduction to converting a master page

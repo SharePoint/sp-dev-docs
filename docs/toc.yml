@@ -293,8 +293,6 @@
       href: spfx/web-parts/guidance/reference-third-party-css-styles.md
     - name: SP PnP JS
       href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
-    - name: AngularJS
-      href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
   - name: Connect to APIs
     items:
     - name: Connect to SharePoint APIs
@@ -309,7 +307,7 @@
       href: spfx/subscribe-to-list-notifications.md
     - name: Tutorials
       items:
-      - name: Consume Microsoft Graph (tutorial)
+      - name: Consume Microsoft Graph
         href: spfx/use-aad-tutorial.md
       - name: Consume enterprise APIs
         href: spfx/use-aadhttpclient-enterpriseapi.md

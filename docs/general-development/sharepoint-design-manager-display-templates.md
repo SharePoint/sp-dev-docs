@@ -8,7 +8,12 @@ localization_priority: Priority
 
 
 # SharePoint Design Manager display templates
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 Learn about display templates, including: how they relate to Search web parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
+
 ## Introduction to display templates
 <a name="bk_introduction"> </a>
 

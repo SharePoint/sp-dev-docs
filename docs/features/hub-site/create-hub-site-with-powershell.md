@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint hub sites using PowerShell
 description: Example code for creating a SharePoint hub site by using PowerShell.
-ms.date: 06/23/2020
+ms.date: 11/18/2020
 localization_priority: Priority
 ---
 
@@ -65,7 +65,7 @@ The hub site doesn't have a logo or description yet. We also want to constrain i
    ```powershell
     Set-PnPHubSite 
      -Identity https://contoso.sharepoint.com/sites/marketing 
-     -LogoUrl https://contoso.sharepoint.com/marketing/SiteAssets/mylogo.jpg 
+     -LogoUrl https://contoso.sharepoint.com/sites/marketing/SiteAssets/mylogo.jpg 
      -Description "Main hub site for collaboration on marketing activities across Contoso"
    ```
 

@@ -8,6 +8,11 @@ localization_priority: Priority
 
 
 # Overview of Design Manager in SharePoint
+
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. 
 ## Introduction to Design Manager
 <a name="Introduction"> </a>

@@ -8,6 +8,10 @@ localization_priority: Priority
 
 
 # Change the preview page in SharePoint Design Manager
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 Learn how to set, create, and change the preview page in Design Manager in SharePoint.
 The preview page is the page of your site that you use to see how your design looks. You can set the preview page to be either a specific page within your site or a generic preview. If you choose the generic preview, you'll see your master page with only a placeholder for content. You'll also see a message in the banner that you're currently previewing the master page without any content. If you choose a specific page, you'll see the page content rendered with the master page and the appropriate page layout.
   
