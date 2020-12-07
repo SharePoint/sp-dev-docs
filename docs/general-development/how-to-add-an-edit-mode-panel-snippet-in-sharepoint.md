@@ -9,6 +9,9 @@ localization_priority: Normal
 
 # Add an Edit Mode Panel snippet in SharePoint
 
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 An Edit Mode Panel is a snippet that you can use to display instructions or other content to content authors, who see the contents of that panel only when they edit a page. Conversely, this snippet can also be configured to display its contents only in regular (view) mode instead of in edit mode.
 
 ## Introduction to the Edit Mode Panel

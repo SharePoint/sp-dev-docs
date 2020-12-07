@@ -9,6 +9,9 @@ localization_priority: Priority
 
 # Brand snippets by using CSS in SharePoint
 
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 To style a snippet, you override the default styles with custom CSS. You can use CSS IDs and element selectors to override all the default styles applied to elements, or you can use an HTML editor or a tool such as the F12 developer tools in Internet Explorer to identify and override specific default styles.
 
 ## Introduction to styling snippets with CSS

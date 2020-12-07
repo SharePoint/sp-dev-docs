@@ -9,6 +9,11 @@ localization_priority: Priority
 
 # Overview of the SharePoint page model
 Learn about the revised page model—including master pages and page layouts—redesigned for SharePoint.
+
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 ## Introduction to the page model
 <a name="bk_Introduction"> </a>
 

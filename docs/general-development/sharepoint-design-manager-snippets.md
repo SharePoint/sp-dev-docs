@@ -8,6 +8,10 @@ localization_priority: Priority
 
 
 # SharePoint Design Manager snippets
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 A snippet is an HTML representation of a SharePoint component or control such as a navigation bar or a web part. By using the Snippet Gallery in Design Manager, you can quickly add SharePoint functionality to your HTML master page or page layout.
 ## Introduction to snippets and the Snippet Gallery
 <a name="Introduction"> </a>

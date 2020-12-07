@@ -10,8 +10,9 @@ localization_priority: Priority
 # Develop the site design in SharePoint
 Find links to information about using Design Manager and implementing a design for your SharePoint site.
 If you want your SharePoint site to represent your organization's brand and not "look like SharePoint," you can create a custom design and use Design Manager to achieve that goal. Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
-  
-    
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
     
 
 For more information about using Design Manager to customize your sites, see the following articles and their subtopics:

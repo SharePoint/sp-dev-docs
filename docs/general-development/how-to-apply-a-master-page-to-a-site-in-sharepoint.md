@@ -8,6 +8,10 @@ localization_priority: Priority
 
 
 # Apply a master page to a site in SharePoint
+
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 Learn how to map a master page to a SharePoint site.
 ## Mapping a master page to a site
 

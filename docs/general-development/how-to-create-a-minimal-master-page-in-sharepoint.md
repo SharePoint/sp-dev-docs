@@ -9,6 +9,9 @@ localization_priority: Priority
 
 # Create a minimal master page in SharePoint
 
+> [!IMPORTANT] 
+> This extensibility option is **only** available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites. We do not recommend using classic experience or these branding techniques anymore.
+
 A minimal master page contains only those page elements that are required by SharePoint to render the page correctly in the browser. With Design Manager, you can quickly create a minimal master page without first having to design and convert an HTML file.
 
 ## Introduction to the minimal master page
