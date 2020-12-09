@@ -1,6 +1,6 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
-ms.date: 06/10/2020
+ms.date: 12/09/2020
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 localization_priority: Priority
