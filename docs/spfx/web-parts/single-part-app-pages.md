@@ -64,7 +64,7 @@ Set-PnPClientSidePage -Identity "Page" -LayoutType SingleWebPartAppPage
 
 ```console
 m365 login
-m365 spo listitem set --webUrl https://contoso.sharepoint.com/sites/marketing --listTitle 'Site Pages' --id 3 --PageLayoutType SingleWebPartAppPage
+m365 spo apppage add --title "Contoso" --webUrl "https://contoso.sharepoint.com" --webPartData $webPartData --addToQuickLaunch
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-set/) for complete details and examples on this command.
