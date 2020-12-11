@@ -1,6 +1,6 @@
 ---
 title: JavaScript user-defined functions overview
-ms.date: 09/25/2017
+ms.date: 12/21/2020
 ms.prod: sharepoint
 ms.assetid: fee38837-1985-4319-ba4e-b99c6ec66336
 localization_priority: Normal
@@ -9,6 +9,10 @@ localization_priority: Normal
 
 # JavaScript user-defined functions overview
 JavaScript user-defined functions (UDFs) are new in Excel Services in SharePoint. This article provides a high-level look at JavaScript UDFs, including basic information on how they work in Excel Services.
+
+> [!NOTE]
+> "If you’re looking information on JavaScript custom functions for Office Add-ins, visit [Create custom functions in Excel](/office/dev/add-ins/excel/custom-functions-overview)."
+
 ## What are UDFs?
 <a name="xlsWhatAreUdfs"> </a>
 
