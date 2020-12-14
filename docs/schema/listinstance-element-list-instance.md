@@ -1,5 +1,6 @@
 ---
 title: ListInstance Element (List Instance)
+description: Specifies default data with which to provision the given list type.
 manager: soliver
 ms.date: 12/14/2020
 ms.audience: Developer
