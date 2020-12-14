@@ -8,7 +8,7 @@ localization_priority: Priority
 ---
 # Customizing ranking models to improve relevance in SharePoint
 
-**APPLIES TO:** ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2013 ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2016 ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2019 ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/no.png) SharePoint in Microsoft 365
+**APPLIES TO:** ![Applies to SharePoint Server 2013](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2013 ![Applies to SharePoint Server 2016](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2016 ![Applies to SharePoint Server 2019](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2019 ![Does not apply to SharePoint Online](https://docs.microsoft.com/sharepoint/sharepointserver/media/no.png) SharePoint Online in Microsoft 365
 
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
 
