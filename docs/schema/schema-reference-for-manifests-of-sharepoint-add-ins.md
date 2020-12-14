@@ -1,5 +1,6 @@
 ---
 title: Schema reference for manifests of SharePoint Add-ins
+description: Index of pages related to SharePoint add-in manifest schemas.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
