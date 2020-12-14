@@ -1,15 +1,17 @@
 ---
 title: Customizing ranking models to improve relevance in SharePoint
-ms.date: 11/10/2020
+description: Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
+ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 localization_priority: Priority
 ---
 # Customizing ranking models to improve relevance in SharePoint
 
-**APPLIES TO:** ![Yes](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2013 ![Yes](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2016 ![Yes](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2019 ![No](https://docs.microsoft.com/sharepoint/sharepointserver/media/no.png) SharePoint in Microsoft 365
+**APPLIES TO:** ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2013 ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2016 ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2019 ![](https://docs.microsoft.com/sharepoint/sharepointserver/media/no.png) SharePoint in Microsoft 365
 
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
+
 You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint.md) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
 
 A search result is relevant if it receives a high rank score, which is a specific numeric score calculated by the search engine using a ranking model. A ranking model is a list of one or more rank stages that contain a set of rank features.
@@ -76,7 +78,7 @@ $twoLinearStagesRankingModel.RankingModelXML > filename.xml
 
 ### To deploy a custom ranking model
 
-1. From the list of available ranking models, copy the GUID of the ranking model that you want to use as a template. (See  [To list all available ranking models](#sp15_list_available_ranking_models) for the sequence of Windows PowerShell cmdlets to use.)
+1. From the list of available ranking models, copy the GUID of the ranking model that you want to use as a template. (See  [To list all available ranking models](#to-list-all-available-ranking-models) for the sequence of Windows PowerShell cmdlets to use.)
 1. Run the following sequence of Windows PowerShell cmdlets using the GUID copied in step 1 for  _<GUID>_.
 
     ```powershell
