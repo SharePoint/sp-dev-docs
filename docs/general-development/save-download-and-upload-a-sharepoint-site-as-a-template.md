@@ -1,5 +1,6 @@
 ---
 title: Save, download, and upload a SharePoint site as a template
+description: Learn how to design and build robust applications by using SharePoint site templates.
 ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
@@ -13,6 +14,7 @@ localization_priority: Priority
 > It is **not supported** in SharePoint Online **(modern sites)** or SharePoint Server 2019 **(modern sites)**.
 
 Learn how to design and build robust applications by using SharePoint site templates.
+
 You can design and build robust SharePoint applications that include a rich set of data sources, customer-facing views and forms, highly customized workflows, and more. Once you've built your business solution site, you can start to use it immediately in your SharePoint environment. Or, you can turn your solution into a template and deploy it in another environment, make it available to users so they can create new sites from it, or hand it off for additional development in Visual Studio.
 
 ## What is a SharePoint site template?
