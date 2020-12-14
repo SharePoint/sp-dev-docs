@@ -283,7 +283,7 @@ You should categorize page optimization techniques into one of two categories: f
 
 - Optimize HTML markup.
 - Use consolidated images and files; for example, combine multiple CSS files into one. Combine images into an image strip or cluster.
-- Use compression (crunch) techniques. For more information, see [Compress (crunch) JavaScript and CSS files](optimize-page-performance-in-sharepoint.md#OptimizingPagePerformance_Crunch).
+- Use compression (crunch) techniques. For more information, see [Compress (crunch) JavaScript and CSS files](optimize-page-performance-in-sharepoint.md#compress-crunch-javascript-and-css-files).
 - Verify that you are referencing the production version of common JavaScript libraries, such as jQuery, instead of the debug versions.
 - Consider using a well-known content delivery network (CDN) such as the [Microsoft Ajax Content Delivery Network](http://www.asp.net/ajaxlibrary/cdn.ashx). The files required in your pages may already be cached by the client browser.
 
