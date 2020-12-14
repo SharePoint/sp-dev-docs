@@ -1,5 +1,6 @@
 ---
+title: Upgrade Definition schema
 redirect_url: upgrade-definition-schema
-redirect_document_id: TRUE 
+redirect_document_id: TRUE
 localization_priority: Normal
 ---
