@@ -14,7 +14,7 @@ For more background about add-in parts, see the following articles:
 
 - [Accessing the add-in from the UI](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md#AccessingApp)
 - [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
-- [Extending SharePoint UI in add-ins](sharepoint-add-ins-ux-design-guidelines.md#UXGuide_Extending)
+- [Extending SharePoint UI in add-ins](sharepoint-add-ins-ux-design-guidelines.md#sharepoint-add-ins-ux-design-guidelines)
 
 The following figure shows how the add-in part content is displayed in a SharePoint page.
 
