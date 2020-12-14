@@ -44,7 +44,7 @@ To show or hide a column in a list or library form:
 1. Paste your custom header formatter in the JSON text input area.
 
     > [!NOTE]
-    > Form configuration allows for certain [predefined elements and attributes](column-formatting#creating-custom-json) to build the custom header.
+    > Form configuration allows for certain [predefined elements and attributes](column-formatting.md#creating-custom-json) to build the custom header.
 
 1. Below is an example of a custom header JSON:
 
@@ -124,7 +124,7 @@ To show or hide a column in a list or library form:
 1. Paste your custom footer formatter in the JSON text input area.
 
     > [!NOTE]
-    > Form configuration allows for certain [predefined elements and attributes](column-formatting#creating-custom-json) to build the custom footer.
+    > Form configuration allows for certain [predefined elements and attributes](column-formatting.md#creating-custom-json) to build the custom footer.
 
 1. Below is an example of a custom footer JSON:
 
