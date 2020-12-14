@@ -1,7 +1,8 @@
 ---
 title: Elements Element (Custom Action)
+description: Top-level element in a Feature manifest file that contains Feature element declarations.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 12/14/2020
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,8 +19,7 @@ Top-level element in a Feature manifest file that contains Feature element decla
 ## Definition
 
 ```XML
-<Elements
-  Id = "Text">
+<Elements Id = "Text">
 </Elements>
 ```
 
@@ -29,30 +29,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|   |   |
-|---|---|
-| **Attribute**  | **Description** |
-| xmlns  | Required. Identifies the XML namespace. The value must be `http://schemas.microsoft.com/sharepoint/`. |
-| Id | Optional **Text**. Specifies a unique identifier for the Feature manifest file. |
+| Attribute | Description                                                                                           |
+| --------- | ----------------------------------------------------------------------------------------------------- |
+| xmlns     | Required. Identifies the XML namespace. The value must be `http://schemas.microsoft.com/sharepoint/`. |
+| Id        | Optional **Text**. Specifies a unique identifier for the Feature manifest file.                       |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="customaction-element.md">CustomAction</a></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="customactiongroup-element-custom-action.md">CustomActionGroup</a></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="hidecustomaction-element.md">HideCustomAction</a></p></td>
-</tr>
-</tbody>
-</table>
+- [CustomAction](customaction-element.md)
+- [CustomActionGroup](customactiongroup-element-custom-action.md)
+- [HideCustomAction](hidecustomaction-element.md)
 
 ### Parent elements
 
@@ -63,40 +49,31 @@ None
 The following example defines a custom action that adds a button to the Server ribbon.
 
 ```XML
-    <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <CustomAction 
-        Id="Ribbon.Library.Actions.AddAButton"
-        Location="CommandUI.Ribbon"
-        RegistrationId="101"
-        RegistrationType="List"
-        Title="Add a Ribbon Button">
-        <CommandUIExtension>
-          <CommandUIDefinitions>
-            <CommandUIDefinition
-              Location="Ribbon.Library.Share.Controls._children">
-              <Button Id="Ribbon.Library.Share.NewRibbonButton"
-                Command="NewRibbonButtonCommand"
-                Image16by16="Insert an image URL here."
-                Image32by32="Insert an image URL here."
-                LabelText="Hello World"
-                TemplateAlias="o2" />
-            </CommandUIDefinition>
-          </CommandUIDefinitions>
-          <CommandUIHandlers>
-            <CommandUIHandler 
-              Command="NewRibbonButtonCommand"
-              CommandAction="javascript:alert('Hello, world');" />
-          </CommandUIHandlers>
-        </CommandUIExtension>
-      </CustomAction>
-    </Elements>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Id="Ribbon.Library.Actions.AddAButton"
+    Location="CommandUI.Ribbon"
+    RegistrationId="101"
+    RegistrationType="List"
+    Title="Add a Ribbon Button">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Library.Share.Controls._children">
+          <Button Id="Ribbon.Library.Share.NewRibbonButton"
+            Command="NewRibbonButtonCommand"
+            Image16by16="Insert an image URL here."
+            Image32by32="Insert an image URL here."
+            LabelText="Hello World"
+            TemplateAlias="o2" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="NewRibbonButtonCommand"
+          CommandAction="javascript:alert('Hello, world');" />
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
 ```
-
-<br/>
-
-
-
-
-
-
-
