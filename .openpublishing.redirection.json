@@ -1,0 +1,74 @@
+{
+    "redirections": [
+        {
+            "source_path": "docs/apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md",
+            "redirect_url": "docs/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/determine-sharepoint-rest-service-endpoint-uris.md",
+            "redirect_url": "docs/sp-add-ins/determine-sharepoint-rest-service-endpoint-uris",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/get-to-know-the-sharepoint-rest-service.md",
+            "redirect_url": "docs/sp-add-ins/get-to-know-the-sharepoint-rest-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/make-batch-requests-with-the-rest-apis.md",
+            "redirect_url": "docs/sp-add-ins/make-batch-requests-with-the-rest-apis.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md",
+            "redirect_url": "docs/sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/set-custom-permissions-on-a-list-by-using-the-rest-interface.md",
+            "redirect_url": "docs/sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/synchronize-sharepoint-items-using-the-rest-service.md",
+            "redirect_url": "docs/sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/upload-a-file-by-using-the-rest-api-and-jquery.md",
+            "redirect_url": "docs/sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/use-odata-query-operations-in-sharepoint-rest-requests.md",
+            "redirect_url": "docs/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/working-with-folders-and-files-with-rest.md",
+            "redirect_url": "docs/sp-add-ins/working-with-folders-and-files-with-rest.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/apis/rest/working-with-lists-and-list-items-with-rest.md",
+            "redirect_url": "docs/sp-add-ins/working-with-lists-and-list-items-with-rest.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/schema/index.md",
+            "redirect_url": "docs/schema/upgrade-definition-schema.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in.md",
+            "redirect_url": "docs/sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sp-add-ins/add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md",
+            "redirect_url": "docs/sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md",
+            "redirect_document_id": false
+        }
+    ]
+}
