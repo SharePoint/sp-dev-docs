@@ -73,7 +73,7 @@ We deliberately opted to use the site collection administrator role for the “F
 
 You can achieve the same result by either granting the permissions to a user or a group, but both models have pro’s and con’s.
 
-|              | Group                                                                                                                                              | User                                                                                                     |
+| Category     | Group                                                                                                                                              | User                                                                                                     |
 | :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
 | Clarity      | A group can contain on or more accounts, typically not visible to the other site collection administrators                                         | User account is always visible, there’s no doubt about it                                                |
 | Maintenance  | You can easily grant access by adding new members to the group                                                                                     | New members must be added to all sites                                                                   |
