@@ -1,5 +1,6 @@
 ---
 title: FieldRef Element (ContentType)
+description: Documentation of the FieldRef schema element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -59,7 +60,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-| **Attribute**  | **Description** |
+| Attribute  | Description |
 |---|---|
 | **Aggregation** | <p>If you use the **Node** attribute to specify an XPath expression that returns a collection of values, you can also include an **Aggregation** attribute that specifies the action to take on the value set that is returned.</p><p>This action can be either an aggregation function or an indication of the particular element within the collection.</p><p>Possible values include the following:</p><ul><li><p>sum</p></li><li><p>count</p></li><li><p>average</p></li><li><p>min</p></li><li><p>max</p></li><li><p>merge</p></li><li><p>plaintext   Converts node text content into plain text.</p></li><li><p>first   Applies property promotion and demotion to the first element in the collection.</p></li><li><p>last   Applies property promotion and demotion to the last element in the collection.</p></li></ul><p>For more information about how the **Node**, **PIAttribute**, **PITarget**, **PrimaryPIAttribute**, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="https://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p> |
 | **Customization** | <p>Optional **Text**. A string in Collaborative Application Markup Language (CAML) that defines custom field properties.</p> |
@@ -90,28 +91,18 @@ The following sections describe attributes, child elements, and parent elements.
 | **ShowInNewForm** | <p>Optional **Boolean**. **TRUE** to display the column on the New form for items of this content type.</p> |
 | **Sortable** | <p>Optional **Boolean**. **TRUE** if values in the field can be sorted.</p> |
 
-
 ### Child elements
 
-|   |
-|---|
-| None. | 
-
+None
 
 ### Parent elements
 
-|   |
-|---|
-| [FieldRefs Element (ContentType)](fieldrefs-element-contenttype.md) |
+- [FieldRefs Element (ContentType)](fieldrefs-element-contenttype.md)
 
+### Occurrence
 
-### Occurrences
-
-|   |
-|---|
-| Minimum: 0 |
-| Maximum: No limit |
-
+- Minimum: 0
+- Maximum: No limit
 
 ### Remarks
 
@@ -123,7 +114,7 @@ The **FieldRef** element is a reference to a column defined elsewhere, either at
 
 Changing these properties in the field reference changes them only as they apply to the specific content type that contains the field reference.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > The **ID**, **Name**, **DisplayName**, and **Required** attributes are always required, even when the **FieldRef** element references a field that is defined in the same element manifest.
 
 ## Example
@@ -131,12 +122,12 @@ Changing these properties in the field reference changes them only as they apply
 The following example shows two **FieldRef** elements specifying columns to include in a content type.
 
 ```XML
-    <FieldRefs>
-      <!--  Built-in Title field -->
-      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="Item" Required="TRUE" Sealed="TRUE"/>
-      <!--  Custom CostCenter field -->
-      <FieldRef ID="{943E7530-5E2B-4C02-8259-CCD93A9ECB18}" Name="CostCenter" DisplayName="Department" Required="TRUE"/>
-    </FieldRefs>
+<FieldRefs>
+  <!--  Built-in Title field -->
+  <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" DisplayName="Item" Required="TRUE" Sealed="TRUE"/>
+  <!--  Custom CostCenter field -->
+  <FieldRef ID="{943E7530-5E2B-4C02-8259-CCD93A9ECB18}" Name="CostCenter" DisplayName="Department" Required="TRUE"/>
+</FieldRefs>
 ```
 
 ## See also
