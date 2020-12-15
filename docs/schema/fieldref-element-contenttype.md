@@ -1,5 +1,6 @@
 ---
 title: FieldRef Element (ContentType)
+description: Documentation of the FieldRef schema element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
