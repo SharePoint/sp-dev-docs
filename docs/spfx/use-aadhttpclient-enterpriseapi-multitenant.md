@@ -16,7 +16,7 @@ Start with creating a multi-tenant enterprise API secured with Azure Active Dire
 
 > While your organization most likely already has specific APIs exposing their applications, this section is meant to give you a complete overview of the implementation and configuration steps.
 
-### Create Azure function
+### Create Azure Function
 
 In the [Azure portal](https://ms.portal.azure.com/), create a new **Function App**.
 
@@ -30,9 +30,9 @@ In the Function App, select the **Add** button and from the list of available fu
 
 In the settings of the function, specify the function name and set the **Authorization level** to **Anonymous**.
 
-![Settings for the new Azure function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
+![Settings for the new Azure Function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
 
-Azure functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you'll secure the underlying Function App. This is why, at this stage, you set not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
+Azure Functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you'll secure the underlying Function App. This is why, at this stage, you set not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
 
 To confirm your settings and create the function, select the **Create Function** button.
 
@@ -108,9 +108,9 @@ If the function executed correctly, you should see a *Status: 200 OK* label and 
 
 ![The 'Ok' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-test-ok.png)
 
-### Secure Azure function
+### Secure Azure Function
 
-Now that the Azure function is working, the next step is for you to secure it with Azure Active Directory so that in order to access it, you need to sign in with your organizational account.
+Now that the Azure Function is working, the next step is for you to secure it with Azure Active Directory so that in order to access it, you need to sign in with your organizational account.
 
 On the Function App blade, from the side panel, select the **Authentication / Authorization** link.
 
