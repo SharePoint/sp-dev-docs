@@ -1,6 +1,6 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
-ms.date: 12/09/2020
+ms.date: 12/21/2020
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 localization_priority: Priority
@@ -102,13 +102,17 @@ For a broader discussion of throttling on the Microsoft Cloud, see [Throttling P
 
 To ensure and maintain high-availability, some traffic may be throttled. Throttling happens when system health is at stake and one of the criteria used for throttling is traffic decoration, which impacts directly on the prioritization of the traffic. Well-decorated traffic will be prioritized over traffic, which isn't properly decorated.
 
-What is definition of undecorated traffic?
+### What is definition of undecorated traffic?
 
 - Traffic is undecorated if there's no AppID/AppTitle and User Agent string in CSOM or REST API call to SharePoint Online. The User Agent string should be in a specific format as described below.
 
-What are the recommendations?
+### What are the recommendations?
 
-- If you've created an application, the recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+- If you've created an application, the recommendation is to register and use AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+
+    > [!NOTE]
+    > Refer to the [Microsoft identity documentation](https://docs.microsoft.com/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
+
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 
 |          Type          |                  User Agent                  |                                                                     Description                                                                     |
