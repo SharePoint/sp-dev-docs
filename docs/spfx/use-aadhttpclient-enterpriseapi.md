@@ -1,7 +1,7 @@
 ---
 title: Consume enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to an enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 12/04/2020
+ms.date: 12/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -16,7 +16,7 @@ Start with creating an enterprise API secured with Azure Active Directory. While
 
 > While your organization most likely already has specific APIs exposing their applications, this section is meant to give you a complete overview of the implementation and configuration steps.
 
-### Create an Azure function
+### Create an Azure Function
 
 In the [Azure portal](https://portal.azure.com/), create a new Function App.
 
@@ -34,9 +34,9 @@ From the list of templates, choose **HTTP trigger**:
 
 In the New Function panel, specify the function name, set the **Authorization level** to **Anonymous**, and click the **Create** button:
 
-![Settings for the new Azure function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
+![Settings for the new Azure Function in the Azure portal](../images/use-aadhttpclient-enterpriseapi-create-function-settings.png)
 
->Azure functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you'll secure the underlying Function App. This is why, at this stage, you chose not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
+>Azure Functions can be secured in a number of ways. Because you want to secure the function using Azure AD, rather than securing the function itself, you'll secure the underlying Function App. This is why, at this stage, you chose not to secure the function itself. Authentication settings applied to the Function App, apply to all functions inside that app.
 
 Once the function is created, replace its contents with the following snippet:
 
@@ -113,9 +113,9 @@ Verify that the function is working correctly, by pressing the **Save and run** 
 
 If the function executed correctly, you'll see a *Status: 200 OK* label and the list orders displayed in the test pane.
 
-### Secure the Azure function
+### Secure the Azure Function
 
-Now that the Azure function is working, the next step is to secure it with Azure Active Directory so that you'll need to sign in with your organizational account to access it.
+Now that the Azure Function is working, the next step is to secure it with Azure Active Directory so that you'll need to sign in with your organizational account to access it.
 
 On the Function App blade in the side panel select the function app:
 
