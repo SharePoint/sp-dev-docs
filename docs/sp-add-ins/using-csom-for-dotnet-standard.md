@@ -1,7 +1,7 @@
 ---
 title: Using CSOM for .NET Standard instead of CSOM for .NET Framework
 description: Explains the differences between using CSOM for .NET Standard versus CSOM for .NET Framework
-ms.date: 10/26/2020
+ms.date: 12/21/2020
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -169,10 +169,10 @@ namespace CSOMDemo
                         {
                             if (!timedOut)
                             {
-                                TokenWaitInfo wi = (TokenWaitInfo)state;
-                                if (wi.Handle != null)
+                                TokenWaitInfo internalWaitToken = (TokenWaitInfo)state;
+                                if (internalWaitToken.Handle != null)
                                 {
-                                    wi.Handle.Unregister(null);
+                                    internalWaitToken.Handle.Unregister(null);
                                 }
                             }
                             else
