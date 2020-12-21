@@ -1,7 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 12/04/2020
+ms.date: 12/21/2020
 ms.prod: sharepoint
 localization_priority: Normal
 ---
