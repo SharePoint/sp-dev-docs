@@ -85,6 +85,8 @@
       items:
       - name: Show or hide columns in a form
         href: declarative-customization/list-form-conditional-show-hide.md
+      - name: Configure the list form
+        href: declarative-customization/list-form-configuration.md
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
