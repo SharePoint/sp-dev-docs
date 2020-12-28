@@ -270,4 +270,4 @@ If we block your subscription, we will notify you of the block in the Office 365
 
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
-- [GitHub: SharePoint Online Throttling code sample](https://github.com/OfficeDev/PnP/tree/dev/Samples/Core.Throttling)
+- [GitHub: SharePoint Online Throttling code sample](https://github.com/pnp/PnP/tree/master/Samples/Core.Throttling)
