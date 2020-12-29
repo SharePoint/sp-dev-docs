@@ -1,6 +1,6 @@
 ---
 title: Build Windows Phone apps that access SharePoint
-ms.date: 04/19/2018
+ms.date: 12/22/2020
 ms.prod: sharepoint
 ms.assetid: 36681335-f772-4499-8445-f94481bc18e7
 description: Create SharePoint Add-ins that integrate SharePoint and mobile devices such as Windows Phone 8 and Windows Phone 7.
@@ -54,7 +54,7 @@ To enable location-aware apps, there is a new native field type class, **SPField
 
 To enable SharePoint authentication for Windows Phone users, the client object model includes a new **Authenticator** class and several associated classes. For an overview, see [Overview of the SharePoint mobile client authentication object model](overview-of-the-sharepoint-mobile-client-authentication-object-model.md).
  
-To enable automatic notifications to Windows Phone users of events on a SharePoint farm, the server object model includes several new classes, each of which is also callable from the client object model. These classes include methods that enable phone apps to register with SharePoint server apps for notifications about specified types of events. There are also methods that the server apps use to send notifications to registered subscribers. For an overview, see [Create a Windows Phone SharePoint list app to receive push notifications](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md#BKMK_NotificationPhoneApp).
+To enable automatic notifications to Windows Phone users of events on a SharePoint farm, the server object model includes several new classes, each of which is also callable from the client object model. These classes include methods that enable phone apps to register with SharePoint server apps for notifications about specified types of events. There are also methods that the server apps use to send notifications to registered subscribers. For an overview, see [Create a Windows Phone SharePoint list app to receive push notifications](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md#create-a-windows-phone-sharepoint-list-app-to-receive-push-notifications).
  
 With SharePoint, you're not limited to mobile app development just for Windows Phone 8 and Windows Phone 7. With the JavaScript programming interface and the new Representational State Transfer (REST) programming interface provided by SharePoint, you can create applications for non-Windows Phone mobile devices; you can interact with SharePoint sites by using JavaScript that executes as scripts in the browser, or remotely by using any technology that supports standard REST capabilities. The following section provides an overview of the REST and JavaScript programming interfaces.
 
