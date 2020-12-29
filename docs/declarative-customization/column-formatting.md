@@ -821,9 +821,9 @@ Both the example uses defaultHoverField
 Users can refer to a column's formatter JSON inside another column (or view formattter) and use it along with other elements to build a custom column visualization. This can be done by using `columnFormatterReference` property.
 
 The following image shows a list with a Gallery layout referencing the Category column formatter:
-<img src="../images/sp-columnformatting-formatter-reference-1.png" alt="Gallery layout formatting pane"/>
+<img src="../images/sp-columnformatting-formatter-reference-1.png" alt="Gallery layout referring Category column"/>
 
-<img src="../images/sp-columnformatting-formatter-reference-2.png" alt="Gallery layout formatting pane"/>
+<img src="../images/sp-columnformatting-formatter-reference-2.png" alt="List layout with Category column formatted"/>
 
 ``` JSON
 {
