@@ -21,12 +21,12 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 - Apply branding customization using Office 365 themes or SharePoint site theming engine
 - If theme engines are not enough, you can adjust some CSS settings using alternate CSS option
 - Avoid customizing OD4B sites using custom master pages, since this will cause you additional long term costs and challenges with future updates
-    - In most of the cases, you can achieve all common branding scenarios with themes and alternate CSS, so this is not really that limiting factor
-    - If you chose to use custom master pages, be prepared on applying changes to the sites when major functional updates are applied to Office 365
+  - In most of the cases, you can achieve all common branding scenarios with themes and alternate CSS, so this is not really that limiting factor
+  - If you chose to use custom master pages, be prepared on applying changes to the sites when major functional updates are applied to Office 365
 - You can use JavaScript embedding to modify or hide functionality in the site
 - You can use CSOM to control for example language or regional settings in the OD4B sites (see [new APIs](https://blogs.msdn.com/b/vesku/archive/2014/12/15/latest-api-updates-in-client-side-object-model-dec-2014-cu-for-sp2013.aspx))
 - We do not recommend usage of content types and site columns in OD4B sites to avoid challenges with the required fields or other elements, which could cause issues for normal use cases with OD4B sites
-    - Think OD4B sites as for personal unstructured data and documents. Team sites and collaboration sits are then for company data and documents where you can certainly use whatever information management policies and metadata you want.
+  - Think OD4B sites as for personal unstructured data and documents. Team sites and collaboration sits are then for company data and documents where you can certainly use whatever information management policies and metadata you want.
 
 As a summary, customization is definitely supported in Office 365 and you can keep on using them with OD4B sites. We just truly want to ensure that you consider the short and long term impact of the customization from operational and maintenance perspective. This is not really specific for SharePoint, rather a rule of thumb for any IT solution build with any platform.
 
@@ -38,7 +38,7 @@ Here’s an example of OD4B site, which has been customized using above guidelin
 
 Let’s start with defining what is the challenge and what are we trying to solve here. Technically each OneDrive for Business site is currently using identical architecture as what the personal or my sites used  back in SharePoint 2007 or 2010 version. This means that technically each OneDrive for Business site is their own site collection and we do not have any centralized location to apply branding or any other customizations.
 
-![Each OneDrive for Business site is its own site collection under the personal managed path, and each url is created based on the user profile. For example, if contoso-my.sharepoint.com is the main site, then John's site will be contoso-my.sharepoint.com/personal/john_contoso_com.](media/Recipes/OD4BCustomization/OD4B-topolgy.png)
+![Challenge with applying OneDrive for Business site customizations](media/Recipes/OD4BCustomization/OD4B-topolgy.png)
 
 Classic solution to apply needed configuration to the OneDrive for Business sites (including my or personal sites) was based on [feature stapling in farm level](http://cks.codeplex.com/releases/view/2824). This meant that you deployed farm solution to your SharePoint farm and used feature framework to associate your custom feature to be activated each time a my site is crated, which was then responsible of applying needed customizations. This similar approach does not work in Office 365, since it requires farm solution to be deployed and that is simply impossible with Office 365 sites. Therefore we need to look alternatives to apply the needed changes to the sites.
 
@@ -128,9 +128,9 @@ Since this app part will be executed each time user lands to front page of the i
 
 There are few different solutions for this. In the reference code example we use JavaScript embedding in each of the OD4B sites to provide company policy message and to remove the possibility to create sub sites (or hide the link). In this particular solution we are uploading the needed JavaScript file to root site collection of the OneDrive for Business address scheme and we reference that file directly from that one location in the individual OD4B sites. This means that you only have one location to maintain and update the JavaScript file, if any changes are needed.
 
-In this reference implementation we actually also refresh this file each time the WebJob is executed, which is certainly not needed, but sample code was meant to be working as easily without any additional steps and possible. Just as well you could upload the JavaScript file manually to root site collection and then reference that from there. Alternative solution would be also to use some CND to store the needed file or reference JavaScript from the provider hosted app side. As long as you have only one copy of the file, you will have
+In this reference implementation we actually also refresh this file each time the WebJob is executed, which is certainly not needed, but sample code was meant to be working as easily without any additional steps and possible. Just as well you could upload the JavaScript file manually to root site collection and then reference that from there. Alternative solution would be also to use some CND to store the needed file or reference JavaScript from the provider hosted app side. As long as you have only one copy of the file, you will have:
 
-![Each OneDrive for Business site is its own site collection under the personal managed path, and each url is created based on the user profile. For example, if contoso-my.sharepoint.com is the main site, then John's site will be contoso-my.sharepoint.com/personal/john_contoso_com.](media/Recipes/OD4BCustomization/asset-locations.png)
+![Location of the assets](media/Recipes/OD4BCustomization/asset-locations.png)
 
 #### Client side caching challenge and how to solve that
 

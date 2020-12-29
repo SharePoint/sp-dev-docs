@@ -254,9 +254,9 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
 > [!NOTE]
 > In the source file, note that first ASP.NET content placeholder, **PlaceHolderAdditionalPageHead**, contains references to the Workflow Services CSOM library ( **sp.workflowservices.js** ) and the core SharePoint CSOM libraries ( **sp.js** and **sp.runtime.js** ). Immediately following this section of code, there is a server-side comment that contains a commented note. Be mindful that this note, shown in Figure 10, is irrelevant and should be ignored.
 
-    **Figure 10. Code comment to disregard.**
+  **Figure 10. Code comment to disregard.**
 
-    ![Figure 10. Code comment to disregard](../images/ngFormsFig10.png)
+  ![Figure 10. Code comment to disregard](../images/ngFormsFig10.png)
 
 ### Update the HTML form
 

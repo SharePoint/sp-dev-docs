@@ -120,265 +120,265 @@ The following code example retrieves and updates custom tabular data sources. Th
 
 Before you can compile this code example, you must configure your development environment as described in  [Create and configure the editor class for a tabular data source editor in PerformancePoint Services](#create-editors-for-custom-performancepoint-services-tabular-data-sources).
 
-    ```csharp
-    using System;
-    using System.IO;
-    using System.Web.UI;
-    using System.Web.UI.WebControls;
-    using Microsoft.PerformancePoint.Scorecards;
-    using System.Xml.Linq;
+```csharp
+using System;
+using System.IO;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Microsoft.PerformancePoint.Scorecards;
+using System.Xml.Linq;
 
-    namespace Microsoft.PerformancePoint.SDK.Samples.SampleDataSource
+namespace Microsoft.PerformancePoint.SDK.Samples.SampleDataSource
+{
+    // Represents the class that defines the sample data source editor.
+    public class SampleDataSourceEditor : Page
     {
-        // Represents the class that defines the sample data source editor.
-        public class SampleDataSourceEditor : Page
+
+        #region Members
+        // Declare private variables for the ASP.NET controls defined in the user interface.
+        // The user interface is an ASPX page that defines the controls in HTML.
+        private TextBox textboxName;
+        private TextBox textboxDescription;
+        private TextBox textboxStockSymbols;
+        private TextBox textboxXMLLocation;
+        private TextBox textboxProxy;
+        private Label labelErrorMessage;
+        private Button buttonOK;
+        #endregion
+
+        #region Page methods and events
+        // Make the controls available to this class.
+        protected override void CreateChildControls()
         {
+            base.CreateChildControls();
 
-            #region Members
-            // Declare private variables for the ASP.NET controls defined in the user interface.
-            // The user interface is an ASPX page that defines the controls in HTML.
-            private TextBox textboxName;
-            private TextBox textboxDescription;
-            private TextBox textboxStockSymbols;
-            private TextBox textboxXMLLocation;
-            private TextBox textboxProxy;
-            private Label labelErrorMessage;
-            private Button buttonOK;
-            #endregion
+            if (null == textboxProxy)
+                textboxProxy = FindControl("textboxProxy") as TextBox;
+            if (null == textboxName)
+                textboxName = FindControl("textboxName") as TextBox;
+            if (null == textboxDescription)
+                textboxDescription = FindControl("textboxDescription") as TextBox;
+            if (null == textboxStockSymbols)
+                textboxStockSymbols = FindControl("textboxStockSymbols") as TextBox;
+            if (null == textboxXMLLocation)
+                textboxXMLLocation = FindControl("textboxXMLLocation") as TextBox;
+            if (null == labelErrorMessage)
+                labelErrorMessage = FindControl("labelErrorMessage") as Label;
+            if (null == buttonOK)
+                buttonOK = FindControl("buttonOK") as Button;
+        }
 
-            #region Page methods and events
-            // Make the controls available to this class.
-            protected override void CreateChildControls()
-            {
-                base.CreateChildControls();
-
-                if (null == textboxProxy)
-                    textboxProxy = FindControl("textboxProxy") as TextBox;
-                if (null == textboxName)
-                    textboxName = FindControl("textboxName") as TextBox;
-                if (null == textboxDescription)
-                    textboxDescription = FindControl("textboxDescription") as TextBox;
-                if (null == textboxStockSymbols)
-                    textboxStockSymbols = FindControl("textboxStockSymbols") as TextBox;
-                if (null == textboxXMLLocation)
-                    textboxXMLLocation = FindControl("textboxXMLLocation") as TextBox;
-                if (null == labelErrorMessage)
-                    labelErrorMessage = FindControl("labelErrorMessage") as Label;
-                if (null == buttonOK)
-                    buttonOK = FindControl("buttonOK") as Button;
-            }
-
-            // Handles the Load event of the Page control.
-            // Methods that use a control variable should call the Control.EnsureChildControls
-            // method before accessing the variable for the first time.
-            protected void Page_Load(object sender, EventArgs e)
-            {
-                // Initialize controls the first time the page loads only.
-                if (!IsPostBack)
-                {
-                    EnsureChildControls();
-
-                    DataSourceRepositoryHelper dataSourceRepositoryHelper = null;
-                    try
-                    {
-                        // Get information from the query string parameters.
-                        string server = Request.QueryString[ClickOnceLaunchKeys.SiteCollectionUrl];
-                        string itemLocation = Request.QueryString[ClickOnceLaunchKeys.ItemLocation];
-                        string action = Request.QueryString[ClickOnceLaunchKeys.LaunchOperation];
-
-                        // Validate the query string parameters.
-                        if (string.IsNullOrEmpty(server) ||
-                            string.IsNullOrEmpty(itemLocation) ||
-                            string.IsNullOrEmpty(action))
-                        {
-                            displayError("Invalid URL.");
-                            return;
-                        }
-
-                        // Retrieve the repository-helper object.
-                        dataSourceRepositoryHelper =
-                            new DataSourceRepositoryHelper();
-
-                        // Set the data source location.
-                        RepositoryLocation repositoryDataSourceLocation = RepositoryLocation.CreateFromUriString(itemLocation);
-
-                        DataSource datasource;
-
-                        // Retrieve the data source object by
-                        // using the repository-helper object.
-                        if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
-                        {
-                            datasource = dataSourceRepositoryHelper.Get(repositoryDataSourceLocation);
-                            if (datasource == null)
-                            {
-                                displayError("Could not retrieve the data source for editing.");
-                                return;
-                            }
-                        }
-                        else
-                        {
-                            displayError("Invalid Action.");
-                            return;
-
-                        }
-
-                        // Save the original data source and helper objects across page postbacks.
-                        ViewState["action"] = action;
-                        ViewState["datasource"] = datasource;
-                        ViewState["datasourcerepositoryhelper"] = dataSourceRepositoryHelper;
-
-                        // Populate the child controls.
-                        if (null != datasource.Name)
-                            textboxName.Text = datasource.Name.ToString();
-
-                        if (null != datasource.Description)
-                            textboxDescription.Text = datasource.Description.ToString();
-
-                        if (null != datasource.CustomData)
-                        {
-                            string[] splitCustomData = datasource.CustomData.Split('&amp;');
-                            if (splitCustomData.Length > 2)
-                            {
-                                textboxStockSymbols.Text = splitCustomData[0];
-                                textboxXMLLocation.Text = splitCustomData[1].Replace(@"\\SampleStockQuotes.xml", string.Empty);
-                                textboxProxy.Text = splitCustomData[2];
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        displayError("An error has occurred. Please contact your administrator for more information.");
-                        if (dataSourceRepositoryHelper != null)
-                        {
-                            // Add the exception detail to the server
-                            // event log.
-                            dataSourceRepositoryHelper.HandleException(ex);
-                        }
-                    }
-                }
-            }
-
-            // Handles the Click event of the buttonOK control.
-            protected void buttonOK_Click(object sender, EventArgs e)
+        // Handles the Load event of the Page control.
+        // Methods that use a control variable should call the Control.EnsureChildControls
+        // method before accessing the variable for the first time.
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Initialize controls the first time the page loads only.
+            if (!IsPostBack)
             {
                 EnsureChildControls();
 
-                // Verify that the required fields contain values.
-                if (!AreAllInputsValid())
-                    return;
-
-                // Clear any pre-existing error message.
-                labelErrorMessage.Text = string.Empty;
-
-                // Retrieve the data source and helper objects from view state.
-                string action = (string)ViewState["action"];
-                DataSource datasource = (DataSource)ViewState["datasource"];
-                DataSourceRepositoryHelper datasourcerepositoryhelper = (DataSourceRepositoryHelper)ViewState["datasourcerepositoryhelper"];
-
-                // Update the data source object with form changes.
-                datasource.Name.Text = textboxName.Text;
-                datasource.Description.Text = textboxDescription.Text;
-
-                // Define column mappings if they aren't already defined.
-                if (datasource.DataTableMapping.ColumnMappings.Count <= 0)
-                {
-                    datasource.DataTableMapping = WSTabularDataSourceProvider.CreateDataColumnMappings();
-                }
-
-                // Save the data source to the repository
-                // by using the repository-helper object.
+                DataSourceRepositoryHelper dataSourceRepositoryHelper = null;
                 try
                 {
-                    CreateCacheFile(datasource);
+                    // Get information from the query string parameters.
+                    string server = Request.QueryString[ClickOnceLaunchKeys.SiteCollectionUrl];
+                    string itemLocation = Request.QueryString[ClickOnceLaunchKeys.ItemLocation];
+                    string action = Request.QueryString[ClickOnceLaunchKeys.LaunchOperation];
 
-                    datasource.Validate();
+                    // Validate the query string parameters.
+                    if (string.IsNullOrEmpty(server) ||
+                        string.IsNullOrEmpty(itemLocation) ||
+                        string.IsNullOrEmpty(action))
+                    {
+                        displayError("Invalid URL.");
+                        return;
+                    }
 
+                    // Retrieve the repository-helper object.
+                    dataSourceRepositoryHelper =
+                        new DataSourceRepositoryHelper();
+
+                    // Set the data source location.
+                    RepositoryLocation repositoryDataSourceLocation = RepositoryLocation.CreateFromUriString(itemLocation);
+
+                    DataSource datasource;
+
+                    // Retrieve the data source object by
+                    // using the repository-helper object.
                     if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
                     {
-                        datasourcerepositoryhelper.Update(datasource);
+                        datasource = dataSourceRepositoryHelper.Get(repositoryDataSourceLocation);
+                        if (datasource == null)
+                        {
+                            displayError("Could not retrieve the data source for editing.");
+                            return;
+                        }
                     }
                     else
                     {
                         displayError("Invalid Action.");
+                        return;
+
+                    }
+
+                    // Save the original data source and helper objects across page postbacks.
+                    ViewState["action"] = action;
+                    ViewState["datasource"] = datasource;
+                    ViewState["datasourcerepositoryhelper"] = dataSourceRepositoryHelper;
+
+                    // Populate the child controls.
+                    if (null != datasource.Name)
+                        textboxName.Text = datasource.Name.ToString();
+
+                    if (null != datasource.Description)
+                        textboxDescription.Text = datasource.Description.ToString();
+
+                    if (null != datasource.CustomData)
+                    {
+                        string[] splitCustomData = datasource.CustomData.Split('&amp;');
+                        if (splitCustomData.Length > 2)
+                        {
+                            textboxStockSymbols.Text = splitCustomData[0];
+                            textboxXMLLocation.Text = splitCustomData[1].Replace(@"\\SampleStockQuotes.xml", string.Empty);
+                            textboxProxy.Text = splitCustomData[2];
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
                     displayError("An error has occurred. Please contact your administrator for more information.");
-                    if (datasourcerepositoryhelper != null)
+                    if (dataSourceRepositoryHelper != null)
                     {
-                        // Add the exception detail to the server event log.
-                        datasourcerepositoryhelper.HandleException(ex);
+                        // Add the exception detail to the server
+                        // event log.
+                        dataSourceRepositoryHelper.HandleException(ex);
                     }
                 }
             }
-            #endregion
-
-            #region Helper methods
-            // Display the error string in the labelErrorMessage label.
-            void displayError(string msg)
-            {
-                EnsureChildControls();
-
-                labelErrorMessage.Text = msg;
-
-                // Disable the OK button because the page is in an error state.
-                buttonOK.Enabled = false;
-                return;
-            }
-
-            // Validate the text box inputs.
-            bool AreAllInputsValid()
-            {
-                if (string.IsNullOrEmpty(textboxProxy.Text))
-                {
-                    labelErrorMessage.Text = "The proxy server address is required.";
-                    return false;
-                }
-
-                if (string.IsNullOrEmpty(textboxXMLLocation.Text))
-                {
-                    labelErrorMessage.Text = "The location to save the cache file to is required.";
-                    return false;
-                }
-
-                if (string.IsNullOrEmpty(textboxName.Text))
-                {
-                    labelErrorMessage.Text = "A data source name is required.";
-                    return false;
-                }
-
-                if (string.IsNullOrEmpty(textboxStockSymbols.Text))
-                {
-                    labelErrorMessage.Text = "A stock symbol is required.";
-                    return false;
-                }
-
-                return true;
-            }
-
-            // Create the XML cache file at the specified location and
-            // store it and the stock symbols in the CustomData
-            // property of the data source.
-            void CreateCacheFile(DataSource datasource)
-            {
-                string cacheFileLocation = string.Format("{0}\\\\{1}", textboxXMLLocation.Text.TrimEnd('\\\\'),
-                                                         "SampleStockQuotes.xml");
-
-                datasource.CustomData = string.Format("{0}&amp;{1}&amp;{2}", textboxStockSymbols.Text, cacheFileLocation, textboxProxy.Text);
-
-                // Check if the cache file already exists.
-                if (!File.Exists(cacheFileLocation))
-                {
-                    // Create the cache file if it does not exist.
-                    XDocument doc = SampleDSCacheHandler.DefaultCacheFileContent;
-                    doc.Save(cacheFileLocation);
-                }
-            }
-            #endregion
         }
+
+        // Handles the Click event of the buttonOK control.
+        protected void buttonOK_Click(object sender, EventArgs e)
+        {
+            EnsureChildControls();
+
+            // Verify that the required fields contain values.
+            if (!AreAllInputsValid())
+                return;
+
+            // Clear any pre-existing error message.
+            labelErrorMessage.Text = string.Empty;
+
+            // Retrieve the data source and helper objects from view state.
+            string action = (string)ViewState["action"];
+            DataSource datasource = (DataSource)ViewState["datasource"];
+            DataSourceRepositoryHelper datasourcerepositoryhelper = (DataSourceRepositoryHelper)ViewState["datasourcerepositoryhelper"];
+
+            // Update the data source object with form changes.
+            datasource.Name.Text = textboxName.Text;
+            datasource.Description.Text = textboxDescription.Text;
+
+            // Define column mappings if they aren't already defined.
+            if (datasource.DataTableMapping.ColumnMappings.Count <= 0)
+            {
+                datasource.DataTableMapping = WSTabularDataSourceProvider.CreateDataColumnMappings();
+            }
+
+            // Save the data source to the repository
+            // by using the repository-helper object.
+            try
+            {
+                CreateCacheFile(datasource);
+
+                datasource.Validate();
+
+                if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
+                {
+                    datasourcerepositoryhelper.Update(datasource);
+                }
+                else
+                {
+                    displayError("Invalid Action.");
+                }
+            }
+            catch (Exception ex)
+            {
+                displayError("An error has occurred. Please contact your administrator for more information.");
+                if (datasourcerepositoryhelper != null)
+                {
+                    // Add the exception detail to the server event log.
+                    datasourcerepositoryhelper.HandleException(ex);
+                }
+            }
+        }
+        #endregion
+
+        #region Helper methods
+        // Display the error string in the labelErrorMessage label.
+        void displayError(string msg)
+        {
+            EnsureChildControls();
+
+            labelErrorMessage.Text = msg;
+
+            // Disable the OK button because the page is in an error state.
+            buttonOK.Enabled = false;
+            return;
+        }
+
+        // Validate the text box inputs.
+        bool AreAllInputsValid()
+        {
+            if (string.IsNullOrEmpty(textboxProxy.Text))
+            {
+                labelErrorMessage.Text = "The proxy server address is required.";
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(textboxXMLLocation.Text))
+            {
+                labelErrorMessage.Text = "The location to save the cache file to is required.";
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(textboxName.Text))
+            {
+                labelErrorMessage.Text = "A data source name is required.";
+                return false;
+            }
+
+            if (string.IsNullOrEmpty(textboxStockSymbols.Text))
+            {
+                labelErrorMessage.Text = "A stock symbol is required.";
+                return false;
+            }
+
+            return true;
+        }
+
+        // Create the XML cache file at the specified location and
+        // store it and the stock symbols in the CustomData
+        // property of the data source.
+        void CreateCacheFile(DataSource datasource)
+        {
+            string cacheFileLocation = string.Format("{0}\\\\{1}", textboxXMLLocation.Text.TrimEnd('\\\\'),
+                                                      "SampleStockQuotes.xml");
+
+            datasource.CustomData = string.Format("{0}&amp;{1}&amp;{2}", textboxStockSymbols.Text, cacheFileLocation, textboxProxy.Text);
+
+            // Check if the cache file already exists.
+            if (!File.Exists(cacheFileLocation))
+            {
+                // Create the cache file if it does not exist.
+                XDocument doc = SampleDSCacheHandler.DefaultCacheFileContent;
+                doc.Save(cacheFileLocation);
+            }
+        }
+        #endregion
     }
-    ```
+}
+```
 
 ## Next steps
 

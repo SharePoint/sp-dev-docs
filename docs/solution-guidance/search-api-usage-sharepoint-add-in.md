@@ -4,7 +4,7 @@ description: The approach you take to execute searches with the SharePoint Searc
 ms.date: 12/29/2020
 localization_priority: Normal
 ---
-Search API usage in the SharePoint Add-in model
+# Search API usage in the SharePoint Add-in model
 
 The approach you take to execute searches with the SharePoint Search Service is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint server-side object model (Content By Query web part overrides) or the Search Web Services were used to execute searches with the SharePoint Search Service.
 
@@ -15,8 +15,8 @@ In a SharePoint Add-in model scenario, you execute searches with the SharePoint 
 As a rule of a thumb, we would like to provide the following high level guidelines to create and configure site collections and sub sites then deploy artifacts, configurations, and branding assets to them.
 
 - Using AppOnly authentication is not supported for any Search Service operations.
-    - This is due to the fact that the Search Service accesses the user profile service to search user profile information and the UPS does not support AppOnly authentication.
-    - Therefore, because search relevance and other search facets depend on a given user and their profile attributes the AppOnly authentication pattern will not work.
+  - This is due to the fact that the Search Service accesses the user profile service to search user profile information and the UPS does not support AppOnly authentication.
+  - Therefore, because search relevance and other search facets depend on a given user and their profile attributes the AppOnly authentication pattern will not work.
 
 ## Options to execute searches with the SharePoint Search Service
 

@@ -1,6 +1,6 @@
 ---
 title: Support and convert SharePoint field types for Windows Phone apps
-description:
+description: Implement data-conversion logic to support SharePoint field types in Windows Phone apps.
 ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 301e6e58-5153-4ca9-a419-8ae0535ebbed
@@ -381,10 +381,9 @@ In a Windows Phone app created using the template and based on this simple list,
     }
     ```
 
-
     In this custom class, the **RegisterDisplayFieldValueConverter** and the **RegisterNewFieldValueConverter** methods of the **Converter** class are called using anonymous functions (defined by a statement lambda) to implement the **get** and **set** routines for the delegates required by the registration methods. The optional argument labels here (for example, "getConvertedFieldValue:") are included in this code only to clarify which delegates are defined.)
 
-    This approach, involving lambda expressions, is an alternative to passing named functions as parameters to the converter registration functions, which was demonstrated in an earlier procedure described in this topic (in the section  [To register the data conversion functions](#BKMK_RegisterFunctions)).
+    This approach, involving lambda expressions, is an alternative to passing named functions as parameters to the converter registration functions, which was demonstrated in an earlier procedure described in this topic (in the section [To register the data conversion functions](#custom-conversion-for-sharepoint-field-types)).
 
 1. Save the file.
 1. In **Solution Explorer**, choose the App.xaml file.
