@@ -1,6 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
-ms.date: 12/21/2020
+description: Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample client-side object model (CSOM) and REST code you can use to make your task easier.
+ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 localization_priority: Priority
@@ -270,4 +271,3 @@ If we block your subscription, we will notify you of the block in the Office 365
 
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
-- [GitHub: SharePoint Online Throttling code sample](https://github.com/OfficeDev/PnP/tree/dev/Samples/Core.Throttling)
