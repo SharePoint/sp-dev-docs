@@ -818,7 +818,7 @@ Both the example uses defaultHoverField
 
 ## Column formatter reference
 
-Users can refer to a column's formatter JSON inside another column (or view formattter) and use it along with other elements to build a custom column visualization. This can be done by using `columnFormatterReference` property.
+Users can refer to a column's formatter JSON inside another column/view formatter and use it along with other elements to build a custom column visualization. This can be done by using `columnFormatterReference` property.
 
 The following image shows a list with a Gallery layout referencing the Category column formatter:
 <img src="../images/sp-columnformatting-formatter-reference-1.png" alt="Gallery layout referring Category column"/>
@@ -973,10 +973,10 @@ You can use predefined icons from Office UI Fabric. For details, see the [Fabric
 
 ## Creating custom JSON
 
-Creating custom column formatting JSON from scratch is simple if you understand the schema. The Monaco Editor is integrated in the formatting pane with pre-filled JSON column schema reference to assist you to create your own column formatting. You have validation and autocomplete to create your JSON. You can start adding your JSON after the first line that defines the schema location.
+Creating custom column formatting JSON from scratch is simple if user understands the schema, Monaco Editor is integrated in the formatting pane with pre-filled JSON column schema reference to assist in creation of column formatting, Monaco editor has validation and autocomplete to help in crafting right JSON. User can start adding JSON after the first line that defines the schema location.
 
 > [!TIP]
-> At any point, select **Ctrl**+**Space** to see suggestions for properties and values. 
+> At any point, select **Ctrl**+**Space** for property/value suggestions.
 
 > [!TIP]
 > You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/sp-dev-list-formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles. 

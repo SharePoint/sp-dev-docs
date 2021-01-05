@@ -264,10 +264,10 @@ The following image shows a customized card in Gallery layout:
 
 ## Creating custom JSON
 
-Creating custom view formatting JSON from scratch is simple if you understand the schema. The Monaco Editor is integrated in the formatting pane with pre-filled JSON schema reference to assist you to create your own view formatting. You have validation and autocomplete to create your JSON. You can start adding your JSON after the first line that defines the schema location.
+Creating custom view formatting JSON from scratch is simple if user understands the schema, Monaco Editor is integrated in the formatting pane with pre-filled JSON schema reference to assist in creation of view formatting, Monaco editor has validation and autocomplete to help in crafting right JSON. User can start adding JSON after the first line that defines the schema location.
 
 > [!TIP]
-> At any point, select **Ctrl**+**Space** to see suggestions for properties and values. 
+> At any point, select **Ctrl**+**Space** for property/value suggestions. 
 
 > [!TIP]
 > You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/sp-dev-list-formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles. 
