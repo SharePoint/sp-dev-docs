@@ -83,35 +83,35 @@ You can deploy a theme by implementing a feature receiver.
 
     The following code example shows how to deploy a custom color palette and font scheme to a site.
 
-```csharp
-// Get the SPColor file. Replace with the path to your SPColor file.
-SPFile colorPaletteFile = Web.GetFile("path to .spcolor file");
-if (null == colorPaletteFile || !colorPaletteFile.Exists)
-{
-    // TODO: handle the error.
-    return;
-}
+    ```csharp
+    // Get the SPColor file. Replace with the path to your SPColor file.
+    SPFile colorPaletteFile = Web.GetFile("path to .spcolor file");
+    if (null == colorPaletteFile || !colorPaletteFile.Exists)
+    {
+        // TODO: handle the error.
+        return;
+    }
 
-// Get the SPFont file. Replace with the path to your SPFont file.
-SPFile fontSchemeFile = Web.GetFile("path to .spfont file");
-if (null == fontSchemeFile || !fontSchemeFile.Exists)
-{
-    // TODO: handle the error.
-    return;
-}
+    // Get the SPFont file. Replace with the path to your SPFont file.
+    SPFile fontSchemeFile = Web.GetFile("path to .spfont file");
+    if (null == fontSchemeFile || !fontSchemeFile.Exists)
+    {
+        // TODO: handle the error.
+        return;
+    }
 
-// Open an SPTheme with the two files. Replace NewTheme with the name for your theme.
-// Note: If you have a background image, you can specify the following:
-// SPTheme.Open("NewTheme", colorPaletteFile, fontSchemeFile, backgroundURI)
-SPTheme theme = SPTheme.Open("NewTheme", colorPaletteFile, fontSchemeFile);
+    // Open an SPTheme with the two files. Replace NewTheme with the name for your theme.
+    // Note: If you have a background image, you can specify the following:
+    // SPTheme.Open("NewTheme", colorPaletteFile, fontSchemeFile, backgroundURI)
+    SPTheme theme = SPTheme.Open("NewTheme", colorPaletteFile, fontSchemeFile);
 
 
-// Now apply your theme to the site.
-// The themed CSS output files are stored in the Themed folder of the Theme Gallery of the root web
-// of the site collection. To specify that the files should be stored in the _themes folder within the root
-// web, pass false to the ApplyTo method.
-theme.ApplyTo(Web, true);
-```
+    // Now apply your theme to the site.
+    // The themed CSS output files are stored in the Themed folder of the Theme Gallery of the root web
+    // of the site collection. To specify that the files should be stored in the _themes folder within the root
+    // web, pass false to the ApplyTo method.
+    theme.ApplyTo(Web, true);
+    ```
 
 > [!NOTE]
 > The  _shareGenerated_ parameter in the **ApplyTo** method specifies whether the themed files can be shared across sites in a site collection. In general, it is set to **true** for SharePoint Server and SharePoint Online sites and set to **false** for SharePoint Foundation sites. The _shareGenerated_ parameter must be set to **true** if you intend the themed files to be shared. For more information, see [ApplyTo(SPWeb, Boolean)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPTheme.ApplyTo.aspx) .
