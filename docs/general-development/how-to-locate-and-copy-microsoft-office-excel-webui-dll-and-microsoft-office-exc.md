@@ -148,55 +148,55 @@ The following steps show how to:
 
 The following is an example of the result of using the command prompt to locate and copy Microsoft.Office.Excel.WebUI.dll to a folder.
 
-    ```console
-    C:\Windows\assembly>dir
-    Volume in drive C has no label.
-    Directory of C:\Windows\assembly
+```console
+C:\Windows\assembly>dir
+Volume in drive C has no label.
+Directory of C:\Windows\assembly
 
-    02/20/2010  09:22 AM    <DIR>          GAC
-    02/20/2010  09:39 AM    <DIR>          GAC_32
-    02/20/2010  09:32 AM    <DIR>          GAC_64
-    02/22/2010  05:05 PM    <DIR>          GAC_MSIL
-    02/22/2010  05:35 PM    <DIR>          NativeImages_v2.0.50727_32
-    02/22/2010  04:33 PM    <DIR>          NativeImages_v2.0.50727_64
-    02/20/2010  10:34 AM    <DIR>          NativeImages_v4.0.30219_32
-    02/20/2010  10:35 AM    <DIR>          NativeImages_v4.0.30219_64
-    02/22/2010  05:04 PM    <DIR>          temp
-    02/22/2010  05:05 PM    <DIR>          tmp
-                   0 File(s)              0 bytes
-                  10 Dir(s)  104,032,665,600 bytes free
-    C:\Windows\assembly>cd gac_msil
+02/20/2010  09:22 AM    <DIR>          GAC
+02/20/2010  09:39 AM    <DIR>          GAC_32
+02/20/2010  09:32 AM    <DIR>          GAC_64
+02/22/2010  05:05 PM    <DIR>          GAC_MSIL
+02/22/2010  05:35 PM    <DIR>          NativeImages_v2.0.50727_32
+02/22/2010  04:33 PM    <DIR>          NativeImages_v2.0.50727_64
+02/20/2010  10:34 AM    <DIR>          NativeImages_v4.0.30219_32
+02/20/2010  10:35 AM    <DIR>          NativeImages_v4.0.30219_64
+02/22/2010  05:04 PM    <DIR>          temp
+02/22/2010  05:05 PM    <DIR>          tmp
+                0 File(s)              0 bytes
+              10 Dir(s)  104,032,665,600 bytes free
+C:\Windows\assembly>cd gac_msil
 
-    C:\Windows\assembly\GAC_MSIL>dir
-     Volume in drive C has no label.
-     Directory of C:\Windows\assembly\GAC_MSIL
-    ...
-    02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.Server.Udf
-    02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.Server.WebServices
+C:\Windows\assembly\GAC_MSIL>dir
+  Volume in drive C has no label.
+  Directory of C:\Windows\assembly\GAC_MSIL
+...
+02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.Server.Udf
+02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.Server.WebServices
 
-    02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.WebUI
-    02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.WebUI.Internal
-    ...
+02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.WebUI
+02/20/2010  07:57 AM    <DIR>          Microsoft.Office.Excel.WebUI.Internal
+...
 
-    C:\Windows\assembly\GAC_MSIL>cd Microsoft.Office.Excel.WebUI
+C:\Windows\assembly\GAC_MSIL>cd Microsoft.Office.Excel.WebUI
 
-    C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI>dir
-     Volume in drive C has no label.
-    Directory of C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI
+C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI>dir
+  Volume in drive C has no label.
+Directory of C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI
 
-    02/20/2010  07:57 AM    <DIR>          .
-    02/20/2010  07:57 AM    <DIR>          ..
-    02/20/2010  07:57 AM    <DIR>          14.0.0.0__71e9bce111e9429c
-                   0 File(s)              0 bytes
-                   3 Dir(s)  104,006,115,328 bytes free
+02/20/2010  07:57 AM    <DIR>          .
+02/20/2010  07:57 AM    <DIR>          ..
+02/20/2010  07:57 AM    <DIR>          14.0.0.0__71e9bce111e9429c
+                0 File(s)              0 bytes
+                3 Dir(s)  104,006,115,328 bytes free
 
-    C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI>cd 14.0.0.0__71e9bce111e9429c
+C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI>cd 14.0.0.0__71e9bce111e9429c
 
-    C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI\14.0.0.0__71e9bce111e9429c>copy Microsoft.Office.Excel.WebUI.dll c:\WebUIAssembly
-            1 file(s) copied.
+C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI\14.0.0.0__71e9bce111e9429c>copy Microsoft.Office.Excel.WebUI.dll c:\WebUIAssembly
+        1 file(s) copied.
 
-    C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI\14.0.0.0__71e9bce111e9429c>
-    ```
+C:\Windows\assembly\GAC_MSIL\Microsoft.Office.Excel.WebUI\14.0.0.0__71e9bce111e9429c>
+```
 
 ## See also
 

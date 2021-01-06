@@ -61,8 +61,8 @@ To create the farm solution that uses the JavaScript object model to work with F
 
 1. Replace the comment between the `script` tags with the code example from one of the following scenarios:
 
-    - [Start or stop following people](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#bk_FollowPeople)
-    - [Get followers and followed people](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#bk_GetFollowers)
+    - [Start or stop following people](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#code-example-start-or-stop-following-people-by-using-the-sharepoint-javascript-object-model)
+    - [Get followers and followed people](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#code-example-get-followers-and-followed-people-by-using-the-sharepoint-javascript-object-model)
 
 1. To test the solution, on the menu bar, choose **Debug**, **Start Debugging**.
 
@@ -76,7 +76,7 @@ The following code example makes the current user start following or stop follow
 - Stop following the target user by using the  [stopFollowing](https://msdn.microsoft.com/library/65b0e9be-dc5e-09fb-c57f-7a933de09a4c%28Office.15%29.aspx) method.
 
 > [!NOTE]
->  Paste the following code between the **script** tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#bk_CreateSolution) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
+> Paste the following code between the **script** tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#create-a-farm-solution-and-application-page-in-visual-studio-2012) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
 
 ```javascript
 // Replace the placeholder value with the account name of the target user.
@@ -156,7 +156,7 @@ The following code example gets the people who the current user is following and
 - Iterate through the groups of people and get each person's display name, personal site URI, and picture URI.
 
 > [!NOTE]
-> Paste the following code between the `script` tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#bk_CreateSolution) procedure.
+> Paste the following code between the `script` tags that you added in the [Create a farm solution and application page](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md#create-a-farm-solution-and-application-page-in-visual-studio-2012) procedure.
 
 ```javascript
 var followed;
