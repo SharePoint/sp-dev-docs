@@ -7,18 +7,21 @@ manager: serdars
 search.appverid: MET150
 description: "This document is to give more in depth information about how to use the SPO Migration API."
 localization_priority: Priority
+ms.service: sharepoint-online
 ---
 # SharePoint Import Migration API (CreationMigrationJob)
 
 ## API Documention
 
-The following API description is based upon use of the SharePoint Client Side Object Model (CSOM). We do recommend using NuGet packages when you reference CSOM in your solution. You can find latest version of the SharePoint Online CSOM package from the NuGet library using id of `Microsoft.SharePointOnline.CSOM`.
+The following API description is based upon use of the SharePoint Client Side Object Model (CSOM). We do recommend using NuGet packages when you reference CSOM in your solution. 
 
-> [!NOTE]
-> You can find latest version of the SharePoint Online Client Side Object Model from [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/).
+You can find latest version of the SharePoint Online Client Side Object Model (CSOM) package from the [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/). Use the ID `Microsoft.SharePointOnline.CSOM`.
 
-> [!NOTE]
-> The **SharePoint Migration Tool** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
+>[!Important]
+> **Pending change:** Files larger than 15 GB must now create the required checksum using [QuickXorHash](https://docs.microsoft.com/en-us/onedrive/developer/code-snippets/quickxorhash?view=odsp-graph-online). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
+>
+>The previous method of MD5Hash is still required for files smaller than 2 GB; however this requirement will be removed at some point in the future.
+
 
 ## Methods
 
@@ -384,11 +387,13 @@ Several log types can be included such as the full import log, along with warnin
 
 ## Changes for those using the "Ship Disk" option
 
-To use the Migration API, you must have a temporary storage container in Azure. When uploading files into the temporary storage, an MD5 is required as a property on every file. However, when shipping the data on hard drives this MD5 property doesn’t get assigned automatically.  As a work around, we have adapted the Migration API to allow the MD5 to be passed for every file as part of the manifest. This also applies for IV values when encrypting the data.
+To use the Migration API, you must have a temporary storage container in Azure. When uploading files into the temporary storage, a checksum is required as a property on every file.  For files larger than 15GB, this is done using QuickXorHash (see example below). For files 2 GB or smaller, MD5 is required as a property on every file.
+
+However, when shipping the data on hard drives this property doesn’t get assigned automatically.  As a work around, we have adapted the Migration API to allow the checksum to be passed for every file as part of the manifest. This also applies for IV values when encrypting the data.
 
 Since the MD5 is generated at the source instead of at the upload time in Azure, Microsoft can confirm the integrity of the file directly against the source MD5.
 
-### What is stored in those Azure Blob Containers?
+## What is stored in those Azure Blob Containers?
 
 The Migration API requires the Azure Container for content passing and also for log and queue reporting. It can be split down as a summary as follows:<br>
 
@@ -398,15 +403,60 @@ The Migration API requires the Azure Container for content passing and also for 
 
 There are two new optional parameters in manifest.xml:
 
+- QuickXorHash
 - MD5Hash
 - InitializationVector
 
-#### Preparing the package
+### Preparing the package
 The method for calling the migration job doesn’t change; only the package generation needs to be changed.
 
-In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *MD5Hash* and *InitializationVector*. <br>
+In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *QuickXorHash*,*MD5Hash* and *InitializationVector*. <br>
 
-Example:
+**Example for files over 15 GB:**
+
+```xml
+
+<?xml version="1.0" encoding="utf-8"?> 
+
+<SPObjects xmlns="urn:deployment-manifest-schema"> 
+
+  <SPObject Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ObjectType="SPFolder" ParentId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents"> 
+
+    <Folder Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Url="Shared Documents" Name="Shared Documents" ParentFolderId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" ContainingDocumentLibrary="a69654d6-eb09-4638-aa6b-a7e8ff86f555" TimeCreated="2021-01-06T18:50:15" TimeLastModified="2021-01-06T18:50:15" SortBehavior="1" /> 
+
+  </SPObject> 
+
+  <SPObject Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ObjectType="SPDocumentLibrary" ParentId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents"> 
+
+    <DocumentLibrary Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" BaseTemplate="DocumentLibrary" RootFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" RootFolderUrl="/Shared Documents" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Title="Documents" HasUniqueRoleAssignments="true"> 
+
+      <ContentTypes /> 
+
+    </DocumentLibrary> 
+
+  </SPObject> 
+
+  <SPObject Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ObjectType="SPFile" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
+
+    <File Url="Shared Documents/MyFile.txt" Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Name="MyFile.txt" ListItemIntId="1" ListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" TimeCreated="2021-01-06T18:43:38" TimeLastModified="2018-06-07T17:54:28" Version="1.0" FileValue="MyFile.txt" FileSize="17662712" Author="1" ModifiedBy="1" MD5Hash="qVBFIb8MJLzT5INrE4XcDQ==" Checksum="3k59aOUae2xygD5B/jtxY4x0Xko=" /> 
+
+  </SPObject> 
+
+  <SPObject Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ObjectType="SPListItem" ParentId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
+
+    <ListItem FileUrl="Shared Documents/MyFile.txt" DocType="File" ParentFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Order="100" Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" Name="MyFile.txt" DirName="/Shared Documents" IntId="1" DocId="aef2bb11-7ee8-4343-87cd-5938d260e647" Version="1.0" Author="1" ModifiedBy="1" TimeLastModified="2018-06-07T17:54:28" TimeCreated="2021-01-06T18:43:38" ModerationStatus="Approved"> 
+
+      <Fields /> 
+
+    </ListItem> 
+
+  </SPObject> 
+
+</SPObjects> 
+
+ ```
+
+**Example for files under 2 GB:**
 
 ```xml
 <File … MD5Hash="CXPP/MWYxY87NjjnLZrFg==" InitializationVector="4WlC5zQK0r9s39LoB2w==" />
