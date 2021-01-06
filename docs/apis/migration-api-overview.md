@@ -1,12 +1,12 @@
 ---
 title: "SharePoint Online Import Migration API"
-ms.service: sharepoint-online
+ms.prod: sharepoint
 ms.date: 01/06/2021
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
 search.appverid: MET150
-description: "This document is to give more in depth information about how to use the SPO Migration API."
+description: "This article provides in depth information on how to use the SPO Migration API."
 localization_priority: Priority
 ---
 # SharePoint Import Migration API (CreationMigrationJob)
