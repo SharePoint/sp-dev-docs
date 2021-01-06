@@ -51,7 +51,7 @@ To preview the formatting, select **Preview**. To commit your changes, select **
 The easiest way to use column formatting is to start from an example and edit it to apply to your specific field. The following sections contain examples that you can copy, paste, and edit for your scenarios. There are also several samples available in the [SharePoint/sp-dev-column-formatting repository](https://github.com/SharePoint/sp-dev-column-formatting).
 
 > [!NOTE]
-> All examples in this document refer to the json schema used in SharePoint Online. To format columns on SharePoint 2019, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
+> All examples in this document refer to the JSON schema used in SharePoint Online. To format columns on SharePoint 2019, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
 
 
 ## Display field values (basic)
@@ -894,7 +894,8 @@ The following image shows a list with a Gallery layout referencing the Category 
                   "class": "sp-card-content"
                 },
                 "style": {
-                  "height": "32px"
+                  "height": "32px",
+                  "font-size":"12px"
                 },
                 "children": [
                   {
