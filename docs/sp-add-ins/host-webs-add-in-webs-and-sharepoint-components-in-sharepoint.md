@@ -21,21 +21,21 @@ Figure 1 shows a host web with two SharePoint Add-ins installed. Add-in 1 has re
 
 For example, suppose that an add-in, with SharePoint components beyond just the UI elements that can be deployed to a host web, is installed on a host website at the following URL: 
 
-    ```txt
-    https://www.fabrikam.com/sites/Marketing
-    ```
+```txt
+https://www.fabrikam.com/sites/Marketing
+```
 
 The SharePoint Add-in will be deployed to a newly created website with a URL like the following:
 
-    ```txt
-    http://add-in-bdf2016ea7dacb.fabrikamadd-ins.com/sites/Marketing/Scheduler
-    ```
+```txt
+http://add-in-bdf2016ea7dacb.fabrikamadd-ins.com/sites/Marketing/Scheduler
+```
 
 Note that this URL has the following structure:
 
-    ```txt
-    https://` _Add-in_Prefix_ `-` _Add-in_ID_ `.` _Add-in_Base_Domain_ `/` _Domain_Relative_URL_of_Host_Web_ `/` _Add-in_Name_
-    ```
+```txt
+https://` _Add-in_Prefix_ `-` _Add-in_ID_ `.` _Add-in_Base_Domain_ `/` _Domain_Relative_URL_of_Host_Web_ `/` _Add-in_Name_
+```
 
 The placeholders are defined as follows:
 
@@ -57,7 +57,7 @@ There are two primary reasons why SharePoint components are deployed to add-in w
 In general, a SharePoint Add-in can contain one or more of the components in the following list. With certain exceptions, these components must be deployed in **Web**-scoped Features that are inside a SharePoint solution package (.wsp) file.
 
 > [!NOTE]
-> The components that are marked with an asterisk (\*) are discussed in more detail in the section [Caveats for deploying SharePoint components](#SpecialCases) later in this article.
+> The components that are marked with an asterisk (\*) are discussed in more detail in the section [Caveats for deploying SharePoint components](#caveats-for-deploying-sharepoint-components) later in this article.
 
 - Features (**Web**-scoped only)
 - Custom actions (including shortcut menu items and ribbon customizations)\*
@@ -93,8 +93,8 @@ The following are some caveats and details concerning the deployment of certain 
 
     You can also define a custom site type for the add-in web. There are two major steps to doing this:
 
-        - Include a custom [WebTemplate Element (Web Template)](https://msdn.microsoft.com/library/ff4ba91a-cc5f-47ff-9101-a7651f452185%28Office.15%29.aspx), an onet.xml file, and possibly other associated files, in the add-in web Feature for your add-in. Deploy the web template in the Web-scoped Feature in a .wsp file inside the add-in package as usual.
-        - Add a [WebTemplate element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](https://msdn.microsoft.com/library/62302903-e97a-a9a3-a64e-13176a7c4e1e%28Office.15%29.aspx) to the add-in manifest as a child of the **Properties** element, and set its **Id** attribute to the GUID of the add-in web Feature and the value of the **Name** attribute of the [WebTemplate Element (Web Template)](https://msdn.microsoft.com/library/ff4ba91a-cc5f-47ff-9101-a7651f452185%28Office.15%29.aspx). Note that the GUID must be hyphenated and wrapped in braces "{}", and the GUID and template name are separated by the "#" character. The following is an example:
+    - Include a custom [WebTemplate Element (Web Template)](https://msdn.microsoft.com/library/ff4ba91a-cc5f-47ff-9101-a7651f452185%28Office.15%29.aspx), an onet.xml file, and possibly other associated files, in the add-in web Feature for your add-in. Deploy the web template in the Web-scoped Feature in a .wsp file inside the add-in package as usual.
+    - Add a [WebTemplate element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](https://msdn.microsoft.com/library/62302903-e97a-a9a3-a64e-13176a7c4e1e%28Office.15%29.aspx) to the add-in manifest as a child of the **Properties** element, and set its **Id** attribute to the GUID of the add-in web Feature and the value of the **Name** attribute of the [WebTemplate Element (Web Template)](https://msdn.microsoft.com/library/ff4ba91a-cc5f-47ff-9101-a7651f452185%28Office.15%29.aspx). Note that the GUID must be hyphenated and wrapped in braces "{}", and the GUID and template name are separated by the "#" character. The following is an example:
 
         ```XML
         <WebTemplate Id="{81dd4ae5-873b-4759-9838-4ad9c3dd2952}#NewSiteType" />
