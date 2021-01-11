@@ -1,13 +1,13 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 07/31/2020
+ms.date: 12/29/2020
 localization_priority: Priority
 ---
 
 # Use view formatting to customize SharePoint
 
-You can use view formatting to customize how views in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a row is loaded in a list view and any styles to be applied to those elements. View formatting does not change the data in list items; it only changes how they're displayed to users who browse the list. Anyone who can create and manage views in a list can use view formatting to configure how views are displayed.
+You can use view formatting to customize how items in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when an item is loaded in a view and any styles to be applied to those elements. View formatting does not change the data in list items; it only changes how they're displayed to users who browse the list. Anyone who can create and manage views in a list can use view formatting to configure how views are displayed.
 
 > [!TIP]
 > Samples demonstrated in this article and numerous other community samples are available from a GitHub repository dedicated for open-sourced list formatting definitions. You can find these samples in the [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) repository within the [SharePoint](https://github.com/SharePoint) GitHub organization.
@@ -19,29 +19,34 @@ You can use view formatting to customize how views in SharePoint lists and libra
 
 To open the view formatting pane, open the view dropdown and choose **Format current view**. <img src="../images/view-dropdown-menu.png" alt="View dropdown menu" width="260" height="310"/>
 
+The pane will look like the following depending on the current layout:
+
+<img src="../images/sp-viewformatting-panel-listlayout.png" alt="List layout formatting pane"/>  <img src="../images/sp-viewformatting-panel-tileslayout.png" alt="Gallery layout formatting pane"/>
+
 >[!NOTE]
-> To enable the 'Tile' layout, include `tileProps` property inside the JSON.
+> We have simplified the View formatting pane experience to separate out the List and Gallery layout formatting JSON. With this change, you do not need to add `tileProps` prop anymore.
 
-To format rows in 'List' or 'Compact List' layout, use the `rowFormatter` or `additionalRowClass` properties. To format entries in 'Tile' layout, use the `formatter` within `tileProps` property.
-
+To format rows in 'List' or 'Compact List' layout, select 'List' in 'Choose layout' dropdown in the formatting pane and use the `rowFormatter` or `additionalRowClass` properties. To format cards in 'Gallery' layout, select 'Gallery' in 'Choose layout' dropdown in the formatting pane and use the `formatter` property.
 
 The easiest way to use view formatting is to start from an example and edit it to apply to your specific view. The following sections contain examples that you can copy, paste, and customize for your specific needs. There are also several samples available in the [SharePoint/sp-dev-list-formatting repository](https://github.com/SharePoint/sp-dev-list-formatting).
 
-## Apply conditional classes
+## List layout customizations
+### Apply conditional classes on rows
 
-You can use view formatting to apply one or more classes to the entire list view row depending on the value of one or more fields in the row. These examples leave the content and structure of list view rows intact.
+You can use **`additionalRowClass`** to apply one or more classes to the entire list row depending on the value of one or more fields in the row. These examples leave the content and structure of list rows intact.
 
 For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#style-guidelines) in the [Column Formatting reference document](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting).
 
 > [!TIP]
-> Using the `additionalRowClass` property to apply classes to list view rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
+> Using the `additionalRowClass` property to apply classes to list rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
 
-### Conditional classes based on a date field
+#### Example: Conditional classes based on a date field
 
-The following image shows a list view with a class applied based on the value of a date column:
+The following image shows a list layout with a class applied based on the value of a date column:
+
 ![SharePoint list with view formatted with conditional formatting](../images/listformatting-additionalrowclass.png)
 
-This example applies the class `sp-field-severity--severeWarning` to a list view row when the item's DueDate is before the current date/time:
+This example applies the class `sp-field-severity--severeWarning` to a list row when the item's DueDate is before the current date/time:
 
 ```JSON
 {
@@ -50,9 +55,9 @@ This example applies the class `sp-field-severity--severeWarning` to a list view
 }
 ```
 
-### Conditional classes based on the value in a text or choice field 
+#### Example: Conditional classes based on the value in a text or choice field 
 
-This example was adopted from a column formatting example, [Conditional formatting based on the value in a text or choice field](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/column-samples/text-conditional-format), with some important differences to apply the concept to list view rows. The column formatting example applies both an icon and a class to a column based on the value of `@currentField`. The `additionalRowClass` attribute in view formatting, however, only allows you to specify a class and not an icon. Additionally, since `@currentField` always resolves to the value of the `Title` field when referenced inside a view format, this sample refers to the `Status` field directly (by using the [$Field] syntax inside the additionalRowClass property to determine which class to apply to the row).
+This example was adopted from a column formatting example, [Conditional formatting based on the value in a text or choice field](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/column-samples/text-conditional-format), with some important differences to apply the concept to list rows. The column formatting example applies both an icon and a class to a column based on the value of `@currentField`. The `additionalRowClass` attribute in view formatting, however, only allows you to specify a class and not an icon. Additionally, since `@currentField` always resolves to the value of the `Title` field when referenced inside a view format, this sample refers to the `Status` field directly (by using the [$Field] syntax inside the additionalRowClass property to determine which class to apply to the row).
 
 ```JSON
 {
@@ -63,20 +68,32 @@ This example was adopted from a column formatting example, [Conditional formatti
 
 You can find this sample with additional details here: [Conditional formatting based on choice field](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/text-conditional-format)
 
-## Build custom row layouts
+#### Example: Alternate Row Formatting based on Modulus 
 
-You can use view formatting to define a totally custom layout of field values inside a row using the same syntax used in Column Formatting.
-
-### Multi-line view style
-
-The following image shows a list with a custom multi-line view style applied:
-![SharePoint list with multi-line view customization](../images/listformatting-rowformatter.png)
-
-This example uses the `rowFormatter` element, which totally overrides the rendering of a list view row. The `rowFormatter` in this example creates a bounding `<div />` box for every list view row. Inside this bounding box, the `$Title` and `$Feedback` fields are displayed on separate lines. Under those fields, a `button` element is displayed that, when clicked, does the same thing as clicking the list row in an uncustomized view, which is opening the property form for the item. This `button` is displayed conditionally, when the value of the `$Assigned_x0020_To` field (assumed to be a person/group field) matches the current signed-in user:
+This example applies `% (Mod)` to a list row with alternate coloring the rows:
 
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
+  "additionalRowClass": "=if(@rowIndex%2==0,'ms-bgColor-themeLight','')"
+}
+```
+
+
+### Build custom list rows
+
+You can use **`rowFormatter`** to define a totally custom layout of field values inside a row using the same syntax used in [Column Formatting](column-formatting.md).
+#### Example: Multi-line view style
+
+The following image shows a list with a custom multi-line view style applied:
+
+![SharePoint list with multi-line view customization](../images/listformatting-rowformatter.png)
+
+This example uses the `rowFormatter` element, which totally overrides the rendering of a list row. The `rowFormatter` in this example creates a bounding `<div />` box for every list row. Inside this bounding box, the `$Title` and `$Feedback` fields are displayed on separate lines. Under those fields, a `button` element is displayed that, when clicked, does the same thing as clicking the list row in an uncustomized view, which is opening the property form for the item. This `button` is displayed conditionally, when the value of the `$Assigned_x0020_To` field (assumed to be a person/group field) matches the current signed-in user:
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
   "hideSelection": true,
   "hideColumnHeader": true,
   "rowFormatter": {
@@ -139,145 +156,127 @@ This example uses the `rowFormatter` element, which totally overrides the render
 ```
 You can find this sample with additional details here: [Multi-line view rendering](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/multi-line-view)
 
+## Gallery layout customizations
 
-Similarly, to get the below format in ‘Tile’ layout for the Feedback list, define the formatter within `tileProps`:
-![Feedback list formatted in Tile layout](../images/feedback-tile-layout.png)
+### Build custom cards
+You can use Gallery **`formatter`** to define a totally custom layout of field values inside a card using the same syntax used in [Column Formatting](column-formatting.md).
+
+The following image shows a customized card in Gallery layout:
+
+![Feedback list formatted in Gallery layout](../images/feedback-tile-layout.png)
 
 ```JSON
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
-  "tileProps": {
-    "height": "250",
-    "width": "350",
-    "hideSelection": true,
-    "formatter": {
-      "elmType": "div",
-      "style": {
-        "display": "flex",
-        "align-items": "stretch",
-        "margin-bottom": "16px",
-        "min-width": "150px",
-        "flex-grow": "1",
-        "justify-content": "space-around",
-        "padding": "5px"
-      },
-      "children": [
-        {
-          "elmType": "div",
-          "style": {
-            "width": "95%",
-            "height": "92%",
-            "box-shadow": "0px 1.6px 3.6px 0 #00000024, 0px 0.3px 0.9px 0 #00000024",
-            "overflow": "hidden",
-            "border-radius": "2px",
-            "padding-left": "16px",
-            "padding-top": "16px"
-          },
-          "attributes": {
-            "class": "ms-bgColor-neutralLighterAlt"
-          },
-          "children": [
-            {
-              "elmType": "div",
-              "style": {
-                "text-align": "left"
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": "250",
+  "width": "350",
+  "hideSelection": true,
+  "formatter": {
+    "elmType": "div",
+    "style": {
+      "display": "flex",
+      "align-items": "stretch",
+      "margin-bottom": "16px",
+      "min-width": "150px",
+      "flex-grow": "1",
+      "justify-content": "space-around",
+      "padding": "5px"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "width": "95%",
+          "height": "92%",
+          "box-shadow": "0px 1.6px 3.6px 0 #00000024, 0px 0.3px 0.9px 0 #00000024",
+          "overflow": "hidden",
+          "border-radius": "2px",
+          "padding-left": "16px",
+          "padding-top": "16px"
+        },
+        "attributes": {
+          "class": "ms-bgColor-neutralLighterAlt"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "style": {
+              "text-align": "left"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "style": {
+                  "color":"#333333",
+                  "font-size": "16px",
+                  "font-weight":"600",
+                  "margin-bottom":"5px"
               },
-              "children": [
-                {
-                  "elmType": "div",
-                  "style": {
-                    "color":"#333333",
-                    "font-size": "16px",
-                    "font-weight":"600",
-                    "margin-bottom":"5px"
+                "txtContent": "[$Title]"
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "color":"#333333",
+                  "font-size": "14px",
+                  "line-height":"1.8"
+              },
+                "attributes": {
+                  "class": "sp-row-listPadding"
                 },
-                  "txtContent": "[$Title]"
+                "txtContent": "[$Feedback]"
+              },
+              {
+                "elmType": "button",
+                "customRowAction": {
+                  "action": "defaultClick"
                 },
-                {
-                  "elmType": "div",
-                  "style": {
-                    "color":"#333333",
-                    "font-size": "14px",
-                    "line-height":"1.8"
+                "txtContent": "Give feedback",
+                "attributes": {
+                  "class": "sp-row-button"
                 },
-                  "attributes": {
-                    "class": "sp-row-listPadding"
-                  },
-                  "txtContent": "[$Feedback]"
-                },
-                {
-                  "elmType": "button",
-                  "customRowAction": {
-                    "action": "defaultClick"
-                  },
-                  "txtContent": "Give feedback",
-                  "attributes": {
-                    "class": "sp-row-button"
-                  },
-                  "style": {
-                    "display": {
-                      "operator": "?",
-                      "operands": [
-                        {
-                          "operator": "==",
-                          "operands": [
-                            "@me",
-                            "[$Assigned_x0020_To.email]"
-                          ]
-                        },
-                        "",
-                        "none"
-                      ]
-                    }
+                "style": {
+                  "display": {
+                    "operator": "?",
+                    "operands": [
+                      {
+                        "operator": "==",
+                        "operands": [
+                          "@me",
+                          "[$Assigned_x0020_To.email]"
+                        ]
+                      },
+                      "",
+                      "none"
+                    ]
                   }
                 }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
-}
-```
 
-### Alternate Row Formatting based on Modulus 
-
-This example applies `% (Mod)` to a list view row with alternate coloring the rows:
-
-```JSON
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
-  "additionalRowClass": "=if(@rowIndex%2==0,'ms-bgColor-themeLight','')"
 }
 ```
 
 ## Creating custom JSON
 
-Creating custom view formatting JSON from scratch is simple if you understand the schema. To create your own custom column formatting:
-
-1. [Download Visual Studio Code](https://code.visualstudio.com/Download). It's free and fast to download. 
-
-2. In Visual Studio Code, create a new file, and save the empty file with a .json file extension.
-
-3. Paste the following lines of code into your empty file.
-
-   ```JSON
-    {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json"
-    }
-   ```
-
-You now have validation and autocomplete to create your JSON. You can start adding your JSON after the first line that defines the schema location. 
+Creating custom view formatting JSON from scratch is simple if user understands the schema, Monaco Editor is integrated in the formatting pane with pre-filled JSON schema reference to assist in creation of view formatting, Monaco editor has validation and autocomplete to help in crafting right JSON. User can start adding JSON after the first line that defines the schema location.
 
 > [!TIP]
-> At any point, select **Ctrl**+**Space** to have Visual Studio Code offer suggestions for properties and values. For more information, see [Editing JSON with Visual Studio Code](https://code.visualstudio.com/Docs/languages/json).
+> At any point, select **Ctrl**+**Space** for property/value suggestions. 
+
+> [!TIP]
+> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/sp-dev-list-formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles. 
 
 ## Detailed syntax reference
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list view row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
 
 >[!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -296,19 +295,19 @@ Optional element. Specifies a CSS class(es) that is applied to the entire row. S
 
 ### hideSelection
 
-Optional element. Specifies whether the ability to select rows in the view is disabled or not. *false* is the default behavior inside a list view (meaning selection is visible and enabled). *true* means that users will not be able to select list items.  
+Optional element. Specifies whether the ability to select rows in the view is disabled or not. *false* is the default behavior inside a list view (meaning selection is visible and enabled). *true* means that users will not be able to select list items. Valid in 'List', 'Compact List' and 'Gallery' layouts.
 
-For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored. For 'Tile' layout, `hideSelection` will only take effect if defined inside `tileProps` properties.
+For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
 ### hideColumnHeader
 
-Optional element. Specifies whether the column headers in the view are hidden or not. *false* is the default behavior inside a list view (meaning column headers will be visible). *true* means that the view will not display column headers.
+Optional element. Specifies whether the column headers in the view are hidden or not. *false* is the default behavior inside a list view (meaning column headers will be visible). *true* means that the view will not display column headers. Only valid for 'List' and 'Compact List' layouts.
 
-### tileProps
+### height
+Optional element. Defines the height of the card in pixels for 'Gallery' layout. Only valid for 'Gallery' layout.
 
-Optional element. Specifies a JSON object that describes a 'Tile' view format. Elements of this property include:
-- height – defines the height of the card in pixels.
-- width – defines the width of the card in pixels. Can go from height/2 to 3 x height. 
-- hideSelection – as defined above
-- formatter – JSON object that defines the layout of tiles. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference).
+### width
+Optional element. Defines the width of the card in pixels for 'Gallery' layout. Can go from height/2 to 3 x height. Only valid for 'Gallery' layout.
 
+### formatter
+JSON object that defines the layout of cards for 'Gallery' layout. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'Gallery' layout.
