@@ -44,28 +44,28 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**EntityTypeName**</p></td>
+<td align="left"><p><b>EntityTypeName</b></p></td>
 <td align="left"><p>Required.</p>
 <p>The name of the external content type as defined in the BDC model.</p>
-<p>Attribute type: **String**</p></td>
+<p>Attribute type: <b>String</b></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**EntityTypeNamespace**</p></td>
+<td align="left"><p><b>EntityTypeNamespace</b></p></td>
 <td align="left"><p>Required.</p>
 <p>The namespace this external content type belongs to, as defined in the BDC model.</p>
-<p>Attribute type: **String**</p></td>
+<p>Attribute type: <b>String</b></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**Name**</p></td>
+<td align="left"><p><b>Name</b></p></td>
 <td align="left"><p>Required.</p>
 <p>The name of the external content type in the solution manifest. This value can be different from the name defined in the BDC model and is used to identify the external content type only within the scope of the solution manifest.</p>
-<p>Attribute type: **String**</p></td>
+<p>Attribute type: <b>String</b></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**Description**</p></td>
+<td align="left"><p><b>Description</b></p></td>
 <td align="left"><p>Optional.</p>
 <p>A description for the external content type.</p>
-<p>Attribute type: **String**</p></td>
+<p>Attribute type: <b>String</b></p></td>
 </tr>
 </tbody>
 </table>
@@ -88,7 +88,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md">View Element in EntityInstanceDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>Specifies the **SpecificFinder** method instance of the external content type that should be run to get the external data.</p></td>
+  <td align="left"><p>Specifies the <b>SpecificFinder</b> method instance of the external content type that should be run to get the external data.</p></td>
 </tr>
 </tbody>
 </table>
