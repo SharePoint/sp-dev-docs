@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 11/18/2020
+ms.date: 12/29/2020
 localization_priority: Priority
 ---
 
@@ -51,7 +51,7 @@ To preview the formatting, select **Preview**. To commit your changes, select **
 The easiest way to use column formatting is to start from an example and edit it to apply to your specific field. The following sections contain examples that you can copy, paste, and edit for your scenarios. There are also several samples available in the [SharePoint/sp-dev-column-formatting repository](https://github.com/SharePoint/sp-dev-column-formatting).
 
 > [!NOTE]
-> All examples in this document refer to the json schema used in SharePoint Online. To format columns on SharePoint 2019, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
+> All examples in this document refer to the JSON schema used in SharePoint Online. To format columns on SharePoint 2019, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
 
 
 ## Display field values (basic)
@@ -816,7 +816,101 @@ Both the example uses defaultHoverField
 ```
 
 
+## Column formatter reference
 
+Users can refer to a column's formatter JSON inside another column/view formatter and use it along with other elements to build a custom column visualization. This can be done by using `columnFormatterReference` property.
+
+The following image shows a list with a Gallery layout referencing the Category column formatter:
+<img src="../images/sp-columnformatting-formatter-reference-1.png" alt="Gallery layout referring Category column"/>
+
+<img src="../images/sp-columnformatting-formatter-reference-2.png" alt="List layout with Category column formatted"/>
+
+``` JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 127,
+  "width": 254,
+  "hideSelection": false,
+  "formatter": {
+    "elmType": "div",
+    "attributes": {
+      "class": "sp-card-container"
+    },
+    "children": [
+      {
+        "elmType": "button",
+        "attributes": {
+          "class": "sp-card-defaultClickButton"
+        },
+        "customRowAction": {
+          "action": "defaultClick"
+        }
+      },
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "ms-bgColor-white sp-css-borderColor-neutralLight sp-card-borderHighlight sp-card-subContainer"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondaryAlt sp-card-label"
+                },
+                "txtContent": "[!Title.DisplayName]"
+              },
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "[$Title]",
+                  "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent"
+                },
+                "txtContent": "=if ([$Title] == '', '–', [$Title])"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-lastTextColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondaryAlt sp-card-label"
+                },
+                "txtContent": "[!Category.DisplayName]"
+              },
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": "sp-card-content"
+                },
+                "style": {
+                  "height": "32px",
+                  "font-size":"12px"
+                },
+                "children": [
+                  {
+                    "columnFormatterReference": "[$Category]"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 ## Supported column types
 
@@ -880,24 +974,13 @@ You can use predefined icons from Office UI Fabric. For details, see the [Fabric
 
 ## Creating custom JSON
 
-Creating custom column formatting JSON from scratch is simple if you understand the schema. To create your own custom column formatting:
-
-1. [Download Visual Studio Code](https://code.visualstudio.com/Download). It's free and fast to download. 
-
-2. In Visual Studio Code, create a new file, and save the empty file with a .json file extension.
-
-3. Paste the following lines of code into your empty file.
-
-   ```JSON
-    {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"
-    }
-   ```
-
-   You now have validation and autocomplete to create your JSON. You can start adding your JSON after the first line that defines the schema location. 
+Creating custom column formatting JSON from scratch is simple if user understands the schema, Monaco Editor is integrated in the formatting pane with pre-filled JSON column schema reference to assist in creation of column formatting, Monaco editor has validation and autocomplete to help in crafting right JSON. User can start adding JSON after the first line that defines the schema location.
 
 > [!TIP]
-> At any point, select **Ctrl**+**Space** to have Visual Studio Code offer suggestions for properties and values. For more information, see [Editing JSON with Visual Studio Code](https://code.visualstudio.com/Docs/languages/json).
+> At any point, select **Ctrl**+**Space** for property/value suggestions.
+
+> [!TIP]
+> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/sp-dev-list-formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles. 
 
 > [!TIP]
 > SharePoint Patterns and Practices provides a free web part, [Column Formatter](https://github.com/SharePoint/sp-dev-solutions/blob/master/solutions/ColumnFormatter/docs/documentation/docs/getting-started.md), that can be used to edit and apply formats directly in the browser.
@@ -1873,6 +1956,16 @@ This also works with field name
  {
     "elmType": "div",
     "txtContent": "[$FieldName.displayValue]"
+}
+```
+
+#### columnFormatterReference
+
+This will be replaced with the referenced column's formatter JSON. Multi level reference is not supported.
+
+```JSON
+{
+    "columnFormatterReference": "[$FieldName]"
 }
 ```
 

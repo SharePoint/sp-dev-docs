@@ -1,12 +1,10 @@
 ---
 title: OneDrive for Business customization in the SharePoint Add-in model
-ms.date: 05/20/2020
+description: In an SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
+ms.date: 12/29/2020
 localization_priority: Normal
 ---
 # OneDrive for Business customization in the SharePoint Add-in model
-==================================================================
-
-## Summary
 
 The approach you take to customize OneDrive for Business sites in the new SharePoint Add-in model is different than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, SharePoint Timer Jobs were created with the SharePoint Server Side Object Model code, deployed via Farm Solutions and managed in the SharePoint Central Administration website.  SharePoint handles both the scheduling and the execution of the timer job in this scenario. 
 
@@ -23,12 +21,12 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 - Apply branding customization using Office 365 themes or SharePoint site theming engine
 - If theme engines are not enough, you can adjust some CSS settings using alternate CSS option
 - Avoid customizing OD4B sites using custom master pages, since this will cause you additional long term costs and challenges with future updates
-	+ In most of the cases, you can achieve all common branding scenarios with themes and alternate CSS, so this is not really that limiting factor
-	+ If you chose to use custom master pages, be prepared on applying changes to the sites when major functional updates are applied to Office 365
+  - In most of the cases, you can achieve all common branding scenarios with themes and alternate CSS, so this is not really that limiting factor
+  - If you chose to use custom master pages, be prepared on applying changes to the sites when major functional updates are applied to Office 365
 - You can use JavaScript embedding to modify or hide functionality in the site
 - You can use CSOM to control for example language or regional settings in the OD4B sites (see [new APIs](https://blogs.msdn.com/b/vesku/archive/2014/12/15/latest-api-updates-in-client-side-object-model-dec-2014-cu-for-sp2013.aspx))
 - We do not recommend usage of content types and site columns in OD4B sites to avoid challenges with the required fields or other elements, which could cause issues for normal use cases with OD4B sites
-	+ Think OD4B sites as for personal unstructured data and documents. Team sites and collaboration sits are then for company data and documents where you can certainly use whatever information management policies and metadata you want.
+  - Think OD4B sites as for personal unstructured data and documents. Team sites and collaboration sits are then for company data and documents where you can certainly use whatever information management policies and metadata you want.
 
 As a summary, customization is definitely supported in Office 365 and you can keep on using them with OD4B sites. We just truly want to ensure that you consider the short and long term impact of the customization from operational and maintenance perspective. This is not really specific for SharePoint, rather a rule of thumb for any IT solution build with any platform.
 
@@ -40,7 +38,7 @@ Here’s an example of OD4B site, which has been customized using above guidelin
 
 Let’s start with defining what is the challenge and what are we trying to solve here. Technically each OneDrive for Business site is currently using identical architecture as what the personal or my sites used  back in SharePoint 2007 or 2010 version. This means that technically each OneDrive for Business site is their own site collection and we do not have any centralized location to apply branding or any other customizations.
 
-![Each OneDrive for Business site is its own site collection under the personal managed path, and each url is created based on the user profile. For example, if contoso-my.sharepoint.com is the main site, then John's site will be contoso-my.sharepoint.com/personal/john_contoso_com.](media/Recipes/OD4BCustomization/OD4B-topolgy.png)
+![Challenge with applying OneDrive for Business site customizations](media/Recipes/OD4BCustomization/OD4B-topolgy.png)
 
 Classic solution to apply needed configuration to the OneDrive for Business sites (including my or personal sites) was based on [feature stapling in farm level](http://cks.codeplex.com/releases/view/2824). This meant that you deployed farm solution to your SharePoint farm and used feature framework to associate your custom feature to be activated each time a my site is crated, which was then responsible of applying needed customizations. This similar approach does not work in Office 365, since it requires farm solution to be deployed and that is simply impossible with Office 365 sites. Therefore we need to look alternatives to apply the needed changes to the sites.
 
@@ -51,9 +49,9 @@ In Office 365 there is no centralized event raised, which we could attach our cu
 In practice we do have four different mechanisms to apply centralized customization to OD4B sites in the Office 365. You could also consider manual option as the fifth one, but in the case of having hundreds or thousands of OD4B sites, using manual options is not really a realistic option. Here’s the different options we have.
 
 1. Office 365 suite level settings (Office 365 themes and other settings)
-2. Hidden app part with user context
-3. Pre-create and apply configuration
-4. Remote timer job based on user profile updates
+1. Hidden app part with user context
+1. Pre-create and apply configuration
+1. Remote timer job based on user profile updates
 
 Each of the options have advantages and disadvantages in them and the right option depends on your detailed business requirements. Some of the settings you can also apply from the Office 365 suite level, but often you would be looking for some more specifics, so actual customizations are needed. It obviously all comes down on exact requirements and business case analyses on their impact on short and long term.
 
@@ -80,10 +78,11 @@ Let’s have a closer look on the logical design of this approach.
 ![Diagram to show relationships. The App part on the SharePoint site uses instantiate to go to Provider Hosted Apps. Provider Hosted Apps uses Add Message to go to Storage Queue. Storage Queue uses instantiate to go to WebJob. WebJob uses Apply modifications to go to the OD4B site.](media/Recipes/OD4BCustomization/hidden-app-part-logical-diagram.png)
 
 1. Place hidden app part to centralized site where end users will land. Typically this is the corporate intranet front page.
-2. App part is hosting a page from provider hosted app, where in the server side code we initiate the customization process by adding needed metadata to the azure storage queue. This means that this page will only receive the customization request, but will not actually apply any changes to keep the processing time normal.
-3. This is the actual azure storage queue, which will receive the messages to queue for processing. This way we can handle the customization controlling process asynchronously so that it does not really matter how long end user will stay on the front page of the Intranet. If the customization process would be synchronous, we would be dependent on end user to keep the browser open in the Intranet front page until page execution is finalized. This would not definitely be optimal and it was the challenge with the [original OD4B customization process](https://blogs.msdn.com/b/vesku/archive/2013/11/25/office365-apply-automatically-custom-branding-to-personal-site-skydrive-pro.aspx), which I blogged while back.
-4. WebJob hooked to follow the storage queue, which is called when new item is placed to the storage queue. This WebJob will receive the needed parameters and metadata from the queued message to access right site collection. WebJob is using app only token and have been granted the needed permissions to manipulate site collections in the tenant level.
-5. Actual customizations are applied one-by-one to those people’s sites who visit the intranet front page to start the process.
+1. App part is hosting a page from provider hosted app, where in the server side code we initiate the customization process by adding needed metadata to the azure storage queue. This means that this page will only receive the customization request, but will not actually apply any changes to keep the processing time normal.
+1. This is the actual azure storage queue, which will receive the messages to queue for processing. This way we can handle the customization controlling process asynchronously so that it does not really matter how long end user will stay on the front page of the Intranet. If the customization process would be synchronous, we would be dependent on end user to keep the browser open in the Intranet front page until page execution is finalized. This would not definitely be optimal and it was the challenge with the [original OD4B customization process](https://blogs.msdn.com/b/vesku/archive/2013/11/25/office365-apply-automatically-custom-branding-to-personal-site-skydrive-pro.aspx), which I blogged while back.
+1. WebJob hooked to follow the storage queue, which is called when new item is placed to the storage queue. This WebJob will receive the needed parameters and metadata from the queued message to access right site collection. WebJob is using app only token and have been granted the needed permissions to manipulate site collections in the tenant level.
+1. Actual customizations are applied one-by-one to those people’s sites who visit the intranet front page to start the process.
+
 This is definitely the most reliable process of ensuring that there’s right configurations in the OD4B sites. You can easily add customization versioning logic to the process, which is also applying any needed updates to the OD4B sites, when there is an update needed and user visits the Intranet front page next time. This option does however require that you have that centralized location where your end users are landing.
 
 If you are familiar of classic SharePoint development models with farm solutions, this is pretty similar process as one time executing timer jobs.
@@ -95,7 +94,7 @@ This option relies on the pre-creation of the OD4B sites before users will acces
 ![An administrator uses, pre-create and customize, to create an OD4B site.](media/Recipes/OD4BCustomization/pre-create-and-apply.png)
 
 1. Administrator is using the remote creation APIs to create OD4B sites for users and is applying the needed customizations to the OD4B sites as part of the script process.
-2. Actual OD4B sites are created to the Office 365 for specific users and associated to their user profiles
+1. Actual OD4B sites are created to the Office 365 for specific users and associated to their user profiles
 
 In some sense this is also really reliable process, but you would have to manage new persons and updates “manually”, which could mean more work then using the *hidden app part* approach. This is definitely valid approach which can be taken and especially useful if you are migrating from some other file sharing solution to the OD4B and want to avoid the need of end users to access the OD4B site once, before actuals site creation is started.
 
@@ -106,7 +105,7 @@ This approach means scanning through user profiles for checking to whom the OD4B
 ![A Remote timer job uses, Loop through site collections, to customize each site.](media/Recipes/OD4BCustomization/remote-timer-job.png)
 
 1. Scheduled task is initiated which will access user profiles of the users for checking who has OD4B site provisioned
-2. Actual sites are customized one-by-one based on the business requirements
+1. Actual sites are customized one-by-one based on the business requirements
 
 One of the key downsides of this option is that there can clearly be a situations where user can access the OD4B sites before the customizations have been applied. At the same time this option is interesting add-on for other options to ensure that end users have not changed any of the required settings on the sites or to check that the OD4B site content aligns with the company policies.
 
@@ -116,7 +115,7 @@ Here's more detailed description of enhanced app part based customizations, whic
 
 Actual logical design follows the hidden app part approach, mentioned before in [this blog post](https://blogs.msdn.com/b/vesku/archive/2013/11/25/office365-apply-automatically-custom-branding-to-personal-site-skydrive-pro.aspx). This means that the assumption is that you have centralized Intranet in the Office 365 environment where you can put the needed app part and that the end users will be landing to this welcome page when they open up their browser. It is common that each company browser will have same home page set using group policies, so that end users will always start from one centralized location when they open up their browser. This is the location where you’d put app part, which can be set to be sized as 0 pixel width and height. Key point here is that you use the end user context to execute the app part, which contains page from the provider hosted add-in.
 
-**Performance optimization and maintenance considerations**
+#### Performance optimization and maintenance considerations
 
 Since this app part will be executed each time user lands to front page of the intranet, we need to consider the performance impact of this or how to make the code to work efficiently and only perform key parts of the code executions when truly needed. Second optimization consideration is also where do we place actual assets which are used in each of the sites. These are pretty typical challenges to tackle with any customizations. Here’s short list of things to concentrate in app model implementations.
 
@@ -125,15 +124,15 @@ Since this app part will be executed each time user lands to front page of the i
 - Reduced execution of code to avoid unnecessary load to Azure and Office 365 service
 - Version customizations which are applied to OD4B site
 
-**Location of the assets**
+#### Location of the assets
 
 There are few different solutions for this. In the reference code example we use JavaScript embedding in each of the OD4B sites to provide company policy message and to remove the possibility to create sub sites (or hide the link). In this particular solution we are uploading the needed JavaScript file to root site collection of the OneDrive for Business address scheme and we reference that file directly from that one location in the individual OD4B sites. This means that you only have one location to maintain and update the JavaScript file, if any changes are needed.
 
-In this reference implementation we actually also refresh this file each time the WebJob is executed, which is certainly not needed, but sample code was meant to be working as easily without any additional steps and possible. Just as well you could upload the JavaScript file manually to root site collection and then reference that from there. Alternative solution would be also to use some CND to store the needed file or reference JavaScript from the provider hosted app side. As long as you have only one copy of the file, you will have
+In this reference implementation we actually also refresh this file each time the WebJob is executed, which is certainly not needed, but sample code was meant to be working as easily without any additional steps and possible. Just as well you could upload the JavaScript file manually to root site collection and then reference that from there. Alternative solution would be also to use some CND to store the needed file or reference JavaScript from the provider hosted app side. As long as you have only one copy of the file, you will have:
 
-![Each OneDrive for Business site is its own site collection under the personal managed path, and each url is created based on the user profile. For example, if contoso-my.sharepoint.com is the main site, then John's site will be contoso-my.sharepoint.com/personal/john_contoso_com.](media/Recipes/OD4BCustomization/asset-locations.png)
+![Location of the assets](media/Recipes/OD4BCustomization/asset-locations.png)
 
-**Client side caching challenge and how to solve that**
+#### Client side caching challenge and how to solve that
 
 One of the challenges with JavaScript based implementation is client side caching. When browsers will download used JavaScript files, they will cache those files to reduce the amount of downloaded assets for following requests. This is great from performance optimization perspective, but causes a challenge when we need to update the JavaScript file. In worst case scenario, cached JavaScript file will cause exceptions with other updates introduced with updated versions.
 
@@ -142,25 +141,27 @@ To remove this issue, we can start using revision attribute with JavaScript URL 
 - /OneDriveCustomization/OneDriveConfiguration.js?rev=4bb89029e7ba470e893170d4cba7de00
 
 Here’s the code which is used to generate the JavaScript URL for the user custom action.
-	
-	/// <summary>
-    /// Just to build the JS path which can be then pointed to the OneDrive site.
-    /// </summary>
-    /// <returns></returns>
-    public string BuildJavaScriptUrl(string siteUrl)
-    {
-        // Solve root site collection URL
-        Uri url = new Uri(siteUrl);
-        string scenarioUrl = String.Format("{0}://{1}:{2}/{3}", 
-                               url.Scheme, url.DnsSafeHost, 
-                               url.Port, JSLocationFolderName);
-       // Unique rev generated each time JS is added, so that we force browsers to 
-       // refresh JS file wiht latest version
-       string revision = Guid.NewGuid().ToString().Replace("-", "");
-       return string.Format("{0}/{1}?rev={2}", scenarioUrl, JSFileName, revision);
-    }
 
-**Reduced execution of code**
+```csharp
+/// <summary>
+/// Just to build the JS path which can be then pointed to the OneDrive site.
+/// </summary>
+/// <returns></returns>
+public string BuildJavaScriptUrl(string siteUrl)
+{
+    // Solve root site collection URL
+    Uri url = new Uri(siteUrl);
+    string scenarioUrl = String.Format("{0}://{1}:{2}/{3}", 
+                            url.Scheme, url.DnsSafeHost, 
+                            url.Port, JSLocationFolderName);
+    // Unique rev generated each time JS is added, so that we force browsers to 
+    // refresh JS file wiht latest version
+    string revision = Guid.NewGuid().ToString().Replace("-", "");
+    return string.Format("{0}/{1}?rev={2}", scenarioUrl, JSFileName, revision);
+}
+```
+
+#### Reduced execution of code
 
 Since this process is based on having hidden app part on the front page of the Intranet, it will mean that the code will be executed each time user will refresh their browser or they move to the page. Since this front page is often set as the default browser home page for the corporate users, code would be executed each time a browser session is started.
 
@@ -170,84 +171,90 @@ Easiest way to ensure that our processing is not performed in each request is to
 
 Here’s what we have in the page load method for the app part. This method call will check existence of the cookie and if the cookie does exist, we will skip the actual business code until execution is again needed.
 
- 	// Check if we should skip this check. We do this only once per hour to avoid 
+```csharp
+// Check if we should skip this check. We do this only once per hour to avoid 
+// perf issues and there's really no point even hitting the user profile 
+// in every request.
+if (CookieCheckSkip())
+    return;
+```
+
+Actual cookie status and setting of the cookie is done as follows.
+
+```csharp
+/// <summary>
+/// Checks if we need to execute the code customization code again. 
+/// Timer set to 60 minutes to avoid constant execution of the code for nothing.
+/// </summary>
+/// <returns></returns>
+private bool CookieCheckSkip()
+{
+    // Get cookie from the current request.
+    HttpCookie cookie = Request.Cookies.Get("OneDriveCustomizerCheck");
+
+    // Check if cookie exists in the current request.
+    if (cookie == null)
+    {
+        // Create cookie.
+        cookie = new HttpCookie("OneDriveCustomizerCheck");
+        // Set value of cookie to current date time.
+        cookie.Value = DateTime.Now.ToString();
+        // Set cookie to expire in 60 minutes.
+        cookie.Expires = DateTime.Now.AddMinutes(60);
+        // Insert the cookie in the current HttpResponse.
+        Response.Cookies.Add(cookie);
+        // Output debugging information
+        WriteDebugInformationIfNeeded(
+            string.Format(@"Cookie did not exist, adding new cookie with {0} 
+                            as expiration. Execute code.",
+                            cookie.Expires));
+        // Since cookie did not existed, let's execute the code, 
+        // so skip is false.
+        return false;
+    }
+    else
+    {
+        // Output debugging information
+        WriteDebugInformationIfNeeded(string.Format(@"Cookie did existed, 
+                                    with {0} as expiration. Skipping code.", 
+                                    cookie.Expires));
+        //  Since cookie did existed, let's skip the code
+        return true;
+    }
+}
+```
+
+If you have a closer look on the code in the app part page, you’ll see that in every call we do check the existences of the OD4B site for the end user. Since this can be only done by accessing user profile, code will have impact on the performance. By using the above cookie check, we can make the end user experience better and we avoid hitting the user profile service constantly without actual requirements. It’s also good to notice that we have placed that cookie check as the first step in the *Page_Load* method, so that we skip all processing, if needed. Here’s a short snippet from the *Page_Load* method from the *Customizer.aspx* to show the code process. 
+
+```csharp
+protected void Page_Load(object sender, EventArgs e)
+{
+    // Check if we should skip this check. We do this only once per hour to avoid 
     // perf issues and there's really no point even hitting the user profile 
     // in every request.
     if (CookieCheckSkip())
         return;
-
-Actual cookie status and setting of the cookie is done as follows.
-
-	/// <summary>
-    /// Checks if we need to execute the code customization code again. 
-    /// Timer set to 60 minutes to avoid constant execution of the code for nothing.
-    /// </summary>
-    /// <returns></returns>
-    private bool CookieCheckSkip()
+  
+    var spContext = 
+        SharePointContextProvider.Current.GetSharePointContext(Context);
+    using (ClientContext clientContext = 
+        spContext.CreateUserClientContextForSPHost())
     {
-        // Get cookie from the current request.
-        HttpCookie cookie = Request.Cookies.Get("OneDriveCustomizerCheck");
-    
-       // Check if cookie exists in the current request.
-       if (cookie == null)
-       {
-           // Create cookie.
-           cookie = new HttpCookie("OneDriveCustomizerCheck");
-           // Set value of cookie to current date time.
-           cookie.Value = DateTime.Now.ToString();
-           // Set cookie to expire in 60 minutes.
-           cookie.Expires = DateTime.Now.AddMinutes(60);
-           // Insert the cookie in the current HttpResponse.
-           Response.Cookies.Add(cookie);
-           // Output debugging information
-           WriteDebugInformationIfNeeded(
-               string.Format(@"Cookie did not exist, adding new cookie with {0} 
-                               as expiration. Execute code.",
-                               cookie.Expires));
-           // Since cookie did not existed, let's execute the code, 
-           // so skip is false.
-           return false;
-       }
-       else
-       {
-           // Output debugging information
-           WriteDebugInformationIfNeeded(string.Format(@"Cookie did existed, 
-                                       with {0} as expiration. Skipping code.", 
-                                       cookie.Expires));
-           //  Since cookie did existed, let's skip the code
-           return true;
-       }
-    }
+        // Get user profile
+        ProfileLoader loader = ProfileLoader.GetProfileLoader(clientContext);
+        UserProfile profile = loader.GetUserProfile();
+        Microsoft.SharePoint.Client.Site personalSite = profile.PersonalSite;
 
-If you have a closer look on the code in the app part page, you’ll see that in every call we do check the existences of the OD4B site for the end user. Since this can be only done by accessing user profile, code will have impact on the performance. By using the above cookie check, we can make the end user experience better and we avoid hitting the user profile service constantly without actual requirements. It’s also good to notice that we have placed that cookie check as the first step in the *Page_Load* method, so that we skip all processing, if needed. Here’s a short snippet from the *Page_Load* method from the *Customizer.aspx* to show the code process. 
+        clientContext.Load(profile, prof => prof.AccountName);
+        clientContext.Load(personalSite);
+        clientContext.ExecuteQuery();
 
-	protected void Page_Load(object sender, EventArgs e)
-    {
-        // Check if we should skip this check. We do this only once per hour to avoid 
-        // perf issues and there's really no point even hitting the user profile 
-        // in every request.
-        if (CookieCheckSkip())
-            return;
-     
-        var spContext = 
-           SharePointContextProvider.Current.GetSharePointContext(Context);
-       using (ClientContext clientContext = 
-           spContext.CreateUserClientContextForSPHost())
-       {
-           // Get user profile
-           ProfileLoader loader = ProfileLoader.GetProfileLoader(clientContext);
-           UserProfile profile = loader.GetUserProfile();
-           Microsoft.SharePoint.Client.Site personalSite = profile.PersonalSite;
-    
-           clientContext.Load(profile, prof => prof.AccountName);
-           clientContext.Load(personalSite);
-           clientContext.ExecuteQuery();
-    
-           // Let's check if the site already exists
-           if (personalSite.ServerObjectIsNull.Value)
-           {
+        // Let's check if the site already exists
+        if (personalSite.ServerObjectIsNull.Value)
+        {
+```
 
-**Version customizations which are applied to OD4B site**
+#### Version customizations which are applied to OD4B site
 
 Second level of optimization on our code processing is done by versioning specifically the customizations which we deploy to the OD4B sites. What this means is that we store the version of the customizations to the OD4B site property bag and only update the files and assets if needed. This means that in the WebJob execution we compare the currently customization version in OD4B to the version which we are about to deploy and only if the customization version odes not exist in the OD4B site, we upload the needed assets and apply other settings.
 
@@ -255,16 +262,20 @@ This approach will also significantly reduce the needed resources from Microsoft
 
 All customization logic is stored in this sample is located in *ApplySiteConfiguration* method at *OD4B.Configuration.Async.Common.SiteModificationManager* class. This method is also called by the WebJob with right parameters to start the customization process. Before we actually perform any operations, we are checking property bag value with a key of ‘Contoso_OneDriveVersion’ and execution will only continue if current version in the site is lower than the version which we are planning to apply.  Here’s the actual code which is using [Office PnP Core component](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core) to simplify the code.
 
-	// Check current site configuration status - is it already in right version?
-    if (ctx.Web.GetPropertyBagValueInt(
-        SiteModificationManager.OneDriveMarkerBagID, 0) 
-        < SiteModificationManager.BrandingVersion)
-    {
+```csharp
+// Check current site configuration status - is it already in right version?
+if (ctx.Web.GetPropertyBagValueInt(
+    SiteModificationManager.OneDriveMarkerBagID, 0) 
+    < SiteModificationManager.BrandingVersion)
+{
+```
 
 When customization is applied to the site, we will set the applied customization version to the property bag for following execution.
 
-	// Save current branding applied indicator to site
-    ctx.Web.SetPropertyBagValue(SiteModificationManager.OneDriveMarkerBagID, SiteModificationManager.BrandingVersion);
+```csharp
+// Save current branding applied indicator to site
+ctx.Web.SetPropertyBagValue(SiteModificationManager.OneDriveMarkerBagID, SiteModificationManager.BrandingVersion);
+```
 
 This is relatively simple process, but will significantly reduce the required resources from Azure and will also reduce unnecesasrey remote operations towards Office 365, which will have positive performance impact.
 
@@ -312,26 +323,28 @@ This project is our test and debugging project for the actual customizations. It
 
 When you test the customizations, you can simply change the code in the Main method between Apply and Reset to change the wanted operation.
 
-	static void Main(string[] args)
+```csharp
+static void Main(string[] args)
+{
+  
+    Uri url = 
+        new Uri("https://vesaj-my.sharepoint.com/personal/vesaj_veskuonline_com");
+  
+        //get the new site collection
+    string realm = TokenHelper.GetRealmFromTargetUrl(url);
+    var token = TokenHelper.GetAppOnlyAccessToken(
+                    TokenHelper.SharePointPrincipal, 
+                    url.Authority, realm).AccessToken;
+    using (var ctx = 
+        TokenHelper.GetClientContextWithAccessToken(url.ToString(), 
+        token))
     {
-     
-        Uri url = 
-            new Uri("https://vesaj-my.sharepoint.com/personal/vesaj_veskuonline_com");
-     
-            //get the new site collection
-        string realm = TokenHelper.GetRealmFromTargetUrl(url);
-        var token = TokenHelper.GetAppOnlyAccessToken(
-                       TokenHelper.SharePointPrincipal, 
-                       url.Authority, realm).AccessToken;
-       using (var ctx = 
-           TokenHelper.GetClientContextWithAccessToken(url.ToString(), 
-           token))
-       {
-           // Uncomment the one you need for testing/reset
-           // Apply(ctx, url);
-           Reset(ctx);
-       }
+        // Uncomment the one you need for testing/reset
+        // Apply(ctx, url);
+        Reset(ctx);
     }
+}
+```
 
 Notice that you will need to ensure that app id and secret for this project in the app.config are matching the ones you gave needed permissions to your tenant. You can easily execute the project by right clicking the project and choosing **Debug – Start New Instance**, so that you can walk the actual code which is executed line by line.
 
@@ -349,54 +362,58 @@ This is the actual WebJob project, which was created using WebJob project templa
 
 This WebJob is created as a continuous WebJob, which is needed for the queue based processing. This means that in the Main method, we only set the process to be executing continuous like follows.
 
-	class Program
+```csharp
+class Program
+{
+    // Please set the following connection strings in app.config for this 
+    // WebJob to run: AzureWebJobsDashboard and AzureWebJobsStorage
+    static void Main()
     {
-        // Please set the following connection strings in app.config for this 
-        // WebJob to run: AzureWebJobsDashboard and AzureWebJobsStorage
-        static void Main()
-        {
-            var host = new JobHost();
-            // The following code ensures that the WebJob will be 
-            // running continuously
-           host.RunAndBlock();
-       }
+        var host = new JobHost();
+        // The following code ensures that the WebJob will be 
+        // running continuously
+        host.RunAndBlock();
     }
+}
+```
 
 Actual queue processing is really easy with WebJobs. Only thing we need to do is to set the right attributes for the method and to ensure that the Azure storage connection strings in the app config are updated accordingly and matching the storage queue’s you have created to Microsoft Azure. Following is the *ProcessQueueMessage* method from the functions.cs class. Notice how we use the App Only token model to access the SharePoint from the WebJob. To make this work, you will need to ensure that you have copied the right app id and secret to the app.config of the project. Actual business logic is located in the *SiteModificationManager* class, so we just call that with the right client context and parameters.
 
-	// This function will get triggered/executed when a new message is written 
-    // on an Azure Queue called queue.
-    public static void ProcessQueueMessage(
-        [QueueTrigger(SiteModificationManager.StorageQueueName)] 
-        SiteModificationData request, TextWriter log)
+```csharp
+// This function will get triggered/executed when a new message is written 
+// on an Azure Queue called queue.
+public static void ProcessQueueMessage(
+    [QueueTrigger(SiteModificationManager.StorageQueueName)] 
+    SiteModificationData request, TextWriter log)
+{
+    Uri url = new Uri(request.SiteUrl);
+  
+    //Connect to the OD4B site sing App Only access
+    string realm = TokenHelper.GetRealmFromTargetUrl(url);
+    var token = TokenHelper.GetAppOnlyAccessToken(
+        TokenHelper.SharePointPrincipal, url.Authority, realm).AccessToken;
+
+    using (var ctx = TokenHelper.GetClientContextWithAccessToken(
+        url.ToString(), token))
     {
-        Uri url = new Uri(request.SiteUrl);
-     
-        //Connect to the OD4B site sing App Only access
-       string realm = TokenHelper.GetRealmFromTargetUrl(url);
-       var token = TokenHelper.GetAppOnlyAccessToken(
-           TokenHelper.SharePointPrincipal, url.Authority, realm).AccessToken;
-    
-       using (var ctx = TokenHelper.GetClientContextWithAccessToken(
-           url.ToString(), token))
-       {
-           // Set configuration object properly for setting the config
-           SiteModificationConfig config = new SiteModificationConfig()
-           {
-               SiteUrl = url.ToString(),
-               JSFile = Path.Combine(Environment.GetEnvironmentVariable
-                   ("WEBROOT_PATH"), "Resources\\OneDriveConfiguration.js"),
-               ThemeName = "Garage",
-               ThemeColorFile = Path.Combine(Environment.GetEnvironmentVariable
-                   ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagewhite.spcolor"),
-               ThemeBGFile = Path.Combine(Environment.GetEnvironmentVariable
-                   ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagebg.jpg"),
-               ThemeFontFile = "" // Ignored in this case, but could be also obviously set
-           };
-    
-           new SiteModificationManager().ApplySiteConfiguration(ctx, config);
-       }
+        // Set configuration object properly for setting the config
+        SiteModificationConfig config = new SiteModificationConfig()
+        {
+            SiteUrl = url.ToString(),
+            JSFile = Path.Combine(Environment.GetEnvironmentVariable
+                ("WEBROOT_PATH"), "Resources\\OneDriveConfiguration.js"),
+            ThemeName = "Garage",
+            ThemeColorFile = Path.Combine(Environment.GetEnvironmentVariable
+                ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagewhite.spcolor"),
+            ThemeBGFile = Path.Combine(Environment.GetEnvironmentVariable
+                ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagebg.jpg"),
+            ThemeFontFile = "" // Ignored in this case, but could be also obviously set
+        };
+
+        new SiteModificationManager().ApplySiteConfiguration(ctx, config);
     }
+}
+```
 
 Other thing worth noticing is that you will need to ensure that you have set the *Copy Local* property for the SharePoint CSOM assembly references property for the project, so that all dependent assemblies are properly copied to Azure when you deploy the web job. This is simply because these assemblies are not located in normal Azure website by default, so by setting this property *True*, you will ensure that the referenced assemblies are copied to cloud as well.
 
@@ -410,40 +427,44 @@ This is the actual provider hosted app which is hosted in Microsoft Azure. It co
 
 Using the storage queues is really straight forward with the APIs available from Azure. Easiest way to get started is to use the '*Windows Azure Storage*' Nuget package, which will associate all needed APIs and other packages to your project. After you have added this Nuget package, you can simply start using the storage queue APIs for the processing. Following is snippet from the *OD4B.Configuration.Async.Common* project (AddConfigRequestToQueue method in SiteModificationManager class), which contains actual queue message handling code and is used from numerous projects (provided easier development time debugging).
 
-	public void AddConfigRequestToQueue(
-                string account, string siteUrl, string storageConnectionString)
+```csharp
+public void AddConfigRequestToQueue(
+            string account, string siteUrl, string storageConnectionString)
+{
+    CloudStorageAccount storageAccount = 
+                        CloudStorageAccount.Parse(storageConnectionString);
+  
+    // Get queue... create if does not exist.
+    CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
+    CloudQueue queue = 
+        queueClient.GetQueueReference(SiteModificationManager.StorageQueueName);
+    queue.CreateIfNotExists();
+
+    // Pass in data for modification
+    var newSiteConfigRequest = new SiteModificationData()
     {
-        CloudStorageAccount storageAccount = 
-                            CloudStorageAccount.Parse(storageConnectionString);
-     
-        // Get queue... create if does not exist.
-        CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient();
-        CloudQueue queue = 
-           queueClient.GetQueueReference(SiteModificationManager.StorageQueueName);
-       queue.CreateIfNotExists();
-    
-       // Pass in data for modification
-       var newSiteConfigRequest = new SiteModificationData()
-       {
-           AccountId = account,
-           SiteUrl = siteUrl
-       };
-    
-       // Add entry to queue
-       queue.AddMessage(
-           new CloudQueueMessage(
-               JsonConvert.SerializeObject(newSiteConfigRequest)));
-    }
+        AccountId = account,
+        SiteUrl = siteUrl
+    };
+
+    // Add entry to queue
+    queue.AddMessage(
+        new CloudQueueMessage(
+            JsonConvert.SerializeObject(newSiteConfigRequest)));
+}
+```
 
 Actual queue processing in this case was done with the WebJob project. In the case of WebJob, we can simply use specific attributes to automate the queue handling. Only thing we need to make sure is that we are using same storage connection string and queue name in both sending and receiving part.
 
-	// This function will get triggered/executed when a new message is written 
-    // on an Azure Queue called queue.
-    public static void ProcessQueueMessage(
-        [QueueTrigger(SiteModificationManager.StorageQueueName)] 
-        SiteModificationData request, TextWriter log)
-    {
-        Uri url = new Uri(request.SiteUrl);
+```csharp
+// This function will get triggered/executed when a new message is written 
+// on an Azure Queue called queue.
+public static void ProcessQueueMessage(
+    [QueueTrigger(SiteModificationManager.StorageQueueName)] 
+    SiteModificationData request, TextWriter log)
+{
+    Uri url = new Uri(request.SiteUrl);
+```
 
 It really does not get easier than this. Notice that we use *SiteModificationManager.StorageQueueName* in both sides to ensure that the queue name is matching.
 
@@ -461,41 +482,43 @@ Second operation with the custom themes require that we upload some additional f
 
 It is also good to notice that we do indeed upload new version of the JS to root site collection each time we customization personal OD4B site. This is definitely not optimal solution, it’s rather there for simplicity purposes for this reference solution. You could consider adding that JavaScript file upload operation to app Installed event, so that it’s only done once when app is installed, but in that case you would have to do some additional work with any updates on that JS file.
 
-	// This function will get triggered/executed when a new message is written 
-    // on an Azure Queue called queue.
-    public static void ProcessQueueMessage(
-        [QueueTrigger(SiteModificationManager.StorageQueueName)] 
-        SiteModificationData request, TextWriter log)
+```csharp
+// This function will get triggered/executed when a new message is written 
+// on an Azure Queue called queue.
+public static void ProcessQueueMessage(
+    [QueueTrigger(SiteModificationManager.StorageQueueName)] 
+    SiteModificationData request, TextWriter log)
+{
+    Uri url = new Uri(request.SiteUrl);
+  
+    //Connect to the OD4B site using App Only token
+    string realm = TokenHelper.GetRealmFromTargetUrl(url);
+    var token = TokenHelper.GetAppOnlyAccessToken(
+        TokenHelper.SharePointPrincipal, url.Authority, realm).AccessToken;
+
+    using (var ctx = TokenHelper.GetClientContextWithAccessToken(
+        url.ToString(), token))
     {
-        Uri url = new Uri(request.SiteUrl);
-     
-        //Connect to the OD4B site using App Only token
-       string realm = TokenHelper.GetRealmFromTargetUrl(url);
-       var token = TokenHelper.GetAppOnlyAccessToken(
-           TokenHelper.SharePointPrincipal, url.Authority, realm).AccessToken;
-    
-       using (var ctx = TokenHelper.GetClientContextWithAccessToken(
-           url.ToString(), token))
-       {
-           // Set configuration object properly for setting the config
-           SiteModificationConfig config = new SiteModificationConfig()
-           {
-               SiteUrl = url.ToString(),
-               JSFile = Path.Combine(Environment.GetEnvironmentVariable
-                   ("WEBROOT_PATH"), "Resources\\OneDriveConfiguration.js"),
-               ThemeName = "Garage",
-               ThemeColorFile = 
-                   Path.Combine(Environment.GetEnvironmentVariable
-                   ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagewhite.spcolor"),
-               ThemeBGFile = 
-                   Path.Combine(Environment.GetEnvironmentVariable
-                   ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagebg.jpg"),
-               ThemeFontFile = "" // Ignored in this case, but could be also set
-           };
-    
-           new SiteModificationManager().ApplySiteConfiguration(ctx, config);
-       }
+        // Set configuration object properly for setting the config
+        SiteModificationConfig config = new SiteModificationConfig()
+        {
+            SiteUrl = url.ToString(),
+            JSFile = Path.Combine(Environment.GetEnvironmentVariable
+                ("WEBROOT_PATH"), "Resources\\OneDriveConfiguration.js"),
+            ThemeName = "Garage",
+            ThemeColorFile = 
+                Path.Combine(Environment.GetEnvironmentVariable
+                ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagewhite.spcolor"),
+            ThemeBGFile = 
+                Path.Combine(Environment.GetEnvironmentVariable
+                ("WEBROOT_PATH"), "Resources\\Themes\\Garage\\garagebg.jpg"),
+            ThemeFontFile = "" // Ignored in this case, but could be also set
+        };
+
+        new SiteModificationManager().ApplySiteConfiguration(ctx, config);
     }
+}
+```
 
 Obviously the needed operations are highly dependent on your business requirements. You can find multiple different patterns and approaches with CSOM based operations from the [Office 365 Developer Patterns and Practices](https://aka.ms/officedevpnp).
 
@@ -525,14 +548,18 @@ In this case we had one JavaScript file and few files for the custom theme, whic
 
 Typically in Azure websites, you could reference to those files by using following format
 
-    string path = HostingEnvironment.MapPath(
-        string.Format("~/{0}", "Resources/OneDriveConfiguration.js"));
+```csharp
+string path = HostingEnvironment.MapPath(
+    string.Format("~/{0}", "Resources/OneDriveConfiguration.js"));
+```
 
 Since WebJobs are however executed in different location and not in the context of IIS, above reference to file would not work, since mapping would fail from the context of the WebJob process. This is where WebJob specific environment variables can help.  In the reference solution case, we used WebJob specific environment variable WEBROOT_PATH to gain access on the associated website folder.
 
-    string jsFile = Path.Combine(
-        Environment.GetEnvironmentVariable("WEBROOT_PATH"), 
-        "Resources\\OneDriveConfiguration.js");
+```csharp
+string jsFile = Path.Combine(
+    Environment.GetEnvironmentVariable("WEBROOT_PATH"), 
+    "Resources\\OneDriveConfiguration.js");
+```
 
 There are also few other environment variables for WebJobs, which might help you. You can check the different environment variables using code and there’s good references in the GitHub for [this](https://gist.github.com/sayedihashimi/831d8883cdf1d23823f3).
 

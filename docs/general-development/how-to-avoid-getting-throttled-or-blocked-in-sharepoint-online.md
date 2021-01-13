@@ -1,6 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
-ms.date: 06/10/2020
+description: Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample client-side object model (CSOM) and REST code you can use to make your task easier.
+ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 localization_priority: Priority
@@ -44,6 +45,9 @@ If the offending process continues to exceed usage limits, SharePoint Online mig
 In addition to throttling by user account, limits are also applied to each application. Every application in SharePoint Online has its own available resources, but multiple applications running against the same tenant ultimately share from the same resource bucket and in rare occurrences can cause rate limiting.
 In these cases, SharePoint Online will attempt to prioritize interactive user requests over background activities.
 
+> [!NOTE]
+> Notice that there is difference between AppOnly authentication and Delegated authentication when making use of Applications when it comes to throttling. When making use of the delegated approach, throttling is applied on an user-basis and not the used application. When making use of the AppOnly way of authenticating, throttling is applied on application-basis.  
+
 ## Common throttling scenarios in SharePoint Online
 
 The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.
@@ -74,7 +78,7 @@ That's why it's so important for your CSOM or REST code to honor the `Retry-Afte
 
 ## Search query volume limits when using app-only authentication with Sites.Read.All permission
 
-In Sharepoint and OneDrive, we process multiple billions of documents and enable our customers to issue large query volumes per second. When you are using SharePoint Online search APIs with app-only authentication and the app having `Sites.Read.All` permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content).
+In SharePoint and OneDrive, we process multiple billions of documents and enable our customers to issue large query volumes per second. When you are using SharePoint Online search APIs with app-only authentication and the app having `Sites.Read.All` permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content).
 
 We want to let our customers know that SharePoint Online search queries using such permission will be throttled at 25 QPS. The search query will return with a 429 response and you can retry the query after 2 minutes. When waiting for 429 recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making additional calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
 
@@ -99,13 +103,17 @@ For a broader discussion of throttling on the Microsoft Cloud, see [Throttling P
 
 To ensure and maintain high-availability, some traffic may be throttled. Throttling happens when system health is at stake and one of the criteria used for throttling is traffic decoration, which impacts directly on the prioritization of the traffic. Well-decorated traffic will be prioritized over traffic, which isn't properly decorated.
 
-What is definition of undecorated traffic?
+### What is definition of undecorated traffic?
 
 - Traffic is undecorated if there's no AppID/AppTitle and User Agent string in CSOM or REST API call to SharePoint Online. The User Agent string should be in a specific format as described below.
 
-What are the recommendations?
+### What are the recommendations?
 
-- If you've created an application, the recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+- If you've created an application, the recommendation is to register and use AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+
+    > [!NOTE]
+    > Refer to the [Microsoft identity documentation](https://docs.microsoft.com/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
+
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 
 |          Type          |                  User Agent                  |                                                                     Description                                                                     |
@@ -263,4 +271,3 @@ If we block your subscription, we will notify you of the block in the Office 365
 
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
-- [GitHub: SharePoint Online Throttling code sample](https://github.com/OfficeDev/PnP/tree/dev/Samples/Core.Throttling)
