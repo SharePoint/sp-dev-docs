@@ -1,6 +1,6 @@
 ---
 title: Advanced Scenarios and Additional Samples
-ms.date: 11/23/2020
+ms.date: 01/14/2021
 ms.prod: sharepoint
 ms.assetid: 110bcc88-2b55-4d80-ab5c-dc3b9658e48d
 localization_priority: Normal
@@ -22,7 +22,7 @@ The  [Using Advanced REST Functionality with the Excel Services Gadget](https://
 
 ## Embedding Workbook Data
 
-The  [Excel Services REST API Examples](https://www.microsoft.com/microsoft-365/blog/2009/11/09/excel-services-in-sharepoint-2010-rest-api-examples/) sample shows you how to use the REST API to embed workbook data in interesting ways.
+The  [Excel Services REST API Examples](https://www.microsoft.com/en-us/microsoft-365/blog/2009/11/09/excel-services-in-sharepoint-2010-rest-api-examples/) sample shows you how to use the REST API to embed workbook data in interesting ways.
 
 ## More REST API Syntax Examples
 
@@ -30,4 +30,4 @@ The  [Excel Services REST API Syntax](https://www.microsoft.com/en-us/microsoft-
 
 ## Ideas About How to Take Advantage of the REST API
 
-The  [Excel Services REST API Examples](https://www.microsoft.com/microsoft-365/blog/2009/11/04/simple-access-to-spreadsheet-data-using-the-excel-services-2010-rest-api/) blog entry provides additional ideas about what you can do with the REST API in Excel Services.
+The  [Excel Services REST API Examples](https://www.microsoft.com/en-us/microsoft-365/blog/2009/11/04/simple-access-to-spreadsheet-data-using-the-excel-services-2010-rest-api/) blog entry provides additional ideas about what you can do with the REST API in Excel Services.
