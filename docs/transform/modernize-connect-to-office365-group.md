@@ -15,9 +15,6 @@ You can connect your site to a new Microsoft 365 group from the user interface s
 In this article, you'll learn how to prepare for such a bulk operation for associating sites to new Microsoft 365 groups and how to actually make it happen.
 
 > [!IMPORTANT]
-> For publishing portals (sites based upon BLANKINTERNET#0, ENTERWIKI#0, SRCHCEN#0, SRCHCENTERLITE#0, BICENTERSITE#0, POINTPUBLISHINGHUB#0, POINTPUBLISHINGTOPIC#0 or sites using the “Pages” library) it's not currently supported to connect these to a Microsoft 365 group or to use modern pages. If you want to modernize your publishing portal it's recommended to start from a new communication site and configure that one accordingly.
-
-> [!IMPORTANT]
 > - It is **not** supported to connect a Communication site to Microsoft 365 group.
 > - You cannot group connect the root site collection in your tenant.
 
