@@ -15,8 +15,6 @@ To configure a form, you will use JSON formatters that you are already familiar 
 
 To configure the form in a list or library:
 
-To show or hide a column in a list or library form:
-
 1. Go to the list or library for which you want to configure the form.
 1. If you are in a list:
 
@@ -46,13 +44,13 @@ To show or hide a column in a list or library form:
     > [!NOTE]
     > Form configuration allows for certain [predefined elements and attributes](column-formatting.md#creating-custom-json) to build the custom header.
 
-1. Below is an example of a custom header JSON:
+1. Below is an example of a custom header & JSON:
 
     ![Custom list form header](images/list-form-configuration-header.png)
 
     ```JSON
     {
-        "debugmode": "true",
+        "debugMode": true,
         "elmType": "div",
         "attributes": {
             "class": "ms-borderColor-neutralTertiary"
@@ -79,7 +77,7 @@ To show or hide a column in a list or library form:
                         "elmType": "div",
                         "attributes": {
                             "iconName": "Group",
-                            "class": "ms-fontSize-42 ms-fontWeight-regular  ms-fontColor-themePrimary",
+                            "class": "ms-fontSize-42 ms-fontWeight-regular ms-fontColor-themePrimary",
                             "title": "Details"
                         },
                         "style": {
@@ -106,17 +104,16 @@ To show or hide a column in a list or library form:
                 "children": [
                     {
                         "elmType": "div",
-                        "txtContent": "='Contact details for ' +[$Title]"
+                        "txtContent": "='Contact details for ' + [$Title]"
                     }
                 ]
             }
         ]
     }
     ```
-
-   1. To preview your changes, click the **Preview** button.
-   1. To save your changes, click the **Save** button.
-   1. Close the form and open the form again to view the applied header.
+1. To preview your changes, click the **Preview** button.
+1. To save your changes, click the **Save** button.
+1. Close and open the form again to view the custom header.
 
 ## Configure custom footer
 
@@ -126,43 +123,47 @@ To show or hide a column in a list or library form:
     > [!NOTE]
     > Form configuration allows for certain [predefined elements and attributes](column-formatting.md#creating-custom-json) to build the custom footer.
 
-1. Below is an example of a custom footer JSON:
+1. Below is an example of a custom footer & JSON:
 
     ![Custom list form footer](images/list-form-configuration-footer.png)
 
     ```JSON
     {
-      "debugMode": true,
-      "elmType": "div",
-      "style": {
-        "width": "100%",
-        "text-align": "left",
-        "overflow": "hidden",
-        "border-top-width": "1px"
-      },
-      "children": [{
+        "debugMode": true,
         "elmType": "div",
         "style": {
-          "width": "100%",
-          "padding-top": "10px",
-          "height": "24px"
+            "width": "100%",
+            "text-align": "left",
+            "overflow": "hidden",
+            "border-top-width": "1px"
         },
-        "children": [{
-          "elmType": "a",
-          "txtContent":"='Contact Details for '+[$Title]",
-          "attributes": {
-            "target": "_blank",
-            "href": "='https://aka.ms/contacts?email='+[$Email]",
-            "class": "ms-fontColor-themePrimary ms-borderColor-themePrimary ms-fontWeight-semibold ms-fontSize-m ms-fontColor-neutralSecondary–hover ms-bgColor-themeLight–hover"
-          }
-        }]
-      }]
+        "children": [
+            {
+                "elmType": "div",
+                "style": {
+                    "width": "100%",
+                    "padding-top": "10px",
+                    "height": "24px"
+                },
+                "children": [
+                    {
+                        "elmType": "a",
+                        "txtContent": "='Contact Details for ' + [$Title]",
+                        "attributes": {
+                            "target": "_blank",
+                            "href": "='https://aka.ms/contacts?email=' + [$Email]",
+                            "class": "ms-fontColor-themePrimary ms-borderColor-themePrimary ms-fontWeight-semibold ms-fontSize-m ms-fontColor-neutralSecondary–hover ms-bgColor-themeLight–hover"
+                        }
+                    }
+                ]
+            }
+        ]
     }
     ```
 
 1. To preview your changes, click the **Preview** button.
 1. To save your changes, click the **Save** button.
-1. Close the form and open the form again to view the applied header.
+1. Close and open the form again to view the custom footer.
 
 ## Configure custom body with one or more sections
 
@@ -181,21 +182,23 @@ To show or hide a column in a list or library form:
 
     ```JSON
     {
-      "sections": [{
-        //give a display name for the section
-        "displayname": "",
-        "fields": [
-          //reference your fields here using their display name
-          "Title"
+        "sections": [
+            {
+                //give a display name for the section
+                "displayName": "",
+                "fields": [
+                    //reference your fields here using their display name
+                    "Title"
+                ]
+            },
+            {
+                //give a display name for the section
+                "displayName": "",
+                "fields": [
+                    //reference your fields here using their display name
+                ]
+            }
         ]
-      },
-      {
-        //give a display name for the section
-        "displayname": "",
-        "fields": [
-          //reference your fields here using their display name
-        ]
-      }]
     }
     ```
 
@@ -203,28 +206,30 @@ To show or hide a column in a list or library form:
 
     ```JSON
     {
-      "sections": [{
-          "displayname": "",
-          "fields": [
-            "Title"
-          ]
-        },
-        {
-          "displayname": "Details",
-          "fields": [
-            "Department",
-            "Email",
-            "Country"
-          ]
-        },
-        {
-          "displayname": "Application",
-          "fields": [
-            "Application Id",
-            "Approver",
-            "Reviewer"
-          ]
-        }]
+        "sections": [
+            {
+                "displayName": "",
+                "fields": [
+                    "Title"
+                ]
+            },
+            {
+                "displayName": "Details",
+                "fields": [
+                    "Department",
+                    "Email",
+                    "Country"
+                ]
+            },
+            {
+                "displayName": "Application",
+                "fields": [
+                    "Application Id",
+                    "Approver",
+                    "Reviewer"
+                ]
+            }
+        ]
     }
     ```
 
@@ -237,4 +242,4 @@ To show or hide a column in a list or library form:
 
 1. To preview your changes, click the **Preview** button.
 1. To save your changes, click the **Save** button.
-1. Close the form and open the form again to view the applied header.
+1. Close and open the form again to view the custom body.
