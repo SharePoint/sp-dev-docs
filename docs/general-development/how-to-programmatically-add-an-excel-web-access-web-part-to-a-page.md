@@ -1,6 +1,7 @@
 ---
 title: Programmatically add an Excel Web Access web part to a page
-ms.date: 09/25/2017
+description: This example shows how to programmatically add an Excel Web Access web part to a SharePoint page. It also shows you how to display an Excel workbook programmatically in an Excel Web Access web part.
+ms.date: 01/05/2020
 keywords: how to,howdoi,howto,webpart
 f1_keywords:
 - how to,howdoi,howto,webpart
@@ -8,218 +9,161 @@ ms.prod: sharepoint
 ms.assetid: 858bb0f6-654a-4f12-ba0b-4776bda5ff6d
 localization_priority: Normal
 ---
-
-
 # Programmatically add an Excel Web Access web part to a page
 
-This example shows how to programmatically add an Excel Web Access web part to a SharePoint page. It also shows you how to display an Excel workbook programmatically in an Excel Web Access web part. 
-  
-    
-    
+This example shows how to programmatically add an Excel Web Access web part to a SharePoint page. It also shows you how to display an Excel workbook programmatically in an Excel Web Access web part.
 
 The following project uses Microsoft Visual Studio.
 
 > [!NOTE]
-> Depending on the Visual Studio version and the Visual Studio integrated development environment (IDE) settings that you are using, the process and steps to create a Visual Studio project could be slightly different from the procedures shown in this topic. 
-  
-> [!NOTE]
-> It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
-  
-    
-    
+> Depending on the Visual Studio version and the Visual Studio integrated development environment (IDE) settings that you are using, the process and steps to create a Visual Studio project could be slightly different from the procedures shown in this topic.
 
+> [!NOTE]
+> It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md).
 
 ## Adding a Reference
 
 The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how to add a reference to it. Repeat for Microsoft.Office.Excel.WebUI.Internal.dll and Microsoft.SharePoint.dll.
-  
-> [!NOTE]
-> It is assumed that you have already copied Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder of your choice. For more information about how to locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, see  [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md). 
-  
-    
-    
 
+> [!NOTE]
+> It is assumed that you have already copied Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder of your choice. For more information about how to locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, see  [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md).
 
 ### To add a reference to Microsoft.Office.Excel.WebUI.dll
 
-
 1. On the **Project** menu, click **Add Reference**.
-    
-  
-2. In the **Add Reference** dialog box, click **Browse**.
-    
+1. In the **Add Reference** dialog box, click **Browse**.
+
     > [!NOTE]
-    > You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
-    
-3. Browse to the location of Microsoft.Office.Excel.WebUI.dll.
-    
-  
-4. Select Microsoft.Office.Excel.WebUI.dll, and then click **OK**.
-    
-  
-5. Click **Add Reference**. A reference to Microsoft.Office.Excel.WebUI.dll is added to your project.
-    
-  
+    > You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**.
+
+1. Browse to the location of Microsoft.Office.Excel.WebUI.dll.
+1. Select Microsoft.Office.Excel.WebUI.dll, and then click **OK**.
+1. Click **Add Reference**. A reference to Microsoft.Office.Excel.WebUI.dll is added to your project.
 
 ## Instantiating a web part
 
-
 ### To instantiate the Excel Web Access web part
 
+1. Add the **Microsoft.Office.Excel.WebUI** namespace as a directive to your code, so that when you use the types in this namespace, you do not need to fully qualify them:
 
-1. Add the Microsoft.Office.Excel.WebUI namespace as a directive to your code, so that when you use the types in this namespace, you do not need to fully qualify them:
-    
-```cs
-  
-using Microsoft.Office.Excel.WebUI;
-```
+    ```csharp
+    using Microsoft.Office.Excel.WebUI;
+    ```
 
+    ```vbnet
+    Imports Microsoft.Office.Excel.WebUI
+    ```
 
-```VB.net
-  Imports Microsoft.Office.Excel.WebUI
-```
+1. Instantiate and initialize the Excel Web Access web part, as follows:
 
-2. Instantiate and initialize the Excel Web Access web part, as follows:
-    
-```cs
-  
- ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
-```
+    ```cs
+    ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
+    ```
 
-
-```VB.net
-  
-Dim ewaWebPart As New ExcelWebRenderer()
-```
-
+    ```vbnet
+    Dim ewaWebPart As New ExcelWebRenderer()
+    ```
 
 ### To display a workbook programmatically
 
+1. In this example, the `AddWebPart()` method takes in the path to an Excel workbook location as an argument. The user provides the path by typing in a Windows Forms text box and clicking a button.
 
-1. In this example, the **AddWebPart** method takes in the path to an Excel workbook location as an argument. The user provides the path by typing in a Windows Forms text box and clicking a button.
-    
     **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
-    
 
-
-```cs
-  
-public bool AddWebPart(string sitename, string book)
-{
-...
-}
-            private void AddEWAButton_Click(object sender, 
-                EventArgs e)
-            {
-                siteurl = textBox1.Text;
-                bookuri = textBox2.Text;
-                succeeded = AddWebPart(siteurl, bookuri);
-                if (succeeded)
+    ```csharp
+    public bool AddWebPart(string sitename, string book)
+    {
+    ...
+    }
+                private void AddEWAButton_Click(object sender,
+                    EventArgs e)
                 {
-                    MessageBox.Show(
-                        success,
-                        appname,
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    progressBar1.Value = 1;
+                    siteurl = textBox1.Text;
+                    bookuri = textBox2.Text;
+                    succeeded = AddWebPart(siteurl, bookuri);
+                    if (succeeded)
+                    {
+                        MessageBox.Show(
+                            success,
+                            appname,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        progressBar1.Value = 1;
+                    }
                 }
-            }
-```
+    ```
 
+    ```vbnet
+    Public Function AddWebPart(ByVal sitename As String, ByVal book As String) As Boolean
+    ...
+    End Function
+    Private Sub AddEWAButton_Click(ByVal sender As Object, ByVal e As EventArgs)
+            siteurl = textBox1.Text
+            bookuri = textBox2.Text
+            succeeded = AddWebPart(siteurl, bookuri)
+            If succeeded Then
+                MessageBox.Show(success, appname, MessageBoxButtons.OK, MessageBoxIcon.Information)
+                progressBar1.Value = 1
+            End If
+    End Sub
+    ```
 
+    > [!IMPORTANT]
+    > Ensure that the location where the workbook is saved is a trusted location.
 
+1. You can display an Excel workbook programmatically by using the following code.
 
-```VB.net
-  
-Public Function AddWebPart(ByVal sitename As String, ByVal book As String) As Boolean
-...
-End Function
-Private Sub AddEWAButton_Click(ByVal sender As Object, ByVal e As EventArgs)
-        siteurl = textBox1.Text
-        bookuri = textBox2.Text
-        succeeded = AddWebPart(siteurl, bookuri)
-        If succeeded Then
-            MessageBox.Show(success, appname, MessageBoxButtons.OK, MessageBoxIcon.Information)
-            progressBar1.Value = 1
-        End If
-End Sub
-```
-
-
-    > **Important:**
-      > Ensure that the location where the workbook is saved is a trusted location. 
-2. You can display an Excel workbook programmatically by using the following code.
-    
     **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
-    
 
+    ```csharp
+    ...
+    // Instantiate Excel Web Access web part.
+    // Add an Excel Web Access web part in a shared view.
+    ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
+    ewaWebPart.WorkbookUri = book;
+    progressBar1.PerformStep();
 
-```cs
-  
-...
-// Instantiate Excel Web Access web part.
-// Add an Excel Web Access web part in a shared view.
-ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
-ewaWebPart.WorkbookUri = book;
-progressBar1.PerformStep();
+    try
+    {
+        webPartManager.AddWebPart(ewaWebPart, "Left", 0);
+    }
+    catch (Exception exc)
+    {
+        MessageBox.Show(
+            addWebPartError + "\\n" + exc.Message,
+            appName,
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Asterisk);
+        progressBar1.Value = 1;
+        return b;
+    ```
 
-try
-{
-    webPartManager.AddWebPart(ewaWebPart, "Left", 0);
-}
-catch (Exception exc)
-{
-    MessageBox.Show(
-        addWebPartError + "\\n" + exc.Message,
-        appName,
-        MessageBoxButtons.OK,
-        MessageBoxIcon.Asterisk);
-    progressBar1.Value = 1;
-    return b;
+    ```vbnet
+    'Instantiate Excel Web Access web part.
+    'Add an Excel Web Access web part in a shared view.
+    Dim ewaWebPart As New ExcelWebRenderer()
+    ewaWebPart.WorkbookUri = book
+    progressBar1.PerformStep()
 
-```
-
-
-
-
-```VB.net
-  
-'Instantiate Excel Web Access web part.
-'Add an Excel Web Access web part in a shared view.
-Dim ewaWebPart As New ExcelWebRenderer()
-ewaWebPart.WorkbookUri = book
-progressBar1.PerformStep()
-
-Try
-    webPartManager.AddWebPart(ewaWebPart, "Left", 0)
-Catch exc As Exception
-    MessageBox.Show(addWebPartError &amp; vbLf &amp; exc.Message, appName, 
-        MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
-    progressBar1.Value = 1
-    Return b
-End Try
-```
-
+    Try
+        webPartManager.AddWebPart(ewaWebPart, "Left", 0)
+    Catch exc As Exception
+        MessageBox.Show(addWebPartError &amp; vbLf &amp; exc.Message, appName,
+            MessageBoxButtons.OK, MessageBoxIcon.Asterisk)
+        progressBar1.Value = 1
+        Return b
+    End Try
+    ```
 
 ## Example
 
 The following example is a Windows Forms application that enables a user to enter information on a SharePoint site and display an Excel workbook saved in a trusted location programmatically. It programmatically creates an Excel Web Access web part on the default.aspx page of the specified site and displays the specified Excel workbook.
-  
-    
-    
-The code sample is the code from the Form1.cs and Form1.vb example files described in the previous procedures. The code sample uses two text boxes, a progress bar, and a button. The code is only a portion of the Windows Forms project. For example, the code involving the layout of the form is not shown. 
-  
-    
-    
- **Sample code provided by:** Daniel Mullowney, Microsoft Corporation
-  
-    
-    
 
+The code sample is the code from the Form1.cs and Form1.vb example files described in the previous procedures. The code sample uses two text boxes, a progress bar, and a button. The code is only a portion of the Windows Forms project. For example, the code involving the layout of the form is not shown.
 
+**Sample code provided by:** Daniel Mullowney, Microsoft Corporation
 
-```cs
-
+```csharp
 namespace AddEWATool
 {
     using System;
@@ -374,14 +318,9 @@ namespace AddEWATool
         }
     }
 }
-
 ```
 
-
-
-
-```VB.net
-
+```vbnet
 Imports System
 Imports System.Windows.Forms
 Imports Microsoft.Office.Excel.WebUI
@@ -497,37 +436,19 @@ Namespace AddEWATool
         End Sub
     End Class
 End Namespace
-
-
-
 ```
-
 
 ## Robust programming
 
 The Excel workbook that you are using must be in a trusted location.
-  
-    
-    
 
 ## See also
 
-
 #### Tasks
 
+- [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md)
 
-  
-    
-    
- [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md)
 #### Concepts
 
-
-  
-    
-    
- [Excel Services Alerts](excel-services-alerts.md)
-  
-    
-    
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+- [Excel Services Alerts](excel-services-alerts.md)
+- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
