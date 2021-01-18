@@ -1,6 +1,7 @@
 ---
 title: Handle SharePoint Online throttling by using exponential back off
-ms.date: 12/02/2020
+description: Learn how to handle throttling in SharePoint Online by using the exponential back-off technique.
+ms.date: 01/16/2020
 localization_priority: Priority
 ---
 
