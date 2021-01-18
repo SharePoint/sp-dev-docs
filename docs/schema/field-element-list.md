@@ -1,7 +1,7 @@
 ---
 title: Field element (List)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/18/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
