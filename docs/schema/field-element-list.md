@@ -1,7 +1,7 @@
 ---
 title: Field element (List)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/18/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -127,7 +127,7 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
 
 ## Elements and attributes
 
-The following sections describe attributes, child elements, and parent elements.
+The following sections describe attributes, child elements, and parent elements:
 
 ### Attributes
 
@@ -289,7 +289,7 @@ The syntax for referencing a field is as follows:
 <Field Name="FieldName"/>
 ```
 
-By default, the field is rendered with the default attributes for that field definition as specified in the previous table. Any of the field attributes can be overridden in the CAML markup of the **FieldRef** attribute, which overrides the definition given for the field itself. (The **Type** attribute for a field cannot be changed.) 
+By default, the field is rendered with the default attributes for that field definition as specified in the previous table. Any of the field attributes can be overridden in the CAML markup of the **FieldRef** attribute, which overrides the definition given for the field itself (The **Type** attribute for a field cannot be changed). 
   
 To display the user-defined display name of a field, you can use `<Property Select="DisplayName"/>`.  
   
@@ -297,7 +297,7 @@ Within a **Fields** element enumeration, the **Name** attribute can be omitted. 
   
 Some properties of fields from forms and from certain aspects of the authoring UI can be rendered through the **Property** element, for example, `<Property Select="Description"/>` or `<Property Select="Type"/>`. These elements simply retrieve the value of any field attribute or child element (**Property**) by name.
   
-In addition to the preceding types, the following predefined fields are used with the **Field** element. 
+In addition to the preceding types, the following predefined fields are used with the **Field** element: 
 
 <br/>
   
@@ -317,7 +317,7 @@ In addition to the preceding types, the following predefined fields are used wit
   
 ## Example
 
-The following example uses the **Field** element to specify options for a list named Area list. 
+The following example uses the **Field** element to specify options for a list named Area list: 
   
 ```XML
 <Field Type="Choice" BaseType="Text" Name="Area">
