@@ -87,6 +87,7 @@ The valid URL including SAS token for accessing the user provided Azure Queue us
 ```
 (SharedAccessQueuePermissions.Add | SharedAccessQueuePermissions.Read | SharedAccessQueuePermissions.Update)
 ```
+
 Once accepted, the job ID will be written to the notification queue if it was provided and access is valid. The notification queue can be used for multiple migration jobs at the same time, as each job will identify itself in values sent back to the notification queue.
 
 The following are examples of all event types logged into the Azure reporting queue:
@@ -415,45 +416,25 @@ In the Manifest container one file is named Manifest.xml. There are 2 optional a
 **Example for files over 15 GB:**
 
 ```xml
-
 <?xml version="1.0" encoding="utf-8"?> 
-
 <SPObjects xmlns="urn:deployment-manifest-schema"> 
-
   <SPObject Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ObjectType="SPFolder" ParentId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents"> 
-
     <Folder Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Url="Shared Documents" Name="Shared Documents" ParentFolderId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" ContainingDocumentLibrary="a69654d6-eb09-4638-aa6b-a7e8ff86f555" TimeCreated="2021-01-06T18:50:15" TimeLastModified="2021-01-06T18:50:15" SortBehavior="1" /> 
-
   </SPObject> 
-
   <SPObject Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ObjectType="SPDocumentLibrary" ParentId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents"> 
-
     <DocumentLibrary Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" BaseTemplate="DocumentLibrary" RootFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" RootFolderUrl="/Shared Documents" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Title="Documents" HasUniqueRoleAssignments="true"> 
-
       <ContentTypes /> 
-
     </DocumentLibrary> 
-
   </SPObject> 
-
   <SPObject Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ObjectType="SPFile" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
-
     <File Url="Shared Documents/MyFile.txt" Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Name="MyFile.txt" ListItemIntId="1" ListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" TimeCreated="2021-01-06T18:43:38" TimeLastModified="2018-06-07T17:54:28" Version="1.0" FileValue="MyFile.txt" FileSize="17662712" Author="1" ModifiedBy="1" MD5Hash="qVBFIb8MJLzT5INrE4XcDQ==" Checksum="3k59aOUae2xygD5B/jtxY4x0Xko=" /> 
-
   </SPObject> 
-
   <SPObject Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ObjectType="SPListItem" ParentId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
-
     <ListItem FileUrl="Shared Documents/MyFile.txt" DocType="File" ParentFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Order="100" Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" Name="MyFile.txt" DirName="/Shared Documents" IntId="1" DocId="aef2bb11-7ee8-4343-87cd-5938d260e647" Version="1.0" Author="1" ModifiedBy="1" TimeLastModified="2018-06-07T17:54:28" TimeCreated="2021-01-06T18:43:38" ModerationStatus="Approved"> 
-
       <Fields /> 
-
     </ListItem> 
-
   </SPObject> 
-
 </SPObjects> 
-
  ```
 
 **Example for files under 2 GB:**
@@ -521,7 +502,6 @@ If the migration API was unable to resolve a user using the login provided in th
 
 1. A new deleted user with the provided login and SystemId is created and is used in the associated metadata within the package.
 1. A warning will be reported in the ImportLogs- “Failed to retrieve user 'user@contoso.com' attributes from the SiteUsers; falling back to passed in values”
-
 
 ## Appendices
 
