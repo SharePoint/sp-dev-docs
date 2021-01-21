@@ -1,7 +1,7 @@
 ---
 title: Connect to a Microsoft 365 group
 description: Connect a Microsoft 365 group to an existing SharePoint site to modernize it and have it benefit from all other group-connected services such as Microsoft Teams and Planner.
-ms.date: 04/23/2018
+ms.date: 01/14/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -13,9 +13,6 @@ Being able to connect a Microsoft 365 group to an existing SharePoint site is im
 You can connect your site to a new Microsoft 365 group from the user interface site-by-site, which might be good for smaller environments. However, larger customers often want to offer a consistent experience to their users, and therefore want to perform a bulk operation of their sites.
 
 In this article, you'll learn how to prepare for such a bulk operation for associating sites to new Microsoft 365 groups and how to actually make it happen.
-
-> [!IMPORTANT]
-> For publishing portals (sites based upon BLANKINTERNET#0, ENTERWIKI#0, SRCHCEN#0, SRCHCENTERLITE#0, BICENTERSITE#0, POINTPUBLISHINGHUB#0, POINTPUBLISHINGTOPIC#0 or sites using the “Pages” library) it's not currently supported to connect these to a Microsoft 365 group or to use modern pages. If you want to modernize your publishing portal it's recommended to start from a new communication site and configure that one accordingly.
 
 > [!IMPORTANT]
 > - It is **not** supported to connect a Communication site to Microsoft 365 group.

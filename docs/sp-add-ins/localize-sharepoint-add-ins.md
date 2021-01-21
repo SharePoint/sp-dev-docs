@@ -10,7 +10,7 @@ localization_priority: Normal
 # Localize SharePoint Add-ins
  
 > [!NOTE] 
-> This topic assumes that you are familiar with the basic creation of SharePoint Add-ins, and with SharePoint features, the distinction between add-in webs and host webs, [the kind of SharePoint components that can be in an add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#TypesOfSPComponentsInApps), and the basics of localization with .resx files.
+> This topic assumes that you are familiar with the basic creation of SharePoint Add-ins, and with SharePoint features, the distinction between add-in webs and host webs, [the kind of SharePoint components that can be in an add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#types-of-sharepoint-components-that-can-be-in-a-sharepoint-add-in), and the basics of localization with .resx files.
  
 <a name="Prerequisites"> </a>
 
@@ -35,7 +35,7 @@ Also, be aware of the following:
 
 ## Localize the add-in web components
 
-An add-in web can contain specific kinds of SP components. For more information about the kinds of SharePoint components that can be in a SharePoint Add-in, see [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#TypesOfSPComponentsInApps). To localize components that are deployed to an add-in web, you add .resx files in modules in the same feature that contains the add-in web component. You reference the resources in the markup of the component. How you do this is explained later in this article. However, custom site pages in a SharePoint Add-in use JavaScript string variable files instead of .resx files, as described later in this section.
+An add-in web can contain specific kinds of SP components. For more information about the kinds of SharePoint components that can be in a SharePoint Add-in, see [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#types-of-sharepoint-components-that-can-be-in-a-sharepoint-add-in). To localize components that are deployed to an add-in web, you add .resx files in modules in the same feature that contains the add-in web component. You reference the resources in the markup of the component. How you do this is explained later in this article. However, custom site pages in a SharePoint Add-in use JavaScript string variable files instead of .resx files, as described later in this section.
  
 > [!NOTE] 
 > Resource files cannot be shared by multiple add-in web features. For each feature in the .wsp file, you have to create separate sets of resource files.

@@ -5174,3 +5174,5 @@
     href: https://aka.ms/spdev-community
 - name: Tutorials
   href: training/training.md
+- name: SharePoint Framework API reference
+  href: https://docs.microsoft.com/en-us/javascript/api/overview/sharepoint?view=sp-typescript-latest
