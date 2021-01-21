@@ -86,7 +86,7 @@ In the procedures of this section, you create a SharePoint Add-in that includes 
 
 You add SharePoint components to an add-in exactly as you would add them to a classic farm solution. However, not every kind of SharePoint component can be included in a SharePoint Add-in. The purposes these components serve are accomplished in other ways in SharePoint Add-ins. 
 
-For detailed information about what kinds of SharePoint components can be included in a SharePoint Add-in and how to include them in a project, see [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#TypesOfSPComponentsInApps).
+For detailed information about what kinds of SharePoint components can be included in a SharePoint Add-in and how to include them in a project, see [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#types-of-sharepoint-components-that-can-be-in-a-sharepoint-add-in).
     
 For purposes of the continuing example, use the following procedures, which provide examples of using Visual Studio to add custom columns, content types, list templates, and list instances to a SharePoint Add-in.
     

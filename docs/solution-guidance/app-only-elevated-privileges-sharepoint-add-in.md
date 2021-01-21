@@ -1,12 +1,11 @@
 ---
 title: App-only and elevated privileges in the SharePoint Add-in model
-ms.date: 04/22/2020
+description: The approach you take to elevate privileges in your code is different in the new SharePoint Add-in model than it was with full trust code. In a typical full trust code (FTC) / Farm Solution scenario, the RunWithElevatedPrivileges API is used with the SharePoint server-side object model code and deployed via Farm Solutions.
+ms.date: 01/06/2021
 localization_priority: Priority
 ---
 
 # App-only and elevated privileges in the SharePoint Add-in model
-
-## Summary
 
 The approach you take to elevate privileges in your code is different in the new SharePoint Add-in model than it was with full trust code. In a typical full trust code (FTC) / Farm Solution scenario, the RunWithElevatedPrivileges API is used with the SharePoint server-side object model code and deployed via Farm Solutions.
 
@@ -16,75 +15,77 @@ In an SharePoint Add-in model scenario, the AllowAppOnlyPolicy permission or a s
 
 As a rule of a thumb, we would like to provide the following high-level guidelines for elevating privileges in code.
 
-- AllowAppOnlyPolicy does not work with 
-	+ Search - if target is SharePoint On-Premises. SharePoint Online support for it has been added ([blog post](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/))
-	+ User Profile CSOM operations, except that the User Profile Bulk Update API can be used with app-only permissions
-	+ Updating taxonomy service entries (write) - read works
-	
-	> [!NOTE] 
-	> In these scenarios you need to use a specific service account.
+- AllowAppOnlyPolicy does not work with
+  - Search - if target is SharePoint On-Premises. SharePoint Online support for it has been added ([blog post](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/))
+  - User Profile CSOM operations, except that the User Profile Bulk Update API can be used with app-only permissions
+  - Updating taxonomy service entries (write) - read works
+
+    > [!NOTE]
+    > In these scenarios you need to use a specific service account.
 
 - AllowAppOnlyPolicy is similar to RunWithElevatedPrivileges, but not exactly the same.
-	+ AllowAppOnlyPolicy executes code based on the permissions granted to the SharePoint Add-in, not on behalf of another user who has the appropriate permissions to perform an operation.
+  - AllowAppOnlyPolicy executes code based on the permissions granted to the SharePoint Add-in, not on behalf of another user who has the appropriate permissions to perform an operation.
 
 Here is an example of returning an App Only Policy token and using it to create a context object.
 
-	Uri siteUrl = new Uri(ConfigurationManager.AppSettings["MySiteUrl"]);
-	try
-    {
-    	//Connect to the give site using App Only token
-    	string realm = TokenHelper.GetRealmFromTargetUrl(siteUrl);
-    	var token = TokenHelper.GetAppOnlyAccessToken(TokenHelper.SharePointPrincipal, siteUrl.Authority, realm).AccessToken;
+```csharp
+Uri siteUrl = new Uri(ConfigurationManager.AppSettings["MySiteUrl"]);
+try
+  {
+    //Connect to the give site using App Only token
+    string realm = TokenHelper.GetRealmFromTargetUrl(siteUrl);
+    var token = TokenHelper.GetAppOnlyAccessToken(TokenHelper.SharePointPrincipal, siteUrl.Authority, realm).AccessToken;
 
-    	using (var ctx = TokenHelper.GetClientContextWithAccessToken(siteUrl.ToString(), token))
-    	{
-    		// Perform operations using the app only token access. 
-    	}
-    }
-    catch (Exception ex)
+    using (var ctx = TokenHelper.GetClientContextWithAccessToken(siteUrl.ToString(), token))
     {
-    	Console.WriteLine("Error in execution: " + ex.Message);
+      // Perform operations using the app only token access.
     }
+  }
+  catch (Exception ex)
+  {
+    Console.WriteLine("Error in execution: " + ex.Message);
+  }
+```
 
 - When using the AllowAppOnlyPolicy, keep in mind it only works in Provider-hosted SharePoint Add-ins.
 - AllowAppOnlyPolicy does not execute code on behalf of a user and therefore may not be appropriate for all scenarios.
 - Service accounts are defined in SharePoint.
-	+ In an Office 365 tenancy, depending what functionality your code requirements have, the service accounts may need an Office 365 license assigned to them.
-	+ You can create service accounts on a per SharePoint Add-in basis, or use a single account for all SharePoint Add-ins.
-	+ Create clear and descriptive names for the service accounts so you can easily track the operations they perform.
-	
-	For example: If your SharePoint Add-in modifies list items, the Modified By column for the list items will display the name of the service account associated with the SharePoint Add-in.
+  - In an Office 365 tenancy, depending what functionality your code requirements have, the service accounts may need an Office 365 license assigned to them.
+  - You can create service accounts on a per SharePoint Add-in basis, or use a single account for all SharePoint Add-ins.
+  - Create clear and descriptive names for the service accounts so you can easily track the operations they perform.
+
+    For example: If your SharePoint Add-in modifies list items, the Modified By column for the list items will display the name of the service account associated with the SharePoint Add-in.
 
 - When authenticating with service accounts, you must retrieve a user name and password for the service account.
-	+ The code snippet below illustrates using a user name and password to authenticate.
-	+ Take care to store and retrieve the user name and password in a secure fashion.
+  - The code snippet below illustrates using a user name and password to authenticate.
+  - Take care to store and retrieve the user name and password in a secure fashion.
 
-	```
-	using (ClientContext context = new ClientContext("https://tenancy.sharepoint.com"))
-	{
-	
-		// Use default authentication mode
-		context.AuthenticationMode = ClientAuthenticationMode.Default;	
-		// Specify the credentials for the account that will execute the request
-		context.Credentials = new SharePointOnlineCredentials("User Name", "Password");
-	}
-	```
-
+    ```csharp
+    using (ClientContext context = new ClientContext("https://tenancy.sharepoint.com"))
+    {
+    
+      // Use default authentication mode
+      context.AuthenticationMode = ClientAuthenticationMode.Default;
+      // Specify the credentials for the account that will execute the request
+      context.Credentials = new SharePointOnlineCredentials("User Name", "Password");
+    }
+    ```
+    
 ## Options to elevate permissions
 
 You have a couple of options to elevate permissions.
 
 - OAuth (AllowAppOnlyPolicy)
-	+ S2S (sub option)
-	+ ACS (sub option)
+  - S2S (sub option)
+  - ACS (sub option)
 - Service Account
-	+ Remotely hosted code (Example: Azure WebJob)
+  - Remotely hosted code (Example: Azure WebJob)
 
 ### OAuth (AllowAppOnlyPolicy)
 
 In this option the AllowAppOnlyPolicy is set to true in the AppPermissionRequests element and permissions are set in the SharePoint Add-in manifest. OAuth is used to return access tokens to allow the SharePoint Add-in to execute operations it has permissions to perform.
 
-**S2S sub option**
+#### S2S sub option
 
 The S2S sub option only works in on-premises SharePoint environments.
 
@@ -92,17 +93,17 @@ When authenticating via OAuth in an S2S scenario the **TokenHelper::GetS2SAccess
 
 This option does not execute code on behalf of a user and therefore may not be appropriate for all scenarios.
 
-**When is it a good fit?**
+#### When is it a good fit?
 
 When you need to elevate privileges in a SharePoint S2S scenario this is a good option because this option works with S2S and is very easy to implement.
 
-**Getting Started**
+#### Getting Started
 
 The following article demonstrates how to use AllowAppOnlyPolicy with S2S.
 
 - [SharePoint 2013 App Only Policy Made Easy (Kirk Evans - MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2013/02/23/sharepoint-2013-app-only-policy-made-easy.aspx)
 
-**ACS sub option**
+#### ACS sub option
 
 The ACS sub option work in on-premises and Office 365 SharePoint environments.
 
@@ -110,11 +111,11 @@ When authenticating via OAuth in an ACS scenario the **TokenHelper::GetAppOnlyAc
 
 This option does not execute code on behalf of a user and therefore may not be appropriate for all scenarios.
 
-**When is it a good fit?**
+#### When is it a good fit?
 
 When you need to elevate privileges in a SharePoint ACS scenario this is a good option because this option works with ACS and is very easy to implement.  This option is a good fit when you have an on-premises SharePoint environment that has an established trust with ACS.  This is your only OAuth option when you have a Office 365 SharePoint environment.
 
-**Getting Started**
+#### Getting Started
 
 The following article demonstrates how to use AllowAppOnlyPolicy with ACS.
 
@@ -127,11 +128,11 @@ The following article demonstrates how to use AllowAppOnlyPolicy with ACS.
 
 In this pattern, the SharePointOnlineCredentials class is used to establish the context of a user that executes code.
 
-**When is it a good fit?**
+#### When is it a good fit?
 
 When you need to execute code on behalf of a specific user (service account) this is a good option because it performs actions on the user's (service account) and the SharePoint Add-in's permissions.
 
-**Getting Started**
+#### Getting Started
 
 The following article demonstrates how the SharePointOnlineCredentials class is used to establish the context of a user that executes code.
 

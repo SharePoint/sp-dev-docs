@@ -1,14 +1,12 @@
 ---
 title: List instance in the SharePoint Add-in model
-ms.date: 11/03/2017
+description: The approach you take to create list instances is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list instances were created with declarative code and deployed via SharePoint Solutions.
+ms.date: 01/06/2021
 localization_priority: Normal
 ---
-List instance in the SharePoint Add-in model
-============================================
+# List instance in the SharePoint Add-in model
 
-## Summary
-
-The approach you take to create list instances is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list instances were created with declarative code and deployed via SharePoint Solutions. 
+The approach you take to create list instances is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list instances were created with declarative code and deployed via SharePoint Solutions.
 
 In a SharePoint Add-in model scenario, the remote provisioning pattern is used to create list instances.
 
@@ -19,7 +17,7 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 - Use the remote provisioning pattern to create list instances.
 - Do not use declarative code (elements.xml) to create list instances.
 
-**Getting started**
+### Getting started
 
 The following O365 PnP code sample and video demonstrates how to create a SharePoint Add-in that provides a user interface that allows end users to create new document libraries. It also demonstrates how to create a document library with specific configurations that collectively represent a template. In this sample you will find the code that creates a list instance.
 
@@ -31,53 +29,58 @@ The following video walks through the code sample.
 
 Use the AddList method in the SharePoint CSOM to create a list instance via the remote provisioning pattern. The following code taken from the [ECM.DocumentLibraries (O365 PnP Code Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries) illustrates how to do it.
 
-	private void CreateLibrary(ClientContext ctx, Library library, string associateContentTypeID) 
-	{
-	    if (!ctx.Web.ListExists(library.Title))
-	    {
-		   // Create List Instance
-	       ctx.Web.AddList(ListTemplateType.DocumentLibrary, library.Title, false);
-	       List _list = ctx.Web.GetListByTitle(library.Title);
-		   
-		   //Set Description
-	       if(!string.IsNullOrEmpty(library.Description)) 
-	       {
-	        _list.Description = library.Description;
-	       }
+```csharp
+private void CreateLibrary(ClientContext ctx, Library library, string associateContentTypeID)
+{
+    if (!ctx.Web.ListExists(library.Title))
+    {
+      // Create List Instance
+        ctx.Web.AddList(ListTemplateType.DocumentLibrary, library.Title, false);
+        List _list = ctx.Web.GetListByTitle(library.Title);
 
-		   //Turn on versioning	
-	       if(library.VerisioningEnabled) {
-	          _list.EnableVersioning = true;
-	       }
-		   
-			//Turn on Content Types
-	       _list.ContentTypesEnabled = true;
-	       _list.Update();
+      //Set Description
+        if(!string.IsNullOrEmpty(library.Description))
+        {
+        _list.Description = library.Description;
+        }
 
-		   //Add Content Type to List
-	       ctx.Web.AddContentTypeToListById(library.Title, associateContentTypeID, true);
-	
-	       //Remove the default Document Content Type
-	       _list.RemoveContentTypeByName(ContentTypeManager.DEFAULT_DOCUMENT_CT_NAME);
+      //Turn on versioning
+        if(library.VerisioningEnabled) {
+          _list.EnableVersioning = true;
+        }
 
-	       ctx.Web.Context.ExecuteQuery();
-	    }
-	}
+    //Turn on Content Types
+        _list.ContentTypesEnabled = true;
+        _list.Update();
+
+      //Add Content Type to List
+        ctx.Web.AddContentTypeToListById(library.Title, associateContentTypeID, true);
+
+        //Remove the default Document Content Type
+        _list.RemoveContentTypeByName(ContentTypeManager.DEFAULT_DOCUMENT_CT_NAME);
+
+        ctx.Web.Context.ExecuteQuery();
+    }
+}
+```
 
 The following code sample illustrates how to create a list instance with the SharePoint REST API.  This sample comes from the [Lists and list items REST API reference (MSDN Article)](https://msdn.microsoft.com/library/office/dn531433.aspx)
 
-	executor.executeAsync({
-	  url: "<app web url>/_api/SP.AppContextSite(@target)/web/lists
-	    ?@target='<host web url>'",
-	  method: "POST",
-	  body: "{ '__metadata': { 'type': 'SP.List' }, 'AllowContentTypes': true, 'BaseTemplate': 100,
-	    'ContentTypesEnabled': true, 'Description': 'My list description', 'Title': 'Test title' }",
-	  headers: { "content-type": "application/json;odata=verbose" },
-	  success: successHandler,
-	  error: errorHandler
-	});
+```csharp
+executor.executeAsync({
+  url: "<app web url>/_api/SP.AppContextSite(@target)/web/lists
+    ?@target='<host web url>'",
+  method: "POST",
+  body: "{ '__metadata': { 'type': 'SP.List' }, 'AllowContentTypes': true, 'BaseTemplate': 100,
+    'ContentTypesEnabled': true, 'Description': 'My list description', 'Title': 'Test title' }",
+  headers: { "content-type": "application/json;odata=verbose" },
+  success: successHandler,
+  error: errorHandler
+});
+```
 
 ## Related links
+
 - [Lists and list items REST API reference (MSDN Article)](https://msdn.microsoft.com/library/office/dn531433.aspx)
 - [List Definitions / List Templates (SharePoint Add-in model recipe)](list-definition-template-sharepoint-add-in.md)
 - [Document and list templates with app model (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Document-and-list-templates-with-app-model)

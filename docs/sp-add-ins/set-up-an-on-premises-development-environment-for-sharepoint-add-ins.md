@@ -126,7 +126,7 @@ The registry path will change in future versions of Visual Studio.
 <a name="SP15appdevonprem_bk_configure"> </a>
 ## Configure an isolated add-in domain in SharePoint
 
-Before you carry out any procedures in this section, read [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#IsolatedDomain).
+Before you carry out any procedures in this section, read [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#host-webs-add-in-webs-and-the-isolated-domain).
 
 You must create an isolated domain in your test SharePoint farm. Also, your SharePoint installation needs a general wildcard host header domain where it can provision SharePoint-hosted add-ins.
 
@@ -188,7 +188,7 @@ Perform the steps in the following procedure to create an isolated add-in domain
 
     ```
 
-7. Specify your add-in prefix (see [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#IsolatedDomain)) by typing the following code in the SharePoint Management Shell:
+7. Specify your add-in prefix (see [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#host-webs-add-in-webs-and-the-isolated-domain)) by typing the following code in the SharePoint Management Shell:
     
     ```
       Set-SPAppSiteSubscriptionName -Name "add-in" -Confirm:$false
