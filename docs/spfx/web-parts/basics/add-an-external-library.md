@@ -1,7 +1,7 @@
 ---
 title: Add an external library to your SharePoint client-side web part
 description: Bundle a JavaScript external library and share libraries.
-ms.date: 12/02/2020
+ms.date: 01/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -123,9 +123,6 @@ In this example, you'll load jQuery from CDN. You don't need to install the NPM 
 ## Load a non-AMD module
 
 Some scripts follow the legacy JavaScript pattern of storing the library on the global namespace. This pattern is now deprecated in favor of [Universal Module Definitions (UMD)](https://github.com/umdjs/umd)/[Asynchronous Module Definitions (AMD)](https://en.wikipedia.org/wiki/Asynchronous_module_definition) or [ES6 modules](https://github.com/lukehoban/es6features/blob/master/README.md#modules). However, you might need to load such libraries in your web part.
-
-> [!TIP]
-> It's difficult to determine manually whether the script that you're trying to load is an AMD or a non-AMD script. This is especially the case if the script that you're trying to load is minified. If your script is hosted on a publicly accessible URL, you can use the free [Rencore SharePoint Framework Script Check](https://rencore.com/sharepoint-framework/script-check/) tool to determine the type of script for you. Additionally, this tool lets you know whether the hosting location from which you're loading the script is properly configured.
 
 To load a non-AMD module, you add an additional property to the entry in your **config.json** file.
 
