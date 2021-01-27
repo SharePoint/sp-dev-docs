@@ -1,7 +1,8 @@
 ---
-title: AssociationGroup element in AssociationGroups
+title: AssociationGroup element in AssociationGroups (BDCMetadataResource Schema)
+description: Details on the AssociationGroup element in AssociationGroups (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: f73d97e6-15d6-dae0-743c-aab2d66d741d
 ---
 
-# AssociationGroup element in AssociationGroups 
-
-(BDCMetadataResource Schema)
+# AssociationGroup element in AssociationGroups (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

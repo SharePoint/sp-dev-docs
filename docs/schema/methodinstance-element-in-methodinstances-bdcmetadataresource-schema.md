@@ -1,7 +1,8 @@
 ---
-title: MethodInstance Element in MethodInstances
+title: MethodInstance Element in MethodInstances (BDCMetadataResource Schema)
+description: Details on the MethodInstance Element in MethodInstances (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: 9174eee9-3a97-ac0b-06c0-4eddf8737d18
 ---
 
-# MethodInstance Element in MethodInstances 
-
-(BDCMetadataResource Schema)
+# MethodInstance Element in MethodInstances (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

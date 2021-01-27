@@ -1,12 +1,12 @@
 ---
-title: Analyze and use the scanner data
+title: "Analyze and use the scanner data: Modernize lists & libraries"
 description: Understand and process the scanner results to help your sites to get the most out of the modern list and library experience
-ms.date: 06/21/2018
+ms.date: 01/27/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Analyze and use the scanner data
+# Analyze and use the scanner data: Modernize lists & libraries
 
 To help you understand which lists are not ready to use the modern list and library user interface, you can use the  [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) to analyze your environment. Use this article to understand how you can use the scanner output to prepare your lists for getting the most out of the modern list and library experience. The scanner will generate an Excel report plus several CSV files. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
 

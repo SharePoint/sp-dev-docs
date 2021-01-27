@@ -1,7 +1,8 @@
 ---
-title: Action element in Actions
+title: Action element in Actions (BDCMetadataResource Schema)
+description: Details on the Action element in Actions (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: c1031b46-28be-51f5-43bb-8d684cc52ee2
 ---
 
-# Action element in Actions 
-
-(BDCMetadataResource Schema)
+# Action element in Actions (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

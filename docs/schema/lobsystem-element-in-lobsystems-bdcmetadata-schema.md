@@ -1,7 +1,8 @@
 ---
-title: LobSystem Element in LobSystems
+title: LobSystem Element in LobSystems (BDCMetadata Schema)
+description: Details on the LobSystem Element in LobSystems (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: d4e58d7d-a628-8093-97fe-7c3136e8f6f2
 ---
 
-# LobSystem Element in LobSystems 
-
-(BDCMetadata Schema)
+# LobSystem Element in LobSystems (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

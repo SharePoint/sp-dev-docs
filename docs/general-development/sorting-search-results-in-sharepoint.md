@@ -1,6 +1,7 @@
 ---
 title: Sorting search results in SharePoint
-ms.date: 09/24/2018
+description: Sort search results programmatically—by ran k, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint.
+ms.date: 01/27/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,7 +12,7 @@ localization_priority: Priority
 
 ![Conceptual overview topic](../images/mod_icon_badge_conoverview.png)
     
-Sort search results programmatically—by rank, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint.
+Sort search results programmatically—by ran k, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint.
 
 You can sort the search results for SharePoint in four ways:
 
@@ -52,7 +53,7 @@ If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Mi
   
     
     
-Apart from the Query object model, SharePoint also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview.md#bk_queryrest).
+Apart from the Query object model, SharePoint also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview.md#querying-with-the-search-rest-service).
   
     
     

@@ -1,12 +1,12 @@
 ---
-title: Analyze and use the scanner data
+title: "Analyze and use the scanner data: Connect to Office 365"
 description: Understand and process the scanner results to help your sites be in optimal shape for connecting a Microsoft 365 group to them.
-ms.date: 12/13/2018
+ms.date: 01/27/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Analyze and use the scanner data
+# Analyze and use the scanner data: Connect to Office 365
 
 To help you understand which sites are ready to be group-connected, you can use the [SharePoint Modernization Scanner](https://aka.ms/sppnp-modernizationscanner) to analyze your environment. Use this article to understand how you can use the scanner output to prepare your sites for being connected to a Microsoft 365 group. The scanner, as of version 1.5, will generate an Excel report plus several CSV files. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
 
@@ -37,7 +37,7 @@ At this point you have a list of all sites which can be connected to a Microsoft
 
 Filter | Validation
 ---------|----------
-![Web template filter on STS#1](media/modernize/groupifyscanner_ready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_ready_4.png)
+![Web template filter on STS#1 - ready](media/modernize/groupifyscanner_ready_3.png) | ![Team sites graph - ready](media/modernize/groupifyscanner_ready_4.png)
 
 With that filter applied let's have a look at the typical warnings:
 
@@ -80,7 +80,7 @@ At this point you have a list of all sites which are **not ready** to be connect
 
 Filter | Validation
 ---------|----------
-![Web template filter on STS#1](media/modernize/groupifyscanner_notready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_notready_4.png)
+![Web template filter on STS#1 - not ready](media/modernize/groupifyscanner_notready_3.png) | ![Team sites graph - not ready](media/modernize/groupifyscanner_notready_4.png)
 
 With that filter applied let's have a look at why a site is not ready.
 

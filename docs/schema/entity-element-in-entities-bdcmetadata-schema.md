@@ -1,7 +1,8 @@
 ---
-title: Entity Element in Entities
+title: Entity Element in Entities (BDCMetadata Schema)
+description: Details on the Entity Element in Entities (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 ---
 
-# Entity Element in Entities 
-
-(BDCMetadata Schema)
+# Entity Element in Entities (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

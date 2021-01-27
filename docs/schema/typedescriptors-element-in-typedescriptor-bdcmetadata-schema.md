@@ -1,7 +1,8 @@
 ---
-title: TypeDescriptors Element in TypeDescriptor
+title: TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)
+description: Details on the TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: 322b2d3f-c92d-3c24-9f22-07b56396275b
 ---
 
-# TypeDescriptors Element in TypeDescriptor 
-
-(BDCMetadata Schema)
+# TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

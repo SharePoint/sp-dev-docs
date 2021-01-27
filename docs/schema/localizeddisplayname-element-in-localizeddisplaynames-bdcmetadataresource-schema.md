@@ -1,7 +1,8 @@
 ---
-title: LocalizedDisplayName Element in LocalizedDisplayNames
+title: LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadataResource Schema)
+description: Details on the LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: 22df0505-2024-a38d-38ea-6f614758fae6
 ---
 
-# LocalizedDisplayName Element in LocalizedDisplayNames 
-
-(BDCMetadataResource Schema)
+# LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

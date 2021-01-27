@@ -1,7 +1,8 @@
 ---
-title: Identifier Element in Identifiers
+title: Identifier Element in Identifiers (BDCMetadata Schema)
+description: Details on the Identifier Element in Identifiers (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: c4abf09b-10b6-0007-9214-35d5fe675be7
 ---
 
-# Identifier Element in Identifiers 
-
-(BDCMetadata Schema)
+# Identifier Element in Identifiers (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

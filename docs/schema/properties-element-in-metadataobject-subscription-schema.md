@@ -1,17 +1,15 @@
 ---
-title: Properties Element in MetadataObject
+title: Properties Element in MetadataObject (Subscription Schema)
+description: This element is not used by Microsoft Business Connectivity Services (BCS) in the current release.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: 391e8202-e3b4-7d98-6033-c9b0ecc152dc
 ---
-
-# Properties Element in MetadataObject 
-
-(Subscription Schema)
+# Properties Element in MetadataObject (Subscription Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -35,58 +33,10 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="property-element-in-properties-subscription-schema.md">Property Element in Properties (Subscription Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+- [Property Element in Properties (Subscription Schema)](property-element-in-properties-subscription-schema.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.md">Subscription Element (Subscription Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="query-element-in-queries-subscription-schema.md">Query Element in Queries (Subscription Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+- [Subscription Element (Subscription Schema)](subscription-element-subscription-schema.md)
+- [Query Element in Queries (Subscription Schema)](query-element-in-queries-subscription-schema.md)
+- [Association Element in Associations (Subscription Schema)](association-element-in-associations-subscription-schema.md)

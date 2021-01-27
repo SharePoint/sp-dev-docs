@@ -1,7 +1,8 @@
 ---
-title: LobSystemInstance Element in LobSystemInstances
+title: LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)
+description: Details on the LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: a836b2fa-e2a2-9edd-04a0-b1396f8a88a1
 ---
 
-# LobSystemInstance Element in LobSystemInstances 
-
-(BDCMetadataResource Schema)
+# LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -1,7 +1,8 @@
 ---
-title: FilterDescriptor Element in FilterDescriptors
+title: FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)
+description: Details on the FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: 8ce0a852-38f9-75d2-8258-27c57418f53c
 ---
 
-# FilterDescriptor Element in FilterDescriptors 
-
-(BDCMetadata Schema)
+# FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

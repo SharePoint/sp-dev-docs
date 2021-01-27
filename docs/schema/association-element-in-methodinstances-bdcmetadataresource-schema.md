@@ -1,7 +1,8 @@
 ---
-title: Association element in MethodInstances
+title: Association element in MethodInstances (BDCMetadataResource Schema)
+description: Details on the Association element in MethodInstances (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: 23403618-d39a-783d-ff3c-12c439e5f4d3
 ---
 
-# Association element in MethodInstances 
-
-(BDCMetadataResource Schema)
+# Association element in MethodInstances (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -1,7 +1,8 @@
 ---
-title: Actions element in Entity
+title: Actions element in Entity (BDCMetadata Schema)
+description: Specifies a list of actions of an external content type.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -10,10 +11,7 @@ ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: c5a6c08d-a3df-61db-3ce3-1e6837bbf221
 ---
-
-# Actions element in Entity 
-
-(BDCMetadata Schema)
+# Actions element in Entity (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -76,11 +74,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

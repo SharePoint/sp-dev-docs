@@ -1,29 +1,26 @@
 ---
 title: SharePoint Search REST API overview
-ms.date: 08/28/2020
+description: Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
+ms.date: 01/27/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
 # SharePoint Search REST API overview
 
 Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
 
 When you query in the context of a SharePoint Online user, you get results from:
 
-- Content in SharePoint Online site collections 
-- Content in Microsoft 365 groups 
-- Shared OneDrive for Business content (content that's accessible for others than the owner of the OneDrive for Business) 
-- Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](https://docs.microsoft.com/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint) 
+- Content in SharePoint Online site collections
+- Content in Microsoft 365 groups
+- Shared OneDrive for Business content (content that's accessible for others than the owner of the OneDrive for Business)
+- Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](https://docs.microsoft.com/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint)
 
-If your users also expect results from OneDrive for Business content that only they have access to, you can use the [ContentSetting](#bk_ContentSetting) parameter to achieve this.
-
-<a name="bk_queryrest"> </a>
+If your users also expect results from OneDrive for Business content that only they have access to, you can use the [ContentSetting](#contentsetting) parameter to achieve this.
 
 ## Content Delivery Network (CDN) Support
 
 If the Office 365 Private or Public CDN is enabled to optimize performance for assets then this section applies to you. If your search results contain images that are served from the CDN, then the URL for the image will be the CDN URL that is returned in the results and not the asset library location. For more information on CDN please review [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](https://aka.ms/spocdn).
-
 
 ## Querying with the Search REST service
 
@@ -43,7 +40,7 @@ For **GET** requests, you specify the query parameters in the URL. You can const
 ```http
 GET http://server/_api/search/query?query_parameter=value&amp;query_parameter=value
 GET http://server/_api/search/query(query_parameter=value&amp;query_parameter=<value>)
-```  
+```
 
 ### POST requests
 
@@ -58,19 +55,19 @@ The HTTP **POST** version of the Search REST service supports all parameters sup
 
 **Table 1. Query parameters with different data types for POST requests**
 
-|                      **Parameter**                       |                                                                               **Data type**                                                                                |
-| :------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [SelectProperties](#bk_SelectProperties)                 | string[]                                                                                                                                                                   |
-| [RefinementFilters](#bk_RefinementFilters)               | string[]                                                                                                                                                                   |
-| [SortList](#bk_SortList)                                 | [Sort](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.Sort.aspx)                                                                              |
-| [HitHighlightedProperties](#bk_HitHighlightedProperties) | string[]                                                                                                                                                                  |
-| [Properties](#bk_Properties)                             | [Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties.aspx) |
+|                       Parameter                       |                                                                                 Data type                                                                                  |
+| :---------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SelectProperties](#selectproperties)                 | string[]                                                                                                                                                                   |
+| [RefinementFilters](#refinementfilters)               | string[]                                                                                                                                                                   |
+| [SortList](#sortlist)                                 | [Sort](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.Sort.aspx)                                                                              |
+| [HitHighlightedProperties](#hithighlightedproperties) | string[]                                                                                                                                                                   |
+| [Properties](#properties)                             | [Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Search.Query.KeywordQueryProperties.aspx) |
 
 Use **POST** requests in the following scenarios:
 
 - When you'll exceed the URL length restriction with a **GET** request.
 - When you can't specify the query parameters in a simple URL. For example, if you have to pass parameter values that contain a complex type array, or comma-separated strings, you have more flexibility when constructing the **POST** request.
-- When you use the  [ReorderingRules](#bk_ReorderingRules) parameter because it is supported only with **POST** requests.
+- When you use the  [ReorderingRules](#reorderingrules) parameter because it is supported only with **POST** requests.
 
 ## Search REST results format
 
@@ -85,8 +82,6 @@ If you don't need metadata, you can instead use:
 ```http
 accept: application/json;odata=nometadata
 ```
-
-<a name="bk_UsingQueryParams"> </a>
 
 ## Using query parameters with the Search REST service
 
@@ -103,7 +98,7 @@ A string that contains the text for the search query.
 GET http://{server}/_api/search/query?querytext='sharepoint'
 ```
 
- #### Sample POST request
+#### Sample POST request
 
 ```json
 {
@@ -115,8 +110,6 @@ GET http://{server}/_api/search/query?querytext='sharepoint'
 }
 ```
 
-<a name="bk_QueryTemplate"> </a>
-
 ### QueryTemplate
 
 A string that contains the text that replaces the query text, as part of a query transform.
@@ -127,7 +120,7 @@ A string that contains the text that replaces the query text, as part of a query
 GET http://server/_api/search/query?querytext='sharepoint'&amp;querytemplate='{searchterms} author:johndoe'
 ```
 
- #### Sample POST request
+#### Sample POST request
 
 ```json
 {
@@ -139,11 +132,9 @@ GET http://server/_api/search/query?querytext='sharepoint'&amp;querytemplate='{s
 }
 ```
 
-<a name="bk_EnableInterleaving"> </a>
-
 ### EnableInterleaving
 
-A Boolean value that specifies whether the result tables that are returned for the result block are mixed with the result tables that are returned for the original query. 
+A Boolean value that specifies whether the result tables that are returned for the result block are mixed with the result tables that are returned for the original query.
 
 **true** to mix the ResultTables; otherwise, **false**. The default value is **true**.
 
@@ -167,8 +158,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enableinterlea
 }
 ```
 
-<a name="bk_SourceId"> </a>
-
 ### SourceId
 
 The result source ID to use for executing the search query.
@@ -191,8 +180,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;sourceid='8413
 }
 ```
 
-<a name="bk_RankingModelId"> </a>
-
 ### RankingModelId
 
 The ID of the ranking model to use for the query.
@@ -214,8 +201,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;rankingmodelid
   'RankingModelId': 'CustomRankingModelID '
 }
 ```
-
-<a name="bk_StartRow"> </a>
 
 ### StartRow
 
@@ -242,8 +227,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;startrow=10
 > [!NOTE]
 > Please be aware that in order to provide search experience with high performance, we limit the maximum supported value of `StartRow` to be **50,000**. If you need to page through larger result sets, please see [Pagination for large result sets.](./pagination-for-large-result-sets.md)
 
-<a name="bk_RowLimit"> </a>
-
 ### RowLimit
 
 The maximum number of rows overall that are returned in the search results. Compared to  _RowsPerPage_,  _RowLimit_ is the maximum number of rows returned overall.
@@ -266,8 +249,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;rowlimit=30
 }
 ```
 
-<a name="bk_RowsPerPage"> </a>
-
 ### RowsPerPage
 
 The maximum number of rows to return per page. Compared to  _RowLimit_,  _RowsPerPage_ refers to the maximum number of rows to return per page, and is used primarily when you want to implement paging for search results.
@@ -289,8 +270,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;rowsperpage=10
   'RowsPerPage': '10'
 }
 ```
-
-<a name="bk_SelectProperties"> </a>
 
 ### SelectProperties
 
@@ -318,8 +297,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;selectproperti
 }
 ```
 
-<a name="bk_Culture"> </a>
-
 ### Culture
 
 The locale ID (LCID) for the query (see  [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx)).
@@ -341,8 +318,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;culture=1044
   'Culture': '1044'
 }
 ```
-
-<a name="bk_RefinementFilters"> </a>
 
 ### RefinementFilters
 
@@ -368,8 +343,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;refinementfilt
 }
 ```
 
-<a name="bk_Refiners"> </a>
-
 ### Refiners
 
 The set of refiners to return in a search result.
@@ -392,8 +365,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;refiners='auth
 }
 ```
 
-<a name="bk_HiddenConstraints"> </a>
-
 ### HiddenConstraints
 
 The additional query terms to append to the query.
@@ -415,8 +386,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;hiddenconstrai
   'HiddenConstraints': 'developer'
 }
 ```
-
-<a name="bk_SortList"> </a>
 
 ### SortList
 
@@ -451,11 +420,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;sortlist='rank
 }
 ```
 
-<a name="bk_EnableStemming"> </a>
-
 ### EnableStemming
 
-A Boolean value that specifies whether stemming is enabled. 
+A Boolean value that specifies whether stemming is enabled.
 
 **true** if the stemming is enabled; otherwise, **false**. The default value is **true**.
 
@@ -477,11 +444,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablestemming
 }
 ```
 
-<a name="bk_TrimDuplicates"> </a>
-
 ### TrimDuplicates
 
-A Boolean value that specifies whether duplicate items are removed from the results. 
+A Boolean value that specifies whether duplicate items are removed from the results.
 
 **true** to remove the duplicate items; otherwise, **false**. The default value is **true**.
 
@@ -502,8 +467,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;trimduplicates
   'TrimDuplicates': 'False'
 }
 ```
-
-<a name="bk_Timeout"> </a>
 
 ### Timeout
 
@@ -527,11 +490,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;timeout=60000
 }
 ```
 
-
 ### EnableNicknames
-<a name="bk_EnableNicknames"> </a>
 
-A Boolean value that specifies whether the exact terms in the search query are used to find matches, or if nicknames are used also. 
+A Boolean value that specifies whether the exact terms in the search query are used to find matches, or if nicknames are used also.
 **true** if nicknames are used; otherwise, **false**. The default value is **false**.
 
 #### Sample GET request
@@ -552,11 +513,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablenickname
 }
 ```
 
-<a name="bk_EnablePhonetic"> </a>
-
 ### EnablePhonetic
 
-A Boolean value that specifies whether the phonetic forms of the query terms are used to find matches. 
+A Boolean value that specifies whether the phonetic forms of the query terms are used to find matches.
 
 **true** if phonetic forms are used; otherwise, **false**. The default value is **false**.
 
@@ -578,11 +537,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablephonetic
 }
 ```
 
-<a name="bk_EnableFql"> </a>
-
 ### EnableFql
 
-A Boolean value that specifies whether the query uses the FAST Query Language (FQL). 
+A Boolean value that specifies whether the query uses the FAST Query Language (FQL).
 
 **true** if the query is an FQL query; otherwise, **false**. The default value is **false**.
 
@@ -603,8 +560,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablefql=true
   'EnableFQL': 'True'
 }
 ```
-
-<a name="bk_HitHighlightedProperties"> </a>
 
 ### HitHighlightedProperties
 
@@ -630,11 +585,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;hithighlighted
 }
 ```
 
-<a name="bk_BypassResultTypes"> </a>
-
 ### BypassResultTypes
 
-A Boolean value that specifies whether to perform result type processing for the query. 
+A Boolean value that specifies whether to perform result type processing for the query.
 
 **true** to perform result type processing; otherwise, **false**. The default value is **false**.
 
@@ -656,11 +609,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;bypassresultty
 }
 ```
 
-<a name="bk_ProcessBestBets"> </a>
-
 ### ProcessBestBets
 
-A Boolean value that specifies whether to return best bet results for the query. 
+A Boolean value that specifies whether to return best bet results for the query.
 
 **true** to return best bets; otherwise, **false**. This parameter is used only when **EnableQueryRules** is set to **true**, otherwise it is ignored. The default value is **false**.
 
@@ -682,8 +633,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;processbestbet
   'EnableQueryRules': 'true'
 }
 ```
-
-<a name="bk_ClientType"> </a>
 
 ### ClientType
 
@@ -707,8 +656,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;clienttype='cu
 }
 ```
 
-<a name="bk_PersonalizationData"> </a>
-
 ### PersonalizationData
 
 The GUID for the user who submitted the search query.
@@ -730,8 +677,6 @@ GET http:// _\<server\>_/_api/search/query?querytext='sharepoint'&amp;personaliz
   'PersonalizationData': ' <GUID> '
 }
 ```
-
-<a name="bk_ResultsURL"> </a>
 
 ### ResultsURL
 
@@ -755,8 +700,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;resultsurl='ht
 }
 ```
 
-<a name="bk_QueryTag"> </a>
-
 ### QueryTag
 
 Custom tags that identify the query. You can specify multiple query tags, separated by semicolons.
@@ -777,8 +720,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'
   'Querytext': 'sharepoint'
 }
 ```
-
-<a name="bk_Properties"> </a>
 
 ### Properties
 
@@ -824,11 +765,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;properties='te
 > [!NOTE]
 > [QueryPropertyValueType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.QueryPropertyValueType.aspx) specifies the type for the property; each type has a specific index value.
 
-<a name="bk_EnableQueryRules"> </a>
-
 ### EnableQueryRules
 
-A Boolean value that specifies whether to enable query rules for the query. 
+A Boolean value that specifies whether to enable query rules for the query.
 
 **true** to enable query rules; otherwise, **false**. The default value is **true**.
 
@@ -850,13 +789,11 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablequeryrul
 }
 ```
 
-<a name="bk_ReorderingRules"> </a>
-
 ### ReorderingRules
 
 Special rules for reordering search results. These rules can specify that documents matching certain conditions are ranked higher or lower in the results. This property applies only when search results are sorted based on rank. You must use a **POST** request for this property; it does not work in a **GET** request.
 
-In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](/previous-versions/office/sharepoint-server/jj276975(v=office.15)) . In the following example, `'MatchType': '0'` specifies `ResultContainsKeyword`.
+In the following example, _MatchType_ refers to [ReorderingRuleMatchType](/previous-versions/office/sharepoint-server/jj276975(v=office.15)) . In the following example, `'MatchType': '0'` specifies `ResultContainsKeyword`.
 
 #### Sample POST request
 
@@ -878,18 +815,16 @@ In the following example,  _MatchType_ refers to [ReorderingRuleMatchType](/prev
 }
 ```
 
-<a name="bk_ProcessPersonalFavorites"> </a>
-
 ### ProcessPersonalFavorites
 
-A Boolean value that specifies whether to return personal favorites with the search results. 
+A Boolean value that specifies whether to return personal favorites with the search results.
 
-**true** to return personal favorites; otherwise **false**. 
+**true** to return personal favorites; otherwise **false**.
 
 #### Sample GET request
 
 ```http
-GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;processpersonalfavorites=true
+GET http://_server_/_api/search/query?querytext='sharepoint'&amp;processpersonalfavorites=true
 ```
 
 #### Sample POST request
@@ -903,8 +838,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;processpersona
   'ProcessPersonalFavorites': 'false'
 }
 ```
-
-<a name="bk_ProcessPersonalFavorites"> </a>
 
 ### QueryTemplatePropertiesUrl
 
@@ -928,8 +861,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;querytemplatep
 }
 ```
 
-<a name="bk_ProcessPersonalFavorites"> </a>
-
 ### HitHighlightedMultivaluePropertyLimit
 
 The number of properties to show hit highlighting for in the search results.
@@ -952,11 +883,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;hithighlighted
 }
 ```
 
-<a name="bk_ProcessPersonalFavorites"> </a>
-
 ### EnableOrderingHitHighlightedProperty
 
-A Boolean value that specifies whether the hit highlighted properties can be ordered. 
+A Boolean value that specifies whether the hit highlighted properties can be ordered.
 
 **true** to enable ordering rules; otherwise **false**.
 
@@ -977,8 +906,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enableordering
   'EnableOrderingHitHighlightedProperty': 'false'
 }
 ```
-
-<a name="bk_ProcessPersonalFavorites"> </a>
 
 ### CollapseSpecification
 
@@ -1002,11 +929,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;collapsespecif
 }
 ```
 
-<a name="bk_ProcessPersonalFavorites"> </a>
-
 ### EnableSorting
 
-A Boolean value that specifies whether to sort search results. 
+A Boolean value that specifies whether to sort search results.
 
 **true** to sort search results using _SortList_, or by rank if  _SortList_ is empty. **false** to leave results unsorted.
 
@@ -1027,8 +952,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablesorting=
   'EnableSorting': 'false'
 }
 ```
-
-<a name="bk_ProcessPersonalFavorites"> </a>
 
 ### GenerateBlockRankLog
 
@@ -1054,8 +977,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;generateblockr
 }
 ```
 
-<a name="bk_ProcessPersonalFavorites"> </a>
-
 ### UIlanguage
 
 The locale identifier (LCID) of the user interface (see  [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664)).
@@ -1077,8 +998,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;uilanguage=104
   'UILanguage': '1044'
 }
 ```
-
-<a name="bk_ProcessPersonalFavorites"> </a>
 
 ### DesiredSnippetLength
 
@@ -1102,8 +1021,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;desiredsnippet
 }
 ```
 
-<a name="bk_ProcessPersonalFavorites"> </a>
-
 ### MaxSnippetLength
 
 The maximum number of characters to display in the hit-highlighted summary generated for a search result.
@@ -1122,11 +1039,9 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;maxsnippetleng
     'type': 'Microsoft.Office.Server.Search.REST.SearchRequest'
   },
   'Querytext ': 'sharepoint',
-  'MaxSnippetLength': '100' 
+  'MaxSnippetLength': '100'
 }
 ```
-
-<a name="bk_ProcessPersonalFavorites"> </a>
 
 ### SummaryLength
 
@@ -1150,8 +1065,6 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;summarylength=
 }
 ```
 
-<a name="bk_ProcessPersonalFavorites"> </a>
-
 ### EnableDynamicGroups
 
 A Boolean value that specifies whether to include the results from private Microsoft 365 groups.
@@ -1172,32 +1085,29 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;Properties='En
     'type': 'Microsoft.Office.Server.Search.REST.SearchRequest'
   },
   'Querytext': 'sharepoint',
-  'Properties': { 
-	'results': [ { 
-		'Name': 'EnableDynamicGroups', 
-		'Value': { 'BoolVal': true } 
-		}
-	]
+  'Properties': {
+  'results': [ {
+    'Name': 'EnableDynamicGroups',
+    'Value': { 'BoolVal': true }
+  }]
 }
 ```
-
-<a name="bk_ContentSetting"> </a>
 
 ### ContentSetting
 
 A string value that specifies an alternative scope of content for the query. The parameter is formatted as a string, but represents a numeric value. The default value is 0. You apply this property via the query property bag (Properties).
 
-- **0** : The scope for the query is all shared content that's been indexed in SharePoint Online. With this value of the parameter, private results aren't returned. In this context *private* means OneDrive for Business content that only the owner of the OneDrive for Business has access to. 
-- **3** : The scope for the query is all shared content that's been indexed in SharePoint Online plus the user's private OneDrive for Business content. Two result blocks are returned. The main result block contains results from shared content, excluding any results from the user’s own OneDrive for Business. The second result block contains results from the user’s own OneDrive for Business (private and shared). This value of the parameter enables the search experience to present results from the user’s own OneDrive separate from the main shared results. 
+- **0** : The scope for the query is all shared content that's been indexed in SharePoint Online. With this value of the parameter, private results aren't returned. In this context *private* means OneDrive for Business content that only the owner of the OneDrive for Business has access to.
+- **3** : The scope for the query is all shared content that's been indexed in SharePoint Online plus the user's private OneDrive for Business content. Two result blocks are returned. The main result block contains results from shared content, excluding any results from the user’s own OneDrive for Business. The second result block contains results from the user’s own OneDrive for Business (private and shared). This value of the parameter enables the search experience to present results from the user’s own OneDrive separate from the main shared results.
 
 > [!NOTE]
-> The values 1 and 2 are reserved for future use. 
+> The values 1 and 2 are reserved for future use.
 
-#### Sample GET request 
+#### Sample GET request
 
-http://server/_api/search/query?querytext='sharepoint'&properties='ContentSetting:3' 
+http://server/_api/search/query?querytext='sharepoint'&properties='ContentSetting:3'
 
-#### Sample POST request 
+#### Sample POST request
 
 ```json
 {
@@ -1220,8 +1130,6 @@ http://server/_api/search/query?querytext='sharepoint'&properties='ContentSettin
 }
 ```
 
-<a name="bk_AnonymousREST"> </a>
-
 ## Enabling anonymous Search REST queries
 
 You can configure search to support Search REST queries from anonymous users. Site administrators can decide what query parameters to expose to anonymous users by using the _queryparametertemplate.xml_ file. This section describes how to configure your site to enable anonymous access, and create the queryparametertemplate.xml file.
@@ -1232,7 +1140,7 @@ You can configure search to support Search REST queries from anonymous users. Si
 1. Add a new document library named QueryPropertiesTemplate to the publishing site.
 1. Create an XML file named queryparametertemplate.xml, and copy the following XML to the file.
 
-    ```xml  
+    ```xml
     <QueryPropertiesTemplate xmlns="https://www.microsoft.com/sharepoint/search/KnownTypes/2008/08" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
       <QueryProperties i:type="KeywordQueryProperties">
         <EnableStemming>true</EnableStemming>
@@ -1310,13 +1218,9 @@ The primary elements in the _queryparametertemplate.xml_ file are:
 
 When an anonymous Search REST query is submitted, the query object is constructed using what's specified in the **QueryProperties** element. Then, all the properties that are listed in the whitelist are copied from the incoming query to the newly constructed query object.
 
-<a name="bk_AnonymousREST"> </a>
-
 ## In this section
 
 - [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service.md)
-
-<a name="bk_addresources"> </a>
 
 ## See also
 

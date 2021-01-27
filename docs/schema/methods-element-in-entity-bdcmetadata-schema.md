@@ -1,5 +1,6 @@
 ---
-title: Methods Element in Entity
+title: Methods Element in Entity (BDCMetadata Schema)
+description: Details on the  Methods Element in Entity (BDCMetadata Schema)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: 42a24b32-bd97-4067-2e25-681d876d29fd
 ---
 
-# Methods Element in Entity 
-
-(BDCMetadata Schema)
+# Methods Element in Entity (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -37,50 +36,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies a method.</p></td>
-</tr>
-</tbody>
-</table>
+|                                                     Element                                                      |     Description     |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------- |
+| [Method Element in Methods (BDCMetadata Schema)</a></span></p>](method-element-in-methods-bdcmetadata-schema.md) | Specifies a method. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The external content type that this list of methods belongs to.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+|                                                      Element                                                       |                           Description                           |
+| ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| [Entity Element in Entities (BDCMetadata Schema)</a></span></p>](entity-element-in-entities-bdcmetadata-schema.md) | The external content type that this list of methods belongs to. |

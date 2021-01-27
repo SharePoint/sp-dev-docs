@@ -1,7 +1,8 @@
 ---
-title: ActionParameter element in ActionParameters
+title: ActionParameter element in ActionParameters (BDCMetadata Schema)
+description: Details on the  ActionParameter element in ActionParameters (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: 1f5fa96a-1bff-f007-984d-a644cbbb2648
 ---
 
-# ActionParameter element in ActionParameters 
-
-(BDCMetadata Schema)
+# ActionParameter element in ActionParameters (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -1,7 +1,8 @@
 ---
-title: LobSystems Element in Model
+title: LobSystems Element in Model (BDCMetadata Schema)
+description: Details on the LobSystems Element in Model (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: d9bf0ca9-fb79-e3a5-cc84-9510d93798cb
 ---
 
-# LobSystems Element in Model 
-
-(BDCMetadata Schema)
+# LobSystems Element in Model (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

@@ -1,7 +1,8 @@
 ---
-title: FilterDescriptors Element in Method
+title: FilterDescriptors Element in Method (BDCMetadata Schema)
+description: Details on the FilterDescriptors Element in Method (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +12,7 @@ localization_priority: Normal
 ms.assetid: 33d8e418-ddbb-e1ac-b145-836ed9f36e5c
 ---
 
-# FilterDescriptors Element in Method 
-
-(BDCMetadata Schema)
+# FilterDescriptors Element in Method (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

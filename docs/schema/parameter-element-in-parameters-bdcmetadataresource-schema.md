@@ -1,7 +1,8 @@
 ---
-title: Parameter Element in Parameters
+title: Parameter Element in Parameters (BDCMetadataResource Schema)
+description: Details on the Parameter Element in Parameters (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: 83463153-e2f4-a9bc-7fa0-edbee2947a91
 ---
 
-# Parameter Element in Parameters 
-
-(BDCMetadataResource Schema)
+# Parameter Element in Parameters (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

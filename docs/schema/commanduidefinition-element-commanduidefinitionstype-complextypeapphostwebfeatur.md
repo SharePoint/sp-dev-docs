@@ -1,7 +1,8 @@
 ---
-title: CommandUIDefinition element
+title: CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
+description: Details on the CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +10,7 @@ localization_priority: Normal
 ms.assetid: ab5fbcf3-20bc-c93b-518c-f6a542c44c34
 ---
 
-# CommandUIDefinition element 
-
-(CommandUIDefinitionsType complexType) (AppHostWebFeatures)
+# CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
 
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
