@@ -1,7 +1,7 @@
 ---
-title: MethodInstances Element in Method
+title: MethodInstances Element in Method (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +11,7 @@ localization_priority: Normal
 ms.assetid: dae3aeae-e72a-0b52-1348-f5e5cd31109f
 ---
 
-# MethodInstances Element in Method 
-
-(BDCMetadata Schema)
+# MethodInstances Element in Method (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

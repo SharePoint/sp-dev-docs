@@ -1,12 +1,12 @@
 ---
-title: Analyze and use the publishing portal scanner data
+title: "Analyze and use the scanner data: Publishing portal scanner"
 description: Understand and process the publishing portal scanner results to help you prepare the modernization of these portals
-ms.date: 10/24/2018
+ms.date: 01/27/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
-# Analyze and use the scanner data
+# Analyze and use the scanner data: Publishing portal scanner
 
 To help you with the modernization of your classic publishing portals, you can use the [SharePoint Modernization Scanner](https://aka.ms/sppnp-modernizationscanner) to analyze your environment. Use this article to understand how you can use the scanner output to help with the modernization of your publishing portals. The scanner, as of version 1.6, will generate an Excel report plus several CSV files containing classic publishing portal information. It's recommended to use the Excel based dashboard to review the scanner data and when needed use the CSV data for more in depth data.
 

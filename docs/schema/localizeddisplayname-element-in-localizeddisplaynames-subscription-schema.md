@@ -1,7 +1,7 @@
 ---
-title: LocalizedDisplayName Element in LocalizedDisplayNames
+title: LocalizedDisplayName Element in LocalizedDisplayNames (Subscription Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +9,7 @@ localization_priority: Normal
 ms.assetid: f6fd7c82-4d2b-12f4-7c42-dd11f48919bf
 ---
 
-# LocalizedDisplayName Element in LocalizedDisplayNames 
-
-(Subscription Schema)
+# LocalizedDisplayName Element in LocalizedDisplayNames (Subscription Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

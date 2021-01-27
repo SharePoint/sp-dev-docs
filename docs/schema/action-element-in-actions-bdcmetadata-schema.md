@@ -1,5 +1,5 @@
 ---
-title: Action element in Actions
+title: Action element in Actions (BDCMetadata Schema)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,9 +11,7 @@ localization_priority: Normal
 ms.assetid: f58b96c0-77a8-69d3-8710-fff03d4970b9
 ---
 
-# Action element in Actions 
-
-(BDCMetadata Schema)
+# Action element in Actions (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -25,7 +23,8 @@ Specifies an action supported by an external content type.
 
 Actions bridge the gap between Microsoft SharePoint 2010 and Microsoft Office 2010 and an external system's user interface by providing a link back to the external system.
 
-By default, the Business Data Connectivity (BDC) service provides actions such as **View Item**, **Edit Item**, and **Delete Item** after you model these operations in the BDC model. In addition to these default actions, you can create actions for other functionality that you want to attach to your external content type. For example, you can use actions to perform simple actions such as to send email messages to a customer from the Customer external content type or to open a customer's home page in a browser.
+By default, the Business Data Connectivity (BDC) service provides actions such as **View Item**, **Edit Item**, and **Delete Item** after you model these operations in the BDC model. In addition to these default actions, you can create ams.date: 01/27/2021
+tions for other functionality that you want to attach to your external content type. For example, you can use actions to perform simple actions such as to send email messages to a customer from the Customer external content type or to open a customer's home page in a browser.
 
 Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data web part or in an External Data column.
 

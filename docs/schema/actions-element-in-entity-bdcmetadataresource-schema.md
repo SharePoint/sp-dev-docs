@@ -1,7 +1,7 @@
 ---
-title: Actions element in Entity
+title: Actions element in Entity (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +9,7 @@ localization_priority: Normal
 ms.assetid: 4d4822f7-bda6-a18d-8f38-64ee92f31c17
 ---
 
-# Actions element in Entity 
-
-(BDCMetadataResource Schema)
+# Actions element in Entity (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

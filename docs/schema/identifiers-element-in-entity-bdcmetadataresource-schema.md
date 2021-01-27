@@ -1,7 +1,7 @@
 ---
-title: Identifiers Element in Entity
+title: Identifiers Element in Entity (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +9,7 @@ localization_priority: Normal
 ms.assetid: 8a6ddfb3-7e73-be5e-fea0-e029849562c0
 ---
 
-# Identifiers Element in Entity 
-
-(BDCMetadataResource Schema)
+# Identifiers Element in Entity (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

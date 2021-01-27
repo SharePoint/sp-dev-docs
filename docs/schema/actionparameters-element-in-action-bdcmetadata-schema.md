@@ -1,7 +1,7 @@
 ---
-title: ActionParameters element in Action
+title: ActionParameters element in Action (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +11,7 @@ localization_priority: Normal
 ms.assetid: e14df901-621c-1851-db78-e99fd3cf31ae
 ---
 
-# ActionParameters element in Action 
-
-(BDCMetadata Schema)
+# ActionParameters element in Action (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

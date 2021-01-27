@@ -1,7 +1,7 @@
 ---
-title: Right Element in AccessControlEntry
+title: Right Element in AccessControlEntry (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -10,11 +10,7 @@ ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: a2e4bd6c-2306-b657-7290-cc9c9b262911
 ---
-
-
-# Right Element in AccessControlEntry 
-
-(BDCMetadata Schema)
+# Right Element in AccessControlEntry (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

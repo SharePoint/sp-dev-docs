@@ -1,7 +1,7 @@
 ---
-title: AccessControlEntry element in AccessControlList
+title: AccessControlEntry element in AccessControlList (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +9,7 @@ localization_priority: Normal
 ms.assetid: caff772b-9029-5fe0-5d93-fca836c1fcb2
 ---
 
-# AccessControlEntry element in AccessControlList 
-
-(BDCMetadataResource Schema)
+# AccessControlEntry element in AccessControlList (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

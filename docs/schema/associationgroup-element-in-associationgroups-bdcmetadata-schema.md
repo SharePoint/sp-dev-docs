@@ -1,7 +1,7 @@
 ---
-title: AssociationGroup element in AssociationGroups
+title: AssociationGroup element in AssociationGroups (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -11,9 +11,7 @@ localization_priority: Normal
 ms.assetid: db30622e-3c2b-2735-9360-a702196cbcff
 ---
 
-# AssociationGroup element in AssociationGroups 
-
-(BDCMetadata Schema)
+# AssociationGroup element in AssociationGroups (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 

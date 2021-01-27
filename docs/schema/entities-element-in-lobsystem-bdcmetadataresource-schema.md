@@ -1,7 +1,7 @@
 ---
-title: Entities Element in LobSystem
+title: Entities Element in LobSystem (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +9,7 @@ localization_priority: Normal
 ms.assetid: 67b9e2e8-b769-9d79-478e-acb613617513
 ---
 
-# Entities Element in LobSystem 
-
-(BDCMetadataResource Schema)
+# Entities Element in LobSystem (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
