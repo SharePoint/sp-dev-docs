@@ -1,5 +1,6 @@
 ---
 title: ActionParameter element in ActionParameters (BDCMetadata Schema)
+description: Details on the  ActionParameter element in ActionParameters (BDCMetadata Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

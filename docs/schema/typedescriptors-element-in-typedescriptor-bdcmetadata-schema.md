@@ -1,5 +1,6 @@
 ---
 title: TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)
+description: Details on the TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

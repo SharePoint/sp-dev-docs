@@ -37,7 +37,7 @@ At this point you have a list of all sites which can be connected to a Microsoft
 
 Filter | Validation
 ---------|----------
-![Web template filter on STS#1](media/modernize/groupifyscanner_ready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_ready_4.png)
+![Web template filter on STS#1 - ready](media/modernize/groupifyscanner_ready_3.png) | ![Team sites graph - ready](media/modernize/groupifyscanner_ready_4.png)
 
 With that filter applied let's have a look at the typical warnings:
 
@@ -80,7 +80,7 @@ At this point you have a list of all sites which are **not ready** to be connect
 
 Filter | Validation
 ---------|----------
-![Web template filter on STS#1](media/modernize/groupifyscanner_notready_3.png) | ![Team sites graph](media/modernize/groupifyscanner_notready_4.png)
+![Web template filter on STS#1 - not ready](media/modernize/groupifyscanner_notready_3.png) | ![Team sites graph - not ready](media/modernize/groupifyscanner_notready_4.png)
 
 With that filter applied let's have a look at why a site is not ready.
 

@@ -1,5 +1,6 @@
 ---
 title: Parameter Element in Parameters (BDCMetadata Schema)
+description: Details on the  Parameter Element in Parameters (BDCMetadata Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

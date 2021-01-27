@@ -1,6 +1,6 @@
 ---
 title: Properties Element in MetadataObject (BDCMetadataResource Schema)
-description: The following sections describe attributes, child elements, and parent elements.
+description: Details on the Properties Element in MetadataObject (BDCMetadataResource Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

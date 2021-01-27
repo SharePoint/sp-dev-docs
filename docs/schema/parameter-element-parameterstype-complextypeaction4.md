@@ -1,5 +1,6 @@
 ---
 title: Parameter element (parametersType complexType) (Action4)
+description: Details on the Parameter element (parametersType complexType) (Action4)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

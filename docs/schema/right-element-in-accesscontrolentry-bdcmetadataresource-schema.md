@@ -1,5 +1,6 @@
 ---
 title: Right Element in AccessControlEntry (BDCMetadataResource Schema)
+description: Details on the Right Element in AccessControlEntry (BDCMetadataResource Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

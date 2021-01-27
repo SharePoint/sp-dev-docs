@@ -1,5 +1,6 @@
 ---
 title: Methods Element in Entity (BDCMetadata Schema)
+description: Details on the  Methods Element in Entity (BDCMetadata Schema)
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
