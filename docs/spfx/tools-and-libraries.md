@@ -1,11 +1,10 @@
 ---
 title: SharePoint Framework development tools and libraries
 description: Use client-side JavaScript libraries to build your solutions and develop client-side web parts.
-ms.date: 10/16/2020
+ms.date: 01/27/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
 # SharePoint Framework development tools and libraries
 
 The SharePoint Framework includes several client-side JavaScript libraries that you can use to build your solutions. This article provides an overview of the tools and libraries that you can use to develop client-side web parts.
