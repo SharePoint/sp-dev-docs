@@ -1,6 +1,7 @@
 ---
 title: SharePoint VSS Writer
-ms.date: 09/25/2017
+description: The VSS included with Windows Server is the infrastructure that provides built-in shadow copy capabilities. Shadow copies created by VSS augment the storage administrator's tape backup archival solutions, providing high fidelity point-in-time copies that can be created and restored easily and effectively, thereby helping to simplify several aspects of storage and data management. Microsoft SharePoint Foundation uses VSS to simplify backup and restore operations. 
+ms.date: 01/27/2021
 ms.prod: sharepoint
 ms.assetid: f83577e4-ebb8-44e5-8dec-a3ca5878b7fd
 localization_priority: Normal
@@ -76,7 +77,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../images/99376713-6a54-4d88-9b05-068578169506.gif)
+  ![SharePoint and Volume Shadow Copy Service 1](../images/99376713-6a54-4d88-9b05-068578169506.gif)
   
 
   
@@ -88,7 +89,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
+  ![SharePoint and Volume Shadow Copy Service 2](../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
   
 
   
@@ -103,7 +104,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
+  ![SharePoint and Volume Shadow Copy Service 3](../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
   
 
   
