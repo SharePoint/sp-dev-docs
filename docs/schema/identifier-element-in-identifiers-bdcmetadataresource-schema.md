@@ -1,5 +1,6 @@
 ---
 title: Identifier Element in Identifiers (BDCMetadataResource Schema)
+description: Element details from for the specified schema.
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer
@@ -25,7 +26,7 @@ Specifies localized display names and properties, in any combination, for an [Id
 
 ## Elements and attributes
 
-The following sections describe attributes, child elements, and parent elements.
+The following sections describe attributes, chiidentifiers-element-in-entity-bdcmetadata-schema.mdld elements, and parent elements.
 
 ### Attributes
 

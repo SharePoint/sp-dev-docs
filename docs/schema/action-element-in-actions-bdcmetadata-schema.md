@@ -1,5 +1,6 @@
 ---
 title: Action element in Actions (BDCMetadata Schema)
+description: Element details from for the specified schema.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

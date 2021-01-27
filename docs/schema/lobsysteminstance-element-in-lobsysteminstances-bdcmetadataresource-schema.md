@@ -1,5 +1,6 @@
 ---
 title: LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)
+description: Element details from for the specified schema.
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer
