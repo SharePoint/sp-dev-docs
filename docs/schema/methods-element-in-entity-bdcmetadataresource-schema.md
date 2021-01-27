@@ -1,7 +1,7 @@
 ---
-title: Methods Element in Entity
+title: Methods Element in Entity (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,9 +9,7 @@ localization_priority: Normal
 ms.assetid: e77e39d9-388b-3dc5-9550-6b75fdb29814
 ---
 
-# Methods Element in Entity 
-
-(BDCMetadataResource Schema)
+# Methods Element in Entity (BDCMetadataResource Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -21,7 +19,7 @@ For more information, see [Methods Element in Entity (BDCMetadata Schema)](metho
 
 **Schema**: BDCMetadataResource
 
-```
+```xml
 <Methods></Methods>
 ```
 
@@ -35,44 +33,8 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+- [Method Element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+- [Entity Element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md)
