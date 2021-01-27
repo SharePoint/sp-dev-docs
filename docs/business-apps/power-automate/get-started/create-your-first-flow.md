@@ -9,11 +9,11 @@ search.app:
 search.appverid: met150
 ---
 
-# Send an email when a new item is created or modified in a SharePoint list
+# Send an email when a new item is created in a SharePoint list
 
 Using Power Automate, you can easily automate day-to-day tasks or build repetitive tasks in SharePoint that help you stay productive.
 
-In this tutorial, you will create a flow that sends an email when a new item is added or modified in a SharePoint list.
+In this tutorial, you will create a flow that sends an email when a new item is added in a SharePoint list.
 
 ## Required setup
 
