@@ -1,6 +1,6 @@
 ---
 title: FilterDescriptors Element in Method (BDCMetadataResource Schema)
-description: Element details from for the specified schema.
+description: Details on the FilterDescriptors Element in Method (BDCMetadataResource Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

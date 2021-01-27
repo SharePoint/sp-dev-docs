@@ -1,6 +1,6 @@
 ---
 title: Entity Element in Entities (BDCMetadataResource Schema)
-description: Element details from for the specified schema.
+description: Details on the Entity Element in Entities (BDCMetadataResource Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

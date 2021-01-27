@@ -1,6 +1,6 @@
 ---
 title: LocalizedDisplayNames Element in MetadataObject (Subscription Schema)
-description: Element details from for the specified schema.
+description: Details on the LocalizedDisplayNames Element in MetadataObject (Subscription Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

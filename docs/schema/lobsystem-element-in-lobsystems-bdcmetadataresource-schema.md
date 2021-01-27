@@ -1,6 +1,6 @@
 ---
 title: LobSystem Element in LobSystems (BDCMetadataResource Schema)
-description: Element details from for the specified schema.
+description: Details on the LobSystem Element in LobSystems (BDCMetadataResource Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

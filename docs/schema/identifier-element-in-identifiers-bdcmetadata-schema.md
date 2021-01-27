@@ -1,6 +1,6 @@
 ---
 title: Identifier Element in Identifiers (BDCMetadata Schema)
-description: Element details from for the specified schema.
+description: Details on the Identifier Element in Identifiers (BDCMetadata Schema)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

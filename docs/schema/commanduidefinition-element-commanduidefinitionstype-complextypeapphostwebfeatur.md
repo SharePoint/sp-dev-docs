@@ -1,6 +1,6 @@
 ---
 title: CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
-description: Element details from for the specified schema.
+description: Details on the CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer
