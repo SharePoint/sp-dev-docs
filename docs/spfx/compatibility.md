@@ -1,13 +1,11 @@
 ---
 title: SharePoint Framework development tools and libraries compatibility
 description: Find which versions of the SharePoint Framework are compatible with each version of SharePoint, development tools and libraries.
-ms.date: 03/20/2020
+ms.date: 01/27/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
-
-# SharePoint Framework development tools and libraries
+# SharePoint Framework development tools and libraries compatibility
 
 As the SharePoint Framework (SPFx) evolves, so do the various development tools and libraries that it uses.
 
