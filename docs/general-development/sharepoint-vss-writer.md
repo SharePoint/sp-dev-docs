@@ -77,7 +77,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../images/99376713-6a54-4d88-9b05-068578169506.gif)
+  ![SharePoint and Volume Shadow Copy Service 1](../images/99376713-6a54-4d88-9b05-068578169506.gif)
   
 
   
@@ -89,7 +89,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
+  ![SharePoint and Volume Shadow Copy Service 2](../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
   
 
   
@@ -104,7 +104,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
+  ![SharePoint and Volume Shadow Copy Service 3](../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
   
 
   
