@@ -142,7 +142,7 @@ You can provide one or more refinement filters for a refined query by adding ref
 
 ### Example 1: Creating a refined query for HTML file types
 
-The following CSOM example shows how to programmatically perform a refinement, to limit the search results to those of HTML file type only. As mentioned in  [Example: Refinement data](#SP15_Example_refinement_data), refinement data related to this refinement option has **RefinerName** set to _Filetype_ and **RefinementToken** set to _"????68746d6c"_.
+The following CSOM example shows how to programmatically perform a refinement, to limit the search results to those of HTML file type only. As mentioned in  [Example: Refinement data](#example-refinement-data), refinement data related to this refinement option has **RefinerName** set to _Filetype_ and **RefinementToken** set to _"????68746d6c"_.
 
 ```cs
 using (var context = new ClientContext("http://<serverName>/<siteCollectionPath>"))

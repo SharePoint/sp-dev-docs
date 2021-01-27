@@ -52,7 +52,7 @@ If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Mi
   
     
     
-Apart from the Query object model, SharePoint also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview.md#bk_queryrest).
+Apart from the Query object model, SharePoint also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview.md#querying-with-the-search-rest-service).
   
     
     
