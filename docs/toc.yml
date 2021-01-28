@@ -1918,7 +1918,7 @@
   - name: PnP CLI for Microsoft 365
     href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
   - name: PnP PowerShell reference
-    href: https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps
+    href: https://pnp.github.io/powershell
 - name: SharePoint APIs
   items:
   - name: Overview
