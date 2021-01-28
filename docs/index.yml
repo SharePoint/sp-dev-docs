@@ -112,6 +112,12 @@ landingContent:
         links:
           - text: PnPjs - Client-side library
             url: https://pnp.github.io/pnpjs/
+          - text: PnP Core SDK.NET library
+            url: https://pnp.github.io/pnpcore/
+          - text: PnP PowerShell
+            url: https://pnp.github.io/powershell/            
+          - text: CLI for Microsoft 365
+            url: https://pnp.github.io/cli-microsoft365/
           - text: SharePoint Framework React Controls
             url: https://pnp.github.io/sp-dev-fx-controls-react/
           - text: SharePoint Framework Property Controls
@@ -120,12 +126,8 @@ landingContent:
             url: https://aka.ms/sp-starter-kit
           - text: PnP SPFx Yeoman Generator
             url: https://pnp.github.io/generator-spfx/
-          - text: CLI for Microsoft 365
-            url: https://pnp.github.io/cli-microsoft365/
           - text: Modern Search web parts
             url: http://aka.ms/pnp-search
-          - text: PnP PowerShell
-            url: https://aka.ms/sppnp-powershell            
 
   # Card (optional)
   - title: SharePoint in Microsoft Graph
