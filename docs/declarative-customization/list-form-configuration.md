@@ -1,7 +1,7 @@
 ---
 title: Configure the list form
 description: Configure list form with a custom header, footer and body with one or more sections.
-ms.date: 12/14/2020
+ms.date: 01/28/2021
 localization_priority: Priority
 ---
 
@@ -185,7 +185,7 @@ To configure the form in a list or library:
         "sections": [
             {
                 //give a display name for the section
-                "displayName": "",
+                "displayname": "",
                 "fields": [
                     //reference your fields here using their display name
                     "Title"
@@ -193,7 +193,7 @@ To configure the form in a list or library:
             },
             {
                 //give a display name for the section
-                "displayName": "",
+                "displayname": "",
                 "fields": [
                     //reference your fields here using their display name
                 ]
@@ -208,13 +208,13 @@ To configure the form in a list or library:
     {
         "sections": [
             {
-                "displayName": "",
+                "displayname": "",
                 "fields": [
                     "Title"
                 ]
             },
             {
-                "displayName": "Details",
+                "displayname": "Details",
                 "fields": [
                     "Department",
                     "Email",
@@ -222,7 +222,7 @@ To configure the form in a list or library:
                 ]
             },
             {
-                "displayName": "Application",
+                "displayname": "Application",
                 "fields": [
                     "Application Id",
                     "Approver",
