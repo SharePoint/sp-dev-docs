@@ -2,6 +2,7 @@
 title: Event receivers and list event receivers in the SharePoint Add-in model
 ms.date: 04/22/2020
 localization_priority: Priority
+description: High level overview and examples of how event receivers work in the new SharePoint Add-in model
 ---
 Event receivers and list event receivers in the SharePoint Add-in model
 =======================================================================
