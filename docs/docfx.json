@@ -38,6 +38,8 @@
       "extendBreadcrumb": "true",
       "breadcrumb_path":"/sharepoint/dev/breadcrumb/toc.json",
       "ms.suite": "office",
+      "ms.author": "vesaj",
+      "author": "VesaJuvonen",
       "ms.topic": "conceptual",
       "feedback_system": "GitHub",
       "feedback_github_repo": "SharePoint/sp-dev-docs",
