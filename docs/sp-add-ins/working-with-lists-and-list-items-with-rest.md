@@ -589,7 +589,7 @@ The following example shows how to update a list item.
 POST https://{site_url}/_api/web/lists/GetByTitle('Test')/items({item_id})
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
-Content-Type: "application/json"
+Content-Type: "application/json;odata=verbose"
 Content-Length: {length of request body as integer}
 If-Match: "{etag or *}"
 X-HTTP-Method: "MERGE"
