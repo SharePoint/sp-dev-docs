@@ -1,6 +1,6 @@
 ---
 title: Migration permission guidance
-ms.service: sharepoint-online
+ms.prod: sharepoint
 ms.date: 02/01/2021
 ms.author: jhendr
 author: JoanneHendrickson
