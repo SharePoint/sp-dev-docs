@@ -78,7 +78,7 @@ To learn more, see [Asynchronous Metadata Read (Export API)](https://docs.micros
 ## Switch to the Microsoft Graph API 
 If a feature is not supported by the migration API, we recommend that you use the Graph API.  If the Graph API does not support the needed migration feature, then use CSOM. However, using CSOM increases the likelihood of being throttled. 
 
-- [Graph Guidance: Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online)
+- [Graph Guidance: Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance)
 
 ### CSOM Guidance (fallback only)
 
