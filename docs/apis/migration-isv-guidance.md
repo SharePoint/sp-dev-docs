@@ -16,7 +16,7 @@ search.appverid: MET150
 ---
 # Migration guidance for ISVs
 
-This document provides guidance for ISVs to deliver a fast and reliable migration experience to customers. It has the latest Microsoft migration practices and addresses common concerns or questions raised by ISV. The page will be updated on regular basis and the priority of the guidance is listed in the order of publication.
+This document guides ISVs in delivering a fast and reliable migration experience to customers. It contains the latest Microsoft migration practices and concerns or questions raised by ISVs. 
 
 ## Use app-based authentication
 There are different usage patterns between end user traffic and an application doing background activities such as migration. It is important to identify user traffic versus application traffic. 
