@@ -61,7 +61,7 @@ Using the configuration above we limit the extraction of lists to only include t
 Once you have a configuration file in place, you can use it like so, as described in the documentation for [Get-PnPProvisioningTemplate](https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpprovisioningtemplate?view=sharepoint-ps#parameters):
 
 ```powershell
-Get-PnPProvisioningTemplate -Configuration "MySchema.xml" -Out "Test.xml"
+Get-PnPProvisioningTemplate -Configuration "config.json" -Out "template.xml"
 ```
 
 Notice that you can specify more configuration options for lists, and we advice you to explore the schema further.
