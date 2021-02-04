@@ -1525,6 +1525,8 @@
           href: transform/modernize-scanner-reports-infopath.md
         - name: Blog usage report
           href: transform/modernize-scanner-reports-blogs.md
+        - name: SharePoint Designer customized forms report
+          href: transform/modernize-scanner-reports-customizedforms.md
       - name: Scanner FAQ
         href: transform/modernize-scanner-faq.md
     - name: SharePoint modernization guidance

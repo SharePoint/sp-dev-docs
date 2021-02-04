@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the blog scanner mode
 description: Explains the blog output created by the modernization scanner
-ms.date: 11/27/2019
+ms.date: 02/04/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -39,7 +39,6 @@ Filter | Takeaway
 ---------|----------
 **No filter** | Lists all the blog sites found in your tenant.
 **Blog Page Count > 10 AND Change Year = this year** | A good filter to identify the actively used blog sites in your tenant. These sites are good candidates for modernization.
-**Blog Type = "Delve blogs"** | As Delve blogs are retired it's good to understand where they are used in your tenant. (requires scanner 2.7+)
 
 ## Understanding the ModernizationBlogPageScanResults.csv file
 

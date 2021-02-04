@@ -155,7 +155,7 @@ https://contoso.sharepoint.com/sites/opensourcerocks
 
 The SharePoint modernization scanner does support multiple modes, depending on your modernization mode you might want to scope the scan to a certain area or alternatively, execute a full scan.
 
-![scanner modes](media/modernize/scanner_p3_1_2.14.png)
+![scanner modes](media/modernize/scanner_p3_1_2.19.png)
 
 Select the option you want in the dropdown and then the checkboxes will show which components will be included in the scan. The "Microsoft 365 group connection readiness" component is the main component that will be included all scan modes.
 
@@ -163,12 +163,12 @@ Select the option you want in the dropdown and then the checkboxes will show whi
 
 As a last step you can tweak the scanner options. Depending on the earlier chosen scanner mode, some options might be disabled.
 
-![scanner options](media/modernize/scanner_p4_1_2.9.png)
+![scanner options](media/modernize/scanner_p4_1_2.19.png)
 
 Following scan options are available:
 
 - **Number of threads**: the scan is multi-threaded, default is 10 but for larger scans 20-30 threads delivers a better scan performance (your mileage might vary)
-- **Don't use search**: if you're not interested in page/site usage information then you can select this option. As this removes one search query per site collection, it will make the scan slightly faster
+- **Don't use search**: if you're interested in page/site usage information then you can unselect this option. As this adds one search query per site collection, it will make the scan slightly slower
 - **Don't include user information**: check this box if you're not interested in seeing user information (user names) as part of the produced data
 - **Exclude lists**: For the "Modern list and library experience" scan you can exclude lists that are only blocked due to an OOB reason
 - **Export page details**: By default the scan isn't exporting detailed web part information (web part properties) as that dataset can be huge. Check this box if you would like to have the full web part option data
@@ -218,11 +218,12 @@ Mode                      | Description
 `WorkflowWithDetailsOnly` | Includes the classic workflow scan with workflow migration readiness analysis + includes the Microsoft 365 group connection readiness component
 `InfoPathOnly`            | Includes the InfoPath scan + includes the Microsoft 365 group connection readiness component
 `BlogOnly`                | Includes the Blog scan + includes the Microsoft 365 group connection readiness component
+`CustomizedFormsOnly`     | Includes the Customized Forms scan + includes the Microsoft 365 group connection readiness component
 
 ### Command-line parameter overview
 
 ```text
-SharePoint PnP Modernization scanner 2.14.0.0
+SharePoint PnP Modernization scanner 2.19.0.0
 Copyright (C) 2020 SharePoint PnP
 ==========================================================
 
@@ -310,7 +311,7 @@ https://contoso-admin.contoso.com -u spadmin@contoso.com -p pwd
 
   -m, --mode                               (Default: Full) Execution mode. Use following modes: Full, GroupifyOnly,
                                            ListOnly, PageOnly, HomePageOnly, PublishingOnly, PublishingWithPagesOnly,
-                                           WorkflowOnly, WorkflowWithDetailsOnly, InfoPathOnly or BlogOnly. Omit or use
+                                           WorkflowOnly, WorkflowWithDetailsOnly, InfoPathOnly, BlogOnly or CustomizedFormsOnly. Omit or use
                                            full for a full scan
 
   -b, --exportwebpartproperties            (Default: False) Export the web part property data

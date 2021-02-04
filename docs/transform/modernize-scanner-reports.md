@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports
 description: Explains the output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 02/04/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -25,6 +25,7 @@ Mode | Description
 `WorkflowOnly` | Includes the classic workflow scan + includes the Microsoft 365 group connection readiness component
 `InfoPathOnly` | Includes the InfoPath scan + includes the Microsoft 365 group connection readiness component
 `BlogOnly` | Includes the Blog scan + includes the Microsoft 365 group connection readiness component
+`CustomizedFormsOnly` | Includes the Customized Forms scan + includes the Microsoft 365 group connection readiness component
 
 After the run you'll find a new sub folder (e.g. 636530041937506713) which contains the following files. Depending on the optional mode you specified you'll get more or less reports.
 
@@ -50,6 +51,7 @@ Report | Include in following modes | Content
 **ModernizationInfoPathScanResults.csv** | Full, InfoPathOnly | One row per found InfoPath usage, explains the type of InfoPath usage.
 **ModernizationBlogWebScanResults.csv** | Full, BlogOnly | One row per found blog site containing last change information and blog site language.
 **ModernizationBlogPageScanResults.csv** | Full, BlogOnly | One row per found blog page having title and last change information.
+**ModernizationCustomizedFormsScanResults.csv** | Full, CustomizedFormsOnly | One row per found page hosting a customized DataForm web part (= includes customized forms).
 **Error.csv** | All modes | If the scan tool encountered errors then these are logged in this file.
 **ScannerSummary.csv** | All modes | Logs the number of scanned site collections, webs and list. It will also contain information on scan duration and used scanner version.
 
