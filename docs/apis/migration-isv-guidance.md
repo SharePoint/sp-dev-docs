@@ -1,6 +1,6 @@
 ---
 title: "Migration guide for ISVs"
-ms.date: 06/18/2020
+ms.date: 02/04/2021
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
@@ -13,6 +13,7 @@ ms.collection:
 - SPMigration
 - M365-collaboration
 search.appverid: MET150
+description: "Learn about using the SharePoint Migration API."
 ---
 # Migration guidance for ISVs
 
