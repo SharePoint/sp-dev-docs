@@ -17,7 +17,7 @@ Sensitivity labels cannot be applied to files and folders using the SharePoint M
 **Step 1:**  
 Before you migrate your content with the Migration API, become familiar with how sensitivity labels work in Microsoft 365 and learn about the Microsoft Information Protection (MIP) SDK:
 
-- [Enable sensitivity labels for Offices files in SharePoint and OneDrive](https://docs.microsoft.com//microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files?view=o365-worldwide)
+- [Enable sensitivity labels for Offices files in SharePoint and OneDrive](https://docs.microsoft.com//microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
 - [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview)
 
 **Step 2:**  
