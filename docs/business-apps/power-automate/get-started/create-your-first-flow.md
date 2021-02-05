@@ -1,7 +1,7 @@
 ---
 title: Send an email when a new item is created or modified in a SharePoint list
 description: Send an email when a new item is created or modified in a SharePoint list
-ms.date: 04/30/2020
+ms.date: 02/05/2021
 ms.prod: sharepoint
 localization_priority: Priority
 search.app: 
@@ -61,11 +61,11 @@ Before proceeding with these instructions, make sure your SharePoint site is set
     > [!NOTE]
     > In this case, this flow that sends an email when new items are added to the list is now active, and runs whenever new items are added to the **Projects** list in the specified SharePoint site.
 
-    ![Flow designer - send email when an item is added in a list](../../../images/gs01-when-item-is-added-template-flow-created.png)
+    ![Flow designer - send email when an item is added in a list - details](../../../images/gs01-when-item-is-added-template-flow-created.png)
 
 1. Click **Edit** in the top command bar to edit the flow in the flow designer.
 
-    ![Flow designer - send email when an item is added in a list](../../../images/gs01-designer-when-item-is-added-template.png)
+    ![Flow designer - send email when an item is added in a list - flow designer](../../../images/gs01-designer-when-item-is-added-template.png)
 
 1. To expand and view the configured properties, select the When the new item is created trigger. Note the input configured to the SharePoint site address and list name from where you created the flow.
 1. In the **Send Email** action, to expand the action, select **Edit**. All the input is filled in with dynamic values from the **Get my profile** and **When the new item is created** actions.
@@ -118,13 +118,13 @@ To test your flow, either add a new item in SharePoint list by adding a new item
 1. In the **dynamic content** list, select values from the actions in your flow, (for example, in the **When the new item is created** trigger, the project owner information is available.
 1. To add the owner information, in the **dynamic content** list, in the search box, search for **owner**.
 
-    ![Flow designer - add owner dynamic content](../../../images/gs01-designer-append-owner-dynamic-content.png)
+    ![Flow designer - add owner dynamic content - overview](../../../images/gs01-designer-append-owner-dynamic-content.png)
 
 1. In the results, select **Owner DisplayName**. As you can see, it also displays other information, such as email, job title, picture and more. Because the **Owner** is a **person** column in SharePoint, SharePoint passes along the person details as individual properties to the flow.
 
    The modified **Body** input appears like this with the included **Owner** info.
 
-    ![Flow designer - add owner dynamic content](../../../images/gs01-designer-email-body-with-owner.png)
+    ![Flow designer - add owner dynamic content - body](../../../images/gs01-designer-email-body-with-owner.png)
 
 1. To test the flow, repeat these steps.
 
