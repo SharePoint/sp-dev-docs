@@ -1,7 +1,7 @@
 ---
 title: Create Modern SharePoint Sites using REST
 description: Create and get the status of a new modern SharePoint site by using the REST interface.
-ms.date: 06/05/2020
+ms.date: 02/05/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -47,8 +47,9 @@ body:
     "Classification":"Low Business Impact",
     "Description":"Description",
     "WebTemplate":"SITEPAGEPUBLISHING#0",
-    "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
-    "Owner":"owner@yourtenant.onmicrosoft.com"
+    "SiteDesignId":"00000000-0000-0000-0000-000000000000",
+    "Owner":"owner@yourtenant.onmicrosoft.com",
+    "WebTemplateExtensionID":"6142d2a0-63a5-4ba0-aede-d9fefca2c767"
   }
 }
 ```
