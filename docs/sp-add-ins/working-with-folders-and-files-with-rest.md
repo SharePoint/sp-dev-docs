@@ -1,12 +1,15 @@
 ---
 title: Working with folders and files with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on folders and files with the SharePoint REST interface.
-ms.date: 1/14/2020
+ms.date: 02/05/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
 # Working with folders and files with REST
+
+> [!NOTE]
+> The examples on this page do not support the % and # characters. [Support % and # in files and folders with ResourcePath API](../solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md)
 
 > [!TIP]
 > The SharePoint Online (and on-premises SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).

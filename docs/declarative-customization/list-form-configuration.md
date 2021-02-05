@@ -23,9 +23,9 @@ To configure the form in a list or library:
 1. If you are in a document library:
 
    - Select a file.
-   - In the **Information Pane**:
-     - Locate the **Properties** section.
-     - Click **Edit all**.
+   - Select ... 
+   - Select More 
+   - Select Properties
 
 1. At the top of the form, expand **Edit Form** icon and then select **Configure layout**
 
