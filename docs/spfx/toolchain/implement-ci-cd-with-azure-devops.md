@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure DevOps
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 09/16/2020
+ms.date: 02/07/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -156,7 +156,7 @@ Now that you have static assets, the next step is to combine the assets into a p
 ### Preparing the artifacts
 
 By default, an Azure DevOps build does not retain any files.  To ensure that the required files needed for the release are retained, you need to explicitly indicate which files should be kept.  
-Add a `Copy Files` task and set the `Contents` to `**\*.sppkg` (the SharePoint Package created with the previous task) and the target folder to `$(build.artifactstagingdirectory)/drop`.
+Add a `Copy Files` task and set the `Contents` to `**/*.sppkg` (the SharePoint Package created with the previous task) and the target folder to `$(build.artifactstagingdirectory)/drop`.
 
 ![grabbing the artifacts](../../images/azure-devops-spfx-08.png)
 
