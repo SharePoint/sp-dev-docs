@@ -1,7 +1,7 @@
 ---
 title: Enable the Microsoft 365 CDN
 description: Enable the Microsoft 365 CDN on your Microsoft 365 Tenant
-ms.date: 10/26/2020
+ms.date: 02/08/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -129,7 +129,7 @@ Get-SPOTenantCdnOrigins -CdnType Public
 # [CLI for Microsoft 365](#tab/o365cli)
 
 ```console
-m365 spo cdn get --type Public
+m365 spo cdn origin list --type Public
 ```
 
 > Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/cdn/cdn-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Enable+the+Microsoft+365+CDN) for details on this command.
