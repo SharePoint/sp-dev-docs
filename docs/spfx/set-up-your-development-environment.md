@@ -1,14 +1,14 @@
 ---
 title: Set up your SharePoint Framework development environment
-description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 11/23/2020
+description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
+ms.date: 03/09/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
 ---
 # Set up your SharePoint Framework development environment
 
-You can use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux environment as well.
+You can use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
@@ -19,24 +19,34 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Install Node.js
 
-Install the latest version of [Node.js](https://www.nodejs.org) LTS **10.x**.
+Install the latest version of **[Node.js](https://www.nodejs.org) LTS v12.x**.
 
-This version is the currently recommended and supported version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*). Node.js is frequently updated and available on multiple platforms including Windows, macOS, and Linux. That's why we are not listing all versions or direct downloads on this page.
+This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
 > [!IMPORTANT]
-> At this time, Node.js v14.x is the Active LTS version listed on the Node.js homepage as the default download. To download Node.js v10.x, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
+> Node.js is frequently updated and available on multiple platforms including macOS, Windows, and Linux. Because the exact download links change frequently, they aren't linked to from this page. Instead, use the details below to determine which installer to download for your platform.
 >
-> For more information about Node.js's Long Term Support (LTS) schedule, see: [Node.js > Releases](https://nodejs.org/en/about/releases/).
+> Be aware that Node.js maintains two different releases at all times: LTS & Current version. The SharePoint Framework is only supported on LTS versions. For more information about Node.js's Long Term Support (LTS) releases, see: [Node.js > Releases](https://nodejs.org/en/about/releases/).
+>
+
+> [!TIP]
+> The Node.js website always recommends the latest installer for both the LTS & Current releases. To download specific versions of Node.js versions, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
 >
 > - Windows users can use the **\*.msi** installers for x86 or x64 depending on your Windows installation. There are usually only two available **\*.msi** files with names similar to **node-v{version-number}-x[86|64].msi**.
 > - macOS users can use the **\*.pkg** installer that's usually is named **node-v{version-number}.pkg**.
 
-You can check if you already have Node.js already installed and the installed version by running **node -v** from the command line. You'll need this to return version **v8.x.x** (*if you're developing solutions for SharePoint Server 2016*) or **v10.x.x** (*if you're developing solutions for SharePoint Server 2019 or SharePoint Online*). If it returns a different major version, refer to the instructions above to obtain a supported version.
+You can check if you already have Node.js already installed, including installed version, by running the following command:
 
-> [!IMPORTANT]
-> All other versions of Node.js not mentioned above are **not** supported with SharePoint Framework development.
+```console
+node -v
+```
 
-> [!NOTE]
+The SharePoint Framework v1.12 is supported on the following Node.js versions:
+
+- Node.js v10 (*Dubnium*)
+- Node.js v12 (*Erbium*)
+
+> [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint Server 2016, see **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section for additional details on which version of Node.js you should install.
 
 ## Install a code editor
@@ -69,6 +79,12 @@ Enter the following command to install Gulp:
 ```console
 npm install gulp --global
 ```
+
+> [!NOTE]
+> Gulp v3 was used as the target for all Gulp tasks in the SPFx build toolchain prior to SPFx v1.12. If you are using Node.js v12+, you must install Gulp v4 globally because Gulp v3 is not supported on Node.js v12+.
+>
+> - Refer to [Check the version of globally installed packages](#check-the-version-of-globally-installed-packages) to find the version you currently have installed.
+> - Refer to the [SharePoint Framework v1.12 release notes](release-1.12.0.md) for additional details.
 
 ### Install Yeoman
 
@@ -119,7 +135,7 @@ Following are some tools that might come in handy as well:
 - [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
 - [Windows Terminal](https://github.com/Microsoft/Terminal)
 - [Cmder for Windows](http://cmder.net/)
-- [Oh My Zsh for Mac](http://ohmyz.sh/)
+- [Oh My Zsh for macOS](http://ohmyz.sh/)
 - [Git source control tools](https://git-scm.com/)
 
 ## SPFx & SharePoint Server 2016
@@ -138,11 +154,25 @@ You're now ready to [build your first client-side web part](web-parts/get-starte
 
 ## Troubleshooting
 
+### Check the version of globally installed packages
+
+To get a list of all globally installed packages, run the following command:
+
+```console
+npm list --global --depth=0️
+```
+
 ### Unable to Trust the Self-signed Development Certificate
+
+#### Scenario: SPFx latest & SharePoint Online
+
+If you're having trouble trusting your self-signed certificate when you run **gulp trust-dev-cert** & you've verified that the correct versions of all dependencies are installed, one solution we usually see resolve the issue is to uninstall all globally installed packages, uninstall Node.js, reboot & start again.
+
+#### Scenario: SPFx v1.1 & SharePoint Server 2016
 
 If you're working with SharePoint Server 2016 / SPFx v1.1, first check the **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section to ensure you're running a supported version of Node.js.
 
-In some cases, executing the command `gulp trust-dev-cert`, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder. Locate & delete the folder `<homedir>/.gcb-serve-data` and then try to trust the self-signed development certificate again.
+In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder. Locate & delete the folder **<homedir>/.gcb-serve-data** and then try to trust the self-signed development certificate again.
 
 ### Unable to Install Packages with NPM - Corporate Proxies
 

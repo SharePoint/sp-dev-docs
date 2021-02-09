@@ -69,6 +69,11 @@
             "source_path": "docs/sp-add-ins/add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md",
             "redirect_url": "docs/sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md",
+            "redirect_url": "docs/spfx/deployment-spfx-teams-solutions.md",
+            "redirect_document_id": false
         }
     ]
 }
