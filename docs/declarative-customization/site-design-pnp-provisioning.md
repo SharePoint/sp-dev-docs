@@ -1,14 +1,14 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 11/25/2020
+ms.date: 02/09/2021
 localization_priority: Priority
 ---
 
 # Calling the PnP provisioning engine from a site script
 
 > [!NOTE]
-> This article uses a version of PnP PowerShell that is currently in pre-release and planned to GA in January 2021. As Azure Functions run PowerShell Core, you'll have to use this version of PnP PowerShell in your Azure Function. For more information about this version of PnP PowerShell see https://pnp.github.io/powershell.
+> This article uses the newest version of PnP PowerShell that is released in January 2021. As Azure Functions run PowerShell Core, you'll have to use this version of PnP PowerShell in your Azure Function. For more information about this version of PnP PowerShell see https://pnp.github.io/powershell.
 
 Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page.
 
