@@ -165,13 +165,6 @@ ConvertTo-PnPPage -Identity pageinroot.aspx -Overwrite -Folder "<root>"
 By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
 
 ```PowerShell
-$minimumVersion = New-Object System.Version("2.24.1803.0")
-if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
-{
-    Install-Module SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -Scope CurrentUser
-}
-Import-Module SharePointPnPPowerShellOnline -DisableNameChecking -MinimumVersion $minimumVersion
-
 Connect-PnPOnline -Url "<your web url>" -Interactive
 
 # Enable modern page feature
