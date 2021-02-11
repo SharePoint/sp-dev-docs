@@ -1,12 +1,12 @@
 ---
 title: User mapping during page transformation
 description: Explains how to the user mapping works when transforming pages
-ms.date: 06/05/2020
+ms.date: 02/11/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 
-# User mapping during page transformation (as of the November 2019 release)
+# User mapping during page transformation
 
 When you're transforming pages from your on-premises SharePoint you typically are using Active Directory accounts (e.g. CONTOSO\JOE) to grant access to SharePoint while in SharePoint Online you use Azure Active Directory accounts to grant access. User mapping is a component of page transformation that enables you to map your on-premises Active Directory accounts to Azure Active Directory accounts in SharePoint Online and use those mapped accounts to specify user and group related information of the target page.
 

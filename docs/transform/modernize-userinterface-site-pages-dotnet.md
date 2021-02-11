@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using .NET
 description: Explains how to transform classic wiki and web part pages into modern modern pages using the SharePoint .NET
-ms.date: 06/05/2020
+ms.date: 02/11/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -9,14 +9,14 @@ localization_priority: Normal
 # Transforming to modern site pages using .NET
 
 > [!IMPORTANT]
-> The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
+> SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) and is continuously evolving, checkout [the release notes](https://github.com/pnp/pnpframework/blob/dev/src/lib/CHANGELOG.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP Framework GitHub issue list](https://github.com/pnp/pnpframework/issues).
 
-The page transformation engine is built using .NET and is distributed as a [nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline) package. Once you've added the nuget package you'll see that 2 additional files are added to your solution:
+The page transformation engine is built using .NET and is distributed as a [nuget](https://www.nuget.org/packages/PnP.Framework) package. Once you've added the nuget package you'll see that 2 additional files are added to your solution:
 
 ![page transformation solution files](media/modernize/pagetransformation_2.png)
 
 > [!Note]
-> The minimal .NET Framework version for this solution to work is 4.5.
+> The PnP Framework nuget package contains a .NET Standard 2.0 version and a .NET 5.0 version, allowing you to embed page transformation in any .NET project.
 
 The `webpartmapping.xml` and `webpartmapping_latestfrompackage.xml` represent the transformation model that describes how the transformation will happen. You typically will tweak the `webpartmapping.xml` file to your needs by for example adding additional mappings to your own web parts. If you later on install an updated version of the nuget package your `webpartmapping.xml` will not be overwritten by default but the `webpartmapping_latestfrompackage.xml` will be. You can use this latter file to compare the latest out-the-box mapping with your mapping and take over the changes you need.
 
@@ -24,9 +24,8 @@ With the mapping file in place you now can use below snippet (coming from the [M
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestsite";
-string userName = "joe@contoso.onmicrosoft.com";
-AuthenticationManager am = new AuthenticationManager();
-using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+AuthenticationManager am = new AuthenticationManager("<Azure AD client id>", "joe@contoso.onmicrosoft.com", "Pwd as SecureString");
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl))
 {
     var pageTransformator = new PageTransformator(cc);
     var pages = cc.Web.GetPages();
@@ -55,7 +54,7 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 ## FAQ
 
-### I want to set mapping properties (as of March 2019 release, version 1.0.1903.*)
+### I want to set mapping properties
 
 Mapping properties are set to drive mapping behavior (e.g. configure the use of the community script editor). You can configure mapping properties like shown in below sample code:
 
@@ -73,16 +72,15 @@ pageTransformator.Transform(pti);
 
 Consult the [web part transformation list](modernize-userinterface-site-pages-webparts.md) article to learn more on the possible mapping properties.
 
-### I want to transform pages into another site collection (as of March 2019 release, version 1.0.1903.*)
+### I want to transform pages into another site collection
 
 The default transformation behavior is doing an in-place transformation, meaning the modern page is created in the same location as the classic page was. You can however also create the modern version of the page in another site collection by providing a client context object for the target site collection.
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestsite";
 string targetSiteUrl = "https://contoso.sharepoint.com/sites/mytargetsite";
-string userName = "joe@contoso.onmicrosoft.com";
-AuthenticationManager am = new AuthenticationManager();
-using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+AuthenticationManager am = new AuthenticationManager("<Azure AD client id>", "joe@contoso.onmicrosoft.com", "Pwd as SecureString");
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl))
 {
     using (var ccTarget = cc.Clone(targetSiteUrl))
     {  
@@ -113,16 +111,15 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 > [!Note]
 > Not all web parts lend themselves well for a cross site transfer, check the **Cross site support** column in [web part transformation list](modernize-userinterface-site-pages-webparts.md) to learn more.
 
-### I want to transform publishing pages (as of April 2019 release, version 1.0.1904.*)
+### I want to transform publishing pages
 
 Publishing page transformation always will be a cross site transformation as mixing modern pages with publishing pages is unsupported. Below sample shows how all publishing pages starting with an "a" are transformed to modern pages in the https://contoso.sharepoint.com/sites/mycommunicationsite site. This sample also shows how to provide a custom page layout mapping file.
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
 string targetSiteUrl = "https://contoso.sharepoint.com/sites/mycommunicationsite";
-string userName = "joe@contoso.onmicrosoft.com";
-AuthenticationManager am = new AuthenticationManager();
-using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+AuthenticationManager am = new AuthenticationManager("<Azure AD client id>", "joe@contoso.onmicrosoft.com", "Pwd as SecureString");
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl))
 {
     using (var ccTarget = cc.Clone(targetSiteUrl))
     {  
@@ -153,16 +150,14 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 > [!Note]
 > Not all web parts lend themselves well for a cross site transfer, check the **Cross site support** column in [web part transformation list](modernize-userinterface-site-pages-webparts.md) to learn more.
 
-
-### Read publishing page in on-premises SharePoint and create the modern page in SharePoint Online (as of June 2019 release, version 1.0.1906.*)
+### Read publishing page in on-premises SharePoint and create the modern page in SharePoint Online
 
 When you want to bring over your classic on-premises publishing portals you could first move the complete portal from on-premises to a classic portal in SharePoint Online and then do the modernization work. However, often it's easier to directly read the classic publishing page from your SharePoint on-premises portal and create the modern version in SharePoint Online.
 
 ```csharp
 string siteUrl = "https://sp.contoso.com/sites/myonpremisesportal";
 string targetSiteUrl = "https://contoso.sharepoint.com/sites/mycommunicationsite";
-string userName = "joe@contoso.onmicrosoft.com";
-AuthenticationManager am = new AuthenticationManager();
+AuthenticationManager am = new AuthenticationManager("<Azure AD client id>", "joe@contoso.onmicrosoft.com", "Pwd as SecureString");
 
 // Setup on-premises client context
 using (var cc = new ClientContext(siteUrl))
@@ -170,7 +165,7 @@ using (var cc = new ClientContext(siteUrl))
     cc.Credentials = CredentialCache.DefaultCredentials;
 
     // Setup SharePoint Online context
-    using (var ccTarget = am.GetSharePointOnlineAuthenticatedContextTenant(targetSiteUrl, userName, GetSecureString("Password")))
+    using (var ccTarget = am.GetSharePointOnlineAuthenticatedContextTenant(targetSiteUrl))
     {  
       var pageTransformator = new PublishingPageTransformator(cc, ccTarget, "C:\\temp\\custompagelayoutmapping.xml");
       
@@ -205,21 +200,19 @@ using (var cc = new ClientContext(siteUrl))
 ```
 
 > [!NOTE]
-> - This feature supports SharePoint 2010, 2013, 2016 and 2019 as source. Target is always SharePoint Online
+> - This feature supports SharePoint 2013, 2016 and 2019 as source. Target is always SharePoint Online
 > - It's important to run your code on a machine that is able to connect to both the on-premises SharePoint server as the SharePoint Online environment
-> - There (currently) is no user mapping feature, hence item level permissions are not copied over from the on-premises publishing page to the SharePoint Online modern page
 > - This approach can also be used for page transformation across tenants (whenever that would make sense)
 
-### I want to use the logging features (as of April 2019 release, version 1.0.1904.*)
+### I want to use the logging features
 
 By default there are three possible log observers (Console, Markdown and MarkdownToSharePoint). The latter two create an MD based report and put them on disk or in SharePoint as a modern page, whereas the first one simply outputs console messages. Below sample shows how you can use the loggers from .NET:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestportal";
 string targetSiteUrl = "https://contoso.sharepoint.com/sites/mycommunicationsite";
-string userName = "joe@contoso.onmicrosoft.com";
-AuthenticationManager am = new AuthenticationManager();
-using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+AuthenticationManager am = new AuthenticationManager("<Azure AD client id>", "joe@contoso.onmicrosoft.com", "Pwd as SecureString");
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl))
 {
     using (var ccTarget = cc.Clone(targetSiteUrl))
     {  
@@ -255,59 +248,19 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 }
 ```
 
-### I choose the "AddPageAcceptBanner" option but don't see the banner web part on the created pages
-
-In order to make the banner webpart work there are 2 requirements that have to be met:
-
-- The banner web part must have been installed in your tenant app catalog
-- The banner web part must have been referenced in the used webpartmapping.xml file
-
-#### Installing the banner web part
-
-To install the default banner web part follow these steps:
-
-- Open your tenant app catalog site collection and go to the **Apps for SharePoint** list
-- Download the banner web part solution (**sharepointpnp-pagetransformation-client.sppkg**) from the [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization/blob/master/Solutions/PageTransformationUI/assets/sharepointpnp-pagetransformation-client.sppkg?raw=true) repository
-- Drag and drop the sppkg file in the **Apps for SharePoint** list. Doing so will ask to **make this solution available to all sites in your organization**. Check the box and click on **Deploy**.
-
-> [!NOTE]
-> The page banner web part is configured to **not** be visible in the web part picker...so even if you've deployed it to all sites in your tenant it will still not be visible for your users. It can only programmatically be added to a page
-
-#### Checking your webpartmapping.xml file
-
-When the page transformation engine puts the banner web part on a page it gets it's definition from the webpartmapping.xml file. Check if you find a web part of type **SharePointPnP.Modernization.PageAcceptanceBanner** in your mapping file. Below sample shows the default configuration using the default web part uploaded in the previous step.
-
-```xml
-      <WebPart Type="SharePointPnP.Modernization.PageAcceptanceBanner">
-        <Properties>
-          <Property Name="SourcePage" Type="string"/>
-          <Property Name="TargetPage" Type="string"/>
-        </Properties>
-        <Mappings>
-          <Mapping Default="true" Name="default">
-            <ClientSideWebPart Type="Custom" ControlId="d462a7c4-b2e1-4e80-867a-7b46d279c161" Order="10" JsonControlData="&#123;&quot;serverProcessedContent&quot;:&#123;&quot;htmlStrings&quot;:&#123;&#125;,&quot;searchablePlainTexts&quot;:&#123;&#125;,&quot;imageSources&quot;:&#123;&#125;,&quot;links&quot;:&#123;&#125;&#125;,&quot;dataVersion&quot;:&quot;1.0&quot;,&quot;properties&quot;:&#123;&quot;description&quot;:&quot;modernizationPageDemo&quot;,&quot;sourcePage&quot;:&quot;{SourcePage}&quot;,&quot;targetPage&quot;:&quot;{TargetPage}&quot;&#125;&#125;"/>
-          </Mapping>
-        </Mappings>
-      </WebPart>
-```
-
-> [!NOTE]
-> - The default mapping file already contains the correct configuration
-> - You can use your own custom banner web part by simply deploying it and then updating the mapping in the used webpartmapping.xml file.
-
 ### Modern site pages don't work on the site I want to transform pages in
 
 By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
 
 ```PowerShell
-$minimumVersion = New-Object System.Version("2.24.1803.0")
-if (-not (Get-InstalledModule -Name SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -ErrorAction Ignore))
+$minimumVersion = New-Object System.Version("1.3.0")
+if (-not (Get-InstalledModule -Name PnP.PowerShell -MinimumVersion $minimumVersion -ErrorAction Ignore))
 {
-    Install-Module SharePointPnPPowerShellOnline -MinimumVersion $minimumVersion -Scope CurrentUser
+    Install-Module PnP.PowerShell -MinimumVersion $minimumVersion -Scope CurrentUser
 }
-Import-Module SharePointPnPPowerShellOnline -DisableNameChecking -MinimumVersion $minimumVersion
+Import-Module PnP.PowerShell -DisableNameChecking -MinimumVersion $minimumVersion
 
-Connect-PnPOnline -Url "<your web url>"
+Connect-PnPOnline -Url "<your web url>" -Interactive
 
 # Enable modern page feature
 Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web -Force

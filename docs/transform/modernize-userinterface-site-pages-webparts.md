@@ -1,7 +1,7 @@
 ---
 title: Overview of the used web part mapping
 description: Explains which web parts are transformed and how
-ms.date: 09/04/2019
+ms.date: 02/11/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,11 +9,11 @@ localization_priority: Priority
 # Overview of the used web part mapping
 
 > [!IMPORTANT]
-> The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
+> SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) and is continuously evolving, checkout [the release notes](https://github.com/pnp/pnpframework/blob/dev/src/lib/CHANGELOG.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP Framework GitHub issue list](https://github.com/pnp/pnpframework/issues).
 
 When a page is transformed from a classic page into a modern page then the most commonly used web parts are transformed as well. Classic web parts (e.g. XSLTListView) are replaced by their OOB modern counterparts (e.g. List web part) assuming there is a modern counterpart available. The next chapter provides an overview of which classic web parts are transformed and how.
 
-## Web part transformation list (updated for September 2019 release)
+## Web part transformation list
 
 The page transformation uses a default web part mapping when it transforms classic pages to modern pages. The used mapping in this default modern is described here, but do know that you can update the mapping to for example add your own custom 3rd party web parts as a transformation target. How to extend the web part mapping model is described in the [Page transformation model](modernize-userinterface-site-pages-model.md) article.
 
@@ -65,7 +65,7 @@ SummaryLinksToQuickLinks | true | Configure the mapping of the summarylinks web 
 
 ### Enabling the use of the Community Script Editor web part to be used during transformation
 
-There's no OOB modern script editor web part as embedding script is discouraged due to it's inherent security risks. If you however do want to transform classic script editor web parts then you can still do this by using an open-source community modern script editor. 
+There's no OOB modern script editor web part as embedding script is discouraged due to it's inherent security risks. If you however do want to transform classic script editor web parts then you can still do this by using an open-source community modern script editor.
 
 #### Installing the community script editor
 
@@ -73,7 +73,7 @@ Follow the instructions to install the open source script editor web part (https
 
 #### Set the UseCommunityScriptEditor mapping flag
 
-You need to tell the page transformation engine you've installed the community script editor and that you want to use it during transformation. When using the `ConvertTo-PnPClientSidePage` [PnP PowerShell](https://aka.ms/sppnp-powershell) cmdlet you can specify the `-UseCommunityScriptEditor` flag. When you're using .Net then you can set the flag as shown in below sample
+You need to tell the page transformation engine you've installed the community script editor and that you want to use it during transformation. When using the `ConvertTo-PnPPage` [PnP PowerShell](https://aka.ms/sppnp-powershell) cmdlet you can specify the `-UseCommunityScriptEditor` flag. When you're using .Net then you can set the flag as shown in below sample
 
 ```csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)

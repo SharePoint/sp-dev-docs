@@ -1,7 +1,7 @@
 ---
 title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
-ms.date: 02/06/2020
+ms.date: 02/11/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -19,17 +19,17 @@ If you're using custom page layouts then it's recommended to use a custom page l
 
 ### Using PowerShell
 
-Using the `Export-PnPClientSidePageMapping` cmdlet you can:
+Using the `Export-PnPPageMapping` cmdlet you can:
 
 - Export the built in mapping file (`-BuiltInPageLayoutMapping` parameter): this file will be used for the out of the box page layouts. **If you specify a custom mapping for an out of the box page layout in your own mapping file, than that mapping will take preference over the OOB mapping**
 - Analyze the page layouts in the connected portal and export those as a mapping file (`-CustomPageLayoutMapping` parameter): all the found custom page layouts are analyzed and exported. If you also want to get your OOB page layouts analyzed then use the `-AnalyzeOOBPageLayouts` parameter.
 
 ```PowerShell
 # Connect to your "classic" portal
-Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/classicportal
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/classicportal -Interactive
 
 # Analyze and export the page layout mapping files
-Export-PnPClientSidePageMapping -BuiltInPageLayoutMapping -CustomPageLayoutMapping -Folder c:\temp
+Export-PnPPageMapping -BuiltInPageLayoutMapping -CustomPageLayoutMapping -Folder c:\temp
 ```
 
 ### Using .Net
@@ -38,9 +38,8 @@ In .Net you need to use the `PageLayoutAnalyser` class to analyze page layouts. 
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/classicportal";
-string userName = "joe@contoso.onmicrosoft.com";
-AuthenticationManager am = new AuthenticationManager();
-using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+AuthenticationManager am = new AuthenticationManager("<Azure AD client id>", "joe@contoso.onmicrosoft.com", "Pwd as SecureString");
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl))
 {
     var analyzer = new PageLayoutAnalyser(cc);
     // Analyze all found page layouts
@@ -51,9 +50,8 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userNa
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/classicportal";
-string userName = "joe@contoso.onmicrosoft.com";
-AuthenticationManager am = new AuthenticationManager();
-using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl, userName, GetSecureString("Password")))
+AuthenticationManager am = new AuthenticationManager("<Azure AD client id>", "joe@contoso.onmicrosoft.com", "Pwd as SecureString");
+using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl))
 {
     var analyzer = new PageLayoutAnalyser(cc);
     // Analyze all the unique page layouts for publishing pages starting with an "a"
@@ -137,10 +135,6 @@ The following properties are used on the PageLayout element:
 - **IncludeVerticalColumn**: optional element to specify the created target page should have a vertical column. When using a vertical column you target the vertical column as an extra column, so if you before adding a vertical column had 3 columns you'll now have 4 and as such you can set the column value of page content to 4 to put it in the vertical column.
 - **PageHeader**: controls the type of page header that will be used. Defaults to `Custom` as that allows for a nice header, but you can switch it to `None` for no header or `Default` for the default modern page header.
 
-> [!Note]
-> - The **AlsoAppliesTo** attribute was introduced in the September 2019 release
-> - The **IncludeVerticalColumn** attribute was introduced in the November 2019 release
-
 ### SectionEmphasis element
 
 The following properties are used on the optional SectionEmphasis element:
@@ -151,9 +145,6 @@ For each section you optionally can specify a section emphasis via the Section e
 
 - **Row**: indicates the row number of this section, first section will have number 1
 - **Emphasis**: sets the section emphasis to None, Neutral, Soft or Strong
-
-> [!Note]
-> The **SectionEmphasis** element was introduced in the November 2019 release
 
 ### Header element
 
@@ -168,9 +159,6 @@ For each field that you want to use in the modern header you'll need to add a Fi
 - **Name**: the name of the field(s) in the classic publishing page. E.g. adding `PublishingRollupImage;PublishingPageImage` as value will mean that the `PublishingRollupImage` will be taken if it was populated, if not populated the `PublishingPageImage` will be tried. You can add as many overrides as you need
 - **HeaderProperty**: the name of the header property to set
 - **Functions**: If set to empty then the field value from the classic publishing page is taken as is, however if you specify a function here then the output of that function is used. If you've specified multiple fields (so using the field override option), then you need to specify the field to use in the function as `{@name}`
-
-> [!Note]
-> - The field override option was introduced in the July 2019 release
 
 When constructing a modern page header there are 4 page header properties that you can populate with data coming from the publishing page:
 
@@ -194,9 +182,6 @@ The default mapping takes the image defined in the `PublishingRollupImage` field
 </Header>
 ```
 
-> [!Note]
-> Static strings are introduced with the May 2019 release.
-
 ### MetaData element
 
 The metadata element defines which of the classic publishing page fields need to be taken over as metadata for the modern page. As sometimes you want the metadata to be also represented using the OOB Page Properties web part you indicate that via these optional attributes:
@@ -215,8 +200,6 @@ For each field that you want to take over you'll need to add a Field element spe
 
 > [!Note]
 > - Functions support is not available for taxonomy fields
-> - Page property web part configuration was introduced in the June 2019 release
-> - The field override option was introduced in the July 2019 release
 
 ### WebParts element
 
@@ -255,9 +238,6 @@ Sometimes publishing pages have multiple web parts in a web part zone and you do
 ```
 
 The above definition will have as a result that the first ContentEditorWebPart will go to row 3, column 2. The second ContentEditorWebPart will be put in row 3, column 1 with order 2 and the first XSLTListView web part will end up in row 3, column 1 with order 1. You can define as many WebPartOccurrence elements as needed, if there is no corresponding web part in the web part zone then the WebPartOccurrence element will be ignored. If there's a web part in the web part zone which is not listed as a WebPartOccurrence element then that web part will get it's row, column and order information from the WebPartZone element.
-
-> [!Note]
-> - The WebPartZoneLayout option was introduced in the July 2019 release
 
 ### FixedWebParts element
 
@@ -344,20 +324,20 @@ Now that the assembly has been defined you can use your functions and selectors 
 
 ## Page layout mapping FAQ
 
-### I want to keep the source page creation information (as of October 2019 release)
+### I want to keep the source page creation information
 
 When using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md) then use the `-KeepPageCreationModificationInformation` cmdlet in the `ConvertTo-PnPClientSidePage` cmdlet. When you're using the [.Net approach](modernize-userinterface-site-pages-dotnet.md) then set the `KeepPageCreationModificationInformation` parameter to true. Using this option will give the target page the Created, Modified, Author and Editor field values from the source page.
 
 > [!Note]
 > When you, as part of page transformation, promote the page as news or publish the page the Editor field will be set to the account running page transformation
 
-### I want to promote the created pages as news (as of October 2019 release)
+### I want to promote the created pages as news
 
 Promoting pages created from a page layout as news pages can be be done by using the `-PostAsNews` parameter on the `-KeepPageCreationModificationInformation` cmdlet (when you're using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md)) or alternatively by setting the `PostAsNews` parameter to true (when using the [.Net approach](modernize-userinterface-site-pages-dotnet.md)).
 
 When you use the `PostAsNews` option in conjunction with the `KeepPageCreationModificationInformation` option then `FirstPublishedDateField` field will be set to the source page modification date. The `FirstPublishedDateField` field is the date value shown during news rollup.
 
-### I want to insert hard coded text on the created page (as of September 2019 release)
+### I want to insert hard coded text on the created page
 
 Sometimes a page layout contains text snippets, which since they're not content in the actual page are not getting transformed. If that's the case then you can define a "fake" field to map like shown below:
 
@@ -374,7 +354,7 @@ Sometimes a page layout contains text snippets, which since they're not content 
 > [!Note]
 > The HTML provided in the StaticString function must be XML encoded and must be formatted like the source page HTML as this HTML will still be converted to HTML which is compliant with the modern text editor
 
-### I want to prefix or suffix the content from field (as of February 2020 release)
+### I want to prefix or suffix the content from field
 
 The approach used in the previous chapter allows you to add extra text on a page, but has as downside that the extra text will be added in it's own text part. If you want the extra text to be integrated with the actual text being transformed then the below approach allows you to do that. You can either prefix and/or suffix existing field content and optionally you can only have the prefixing/suffixing done when the the field contains content. The bool parameter in the `Prefix`, `Suffix` and `PrefixAndSuffix` functions defines whether the prefixing/suffixing needs to happen when the field content is empty: 'true' means to apply the action even when the field is empty.
 
@@ -398,7 +378,7 @@ See [Page Transformation Functions and Selectors](modernize-userinterface-site-p
 </WebParts>
 ```
 
-### I want to populate a managed metadata field with one or more terms (as of February 2020 release)
+### I want to populate a managed metadata field with one or more terms
 
 When you have a managed metadata field in the source page metadata then you might want to have a similar managed metadata field for the target page. Given page transformation currently does have a managed metadata mapping feature this poses a problem. A possible workaround is to populate the target managed metadata field with a chosen term or a set of terms in case of a multi-value managed metadata field. This can be done using the `DefaultTaxonomyFieldValue` function as shown in below example:
 
@@ -463,7 +443,7 @@ Once that's in place you need to update your page layout mapping by adding a fie
 
 Ensure that specify the custom **webpartmapping.xml** file as part of your transformation (`-WebPartMappingFile` PowerShell cmdlet parameter, `PublishingPageTransformator` constructor when using .Net).
 
-### I'm using a lot of Add-In parts and want to transform these to custom SPFX web parts (as of the December 2019 release)
+### I'm using a lot of Add-In parts and want to transform these to custom SPFX web parts
 
 The default behavior of page transformation is simply take over the add-in part on the modern page as add-in's do work on modern pages. If you however want to selectively transform some add-in parts to custom SPFX based web parts, drop some of add-in parts and keep the remaining add-in parts then the default mapping will not be sufficient. In the below example you see that the `StaticString` function is used to feed the add-in title as mapping selector value. So based up on the title of the web part a mapping will be selected. The first add-in will be taken over as add-in on the modern page, the second one will be transformed to a custom SPFX based alternative and the last one will be simply dropped.
 
@@ -514,7 +494,7 @@ You can even make the mapping more precise by taking in account add-in part prop
 </WebPart>
 ```
 
-### Can I control the page preview image (as of the May 2019 release)
+### Can I control the page preview image
 
 When a page has a page header image that image will also be used as a page preview image. If you however want to control the page preview image then you can populate the `BannerImageUrl` field using either the `ToPreviewImageUrl` function or by specifying a hard coded value as shown in below samples.
 
@@ -529,7 +509,7 @@ When a page has a page header image that image will also be used as a page previ
 <Field Name="PreviewImage" TargetFieldName="BannerImageUrl" Functions="ToPreviewImageUrl('/sites/classicportal/images/myimage.jpg')" />
 ```
 
-### I want to use different defaults for the QuickLinks web part (as of the July 2019 release)
+### I want to use different defaults for the QuickLinks web part
 
 When transformation results in a modern QuickLinks web part (e.g. for transformation of the SummaryLinkWebPart) then the page transformation framework will use a default base configuration for the QuickLinks web part. If you, however, want a different configuration then you can do that by specifying the QuickLinksJsonProperties property. Wrap the encoded JSON properties in a StaticString function as shown in this sample:
 

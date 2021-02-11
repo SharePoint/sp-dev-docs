@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages
 description: Explains how to transform classic wiki and web part pages into modern pages
-ms.date: 01/16/2020
+ms.date: 02/11/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,14 +10,12 @@ localization_priority: Priority
 
 Classic SharePoint sites typically have classic pages being wiki pages, web part pages, blog pages or publishing pages and these pages cannot present themselves using a modern user interface. A classic site however can host modern pages which enable great end user experiences. You can find inspiration via the [SharePoint Look Book](https://sharepointlookbook.azurewebsites.net/) as it allows you to discover the modern experiences you can build with SharePoint in Office 365.
 
-The SharePoint PnP Modernization framework ([Nuget](https://www.nuget.org/packages/SharePointPnPModernizationOnline), [source code](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/SharePointPnP.Modernization.Framework)) does bring page transformation capabilities which will be explained in the upcoming chapters.
+SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) library ([source code](https://github.com/pnp/pnpframework/tree/dev/src/lib/PnP.Framework/Modernization)) and does bring page transformation capabilities which will be explained in the upcoming chapters.
 
 > [!IMPORTANT]
-> - Page transformation today works for wiki pages, web part pages, (Delve) blog pages and publishing pages.
-> - The SharePoint PnP Modernization framework is continuously evolving, checkout [the release notes](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization/Modernization%20Framework%20release%20notes.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [sp-dev-modernization GitHub issue list](https://github.com/SharePoint/sp-dev-modernization/issues).
-
-> [!IMPORTANT]
-> Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
+> - Page transformation today works for wiki pages, web part pages, blog pages and publishing pages.
+> - SharePoint PnP Modernization is part of the [PnP Framework](https://github.com/pnp/pnpframework) and is continuously evolving, checkout [the release notes](https://github.com/pnp/pnpframework/blob/dev/src/lib/CHANGELOG.md) to stay up to date on the latest changes. If you encounter problems please file an issue in the [PnP Framework GitHub issue list](https://github.com/pnp/pnpframework/issues).
+> - Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.
 
 Page transformation can be used in one or more of the below models:
 
@@ -32,9 +30,11 @@ Page Type | SharePoint 2010 | SharePoint 2013 | SharePoint 2016 | SharePoint 201
 ----------|-----------------|-----------------|-----------------|-----------------|------------------
 Wiki page | x | x | x | x | x
 Webpart page | x | x | x | x | x
-Blog page | x (as of the November 2019 release) | x | x | x | x
-Delve Blog page |   |   |   |   | x (as of the December 2019 release)
+Blog page | x | x | x | x | x
 Publishing page | x | x | x | x | x
+
+> [!Note]
+> To transform SharePoint 2010 pages you need to use our legacy versions: [SharePointPnPPowerShellOnline](https://www.powershellgallery.com/packages/SharePointPnPPowerShellOnline/3.29.2101.0) / [PnP Modernization Framework](https://www.nuget.org/packages/SharePointPnPModernizationOnline/).
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 title: Understanding in-place page transformation versus cross-site page transformation
 description: Explains the differences between in-place and cross-site page transformation and when to use which one
-ms.date: 02/06/2020
+ms.date: 02/11/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -18,19 +18,19 @@ Overall in-place transformation will give you the best results as there's no ris
 
 ## Cross-site transformation
 
-Cross site page transformation will read the classic page (e.g. mypage.aspx) and will then create the modern page (e.g. mypage.aspx) in **another** site collection. Typical use case of cross-site transformation is for transforming page types which cannot be used together with modern pages in the same site: this applies to classic publishing pages, blog pages and Delve blog pages. Another important use case is when you transform on-premises pages: given page transformation only supports SharePoint Online as the target platform for modern pages, this means these transformations are cross-site page transformations.
+Cross site page transformation will read the classic page (e.g. mypage.aspx) and will then create the modern page (e.g. mypage.aspx) in **another** site collection. Typical use case of cross-site transformation is for transforming page types which cannot be used together with modern pages in the same site: this applies to classic publishing pages and blog pages. Another important use case is when you transform on-premises pages: given page transformation only supports SharePoint Online as the target platform for modern pages, this means these transformations are cross-site page transformations.
 
 ## In-place transformation versus cross-site transformation
 
 Below table provides an overview on whether you need to use in-place transformation, cross-site transformation or whether you can choose.
 
-Source\Type       | Wiki page | Web part page | Publishing page | Blog page | Delve blog page
-------------------|-----------|---------------|-----------------|-----------|----------------
-SharePoint Online | In-place (preferred) or cross-site | In-place (preferred) or cross-site | Cross-site | Cross-site | Cross-site
-SharePoint 2019 | Cross-site | Cross-site | Cross-site | Cross-site | N/A
-SharePoint 2016 | Cross-site | Cross-site | Cross-site | Cross-site | N/A
-SharePoint 2013 | Cross-site | Cross-site | Cross-site | Cross-site | N/A
-SharePoint 2010 | Cross-site | Cross-site | Cross-site | Cross-site | N/A
+Source\Type       | Wiki page | Web part page | Publishing page | Blog page 
+------------------|-----------|---------------|-----------------|-----------
+SharePoint Online | In-place (preferred) or cross-site | In-place (preferred) or cross-site | Cross-site | Cross-site
+SharePoint 2019 | Cross-site | Cross-site | Cross-site | Cross-site
+SharePoint 2016 | Cross-site | Cross-site | Cross-site | Cross-site
+SharePoint 2013 | Cross-site | Cross-site | Cross-site | Cross-site
+SharePoint 2010 | Cross-site | Cross-site | Cross-site | Cross-site
 
 ## Limitations on allowed target sites during a cross-site transformation
 
