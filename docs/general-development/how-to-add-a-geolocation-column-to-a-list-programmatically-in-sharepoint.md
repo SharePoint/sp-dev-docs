@@ -32,7 +32,8 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
       > Please note that you are responsible for compliance with terms and conditions applicable to your use of the Bing Maps key, and any necessary disclosures to users of your application regarding data passed to the Bing Maps service. 
 - Visual Studio 2010.
 - SharePoint Online Management Shell - https://www.microsoft.com/download/details.aspx?id=35588 
-- SharePoint PnP PowerShell - https://github.com/SharePoint/PnP-PowerShell/ 
+- SharePoint PnP-PowerShell (legacy) - https://github.com/SharePoint/PnP-PowerShell/
+- SharePoint PnP.PowerShell (latest) - https://github.com/pnp/powershell
     
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
