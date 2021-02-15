@@ -1,6 +1,7 @@
 ---
 title: Configuring the PnP Provisioning Engine
-ms.date: 12/05/2020
+description: Sometimes you do not want to extract all artifacts from a site, or only even a specific list. For that the PnP Provisioning Engine uses a JSON formatted configuration file which gives you detailed control over the process.
+ms.date: 02/03/2021
 localization_priority: Priority
 ---
 
@@ -11,6 +12,7 @@ Sometimes you do not want to extract all artifacts from a site, or only even a s
 ## Extraction Configuration
 
 There is a JSON schema available at https://aka.ms/sppnp-extract-configuration-schema. We will automatically update the schema referred to by that URL to a later version if new functionality comes available.
+
 If you create a JSON file use a modern editor, like Visual Studio Code, and you reference this schema, there will be intellisense and descriptions of all the properties you can set.
 
 Let's have a look at the following sample configuration
@@ -58,7 +60,7 @@ For some of the handlers we can specify more detail configuration options:
 
 Using the configuration above we limit the extraction of lists to only include the list called "My Test List". We're telling the engine that we do want to export list items to the template (they will show up as DataRow elements), and we tell the engine also to include any attachments if present. However, the engine will not download those attachments unless you set the `persistAssetFiles` property to `true`.
 
-Once you have a configuration file in place, you can use it like so, as described in the documentation for [Get-PnPProvisioningTemplate](https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpprovisioningtemplate?view=sharepoint-ps#parameters):
+Once you have a configuration file in place, you can use it like so, as described in the documentation for [Get-PnPProvisioningTemplate](/powershell/module/sharepoint-pnp/get-pnpprovisioningtemplate):
 
 ```powershell
 Get-PnPProvisioningTemplate -Configuration "config.json" -Out "template.xml"
