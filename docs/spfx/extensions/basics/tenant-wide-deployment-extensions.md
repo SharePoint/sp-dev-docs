@@ -1,11 +1,10 @@
 ---
 title: Tenant Wide Deployment of SharePoint Framework Extensions
 description: Activating SharePoint Framework extensions across tenant from centralized location.
-ms.date: 06/19/2020
+ms.date: 02/16/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
 # Tenant-wide Deployment of SharePoint Framework Extensions
 
 Tenant Wide Deployment option for SharePoint Framework (SPFx) Extensions is supported for application customizers and for List View Command Sets. It provides an easy option for tenant App Catalog managers to manage which extensions are activated by default across the tenant or based on web / list templates used in the sites.
@@ -82,9 +81,9 @@ Supported location values are following. These are specific for the component ty
 
 ## Automating tenant wide deployment from solution package
 
-SharePoint Framework solutions default scaffolding creates an automation file to the SharePoint Framework solution when an extension component type is created with initial solution creation. Default deployment activation is located in the file **./sharepoint/assets/ClientSideInstance.xml**.
+The SharePoint Framework generator adds the file **./sharepoint/assets/ClientSideInstance.xml** to new solutions when the initial component type selected is an extension.
 
-![SharePoint client-side solution scaffolded successfully](../../../images/ext-tenant-wide-clientsideinstance.png)
+![SharePoint client-side solution project](../../../images/ext-tenant-wide-clientsideinstance.png)
 
 **ClientSideInstance.xml** is taken into account in the solution activation at the App Catalog if the `skipFeatureDeployment` attribute is set to *true* in the **package-solution.json** file.
 
@@ -102,7 +101,12 @@ This file contains by default following structure. **ClientSideComponentInstance
 </Elements>
 ```
 
- **ClientSideInstance.xml** file is also referenced in the **package-solution.json**, so that it's included inside of the **\*.sppkg** file, when you package your solution.
+If you selected **SharePoint Online only (latest)** as the target environment selected when the SharePoint Framework solution was created, the **ClientSideInstance.xml** file is also referenced in the **package-solution.json**, so that it's included inside of the **\*.sppkg** file, when you package your solution.
+
+> [!IMPORTANT]
+> If you select another target environment, while the the **ClientSideInstance.xml** file is added to the project, it isn't included in the **package-solution.json** file. While SharePoint Server 2019 (*that includes the SharePoint Framework v1.4, see [Supported capabilities](../../../general-development/sharepoint-2019-development-platform.md#supported-capabilities) for details*) supports tenant scoped deployment, it doesn't support tenant-wide deployment (*added in SharePoint Framework v1.6, see [Tenant-Wide Deployment of extensions](../../release-1.6.md#tenant-wide-deployment-of-extensions) for details*).
+>
+> If this file is referenced in the **package-solution.json**, uploading the generated **\*.sppkg** file to the SharePoint Server 2019 tenant app catalog will throw an exception.
 
 > [!NOTE]
 > If you do not want this file to be present in the **\*.sppkg** file, you can easily remove that from packaging process by updating **package-solution.json** file.
@@ -140,6 +144,6 @@ Below xml definition shows how the optional values could be used as part of the 
 
 When an administrator adds a  solution that has a **ClientSideInstance.xml** file inside of it to App Catalog, specific warning message is shows to ensure that presence of the automated configuration is known.
 
-![SharePoint client-side solution scaffolded successfully](../../../images/ext-tenant-wide-solution-deployment.png)
+![Trusting SharePoint Framework package deployed to tenant app catalog](../../../images/ext-tenant-wide-solution-deployment.png)
 
 After solution deployment, an administrator can change the deployment settings from the **Tenant Wide Extension** list.
