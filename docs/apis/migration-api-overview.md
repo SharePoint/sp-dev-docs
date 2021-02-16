@@ -406,12 +406,11 @@ There are two new optional parameters in manifest.xml:
 
 - QuickXorHash
 - MD5Hash
-- InitializationVector
 
 ### Preparing the package
 The method for calling the migration job doesn’t change; only the package generation needs to be changed.
 
-In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *QuickXorHash*,*MD5Hash* and *InitializationVector*. <br>
+In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *QuickXorHash* and *MD5Hash*. <br>
 
 **Example for files over 15 GB:**
 
