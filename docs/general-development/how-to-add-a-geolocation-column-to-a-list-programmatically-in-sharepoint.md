@@ -1,14 +1,15 @@
 ---
 title: Add a Geolocation column to a list programmatically in SharePoint
-ms.date: 06/05/2020
+description: Learn how to programmatically add a Geolocation column to a list in SharePoint. Integrate location information and maps in SharePoint lists and location-based websites by using the new Geolocation field creating your own Geolocation-based field type.
+ms.date: 02/17/2021
 ms.prod: sharepoint
 ms.assetid: f31a3594-c328-4731-b8eb-5da6b85103ad
 localization_priority: Priority
 ---
-
-
 # Add a Geolocation column to a list programmatically in SharePoint
+
 Learn how to programmatically add a Geolocation column to a list in SharePoint. Integrate location information and maps in SharePoint lists and location-based websites by using the new Geolocation field creating your own Geolocation-based field type.
+
 SharePoint introduces a new field type named Geolocation that enables you to annotate SharePoint lists with location information. In columns of type Geolocation, you can enter location information as a pair of latitude and longitude coordinates in decimal degrees or retrieve the coordinates of the user's current location from the browser if it implements the W3C Geolocation API. For more information about the Geolocation column, see [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md). The Geolocation column is not available by default in SharePoint lists. To add the column to a SharePoint list, you have to write code. In this article, learn how to add the Geolocation field to a list programmatically by using the SharePoint client object model.
   
     
@@ -32,7 +33,8 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
       > Please note that you are responsible for compliance with terms and conditions applicable to your use of the Bing Maps key, and any necessary disclosures to users of your application regarding data passed to the Bing Maps service. 
 - Visual Studio 2010.
 - SharePoint Online Management Shell - https://www.microsoft.com/download/details.aspx?id=35588 
-- SharePoint PnP PowerShell - https://github.com/SharePoint/PnP-PowerShell/ 
+- SharePoint PnP-PowerShell (legacy) - https://github.com/SharePoint/PnP-PowerShell/
+- SharePoint PnP.PowerShell (latest) - https://github.com/pnp/powershell
     
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
