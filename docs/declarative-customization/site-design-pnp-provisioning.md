@@ -1,7 +1,7 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 localization_priority: Priority
 ---
 
@@ -31,17 +31,17 @@ You'll use these components to trigger the PnP provisioning code after you creat
 
 ## Set up app-only access to your tenant
 
-We are going to use authentication with a clientid and a certificate in this tutorial. 
+We are going to use authentication with a clientid and a certificate in this tutorial.
 
 1. Create a new self-signed certificate with PnP PowerShell on your computer:
-    
+
     ```powershell
-    Register-PnPAzureADApp -ApplicationName "PnPFlowDemo" -Tenant "contoso.onmicrosoft.com" -DeviceLogin -Out .    
+    Register-PnPAzureADApp -ApplicationName "PnPFlowDemo" -Tenant "contoso.onmicrosoft.com" -DeviceLogin -Out .
     ```
 
     Replace **contoso.onmicrosoft.com** with your tenant.
 
-    Follow the steps carefully. 
+    Follow the steps carefully.
 
     As a result of the command a new Azure AD Application will be registered, permissions will be set correctly, and you will have provided consent to use this application in your tenant. Notice that you require write access to the Azure AD for this.
 
@@ -158,8 +158,8 @@ Copy the following provisioning template XML to a new file and save the file as 
     ![Screenshot of the Azure portal with the Runtime stack and Version fields hightlighted](images/pnpprovisioning-runtime-stack-selection.png)
 
 1. When created, navigate to your new Function App
-1. Select **App Files** 
-    
+1. Select **App Files**
+
     ![Screenshot of the Function App with the App Files entry highlighted in the menu](images/pnpprovisioning-app-files.menu.png)
 
 1. In the dropdown menu, select **requirements.psd1** and add a new entry as follows
@@ -169,12 +169,13 @@ Copy the following provisioning template XML to a new file and save the file as 
     # See https://aka.ms/functionsmanageddependency for additional information.
     #
     @{
-       # For latest supported version, go to 'https://www.powershellgallery.com/packages/Az'. 
-       'Az' = '5.*'
-       # For the latest supported version, go to 'https://www.powershellgallery.com/packages/PnP.PowerShell'.
-       'PnP.PowerShell' = '0.2.17-nightly'
+        # For latest supported version, go to 'https://www.powershellgallery.com/packages/Az'.
+        'Az' = '5.*'
+        # For the latest supported version, go to 'https://www.powershellgallery.com/packages/PnP.PowerShell'.
+        'PnP.PowerShell' = '1.*'
     }
     ```
+
     Save the file. Notice, that if you do no intent to use the Azure PowerShell Cmdlets you can remove that entry from this file. The requirements.psd1 file makes sure that specific PowerShell modules will be available to all functions. At the first execution of the Azure Function these modules will be downloaded and made available. You can also use wildcard references for the version. See for more information about this file here: https://docs.microsoft.com/azure/azure-functions/functions-reference-powershell?tabs=portal#dependency-management
 
 1. Create a new Azure Function **Functions** > **Add**:
@@ -197,7 +198,7 @@ Copy the following provisioning template XML to a new file and save the file as 
 
 1. Go to the Function App main screen and select **Advanced Tools** in the left menu and click **Go**. A new tab will open.
 1. Select **PowerShell** from the **Debug Console** menu at the top.
-1. Navigate to **site\wwwroot\InvokePnPSiteTemplate** (or site\wwwroot\[name of your function])
+1. Navigate to **site\wwwroot\InvokePnPSiteTemplate** (or **site\wwwroot\[name of your function]**)
 1. Drag and drop the earlier created **FlowDemoTemplate.xml** file onto the page. This will upload the file to the folder.
 1. Drag and drop the earlier generated **cert.pfx** file onto the page. This will upload the file to the folder.
 1. Navigate back to the function and select **Code + Test** to edit the function.
@@ -276,5 +277,3 @@ To create a site design, you first need to create a site script. A site design i
 After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Power Automate flow from the site design.
 
 To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. Notice that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
-
-
