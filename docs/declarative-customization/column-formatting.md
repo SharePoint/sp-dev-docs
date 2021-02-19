@@ -472,7 +472,7 @@ Here's the same sample from above, using the Excel-style expression syntax:
             "elmType": "span",
             "attributes": {
                 "class": "=if([$After] > [$Before], 'sp-field-trending--up', 'sp-field-trending--down')",
-                "iconName": "=if([$After] > [$Before], 'SortUp', "=if([$After] < [$Before], 'SortDown', ''))"
+                "iconName": "=if([$After] > [$Before], 'SortUp', "if([$After] < [$Before], 'SortDown', ''))"
             }
         },
         {
