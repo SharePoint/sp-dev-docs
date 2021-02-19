@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 12/29/2020
+ms.date: 02/19/2021
 localization_priority: Priority
 ---
 
@@ -134,7 +134,7 @@ The following image shows an example of conditional formatting applied to a text
 
 ![Status field with done colored green, blocked colored red, and in review colored orange](../images/sp-columnformatting-conditionaladvanced.png)
 
-You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Has Issues, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--severeWarning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. It then outputs a `<span />` element with an `IconName` attribute. This attribute automatically applies another CSS class to that `<span />` that shows an [Office UI Fabric](https://developer.microsoft.com/fluentui#/) icon inside that element. Finally, another `<span />` element is output that contains the value inside the field.
+You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Has Issues, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--severeWarning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. It then outputs a `<span />` element with an `IconName` attribute. This attribute automatically applies another CSS class to that `<span />` that shows an [Fluent UI](https://developer.microsoft.com/fluentui#/) icon inside that element. Finally, another `<span />` element is output that contains the value inside the field.
 
 This pattern is useful when you want different values to map to different levels of urgency or severity. You can start from this example and edit it to specify your own field values and the styles and icons that should map to those values.
 
@@ -322,7 +322,7 @@ The following image shows action buttons added to a field.
 You can use column formatting to render quick action links next to fields. The following example, intended for a person field, renders two elements inside the parent `<div />` element:
 
 - A `<span />` element that contains the person’s display name.
-- An `<a />` element that opens a mailto: link that creates an email with a subject and body populated dynamically via item metadata. The `<a />` element is styled using the `ms-Icon`, `ms-Icon—Mail`, and `ms-QuickAction` [Fabric](https://developer.microsoft.com/fabric) classes to make it look like a clickable email icon. 
+- An `<a />` element that opens a mailto: link that creates an email with a subject and body populated dynamically via item metadata. The `<a />` element is styled using the `ms-Icon`, `ms-Icon—Mail`, and `ms-QuickAction` [Fluent UI](https://developer.microsoft.com/fluentui) classes to make it look like a clickable email icon. 
 
 ```JSON
 {
@@ -966,11 +966,11 @@ You can use the following predefined classes for several common scenarios.
 > [!NOTE]
 > The icons shown above for the `sp-field-severity` classes are **NOT** part of the class. Only the background color is included. Icons can be added by using the `iconName` attribute.
 
-In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Office UI Fabric can be used. For details, see the [Fabric website](https://developer.microsoft.com/fluentui#/styles/web/colors/products). 
+In addition to the classes listed above, the classes (such as the theme color, typography, grid system, etc.) defined by the Fluent UI can be used. For details, see the [Fluent UI website](https://developer.microsoft.com/fluentui#/styles/web/colors/products). 
 
 ### Predefined icons
 
-You can use predefined icons from Office UI Fabric. For details, see the [Fabric website](https://developer.microsoft.com/fluentui#/styles/web/icons). 
+You can use predefined icons from Fluent UI. For details, see the [Fluent UI website](https://developer.microsoft.com/fluentui#/styles/web/icons). 
 
 ## Creating custom JSON
 
