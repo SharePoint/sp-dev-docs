@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - PnP PowerShell cmdlets
 description: Use PnP PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 06/05/2020
+ms.date: 02/19/2021
 localization_priority: Priority
 ---
 
@@ -36,12 +36,15 @@ The following cmdlets are available for managing site designs and site scripts f
 - [Add-PnPSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Add-PnPSiteDesign?view=sharepoint-ps)
 - [Add-PnPSiteDesignTask](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Add-PnPSiteDesignTask?view=sharepoint-ps)
 - [Add-PnPSiteScript](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Add-PnPSiteScript?view=sharepoint-ps)
+- [Add-PnPSiteScriptPackage](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Add-PnPSiteScriptPackage?view=sharepoint-ps)
 - [Get-PnPSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteDesign?view=sharepoint-ps)
 - [Get-PnPSiteDesignRights](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteDesignRights?view=sharepoint-ps)
 - [Get-PnPSiteDesignRun](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteDesignRun?view=sharepoint-ps)
 - [Get-PnPSiteDesignRunStatus](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteDesignRunStatus?view=sharepoint-ps)
 - [Get-PnPSiteDesignTask](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteDesignTask?view=sharepoint-ps)
 - [Get-PnPSiteScript](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteScript?view=sharepoint-ps)
+- [Get-PnPSiteScriptFromList](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteScriptFromList?view=sharepoint-ps)
+- [Get-PnPSiteScriptFromWeb](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Get-PnPSiteScriptFromWeb?view=sharepoint-ps)
 - [Grant-PnPSiteDesignRights](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Grant-PnPSiteDesignRights?view=sharepoint-ps)
 - [Invoke-PnPSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Invoke-PnPSiteDesign?view=sharepoint-ps)
 - [Remove-PnPSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Remove-PnPSiteDesign?view=sharepoint-ps)
@@ -50,7 +53,7 @@ The following cmdlets are available for managing site designs and site scripts f
 - [Revoke-PnPSiteDesignRights](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Revoke-PnPSiteDesignRights?view=sharepoint-ps)
 - [Set-PnPSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Set-PnPSiteDesign?view=sharepoint-ps)
 - [Set-PnPSiteScript](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Set-PnPSiteScript?view=sharepoint-ps)
-
+- [Set-PnPSiteScriptPackage](https://docs.microsoft.com/powershell/module/sharepoint-pnp/Set-PnPSiteScriptPackage?view=sharepoint-ps)
 
 ## See also
 
