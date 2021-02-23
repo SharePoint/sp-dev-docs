@@ -1,7 +1,7 @@
 ---
 title: Get to know the SharePoint REST service
 description: Basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.
-ms.date: 1/15/2020
+ms.date: 02/23/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -95,7 +95,7 @@ The following table contains typical REST endpoint URL examples to get you start
 | Retrieves all lists on a site                                                         | `lists`                                     | GET             | Not applicable   |
 | Retrieves a single list's metadata                                                    | `lists/getbytitle('listname')`              | GET             | Not applicable   |
 | Retrieves items within a list                                                         | `lists/getbytitle('listname')/items`        | GET             | Not applicable   |
-| Retrieves a specific property of a document<br />*(in this case, the document title)* | `lists/getbytitle('listname')?select=Title` | GET             | Not applicable   |
+| Retrieves a specific property of a list<br />*(in this case, the list title)*         | `lists/getbytitle('listname')?select=Title` | GET             | Not applicable   |
 | Creates a list                                                                        | `lists`                                     | POST            | See sample       |
 | Adds an item to a list                                                                | `lists/getbytitle('listname')/items`        | POST            | See sample       |
 
