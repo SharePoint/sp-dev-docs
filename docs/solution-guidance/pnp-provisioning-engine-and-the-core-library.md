@@ -1,7 +1,7 @@
 ---
 title: PnP provisioning engine and the Core library
 description: Take a high-level look at the remote provisioning process, including a closer look at the OfficeDevPnP.Core library.
-ms.date: 06/05/2020
+ms.date: 02/23/2021
 localization_priority: Priority
 ---
 
@@ -22,7 +22,7 @@ The PnP provisioning engine is the structured implementation of classes in the C
 
 The PnP provisioning engine allows you to model the design of site columns, content types, list definitions, composed looks, and pages. You can design those features and much more by pointing to existing site design features, by crafting the design by hand, or by using a mix of both approaches. You can then, optionally, persist the design as a provisioning template that you can save and reuse.
 
-You can use one of two approaches for extracting your site design as a provisioning template. Use Windows PowerShell scripts (SharePointPnP.PowerShell), or use CSOM/REST code that implements extension methods provided by the Core library (OfficeDevPnP.Core).
+You can use one of two approaches for extracting your site design as a provisioning template. Use Windows PowerShell scripts (PnP.PowerShell), or use CSOM/REST code that implements extension methods provided by the Core library (OfficeDevPnP.Core).
 
 ### Using Windows PowerShell scripting to extract a provisioning template
 
@@ -36,7 +36,7 @@ To use Windows PowerShell scripts with the provisioning engine, you first must d
 The recommended way to install the cmdlet is by using the PowerShell gallery:
 
 ```powershell
-Install-Module -Name SharePointPnPPowerShellOnline
+Install-Module -Name PnP.PowerShell
 ```
 
 In case you want to install a version for SharePoint on-premises, substitute 'online' in the name with the respective version of SharePoint. 
