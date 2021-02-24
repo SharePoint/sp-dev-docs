@@ -1971,6 +1971,8 @@
       href: apis/migration-perm-guidance.md
     - name: Migrating OneNote folders
       href: apis/onenote-migration-service.md
+    - name: Sensitivity Labels and the SharePoint Migration API
+      href: apis/sp-migration-api-and-sensitivity-labels.md
     - name: Migration API
       items:
       - name: Import Migration API
