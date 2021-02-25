@@ -60,6 +60,14 @@ The SharePoint Framework development and build toolchain leverages various popul
 > npm install gulp yo @microsoft/generator-sharepoint --global
 > ```
 
+> [!TIP]
+> If you know you're on a corporate network using a proxy or if the above command statement fails, you may need to configure the proxy settings for npm as follows:
+>
+> ```console
+> npm config set proxy http://proxy.YourDomain.com:80
+> ```
+> where http://proxy.YourDomain.com:80 is the proxy address of your corporate proxy server, including the port.
+
 ### Install Gulp
 
 [Gulp](https://gulpjs.com) is a JavaScript-based task runner used to automate repetitive tasks. The SharePoint Framework build toolchain uses Gulp tasks to build projects, create JavaScript bundles, and the resulting packages used to deploy solutions.
