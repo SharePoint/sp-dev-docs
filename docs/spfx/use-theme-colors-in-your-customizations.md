@@ -1,7 +1,7 @@
 ---
 title: Use theme colors in your SharePoint Framework customizations
 description: Use theme colors so that your customizations look like a part of the site by referring to the theme colors of the context site in your SharePoint Framework solution.
-ms.date: 04/30/2020
+ms.date: 02/26/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
