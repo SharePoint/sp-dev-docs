@@ -1,14 +1,14 @@
 ---
 title: Migration permission guidance
-ms.date: 06/14/2020
+ms.prod: sharepoint
+ms.date: 02/01/2021
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
 audience: ITPro
 f1.keywords:
 - NOCSH
 ms.topic: conceptual
-ms.service: sharepoint-online
 localization_priority: Priority
 ms.collection:
 - SPMigration

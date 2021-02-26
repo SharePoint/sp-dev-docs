@@ -1,6 +1,6 @@
 ---
 title: "Migration guide for ISVs"
-ms.date: 06/18/2020
+ms.date: 02/04/2021
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
@@ -13,10 +13,11 @@ ms.collection:
 - SPMigration
 - M365-collaboration
 search.appverid: MET150
+description: "Learn about using the SharePoint Migration API."
 ---
 # Migration guidance for ISVs
 
-This document provides guidance for ISVs to deliver a fast and reliable migration experience to customers. It has the latest Microsoft migration practices and addresses common concerns or questions raised by ISV. The page will be updated on regular basis and the priority of the guidance is listed in the order of publication.
+This document guides ISVs in delivering a fast and reliable migration experience to customers. It contains the latest Microsoft migration practices and concerns or questions raised by ISVs. 
 
 ## Use app-based authentication
 There are different usage patterns between end user traffic and an application doing background activities such as migration. It is important to identify user traffic versus application traffic. 
@@ -78,7 +79,7 @@ To learn more, see [Asynchronous Metadata Read (Export API)](https://docs.micros
 ## Switch to the Microsoft Graph API 
 If a feature is not supported by the migration API, we recommend that you use the Graph API.  If the Graph API does not support the needed migration feature, then use CSOM. However, using CSOM increases the likelihood of being throttled. 
 
-- [Graph Guidance: Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance?view=odsp-graph-online)
+- [Graph Guidance: Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance)
 
 ### CSOM Guidance (fallback only)
 
