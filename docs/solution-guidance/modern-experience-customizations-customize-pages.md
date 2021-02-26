@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" site pages
 description: Use custom branding in SharePoint Online, add "modern" pages programmatically, and add, delete, or update client-side web parts on "modern" pages.
-ms.date: 06/05/2020
+ms.date: 02/21/2021
 localization_priority: Priority
 ---
 
