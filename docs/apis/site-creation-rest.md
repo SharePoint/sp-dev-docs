@@ -47,9 +47,9 @@ body:
     "Classification":"Low Business Impact",
     "Description":"Description",
     "WebTemplate":"SITEPAGEPUBLISHING#0",
-    "SiteDesignId":"00000000-0000-0000-0000-000000000000",
+    "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
     "Owner":"owner@yourtenant.onmicrosoft.com",
-    "WebTemplateExtensionID":"6142d2a0-63a5-4ba0-aede-d9fefca2c767"
+    "WebTemplateExtensionID":"00000000-0000-0000-0000-000000000000"
   }
 }
 ```
@@ -60,10 +60,19 @@ body:
 
 The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/powershell/module/sharepoint-pnp/get-pnpsitedesign) (PnP PowerShell) cmdlets. If you want to apply an out-of-the-box available site design, use the following values:
 
-- Topic: null
+- Topic: 96c933ac-3698-44c7-9f4a-5fd17d71af9e or null
 - Showcase: `6142d2a0-63a5-4ba0-aede-d9fefca2c767`
 - Blank: `f6cc5403-0d63-442e-96c0-285923709ffc`
 
+> [!IMPORTANT]
+> To apply your custom site designs as retrieved with [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/powershell/module/sharepoint-pnp/get-pnpsitedesign) (PnP PowerShell) you will have to change the JSON as follows:
+```json
+...
+    "SiteDesignId":"00000000-0000-0000-0000-000000000000",
+    "Owner":"owner@yourtenant.onmicrosoft.com",
+    "WebTemplateExtensionID":"<your site design ID>"
+...
+```
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
 ### Response
