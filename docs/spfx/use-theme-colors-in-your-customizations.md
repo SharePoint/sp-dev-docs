@@ -1,7 +1,7 @@
 ---
 title: Use theme colors in your SharePoint Framework customizations
 description: Use theme colors so that your customizations look like a part of the site by referring to the theme colors of the context site in your SharePoint Framework solution.
-ms.date: 04/30/2020
+ms.date: 02/26/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -85,7 +85,7 @@ When you scaffold a new SharePoint Framework client-side web part, by default, i
 
 ### Support section backgrounds
 
-A customziation utilizing theme colors may still stand out if it doesn't respond to section background changes via theme variants support. See [Supporting Section Backgrounds](./web-parts/guidance/supporting-section-backgrounds.md) for more information.
+A customization utilizing theme colors may still stand out if it doesn't respond to section background changes via theme variants support. See [Supporting Section Backgrounds](./web-parts/guidance/supporting-section-backgrounds.md) for more information.
 
 A web part without theme variants support uses a white background regardless of the selected section background color.
 
@@ -95,9 +95,9 @@ A web part configured to support theme variants can apply the section background
 
 ![customization with theme variant support](../images/customization-with-theme-variants-support.png)
 
-## Available theme tokens and their occurances
+## Available theme tokens and their occurrences
 
-In the context of modern SharePoint sites, the values associated with theme tokens have numerous occurances within front-end, system page, and SharePoint web part UI. To best match your customizations to the general look and feel, consideration should be made to using appropriate theme tokens.
+In the context of modern SharePoint sites, the values associated with theme tokens have numerous occurrences within front-end, system page, and SharePoint web part UI. To best match your customizations to the general look and feel, consideration should be made to using appropriate theme tokens.
 
 The following theme tokens are available for you to use:
 
@@ -119,7 +119,7 @@ The following theme tokens are available for you to use:
 | `neutralLight`         | `#eaeaea`                | Some web part borders, command bar action hover, command bar background when a list item is selected, list view category header background when an item is selected, button hover. System pages: Ribbon tab background, OK button border, selected navigation element background, disabled text box border. Divider web part. Image background color in some web parts when the second section background color option is selected. |
 | `neutralLighter`       | `#f4f4f4`                | Some menu backgrounds (e.g., the command bar), selected left navigation element, some button backgrounds, one option for a section background color.                                                                                                                                                                                                                                                                                |
 | `neutralLighterAlt`    | `#f8f8f8`                | Left navigation hover background, list info panel text background, image background color in some webparts when the first section background color is selected, some icons and texts when editing web parts. System pages: Cancel button background, disabled text box background.                                                                                                                                                  |
-| `neutralPrimary`       | `#333333`                | Site header texts, texts in navigation menux, command bar, buttons and web parts, web part related icon backgrounds when the page is in edit mode, add web part panel icons and texts, web part settings panel texts. System pages: dropdown arrow color, some texts.                                                                                                                                                               |
+| `neutralPrimary`       | `#333333`                | Site header texts, texts in navigation menus, command bar, buttons and web parts, web part related icon backgrounds when the page is in edit mode, add web part panel icons and texts, web part settings panel texts. System pages: dropdown arrow color, some texts.                                                                                                                                                               |
 | `neutralPrimaryAlt`    | `#3c3c3c`                | The suite bar background in site contents view.                                                                                                                                                                                                                                                                                                                                                                                     |
 | `neutralSecondary`     | `#666666`                | Some menu texts, empty library text, some icon hover backgrounds, some texts in web parts, command bar arrows, range selector. System pages: link color, some icons, and borders.                                                                                                                                                                                                                                                   |
 | `neutralTertiary`      | `#a6a6a6`                | Some button texts, some web part titles, some web part setting texts, some web part icons, border hover in some web parts, dashed section border in edit mode, web part settings panel control border. Most visible when editing web parts. System pages: text box, dropdown, and button border color.                                                                                                                              |
@@ -130,13 +130,13 @@ The following theme tokens are available for you to use:
 | `neutralQuaternaryAlt` | `#dadada`                | Info icon and selected ellipses background in lists, some web part element backgrounds when in edit mode, web part property pane dropdown item background, selected list item background.                                                                                                                                                                                                                                           |
 | `accent`*              | `#ca5010`                | The fourth color in the palette in the “Change the look” panel.                                                                                                                                                                                                                                                                                                                                                                     |
 | `whiteTranslucent40`*  | `"rgba(255,255,255,.4)"` | Covers the rest of page when a modal dialog is opened.                                                                                                                                                                                                                                                                                                                                                                              |
-| `blackTranslucent40`*  | `"rgba(0,0,0,.4)"`       | Covers the rest of page during certain mobal dialog states, i.e.: when the web part search dialog is expanded                                                                                                                                                                                                                                                                                                                       |
+| `blackTranslucent40`*  | `"rgba(0,0,0,.4)"`       | Covers the rest of page during certain modal dialog states, i.e.: when the web part search dialog is expanded                                                                                                                                                                                                                                                                                                                       |
 | `backgroundOverlay`*   | (empty)                  | Site contents primary background, some borders, i.e.: between hub and site navigation                                                                                                                                                                                                                                                                                                                                               |
 | `primaryBackground`*   | `#ffffff`                | Some backgrounds when editing web part settings, some text field backgrounds                                                                                                                                                                                                                                                                                                                                                        |
 
 *Not included in [theme generator](https://aka.ms/themedesigner).
 
-Occurance of theme tokens within SharePoint UI may differ depending upon selected background colors (i.e., theme token, `white` is used for header navigation links if a dark header background is selected, otherwise `neutralSecondary` is used). See [Designing for section backgrounds using semantic slots](../design/semantic_slots.md) for more information.
+Occurrence of theme tokens within SharePoint UI may differ depending upon selected background colors (i.e., theme token, `white` is used for header navigation links if a dark header background is selected, otherwise `neutralSecondary` is used). See [Designing for section backgrounds using semantic slots](../design/semantic_slots.md) for more information.
 
 > [!NOTE]
 > There are more tokens registered with the SharePoint Framework, although only the subset mentioned above are assignable in custom themes on modern SharePoint sites (the rest being generated automatically by the theming engine). For the complete list of available tokens, see the value of the `window.__themeState__.theme` property by using the console in your web browser's developer tools.
