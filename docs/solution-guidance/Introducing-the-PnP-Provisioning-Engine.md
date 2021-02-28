@@ -58,7 +58,7 @@ To use the PowerShell cmdlets for SharePoint Online or SharePoint, go to [PnP Po
 After you have connected your PowerShell environment to SharePoint Online by using the **Connect-PnPOnline** cmdlet, you can use the following PowerShell cmdlet: 
 
 ```powershell
-Get-PnPProvisioningTemplate -Out "PnP-Provisioning-File.xml"
+Get-PnPSiteTemplate -Out "PnP-Provisioning-File.xml"
 ```
 
 The `–Out` argument instructs the cmdlet about where to save the provisioning template.
@@ -166,7 +166,7 @@ You can now apply a custom site template by using a PnP PowerShell cmdlet
 
 ```PowerShell
 Connect-PnPOnline -Url "https://yourtenant.sharepoint.com/sites/targetcommunicationsite"
-Apply-PnPProvisioningTemplate -Path "PnP-Provisioning-File.xml"
+Invoke-PnPSiteTemplate -Path "PnP-Provisioning-File.xml"
 ```
 
 The `–Path` argument refers to the source template file, which the cmdlet automatically applies to the currently connected site (implied by the ```Connect-PnPOnline``` cmdlet).
@@ -201,7 +201,7 @@ To apply a tenant template to a tenant you enter:
 
 ```powershell
 Connect-PnPOnline https://yourtenant.sharepoint.com
-Apply-PnPTenantTemplate -Path "yourtenanttemplate.xml"
+Invoke-PnPTenantTemplate -Path "yourtenanttemplate.xml"
 ```
 
 For more information about tenant templates, refer to [PnP Provisioning Tenant Templates](pnp-provisioning-tenant-templates.md)
