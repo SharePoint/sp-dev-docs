@@ -37,7 +37,7 @@ Accept: "application/json;odata=verbose"
 ```
 ---
 
-The client.svc web service in SharePoint handles the HTTP request, and serves the appropriate response in either Atom or JavaScript Object Notation (JSON) format. Your client application must then parse that response. The following figure shows a high-level view of the SharePoint REST architecture.
+The client.svc web service in SharePoint handles the HTTP request and serves the appropriate response in either Atom or JavaScript Object Notation (JSON) format. Your client application must then parse that response. The following figure shows a high-level view of the SharePoint REST architecture.
 
 **SharePoint REST service architecture**
 
