@@ -1,7 +1,7 @@
 ---
 title: Set up your Microsoft 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
-ms.date: 06/12/2020
+ms.date: 02/26/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -30,8 +30,16 @@ You need an app catalog to upload and deploy web parts. If you've already set up
 
 1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Microsoft 365 tenant prefix.
 
+    Commercial Tenant
+    
     ```http
     https://{your-tenant-prefix}-admin.sharepoint.com
+    ```
+    
+    GCC High Tenant
+    
+    ```http
+    https://{your-tenant-prefix}-admin.sharepoint.us
     ```
 
 1. In the left sidebar, select **More features**
@@ -54,8 +62,16 @@ You also need a site collection and a site for your testing. You can create a ne
 
 1. Navigate to **SharePoint Admin Center** by entering the following URL in your browser. Replace **{your-tenant-prefix}** with your Microsoft 365 tenant prefix:
 
+    Commercial Tenant
+    
     ```http
     https://{your-tenant-prefix}-admin.sharepoint.com
+    ```
+
+    GCC High Tenant
+    
+    ```http
+    https://{your-tenant-prefix}-admin.sharepoint.us
     ```
 
 1. In the left sidebar, select **Sites > Active sites**.
