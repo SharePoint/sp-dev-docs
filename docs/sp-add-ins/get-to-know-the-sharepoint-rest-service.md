@@ -1,7 +1,7 @@
 ---
 title: Get to know the SharePoint REST service
 description: Basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.
-ms.date: 02/23/2021
+ms.date: 03/03/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -16,7 +16,7 @@ This topic assumes you have a basic familiarity with REST and how to construct R
 
 ## How the SharePoint REST service works
 
-SharePoint adds the ability for you to remotely interact with SharePoint sites by using REST. Now you can interact directly with SharePoint objects by using any technology that supports standard REST capabilities.
+SharePoint adds the ability for you to remotely interact with SharePoint sites by using REST. Now, you can interact directly with SharePoint objects by using any technology that supports standard REST capabilities.
 
 To access SharePoint resources using REST, construct a RESTful HTTP request by using the OData standard, which corresponds to the desired client object model API. For example:
 
