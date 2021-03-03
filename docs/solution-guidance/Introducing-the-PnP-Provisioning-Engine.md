@@ -1,7 +1,7 @@
 ---
 title: Introducing the PnP provisioning engine
 description: This article introduces the PnP provisioning engine, which was originally released in April 2015 within the [OfficeDev PnP](../community/community.md) project, and which is updated on a monthly basis in alignment with the release schedule of the Office Dev PnP Core Library. 
-ms.date: 06/05/2020
+ms.date: 03/03/2021
 localization_priority: Priority
 ---
 
