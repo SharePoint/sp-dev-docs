@@ -70,22 +70,13 @@ There's an alternative way to deploy your solution, which will for instance allo
 
 To upload an app for a specific team, you'll have to enable side loading. The following configuration steps must be done only **once** in a tenant.
 
-1. Navigate to the Microsoft 365 Admin center by selecting **Admin** from the app launcher:
+1. Navigate to the **Microsoft 365 Teams Admin center** / **App Setup policies** by  going to "https://admin.teams.microsoft.com/policies/app-setup" 
+    
+    ![App setup policies](../images/app-setup-policies.png)
 
-    ![Moving to admin UI](../images/sp-teams-move-to-admin.png)
+1. Select the Global policy (or create a new one). Make sure the "Upload custom apps" setting is enabled.
 
-1. Choose **Settings** and **Services & add-ins** from the left menu.
-1. Select **Microsoft Teams** from the list of services you want to manage:
-
-    ![Moving to admin UI](../images/sp-teams-admin-select-teams.png)
-
-1. Extend the **Apps** section under Tenant-wide settings:
-
-    ![Moving to admin UI](../images/sp-teams-admin-extend-apps.png)
-
-1. Ensure that **Allow sideloading of external apps** setting is enabled:
-
-    ![Moving to admin UI](../images/sp-teams-admin-allow-side-loading.png)
+    ![App setup policies](../images/upload-custom-apps.png)
 
 1. Select **Save**:
 
@@ -105,6 +96,8 @@ To upload an app for a specific team, you'll have to enable side loading. The fo
 
     > [!NOTE]
     > If this setting is not available, side loading is not enabled in the tenant which you are using. Double check the settings from the tenant admin UIs.
+
+    ![Manage Team](../images/upload-custom-app-link.png)
 
 1. Upload the Microsoft Teams app manifest file your created earlier from the **./teams** folder under your newly created solution and ensure that it's properly visible in the list of Apps. Notice how the custom image is visible with the description of the solution:
 
