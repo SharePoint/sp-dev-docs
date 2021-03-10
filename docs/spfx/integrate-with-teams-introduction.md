@@ -72,11 +72,11 @@ To upload an app for a specific team, you'll have to enable side loading. The fo
 
 1. Navigate to the **Microsoft 365 Teams Admin center** / **App Setup policies** by  going to "https://admin.teams.microsoft.com/policies/app-setup" 
     
-    ![App setup policies](../images/app-setup-policies.png)
+    ![Showing app setup policies in Teams Admin center](../images/app-setup-policies.png)
 
 1. Select the Global policy (or create a new one). Make sure the "Upload custom apps" setting is enabled.
 
-    ![App setup policies](../images/upload-custom-apps.png)
+    ![Enable custom apps](../images/upload-custom-apps.png)
 
 1. Select **Save**:
 
@@ -89,7 +89,7 @@ To upload an app for a specific team, you'll have to enable side loading. The fo
 
 1. Choose a Team that you want to use for testing the capability and select **Manage team** from the `...` menu:
 
-    ![Manage Team](../images/sp-teams-manage-team.png)
+    ![Select the team you like to manage](../images/sp-teams-manage-team.png)
 
 1. Move to **Apps** tab.
 1. Choose **Upload a custom app** from the bottom-right corner.
@@ -97,7 +97,7 @@ To upload an app for a specific team, you'll have to enable side loading. The fo
     > [!NOTE]
     > If this setting is not available, side loading is not enabled in the tenant which you are using. Double check the settings from the tenant admin UIs.
 
-    ![Manage Team](../images/upload-custom-app-link.png)
+    ![Showing the "Upload custom app" link](../images/upload-custom-app-link.png)
 
 1. Upload the Microsoft Teams app manifest file your created earlier from the **./teams** folder under your newly created solution and ensure that it's properly visible in the list of Apps. Notice how the custom image is visible with the description of the solution:
 
@@ -114,7 +114,7 @@ To upload an app for a specific team, you'll have to enable side loading. The fo
 
 1. Notice how you can customize the tab instance using the exposed properties on the web part. Select **Save**:
 
-    ![Add a tab](../images/sp-teams-configure-tab.png)
+    ![Tab custom properties](../images/sp-teams-configure-tab.png)
 
 ## Detecting if web part is in Teams context
 
