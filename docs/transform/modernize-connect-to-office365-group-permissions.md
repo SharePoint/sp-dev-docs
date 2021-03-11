@@ -1,7 +1,7 @@
 ---
 title: Site permissions after Microsoft 365 group connection
 description: Connect a Microsoft 365 group to an existing SharePoint site does have an impact on the SharePoint site permissions, which is explained in this article
-ms.date: 03/09/2021
+ms.date: 03/11/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -12,9 +12,10 @@ As part of the connection to a Microsoft 365 group the site's permissions will a
 
 - The Microsoft 365 group Owners get connected to both the site collection administrators as the site owners group: everyone who’s Microsoft 365 group owner also has site collection admin permissions on the SharePoint site
 - The Microsoft 365 group members get connected to the site members group: everyone who’s Microsoft 365 group member is has the permissions which are granted to the SharePoint site’s Members group
-- Any other permissions granted on the SharePoint site stay as is, so for example viewers will still have view access, broken permission inheritance stays working as is
-- Permissions "flow" from the Microsoft 365 group to SharePoint: adding a person to the Microsoft 365 Owners group will also make that person an Owner (even Administrator) of the SharePoint site
-- There a no permissions "flowing back" to the Microsoft 365 group: if you add a person to the SharePoint Owners group then that person is not an Owner of the group
+- Any other permissions granted on the SharePoint site stay as is: for example viewers will still have view access and broken permission inheritance stays working as is
+- Permissions "flow" from the Microsoft 365 group to SharePoint: adding a person to the owners of the Microsoft 365 group will also make that person an owner  and even a site collection administrator of the SharePoint site
+- There are no permissions "flowing back" to the Microsoft 365 group: if you add a person to the SharePoint Owners group then that person does not become an Owner of the Microsoft 365 group
+- Keep in mind that permissions set to a SharePoint site outside of the Microsoft 365 group effectively mean that those users will only be able to access the SharePoint Online site beloning to the Microsoft 365 group, but will not have access to the other components of the group, such as the Exchange Online mailbox, calendar and potentially Microsoft Teams
 
 ![Site permissions after group connection](media/modernize/groupifypermissions_1.png)
 
