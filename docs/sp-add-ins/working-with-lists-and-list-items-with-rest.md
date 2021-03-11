@@ -1,7 +1,7 @@
 ---
 title: Working with lists and list items with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
-ms.date: 06/04/2020
+ms.date: 03/11/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -20,7 +20,7 @@ This topic assumes that you're already familiar with the topics [Get to know the
 The following example shows how to **retrieve a specific list if you know its GUID**.
 
 ```http
-GET https://{site_url}/_api/web/lists(guid'{list_guid}')
+GET https://{site_url}/_api/web/lists('{list_guid}')
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 ```
@@ -114,7 +114,7 @@ X-RequestDigest: "{form_digest_value}"
 The following example shows how to **update a list by using the MERGE method**.
 
 ```http
-POST https://{site_url}/_api/web/lists(guid'{list_guid}')
+POST https://{site_url}/_api/web/lists('{list_guid}')
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 Content-Type: "application/json"
@@ -134,7 +134,7 @@ X-RequestDigest: "{form_digest_value}"
 The following example shows how to **create a custom field for a list**.
 
 ```http
-POST https://{site_url}/_api/web/lists(guid'{list_guid}')/Fields
+POST https://{site_url}/_api/web/lists('{list_guid}')/Fields
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 Content-Type: "application/json"
@@ -156,7 +156,7 @@ X-RequestDigest: "{form_digest_value}"
 The following example shows how to **delete a list**.
 
 ```http
-POST https://{site_url}/_api/web/lists(guid'{list_guid}')
+POST https://{site_url}/_api/web/lists('{list_guid}')
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 If-Match: "{etag or *}"
