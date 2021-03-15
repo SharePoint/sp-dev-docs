@@ -43,7 +43,7 @@ This release introduces a new property & event in the Web Part API to detect the
 - Add support for **Node.js v12**
   - *See [Set up your SharePoint Framework development environment](set-up-your-development-environment.md) for details.*
   - **Gulp v4** (installed globally) is required (*see [Regarding Gulp versions & Node.js v12+](#gulp-versions--nodejs-v12) for details*)
-- For app projects:
+- For all projects:
   - Update the default version of TypeScript to **v3.7** (*via **@microsoft/rush-stack-compiler-3.7** v0.2.3*)
   - Update the **Gulp** version used to **v4.0.2**
 - For projects that use React:
