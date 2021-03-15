@@ -1065,7 +1065,6 @@ An optional property that specifies style attributes to apply to the element spe
 ```JS
 'background-color'
 'fill'
-'background-image'
 'border'
 'border-bottom'
 'border-bottom-color'
