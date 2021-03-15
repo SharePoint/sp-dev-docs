@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.12 release notes
 description: Release notes for the SharePoint Framework v1.12 release
-ms.date: 03/09/2021
+ms.date: 03/15/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,7 +9,7 @@ localization_priority: Priority
 
 This release introduces a new property & event in the Web Part API to detect the rendering width (and changes), improved support for Microsoft Teams solutions, and updates supported versions of Node.js.
 
-**Released:** March 9, 2021
+**Released:** March 15, 2021
 
 ## Upgrading projects from v1.11 to v1.12
 

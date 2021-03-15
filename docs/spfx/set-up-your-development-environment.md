@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 03/09/2021
+ms.date: 03/15/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started

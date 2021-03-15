@@ -1,7 +1,7 @@
 ---
 title: Expose SharePoint Framework web parts in Microsoft Teams
 description: You can expose web parts built using SharePoint Framework in Microsoft Teams.
-ms.date: 03/09/2021
+ms.date: 03/15/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
