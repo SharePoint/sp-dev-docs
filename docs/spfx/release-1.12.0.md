@@ -49,7 +49,7 @@ This release introduces a new property & event in the Web Part API to detect the
   - Update the **Gulp** version used to **v4.0.2**
 - For projects that use React:
   - Update the React NPM packages (**react** & **react-dom**) to **v16.9.0**.
-  - Update the Office UI Fabric React NPM package (**office-ui-fabric-react**) to **v7.156.0**.
+  - Update the Office UI Fabric React NPM package / Microsoft Fluent UI (**office-ui-fabric-react**) to **v7.156.0**.
 
 ## Deprecations and removed items in this release
 
