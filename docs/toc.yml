@@ -171,6 +171,8 @@
         href: spfx/web-parts/get-started/use-fabric-react-components.md
       - name: Use full-width column
         href: spfx/web-parts/basics/use-web-parts-full-width-column.md
+      - name: Determine the rendered web part width
+        href: spfx/web-parts/basics/determine-web-part-width.md
       - name: Support section backgrounds
         href: spfx/web-parts/guidance/supporting-section-backgrounds.md
       - name: Isolated web parts
@@ -181,8 +183,6 @@
         items:
         - name: Building Microsoft Teams Tabs
           href: spfx/integrate-with-teams-introduction.md
-        - name: Creating Teams manifest manually
-          href: spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md
         - name: Hosting Microsoft Teams Tabs in SharePoint
           href: spfx/using-teams-solutions-in-sharepoint.md
       - name: Building Office add-ins
@@ -325,6 +325,8 @@
       href: spfx/enable-Microsoft-365-content-delivery-network.md
     - name: Deploy web parts to Azure CDN
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
+    - name: Deployment options for SPFx solutions & Microsoft Teams
+      href: spfx/deployment-spfx-teams-solutions.md
     - name: Custom build tasks
       href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
     - name: Extend Webpack
@@ -462,6 +464,8 @@
     href: spfx/build-for-teams-overview.md
   - name: Expose web parts in Microsoft Teams
     href: spfx/build-for-teams-expose-webparts-teams.md
+  - name: Build Microsoft Teams channel/group tabs with SPFx
+    href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
   - name: Configure web parts in Microsoft Teams
     href: spfx/build-for-teams-configure-in-teams.md
   - name: 'Scenario: Build a Me-experience in Microsoft Teams'

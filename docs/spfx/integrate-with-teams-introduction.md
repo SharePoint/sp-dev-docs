@@ -1,7 +1,7 @@
 ---
 title: Building Microsoft Teams Tabs using SharePoint Framework
 description: You can build your Microsoft Teams tabs using SharePoint Framework and utilize the tooling
-ms.date: 06/16/2020
+ms.date: 03/15/2021
 ms.prod: sharepoint
 ---
 
@@ -47,9 +47,11 @@ There are multiple options to deploy Microsoft Teams tab or as a personal app. A
 
 You can use the **Sync with Teams** button in the App Catalog ribbon that will automatically create the Microsoft Teams app manifest, app package and install it in the Microsoft Teams store. This will make your solution available for all users in your tenant and Microsoft Teams teams.
 
+Developers can also define the contents of the Microsoft Teams app manifest and app package. Refer to [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md) for deployment options.
+
 ### Alternative deployment options
 
-There's an alternative way to deploy your solution, which will for instance allow you to make a solution available only to one specific team in your tenant. See [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) for details on how to create the manifest.
+There's an alternative way to deploy your solution, which will for instance allow you to make a solution available only to one specific team in your tenant.
 
 1. Build your SharePoint Framework solution the normal way:
 
@@ -62,35 +64,10 @@ There's an alternative way to deploy your solution, which will for instance allo
 
     ![Solution structure](../images/sp-teams-solution-structure.png)
 
-1. Notice the two image files in the **./teams** folder. Add the manifest file you created as described in [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](./web-parts/guidance/creating-team-manifest-manually-for-webpart.md) to this folder. This file should be named ***manifest.json**.
-1. After you added the manifest to the **./teams** folder, zip the contents of the folder into a zip file. This means that the zip file should only contain the manifest.json and the two images.
-1. Add your solution to the app catalog and make sure to select the option **Make this solution available to all sites in the organization** before selecting **Deploy**
+1. Add the Microsoft Teams app package as described in [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md#developer-provided-microsoft-teams-app-manifest--package) to the **./teams** folder.
+1. Add your solution to the app catalog and make sure to select the option **Make this solution available to all sites in the organization** before selecting **Deploy**.
 
-### Turn on side loading of external apps in Teams
-
-To upload an app for a specific team, you'll have to enable side loading. The following configuration steps must be done only **once** in a tenant.
-
-1. Navigate to the Microsoft 365 Admin center by selecting **Admin** from the app launcher:
-
-    ![Moving to admin UI](../images/sp-teams-move-to-admin.png)
-
-1. Choose **Settings** and **Services & add-ins** from the left menu.
-1. Select **Microsoft Teams** from the list of services you want to manage:
-
-    ![Moving to admin UI](../images/sp-teams-admin-select-teams.png)
-
-1. Extend the **Apps** section under Tenant-wide settings:
-
-    ![Moving to admin UI](../images/sp-teams-admin-extend-apps.png)
-
-1. Ensure that **Allow sideloading of external apps** setting is enabled:
-
-    ![Moving to admin UI](../images/sp-teams-admin-allow-side-loading.png)
-
-1. Select **Save**:
-
-    > [!NOTE]
-    > The side loading configuration to be done only once in a tenant. For more information on preparing your Microsoft 365 tenant for Microsoft Teams development, see [Microsoft Teams developer documentation](https://docs.microsoft.com/microsoftteams/platform/get-started/get-started-tenant#turn-on-microsoft-teams-for-your-organization).
+### Side loading of external apps in Teams
 
 1. Move to your Microsoft Teams instance by selecting **Teams** in the app launcher:
 
@@ -108,7 +85,7 @@ To upload an app for a specific team, you'll have to enable side loading. The fo
 
 1. Upload the Microsoft Teams app manifest file your created earlier from the **./teams** folder under your newly created solution and ensure that it's properly visible in the list of Apps. Notice how the custom image is visible with the description of the solution:
 
-    ![Manage Team](../images/sp-teams-app-uploaded.png)
+    ![Upload app](../images/sp-teams-app-uploaded.png)
 
 1. Move to a channel in the Team where you uploaded the solution. In the following image, notice we've activated the **General** channel in **Team**
 
@@ -121,7 +98,7 @@ To upload an app for a specific team, you'll have to enable side loading. The fo
 
 1. Notice how you can customize the tab instance using the exposed properties on the web part. Select **Save**:
 
-    ![Add a tab](../images/sp-teams-configure-tab.png)
+    ![Configure tab](../images/sp-teams-configure-tab.png)
 
 ## Detecting if web part is in Teams context
 
@@ -132,7 +109,7 @@ this.context.sdks.microsoftTeams
 ```
 
 > [!NOTE]
-> For more information on the Microsoft Teams tab context, see [Microsoft Teams development documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-context?view=msteams-client-js-latest).
+> For more information on the Microsoft Teams tab context, see [Microsoft Teams development documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-context).
 
 > [!IMPORTANT]
 > The property `this.context.microsoftTeams` has been deprecated in the SharePoint Framework v1.10 release.
