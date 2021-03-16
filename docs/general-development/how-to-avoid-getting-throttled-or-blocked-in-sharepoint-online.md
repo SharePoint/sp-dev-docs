@@ -67,6 +67,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
   - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
   - You're running a load-testing script on SharePoint Online and you get throttled. Load testing isn't allowed on SharePoint Online.
   - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
+  - Running the OneDrive Sync client while also running migration applications or applications that crawl sites and write back data can result in high request volumes that may trigger throttling. 
 
     ![Steady throttling](../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
 
