@@ -37,7 +37,7 @@ This release introduces a new property & event in the Web Part API to detect the
   - *See [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md) for more details.*
 - A new API has been added to the SPFx web part class to determine the rendered width of a web part and optionally handle an event when it changes.
   - *See [Determine the rendered web part size](web-parts/basics/determine-web-part-width.md) for more details.*
-- Premilinary support for Microsoft Teams meeting apps with the SharePoint Framework - full support is pending a fix for server side regression
+- Preliminary support for Microsoft Teams meeting apps with the SharePoint Framework - full support is pending a fix for server side regression
 
 ## Changes in this release
 
