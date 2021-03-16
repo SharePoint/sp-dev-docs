@@ -37,6 +37,7 @@ This release introduces a new property & event in the Web Part API to detect the
   - *See [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md) for more details.*
 - A new API has been added to the SPFx web part class to determine the rendered width of a web part and optionally handle an event when it changes.
   - *See [Determine the rendered web part size](web-parts/basics/determine-web-part-width.md) for more details.*
+- Premilinary support for Microsoft Teams meeting apps with the SharePoint Framework - full support is pending a fix for server side regression
 
 ## Changes in this release
 
@@ -53,6 +54,8 @@ This release introduces a new property & event in the Web Part API to detect the
 ## Deprecations and removed items in this release
 
 - **Gulp v3** is not supported (*neither globally nor locally installed*) when using Node.js v12+.
+- **Local workbench is deprecated** - This is the last release that will include support for the local workbench.
+- This is the last release that will include a single generator that works for on-prem and SharePoint Online.  You'll still be able to create projects for on-prem, just by using the older generator.
 
 ### Gulp versions & Node.js v12+
 
