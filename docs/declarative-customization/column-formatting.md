@@ -1035,6 +1035,7 @@ Any other value will result in an error.
 
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
+- **openContextMenu**:  Clicking the button will open the item's default context menu.
 - **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
 
 ```JSON
