@@ -210,12 +210,14 @@ Copy the following provisioning template XML to a new file and save the file as 
     # Write out the queue message and insertion time to the information log.
     Write-Host "PowerShell queue trigger function processed work item: $QueueItem"
     Write-Host "Queue item insertion time: $($TriggerMetadata.InsertionTime)"
-    Connect-PnPOnline -ClientId [insertyourAzureAppIdhere]] -CertificatePath D:\home\site\wwwroot\InvokePnPSiteTemplate\cert.pfx -Url $QueueItem
+    Connect-PnPOnline -ClientId [insertyourAzureAppIdhere] -CertificatePath D:\home\site\wwwroot\InvokePnPSiteTemplate\cert.pfx -Tenant 'contoso.onmicrosoft.com' -Url $QueueItem
     Write-Output "Connected to site"
     Invoke-PnPSiteTemplate -Path D:\home\site\wwwroot\InvokePnPSiteTemplate\FlowDemoTemplate.xml
     ```
 
     Replace **[insertyourAppIdHere]** with the value that the `Register-PnPAzureApp` cmdlet returned for AzureAppId.
+    
+    Replace **'contoso.onmicrosoft.com'** with your tenant details.
 
 ## Create the site design
 
