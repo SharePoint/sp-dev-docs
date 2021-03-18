@@ -854,7 +854,7 @@ The `@group` object has the following properties (with example values):
 {
     "fieldData": "California",
     "columnDisplayName": "City",
-    "count": "3"
+    "count": 3
 }
 ```
 
@@ -872,7 +872,7 @@ You can also access sub properties for fields with rich data, e.g. People field,
     "jobTitle": "HR Manager"
   },
   "columnDisplayName": "Author",
-  "count": "5"
+  "count": 5
 }
 
 ```
