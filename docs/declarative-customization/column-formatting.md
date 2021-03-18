@@ -935,10 +935,10 @@ The following column types support column formatting:
 * Single line of text
 * Title (in Lists)
 * Yes/No
+* Managed Metadata
 
 The following are currently **not** supported:
 
-* Managed Metadata
 * Filename (in Document Libraries)
 * Retention Label
 * Sealed columns
