@@ -858,7 +858,7 @@ The `@group` object has the following properties (with example values):
 }
 ```
 
-You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Column Format special string values](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#special-string-values).
+You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Column Format special string values](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#special-string-values).
 
 ```JSON
 {
@@ -895,7 +895,7 @@ The `@columnAggregate` object has the following properties (with example values)
 
 Provides access to array of aggregated column's value, display name and aggregate type. Valid in 'List', 'Compact List' and 'Gallery' layouts. Available only inside `groupProps`.
 
-The `@aggregates` object has the following properties (with example value), and can be iterated on using [Column Format foreach](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/column-formatting#foreach) property.
+The `@aggregates` object has the following properties (with example value), and can be iterated on using [Column Format foreach](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#foreach) property.
 
 ```JSON
 [
