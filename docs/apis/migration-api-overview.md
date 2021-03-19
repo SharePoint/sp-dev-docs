@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 ms.prod: sharepoint
-ms.date: 02/17/2021
+ms.date: 03/17/2021
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -18,7 +18,9 @@ The following API description is based upon use of the SharePoint Client Side Ob
 You can find latest version of the SharePoint Online Client Side Object Model (CSOM) package from the [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/). Use the ID `Microsoft.SharePointOnline.CSOM`.
 
 >[!Important]
-> **Pending change:** Files larger than 15 GB must now create the required checksum using [QuickXorHash](https://docs.microsoft.com/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
+> Files larger than 15 GB must now create the required checksum using [QuickXorHash](https://docs.microsoft.com/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
+> 
+>The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirementt.
 >
 >The previous method of MD5Hash is still required for files smaller than 2 GB; however this requirement will be removed at some point in the future.
 
@@ -450,7 +452,8 @@ Even if the API support 15GB files, we recommend package sizes of up to 250 MB O
 
 ### File size
 
-Currently, the import pipeline supports individual files of **15 GB** maximum size.
+>[!Note]
+>The Migration API supports individual files over **15 GB**. The maximum size is current to that set by SharePoint Online.
 
 ### Only un-compressed packages are supported
 
