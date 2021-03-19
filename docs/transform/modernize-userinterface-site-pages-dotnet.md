@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using .NET
 description: Explains how to transform classic wiki and web part pages into modern modern pages using the SharePoint .NET
-ms.date: 02/11/2021
+ms.date: 03/16/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -20,7 +20,7 @@ The page transformation engine is built using .NET and is distributed as a [nuge
 
 The `webpartmapping.xml` and `webpartmapping_latestfrompackage.xml` represent the transformation model that describes how the transformation will happen. You typically will tweak the `webpartmapping.xml` file to your needs by for example adding additional mappings to your own web parts. If you later on install an updated version of the nuget package your `webpartmapping.xml` will not be overwritten by default but the `webpartmapping_latestfrompackage.xml` will be. You can use this latter file to compare the latest out-the-box mapping with your mapping and take over the changes you need.
 
-With the mapping file in place you now can use below snippet (coming from the [Modernization.PageTransformation sample on GitHub](https://github.com/SharePoint/PnP/tree/dev/Samples/Modernization.PageTransformation)) to transform all the pages in a given site:
+With the mapping file in place you now can use below snippet (coming from the [Modernization.PageTransformation sample on GitHub](https://github.com/pnp/PnP/tree/master/Samples/Modernization.PageTransformation)) to transform all the pages in a given site:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/mytestsite";
