@@ -1486,7 +1486,7 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=getDate(Date('12/26/1981'))"` results in _26_ 
   
 - **getMonth**:  returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year). - _Only available in SharePoint Online_
-  - `"txtContent":"=getMonth(Date('12/26/1981'))"` results in _11_ 
+  - `"txtContent":"=getMonth(Date('12/26/1981'))"` results in _12_ 
 
 - **getYear**: returns the year of the given date. - _Only available in SharePoint Online_
   - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_ 
