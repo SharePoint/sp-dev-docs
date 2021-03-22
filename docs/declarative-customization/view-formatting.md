@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 12/29/2020
+ms.date: 03/22/2021
 localization_priority: Priority
 ---
 
@@ -165,7 +165,10 @@ You can use `groupProps` to format group headers with flexibility to add grouped
 #### Example: Color coded group header
 
 In the example below we have list with group headers formatted according to column metadata.
+
 ![Employee list grouped by City with formatted group header](../images/employee-formatted-group-header-list-layout.png)
+
+In this example below, the `headerFormatter` for `groupProps` is used to format the group header and the `@group` is used to access group info.
 
 ```JSON
 {
@@ -252,12 +255,13 @@ In the example below we have list with group headers formatted according to colu
 }
 ```
 
-#### Example: Color coded group header with aggregates
+#### Example: Color coded group header with aggregate
 
 In the example below we have list with group headers formatted with group aggregates.
+
 ![Employee list grouped by City with formatted group header with Aggregates summary](../images/employee-formatted-group-header-aggregate-list-layout.png)
 
-In this example the `hideFooter` for `groupProps` is set to `true` to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
+In this example the `hideFooter` for `groupProps` are set to `true`- to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
 
 ```JSON
 {
@@ -350,9 +354,10 @@ In this example the `hideFooter` for `groupProps` is set to `true` to hide the g
 #### Example: Custom group footer
 
 In the example below we have list with group footer formatted according to aggregate value.
+
 ![Employee list grouped by City with formatted group footer](../images/group-footer-list-layout.png)
 
-In this example the `footerFormatter` for `groupProps` is set to format the group footer and the `@columnAggregate` is used to access column aggregate.
+In this example the `footerFormatter` for `groupProps` are used to format the group footer and the `@columnAggregate` is used to access column aggregate.
 
 ```JSON
 {
@@ -395,7 +400,8 @@ You can use `footerFormatter` to format list footer with access to column aggreg
 
 #### Example: Custom list footer
 
-In the example below we have list with footer formatted according to aggregate value.
+In the example below we have list with formatted footer as per the aggregate value.
+
 ![Employee list grouped by City with formatted list footer](../images/list-footer-list-layout.png)
 
 In this example the `footerFormatter` is set to format the list footer and the `@columnAggregate` is used to access column aggregate.
@@ -562,10 +568,12 @@ You can use `groupProps` to format group headers with flexibility to add grouped
 
 #### Example: Color coded group header
 
-In the example below we have gallery with group headers formatted according to column metadata.
+In the example below we have gallery view with formatted group headers as per column metadata.
+
 ![Employee gallery grouped by City with formatted group header](../images/employee-formatted-group-header-gallery-layout.png)
 
-Note that gallery card formatter is skipped in the below JSON for simplicity.
+[!NOTE]
+Gallery card formatter is skipped in the below JSON for simplicity.
 
 ```JSON
 {
@@ -666,12 +674,16 @@ Note that gallery card formatter is skipped in the below JSON for simplicity.
 }
 ```
 
-#### Example: Color coded group header with aggregates
+#### Example: Color coded group header with aggregate
 
-In the example below we have list with group headers formatted with group aggregates.
+In the example below we have list with formatted group headers formatted and group aggregates.
+
 ![Employee gallery grouped by City with formatted group header with Aggregates summary](../images/employee-formatted-group-header-aggregate-gallery-layout.png)
 
-In this example the `@aggregates` array is used to display a summary in the group header using `headerFormatter` in `groupProps`. Note that gallery card formatter is skipped in the below JSON for simplicity.
+In this example the `@aggregates` array is used to display a summary in the group header using `headerFormatter` in `groupProps`.
+
+[!NOTE]
+Gallery card formatter is skipped in the below JSON for simplicity.
 
 ```JSON
 {
