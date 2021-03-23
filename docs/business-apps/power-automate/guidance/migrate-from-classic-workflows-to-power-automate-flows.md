@@ -228,4 +228,4 @@ While the following lists show some of the most common workflow capabilities, Po
 | Share workflows with users | Not available | Yes |
 | Save a copy of workflow to create a copy of the workflow | Not available | Yes |
 | Workflow versioning | Not available | No |
-| Create a workflow with elevated permissions | Yes, by granting permissions to workflow app and then using App Step action and SharePoint Add-ins | Not available
+| Create a workflow with elevated permissions | Yes, by granting permissions to workflow app and then using App Step action and SharePoint Add-ins | Yes, child workflows in a solution can run as the Flow publisher account granting the elevanted permissions of the author account
