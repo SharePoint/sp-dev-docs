@@ -1,6 +1,7 @@
 ---
 title: Managed metadata and navigation in SharePoint
-ms.date: 09/25/2017
+description: Learn about enterprise managed metadata (EMM) and navigation features in SharePoint.
+ms.date: 03/23/2021
 ms.prod: sharepoint
 ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
 localization_priority: Normal
@@ -136,11 +137,11 @@ You can use the following code examples to complete basic operations with the ta
             {
                if (termStore != null)
                 {
-                   foreach( TermGroup groupin termStore.Groups)
+                   foreach(TermGroup group in termStore.Groups)
                     {
                        Console.WriteLine("Group " + group.Name);
  
-                       foreach( TermSet termSetin group.TermSets )
+                       foreach(TermSet termSet in group.TermSets )
                         {
                            Console.WriteLine("TermSet " + termSet.Name);
  
