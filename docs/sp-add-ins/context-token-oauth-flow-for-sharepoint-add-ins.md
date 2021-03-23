@@ -1,7 +1,7 @@
 ---
 title: Context Token OAuth flow for SharePoint Add-ins
 description: The OAuth authentication and authorization flow for low-trust, provider-hosted add-ins in SharePoint.
-ms.date: 05/01/2020
+ms.date: 03/23/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -28,7 +28,7 @@ There are three tokens involved: SharePoint has ACS create a **context token** t
 
 The following preliminary steps must be completed before a SharePoint Add-in can use the Context Token flow:
 
-- If the SharePoint Add-in is to be installed to an on-premises SharePoint farm, these setup requirements don't apply if it is only installed to SharePoint Online:
+- The following requirements only apply if you're installing the SharePoint Add-in on-premises in addition to SharePoint Online; these requirements don't apply if you're only installing the SharePoint Add-in to SharePoint Online
 
   - **The farm must be configured to support add-ins**. This is actually a requirement for installing any SharePoint Add-ins to the farm, even if they don't use the Context Token flow. For more information, see [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md).
   - **The customer who is installing the add-in must have an Office 365 account**. This is necessary to get access to ACS. The customer does not have to use their account for any other purpose.
