@@ -9,7 +9,7 @@ localization_priority: Normal
 
 Sometimes custom SharePoint Framework (SPFx) applications need to know the rendered size of a web part for various reasons. This value can change when web parts are viewed on different devices, such as a desktop or mobile browser.
 
-The rendered size of the web part can also be influenced based on where it's placed on a page. If the web part is used as a [single part app pages](../single-part-app-pages.md), it could be one size, but if also used as as web part render in a page layout with just one column or multiple columns, it could be rendered in a completely different size.
+The rendered size of the web part can also be influenced based on where it's placed on a page. If the web part is used as a [single part app pages](../single-part-app-pages.md), it could be one size, but if also used as a web part render in a page layout with just one column or multiple columns, it could be rendered in a completely different size.
 
 The functionality of the web part could differ based on the size of the rendered web part.
 
@@ -42,7 +42,7 @@ Developers can also determine when the web part's rendered width changes by hand
 protected onAfterResize(newWidth: number): void;
 ```
 
-This API is invoked when the web part container dom element width is changed, such as when when the browser window is resized and when the property pane is toggled open/closed.
+This API is invoked when the web part container DOM element width is changed, such as when the browser window is resized and when the property pane is toggled open/closed.
 
 Web parts should utilize this method to perform operations such as potentially re-rendering components based on the new available width for the web part.
 
