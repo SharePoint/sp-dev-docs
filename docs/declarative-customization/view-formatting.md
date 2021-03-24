@@ -261,7 +261,7 @@ In the example below we have list with group headers formatted with group aggreg
 
 ![Employee list grouped by City with formatted group header with Aggregates summary](../images/employee-formatted-group-header-aggregate-list-layout.png)
 
-In this example the `hideFooter` for `groupProps` are set to `true`- to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
+In this example the `hideFooter` for `groupProps` is set to _true_ - to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
 
 ```JSON
 {
@@ -572,8 +572,8 @@ In the example below we have gallery view with formatted group headers as per co
 
 ![Employee gallery grouped by City with formatted group header](../images/employee-formatted-group-header-gallery-layout.png)
 
-[!NOTE]
-Gallery card formatter is skipped in the below JSON for simplicity.
+> [!NOTE]
+> Gallery card formatter is skipped in the below JSON for simplicity.
 
 ```JSON
 {
@@ -676,14 +676,14 @@ Gallery card formatter is skipped in the below JSON for simplicity.
 
 #### Example: Color coded group header with aggregate
 
-In the example below we have list with formatted group headers formatted and group aggregates.
+In the example below we have list with formatted group headers and group aggregates.
 
 ![Employee gallery grouped by City with formatted group header with Aggregates summary](../images/employee-formatted-group-header-aggregate-gallery-layout.png)
 
 In this example the `@aggregates` array is used to display a summary in the group header using `headerFormatter` in `groupProps`.
 
-[!NOTE]
-Gallery card formatter is skipped in the below JSON for simplicity.
+> [!NOTE]
+> Gallery card formatter is skipped in the below JSON for simplicity.
 
 ```JSON
 {
@@ -854,7 +854,7 @@ For list & compact list layout, `hideFooter` overrides the `footerFormatter`, if
 
 ### Special string values
 
-The values for `txtContent`, styles, and attributes can be either strings or Expression objects. A few special string patterns for retrieving values from group and aggregate are supported.
+The values for `txtContent`, styles, and attributes can be either strings or expression objects. A few special string patterns for retrieving values from group and aggregate are supported.
 
 #### "@group"
 
@@ -907,7 +907,7 @@ The `@columnAggregate` object has the following properties (with example values)
 
 Provides access to array of aggregated column's value, display name and aggregate type. Valid in 'List', 'Compact List' and 'Gallery' layouts. Available only inside `groupProps`.
 
-The `@aggregates` object has the following properties (with example value), and can be iterated on using [Column Format foreach](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#foreach) property.
+The `@aggregates` object has the following properties (with example value), and can be iterated on using [Column Format forEach](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#foreach) property.
 
 ```JSON
 [
