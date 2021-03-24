@@ -11,6 +11,10 @@ This release introduces a new property & event in the Web Part API to detect the
 
 **Released:** March 15, 2021
 
+
+> [!CAUTION]
+> Version 1.12 release is currently considered as deprecated due the unexpected regressions. We recommend usage of [v1.11](release-1.11.0.md) until updated version is available.
+
 ## Upgrading projects from v1.11 to v1.12
 
 1. In the project's **package.json** file, identify all SPFx v1.11 packages. For each SPFx package:
