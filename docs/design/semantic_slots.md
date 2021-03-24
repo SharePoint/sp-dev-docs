@@ -59,14 +59,14 @@ In the table below, you can see all eight palette colors defined for the bodyTe
 </table>
 <br/>
 
-! Note
-The current semantic slot list is defined by commonly used design patterns in SharePoint. We want to avoid creating case-specific semantic slots. When designing a new web part, consider aligning to an existing design pattern. Office UI Fabric's policy is that semantic slots may never be removed from the list, so any additions are permanent.
+> [!NOTE]
+> The current semantic slot list is defined by commonly used design patterns in SharePoint. We want to avoid creating case-specific semantic slots. When designing a new web part, consider aligning to an existing design pattern. Office UI Fabric's policy is that semantic slots may never be removed from the list, so any additions are permanent.
 
 ## Identifying semantic slots in your designs
 
 Semantic slots should be assigned based on the function of a page element. The name of a semantic slot can quickly tell you how it’s meant to be used. You can find all existing semantic slots and their use case examples in the [Fabric semantic colors documentation](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/styling/src/interfaces/ISemanticColors.ts).
 
-Fabric palette colors should be referenced from your site theme’s color ramp. If your site is using a SharePoint out of the box theme, you can reference [SharePoint theme color ramps](https://fluentfabric.azurewebsites.net/#/color/products). If your site is using a custom theme, you can generate a unique color ramp using the [Fabric theme generator](https://aka.ms/themedesigner).
+Fabric palette colors should be referenced from your site theme’s color ramp. If your site is using a SharePoint out of the box theme, you can reference [SharePoint theme color ramps](https://fluentfabric.azurewebsites.net/#/color/products). If your site is using a custom theme, you can generate a unique color ramp using the [Fluent UI Theme Designer](https://aka.ms/themedesigner).
 
 ![Example of redlines for a web part in the None section background](../images/doc-semantic-slot-1.png)
 
