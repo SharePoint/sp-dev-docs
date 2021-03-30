@@ -199,37 +199,37 @@ To make your web part available in Microsoft Teams, you'll have synchronize your
 
 1. Confirm that you can see the status message on the top-right corner.
 
-    ![Sync to Teams button in ribbon](../../../images/teams-successfully-synced.png)
+    ![Sync to Teams status message](../../../images/teams-successfully-synced.png)
 
     > [!IMPORTANT]
     > If the synchronization isn't successful, please ensure that you have deleted possible previous version from the Microsoft Team App Catalog. This is the most common reason why the synchronization would fail as existing solution is not overridden currently.
 
 1. Move to the Microsoft Teams side and check the App Catalog status by selecting **Apps** from the left navigation
 
-    ![Channel activated](../../../images/sp-teams-apps-in-teams.png)
+    ![Apps menu in the Teams left-rail](../../../images/sp-teams-apps-in-teams.png)
 
 1. Wait until your tenant-specific apps selection is visible:
 
-    ![Channel activated](../../../images/sp-teams-apps-for-tenant.png)
+    ![Select the tenant/organization name](../../../images/sp-teams-apps-for-tenant.png)
 
     > [!NOTE]
     > This can take few minutes based due to caching.
 
 1. Confirm that you can see **MyFirstTeamsTab** app in the catalog:
 
-    ![Channel activated](../../../images/sp-teams-my-first-in-catalog.png)
+    ![Custom SPFx Microsoft Teams app displayed as an option](../../../images/sp-teams-my-first-in-catalog.png)
 
     > [!NOTE]
     > This can take few minutes based due to caching.
 
 1. Move to a channel in a team where you want to test the solution. In the below picture, we have activated **General** channel in **Team**:
 
-    ![Channel activated](../../../images/sp-teams-channel-activated.png)
+    ![Selecting the General channel in the Microsoft Teams team](../../../images/sp-teams-channel-activated.png)
 
 1. Select **+** to add a new tab on the channel.
 1. Select your custom tab called **MyFirstTeamTab** in the list. You can use the search capability if needed to find your custom tab:
 
-    ![Add a tab](../../../images/sp-teams-add-a-tab.png)
+    ![Search for the custom tab](../../../images/sp-teams-add-a-tab.png)
 
 1. Select **Add** to confirm the tab to be selected.
 1. Select **Save** to confirm the tab to be installed on the channel:
