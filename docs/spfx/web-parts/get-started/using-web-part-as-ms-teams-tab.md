@@ -1,7 +1,7 @@
 ---
 title: Build Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 08/19/2020
+ms.date: 03/30/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -191,7 +191,7 @@ At this point, the web part is deployed and is automatically available cross the
 To make your web part available in Microsoft Teams, you'll have synchronize your solution with teams.
 
 > [!NOTE]
-> In this tutorial, we're using the automatic deployment option for the solution from the SharePoint app catalog. You can also perform these steps manually, if you want to provide alternative settings for your solutions. For more information, see: [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](../guidance/creating-team-manifest-manually-for-webpart.md).
+> In this tutorial, we're using the automatic deployment option for the solution from the SharePoint app catalog. For more information, see: [Deployment options for SharePoint Framework solutions for Microsoft Teams](../../deployment-spfx-teams-solutions.md).
 
 1. Select the **teams-tab-client-side-solution** package in the SharePoint tenant App Catalog and select the **Sync to Teams** button at in the ribbon in the **Files** tab.
 
@@ -199,37 +199,37 @@ To make your web part available in Microsoft Teams, you'll have synchronize your
 
 1. Confirm that you can see the status message on the top-right corner.
 
-    ![Sync to Teams button in ribbon](../../../images/teams-successfully-synced.png)
+    ![Sync to Teams status message](../../../images/teams-successfully-synced.png)
 
     > [!IMPORTANT]
     > If the synchronization isn't successful, please ensure that you have deleted possible previous version from the Microsoft Team App Catalog. This is the most common reason why the synchronization would fail as existing solution is not overridden currently.
 
 1. Move to the Microsoft Teams side and check the App Catalog status by selecting **Apps** from the left navigation
 
-    ![Channel activated](../../../images/sp-teams-apps-in-teams.png)
+    ![Apps menu in the Teams left-rail](../../../images/sp-teams-apps-in-teams.png)
 
 1. Wait until your tenant-specific apps selection is visible:
 
-    ![Channel activated](../../../images/sp-teams-apps-for-tenant.png)
+    ![Select the tenant/organization name](../../../images/sp-teams-apps-for-tenant.png)
 
     > [!NOTE]
     > This can take few minutes based due to caching.
 
 1. Confirm that you can see **MyFirstTeamsTab** app in the catalog:
 
-    ![Channel activated](../../../images/sp-teams-my-first-in-catalog.png)
+    ![Custom SPFx Microsoft Teams app displayed as an option](../../../images/sp-teams-my-first-in-catalog.png)
 
     > [!NOTE]
     > This can take few minutes based due to caching.
 
 1. Move to a channel in a team where you want to test the solution. In the below picture, we have activated **General** channel in **Team**:
 
-    ![Channel activated](../../../images/sp-teams-channel-activated.png)
+    ![Selecting the General channel in the Microsoft Teams team](../../../images/sp-teams-channel-activated.png)
 
 1. Select **+** to add a new tab on the channel.
 1. Select your custom tab called **MyFirstTeamTab** in the list. You can use the search capability if needed to find your custom tab:
 
-    ![Add a tab](../../../images/sp-teams-add-a-tab.png)
+    ![Search for the custom tab](../../../images/sp-teams-add-a-tab.png)
 
 1. Select **Add** to confirm the tab to be selected.
 1. Select **Save** to confirm the tab to be installed on the channel:
