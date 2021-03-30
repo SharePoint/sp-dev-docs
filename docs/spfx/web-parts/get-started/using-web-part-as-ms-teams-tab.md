@@ -1,7 +1,7 @@
 ---
 title: Build Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 08/19/2020
+ms.date: 03/30/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -191,7 +191,7 @@ At this point, the web part is deployed and is automatically available cross the
 To make your web part available in Microsoft Teams, you'll have synchronize your solution with teams.
 
 > [!NOTE]
-> In this tutorial, we're using the automatic deployment option for the solution from the SharePoint app catalog. You can also perform these steps manually, if you want to provide alternative settings for your solutions. For more information, see: [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](../guidance/creating-team-manifest-manually-for-webpart.md).
+> In this tutorial, we're using the automatic deployment option for the solution from the SharePoint app catalog. For more information, see: [Deployment options for SharePoint Framework solutions for Microsoft Teams](../../deployment-spfx-teams-solutions.md).
 
 1. Select the **teams-tab-client-side-solution** package in the SharePoint tenant App Catalog and select the **Sync to Teams** button at in the ribbon in the **Files** tab.
 
