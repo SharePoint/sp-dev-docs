@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 03/22/2021
+ms.date: 03/30/2021
 localization_priority: Priority
 ---
 
@@ -261,7 +261,7 @@ In the example below we have list with group headers formatted with group aggreg
 
 ![Employee list grouped by City with formatted group header with Aggregates summary](../images/employee-formatted-group-header-aggregate-list-layout.png)
 
-In this example the `hideFooter` for `groupProps` is set to _true_ - to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
+In this example the `hideFooter` for `groupProps` is set to `true` - to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
 
 ```JSON
 {
@@ -814,13 +814,13 @@ Optional element. Specifies a CSS class(es) that is applied to the entire row. S
 
 ### hideSelection
 
-Optional element. Specifies whether the ability to select rows in the view is disabled or not. _false_ is the default behavior inside a list view (meaning selection is visible and enabled). _true_ means that users will not be able to select list items. Valid in 'List', 'Compact List' and 'Gallery' layouts.
+Optional element. Specifies whether the ability to select rows in the view is disabled or not. `false` is the default behavior inside a list view (meaning selection is visible and enabled). `true` means that users will not be able to select list items. Valid in 'List', 'Compact List' and 'Gallery' layouts.
 
 For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
 ### hideColumnHeader
 
-Optional element. Specifies whether the column headers in the view are hidden or not. _false_ is the default behavior inside a list view (meaning column headers will be visible). _true_ means that the view will not display column headers. Only valid for 'List' and 'Compact List' layouts.
+Optional element. Specifies whether the column headers in the view are hidden or not. `false` is the default behavior inside a list view (meaning column headers will be visible). `true` means that the view will not display column headers. Only valid for 'List' and 'Compact List' layouts.
 
 ### height
 
@@ -848,7 +848,7 @@ JSON object that defines the format for group and list footer. The schema of thi
 
 ### hideFooter
 
-Optional element. Specifies whether the list footers or the group footers in the view are hidden or not. _false_ is the default behavior (meaning footer is visible). _true_ means that view will not display footers. Valid in 'List' and 'Compact List' layouts.
+Optional element. Specifies whether the list footers or the group footers in the view are hidden or not. `false` is the default behavior (meaning footer is visible). `true` means that view will not display footers. Valid in 'List' and 'Compact List' layouts.
 
 For list & compact list layout, `hideFooter` overrides the `footerFormatter`, if present.
 
