@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 03/15/2021
+ms.date: 03/30/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -19,7 +19,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Install Node.js
 
-Install the latest version of **[Node.js](https://www.nodejs.org) LTS v12.x**.
+Install the latest version of **[Node.js](https://www.nodejs.org) LTS v10.x**.
 
 This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
@@ -41,10 +41,9 @@ You can check if you already have Node.js already installed, including installed
 node -v
 ```
 
-The SharePoint Framework v1.12 is supported on the following Node.js versions:
+The SharePoint Framework v1.11 is supported on the following Node.js versions:
 
 - Node.js v10 (*Dubnium*)
-- Node.js v12 (*Erbium*)
 
 > [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint Server 2016, see **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section for additional details on which version of Node.js you should install.
@@ -79,12 +78,6 @@ Enter the following command to install Gulp:
 ```console
 npm install gulp --global
 ```
-
-> [!NOTE]
-> Gulp v3 was used as the target for all Gulp tasks in the SPFx build toolchain prior to SPFx v1.12. If you are using Node.js v12+, you must install Gulp v4 globally because Gulp v3 is not supported on Node.js v12+.
->
-> - Refer to [Check the version of globally installed packages](#check-the-version-of-globally-installed-packages) to find the version you currently have installed.
-> - Refer to the [SharePoint Framework v1.12 release notes](release-1.12.0.md) for additional details.
 
 ### Install Yeoman
 
