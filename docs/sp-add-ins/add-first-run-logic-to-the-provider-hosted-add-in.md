@@ -1,7 +1,7 @@
 ---
 title: Add first-run logic to the provider-hosted add-in
 description: Include "first run" code in a provider-hosted SharePoint Add-in by creating the basic class for deploying components, adding the basic startup logic, and programmatically deploying a SharePoint list. 
-ms.date: 12/04/2017
+ms.date: 04/02/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -103,9 +103,9 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
 
 > [!NOTE]
 > You may wonder now why the add-in uses version numbers and a "less than" test to determine the answer to a simple yes/no question: "Is the add-in running for the first time?" We could just as well have a simple string field in the **Tenants** table that is set to *not-yet-run* in the installation handler, and then changed to *already-run-once* by the first-run logic after the SharePoint components are deployed. 
-
+>
 > For the Chain Store add-in, a simple test would work. However, it is generally a good practice to use version numbers because a production add-in is likely to be updated-in-place in the future; that is, updated after it is already installed. When that time comes, your add-in logic needs to be sensitive to more than the two possibilities *not-yet-run* and *already-run-once*. 
-
+>
 > Suppose, for example, that you want to add an additional list to the host web in the upgrade from version 1.0.0.0 to 2.0.0.0. You could do this in an update event handler, or in first-run-after-update logic. Either way, your deployment logic needs to deploy new components, but it also needs to avoid trying to redeploy components that were deployed in a previous version of the add-in. A version number of 1.0.0.0 signals that the components of version 1.0.0.0 have been deployed, but that the first-run-after-update logic has not yet run.
 
 ## Add the basic startup logic
