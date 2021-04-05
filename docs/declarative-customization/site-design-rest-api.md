@@ -170,7 +170,8 @@ Gets the site script syntax for a specific SharePoint site.
 | IncludeTheme         | (Optional) True if custom theme will be extracted; otherwise false. |
 | IncludeLinksToExportedItems         | (Optional) True if navigation links will be extracted; otherwise false. In order to export navigation links pointing to lists, the list needs to be included in the request as well. |
 
->**Note:** At least one **include** parameter must be provided when using this API, otherwise request fails.
+> [!NOTE]
+> At least one **include** parameter must be provided when using this API, otherwise request fails.
 
 ### Examples
 
@@ -195,7 +196,8 @@ RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScri
 
 Here is an example of the JSON returned after calling **GetSiteScriptFromWeb**.
 
->**Note:** The response object shown here might be shortened for readability.
+> [!NOTE]
+> The response object shown here might be shortened for readability.
 
 ```json
 {
@@ -265,7 +267,7 @@ Here is an example of the JSON returned after calling **GetSiteScriptFromWeb**.
 
 ## GetSiteScriptFromList
 
-Gets the site script syntax for a specific list
+Gets the site script syntax for a specific list.
 
 ### Parameters
 
@@ -435,7 +437,7 @@ Creates a new site design available to users when they create a new site from th
 |SiteScriptIds           | An array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
 |Description         | (Optional) The display description of site design. |
 |PreviewImageUrl     | (Optional) The URL of a preview image. If none is specified, SharePoint uses a generic image. |
-|PreviewImageAltText | (Optional) The alt text description of the image for accessibility. |
+|PreviewImageAltText | (Optional) The alt text description of the preview image for accessibility. |
 |IsDefault           | (Optional) **True** if the site design is applied as the default site design; otherwise, **false**. For more information see [Customize a default site design](customize-default-site-design.md). |
 
 ### Examples
@@ -518,7 +520,7 @@ Gets a list of information about existing site designs.
 
 ### Parameters
 
-None
+None.
 
 ### Examples
 
@@ -618,7 +620,7 @@ Updates a site design with new values. In the REST call, all parameters are opti
 |SiteScripts         | (Optional) A new array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed. |
 |Description         | (Optional) The new display description of the updated site design. |
 |PreviewImageUrl     | (Optional) The new URL of a preview image. |
-|PreviewImageAltText | (Optional) The new alt text description of the image for accessibility. |
+|PreviewImageAltText | (Optional) The new alt text description of the preview image for accessibility. |
 |IsDefault           | (Optional) **True** if the site design is applied as the default site design; otherwise, **false**. For more information see [Customize a default site design](customize-default-site-design.md). |
 
 ### Examples
@@ -739,7 +741,7 @@ Grants access to a site design for one or more principals.
 
 ### Examples
 
-Here's an example of granting view rights to a site design for Nestor and Patti (fictional users at Contoso.)
+Here's an example of granting view rights to a site design for Nestor and Patti (fictional users at Contoso).
 
 ```javascript
 RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {
@@ -762,12 +764,12 @@ Revokes access from a site design for one or more principals.
 
 ### Examples
 
-Here's an example of revoking view rights from a site design for Patti (fictional user at Contoso.)
+Here's an example of revoking view rights from a site design for Patti (fictional user at Contoso).
 
 ```javascript
 RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights", 
 {id:"5d4756e9-e1f5-42f7-afa7-5fa5aac170aa",
- principalNames:["debrab@Contoso.sharepoint.com"] });
+ principalNames:["PattiF@contoso.onmicrosoft.com"] });
 ```
 
 ## See also
