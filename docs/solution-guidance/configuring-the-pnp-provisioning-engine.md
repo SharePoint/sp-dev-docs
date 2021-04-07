@@ -1,7 +1,7 @@
 ---
 title: Configuring the PnP Provisioning Engine
 description: Sometimes you do not want to extract all artifacts from a site, or only even a specific list. For that the PnP Provisioning Engine uses a JSON formatted configuration file which gives you detailed control over the process.
-ms.date: 02/03/2021
+ms.date: 04/07/2021
 localization_priority: Priority
 ---
 
