@@ -9,7 +9,7 @@ localization_priority: Priority
 
 This release introduces a new property & event in the Web Part API to detect the rendering width (and changes), improved support for Microsoft Teams solutions, and updates supported versions of Node.js.
 
-**Released:** March 15, 2021
+**Released:** TBD Q2, 2021
 
 [!INCLUDE [spfx-release-candidate](../../includes/snippets/spfx-release-candidate.md)]
 
@@ -25,7 +25,7 @@ This release introduces a new property & event in the Web Part API to detect the
     1. Install the refreshed v1.12 {version-release} package:
 
         ```console
-        npm install @microsoft/{spfx-package-name}@1.12.1{release-candidate} --save --save-exact
+        npm install @microsoft/{spfx-package-name}@1.12.1 --save --save-exact
         ```
 
 > [!TIP]
