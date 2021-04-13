@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.12.1 release notes
 description: Release notes for the SharePoint Framework v1.12.1 release
-ms.date: 03/30/2021
+ms.date: 04/13/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,10 +11,7 @@ This release introduces a new property & event in the Web Part API to detect the
 
 **Released:** March 15, 2021
 
-> [!CAUTION]
-> Version 1.12.1 release is available as a developer preview. Please consider this release as public beta made available for testing.
->
-> For production environments, we recommend using the SPFx version referenced on [Set up your SharePoint Framework development environment](set-up-your-development-environment.md).
+[!INCLUDE [spfx-release-candidate](../../includes/snippets/spfx-release-candidate.md)]
 
 ## Upgrading projects from v1.11.0 to v1.12.1
 
@@ -28,13 +25,11 @@ This release introduces a new property & event in the Web Part API to detect the
     1. Install the refreshed v1.12 {version-release} package:
 
         ```console
-        npm install @microsoft/{spfx-package-name}@1.12.1 --save --save-exact
+        npm install @microsoft/{spfx-package-name}@1.12.1{release-candidate} --save --save-exact
         ```
 
 > [!TIP]
 > The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
 
 ## New features and capabilities
 
