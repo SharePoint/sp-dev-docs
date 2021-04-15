@@ -51,7 +51,7 @@ With the preparation work done let's continue to the next chapter showing how yo
 If you want to utilize the generated app-only registration with [PnP PowerShell](https://aka.ms/pnp-powershell), you can do so by connecting to your SharePoint On-Premises or Online environment using:
 
 ```powershell
-Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/demo -AppId [Your Client ID] -AppSecret "[Your Client Secret]"
+Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/demo -ClientId [Your Client ID] -ClientSecret "[Your Client Secret]"
 ```
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
