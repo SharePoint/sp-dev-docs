@@ -132,3 +132,11 @@ The following formula checks if the Yes/No column [$Promoted] is equal to a Yes.
 =if([$Promoted]==true,'true','false')
 ```
 
+##### Lookup column
+
+The following formula checks if the lookup column [$City] is equal to _Toronto_. To do so, it checks for the value _1;#Toronto_ where 1 is an item ID in the lookup list of cities.
+
+```
+=if([$City]=='1;#Toronto', 'true', 'false')
+```
+
