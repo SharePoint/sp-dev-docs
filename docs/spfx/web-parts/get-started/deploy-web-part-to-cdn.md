@@ -1,7 +1,7 @@
 ---
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
-ms.date: 10/26/2020
+ms.date: 04/17/2021
 ms.prod: sharepoint
 ---
 # Deploy your SharePoint client-side web part to Azure CDN
@@ -146,12 +146,17 @@ Note, however, that you have not yet deployed the files.
     ```json
     {
       "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
-      "workingDir": "./temp/deploy/",
+      "workingDir": "./release/assets/",
       "account": "<!-- STORAGE ACCOUNT NAME -->",
       "container": "azurehosted-webpart",
       "accessKey": "<!-- ACCESS KEY -->"
     }
     ```
+
+    > [!IMPORTANT]
+    > The location of resources used in the Azure CDN deployments changed in SPFx v1.12.1. The snippet above reflects the correct location in the `workingDir` property.
+    >
+    > For projects created prior to SPFx v1.12.1, the `workingDir` property was set to `./temp/deploy/`. If you've upgraded the project to SPFx v1.12.1+, you should update this property to the above setting. For more information, see [SharePoint Framework v1.12.1 release notes](../../release-1.12.1.md).
 
 1. Replace the `account`, `container`, `accessKey` with your storage account name, BLOB container, and storage account access key respectively.
 
@@ -161,7 +166,8 @@ Note, however, that you have not yet deployed the files.
 
     ```json
     {
-      "workingDir": "./temp/deploy/",
+      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/deploy-azure-storage.schema.json",
+      "workingDir": "./release/assets/",
       "account": "spfxsamples",
       "container": "azurehosted-webpart",
       "accessKey": "q1UsGWocj+CnlLuv9ZpriOCj46ikgBbDBCaQ0FfE8+qKVbDTVSbRGj41avlG73rynbvKizZpIKK9XpnpA=="

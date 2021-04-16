@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework developer preview releases
 description: Details on how to use developer preview pre-release packages with SharePoint Framework.
-ms.date: 04/13/2021
+ms.date: 04/17/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -35,9 +35,9 @@ http://aka.ms/spfx
 keywords: yeoman-generator
 
 dist
-.tarball: https://registry.npmjs.org/@microsoft/generator-sharepoint/-/generator-sharepoint-1.11.0.tgz
-.shasum: 43323fa642165e4ce5b1b9d4624244b07d6332bb
-.integrity: sha512-ySYCMk5nMIk3mZhDoxS0Dgxs6dnM5JBAOrEpwWDb1jLQCoxnXFBsanfHzbBSS3UIokpaS3ZNrocr22d2RIdQww==
+.tarball: https://registry.npmjs.org/@microsoft/generator-sharepoint/-/generator-sharepoint-1.xx.xx.tgz
+.shasum: 43323fa642165e4ce5b1b...<omitted>
+.integrity: sha512-ySYCMk5nMIk...<omitted>
 .unpackedSize: 1.9 MB
 
 dependencies:
@@ -51,7 +51,7 @@ maintainers:
 - odspnpm <odspnpm@microsoft.com>
 
 dist-tags:
-latest: 1.11.0     next: 1.12.1-rc.0
+latest: 10.10.0     next: 10.11.12-rc.5
 
 published 9 months ago by odspnpm <odspnpm@microsoft.com>
 ```
@@ -62,14 +62,14 @@ In the sample output above, you can see the current released version is *1.11* w
 
 To install a specific version of an NPM package, add `@` followed by the version number at the end of the package name.
 
-For example, if the **info** command lists the **next** version is *10.11.12-rc.5*, you'd globally install the latest version of the generator with the following command:
+For example, if the **info** command lists the **next** version is *10.11.12-rc.5*, you'd globally install the next preview version of the generator with the following command:
 
 ```console
-npm install @microsoft/generator-sharepoint@10.11.12-rc.5 --global
+npm install @microsoft/generator-sharepoint@next --global
 ```
 
 > [!NOTE]
-> For more information on installing NPM packages, see the NPM documentation on [npm-install](https://docs.npmjs.com/cli/v7/commands/npm-install).
+> For more information on installing NPM packages, including how to install a specific versions, see the NPM documentation on [npm-install](https://docs.npmjs.com/cli/v7/commands/npm-install).
 
 ## Reporting issues
 
