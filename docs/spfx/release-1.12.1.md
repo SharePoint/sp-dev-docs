@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.12.1 release notes
 description: Release notes for the SharePoint Framework v1.12.1 release
-ms.date: 04/13/2021
+ms.date: 04/16/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -41,7 +41,7 @@ This release introduces a new property & event in the Web Part API to detect the
 
 ## Changes in this release
 
-- Add support for **Node.js v12.x & v14.x**
+- Add support for **Node.js v12.13.x & v14.15.x**nvm 
   - *See [Set up your SharePoint Framework development environment](set-up-your-development-environment.md) for details.*
   - **Gulp v4** (installed globally) is required (*see [Regarding Gulp versions & Node.js v12+](#gulp-versions--nodejs-v12) for details*)
 - For all projects:
@@ -50,6 +50,7 @@ This release introduces a new property & event in the Web Part API to detect the
 - For projects that use React:
   - Update the React NPM packages (**react** & **react-dom**) to **v16.9.0**.
   - Update the Office UI Fabric React NPM package / Microsoft Fluent UI (**office-ui-fabric-react**) to **v7.156.0**.
+- The default location for resources used in deployments changed from `./temp/deploy` to `./releases/assets`. For projects created prior to SPFx v1.12.1, you should update the **./config/deploy-azure-storage.json** file property `workingDir` to the new location: `"workingDir": "./release/assets/"`. For more information, see [Deploy your SharePoint client-side web part to Azure CDN: Configure Azure Storage account details](web-parts/get-started/deploy-web-part-to-cdn.md#configure-azure-storage-account-details).
 
 ## Deprecations and removed items in this release
 
