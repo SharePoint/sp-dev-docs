@@ -265,7 +265,7 @@ Because you changed the web part bundle, you need to redeploy the package to the
 1. Go to any SharePoint site in your tenant and select **Add a page** from the *gears* menu.
 1. **Edit** the page and select **AzureCDN** web part from the web part picker to confirm that your deployment has been successful.
 
-    ![Screenshot of trust client-side solution package prompt](../../../images/cdn-azure-picker-selection-page.png)
+    ![Screenshot selecting the web part from the picker](../../../images/cdn-azure-picker-selection-page.png)
 
 1. Notice that you aren't running **gulp serve**, and therefore nothing is served from **localhost**. Content is served from the Azure CDN. You can also double-check this by selecting <kbd>F12</kbd> in your browser and confirming that you can see the Azure CDN as one of the sources for the page assets.
 
