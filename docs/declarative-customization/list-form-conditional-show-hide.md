@@ -66,6 +66,7 @@ While the formula supports many of the available column types, we do not current
 
 * Person or Group with multiple selections
 * Choice with multiple selections
+* Lookup columns
 * Time calculations in Date and Time column
 * Currency columns
 * Location columns
