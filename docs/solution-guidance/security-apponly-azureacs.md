@@ -1,7 +1,7 @@
 ---
 title: Granting access using SharePoint App-Only
 description: Granting access using SharePoint App-Only
-ms.date: 09/25/2020
+ms.date: 04/20/2021
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
@@ -20,14 +20,14 @@ SharePoint App-Only is the older, but still very relevant, model of setting up a
 
 Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then call the appregnew.aspx page (e.g. https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click on the Generate button to generate a client id and client secret and fill the remaining information like shown in the screen-shot below.
 
-![using appregnew.aspx](media/apponly/sharepointapponly1.png)
+![Create a new Client ID & secret](media/apponly/sharepointapponly1.png)
 
 > [!IMPORTANT]
 > Store the retrieved information (client id and client secret) since you'll need this in the next step!
 
 Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx. Once the page is loaded add your client id and look up the created principal:
 
-![using appregnew.aspx](media/apponly/sharepointapponly2.png)
+![Grant permissions to new principal](media/apponly/sharepointapponly2.png)
 
 To grant permissions, you'll need to provide the permission XML that describes the needed permissions. Since this application needs to be able to access all sites + also uses search with app-only it needs below permissions:
 
