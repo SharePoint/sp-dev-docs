@@ -42,10 +42,10 @@ body:
 
       *If your question is about a third-party or another library/SDK/tooling that is not officially supported by Microsoft, please submit your issue to that project's relevant forum.*
     options:
-      - Visual Studio Code   (include version below)
-      - Visual Studio        (include version below)
-      - .NET                 (include version below)
-      - Node.js              (include version below)
+      - Visual Studio Code (include version below)
+      - Visual Studio (include version below)
+      - .NET (include version below)
+      - Node.js (include version below)
       - SharePoint Framework (include version below)
       - SharePoint Add-ins
       - SharePoint CSOM
