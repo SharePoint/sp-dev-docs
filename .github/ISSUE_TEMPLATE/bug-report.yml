@@ -1,6 +1,6 @@
 ---
 name: Bug / error report
-about: Submit a bug or error report.
+description: Submit a bug or error report.
 labels: ['Needs: Triage', 'type:bug-suspected']
 body:
 - type: markdown
