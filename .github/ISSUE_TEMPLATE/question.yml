@@ -1,7 +1,7 @@
----
 name: Question or generic issue (not a bug or feature request)
 description: Do you have a question? Or is it something else that doesn't fit one of the links below? Select this option!
 labels: 'Needs: Triage'
+
 body:
 - type: markdown
   attributes:
@@ -11,6 +11,7 @@ body:
       - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/sp-dev-docs/wiki/How-to-Create-Good-Issues).
       - Remember to include sufficient details and context.
       - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
+
 - type: dropdown
   id: category
   attributes:
@@ -22,10 +23,12 @@ body:
       - other
   validations:
     required: true
+
 - type: markdown
   attributes:
     value: |
       Please provide the following details about your environment. *If this section is ignored, your submission will be flagged as **incomplete** & automatically closed.*
+
 - type: checkbox
   id: tooling
   attributes:
@@ -46,6 +49,7 @@ body:
       - SharePoint CSOM
       - SharePoint REST API
       - other (enter in the "Additional environment details" area below)
+
 - type: dropdown
   id: target_environment
   attributes:
@@ -57,6 +61,7 @@ body:
       - other (enter below)
   validations:
     required: true
+
 - type: checkbox
   id: client
   attributes:
@@ -71,11 +76,13 @@ body:
       - mobile (iOS/iPadOS)
       - mobile (Android)
       - other (enter in the "Additional environment details" area below)
+
 - type: textarea
   id: client_other
   attributes:
     label: Target environment (other)
     description: Include as much detail about the environment you're targetting. This is required if "other (enter below)" is selected in the previous field.
+
 - type: textarea
   id: additional_environment_detail
   attributes:
@@ -85,4 +92,3 @@ body:
   label: Issue description
   validations:
     required: true
----
