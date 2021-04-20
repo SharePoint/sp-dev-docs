@@ -1,0 +1,88 @@
+---
+name: Question or generic issue (not a bug or feature request)
+description: Do you have a question? Or is it something else that doesn't fit one of the links below? Select this option!
+labels: 'Needs: Triage'
+body:
+- type: markdown
+  attributes:
+    value: |
+      This is for SharePoint development topics. If your submission is now about SharePoint development such as out-of-the-box capabilities, SharePoint configuration, please use refer to other support options listed on the [new issue chooser page](https://github.com/SharePoint/sp-dev-docs/issues/new/choose). Please provide as much information as possible so we can best address your submission. Thanks!
+
+      - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/sp-dev-docs/wiki/How-to-Create-Good-Issues).
+      - Remember to include sufficient details and context.
+      - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
+- type: dropdown
+  id: category
+  attributes:
+    label: Category
+    description: Select the type of issue.
+    options:
+      - Question
+      - Documentation issue / typo
+      - other
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: |
+      Please provide the following details about your environment. *If this section is ignored, your submission will be flagged as **incomplete** & automatically closed.*
+- type: checkbox
+  id: tooling
+  attributes:
+    label: Tooling / frameworks / Microsoft libraries
+    description: |
+      What tooling, frameworks, SDKs, or official libraries is this related to? Please include the version details in the *"Additional environment details"* field below.
+
+      **This form is only for officially supported Microsoft products**.
+
+      *If your question is about a third-party or another library/SDK/tooling that is not officially supported by Microsoft, please submit your issue to that project's relevant forum.*
+    options:
+      - Visual Studio Code   (include version below)
+      - Visual Studio        (include version below)
+      - .NET                 (include version below)
+      - Node.js              (include version below)
+      - SharePoint Framework (include version below)
+      - SharePoint Add-ins
+      - SharePoint CSOM
+      - SharePoint REST API
+      - other (enter in the "Additional environment details" area below)
+- type: dropdown
+  id: target_environment
+  attributes:
+    label: Target SharePoint environment
+    options:
+      - SharePoint Online
+      - SharePoint Server 2019 (on-premise)
+      - SharePoint Server 2016 (on-premise)
+      - other (enter below)
+  validations:
+    required: true
+- type: checkbox
+  id: client
+  attributes:
+    label: Browser(s) / client(s)
+    description: Select the browser(s)/clients this submission is relevant to. Use the *"Additional environment details"* field below to provide version details (if applicable).
+    options:
+      - Internet Explorer (include version below)
+      - Microsoft Edge    (include version below)
+      - Google Chrome     (include version below)
+      - FireFox           (include version below)
+      - Safari            (include version below)
+      - mobile (iOS/iPadOS)
+      - mobile (Android)
+      - other (enter in the "Additional environment details" area below)
+- type: textarea
+  id: client_other
+  attributes:
+    label: Target environment (other)
+    description: Include as much detail about the environment you're targetting. This is required if "other (enter below)" is selected in the previous field.
+- type: textarea
+  id: additional_environment_detail
+  attributes:
+    label: Additional environment details
+    description: Include as much detail about the environment you're targetting. This is required if "other (enter below)" is selected in the previous field.
+- type: textarea
+  label: Issue description
+  validations:
+    required: true
+---
