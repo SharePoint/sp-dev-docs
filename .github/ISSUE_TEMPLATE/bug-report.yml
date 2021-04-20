@@ -1,4 +1,4 @@
-name: zz ❌❌ DO NOT USE (WIP)
+name: 🐞 Bug or Error Report
 description: Submit a bug or error report.
 labels: ['Needs: Triage', 'type:bug-suspected']
 
@@ -78,6 +78,11 @@ body:
   attributes:
     label: Additional environment details
     description: Include as much detail about the environment you're targetting. This is required if "other (enter below)" is selected in the previous field.
+    value: |
+      - browser version
+      - SPFx version
+      - Node.js version
+      - etc
 
 - type: markdown
   attributes:
