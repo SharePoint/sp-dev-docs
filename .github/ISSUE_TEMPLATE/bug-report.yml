@@ -1,7 +1,7 @@
----
 name: Bug / error report
 description: Submit a bug or error report.
 labels: ['Needs: Triage', 'type:bug-suspected']
+
 body:
 - type: markdown
   attributes:
@@ -13,10 +13,12 @@ body:
       - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/sp-dev-docs/wiki/How-to-Create-Good-Issues).
       - Remember to include sufficient details and context.
       - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
+
 - type: markdown
   attributes:
     value: |
       Please provide the following details about your environment. *If this section is ignored, your submission will be flagged as **incomplete** & automatically closed.*
+
 - type: dropdown
   id: target_environment
   attributes:
@@ -28,6 +30,7 @@ body:
       - other (enter in the "Additional environment details" area below)
   validations:
     required: true
+
 - type: checkbox
   id: tooling
   attributes:
@@ -51,6 +54,7 @@ body:
       - other (enter in the "Additional environment details" area below)
   validations:
     required: true
+
 - type: dropdown
   id: dev_environment
   attributes:
@@ -59,6 +63,7 @@ body:
       - Windows
       - macOS
       - Linux
+
 - type: checkbox
   id: client
   attributes:
@@ -76,19 +81,23 @@ body:
       - other (enter in the "Additional environment details" area below)
   validations:
     required: true
+
 - type: textarea
   id: additional_environment_detail
   attributes:
     label: Additional environment details
     description: Include as much detail about the environment you're targetting. This is required if "other (enter below)" is selected in the previous field.
+
 - type: markdown
   attributes:
     value: |
       Provide a clear & concise description of what the bug is. Please follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/sp-dev-docs/wiki/How-to-Create-Good-Issues) which explains how to apply formatting, adding references & resources, screenshots, etc. **Do not attach ZIP files** of your code or compiled projects - instead, please publish your code to a public GitHub repo & post a link to it.
+
 - type: textarea
   label: Describe the bug / error
   validations:
     required: true
+
 - type: Steps to reproduce
   attributes:
     description: How do you reproduce this? Please provide as much step-by-step detail as possible.
@@ -98,9 +107,9 @@ body:
       3. 
   validations:
     required: true
+
 - type: Expected behavior
   attributes:
     description: What did you expect to happen when the reproduce steps are followed?
   validations:
     required: true
----
