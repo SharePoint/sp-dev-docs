@@ -43,6 +43,8 @@ body:
       - SharePoint Add-ins
       - SharePoint CSOM
       - SharePoint REST API
+      - Site designs & site scripts
+      - Declarative list formatting
       - not applicable
       - other (enter in the "Additional environment details" area below)
   validations:
