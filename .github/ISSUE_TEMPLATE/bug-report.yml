@@ -89,3 +89,21 @@ body:
     label: Describe the bug / error
   validations:
     required: true
+
+- type: textarea
+  attributes:
+    label: Steps to reproduce
+    description: How do you reproduce this? Please provide as much step-by-step detail as possible.
+    value: |
+      1.
+      2.
+      3.
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Expected behavior
+    description: What did you expect to happen when the reproduce steps are followed?
+  validations:
+    required: true
