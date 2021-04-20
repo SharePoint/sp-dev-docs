@@ -1,6 +1,6 @@
 ---
 title: Query SharePoint change log with ChangeQuery and ChangeToken
-ms.date: 11/03/2017
+ms.date: 04/20/2021
 localization_priority: Priority
 ---
 # Query SharePoint change log with ChangeQuery and ChangeToken
@@ -11,7 +11,7 @@ _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
 You can query the SharePoint change log by using [ChangeQuery](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.changequery.aspx) and [ChangeToken](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.changetoken.aspx) to find and process changes made on a SharePoint content database, site collection, site, or list.
 
-The [Core.ListItemChangeMonitor](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.ListItemChangeMonitor) code sample shows you how to use SharePoint's change log to find and process changes made on a SharePoint list. Use this code sample to:
+The [Core.ListItemChangeMonitor](https://github.com/pnp/PnP/tree/master/Samples/Core.ListItemChangeMonitor) code sample shows you how to use SharePoint's change log to find and process changes made on a SharePoint list. Use this code sample to:
 
 - Monitor SharePoint for changes on a list, site, site collection, or content database.
     
@@ -21,7 +21,7 @@ The [Core.ListItemChangeMonitor](https://github.com/SharePoint/PnP/tree/dev/Samp
     
 ## Before you begin
 
-To get started, download the [Core.ListItemChangeMonitor](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.ListItemChangeMonitor) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.ListItemChangeMonitor](https://github.com/pnp/PnP/tree/master/Samples/Core.ListItemChangeMonitor) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/master) project on GitHub.
 
 Before you run this code sample, do the following:
 
