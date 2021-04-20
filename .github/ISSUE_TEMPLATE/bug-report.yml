@@ -14,10 +14,9 @@ body:
       - Remember to include sufficient details and context.
       - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
 
-      Please provide the following details about your environment. 🚨 *If this section is ignored, your submission will be flagged as **incomplete** & automatically closed.*
+      Please provide the following details about your environment. 🚨  *If this section is ignored, your submission will be flagged as **incomplete** & automatically closed.*
 
 - type: dropdown
-  id: target_environment
   attributes:
     label: Target SharePoint environment
     options:
@@ -30,7 +29,7 @@ body:
 
 - type: dropdown
   attributes:
-    label: What development environment, framework, SDK or API is this about?
+    label: What SharePoint development model, framework, SDK or API is this about?
     description: |
       What tooling, frameworks, SDKs, or official libraries is this related to? Please include the version details in the *"Additional environment details"* field below.
 
@@ -38,22 +37,18 @@ body:
 
       *If your question is about a third-party or another library/SDK/tooling that is not officially supported by Microsoft, please submit your issue to that project's relevant forum.*
 
-      **NOTE**:💥 If you select SharePoint Framework, you must include the following version numbers in the **Additional environment details** section below.:
-
-        - SharePoint Framework
-        - Node.js (`node -v`)
+      **NOTE**:💥 If you select SharePoint Framework, you must include the following version numbers in the **Additional environment details** section below: 1️⃣  SharePoint Framework & 2️⃣  Node.js (`node -v`).
     options:
-      - label: 💥 SharePoint Framework
-      - label: SharePoint Add-ins
-      - label: SharePoint CSOM
-      - label: SharePoint REST API
-      - label: not applicable
-      - label: other (enter in the "Additional environment details" area below)
+      - 💥 SharePoint Framework
+      - SharePoint Add-ins
+      - SharePoint CSOM
+      - SharePoint REST API
+      - not applicable
+      - other (enter in the "Additional environment details" area below)
   validations:
     required: true
 
 - type: dropdown
-  id: dev_environment
   attributes:
     label: Developer environment
     options:
