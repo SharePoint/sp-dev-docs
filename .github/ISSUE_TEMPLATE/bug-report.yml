@@ -13,3 +13,20 @@ body:
       - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/sp-dev-docs/wiki/How-to-Create-Good-Issues).
       - Remember to include sufficient details and context.
       - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
+
+- type: markdown
+  attributes:
+    value: |
+      Please provide the following details about your environment. *If this section is ignored, your submission will be flagged as **incomplete** & automatically closed.*
+
+- type: dropdown
+  id: target_environment
+  attributes:
+    label: Target SharePoint environment
+    options:
+      - SharePoint Online
+      - SharePoint Server 2019 (on-premise)
+      - SharePoint Server 2016 (on-premise)
+      - other (enter in the "Additional environment details" area below)
+  validations:
+    required: true
