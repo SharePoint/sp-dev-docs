@@ -30,3 +30,27 @@ body:
       - other (enter in the "Additional environment details" area below)
   validations:
     required: true
+
+- type: checkbox
+  id: tooling
+  attributes:
+    label: Tooling / frameworks / Microsoft libraries
+    description: |
+      What tooling, frameworks, SDKs, or official libraries is this related to? Please include the version details in the *"Additional environment details"* field below.
+
+      **This form is only for officially supported Microsoft products**.
+
+      *If your question is about a third-party or another library/SDK/tooling that is not officially supported by Microsoft, please submit your issue to that project's relevant forum.*
+    options:
+      - label: Visual Studio Code (*include version in the **Additional environment details** area below*)
+      - label: Visual Studio (*include version in the **Additional environment details** area below*)
+      - label: .NET (*include version in the **Additional environment details** area below*)
+      - label: Node.js (*include version in the **Additional environment details** area below*)
+      - label: SharePoint Framework (*include version in the **Additional environment details** area below*)
+      - label: SharePoint Add-ins
+      - label: SharePoint CSOM
+      - label: SharePoint REST API
+      - label: not applicable
+      - label: other (*enter in the **Additional environment details** area below*)
+  validations:
+    required: true
