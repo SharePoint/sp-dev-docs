@@ -1,0 +1,15 @@
+name: Bug / error report
+description: Submit a bug or error report.
+labels: ['Needs: Triage', 'type:bug-suspected']
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      - [x] Bug
+
+      This is for SharePoint development bugs. If your submission is now about SharePoint development such as out-of-the-box capabilities, SharePoint configuration, please use refer to other support options listed on the [new issue chooser page](https://github.com/SharePoint/sp-dev-docs/issues/new/choose). Please provide as much information as possible so we can best address your submission. Thanks!
+
+      - Follow our guidance on [How To Create Good Issues](https://github.com/sharepoint/sp-dev-docs/wiki/How-to-Create-Good-Issues).
+      - Remember to include sufficient details and context.
+      - If you have multiple questions, suggestions, or bugs, please submit them in separate issues.
