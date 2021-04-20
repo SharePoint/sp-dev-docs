@@ -98,7 +98,8 @@ body:
   validations:
     required: true
 
-- type: Steps to reproduce
+- type: textarea
+  label: Steps to reproduce
   attributes:
     description: How do you reproduce this? Please provide as much step-by-step detail as possible.
     value: |
@@ -108,7 +109,8 @@ body:
   validations:
     required: true
 
-- type: Expected behavior
+- type: textarea
+  title: Expected behavior
   attributes:
     description: What did you expect to happen when the reproduce steps are followed?
   validations:
