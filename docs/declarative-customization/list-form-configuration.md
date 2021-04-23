@@ -1,7 +1,7 @@
 ---
 title: Configure the list form
 description: Configure list form with a custom header, footer and body with one or more sections.
-ms.date: 01/28/2021
+ms.date: 04/23/2021
 localization_priority: Priority
 ---
 
@@ -50,7 +50,6 @@ To configure the form in a list or library:
 
     ```JSON
     {
-        "debugMode": true,
         "elmType": "div",
         "attributes": {
             "class": "ms-borderColor-neutralTertiary"
@@ -129,7 +128,6 @@ To configure the form in a list or library:
 
     ```JSON
     {
-        "debugMode": true,
         "elmType": "div",
         "style": {
             "width": "100%",
