@@ -1,7 +1,7 @@
 ---
 title: Show or hide columns in a list form
 description: Customize which columns to show or hide using a conditional formula in the list form by constructing a simple formula that are equations performing conditional checks on values in a SharePoint list or library.
-ms.date: 04/20/2021
+ms.date: 04/23/2021
 localization_priority: Priority
 ---
 
@@ -66,7 +66,6 @@ While the formula supports many of the available column types, we do not current
 
 * Person or Group with multiple selections
 * Choice with multiple selections
-* Lookup columns
 * Time calculations in Date and Time column
 * Currency columns
 * Location columns
@@ -135,9 +134,9 @@ The following formula checks if the Yes/No column `[$Promoted]` is equal to a Ye
 
 ##### Lookup column
 
-The following formula checks if the lookup column [$City] is equal to _Toronto_. To do so, it checks for the value _1;#Toronto_ where 1 is an item ID in the lookup list of cities.
+The following formula checks if the lookup column `[$City]` is equal to *Toronto*. To do so, it checks for the value `1;#Toronto` where 1 is an item ID in the lookup list of cities.
 
 ```
-=if([$City]=='1;#Toronto', 'true', 'false')
+=if([$City] == '1;#Toronto', 'true', 'false')
 ```
 
