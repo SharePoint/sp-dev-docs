@@ -472,6 +472,8 @@
     href: spfx/build-for-teams-configure-in-teams.md
   - name: 'Scenario: Build a Me-experience in Microsoft Teams'
     href: spfx/build-for-teams-me-experience.md
+  - name: 'Tutorial: Build meeting apps for Microsoft Teams with SPFx'
+    href: spfx/build-for-teams-meeting-app.md
   - name: Considerations
     href: spfx/build-for-teams-considerations.md
 - name: Business Apps & Process Automation
