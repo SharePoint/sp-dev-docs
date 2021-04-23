@@ -216,7 +216,9 @@ A term store manager can enhance and expand term usage models based on more flex
   
 - Gain additional multilingual support, including support for automated translation and flexible LCIDs. 
     
-  
+- For programmatic creation of taxonomy fields using the SharePoint Server Object Model, please refer to the sample https://docs.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.taxonomy.taxonomyfield?view=sharepoint-server
+
+- For programmatic creation of taxonomy fields using the SharePoint Client Side Object Model (CSOM), you can use a similar pattern as above taking into consideration the following sample https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code#add-a-field-to-a-sharepoint-list
 
 ## Unsupported scenarios for working with custom site definitions
 <a name="SP15_ManagedMetadataAndNav_UnsupportedScenarios"> </a>
