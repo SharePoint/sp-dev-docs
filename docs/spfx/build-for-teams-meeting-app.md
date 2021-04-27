@@ -1,14 +1,14 @@
 ---
 title: "Tutorial: Build meeting apps for Microsoft Teams with SPFx"
 description: Build meeting apps for Microsoft Teams with the SharePoint Framework.
-ms.date: 04/27/2021
+ms.date: 04/28/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
 
 # Build meeting apps for Microsoft Teams with SPFx
 
-The SharePoint Framework (SPFx) v1.8 release introduced the ability to use SPFx web parts to implement Microsoft Teams tabs. Using SharePoint Framework can simplify Microsoft Teams app development as explained in [Build for Microsoft Teams using SharePoint Framework](../../build-for-teams-overview.md).
+The SharePoint Framework (SPFx) v1.8 release introduced the ability to use SPFx web parts to implement Microsoft Teams tabs. Using SharePoint Framework can simplify Microsoft Teams app development as explained in [Build for Microsoft Teams using SharePoint Framework](build-for-teams-overview.md).
 
 Developers can create apps for Microsoft Teams meetings using the same techniques used to create custom tabs. In this tutorial, you'll learn how to implement a custom Microsoft Teams meeting app using a SPFx web part.
 
@@ -113,9 +113,9 @@ Locate the **./src/webparts/\*\*/manifest.json** file for the web part you'll us
 
 ## Prepare the Microsoft Teams app for deployment
 
-When a SPFx solution is used in a Microsoft Teams app, it must be deployed to both SharePoint Online and Microsoft Teams. Refer to [Deployment options for SharePoint Framework solutions for Microsoft Teams](../../deployment-spfx-teams-solutions.md) for details on the deployment options.
+When a SPFx solution is used in a Microsoft Teams app, it must be deployed to both SharePoint Online and Microsoft Teams. Refer to [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md) for details on the deployment options.
 
-Meeting apps require details in the Microsoft Teams app manifest file that aren't created automatically by SharePoint Online. Therefore, you must use the [Developer-provided Microsoft Teams app manifest & package](../../deployment-spfx-teams-solutions.md#developer-provided-microsoft-teams-app-manifest--package) option.
+Meeting apps require details in the Microsoft Teams app manifest file that aren't created automatically by SharePoint Online. Therefore, you must use the [Developer-provided Microsoft Teams app manifest & package](deployment-spfx-teams-solutions.md#developer-provided-microsoft-teams-app-manifest--package) option.
 
 This means you'll need to create the app manifest file, and the app package file.
 
@@ -245,7 +245,7 @@ To make your meeting app available in Microsoft Teams, you'll have synchronize y
 
 1. Confirm that you can see the status message on the top-right corner.
 
-    ![Sync to Teams button in ribbon](../images/teams-successfully-synced.png)
+    ![Sync to Teams button in ribbon status message](../images/teams-successfully-synced.png)
 
 ## Test the meeting app
 
@@ -273,8 +273,8 @@ Once the app has been installed into the meeting, when you go back to the meetin
 
 ## See also
 
-- [Building Microsoft Teams Tabs using SharePoint Framework](../../integrate-with-teams-introduction.md)
-- [Deployment options for SharePoint Framework solutions for Microsoft Teams](../../deployment-spfx-teams-solutions.md)
+- [Building Microsoft Teams Tabs using SharePoint Framework](integrate-with-teams-introduction.md)
+- [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md)
 - [Microsoft Teams: developer platform](/microsoftteams/platform/overview)
 - [Microsoft Teams: Apps in Teams meetings](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings)
 - [Microsoft Teams: Build an app for meetings](/microsoftteams/platform/apps-in-teams-meetings/create-apps-for-teams-meetings?tabs=javascript)
