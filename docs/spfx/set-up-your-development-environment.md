@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -19,7 +19,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Install Node.js
 
-Install the latest version of **[Node.js](https://www.nodejs.org) LTS v10.x**.
+Install the latest version of **[Node.js](https://www.nodejs.org) LTS v14**.
 
 This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
@@ -27,7 +27,6 @@ This version is the currently recommended version of Node.js to use with the Sha
 > Node.js is frequently updated and available on multiple platforms including macOS, Windows, and Linux. Because the exact download links change frequently, they aren't linked to from this page. Instead, use the details below to determine which installer to download for your platform.
 >
 > Be aware that Node.js maintains two different releases at all times: LTS & Current version. The SharePoint Framework is only supported on LTS versions. For more information about Node.js's Long Term Support (LTS) releases, see: [Node.js > Releases](https://nodejs.org/en/about/releases/).
->
 
 > [!TIP]
 > The Node.js website always recommends the latest installer for both the LTS & Current releases. To download specific versions of Node.js versions, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
@@ -41,9 +40,11 @@ You can check if you already have Node.js already installed, including installed
 node -v
 ```
 
-The SharePoint Framework v1.11 is supported on the following Node.js versions:
+The SharePoint Framework v1.12.1 is supported on the following Node.js versions:
 
-- Node.js v10 (*Dubnium*)
+- Node.js v10.13.0+ (*Dubnium*)
+- Node.js v12.13.0+ (*Erbium*)
+- Node.js v14.15.0+ (*Fermium*)
 
 > [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint Server 2016, see **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section for additional details on which version of Node.js you should install.
@@ -78,6 +79,9 @@ Enter the following command to install Gulp:
 ```console
 npm install gulp --global
 ```
+
+> [!IMPORTANT]
+> If you're using Node.js v12+ or higher, you must use Gulp v4+. If you're using a version of Node.js lower than v12, you must use Gulp v3. For more information, see: [SharePoint Framework v1.12.1 release notes | Gulp versions & Node.js v12+](release-1.12.1.md#gulp-versions--nodejs-v12)
 
 ### Install Yeoman
 
