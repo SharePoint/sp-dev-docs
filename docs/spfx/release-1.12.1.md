@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.12.1 release notes
 description: Release notes for the SharePoint Framework v1.12.1 release
-ms.date: 04/16/2021
+ms.date: 04/28/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,9 +9,7 @@ localization_priority: Priority
 
 This release introduces a new property & event in the Web Part API to detect the rendering width (and changes), improved support for Microsoft Teams solutions, and updates supported versions of Node.js.
 
-**Released:** TBD Q2, 2021
-
-[!INCLUDE [spfx-release-candidate](../../includes/snippets/spfx-release-candidate.md)]
+**Released:** April 28, 2021
 
 ## Upgrading projects from v1.11.0 to v1.12.1
 
@@ -37,11 +35,12 @@ This release introduces a new property & event in the Web Part API to detect the
   - *See [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md) for more details.*
 - A new API has been added to the SPFx web part class to determine the rendered width of a web part and optionally handle an event when it changes.
   - *See [Determine the rendered web part size](web-parts/basics/determine-web-part-width.md) for more details.*
+- Expand [list notifications](subscribe-to-list-notifications.md) to work for both lists and document libraries.
 - Preliminary support for Microsoft Teams meeting apps with the SharePoint Framework - full support is pending a fix for server side regression
 
 ## Changes in this release
 
-- Add support for **Node.js v12.13.x & v14.15.x**nvm 
+- Add support for **Node.js v12.13.x & v14.15.x**
   - *See [Set up your SharePoint Framework development environment](set-up-your-development-environment.md) for details.*
   - **Gulp v4** (installed globally) is required (*see [Regarding Gulp versions & Node.js v12+](#gulp-versions--nodejs-v12) for details*)
 - For all projects:

@@ -426,7 +426,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.12.1 (preview) - TBD Q2, 2021
+    - name: SPFx v1.12.1 - April 28, 2021
       href: spfx/release-1.12.1.md
     - name: SPFx v1.11.0 - July 16, 2020
       href: spfx/release-1.11.0.md
@@ -472,6 +472,8 @@
     href: spfx/build-for-teams-configure-in-teams.md
   - name: 'Scenario: Build a Me-experience in Microsoft Teams'
     href: spfx/build-for-teams-me-experience.md
+  - name: 'Tutorial: Build meeting apps for Microsoft Teams with SPFx'
+    href: spfx/build-for-teams-meeting-app.md
   - name: Considerations
     href: spfx/build-for-teams-considerations.md
 - name: Business Apps & Process Automation
