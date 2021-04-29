@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern pages using the SharePoint PowerShell
-ms.date: 02/11/2021
+ms.date: 04/29/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -168,7 +168,7 @@ By default the modern site page capability is enabled on most sites but maybe it
 Connect-PnPOnline -Url "<your web url>" -Interactive
 
 # Enable modern page feature
-Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web -Force
+Enable-PnPFeature -Identity "B6917CB1-93A0-4B97-A84D-7CF49975D4EC" -Scope Web
 ```
 
 ## See also
