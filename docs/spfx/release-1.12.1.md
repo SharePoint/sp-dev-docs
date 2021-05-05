@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.12.1 release notes
 description: Release notes for the SharePoint Framework v1.12.1 release
-ms.date: 04/28/2021
+ms.date: 05/05/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -56,6 +56,20 @@ This release introduces a new property & event in the Web Part API to detect the
 - **Gulp v3** is not supported (*neither globally nor locally installed*) when using Node.js v12+.
 - **Local workbench is deprecated** - This is the last release that will include support for the local workbench.
 - This is the last release that will include a single generator that works for on-prem and SharePoint Online.  You'll still be able to create projects for on-prem, just by using the older generator.
+- The **gulp serve** task has been deprecated and renamed to **serve-deprecated**. To address this, the **gulpfile.js** in new SPFx v1.12.1 projects has been updated to add an alias **serve** for the renamed **serve-deprecated** task. However, if you're upgrading a project to SPFx v1.12.1, you need to edit your **gulpfile.js** file so the task **gulp serve** will continue to work.
+
+    When upgrading SPFx projects to v1.12.1, add the following before the line `build.initialize(require('gulp'));`:
+
+    ```javascript
+    var getTasks = build.rig.getTasks;
+    build.rig.getTasks = function () {
+      var result = getTasks.call(build.rig);
+
+      result.set('serve', result.get('serve-deprecated'));
+
+      return result;
+    };
+    ```
 
 ### Gulp versions & Node.js v12+
 
