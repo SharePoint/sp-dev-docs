@@ -20,7 +20,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
 1. In your SharePoint site, browse to the **Projects** list.
 
-1. To create and manage flows for a list or a library, from the command bar, on the list or library page, select **Power Apps**. More options appear:
+1. To create and manage flows for a list or a library, from the command bar, on the list or library page, select **Integrate** > **Power Apps**. More options appear:
 
    - Create an app
    - See all apps
@@ -42,7 +42,9 @@ Before starting, make sure your SharePoint site is set up with the [required lis
     
     1. When you select a control on the canvas, on the right-hand panel, the **Properties** pane associated with the control appears.
 
-    ![Image control with Properties panel](../../../images/gs01-image-control-selected.png)
+    ![Image control with Properties panel](../../../images/gs01-image-control-selected.png)<img width="403" alt="Lists_Integrate_PowerApps_CreateApp" src="https://user-images.githubusercontent.com/70417807/117352154-7bfb6380-ae63-11eb-9fc7-f275a62715f2.png">
+<img width="403" alt="Lists_Integrate_PowerApps_CreateApp" src="https://user-images.githubusercontent.com/70417807/117352218-97ff0500-ae63-11eb-966a-1c460b5608f3.png">
+
 
     1. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-cards).
 
