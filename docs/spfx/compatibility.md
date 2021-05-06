@@ -11,7 +11,7 @@ As the SharePoint Framework (SPFx) evolves, so do the various development tools 
 
 ## SharePoint Framework version compatibility
 
-Because SharePoint Online and the on-premises versions of SharePoint Server have different release cycles for new capabilities, they also have support different Sharepoint Framework capabilities.
+Because SharePoint Online and the on-premises versions of SharePoint Server have different release cycles for new capabilities, they also have support different SharePoint Framework capabilities.
 
 SharePoint Online always uses the latest version of the SharePoint Framework, but SharePoint 2016 and SharePoint 2019 only support the versions that match the server-side dependencies of the deployed packages.
 
