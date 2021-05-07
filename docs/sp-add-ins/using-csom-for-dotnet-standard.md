@@ -1,7 +1,7 @@
 ---
 title: Using CSOM for .NET Standard instead of CSOM for .NET Framework
 description: Explains the differences between using CSOM for .NET Standard versus CSOM for .NET Framework
-ms.date: 12/21/2020
+ms.date: 05/07/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -48,7 +48,7 @@ Below steps will help you create and configure an application in Azure Active Di
 - Go to **API permissions** to grant permissions to your application, select **Add a permission**, choose **SharePoint**, **Delegated permissions** and select for example **AllSites.Manage**
 - Select **Grant admin consent** to consent the application's requested permissions
 - Select **Authentication** in the left navigation
-- Change **Default client type - Treat application as public client** from No to **Yes**
+- Change **Allow public client flows** from No to **Yes**
 - Select **Overview** and copy the application ID to the clipboard (you'll need it later on)
 
 ### Getting an access token from Azure AD and using that in your CSOM for .NET Standard-based application
