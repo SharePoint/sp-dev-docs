@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 03/30/2021
+ms.date: 05/07/2021
 localization_priority: Priority
 ---
 
@@ -241,7 +241,6 @@ In this example below, the `headerFormatter` for `groupProps` is used to format 
                   "elmType": "div",
                   "txtContent": "='has ' + @group.count + if(@group.count > '1', ' employees', ' employee')",
                   "style": {
-                    "padding": " ",
                     "font-weight": "500"
                   }
                 }
@@ -336,7 +335,6 @@ In this example the `hideFooter` for `groupProps` is set to `true` - to hide the
                   "elmType": "div",
                   "txtContent": "='has approval pending for ' + Number(@group.count - Number([$aggregate.value])) + if(@group.count - Number([$aggregate.value]) > 1 , ' employees', ' employee')",
                   "style": {
-                    "padding": " ",
                     "font-weight": "500"
                   }
                 }
@@ -658,7 +656,6 @@ In the example below we have gallery view with formatted group headers as per co
                       "elmType": "div",
                       "txtContent": "='has ' + @group.count + if(@group.count > '1', ' employees', ' employee')",
                       "style": {
-                        "padding": " ",
                         "font-weight": "500"
                       }
                     }
@@ -765,7 +762,6 @@ In this example the `@aggregates` array is used to display a summary in the grou
                       "elmType": "div",
                       "txtContent": "='has approval pending for ' + Number(@group.count - Number([$aggregate.value])) + if(@group.count - Number([$aggregate.value]) > 1 , ' employees', ' employee')",
                       "style": {
-                        "padding": " ",
                         "font-weight": "500"
                       }
                     }
