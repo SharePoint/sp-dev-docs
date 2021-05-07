@@ -1,7 +1,7 @@
 ---
 title: Using CSOM for .NET Standard instead of CSOM for .NET Framework
 description: Explains the differences between using CSOM for .NET Standard versus CSOM for .NET Framework
-ms.date: 12/21/2020
+ms.date: 05/07/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
