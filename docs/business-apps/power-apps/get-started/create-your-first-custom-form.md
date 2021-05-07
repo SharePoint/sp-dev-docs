@@ -26,7 +26,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
    - See all apps
    - Customize forms
 
-    ![Create a custom form from Projects list](../../../images/gs01-create-a-custom-form-command-bar.png)
+    ![Create a custom form from Projects list](../../../images/lists-integrate-power-apps-create-app.png)
 
 1. Select **Customize forms**. The Power Apps studio appears and loads your form onto the canvas. If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
 
