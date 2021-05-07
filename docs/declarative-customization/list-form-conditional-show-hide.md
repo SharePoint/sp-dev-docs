@@ -1,7 +1,7 @@
 ---
 title: Show or hide columns in a list form
 description: Customize which columns to show or hide using a conditional formula in the list form by constructing a simple formula that are equations performing conditional checks on values in a SharePoint list or library.
-ms.date: 04/23/2021
+ms.date: 05/07/2021
 localization_priority: Priority
 ---
 
@@ -134,9 +134,18 @@ The following formula checks if the Yes/No column `[$Promoted]` is equal to a Ye
 
 ##### Lookup column
 
-The following formula checks if the lookup column `[$City]` is equal to *Toronto*. To do so, it checks for the value `1;#Toronto` where 1 is an item ID in the lookup list of cities.
+> [!NOTE]
+> When accessing lookup columns in column or view formatting, you have access to the lookup value and lookup id as separate values. In form formatting and conditional field expressions, both values are returned as a single line of text. For instance, a lookup column referencing an item with item ID 1 (in the source list) with a value of `Toronto` will have a value of `1;#Toronto` when used in form formatting or conditional field expressions.
+
+
+The following formula checks if the lookup column `[$City]` has a value equal to *Toronto*. To do so, it splits the lookup value result by the separator and checks against the value.
 
 ```
-=if([$City] == '1;#Toronto', 'true', 'false')
+=if(substring([$City],indexOf([$City],';#')+2,1000) == 'Toronto', 'true', 'false')
 ```
 
+Similarly, you can compare against the ID portion of the lookup using this expression:
+
+```
+=if(Number(substring([$City],0,indexOf([$City],';#'))) == 1, 'true', 'false')
+```
