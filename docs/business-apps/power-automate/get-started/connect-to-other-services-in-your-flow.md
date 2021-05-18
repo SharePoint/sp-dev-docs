@@ -25,7 +25,7 @@ In this article, we will connect to Microsoft Teams and post a message to one of
 1. In your browser, switch to the **flow designer** tab.
 1. If you do not have the flow designer tab opened, to open the flow, follow these steps:
     * Browse to the **Projects** list.
-    * Select **Automate > Power Automate > See your flows**.
+    * Select **Integrate** > **Power Automate** > **See your flows**.
     * If prompted, sign in with your Microsoft 365 account.
     * In the **My flows** tab, select **Send a customized email when a new SharePoint list item is added** flow.
     * To edit the flow, in the **flow details** page, in the top command bar, select **Edit**.
