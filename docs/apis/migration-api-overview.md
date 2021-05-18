@@ -713,6 +713,11 @@ Included below are the XSD files used for package validation in the import pipel
   <!--This defines that the XML can contain 0-N instances of the ExportSettings element-->
   <xs:element name="ExportSettings" type="SPExportSettings" />
 </xs:schema>
+<!Including CommentFlags settings
+<Comments>
+    <Comment Id="1" Text="SGVsbG8gd29ybGQgdmlkZW8gY29tbWVudCE=" ParentId="0" UserId="12" Created="2021-05-14T22:35:30.353Z" UIVersion="512" />
+    <Comment Id="2" Text="SGVsbG8gd29ybGQgdmlkZW8gcmVwbHku" ParentId="1" UserId="12" Created=2021-05-14T22:36:14.08Z" UIVersion="512" />
+</Comments>
 ```
 
 ### DeploymentLookupListMap.XSD
@@ -1479,6 +1484,10 @@ There is no change from current published full 2013 package schema.
   <!--This defines that the XML can contain 0-N instances of the SPGenericObject element-->
   <xs:element name="SPObjects" type="SPGenericObjectCollection"></xs:element>
 </xs:schema>
+<Comments>
+    <Comment Id="1" Text="SGVsbG8gd29ybGQgdmlkZW8gY29tbWVudCE=" ParentId="0" UserId="12" Created="2021-05-14T22:35:30.353Z" UIVersion="512" />
+    <Comment Id="2" Text="SGVsbG8gd29ybGQgdmlkZW8gcmVwbHku" ParentId="1" UserId="12" Created=2021-05-14T22:36:14.08Z" UIVersion="512" />
+</Comments>
 ```
 
 ### DeploymentRequirements.XSD
