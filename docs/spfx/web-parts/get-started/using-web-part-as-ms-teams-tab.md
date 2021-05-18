@@ -1,7 +1,7 @@
 ---
 title: Build Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 03/30/2021
+ms.date: 05/18/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -213,14 +213,14 @@ To make your web part available in Microsoft Teams, you'll have synchronize your
     ![Select the tenant/organization name](../../../images/sp-teams-apps-for-tenant.png)
 
     > [!NOTE]
-    > This can take few minutes based due to caching.
+    > This can take a few minutes due to caching.
 
 1. Confirm that you can see **MyFirstTeamsTab** app in the catalog:
 
     ![Custom SPFx Microsoft Teams app displayed as an option](../../../images/sp-teams-my-first-in-catalog.png)
 
     > [!NOTE]
-    > This can take few minutes based due to caching.
+    > This can take a few minutes due to caching.
 
 1. Move to a channel in a team where you want to test the solution. In the below picture, we have activated **General** channel in **Team**:
 
