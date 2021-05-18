@@ -26,12 +26,12 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
     * Create a flow
     * See your flows
-    * Configure flows
-
-    > [!NOTE]
-    > If they are available for the list or library here, you may see other options on the **Automate** menu, such as **Set a reminder** and other flows.
+    * Configure flows 
 
     ![Create a flow from Projects list](../../../images/lists-integrate-power-automate-create-flow.png)
+    
+    > [!NOTE]
+    > If they are available for the list or library here, you may see other options on the **Automate** menu, such as **Set a reminder** and other flows.
 
 1. Select **Create a flow**. In the **Create a flow** panel, you can explore various templates available for your list.
 
