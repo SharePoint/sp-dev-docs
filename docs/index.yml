@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: SharePoint Development documentation # < 60 chars
+title: SharePoint developmer documentation # < 60 chars
 summary: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # < 160 chars
 
 metadata:
-  title: SharePoint Development documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: SharePoint developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # Required; article description that is displayed in search results. < 160 chars.
   ms.prod: sharepoint #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
