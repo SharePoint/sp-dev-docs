@@ -132,7 +132,7 @@ A term store manager can enhance and expand term usage models based on more flex
 - Link to another site collection and view others' terms. If you want to make your term set available to other site collections connected to the managed metadata service, create a **global term set**. If you want to create a private term set that is available only to a specific site collection when it is stored in the managed metadata service, create a **local term set**.
 - Block users from using keywords outside of a specific term set.
 - Gain additional multilingual support, including support for automated translation and flexible LCIDs.
-- For programmatic creation of taxonomy fields using the SharePoint Server Object Model, please refer to the sample [](/dotnet/api/microsoft.sharepoint.taxonomy.taxonomyfield)
+- For programmatic creation of taxonomy fields using the SharePoint Server Object Model, please refer to the sample: [TaxonomyField Class](/dotnet/api/microsoft.sharepoint.taxonomy.taxonomyfield)
 - For programmatic creation of taxonomy fields using the SharePoint Client Side Object Model (CSOM), you can use a similar pattern as above taking into consideration the following sample: [Complete basic operations using SharePoint client library code](../sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md#add-a-field-to-a-sharepoint-list)
 
 ## Unsupported scenarios for working with custom site definitions
