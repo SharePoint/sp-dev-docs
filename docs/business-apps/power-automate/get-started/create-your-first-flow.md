@@ -22,7 +22,7 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 ## Create a flow
 
 1. In your SharePoint site, browse to the **Projects** list.
-1. To create and manage flows for a list or a library, from the command bar, on the list or library page, select **Automate** > **Power Automate**. Selecting **Power Automate** expands to show you more options:
+1. To create and manage flows for a list or a library, from the command bar, on the list or library page, select **Integrate** > **Power Automate**. Selecting **Power Automate** expands to show you more options:
 
     * Create a flow
     * See your flows
