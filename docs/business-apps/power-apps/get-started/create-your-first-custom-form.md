@@ -112,7 +112,7 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 
 1. In the formula bar, enter the following formula: `If(SharePointIntegration.Selected.Owner.DisplayName = "Nestor Wilke", false, true)`
 
-    ![View-only title](../../../images/gs01-attachments-conditional-visibility.png)
+    ![Enter conditional formula](../../../images/gs01-attachments-conditional-visibility.png)
     
     If the project owner is Nestor Wilke, then the **Attachments** data card is hidden. Otherwise, it is visible.
 
