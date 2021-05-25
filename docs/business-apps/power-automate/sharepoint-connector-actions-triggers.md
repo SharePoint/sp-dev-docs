@@ -309,22 +309,23 @@ The following tables list all of the actions and triggers that are supported for
 | Get folder metadata | Yes | Yes | Yes |
 | Get folder metadata using path | Yes | Yes | Yes |
 | Get file content | Yes | Yes | Yes |
-| Create file | Yes | Yes | Yes |
+| Create file | Yes<sup>1</sup> | Yes<sup>1</sup> | Yes<sup>1</sup> |
 | Update file | Yes | Yes | Yes |
-| Copy file (deprecated)<sup>1</sup>| Yes | Yes | Yes |
+| Copy file (deprecated)<sup>2</sup>| Yes | Yes | Yes |
 | List folder | Yes | Yes | Yes |
 | Extract folder | Yes | Yes | Yes |
 | Get attachments | Yes | Yes | Yes |
 | Add attachment | Yes | Yes | Yes |
 | Delete attachment | Yes | Yes | Yes |
-| Get items | Yes<sup>2</sup> | Yes<sup>2</sup> | Yes<sup>2</sup> |
-| Get item | Yes<sup>3</sup> | Yes<sup>3</sup> | Yes<sup>3</sup> |
-| Create item | Yes<sup>3</sup> | Yes<sup>3</sup> | Yes<sup>3</sup> |
-| Update item | Yes<sup>3</sup> | Yes<sup>3</sup> | Yes<sup>3</sup> |
+| Get items | Yes<sup>3</sup> | Yes<sup>3</sup> | Yes<sup>3</sup> |
+| Get item | Yes<sup>4</sup> | Yes<sup>4</sup> | Yes<sup>4</sup> |
+| Create item | Yes<sup>4</sup> | Yes<sup>4</sup> | Yes<sup>4</sup> |
+| Update item | Yes<sup>4</sup> | Yes<sup>4</sup> | Yes<sup>4</sup> |
 | Delete item | Yes | Yes | Yes |
 | Send an HTTP request to SharePoint | Yes | Yes | Yes |
 
 > [!NOTE]
+> 1. Does not support creating a large file by uploading it as a set of chunks.
 > 1. This action includes "(deprecated)" in its display name. The "Copy file" action is different from this action.
 > 1. This action only supports OData parameters, which excludes parameters such as "Limit Entries to Folder", "Include Nested Items", and "Limit Columns by View".
 > 1. Does not support “Limit Columns by View”.
