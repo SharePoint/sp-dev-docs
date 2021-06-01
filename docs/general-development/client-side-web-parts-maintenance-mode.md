@@ -1,6 +1,7 @@
 ---
 title: Maintenance mode for client-side web parts
-ms.date: 10/21/2020
+description: When working with client-side web parts, you can load them in maintenance mode. The maintenance mode can be helpful when trying to debug issues related to web parts placed on the page.
+ms.date: 05/25/2021
 ms.prod: sharepoint
 ms.assetid: 3ebd2a11-8291-4228-add0-9e0cd899dd3c
 localization_priority: Normal
@@ -75,6 +76,16 @@ If the web part [integrates its properties with SharePoint](../spfx/web-parts/gu
 - In maintenance mode, you can delete or move web parts on the page.
 - The maintenance mode shows only information about web parts. You can't use it to show information about SharePoint Framework extensions that are executed on the page.
 - Switching to maintenance mode only disables executing web part code. Any SharePoint Framework extensions registered on the page will still execute.
+
+## Disable SPFx web parts and extensions
+
+If you need to troubleshoot a SharePoint page to see if there is a SharePoint Framework extension or web part causing issues you can append **?disable3PCode=1** to the URL to disable loading of SPFx components, for example:
+
+```text
+https://contoso.sharepoint.com/sites/team?disable3PCode=1
+```
+
+This will prevent loading of any third party SPFx components on the page.
 
 ## See also
 
