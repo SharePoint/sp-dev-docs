@@ -785,7 +785,7 @@ Creating custom view formatting JSON from scratch is simple if user understands 
 > At any point, select **Ctrl**+**Space** for property/value suggestions.
 
 > [!TIP]
-> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/sp-dev-list-formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles.
+> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/List-Formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles.
 
 ## Detailed syntax reference
 
