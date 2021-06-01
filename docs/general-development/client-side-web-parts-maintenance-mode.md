@@ -1,6 +1,7 @@
 ---
 title: Maintenance mode for client-side web parts
-ms.date: 05/25/2020
+description: When working with client-side web parts, you can load them in maintenance mode. The maintenance mode can be helpful when trying to debug issues related to web parts placed on the page.
+ms.date: 05/25/2021
 ms.prod: sharepoint
 ms.assetid: 3ebd2a11-8291-4228-add0-9e0cd899dd3c
 localization_priority: Normal
