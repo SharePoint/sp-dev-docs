@@ -412,6 +412,8 @@
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator
       href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: Microsoft Graph Toolkit
+      href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging
     items:
     - name: Debug in Visual Studio Code
