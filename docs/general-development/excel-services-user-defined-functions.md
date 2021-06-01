@@ -35,7 +35,7 @@ This section contains information about user-defined functions (UDFs) and how to
 > Get step-by-step instructions about developing Excel Services UDFs by using Microsoft Visual C#.
     
   
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.yml)
   
     
     

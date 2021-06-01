@@ -21,4 +21,4 @@ Publishing your SharePoint Framework solutions to [marketplace (also known as Ap
 
 * [SharePoint Framework specific validation checklist](publish-to-marketplace-checklist.md)
 * [After publishing your app](publish-to-marketplace-after-publishing.md)
-* [Frequently asked questions](publish-to-marketplace-faq.md)
+* [Frequently asked questions](publish-to-marketplace-faq.yml)

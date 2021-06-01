@@ -134,5 +134,5 @@ For more information about configuring code groups, see the following articles o
 - [How to: Access an External Data Source from a UDF](how-to-access-an-external-data-source-from-a-udf.md)
 - [How to: Deploy UDFs Using SharePoint Foundation Solutions](how-to-deploy-udfs-using-sharepoint-foundation-solutions.md)
 - [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
-- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.yml)
 - [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

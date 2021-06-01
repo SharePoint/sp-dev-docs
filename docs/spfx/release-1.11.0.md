@@ -41,7 +41,7 @@ New in this release, support for additional attributes in the solution for enabl
   - [Docs: Publish SharePoint Framework applications to the Marketplace](publish-to-marketplace-overview.md)
   - [Docs: Prepare your SharePoint Framework application for publishing to the Marketplace](publish-to-marketplace-checklist.md)
   - [Docs: Maintain and support your published app](publish-to-marketplace-after-publishing.md)
-  - [Docs: Publish SharePoint Framework applications to the Marketplace - FAQ](publish-to-marketplace-faq.md)
+  - [Docs: Publish SharePoint Framework applications to the Marketplace - FAQ](publish-to-marketplace-faq.yml)
 - Support Microsoft Teams task modules added
   - [Docs: Expose web part as Microsoft Teams messaging extension](build-for-teams-expose-webparts-teams.md#expose-web-part-as-microsoft-teams-messaging-extension)
 - Additional metadata for the SharePoint Framework solutions

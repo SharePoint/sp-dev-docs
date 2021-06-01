@@ -121,5 +121,5 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
 #### Concepts
 
 - [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
-- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.yml)
 - [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

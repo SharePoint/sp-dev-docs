@@ -98,7 +98,7 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
 - [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
 - [How to: Trust a Location](how-to-trust-a-location.md)
 - [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
-- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.yml)
 - [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
 - [Excel Services Alerts](excel-services-alerts.md)
 - [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
