@@ -193,6 +193,8 @@
         href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
       - name: Use Microsoft Graph in web parts
         href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
+      - name: Use Microsoft Graph Toolkit in web parts
+        href: spfx/web-parts/get-started/build-web-part-microsoft-graph-toolkit.md
       - name: Provision assets from a web part
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Build Microsoft Teams channel/group tabs with SPFx
