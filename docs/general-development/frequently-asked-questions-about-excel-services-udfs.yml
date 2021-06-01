@@ -44,7 +44,6 @@ sections:
           Yes. For an example, see the following UDF sample code. Also see  [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md).
 
           ```cs
-          
           using System;
           using System.Collections.Generic;
           using System.Text;
@@ -185,7 +184,7 @@ additionalContent: |
   
   [How to: Catch Exceptions](how-to-catch-exceptions.md)
 
-#### Concepts
+  #### Concepts
 
   
   [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
