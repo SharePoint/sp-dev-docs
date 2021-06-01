@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 05/07/2021
+ms.date: 06/01/2021
 localization_priority: Priority
 ---
 
@@ -785,7 +785,7 @@ Creating custom view formatting JSON from scratch is simple if user understands 
 > At any point, select **Ctrl**+**Space** for property/value suggestions.
 
 > [!TIP]
-> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/sp-dev-list-formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles.
+> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/List-Formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles.
 
 ## Detailed syntax reference
 
