@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 
-title: SharePoint developmer documentation # < 60 chars
+title: SharePoint developer documentation # < 60 chars
 summary: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # < 160 chars
 
 metadata:
@@ -11,7 +11,7 @@ metadata:
   ms.audience: Developer # Optional; Remove if no collection is used.
   author: VesaJuvonen #Required; your GitHub user alias, with correct capitalization.
   ms.author: vesaj #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/10/2020 #Required; mm/dd/yyyy format.
+  ms.date: 26/05/2021 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
