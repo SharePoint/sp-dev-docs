@@ -22,7 +22,7 @@ The reason why you can't click **trust it** is because Visual Studio is working 
 
 ### Step 1: Create a new service principal
 
-Navigate to a site collection in your tenant and generate a new client ID and Secret. (for example, https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click **Generate** for both the **Client ID**, **Client Secret** Fields and supply the remaining fields. While you're developing the add-in, ensure you use localhost.com including the port as the App Domain. You should have something similar as below.
+Navigate to a site collection in your tenant and generate a new client ID and Secret. (for example, https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click **Generate** for both the **Client ID**, **Client Secret** Fields and supply the remaining fields. While you're developing the add-in, ensure you use localhost including the port as the App Domain. You should have something similar as below.
 
 ![Create a new service principal in on the AppRegNew page](media/development-experience-tenant-apponly-permissions-in-spo-02.png)
 
