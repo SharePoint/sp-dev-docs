@@ -12,6 +12,7 @@ localization_priority: Priority
 > - In previous versions of SharePoint, site templates were called site designs but will be referred to as site templates moving forward.
 > - SharePoint has a new site template experience that will be available to all SharePoint user with permissions to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
 > - As of today, the site template experience cannot be disabled.
+> - Site templates created by your organization and set as the default template will automatically apply when new sites are created but can be updated by the site owner by selecting **Settings** and then **Apply a site template.**
 > - Site template version history is not currently available for the new site template experience but will be included in future iterations.
 
 Use site templates and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations. 
