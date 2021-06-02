@@ -40,7 +40,7 @@ For triggers that support run-only users, below the **Owners** card, a **Manage 
 
 ![Manage run-only users card dropdown](../../../images/manage-run-only-users-card.png)
 
-Here, you can manage the run-only users or assign the users of the Microsoft list as run-only users. In order to run flows, users must have Edit Permissions on the list. Learn more about [list permissions and permission levels](../../../../../sharepoint/understanding-permission-levels#list-permissions-and-permission-levels).
+Here, you can manage the run-only users or assign the users of the Microsoft list as run-only users. In order to run flows, users must have Edit Permissions on the list. Learn more about [list permissions and permission levels](https://docs.microsoft.com/sharepoint/understanding-permission-levels#list-permissions-and-permission-levels).
 
 ![Manage run-only permissions](../../../images/manage-run-only-permissions.png)
 
