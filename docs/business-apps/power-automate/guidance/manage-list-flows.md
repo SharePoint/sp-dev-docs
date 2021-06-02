@@ -1,9 +1,10 @@
 ---
 title: Manage owners and users in your Microsoft list flows with Power Automate
-ms.date: 05/19/2020
+ms.date: 06/02/2021
 search.app: 
   - Flow
 search.appverid: met150
+description: Manage owners and users of your Power Automate flows for Microsoft lists. You can see all users of a flow, add new users or owners, and modify existing users or owners.
 ---
 
 # Manage owners and users in your Microsoft list flows with Power Automate
@@ -39,7 +40,7 @@ For triggers that support run-only users, below the **Owners** card, a **Manage 
 
 ![Manage run-only users card dropdown](../../../images/manage-run-only-users-card.png)
 
-Here, you can manage the run-only users or assign the users of the Microsoft list as run-only users. In order to run flows, users must have Edit Permissions on the list. Learn more about [list permissions and permission levels](https://docs.microsoft.com/sharepoint/understanding-permission-levels#list-permissions-and-permission-levels).
+Here, you can manage the run-only users or assign the users of the Microsoft list as run-only users. In order to run flows, users must have Edit Permissions on the list. Learn more about [list permissions and permission levels](../../../../sharepoint/understanding-permission-levels#list-permissions-and-permission-levels).
 
 ![Manage run-only permissions](../../../images/manage-run-only-permissions.png)
 
