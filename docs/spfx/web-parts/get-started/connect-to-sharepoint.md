@@ -45,7 +45,7 @@ this.context.pageContext
 1. Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\helloWorld\HelloWorldWebPart.ts**.
 1. Inside the `render()` method, replace the **innerHTML** code block with the following code:
 
-    ```tsx
+    ```typescript
     this.domElement.innerHTML = `
       <div class="${ styles.helloWorld }">
         <div class="${ styles.container }">
