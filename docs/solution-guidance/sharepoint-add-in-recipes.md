@@ -1,6 +1,7 @@
 ---
 title: SharePoint Add-in recipes
-ms.date: 11/03/2017
+description: The articles in this section show you how to use the SharePoint Add-in model to customize your SharePoint sites. The following table lists the articles that are included.
+ms.date: 06/14/2021
 localization_priority: Normal
 ---
 # SharePoint Add-in recipes
