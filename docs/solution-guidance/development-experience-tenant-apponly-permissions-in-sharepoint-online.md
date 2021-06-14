@@ -1,7 +1,7 @@
 ---
 title: Developing using Tenant permissions with App-Only in SharePoint Online
 description: The developer experience has changed for SharePoint Provider-hosted Add-ins that require Tenant permission in combination with app-only. This article walks you through the new experience for developing and debugging these solutions.
-ms.date: 12/22/2020
+ms.date: 06/14/2021
 localization_priority: Priority
 ---
 # Developing using Tenant permissions with App-Only in SharePoint Online
@@ -22,7 +22,7 @@ The reason why you can't click **trust it** is because Visual Studio is working 
 
 ### Step 1: Create a new service principal
 
-Navigate to a site collection in your tenant and generate a new client ID and Secret. (for example, https://contoso.sharepoint.com/_layouts/15/appregnew.aspx). In this page click **Generate** for both the **Client ID**, **Client Secret** Fields and supply the remaining fields. While you're developing the add-in, ensure you use localhost including the port as the App Domain. You should have something similar as below.
+Navigate to a site collection in your tenant and generate a new client ID and Secret. (for example, `https://contoso.sharepoint.com/_layouts/15/appregnew.aspx`). In this page click **Generate** for both the **Client ID**, **Client Secret** Fields and supply the remaining fields. While you're developing the add-in, ensure you use `localhost` including the port as the App Domain. You should have something similar as below.
 
 ![Create a new service principal in on the AppRegNew page](media/development-experience-tenant-apponly-permissions-in-spo-02.png)
 
@@ -30,7 +30,7 @@ Navigate to a site collection in your tenant and generate a new client ID and Se
 
 To do this step, you must be a SharePoint Online Administrator.
 
-Navigate to the SharePoint Admin Center (for example, https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx) and grant the tenant permissions
+Navigate to the SharePoint Admin Center (for example, `https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx`) and grant the tenant permissions
 
 ![Specify the app's permissions with XML](media/development-experience-tenant-apponly-permissions-in-spo-03.png)
 
@@ -50,7 +50,7 @@ Supply the **Client ID** and **Client Secret** created in Step 1.
 
 ![Set the client ID and secret in the add-in's identity dialog in Visual Studio](media/development-experience-tenant-apponly-permissions-in-spo-06.png)
 
-Since you want to debug the add-in, ensure that you supply https://localhost including the port as shown below.
+Since you want to debug the add-in, ensure that you supply `https://localhost` including the port as shown below.
 
 ![Set the location to https://localhost for debugging](media/development-experience-tenant-apponly-permissions-in-spo-07.png)
 
