@@ -22,7 +22,7 @@ A list with the appearance of the **Effort**, **Assigned To**, and **Status** fi
 
 ## How is column formatting different than the Field Customizer?
 
-Both column formatting and [SharePoint Framework Field Customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful because you can use it to write any code that you want to control how a field is displayed. 
+Both column formatting and [SharePoint Framework Field Customizer](../spfx/extensions/get-started/building-simple-field-customizer.md) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful because you can use it to write any code that you want to control how a field is displayed. 
 
 Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes. 
 
@@ -531,7 +531,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 }
 ```
 
-Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#button-elements) portion of the Detailed syntax reference for more details.
+Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](column-formatting#button-elements.md) portion of the Detailed syntax reference for more details.
 
 ## Formatting multi-value fields
 
@@ -1036,7 +1036,7 @@ Any other value will result in an error.
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.
-- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
+- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](column-formatting#create-a-button-to-launch-a-flow.md) section in this document. Below is an example of this type of button.
 
 ```JSON
 {
