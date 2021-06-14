@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 03/22/2021
+ms.date: 06/14/2021
 localization_priority: Priority
 ---
 
@@ -980,7 +980,7 @@ Creating custom column formatting JSON from scratch is simple if user understand
 > At any point, select **Ctrl**+**Space** for property/value suggestions.
 
 > [!TIP]
-> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/sp-dev-list-formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles. 
+> You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/List-Formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles. 
 
 > [!TIP]
 > SharePoint Patterns and Practices provides a free web part, [Column Formatter](https://github.com/SharePoint/sp-dev-solutions/blob/master/solutions/ColumnFormatter/docs/documentation/docs/getting-started.md), that can be used to edit and apply formats directly in the browser.
