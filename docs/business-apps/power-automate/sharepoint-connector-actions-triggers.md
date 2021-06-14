@@ -40,6 +40,11 @@ Allows users of lists to trigger a flow after selecting an item in a list.
 > [!NOTE]
 > Only flows within the default environment can be executed manually from a SharePoint list.
 
+### When a file is classified by a content understanding model 
+Triggers the flow when a SharePoint Syntex content understanding model classifies a file, shown in the classification date property of the file.
+
+For more info about when SharePoint Syntex and how it classifies files see: [Introduction to Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding)
+
 ### When a file is created (properties only)
 
 Triggers the flow when you create a file in a document library, and returns only the custom file properties associated with that file.
