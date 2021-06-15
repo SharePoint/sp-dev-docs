@@ -1,7 +1,7 @@
 ---
 title: Send an email when a new item is created or modified in a SharePoint list
 description: Send an email when a new item is created or modified in a SharePoint list
-ms.date: 02/05/2021
+ms.date: 06/14/2021
 ms.prod: sharepoint
 localization_priority: Priority
 search.app: 
