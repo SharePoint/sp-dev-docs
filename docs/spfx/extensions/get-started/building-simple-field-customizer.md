@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 08/26/2020
+ms.date: 06/15/2021
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -240,7 +240,7 @@ Now that we've tested our solution properly in debug mode, we can package this t
 
 1. Install the solution package to the site where it should be installed, so that the extension manifest is white listed for execution.
 1. Associate the Field Customizer to an existing field in the site. You can do this programmatically using the SharePoint REST or CSOM API, or by using the Feature Framework in of the SharePoint Framework solution package. In this tutorial, we'll use the Feature Framework's xml files. You need to associate the following properties in the `SPField` object at the site or list level.
-    - `ClientSiteComponentId`: this is the identifier (GUID) of the Field Customizer that has been installed in the app catalog.
+    - `ClientSideComponentId`: this is the identifier (GUID) of the Field Customizer that has been installed in the app catalog.
     - `ClientSideComponentProperties`: this is an optional parameter that can be used to provide properties for the Field Customizer instance.
 
     You can control the requirement to add a solution containing your extension to the site with the `skipFeatureDeployment` property in **./config/package-solution.json** file. Even though you wouldn't require the solution to be installed on the site, you'd need to associate `ClientSideComponentId` to specific objects for the extension to be visible.
