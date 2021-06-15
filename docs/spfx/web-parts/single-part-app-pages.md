@@ -43,7 +43,7 @@ Following web part manifest demonstrates scenario where the web part is included
 
 As a developer, the two most common ways to provision Single Part App pages is to use PnP PowerShell or CLI for Microsoft 365.
 
-You can use [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to update the page layout for the existing page with following script.
+You can use [PnP PowerShell](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) to update the page layout for the existing page with following script.
 
 [!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
