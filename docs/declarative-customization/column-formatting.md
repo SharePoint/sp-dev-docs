@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 06/14/2021
+ms.date: 06/16/2021
 localization_priority: Priority
 ---
 
@@ -531,7 +531,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 }
 ```
 
-Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](column-formatting#button-elements.md) portion of the Detailed syntax reference for more details.
+Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](#button-elements) portion of the Detailed syntax reference for more details.
 
 ## Formatting multi-value fields
 
@@ -1036,7 +1036,7 @@ Any other value will result in an error.
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.
-- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](column-formatting#create-a-button-to-launch-a-flow.md) section in this document. Below is an example of this type of button.
+- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
 
 ```JSON
 {
