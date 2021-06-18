@@ -10,6 +10,9 @@ localization_priority: Priority
 This is the sixth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#Nextsteps).
 
 > [!NOTE]
+> It's recommended that Microsoft Power Automate be used for apps and process automation. Starting with Visual Studio 2022, Workflow templates have been removed from SharePoint Add-in Projects. For more information please see [Guidance: Migrate from classic workflows to Power Automate flows in SharePoint](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md)
+
+> [!TIP]
 > If you have been working through this series about SharePoint-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeWorkflow.sln file.
 
 In this article, you add a workflow in the Employee Orientation SharePoint Add-in that notifies the Human Resources (HR) department that a new employee is ready to fill out the HR paperwork.
@@ -121,6 +124,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 1. You will work with this add-in and Visual Studio solution in other articles, and it's a good practice to retract the add-in one last time when you are done working with it for a while. Right-click the project in **Solution Explorer** and select **Retract**.
 
 ## Next steps
+
 <a name="Nextsteps"> </a>
 
 In the next article in this series, you'll [add a custom page and style to a SharePoint-hosted SharePoint Add-in](add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md).
