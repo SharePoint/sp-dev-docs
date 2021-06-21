@@ -370,7 +370,7 @@ Now you're ready to deploy the solution to a SharePoint site and get the field a
 The process for publishing your app is identical among the different extension types.
 
 > [!NOTE]
-> This was a relatively simple field customizer with functionality that could also have been achieved with [column formatting capability](../../../declarative-customization/column-formatting). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
+> This was a relatively simple field customizer with functionality that could also have been achieved with [column formatting capability](/sharepoint/dev/declarative-customization/column-formatting). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
 
 ## See also
 
