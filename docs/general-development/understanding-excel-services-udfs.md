@@ -1,5 +1,6 @@
 ---
 title: Understanding Excel Services UDFs
+description: "User-defined functions (UDFs) are custom functions that extend the calculation and data-import capabilities of Excel."
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a1567278-fac4-4b3b-a814-56f2376c1217

@@ -1,5 +1,6 @@
 ---
 title: Enable UDFs
+description: "Each Excel Services trusted location in the Shared Services Provider (SSP) has an AllowUdfs flag."
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,UDF list
 f1_keywords:

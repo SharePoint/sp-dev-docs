@@ -1,5 +1,6 @@
 ---
 title: Excel Services User-Defined Functions
+description: "This section contains information about user-defined functions (UDFs) and how to use UDF attributes in your code."
 ms.date: 09/25/2017
 keywords: functions
 f1_keywords:

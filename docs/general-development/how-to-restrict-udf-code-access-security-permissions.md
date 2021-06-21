@@ -1,5 +1,6 @@
 ---
 title: Restrict UDF code access security permissions
+description: "If you do not want a particular user-defined function (UDF) assembly to run with full trust, you must explicitly restrict code access security permissions for it."
 ms.date: 09/25/2017
 keywords: cas,how to,howdoi,howto,UDF list
 f1_keywords:
