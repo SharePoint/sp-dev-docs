@@ -1,12 +1,11 @@
 ---
 title: Store and retrieve SharePoint list items on a Windows Phone
 description: Learn about the Windows Phone application life cycle and storing network data locally.
-ms.date: 12/29/2020
+ms.date: 06/22/2021
 ms.prod: sharepoint
 ms.assetid: 14ca37a2-5b45-430d-9004-ff3016f89834
 localization_priority: Normal
 ---
-
 # Store and retrieve SharePoint list items on a Windows Phone
 
 Learn about the Windows Phone application life cycle and storing network data locally.
@@ -187,7 +186,6 @@ For the procedures in this section, we assume you're working in the context of a
     ```
 
     The namespace specified in this code is based on the name of the project (SPListAppLocalStorage in this case). You might want to specify a different namespace, based on the name of your project.
-
 
 1. Save the file.
 
