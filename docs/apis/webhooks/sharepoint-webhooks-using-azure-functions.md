@@ -226,7 +226,7 @@ We'll need to let SharePoint know what webhook URL we're using. To do so, let's 
 
 1. Click **Get function URL**.
 
-    ![Get Function URL Link](../../images/webhook-azure-function07.png)
+    ![Log message console](../../images/webhook-azure-function07.png)
 
 1. Click **Copy** to copy the Azure Function App URL to your clipboard.
 

@@ -12,7 +12,7 @@ Next is using the scan results from step 1 to build your modernization plan: you
 
 ## Identify sites for Modernization
 
-The scan results will help you identify site collections which are good candidates for Modernization. The **Microsoft 365 group connect** reports will contain information about all the scanned site collections, so a filtering is needed to identify the sites that are Modernization candidates. Once there’s a list of sites for Modernization the next step is splitting them up in waves. The recommended approach is to start with a pilot wave that runs Modernization on a relatively small amount of sites. Goal is to gather customer feedback and finetune the modernization script if needed. Depending on the amount of sites and the input from the customer the remaining sites are handled in a series of additional waves. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner-reports-groupconnect to learn more about the Microsoft 365 group connect reports.
+The scan results will help you identify site collections which are good candidates for Modernization. The **Microsoft 365 group connect** reports will contain information about all the scanned site collections, so a filtering is needed to identify the sites that are Modernization candidates. Once there’s a list of sites for Modernization the next step is splitting them up in waves. The recommended approach is to start with a pilot wave that runs Modernization on a relatively small amount of sites. Goal is to gather customer feedback and fine tune the modernization script if needed. Depending on the amount of sites and the input from the customer the remaining sites are handled in a series of additional waves. See https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner-reports-groupconnect to learn more about the Microsoft 365 group connect reports.
 
 Filtering the Microsoft 365 group connect (= “groupify”) report to identify sites for Modernization:
 
@@ -118,7 +118,7 @@ Before running the Modernization it’s important to validate the input (alias m
 #### Where can I learn more about the validation details?
 
 - Microsoft 365 group naming policy: https://docs.microsoft.com/office365/admin/create-groups/groups-naming-policy?redirectSourcePath=%252fen-us%252farticle%252foffice-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552&view=o365-worldwide
-- Who can create Groups: https://docs.microsoft.com/office365/admin/create-groups/manage-creation-of-groups?redirectSourcePath=%252fen-us%252farticle%252fmanage-who-can-create-office-365-groups-4c46c8cb-17d0-44b5-9776-005fced8e618&view=o365-worldwide
+- Who can create Groups: https://docs.microsoft.com/office365/admin/create-groups/manage-creation-of-groups
 - Group classifications: https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-groups-with-powershell
 - Tenant themes: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme
 

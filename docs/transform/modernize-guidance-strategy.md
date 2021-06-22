@@ -69,7 +69,7 @@ After Microsoft 365 group connection the default setup will be that Microsoft 36
 
 ### Teams team provisioning impact
 
-![starting point](media/modernize/teamwork_impact_7.png)
+![Teams team provisioning impact](media/modernize/teamwork_impact_7.png)
 
 A key reason to group connected a site is using that existing site linked to Microsoft Teams. A Microsoft Teams team is a collaboration hub that unites team related work. After you’ve connected a Microsoft Teams team (“teamify”) you have a Teams team that has a “General” channel which uses the SharePoint site’s default document library to store documents.
 
@@ -81,7 +81,7 @@ A key reason to group connected a site is using that existing site linked to Mic
 The Microsoft 365 group names you’ll be using during the Microsoft 365 group Connect step will have to be unique across your Azure AD environment. Therefore it’s important that you think about a group naming convention.
 
 - **Task:** Define a group naming convention that you can apply to the sites that will be modernized.
-- **Task:** Consider configuring Microsoft 365 group naming policies in Azure AD to help enforce group naming. See https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-naming-policy and https://docs.microsoft.com/office365/admin/create-groups/groups-naming-policy?redirectSourcePath=%252fen-us%252farticle%252foffice-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552&view=o365-worldwide to learn more.
+- **Task:** Consider configuring Microsoft 365 group naming policies in Azure AD to help enforce group naming. See [Enforce a naming policy on Microsoft 365 groups in Azure Active Directory](/azure/active-directory/users-groups-roles/groups-naming-policy) and [Microsoft 365 groups naming policy](/office365/admin/create-groups/groups-naming-policy) to learn more.
 
 ### Frequently Asked Questions
 
@@ -95,8 +95,8 @@ During the Modernization you’ll be (optionally) setting the site’s theme to 
 
 - **Task:** Create the needed tenant themes. Use the online theme generator (https://aka.ms/themedesigner) to create the themes, use the **Export theme** option and copy the PowerShell formatting.
 - **Task:** Add the new theme to the tenant via:
-  - Assigning the copied PowerShell to a variable: $ContosoTheme = @{“themePrimary”=…
-  - Adding the theme: Add-PnPTenantTheme -Palette $ContosoTheme -Identity “Contoso Corporate theme" -IsInverted:$false 
+  - Assigning the copied PowerShell to a variable: `$ContosoTheme = @{“themePrimary”=…`
+  - Adding the theme: `Add-PnPTenantTheme -Palette $ContosoTheme -Identity “Contoso Corporate theme" -IsInverted:$false`
   - See https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme for more details
 
 ### Frequently Asked Questions
