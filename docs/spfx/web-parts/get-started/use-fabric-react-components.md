@@ -33,7 +33,7 @@ The primary Fluent UI React package, **\@fluentui/react**, simply exports compon
 This page will continue to refer to the Office UI Fabric packages until Microsoft recommends switching to the Fluent UI packages. The documentation links on this page may point to the Fluent UI documentation but it applies to the Office UI Fabric as well.
 
 - [Fluent UI website](https://developer.microsoft.com/fluentui#/controls/web) - detailed API documentation along with implementation code examples for each control.
-- [API reference](https://docs.microsoft.com/javascript/api/office-ui-fabric-react?branch=live&view=office-ui-fabric-react-latest) - detailed API reference documentation.
+- [API reference](/javascript/api/office-ui-fabric-react?branch=live&view=office-ui-fabric-react-latest) - detailed API reference documentation.
 - [Office UI Fabric React / Fluent UI React](https://github.com/microsoft/fluentui) - source code repository on github.
 
 ## Create a new web part project

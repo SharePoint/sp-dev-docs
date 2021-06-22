@@ -37,7 +37,7 @@ Users primarily use SharePoint Designer to author and publish workflows in Share
 
 Since the release of classic workflows, SharePoint and Microsoft 365 apps have evolved to provide compelling, flexible and more performant experiences. Modern experiences in SharePoint integrate with rest of the Microsoft 365 apps and services driving security, productivity, and collaboration.
 
-[Power Automate](https://docs.microsoft.com/power-automate/getting-started) helps users and businesses to create automated workflows between your favorite apps and services to get notifications, collect data, automate business policies and more.
+[Power Automate](/power-automate/getting-started) helps users and businesses to create automated workflows between your favorite apps and services to get notifications, collect data, automate business policies and more.
 
 > [!VIDEO https://www.youtube.com/embed/hCuxuUaGC6Y]
 
@@ -47,7 +47,7 @@ Using Microsoft Power Automate, SharePoint users can use the SharePoint Connecto
 
 - Start approval when a new file is added in a library.
 
-To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/en-us/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](https://docs.microsoft.com/power-automate/mobile-create-flow).
+To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/en-us/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](/power-automate/mobile-create-flow).
 
 To learn more about building workflows using Power Automate in SharePoint, start here: Business apps and Business process [automation in SharePoint](https://docs.microsoft.com/sharepoint/dev/business-apps/introduction-to-sharepoint-business-process-integration).
 
@@ -67,11 +67,11 @@ While these pain points do exist, you can see there are workarounds for each of 
 
 Approvals are the most common workflow scenario when it comes to automating business processes in SharePoint. Transitioning to Power Automate flows, approvals can be streamlined for data in SharePoint, Dynamics 365, forms, SQL, and so on. You can create approvals in your workflow, and view sent and received requests in a unified Actions center. Power Automate approvals enable users to customize flows and create approvals for the following types:
 
-- [Single approvals](https://docs.microsoft.com/power-automate/modern-approvals)
+- [Single approvals](/power-automate/modern-approvals)
 
-- [Sequential approvals](https://docs.microsoft.com/power-automate/sequential-modern-approvals)
+- [Sequential approvals](/power-automate/sequential-modern-approvals)
 
-- [Parallel approvals](https://docs.microsoft.com/power-automate/parallel-modern-approvals)
+- [Parallel approvals](/power-automate/parallel-modern-approvals)
 
 SharePoint approvals such as [page approvals](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/customize-page-approvals), [document approvals](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/require-doc-approval), and [hub association approvals](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098#bkmk_managesiteassociationapprovals) are all integrated and powered by Power Automate flows, providing users the flexibility to customize the business process for each of the approval scenarios.
 
@@ -87,9 +87,9 @@ While the following lists show some of the most common workflow capabilities, Po
 
 - [SharePoint Power Automate Documentation](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers)
 
-- [Learn Power Automate](https://docs.microsoft.com/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
+- [Learn Power Automate](/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
 
-- [Power Automate Documentation](https://docs.microsoft.com/power-automate/?utm_source=flow-sidebar&utm_medium=web)
+- [Power Automate Documentation](/power-automate/?utm_source=flow-sidebar&utm_medium=web)
 
 ### Workflow concepts
 

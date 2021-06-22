@@ -29,7 +29,7 @@ The main example in this article shows how to build an add-in that reads data on
 
 To follow the examples in this article, you need the following:
 
-- [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio) installed either remotely or on the computer where you installed SharePoint.
+- [Visual Studio](/visualstudio/install/install-visual-studio) installed either remotely or on the computer where you installed SharePoint.
     
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](https://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015).  
     

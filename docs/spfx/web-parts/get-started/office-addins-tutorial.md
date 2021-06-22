@@ -139,7 +139,7 @@ This adds the needed intelligence for the Office JavaScript SDK types when you d
     ```
 
     > [!NOTE]
-    > See more information around the Office JavaScript API capabilities from the [API Reference documentation](https://docs.microsoft.com/office/dev/add-ins/reference/javascript-api-for-office).
+    > See more information around the Office JavaScript API capabilities from the [API Reference documentation](/office/dev/add-ins/reference/javascript-api-for-office).
 
 ## Packaging and deploying your solution to SharePoint
 

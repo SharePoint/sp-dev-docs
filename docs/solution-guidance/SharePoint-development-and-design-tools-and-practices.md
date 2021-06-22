@@ -34,7 +34,7 @@ When you use SharePoint as a development platform, you need to create an environ
 
 |Option|Considerations|
 |:-----|:-----|
-|[Team Foundation Server](https://docs.microsoft.com/visualstudio/releasenotes/tfs2017-relnotes)|- Located on [Visual Studio Team Services](https://www.visualstudio.com/vso/) for easy access.<br/>- Includes a centralized source code and life cycle management system.|
+|[Team Foundation Server](/visualstudio/releasenotes/tfs2017-relnotes)|- Located on [Visual Studio Team Services](https://www.visualstudio.com/vso/) for easy access.<br/>- Includes a centralized source code and life cycle management system.|
 |Cloud test and acceptance environments|- Use a separate tenant for acceptance testing.<br/>- Separate test environment for on-premises testing.|
 |On-premises test and acceptance environments|- Use for on-premises SharePoint deployments.<br/>- Hosted by customer on-premises or in Microsoft Azure.|
  

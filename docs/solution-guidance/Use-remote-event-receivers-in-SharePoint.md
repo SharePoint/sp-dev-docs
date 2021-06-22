@@ -46,7 +46,7 @@ Before you run this add-in, do the following:
     
 4. Create an Azure Service Bus Namespace.
     
-	1. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-create-namespace-portal).
+	1. Carry out the instructions in [Create a Service Bus namespace](/azure/service-bus-messaging/service-bus-create-namespace-portal).
 
     2. Copy **Primary Connection String** from the just created Service Bus Namespace
 	

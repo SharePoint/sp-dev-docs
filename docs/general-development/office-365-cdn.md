@@ -10,4 +10,4 @@ localization_priority: Priority
 
 _**Applies to:** Office 365_
 
-This page has been moved to: [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](https://docs.microsoft.com/office365/enterprise/use-office-365-cdn-with-spo).
+This page has been moved to: [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](/office365/enterprise/use-office-365-cdn-with-spo).

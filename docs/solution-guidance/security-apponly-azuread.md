@@ -302,8 +302,8 @@ $clientContext.Web.Title
 
 ## Using this principal in your application and make use of the Azure KeyVault to store the certificate and retrieve it using an Azure Function 
 
-Add a [Managed Identity](https://docs.microsoft.com/azure/app-service/overview-managed-identity
-) to the Azure Function and give this identity access (GET permission on Secrets) to the [KeyVault](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references). 
+Add a [Managed Identity](/azure/app-service/overview-managed-identity
+) to the Azure Function and give this identity access (GET permission on Secrets) to the [KeyVault](/azure/app-service/app-service-key-vault-references). 
 
 Below there is a slightly different call to the same GetAzureADAppOnlyAuthenticatedContext method where we pass an actual certificate instead of a path to the certificate. An extra function is added to retrieve to certificate from the KeyVault using the managed identity of the Azure Function, this retrieval is seamless and transparent since the 'magic' happens in the AzureServiceTokenProvider.  
 

@@ -50,7 +50,7 @@ None.
 - [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md)
 - [FilterDescriptor Element in FilterDescriptors (BDCMetadata Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadata-schema.md)
 - [Parameter Element in Parameters (BDCMetadata Schema)](parameter-element-in-parameters-bdcmetadata-schema.md)
-- [TypeDescriptor](https://docs.microsoft.com/dotnet/api/system.componentmodel.typedescriptor)
+- [TypeDescriptor](/dotnet/api/system.componentmodel.typedescriptor)
 - [TypeDescriptor Element (BDCMetadata Schema)](typedescriptor-element-bdcmetadata-schema.md)
 - [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md)
 - [MethodInstance Element in MethodInstances (BDCMetadata Schema)](methodinstance-element-in-methodinstances-bdcmetadata-schema.md)

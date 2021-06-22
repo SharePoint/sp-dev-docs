@@ -40,7 +40,7 @@ To learn more on how to register an app ID and how to implement app-based authen
 #### Permission settings
 Azure Active Directory (AAD) provides two type of permission : delegated permission and application permissions. For official AAD guidance please see:
 
-- [Permissions and consent in the Azure Active Directory v1.0 endpoint](https://docs.microsoft.com/azure/active-directory/develop/v1-permissions-and-consent). 
+- [Permissions and consent in the Azure Active Directory v1.0 endpoint](/azure/active-directory/develop/v1-permissions-and-consent). 
 
 For SharePoint and OneDrive migration scenarios, the guidance is to follow the AAD permission specification. 
 
@@ -79,7 +79,7 @@ To learn more, see [Asynchronous Metadata Read (Export API)](https://docs.micros
 ## Switch to the Microsoft Graph API 
 If a feature is not supported by the migration API, we recommend that you use the Graph API.  If the Graph API does not support the needed migration feature, then use CSOM. However, using CSOM increases the likelihood of being throttled. 
 
-- [Graph Guidance: Best practices for discovering files and detecting changes at scale](https://docs.microsoft.com/onedrive/developer/rest-api/concepts/scan-guidance)
+- [Graph Guidance: Best practices for discovering files and detecting changes at scale](/onedrive/developer/rest-api/concepts/scan-guidance)
 
 ### CSOM Guidance (fallback only)
 

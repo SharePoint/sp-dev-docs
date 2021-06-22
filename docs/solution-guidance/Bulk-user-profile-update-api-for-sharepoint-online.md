@@ -433,7 +433,7 @@ In order to use an app-only context with the SharePoint add-in model, you need t
 </AppPermissionRequests>
 ```
 
-In order to use app-only with an application registered in Azure Active Directory, you need to [register the application](https://docs.microsoft.com/graph/auth-register-app-v2), [provide a X.509 certificate for authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-microsoft-identity-platform), which is a requirement for SharePoint Online app-only authentication within Azure Active Directory, and grant the following SharePoint Online permissions scopes for Application: Sites.FullControl.All and User.ReadWrite.All .
+In order to use app-only with an application registered in Azure Active Directory, you need to [register the application](/graph/auth-register-app-v2), [provide a X.509 certificate for authentication](/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-microsoft-identity-platform), which is a requirement for SharePoint Online app-only authentication within Azure Active Directory, and grant the following SharePoint Online permissions scopes for Application: Sites.FullControl.All and User.ReadWrite.All .
 
 ### This API is updating properties in the user profile service, but how would I create those properties in the tenant?
 

@@ -20,7 +20,7 @@ Unless otherwise noted, developer sites can be created in all plans that include
 - Microsoft 365 A3, A5
 - Microsoft 365 Government G3, G5
 
-If you would like to learn more about Microsoft 365 plans for your business, see [SharePoint Online: software boundaries and limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
+If you would like to learn more about Microsoft 365 plans for your business, see [SharePoint Online: software boundaries and limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits).
     
 For more information about the Microsoft 365 Enterprise offerings, see [Plans &amp; Pricing](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 

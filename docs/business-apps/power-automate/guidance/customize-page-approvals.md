@@ -42,6 +42,6 @@ Occasionally, the default approval action may not help in tracking and auditing 
 
 ![Parallel approvals in flow](../../../images/parallel-approvals-in-flow.png)
 
-To learn more, see [Create parallel approval workflows with Power Automate](https://docs.microsoft.com/power-automate/parallel-modern-approvals).
+To learn more, see [Create parallel approval workflows with Power Automate](/power-automate/parallel-modern-approvals).
 
 

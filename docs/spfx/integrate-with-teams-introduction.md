@@ -109,7 +109,7 @@ this.context.sdks.microsoftTeams
 ```
 
 > [!NOTE]
-> For more information on the Microsoft Teams tab context, see [Microsoft Teams development documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-context).
+> For more information on the Microsoft Teams tab context, see [Microsoft Teams development documentation](/microsoftteams/platform/concepts/tabs/tabs-context).
 
 > [!IMPORTANT]
 > The property `this.context.microsoftTeams` has been deprecated in the SharePoint Framework v1.10 release.
@@ -119,5 +119,5 @@ this.context.sdks.microsoftTeams
 ## See also
 
 - [Building Microsoft Teams tab using SharePoint Framework - Tutorial](web-parts/get-started/using-web-part-as-ms-teams-tab.md)
-- [Upload an app package to Microsoft Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/apps/apps-upload)
+- [Upload an app package to Microsoft Teams](/microsoftteams/platform/concepts/apps/apps-upload)
 - [Tenant-scoped solution deployment for SharePoint Framework solutions](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment)

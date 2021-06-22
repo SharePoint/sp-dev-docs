@@ -18,18 +18,18 @@ Sensitivity labels cannot be applied to files and folders using the SharePoint M
 Before you migrate your content with the Migration API, become familiar with how sensitivity labels work in Microsoft 365 and learn about the Microsoft Information Protection (MIP) SDK:
 
 - [Enable sensitivity labels for Offices files in SharePoint and OneDrive](https://docs.microsoft.com//microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)
-- [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview)
+- [Microsoft Information Protection SDK](/information-protection/develop/overview)
 
 **Step 2:**  
 Download and configure the Microsoft Information Protection (MIP) SDK. The article listed here shows you how to set up and configure your Microsoft 365 subscription and client workstation, in preparation for using the SDK.
 
-- [Microsoft Information Projection (MIP) SDK setup and configuration](https://docs.microsoft.com/information-protection/develop/setup-configure-mip) 
+- [Microsoft Information Projection (MIP) SDK setup and configuration](/information-protection/develop/setup-configure-mip) 
 
 
 **Step 3:** 
 Apply sensitivity labels using the MIP SDK. 
  
-If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](https://docs.microsoft.com/azure/information-protection/configure-policy-migrate-labels).  
+If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels).  
 
 
 **Step 4:** Migrate content using the [SharePoint Migration API](https://docs.microsoft.com/sharepoint/dev/apis/migration-api-overview)

@@ -74,7 +74,7 @@ While consuming LOB systems, another option that you have is to create SharePoin
 
 ### Articles
 * [Create hybrid connectivity apps for SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/create-hybrid-connectivity-apps-for-sharepoint)
-* [Azure Relay Hybrid Connections protocol](https://docs.microsoft.com/azure/service-bus-relay/relay-hybrid-connections-protocol)
+* [Azure Relay Hybrid Connections protocol](/azure/service-bus-relay/relay-hybrid-connections-protocol)
 
 ### Videos
 * [Azure App Service with Hybrid Connections to On-premises Resources](https://azure.microsoft.com/resources/videos/azure-app-service-with-hybrid-connections-to-on-premises-resources/)

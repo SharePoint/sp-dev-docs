@@ -132,7 +132,7 @@ using (var context = new ClientContext(destinationUrl))
 
 ## PnP Core library
 
-The Core library (OfficeDevPnP.Core) is a CSOM/REST object model that supports the PnP provisioning framework and enables the PnP provisioning engine. It consists of several namespaces, including a set of [extension methods](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/extension-methods). These methods extend the SharePoint object model to support remote provisioning as well as objects for handling entities, timer jobs, provisioning templates, and the entirety of the provisioning framework. Table 1 lists namespaces in the Core library.
+The Core library (OfficeDevPnP.Core) is a CSOM/REST object model that supports the PnP provisioning framework and enables the PnP provisioning engine. It consists of several namespaces, including a set of [extension methods](/dotnet/csharp/programming-guide/classes-and-structs/extension-methods). These methods extend the SharePoint object model to support remote provisioning as well as objects for handling entities, timer jobs, provisioning templates, and the entirety of the provisioning framework. Table 1 lists namespaces in the Core library.
 
 <br/>
 

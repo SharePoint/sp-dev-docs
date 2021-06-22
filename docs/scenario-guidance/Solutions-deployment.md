@@ -24,8 +24,8 @@ In the SharePoint Add-In Model there are many well-known rules and guidelines ab
 * [Publish SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/publish-sharepoint-add-ins)
 * [Tenancies and deployment scopes for SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins)
 * [Deploying and installing SharePoint Add-ins: methods and options](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options)
-* [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/office/dev/store/create-or-update-client-ids-and-secrets)
-* [Use the Seller Dashboard to submit your solution to AppSource](https://docs.microsoft.com/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store)
+* [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets)
+* [Use the Seller Dashboard to submit your solution to AppSource](/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store)
 
 ## SharePoint Framework
 

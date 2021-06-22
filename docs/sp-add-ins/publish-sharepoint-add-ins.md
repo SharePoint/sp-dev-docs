@@ -18,12 +18,12 @@ For information about how to package your add-in for publication by using Visual
 
 ## Publishing to AppSource
 
-To publish an add-in to AppSource, you must first [open a developer account](https://docs.microsoft.com/office/dev/store/open-a-developer-account). 
+To publish an add-in to AppSource, you must first [open a developer account](/office/dev/store/open-a-developer-account). 
 
 When you upload an add-in to AppSource for publication, Microsoft performs a validation check. For example, it checks that the add-in is free of viruses and that the add-in manifest markup is valid and complete, and verifies that any SharePoint solution packages (.wsp files) that you included in the add-in do not contain elements that aren't allowed, or SharePoint features with a scope that is broader than web. The package is also inspected for objectionable content. If the add-in package passes validation, it's wrapped into a file and signed by Microsoft.
 
 > [!NOTE] 
-> Pricing model management is not supported for Office marketplace products. Existing paid products that migrated from Seller Dashboard will need to move to a SaaS model or be made free by July 2020. For details, see [Moving from paid to free add-ins](https://docs.microsoft.com/office/dev/store/moving-from-paid-to-free-addins). You can monetize your add-in through the Microsoft Commercial Marketplace; for details, see [Monetize your add-in](https://docs.microsoft.com/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). 
+> Pricing model management is not supported for Office marketplace products. Existing paid products that migrated from Seller Dashboard will need to move to a SaaS model or be made free by July 2020. For details, see [Moving from paid to free add-ins](/office/dev/store/moving-from-paid-to-free-addins). You can monetize your add-in through the Microsoft Commercial Marketplace; for details, see [Monetize your add-in](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). 
 
 ## Publishing to an add-in catalog
 
@@ -49,10 +49,10 @@ The following table offers a comparison of publishing to AppSource or to an add-
 ## See also
 <a name="bk_addresources"> </a>
 
--  [Make your solutions available in AppSource and within Office](https://docs.microsoft.com/office/dev/store/submit-to-appsource-via-partner-center)
--  [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/office/dev/store/create-or-update-client-ids-and-secrets)
--  [Submit your Office solution to AppSource via Partner Center](https://docs.microsoft.com/office/dev/store/use-partner-center-to-submit-to-appsource)
--  [Validation policies for apps and add-ins submitted to AppSource](https://docs.microsoft.com/office/dev/store/validation-policies)
+-  [Make your solutions available in AppSource and within Office](/office/dev/store/submit-to-appsource-via-partner-center)
+-  [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets)
+-  [Submit your Office solution to AppSource via Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource)
+-  [Validation policies for apps and add-ins submitted to AppSource](/office/dev/store/validation-policies)
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins)
 -  [Get started creating provider-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins)
 -  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)

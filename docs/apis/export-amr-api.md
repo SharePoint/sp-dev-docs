@@ -170,7 +170,7 @@ If an invalid value is detected, other than NULL, an error will be generated, an
 
 This is an optional parameter. If it is specified, the AES256CBCKey is used to encrypt output files and queue messages. Otherwise, there is no encryption. 
 
-For more information, see [EncryptionOption Class](https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.encryptionoption).
+For more information, see [EncryptionOption Class](/dotnet/api/microsoft.sharepoint.client.encryptionoption).
 
 #### azureContainerManifestUri
 

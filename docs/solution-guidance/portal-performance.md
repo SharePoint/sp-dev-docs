@@ -198,7 +198,7 @@ The proper management of client-side data request traffic is critical to the per
 	- For static content, or content that is updated infrequently, like site navigation, consider writing this content to a JSON file and serving it from a CDN.
 	- To reduce costs at the middle-tier, clients can also cache the responses to LocalStorage.
 
-For additional information, see [Caching](https://docs.microsoft.com/azure/architecture/best-practices/caching).
+For additional information, see [Caching](/azure/architecture/best-practices/caching).
 
 #### Call the server (or other back-end data source) only when a cache miss occurs
 

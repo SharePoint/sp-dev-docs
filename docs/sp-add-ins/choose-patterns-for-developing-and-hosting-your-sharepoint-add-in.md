@@ -126,7 +126,7 @@ You can host a provider-hosted SharePoint Add-in on an Azure web role instead of
 
 See the following links for more information about Azure web roles.
 
-- [What is a cloud service?](https://docs.microsoft.com/azure/cloud-services/cloud-services-choose-me)
+- [What is a cloud service?](/azure/cloud-services/cloud-services-choose-me)
 - [Introducing Microsoft Azure](https://azure.microsoft.com/overview/what-is-azure/)
 - [Autoscaling and Microsoft Azure](https://msdn.microsoft.com/library/hh680945%28v=pandp.50%29.aspx)
 
