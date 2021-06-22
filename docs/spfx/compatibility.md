@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development tools and libraries compatibility
 description: Find which versions of the SharePoint Framework are compatible with each version of SharePoint, development tools and libraries.
-ms.date: 05/18/2021
+ms.date: 06/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -32,26 +32,26 @@ As each new version of the SharePoint Framework is released, support for newer v
 
 The following table lists SharePoint Framework and compatible versions of common tools and libraries:
 
-|               SPFx               |          Node.js          |                    NPM                    |   TypeScript   |    React    |
-| -------------------------------- | ------------------------- | ----------------------------------------- | -------------- | ----------- |
-| [1.12.1](/release-1.12.1.md)     | LTS v14, LTS v12, LTS v10 | v5, v6                                    | v3.7           | v16.9.0     |
-| ~~[1.12.0](/release-1.12.0.md)~~ | ~~LTS v12, LTS v10~~      | ~~v5, v6~~                                | ~~v3.7~~       | ~~v16.9.0~~ |
-| [1.11.0](/release-1.11.0.md)     | LTS v10                   | v5, v6                                    | v3.3           | v16.8.5     |
-| [1.10.0](/release-1.10.0.md)     | LTS v10, LTS 8            | v5, v6                                    | v3.3           | v16.8.5     |
-| [1.9.1](/release-1.9.1.md)       | LTS v10, LTS 8            | v5, v6                                    | v2.9           | v16.8.5     |
-| [1.8.2](/release-1.8.2.md)       | LTS 8, LTS 10             | v5, v6                                    | v2.9           | v16.7.0     |
-| [1.8.1](/release-1.8.1.md)       | LTS 8                     | v5, v6                                    | v2.7, v2.9, v3 | v16.7.0     |
-| [1.8.0](/release-1.8.0.md)       | LTS 8                     | v5, v6                                    | v2.7, v2.9, v3 | v16.7.0     |
-| [1.7.1](/release-1.7.1.md)       | LTS 8                     | v5, v6                                    | v2.4           | v16.3.2     |
-| [1.7.0](/release-1.7.md)         | LTS 8                     | v5, v6                                    | v2.4           | v16.3.2     |
-| [1.6.0](/release-1.6.md)         | LTS 6,  LTS 8             | v3 (w/ Node.js 6),<br/> v5 (w/ Node.js 8) | v2.4           | v15         |
-| [1.5.1](/release-1.5.1.md)       | LTS 6,  LTS 8             | v3 (w/ Node.js 6),<br/> v5 (w/ Node.js 8) | v2.4           | v15         |
-| [1.5.0](/release-1.5.md)         | LTS 6,  LTS 8             | v3 (w/ Node.js 6),<br/> v5 (w/ Node.js 8) | v2.4           | v15         |
-| [1.4.1](/release-1.4.1.md)       | LTS 6,  LTS 8             | v3, v4                                    | v2.4           | v15         |
-| [1.4.0](/release-1.4.md)         | LTS 6                     | v3, v4                                    | v2.4           | v15         |
-| [1.3.0](/release-1.3.md)         | LTS 6                     | v3, v4                                    | v2.4           | v15         |
-| [1.1.0](/release-1.1.md)         | LTS 6                     | v3, v4                                    | v2.4           | v15         |
-| [1.0.0](/release-1.0.0.md)       | LTS 6                     | v3                                        | v2.4           | v15         |
+|               SPFx               |         Node.js          |                    NPM                    |   TypeScript   |    React    |
+| -------------------------------- | ------------------------ | ----------------------------------------- | -------------- | ----------- |
+| [1.12.1](release-1.12.1.md)     | LTS v10,LTS v12, LTS v14 | v5, v6                                    | v3.7           | v16.9.0     |
+| ~~[1.12.0](release-1.12.0.md)~~ | ~~LTS v12, LTS v10~~     | ~~v5, v6~~                                | ~~v3.7~~       | ~~v16.9.0~~ |
+| [1.11.0](release-1.11.0.md)     | LTS v10                  | v5, v6                                    | v3.3           | v16.8.5     |
+| [1.10.0](release-1.10.0.md)     | LTS v8, LTS v10          | v5, v6                                    | v3.3           | v16.8.5     |
+| [1.9.1](release-1.9.1.md)       | LTS v8, LTS v10          | v5, v6                                    | v2.9           | v16.8.5     |
+| [1.8.2](release-1.8.2.md)       | LTS v8, LTS v10          | v5, v6                                    | v2.9           | v16.7.0     |
+| [1.8.1](release-1.8.1.md)       | LTS v8                   | v5, v6                                    | v2.7, v2.9, v3 | v16.7.0     |
+| [1.8.0](release-1.8.0.md)       | LTS v8                   | v5, v6                                    | v2.7, v2.9, v3 | v16.7.0     |
+| [1.7.1](release-1.7.1.md)       | LTS v8                   | v5, v6                                    | v2.4           | v16.3.2     |
+| [1.7.0](release-1.7.md)         | LTS v8                   | v5, v6                                    | v2.4           | v16.3.2     |
+| [1.6.0](release-1.6.md)         | LTS v6, LTS v8           | v3 (w/ Node.js 6),<br/> v5 (w/ Node.js 8) | v2.4           | v15         |
+| [1.5.1](release-1.5.1.md)       | LTS v6, LTS v8           | v3 (w/ Node.js 6),<br/> v5 (w/ Node.js 8) | v2.4           | v15         |
+| [1.5.0](release-1.5.md)         | LTS v6, LTS v8           | v3 (w/ Node.js 6),<br/> v5 (w/ Node.js 8) | v2.4           | v15         |
+| [1.4.1](release-1.4.1.md)       | LTS v6, LTS v8           | v3, v4                                    | v2.4           | v15         |
+| [1.4.0](release-1.4.md)         | LTS v6                   | v3, v4                                    | v2.4           | v15         |
+| [1.3.0](release-1.3.md)         | LTS v6                   | v3, v4                                    | v2.4           | v15         |
+| [1.1.0](release-1.1.md)         | LTS v6                   | v3, v4                                    | v2.4           | v15         |
+| [1.0.0](release-1.0.0.md)       | LTS v6                   | v3                                        | v2.4           | v15         |
 
 ## See also
 
