@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # Use the SharePoint JavaScript APIs to work with SharePoint data
 
-This is the tenth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#Nextsteps).
+This is the tenth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating SharePoint-hosted SharePoint Add-ins | Next steps](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#next-steps).
 
 > [!NOTE]
 > If you have been working through this series about SharePoint-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeJSOM.sln file.
@@ -27,7 +27,7 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
     <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
     <script type="text/javascript" src="/_layouts/15/sp.js"></script>
     ```
-    
+
    Then search the file for any other markup that also loads one or the other of these files and remove the redundant markup. Save and close the file.
 
 1. In the **Scripts** node in **Solution Explorer**, there may already be an Add-in.js file. If there'sn't, but there's an App.js file, right-click **App.js** and rename it **Add-in.js**. If there'sn't an Add-in.js or App.js, create one with these steps:
@@ -39,9 +39,9 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
        ```html
        <script type="text/javascript" src="../Scripts/App.js"></script>
        ```
-    
+
        to
-    
+
        ```html
        <script type="text/javascript" src="../Scripts/Add-in.js"></script>
        ```
@@ -51,12 +51,12 @@ Even though SharePoint-hosted SharePoint Add-ins can't have server-side code, yo
 
     ```javascript
     'use strict';
-    
+
       var clientContext = SP.ClientContext.get_current();
       var employeeList = clientContext.get_web().get_lists().getByTitle('New Employees In Seattle');
       var completedItems;
     ```
-    
+
    Note the following about this code:
 
    - The `'use strict';` line ensures that the JavaScript runtime in the browser will throw an exception if you inadvertently use certain bad practices in the JavaScript.

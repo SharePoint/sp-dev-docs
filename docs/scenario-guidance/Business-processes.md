@@ -4,7 +4,6 @@ description: Scenario guidance on business process options in SharePoint Online 
 ms.date: 03/26/2018
 localization_priority: Normal
 ---
-
 # Business Processes
 
 ## Summary
@@ -70,9 +69,9 @@ Both in SharePoint Online and in SharePoint 2013/2016 on-premises you can define
 
 ### Articles
 
-* [Get started with workflows in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/get-started-with-workflows-in-sharepoint)
-* [SharePoint workflow development best practices](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-workflow-development-best-practices)
-* [Workflow actions and activities reference for SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/workflow-actions-and-activities-reference-for-sharepoint)
+* [Get started with workflows in SharePoint](../general-development/get-started-with-workflows-in-sharepoint.md)
+* [SharePoint workflow development best practices](../general-development/sharepoint-workflow-development-best-practices.md)
+* [Workflow actions and activities reference for SharePoint](../general-development/workflow-actions-and-activities-reference-for-sharepoint.md)
 
 ### Samples
 

@@ -177,7 +177,7 @@ When you deploy SharePoint Framework solutions that request permissions to Azure
 
 ### Manage permissions in the new SharePoint admin center
 
-To learn how to use the API access page in the new SharePoint admin center, see [Manage access to Azure AD-secured APIs](https://docs.microsoft.com/sharepoint/api-access).
+To learn how to use the API access page in the new SharePoint admin center, see [Manage access to Azure AD-secured APIs](/sharepoint/api-access).
 
 ### Manage permissions with PowerShell
 

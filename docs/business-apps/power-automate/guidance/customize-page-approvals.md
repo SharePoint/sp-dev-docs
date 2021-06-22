@@ -1,7 +1,8 @@
 ---
 title: Customize SharePoint page approvals to meet your needs
+description: With the help of flows in Power Automate, you can configure page approval to add to the standard publishing process for a site. The default publishing flow meets your basic needs.
 ms.date: 07/12/2020
-search.app: 
+search.app:
   - Flow
 search.appverid: met150
 ---

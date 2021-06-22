@@ -4,7 +4,6 @@ description: You can build your Microsoft Teams tabs using SharePoint Framework 
 ms.date: 03/15/2021
 ms.prod: sharepoint
 ---
-
 # Building Microsoft Teams Tabs using SharePoint Framework
 
 Starting with SharePoint Framework v1.8, you can build tabs for Microsoft Teams with the SharePoint Framework tooling and use SharePoint as a host for your solutions. As part of the SharePoint Framework v1.10 you can also publish your solution as Microsoft Teams personal app.
@@ -120,4 +119,4 @@ this.context.sdks.microsoftTeams
 
 - [Building Microsoft Teams tab using SharePoint Framework - Tutorial](web-parts/get-started/using-web-part-as-ms-teams-tab.md)
 - [Upload an app package to Microsoft Teams](/microsoftteams/platform/concepts/apps/apps-upload)
-- [Tenant-scoped solution deployment for SharePoint Framework solutions](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment)
+- [Tenant-scoped solution deployment for SharePoint Framework solutions](tenant-scoped-deployment.md)

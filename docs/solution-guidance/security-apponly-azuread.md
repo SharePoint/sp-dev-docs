@@ -357,10 +357,11 @@ internal static X509Certificate2 GetKeyVaultCertificate(string keyvaultName, str
 
 ## Using this principal with the Pnp Modernization Scanner
 
-Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner) to use this principal with the tool.
+Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](../transform/modernize-scanner.md) to use this principal with the tool.
 
 ## FAQ
 
 ### Can I use other means besides certificates for realizing app-only access for my Azure AD app?
+
 No, all other options are blocked by SharePoint Online and will result in an Access Denied message.
 

@@ -50,7 +50,7 @@ Using Microsoft Power Automate, SharePoint users can use the SharePoint Connecto
 
 To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/en-us/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](/power-automate/mobile-create-flow).
 
-To learn more about building workflows using Power Automate in SharePoint, start here: Business apps and Business process [automation in SharePoint](https://docs.microsoft.com/sharepoint/dev/business-apps/introduction-to-sharepoint-business-process-integration).
+To learn more about building workflows using Power Automate in SharePoint, start here: Business apps and Business process [Business apps and business process automation](../../introduction-to-sharepoint-business-process-integration.md).
 
 ## Pain points in moving between classic workflows in SharePoint and Power Automate flows
 
@@ -74,7 +74,7 @@ Approvals are the most common workflow scenario when it comes to automating busi
 
 - [Parallel approvals](/power-automate/parallel-modern-approvals)
 
-SharePoint approvals such as [page approvals](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/customize-page-approvals), [document approvals](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/require-doc-approval), and [hub association approvals](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098#bkmk_managesiteassociationapprovals) are all integrated and powered by Power Automate flows, providing users the flexibility to customize the business process for each of the approval scenarios.
+SharePoint approvals such as [page approvals](customize-page-approvals.md), [document approvals][Require approval of documents in SharePoint using Power Automate](require-doc-approval.md), and [hub association approvals](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098#bkmk_managesiteassociationapprovals) are all integrated and powered by Power Automate flows, providing users the flexibility to customize the business process for each of the approval scenarios.
 
 ## Authoring classic workflows and flows
 
@@ -86,10 +86,8 @@ See the following tables that compare the workflow terminologies, triggers, and 
 
 While the following lists show some of the most common workflow capabilities, Power Automate offers many more features, and is actively updated with new features. We highly recommend visiting the following Power Automate websites for guided learning:
 
-- [SharePoint Power Automate Documentation](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers)
-
+- [Microsoft SharePoint Connector in Power Automate](../sharepoint-connector-actions-triggers.md)
 - [Learn Power Automate](/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
-
 - [Power Automate Documentation](/power-automate/?utm_source=flow-sidebar&utm_medium=web)
 
 ### Workflow concepts
@@ -222,6 +220,7 @@ While the following lists show some of the most common workflow capabilities, Po
 | Copy/paste actions |Yes | Yes |
 
 ## Workflow administration
+
 |Workflow administration |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Central location to view all workflows   | Yes, only available to view for a given list or library   | Yes, 'My flows' lists user flows |

@@ -8,7 +8,7 @@ localization_priority: Priority
 ---
 # Customizing ranking models to improve relevance in SharePoint
 
-**APPLIES TO:** ![Applies to SharePoint Server 2013](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2013 ![Applies to SharePoint Server 2016](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2016 ![Applies to SharePoint Server 2019](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2019 ![Does not apply to SharePoint Online](https://docs.microsoft.com/sharepoint/sharepointserver/media/no.png) SharePoint Online in Microsoft 365
+**APPLIES TO:** ![Applies to SharePoint Server 2013](/sharepoint/sharepointserver/media/yes.png) 2013 ![Applies to SharePoint Server 2016](/sharepoint/sharepointserver/media/yes.png) 2016 ![Applies to SharePoint Server 2019](/sharepoint/sharepointserver/media/yes.png) 2019 ![Does not apply to SharePoint Online](/sharepoint/sharepointserver/media/no.png) SharePoint Online in Microsoft 365
 
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
 
@@ -655,4 +655,4 @@ This ranking model with one linear stage contains these four rank features:
 - [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
 - [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
 - [Overview of search result ranking in SharePoint](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
-- [Create a custom ranking model by using the Ranking Model Tuning App](https://docs.microsoft.com/sharepoint/search/create-custom-ranking-model)
+- [Create a custom ranking model by using the Ranking Model Tuning App](/sharepoint/search/create-custom-ranking-model)

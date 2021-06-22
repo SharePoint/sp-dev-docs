@@ -47,7 +47,7 @@ For all non-human access, it’s advisable to use app principals as discussed pr
 - Using an Azure AD application: this is the preferred method when using SharePoint Online because you can also grant permissions to other Office 365 services (if needed) and you have a user interface (Azure portal) to maintain your app principals.
 - Using a SharePoint App-Only principal: this method is older and only works for SharePoint access, but is still relevant. This method is also the recommended model when you’re still working in SharePoint on-premises since this model works in both SharePoint on-premises as SharePoint Online.
 
-Both models are explained in detail in the [Accessing SharePoint using an application context, also known as app-only](https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-apponly) article.
+Both models are explained in detail in the [Accessing SharePoint using an application context, also known as app-only](security-apponly.md) article.
 
 ### Granting access via users and groups
 
@@ -166,7 +166,7 @@ foreach($sitecollection in $sitecollections) {
 
 An alternative model for the PowerShell approach is creating a background application that enumerates all site collections (including modern team sites, OneDrive for Business sites, across locations when using Multi-Geo), checks if the needed user/group has access and if not adds that one. The architecture of such an application could be as simple as the one defined below:
 
-1. You start with defining an application in Azure AD for which you setup app-only usage (see “[Setting up an Azure AD app for app-only access](https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-apponly-azuread)”) and grant full control on all site collections
+1. You start with defining an application in Azure AD for which you setup app-only usage (see [Granting access via Azure AD App-Only](security-apponly-azuread.md)) and grant full control on all site collections
 2. You create a C# application that authorizes itself using the Azure AD application you’ve defined in step 1 and iterates over all the site collections (this can include OD4B site collections) to add the needed accounts/groups if they’re not present
 3. This C# application then needs to be hosted and scheduled to run on regular intervals. Using an Azure web job is a good model for doing so, but the same could be done by running the application as a scheduled task on a server
 

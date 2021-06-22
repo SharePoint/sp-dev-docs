@@ -98,5 +98,5 @@ After you add a site template to the solutions gallery and the template is activ
 ## See also
 
 - [Site Types: WebTemplates and Site Definitions](/previous-versions/office/developer/sharepoint-2010/ms434313(v=office.14))
-- [Understanding how to package and deploy workflow in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/understanding-how-to-package-and-deploy-workflow-in-sharepoint)
+- [Understanding how to package and deploy workflow in SharePoint](understanding-how-to-package-and-deploy-workflow-in-sharepoint.md)
 - [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)

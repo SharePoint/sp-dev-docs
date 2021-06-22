@@ -13,15 +13,15 @@ localization_priority: Priority
 
 # Excel Services error codes
 
-Excel Services generates errors and error messages in the SOAP exception based on errors that occur in Excel Services. The following table shows the errors that are accessible when calls to the Excel Web Services methods throw a SOAP exception. 
+Excel Services generates errors and error messages in the SOAP exception based on errors that occur in Excel Services. The following table shows the errors that are accessible when calls to the Excel Web Services methods throw a SOAP exception.
 
 You use the [SubCode](/dotnet/api/system.web.services.protocols.soapexception.subcode) property of the **SoapException** class to capture the error codes. For more information about using the **SubCode** property to capture error codes, see [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
 For more information about Excel Services alerts, see  [Excel Services Alerts](excel-services-alerts.md).
 
 ## Error codes
 
-The following table lists the error codes for Excel Web Services alerts and the associated messages, explanation, and resolutions. 
- 
+The following table lists the error codes for Excel Web Services alerts and the associated messages, explanation, and resolutions.
+
 |**Error Code**|**Message**|**Explanation**|**Resolution**|
 |:-----|:-----|:-----|:-----|
 |ApiInvalidArgument  <br/> |Invalid value to argument: {0}  <br/> |An invalid value for an argument was passed into the API call.  <br/> 0 = name of the argument. Its value is invalid.  <br/> |Use a valid value for the argument.  <br/> |
@@ -51,10 +51,10 @@ The following table lists the error codes for Excel Web Services alerts and the 
 |SheetRangeMismatch  <br/> |The sheet provided as the sheet argument is not the same as the sheet specified in the range argument.  <br/> |The name of the sheet passed in for a  _sheetName_ parameter does not match the sheet location specified in the _rangeName_ parameter. <br/> |When specifying a sheet in both the range and sheet arguments, ensure that the sheet names are the same. For example,  `Calculate(Sheet1, Sheet1!Range("A1"))`.  <br/> |
 |SpecifiedRangeNotFound  <br/> |The requested range does not exist in the sheet.  <br/> |The range that was passed into a method with the A1 suffix (**SetCellA1**, **SetRangeA1**, **GetCellA1**, and **GetRangeA1**) could not be found.  <br/> |Make sure the range specified exists in the sheet.  <br/> |
 |WorkbookNotSupported  <br/> |The file you selected cannot be opened because it contains feature(s) that are not supported by Excel Services. One or more of the following unsupported features were detected in the workbook:  <br/> {0}  <br/> |The workbook contains unsupported features.  <br/> 0 = a \\n separated list of unsupported feature names.  <br/> |Make sure the workbook does not contain features that are not supported by Excel Services.  <br/> |
-   
+
 
 ## See also
-    
+
 - [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
 - [Excel Services Alerts](excel-services-alerts.md)
 - [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)

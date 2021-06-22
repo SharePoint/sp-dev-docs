@@ -18,13 +18,9 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
 > This lab requires that you are using at least version 1.10 of the SharePoint Framework as these capabilities are not available in earlier versions.
 
 > [!NOTE]
-> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the library (*see [this article for reference](https://docs.microsoft.com/sharepoint/dev/spfx/try-preview-capabilities)*)
-
-<br/>
+> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the library (*see [Try SharePoint Framework preview capabilities](../../try-preview-capabilities.md) for more information*).
 
 > [!Video https://www.youtube.com/embed/QtGjTAjbIKU]
-
-<br/>
 
 ## Create a new solution
 
@@ -52,13 +48,13 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
     * Select **SharePoint Online only (latest)**, and then select Enter.
     * Select **Use the current folder** as the location for the files.
     * Select **y** to ensure that your web part is automatically deployed tenant-wide when it's added to the tenant App Catalog.
-    * Select **N** on the question if solution contains unique permissions.  
+    * Select **N** on the question if solution contains unique permissions.
     * Select **WebPart** as the client-side component type to be created.
 
 1. The next set of prompts asks for specific information about your web part:
 
     * Enter **MyFirstOWAaddin** for the web part name, and then select Enter.
-    * Enter **My first Outlook add-in** as the description of the web part, and then select Enter. 
+    * Enter **My first Outlook add-in** as the description of the web part, and then select Enter.
     * Accept the default **No JavaScript web framework** option for the framework, and then select Enter to continue.
 
     ![Yeoman prompts](../../../images/add-in-yeoman.png)
