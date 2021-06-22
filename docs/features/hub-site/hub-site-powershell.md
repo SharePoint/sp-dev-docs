@@ -25,14 +25,14 @@ The following PowerShell cmdlets are available for managing hub sites:
 
 |cmdlet|Description|
 |------|-----------|
-|[Add-SPOHubSiteAssociation](https://docs.microsoft.com/powershell/module/sharepoint-online/add-spohubsiteassociation?view=sharepoint-ps)|Adds a new association between a site and a hub site.|
-|[Remove-SPOHubSiteAssociation](https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spohubsiteassociation?view=sharepoint-ps)|Removes an association between a site and a hub site.|
-|[Get-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/get-spohubsite?view=sharepoint-ps)|Lists hub sites or hub site information.|
-|[Grant-SPOHubSiteRights](https://docs.microsoft.com/powershell/module/sharepoint-online/grant-spohubsiterights?view=sharepoint-ps)|Grants rights to users or security groups to access the hub site.|
-|[Register-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/register-spohubsite?view=sharepoint-ps)|Enables the hub site feature on a site to make it a hub site.|
-|[Revoke-SPOHubSiteRights](https://docs.microsoft.com/powershell/module/sharepoint-online/revoke-spohubsiterights?view=sharepoint-ps)|Revokes rights for specified principals to a hub site.|
-|[Set-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/set-spohubsite?view=sharepoint-ps)|Sets the hub site information such as name, logo, and description.|
-|[Unregister-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/unregister-spohubsite?view=sharepoint-ps)|Disables the hub site feature on a site.|
+|[Add-SPOHubSiteAssociation](/powershell/module/sharepoint-online/add-spohubsiteassociation?view=sharepoint-ps)|Adds a new association between a site and a hub site.|
+|[Remove-SPOHubSiteAssociation](/powershell/module/sharepoint-online/remove-spohubsiteassociation?view=sharepoint-ps)|Removes an association between a site and a hub site.|
+|[Get-SPOHubSite](/powershell/module/sharepoint-online/get-spohubsite?view=sharepoint-ps)|Lists hub sites or hub site information.|
+|[Grant-SPOHubSiteRights](/powershell/module/sharepoint-online/grant-spohubsiterights?view=sharepoint-ps)|Grants rights to users or security groups to access the hub site.|
+|[Register-SPOHubSite](/powershell/module/sharepoint-online/register-spohubsite?view=sharepoint-ps)|Enables the hub site feature on a site to make it a hub site.|
+|[Revoke-SPOHubSiteRights](/powershell/module/sharepoint-online/revoke-spohubsiterights?view=sharepoint-ps)|Revokes rights for specified principals to a hub site.|
+|[Set-SPOHubSite](/powershell/module/sharepoint-online/set-spohubsite?view=sharepoint-ps)|Sets the hub site information such as name, logo, and description.|
+|[Unregister-SPOHubSite](/powershell/module/sharepoint-online/unregister-spohubsite?view=sharepoint-ps)|Disables the hub site feature on a site.|
 
 ## See also
 
