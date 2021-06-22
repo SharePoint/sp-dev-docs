@@ -18,9 +18,9 @@ For a video introduction to timer jobs, see the video [Introduction to the PnP t
 
 ## Simple timer job example
 
-In this section, you will learn how to create a very simple timer job. The goal of this sample is to provide the reader a quick view; later on we provide a more detailed explanation of the timer job framework. 
+In this section, you will learn how to create a very simple timer job. The goal of this sample is to provide the reader a quick view; later on we provide a more detailed explanation of the timer job framework.
 
-> [!NOTE] 
+> [!NOTE]
 > For a more extensive PnP solution with ten individual timer job examples, from "Hello world" samples to actual content expiration jobs, see [Core.TimerJobs.Samples](https://github.com/SharePoint/PnP/tree/dev/Solutions/Core.TimerJobs.Samples).
 
 The following steps describe how to create a simple timer job.
@@ -30,9 +30,9 @@ The following steps describe how to create a simple timer job.
 Create a new project of the type "console" and reference the PnP Core library by doing one of the following:
 
 - Add the Office 365 Developer Patterns and Practices Core NuGet package to your project. There's a [NuGet package for v15 (on-premises) and for v16 (Office 365)](https://www.nuget.org/packages?q=pnp). This is the preferred option.
-- Add the existing PnP Core source project to your project. This allows you to step into the PnP core code when debugging. 
+- Add the existing PnP Core source project to your project. This allows you to step into the PnP core code when debugging.
 
-    > [!NOTE] 
+    > [!NOTE]
     > You will be responsible for keeping this code updated with the latest changes added to PnP.
 
 ### Step 2: Create a timer job class and add your timer job logic
@@ -92,13 +92,13 @@ static void Main(string[] args)
 {
     // Instantiate the timer job class
     SimpleJob simpleJob = new SimpleJob();
-    
+
     // The provided credentials need access to the site collections you want to use
     simpleJob.UseOffice365Authentication("user@tenant.onmicrosoft.com", "pwd");
 
     // Add one or more sites to operate on
     simpleJob.AddSite("https://<tenant>.sharepoint.com/sites/d*");
-    
+
     // Run the job
     simpleJob.Run();
 }
@@ -127,7 +127,7 @@ Before deploying a timer job, ensure that the job can run without user interacti
   </appSettings>
 ```
 
-After these changes are added to the app.config file, run the timer job from Visual Studio to confirm that it runs without user interaction. 
+After these changes are added to the app.config file, run the timer job from Visual Studio to confirm that it runs without user interaction.
 
 The actual deployment to Azure is based on Azure WebJobs. To deploy this timer job example, follow these steps:
 
@@ -141,27 +141,27 @@ The actual deployment to Azure is based on Azure WebJobs. To deploy this timer j
 
 5. After the timer job has been published, you can trigger the job and check the job execution from Visual Studio or the [Azure portal](https://ms.portal.azure.com).
 
-    ![Azure portal](media/timerjob-framework/4xDUvXv.png)
+    ![Azure portal (legacy)](media/timerjob-framework/4xDUvXv.png)
 
-6. Also, the timer job can be run from the new [Azure portal](https://ms.portal.azure.com/) by selecting the job and choosing **Run**. More details about how to work with WebJobs from the new portal can be found in the article, [Run Background tasks with WebJobs in Azure App Service](https://docs.microsoft.com/azure/app-service/web-sites-create-web-jobs).
+6. Also, the timer job can be run from the new [Azure portal](https://ms.portal.azure.com/) by selecting the job and choosing **Run**. More details about how to work with WebJobs from the new portal can be found in the article, [Run Background tasks with WebJobs in Azure App Service](/azure/app-service/web-sites-create-web-jobs).
 
-    ![Azure portal](media/timerjob-framework/n4wGS5x.png)
+    ![Azure portal (current)](media/timerjob-framework/n4wGS5x.png)
 
-> [!NOTE] 
-> For in-depth guidance about deploying an Azure WebJob, see [Getting started with Azure WebJobs (timer jobs) for your Office 365 sites](getting-started-with-building-azure-webjobs-for-your-office365-sites.md). 
+> [!NOTE]
+> For in-depth guidance about deploying an Azure WebJob, see [Getting started with Azure WebJobs (timer jobs) for your Office 365 sites](getting-started-with-building-azure-webjobs-for-your-office365-sites.md).
 
 ### Deploy timer jobs to Windows Server by using the Windows Scheduler
 
-When deployed to Windows Server, the timer job must run without user interaction. 
+When deployed to Windows Server, the timer job must run without user interaction.
 
-1. Modify the app.config file as described in the previous section **Deploy timer jobs to Azure using Azure WebJobs**. 
+1. Modify the app.config file as described in the previous section **Deploy timer jobs to Azure using Azure WebJobs**.
 
-2. Copy the release version of your job to the server you want it to run on. 
+2. Copy the release version of your job to the server you want it to run on.
 
-    > [!IMPORTANT] 
-    > Copy all the relevant assemblies, the .exe file, and the .config file to ensure the job can run on the server without installing any additional files or programs on the server. 
+    > [!IMPORTANT]
+    > Copy all the relevant assemblies, the .exe file, and the .config file to ensure the job can run on the server without installing any additional files or programs on the server.
 
-3. Schedule the execution of the timer job. We recommend that you use the built-in [Windows Task Scheduler](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721871(v=ws.11)). To use the Windows Task Scheduler:
+3. Schedule the execution of the timer job. We recommend that you use the built-in [Windows Task Scheduler](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721871(v=ws.11)). To use the Windows Task Scheduler:
 
     1. Open the Task Scheduler (**Control Panel** > **Task Scheduler**).
     2. Choose **Create Task** and specify a name and an account that will execute the task.
@@ -175,7 +175,7 @@ When deployed to Windows Server, the timer job must run without user interaction
 
 This section details the timer job framework features and how they work.
 
-### Structure 
+### Structure
 
 The **TimerJob** class is an abstract base class that contains the following public properties, methods and events:
 
@@ -204,7 +204,7 @@ Further details on each step can be found in the next sections.
 
 ### Authentication
 
-Before a timer job can be used, the timer job needs to know how to authenticate back to SharePoint. The framework currently supports the approaches in the **AuthenticationType** enum: **Office365**, **NetworkCredentials**, and **AppOnly**. Using the following methods also automatically sets the **AuthenticationType** property to the appropriate value of **Office365**, **NetworkCredentials**, and **AppOnly**. 
+Before a timer job can be used, the timer job needs to know how to authenticate back to SharePoint. The framework currently supports the approaches in the **AuthenticationType** enum: **Office365**, **NetworkCredentials**, and **AppOnly**. Using the following methods also automatically sets the **AuthenticationType** property to the appropriate value of **Office365**, **NetworkCredentials**, and **AppOnly**.
 
 The following flowchart shows the steps to take, followed by detailed explanations of each approach.
 
@@ -234,10 +234,10 @@ public void UseNetworkCredentialsAuthentication(string credentialName)
 
 #### App only
 
-App-only authentication is the **preferred method** because you can grant tenant-scoped permissions. For user credentials, the user account must have the needed permissions. 
+App-only authentication is the **preferred method** because you can grant tenant-scoped permissions. For user credentials, the user account must have the needed permissions.
 
-> [!NOTE] 
-> Certain site resolving logic won't work with app-only authentication. Details can be found in the next section. 
+> [!NOTE]
+> Certain site resolving logic won't work with app-only authentication. Details can be found in the next section.
 
 To configure the job for app-only authentication, use one of the following methods:
 
@@ -248,12 +248,12 @@ public void UseAzureADAppOnlyAuthentication(string clientId, string clientSecret
 
 The same method can be used for either Office 365 or SharePoint on-premises, which makes timer jobs that use app-only authentication easily transportable between environments.
 
-> [!NOTE] 
+> [!NOTE]
 > When you use app-only authentication, your timer job logic fails when APIs are used that do not work with **AuthenticationType.AppOnly**. Typical samples are the Search API, writing to the taxonomy store, and using the user profile API.
 
 ### Sites to operate on
 
-When a timer job runs, it needs one or more sites to run against. 
+When a timer job runs, it needs one or more sites to run against.
 
 #### Add sites to a timer job
 
@@ -264,7 +264,7 @@ public void AddSite(string site)
 public void ClearAddedSites()
 ```
 
-To add a site, specify either a fully qualified URL (for example, `https://tenant.sharepoint.com/sites/dev`) or a wild card URL. 
+To add a site, specify either a fully qualified URL (for example, `https://tenant.sharepoint.com/sites/dev`) or a wild card URL.
 
 A wild card URL is a URL that ends with an asterisk (`*`). Only one single `*` is allowed and it must be the last character of the URL. A sample wild card URL is `https://tenant.sharepoint.com/sites/*`, which returns **all** the site collections under the managed path of that site. For another example, `https://tenant.sharepoint.com/sites/dev*` returns all site collections where the URL contains `dev`.
 
@@ -286,13 +286,13 @@ public override List<string> UpdateAddedSites(List<string> addedSites)
 
 #### Specify enumeration credentials
 
-After adding a wild card URL and setting authentication to app-only, specify the enumeration credentials. Enumeration credentials are used to fetch a list of site collections that are used in the site matching algorithm to return a real list of sites. 
+After adding a wild card URL and setting authentication to app-only, specify the enumeration credentials. Enumeration credentials are used to fetch a list of site collections that are used in the site matching algorithm to return a real list of sites.
 
 To acquire a list of site collections, the timer framework behaves differently between Office 365 (v16) and on-premises (v15):
 - **Office 365**: The **Tenant.GetSiteProperties** method is used to read the 'regular' site collections; the search API is used to read the OneDrive for Business site collections.
 - **SharePoint on-premises**: The search API is used to read all site collections.
 
-Given that the search API doesn't work with a user context, the timer job falls back to the specified enumeration credentials. 
+Given that the search API doesn't work with a user context, the timer job falls back to the specified enumeration credentials.
 
 To specify user credentials for running against **Office 365**, you can use these two methods:
 
@@ -316,7 +316,7 @@ Often you want the timer job code to be executed against the root site of the si
 
 #### Override resolved and/or expanded sites
 
-After the timer framework resolves the wild card sites, and optionally expands the subsites, the next step is to process the list of sites. Prior to processing the list of sites, you might want to modify the list of sites. For example, you may want to remove specific sites or add more sites to the list. This can be accomplished by overriding the **ResolveAddedSites** virtual method. The following sample shows how to override the **ResolveAddedSites** method to remove one site from the list. 
+After the timer framework resolves the wild card sites, and optionally expands the subsites, the next step is to process the list of sites. Prior to processing the list of sites, you might want to modify the list of sites. For example, you may want to remove specific sites or add more sites to the list. This can be accomplished by overriding the **ResolveAddedSites** virtual method. The following sample shows how to override the **ResolveAddedSites** method to remove one site from the list.
 
 ```csharp
 public override List<string> ResolveAddedSites(List<string> addedSites)
@@ -324,8 +324,8 @@ public override List<string> ResolveAddedSites(List<string> addedSites)
     // Use default TimerJob base class site resolving
     addedSites = base.ResolveAddedSites(addedSites);
 
-    //Delete the first one from the list...simple change. A real life case could be reading the site scope 
-    //from a SQL (Azure) DB to prevent the whole site resolving. 
+    //Delete the first one from the list...simple change. A real life case could be reading the site scope
+    //from a SQL (Azure) DB to prevent the whole site resolving.
     addedSites.RemoveAt(0);
 
     //Return the updated list of resolved sites...this list will be processed by the timer job
@@ -335,7 +335,7 @@ public override List<string> ResolveAddedSites(List<string> addedSites)
 
 ### TimerJobRun event
 
-The timer job framework splits the list of sites into work batches. Each batch of sites is run on its own thread. By default, the framework creates five batches and five threads to run those five batches. See the [Threading](#threading) section to learn more about timer job threading options. 
+The timer job framework splits the list of sites into work batches. Each batch of sites is run on its own thread. By default, the framework creates five batches and five threads to run those five batches. See the [Threading](#threading) section to learn more about timer job threading options.
 
 When a thread processes a batch, the **TimerJobRun** event is triggered by the timer framework and provides all the necessary information to run the timer job. Timer jobs are run as events, so the code must connect an event handler to the **TimerJobRun** event:
 
@@ -383,7 +383,7 @@ All **ClientContext** objects use the authentication information described in th
 
 ### State management
 
-When you write timer job logic, you often need to persist state; for example, to record when a site was last processed, or to store data to support your timer job business logic. For this reason, the timer job framework has state management capabilities. 
+When you write timer job logic, you often need to persist state; for example, to record when a site was last processed, or to store data to support your timer job business logic. For this reason, the timer job framework has state management capabilities.
 
 State management stores and retrieves a set of standard and custom properties as a JSON serialized string in the web property bag of the processed site (name = timer job name + "_Properties"). The following are the default properties of the **TimerJobRunEventArgs** object:
 
@@ -465,20 +465,20 @@ The state is stored as a single JSON serialized property, which means it can be 
 The timer job framework by default uses threads to parallelize work. Threading is used for both the subsite expansion (when requested) and for running the actual timer job logic (**TimerJobRun** event) for each site. The following properties can be used to control the threading implementation:
 
 - **UseThreading** property: Gets or sets a value indicating whether threading is used. Defaults to **true**.  Set to **false** to perform all actions by using the main application thread.
-- **MaximumThreads** property: Gets or sets the number of threads to use for this timer job. Valid values are 2 to 100. The default is 5. Having lots of threads is not necessarily faster than having just a few threads. The optimal number should be acquired via testing by using a variety of thread counts. The default of 5 threads has been found to significantly boost performance in most scenarios. 
+- **MaximumThreads** property: Gets or sets the number of threads to use for this timer job. Valid values are 2 to 100. The default is 5. Having lots of threads is not necessarily faster than having just a few threads. The optimal number should be acquired via testing by using a variety of thread counts. The default of 5 threads has been found to significantly boost performance in most scenarios.
 
 #### Throttling
 
 Because a timer job uses threading and timer job operations are typically resource-intensive operations, a timer job run could be throttled. To correctly deal with throttling, the timer job framework and the whole of PnP Core uses the **ExecuteQueryRetry** method instead of the default **ExecuteQuery** method.
 
-> [!NOTE] 
+> [!NOTE]
 > It is important to use **ExecuteQueryRetry** in your timer job implementation code.
 
 #### Concurrency issues - process all subsites of a site collection in the same thread
 
-Timer jobs may have concurrency issues when using multiple threads to process subsites. 
+Timer jobs may have concurrency issues when using multiple threads to process subsites.
 
-Take this example: Thread A processes the first set of subsites from site collection 1, and thread B processes the rest of the subsites from site collection 1. If the timer job processes the subsite and the root site (by using the **SiteClientContext** object), there could be a concurrency issue because both thread A and thread B process the root site. 
+Take this example: Thread A processes the first set of subsites from site collection 1, and thread B processes the rest of the subsites from site collection 1. If the timer job processes the subsite and the root site (by using the **SiteClientContext** object), there could be a concurrency issue because both thread A and thread B process the root site.
 
 To avoid the concurrency issue (without running the timer jobs in a single thread) use the **GetAllSubSites** method within the timer job.
 
@@ -505,7 +505,7 @@ public class SiteCollectionScopedJob: TimerJob
             // Clone the existing ClientContext for the sub web
             using (ClientContext ccWeb = e.SiteClientContext.Clone(site))
             {
-                // Here's the timer job logic, but now a single site collection is handled in a single thread which 
+                // Here's the timer job logic, but now a single site collection is handled in a single thread which
                 // allows for further optimization or prevents race conditions
                 ccWeb.Load(ccWeb.Web, s => s.Title);
                 ccWeb.ExecuteQueryRetry();
@@ -535,8 +535,8 @@ Using the above configuration file, the timer job framework uses the `System.Dia
 
 - **ConsoleTraceListener** writes logs to the console.
 - The method described in [Cloud Diagnostics - Take Control of Logging and Tracing in Windows Azure](https://msdn.microsoft.com/magazine/ff714589.aspx). This method uses Microsoft.WindowsAzure.Diagnostics.**DiagnosticMonitorTraceListener**. Additional Azure resources can be found here:
-    - [Enable diagnostics logging for web apps in Azure App Service](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log)
-    - [Troubleshoot a web app in Azure App Service using Visual Studio](https://docs.microsoft.com/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio)
+    - [Enable diagnostics logging for web apps in Azure App Service](/azure/app-service/web-sites-enable-diagnostic-log)
+    - [Troubleshoot a web app in Azure App Service using Visual Studio](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio)
 
 It is strongly advised to use the same logging approach for your custom timer job code as you do for the timer job framework. In your timer job code, you can use the PnP Core **Log** class:
 

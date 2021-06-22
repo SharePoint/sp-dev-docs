@@ -1,6 +1,6 @@
 ---
 title: Configure Office 365 API projects for distribution
-description: 
+description: This page explains some steps developers should consider taking on their projects that leverage the Office 365 APIs prior to distributing them to other developers, their customers, or to source control systems such as Team Foundation Server, Git, or VSTS.
 ms.date: 5/8/2018
 localization_priority: Normal
 ---
@@ -26,7 +26,7 @@ The Office 365 API Tools for Visual Studio, version 1.3.41104.1, adds multiple N
 
 The way Visual Studio works is that it, or add-ins, typically contain a local copy of the NuGet package so that developers do not always have to be connected to the Internet to download the NuGet packages. The package that the tools include has an ID of **Microsoft.Azure.ActiveDirectory.GraphClient** and a version of **1.0.22**.
 
-When projects are committed to source control, typically the packages are not included as part of the commit because they can add a lot of extra storage space demands and unnecessarily increase the size of a package when sharing it with other developers. Therefore, one of the first tasks developers do after getting a copy of the project from source control is to run [NuGet package restore](https://docs.microsoft.com/nuget/consume-packages/package-restore).
+When projects are committed to source control, typically the packages are not included as part of the commit because they can add a lot of extra storage space demands and unnecessarily increase the size of a package when sharing it with other developers. Therefore, one of the first tasks developers do after getting a copy of the project from source control is to run [NuGet package restore](/nuget/consume-packages/package-restore).
 
 The challenge is that a package with the same ID and version does not exist in the NuGet package registry; there is no package with an ID of **Microsoft.Azure.ActiveDirectory.GraphClient** and a version of **1.0.22**. The package does exist in the NuGet package registry, [Microsoft.Azure.ActiveDirectory.GraphClient](https://www.nuget.org/packages/Microsoft.Azure.ActiveDirectory.GraphClient), but under different versions.
 

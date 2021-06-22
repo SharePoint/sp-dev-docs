@@ -141,7 +141,7 @@ Locate the **./src/webparts/\*\*/manifest.json** file for the web part you want 
     ```
 
     > [!NOTE]
-    > For a full description of the information available through Microsoft Teams context for Microsoft Teams tabs, see: [Microsoft Teams developer documentation](https://docs.microsoft.com/microsoftteams/platform/concepts/tabs/tabs-context).
+    > For a full description of the information available through Microsoft Teams context for Microsoft Teams tabs, see: [Microsoft Teams developer documentation](/microsoftteams/platform/concepts/tabs/tabs-context).
 
 ## Package and deploy your web part to SharePoint
 
@@ -261,4 +261,4 @@ You can now sync your new version to Microsoft Teams.
 
 ## See also
 
-- [The Microsoft Teams developer platform](https://docs.microsoft.com/microsoftteams/platform/overview)
+- [The Microsoft Teams developer platform](/microsoftteams/platform/overview)

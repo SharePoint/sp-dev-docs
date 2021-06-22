@@ -27,7 +27,7 @@ Review all the SPFx releases here from the initial GA release in February 2017 i
 
 * [Background and Philosophy](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
 * [Design Great Web Parts](https://docs.microsoft.com/sharepoint/dev/design/design-guidance-overview)
-* [API Docs](https://docs.microsoft.com/javascript/api/sp-application-base)
+* [API Docs](/javascript/api/sp-application-base)
 
 ## Updates & Feedback
 

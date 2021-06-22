@@ -195,7 +195,7 @@ SharePoint .master pages require that you use content placeholders, which render
 
 If you remove one of the content placeholders listed in Table 2 from a SharePoint .master page, SharePoint will throw an error. You can add a content placeholder with hidden visibility, which hides the content from end users.
 
-For more information, see [Windows SharePoint Services Default Master Pages](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-services/ms467402(v=office.12)) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](https://support.office.com/article/Working-with-content-placeholder-controls-d8b87b85-d1ef-409d-a5c7-044890f89288?CorrelationId=517ec37c-89ef-40d9-b70e-54aa63ac994f&amp;ui=en-US&amp;rs=en-US&amp;ad=US).
+For more information, see [Windows SharePoint Services Default Master Pages](/previous-versions/office/developer/sharepoint-services/ms467402(v=office.12)) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](https://support.office.com/article/Working-with-content-placeholder-controls-d8b87b85-d1ef-409d-a5c7-044890f89288?CorrelationId=517ec37c-89ef-40d9-b70e-54aa63ac994f&amp;ui=en-US&amp;rs=en-US&amp;ad=US).
 
 Default SharePoint master pages such as seattle.master and oslo.master include many more content placeholders than SharePoint requires. For example, these master pages include `<SharePoint:Themes runat="server">` and `<SharePoint.CssRegistration runat="server">` controls.
 

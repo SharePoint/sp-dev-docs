@@ -79,7 +79,7 @@ You can also influence the rank calculation in the query string, in one of two w
 
 You can specify search result sorting based on the value of one or more managed properties. This means that SharePoint performs the sorting based on all results that match the query.
 
-You can sort based on text and numeric properties. For text properties, the sorting is based on standard text string sorting. In contrast, for numeric properties (including managed properties of type [DateTime](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14))), the sorting is based on numeric value.
+You can sort based on text and numeric properties. For text properties, the sorting is based on standard text string sorting. In contrast, for numeric properties (including managed properties of type [DateTime](/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14))), the sorting is based on numeric value.
   
     
     
@@ -235,15 +235,15 @@ http://localhost/_api/search/query?querytext='home'&amp;sortlist='[formula:abs(2
 
 ### Using managed properties in the sort formula
 
-You can apply a sort formula on the value of managed properties of type [Integer](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), [Decimal](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), and [Datetime()](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)). You must enable sorting for the specified managed property in the search schema.
+You can apply a sort formula on the value of managed properties of type [Integer](/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), [Decimal](/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), and [Datetime()](/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)). You must enable sorting for the specified managed property in the search schema.
   
     
     
-For more managed properties of type  [Decimal](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is multiplied by 10^(decimal digits) before being used in the formula evaluation.
+For more managed properties of type  [Decimal](/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is multiplied by 10^(decimal digits) before being used in the formula evaluation.
   
     
     
-For managed properties of type  Datetime()](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
+For managed properties of type  Datetime()](/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)), the value is converted to the number of 100 nanoseconds since January 1 29000 BC before being used in the formula evaluation. There are 366 days in the year.
   
     
     

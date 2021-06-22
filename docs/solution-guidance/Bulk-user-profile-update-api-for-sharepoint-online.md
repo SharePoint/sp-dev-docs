@@ -115,20 +115,20 @@ The following are restrictions on individual source data files:
 - Maximum number of properties: 500,000
 - The source file must be uploaded to the same SharePoint Online tenant where the process is started.
 
-> [!NOTE] 
+> [!NOTE]
 > The update file must have the Byte Order Mark (BOM) specified if any characters are not part of the Western European encoding (iso-8859-1) which is the default. International characters may not be interpreted correctly with the default encoding, so it is recommended to use the UTF-8 encoding. This encoding has a BOM of 'EF BB BF' in hex. This would be placed at the beginning of the byte array of the file when creating the file stream. If using a text editor, select the endoding type as UTF-8 before saving.
 
 ## Queue the import process
 
-You can queue the CSOM API for the bulk import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later. 
+You can queue the CSOM API for the bulk import process by calling the [QueueImportProfileProperties](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.queueimportprofileproperties.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. This is an asynchronous call in that it doesn’t download the source data or perform the import; it simply adds a work item to the queue for doing this later.
 
 Following is the full signature of the method:
 
 ```cs
 public ClientResult<Guid> QueueImportProfileProperties(
-                          ImportProfilePropertiesUserIdType idType, 
-                          string sourceDataIdProperty, 
-                          IDictionary<string, string> propertyMap, 
+                          ImportProfilePropertiesUserIdType idType,
+                          string sourceDataIdProperty,
+                          IDictionary<string, string> propertyMap,
                           string sourceUri);
 ```
 
@@ -167,14 +167,14 @@ A GUID that identifies the import job that has been queued.
 Following is an example that uses C# for starting the process by using the previous sample input file:
 
 ```cs
-// Create an instance of the Office 365 Tenant object. Loading this object is not technically needed for this operation. 
+// Create an instance of the Office 365 Tenant object. Loading this object is not technically needed for this operation.
 Office365Tenant tenant = new Office365Tenant(ctx);
 ctx.Load(tenant);
 ctx.ExecuteQuery();
 
-// Type of user identifier ["PrincipalName", "Email", "CloudId"] in the 
+// Type of user identifier ["PrincipalName", "Email", "CloudId"] in the
 // user profile service. In this case, we use Email as the identifier at the UPA storage
-ImportProfilePropertiesUserIdType userIdType = 
+ImportProfilePropertiesUserIdType userIdType =
       ImportProfilePropertiesUserIdType.Email;
 
 // Name of the user identifier property within the JSON file
@@ -182,7 +182,7 @@ var userLookupKey = "IdName";
 
 var propertyMap = new System.Collections.Generic.Dictionary<string, string>();
 
-// The key is the property in the JSON file 
+// The key is the property in the JSON file
 // The value is the user profile property Name in the user profile service
 // Notice that we have 2 custom properties in UPA called 'City' and 'OfficeCode'
 propertyMap.Add("City", "City");
@@ -205,7 +205,7 @@ You can check the status of the user profile service import jobs by using the CS
 
 ### Individual import job
 
-You can check the status of an individual import job by using the [GetImportProfilePropertyJob](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjob.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. You must have the unique identifier of a specific import job provided as a parameter to this method. 
+You can check the status of an individual import job by using the [GetImportProfilePropertyJob](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjob.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. You must have the unique identifier of a specific import job provided as a parameter to this method.
 
 Following is the full signature of the method:
 
@@ -215,7 +215,7 @@ public ImportProfilePropertiesJobInfo GetImportProfilePropertyJob(Guid jobId);
 
 #### Parameters
 
-- **jobID**: System.Guid 
+- **jobID**: System.Guid
 
   The ID of the job for which to get the high-level status.
 
@@ -237,7 +237,7 @@ ctx.ExecuteQuery();
 
 ### All import jobs
 
-You can check the status of all import jobs by using the [GetImportProfilePropertyJobs](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjobs.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object. 
+You can check the status of all import jobs by using the [GetImportProfilePropertyJobs](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.getimportprofilepropertyjobs.aspx) method located in the [Office365Tenant](https://msdn.microsoft.com/library/office/microsoft.online.sharepoint.tenantmanagement.office365tenant.aspx) object.
 
 Following is the full signature of the method:
 
@@ -263,7 +263,7 @@ An [ImportProfilePropertiesJobInfo](https://msdn.microsoft.com/library/office/mi
   - **Succeeded** - The job completed with no errors.
   - **Error** - The job completed with errors.
 
-- **SourceUri**: System.String 
+- **SourceUri**: System.String
 
   The URI to the data source file.
 
@@ -347,14 +347,14 @@ $propertyMap = New-Object -type 'System.Collections.Generic.Dictionary[String,St
 $propertyMap.Add("City", "City")
 $propertyMap.Add("Office", "OfficeCode")
 
-# Call to queue UPA property import 
+# Call to queue UPA property import
 $workItemId = $o365.QueueImportProfileProperties($userIdType, $userLookupKey, $propertyMap, $importFileUrl);
 
 # Execute the CSOM command for queuing the import job
 $context.ExecuteQuery();
 
 # Output the unique identifier of the job
-Write-Host "Import job created with the following identifier:" $workItemId.Value 
+Write-Host "Import job created with the following identifier:" $workItemId.Value
 ```
 
 ### Sample PowerShell script using PnP PowerShell
@@ -362,7 +362,7 @@ Write-Host "Import job created with the following identifier:" $workItemId.Value
 To initiate a bulk import using [PnP PowerShell](https://aka.ms/pnp-powershell), you can use:
 
 ```powershell
-@" 
+@"
  {
   "value": [
     {
@@ -372,7 +372,7 @@ To initiate a bulk import using [PnP PowerShell](https://aka.ms/pnp-powershell),
   {
       "IdName": "vesaj@contoso.com",
       "Department": "PnP",
-    }    
+    }
   ]
 }
 "@ > profiles.json
@@ -380,7 +380,7 @@ To initiate a bulk import using [PnP PowerShell](https://aka.ms/pnp-powershell),
 New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
 ```
 
-For more information, see https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpupabulkimportjob
+For more information, see [New-PnPUPABulkImportJob](/powershell/module/sharepoint-pnp/new-pnpupabulkimportjob)
 
 To check on the processing status of a bulk import job, you can use:
 
@@ -388,7 +388,7 @@ To check on the processing status of a bulk import job, you can use:
 Get-PnPUPABulkImportStatus
 ```
 
-For more information, see https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnpupabulkimportstatus
+For more information, see [Get-PnPUPABulkImportStatus](/powershell/module/sharepoint-pnp/get-pnpupabulkimportstatus)
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
@@ -424,16 +424,16 @@ _DataFileNotJson - JsonToken EndObject is not valid for closing JsonType Array. 
 
 Yes, the actual import of the file does not occur synchronously with the identity of the caller, so this works with app-only context without any issues.
 
-In order to use an app-only context with the SharePoint add-in model, you need to register a client ID and secret to be able to execute the APIs following [this guidance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-apponly-azureacs). Moreover, while registering the SharePoint add-in you will have to grant the permissions using the following XML snippet:
+In order to use an app-only context with the SharePoint add-in model, you need to register a client ID and secret to be able to execute the APIs following [this guidance](security-apponly-azureacs.md). Moreover, while registering the SharePoint add-in you will have to grant the permissions using the following XML snippet:
 
 ```xml
 <AppPermissionRequests AllowAppOnlyPolicy="true">
   <AppPermissionRequest Scope="http://sharepoint/content/tenant" Right="FullControl" />
-  <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="FullControl" /> 
+  <AppPermissionRequest Scope="http://sharepoint/social/tenant" Right="FullControl" />
 </AppPermissionRequests>
 ```
 
-In order to use app-only with an application registered in Azure Active Directory, you need to [register the application](https://docs.microsoft.com/graph/auth-register-app-v2), [provide a X.509 certificate for authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-microsoft-identity-platform), which is a requirement for SharePoint Online app-only authentication within Azure Active Directory, and grant the following SharePoint Online permissions scopes for Application: Sites.FullControl.All and User.ReadWrite.All .
+In order to use app-only with an application registered in Azure Active Directory, you need to [register the application](/graph/auth-register-app-v2), [provide a X.509 certificate for authentication](/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-microsoft-identity-platform), which is a requirement for SharePoint Online app-only authentication within Azure Active Directory, and grant the following SharePoint Online permissions scopes for Application: Sites.FullControl.All and User.ReadWrite.All .
 
 ### This API is updating properties in the user profile service, but how would I create those properties in the tenant?
 

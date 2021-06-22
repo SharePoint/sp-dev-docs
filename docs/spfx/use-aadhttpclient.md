@@ -12,9 +12,9 @@ When building SharePoint Framework solutions, you might need to connect to an AP
 
 ## Web API permissions overview
 
-Azure AD secures a number of resources, from Office 365 to custom line-of-business applications built by the organization. To connect to these resources, applications must obtain a valid access token that grants them access to a particular resource. Applications can obtain an access token as part of the [OAuth authorization flow](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Azure AD secures a number of resources, from Office 365 to custom line-of-business applications built by the organization. To connect to these resources, applications must obtain a valid access token that grants them access to a particular resource. Applications can obtain an access token as part of the [OAuth authorization flow](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
-Client-side applications that are incapable of storing a secret, such as SharePoint Framework solutions, use a specific type of OAuth flow named [OAuth implicit flow](https://docs.microsoft.com/azure/active-directory/develop/active-directory-dev-understanding-oauth2-implicit-grant).
+Client-side applications that are incapable of storing a secret, such as SharePoint Framework solutions, use a specific type of OAuth flow named [OAuth implicit flow](/azure/active-directory/develop/active-directory-dev-understanding-oauth2-implicit-grant).
 
 Developers building client-side solutions are responsible for implementing authorization by using the OAuth implicit flow in their application. In SharePoint Framework solutions, that's already done as part of the framework through **MSGraphClient** and **AadHttpClient**, both of which are introduced in SharePoint Framework v1.4.1.
 
@@ -65,7 +65,7 @@ One way to see the available applications in Azure AD is by navigating to the [A
 ### Use Azure PowerShell
 
 > [!NOTE]
-> Before you can execute the following steps, you must install [Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps). Alternatively, you can execute the cmdlets mentioned in this section in the Azure Cloud Shell PowerShell.
+> Before you can execute the following steps, you must install [Azure PowerShell](/powershell/azure/install-az-ps). Alternatively, you can execute the cmdlets mentioned in this section in the Azure Cloud Shell PowerShell.
 
 1. Sign in to your Azure subscription by executing in PowerShell (this isn't necessary if you're using the Azure Cloud Shell):
 
@@ -84,7 +84,7 @@ One way to see the available applications in Azure AD is by navigating to the [A
 ### Use Azure CLI
 
 > [!NOTE]
-> Before you can execute the following steps, you must install the [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Alternatively, you can run the Azure CLI through the [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview?view=azure-cli-latest) or as a [Docker container](https://hub.docker.com/r/microsoft/azure-cli/).
+> Before you can execute the following steps, you must install the [Azure CLI](/cli/azure/install-azure-cli). Alternatively, you can run the Azure CLI through the [Azure Cloud Shell](/azure/cloud-shell/overview) or as a [Docker container](https://hub.docker.com/r/microsoft/azure-cli/).
 
 1. If you're running the CLI on your machine or in a Docker container, start by connecting to your Azure subscription by executing:
 
@@ -177,7 +177,7 @@ When you deploy SharePoint Framework solutions that request permissions to Azure
 
 ### Manage permissions in the new SharePoint admin center
 
-To learn how to use the API access page in the new SharePoint admin center, see [Manage access to Azure AD-secured APIs](https://docs.microsoft.com/sharepoint/api-access).
+To learn how to use the API access page in the new SharePoint admin center, see [Manage access to Azure AD-secured APIs](/sharepoint/api-access).
 
 ### Manage permissions with PowerShell
 

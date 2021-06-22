@@ -29,7 +29,7 @@ Most classic SharePoint components, such as custom content types, custom list de
 
 ## Prerequisites for creating this SharePoint Add-in
 
-- [Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio)
+- [Visual Studio](/visualstudio/install/install-visual-studio)
 
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**, but sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](https://aka.ms/OfficeDevToolsForVS2013) or the [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015). 
 

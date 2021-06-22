@@ -7,7 +7,7 @@ localization_priority: Priority
 ---
 # Add a workflow to a SharePoint-hosted SharePoint Add-in
 
-This is the sixth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#Nextsteps).
+This is the sixth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series, which you can find at [Get started creating SharePoint-hosted SharePoint Add-ins | Next steps](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#next-steps).
 
 > [!NOTE]
 > It's recommended that Microsoft Power Automate be used for apps and process automation. Starting with Visual Studio 2022, Workflow templates have been removed from SharePoint Add-in Projects. For more information please see [Guidance: Migrate from classic workflows to Power Automate flows in SharePoint](../business-apps/power-automate/guidance/migrate-from-classic-workflows-to-power-automate-flows.md)

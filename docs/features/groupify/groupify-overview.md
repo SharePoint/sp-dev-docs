@@ -34,7 +34,7 @@ After your site is connected to a Microsoft 365 group, it behaves like a modern 
 
 - [Connect a classic SharePoint team site to a new Microsoft 365 group](../../transform/modernize-connect-to-office365-group.md)
 - [SharePoint Modernization scanner tool](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization)
-- [PowerShell cmdlet to connect a SharePoint team site to a new Microsoft 365 group](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOSiteOffice365Group)
+- [PowerShell cmdlet to connect a SharePoint team site to a new Microsoft 365 group](/powershell/module/sharepoint-online/Set-SPOSiteOffice365Group)
 - [Modernize your classic SharePoint sites](../../transform/modernize-classic-sites.md)
 
 

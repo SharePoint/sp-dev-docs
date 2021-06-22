@@ -1,6 +1,6 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure Pipelines
-description: Streamlining the build and deployment process by automating manual steps.
+description: Streamlining the build and deployment process by automating manual steps using Azure Pipelines.
 ms.date: 12/02/2020
 ms.prod: sharepoint
 localization_priority: Priority
@@ -194,7 +194,7 @@ stages:
 > You can define multiple environments and by duplicating the __deployqa__ stage and providing different parameters. If you do so, make sure the stage name, the job name, the target environment and the variable group name are unique.
 
 > [!NOTE] 
-> You can conditionnally deploy to different environments leveraging [conditions](https://docs.microsoft.com/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml)
+> You can conditionally deploy to different environments leveraging [conditions](/azure/devops/pipelines/process/conditions?tabs=yaml)
 
 ## Configuring the credentials for the environments
 

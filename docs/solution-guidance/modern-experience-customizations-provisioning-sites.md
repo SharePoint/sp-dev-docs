@@ -163,7 +163,7 @@ https://[tenant].sharepoint.com/sites/[mailNickname]
 ``` 
 
 > [!NOTE]
-> A detailed description of group creation using Microsoft Graph is available from the [official documentation](https://docs.microsoft.com/graph/api/group-post-groups).
+> A detailed description of group creation using Microsoft Graph is available from the [official documentation](/graph/api/group-post-groups).
 
 #### Provision a Microsoft 365 group using the PnP CSOM core component
 

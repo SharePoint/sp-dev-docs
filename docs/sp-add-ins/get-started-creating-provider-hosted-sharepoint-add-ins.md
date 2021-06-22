@@ -30,11 +30,11 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
 
 ### Get the tools
 
-- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
  
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](https://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](https://aka.ms/OfficeDevToolsForVS2015). 
 
-Reference [earlier versions of Visual Studio](https://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](https://docs.microsoft.com/visualstudio/).
+Reference [earlier versions of Visual Studio](https://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx) or other [Visual Studio documentation](/visualstudio/).
 
 <a name="o365_signup"> </a>
 
@@ -49,7 +49,7 @@ To get an Office 365 plan:
 
 - [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/office/dev-program).
 
-- See the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
+- See the [Office 365 Developer Program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 ### Open your developer site 
  

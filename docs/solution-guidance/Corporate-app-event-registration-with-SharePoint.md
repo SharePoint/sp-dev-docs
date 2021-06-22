@@ -161,7 +161,7 @@ The following table lists the properties that need to be implemented by the clas
 
 <br/>
 
-The following table lists the methods that have to be implemented by the classes that inherit from the **BaseListItem** abstract class. These methods return parameters that should be set to [blittable types](https://docs.microsoft.com/dotnet/framework/interop/blittable-and-non-blittable-types) so that they can be used on multiple platforms.
+The following table lists the methods that have to be implemented by the classes that inherit from the **BaseListItem** abstract class. These methods return parameters that should be set to [blittable types](/dotnet/framework/interop/blittable-and-non-blittable-types) so that they can be used on multiple platforms.
 
 |Method|Description|
 |:-----|:-----|

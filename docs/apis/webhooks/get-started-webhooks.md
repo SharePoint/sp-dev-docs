@@ -19,7 +19,7 @@ To complete the step-by-step instructions in this article, download and install 
 * [Postman](https://www.getpostman.com/)
 * [Visual Studio Community Edition](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
 * [ngrok](https://ngrok.com/) (to install ngrok, see [Download and Installation](https://ngrok.com/download))
-* An Office 365 developer subscription with SharePoint Online. If you are new to Office 365, you can also [sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
+* An Office 365 developer subscription with SharePoint Online. If you are new to Office 365, you can also [sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Office 365 Developer Program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 ## Step 1: Register an Azure AD application for Postman client
 
@@ -30,7 +30,7 @@ In order for the Postman client to communicate with SharePoint, you need to regi
 2. To access SharePoint Online, it's important to grant the Azure AD app permissions to the **Office 365 SharePoint Online** application and select the **read and write items and lists in all site collections** permission.
 
 	> [!NOTE] 
-	> For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#adding-an-application). 
+	> For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](/azure/active-directory/develop/active-directory-integrating-applications#adding-an-application). 
 
 3. Enter the following endpoint as the Reply (Redirect) URL for the app. This is the endpoint to which Azure AD will send the authentication response, including the access token, if authentication was successful.
 

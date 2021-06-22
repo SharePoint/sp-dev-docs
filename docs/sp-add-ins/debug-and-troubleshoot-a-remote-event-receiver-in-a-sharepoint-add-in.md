@@ -20,7 +20,7 @@ When a SharePoint Add-in project in Visual Studio includes a remote event receiv
 
 1. If you don't already have one, get a Microsoft Azure subscription. One is included as a benefit with an [MSDN Subscription](https://azure.microsoft.com/pricing/member-offers/msdn-benefits/).
 
-2. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-resource-manager-overview).
+2. Carry out the instructions in [Create a Service Bus namespace](/azure/service-bus-messaging/service-bus-resource-manager-overview).
     
 
 ### To configure the SharePoint Add-in project in Visual Studio
@@ -37,7 +37,7 @@ When a SharePoint Add-in project in Visual Studio includes a remote event receiv
     
     1. Sign in to the Azure portal and open the **Service Bus** tab.
 
-    2. Open the namespace that you created for RER debugging and navigate to the connection strings. The Azure portal UI changes frequently. If you can't find the connection strings, see [Azure portal help](https://docs.microsoft.com/azure/).
+    2. Open the namespace that you created for RER debugging and navigate to the connection strings. The Azure portal UI changes frequently. If you can't find the connection strings, see [Azure portal help](/azure/).
 
     3. Copy the **SAS** connection string. This is the string you enter in the Visual Studio project properties.
 

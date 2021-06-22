@@ -44,6 +44,6 @@ If you're developing new applications that need to work in a OneDrive and ShareP
 
 ## See also
 
-- [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://docs.microsoft.com/office365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365)
+- [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](/office365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365)
 - [Office 365 development and SharePoint PnP solution guidance](office-365-development-patterns-and-practices-solution-guidance.md)
 

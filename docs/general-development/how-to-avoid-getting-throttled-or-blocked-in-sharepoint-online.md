@@ -113,7 +113,7 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 - If you've created an application, the recommendation is to register and use AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
 
     > [!NOTE]
-    > Refer to the [Microsoft identity documentation](https://docs.microsoft.com/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
+    > Refer to the [Microsoft identity documentation](/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
 
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 

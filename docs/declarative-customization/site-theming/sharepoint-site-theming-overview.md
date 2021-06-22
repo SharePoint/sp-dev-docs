@@ -7,7 +7,7 @@ localization_priority: Priority
 
 # SharePoint site theming
 
-SharePoint site owners have new options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections. 
+SharePoint site owners have new options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
 
 These new features include:
 
@@ -17,7 +17,7 @@ These new features include:
 * An updated color palette, with 12 light colors and 6 dark colors, as well as 16 supplementary themes.
 * Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
 
-These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the [SharePoint client-side object model (CSOM)](sharepoint-site-theming-csom.md) or the [SharePoint REST API](sharepoint-site-theming-rest-api.md). For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview)
+These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the [SharePoint client-side object model (CSOM)](sharepoint-site-theming-csom.md) or the [SharePoint REST API](sharepoint-site-theming-rest-api.md). For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](../site-design-overview.md).
 
 For general information about working with themes to customize the look of your sites, see [Change the look of your SharePoint site](https://support.office.com/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818).
 
@@ -64,14 +64,14 @@ When you select a classic theme, a modern theme is generated from the settings i
 
 For the simplest experience, we recommend that you use modern themes with modern pages. If you need to use classic themes with modern pages, test your site carefully to verify that your content is readable and accessible.
 
-## Troubleshoot custom theme issues 
+## Troubleshoot custom theme issues
 
 The modern site theming experience has been rolled out to classic site templates, too. While the new client-side theming architecture is more performant, if you have customizations on classic sites that aren’t rendering properly after you change the site’s theme, you can opt the site out of the new theming experience by disabling the feature. Please note, this opt-out only applies to classic sites where you have custom theme references that aren't rendering properly. By enabling this site-level opt-out you will disable the modern theming - and also lose the fast theming benefits it provides.
 
 To do this, you must use a Windows PowerShell script with a CSOM (client-side object model) wrapper. We recommend using the PnP PowerShell enable feature command:
 
-1. Verify that you meet the following minimum requirements:  
-    * You are at least a site collection owner on the site where you want to disable modern site themes 
+1. Verify that you meet the following minimum requirements:
+    * You are at least a site collection owner on the site where you want to disable modern site themes
     * You have read about [Execution Policies](https://technet.microsoft.com/library/dd347641.aspx)
 
 2. Download the latest PnP PowerShell from https://github.com/SharePoint/PnP-PowerShell/releases.
@@ -85,15 +85,15 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 5. To opt out of the site, you need to enable a feature:
 
     * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
-    * Verify that nothing is returned from the previous command (this confirms the feature isn’t enabled yet) 
+    * Verify that nothing is returned from the previous command (this confirms the feature isn’t enabled yet)
     * Enter `Enable-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
     * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
 
-6. Verify that the following is returned: 
+6. Verify that the following is returned:
 
     `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
 
-For more information about Windows PowerShell, see [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6).
+For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/powershell-scripting).
 
 ## See also
 

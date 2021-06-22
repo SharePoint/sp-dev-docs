@@ -1,7 +1,8 @@
 ---
 title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
+description: This article specifically provides guidance about how to plan for transitioning from classic SharePoint Workflows to Power Automate flows.
 ms.date: 07/21/2020
-search.app: 
+search.app:
   - Flow
 search.appverid: met150
 ---
@@ -37,7 +38,7 @@ Users primarily use SharePoint Designer to author and publish workflows in Share
 
 Since the release of classic workflows, SharePoint and Microsoft 365 apps have evolved to provide compelling, flexible and more performant experiences. Modern experiences in SharePoint integrate with rest of the Microsoft 365 apps and services driving security, productivity, and collaboration.
 
-[Power Automate](https://docs.microsoft.com/power-automate/getting-started) helps users and businesses to create automated workflows between your favorite apps and services to get notifications, collect data, automate business policies and more.
+[Power Automate](/power-automate/getting-started) helps users and businesses to create automated workflows between your favorite apps and services to get notifications, collect data, automate business policies and more.
 
 > [!VIDEO https://www.youtube.com/embed/hCuxuUaGC6Y]
 
@@ -47,16 +48,16 @@ Using Microsoft Power Automate, SharePoint users can use the SharePoint Connecto
 
 - Start approval when a new file is added in a library.
 
-To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/en-us/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](https://docs.microsoft.com/power-automate/mobile-create-flow).
+To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/en-us/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](/power-automate/mobile-create-flow).
 
-To learn more about building workflows using Power Automate in SharePoint, start here: Business apps and Business process [automation in SharePoint](https://docs.microsoft.com/sharepoint/dev/business-apps/introduction-to-sharepoint-business-process-integration).
+To learn more about building workflows using Power Automate in SharePoint, start here: Business apps and Business process [Business apps and business process automation](../../introduction-to-sharepoint-business-process-integration.md).
 
 ## Pain points in moving between classic workflows in SharePoint and Power Automate flows
 
 Many people feel there are significant gaps between SharePoint Designer (classic) workflows and Power Automate flows, but the list is not long. Of course, there are some workarounds you should consider in your planning as you move from classic workflows to Power Automate flows.
-	
+
 - **30 day run limit for flows** – SharePoint Designer workflows can run endlessly, but flows have a 30 day lifespan. Getting beyond this limitation means your flow will need to call itself in a re-entrant way to restart the clock ticking.
-- **HTTP Connector** – If you make calls to SharePoint's REST API, then you can use  the ['Send HTTP Request to SharePoint'](../guidance/working-with-send-sp-http-request.md) action available in the SharePoint connector. Flow also has a generic HTTP connector (as an action), but it is a Premium connector. If you use HTTP calls extensively, you may want to create a “service account” user with a Power Automate license and run these flows with that user account. This also will make it easier to manage the set of flows you consider "enterprise" flows. 
+- **HTTP Connector** – If you make calls to SharePoint's REST API, then you can use  the ['Send HTTP Request to SharePoint'](../guidance/working-with-send-sp-http-request.md) action available in the SharePoint connector. Flow also has a generic HTTP connector (as an action), but it is a Premium connector. If you use HTTP calls extensively, you may want to create a “service account” user with a Power Automate license and run these flows with that user account. This also will make it easier to manage the set of flows you consider "enterprise" flows.
 - **Reusable Flows** – Using some modular thinking, you can create a master flow which a flow per list or library can call to do the heavy lifting. (In some ways this is even preferable, as you can edit a flow which is used in many locations centrally.) Alternatively, you can use flow actions to discover all of the lists or libraries which match some criteria and run the flow on them all on a timer rather than based on events.
 - **Workflow history storage** – Flows maintain a history in the context of the flow itself in the Power Automate dashboard. If you need tracking in your sites, you can have the flow log information in a list you create.
 - **Impersonation** - In SharePoint 2010 workflows, you can add an impersonation step to act as a different user. This capability is not readily available in flows.
@@ -67,13 +68,13 @@ While these pain points do exist, you can see there are workarounds for each of 
 
 Approvals are the most common workflow scenario when it comes to automating business processes in SharePoint. Transitioning to Power Automate flows, approvals can be streamlined for data in SharePoint, Dynamics 365, forms, SQL, and so on. You can create approvals in your workflow, and view sent and received requests in a unified Actions center. Power Automate approvals enable users to customize flows and create approvals for the following types:
 
-- [Single approvals](https://docs.microsoft.com/power-automate/modern-approvals)
+- [Single approvals](/power-automate/modern-approvals)
 
-- [Sequential approvals](https://docs.microsoft.com/power-automate/sequential-modern-approvals)
+- [Sequential approvals](/power-automate/sequential-modern-approvals)
 
-- [Parallel approvals](https://docs.microsoft.com/power-automate/parallel-modern-approvals)
+- [Parallel approvals](/power-automate/parallel-modern-approvals)
 
-SharePoint approvals such as [page approvals](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/customize-page-approvals), [document approvals](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/guidance/require-doc-approval), and [hub association approvals](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098#bkmk_managesiteassociationapprovals) are all integrated and powered by Power Automate flows, providing users the flexibility to customize the business process for each of the approval scenarios.
+SharePoint approvals such as [page approvals](customize-page-approvals.md), [document approvals][Require approval of documents in SharePoint using Power Automate](require-doc-approval.md), and [hub association approvals](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098#bkmk_managesiteassociationapprovals) are all integrated and powered by Power Automate flows, providing users the flexibility to customize the business process for each of the approval scenarios.
 
 ## Authoring classic workflows and flows
 
@@ -85,11 +86,9 @@ See the following tables that compare the workflow terminologies, triggers, and 
 
 While the following lists show some of the most common workflow capabilities, Power Automate offers many more features, and is actively updated with new features. We highly recommend visiting the following Power Automate websites for guided learning:
 
-- [SharePoint Power Automate Documentation](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers)
-
-- [Learn Power Automate](https://docs.microsoft.com/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
-
-- [Power Automate Documentation](https://docs.microsoft.com/power-automate/?utm_source=flow-sidebar&utm_medium=web)
+- [Microsoft SharePoint Connector in Power Automate](../sharepoint-connector-actions-triggers.md)
+- [Learn Power Automate](/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
+- [Power Automate Documentation](/power-automate/?utm_source=flow-sidebar&utm_medium=web)
 
 ### Workflow concepts
 
@@ -221,6 +220,7 @@ While the following lists show some of the most common workflow capabilities, Po
 | Copy/paste actions |Yes | Yes |
 
 ## Workflow administration
+
 |Workflow administration |SharePoint workflow |Power Automate flow |
 |:-------|:-------|:--------|
 | Central location to view all workflows   | Yes, only available to view for a given list or library   | Yes, 'My flows' lists user flows |

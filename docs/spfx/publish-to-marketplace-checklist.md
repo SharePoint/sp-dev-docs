@@ -51,7 +51,7 @@ Attribute|Description|Mandatory
 ---|---|---
 `name`|Name of the organization that built the application|Yes
 `websiteUrl`|URL of a website with additional information about the application|Yes
-`mpnId`|Microsoft Partner Network ID (more details on [MS Partner Network](https://docs.microsoft.com/partner-center/mpn-overview))|No (but highly recommended to provide it)
+`mpnId`|Microsoft Partner Network ID (more details on [MS Partner Network](/partner-center/mpn-overview))|No (but highly recommended to provide it)
 `privacyUrl`|Privacy statement URL|Yes
 `termOfUseUrl`|Terms of use URL|Yes
 

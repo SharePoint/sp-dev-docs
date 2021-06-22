@@ -20,13 +20,13 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 
 | Repository | Description |
 |--------|--------|
-| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at https://docs.microsoft.com/sharepoint/dev/ |
+| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at `https://docs.microsoft.com/sharepoint/dev/` |
 | [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) | Samples and tutorial code around SharePoint Framework client-side web parts |
 | [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions) | Samples and tutorial code around SharePoint Framework extensions |
 | [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization) | Solutions, tools and script to help you modernize your sites |
 | [sp-dev-solutions](https://github.com/SharePoint/sp-dev-solutions) | More polished and fine-tuned reusable solutions built with the SharePoint Framework |
-| [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) | Various [column formatting](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting) json files shared among the community |
-| [sp-dev-site-scripts](https://github.com/SharePoint/sp-dev-site-scripts) | Various [Site Script and Site Design](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview) json files shared among the community |
+| [sp-dev-list-formatting](https://github.com/SharePoint/sp-dev-list-formatting) | Various [column formatting](../declarative-customization/column-formatting.md) json files shared among the community |
+| [sp-dev-site-scripts](https://github.com/SharePoint/sp-dev-site-scripts) | Various [Site Script and Site Design](../declarative-customization/site-design-overview.md) json files shared among the community |
 | [sp-dev-fx-controls-react](https://github.com/SharePoint/sp-dev-fx-controls-react) | Reusable content controls for SharePoint Framework solutions built with React |
 | [sp-dev-fx-property-controls](https://github.com/SharePoint/sp-dev-fx-property-controls) | Reusable property pane controls for use in SharePoint Framework web parts |
 | [sp-dev-gdpr-activity-hub](https://github.com/SharePoint/sp-dev-gdpr-activity-hub) | A reference solution for the business case of GDPR demonstrating an SPFx implementation with Power BI and modern sites |
@@ -40,14 +40,14 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 |--------|--------|
 | [pnp](https://github.com/SharePoint/pnp) | Main repository for SharePoint Add-ins, Microsoft Graph, and other samples |
 | [pnp-sites-core](https://github.com/SharePoint/pnp-sites-core) | Office Dev PnP CSOM Core component - Extension component for native SharePoint Client-Side Object Model |
-| [pnp-powershell](https://github.com/SharePoint/pnp-powershell) | Source code for [SharePoint PnP PowerShell cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) |
+| [pnp-powershell](https://github.com/SharePoint/pnp-powershell) | Source code for [SharePoint PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) |
 | [pnp-provisioning-schema](https://github.com/SharePoint/PnP-Provisioning-Schema) | PnP provisioning engine schema repository |
 | [pnp-tools](https://github.com/SharePoint/PnP-Tools) | Repository for tools and scripts targeted primarily for IT pros and for on-premises SharePoint 2013 and SharePoint 2016 |
 | [pnp-partner-pack](https://github.com/SharePoint/PnP-Partner-Pack) | Packaged guidance with detailed instructions about setting things up in Office 365 and Azure |
 | [pnp-js-core](https://github.com/SharePoint/PnP-JS-Core) | Office Dev PnP Core component for JavaScript |
 | [pnp-transformation](https://github.com/SharePoint/PnP-Transformation) | Material specifically for the transformation process. Currently, includes samples around InfoPath replacement and transformation tooling from farm solutions to the add-in model |
 | [pnp-js-provisioning](https://github.com/SharePoint/pnp-js-provisioning) | Repository for planned JavaScript provisioning library |
-| [pnp-provisioning-templates](https://github.com/SharePoint/PnP-Provisioning-Templates) | Repository for provisioning templates. 
+| [pnp-provisioning-templates](https://github.com/SharePoint/PnP-Provisioning-Templates) | Repository for provisioning templates.
 | [pnp-guidance](https://github.com/SharePoint/PnP-Guidance) | Old repository on guidance, presentations, and articles that were partially synced to MSDN |
 | [pnp-identitymodel](https://github.com/SharePoint/PnP-IdentityModel) | Open source replacement of Microsoft.IdentityModel.Extensions.dll |
 

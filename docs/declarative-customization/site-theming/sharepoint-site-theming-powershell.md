@@ -21,17 +21,17 @@ To run the PowerShell cmdlets for theme management, you must do the following:
 
 2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx) to connect to your SharePoint tenant.
 
-To verify your setup, try using the [Get-SPOHideDefaultThemes](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOHideDefaultThemes?view=sharepoint-ps) cmdlet to read the SPOHideDefaultThemes setting. If the cmdlet runs and returns False with no errors, as shown in the following example, you're ready to proceed.
+To verify your setup, try using the [Get-SPOHideDefaultThemes](/powershell/module/sharepoint-online/Get-SPOHideDefaultThemes) cmdlet to read the SPOHideDefaultThemes setting. If the cmdlet runs and returns False with no errors, as shown in the following example, you're ready to proceed.
 
 ## Site theme cmdlets
 
 The following cmdlets are available for managing site themes from PowerShell:
 
-* [Add-SPOTheme](https://docs.microsoft.com/powershell/module/sharepoint-online/Add-SPOTheme?view=sharepoint-ps) &ndash; Creates a new custom theme, or overwrites an existing theme to modify its settings.
-* [Get-SPOTheme](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOTheme?view=sharepoint-ps) &ndash; Retrieves settings for an existing theme.
-* [Remove-SPOTheme](https://docs.microsoft.com/powershell/module/sharepoint-online/Remove-SPOTheme?view=sharepoint-ps) &ndash; Removes a theme from the theme gallery.
-* [Set-SPOHideDefaultThemes](https://docs.microsoft.com/powershell/module/sharepoint-online/Set-SPOHideDefaultThemes?view=sharepoint-ps) &ndash; Specifies whether the default themes should be available.
-* [Get-SPOHideDefaultThemes](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOHideDefaultThemes?view=sharepoint-ps) &ndash; Queries the current SPOHideDefaultThemes setting.
+* [Add-SPOTheme](/powershell/module/sharepoint-online/Add-SPOTheme) &ndash; Creates a new custom theme, or overwrites an existing theme to modify its settings.
+* [Get-SPOTheme](/powershell/module/sharepoint-online/Get-SPOTheme) &ndash; Retrieves settings for an existing theme.
+* [Remove-SPOTheme](/powershell/module/sharepoint-online/Remove-SPOTheme) &ndash; Removes a theme from the theme gallery.
+* [Set-SPOHideDefaultThemes](/powershell/module/sharepoint-online/Set-SPOHideDefaultThemes) &ndash; Specifies whether the default themes should be available.
+* [Get-SPOHideDefaultThemes](/powershell/module/sharepoint-online/Get-SPOHideDefaultThemes) &ndash; Queries the current SPOHideDefaultThemes setting.
 
 
 ## See also

@@ -20,7 +20,7 @@ Start with creating an enterprise API secured with Azure Active Directory. While
 
 In the [Azure portal](https://portal.azure.com/), create a new Function App.
 
-> For more information on creating Function Apps in Azure, see the [Create a function app from the Azure portal](https://docs.microsoft.com/azure/azure-functions/functions-create-function-app-portal) help article.
+> For more information on creating Function Apps in Azure, see the [Create a function app from the Azure portal](/azure/azure-functions/functions-create-function-app-portal) help article.
 
 In the Function App, you'll create a new HTTP-triggered function. In this example, you'll build the function using C#, but, in general, there is no restriction on which programming language you must use.
 

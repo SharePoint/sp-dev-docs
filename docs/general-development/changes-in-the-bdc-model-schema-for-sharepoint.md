@@ -1,5 +1,6 @@
 ---
 title: Changes in the BDC model schema for SharePoint
+description: Learn what has changed in SharePoint for the BDC model schema.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 882ea867-9acb-4313-99c9-865a523b72fd

@@ -18,10 +18,8 @@ A site design is a collection of actions that SharePoint runs when creating a ne
 Each action is specified by the "verb" value in the JSON script. Also, actions can have subactions that are also "verb" values. In the following JSON, the script specifies to create a new list named **Customer Tracking**, and then subactions set the description and add several fields to define the list.
 
 1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
-
-2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx) to connect to your SharePoint tenant.
-
-3. Create - and assign the JSON that describes the new script - to a variable as shown in the following PowerShell code. You can view and reference the latest JSON schema file here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
+1. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx) to connect to your SharePoint tenant.
+1. Create - and assign the JSON that describes the new script - to a variable as shown in the following PowerShell code. You can view and reference the latest JSON schema file here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
    ```powershell
     $site_script = '
@@ -73,8 +71,6 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
     '
    ```
 
-<br/>
-
 The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design) if applied programmatically using the Invoke-SPOSiteDesign command. If they are applied through the UX or using the Add-SPOSiteDesignTask command then the limit is 300 cumulative actions (or 100K characters).
 
 ## Add the site script
@@ -119,37 +115,30 @@ Now that you've added a site script and site design, you can use it to create ne
 ### New site creation
 
 1. Go to the home page of the SharePoint site that you are using for development.
-
-2. Choose **Create site**.
-
-3. Choose **Team site**.
-
-4. In the **Choose a design** drop-down, select your site design **customer orders**.
-
-5. In **Site name**, enter a name for the new site **Customer order tracking**.
-
-6. Choose **Next**.
-
-7. Choose **Finish**.
-
-8. A notification bar will be displayed indicating that your script is being applied. To invoke the site design information panel, click the **View progress** link. Once the script(s) have completed the notification banner message will change to **Site Design applied. Refresh this site to see the changes.**, allowing you to either invoke the panel or refresh the page.
-
-9. You will see the custom list on the page.
+1. Choose **Create site**.
+1. Choose **Team site**.
+1. In the **Choose a design** drop-down, select your site design **customer orders**.
+1. In **Site name**, enter a name for the new site **Customer order tracking**.
+1. Choose **Next**.
+1. Choose **Finish**.
+1. A notification bar will be displayed indicating that your script is being applied. To invoke the site design information panel, click the **View progress** link. Once the script(s) have completed the notification banner message will change to **Site Design applied. Refresh this site to see the changes.**, allowing you to either invoke the panel or refresh the page.
+1. You will see the custom list on the page.
 
 ### Apply to an existing site collection
 
-You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet.
+You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/Invoke-SPOSiteDesign) cmdlet.
 
 You can apply a published site design to:
+
 1. Group-connected Team site
-2. Team site not connected to a Microsoft 365 group
-3. Communication site
-4. Classic team site
-5. Classic publishing site
+1. Team site not connected to a Microsoft 365 group
+1. Communication site
+1. Classic team site
+1. Classic publishing site
 
 ### Associate with a hub site
 
-You can also associate a published site design to a hub site in hub site settings so it can be applied to all joining sites. For details on how to associate the site design either through the UI or using the Set-SPOHubSite command please review the [Set up a site design for your hub site](https://docs.microsoft.com/sharepoint/set-up-site-design-hub-site) article.
+You can also associate a published site design to a hub site in hub site settings so it can be applied to all joining sites. For details on how to associate the site design either through the UI or using the `Set-SPOHubSite` cmdlet please review the [PowerShell cmdlets for SharePoint hub sites](../features/hub-site/hub-site-powershell.md) article.
 
 ## See also
 
