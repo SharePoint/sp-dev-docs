@@ -1,5 +1,6 @@
 ---
 title: Excel Services error codes
+description: Excel Services generates errors and error messages in the SOAP exception based on errors that occur in Excel Services. The following table shows the errors that are accessible when calls to the Excel Web Services methods throw a SOAP exception.
 ms.date: 09/25/2017
 keywords: alerts
 f1_keywords:

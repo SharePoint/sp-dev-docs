@@ -1,5 +1,6 @@
 ---
 title: BDC model schema reference for SharePoint
+description: Contains reference documentation for the BDC model schema (BDCMetadata.xsd), which you can use to create external content types in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 979a5ffc-f033-4e72-b2d1-11d8cb1b294a
