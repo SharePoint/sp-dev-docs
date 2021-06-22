@@ -27,7 +27,7 @@ To figure out if a Microsoft Graph REST API call is backed by SharePoint Online 
 
 ## See also
 
-- [Microsoft Graph REST API v1.0 reference](/graph/api/overview?view=graph-rest-1.0)
+- [Microsoft Graph REST API v1.0 reference](/graph/api/overview)
 
  
 

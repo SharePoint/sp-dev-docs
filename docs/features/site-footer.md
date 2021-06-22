@@ -24,7 +24,7 @@ Following picture demonstrates a footer with a logo, footer name and labels and 
 
 ## Controlling footer rendering using code or PowerShell
 
-You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps):
+You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets):
 
 ```powershell
 Connect-PnPOnline -Url "<SiteURL>" –Credentials (Get-Credential) 

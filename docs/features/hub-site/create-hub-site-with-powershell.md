@@ -46,7 +46,7 @@ First, we will create the marketing site that will serve as a hub site that othe
    https://contoso.sharepoint.com/sites/marketing
    ```
 
-3. Register the new marketing site as a hub site by using the [Register-SPOHubSite](/powershell/module/sharepoint-online/register-spohubsite?view=sharepoint-ps) cmdlet:
+3. Register the new marketing site as a hub site by using the [Register-SPOHubSite](/powershell/module/sharepoint-online/register-spohubsite) cmdlet:
 
    ```powershell
    Register-SPOHubSite -Site https://contoso.sharepoint.com/sites/marketing

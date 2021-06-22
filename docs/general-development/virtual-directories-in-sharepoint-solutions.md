@@ -38,4 +38,4 @@ If you need to make your solution compatible with site collections of either mod
 -  [Planning Deployment of Farm Solutions for SharePoint](https://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint.aspx)
     
   
--  [SPUtility properties](/dotnet/api/microsoft.sharepoint.utilities.sputility?view=sharepoint-server#properties)
+-  [SPUtility properties](/dotnet/api/microsoft.sharepoint.utilities.sputility#properties)

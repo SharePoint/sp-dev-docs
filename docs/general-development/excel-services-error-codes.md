@@ -14,7 +14,7 @@ localization_priority: Priority
 
 Excel Services generates errors and error messages in the SOAP exception based on errors that occur in Excel Services. The following table shows the errors that are accessible when calls to the Excel Web Services methods throw a SOAP exception. 
 
-You use the [SubCode](/dotnet/api/system.web.services.protocols.soapexception.subcode?view=netframework-4.7.2) property of the **SoapException** class to capture the error codes. For more information about using the **SubCode** property to capture error codes, see [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
+You use the [SubCode](/dotnet/api/system.web.services.protocols.soapexception.subcode) property of the **SoapException** class to capture the error codes. For more information about using the **SubCode** property to capture error codes, see [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
 For more information about Excel Services alerts, see  [Excel Services Alerts](excel-services-alerts.md).
 
 ## Error codes

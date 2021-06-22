@@ -5191,4 +5191,4 @@
 - name: Tutorials
   href: training/training.md
 - name: SharePoint Framework API reference
-  href: https://docs.microsoft.com/javascript/api/overview/sharepoint?view=sp-typescript-latest
+  href: https://docs.microsoft.com/javascript/api/overview/sharepoint

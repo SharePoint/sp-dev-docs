@@ -120,7 +120,7 @@ Before running the Modernization it’s important to validate the input (alias m
 - Microsoft 365 group naming policy: https://docs.microsoft.com/office365/admin/create-groups/groups-naming-policy?redirectSourcePath=%252fen-us%252farticle%252foffice-365-groups-naming-policy-6ceca4d3-cad1-4532-9f0f-d469dfbbb552&view=o365-worldwide
 - Who can create Groups: https://docs.microsoft.com/office365/admin/create-groups/manage-creation-of-groups?redirectSourcePath=%252fen-us%252farticle%252fmanage-who-can-create-office-365-groups-4c46c8cb-17d0-44b5-9776-005fced8e618&view=o365-worldwide
 - Group classifications: https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-groups-with-powershell
-- Tenant themes: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme?view=sharepoint-ps
+- Tenant themes: https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnptenanttheme
 
 ## Modernize a wave of site collections
 

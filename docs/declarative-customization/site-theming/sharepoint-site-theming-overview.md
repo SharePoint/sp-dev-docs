@@ -93,7 +93,7 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 
     `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
 
-For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/powershell-scripting?view=powershell-6).
+For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/powershell-scripting).
 
 ## See also
 

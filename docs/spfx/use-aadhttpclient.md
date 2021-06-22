@@ -84,7 +84,7 @@ One way to see the available applications in Azure AD is by navigating to the [A
 ### Use Azure CLI
 
 > [!NOTE]
-> Before you can execute the following steps, you must install the [Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest). Alternatively, you can run the Azure CLI through the [Azure Cloud Shell](/azure/cloud-shell/overview?view=azure-cli-latest) or as a [Docker container](https://hub.docker.com/r/microsoft/azure-cli/).
+> Before you can execute the following steps, you must install the [Azure CLI](/cli/azure/install-azure-cli). Alternatively, you can run the Azure CLI through the [Azure Cloud Shell](/azure/cloud-shell/overview) or as a [Docker container](https://hub.docker.com/r/microsoft/azure-cli/).
 
 1. If you're running the CLI on your machine or in a Docker container, start by connecting to your Azure subscription by executing:
 

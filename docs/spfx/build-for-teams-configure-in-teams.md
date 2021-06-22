@@ -55,7 +55,7 @@ Alternatively, you could store user settings in a list. You could create a hidde
 
 #### Store user configuration in application’s personal folder
 
-One of the less-known options for persisting application- and user-specific configuration is using the [application’s personal folder](/graph/api/drive-get-specialfolder?view=graph-rest-1.0&tabs=http). Application’s specific folder is located in the user’s OneDrive for Business site. Each application gets a designated folder in which it can store any number of files.
+One of the less-known options for persisting application- and user-specific configuration is using the [application’s personal folder](/graph/api/drive-get-specialfolder?tabs=http). Application’s specific folder is located in the user’s OneDrive for Business site. Each application gets a designated folder in which it can store any number of files.
 
 ![Application’s personal folder created for SharePoint Framework applications](../images/build-for-teams/build-for-teams-application-personal-folder.png)
 
