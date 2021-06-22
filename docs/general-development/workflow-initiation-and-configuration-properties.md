@@ -1,5 +1,6 @@
 ---
 title: Workflow initiation and configuration properties
+description: See an overview of the initiation and association properties that SharePoint sets on workflows.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7386bbf9-3ed6-4732-bcdb-b27baed7397e
@@ -12,8 +13,6 @@ See an overview of the initiation and association properties that SharePoint set
 
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).
-
-## 
 
 When you launch a workflow, SharePoint automatically sets a number of association and initiation properties that support the workflow. These are listed below. The set of properties that are set differs slightly depending whether it is a **site** workflows or a **list** workflow. These differences are identified in the lists.
   

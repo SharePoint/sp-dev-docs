@@ -1,5 +1,6 @@
 ---
 title: Use the site collection app catalog
+description: Using site collection app catalogs, SharePoint tenant administrators can decentralize the management and scope the deployment of SharePoint add-ins and SharePoint Framework solutions to specific sites.
 ms.date: 09/07/2020
 ms.prod: sharepoint
 ms.assetid: fdf7ecb1-9951-475b-b058-3285fba77b68

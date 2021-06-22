@@ -1,5 +1,6 @@
 ---
 title: Use remote event receivers in SharePoint
+description: Use remote event receivers to handle events in the SharePoint Add-in model. Use AppInstalled and AppUninstalling events to set up or remove SharePoint objects and other event receivers your add-in needs.
 ms.date: 04/22/2020
 localization_priority: Priority
 ---

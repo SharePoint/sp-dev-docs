@@ -1,5 +1,6 @@
 ---
 title: Common error messages in SharePoint workflow development
+description: A listing of common error messages that you might encounter while developing SharePoint workflows and guidance for solving the underlying problem.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e9bf6878-c722-4b1f-b5b5-b302ae0ea4da

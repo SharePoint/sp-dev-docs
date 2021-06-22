@@ -1,5 +1,6 @@
 ---
 title: Virtual directories in SharePoint solutions
+description: Learn about how changes in the virtual directory system affect how you create farm solutions in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c26c4160-31be-4358-89cf-082b8a1e6a6c

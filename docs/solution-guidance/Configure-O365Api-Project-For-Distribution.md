@@ -1,6 +1,6 @@
 ---
 title: Configure Office 365 API projects for distribution
-description: 
+description: This page explains some steps developers should consider taking on their projects that leverage the Office 365 APIs prior to distributing them to other developers, their customers, or to source control systems such as Team Foundation Server, Git, or VSTS.
 ms.date: 5/8/2018
 localization_priority: Normal
 ---

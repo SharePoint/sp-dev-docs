@@ -1,5 +1,6 @@
 ---
 title: Accessibility in SharePoint
+description: Learn about the features, products, and services that make SharePoint accessible for people with disabilities, and find developer resources that can help you design and build apps and websites that support key accessibility scenarios.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c9106d47-c523-49c1-b9f1-cdd7420abd5e
