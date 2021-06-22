@@ -1,6 +1,7 @@
 ---
 title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
-ms.date: 07/21/2020
+description: This article specifically provides guidance about how to plan for transitioning from classic SharePoint Workflows to Power Automate flows.
+ms.date: 06/22/2021
 search.app: 
   - Flow
 search.appverid: met150
