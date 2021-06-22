@@ -163,7 +163,7 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 ### Solutions
 
 - [SharePoint Modernization scanner](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization)
-- [PnP PowerShell branding cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps#branding)
+- [PnP PowerShell branding cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps#branding)
 - [Transformation tool](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM#introduction)
 
 ## Custom CSS

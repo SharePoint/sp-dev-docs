@@ -138,7 +138,7 @@ Now that you've added a site script and site design, you can use it to create ne
 
 ### Apply to an existing site collection
 
-You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet.
+You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/Invoke-SPOSiteDesign?view=sharepoint-ps) cmdlet.
 
 You can apply a published site design to:
 1. Group-connected Team site

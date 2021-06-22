@@ -66,7 +66,7 @@ Your first step in troubleshooting the issue is to use the Visual Studio debugge
 
 - There is no user profile created for the user who is accessing the remote web application. Create the user profile.
     
-- Your add-in does not have permission to the resource you are trying to access. Open the SharePoint Management Shell and run the following Windows PowerShell cmdlet. The variable `$web` is the SharePoint website you are trying to get access to, and `$appPrincipal` is the add-in ID. For more information, see [Set-SPAppPrincipalPermission](https://docs.microsoft.com/powershell/module/sharepoint-server/Set-SPAppPrincipalPermission?view=sharepoint-ps).
+- Your add-in does not have permission to the resource you are trying to access. Open the SharePoint Management Shell and run the following Windows PowerShell cmdlet. The variable `$web` is the SharePoint website you are trying to get access to, and `$appPrincipal` is the add-in ID. For more information, see [Set-SPAppPrincipalPermission](/powershell/module/sharepoint-server/Set-SPAppPrincipalPermission?view=sharepoint-ps).
       
   ```powershell
     Set-SPAppPrincipalPermission -Site $web -AppPrincipal $appPrincipal -Scope Site -Right FullControl

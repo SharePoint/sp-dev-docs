@@ -65,7 +65,7 @@ One way to see the available applications in Azure AD is by navigating to the [A
 ### Use Azure PowerShell
 
 > [!NOTE]
-> Before you can execute the following steps, you must install [Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps). Alternatively, you can execute the cmdlets mentioned in this section in the Azure Cloud Shell PowerShell.
+> Before you can execute the following steps, you must install [Azure PowerShell](/powershell/azure/install-az-ps). Alternatively, you can execute the cmdlets mentioned in this section in the Azure Cloud Shell PowerShell.
 
 1. Sign in to your Azure subscription by executing in PowerShell (this isn't necessary if you're using the Azure Cloud Shell):
 
