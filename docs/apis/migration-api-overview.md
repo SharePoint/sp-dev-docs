@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 ms.prod: sharepoint
-ms.date: 03/17/2021
+ms.date: 06/22/2021
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -18,7 +18,7 @@ The following API description is based upon use of the SharePoint Client Side Ob
 You can find latest version of the SharePoint Online Client Side Object Model (CSOM) package from the [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/). Use the ID `Microsoft.SharePointOnline.CSOM`.
 
 >[!Important]
-> Files larger than 15 GB must now create the required checksum using [QuickXorHash](https://docs.microsoft.com/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
+> Files larger than 15 GB must now create the required checksum using [QuickXorHash](/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
 > 
 >The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirementt.
 >
@@ -286,7 +286,7 @@ SPMigrationJobState is an enumeration that tracks possible major states in the i
 
 ## Import Package Structure
 
-Package structure is based on a constrained version of the Content Deployment package schema. Documentation for the original full schema can be found at [docs.microsoft.com](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). Until published on docs.microsoft.com, the constrained structure can be found in this document in the appendix.
+Package structure is based on a constrained version of the Content Deployment package schema. Documentation for the original full schema can be found at [docs.microsoft.com](../schema/content-migration-schemas.md). Until published on docs.microsoft.com, the constrained structure can be found in this document in the appendix.
 
 |      XML file      |           Schema File           |                                                                                                                                                                                                                                                       Description                                                                                                                                                                                                                                                        |
 | ------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -307,19 +307,19 @@ The main requirement for the structure is that the FileValue references in the *
 
 ### ExportSettings.XML
 
-The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 The main requirement is that the ExportSettings `SiteUrl` value must be populated with a URL consistent with the source URL used for the rest of the import package. In the case of file shares as a source, the URL would be pre-specified to be the source URL in the rest of the package, whereas a package generated through an export operation at a source site would be its original source site collection URL.
 
 ### LookupListMap.XML
 
-The **LookupListMap.XML** file, if included, is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained **DeploymentLookupListMap.XSD**, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+The **LookupListMap.XML** file, if included, is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained **DeploymentLookupListMap.XSD**, which has no change from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 Since an import package for the pipeline does not include defining fields or views on a list or document library, the **LookupListMap.XML** file will normally include no child nodes under the root and as such can also be excluded from the package if not required, although a warning may be logged in this case.
 
 ### Manifest.XML
 
-All instances of the **Manifest.XML** file for a package are expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentManifest.XSD**, which has multiple major changes and significant reduction in types from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+All instances of the **Manifest.XML** file for a package are expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentManifest.XSD**, which has multiple major changes and significant reduction in types from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 The **Manifest.XML** is the primary descriptor for metadata within the package, and provides the list/folder/item hierarchy, along with metadata for the items including references back to users and groups defined in the **UserGroupMap.XML** file. There may be more than one **Manifest.XML** file (which can be identified using different file names to uniquely identify them), and all are found by the import pipeline through references within the **SystemData.XML** file’s ManifestFile entries.
 
@@ -333,17 +333,17 @@ The package generated initially from a file share is effectively a form of recor
 
 ### Requirements.XML
 
-The **Requirements.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained DeploymentRequirements.XSD, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+The **Requirements.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. This optional file is validated using the constrained DeploymentRequirements.XSD, which has no change from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 For file shares this is expected to normally include no child nodes under the root and as such can also be excluded from the package if not required, although a warning will be logged in this case.
 
 ### RootObjectMap.XML
 
-The **RootObjectMap.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentRootObjectMap.XSD**, which has some limited changes from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas). The most common `RootObject` that will be included will be a single object of type List. The Id for this item should be the List Id for the target list, and the `ParentWebID` should match the Id of the parent target web containing this list in order for migration to be successful. The Id, WebUrl and Url values of this object must also match the related structure laid out in the **Manifest.XML** file.
+The **RootObjectMap.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentRootObjectMap.XSD**, which has some limited changes from current published [full 2013 package schema](../schema/content-migration-schemas.md). The most common `RootObject` that will be included will be a single object of type List. The Id for this item should be the List Id for the target list, and the `ParentWebID` should match the Id of the parent target web containing this list in order for migration to be successful. The Id, WebUrl and Url values of this object must also match the related structure laid out in the **Manifest.XML** file.
 
 ### SystemData.XML
 
-The **SystemData.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentSystemData.XSD**, which has no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+The **SystemData.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained **DeploymentSystemData.XSD**, which has no change from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 The `SchemaVersion` information is expected to reference the current Build and DatabaseVersion of the target farm, a Version of “15.0.0.0”, and the `SiteVersion` value is expected to always match the target site collection `UIVersion` (i.e. most commonly this will be “15”). Each **Manifest.XML** file for the package is expected to be listed in this file within the `ManifestFile` entries.
 
@@ -603,7 +603,7 @@ UserGroup.xml file defines all users and groups within the exported web(s). The 
 
 ## Constrained XSD structures
 
-Included below are the XSD files used for package validation in the import pipeline, when different than the original 2013 full schema which can be found at [official SharePoint documentation](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+Included below are the XSD files used for package validation in the import pipeline, when different than the original 2013 full schema which can be found at [official SharePoint documentation](../schema/content-migration-schemas.md).
 
 ### DeploymentExportSettings.XSD
 
@@ -713,6 +713,11 @@ Included below are the XSD files used for package validation in the import pipel
   <!--This defines that the XML can contain 0-N instances of the ExportSettings element-->
   <xs:element name="ExportSettings" type="SPExportSettings" />
 </xs:schema>
+<!Including CommentFlags settings
+<Comments>
+    <Comment Id="1" Text="SGVsbG8gd29ybGQgdmlkZW8gY29tbWVudCE=" ParentId="0" UserId="12" Created="2021-05-14T22:35:30.353Z" UIVersion="512" />
+    <Comment Id="2" Text="SGVsbG8gd29ybGQgdmlkZW8gcmVwbHku" ParentId="1" UserId="12" Created=2021-05-14T22:36:14.08Z" UIVersion="512" />
+</Comments>
 ```
 
 ### DeploymentLookupListMap.XSD
@@ -1479,11 +1484,15 @@ There is no change from current published full 2013 package schema.
   <!--This defines that the XML can contain 0-N instances of the SPGenericObject element-->
   <xs:element name="SPObjects" type="SPGenericObjectCollection"></xs:element>
 </xs:schema>
+<Comments>
+    <Comment Id="1" Text="SGVsbG8gd29ybGQgdmlkZW8gY29tbWVudCE=" ParentId="0" UserId="12" Created="2021-05-14T22:35:30.353Z" UIVersion="512" />
+    <Comment Id="2" Text="SGVsbG8gd29ybGQgdmlkZW8gcmVwbHku" ParentId="1" UserId="12" Created=2021-05-14T22:36:14.08Z" UIVersion="512" />
+</Comments>
 ```
 
 ### DeploymentRequirements.XSD
 
-There is no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+There is no change from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 ### DeploymentRootObjectMap.XSD
 
@@ -1531,15 +1540,15 @@ There is no change from current published [full 2013 package schema](https://doc
 
 ### DeploymentSystemData.XSD
 
-There is no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+There is no change from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 ### DeploymentUserGroupMap.XSD
 
-There is no change from current published full 2013 [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+There is no change from current published full 2013 [full 2013 package schema](../schema/content-migration-schemas.md).
 
 ### DeploymentViewFormsList.XSD
 
-There is no change from current published [full 2013 package schema](https://docs.microsoft.com/sharepoint/dev/schema/content-migration-schemas).
+There is no change from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 ## Sample: Using REST to call the API
 
