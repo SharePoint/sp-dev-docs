@@ -1,7 +1,7 @@
 ---
 title: Work with sites in a Multi-Geo environment
 description: When your custom solution needs to work with SharePoint sites, and when you deploy applications, it's important to be aware of the geo locations in your Multi-Geo tenant. 
-ms.date: 6/18/2019
+ms.date: 06/22/2021
 localization_priority: Normal
 ---
 
@@ -43,7 +43,7 @@ The `Tenant` object is also used to configure tenant-level settings, such as CDN
 	- Use the `GeoLocation` property of the `Site` object to get the site's geo location.
 	- Use the `GetSitePropertiesByUrl` tenant method to get the site, make changes, and call `Update` on the retrieved `SiteProperties` object.
 
-For more information about how to get a site by using the `GetSitePropertiesByUrl` method and then restrict the site from being moved by setting the `RestrictedToRegion` property, see the [MultiGeo.RestrictSiteToGeoLocation](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.RestrictSiteToGeoLocation) sample. 
+For more information about how to get a site by using the `GetSitePropertiesByUrl` method and then restrict the site from being moved by setting the `RestrictedToRegion` property, see the [MultiGeo.RestrictSiteToGeoLocation](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.RestrictSiteToGeoLocation) sample. 
 
 ## Identify sites by storing the site ID
 
