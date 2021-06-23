@@ -68,6 +68,10 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
     ![Steady throttling](../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
 
+- **Unsupported use cases**
+
+    Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
+
 ## Why can't you just tell me the exact throttling limits?
 
 Setting and publishing exact throttling limits sounds straightforward, but in fact it would result in more restrictive limits. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online.
