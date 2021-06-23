@@ -420,7 +420,7 @@ Table 1 describes the available font slots and where they are used in a page.
 -  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming)
     
   
 -  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)

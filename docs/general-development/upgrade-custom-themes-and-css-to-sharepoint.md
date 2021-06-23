@@ -114,7 +114,7 @@ Unmodified SharePoint 2010 CSS files and custom CSS files cannot be used on Shar
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 -  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)

@@ -18,7 +18,7 @@ You can use the SharePoint client object model (CSOM) to retrieve, update, and m
 
 For more information about the sets of APIs available on the SharePoint platform, see [Choose the right API set in SharePoint](../general-development/choose-the-right-api-set-in-sharepoint.md).
 
-This article shows how to perform basic operations by using the .NET Framework object model, which is available as a redistributable package on the Microsoft Download Center (search for "[SharePoint Server Client Components SDK](https://www.microsoft.com/en-us/search?q=SharePoint+Server+Client+Components+SDK)" or "[SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/search?q=SharePoint+Online+Client+Components+SDK").
+This article shows how to perform basic operations by using the .NET Framework object model, which is available as a redistributable package on the Microsoft Download Center (search for "[SharePoint Server Client Components SDK](https://www.microsoft.com/search?q=SharePoint+Server+Client+Components+SDK)" or "[SharePoint Online Client Components SDK](https://www.microsoft.com/search?q=SharePoint+Online+Client+Components+SDK").
 
 For information about how to use the other client APIs, see:
 

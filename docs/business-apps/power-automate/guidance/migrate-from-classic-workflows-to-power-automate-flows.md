@@ -48,7 +48,7 @@ Using Microsoft Power Automate, SharePoint users can use the SharePoint Connecto
 
 - Start approval when a new file is added in a library.
 
-To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/en-us/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](/power-automate/mobile-create-flow).
+To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](/power-automate/mobile-create-flow).
 
 To learn more about building workflows using Power Automate in SharePoint, start here: Business apps and Business process [Business apps and business process automation](../../introduction-to-sharepoint-business-process-integration.md).
 

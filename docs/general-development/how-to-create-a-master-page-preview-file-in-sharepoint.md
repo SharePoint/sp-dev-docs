@@ -157,4 +157,4 @@ To create a master page preview file, use an existing master page preview as a s
 - [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
 - [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
 - [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
-- [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
+- [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)

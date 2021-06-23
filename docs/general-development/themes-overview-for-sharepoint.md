@@ -127,7 +127,7 @@ You can create new designs by creating new list items in the Composed Looks list
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 
