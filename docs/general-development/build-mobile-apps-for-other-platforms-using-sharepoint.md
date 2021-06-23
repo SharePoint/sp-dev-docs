@@ -293,37 +293,14 @@ For more information, see  [Complete basic operations using SharePoint REST endp
 
 
 ## See also
-<a name="bk_addresources"> </a>
 
-
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
-
-
--  [Using the SharePoint REST service](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service)
-
-
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
-
-
--  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
-
-
--  [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
-
-
--  [Get to know the SharePoint REST service](https://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
-
-
--  [Open Data Protocol](http://www.odata.org/)
-
-
--  [Authorization and authentication of SharePoint Add-ins](https://msdn.microsoft.com/library/bde5647a-fff1-4b51-b67b-2139de79ce4a%28Office.15%29.aspx)
-
-
--  [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
-
-
--  [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
-
-
-
+- [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+- [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
+- [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+- [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
+- [Use OData query operations in SharePoint REST requests](https://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
+- [Get to know the SharePoint REST service](https://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
+- [Open Data Protocol](http://www.odata.org/)
+- [Authorization and authentication of SharePoint Add-ins](https://msdn.microsoft.com/library/bde5647a-fff1-4b51-b67b-2139de79ce4a%28Office.15%29.aspx)
+- [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
+- [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)

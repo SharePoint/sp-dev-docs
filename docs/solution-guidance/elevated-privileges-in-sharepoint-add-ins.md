@@ -1,5 +1,6 @@
 ---
 title: Elevated privileges
+description: Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins or other remotely hosted solutions.
 ms.date: 04/22/2020
 localization_priority: Normal
 ---

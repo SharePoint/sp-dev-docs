@@ -1,5 +1,6 @@
 ---
 title: Using the SharePoint search Query APIs
+description: Learn about the query APIs available in SharePoint that enable you to add search functionality to custom solutions and applications.
 ms.date: 01/16/2020
 ms.prod: sharepoint
 ms.assetid: ae9d73ed-1140-430b-9287-01dbbe8ae7d1
@@ -36,7 +37,7 @@ As a best practice in SharePoint development, use client APIs when you can. Clie
 
 ### Query using the .NET client object model
 
-Search in SharePoint includes a client object model that enables access to search results for online, on-premises, and mobile development. The Search in SharePoint CSOM is built on the SharePoint CSOM. Therefore, your client code first needs to access the SharePoint CSOM and then access the Search in SharePoint CSOM. For more information about the SharePoint CSOM and the [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) class, which is the entry point to the CSOM, see [SharePoint Complete Basic Operations Using SharePoint Client Library Code](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code).
+Search in SharePoint includes a client object model that enables access to search results for online, on-premises, and mobile development. The Search in SharePoint CSOM is built on the SharePoint CSOM. Therefore, your client code first needs to access the SharePoint CSOM and then access the Search in SharePoint CSOM. For more information about the SharePoint CSOM and the [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) class, which is the entry point to the CSOM, see [Complete basic operations using SharePoint client library code](../sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md).
 
 For the .NET managed CSOM, get a **ClientContext** instance (located in the [Microsoft.SharePoint.Client](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.aspx) namespace in the Microsoft.SharePoint.Client.dll). Then use the object model in the **Microsoft.SharePoint.Client.Search.Query** namespace in the Microsoft.SharePoint.Client.Search.dll.
 
