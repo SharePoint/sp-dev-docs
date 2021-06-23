@@ -32,7 +32,7 @@ To remove the placeholder  `<a>` tags, find <a> tags that are located directly b
 
 ## Workarounds
 
-We encourage you to  [embed Excel into your webpages ](https://support.office.com/en-au/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU) as an alternative.
+We encourage you to  [embed Excel into your webpages ](https://support.office.com/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU) as an alternative.
   
     
     
@@ -44,7 +44,7 @@ We encourage you to  [embed Excel into your webpages ](https://support.office.co
 -  [Excel Services in SharePoint](excel-services-in-sharepoint.md)
     
   
--  [Embed an Excel workbook on your blog](https://support.office.com/en-au/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU)
+-  [Embed an Excel workbook on your blog](https://support.office.com/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU)
     
   
 

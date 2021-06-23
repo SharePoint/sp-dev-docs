@@ -180,7 +180,7 @@ Consider these options:
 For information about CDNs, see:
 
 - [Office 365 Public CDN Overview](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn)
-- [Using content delivery networks with SharePoint Online](https://support.office.com/en-gb/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
+- [Using content delivery networks with SharePoint Online](https://support.office.com/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
 - [CDN Manager GitHub repo](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 - [Branding guidance for SharePoint Online portals](portal-branding.md)
 - [Performance guidance for SharePoint Online portals](portal-performance.md)
