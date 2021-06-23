@@ -102,6 +102,10 @@ jobs:
 > [!NOTE] 
 > You can find the latest version of this file on the [sample](https://github.com/SharePoint/sp-dev-build-extensions/tree/master/samples/azure-devops-ci-cd-spfx)
 
+> [!NOTE] 
+> You can check the [list of predefined Azure Pipelines variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml) to see what you can use to extend your scripts e.g. with folder paths, build numbers etc.
+
+
 ## Implementing Continuous Deployment
 
 The continuous deployment stage is described by the following YAML template.  
