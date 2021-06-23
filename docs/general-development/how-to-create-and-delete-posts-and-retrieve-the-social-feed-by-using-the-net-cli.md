@@ -107,7 +107,7 @@ The following code example publishes a post and a reply from the current user. I
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -234,7 +234,7 @@ For more information about feed types, see  [Overview of feed types](work-with-s
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -354,7 +354,7 @@ The following code example deletes a post or a reply from the current user's per
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

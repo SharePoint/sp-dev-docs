@@ -91,7 +91,7 @@ The following example shows how to sort search results by using the **Size** man
     
     
 
-```cs
+```csharp
 
 using (var context = new ClientContext("http://localhost"))
 {
@@ -198,7 +198,7 @@ The following code example shows how to specify sort by formula with ascending s
 
 
 
-```cs
+```csharp
 using (var context = new ClientContext("http://localhost"))
 {
     var query = new KeywordQuery(context)
@@ -337,7 +337,7 @@ The following examples show how to specify the sort formula using the Query obje
 
 
 
-```cs
+```csharp
 
 using (var context = new ClientContext("http://localhost"))
 {
@@ -386,7 +386,7 @@ If you want to apply a distance-based sorting (not combining the distance with o
 
 
 
-```cs
+```csharp
 using (var context = new ClientContext("http://localhost"))
 {
     var query = new KeywordQuery(context)
@@ -524,7 +524,7 @@ http://localhost/_api/search/query?querytext='home'&amp;sortlist='[random:seed=5
 
 
 
-```cs
+```csharp
 using (var context = new ClientContext("http://localhost"))
 {
     var query = new KeywordQuery(context)

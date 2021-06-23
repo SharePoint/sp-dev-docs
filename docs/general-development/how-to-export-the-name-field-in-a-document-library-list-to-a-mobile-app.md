@@ -69,7 +69,7 @@ To export the **Name** field and access attachments from a document library, you
 
 - In DisplayItemViewModel.cs, add the following code to **DisplayVM**.
     
-```cs
+```csharp
   
 public string m_fileUrl;
         public string FileUrl

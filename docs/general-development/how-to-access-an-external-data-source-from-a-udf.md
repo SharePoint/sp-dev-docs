@@ -21,7 +21,7 @@ This example shows how to access an external database from a user-defined functi
 ## Example
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

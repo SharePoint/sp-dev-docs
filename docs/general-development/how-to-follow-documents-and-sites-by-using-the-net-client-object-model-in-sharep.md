@@ -126,7 +126,7 @@ This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/libr
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -250,7 +250,7 @@ The following code example gets the documents and sites that the current user is
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

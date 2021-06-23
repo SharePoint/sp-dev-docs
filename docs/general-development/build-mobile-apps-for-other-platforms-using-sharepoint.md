@@ -100,7 +100,7 @@ The following code demonstrates how to authenticate your app to SharePoint using
 
 
 
-```cs
+```csharp
 
 string SharePointUrl = "https://Target SharePoint site";
 

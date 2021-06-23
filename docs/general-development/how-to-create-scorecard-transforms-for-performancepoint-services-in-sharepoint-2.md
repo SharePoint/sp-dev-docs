@@ -71,7 +71,7 @@ Before you can compile this code example, you must configure your development en
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -160,7 +160,7 @@ The following code example creates a **PreQuery** transform that applies a grey 
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

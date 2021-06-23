@@ -143,7 +143,7 @@ Use the following code to collapse the search results by using the **CollapseSpe
 
 
 
-```cs
+```csharp
 
 using (var context = new ClientContext("http://localhost"))
 {

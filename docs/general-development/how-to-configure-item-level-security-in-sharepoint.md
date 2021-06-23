@@ -139,7 +139,7 @@ The following code is the method signature for the method that is specified in t
 
 
 
-```cs
+```csharp
 
 Public static Byte[]GetItemSecurity (string  id)
 {
@@ -156,7 +156,7 @@ If the external system does not support NTLM authentication, but the external sy
     
     
 
-```cs
+```csharp
 
 /// Returns the security descriptor for a user.
 /// </summary>

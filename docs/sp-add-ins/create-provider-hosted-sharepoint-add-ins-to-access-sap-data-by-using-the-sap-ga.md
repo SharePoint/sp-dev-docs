@@ -167,7 +167,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 1. Right-click the ASP.NET project and use the Visual Studio item adding process to add a new class file to the project named **AADAuthHelper.cs**.
 1. Add the following **using** statements to the file.
 
-    ```cs
+    ```csharp
     using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using System.Configuration;
     using System.Web.UI;
@@ -175,13 +175,13 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Change the access keyword from **public** to **internal**, and add the **static** keyword to the class declaration.
 
-    ```cs
+    ```csharp
     internal static class AADAuthHelper
     ```
 
 1. Add the following fields to the class. These fields store information that your ASP.NET application uses to get access tokens from Azure AD.
 
-    ```cs
+    ```csharp
     private static readonly string _authority = ConfigurationManager.AppSettings["Authority"];
     private static readonly string _appRedirectUrl = ConfigurationManager.AppSettings["AppRedirectUrl"];
     private static readonly string _resourceUrl = ConfigurationManager.AppSettings["ResourceUrl"];
@@ -197,7 +197,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following property to the class. This property holds the URL to the Azure AD sign-in screen.
 
-    ```cs
+    ```csharp
     private static string AuthorizeUrl
     {
       get
@@ -213,7 +213,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following properties to the class. These cache the access and refresh tokens and check their validity.
 
-    ```cs
+    ```csharp
     public static Tuple<string, DateTimeOffset> AccessToken
     {
       get {
@@ -248,7 +248,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following methods to the class. These are used to check the validity of the authorization code and to obtain an access token from Azure AD by using either an authentication code or a refresh token.
 
-    ```cs
+    ```csharp
     private static bool IsAuthorizationCodeNotNull(string authCode)
     {
       return !string.IsNullOrEmpty(authCode);
@@ -281,7 +281,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following method to the class. It is called from the ASP.NET code-behind to obtain a valid access token before a call is made to get SAP data via SAP Gateway for Microsoft.
 
-    ```cs
+    ```csharp
     internal static void EnsureValidAccessToken(Page page)
     {
       if (IsAccessTokenValid)
@@ -323,7 +323,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 1. Create one or more classes to model the data that your add-in gets from SAP. In the continuing example, there is just one data model class. Right-click the ASP.NET project and use the Visual Studio item-adding process to add a new class file to the project named **Automobile.cs**.
 1. Add the following code to the body of the class:
 
-    ```cs
+    ```csharp
     public string Price;
     public string Brand;
     public string Model;
@@ -338,21 +338,21 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Open the Default.aspx.cs file, and add the following **using** statements.
 
-    ```cs
+    ```csharp
     using System.Net;
     using Newtonsoft.Json.Linq;
     ```
 
 1. Add a **const** declaration to the Default class whose value is the base URL of the SAP OData endpoint that the add-in will be accessing. The following is an example:
 
-    ```cs
+    ```csharp
     private const string SAP_ODATA_URL = @"https://<SAP_gateway_domain>.cloudapp.net:8081/perf/sap/opu/odata/sap/ZCAR_POC_SRV/";
     ```
 
 2. The Office Developer Tools for Visual Studio have added a **Page\_PreInit** method and a **Page\_Load** method. Comment out the code inside the **Page\_Load** method and comment out the whole **Page\_Init** method. This code is not used in this sample. (If your SharePoint Add-in is going to access SharePoint, restore this code. See [Add SharePoint access to the ASP.NET application (optional)](#add-sharepoint-access-to-the-aspnet-application-optional).)
 1. Add the following line to the top of the **Page_Load** method. This eases the process of debugging because your ASP.NET application is communicating with SAP Gateway for Microsoft using SSL (HTTPS), but your "localhost:port" server is not configured to trust the certificate of SAP Gateway for Microsoft. Without this line of code, you would get an invalid certificate warning before Default.aspx opens. Some browsers allow you to click past this error, but some will not let you open Default.aspx at all.
 
-    ```cs
+    ```csharp
     ServicePointManager.ServerCertificateValidationCallback = (s, cert, chain, errors) => true;
     ```
 
@@ -361,7 +361,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following code to the **Page_Load** method. The string you pass to the `GetSAPData` method is an OData query.
 
-    ```cs
+    ```csharp
     if (!IsPostBack)
     {
       GetSAPData("DataCollection?$top=3");
@@ -370,7 +370,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following method to the Default class. This method first ensures that the cache for the access token has a valid access token in it that has been obtained from Azure AD. It then creates an HTTP **GET** Request that includes the access token and sends it to the SAP OData endpoint. The result is returned as a JSON object that is converted to a .NET **List** object. Three properties of the items are used in an array that is bound to the **DataListView**.
 
-    ```cs
+    ```csharp
     private void GetSAPData(string oDataQuery)
     {
       AADAuthHelper.EnsureValidAccessToken(this);
@@ -444,7 +444,7 @@ The following procedure provides some basic guidance about how to do this, but w
 1. Open the Default.aspx.cs file and uncomment the `Page_PreInit` method. Also uncomment the code that the Office Developer Tools for Visual Studio added to the `Page_Load` method.
 1. If your SharePoint Add-in is going to access SharePoint data, you have to cache the SharePoint context token that is POSTed to the Default.aspx page when the add-in is launched in SharePoint. This is to ensure that the SharePoint context token is not lost when the browser is redirected following the Azure AD authentication. (You have several options for how to cache this context.) The Office Developer Tools for Visual Studio add a SharePointContext.cs file to the ASP.NET project that does most of the work. To use the session cache, you simply add the following code inside the `if (!IsPostBack)` block *before* the code that calls out to SAP Gateway for Microsoft.
 
-    ```cs
+    ```csharp
     if (HttpContext.Current.Session["SharePointContext"] == null)
     {
         HttpContext.Current.Session["SharePointContext"]
@@ -455,7 +455,7 @@ The following procedure provides some basic guidance about how to do this, but w
 1. The **SharePointContext.cs** file makes calls to another file that the Office Developer Tools for Visual Studio added to the project: TokenHelper.cs. This file provides most of the code needed to obtain and use access tokens for SharePoint. However, it does not provide any code for renewing an expired access token or an expired refresh token. Nor does it contain any token caching code. For a production quality SharePoint Add-in, you need to add such code. The caching logic in the preceding step is an example. Your code should also cache the access token and reuse it until it expires. When the access token is expired, your code should use the refresh token to get a new access token.
 1. Add the data calls to SharePoint by using either CSOM or REST. The following example is a modification of CSOM code that Office Developer Tools for Visual Studio adds to the **Page_Load** method. In this example, the code has been moved to a separate method and it begins by retrieving the cached context token.
 
-    ```cs
+    ```csharp
     private void GetSharePointTitle()
     {
         var spContext = HttpContext.Current.Session["SharePointContext"] as SharePointContext;

@@ -144,7 +144,7 @@ In **FileUploadService.cs**, `UploadFileSlicePerSlice` uploads a large file to a
 
 Chunks must be uploaded in sequential order. You can't upload slices concurrently (for example, by using a multithreaded approach).
 
-```cs
+```csharp
 public Microsoft.SharePoint.Client.File UploadFileSlicePerSlice(ClientContext ctx, string libraryName, string fileName, int fileChunkSizeInMB = 3)
 {
   // Each sliced upload requires a unique ID.

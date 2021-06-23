@@ -29,7 +29,7 @@ Use the **SetCell** and **SetCellA1** methods to set values in a single cell. If
 Methods that have the A1 suffix ( **SetCellA1** and **SetRangeA1**) use a different coordinate system than those that do not ( **SetCell** and **SetRange**). If you want to use Excel-style references to cells, such as range references (for example, H8, A3:D5, Sheet2!A12:G18) or named ranges, you should use the methods with the A1 suffix. Those methods allow you to pass in the name of a sheet and range.If you want to access an Excel range by using a numeric coordinate system, you should use the methods that do not have the A1 suffix. It is easier to use range coordinates when you have code that iterates through a set of cells in a loop, or when the range coordinates are calculated dynamically as part of the algorithm.The row and column coordinates of a cell are 0-based. Therefore, "0,0" will return cell A1, as in this example:
 
 
-```cs
+```csharp
 
 // Call the SetCell method to set a value, 8, into a cell.
 // The cell is in the first row and first column; that is, cell A1.
@@ -52,7 +52,7 @@ If you are getting values from multiple adjacent cells, you may want to consider
 
 1. Use the **SetCell** method to set a value in a cell in the open workbook by using numeric range coordinates:
     
-```cs
+```csharp
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -104,7 +104,7 @@ xlservice.SetCell(sessionId, sheetName, 8, 1, 28)
 
 2. Use the **SetRange** method to set values in a range in the open workbook by using numeric range coordinates:
     
-```cs
+```csharp
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -229,7 +229,7 @@ End Sub
 
 1. Use the **SetCellA1** method to set a value in a cell in the open workbook, using the Excel "A1" range specification:
     
-```cs
+```csharp
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -250,7 +250,7 @@ xlservice.SetCellA1(sessionId, String.Empty, "InterestRateParam", 8)
 
 2. Use the **SetRangeA1** method to get a value from a range in the open workbook, using the Excel "A1" range specification:
     
-```cs
+```csharp
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();

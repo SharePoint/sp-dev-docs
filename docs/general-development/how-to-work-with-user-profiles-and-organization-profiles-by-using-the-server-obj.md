@@ -96,7 +96,7 @@ The following code example creates a  [UserProfile](https://msdn.microsoft.com/l
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -164,7 +164,7 @@ The following code example creates a  [CoreProperty](https://msdn.microsoft.com/
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -255,7 +255,7 @@ The following code example retrieves all user profiles within the context and ch
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections;
@@ -325,7 +325,7 @@ The following code example retrieves the set of properties that represent a spec
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -400,7 +400,7 @@ The following code example retrieves all **UserProfile** type properties and ret
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

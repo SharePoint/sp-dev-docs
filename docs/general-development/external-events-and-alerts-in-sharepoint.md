@@ -27,7 +27,7 @@ The following example contains a simple external event receiver in C# that execu
 
 
 
-```cs
+```csharp
 
 public class EntryContentEventReceiver : SPItemEventReceiver
 {

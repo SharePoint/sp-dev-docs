@@ -70,7 +70,7 @@ SharePoint introduces classes that you can use to support cross-site publishing 
     
 
 
-```cs
+```csharp
   
 /// Retrieve available catalogs.
 public static List<CatalogConnectionSettings> GetPublishingCatalogs(SPSite site, int startRow, int numberOfRows, string filterText, out int totalNumberOfCatalogs)
@@ -81,7 +81,7 @@ public static List<CatalogConnectionSettings> GetPublishingCatalogs(SPSite site,
     
 
 
-```cs
+```csharp
   
 ///Get catalog information that is saved for a list.
 public static bool GetCatalogConfiguration(SPList list, out CatalogShareSettings catalogSettings, out string selectedTaxonomyField)
@@ -92,7 +92,7 @@ public static bool GetCatalogConfiguration(SPList list, out CatalogShareSettings
     
 
 
-```cs
+```csharp
   
 ///Stop sharing a list or library as a publishing catalog for cross-publishing content reuse.
 public static void UnPublishCatalog(SPList list)
@@ -104,7 +104,7 @@ public static void UnPublishCatalog(SPList list)
     
 
 
-```cs
+```csharp
   
 /// Add catalog or site source into the internal CatalogInfo collection, but the source is not persisted into the property bag.
 public void AddCatalogConnection(CatalogConnectionSettings catalogInfo)
@@ -115,7 +115,7 @@ public void AddCatalogConnection(CatalogConnectionSettings catalogInfo)
     
 
 
-```cs
+```csharp
   
 /// Queues an Add operation to add a connection configured to rewrite URLs. The connection is added to the store when the Update method is called.
 public void AddCatalogConnection(CatalogConnectionSettings catalogInfo, 
@@ -130,7 +130,7 @@ bool isManualRule)
     
 
 
-```cs
+```csharp
   
 /// Update existing catalog/site source in the internal CatalogInfo collection. Edits are not committed until the Update method is called.
 public void UpdateCatalogConnection(CatalogConnectionSettings catalogInfo)
@@ -141,7 +141,7 @@ public void UpdateCatalogConnection(CatalogConnectionSettings catalogInfo)
     
 
 
-```cs
+```csharp
   
 /// Remove a catalog or site source. Deletion is not committed until the Update method is called.
 public void DeleteCatalogConnection(string catalogPath)
@@ -152,7 +152,7 @@ public void DeleteCatalogConnection(string catalogPath)
     
 
 
-```cs
+```csharp
   
 /// Determine whether a connection exists to this source from the site.
 public bool Contains(string catalogPath)
@@ -163,7 +163,7 @@ public bool Contains(string catalogPath)
     
 
 
-```cs
+```csharp
   
 /// Get the settings for a catalog connected to this site.
 public CatalogConnectionSettings GetCatalogConnectionSettings(string catalogPath)

@@ -132,7 +132,7 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
-```cs
+```csharp
 // Get access to source site
 using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 {
@@ -158,7 +158,7 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 
 Following sample is in C# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
 
-```cs
+```csharp
 HttpWebRequest endpointRequest = (HttpWebRequest) HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
 endpointRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
@@ -174,7 +174,7 @@ HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse(
 
 Add this extension method in a static class and use `ExecuteQueryWithIncrementalRetry` instead of `ExecuteQuery` to make your code handle throttling requests.
 
-```cs
+```csharp
 public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount, int delay)
 {
   int retryAttempts = 0;

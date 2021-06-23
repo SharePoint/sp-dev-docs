@@ -61,7 +61,7 @@ The application queries the  [SPPropertyBag](https://msdn.microsoft.com/library/
     
     
 
-```cs
+```csharp
 
 using System;
 using System.Collections;

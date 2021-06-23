@@ -96,7 +96,7 @@ Each term you add to your term set receives a unique identifier. This identifier
 
 
 
-```cs
+```csharp
 
 static void CreateNavigationTermSet(string siteUrl)
 {
@@ -160,7 +160,7 @@ To add **Male** and **Female** user segments, you can re-implement the `OnLoad()
     
     
 
-```cs
+```csharp
 
 protected override void OnLoad(EventArgs e)
 {
@@ -183,7 +183,7 @@ The corresponding **AddMycustomProperties** method would look like the following
 
 
 
-```cs
+```csharp
 
 private void AddMycustomProperties(object sender, BeforeSerializeToClientEventArgs e)
 {
@@ -222,7 +222,7 @@ To create user segments based on the type of web browser the end-user is using, 
     
     
 
-```cs
+```csharp
 
 protected override void OnLoad(EventArgs e)
 {
@@ -245,7 +245,7 @@ The code for the **AddMycustomProperties** method would look like the following 
 
 
 
-```cs
+```csharp
 
 private void AddMycustomProperties(object sender, BeforeSerializeToClientEventArgs e)
 {

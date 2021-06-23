@@ -100,7 +100,7 @@ This example shows how to get context from SharePoint, and then retrieve a speci
     
     
 
-```cs
+```csharp
 
 ClientContext ctx = new ClientContext("http://sharepointservername"); 
 Web web = ctx.Web; 
@@ -118,7 +118,7 @@ This example shows how to write a generic invoker so that you can create an enti
     
     
 
-```cs
+```csharp
 LobSystem lobSystem = entity.GetLobSystem();
 ctx.Load(lobSystem);
 
@@ -152,7 +152,7 @@ The following example shows how to retrieve a filtered, paged dataset. In this c
     
     
 
-```cs
+```csharp
 
 // Find filters for given Method Name. 
 FilterCollection fCollection = entity.GetFilters("methodName"); 
@@ -177,7 +177,7 @@ The following example demonstrates how to return a filtered result set. In this 
     
     
 
-```cs
+```csharp
 
 // Find filters for given Method Name. 
 FilterCollection fCollection = entity.GetFilters("methodName"); 

@@ -143,7 +143,7 @@ You can retrieve the user's identity by accessing the thread's current principal
     
     
 
-```cs
+```csharp
 
 IIdentity userIdentity = System.Threading.Thread.CurrentPrincipal.Identity;
 ```
@@ -155,7 +155,7 @@ You must also include the following namespace directive.
 
 
 
-```cs
+```csharp
 using System.Security.Principal;
 ```
 
@@ -196,7 +196,7 @@ You can access an individual configuration property by using the property name t
     
     
 
-```cs
+```csharp
 public void Initialize(NameValueCollection staticProperties, SearchServiceApplication searchApplication)
 {
     if (staticProperties["CheckLimitProperty"] != null)

@@ -42,7 +42,7 @@ When your Azure AD application needs to authorize it needs to use the correct en
 
 The PnP [AuthenticationManager](https://github.com/SharePoint/PnP-Sites-Core/blob/dev/Core/OfficeDevPnP.Core/AuthenticationManager.cs) offers an easy way to obtain an SharePoint ClientContext object when you're using an Azure AD application. The impacted methods have been extended with an optional `AzureEnvironment` enum
 
-```c#
+```csharp
 /// <summary>
 /// Enum to identify the supported Office 365 hosting environments
 /// </summary>
@@ -57,7 +57,7 @@ public enum AzureEnvironment
 ```
 
 Below snippet shows an app-only authorization, notice the last parameter in the `GetAzureADAppOnlyAuthenticatedContext` method:
-```c#
+```csharp
 string siteUrl = "https://contoso.sharepoint.de/sites/test";
 string aadAppId = "079d8797-cebc-4cda-a3e0-xxxx"; 
 string pfxPassword = "my password";
@@ -67,7 +67,7 @@ ClientContext cc = new AuthenticationManager().GetAzureADAppOnlyAuthenticatedCon
 
 Another snippet is showing an interactive user login using the `GetAzureADNativeApplicationAuthenticatedContext` method:
 
-```c#
+```csharp
 string siteUrl = "https://contoso.sharepoint.de/sites/test";
 string aadAppId = "ff76a9f4-430b-4ee4-8602-xxxx"; 
 ClientContext cc = new AuthenticationManager().GetAzureADNativeApplicationAuthenticatedContext(siteUrl, 
@@ -136,7 +136,7 @@ private static string AcsHostUrl = "accesscontrol.chinacloudapi.cn";
 
 The PnP [AuthenticationManager](https://github.com/SharePoint/PnP-Sites-Core/blob/dev/Core/OfficeDevPnP.Core/AuthenticationManager.cs) offers an easy way to obtain an SharePoint ClientContext object when you're using Azure ACS to authorize. The impacted methods have been extended with an optional `AzureEnvironment` enum
 
-```c#
+```csharp
 /// <summary>
 /// Enum to identify the supported Office 365 hosting environments
 /// </summary>
@@ -151,7 +151,7 @@ public enum AzureEnvironment
 ```
 
 Below snippet shows an app-only authorization, notice the last parameter in the `GetAppOnlyAuthenticatedContext` method:
-```c#
+```csharp
 string siteUrl = "https://contoso.sharepoint.de/sites/test";
 string acsAppId = "955c10f2-7072-47f8-8bc1-xxxxx"; 
 string acsAppSecret = "jgTolmGXU9DW8hUKgletoxxxxx"; 

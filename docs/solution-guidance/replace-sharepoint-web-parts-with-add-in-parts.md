@@ -107,7 +107,7 @@ To use the add-in part definition in your CSOM code:
     
 - Assign the add-in part definition to a string that will be used in your CSOM code.
 
-```cs
+```csharp
 private const string appPartXml = @"<webParts>
   <webPart xmlns=""http://schemas.microsoft.com/WebPart/v3"">
     <metaData>

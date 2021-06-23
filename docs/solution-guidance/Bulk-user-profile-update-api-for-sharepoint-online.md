@@ -124,7 +124,7 @@ You can queue the CSOM API for the bulk import process by calling the [QueueImpo
 
 Following is the full signature of the method:
 
-```cs
+```csharp
 public ClientResult<Guid> QueueImportProfileProperties(
                           ImportProfilePropertiesUserIdType idType,
                           string sourceDataIdProperty,
@@ -166,7 +166,7 @@ A GUID that identifies the import job that has been queued.
 
 Following is an example that uses C# for starting the process by using the previous sample input file:
 
-```cs
+```csharp
 // Create an instance of the Office 365 Tenant object. Loading this object is not technically needed for this operation.
 Office365Tenant tenant = new Office365Tenant(ctx);
 ctx.Load(tenant);
@@ -209,7 +209,7 @@ You can check the status of an individual import job by using the [GetImportProf
 
 Following is the full signature of the method:
 
-```cs
+```csharp
 public ImportProfilePropertiesJobInfo GetImportProfilePropertyJob(Guid jobId);
 ```
 
@@ -227,7 +227,7 @@ An [ImportProfilePropertiesJobStatus](https://msdn.microsoft.com/library/office/
 
 Following is an example that uses C# for retrieving the status of a specific import job by using a stored identifier:
 
-```cs
+```csharp
 // Check the status of a specific request based on the job id received when we queued the job
 Office365Tenant tenant = new Office365Tenant(ctx);
 var job = tenant.GetImportProfilePropertyJob(workItemId);
@@ -241,7 +241,7 @@ You can check the status of all import jobs by using the [GetImportProfileProper
 
 Following is the full signature of the method:
 
-```cs
+```csharp
 public ImportProfilePropertiesJobStatusCollection GetImportProfilePropertyJobs(); 
 ```
 
@@ -295,7 +295,7 @@ An [ImportProfilePropertiesJobStatusCollection](https://msdn.microsoft.com/libra
 
 Following is an example that uses C# for getting the status of all import jobs currently saved in the tenant. These could be already processed or queued jobs:
 
-```cs
+```csharp
 // Load all import jobs – old and queued ones
 Office365Tenant tenant = new Office365Tenant(ctx);
 var jobs = tenant.GetImportProfilePropertyJobs();

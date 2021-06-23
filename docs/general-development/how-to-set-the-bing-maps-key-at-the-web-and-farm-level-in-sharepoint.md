@@ -56,19 +56,19 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
 1. Open the SharePoint Online Management Shell
 2. Connect to the site you want to add/update the Bing Maps key
 
-```cs
+```csharp
 Connect-PnPOnline -url "https://TENANT.sharepoint.com/sites/SITEURL"
 ```
 
 3. Add the Bing Maps Key to the Site Property Bag (Update "YOURKEYVALUE")
 
-```cs
+```csharp
 Set-PnPPropertyBagValue -Key "BING_MAPS_KEY" -Value "YOURKEYVALUE"
 ```
 
 4. If you receive an error regarding NoScript being enabled, you must disable it in the site. Then rerun step 3.
 
-```cs
+```csharp
 Set-SPOsite <SiteURL> -DenyAddAndCustomizePages 0
 ```
     
@@ -96,7 +96,7 @@ Set-SPOsite <SiteURL> -DenyAddAndCustomizePages 0
 
 7. Add the following code to the Main method in the .cs file.
 
-```cs
+```csharp
   
 class Program
     {

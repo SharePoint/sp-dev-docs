@@ -42,7 +42,7 @@ For the .NET managed CSOM, get a **ClientContext** instance (located in the [Mic
 
 Here's a basic example.
 
-```cs
+```csharp
 using (ClientContext clientContext = new ClientContext("http://<serverName>/sites/<siteCollectionPath>"))
 {
   KeywordQuery keywordQuery = new KeywordQuery(clientContext);
@@ -61,7 +61,7 @@ For the JavaScript CSOM, get a  [ClientContext](https://msdn.microsoft.com/libra
 
 Here's a basic example.
 
-```cs
+```csharp
 var clientContext = new SP.ClientContext("<serverRelativeUrl>");
 var contextSite = clientContext.get_site();
 var keywordQuery = new Microsoft.SharePoint.Client.Search.Query.KeywordQuery(clientContext);
@@ -89,7 +89,7 @@ As in SharePoint Server 2010, you use the  **KeywordQuery** class to define the 
 
 Here's a basic example.
 
-```cs
+```csharp
 using (SPSite siteCollection = new SPSite("<serverRelativeUrl>"))
 {
   KeywordQuery keywordQuery = new KeywordQuery(siteCollection);

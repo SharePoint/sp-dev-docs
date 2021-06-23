@@ -40,7 +40,7 @@ One service it provides is to return geographical coordinates in decimal form. I
 
 
 
-```cs
+```csharp
 
 [UdfMethod]
 public string ToDegreeNotation(double angle)
@@ -78,7 +78,7 @@ If your Internet Explorer LAN setting is configured to use a proxy server, your 
 
 
 
-```cs
+```csharp
 
 namespace ZipCodeUdfSample
 {
@@ -117,7 +117,7 @@ For more information about how to test and call UDFs from cells, see  [Walkthrou
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

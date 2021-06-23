@@ -52,7 +52,7 @@ The following project uses Microsoft Visual Studio 2005.
   
 8. You should see the following code in the Class1.cs file:
     
-```cs
+```csharp
   
 using System;
 using System.Collections.Generic;

@@ -208,7 +208,7 @@ For more information about feed types, see  [Overview of feed types in the My Si
 
 
 
-```cs
+```csharp
 // Replace the placeholder value with the account name of the target user.
 var targetUser = 'domainName\\\\userName';
 
@@ -336,7 +336,7 @@ The following code example deletes a post or a reply. It shows how to:
     
 
 
-```cs
+```csharp
 // Ensure that the SP.UserProfiles.js file is loaded before the custom code runs.
 SP.SOD.executeOrDelayUntilScriptLoaded(GetFeeds, 'SP.UserProfiles.js');
 

@@ -56,7 +56,7 @@ GET http://{site_url}/_api/search/query?querytext='sharepoint indexdocid>20'&amp
 And so on for the rest of the pages.
 
 To use the same approach in CSOM, see the following example:
-```C#
+```csharp
 ...
 if (startRow == 0) // When issueing the query for first time, we don't have a DocId value yet
     keywordQuery.QueryText = "sharepoint";

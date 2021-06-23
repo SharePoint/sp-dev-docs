@@ -107,7 +107,7 @@ The following is a standard use of **RunWithElevatedPrivileges**.
 
 
 
-```cs
+```csharp
 
 SPSecurity.RunWithElevatedPrivileges(delegate()
 {
@@ -122,7 +122,7 @@ Frequently, to perform actions in SharePoint, you must get a new  [SPSite](https
 
 
 
-```cs
+```csharp
 
 SPSecurity.RunWithElevatedPrivileges(delegate()
 {

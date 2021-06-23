@@ -90,7 +90,7 @@ To create a console application that uses the .NET client object model to retrie
   
 6. In the **Main** method, define variables for the server URL and the target user name, as shown in the following code.
     
-```cs
+```csharp
 const string serverUrl = "http://serverName/";
 const string targetUser = "domainName\\userName";
 ```
@@ -99,13 +99,13 @@ const string targetUser = "domainName\\userName";
 
 7. Initialize the SharePoint client context, as shown in the following code.
     
-```cs
+```csharp
 ClientContext clientContext = new ClientContext(serverUrl);
 ```
 
 8. Get the target user's properties from the **PeopleManager** object, as shown in the following code.
     
-```cs
+```csharp
 PeopleManager peopleManager = new PeopleManager(clientContext);
 PersonProperties personProperties = peopleManager.GetPropertiesFor(targetUser);
 ```
@@ -115,7 +115,7 @@ PersonProperties personProperties = peopleManager.GetPropertiesFor(targetUser);
   
 9. To initialize the **personProperties** object, register the request that you want to run, and then run the request on the server, as shown in the following code.
     
-```cs
+```csharp
 clientContext.Load(personProperties, p => p.AccountName, p => p.UserProfileProperties);
 clientContext.ExecuteQuery();
 ```
@@ -126,7 +126,7 @@ clientContext.ExecuteQuery();
 
 10. Iterate through the user profile properties and read the name and value of each property, as shown in the following code.
     
-```cs
+```csharp
 foreach (var property in personProperties.UserProfileProperties)
 {
     Console.WriteLine(string.Format("{0}: {1}", 
@@ -147,7 +147,7 @@ The following code example shows how to retrieve and iterate through all the use
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -203,7 +203,7 @@ The following code example shows how to get, in a SharePoint Add-in, the user pr
     
     
 
-```cs
+```csharp
 
 string contextTokenString = TokenHelper.GetContextTokenFromRequest(Request);
 
@@ -252,7 +252,7 @@ Unlike the previous code example that retrieves a  [PersonProperties](https://ms
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

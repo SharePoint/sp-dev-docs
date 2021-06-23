@@ -290,7 +290,7 @@ The following C# and Visual Basic examples show a simple PowerPoint Automation S
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

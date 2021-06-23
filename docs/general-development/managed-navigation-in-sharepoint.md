@@ -86,7 +86,7 @@ When you use the .NET client object model for taxonomy, you can create a new nav
 
 
 
-```cs
+```csharp
 public class NavigationTermSetTests
 {
     public void CreateNavigationTermSet()
@@ -183,7 +183,7 @@ You can use the .NET server taxonomy classes and methods in the  [Microsoft.Shar
 
 
 
-```cs
+```csharp
 ///Create a navigation term set.
 using (SPSite site = new SPSite(TestConfig.ServerUrl))
 {

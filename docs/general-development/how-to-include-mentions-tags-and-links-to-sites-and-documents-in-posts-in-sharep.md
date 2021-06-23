@@ -80,7 +80,7 @@ In the social feed, clicking a link to a website, SharePoint site, or document o
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -191,7 +191,7 @@ In the social feed, clicking a mention redirects to the mentioned person's **Abo
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -280,7 +280,7 @@ In the social feed, clicking a tag redirects to the tag's **About** page. If the
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

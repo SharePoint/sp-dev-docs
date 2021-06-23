@@ -47,7 +47,7 @@ The following code shows how to import search configuration settings from a file
     
     
 
-```cs
+```csharp
 
 private static void Import(string fileName)
 {

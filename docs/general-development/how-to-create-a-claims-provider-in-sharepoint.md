@@ -47,7 +47,7 @@ The following  [Name](https://msdn.microsoft.com/library/Microsoft.SharePoint.Ad
     
     
 
-```cs
+```csharp
 
 public abstract String Name
       
@@ -61,7 +61,7 @@ Claims can be displayed in the people picker control through claims picking. The
     
     
 
-```cs
+```csharp
 
 protected abstract void FillSchema(SPProviderSchema schema);
      protected abstract void FillClaimTypes(List<String> claimTypes);
@@ -78,7 +78,7 @@ When you include additional claims in a user's security token, you are augmentin
     
     
 
-```cs
+```csharp
 
 public abstract bool SupportsEntityInformation
       protected abstract void FillClaimsForEntity(Uri context, SPClaim entity, List<SPClaim> claims);
@@ -93,7 +93,7 @@ If you want to display hierarchy on the left pane of the claims picker, you must
     
     
 
-```cs
+```csharp
 
 public abstract bool SupportsHierarchy
      protected abstract void FillHierarchy(Uri context, String[] entityTypes, String hierarchyNodeID, int numberOfLevels, bool includeEntityData, SPProviderHierarchyTree hierarchy);
@@ -108,7 +108,7 @@ If you want to be able to resolve claims by using the type-in control of the cla
     
     
 
-```cs
+```csharp
 
 public abstract bool SupportsResolve
      protected abstract void FillResolve(Uri context, String[] entityTypes, String resolveInput, List<PickerEntity> resolved);
@@ -124,7 +124,7 @@ If you want to be able to search for claims in the claims picker, you must imple
     
     
 
-```cs
+```csharp
 
 public abstract bool SupportsSearch
      protected abstract void FillSearch(Uri context, String[] entityTypes, String searchPattern, String hierarchyNodeID, int maxCount, SPProviderHierarchyTree searchTree);
@@ -147,7 +147,7 @@ The following is a helper method that you can implement to help you create  [SPC
     
     
 
-```cs
+```csharp
 
 protected SPClaim CreateClaim(String claimType, String value, String valueType)
 ```

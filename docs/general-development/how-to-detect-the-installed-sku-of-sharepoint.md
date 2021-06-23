@@ -19,7 +19,7 @@ The following code example demonstrates how to retrieve the registry key of the 
     
     
 
-```cs
+```csharp
 
 using System;
 using System.Collections;

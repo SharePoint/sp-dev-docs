@@ -121,7 +121,7 @@ Using the following code, you can access a data stream that the OData connector 
     
     
 
-```cs
+```csharp
 
 /*Invoke  Stream Accessor Method */
         internal void ExecuteStreamAccessorMethod(IEntityInstance entityInstance, string streamAccessorName)

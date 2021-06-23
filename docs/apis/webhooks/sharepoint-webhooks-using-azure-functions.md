@@ -63,7 +63,7 @@ In our case, we want this Azure Function to behave as a SharePoint webhook servi
 
 You can achieve this by replacing the default code with the following code:
 
-```cs
+```csharp
 #r "Newtonsoft.Json"
 
 using System.Net;

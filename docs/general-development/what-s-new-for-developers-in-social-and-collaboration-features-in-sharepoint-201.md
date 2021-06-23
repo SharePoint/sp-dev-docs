@@ -69,7 +69,7 @@ The following code example uses the .NET client object model in a console applic
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -259,7 +259,7 @@ The following list contains information for developing with Community Site featu
     
 
 
-```cs
+```csharp
   
 int retries = 1;
 while (retries <= 10)

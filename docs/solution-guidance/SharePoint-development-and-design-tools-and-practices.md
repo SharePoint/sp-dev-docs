@@ -70,7 +70,7 @@ The following example shows how to use the Design Package APIs in the remote pro
 
 This code was designed for use with publishing sites. Although it is possible to use the Design Packages API to apply branding to team sites that have the publishing feature enabled, this can introduce long-term support issues.
 
-```cs
+```csharp
 using Microsoft.SharePoint.Client;
 using System;
 using System.Collections.Generic;
@@ -175,7 +175,7 @@ You can use SharePoint CSOM functionality to install and uninstall design packag
 For example, use the [SP.Publishing.DesignPackage.install Method (sp.publishing)](https://msdn.microsoft.com/library/26500127-210f-6c52-c0de-cf2894939a91.aspx) or [DesignPackage.Install method](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.install.aspx) to install the design package on the site, as shown in the following example. 
 
 
-```cs
+```csharp
 public static void Install(
     	ClientRuntimeContext context,
 	    Site site,
@@ -188,7 +188,7 @@ public static void Install(
 
 The  [DesignPackageInfo](https://msdn.microsoft.com/library/office/microsoft.sharepoint.publishing.designpackageinfo.aspx) class specifies metadata that describe the contents of the design package to be installed. Use the [Uninstall](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.uninstall.aspx) method to uninstall the design package from the site, as shown in the following example.
 
-```cs
+```csharp
 public static void UnInstall(
 	    ClientRuntimeContext context,
 	    Site site,
@@ -200,7 +200,7 @@ public static void UnInstall(
 
 If you need to brand a team site with the publishing feature enabled, or a publishing site on SharePoint Online, you can use the [ExportEnterprise](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.exportenterprise.aspx) or the [ExportSmallBusiness](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.publishing.designpackage.exportsmallbusiness.aspx) method to export design packages for site templates to the Solution Gallery. Use the **ExportSmallBusiness** method with the small business site template, and use the **ExportEnterprise** method for all other site templates, as shown in the following example. 
 
-```cs
+```csharp
 public static ClientResult<DesignPackageInfo> ExportEnterprise(
 	    ClientRuntimeContext context,
 	    Site site,
@@ -212,7 +212,7 @@ public static ClientResult<DesignPackageInfo> ExportEnterprise(
 
 When you use the **ExportSmallBusiness** method, you can include the search configuration in the design package, as shown in the following example. Note that all design package methods operate at the level of the site collection. The name of the design package is represented by the string `packageName`.
 
-```cs
+```csharp
 public static ClientResult<DesignPackageInfo> ExportSmallBusiness(
 	    ClientRuntimeContext context,
 	    Site site,

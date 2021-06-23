@@ -80,7 +80,7 @@ If you're using Microsoft .NET, `Response.Redirect` is one of several ways you c
 
 For example, if you choose to call the `GetAuthorizationUrl` method to construct the **OAuthAuthorize.aspx** redirect URL for you, using the **TokenHelper.cs** in your project, the code is as follows:
 
-```cs
+```csharp
 Response.Redirect(
   TokenHelper.GetAuthorizationUrl(
     sharePointSiteUrl.ToString(),
@@ -139,7 +139,7 @@ Contoso retrieves the authorization code from the query parameter, and then incl
 
 If you're using managed code and the SharePoint CSOM, the **TokenHelper.cs** file, the method that makes the request to ACS is **GetClientContextWithAuthorizationCode**. In this case, the code looks similar to the following (where  `authCode` is a variable to which the authorization code has been assigned): 
 
-```cs
+```csharp
 TokenHelper.GetClientContextWithAuthorizationCode(
   "https://fabrikam.sharepoint.com/",
   "00000003-0000-0ff1-ce00-000000000000",
@@ -173,7 +173,7 @@ The values listed in the **Scope alias** column are shorthand versions of their 
 
 The scope aliases are used only in the context of using the **OAuthAuthorize.aspx** redirect page. As shown in [step 2 of the OAuth flow](#step-2-the-add-in-redirects-to-the-sharepoint-site-authorization-url) described in the previous section, when the add-in is using managed code, the aliases are used when you call the `GetAuthorizationUrl` method of **TokenHelper.cs** in your project. The following is another example:
 
-```cs
+```csharp
 Response.Redirect(TokenHelper.GetAuthorizationUrl(
     sharePointSiteUrl.ToString(),
     "Web.Read List.Write ",
@@ -244,7 +244,7 @@ The following is an example of the code-behind of such a page in an ASP.NET appl
 
 For a more complex example that uses the refresh token to get a new access token, see the next section.
 
-```cs
+```csharp
 public partial class RedirectAccept : System.Web.UI.Page
 {
   protected void Page_Load(object sender, EventArgs e)
@@ -286,7 +286,7 @@ The following is code-behind for a Default.aspx page. This page assumes a scenar
 
 ### Code-behind for a Default.aspx page
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -342,7 +342,7 @@ The following is a code example for a token cache module that the previous sampl
 
 ### Code example for a token cache module
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

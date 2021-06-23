@@ -49,7 +49,7 @@ In this step, you will build and test your application. Visual Studio offers sev
 
 1. If the path to the workbook you provided is wrong, you will get a "file not found" exception, which is caught by the following code:
     
-```cs
+```csharp
   
 catch (SoapException e)
 {
@@ -98,7 +98,7 @@ Additional information: Index was outside the bounds of the array.
 
 3. You can handle the above unhandled exception by adding another **catch** block to catch the exception after the SOAP exception **catch** block as shown here:
     
-```cs
+```csharp
   
 catch (Exception e)
 {
@@ -120,7 +120,7 @@ End Try
 
 1. You can run your application by clicking **Start** on the **Debug** menu, or by pressing **F5**. To ensure that the console window remains open after the program has finished executing, you could add the following line of code at the end of your code (after the **catch** block):
     
-```cs
+```csharp
   
 Console.ReadLine();
 ```

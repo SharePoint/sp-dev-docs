@@ -25,7 +25,7 @@ The following is an example of how to do this.
 
 
 
-```cs
+```csharp
 
 public class MyClaimProviderFeatureReceiver : SPClaimProviderFeatureReceiver
     {
@@ -57,7 +57,7 @@ The following is a sample that demonstrates how to define a feature and a featur
     
     
 
-```cs
+```csharp
 
 // Sample claims provider feature receiver class through which
 // the sample claims provider registers itself 

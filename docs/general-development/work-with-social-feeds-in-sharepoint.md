@@ -71,7 +71,7 @@ If you're using the server object model to access feed content and your code isn
 
 
 
-```cs
+```csharp
 
 using (SPSite site = new SPSite(<siteURL>))
 {

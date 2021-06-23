@@ -24,7 +24,7 @@ Represents an alternative URL for a web application and the zone to which it app
     
     
 
-```cs
+```csharp
 
 public class AlternateUrl
 ```
@@ -43,7 +43,7 @@ Gets the URI of the alternate URL.
 
 
 
-```cs
+```csharp
 public String Uri
 ```
 
@@ -74,7 +74,7 @@ Provides data about an **AuthenticationCompleted** event.
     
     
 
-```cs
+```csharp
 public sealed class AuthenticationCompletedEventArgs : AsyncCompletedEventArgs
 
 ```
@@ -87,7 +87,7 @@ Initializes a new instance of the AuthenticationCompletedEventArgs class.
     
     
 
-```cs
+```csharp
 
 public AuthenticationCompletedEventArgs(Exception error, bool canceled, HttpStatusCode userState)
 ```
@@ -120,7 +120,7 @@ Gets the status returned by the server after an authentication attempt.
 
 
 
-```cs
+```csharp
 public HttpStatusCode HttpStatusCode
 ```
 
@@ -164,7 +164,7 @@ Initializes a new instance of the class.
     
     
 
-```cs
+```csharp
 public Authenticator()
 
 public Authenticator(Uri uagServerUrl)
@@ -181,7 +181,7 @@ public Authenticator(Uri uagServerUrl)
 
 
 
-```cs
+```csharp
 
 public Authenticator(string userName, string password)
 ```
@@ -201,7 +201,7 @@ public Authenticator(string userName, string password)
 
 
 
-```cs
+```csharp
 public Authenticator(string userName, string password, string domain)
 ```
 
@@ -224,7 +224,7 @@ public Authenticator(string userName, string password, string domain)
 
 
 
-```cs
+```csharp
 public Authenticator(string userName, string password, Uri uagServerUrl)
 ```
 
@@ -247,7 +247,7 @@ public Authenticator(string userName, string password, Uri uagServerUrl)
 
 
 
-```cs
+```csharp
 public Authenticator(string userName, string password, string domain, Uri uagServerUrl)
 ```
 
@@ -285,7 +285,7 @@ Clears all cookies, credentials, and UAG settings from the cache.
 
 
 
-```cs
+```csharp
 public static void ClearAllApplicationSettings
 ```
 
@@ -300,7 +300,7 @@ Clears all stored cookies and sets the **Status** property of all **Authenticato
 
 
 
-```cs
+```csharp
 public static void ClearAllCookies()
 ```
 
@@ -315,7 +315,7 @@ Clears all credentials from the cache and sets the **Status** property of all **
 
 
 
-```cs
+```csharp
 public static void ClearAllCredentials()
 ```
 
@@ -360,7 +360,7 @@ Returns true if the authorization request failed because of an invalid cookie or
 
 
 
-```cs
+```csharp
 public static bool IsRequestUnauthorized(ClientRequestFailedEventArgs failedEventArgs)
 ```
 
@@ -397,7 +397,7 @@ Gets or sets the authentication mode.
 
 
 
-```cs
+```csharp
 public ClientAuthenticationMode AuthenticationMode
 ```
 
@@ -427,7 +427,7 @@ If you enable caching of cookies, consider that the cookies expire at some point
 
 
 
-```cs
+```csharp
 if (Authenticator.IsRequestUnauthorized(execQueryArgs))
 {
     (sender as Authenticator).ClearCookies();
@@ -445,7 +445,7 @@ Gets or sets an indicator of whether credentials are cached.
 
 
 
-```cs
+```csharp
 
 public bool CredentialCachingEnabled
 ```
@@ -461,7 +461,7 @@ Gets or sets the domain or computer for the credential, usually this is the doma
 
 
 
-```cs
+```csharp
 public string Domain
 ```
 
@@ -480,7 +480,7 @@ Gets or sets a indicator of whether the user should be navigated back to the pre
 
 
 
-```cs
+```csharp
 public bool NavigateBackAfterAuthentication
 ```
 
@@ -495,7 +495,7 @@ Gets or sets the password for the credential.
 
 
 
-```cs
+```csharp
 public string Password
 ```
 
@@ -514,7 +514,7 @@ Gets or sets an indicator of whether the user should be prompted to enter a name
 
 
 
-```cs
+```csharp
 public bool PromptOnFailure
 ```
 
@@ -529,7 +529,7 @@ Gets the status of the attempt to authenticate.
 
 
 
-```cs
+```csharp
 public AuthenticationStatus Status
 ```
 
@@ -548,7 +548,7 @@ Gets or sets the URL of the UAG server.
 
 
 
-```cs
+```csharp
 public Uri UagServerUrl
 ```
 
@@ -563,7 +563,7 @@ Gets or sets the user name for the credential.
 
 
 
-```cs
+```csharp
 public string UserName
 ```
 
@@ -585,7 +585,7 @@ Raised when the authentication attempt is completed, regardless of whether it su
 
 
 
-```cs
+```csharp
 public event EventHandler<AuthenticationCompletedEventArgs> AuthenticationCompleted;
 ```
 
@@ -612,7 +612,7 @@ Provides methods for authenticating a user on a SharePoint website.
     
     
 
-```cs
+```csharp
 public class ODataAuthenticator : Authenticator
 ```
 
@@ -637,7 +637,7 @@ Authenticates a user to the specified website.
 
 
 
-```cs
+```csharp
 public new void Authenticate(Uri serverUrl)
 ```
 
@@ -659,7 +659,7 @@ Gets a container with the cookies for requests to the website.
 
 
 
-```cs
+```csharp
 public new CookieContainer CookieContainer
 ```
 
@@ -678,7 +678,7 @@ Gets the URL that is used for communication to the server that is running ShareP
 
 
 
-```cs
+```csharp
 public Uri ResolvedUrl
 ```
 
@@ -690,7 +690,7 @@ Provides a method for getting the Alternate URLs of the web application that con
     
     
 
-```cs
+```csharp
 public static class ServerSettings
 ```
 
@@ -708,7 +708,7 @@ Gets the alternate URLs of the specified website.
 
 
 
-```cs
+```csharp
 public static ClientObjectList<AlternateUrl> GetAlternateUrls(ClientRuntimeContext context)
 ```
 
@@ -746,7 +746,7 @@ Governs the rendering of **SPFieldGeolocation** fields. An object of this type i
 
 
 
-```cs
+```csharp
 public class GeolocationFieldControl : BaseFieldControl
 ```
 
@@ -762,7 +762,7 @@ The following are used to render the field in the New and Edit modes.
     
     
 
-```cs
+```csharp
 protected TextBox m_latitudeBox;
 protected TextBox m_longitudeBox;
 protected Label m_longitudeLabel;
@@ -809,7 +809,7 @@ Represents a field (column) that holds a location on the globe defined by longit
     
     
 
-```cs
+```csharp
 
 public class SPFieldGeolocation : SPField
 ```
@@ -826,7 +826,7 @@ Initializes a new instance of the **SPFieldGeolocation** class.
     
     
 
-```cs
+```csharp
 public SPFieldGeolocation(SPFieldCollection fields, string fieldName)
 public SPFieldGeolocation(SPFieldCollection fields, string fieldName, string displayName)
 ```
@@ -859,7 +859,7 @@ Gets the value of the field so that it can be rendered on the client.
 
 
 
-```cs
+```csharp
 
 public override object GetFieldValueForClientRender(SPItem item, SPControlMode mode)
 ```
@@ -886,7 +886,7 @@ Gets the field schema as JavaScript Object Notation (JSON).
 
 
 
-```cs
+```csharp
 public override Dictionary<string, object> GetJsonClientFormFieldSchema(SPControlMode mode)
 ```
 
@@ -909,7 +909,7 @@ Verifies that the specified list item is not null and then verifies that the str
 
 
 
-```cs
+```csharp
 public override object ValidateAndParseValue(SPListItem item, string value)
 ```
 
@@ -954,7 +954,7 @@ Gets or sets the name of the JavaScript file that renders the fields of the **SP
 
 
 
-```cs
+```csharp
 public override string JSLink
 ```
 
@@ -973,7 +973,7 @@ Gets the **SPMobileGeolocationField** object that renders the field.
 
 
 
-```cs
+```csharp
 public override SPMobileBaseFieldControl FieldRenderingMobileControl
 ```
 
@@ -1003,7 +1003,7 @@ Represents a location on the globe defined by longitude, latitude, and possibly 
     
     
 
-```cs
+```csharp
 public class SPFieldGeolocationValue : SPFieldGeographyValue
 ```
 
@@ -1015,7 +1015,7 @@ Initializes a new instance of the **SPFieldGeolocationValue** class.
     
     
 
-```cs
+```csharp
 public SPFieldGeolocationValue()
 public SPFieldGeolocationValue(string fieldValue)
 public SPFieldGeolocationValue(double latitude, double longitude)
@@ -1073,7 +1073,7 @@ This override returns one of the following, depending on whether the **Altitude*
 
 
 
-```cs
+```csharp
 
 public override string ToString()
 ```
@@ -1089,7 +1089,7 @@ Wraps **ToString**.
 
 
 
-```cs
+```csharp
 public string ToWellKnownText()
 ```
 
@@ -1107,7 +1107,7 @@ Gets or sets the altitude of the location. Use of this property is optional and 
 
 
 
-```cs
+```csharp
 public double Altitude
 ```
 
@@ -1122,7 +1122,7 @@ Gets or sets the latitude of the location.
 
 
 
-```cs
+```csharp
 public double Latitude
 ```
 
@@ -1141,7 +1141,7 @@ Gets or sets the longitude of the location.
 
 
 
-```cs
+```csharp
 public double Longitude
 ```
 
@@ -1160,7 +1160,7 @@ Gets or sets a user-defined alternate designation of the location point. For exa
 
 
 
-```cs
+```csharp
 public double Measure
 ```
 
@@ -1172,7 +1172,7 @@ A new value has been added to this enum:
     
     
 
-```cs
+```csharp
 Geolocation
 ```
 
@@ -1184,7 +1184,7 @@ A base class for classes that represent the content of a phone notification. Der
     
     
 
-```cs
+```csharp
 public abstract class SPPhoneNotificationContent
 ```
 
@@ -1202,7 +1202,7 @@ When implemented in a derived class, transforms the content into a Byte array th
 
 
 
-```cs
+```csharp
 protected internal abstract byte[] PreparePayload();
 ```
 
@@ -1220,7 +1220,7 @@ Gets the type of notification (for example, tile or toast) for which the content
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationType NotificationType
 
 ```
@@ -1240,7 +1240,7 @@ Gets the type of the subscriber's device, for example, a Windows Phone.
 
 
 
-```cs
+```csharp
 
 public SPPhoneNotificationSubscriberType SubscriberType
 ```
@@ -1257,7 +1257,7 @@ Represents the outcome of an attempt to send a notification.
     
     
 
-```cs
+```csharp
 public class SPPhoneNotificationResponse
 ```
 
@@ -1275,7 +1275,7 @@ Creates an **SPPhoneNotificationResponse** object.
 
 
 
-```cs
+```csharp
 public static SPPhoneNotificationResponse
 Create(SPPhoneNotificationSubscriberType subscriberType, 
 SPPhoneNotificationType notificationType, HttpWebResponse response)
@@ -1313,7 +1313,7 @@ Gets the type of notification (for example, toast or tile).
 
 
 
-```cs
+```csharp
 
 public SPPhoneNotificationType NotificationType
 ```
@@ -1333,7 +1333,7 @@ Gets the token of the notification service that was used in the notification.
 
 
 
-```cs
+```csharp
 public string ServiceToken
 ```
 
@@ -1348,7 +1348,7 @@ Gets the HTTP status code. A string version of a **HttpStatusCode** value.
 
 
 
-```cs
+```csharp
 public string StatusCode
 ```
 
@@ -1363,7 +1363,7 @@ Gets or sets the type of device to which the notification was sent.
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationSubscriberType SubscriberType
 ```
 
@@ -1382,7 +1382,7 @@ The UTC time of the notification.
 
 
 
-```cs
+```csharp
 public DateTime Timestamp
 ```
 
@@ -1394,7 +1394,7 @@ A base class for classes that represent a subscriber to notifications issued by 
     
     
 
-```cs
+```csharp
 public abstract class SPPhoneNotificationSubscriber
 ```
 
@@ -1412,7 +1412,7 @@ Sends the specified notification content to the subscriber with error checking.
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationResponse Notify(SPPhoneNotificationContent notificationContent)
 ```
 
@@ -1443,7 +1443,7 @@ When overridden in a derived class, sends the specified notification content to 
 
 
 
-```cs
+```csharp
 protected abstract SPPhoneNotificationResponse NotifyInternal(SPPhoneNotificationContent notificationContent);
 ```
 
@@ -1470,7 +1470,7 @@ Returns selected properties of the object as a string.
 
 
 
-```cs
+```csharp
 public override string ToString()
 ```
 
@@ -1489,7 +1489,7 @@ Saves a (possibly changed) **SPPhoneNotificationSubscriber** object to the websi
 
 
 
-```cs
+```csharp
 public void Update()
 ```
 
@@ -1504,7 +1504,7 @@ When implemented in a derived class, validates selected properties of the object
 
 
 
-```cs
+```csharp
 protected abstract void ValidateSubscriberProperties();
 ```
 
@@ -1522,7 +1522,7 @@ Gets or sets a custom arguments string which represents the state of the notific
 
 
 
-```cs
+```csharp
 public string CustomArgs
 ```
 
@@ -1537,7 +1537,7 @@ Gets an ID for the specific instance of the application on the phone or other mo
 
 
 
-```cs
+```csharp
 public Guid DeviceAppInstanceId
 ```
 
@@ -1552,7 +1552,7 @@ Gets the date and time when the subscriber was last modified.
 
 
 
-```cs
+```csharp
 public DateTime LastModifiedTimeStamp
 ```
 
@@ -1567,7 +1567,7 @@ Gets the date and time when the subscriber registered for notifications.
 
 
 
-```cs
+```csharp
 public DateTime RegistrationTimeStamp
 ```
 
@@ -1582,7 +1582,7 @@ Gets or sets delivery channel information that is needed by a notification servi
 
 
 
-```cs
+```csharp
 public string ServiceToken
 ```
 
@@ -1597,7 +1597,7 @@ Gets the type of the device, such as Windows Phone 7.
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationSubscriberType SubscriberType
 ```
 
@@ -1616,7 +1616,7 @@ Gets the user who registered for notifications.
 
 
 
-```cs
+```csharp
 public SPUser User
 ```
 
@@ -1628,7 +1628,7 @@ A collection of notification subscribers. The collection object takes **Int32** 
     
     
 
-```cs
+```csharp
 public sealed class SPPhoneNotificationSubscriberCollection : SPBaseCollection
 ```
 
@@ -1646,7 +1646,7 @@ Gets the number of items in the collection.
 
 
 
-```cs
+```csharp
 public override int Count
 ```
 
@@ -1702,7 +1702,7 @@ Gets a value that indicates whether the current user is a subscriber for the spe
 
 
 
-```cs
+```csharp
 public bool DoesPhoneNotificationSubscriberExist(Guid deviceAppInstanceId)
 ```
 
@@ -1717,7 +1717,7 @@ Gets a notification subscriber with the specified application and phone IDs from
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationSubscriber GetPhoneNotificationSubscriber(Guid deviceAppInstanceId)
 ```
 
@@ -1744,7 +1744,7 @@ Gets a collection of notification subscribers from the website's notification Su
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(string customArgs)
 ```
 
@@ -1757,7 +1757,7 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(string user)
 
 ```
@@ -1794,7 +1794,7 @@ Registers a phone app on a phone to receive notifications.
 
 
 
-```cs
+```csharp
 
 public SPPhoneNotificationSubscriber RegisterPhoneNotificationSubscriber(SPPhoneNotificationSubscriberType subscriberType, Guid deviceAppInstanceId, string serviceToken)
 ```
@@ -1828,7 +1828,7 @@ Unregisters a phone app on a phone from receiving notifications.
 
 
 
-```cs
+```csharp
 public void UnregisterPhoneNotificationSubscriber(Guid deviceAppInstanceId)
 ```
 
@@ -1854,7 +1854,7 @@ Gets a collection of all the phone notification subscribers in the website's Sub
 
 
 
-```cs
+```csharp
 public SPPhoneNotificationSubscriberCollection PhoneNotificationSubscribers
 ```
 
@@ -1870,7 +1870,7 @@ Represents the content of a tile notification.
     
     
 
-```cs
+```csharp
 public sealed class WP7NotificationTileContent : SPPhoneNotificationContent
 ```
 
@@ -1882,7 +1882,7 @@ Initializes a new instance of the WP7NotificationTileContent class.
     
     
 
-```cs
+```csharp
 public WP7NotificationTileContent()
 ```
 
@@ -1900,7 +1900,7 @@ Transforms the content into a **Byte** array that is sent over the wire to the n
 
 
 
-```cs
+```csharp
 protected internal override byte[] PreparePayload();
 ```
 
@@ -1918,7 +1918,7 @@ Gets or sets the count of the notification. Must be from -1 to 99 inclusive.
 
 
 
-```cs
+```csharp
 public int Count
 ```
 
@@ -1937,7 +1937,7 @@ Gets or sets the title of the tile notification.
 
 
 
-```cs
+```csharp
 public string Title
 ```
 
@@ -1952,7 +1952,7 @@ Gets or sets the path to the tile's background image.
 
 
 
-```cs
+```csharp
 public string BackgroundImagePath
 ```
 
@@ -1967,7 +1967,7 @@ Gets or sets the background image of the back side of a flipping tile.
 
 
 
-```cs
+```csharp
 public string BackBackgroundImagePath
 ```
 
@@ -1982,7 +1982,7 @@ Gets or sets the content of the back side of a flipping tile.
 
 
 
-```cs
+```csharp
 public string BackContent
 ```
 
@@ -1997,7 +1997,7 @@ Gets or sets of the title that appears on the back side of a flipping tile.
 
 
 
-```cs
+```csharp
 public string BackTitle
 ```
 
@@ -2012,7 +2012,7 @@ Gets or sets the ID of the tile.
 
 
 
-```cs
+```csharp
 public string TileId
 ```
 
@@ -2024,7 +2024,7 @@ Represents the content of a toast notification.
     
     
 
-```cs
+```csharp
 public sealed class WP7NotificationToastContent : SPPhoneNotificationContent
 ```
 
@@ -2036,7 +2036,7 @@ Initializes a new instance of the WP7NotificationToastContent class.
     
     
 
-```cs
+```csharp
 public WP7NotificationToastContent()
 ```
 
@@ -2054,7 +2054,7 @@ Transforms the content into a **Byte** array that is sent over the wire to the n
 
 
 
-```cs
+```csharp
 protected internal override byte[] PreparePayload();
 ```
 
@@ -2072,7 +2072,7 @@ Gets or sets the message of the toast notification.
 
 
 
-```cs
+```csharp
 public string Message
 ```
 
@@ -2087,7 +2087,7 @@ Gets or sets the title of the toast notification.
 
 
 
-```cs
+```csharp
 public string Title
 ```
 
@@ -2102,7 +2102,7 @@ Gets or sets custom settings data that is passed to the receiving application if
 
 
 
-```cs
+```csharp
 public string Param
 ```
 
@@ -2118,7 +2118,7 @@ Represents the content of a raw notification.
     
     
 
-```cs
+```csharp
 public sealed class WP7NotificationRawContent : SPPhoneNotificationContent
 ```
 
@@ -2130,7 +2130,7 @@ Initializes a new instance of the WP7NotificationRawContent class.
     
     
 
-```cs
+```csharp
 public WP7NotificationRawContent()
 ```
 
@@ -2148,7 +2148,7 @@ Transforms the content into a Byte array that is sent over the wire to the notif
 
 
 
-```cs
+```csharp
 protected internal override byte[] PreparePayload();
 ```
 
@@ -2166,7 +2166,7 @@ Gets or sets the message of the raw notification.
 
 
 
-```cs
+```csharp
 public string Message
 ```
 
@@ -2178,7 +2178,7 @@ Represents the outcome of an attempt to send a notification to a Windows Phone 7
     
     
 
-```cs
+```csharp
 public WP7PhoneNotificationResponse(SPPhoneNotificationType notificationType, HttpWebResponse response)
 ```
 
@@ -2211,7 +2211,7 @@ Gets the notification status, for example, success or failure.
 
 
 
-```cs
+```csharp
 public string NotificationStatus
 ```
 
@@ -2226,7 +2226,7 @@ Gets the status of the device at the time of the notification.
 
 
 
-```cs
+```csharp
 public string DeviceConnectionStatus
 ```
 
@@ -2241,7 +2241,7 @@ The subscription status of the device at the time of the notification.
 
 
 
-```cs
+```csharp
 public string SubscriptionStatus
 ```
 

@@ -59,7 +59,7 @@ The following example shows how to close a workbook asynchronously using Visual 
     
     
 
-```cs
+```csharp
 
 using System;
 using SampleApplication.ExcelWebService;

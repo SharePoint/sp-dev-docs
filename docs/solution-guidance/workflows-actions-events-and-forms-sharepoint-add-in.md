@@ -42,7 +42,7 @@ In this option custom workflows are created, deployed, and associated with the H
 The following code sample demonstrates how to use CSOM to provision a workflow and the lists which support the workflow.
 
 
-```c# 
+```csharp 
 	public void ProvisionIncidentWorkflowAndRelatedLists(string incidentWorkflowFile, string suiteLevelWebAppUrl, string dispatcherName)
     {
 		//Return the list the workflow will be associated with

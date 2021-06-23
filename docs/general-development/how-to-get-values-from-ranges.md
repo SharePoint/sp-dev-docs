@@ -26,7 +26,7 @@ Methods that have the A1 suffix ( **GetCellA1** and **GetRangeA1**) use a differ
 If you want to access an Excel range by using a numeric coordinate system, you should use the methods that do not have the A1 suffix. It is easier to use range coordinates when you have code that iterates through a set of cells in a loop, or when the range coordinates are calculated dynamically as part of the algorithm.The row and column coordinates of a cell are 0-based. Therefore, "0,0" will return cell A1, as in this example:
 
 
-```cs
+```csharp
 
 // Call the GetCell method to retrieve a value from a cell.
 // The cell is in the first row and first column; that is, cell A1
@@ -49,7 +49,7 @@ If you are getting values from multiple adjacent cells, you may want to consider
 
 1. Use the **GetCell** method to get a value from a cell in the open workbook by using numeric range coordinates; for example:
     
-```cs
+```csharp
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -98,7 +98,7 @@ Dim rangeResult2() As Object = xlservice.GetCell(sessionId, sheetName, 0, 8, Fal
 
 2. Use the **GetRange** method to get values from a range in the open workbook by using numeric range coordinates.
     
-```cs
+```csharp
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -157,7 +157,7 @@ Next x
 
 1. Use the **GetCellA1** method to get a value from a cell in the open workbook, using the Excel "A1" range specification; for example:
     
-```cs
+```csharp
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -201,7 +201,7 @@ Dim rangeResult() As Object = xlservice.GetCellA1(sessionId, sheetName, "Monthly
     
   
 
-```cs
+```csharp
   
 object[] rangeResults = xlservice.GetRangeA1(sessionId, "Sheet1", "B2:D3", true, out outStatus);
 foreach (object[] rangeResult in rangeResults)

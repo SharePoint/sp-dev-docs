@@ -36,7 +36,7 @@ To facilitate using these objects, you must first add the namespaces as directiv
   
 2. To add these directives, add the following code to the beginning of your code in the Class1.cs file, after  `using System:`
     
-```cs
+```csharp
   
 using SampleApplication.ExcelWebService;
 using System.Web.Services.Protocols;
@@ -55,7 +55,7 @@ Imports System.Web.Services.Protocols
 
 1. Instantiate and initialize the Web service proxy object by adding the following code after the opening bracket in  `static void Main(string[] args)`:
     
-```cs
+```csharp
   
 ExcelService es = new ExcelService();
 ```
@@ -67,7 +67,7 @@ ExcelService es = new ExcelService();
 
 2. Add the following code to create a status array and range coordinate objects:
     
-```cs
+```csharp
   Status[] outStatus;
 RangeCoordinates rangeCoordinates = new RangeCoordinates();
 ```
@@ -81,7 +81,7 @@ Dim rangeCoordinates As New RangeCoordinates()
 
 3. Add the code to point to the worksheet you want to access. In this example, the worksheet is called "Sheet1". Add the following to your code: 
     
-    ```cs
+    ```csharp
     
     string sheetName = "Sheet1";
     ```
@@ -95,7 +95,7 @@ Dim rangeCoordinates As New RangeCoordinates()
 
 4.  Add the following code to point to the workbook you want to open:
 
-    ```cs
+    ```csharp
     string targetWorkbookPath = "http://myserver02/example/Shared%20Documents/Book1.xlsx";
     ```
 
@@ -115,7 +115,7 @@ Dim rangeCoordinates As New RangeCoordinates()
     > [!NOTE]
     > You have to explicitly set the credentials even if you intend to use the default credentials. 
 
-```cs
+```csharp
   es.Credentials = System.Net.CredentialCache.DefaultCredentials;
 ```
 
@@ -126,7 +126,7 @@ Dim rangeCoordinates As New RangeCoordinates()
 
 6. Add the following code to open the workbook and point to the trusted location where the workbook is located. Place the code in a **try** block:
     
-```cs
+```csharp
   try
 {
 string sessionId = es.OpenWorkbook(targetWorkbookPath, "en-US", 
@@ -142,7 +142,7 @@ Dim sessionId As String = es.OpenWorkbook(targetWorkbookPath, "en-US", "en-US", 
 
 7. Add the following code to prepare an object to define range coordinates, and call the **GetRange** method. The code will also print the total number of rows in the range and the value in a particular range.
     
-```cs
+```csharp
   
 rangeCoordinates.Column = 3;
 rangeCoordinates.Row = 9;
@@ -173,7 +173,7 @@ Console.WriteLine("Value in range is: " &amp; (CType(rangeResult1(5), Object()))
     > **Important:**
       > It is good practice to close the workbook if you are done using the session. This will close the session and free resources. 
 
-```cs
+```csharp
   
 es.CloseWorkbook(sessionId);
 }
@@ -187,7 +187,7 @@ es.CloseWorkbook(sessionId)
 
 9. Add a **catch** block to catch the SOAP exception and print the exception message:
     
-```cs
+```csharp
   catch (SoapException e)
 {
     Console.WriteLine("SOAP Exception Message: {0}", e.Message);
@@ -217,7 +217,7 @@ The following code sample is the complete code in the Class1.cs example file des
     
 
 
-```cs
+```csharp
 
 using System;
 using SampleApplication.ExcelWebService;

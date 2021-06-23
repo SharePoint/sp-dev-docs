@@ -140,7 +140,7 @@ Figure 1 shows a view form with a custom-rendered field type.
     > [!NOTE]
     > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

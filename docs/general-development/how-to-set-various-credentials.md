@@ -22,7 +22,7 @@ The following code uses the current user's logon credentials to make a request t
     
     
 
-```cs
+```csharp
 
 //Instantiate the Web service.
     ExcelService xlService = new ExcelService();
@@ -54,7 +54,7 @@ The following code uses the current user's logon credentials to make a request t
 
 
 
-```cs
+```csharp
 
         protected string farmURL, docLibPath, workbookPath, uiCulture, dataCulture, localTempFolder, authenticationType;
         protected Cookie authCookie;
@@ -184,7 +184,7 @@ The following code uses the current user's logon credentials to make a request t
     
     
 
-```cs
+```csharp
 
 //Instantiate the Web service.
 ExcelService xlService = new ExcelService();

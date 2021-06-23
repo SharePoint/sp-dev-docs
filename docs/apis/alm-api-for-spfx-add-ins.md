@@ -57,7 +57,7 @@ The PnP CSOM implements the ALM APIs by calling the SharePoint REST API.
 
 Before using any of the ALM APIs in PnP CSOM, you need to obtain an authenticated client context using the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM). Then use the authenticated client context to get an instance of the PnP CSOM's **AppManager** object to call the ALM commands:
 
-```cs
+```csharp
 using Microsoft.SharePoint.Client;
 using OfficeDevPnP.Core.ALM;
 
@@ -72,7 +72,7 @@ using (var context = new ClientContext(webURL)) {
 
 In all PnP Core methods, it's assumed the request targets the tenant app catalog in the tenant you connect to using the SharePoint CSOM `ClientContext` object. you can override the scope of all commands with an optional scope argument, for example
 
-```cs
+```csharp
 appManager.Install('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx', AppCatalogScope.Site);
 ```
 
@@ -128,7 +128,7 @@ Byte array of the file
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 // read file
 var filePath = "c:\path\to\file\sharepoint-solution-package.sppkg";
 // get an instance of the PnP CSOM's AppManager as shown above
@@ -190,7 +190,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 appManager.Deploy('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
 
@@ -237,7 +237,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 // get an app package
 appManager.Retract('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
@@ -274,7 +274,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 appManager.Remove('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
 
@@ -357,7 +357,7 @@ GET /_api/web/{scope}appcatalog/AvailableApps
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 var allAppPackages = appManager.GetAvailable();
 ```
 
@@ -419,7 +419,7 @@ GET /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 var appPackage = appManager.GetAvailable('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx');
 ```
 
@@ -463,7 +463,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 // get an app package
 appManager.Install('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
@@ -508,7 +508,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 // get an app package
 var appPackage = appManager.GetAvailable('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx');
 if (appPackage.CanUpgrade) {
@@ -559,7 +559,7 @@ POST /_api/web/{scope}appcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 appManager.Uninstall('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
 
@@ -603,7 +603,7 @@ POST /_api/web/{scope}appcatalog/SyncSolutionToTeams(id=xxxxx)
 
 # [PnP CSOM](#tab/pnpcsom)
 
-```cs
+```csharp
 appManager.SyncToTeams('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 ```
 

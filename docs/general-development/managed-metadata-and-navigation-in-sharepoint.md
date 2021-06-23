@@ -32,7 +32,7 @@ Developing customizations with CSOM is very similar to developing .NET server ta
 
 You can use the following code examples to complete basic operations with the taxonomy CSOM. The first example creates a **Group** object, a **TermSet** object, and **Term** objects. The second example iterates on a **Group** object and writes its contents.
 
-```cs
+```csharp
 private void CreateColorsTermSet(string siteUrl)
 {
   ClientContext clientContext = new ClientContext(siteUrl);

@@ -72,7 +72,7 @@ Change the placeholder values for the URL variables before you run the code.
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -156,7 +156,7 @@ Change the placeholder values for the URL variables before you run the code.
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -236,7 +236,7 @@ Change the placeholder values for the URL variables before you run the code.
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
