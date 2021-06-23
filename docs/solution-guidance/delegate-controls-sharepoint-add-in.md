@@ -1,10 +1,10 @@
 ---
 title: Delegate controls in the SharePoint Add-in model
+description: The approach you take to implement delegate controls in your code is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, delegate controls were built as user controls or web controls, registered with features, and deployed via SharePoint Solutions.
 ms.date: 05/20/2020
 localization_priority: Normal
 ---
-Delegate controls in the SharePoint Add-in model
-================================================
+# Delegate controls in the SharePoint Add-in model
 
 ## Summary
 
@@ -12,8 +12,7 @@ The approach you take to implement delegate controls in your code is different i
 
 In an SharePoint Add-in model scenario, JavaScript is embedded in SharePoint pages to implement the same functionality as delegate controls.
 
-High Level Guidelines
----------------------
+## High Level Guidelines
 
 As a rule of a thumb, we would like to provide the following high level guidelines for creating delegate controls in the new SharePoint Add-in model.
 
@@ -24,12 +23,14 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 See the [User controls and web controls (SharePoint Add-in Model Recipe)](user-controls-and-web-controls-sharepoint-add-in.md) to learn how to embed JavaScript to all SharePoint pages with custom user actions and how to embed JavaScript directly into page layouts and master pages.
 
 ## Related links
+
 - [Cross site collection navigation (O365 PnP Video)](https://channel9.msdn.com/blogs/OfficeDevPnP/Cross-site-collection-navigation)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")
 - References in MSDN at [https://aka.ms/OfficeDevPnPMSDN](https://aka.ms/OfficeDevPnPMSDN "References in MSDN")
 - Videos at [https://aka.ms/OfficeDevPnPVideos](https://aka.ms/OfficeDevPnPVideos "Videos")
 
 ## PnP samples
+
 - [OD4B.NavLinksInjection (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/OD4B.NavLinksInjection)
 - Samples and content at [Microsoft 365 Patterns and Practices (PnP)](https://aka.ms/sppnp)
 

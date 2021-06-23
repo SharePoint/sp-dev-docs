@@ -12,8 +12,8 @@ Having a solid information architecture is an important prerequisite for realizi
 Consider the following factors:
 
 - Business objectives and the organizational structure.
-- The kind of content you are dealing with. Is the content collaborative or published content? 
-- Content classification and confidentiality. 
+- The kind of content you are dealing with. Is the content collaborative or published content?
+- Content classification and confidentiality.
 - Life-cycle of the content, and possible retention/disposition strategies. This also applies to sites as well. 
 - Users of the content, their behaviors, common tasks, and expectations.
 
@@ -27,7 +27,7 @@ Information architecture is not a one-time process, rather, it a continuous proc
 
 <br/>
 
-> [!NOTE] 
+> [!NOTE]
 > Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 >
 > This article is not meant to go deep into every aspect of governance and information architecture. The intended point is to highlight common issues that affect user adoption and/or performance.
@@ -55,7 +55,7 @@ The following sections address some key areas that you should consider when buil
 
 Consider minimizing the number of top-level site collection nodes and the number of subsite levels within your information architecture.
 
-The discussions have changed around horizontal/flat site collections versus vertical/hierarchical. In the past, we promoted flattening hierarchies into potentially several separate site collections; reasons included factors such as IA best practices, menu structures, content database management, and capacity. As far as capacity is concerned, that is no longer relevant with SharePoint Online. However, there are other considerations now, such as URL limitations. 
+The discussions have changed around horizontal/flat site collections versus vertical/hierarchical. In the past, we promoted flattening hierarchies into potentially several separate site collections; reasons included factors such as IA best practices, menu structures, content database management, and capacity. As far as capacity is concerned, that is no longer relevant with SharePoint Online. However, there are other considerations now, such as URL limitations.
 
 For more information, see [SharePoint Online limits](https://support.office.com/article/sharepoint-online-limits-8f34ff47-b749-408b-abc0-b605e1f6d498?ocmsassetID=HA102694293&CorrelationId=7773acb9-7e7f-4800-86bc-9af55b7077c7&ui=en-US&rs=en-US&ad=US).
 
@@ -86,7 +86,7 @@ Sites considered as publishing portal sites might be structured as:
 
 Usually, not everything migrates to the cloud immediately and all at once, so plan for a hybrid IA and evolve as necessary. Plan accordingly for hybrid scenarios.
 
-For more information, see [SharePoint hybrid sites and search](https://docs.microsoft.com/SharePoint/hybrid/sharepoint-hybrid-sites-and-search).
+For more information, see [SharePoint hybrid sites and search](/SharePoint/hybrid/sharepoint-hybrid-sites-and-search).
 
 ## Permissions
 
@@ -96,7 +96,7 @@ Structuring for permissions is a difficult task, and is another topic that requi
 - SharePoint groups approach
 - Active Directory security groups (Azure AD security groups)
 
-> [!NOTE] 
+> [!NOTE]
 > If you are in SharePoint Online, sync your groups with AD Connect.
 
 Follow these guidelines when planning for permissions:
@@ -110,7 +110,7 @@ Inaccessible content that should not be will cause frustration and eventually hi
 
 ## Search
 
-There are many design considerations related to configuration choices specific to search in SharePoint Online. A detailed search specification should be developed, especially for advanced configurations. The search experience can be tuned for performance and relevancy, and can be customized for users. 
+There are many design considerations related to configuration choices specific to search in SharePoint Online. A detailed search specification should be developed, especially for advanced configurations. The search experience can be tuned for performance and relevancy, and can be customized for users.
 
 This includes:
 
@@ -122,7 +122,7 @@ Content aggregation can have significant impact on the performance of your porta
 
 ## Taxonomy
 
-Taxonomy covers both site **navigation** as well as **data**. Careful planning is required from a governance perspective, as well as a performance perspective. Think about core business functions to start, but also think about future growth and manageability. 
+Taxonomy covers both site **navigation** as well as **data**. Careful planning is required from a governance perspective, as well as a performance perspective. Think about core business functions to start, but also think about future growth and manageability.
 
 ### Content types
 
@@ -131,7 +131,7 @@ Proper planning, configuration, and implementation of content types and their as
 Define a small set of global content types, which may be based on legal or records management team requirements, as well as authoring requirements for tagging, etc.
 
 These content types should have at a minimum, some fields such as:
-	
+
 - InformationClassification
 - BusinessFunction
 - CorporateFunction
@@ -147,12 +147,12 @@ This is another topic that is too big for the scope of this article. For a good 
 
 Metadata in SharePoint enables organizations to combine the advantages of formal, managed taxonomies with the dynamic benefits of social tagging in customized ways mapping to different information usage and management scenarios.
 
-Enterprise metadata hierarchies can be based off of information security classifications. Managed metadata can also be mapped to documents or list items by using site columns and content types. These managed metadata term sets can be managed by managers and contributors, and the ability to add terms to term sets can be controlled as well. 
+Enterprise metadata hierarchies can be based off of information security classifications. Managed metadata can also be mapped to documents or list items by using site columns and content types. These managed metadata term sets can be managed by managers and contributors, and the ability to add terms to term sets can be controlled as well.
 
-Enterprise term store hierarchies are typically managed by a governance steering committee with an input process from other teams in the organization.  
+Enterprise term store hierarchies are typically managed by a governance steering committee with an input process from other teams in the organization.
 
-> [!IMPORTANT] 
-> Poor planning and poor management can cause issues around large taxonomy hierarchies and deep sorting. The data needs to be sorted client-side, so we recommend that you carefully consider the potential depth of the hierarchy, and the number of terms being returned. The depth of the hierarchy and the number of terms can cause the client Document Object Model (DOM) sort to take several seconds. 
+> [!IMPORTANT]
+> Poor planning and poor management can cause issues around large taxonomy hierarchies and deep sorting. The data needs to be sorted client-side, so we recommend that you carefully consider the potential depth of the hierarchy, and the number of terms being returned. The depth of the hierarchy and the number of terms can cause the client Document Object Model (DOM) sort to take several seconds.
 >
 > Don't delete term-store items; deprecate them. Keep the term store clean of potentially missing objects or faulty permissions, causing delays in data being returned.
 >
@@ -165,7 +165,7 @@ For planning managed metadata, the following worksheets are available:
 
 ### Navigation
 
-For more information about navigation best practices, see [Navigation solutions for SharePoint Online portals](portal-navigation.md). 
+For more information about navigation best practices, see [Navigation solutions for SharePoint Online portals](portal-navigation.md).
 
 ## Large media
 
@@ -180,7 +180,7 @@ Consider these options:
 For information about CDNs, see:
 
 - [Office 365 Public CDN Overview](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn)
-- [Using content delivery networks with SharePoint Online](https://support.office.com/en-gb/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
+- [Using content delivery networks with SharePoint Online](https://support.office.com/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
 - [CDN Manager GitHub repo](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 - [Branding guidance for SharePoint Online portals](portal-branding.md)
 - [Performance guidance for SharePoint Online portals](portal-performance.md)

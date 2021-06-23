@@ -14,7 +14,7 @@ You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365D
 
 ## SharePoint Framework Releases
 
-Review all the SPFx releases here from the initial GA release in February 2017 in the docs: https://docs.microsoft.com/en-us/sharepoint/dev/spfx/roadmap
+Review all the SPFx releases here from the initial GA release in February 2017 in the docs: https://docs.microsoft.com/sharepoint/dev/spfx/roadmap
 
 ## Get Started
 
@@ -34,7 +34,7 @@ Review all the SPFx releases here from the initial GA release in February 2017 i
 To keep track of improvements to the Office 365 Framework, please take a look at:
 
 * [@SharePoint](https://twitter.com/sharepoint), [@Microsoft365Dev](https://twitter.com/Microsoft365Dev) and [@m365pnp](https://twitter.com/m365pnp) on Twitter
-* [Office Developer Blog](https://developer.microsoft.com/en-us/office/blogs/)
+* [Office Developer Blog](https://developer.microsoft.com/office/blogs/)
 
 Provide Feedback:
 
@@ -49,7 +49,7 @@ Please see following guidance if you are planning to submit changes on the Share
 
 * [Contribution guidance](https://github.com/SharePoint/sp-dev-docs/blob/master/.github/CONTRIBUTING.md)
 * [How to Create Good Pull Requests](https://github.com/SharePoint/sp-dev-docs/wiki/How-to-Create-Good-Pull-Requests)
-* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.docs.microsoft.com/en-us/help/contribute/?branch=master) for docs.microsoft.com contributors
+* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.docs.microsoft.com/help/contribute/?branch=master) for docs.microsoft.com contributors
 
 ## Have Fun
 

@@ -10,4 +10,4 @@ localization_priority: Priority
 _**Applies to:** Microsoft 365_
 
 >[!Important]
-> When you are planning to embed SharePoint sites in Microsoft Teams, please use the [Viva Connections Desktop model](https://docs.microsoft.com/en-gb/SharePoint/viva-connections) for the optimal experience.
+> When you are planning to embed SharePoint sites in Microsoft Teams, please use the [Viva Connections Desktop model](/SharePoint/viva-connections) for the optimal experience.

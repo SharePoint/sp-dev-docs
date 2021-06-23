@@ -12,7 +12,7 @@ The SharePoint Framework (SPFx) v1.8 release introduced the ability to use SPFx 
 
 Developers can create apps for Microsoft Teams meetings using the same techniques used to create custom tabs. In this tutorial, you'll learn how to implement a custom Microsoft Teams meeting app using a SPFx web part.
 
-Microsoft Teams meeting apps must support configurable tabs in the **[groupchat](/microsoftteams/platform/resources/schema/manifest-schema#configurabletabs)** scope. This enables the [pre-meeting](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings#pre-meeting-app-experience) and [post-meeting](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings#post-meeting-app-experience) chats. Refer to the following documentation for additional requirements: [Create apps for Teams meetings: Prerequisites and considerations](/en-us/microsoftteams/platform/apps-in-teams-meetings/create-apps-for-teams-meetings#prerequisites-and-considerations)
+Microsoft Teams meeting apps must support configurable tabs in the **[groupchat](/microsoftteams/platform/resources/schema/manifest-schema#configurabletabs)** scope. This enables the [pre-meeting](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings#pre-meeting-app-experience) and [post-meeting](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings#post-meeting-app-experience) chats. Refer to the following documentation for additional requirements: [Create apps for Teams meetings: Prerequisites and considerations](/microsoftteams/platform/apps-in-teams-meetings/create-apps-for-teams-meetings#prerequisites-and-considerations)
 
 > [!IMPORTANT]
 > This tutorial requires SPFx v1.11 or higher.

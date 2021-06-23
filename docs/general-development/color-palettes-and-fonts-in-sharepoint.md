@@ -1,28 +1,29 @@
 ---
 title: Color palettes and fonts in SharePoint
+description: Use this reference to define the color palette or font scheme that is used in a SharePoint site.
 ms.date: 05/20/2020
 ms.prod: sharepoint
 ms.assetid: c17d375b-151f-48ae-ac32-f2ce9e68d63f
 localization_priority: Priority
 ---
-
-
 # Color palettes and fonts in SharePoint
+
 Use this reference to define the color palette or font scheme that is used in a SharePoint site.
+
 ## Color palettes
 <a name="color"> </a>
 
 A color palette is the combination of colors that are used in a SharePoint site. The color palette for a SharePoint site is defined in a color palette file. Color slots are also used by the master page preview file to generate thumbnail and preview images of a site. The following describes the structure of the color palette file and the master page preview file:
-  
-    
-    
+
+
+
 
 - **Color palette file (.spcolor)**
-    
-    Color palette files are used in the **Change the look** wizard, which enables users to change the look and feel of their site by using the SharePoint themes user interface. By default, 32 color palette files are installed with SharePoint. You can also create additional color palette files. The following example shows the format of a color palette file.
-    
 
-```xml  
+    Color palette files are used in the **Change the look** wizard, which enables users to change the look and feel of their site by using the SharePoint themes user interface. By default, 32 color palette files are installed with SharePoint. You can also create additional color palette files. The following example shows the format of a color palette file.
+
+
+```xml
 <s:colorPalette isInverted="InvertedSetting" previewSlot1="Slot1" previewSlot2="Slot2" previewSlot3="Slot3" xmlns:s="http://schemas.microsoft.com/sharepoint/">
     <s:color name="ColorSlot" value="Color" />
     <!--additional color slots-->
@@ -31,71 +32,71 @@ A color palette is the combination of colors that are used in a SharePoint site.
 
 
   In a color palette file, the following placeholders are replaced:
-    
+
 -  _InvertedSetting_ is a Boolean value. **true** if the color palette is generally light text on a dark background. **false** if the color palette is generally dark text on a light background.
-    
-  
+
+
 -  _Slot1_ is the annotation name of the color slot to use as the first block of the palette icon in the color palette picker of the theming experience.
-    
-  
+
+
 -  _Slot2_ is the annotation name of the color slot to use as the second block of the palette icon in the color palette picker of the theming experience.
-    
-  
+
+
 -  _Slot3_ is the annotation name of the color slot to use as the third block of the palette icon in the color palette picker of the theming experience.
-    
-  
+
+
 -  _ColorSlot_ is the annotation name of the color slot that you are defining (for example, SiteTitle).
-    
-  
+
+
 -  _Color_ is the hexadecimal value of the color to use for the specified color slot. This may be in 6 digits (RRGGBB) or 8 digits (AARRGGBB). If the hexadecimal value is 8 digits, the first two digits represent the opacity level (00-FF, which maps to 0-255). If the hexadecimal value is 6 digits, the default opacity is 100% or FF.
-    
-  
+
+
 
   The color palette files are located in the Theme Gallery of the root site, in the site collection in the **15** folder (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, select **Themes**, and then select **15**.
-    
-  
+
+
 - **Master page preview file (.preview)**
-    
+
   Master page preview files are used to generate thumbnail images and preview images when you use the **Change the look** wizard. A master page must have a corresponding preview file to be used in the **Change the look** wizard. A preview file is a specially formatted file that has sections for the default color palette, default font scheme, tokenized CSS, and tokenized HTML. It uses string tokens to get the value of color slots, font names, and localized UI strings. The following example shows color slots being used in the master page preview file.
-    
+
 
 
 ```HTML
-  
+
 [ID] #dgp-pageContainer
 {
     background-color: [T_THEME_COLOR_PAGEBACKGROUND];
     color: [T_THEME_COLOR_BODYTEXT];
     width: 100%;
-    height:100%;     
-    background-image: url('[T_IMAGE]');       
+    height:100%;
+    background-image: url('[T_IMAGE]');
     background-size: cover;
-    font-family: [T_BODY_FONT];   
+    font-family: [T_BODY_FONT];
 }
 ```
 
 
   For more information, see  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
-    
-  
+
+
 
 > **Tip:**
 > You can use the SharePoint color palette tool to help you create SharePoint designs. You can  [download the SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) from the Microsoft Download Center.
-  
-    
-    
+
+
+
 
 
 ### Color slot mapping
 <a name="colorSlots"> </a>
 
 Table 1 describes the color slots that are available and where color slots are used in a SharePoint site.
-  
+
 > [!NOTE]
 > When discussing navigation items,pressed applies to when a user clicks or touches a navigation item.Selected applies to when a user is navigated to the page.>  The following summarizes a normal flow of actions and the color slot that applies to the navigation item link at each step:>  The base text of a navigation item link: HeaderNavigationText>  A user hovers the cursor over the navigation item link: HeaderNavigationHoverText>  A user clicks, touches, or chooses the navigation item link: HeaderNavigationPressedText>  The user is navigated to the chosen page. The color slot that applies to the navigation item for the page the user is now on: HeaderNavigationSelectedText
-  
-    
-    
+
+
+
 
 
 **Table 1. Color slots**
@@ -192,19 +193,19 @@ Table 1 describes the color slots that are available and where color slots are u
 |ContentAccent4  <br/> |The fourth accent color that a user can select from the Rich Text Editor color picker.  <br/> |[T_THEME_COLOR_CONTENTACCENT4]  <br/> |
 |ContentAccent5  <br/> |The fifth accent color that a user can select from the Rich Text Editor color picker.  <br/> |[T_THEME_COLOR_CONTENTACCENT5]  <br/> |
 |ContentAccent6  <br/> |The sixth accent color that a user can select from the Rich Text Editor color picker.  <br/> |[T_THEME_COLOR_CONTENTACCENT6]  <br/> |
-   
+
 
 ## Font schemes
 <a name="font"> </a>
 
 Fonts are defined in the font scheme (.spfont file) and the master page preview (.preview file) for a given SharePoint site. The font scheme defines the fonts that are used in four areas: title, navigation, heading, and body. Seven font schemes are included in SharePoint. You can create additional font schemes. The font scheme files are located in the **15** subfolder of the Theme Gallery of the root site of the site collection (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, select **Themes**, and then select **15**.
-  
-    
-    
+
+
+
 The following example describes the format for an .spfont file.
-  
-    
-    
+
+
+
 
 
 
@@ -225,42 +226,42 @@ The following example describes the format for an .spfont file.
 ```
 
 In an .spfont file, the following placeholders are replaced:
-  
-    
-    
+
+
+
 
 -  _FontSchemeName_ is the name of the font scheme.
-    
-  
+
+
 -  _Slot1_ is the name of the font slot that you want to use as the first block of the font icon in the font scheme picker in the **Change the look** wizard.
-    
-  
+
+
 -  _Slot2_ is the name of the font slot that you want to use as the second block of the font icon in the font scheme picker in the **Change the look** wizard.
-    
-  
+
+
 -  _FontSlotName_ is the name of the font slot that you are defining (for example, title).
-    
-  
+
+
 -  _LatinScriptFont_ is the font to use for Latin scripts. This font is also the fallback font. That is, this is the font that is used for a language that does not have a script that is explicitly set in the font scheme.
-    
+
     > [!NOTE]
     > You must provide additional information to use web fonts in your font scheme. For more information, see the  [Web fonts](#webFont) section in this article.
 -  _EAScriptFont_ is the font to use for East Asia scripts. The **<s:ea>** element is not currently used by SharePoint. But, the **<s:ea>** element is still required in the font scheme.
-    
-  
+
+
 -  _CSFont_ is the font to use for complex scripts. The **<s:cs>** element is not currently used by SharePoint. But, the **<s:cs>** element is still required in the font scheme.
-    
-  
+
+
 -  _Language_ is the language script.
-    
-  
+
+
 -  _ScriptFont_ is the font to use for the specified language script.
-    
-  
+
+
 The following example shows a portion of an .spfont file.
-  
-    
-    
+
+
+
 
 
 
@@ -306,17 +307,17 @@ The following example shows a portion of an .spfont file.
 ```
 
 SharePoint includes support for web fonts. You must provide additional information to use web fonts in your font scheme. For more information, see the  [Web fonts](#webFont) section in this article.
-  
-    
-    
+
+
+
 
 ### Web-safe fonts
 <a name="websafeFont"> </a>
 
 Web-safe fonts are a set of fonts that are widely used and available on most devices by default. To specify a web-safe font in the font scheme, include the name of the font in the **typeface** attribute of the font slot. The following example shows a web-safe font used in a font scheme.
-  
-    
-    
+
+
+
 
 ```xml
 
@@ -331,13 +332,13 @@ Web-safe fonts are a set of fonts that are widely used and available on most dev
 <a name="webFont"> </a>
 
 Web fonts are fonts that are available on the Internet. When a user views a site that uses web fonts, the web browser downloads the necessary font files along with the rest of the page. To specify a web font, you must provide the URL to your web font files in four font formats (for support across browsers), and a small and large thumbnail image to use to render the font names in the font scheme picker.
-  
-    
-    
+
+
+
 The following example describes the information that is required to use a web font in an **<s:latin>** element.
-  
-    
-    
+
+
+
 
 
 
@@ -354,30 +355,30 @@ The following example describes the information that is required to use a web fo
 ```
 
 In this example of using a web font, the following placeholders would be replaced:
-  
-    
-    
+
+
+
 
 -  _FontName_ is the name of the web font.
-    
-  
+
+
 -  _EotFile_ is the relative URL to the Embedded Open Type font file.
-    
-  
+
+
 -  _WoffFile_ is the relative URL to the Web Open Font Format font file.
-    
-  
+
+
 -  _TtfFile_ is the relative URL to the TrueType font file.
-    
-  
+
+
 -  _SvgFile_ is the relative URL to the Scalable Vector Graphics font file.
-    
-  
+
+
 -  _LargeImgFile_ is the relative URL to the large thumbnail image that you want to use in the font scheme picker.
-    
-  
+
+
 -  _SmallImgFile_ is the relative URL to the small thumbnail image that you want to use in the font scheme picker.
-    
+
   > [!NOTE]
   > The paths to the files have to be the full URL (i.e. https://tenant.sharepoint.com/sites/sitename/_catalogs/theme/15/fontfile.wof)
   > The LargeImgFile and SmallImgFile attributes have to be present in the Latin tag even if given empty values.
@@ -386,9 +387,9 @@ In this example of using a web font, the following placeholders would be replace
 <a name="fontSlot"> </a>
 
 Table 1 describes the available font slots and where they are used in a page.
-  
-    
-    
+
+
+
 
 **Table 1. Font slots**
 
@@ -402,32 +403,32 @@ Table 1 describes the available font slots and where they are used in a page.
 |small-heading  <br/> |Used for H4 headings.  <br/> |
 |large-body  <br/> |Used for large body text (15 pixels and 19 pixels).  <br/> |
 |body  <br/> |The base font that is used everywhere else on the page.  <br/> |
-   
+
 
 ## See also
 <a name="bk_addresources"> </a>
 
 
 -  [Themes overview for SharePoint](themes-overview-for-sharepoint.md)
-    
-  
--  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
-    
-  
--  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
-    
-  
--  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
-    
-  
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming)
-    
-  
--  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
-    
-  
 
-  
-    
-    
+
+-  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
+
+
+-  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
+
+
+-  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
+
+
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming)
+
+
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
+
+
+
+
+
+
 

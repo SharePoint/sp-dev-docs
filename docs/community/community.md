@@ -12,7 +12,7 @@ The SharePoint Development Community (also known as the SharePoint PnP community
 
 ## Blog posts, videos, and social media
 
-- [SharePoint Developer Blog](https://developer.microsoft.com/en-us/office/blogs/) - Latest developer news around SharePoint and Office 365
+- [SharePoint Developer Blog](https://developer.microsoft.com/office/blogs/) - Latest developer news around SharePoint and Office 365
 - [SharePoint Developer Videos](https://aka.ms/spdev-videos) - Latest guidance videos, training videos, and community call recordings
 - [Microsoft 365 Dev Twitter](https://twitter.com/Microsoft365Dev) - Official communication channel for SharePoint, Office 365, Windows 10 and Enterprise Mobility + Security developer topics
 - [Microsoft 365 PnP Twitter](https://twitter.com/m365pnp) - Community account for Microsoft 365 and SharePoint topics

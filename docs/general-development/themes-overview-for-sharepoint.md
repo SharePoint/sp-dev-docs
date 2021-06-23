@@ -1,5 +1,6 @@
 ---
 title: Themes overview for SharePoint
+description: Learn about the theming experience in SharePoint and how themes can be used to customize the look and feel of sites.
 ms.date: 05/20/2020
 ms.prod: sharepoint
 ms.assetid: ae585dd3-82fe-46bb-ac93-065edc0a16f4
@@ -127,7 +128,7 @@ You can create new designs by creating new list items in the Composed Looks list
 -  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/en-us/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://www.microsoft.com/microsoft-365/blog/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 
