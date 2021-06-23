@@ -1,5 +1,6 @@
 ---
 title: JavaScript Patterns and Performance
+description: Years ago, ASP.NET gave us server-side UI control rendering, and it was good. That server-side rendering, however, requires full trust code. Now that we have transitioned to SharePoint and Office 365, full trust code is no longer an option. That means server-side UI control rendering won't work for us any more.
 ms.date: 11/03/2017
 localization_priority: Normal
 ---

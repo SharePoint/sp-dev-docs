@@ -1,5 +1,6 @@
 ---
 title: Advanced Scenarios and Additional Samples
+description: This topic describes some advanced REST scenarios and additional samples. It provides links to webpages where you can get more detailed information.
 ms.date: 01/14/2021
 ms.prod: sharepoint
 ms.assetid: 110bcc88-2b55-4d80-ab5c-dc3b9658e48d

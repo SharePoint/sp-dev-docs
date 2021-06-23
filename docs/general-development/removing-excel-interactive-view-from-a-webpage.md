@@ -1,5 +1,6 @@
 ---
 title: Removing Excel Interactive View from a webpage
+description: The Excel Interactive View feature has been disabled. If you have inserted an Excel Interactive View into your webpage, you can remove it by removing the  `<script>` tag and the placeholder `<a>` tags for the button from the HTML of your webpage.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 407b3aa3-7286-462b-905f-811a3b7f3f1c
@@ -10,9 +11,9 @@ localization_priority: Normal
 # Removing Excel Interactive View from a webpage
 
 The Excel Interactive View feature has been disabled. If you have inserted an Excel Interactive View into your webpage, you can remove it by removing the  `<script>` tag and the placeholder `<a>` tags for the button from the HTML of your webpage.
-  
-    
-    
+
+
+
 
 To remove the  `<script>` tag, search for and delete the following HTML.
 
@@ -33,18 +34,18 @@ To remove the placeholder  `<a>` tags, find <a> tags that are located directly b
 ## Workarounds
 
 We encourage you to  [embed Excel into your webpages ](https://support.office.com/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU) as an alternative.
-  
-    
-    
+
+
+
 
 ## See also
 <a name="bk_addresources"> </a>
 
 
 -  [Excel Services in SharePoint](excel-services-in-sharepoint.md)
-    
-  
+
+
 -  [Embed an Excel workbook on your blog](https://support.office.com/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU)
-    
-  
+
+
 
