@@ -1,5 +1,6 @@
 ---
 title: Create external event receivers
+description: Learn the steps for creating external event receivers for on-premises installations of Business Connectivity Services (BCS) external lists.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c6d5f486-6247-47f9-9876-fab12f13342f
@@ -414,7 +415,7 @@ In the next step, you create the actual service that is hosted by IIS that will 
   
 4. In the code for the data service, in the definition of the class that defines the data service, replace the comment  `/* TODO: put your data source class name here */` with the type that is the entity container of the data model, which in this case is `NorthwindEntities`. The class definition should look like the following.
     
-```cs
+```csharp
   
 public class Northwind : DataService<NorthwindEntities>
 
@@ -426,7 +427,7 @@ public class Northwind : DataService<NorthwindEntities>
 
 - You now have to modify the security to allow access to the data from the OData feed by external consumers. When a WCF service is created, all access is denied by default. Make the following changes to the class you just created.
     
-```cs
+```csharp
   
 config.SetEntitySetAccessRule("*", EntitySetRights.All);
 config.SetServiceOperationAccessRule("*", ServiceOperationRights.All);
@@ -446,7 +447,7 @@ The WCF service can also be coded with a means to handle the Subscribe and Unsub
 
 
 
-```cs
+```csharp
 
 /// The Subscribe service operation maps directly to the Subscribe stereotype
 /// found in the BDC model
@@ -521,7 +522,7 @@ Next, you create a new Windows Service project that will be registered on the WC
   
 4. Add the following code in the newly created class.
     
-```cs
+```csharp
   
 public partial class PollingService : ServiceBase
 {
@@ -851,7 +852,7 @@ The following is a script that will turn on the feature using client code.
 
 
 
-```cs
+```csharp
 function EnableEventing_Clicked()
 {
     var clientContext = SP.ClientContext.get_current();

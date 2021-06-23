@@ -40,7 +40,7 @@ In the New Function panel, specify the function name, set the **Authorization le
 
 Once the function is created, replace its contents with the following snippet:
 
-```cs
+```csharp
 #r "Newtonsoft.Json"
 
 using System.Net;

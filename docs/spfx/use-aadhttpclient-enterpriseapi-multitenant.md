@@ -38,7 +38,7 @@ To confirm your settings and create the function, select the **Create Function**
 
 Once the function is created, replace its contents with the following snippet:
 
-```cs
+```csharp
 using System.Net;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)

@@ -26,7 +26,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
 
 1. After adding a Web reference to the Excel Web Services, add the following using directive so that you can use the **SoapException** class without having to qualify it with a full namespace:
     
-    ```cs
+    ```csharp
 
     using System.Web.Services.Protocols;
     ```
@@ -38,7 +38,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
 
 2. To capture the Excel Services error codes using the **SubCode** property, you must use the SOAP12 protocol version. After instantiating the Excel Web Services proxy class, set the SOAP protocol version as follows:
     
-    ```cs
+    ```csharp
       // Instantiate the Web service.
      ExcelService xlservice = new ExcelService();
 
@@ -58,7 +58,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
 
 3. To catch the error codes using the **SubCode** property, add a SOAP exception catch block to your code, for example:
     
-    ```cs
+    ```csharp
 
     catch (SoapException e)
     {
@@ -86,7 +86,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
   
 2. After you add a reference, add the following **using** directive to your code so that you can use the **SoapException** class without having to qualify it with a full namespace:
     
-    ```cs
+    ```csharp
 
     using System.Web.Services.Protocols;
     ```
@@ -101,7 +101,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
   
 4. To catch the error codes using the **SubCode** property, add a SOAP exception catch block to your code, for example:
     
-    ```cs
+    ```csharp
       catch (SoapException e)
     {
         Console.WriteLine("SOAP Exception Message: {0}", e.Message);
@@ -129,7 +129,7 @@ The sheet that was requested could not be found. Please try a different one.
 ```
 
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Text;

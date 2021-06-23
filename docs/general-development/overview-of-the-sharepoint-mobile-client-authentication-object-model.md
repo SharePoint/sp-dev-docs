@@ -1,5 +1,6 @@
 ---
 title: Overview of the SharePoint mobile client authentication object model
+description: Get an overview of development with the authentication APIs of the SharePoint client object model for Silverlight.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 00ee657f-a32a-495e-80b4-83ac0f60df44
@@ -51,7 +52,7 @@ The following code shows these steps.
 
 
 
-```cs
+```csharp
 
 ClientContext context = new ClientContext(ListUrl);
 
@@ -146,7 +147,7 @@ The following code shows these steps.
 
 
 
-```cs
+```csharp
 
 ODataAuthenticator oat = new ODataAuthenticator();
 
@@ -187,7 +188,7 @@ The following is an example of an implementation of an **OnAuthenticationComplet
 
 
 
-```cs
+```csharp
 
 void OnAuthenticationCompleted(object sender, AuthenticationCompletedEventArgs e)
 {
@@ -220,7 +221,7 @@ All that the **OnSendingRequest** handler needs to do is set the cookie containe
 
 
 
-```cs
+```csharp
 
 void OnSendingRequest(object sender, SendingRequestEventArgs e)
 { 
@@ -245,7 +246,7 @@ void OnSendingRequest(object sender, SendingRequestEventArgs e)
     
 
 
-```cs
+```csharp
   
 Authenticator at = new Authenticator();
 at.AuthenticationMode = ClientAuthenticationMode.MicrosoftOnline;                          
@@ -274,7 +275,7 @@ To authenticate against a SharePoint Online URL, set the **AuthenticationMode** 
     
     
 
-```cs
+```csharp
 
  Authenticator auth = new Authenticator("domain\\\\name", "xyz"); 
  auth.FederationPassiveAuthUri = "urn:oasis:names:tc:SAML:2.0:ac:classes:Password"; 

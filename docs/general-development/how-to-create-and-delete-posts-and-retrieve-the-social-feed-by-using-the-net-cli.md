@@ -1,5 +1,6 @@
 ---
 title: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint
+description: Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint .NET client object model.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c8d68632-1b55-454c-961a-f3ddad731bf6
@@ -107,7 +108,7 @@ The following code example publishes a post and a reply from the current user. I
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -234,7 +235,7 @@ For more information about feed types, see  [Overview of feed types](work-with-s
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -354,7 +355,7 @@ The following code example deletes a post or a reply from the current user's per
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

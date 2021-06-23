@@ -1,5 +1,6 @@
 ---
 title: Detect the installed SKU of SharePoint
+description: If the behavior of your solutions depends on the locally installed SKU of SharePoint or Project Server 2013, use the code example in this article to find the SKU information you need.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d5d84d6f-6a8e-4ead-9296-7025baf1e154
@@ -19,7 +20,7 @@ The following code example demonstrates how to retrieve the registry key of the 
     
     
 
-```cs
+```csharp
 
 using System;
 using System.Collections;

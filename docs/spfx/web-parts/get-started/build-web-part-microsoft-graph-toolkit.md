@@ -41,13 +41,13 @@ The Microsoft Graph Toolkit providers enable authentication and access to Micros
 
 First, add the provider to your web part. Locate the `src\webparts\<your-project>\<your-web-part>.ts` file in your project folder, and add the following line to the top of your file, right below the existing `import` statements:
 
-```ts
+```typescript
 import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
 ```
 
 Next, you need to initialize the provider with the authenticated context inside the `onInit()` method of your web part. In the same file, add the following code right before the `public render(): void {` line:
 
-```ts
+```typescript
 protected async onInit() {
   if (!Providers.globalProvider) {
     Providers.globalProvider = new SharePointProvider(this.context);
@@ -59,7 +59,7 @@ protected async onInit() {
 
 Now, you can start adding components to your web part. Simply add the components to the HTML inside of the `render()` method, and the components will use the SharePoint context to access Microsoft Graph. For example, to add the [Person component](/graph/toolkit/components/person), your code will look like:
 
-```ts
+```typescript
 public render(): void {
   this.domElement.innerHTML = `
     <mgt-person person-query="me" view="twolines"></mgt-person>

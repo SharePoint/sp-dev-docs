@@ -54,7 +54,7 @@ The Models/DataInitializer.cs file contains the code that runs when you choose t
     
 The code in this file uses a method similar to the one that is used in the [Core.ModifyPages](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ModifyPages) sample to add a custom page to the site.
 
-```cs
+```csharp
             // Create default wiki page.
             web.AddWikiPage("Site Pages", "EventsHome.aspx");
 AddWikiPage is an extension method from the Core.DevPnPCore project to add a new page to the site. This new page also becomes the new WelcomePage for the site. It also prepares to add the web parts to this page.
@@ -116,7 +116,7 @@ The Models\DataInitializer.cs file also defines the XML for both web parts that 
 
 **Add the web parts to the page**
 
-```cs
+```csharp
         var limitedWebPartManager = webPartPage.GetLimitedWebPartManager(Microsoft.SharePoint.Client.WebParts.PersonalizationScope.Shared);
         web.Context.Load(limitedWebPartManager.WebParts);
         web.Context.ExecuteQuery();
@@ -224,7 +224,7 @@ The following code examples show how the underlying **BaseGet** and **BaseSet** 
 
 **BaseGet**
 
-```cs
+```csharp
 protected T BaseGet<T>(ListItem item, string internalName){
             var field = _fields[internalName.ToLowerInvariant()];
             var value = item[field.InternalName];
@@ -237,7 +237,7 @@ protected T BaseGet<T>(ListItem item, string internalName){
 
 **BaseSet**
 
-```cs
+```csharp
 protected void BaseSet(ListItem item, string internalName, object value) {
             if (_fields.ContainsKey(internalName)) {
                 var field = _fields[internalName.ToLowerInvariant()];
@@ -257,7 +257,7 @@ protected void BaseSet(ListItem item, string internalName, object value) {
 
 The **BaseListItem** class also contains a **Save** method that is used to save each LOB entity that the add-in creates and manipulates. This method loads the list and determines whether the current item has an ID that is greater than 0. If the ID is not greater than 0, it assumes that it's not valid and creates a new list item. It uses the **SetProperties** method to set properties on the **ListItem**, and then sets the properties on the subclass by using the **ReadProperties** method.
 
-```cs
+```csharp
 public void Save(Web web) {
             var context = web.Context;
             var list = web.GetListByTitle(ListTitle);

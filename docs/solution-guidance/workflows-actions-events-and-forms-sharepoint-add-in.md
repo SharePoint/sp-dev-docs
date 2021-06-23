@@ -1,5 +1,6 @@
 ---
 title: Workflows, actions (activities), events, and forms in the SharePoint Add-in model
+description: The approach you take to implement workflows and their associated components is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, workflows and their associated components were built with server side code and deployed via SharePoint Solutions.  The workflows and their associated components ran on the SharePoint server.
 ms.date: 05/20/2020
 localization_priority: Normal
 ---
@@ -42,7 +43,7 @@ In this option custom workflows are created, deployed, and associated with the H
 The following code sample demonstrates how to use CSOM to provision a workflow and the lists which support the workflow.
 
 
-```c# 
+```csharp 
 	public void ProvisionIncidentWorkflowAndRelatedLists(string incidentWorkflowFile, string suiteLevelWebAppUrl, string dispatcherName)
     {
 		//Return the list the workflow will be associated with

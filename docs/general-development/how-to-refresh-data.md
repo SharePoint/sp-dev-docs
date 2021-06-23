@@ -1,5 +1,6 @@
 ---
 title: Refresh data
+description: This example shows how to retrieve updated data from external data sources for the open workbook by using the Refresh method.
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
@@ -18,7 +19,7 @@ This example shows how to retrieve updated data from external data sources for t
     
 
 
-```cs
+```csharp
 
 public Status[] Refresh (string sessionId, string connectionName)
 ```
@@ -32,7 +33,7 @@ End Function
 If you link directly to Microsoft.Office.Excel.Server.WebServices.dll, the signature for the **Refresh** method is:
 
 
-```cs
+```csharp
 
 public void Refresh (string sessionId, string connectionName,
     out Status[] status)
@@ -55,7 +56,7 @@ The following code sample shows how to call the **Refresh** method using Excel W
     
     
 
-```cs
+```csharp
 
 // Instantiate the Web service.
 ExcelService xlservice = new ExcelService();
