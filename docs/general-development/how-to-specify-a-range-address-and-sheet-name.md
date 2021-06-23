@@ -1,5 +1,6 @@
 ---
 title: Specify a range address and sheet name
+description: This example shows how to specify range addresses by using range coordinates, named ranges, rows, and columns. It also shows how to specify a sheet name and the relationship between a sheet name and a range address.
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,set range
 f1_keywords:

@@ -1,5 +1,6 @@
 ---
 title: Use the CloseWorkbook method call asynchronously
+description: When you are using Excel Web Services, it is good practice to close the workbook by calling the CloseWorkbook method if you are finished using the session. This closes the session and allows Excel Services to free resources in a predictable manner. This could potentially improve your server performance and robustness.
 ms.date: 09/25/2017
 keywords: async,how to,howdoi,howto
 f1_keywords:

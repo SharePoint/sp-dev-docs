@@ -1,15 +1,15 @@
 ---
 title: Get started using the client object model with external data in SharePoint
+description: Learn how to use the SharePoint client object model to work with Business Connectivity Services (BCS) in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8ed91929-fdb6-4fde-ba2a-7942870575f3
 localization_priority: Normal
 ---
-
-
-
 # Get started using the client object model with external data in SharePoint
+
 Learn how to use the SharePoint client object model to work with Business Connectivity Services (BCS) in SharePoint.
+
 ## What is the SharePoint client object model?
 
 The client object model for SharePoint is a set of client-based libraries that represent the server object model. They are packaged in three different DLLs to accommodate a variety of development types. The client object model includes most of the major functions of the server API. This allows access to the same types of functionality from browser scripting and also .NET web applications and Silverlight applications.  <br/> To enhance and expand the capabilities for working with external data, Business Connectivity Services (BCS) has expanded the client object model to include additional functionality.  <br/> 

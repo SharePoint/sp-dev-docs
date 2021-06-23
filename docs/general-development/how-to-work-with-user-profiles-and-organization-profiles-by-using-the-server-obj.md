@@ -1,5 +1,6 @@
 ---
 title: Work with user profiles and organization profiles by using the server object model in SharePoint
+description: Learn how to create, retrieve, and change SharePoint user profiles and user profile properties programmatically by using the SharePoint server object model.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b

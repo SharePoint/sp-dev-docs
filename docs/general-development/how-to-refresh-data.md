@@ -1,5 +1,6 @@
 ---
 title: Refresh data
+description: This example shows how to retrieve updated data from external data sources for the open workbook by using the Refresh method.
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:

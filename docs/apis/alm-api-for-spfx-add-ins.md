@@ -28,7 +28,7 @@ ALM APIs can be used to perform exactly the same operations that are available f
 ALM APIs are supported for the tenant-scoped site collections and [site collection app catalog](../general-development/site-collection-app-catalog.md). Use the corresponding app catalog's URL to target a specific app catalog. You must first enabled a site collection app catalog before targeting it with the actions documented on this page.
 
 > [!IMPORTANT]
-> Tenant-scoped permissions which require [tenant administrative approval](https://docs.microsoft.com/sharepoint/dev/solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online) are not supported with the ALM APIs.
+> Tenant-scoped permissions which require [tenant administrative permissions](../solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online.md) are not supported with the ALM APIs.
 
 ## Options for working with ALM APIs
 
@@ -42,12 +42,12 @@ The app catalog must be included in all HTTP requests when using the REST API as
 
 For example:
 
-|      Scope      |                                            Endpoint                                            |
-| :-------------- | :--------------------------------------------------------------------------------------------- |
-| tenant          | **https://contoso.sharepoint.com/sites/AppCatalog/_api/web/tenantappcatalog/{command}**        |
-| site collection | **https://contoso.sharepoint.com/sites/Marketing/_api/web/sitecollectionappcatalog/{command}** |
+|      Scope      |                                           Endpoint                                           |
+| :-------------- | :------------------------------------------------------------------------------------------- |
+| tenant          | `https://contoso.sharepoint.com/sites/AppCatalog/_api/web/tenantappcatalog/{command}`        |
+| site collection | `https://contoso.sharepoint.com/sites/Marketing/_api/web/sitecollectionappcatalog/{command}` |
 
-- when targeting the tenant app catalog located at **https://contoso.sharepoint.com/sites/AppCatalog**, the endpoint would be **
+- when targeting the tenant app catalog located at `https://contoso.sharepoint.com/sites/AppCatalog`, the endpoint would be **
 
 Learn more here: [SharePoint REST API](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 

@@ -1,5 +1,6 @@
 ---
 title: Set values of ranges
+description: "Excel Web Services exposes four methods for setting values into an Excel workbook: SetCell, SetCellA1, SetRange, and SetRangeA1."
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,set range
 f1_keywords:

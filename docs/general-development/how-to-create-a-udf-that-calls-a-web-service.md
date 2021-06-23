@@ -1,5 +1,6 @@
 ---
 title: Create a UDF that calls a web service
+description: This example shows how to call an external Web service from a user-defined function (UDF).
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
@@ -13,30 +14,30 @@ localization_priority: Normal
 # Create a UDF that calls a web service
 
 This example shows how to call an external Web service from a user-defined function (UDF). The Web service used in this example is:
-  
-    
-    
+
+
+
 
  `http://webservices.imacination.com/distance/Distance.jws?wsdl`
-You must use Microsoft Visual Studio 2005 or a similar Microsoft .NET Framework 2.0-compatible development tool to create this sample. 
-  
+You must use Microsoft Visual Studio 2005 or a similar Microsoft .NET Framework 2.0-compatible development tool to create this sample.
+
 > [!NOTE]
-> Before testing the code, make sure that the Web service you are calling is available. The Web service server could be down or the Web service discontinued. If the Web service is unavailable, the calls you make to the Web service from your code will fail. > You can check if a Web service is available by visiting its site. In this example, the URL is: >  `http://webservices.imacination.com/distance/Distance.jws?wsdl`> If the Web service is available, you will be able to see the Web Services Description Language (WSDL). If it is not available, you will get the usual "webpage not found" error. 
-  
-    
-    
+> Before testing the code, make sure that the Web service you are calling is available. The Web service server could be down or the Web service discontinued. If the Web service is unavailable, the calls you make to the Web service from your code will fail. > You can check if a Web service is available by visiting its site. In this example, the URL is: >  `http://webservices.imacination.com/distance/Distance.jws?wsdl`> If the Web service is available, you will be able to see the Web Services Description Language (WSDL). If it is not available, you will get the usual "webpage not found" error.
+
+
+
 
 
 ## Example
 
 You can learn more about the Web service used in this example by examining its WSDL.
-  
-    
-    
+
+
+
 One service it provides is to return geographical coordinates in decimal form. In this sample, the  `ToDegreeNotation` function has been added to show how you can convert coordinates to degrees/minutes/seconds, which is more appropriate for displaying coordinates.
-  
-    
-    
+
+
+
 
 
 
@@ -50,7 +51,7 @@ public string ToDegreeNotation(double angle)
     int minutes = (int)minutesAndSeconds;
     int seconds = (int)(Math.Abs(minutesAndSeconds - minutes) * 60);
 
-    return deg.ToString() + "°" + minutes.ToString() + "\\'" + 
+    return deg.ToString() + "°" + minutes.ToString() + "\\'" +
         seconds.ToString() + "\\"";
 }
 ```
@@ -72,9 +73,9 @@ End Function
 ```
 
 If your Internet Explorer LAN setting is configured to use a proxy server, your code must explicitly make a call to set the proxy server. Otherwise, your Web service calls will fail. You can set the proxy server in the constructor as follows:
-  
-    
-    
+
+
+
 
 
 
@@ -89,7 +90,7 @@ namespace ZipCodeUdfSample
         public ZipCodeUdfs()
         {
             this.distanceService = new DistanceService();
-            this.distanceService.Proxy = 
+            this.distanceService.Proxy =
                 new WebProxy("http://myproxy:80", true);
         }
 ```
@@ -111,9 +112,9 @@ Namespace ZipCodeUdfSample
 ```
 
 For more information about how to test and call UDFs from cells, see  [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md).
-  
-    
-    
+
+
+
 
 
 
@@ -287,41 +288,41 @@ End Namespace
 #### Tasks
 
 
-  
-    
-    
+
+
+
  [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
-  
-    
-    
+
+
+
  [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
-  
-    
-    
+
+
+
  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
-  
-    
-    
+
+
+
  [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
 #### Concepts
 
 
-  
-    
-    
+
+
+
  [Accessing the SOAP API](accessing-the-soap-api.md)
 #### Other resources
 
 
-  
-    
-    
+
+
+
  [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
-  
-    
-    
+
+
+
  [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
-  
-    
-    
+
+
+
  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

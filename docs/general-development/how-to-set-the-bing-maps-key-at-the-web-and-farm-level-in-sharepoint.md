@@ -1,5 +1,6 @@
 ---
 title: Set the Bing Maps key at the web and farm level in SharePoint
+description: Learn how to set the Bing Maps key programmatically at the web (SharePoint Server and SharePoint Online) and farm (SharePoint Server) level by using the SharePoint client object model and Windows PowerShell, to enable the Bing Maps functionality in SharePoint lists and location-based web and mobile apps.
 ms.date: 06/05/2020
 ms.prod: sharepoint
 ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
@@ -32,24 +33,24 @@ To follow the steps in this example, you should have the following:
 <a name="SP15Setbing_farm"> </a>
 
 The Bing Maps key can be set at the farm or web level. To set the Bing Maps key at the farm level, you need administrator rights on the server; you can then add the key by using the SharePoint Management Shell. To set the Bing Maps key at the web level, write a console application that uses the SharePoint client object model or leverage SharePoint PnP PowerShell.
-  
+
 > [!TIP]
-> The Bing Maps key set at web level has higher precedence order than the Bing Maps key set at farm level. 
+> The Bing Maps key set at web level has higher precedence order than the Bing Maps key set at farm level.
 
 ### To set the Bing Maps key at the farm level using Windows PowerShell
 
 
 1. Log on to the SharePoint server as an administrator, and open the SharePoint Management Shell.
-    
-  
-2. Execute the following command: 
-    
+
+
+2. Execute the following command:
+
      `Set-SPBingMapsKey -BingKey "<Enter a valid Bing Maps key>"`
-    
-    The Bing Maps key is now set at the farm level in SharePoint. 
-    
+
+    The Bing Maps key is now set at the farm level in SharePoint.
+
 > [!NOTE]
-> When you use Windows PowerShell, the Bing Maps key can be set only at the farm level. If you want to set the Bing Maps key at the web level, you can set the key programmatically, as shown in the following section. 
+> When you use Windows PowerShell, the Bing Maps key can be set only at the farm level. If you want to set the Bing Maps key at the web level, you can set the key programmatically, as shown in the following section.
 
 ### To set the Bing Maps key at the web level with SharePoint PnP PowerShell
 
@@ -71,9 +72,9 @@ Set-PnPPropertyBagValue -Key "BING_MAPS_KEY" -Value "YOURKEYVALUE"
 ```csharp
 Set-SPOsite <SiteURL> -DenyAddAndCustomizePages 0
 ```
-    
+
 > [!NOTE]
-> Ensure you understand the implications of changing a site's NoScript Policy - https://docs.microsoft.com/sharepoint/allow-or-prevent-custom-script?redirectSourcePath=%252fen-us%252farticle%252fTurn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+> Ensure you understand the implications of changing a site's NoScript Policy - [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
 
 
 ### To set the Bing Maps key at the farm or web level using the client object model with Visual Studio
@@ -81,13 +82,13 @@ Set-SPOsite <SiteURL> -DenyAddAndCustomizePages 0
 1. Start Visual Studio.
 
 2. On the menu bar, choose **File**, **New Project**. The **New Project** dialog box opens.
-  
+
 3. In the **New Project** dialog box, choose **C#** in the **Installed Templates** box, and then choose the **Console Application** template.
 
 4. Give the project a name, and then choose the **OK** button.
-  
+
 5. Visual Studio creates the project. Add a reference to the following assemblies, and choose **OK**.
-    
+
   - Microsoft.SharePoint.Client.dll
   - Microsoft.SharePoint.Client.Runtime.dll
 
@@ -97,7 +98,7 @@ Set-SPOsite <SiteURL> -DenyAddAndCustomizePages 0
 7. Add the following code to the Main method in the .cs file.
 
 ```csharp
-  
+
 class Program
     {
         static void Main(string[] args)
@@ -113,19 +114,19 @@ class Program
             web.AllProperties["BING_MAPS_KEY"] = "<Valid Bing Maps Key>"
             web.Update();
             context.ExecuteQuery();
-        }    
+        }
     }
 
 ```
 
 8. Replace the <Site Url> and  _<Valid Bing Maps Key>_ with valid values.
 9. Set the target framework in Project Properties as .NET Framework 4.0, and run the example.
-10. The key should now be set at the web level. 
+10. The key should now be set at the web level.
 
 ## Next steps
 <a name="SP15Bing_nextsteps"> </a>
 
 To learn more about working with location and map functionality in SharePoint, see the following:
 
--  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
--  [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md)
+- [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
+- [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md)

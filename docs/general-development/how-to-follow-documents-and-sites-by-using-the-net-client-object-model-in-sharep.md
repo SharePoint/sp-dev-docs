@@ -1,5 +1,6 @@
 ---
 title: Follow documents and sites by using the .NET client object model in SharePoint
+description: Learn how to work with Following Content features by using the SharePoint .NET client object model.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 84366e01-4961-459d-8109-2f1d2d714353

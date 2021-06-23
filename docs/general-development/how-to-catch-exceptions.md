@@ -1,5 +1,6 @@
 ---
 title: Catch exceptions
+description: You place the sections of code that might throw exceptions in a try block and place code that handles exceptions in a catch block. The order of catch statements is important. When an exception occurs, it is passed up the stack and each catch block is given the opportunity to handle it.
 ms.date: 09/25/2017
 keywords: errors,how to,howdoi,howto
 f1_keywords:

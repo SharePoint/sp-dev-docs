@@ -1,5 +1,6 @@
 ---
 title: Machine Translation Services in SharePoint
+description: Learn about the Machine Translation Service, which is a new service application in SharePoint that provides automatic machine translation of files and sites.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 15a81428-da94-40b8-8ed4-6a12f05661e2

@@ -1,11 +1,10 @@
 ---
 title: Authorization Code OAuth flow for SharePoint Add-ins
 description: The OAuth flow for add-ins that request permission to access SharePoint resources on the fly, and how to use the **OAuthAuthorize.aspx** page and the SharePoint redirect URI.
-ms.date: 06/15/2020
+ms.date: 06/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
-
 # Authorization Code OAuth flow for SharePoint Add-ins
 
 > [!NOTE]
@@ -38,11 +37,11 @@ For simplicity, this article assumes that the add-in is a web application called
 
 ### Detailed example of the flow
 
-Suppose that Contoso provides a photo-printing service online. A user wants to print some photos. The user wants to give consent to a Contoso photo-printing service to access and print photos from a set of photo libraries that the user keeps on a SharePoint Online site **fabrikam.sharepoint.com**.
+Suppose that Contoso provides a photo-printing service online. A user wants to print some photos. The user wants to give consent to a Contoso photo-printing service to access and print photos from a set of photo libraries that the user keeps on a SharePoint Online site `fabrikam.sharepoint.com`.
 
-![OAuth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_0.png)
+![OAuth overview](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_0.png)
 
-The photo-printing application is registered, so it has a client ID, client secret, and redirect URI. The redirect URI that Contoso provided when it registered the add-in is **https://contoso.com/RedirectAccept.aspx**. The client ID and client secret information are stored in the photo-printing application's web.config file. The following is an example of how the client ID and client secret are entered in the web.config file.
+The photo-printing application is registered, so it has a client ID, client secret, and redirect URI. The redirect URI that Contoso provided when it registered the add-in is `https://contoso.com/RedirectAccept.aspx`. The client ID and client secret information are stored in the photo-printing application's web.config file. The following is an example of how the client ID and client secret are entered in the web.config file.
 
 ```XML
 <configuration>
@@ -62,7 +61,7 @@ Following are the steps in the Authorization Code flow.
 
 #### Step 1: Client opens an application and then directs it to a SharePoint site for data
 
-![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_1.png)
+![Three-legged OAuth Flow - step 1](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_1.png)
 
 A user browses to the Contoso photo-printing website, where the UI indicates that the user can print photos that are kept on any SharePoint Online site.
 
@@ -72,7 +71,7 @@ The photo-printing add-in asks the user to enter the URL of the photo collection
 
 #### Step 2: The add-in redirects to the SharePoint site authorization URL
 
-![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_2.png)
+![Three-legged OAuth Flow - step 2](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_2.png)
 
 When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to **https://fabrikam.sharepoint.com/**; this redirect is an HTTP 302 Redirect Response.
 
@@ -92,7 +91,7 @@ Response.Redirect(
 
 If you look at the three-parameter overload of the `GetAuthorizationUrl` method in **TokenHelper.cs**, you see that the second parameter is a permission scope parameter, which is a space-delimited list of permissions the add-in requests in shorthand format. For more information about permission scopes, see [Permission scope aliases and the use of the OAuthAuthorize.aspx page](#permission-scope-aliases-and-the-oauthauthorizeaspx-page).
 
-The third parameter must be the same redirect URI that is used when the add-in is registered. For more information about registration, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md). The returned string is a URL including query string parameters. If you prefer, you can manually construct the **OAuthAuthorize.aspx** redirect URL. For example, the URL that the Contoso photo-printing add-in redirects the user to in this case is (*line breaks added for readability*): 
+The third parameter must be the same redirect URI that is used when the add-in is registered. For more information about registration, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md). The returned string is a URL including query string parameters. If you prefer, you can manually construct the **OAuthAuthorize.aspx** redirect URL. For example, the URL that the Contoso photo-printing add-in redirects the user to in this case is (*line breaks added for readability*):
 
 ```http
 https://fabrikam.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?
@@ -113,19 +112,19 @@ If you want a separate consent pop-up dialog, you can add the query parameter **
 
 #### Step 3: SharePoint displays the consent page so the user can grant the add-in permissions
 
-![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_3.png)
+![Three-legged OAuth Flow - step 3](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_3.png)
 
 If the user isn't already signed into the Fabrikam SharePoint Online site, the user is prompted to sign in. When the user is signed in, SharePoint renders an HTML consent page. The consent page prompts the user to grant (or deny) the Contoso photo-printing add-in the permissions that the add-in requests. In this case, the user would be granting the add-in read access to the user's picture library on Fabrikam.
 
 #### Step 4: SharePoint requests a short-lived authorization code from ACS
 
-![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_4.png)
+![Three-legged OAuth Flow - step 4](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_4.png)
 
 The Fabrikam SharePoint Online site asks ACS to create a short-lived (approximately 5 minutes) authorization code unique to this combination of user and add-in. ACS sends the authorization code to the Fabrikam site.
 
 #### Step 5: The SharePoint Online site redirects to the app's registered redirect URI, passing the authorization code to the add-in
 
-![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_5.png)
+![Three-legged OAuth Flow - step 5](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_5.png)
 
 The Fabrikam SharePoint Online site redirects the browser back to Contoso via HTTP 302 Response. The URL construct for this redirection uses the redirect URI that was specified when the photo-printing add-in was registered. It also includes the authorization code as a query string.
 
@@ -133,11 +132,11 @@ The redirect URL is structured like the following: **https://contoso.com/Redirec
 
 #### Step 6: The add-in uses the authorization code to request an access token from ACS, which validates the request, invalidates the authorization code, and then sends access and refresh tokens to the add-in
 
-![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_6.png)
+![Three-legged OAuth Flow - step 6](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_6.png)
 
 Contoso retrieves the authorization code from the query parameter, and then includes it, along with the client ID and client secret, in a request to ACS for an access token.
 
-If you're using managed code and the SharePoint CSOM, the **TokenHelper.cs** file, the method that makes the request to ACS is **GetClientContextWithAuthorizationCode**. In this case, the code looks similar to the following (where  `authCode` is a variable to which the authorization code has been assigned): 
+If you're using managed code and the SharePoint CSOM, the **TokenHelper.cs** file, the method that makes the request to ACS is **GetClientContextWithAuthorizationCode**. In this case, the code looks similar to the following (where  `authCode` is a variable to which the authorization code has been assigned):
 
 ```csharp
 TokenHelper.GetClientContextWithAuthorizationCode(
@@ -159,7 +158,7 @@ For more information about tokens, see [Handle security tokens in provider-hoste
 
 #### Step 7: The add-in can now use the access token to request data from the SharePoint site, which it can display to the user
 
-![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_7.png)
+![Three-legged OAuth Flow - step 7](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_7.png)
 
 Contoso includes the access token to make a REST API call or CSOM request to SharePoint, passing the OAuth access token in the HTTP **Authorization** header. SharePoint returns the information that Contoso requested.
 
@@ -194,25 +193,25 @@ https://fabrikam.sharepoint.com/_layout/15/OAuthAuthorize.aspx?client_id=c78d058
 
 ### Table 1. SharePoint add-in permission request scope URIs and their corresponding aliases
 
-|**Scope URI**|**Scope alias**|**Available rights**|
-|:-----|:-----|:-----|
-|http://sharepoint/content/sitecollection|Site|Read, Write, Manage|
-|http://sharepoint/content/sitecollection/web|Web|Read, Write, Manage|
-|http://sharepoint/content/sitecollection/web/list|List|Read, Write, Manage|
-|http://sharepoint/content/tenant|AllSites|Read, Write, Manage|
-|http://sharepoint/bcs/connection|None (currently not supported)|Read|
-|http://sharepoint/search|Search|QueryAsUserIgnoreAppPrincipal|
-|http://sharepoint/projectserver|ProjectAdmin |Manage|
-|http://sharepoint/projectserver/projects|Projects|Read, Write|
-|http://sharepoint/projectserver/projects/project|Project|Read, Write|
-|http://sharepoint/projectserver/enterpriseresources|ProjectResources|Read, Write|
-|http://sharepoint/projectserver/statusing|ProjectStatusing|SubmitStatus|
-|http://sharepoint/projectserver/reporting|ProjectReporting|Read|
-|http://sharepoint/projectserver/workflow|ProjectWorkflow|Elevate|
-|http://sharepoint/social/tenant|AllProfiles|Read, Write, Manage|
-|http://sharepoint/social/core|Social|Read, Write, Manage|
-|http://sharepoint/social/microfeed|Microfeed|Read, Write, Manage|
-|http://sharepoint/taxonomy|TermStore|Read, Write|
+|                       Scope URI                        |          Scope alias           |       Available rights        |
+| :----------------------------------------------------- | :----------------------------- | :---------------------------- |
+| `https://sharepoint/content/sitecollection`            | Site                           | Read, Write, Manage           |
+| `https://sharepoint/content/sitecollection/web`        | Web                            | Read, Write, Manage           |
+| `https://sharepoint/content/sitecollection/web/list`   | List                           | Read, Write, Manage           |
+| `https://sharepoint/content/tenant`                    | AllSites                       | Read, Write, Manage           |
+| `https://sharepoint/bcs/connection`                    | None (currently not supported) | Read                          |
+| `https://sharepoint/search`                            | Search                         | QueryAsUserIgnoreAppPrincipal |
+| `https://sharepoint/projectserver`                     | ProjectAdmin                   | Manage                        |
+| `https://sharepoint/projectserver/projects`            | Projects                       | Read, Write                   |
+| `https://sharepoint/projectserver/projects/project`    | Project                        | Read, Write                   |
+| `https://sharepoint/projectserver/enterpriseresources` | ProjectResources               | Read, Write                   |
+| `https://sharepoint/projectserver/statusing`           | ProjectStatusing               | SubmitStatus                  |
+| `https://sharepoint/projectserver/reporting`           | ProjectReporting               | Read                          |
+| `https://sharepoint/projectserver/workflow`            | ProjectWorkflow                | Elevate                       |
+| `https://sharepoint/social/tenant`                     | AllProfiles                    | Read, Write, Manage           |
+| `https://sharepoint/social/core`                       | Social                         | Read, Write, Manage           |
+| `https://sharepoint/social/microfeed`                  | Microfeed                      | Read, Write, Manage           |
+| `https://sharepoint/taxonomy`                          | TermStore                      | Read, Write                   |
 
 ## Redirect URIs and a sample redirect page
 

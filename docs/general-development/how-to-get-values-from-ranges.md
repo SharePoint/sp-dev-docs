@@ -1,5 +1,6 @@
 ---
 title: Get values from ranges
+description: "Excel Web Services exposes four methods for getting values from an Excel workbook: GetCell, GetCellA1, GetRange, and GetRangeA1."
 ms.date: 09/25/2017
 keywords: get range,how to,howdoi,howto
 f1_keywords:

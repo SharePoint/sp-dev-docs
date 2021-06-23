@@ -1,5 +1,6 @@
 ---
 title: Create an OData data service for use as a BCS external system
+description: Learn how to create an Internet-addressable WCF service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7d7b3aa6-85b7-400d-8ea5-50bebac56a1d
