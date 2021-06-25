@@ -71,4 +71,4 @@ Permissions migration is performed using the DeploymentRoleAssignments object wi
 
 
 >[!NOTE]
->The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
+>The **Migration API** is not available for users of Office 365 operated by 21Vianet in China.
