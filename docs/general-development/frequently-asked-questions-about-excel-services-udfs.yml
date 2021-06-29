@@ -1,6 +1,7 @@
 ### YamlMime:FAQ
 metadata:
   title: Frequently Asked Questions About Excel Services UDFs
+  description: Here are some frequently asked questions about Excel Services user-defined functions (UDFs).
   ms.date: 09/25/2017
   keywords: faqs
   f1_keywords:
@@ -43,7 +44,7 @@ sections:
         answer: |
           Yes. For an example, see the following UDF sample code. Also see  [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md).
 
-          ```cs
+          ```csharp
           using System;
           using System.Collections.Generic;
           using System.Text;
