@@ -1,10 +1,11 @@
 ---
 title: "SPO Migration API: Migrating shared files and folders"
+description: "Migrating shared files and folders using item references."
+ms.date: 06/29/2021
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 ms.topic: article
-description: "Migrating shared files and folders using item references."
 --- 
 
 
