@@ -1,12 +1,10 @@
 ---
 title: Search configuration in the SharePoint Add-in model
+description: The approach you take to configure search is different in the new SharePoint Add-in model than it was with Full Trust Code.
 ms.date: 05/20/2020
 localization_priority: Normal
 ---
-Search configuration in the SharePoint Add-in model
-===================================================
-
-## Summary
+# Search configuration in the SharePoint Add-in model
 
 The approach you take to configure search is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint Server-side Object Model was used to configure search, and deployed via SharePoint Solutions.
 
@@ -18,11 +16,11 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 
 - Use the SharePoint Client-side Object Model (CSOM) API to configure search whenever possible by importing and exporting search configuration settings.
 - Not all search configuration settings are currently available via the SharePoint CSOM API.
-	+ See the [Export and import customized search configuration settings in SharePoint Server 2013 (TechNet Article)](https://technet.microsoft.com/library/jj871675.aspx#BKMK_2) for a list of search configuration settings that can be exported and imported.
-	+ If a search configuration setting is not able to be set using the CSOM then the Administration user interface is required to set configuration values.
+  - See the [Export and import customized search configuration settings in SharePoint Server 2013 (TechNet Article)](https://technet.microsoft.com/library/jj871675.aspx#BKMK_2) for a list of search configuration settings that can be exported and imported.
+  - If a search configuration setting is not able to be set using the CSOM then the Administration user interface is required to set configuration values.
 - The SharePoint REST API is not capable (at this time) of importing or exporting search configuration settings.
 
-**Getting started**
+### Getting started
 
 The following sample demonstrates how to import and export search settings between SharePoint tenants, site collections and sites.
 

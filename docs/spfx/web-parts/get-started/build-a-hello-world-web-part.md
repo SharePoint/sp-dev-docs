@@ -179,7 +179,7 @@ This property definition is used to define custom property types for your web pa
 
 #### Web part render method
 
-The DOM element where the web part should be rendered is available in the `render()` method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any:
+The DOM element where the web part should be rendered is available in the `render()` method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV.
 
 ```typescript
 public render(): void {
@@ -297,10 +297,21 @@ Let's now add a few more properties to the property pane: a checkbox, a drop-dow
     }
     ```
 
-1. After you add your properties to the web part properties, you can now access the properties in the same way you accessed the `description` property earlier:
+1. After you add your properties to the web part properties, you can now access the properties in the same way you accessed the `description` property earlier.
+
+    Locate the following line:
+
+    ```typescript
+    <p class="${ styles.description }">${escape(this.properties.description)}</p>
+    ```
+
+    Add the following immediately after the previously mentioned line:
 
     ```typescript
     <p class="${ styles.description }">${escape(this.properties.test)}</p>
+    <p class="${ styles.description }">${this.properties.test1}</p>
+    <p class="${ styles.description }">${escape(this.properties.test2)}</p>
+    <p class="${ styles.description }">${this.properties.test3}</p>
     ```
 
     To set the default value for the properties, you need to update the web part manifest's `properties` property bag.

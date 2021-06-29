@@ -27,7 +27,7 @@ The operation involves two steps:
 
 First, get a list of sites and subsites that you want to update. The sample shows how to do this by using the search functionality, but other options include reading from a site directory, or providing a management UI where administrators can specify the list. The following example shows you how to use search functionality to generate the list.
 
-```cs
+```csharp
 // Get a list of sites. Search is one way to get this list, an alternative can be a site directory.
 List<SiteEntity> sites = cc.Web.SiteSearchScopedByUrl("https://bertonline.sharepoint.com");
 
@@ -62,7 +62,7 @@ After you select a site for processing, you can use OfficeDevPnP.Core methods to
 
 The sample uses a pattern that leverages the web property bag to store information about the current settings. The code first reads the web property bag values and then takes an action that is appropriate for each value.
 
-```cs
+```csharp
 // Verify that you have a property bag entry.
 string themeName = cc.Web.GetPropertyBagValueString(BRANDING_THEME, "");
 
@@ -98,7 +98,7 @@ if (!String.IsNullOrEmpty(themeName))
 
 The code that then updates the theme is straightforward and is based on OfficeDevPnP.Core methods.
 
-```cs
+```csharp
 string themeRoot = Path.Combine(AppRootPath, String.Format(@"Themes\{0}", themeName));
 string spColorFile = Path.Combine(themeRoot, string.Format("{0}.spcolor", themeName));
 string spFontFile = Path.Combine(themeRoot, string.Format("{0}.spfont", themeName));
@@ -195,7 +195,7 @@ SharePoint .master pages require that you use content placeholders, which render
 
 If you remove one of the content placeholders listed in Table 2 from a SharePoint .master page, SharePoint will throw an error. You can add a content placeholder with hidden visibility, which hides the content from end users.
 
-For more information, see [Windows SharePoint Services Default Master Pages](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-services/ms467402(v=office.12)) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](https://support.office.com/article/Working-with-content-placeholder-controls-d8b87b85-d1ef-409d-a5c7-044890f89288?CorrelationId=517ec37c-89ef-40d9-b70e-54aa63ac994f&amp;ui=en-US&amp;rs=en-US&amp;ad=US).
+For more information, see [Windows SharePoint Services Default Master Pages](/previous-versions/office/developer/sharepoint-services/ms467402(v=office.12)) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](https://support.office.com/article/Working-with-content-placeholder-controls-d8b87b85-d1ef-409d-a5c7-044890f89288?CorrelationId=517ec37c-89ef-40d9-b70e-54aa63ac994f&amp;ui=en-US&amp;rs=en-US&amp;ad=US).
 
 Default SharePoint master pages such as seattle.master and oslo.master include many more content placeholders than SharePoint requires. For example, these master pages include `<SharePoint:Themes runat="server">` and `<SharePoint.CssRegistration runat="server">` controls.
 
@@ -214,7 +214,7 @@ SharePoint Online introduces new master page markup for the **Suite Navigation**
 
 Generally, we recommend that you use the [UserCustomAction](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.usercustomaction.aspx) class to add or remove links and other elements. This is a variant of SharePoint using the [CustomAction](https://msdn.microsoft.com/library/office/ms460194.aspx) element, which you might recognize as part of the feature framework if you're familiar with the full trust code model. Although the **CustomAction** element and feature framework provisioning pattern are not specifically supported in the client-side object model (CSOM), the same location identifiers available to the **CustomAction** element can be used in CSOM code.
 
-```cs
+```csharp
 <CustomAction
   RequiredAdmin = "Delegated | Farm | Machine"
   ControlAssembly = "Text"
@@ -266,7 +266,7 @@ After you create a web part page, add a Script Editor web part to an available w
 
 You can use the [UserCustomAction](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.usercustomaction.aspx) class and property bag entries to customize the settings menu of any SharePoint site, as shown in the following code example.
 
-```cs
+```csharp
 public void AddCustomActions(ClientContext clientContext)
 {
     // Add a site settings link if it doesn't already exist.

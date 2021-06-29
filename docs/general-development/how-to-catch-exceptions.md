@@ -1,5 +1,6 @@
 ---
 title: Catch exceptions
+description: You place the sections of code that might throw exceptions in a try block and place code that handles exceptions in a catch block. The order of catch statements is important. When an exception occurs, it is passed up the stack and each catch block is given the opportunity to handle it.
 ms.date: 09/25/2017
 keywords: errors,how to,howdoi,howto
 f1_keywords:
@@ -18,7 +19,7 @@ You place the sections of code that might throw exceptions in a try block and pl
     
 
 
-```cs
+```csharp
 
 catch (SoapException e)
 {
@@ -41,7 +42,7 @@ End Try
 If no type-specific catch block exists, the exception is caught by a general catch block, if one exists. For example, you can catch general exceptions by adding the following code:
 
 
-```cs
+```csharp
 
 catch (Exception e)
 {
@@ -63,7 +64,7 @@ You place catch blocks targeted to specific types of exceptions before a general
 ## Example
 
 
-```cs
+```csharp
 
 using System;
 using System.Text;

@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 06/16/2020
+ms.date: 06/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,6 +11,9 @@ More complex SharePoint Framework client-side web parts likely have many propert
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
+
+> [!WARNING]
+> SPFx solutions targetting SharePoint Server 2016 are limited to setting only a single web part property as a preconfigured entry. For more information, see [issue #5260](https://github.com/SharePoint/sp-dev-docs/issues/5260).
 
 ## Web part preconfigured entries
 
@@ -55,8 +58,8 @@ Each item in the `preconfiguredEntries` array consists of several properties. Th
 |      Property name       |    Value type    | Required |                                                                                                                                                                                                                                 Purpose                                                                                                                                                                                                                                  |                                                          Sample value                                                          |
 | :----------------------- | :--------------- | :------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
 | `title`                    | ILocalizedString |   yes    | The web part title that is displayed in the toolbox.                                                                                                                                                                                                                                                                                                                                                                                                                     | `"title": { "default": "Weather", "nl-nl": "Weerbericht" }`                                                                    |
-| `description`              | ILocalizedString |   yes    | The web part description that is displayed in the toolbox tooltips.                                                                                                                                                                                                                                                                                                                                                                                                      | `"description": { "default": "Shows weather in the given location", "nl-nl": "Toont weerbericht voor de opgegeven locatie" } ` |
-| `officeFabricIconFontName` | string           |    no    | The icon for the web part that is displayed in the toolbox. Its value must be one of the [Office UI Fabric icon names](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons). If this property has a value, the `iconImageUrl` property is ignored.                                                                                                                                                                                                        | `"officeFabricIconFontName": "Sunny"`                                                                                          |
+| `description`              | ILocalizedString |   yes    | The web part description that is displayed in the toolbox tooltips.                                                                                                                                                                                                                                                                                                                                                                                                      | `"description": { "default": "Shows weather in the given location", "nl-nl": "Toont weerbericht voor de opgegeven locatie" }` |
+| `officeFabricIconFontName` | string           |    no    | The icon for the web part that is displayed in the toolbox. Its value must be one of the [Office UI Fabric icon names](https://developer.microsoft.com/fluentui#/styles/web/icons). If this property has a value, the `iconImageUrl` property is ignored.                                                                                                                                                                                                        | `"officeFabricIconFontName": "Sunny"`                                                                                          |
 | `iconImageUrl`             | string           |    no    | The icon for the web part that is displayed in the toolbox and is represented by an image URL. The image at the URL must be exactly 40x28 px. If the `officeFabricIconName` property doesn't have a value, this property must have a value.                                                                                                                                                                                                                           | `"iconImageUrl": "https://cdn.contoso.com/weather.png"`                                                                        |
 | `groupId`                  | string           |   yes    | The group ID to determine which modern group contains the web part in a modern site page. The SharePoint Framework reserves group IDs for [predefined groups](#predefined-modern-groups). The developer can pick one from those groups. If the developer fills an ID not in the predefined groups, it falls back to **Other** group.                                                                                                                                     | `"groupId": "1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489"`                                                                            |
 | `group`                    | ILocalizedString |    no    | The group name in the web part picker to contain the web part in the classic page. If no value is provided, the web part is displayed in the **Miscellaneous** group.                                                                                                                                                                                                                                                                                                    | `"group": { "default": "Content", "nl-nl": "Inhoud" }`                                                                         |
@@ -507,7 +510,7 @@ Imagine that another group of users often uses your gallery web part to show doc
 
 1. When you open the web part toolbox to add the web part to the canvas, you see that there are two web parts for you to choose from.
 
-    ![Web part toolbox showing the preconfigured version of the web part](../../../images/preconfiguredentries-multiple-web-parts-toolbox.png)
+    ![Web part toolbox showing the preconfigured version of two web parts](../../../images/preconfiguredentries-multiple-web-parts-toolbox.png)
 
 1. After adding the **Recent documents** web part to the page, it works immediately by using its specific preconfigured settings.
 
@@ -575,4 +578,4 @@ Depending on how you build your web part, it could be possible that the web part
 
 1. When you open the web part toolbox to add the web part to the canvas, you see that there are now three web parts that users can choose from.
 
-    ![Web part toolbox showing the preconfigured version of the web part](../../../images/preconfiguredentries-three-configurations-toolbox.png)
+    ![Web part toolbox showing the preconfigured version of three web parts](../../../images/preconfiguredentries-three-configurations-toolbox.png)

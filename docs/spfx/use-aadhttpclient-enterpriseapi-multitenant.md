@@ -20,7 +20,7 @@ Start with creating a multi-tenant enterprise API secured with Azure Active Dire
 
 In the [Azure portal](https://ms.portal.azure.com/), create a new **Function App**.
 
-> For more information on creating Function Apps in Azure, see the [Create a function app from the Azure portal](https://docs.microsoft.com/azure/azure-functions/functions-create-function-app-portal) help article.
+> For more information on creating Function Apps in Azure, see the [Create a function app from the Azure portal](/azure/azure-functions/functions-create-function-app-portal) help article.
 
 In the Function App, create new HTTP-triggered function. In this example, you'll build it using C#, but there's no restriction with regard to which programming language you can use.
 
@@ -38,7 +38,7 @@ To confirm your settings and create the function, select the **Create Function**
 
 Once the function is created, replace its contents with the following snippet:
 
-```cs
+```csharp
 using System.Net;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)

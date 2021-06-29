@@ -71,7 +71,7 @@ In this example,  _args [1]_ is **MyParam**, **args [2]** is _28_ and _GetSnapsh
 
 1. Following is the signature for the **SetCellA1** method in Excel Web Services:
 
-    ```cs
+    ```csharp
       public void SetCellA1 (
     string sessionId,
     string sheetName,

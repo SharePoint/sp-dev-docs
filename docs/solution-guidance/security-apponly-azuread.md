@@ -8,7 +8,6 @@ ms.author: vesaj
 ms.topic: sharepoint
 localization_priority: normal
 ---
-
 # Granting access via Azure AD App-Only
 
 When using SharePoint Online you can define applications in Azure AD and these applications can be granted permissions to SharePoint, but also to all the other services in Office 365. This model is the preferred model in case you’re using SharePoint Online, if you’re using SharePoint on-premises you have to use the SharePoint Only model via based Azure ACS as described in [here](security-apponly-azureacs.md).
@@ -59,7 +58,7 @@ Param(
 
    [Parameter(Mandatory=$true)]
    [DateTime]$StartDate,
-   
+
    [Parameter(Mandatory=$true)]
    [DateTime]$EndDate,
 
@@ -73,7 +72,7 @@ Param(
 # DO NOT MODIFY BELOW
 
 function CreateSelfSignedCertificate(){
-    
+
     #Remove and existing certificates with the same common name from personal and root stores
     #Need to be very wary of this as could break something
     if($CommonName.ToLower().StartsWith("cn="))
@@ -86,7 +85,7 @@ function CreateSelfSignedCertificate(){
     {
         if($Force)
         {
-        
+
             foreach($c in $certs)
             {
                 remove-item $c.PSPath
@@ -103,7 +102,7 @@ function CreateSelfSignedCertificate(){
     $key = new-object -com "X509Enrollment.CX509PrivateKey.1"
     $key.ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
     $key.KeySpec = 1
-    $key.Length = 2048 
+    $key.Length = 2048
     $key.SecurityDescriptor = "D:PAI(A;;0xd01f01ff;;;SY)(A;;0xd01f01ff;;;BA)(A;;0x80120089;;;NS)"
     $key.MachineContext = 1
     $key.ExportPolicy = 1 # This is required to allow the private key to be exported
@@ -144,7 +143,7 @@ function ExportPFXFile()
         $Password = Read-Host -Prompt "Enter Password to protect private key" -AsSecureString
     }
     $cert = Get-ChildItem -Path Cert:\LocalMachine\my | where-object{$_.Subject -eq "CN=$CommonName"}
-    
+
     Export-PfxCertificate -Cert $cert -Password $Password -FilePath "$($CommonName).pfx"
     Export-Certificate -Cert $cert -Type CERT -FilePath "$CommonName.cer"
 }
@@ -171,7 +170,7 @@ if(CreateSelfSignedCertificate)
 }
 ```
 
-You will be asked to give a password to encrypt your private key, and both the .PFX file and .CER file will be exported to the current folder. 
+You will be asked to give a password to encrypt your private key, and both the .PFX file and .CER file will be exported to the current folder.
 
 Next step is registering an Azure AD application in the Azure Active Directory tenant that is linked to your Office 365 tenant. To do that, open the Office 365 Admin Center (https://admin.microsoft.com) using the account of a user member of the Tenant Global Admins group. Click on the "Azure Active Directory" link that is available under the "Admin centers" group in the left-side treeview of the Office 365 Admin Center. In the new browser's tab that will be opened you will find the [Microsoft Azure portal](https://portal.azure.com). If it is the first time that you access the Azure portal with your account, you will have to register a new Azure subscription, providing some information and a credit card for any payment need. But don't worry, in order to play with Azure AD and to register an Office 365 Application you will not pay anything. In fact, those are free capabilities. Once having access to the Azure portal, select the "Azure Active Directory" section and choose the option "App registrations". See the next figure for further details.
 
@@ -190,7 +189,7 @@ Now click on "API permissions" in the left menu bar, and click on the "Add a per
 	- Application permissions
 		- Sites
 			- Sites.FullControl.All
-			
+
 Click on the blue "Add permissions" button at the bottom to add the permissions to your application. The "Application permissions" are those granted to the application when running as App Only.
 
 ![granting permissions to azure ad application](media/apponly/azureadapponly4.png)
@@ -209,16 +208,16 @@ To confirm that the certificate was successfully registered, click on "Manifest"
       "type": "AsymmetricX509Cert",
       "usage": "Verify",
       "value": "<$base64Cert>",
-      "displayName": "CN=<$name of your cert>"      
+      "displayName": "CN=<$name of your cert>"
      }
   ],
 ```
 
 If you see a section looking somewhat similar to this, the certificate has been added successfully.
 
-In this sample the Sites.FullControl.All application permission require admin consent in a tenant before it can be used. In order to do this, click on "API permissions" in the left menu again. At the bottom you will see a section "Grant consent". Click on the "Grant admin consent for <organization name>" button and confirm the action by clicking on the "Yes" button that appears at the top.
+In this sample the Sites.FullControl.All application permission require admin consent in a tenant before it can be used. In order to do this, click on "API permissions" in the left menu again. At the bottom you will see a section "Grant consent". Click on the "Grant admin consent for {{organization name}}" button and confirm the action by clicking on the "Yes" button that appears at the top.
 
-![granting permissions to azure ad application](media/apponly/azureadapponly5.png)
+![granting API permissions to azure ad application](media/apponly/azureadapponly5.png)
 
 ## Using this principal with PnP PowerShell
 
@@ -300,12 +299,12 @@ $clientContext.ExecuteQuery()
 $clientContext.Web.Title
 ```
 
-## Using this principal in your application and make use of the Azure KeyVault to store the certificate and retrieve it using an Azure Function 
+## Using this principal in your application and make use of the Azure KeyVault to store the certificate and retrieve it using an Azure Function
 
-Add a [Managed Identity](https://docs.microsoft.com/azure/app-service/overview-managed-identity
-) to the Azure Function and give this identity access (GET permission on Secrets) to the [KeyVault](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references). 
+Add a [Managed Identity](/azure/app-service/overview-managed-identity
+) to the Azure Function and give this identity access (GET permission on Secrets) to the [KeyVault](/azure/app-service/app-service-key-vault-references).
 
-Below there is a slightly different call to the same GetAzureADAppOnlyAuthenticatedContext method where we pass an actual certificate instead of a path to the certificate. An extra function is added to retrieve to certificate from the KeyVault using the managed identity of the Azure Function, this retrieval is seamless and transparent since the 'magic' happens in the AzureServiceTokenProvider.  
+Below there is a slightly different call to the same GetAzureADAppOnlyAuthenticatedContext method where we pass an actual certificate instead of a path to the certificate. An extra function is added to retrieve to certificate from the KeyVault using the managed identity of the Azure Function, this retrieval is seamless and transparent since the 'magic' happens in the AzureServiceTokenProvider.
 
 ```csharp
 static void Main(string[] args)
@@ -343,12 +342,12 @@ internal static X509Certificate2 GetKeyVaultCertificate(string keyvaultName, str
     // Returning the certificate
     return new X509Certificate2(Convert.FromBase64String(secret.Result.Value));
 
-    // If you receive the following error when running the Function; 
-    // Microsoft.Azure.WebJobs.Host.FunctionInvocationException: 
+    // If you receive the following error when running the Function;
+    // Microsoft.Azure.WebJobs.Host.FunctionInvocationException:
     // Exception while executing function: NotificationFunctions.QueueOperation--->
-    // System.Security.Cryptography.CryptographicException: 
+    // System.Security.Cryptography.CryptographicException:
     // The system cannot find the file specified.at System.Security.Cryptography.NCryptNative.ImportKey(SafeNCryptProviderHandle provider, Byte[] keyBlob, String format) at System.Security.Cryptography.CngKey.Import(Byte[] keyBlob, CngKeyBlobFormat format, CngProvider provider)
-    // 
+    //
     // Please see https://stackoverflow.com/questions/31685278/create-a-self-signed-certificate-in-net-using-an-azure-web-application-asp-ne
     // Add the following Application setting to the AF "WEBSITE_LOAD_USER_PROFILE = 1"
 }
@@ -358,10 +357,11 @@ internal static X509Certificate2 GetKeyVaultCertificate(string keyvaultName, str
 
 ## Using this principal with the Pnp Modernization Scanner
 
-Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](https://docs.microsoft.com/sharepoint/dev/transform/modernize-scanner) to use this principal with the tool.
+Now you have created the Azure Active Directory Application Registration, proceed with [following the steps here](../transform/modernize-scanner.md) to use this principal with the tool.
 
 ## FAQ
 
 ### Can I use other means besides certificates for realizing app-only access for my Azure AD app?
+
 No, all other options are blocked by SharePoint Online and will result in an Access Denied message.
 

@@ -22,7 +22,7 @@ It is a Chrome extension developed by Microsoft to highlight guidance for optimi
 Whilst some of the items highlighted relate to existing out of the box functionality, we are working towards removing these components as there are better alternatives that provide a faster user experience. The biggest culprit is the use of structural navigation.
 The tool also highlights enhanced functionality e.g. Content Delivery Networks (CDNs), that have been made available by Microsoft to further optimize the end user experience. Please also see [Tune SharePoint Online Performance](https://aka.ms/spoperformance)
 
-What you will see is that between the Page Diagnostics tool and tuning guidance, they provide a high-level overview of what impacts performance whilst the details on this page take you deeper into how customizations should be built to avoid impacting a page's performance. 
+What you will see is that between the Page Diagnostics tool and tuning guidance, they provide a high-level overview of what impacts performance whilst the details on this page take you deeper into how customizations should be built to avoid impacting a page's performance.
 
 <a name="bk_antiPatterns"> </a>
 
@@ -94,9 +94,9 @@ The following sections provide performance guidance for achieving this goal.
 
 ### Disable unnecessary features in classic portals
 
-When the Publishing features are activated on a portal, both the Device Channels and the Search Engine Optimization (SEO) features are turned on with their default settings. The SEO feature is designed to boost search relevance and ranking in a publicly consumed portal. Since SharePoint Online no longer offers public websites, this feature is no longer required. It does, however, still add additional costs to your page rendering. 
+When the Publishing features are activated on a portal, both the Device Channels and the Search Engine Optimization (SEO) features are turned on with their default settings. The SEO feature is designed to boost search relevance and ranking in a publicly consumed portal. Since SharePoint Online no longer offers public websites, this feature is no longer required. It does, however, still add additional costs to your page rendering.
 
-The Device Channels feature was originally designed to facilitate mobile rendering of Publishing Portals, however, much of this functionality has been supplanted by modern features like the Mobile Apps and the Modern UI. If you have not designed custom mobile masterpages for your portal, this feature should be disabled. Similar to the SEO feature, it adds additional cost and complexity to the server rendering of the page, which will ultimately degrade performance. 
+The Device Channels feature was originally designed to facilitate mobile rendering of Publishing Portals, however, much of this functionality has been supplanted by modern features like the Mobile Apps and the Modern UI. If you have not designed custom mobile masterpages for your portal, this feature should be disabled. Similar to the SEO feature, it adds additional cost and complexity to the server rendering of the page, which will ultimately degrade performance.
 
 Both of these features are hidden from the site UI, so they must be deactivated with code. See the [PnP PowerShell](https://aka.ms/sppnp-powershell) script at the bottom of this section to forcibly disable these features:
 
@@ -153,9 +153,9 @@ Consider using [Azure Application Insights](https://azure.microsoft.com/blog/und
 
 The client browser can have a significant impact on the performance of the client-side web application in terms of actual performance and available functionality.
 
-In general, you should target the most up-to-date version of modern browsers that are compatible with your desktop operating system. 
+In general, you should target the most up-to-date version of modern browsers that are compatible with your desktop operating system.
 
-It is common for a large enterprise to have at least one web-based Line-of-Business (LOB) application that still requires the use of a legacy browser. However, that constraint should not hinder the forward progress of new web applications. Design new client-side web applications to take advantage of the improved performance and functionality of modern browsers.  
+It is common for a large enterprise to have at least one web-based Line-of-Business (LOB) application that still requires the use of a legacy browser. However, that constraint should not hinder the forward progress of new web applications. Design new client-side web applications to take advantage of the improved performance and functionality of modern browsers.
 
 When dealing with a legacy browser constraint:
 
@@ -171,7 +171,7 @@ For the latest Office 365 browser requirements, see [Which browsers work with Of
 
 The client environment and the network topology that connects the client to the server can have a significant impact on the performance of client-side web applications.
 
-In the ideal scenario, the client environment is comprised of up-to-date client machines running modern browsers, and is connected to the server via a network that has ample bandwidth and low latency. In reality, you will be faced with a less-than-ideal scenario, and your web application may lack the political currency necessary to drive immediate change. 
+In the ideal scenario, the client environment is comprised of up-to-date client machines running modern browsers, and is connected to the server via a network that has ample bandwidth and low latency. In reality, you will be faced with a less-than-ideal scenario, and your web application may lack the political currency necessary to drive immediate change.
 
 As such, tailor the initial design of your client-side web application to adhere to the present constraints, with a plan to take advantage of client environment improvements as they are deployed. In such a scenario, you will eventually encounter a mix of client machines, so ensure that your client-side web application can detect client capabilities at run-time and adjust its behavior accordingly.
 
@@ -198,7 +198,7 @@ The proper management of client-side data request traffic is critical to the per
 	- For static content, or content that is updated infrequently, like site navigation, consider writing this content to a JSON file and serving it from a CDN.
 	- To reduce costs at the middle-tier, clients can also cache the responses to LocalStorage.
 
-For additional information, see [Caching](https://docs.microsoft.com/azure/architecture/best-practices/caching).
+For additional information, see [Caching](/azure/architecture/best-practices/caching).
 
 #### Call the server (or other back-end data source) only when a cache miss occurs
 
@@ -211,10 +211,10 @@ For additional information, see [Caching](https://docs.microsoft.com/azure/archi
 - Strip all request-specific packaging layers from the response.
 - Extract the **core** data results and convert into a minimal, request-independent JSON representation:
 	- A minimal representation requires less storage within the (finite) client-side cache.
-	- A request-independent representation decouples the data from its data source and request semantics; this allows the data source to be easily changed (static, mock, live) as the solution is developed. 
+	- A request-independent representation decouples the data from its data source and request semantics; this allows the data source to be easily changed (static, mock, live) as the solution is developed.
 	- JSON enables the use of JavaScript objects to which custom client-side display controls can easily bind; this also serves to define the working data contract between the UX and Data teams.
 
-#### Store the data response in a cache 
+#### Store the data response in a cache
 
 - Store the JSON representation of the data response in the cache.
 	- Use a middle-tier cache for shared data (for example, Global Menu).
@@ -223,9 +223,9 @@ For additional information, see [Caching](https://docs.microsoft.com/azure/archi
 - Be sure to store **No results** as well because it is a valid data response.
 - Ensure cached data is available across all pages and components of the client-side web application.
 
-#### Leverage the Client-Side Data Access Layer Framework 
+#### Leverage the Client-Side Data Access Layer Framework
 
-The Client-Side Data Access Layer Framework is described later in this article, and implements the patterns described earlier. 
+The Client-Side Data Access Layer Framework is described later in this article, and implements the patterns described earlier.
 
 Treat the Data Access Layer as a core component of your overall client-side framework, and ensure that it is used by all client-side web applications for consistency and performance.
 
@@ -235,7 +235,7 @@ Treat the Data Access Layer as a core component of your overall client-side fram
 
 #### Some client-side data requests can negatively impact the SharePoint server severely
 
-- Avoid the use of client-side CAML queries, especially those that would target the legacy Lists (SOAP) web service. 
+- Avoid the use of client-side CAML queries, especially those that would target the legacy Lists (SOAP) web service.
 - Client-side CAML queries generally bypass all server-side caching mechanisms, which results in negative server performance under heavy loads.
 
 If you must use CAML queries, observe the following guidelines:
@@ -244,7 +244,7 @@ If you must use CAML queries, observe the following guidelines:
 - Define the simplest, most-efficient CAML query possible, and verify its performance.
 - Leverage the Client-Side Data Access Layer Framework (described later in this article) to cache the data response.
 
-In general, use SharePoint REST APIs for client-side data requests. When performing data/content aggregation, use the SharePoint Search REST APIs. 
+In general, use SharePoint REST APIs for client-side data requests. When performing data/content aggregation, use the SharePoint Search REST APIs.
 
 #### Optimize your search queries to minimize execution time and response sizes
 
@@ -263,19 +263,19 @@ In general, use SharePoint REST APIs for client-side data requests. When perform
 
 - The SharePoint client library allows a developer to specify the fields needed for their application and return only this data. This reduces costs at all layers.
 
-For code samples demonstrating this technique, please see [Complete basic operations using SharePoint client library code](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code#retrieve-only-selected-properties-of-a-website)
+For code samples demonstrating this technique, see [Retrieve only selected properties of a website](../sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md#retrieve-only-selected-properties-of-a-website)
 
 #### Be mindful of aggregate request volumes
 
-- Client-side REST requests to SharePoint Online are now subject to request throttling and even request blocking. 
-- Pay attention to the HTTP response codes/warnings of your data requests and alter your data request behavior accordingly to avoid data service disruptions in your client-side web applications. 
+- Client-side REST requests to SharePoint Online are now subject to request throttling and even request blocking.
+- Pay attention to the HTTP response codes/warnings of your data requests and alter your data request behavior accordingly to avoid data service disruptions in your client-side web applications.
 
-For details about how to avoid being throttled or blocked, see [Avoid getting throttled or blocked in SharePoint Online](../general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md). 
+For details about how to avoid being throttled or blocked, see [Avoid getting throttled or blocked in SharePoint Online](../general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md).
 
 #### Batch REST request traffic
 
-- REST request traffic can be now be optimized via OData Batching.  
-- For more information, see [OData Batch Request Tutorial](http://www.odata.org/getting-started/advanced-tutorial/#batch) and the [OData Batch Request Protocol Spec](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313). 
+- REST request traffic can be now be optimized via OData Batching.
+- For more information, see [OData Batch Request Tutorial](http://www.odata.org/getting-started/advanced-tutorial/#batch) and the [OData Batch Request Protocol Spec](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752313).
 - Alternatively, consider using the Office Development Patterns and Practices [JavaScript Core (PnP-JS-Core)](https://github.com/SharePoint/PnP-JS-Core) component, which also provides a [wrapper](https://github.com/SharePoint/PnP-JS-Core/wiki/Batching) to encapsulate Batch Request functionality.
 
 <a name="bk_freeShipping"> </a>
@@ -286,7 +286,7 @@ Make use of built-in functionality that can automatically deliver data to the cl
 
 - Use the global JavaScript variable named **spPageContextInfo**, if available.
 	- It is included in the global JavaScript namespace of every **classic** SharePoint page.
-	- It contains common context information needed by the client-side environment upon page loads. 
+	- It contains common context information needed by the client-side environment upon page loads.
 	- There is no need to make a call to SharePoint to get this data when the page loads.
 
 - Use preloaded information from SharePoint Framework, if you are using modern pages and implementing your customization by using SharePoint Framework.
@@ -294,7 +294,7 @@ Make use of built-in functionality that can automatically deliver data to the cl
 - Use JavaScript files to store configuration settings used by the client-side web application.
 	- Place these files in your resource file location (for example, SharePoint Style Library).
 	- Reference these files as a JavaScript resource file in your client-side web application.
-	- Browsers automatically deliver these files to the client environment when the page loads; furthermore, each is stored/served from the local internet files cache. 
+	- Browsers automatically deliver these files to the client environment when the page loads; furthermore, each is stored/served from the local internet files cache.
 	- There is no need to make a call to SharePoint to get this data when the page loads.
 
 <a name="bk_resourceFiles"> </a>
@@ -312,7 +312,7 @@ Use resource files effectively to improve the performance of your client-side we
 
 - Leverage dynamic file requests to defer/load optional JavaScript files only when necessary (that is, Lazy Load).
 
-- Ensure that JavaScript files are requested in the proper order; implement logic to ensure required functionality is present. 
+- Ensure that JavaScript files are requested in the proper order; implement logic to ensure required functionality is present.
 
 - Leverage Image Sprites to reduce the number of image files that need to be downloaded.
 
@@ -331,7 +331,7 @@ A Content Delivery Network (CDN) is a geo-dispersed network that allows an end-u
 	- [Office 365 Public/Private CDN](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn)
 	- SharePoint Portal Style Library (default option when a CDN is not used)
 
-> [!NOTE] 
+> [!NOTE]
 > The [Office 365 private CDN capability](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn) has a publishing feature auto URL rewriting to CDN URLs. So after private CDN is enabled, SharePoint returns your publishing pages with links pointing to your private CDN location without you as a developer having to build this. This applies to publishing pages, but also to data returned by the content by a search web part, the picture library slideshow, image fields in SPList REST queries, and SharePoint Image renditions. Your publishing portal can also combine both private and public CDN on the same portal.
 
 <a name="bk_ajax"> </a>
@@ -339,12 +339,12 @@ A Content Delivery Network (CDN) is a geo-dispersed network that allows an end-u
 ### Use AJAX
 
 Asynchronous JavaScript and Xml (AJAX) allows a client-side web application to execute background data requests in a way that does not require a full page load.
- 
-For emphasis, the **A** in AJAX stands for **asynchronous**; it is best to keep it that way. While it is possible to execute synchronous calls in AJAX, it is rarely a good idea to do so. 
+
+For emphasis, the **A** in AJAX stands for **asynchronous**; it is best to keep it that way. While it is possible to execute synchronous calls in AJAX, it is rarely a good idea to do so.
 
 Never perform synchronous AJAX calls; the browser blocks until the call completes, which results in a poor user experience.
 
-The need for a synchronous call usually arises due to an order dependency in the flow of data requests. Analyze the data request flow at design time, and eliminate (or at least reduce) the order dependency. Mitigate the impact of any dependencies that remain by chaining the success event handlers of asynchronous data requests. 
+The need for a synchronous call usually arises due to an order dependency in the flow of data requests. Analyze the data request flow at design time, and eliminate (or at least reduce) the order dependency. Mitigate the impact of any dependencies that remain by chaining the success event handlers of asynchronous data requests.
 
 <a name="bk_javaScript"> </a>
 
@@ -361,7 +361,7 @@ Extensive performance guidelines for JavaScript are outside the scope of this ar
 - Limit use of try/catch in critical code segments.
 - Use proper scope for variables.
 
-For in-depth guidelines about JavaScript performance: 
+For in-depth guidelines about JavaScript performance:
 
 - [JavaScript Patterns and Performance](javascript-patterns-and-performance.md)
 - [Office Dev PnP webcast – JavaScript performance considerations with SharePoint](https://developer.microsoft.com/office/blogs/javascript-performance-considerations-with-sharepoint)
@@ -398,7 +398,7 @@ The Client-Side Data Access Layer (DAL) Framework is a custom client-side JavaSc
 
 There are a number of client-side JavaScript Frameworks and Libraries that you can leverage to implement the DAL. Choose the one with which you are most familiar and adhere to the following tenets. Use the logical architecture proposed as a template for your implementation.
 
-The [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer) provides a working reference implementation of the Client-Side Data Access Layer (DAL) Framework. 
+The [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer) provides a working reference implementation of the Client-Side Data Access Layer (DAL) Framework.
 
 <a name="bk_dalTenets"> </a>
 
@@ -460,7 +460,7 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 
 2. The display component determines that it needs to request data to render.
 
-3. The display component requests its associated business data object (BDO) from the Business Data Manager. 
+3. The display component requests its associated business data object (BDO) from the Business Data Manager.
 	- Optionally, the display component displays a progress indicator while the request is in progress.
 
 4. The Business Data Manager computes the storage key and determines the storage options for the BDO.
@@ -477,9 +477,9 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 
 8. The Business Data Manager populates the BDO with the fresh data.
 
-9. The Business Data Manager asks the Storage Manager to store the BDO per the storage options. 
+9. The Business Data Manager asks the Storage Manager to store the BDO per the storage options.
 
-10. The Business Data Manager returns the BDO to the display component. 
+10. The Business Data Manager returns the BDO to the display component.
 
 11. The display component binds to the BDO and renders the data.
 

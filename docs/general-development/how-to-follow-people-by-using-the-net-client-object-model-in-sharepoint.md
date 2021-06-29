@@ -1,5 +1,6 @@
 ---
 title: Follow people by using the .NET client object model in SharePoint
+description: Learn how to work with Following People features by using the SharePoint .NET client object model.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
@@ -108,7 +109,7 @@ This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/libr
 
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;
@@ -221,7 +222,7 @@ The following code example gets the people who the current user is following, ge
     
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

@@ -59,7 +59,7 @@ None
 
 The following example uses the **Contains** element within a string that is assigned to the **Query** property to return the titles of items where the Conference column value begins with "Morning" and contains "discussion session". 
   
-```cs
+```csharp
 SPWeb mySite = SPControl.GetContextWeb(Context);
 SPList list = mySite.Lists["List_Name"];
 SPQuery query = new SPQuery();

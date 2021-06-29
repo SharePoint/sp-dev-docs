@@ -370,9 +370,13 @@ Now you're ready to deploy the solution to a SharePoint site and get the field a
 The process for publishing your app is identical among the different extension types.
 
 > [!NOTE]
+<<<<<<< HEAD
 > This was a relatively simple field customizer with functionality that could also have been achieved with [column formatting capability](/sharepoint/dev/declarative-customization/column-formatting). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
+=======
+> This was a relatively simple field customizer with functionality that could also have been achieved with [Use column formatting to customize SharePoint](../../../declarative-customization/column-formatting.md). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
+>>>>>>> 3aeaaa1b76406534f1a0c68530ffcdf70a828d26
 
 ## See also
 
-- [Build your first ListView Command Set extension](./building-simple-cmdset-with-dialog-api.md)
+- [Build your first ListView Command Set extension](building-simple-cmdset-with-dialog-api.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)

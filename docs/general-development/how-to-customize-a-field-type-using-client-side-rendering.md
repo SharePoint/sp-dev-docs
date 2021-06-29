@@ -1,5 +1,6 @@
 ---
 title: Customize a field type using client-side rendering
+description: Learn how to customize a field type by using the client-side rendering technology in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
@@ -11,6 +12,7 @@ localization_priority: Normal
 # Customize a field type using client-side rendering
 
 Learn how to customize a field type by using the client-side rendering technology in SharePoint.
+
 Client-side rendering provides a mechanism that you can use to produce your own output for a set of controls that are hosted in a SharePoint page. This mechanism enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of custom field types. In client-side rendering you can specify your own JavaScript resources and host them in the data storage options available to your farm solution, such as the _layouts folder.
 
 > [!IMPORTANT]
@@ -140,7 +142,7 @@ Figure 1 shows a view form with a custom-rendered field type.
     > [!NOTE]
     > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -42,7 +42,7 @@ There is a role assignment limit of 5,000 per security scope.
 When a library (or list) contains more than 100,000 items (files and folders or list items), you cannot break permissions inheritance on the list itself.  There is a limit of 100,000 items that can be updated or removed as a part of creating a new SharePoint security scope.
 
 If you are migrating a structure that has more than 100,000 children (such as files, folders, lists, or other object types), you need to restructure the migration by importing security in multiple phases to avoid exceeding this limit. Any VROOM invite, REST share link, or any other permission-modifying function call will trigger an HTTP 429 throttle if the threshold is reached. Permissions will not be updated. Unlike other throttles, waiting and trying again will not resolve the situation as you have reached a hard limit of 100,000.
-To learn more about the service limits in SharePoint for Microsoft 365, see [SharePoint Limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries).
+To learn more about the service limits in SharePoint for Microsoft 365, see [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries).
 
 ## Folders containing fewer than 100,000 items
 
@@ -65,7 +65,7 @@ In this example, at the source, break up the structure into four folders, A, B, 
 ![Hierarchy ABCD](../images/hierarchy-ABCD.png)
 
 >[!NOTE]
->There are other limits that must be considered during migration. See [SharePoint Limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries) for details.
+>There are other limits that must be considered during migration. See [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries) for details.
 
 ### Method 2: Create your destination layout to avoid exceeding limits
 

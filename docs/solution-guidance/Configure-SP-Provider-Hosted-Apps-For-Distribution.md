@@ -23,7 +23,7 @@ The Office Developer Tools for Visual Studio, version 12.0.31105, adds a NuGet p
 
 The way Visual Studio works is that it, or add-ins, typically contain a local copy of the NuGet package so that developers do not always have to be connected to the Internet to download the NuGet packages. The package that the tools include has an ID of **AppForSharePoint16WebToolkit**.
 
-When projects are committed to source control, typically the packages are not included as part of the commit because they can add a lot of extra storage space demands and unnecessarily increase the size of a package when sharing it with other developers. Therefore, one of the first tasks developers do after getting a copy of the project from source control is to run [NuGet package restore](https://docs.microsoft.com/nuget/consume-packages/package-restore).
+When projects are committed to source control, typically the packages are not included as part of the commit because they can add a lot of extra storage space demands and unnecessarily increase the size of a package when sharing it with other developers. Therefore, one of the first tasks developers do after getting a copy of the project from source control is to run [NuGet package restore](/nuget/consume-packages/package-restore).
 
 The challenge is that a package with the same ID does not exist in the NuGet package registry; there is no package with an ID of **AppForSharePoint16WebToolkit**. Instead, the exact same package was added to the NuGet package registry as [AppForSharePointWebToolkit](http://www.nuget.org/packages/AppForSharePointWebToolkit) (note the lack of the `16` in the ID).
 

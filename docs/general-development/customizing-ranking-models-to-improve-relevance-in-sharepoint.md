@@ -8,7 +8,7 @@ localization_priority: Priority
 ---
 # Customizing ranking models to improve relevance in SharePoint
 
-**APPLIES TO:** ![Applies to SharePoint Server 2013](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2013 ![Applies to SharePoint Server 2016](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2016 ![Applies to SharePoint Server 2019](https://docs.microsoft.com/sharepoint/sharepointserver/media/yes.png) 2019 ![Does not apply to SharePoint Online](https://docs.microsoft.com/sharepoint/sharepointserver/media/no.png) SharePoint Online in Microsoft 365
+**APPLIES TO:** ![Applies to SharePoint Server 2013](/sharepoint/sharepointserver/media/yes.png) 2013 ![Applies to SharePoint Server 2016](/sharepoint/sharepointserver/media/yes.png) 2016 ![Applies to SharePoint Server 2019](/sharepoint/sharepointserver/media/yes.png) 2019 ![Does not apply to SharePoint Online](/sharepoint/sharepointserver/media/no.png) SharePoint Online in Microsoft 365
 
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
 
@@ -264,7 +264,7 @@ Weight groups are also known as context. See  [Influencing the ranking of search
 
 ### Static
 
-The static rank feature ranks items based on numeric managed properties that are stored in the search index. The numeric managed properties used for relevance rank calculation in static rank features must be of type  [Integer](https://docs.microsoft.com/dotnet/api/system.int32) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the static rank feature.
+The static rank feature ranks items based on numeric managed properties that are stored in the search index. The numeric managed properties used for relevance rank calculation in static rank features must be of type  [Integer](/dotnet/api/system.int32) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the static rank feature.
 
 Before the static rank feature can be aggregated with other rank features, each static rank feature is preprocessed via a single transformation. Table 1 lists all supported transform functions.
 
@@ -296,7 +296,7 @@ Before the static rank feature can be aggregated with other rank features, each 
 
 The bucketed static rank feature ranks documents based on their file type and language. The definition of a bucketed static rank feature within a ranking model depends on whether the rank feature is part of a linear model or a neural network. The following examples apply only to linear models. For neural networks, the number of  `<Add>` attributes for each bucket must match the number of hidden nodes in the neural network.
 
-The managed properties used for relevance rank calculation in bucketed static rank features must be of type  [Integer](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/int) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the bucketed static rank feature.
+The managed properties used for relevance rank calculation in bucketed static rank features must be of type  [Integer](/dotnet/csharp/language-reference/keywords/int) and set to [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) or [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) in the search schema. You can't use multivalued managed properties in combination with the bucketed static rank feature.
 
 #### Example bucketed static rank feature definition for file type
 
@@ -543,7 +543,7 @@ Query properties is a ranking mechanism that populates additional information us
 
 ## Example 1: Basic ranking model with one linear stage containing a single static rank feature
 
-This ranking model assumes that the customer has created a managed property named **CustomRating**. The static rank feature requires **CustomRating** to be of [Integer](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/int) data type and to be configured as [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) or [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) in the search schema. For each document in the result set, the rank score produced by this ranking model is equal to the value of **CustomRating** for that document. The effect of this model is similar to sorting all search results, descending, with the **CustomRating** managed property.
+This ranking model assumes that the customer has created a managed property named **CustomRating**. The static rank feature requires **CustomRating** to be of [Integer](/dotnet/csharp/language-reference/keywords/int) data type and to be configured as [Sortable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Sortable.aspx) or [Refinable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Refinable.aspx) in the search schema. For each document in the result set, the rank score produced by this ranking model is equal to the value of **CustomRating** for that document. The effect of this model is similar to sorting all search results, descending, with the **CustomRating** managed property.
 
 ```xml
 <?xml version="1.0"?>
@@ -655,4 +655,4 @@ This ranking model with one linear stage contains these four rank features:
 - [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
 - [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
 - [Overview of search result ranking in SharePoint](https://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
-- [Create a custom ranking model by using the Ranking Model Tuning App](https://docs.microsoft.com/sharepoint/search/create-custom-ranking-model)
+- [Create a custom ranking model by using the Ranking Model Tuning App](/sharepoint/search/create-custom-ranking-model)

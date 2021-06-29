@@ -1,5 +1,6 @@
 ---
 title: Create an external content type from an OData source in SharePoint
+description: Learn how to use Visual Studio 2012 to discover a published OData source and create a reusable external content type for use in Business Connectivity Services (BCS) in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bc60ea49-c44e-4531-af62-06b8cf77d35d
@@ -121,7 +122,7 @@ Using the following code, you can access a data stream that the OData connector 
     
     
 
-```cs
+```csharp
 
 /*Invoke  Stream Accessor Method */
         internal void ExecuteStreamAccessorMethod(IEntityInstance entityInstance, string streamAccessorName)

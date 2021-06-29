@@ -1,10 +1,11 @@
 ---
 title: "SPO Migration API: Migrating shared files and folders"
+description: "Migrating shared files and folders using item references."
+ms.date: 06/29/2021
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 ms.topic: article
-description: "Migrating shared files and folders using item references."
 --- 
 
 
@@ -56,7 +57,7 @@ Do not migrate anonymous sharing links from the source; this is not useful as it
 ### Sharing with external users
 Before starting migration, you must ensure all users are provisioned in the customer tenant. For users external to the tenant (ie. from a different organization), provision them as B2B collaboration users in Azure Active Directory. This is done in the Azure portal following these steps: 
 
-- [Add Azure Active Directory B2B collaboration users in the Azure portal](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator). 
+- [Add Azure Active Directory B2B collaboration users in the Azure portal](/azure/active-directory/b2b/add-users-administrator). 
 
 Once the external users are provisioned, share files and folders with them during migration the same way as internal users.
 
@@ -71,4 +72,4 @@ Permissions migration is performed using the DeploymentRoleAssignments object wi
 
 
 >[!NOTE]
->The **Migration API** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
+>The **Migration API** is not available for users of Office 365 operated by 21Vianet in China.

@@ -23,7 +23,7 @@ Below table outlines the differences between both versions and provides guidelin
 
 CSOM feature | .NET Framework version | .NET Standard version | Guidelines
 -------------|------------------------|-----------------------|------------
-.NET supportability | .NET Framework 4.5+ | .NET Framework 4.6.1+, .NET Core 2.0+, Mono 5.4+ ([.NET docs](https://docs.microsoft.com/dotnet/standard/net-standard)) | It's recommended to use the CSOM for .NET Standard version for all your SharePoint Online CSOM developments
+.NET supportability | .NET Framework 4.5+ | .NET Framework 4.6.1+, .NET Core 2.0+, Mono 5.4+ ([.NET docs](/dotnet/standard/net-standard)) | It's recommended to use the CSOM for .NET Standard version for all your SharePoint Online CSOM developments
 Cross platform | No | Yes (can be used on any platform that support .NET Standard) | For cross platform, you have to use CSOM for .NET Standard
 On-Premises SharePoint support | Yes | No | The CSOM .NET Framework versions are still fully supported and being updated, so use those for on-premises SharePoint development
 Support for legacy authentication flows (so called cookie based auth using the `SharePointOnlineCredentials` class) | Yes | No | See the **Using modern authentication with CSOM for .NET Standard** chapter. Using Azure AD applications to configure authentication for SharePoint Online is the recommended approach

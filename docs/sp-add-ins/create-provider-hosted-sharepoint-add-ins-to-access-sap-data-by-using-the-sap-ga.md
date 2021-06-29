@@ -24,9 +24,9 @@ The following are the prerequisites to the procedures in this article:
     > Sign in to your Office 365 account (login.microsoftonline.com) to change the temporary password after the account is created.
 
 - **A SAP OData endpoint** with sample data in it. See the documentation for [SAP Gateway for Microsoft](https://help.sap.com/saphelp_nwgwpam_1/helpdata/en/b5/74d3ad2f33428193a32c09c351e0b3/frameset.htm).
-- **A basic familiarity with Azure AD.** See [Get started with Azure AD](https://docs.microsoft.com/azure/active-directory/get-started-azure-ad).
+- **A basic familiarity with Azure AD.** See [Get started with Azure AD](/azure/active-directory/get-started-azure-ad).
 - **A basic familiarity with creating SharePoint Add-ins.** See [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
-- **A basic familiarity with OAuth 2.0 in Azure AD**. See [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code) and its child topics.
+- **A basic familiarity with OAuth 2.0 in Azure AD**. See [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code) and its child topics.
 - **Code sample:** [SharePoint: Using the SAP Gateway to Microsoft in a SharePoint Add-in](https://code.msdn.microsoft.com/office/sharepoint-2013-using-the-0931abce)
 
 ## Understand authentication and authorization to SAP Gateway for Microsoft and SharePoint
@@ -41,7 +41,7 @@ The process involves an OAuth "flow" in which the application, which can be a Sh
 > [!IMPORTANT]
 > Azure Access Control (ACS), a service of Azure Active Directory (Azure AD), will be retired on November 7, 2018. This retirement does not impact the SharePoint Add-in model, which uses the `https://accounts.accesscontrol.windows.net` hostname (which is not impacted by this retirement). For more information, see [Impact of Azure Access Control retirement for SharePoint Add-ins](https://developer.microsoft.com/office/blogs/impact-of-azure-access-control-deprecation-for-sharepoint-add-ins).
 
-For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Azure AD, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Azure AD, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 For a similar description and a diagram of the flow for accessing SharePoint, see [the steps in the Context Token flow](context-token-oauth-flow-for-sharepoint-add-ins.md#context-token-flow-steps).
 
@@ -167,7 +167,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 1. Right-click the ASP.NET project and use the Visual Studio item adding process to add a new class file to the project named **AADAuthHelper.cs**.
 1. Add the following **using** statements to the file.
 
-    ```cs
+    ```csharp
     using Microsoft.IdentityModel.Clients.ActiveDirectory;
     using System.Configuration;
     using System.Web.UI;
@@ -175,13 +175,13 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Change the access keyword from **public** to **internal**, and add the **static** keyword to the class declaration.
 
-    ```cs
+    ```csharp
     internal static class AADAuthHelper
     ```
 
 1. Add the following fields to the class. These fields store information that your ASP.NET application uses to get access tokens from Azure AD.
 
-    ```cs
+    ```csharp
     private static readonly string _authority = ConfigurationManager.AppSettings["Authority"];
     private static readonly string _appRedirectUrl = ConfigurationManager.AppSettings["AppRedirectUrl"];
     private static readonly string _resourceUrl = ConfigurationManager.AppSettings["ResourceUrl"];
@@ -197,7 +197,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following property to the class. This property holds the URL to the Azure AD sign-in screen.
 
-    ```cs
+    ```csharp
     private static string AuthorizeUrl
     {
       get
@@ -213,7 +213,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following properties to the class. These cache the access and refresh tokens and check their validity.
 
-    ```cs
+    ```csharp
     public static Tuple<string, DateTimeOffset> AccessToken
     {
       get {
@@ -248,7 +248,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following methods to the class. These are used to check the validity of the authorization code and to obtain an access token from Azure AD by using either an authentication code or a refresh token.
 
-    ```cs
+    ```csharp
     private static bool IsAuthorizationCodeNotNull(string authCode)
     {
       return !string.IsNullOrEmpty(authCode);
@@ -281,7 +281,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following method to the class. It is called from the ASP.NET code-behind to obtain a valid access token before a call is made to get SAP data via SAP Gateway for Microsoft.
 
-    ```cs
+    ```csharp
     internal static void EnsureValidAccessToken(Page page)
     {
       if (IsAccessTokenValid)
@@ -316,14 +316,14 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
     ```
 
 > [!TIP]
-> The `AADAuthHelper` class has only minimal error handling. For a robust, production quality SharePoint Add-in, add more error handling as described in this MSDN node: [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+> The `AADAuthHelper` class has only minimal error handling. For a robust, production quality SharePoint Add-in, add more error handling as described in this MSDN node: [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 ### To create data model classes
 
 1. Create one or more classes to model the data that your add-in gets from SAP. In the continuing example, there is just one data model class. Right-click the ASP.NET project and use the Visual Studio item-adding process to add a new class file to the project named **Automobile.cs**.
 1. Add the following code to the body of the class:
 
-    ```cs
+    ```csharp
     public string Price;
     public string Brand;
     public string Model;
@@ -338,21 +338,21 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Open the Default.aspx.cs file, and add the following **using** statements.
 
-    ```cs
+    ```csharp
     using System.Net;
     using Newtonsoft.Json.Linq;
     ```
 
 1. Add a **const** declaration to the Default class whose value is the base URL of the SAP OData endpoint that the add-in will be accessing. The following is an example:
 
-    ```cs
+    ```csharp
     private const string SAP_ODATA_URL = @"https://<SAP_gateway_domain>.cloudapp.net:8081/perf/sap/opu/odata/sap/ZCAR_POC_SRV/";
     ```
 
 2. The Office Developer Tools for Visual Studio have added a **Page\_PreInit** method and a **Page\_Load** method. Comment out the code inside the **Page\_Load** method and comment out the whole **Page\_Init** method. This code is not used in this sample. (If your SharePoint Add-in is going to access SharePoint, restore this code. See [Add SharePoint access to the ASP.NET application (optional)](#add-sharepoint-access-to-the-aspnet-application-optional).)
 1. Add the following line to the top of the **Page_Load** method. This eases the process of debugging because your ASP.NET application is communicating with SAP Gateway for Microsoft using SSL (HTTPS), but your "localhost:port" server is not configured to trust the certificate of SAP Gateway for Microsoft. Without this line of code, you would get an invalid certificate warning before Default.aspx opens. Some browsers allow you to click past this error, but some will not let you open Default.aspx at all.
 
-    ```cs
+    ```csharp
     ServicePointManager.ServerCertificateValidationCallback = (s, cert, chain, errors) => true;
     ```
 
@@ -361,7 +361,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following code to the **Page_Load** method. The string you pass to the `GetSAPData` method is an OData query.
 
-    ```cs
+    ```csharp
     if (!IsPostBack)
     {
       GetSAPData("DataCollection?$top=3");
@@ -370,7 +370,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 
 1. Add the following method to the Default class. This method first ensures that the cache for the access token has a valid access token in it that has been obtained from Azure AD. It then creates an HTTP **GET** Request that includes the access token and sends it to the SAP OData endpoint. The result is returned as a JSON object that is converted to a .NET **List** object. Three properties of the items are used in an array that is bound to the **DataListView**.
 
-    ```cs
+    ```csharp
     private void GetSAPData(string oDataQuery)
     {
       AADAuthHelper.EnsureValidAccessToken(this);
@@ -444,7 +444,7 @@ The following procedure provides some basic guidance about how to do this, but w
 1. Open the Default.aspx.cs file and uncomment the `Page_PreInit` method. Also uncomment the code that the Office Developer Tools for Visual Studio added to the `Page_Load` method.
 1. If your SharePoint Add-in is going to access SharePoint data, you have to cache the SharePoint context token that is POSTed to the Default.aspx page when the add-in is launched in SharePoint. This is to ensure that the SharePoint context token is not lost when the browser is redirected following the Azure AD authentication. (You have several options for how to cache this context.) The Office Developer Tools for Visual Studio add a SharePointContext.cs file to the ASP.NET project that does most of the work. To use the session cache, you simply add the following code inside the `if (!IsPostBack)` block *before* the code that calls out to SAP Gateway for Microsoft.
 
-    ```cs
+    ```csharp
     if (HttpContext.Current.Session["SharePointContext"] == null)
     {
         HttpContext.Current.Session["SharePointContext"]
@@ -455,7 +455,7 @@ The following procedure provides some basic guidance about how to do this, but w
 1. The **SharePointContext.cs** file makes calls to another file that the Office Developer Tools for Visual Studio added to the project: TokenHelper.cs. This file provides most of the code needed to obtain and use access tokens for SharePoint. However, it does not provide any code for renewing an expired access token or an expired refresh token. Nor does it contain any token caching code. For a production quality SharePoint Add-in, you need to add such code. The caching logic in the preceding step is an example. Your code should also cache the access token and reuse it until it expires. When the access token is expired, your code should use the refresh token to get a new access token.
 1. Add the data calls to SharePoint by using either CSOM or REST. The following example is a modification of CSOM code that Office Developer Tools for Visual Studio adds to the **Page_Load** method. In this example, the code has been moved to a separate method and it begins by retrieving the cached context token.
 
-    ```cs
+    ```csharp
     private void GetSharePointTitle()
     {
         var spContext = HttpContext.Current.Session["SharePointContext"] as SharePointContext;
@@ -523,7 +523,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
 
 ### Publish the ASP.NET application to Azure and install the add-in to SharePoint
 
-1. There are several ways to publish an ASP.NET application to an Azure website. For more information, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-deploy-local-git).
+1. There are several ways to publish an ASP.NET application to an Azure website. For more information, see [Local Git Deployment to Azure App Service](/azure/app-service/app-service-deploy-local-git).
 1. In Visual Studio, right-click the SharePoint Add-in project and select **Package**. On the **Publish your add-in** page that opens, select **Package the add-in**. File Explorer opens to the folder with the add-in package.
 1. Sign in to Office 365 as a global administrator, and navigate to the organization add-in catalog site collection. (If there isn't one, create it. See [Use the Add-in Catalog to make custom business add-ins available for your SharePoint Online environment](https://support.office.com/article/Use-the-App-Catalog-to-make-custom-business-apps-available-for-your-SharePoint-Online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0?CorrelationId=40e9dc6b-213e-4496-8c5f-40ca27922fa1&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA102772362).)
 1. Upload the add-in package to the add-in catalog.

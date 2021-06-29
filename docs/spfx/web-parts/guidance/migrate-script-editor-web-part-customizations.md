@@ -122,7 +122,7 @@ SharePoint Framework allows developers to benefit from the TypeScript type syste
 
 When building reusable client-side customizations, in the past developers used the `spPageContextInfo` JavaScript object to get information about the current page, site, or user. This object offered them an easy way to make their solution reusable across the different sites in SharePoint and not have to use fixed URLs.
 
-While the `spPageContextInfo` object is still present on classic SharePoint pages, it can't be reliably used with modern SharePoint pages and libraries. When building solutions on the SharePoint Framework, developers are recommended to use the `[IWebPartContext.pageContext](https://docs.microsoft.com/javascript/api/sp-webpart-base/iwebpartcontext?view=sp-typescript-latest)` object instead, which contains the context information for the particular solution.
+While the `spPageContextInfo` object is still present on classic SharePoint pages, it can't be reliably used with modern SharePoint pages and libraries. When building solutions on the SharePoint Framework, developers are recommended to use the `[IWebPartContext.pageContext](/javascript/api/sp-webpart-base/iwebpartcontext)` object instead, which contains the context information for the particular solution.
 
 ### No access to SharePoint JavaScript Object Model by default
 
@@ -199,7 +199,7 @@ public render(): void {
 
 Many client-side customizations use jQuery for executing AJAX requests for its simplicity and cross-browser compatibility. If this is all that you're using jQuery for, you can execute the AJAX calls by using the standard HTTP client provided with the SharePoint Framework.
 
-SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](https://docs.microsoft.com/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](https://docs.microsoft.com/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
+SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
 
 ```typescript
 this.context.spHttpClient.get(`${this.context.pageContext.web.absoluteUrl}/_api/web?$select=Title`,

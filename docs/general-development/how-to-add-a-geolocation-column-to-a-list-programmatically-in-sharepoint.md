@@ -46,15 +46,15 @@ Follow these steps to add the Geolocation column to a list. This must be done pr
 ### To add the Geolocation column to a list using PnP PowerShell
 1. Open the SharePoint Online Management Shell
 2. Connect to the site you wish to add the column to
-```cs
+```csharp
 Connect-PnPOnline -url "https://TENANT.sharepoint.com/sites/SITEURL"
 ``` 
 3. Open the list you wish to add the column to
-```cs
+```csharp
 $list = Get-PnPList -Identity "LISTNAME"
 ``` 
 4. #Add the Geolocation field - Change parameters as necessary
-```cs
+```csharp
 Add-PnPField -List $list -Type GeoLocation -DisplayName "GeoLocationField" -InternalName "GeoLocationField" -AddToDefaultView -Required
 ``` 
 
@@ -90,7 +90,7 @@ Add-PnPField -List $list -Type GeoLocation -DisplayName "GeoLocationField" -Inte
   
 7. Add the following code to the **Main** method in the .cs file.
     
-```cs
+```csharp
   
 class Program
     {
@@ -143,7 +143,7 @@ After the Geolocation field is added to a SharePoint list, the developer can add
 
 - The following method adds a list item by passing the Geolocation value as an object.
     
-```cs
+```csharp
   
 private void AddListItem()
         {   // Replace site URL and List Title with Valid values.
@@ -172,7 +172,7 @@ private void AddListItem()
 
 - The following method adds a list item to the SharePoint list by passing raw values to the Geolocation field.
     
-```cs
+```csharp
   
 private void AddListItem()
         {   // Replace site URL and List Title with Valid values.

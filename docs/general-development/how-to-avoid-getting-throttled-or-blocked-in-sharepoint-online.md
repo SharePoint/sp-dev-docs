@@ -68,6 +68,10 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
     ![Steady throttling](../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
 
+- **Unsupported use cases**
+
+    Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
+
 ## Why can't you just tell me the exact throttling limits?
 
 Setting and publishing exact throttling limits sounds straightforward, but in fact it would result in more restrictive limits. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online.
@@ -113,7 +117,7 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 - If you've created an application, the recommendation is to register and use AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
 
     > [!NOTE]
-    > Refer to the [Microsoft identity documentation](https://docs.microsoft.com/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
+    > Refer to the [Microsoft identity documentation](/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
 
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 
@@ -132,7 +136,7 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
-```cs
+```csharp
 // Get access to source site
 using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 {
@@ -158,7 +162,7 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 
 Following sample is in C# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
 
-```cs
+```csharp
 HttpWebRequest endpointRequest = (HttpWebRequest) HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
 endpointRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
@@ -174,7 +178,7 @@ HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse(
 
 Add this extension method in a static class and use `ExecuteQueryWithIncrementalRetry` instead of `ExecuteQuery` to make your code handle throttling requests.
 
-```cs
+```csharp
 public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount, int delay)
 {
   int retryAttempts = 0;

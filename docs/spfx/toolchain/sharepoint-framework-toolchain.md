@@ -143,7 +143,7 @@ Following properties are available as a part of the `developer` section:
 -------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------
 `name`         | Name of the organization that built the application                                                                         | Yes
 `websiteUrl`   | URL of a website with additional information about the application                                                          | Yes
-`mpnId`        | Microsoft Partner Network ID (more details on [MS Partner Network](https://docs.microsoft.com/partner-center/mpn-overview)) | No (but highly recommended)
+`mpnId`        | Microsoft Partner Network ID (more details on [MS Partner Network](/partner-center/mpn-overview)) | No (but highly recommended)
 `privacyUrl`   | Privacy statement URL                                                                                                       | Yes
 `termOfUseUrl` | Terms of use URL                                                                                                            | Yes
 

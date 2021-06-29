@@ -50,7 +50,7 @@ We recommend that you use the sample editor as a template. The sample shows how 
 
 1. Retrieve the parameters from the query string and set them as values for local variables, as shown in the following code example.
 
-    ```cs
+    ```csharp
     // The URL of the site collection that contains the PerformancePoint Services repository.
     string server = Request.QueryString[ClickOnceLaunchKeys.SiteCollectionUrl];
 
@@ -66,13 +66,13 @@ We recommend that you use the sample editor as a template. The sample shows how 
 
 1. Retrieve the **DataSourceRepositoryHelper** object that is used to make calls to the repository, as shown in the following code example.
 
-    ```cs
+    ```csharp
     DataSourceRepositoryHelper = new DataSourceRepositoryHelper();
     ```
 
 11. Set the data source location based on the query string parameter, as shown in the following code example.
 
-    ```cs
+    ```csharp
     RepositoryLocation repositoryDataSourceLocation = RepositoryLocation.CreateFromUriString(itemLocation);
     ```
 

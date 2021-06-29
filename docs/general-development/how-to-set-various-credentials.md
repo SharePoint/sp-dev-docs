@@ -1,5 +1,6 @@
 ---
 title: Set various credentials
+description: You must set credentials for your users before they can call Excel Web Services by using your custom application.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: eb819681-5a4f-49ae-b7f4-334366c51112
@@ -22,7 +23,7 @@ The following code uses the current user's logon credentials to make a request t
     
     
 
-```cs
+```csharp
 
 //Instantiate the Web service.
     ExcelService xlService = new ExcelService();
@@ -54,7 +55,7 @@ The following code uses the current user's logon credentials to make a request t
 
 
 
-```cs
+```csharp
 
         protected string farmURL, docLibPath, workbookPath, uiCulture, dataCulture, localTempFolder, authenticationType;
         protected Cookie authCookie;
@@ -184,7 +185,7 @@ The following code uses the current user's logon credentials to make a request t
     
     
 
-```cs
+```csharp
 
 //Instantiate the Web service.
 ExcelService xlService = new ExcelService();

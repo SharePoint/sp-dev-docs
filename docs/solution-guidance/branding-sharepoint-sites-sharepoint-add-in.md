@@ -65,7 +65,7 @@ It is important to understand that Office 365 themes and SharePoint themes are d
 - text and icons color
 - app menu icon
 
-See the [Customize the Office 365 theme for your organization](https://support.office.com/en-au/article/Customize-the-Office-365-theme-for-your-organization-8275da91-7a48-4591-94ab-3123a3f79530) article to learn more about Office 365 themes.
+See the [Customize the Office 365 theme for your organization](https://support.office.com/article/Customize-the-Office-365-theme-for-your-organization-8275da91-7a48-4591-94ab-3123a3f79530) article to learn more about Office 365 themes.
 
 **SharePoint themes** include the following components.
 
@@ -158,7 +158,7 @@ You can change the composed look for a SharePoint site via the web browser or th
 
 ## Use the SharePoint color palette tool to create a color palette for a SharePoint theme
 
-The [SharePoint color palette tool](https://www.microsoft.com/en-gb/download/details.aspx?id=38182) (pictured below) is easy to use and allows you to create the color scheme for a SharePoint theme.  This tool provides a *what you see is what you get* editing experience.  When you save the color schemes this tool creates it generates a .spcolor file.
+The [SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) (pictured below) is easy to use and allows you to create the color scheme for a SharePoint theme.  This tool provides a *what you see is what you get* editing experience.  When you save the color schemes this tool creates it generates a .spcolor file.
 
 ![The SharePoint Color Palette Tool](media/Recipes/Themes/color-palette-tool.png)
 
@@ -326,7 +326,7 @@ The following chart summarizes all your options to brand a SharePoint site at a 
 
 ## Related links
 
-- [SharePoint color palette tool](https://www.microsoft.com/en-gb/download/details.aspx?id=38182)
+- [SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182)
 - Ignite 2015 - [Deep Dive into Safe SharePoint Branding in Office 365 Using Repeatable Patterns and Practices](https://channel9.msdn.com/Events/Ignite/2015/BRK3164)
 - [Customize your SharePoint site UI by using JavaScript](Customize-your-SharePoint-site-UI-by-using-JavaScript.md)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")

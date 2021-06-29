@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 06/16/2021
+ms.date: 06/29/2021
 localization_priority: Priority
 ---
 
@@ -472,7 +472,7 @@ Here's the same sample from above, using the Excel-style expression syntax:
             "elmType": "span",
             "attributes": {
                 "class": "=if([$After] > [$Before], 'sp-field-trending--up', 'sp-field-trending--down')",
-                "iconName": "=if([$After] > [$Before], 'SortUp', "if([$After] < [$Before], 'SortDown', ''))"
+                "iconName": "=if([$After] > [$Before], 'SortUp', if([$After] < [$Before], 'SortDown', ''))"
             }
         },
         {
@@ -1063,7 +1063,7 @@ An optional property that specifies the text content of the element specified by
 
 An optional property that specifies style attributes to apply to the element specified by `elmType`. This is an object with name-value pairs that correspond to CSS names and values. The values of each property in the style object can either be a string (including special strings) or an Expression object. The following style attributes are allowed.
 
-```JS
+```javascript
 'background-color'
 'fill'
 'background-image'

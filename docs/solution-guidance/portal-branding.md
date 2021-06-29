@@ -162,7 +162,7 @@ The [PnP provisioning engine](https://developer.microsoft.com/office/blogs/intro
 For more information about CDNs, see:
 
 - [Office 365 Public/Private CDN capability](https://developer.microsoft.com/office/blogs/general-availability-of-office-365-cdn)
-- [Using content delivery networks with SharePoint Online](https://support.office.com/en-gb/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
+- [Using content delivery networks with SharePoint Online](https://support.office.com/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
 - [CDN Manager](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 
 ## See also

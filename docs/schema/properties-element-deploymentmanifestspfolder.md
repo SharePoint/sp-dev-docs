@@ -1,5 +1,6 @@
 ---
 title: "Properties Element (DeploymentManifest - SPFolder)"
+description: Represents a collection of properties on an instance of a Windows SharePoint Services 3.0 folder.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 localization_priority: Normal
 ms.assetid: b2bdf3ad-5452-4c44-bdca-304597b0efd2
-description: "Last modified: March 09, 2015"
 ---
 
 # Properties Element (DeploymentManifest - SPFolder)
@@ -33,7 +33,7 @@ USAGE
 
 ## Type
 
-[Dictionary](https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2)
+[Dictionary](/dotnet/api/system.collections.generic.dictionary-2)
   
 ## Elements and attributes
 
@@ -54,6 +54,6 @@ None
 ## See also
 
 - [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
-- [Dictionary](https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2)
+- [Dictionary](/dotnet/api/system.collections.generic.dictionary-2)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
 

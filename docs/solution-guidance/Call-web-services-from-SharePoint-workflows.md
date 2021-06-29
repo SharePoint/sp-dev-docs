@@ -48,7 +48,7 @@ The **Create** button on the screen calls a **Create** method in the Controllers
 
 **Create method**
 
-```cs
+```csharp
 public ActionResult Create(string country, string spHostUrl)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
@@ -74,7 +74,7 @@ public ActionResult Create(string country, string spHostUrl)
 
 **Add method**
 
-```cs
+```csharp
 public int Add(string country)
         {
             var item = list.AddItem(new ListItemCreationInformation());
@@ -96,7 +96,7 @@ After creating that new list item, the add-in presents a **Start Workflow** butt
 
 Choosing the **Start Workflow** button triggers the **StartWorkflow** method that is defined in the Controllers\PartSuppliersController.cs file. This method packages the add-in web URL, the web service URL (for your remotely hosted web application, not for the Northwind web service), and the context token values, and passes them to the **StartWorkflow** method. The **PartSuppliersService** method needs the context token to interact with SharePoint.
 
-```cs
+```csharp
 public ActionResult StartWorkflow(int id, Guid workflowSubscriptionId, string spHostUrl)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext) as SharePointAcsContext;
@@ -125,7 +125,7 @@ public ActionResult StartWorkflow(int id, Guid workflowSubscriptionId, string sp
 
 The **StartWorkflow** method then creates a workflow instance and passes the three values (appWebUrl, webServiceUrl, contextToken) stored in the payload variable to the workflow.
 
-```cs
+```csharp
  {
             var workflowServicesManager = new WorkflowServicesManager(clientContext, clientContext.Web);
 
@@ -143,7 +143,7 @@ The **StartWorkflow** method then creates a workflow instance and passes the thr
 
 After the workflow starts, it makes a **POST HTTP** request to the remotely hosted web application. This request tells the web application to update the suppliers list with the suppliers for the country that the user has just added. The Controllers\DataController.cs file contains a **POST** method that receives the contents of this request.
 
-```cs
+```csharp
 public void Post([FromBody]string country)
         {
             var supplierNames = GetSupplierNames(country);
@@ -156,7 +156,7 @@ public void Post([FromBody]string country)
 
 The **GetSupplierNames** method (in the Controllers\DataController.cs file) constructs and executes a LINQ query to the Northwind OData web service for all the suppliers associated with the selected country. 
 
-```cs
+```csharp
 private string[] GetSupplierNames(string country)
         {
             Uri uri = new Uri("http://services.odata.org/V3/Northwind/Northwind.svc");
@@ -175,7 +175,7 @@ private string[] GetSupplierNames(string country)
 
 The **UpdateSuppliers** method then updates the **Suppliers** field of the newly added list item.
 
-```cs
+```csharp
 private void UpdateSuppliers(string country, string[] supplierNames)
         {
             var request = HttpContext.Current.Request;
@@ -242,7 +242,7 @@ The **Create** button calls a method in the Controllers\PartSuppliersController.
 
 **Create method**
 
-```cs
+```csharp
 public ActionResult Create(string country, string spHostUrl)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
@@ -268,7 +268,7 @@ public ActionResult Create(string country, string spHostUrl)
 
 **Add method**
 
-```cs
+```csharp
 public int Add(string country)
         {
             var item = list.AddItem(new ListItemCreationInformation());
@@ -288,7 +288,7 @@ After it creates that new list item, the add-in presents a **Start Workflow** bu
 
 Choosing the **Start Workflow** button triggers the **StartWorkflow** method in the Controllers\PartSuppliersController.cs file. This method packages the add-in web URL and the web service URL (for your remotely hosted web application, not for the Northwind web service) and passes them to the **StartWorkflow** method in the Services\PartSuppliersService.cs file. The workflow communicates with the remote web application via the web proxy, and the web proxy adds the access token in a request header. This is why the workflow doesn't pass a context token to the **StartWorkflow** method in this sample. The code is shown in the following example.
 
-```cs
+```csharp
 public ActionResult StartWorkflow(int id, Guid workflowSubscriptionId, string spHostUrl)
         {
             var spContext = SharePointContextProvider.Current.GetSharePointContext(HttpContext);
@@ -316,7 +316,7 @@ public ActionResult StartWorkflow(int id, Guid workflowSubscriptionId, string sp
 
 The **StartWorkflow** method creates a workflow instance and passes the two values (appWebUrl and webServiceUrl) stored in the payload variable to the workflow.
 
-```cs
+```csharp
 public void StartWorkflow(Guid subscriptionId, int itemId, Dictionary<string, object> payload)
         {
             var workflowServicesManager = new WorkflowServicesManager(clientContext, clientContext.Web);
@@ -345,7 +345,7 @@ The **HttpSend** activity should be configured as a **GET** request with an **Ac
 
 If the user selected **Canada** for the new supplier list item, for example, the JSON-formatted response will be as shown in the following example.
 
-```cs
+```csharp
 {
     value: [
         {
@@ -391,7 +391,7 @@ The **Post** method inside the Controllers\DataController.cs file accepts the co
 
 Because the workflow in this sample has already queried the Northwind service, this version of the method needs only to update the SharePoint list. It also passes the add-in web URL and the access token (which is passed by the web proxy) to the **UpdateSuppliers** method in the Services\PartSuppliersService.cs file, as shown in the following code example.
 
-```cs
+```csharp
 public void Post(UpdatePartSupplierModel model)
         {
             var request = HttpContext.Current.Request;
@@ -412,7 +412,7 @@ public void Post(UpdatePartSupplierModel model)
 
 The **UpdateSuppliers** method in the PartSuppliers.cs file updates the **Suppliers** field of the newly created list item.
 
-```cs
+```csharp
 public void UpdateSuppliers(int id, IEnumerable<string> supplierNames)
         {
             var item = list.GetItemById(id);

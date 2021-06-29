@@ -1,5 +1,6 @@
 ---
 title: Machine Translation Services in SharePoint
+description: Learn about the Machine Translation Service, which is a new service application in SharePoint that provides automatic machine translation of files and sites.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 15a81428-da94-40b8-8ed4-6a12f05661e2
@@ -89,7 +90,7 @@ The following code shows how to translate a single file asynchronously.
 
 
 
-```cs
+```csharp
 
 SPServiceContext sc = SPServiceContext.GetContext(new SPSite(site));
 TranslationJob job = new TranslationJob(sc, CultureInfo.GetCultureInfo(culture)); 
@@ -131,7 +132,7 @@ The following code shows how to translate every file within a document library a
 
 
 
-```cs
+```csharp
 
 SPServiceContext sc = SPServiceContext.GetContext(new SPSite(site));
 TranslationJob job = new TranslationJob(sc, CultureInfo.GetCultureInfo(culture));
@@ -167,7 +168,7 @@ The following code shows how to translate a single file synchronously.
 
 
 
-```cs
+```csharp
 
 SPServiceContext sc = SPServiceContext.GetContext(new SPSite(site));
 SyncTranslator job = new SyncTranslator(sc, CultureInfo.GetCultureInfo(jobCulture));
@@ -182,7 +183,7 @@ The following code shows how to translate a stream synchronously.
 
 
 
-```cs
+```csharp
 
 SPServiceContext sc = SPServiceContext.GetContext(new SPSite(site));
 SyncTranslator job = new SyncTranslator(sc, CultureInfo.GetCultureInfo(jobCulture));
@@ -202,7 +203,7 @@ The following code shows how to translate a sequence of bytes synchronously.
 
 
 
-```cs
+```csharp
 
 SPServiceContext sc = SPServiceContext.GetContext(new SPSite(site));
 SyncTranslator job = new SyncTranslator(sc, CultureInfo.GetCultureInfo(jobCulture));
@@ -302,7 +303,7 @@ To translate a single file asynchronously:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 string culture  = "cultureID";
@@ -326,7 +327,7 @@ To translate a folder asynchronously:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 string culture = "cultureID";
@@ -350,7 +351,7 @@ To translate a library asynchronously:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 string culture = "cultureID";
@@ -374,7 +375,7 @@ To translate a single file synchronously:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 string culture = "cultureID"
@@ -402,7 +403,7 @@ To retrieve all languages that are supported by the Machine Translation Service:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 IEnumerable<string> supportedLanguages = TranslationJob.EnumerateSupportedLanguages(clientContext);
@@ -420,7 +421,7 @@ To check whether a specific language is supported:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 clientResult<bool> isSupported;
@@ -435,7 +436,7 @@ To retrieve all the file name extensions that are supported by the Machine Trans
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 IEnumerable<string> fileExt = TranslationJob.EnumerateSupportedFileExtensions(clientContext);
@@ -453,7 +454,7 @@ To check whether a specific file name extension is supported:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 clientResult<bool> isSupported;
@@ -469,7 +470,7 @@ To check the file size limit for a specific file name extension:
 
 
 
-```cs
+```csharp
 
 ClientContext clientContext = new ClientContext("http://serverName/sites/siteCollectionPath");
 clientResult<int> maxSize;

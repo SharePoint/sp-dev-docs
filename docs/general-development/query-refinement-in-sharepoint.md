@@ -71,7 +71,7 @@ Refiners = "FileType,Write(discretize=manual/2013-01-01/2013-08-22/2013-09-15/20
 
 The following CSOM example shows how to programmatically request three refiners: **FileType**, **Write**, and **Companies**. **Write** represents the last modified date for the item, and uses the advanced syntax to return fixed-size date/time bins.
 
-```cs
+```csharp
 using (var context = new ClientContext("http://<serverName>/<siteCollectionPath>"))
 {
     var query = new KeywordQuery(context)
@@ -144,7 +144,7 @@ You can provide one or more refinement filters for a refined query by adding ref
 
 The following CSOM example shows how to programmatically perform a refinement, to limit the search results to those of HTML file type only. As mentioned in  [Example: Refinement data](#example-refinement-data), refinement data related to this refinement option has **RefinerName** set to _Filetype_ and **RefinementToken** set to _"????68746d6c"_.
 
-```cs
+```csharp
 using (var context = new ClientContext("http://<serverName>/<siteCollectionPath>"))
 {
     var query = new KeywordQuery(context)
@@ -173,7 +173,7 @@ using (var context = new ClientContext("http://<serverName>/<siteCollectionPath>
 
 The following CSOM example shows how to run a query with a refiner spec to create refinement data which is subsequently used to perform refinement. This example simulates the process of an end user selecting the first refinement option.
 
-```cs
+```csharp
 using (var context = new ClientContext("http://<serverName>/<siteCollectionPath>"))
 {
     // Step 1: Run the query with refiner spec to provide refinement data in search result

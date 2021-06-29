@@ -34,7 +34,7 @@ First, we will create the marketing site that will serve as a hub site that othe
    Connect-PnPOnline -Url https://contoso-admin.sharepoint.com -UseWebLogin
    ```
 
-2. Create the site to be used as a hub site using the [New-PnPSite](https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpsite) cmdlet:
+2. Create the site to be used as a hub site using the [New-PnPSite](/powershell/module/sharepoint-pnp/new-pnpsite) cmdlet:
 
    ```powershell
    New-PnPSite -Type TeamSite -Title "Contoso marketing division" -Alias "marketing" -Description "Main site for collaboration for marketing teams at Contoso"
@@ -46,7 +46,7 @@ First, we will create the marketing site that will serve as a hub site that othe
    https://contoso.sharepoint.com/sites/marketing
    ```
 
-3. Register the new marketing site as a hub site by using the [Register-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/register-spohubsite?view=sharepoint-ps) cmdlet:
+3. Register the new marketing site as a hub site by using the [Register-SPOHubSite](/powershell/module/sharepoint-online/register-spohubsite) cmdlet:
 
    ```powershell
    Register-SPOHubSite -Site https://contoso.sharepoint.com/sites/marketing
@@ -60,7 +60,7 @@ The hub site doesn't have a logo or description yet. We also want to constrain i
 
 1. Upload a logo image for the site by going to `https://contoso.sharepoint.com/sites/marketing/SiteAssets` and uploading any image you like. Make a note of the image file name. 
 
-2. Use the [Set-PnPHubSite](https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnphubsite) cmdlet to set the logo and description. In place of `mylogo.jpg`, specify the name of the image that you uploaded:
+2. Use the [Set-PnPHubSite](/powershell/module/sharepoint-pnp/set-pnphubsite) cmdlet to set the logo and description. In place of `mylogo.jpg`, specify the name of the image that you uploaded:
 
    ```powershell
     Set-PnPHubSite 
@@ -73,7 +73,7 @@ The hub site doesn't have a logo or description yet. We also want to constrain i
 
 Now we will restrict access so that only the user `nestorw@contoso.com` can make changes to the hub site associations.
 
-- Run the [Grant-PnPHubSiteRights](https://docs.microsoft.com/powershell/module/sharepoint-pnp/grant-pnphubsiterights) cmdlet to grant a user rights to the marketing hub site. We'll use `nestorw@contoso` in this example, but you can use any valid user on your tenant (you can specify multiple users by separating them with a comma):
+- Run the [Grant-PnPHubSiteRights](/powershell/module/sharepoint-pnp/grant-pnphubsiterights) cmdlet to grant a user rights to the marketing hub site. We'll use `nestorw@contoso` in this example, but you can use any valid user on your tenant (you can specify multiple users by separating them with a comma):
 
    ```powershell
     Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/marketing -Principals "nestorw@contoso" -Rights Join
@@ -83,7 +83,7 @@ Now we will restrict access so that only the user `nestorw@contoso.com` can make
 
 The final step is to create the site we want to associate with the hub. You can repeat these steps for as many sites as you want to join to the hub.
 
-1. Provision the site by using the [New-PnPSite](https://docs.microsoft.com/powershell/module/sharepoint-pnp/new-pnpsite) cmdlet:
+1. Provision the site by using the [New-PnPSite](/powershell/module/sharepoint-pnp/new-pnpsite) cmdlet:
     
    ```powershell
      New-PnPSite -Type TeamSite -Title "Online advertising team" -Alias "online-advertising" -Description "For collaboration on online advertising resources"     
@@ -95,7 +95,7 @@ The final step is to create the site we want to associate with the hub. You can 
     https://contoso.sharepoint.com/sites/online-advertising
    ```
     
-2. Associate this site with the hub site by using the [Add-PnPHubSiteAssociation](https://docs.microsoft.com/powershell/module/sharepoint-pnp/add-pnphubsiteassociation) cmdlet:
+2. Associate this site with the hub site by using the [Add-PnPHubSiteAssociation](/powershell/module/sharepoint-pnp/add-pnphubsiteassociation) cmdlet:
   
    ```powershell
     Add-PnPHubSiteAssociation 
@@ -107,7 +107,7 @@ The final step is to create the site we want to associate with the hub. You can 
 
 To confirm, you can either:
 
-- Run the [Get-PnPHubSite](https://docs.microsoft.com/powershell/module/sharepoint-pnp/get-pnphubsite) cmdlet.
+- Run the [Get-PnPHubSite](/powershell/module/sharepoint-pnp/get-pnphubsite) cmdlet.
 
 - Sign in to SharePoint Online and view the hub site directly at `https://contoso.sharepoint.com/sites/marketing`. 
 

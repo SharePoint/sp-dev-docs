@@ -133,7 +133,7 @@ The [Personalizing search results in a SharePoint Add-in](https://code.msdn.micr
 
 The example first gets SharePoint context by using the **SharePointContextProvider** class.
 
-```cs
+```csharp
 var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
 ```
 

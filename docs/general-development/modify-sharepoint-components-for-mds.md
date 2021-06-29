@@ -1,5 +1,6 @@
 ---
 title: Modify SharePoint components for MDS
+description: Learn how to modify the components in your SharePoint project to take advantage of Minimal Download Strategy (MDS) in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c967be7c-f29f-481a-9ce2-915ead315dcd
@@ -69,7 +70,7 @@ HTML regions and controls are MDS compatible if they are wrapped in **SharePoint
 
 
 
-```cs
+```csharp
 <SharePoint:AjaxDelta
             id="DeltaPlaceHolderMain"
             BlockElement="true"
@@ -87,7 +88,7 @@ Another example of the **AjaxDelta** pattern is the (2) left navigation bar in F
 
 
 
-```cs
+```csharp
 <SharePoint:AjaxDelta
             id="DeltaPlaceHolderLeftNavBar"
             BlockElement="true"
@@ -117,7 +118,7 @@ The last example in Figure 1 is the (3) page title, which requires a special pat
 
 
 
-```cs
+```csharp
 
 <SharePoint:PageTitle runat="server">
     <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">
@@ -133,7 +134,7 @@ Your master page can also include style sheets and JavaScript files. The server 
 
 
 
-```cs
+```csharp
 
 <SharePoint:CssLink runat="server" Version="15"/>
 <SharePoint:CssRegistration Name="my_styles.css" runat="server" />
@@ -146,7 +147,7 @@ Note that you can have only one **CssLink** tag per master page, but you can hav
 
 
 
-```cs
+```csharp
 
 <SharePoint:ScriptLink language="javascript" name="my_javascript.js" runat="server" />
 ```
@@ -196,7 +197,7 @@ Besides referencing JavaScript files, your ASP.NET pages can have inline JavaScr
 
 
 
-```cs
+```csharp
 <SharePoint:ScriptBlock runat="server" >
     // Your JavaScript code here.
 </SharePoint:ScriptBlock>
@@ -211,7 +212,7 @@ You also need to mark your controls and web parts as MDS compliant. The followin
     
     
 
-```cs
+```csharp
 
 [assembly: Microsoft.SharePoint.WebControls.MdsCompliantAttribute(IsCompliant = true)]
 namespace VisualWebPartProject2.VisualWebPart1

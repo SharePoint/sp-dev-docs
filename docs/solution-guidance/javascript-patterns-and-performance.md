@@ -1,5 +1,6 @@
 ---
 title: JavaScript Patterns and Performance
+description: Years ago, ASP.NET gave us server-side UI control rendering, and it was good. That server-side rendering, however, requires full trust code. Now that we have transitioned to SharePoint and Office 365, full trust code is no longer an option. That means server-side UI control rendering won't work for us any more.
 ms.date: 11/03/2017
 localization_priority: Normal
 ---
@@ -436,8 +437,8 @@ For a more complex usage of asynchronous and Deferred, you can refer to the deve
 ## <a name="Resources"></a> Resources
 
 ### See Also
-- [JavaScript – Patterns and Usage](https://developer.microsoft.com/en-us/office/blogs//javascript-development-patterns-with-sharepoint)
-- [JavaScript – Performance Considerations](https://developer.microsoft.com/en-us/office/blogs//javascript-performance-considerations-with-sharepoint)
+- [JavaScript – Patterns and Usage](https://developer.microsoft.com/office/blogs//javascript-development-patterns-with-sharepoint)
+- [JavaScript – Performance Considerations](https://developer.microsoft.com/office/blogs//javascript-performance-considerations-with-sharepoint)
 - [Complete basic operations using JavaScript library code in SharePoint 2013](https://msdn.microsoft.com/library/office/jj163201.aspx)
 - [Client-side rendering (JS Link) code samples](https://code.msdn.microsoft.com/office/Client-side-rendering-JS-2ed3538a)
 - [JavaScript Embedding (Customize your SharePoint site UI by using JavaScript)](https://msdn.microsoft.com/library/dn913116.aspx)

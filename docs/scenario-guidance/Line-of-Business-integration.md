@@ -32,18 +32,21 @@ _**Applies to:** Office 365 | SharePoint Online | SharePoint 2016_
 Whenever you need to consume LOB systems from a client-side solution, like a client-side web part developed using SharePoint Framework, or a bunch of JavaScript code hosted in a Script Editor web part, you can consume a LOB system just using a REST API, eventually registered in Azure Active Directory. In this section you can find useful links to further information about this topic.
 
 ### Articles
-* [Connect to API secured with Azure Active Directory](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad)
-* [Connect to Azure AD-secured APIs in SharePoint Framework solutions](https://docs.microsoft.com/sharepoint/dev/spfx/use-aadhttpclient)
-* [Consume enterprise APIs secured with Azure AD in SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/use-aadhttpclient-enterpriseapi)
+
+* [Connect to API secured with Azure Active Directory](../spfx/web-parts/guidance/connect-to-api-secured-with-aad.md)
+* [Connect to Azure AD-secured APIs in SharePoint Framework solutions](../spfx/use-aadhttpclient.md)
+* [Consume enterprise APIs secured with Azure AD in SharePoint Framework](../spfx/use-aadhttpclient-enterpriseapi.md)
 
 ### Samples
+
 * [Call custom Web API secured with AAD from SharePoint Framework client-side web part](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-aad-webapi)
 * [Azure Active Directory implicit flow authentication samples](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-aad-implicitflow)
 * [Call custom Web API secured with AAD from SharePoint Framework client-side web part using Angular v1.x](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-aad-webapi)
 * [Angular MS Graph web part Built with Angular v1.x](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-msgraph)
-* [Application Customizer GraphClient from Modern Teamsite](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/js-application-graph-client)
+* [Application Customizer GraphClient from Modern Team site](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/js-application-graph-client)
 
 ### Videos
+
 * [Calling external APIs securely from SharePoint Framework](https://www.youtube.com/watch?v=SDjKRfHA1nw)
 * [Let's build with SharePoint (web parts, Extensions and much more)](https://myignite.microsoft.com/sessions/55180)
 
@@ -57,10 +60,12 @@ In SharePoint Online the BCS can connect to an OData REST service, to a SOAP ser
 Moreover, in SharePoint Online, if compared with SharePoint on-premises, you don't have functionalities like External Data Search, Profile Pages, custom Actions, and Office client support.
 
 ### Articles
-* [Business Connectivity Services in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/business-connectivity-services-in-sharepoint)
+
+* [Business Connectivity Services in SharePoint](../general-development/business-connectivity-services-in-sharepoint.md)
 * [Make an External List from a SQL Azure table with Business Connectivity Services and Secure Store](https://support.office.com/article/Make-an-External-List-from-a-SQL-Azure-table-with-Business-Connectivity-Services-and-Secure-Store-466f3809-fde7-41f2-87f7-77d9fdadfc95?ui=en-US&rs=en-US&ad=US#__toc350352765)
 
 ### Videos
+
 * [Configuring Hybrid Business Connectivity Services with SharePoint 2013](https://channel9.msdn.com/Events/SharePoint-Conference/2014/SPC319)
 
 ## Hybrid - Connect to on-premises
@@ -73,8 +78,10 @@ While consuming LOB systems, another option that you have is to create SharePoin
 > This kind of solution architecture can have challenges with network latency. Due the direct hybrid connectivity, services in SharePoint Online would have a dependency on the on-premises services which is not optimal. It's recommended to have data cache intermediary in Azure side rather than connecting directly to the on-premises, even though technically this can be implemented relatively easily.
 
 ### Articles
-* [Create hybrid connectivity apps for SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/create-hybrid-connectivity-apps-for-sharepoint)
-* [Azure Relay Hybrid Connections protocol](https://docs.microsoft.com/azure/service-bus-relay/relay-hybrid-connections-protocol)
+
+* [Create hybrid connectivity apps for SharePoint](../general-development/create-hybrid-connectivity-apps-for-sharepoint.md)
+* [Azure Relay Hybrid Connections protocol](/azure/service-bus-relay/relay-hybrid-connections-protocol)
 
 ### Videos
+
 * [Azure App Service with Hybrid Connections to On-premises Resources](https://azure.microsoft.com/resources/videos/azure-app-service-with-hybrid-connections-to-on-premises-resources/)
