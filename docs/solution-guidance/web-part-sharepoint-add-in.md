@@ -1,19 +1,16 @@
 ---
 title: Web part in the SharePoint Add-in model
+description: The approach you take to create portable page components is different in the new SharePoint Add-in model than it was with Full Trust Code.
 ms.date: 05/20/2020
 localization_priority: Normal
 ---
-Web part in the SharePoint Add-in model
-=======================================
-
-## Summary
+# Web part in the SharePoint Add-in model
 
 The approach you take to create portable page components is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, web parts were created to implement portable page components.
 
 In an SharePoint Add-in model scenario, Add-in Parts (App Parts) are created to implement portable page components.  Add-in parts use client side code.
 
-High Level Guidelines
----------------------
+## High Level Guidelines
 
 As a rule of a thumb, we would like to provide the following high level guidelines regarding Add-in Parts.
 
@@ -21,11 +18,11 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 - You cannot create custom editor parts for Add-in Parts.
 - Use the Add-in Script Part to link to JavaScript that is used to interact with SharePoint and other services and create a user interface.
 - By default, custom properties you add to editor parts are always shown as the final group in an editor part.
-	+ You can use JavaScript to override the look and feel of an editor part for an Add-in Part.
-	+ See the following sample that demonstrates how this is done. 
-	+ [Core.AppPartPropertyUIOverride (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppPartPropertyUIOverride)
+  - You can use JavaScript to override the look and feel of an editor part for an Add-in Part.
+  - See the following sample that demonstrates how this is done.
+  - [Core.AppPartPropertyUIOverride (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppPartPropertyUIOverride)
 
-**Getting Started**
+### Getting Started
 
 Add-in Parts may be easily created by using the out-of-the-box Add-in Script Part.  This allows you to provide a link to a JavaScript file hosted anywhere.  The JavaScript file uses client side code to interact with SharePoint or other services and render a user interface.
 

@@ -8,7 +8,7 @@ localization_priority: Normal
 
 # Expose SharePoint Framework web parts in Microsoft Teams
 
-Using SharePoint Framework, you can build [web parts](web-parts/overview-client-side-web-parts.md) and [extensions](extensions/overview-extensions.md). When building web parts, you can enable them to be exposed as a [Microsoft Teams tab](https://docs.microsoft.com/microsoftteams/platform/tabs/what-are-tabs), a [personal app](https://docs.microsoft.com/microsoftteams/platform/concepts/design/personal-apps) or a [messaging extension](https://docs.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
+Using SharePoint Framework, you can build [web parts](web-parts/overview-client-side-web-parts.md) and [extensions](extensions/overview-extensions.md). When building web parts, you can enable them to be exposed as a [Microsoft Teams tab](/microsoftteams/platform/tabs/what-are-tabs), a [personal app](/microsoftteams/platform/concepts/design/personal-apps) or a [messaging extension](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
 
 > [!TIP]
 > To see how to use the different concepts described in this article, see the sample [Leads application](https://github.com/pnp/sp-dev-solutions/tree/master/solutions/LeadsLOBSolution) on GitHub.
@@ -77,7 +77,7 @@ The key piece of information is the URL in the `taskInfo` property, which must m
 
 ### Responding to user interaction
 
-When your web part is exposed in Microsoft Teams as a messaging extension, you might want to respond to user interaction, for example by posting an adaptive card to the conversation. This requires using a [task module](https://docs.microsoft.com/microsoftteams/platform/task-modules-and-cards/what-are-task-modules) and a [bot](https://docs.microsoft.com/microsoftteams/platform/bots/what-are-bots). The task module notifies the bot of the event that the user triggered, and the bot will post data back to the conversation. First however, you need to check if the web part is used as a messaging extension.
+When your web part is exposed in Microsoft Teams as a messaging extension, you might want to respond to user interaction, for example by posting an adaptive card to the conversation. This requires using a [task module](/microsoftteams/platform/task-modules-and-cards/what-are-task-modules) and a [bot](/microsoftteams/platform/bots/what-are-bots). The task module notifies the bot of the event that the user triggered, and the bot will post data back to the conversation. First however, you need to check if the web part is used as a messaging extension.
 
 To check if your web part is being used as a messaging extension, check if the `context._host._teamsManager._appContext.applicationName` property is set to `TeamsTaskModuleApplication`:
 
@@ -138,7 +138,7 @@ protected async handleTeamsMessagingExtensionSubmitAction(context: TurnContext, 
 [see full code](https://github.com/pnp/sp-dev-solutions/blob/cd3757ac071e2fb9f90a3f64b43ede8b1de39a0c/solutions/LeadsLOBSolution/bot/src/app/leadsBot/LeadsBot.ts#L24)
 
 > [!TIP]
-> For more information about building Microsoft Teams messaging extensions see the [Microsoft Teams documentation](https://docs.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions). To see an example of how a SharePoint Framework web part is exposed as a messaging extension see the sample [Leads application](https://github.com/pnp/sp-dev-solutions/tree/master/solutions/LeadsLOBSolution) on GitHub.
+> For more information about building Microsoft Teams messaging extensions see the [Microsoft Teams documentation](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions). To see an example of how a SharePoint Framework web part is exposed as a messaging extension see the sample [Leads application](https://github.com/pnp/sp-dev-solutions/tree/master/solutions/LeadsLOBSolution) on GitHub.
 
 When you choose to expose your SharePoint Framework web parts in Microsoft Teams, you have a number of options for how to deploy them to Microsoft Teams.
 

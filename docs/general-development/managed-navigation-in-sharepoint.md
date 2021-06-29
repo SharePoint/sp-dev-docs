@@ -1,5 +1,6 @@
 ---
 title: Managed navigation in SharePoint
+description: Learn about the taxonomy-driven managed navigation feature in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 localization_priority: Normal
@@ -86,7 +87,7 @@ When you use the .NET client object model for taxonomy, you can create a new nav
 
 
 
-```cs
+```csharp
 public class NavigationTermSetTests
 {
     public void CreateNavigationTermSet()
@@ -183,7 +184,7 @@ You can use the .NET server taxonomy classes and methods in the  [Microsoft.Shar
 
 
 
-```cs
+```csharp
 ///Create a navigation term set.
 using (SPSite site = new SPSite(TestConfig.ServerUrl))
 {

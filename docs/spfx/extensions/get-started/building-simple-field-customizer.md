@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
-description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 08/26/2020
+description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
+ms.date: 06/15/2021
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -238,14 +238,14 @@ Now that we've successfully tested the out-of-the-box starting point of the Fiel
 
 Now that we've tested our solution properly in debug mode, we can package this to be deployed automatically as part of the solution package deployed to the sites.
 
-1. Install the solution package to the site where it should be installed, so that the extension manifest is white listed for execution.
+1. Install the solution package to the site where it should be installed, so that the extension manifest is included for execution.
 1. Associate the Field Customizer to an existing field in the site. You can do this programmatically using the SharePoint REST or CSOM API, or by using the Feature Framework in of the SharePoint Framework solution package. In this tutorial, we'll use the Feature Framework's xml files. You need to associate the following properties in the `SPField` object at the site or list level.
-    - `ClientSiteComponentId`: this is the identifier (GUID) of the Field Customizer that has been installed in the app catalog.
+    - `ClientSideComponentId`: this is the identifier (GUID) of the Field Customizer that has been installed in the app catalog.
     - `ClientSideComponentProperties`: this is an optional parameter that can be used to provide properties for the Field Customizer instance.
 
     You can control the requirement to add a solution containing your extension to the site with the `skipFeatureDeployment` property in **./config/package-solution.json** file. Even though you wouldn't require the solution to be installed on the site, you'd need to associate `ClientSideComponentId` to specific objects for the extension to be visible.
 
-    You can use, for example,  [Set-PnPField cmdlet](https://docs.microsoft.com/powershell/module/sharepoint-pnp/set-pnpfield?view=sharepoint-ps) from PnP PowerShell cmdlets to programatically associate an extension to existing fields in your sites.
+    You can use, for example,  [Set-PnPField cmdlet](/powershell/module/sharepoint-pnp/set-pnpfield) from PnP PowerShell cmdlets to programatically associate an extension to existing fields in your sites.
 
     [!INCLUDE [pnp-powershell](../../../../includes/snippets/open-source/pnp-powershell.md)]
 
@@ -261,7 +261,7 @@ In the following steps, we review the default field definition, which was automa
 Look at the XML in this file. The `ClientSideComponentId` property has been automatically updated to the unique ID of your Field Customizer available in the **./src/extensions/helloWorld/HelloWorldFieldCustomizer.manifest.json** file. You'll need to adjust this file matching on your field type and details.
 
 > [!NOTE]
-> For more information on the Feature Framework XML schema, see: [SharePoint schema reference](https://docs.microsoft.com/sharepoint/dev/schema/field-definitions).
+> For more information on the Feature Framework XML schema, see: [SharePoint schema reference](/sharepoint/dev/schema/field-definitions).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -370,9 +370,9 @@ Now you're ready to deploy the solution to a SharePoint site and get the field a
 The process for publishing your app is identical among the different extension types.
 
 > [!NOTE]
-> This was a relatively simple field customizer with functionality that could also have been achieved with [column formatting capability](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
+> This was a relatively simple field customizer with functionality that could also have been achieved with [Use column formatting to customize SharePoint](../../../declarative-customization/column-formatting.md). Column formatting however does not support actual custom code. Notice that field customizers cannot be modified by end users from the user interface which enables additional use cases.
 
 ## See also
 
-- [Build your first ListView Command Set extension](./building-simple-cmdset-with-dialog-api.md)
+- [Build your first ListView Command Set extension](building-simple-cmdset-with-dialog-api.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)

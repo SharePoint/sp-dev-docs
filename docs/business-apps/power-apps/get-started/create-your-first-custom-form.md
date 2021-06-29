@@ -1,7 +1,7 @@
 ---
 title: Customize a form for a SharePoint list
 description: Customize a form for a SharePoint list
-ms.date: 06/03/2020
+ms.date: 05/18/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -20,13 +20,13 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
 1. In your SharePoint site, browse to the **Projects** list.
 
-1. To create and manage flows for a list or a library, from the command bar, on the list or library page, select **Power Apps**. More options appear:
+1. To create and manage flows for a list or a library, from the command bar, on the list or library page, select **Integrate** > **Power Apps**. More options appear:
 
    - Create an app
    - See all apps
    - Customize forms
 
-    ![Create a custom form from Projects list](../../../images/gs01-create-a-custom-form-command-bar.png)
+    ![Create a custom form from Projects list](../../../images/lists-integrate-power-apps-create-app.png)
 
 1. Select **Customize forms**. The Power Apps studio appears and loads your form onto the canvas. If the **Welcome to Power Apps Studio** dialog box opens, select **Skip**.
 
@@ -34,7 +34,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
 ### Add a user profile photo
 
-1. On the **Insert** tab, select **Media** > **Image**. An [Image](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-image) control named **Image1** is added to the canvas and to the [Tree view](https://docs.microsoft.com/powerapps/maker/model-driven-apps/using-tree-view-on-form) on the left-hand panel.
+1. On the **Insert** tab, select **Media** > **Image**. An [Image](/powerapps/maker/canvas-apps/controls/control-image) control named **Image1** is added to the canvas and to the [Tree view](/powerapps/maker/model-driven-apps/using-tree-view-on-form) on the left-hand panel.
 
     ![Add an image in Power Apps studio](../../../images/gs01-power-apps-studio-add-image.png)
 
@@ -44,9 +44,9 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Image control with Properties panel](../../../images/gs01-image-control-selected.png)
 
-    1. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-cards).
+    1. Because the image is the profile photo of the owner of the selected item, we recommend you make it the same height as the **Owner_DataCard1** [data card](/powerapps/maker/canvas-apps/working-with-cards).
 
-    1. With **Image1** selected, in the [formula bar](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter `Owner_DataCard1.Height` as the formula. **Image1** now has the same height as **Owner_DataCard1**.
+    1. With **Image1** selected, in the [formula bar](/powerapps/maker/canvas-apps/working-with-formulas), change the property to **Height**, and enter `Owner_DataCard1.Height` as the formula. **Image1** now has the same height as **Owner_DataCard1**.
 
     ![Set image height](../../../images/gs01-set-image-height.png)
          
@@ -60,7 +60,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 
     ![Set image border radius](../../../images/gs01-set-image-border-radius.png)
 
-1. To change the image of **Image1** from the sample image to the project owner's profile photo, you can use the Office 365 Users connector to retrieve the photo by the owner's email. First, [connect your custom form to the Office 365 Users connector](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-office365-users).
+1. To change the image of **Image1** from the sample image to the project owner's profile photo, you can use the Office 365 Users connector to retrieve the photo by the owner's email. First, [connect your custom form to the Office 365 Users connector](/powerapps/maker/canvas-apps/connections/connection-office365-users).
 
 1. To retrieve the project owner's profile photo by email, in the formula bar, change the property to **Image**, and enter `Office365Users.UserPhoto(DataCardValue5.Selected.Email)` as the formula. The user photo from the owner's Office 365 user profile appears in **Image1**. 
 
@@ -73,7 +73,7 @@ Before starting, make sure your SharePoint site is set up with the [required lis
 To make the **Title** field view-only, follow these steps.
 
  > [!NOTE]
- > **Title** is a [predefined card](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
+ > **Title** is a [predefined card](/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
 
 1. Select **Title_DataCard1**, toggle the **Properties** pane to the **Advanced** pane, and select **Unlock to manage properties**.
 
@@ -98,7 +98,7 @@ To make the **Title** field view-only, follow these steps.
 To hide the **Attachments** field if the project owner is Nestor Wilke, follow these steps.
 
 > [!NOTE]
-> **Attachments** is a [predefined card](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
+> **Attachments** is a [predefined card](/powerapps/maker/canvas-apps/controls/control-card), so it is locked by default, and needs to be unlocked.
 
 1. Select **Attachments**, toggle the **Properties** pane to the **Advanced** pane, and select **Unlock to manage properties**.
 
@@ -112,11 +112,11 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
 
 1. In the formula bar, enter the following formula: `If(SharePointIntegration.Selected.Owner.DisplayName = "Nestor Wilke", false, true)`
 
-    ![View-only title](../../../images/gs01-attachments-conditional-visibility.png)
+    ![Enter conditional formula](../../../images/gs01-attachments-conditional-visibility.png)
     
     If the project owner is Nestor Wilke, then the **Attachments** data card is hidden. Otherwise, it is visible.
 
-    You can write the same conditional logic in multiple ways. For more info, see [Operators and Identifiers in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/operators).
+    You can write the same conditional logic in multiple ways. For more info, see [Operators and Identifiers in Power Apps](/powerapps/maker/canvas-apps/functions/operators).
 
 ## Publish your custom form
 

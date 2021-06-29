@@ -417,4 +417,4 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 - [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md)
 - [SharePoint: Create a Geolocation field that renders maps using Nokia Maps](https://code.msdn.microsoft.com/office/SharePoint-2013-Create-a-d9a91551)
 - [How to: Create a Custom Field Type](https://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f%28Office.15%29.aspx)
-- [Add and Remove Mapped Folders](https://docs.microsoft.com/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders)
+- [Add and Remove Mapped Folders](/visualstudio/sharepoint/how-to-add-and-remove-mapped-folders)

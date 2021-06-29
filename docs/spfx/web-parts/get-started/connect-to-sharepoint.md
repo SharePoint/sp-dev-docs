@@ -1,7 +1,7 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
-ms.date: 06/16/2020
+ms.date: 06/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
@@ -245,6 +245,9 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 1. Save the file.
 
     Gulp rebuilds the code in the console as soon as you save the file. This generates the corresponding typings in the **HelloWorldWebPart.module.scss.ts** file. After compiled to TypeScript, you can then import and reference these styles in your web part code.
+
+    > [!TIP]
+    > This file is dynamically generated when the project is built. It's hidden from VS Code's Explorer view using the **.vscode/settings.json** file.
 
     You can see that in the `render()` method of the web part:
 

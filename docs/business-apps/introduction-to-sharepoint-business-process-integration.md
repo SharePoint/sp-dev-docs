@@ -48,4 +48,4 @@ Cross-tool functionality seamlessly moves your data from one operation to anothe
 ## Next steps
 
 * [Get started with Power Automate and SharePoint](./power-automate/get-started/create-your-first-flow.md)
-* [Get started with Power Apps and SharePoint](https://docs.microsoft.com/powerapps/maker/canvas-apps/customize-list-form)
+* [Get started with Power Apps and SharePoint](/powerapps/maker/canvas-apps/customize-list-form)

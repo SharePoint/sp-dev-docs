@@ -120,7 +120,7 @@ You should focus on transforming Feature Framework elements deployed by the site
     
 ### Timer jobs
 
-If you are using SharePoint Online, you cannot create and manage timer jobs. Instead, you can create a console application that uses Windows Task Scheduler or an [Azure WebJob](https://docs.microsoft.com/azure/app-service/web-sites-create-web-jobs) to schedule and run the console application remotely. 
+If you are using SharePoint Online, you cannot create and manage timer jobs. Instead, you can create a console application that uses Windows Task Scheduler or an [Azure WebJob](/azure/app-service/web-sites-create-web-jobs) to schedule and run the console application remotely. 
 
 When creating a custom timer job, determine whether you need to use a specific account or an OAuth-based app-only token. The [Core.TimerJobs.Samples](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples) code sample shows how to create your own custom timer job.
     

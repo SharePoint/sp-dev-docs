@@ -45,9 +45,6 @@ If the offending process continues to exceed usage limits, SharePoint Online mig
 In addition to throttling by user account, limits are also applied to each application. Every application in SharePoint Online has its own available resources, but multiple applications running against the same tenant ultimately share from the same resource bucket and in rare occurrences can cause rate limiting.
 In these cases, SharePoint Online will attempt to prioritize interactive user requests over background activities.
 
-> [!NOTE]
-> Notice that there is difference between AppOnly authentication and Delegated authentication when making use of Applications when it comes to throttling. When making use of the delegated approach, throttling is applied on an user-basis and not the used application. When making use of the AppOnly way of authenticating, throttling is applied on application-basis.  
-
 ## Common throttling scenarios in SharePoint Online
 
 The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.
@@ -71,11 +68,15 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
     ![Steady throttling](../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
 
+- **Unsupported use cases**
+
+    Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
+
 ## Why can't you just tell me the exact throttling limits?
 
 Setting and publishing exact throttling limits sounds straightforward, but in fact it would result in more restrictive limits. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online.
 
-That's why it's so important for your CSOM or REST code to honor the `Retry-After` HTTP header value; this lets your code run as fast as possible on any given day, and it lets your code back off "just enough" if it hits throttling limits. The code samples later in this article show you how to use the `Retry-After` HTTP header.
+That's why it's so important for your code to honor the `Retry-After` HTTP header value; this lets your code run as fast as possible on any given day, and it lets your code back off "just enough" if it hits throttling limits. The code samples later in this article show you how to use the `Retry-After` HTTP header.
 
 ## Search query volume limits when using app-only authentication with Sites.Read.All permission
 
@@ -89,8 +90,11 @@ As we scale our system, we realize the importance of hardening the system to run
 
 - Reduce the number of operations per request
 - Reduce the frequency of calls
+- Choose Microsoft Graph APIs over CSOM and REST APIs when possible
 - Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
 - Leverage the `Retry-After` HTTP header
+
+Microsoft Graph is cloud born APIs that have the latest improvements and optimizations. In general, Microsoft Graph consumes less resource than CSOM and REST to achieve the same functionality. Hence, adopting Microsoft Graph can improve application's performance and reduce throttling.
 
 If you do run into throttling, we require leveraging the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed.
 
@@ -113,7 +117,7 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 - If you've created an application, the recommendation is to register and use AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
 
     > [!NOTE]
-    > Refer to the [Microsoft identity documentation](https://docs.microsoft.com/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
+    > Refer to the [Microsoft identity documentation](/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
 
 - Make sure to include User Agent string in your API call to SharePoint with following naming convention
 
@@ -132,7 +136,7 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
-```cs
+```csharp
 // Get access to source site
 using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 {
@@ -158,7 +162,7 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
 
 Following sample is in C# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
 
-```cs
+```csharp
 HttpWebRequest endpointRequest = (HttpWebRequest) HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
 endpointRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
@@ -174,7 +178,7 @@ HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse(
 
 Add this extension method in a static class and use `ExecuteQueryWithIncrementalRetry` instead of `ExecuteQuery` to make your code handle throttling requests.
 
-```cs
+```csharp
 public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount, int delay)
 {
   int retryAttempts = 0;

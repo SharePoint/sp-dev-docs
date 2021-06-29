@@ -1,5 +1,6 @@
 ---
 title: Elevated privileges
+description: Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins or other remotely hosted solutions.
 ms.date: 04/22/2020
 localization_priority: Normal
 ---
@@ -74,7 +75,7 @@ To get a reference to the [ClientContext](https://msdn.microsoft.com/library/off
 > [!NOTE] 
 > he code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-```cs
+```csharp
 Uri siteUrl = new Uri(ConfigurationManager.AppSettings["MySiteUrl"]);
 try
 {
@@ -124,7 +125,7 @@ When planning to use service accounts in your add-in, consider the following:
 
 The following code shows how to authenticate by using [SharePointOnlineCredentials](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.sharepointonlinecredentials.aspx) with a service account.
 
-```cs
+```csharp
 using (ClientContext context = new ClientContext("https://contoso.sharepoint.com"))
 {
 

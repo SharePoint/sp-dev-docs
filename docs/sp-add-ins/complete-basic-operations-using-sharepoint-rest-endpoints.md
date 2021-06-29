@@ -52,7 +52,7 @@ The following C# code demonstrates how to make this **GET** request that returns
 
 For more information about how you can obtain an access token, see [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md) and [Authorization Code OAuth flow for SharePoint Add-ins](authorization-code-oauth-flow-for-sharepoint-add-ins.md).
 
-```cs
+```csharp
 HttpWebRequest endpointRequest =
   (HttpWebRequest)HttpWebRequest.Create(
   "http://<site url>/_api/web/lists");
@@ -112,7 +112,7 @@ You can create and update SharePoint entities by constructing RESTful HTTP reque
 
 Another important consideration when creating, updating, and deleting SharePoint entities is that if you aren't using OAuth to authorize your requests, these operations require the server's request form digest value as the value of the **X-RequestDigest** header. You can retrieve this value by making a **POST** request with an empty body to `http://<site url>/_api/contextinfo` and extracting the value of the `d:FormDigestValue` node in the XML that the **contextinfo** endpoint returns. The following example shows an HTTP request to the **contextinfo** endpoint in C#.
 
-```cs
+```csharp
 HttpWebRequest endpointRequest =(HttpWebRequest)HttpWebRequest.Create(
                                     "http://<site url>/_api/contextinfo");
 endpointRequest.Method = "POST";

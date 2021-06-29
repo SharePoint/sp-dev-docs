@@ -1,7 +1,7 @@
 ---
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
-ms.date: 09/07/2020
+ms.date: 06/14/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -43,7 +43,7 @@ Following web part manifest demonstrates scenario where the web part is included
 
 As a developer, the two most common ways to provision Single Part App pages is to use PnP PowerShell or CLI for Microsoft 365.
 
-You can use [PnP PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps) to update the page layout for the existing page with following script.
+You can use [PnP PowerShell](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) to update the page layout for the existing page with following script.
 
 [!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
@@ -64,10 +64,10 @@ Set-PnPClientSidePage -Identity "Page" -LayoutType SingleWebPartAppPage
 
 ```console
 m365 login
-m365 spo listitem set --webUrl https://contoso.sharepoint.com/sites/marketing --listTitle 'Site Pages' --id 3 --PageLayoutType SingleWebPartAppPage
+m365 spo listitem set --webUrl https://contoso.sharepoint.com/sites/marketing --listTitle "Site Pages" --id 3 --PageLayoutType SingleWebPartAppPage
 ```
 
-> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-set/) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-set.html) for complete details and examples on this command.
 
 ---
 

@@ -15,13 +15,13 @@ To accommodate your users' preferences, you can let them configure your web part
 
 ## Configure Microsoft Teams tabs built using SharePoint Framework
 
-Typically, when building Microsoft Teams tab, you need to [build custom UI to allow users to configure your tab](https://docs.microsoft.com/microsoftteams/platform/tabs/how-to/create-tab-pages/configuration-page). Additionally, you need to write code to store and load configuration values as selected by the user.
+Typically, when building Microsoft Teams tab, you need to [build custom UI to allow users to configure your tab](/microsoftteams/platform/tabs/how-to/create-tab-pages/configuration-page). Additionally, you need to write code to store and load configuration values as selected by the user.
 
 When building tabs using SharePoint Framework, the generated tab uses the [web part property pane](web-parts/guidance/integrate-web-part-properties-with-sharepoint.md) to let users configure the tab. This saves you a lot of effort. Not only you don’t need to build and maintain a separate configuration UI but you also don’t need to implement any code responsible for storing and managing the settings. All of that is handled automatically for you by SharePoint Framework.
 
 ## Configure Microsoft Teams personal apps built using SharePoint Framework
 
-Microsoft Teams personal apps don’t offer any infrastructure for implementing configuration. Instead, following the pattern recommended by Microsoft Teams, personal app’s [settings should be exposed in a separate tab](https://docs.microsoft.com/microsoftteams/platform/concepts/design/personal-apps).
+Microsoft Teams personal apps don’t offer any infrastructure for implementing configuration. Instead, following the pattern recommended by Microsoft Teams, personal app’s [settings should be exposed in a separate tab](/microsoftteams/platform/concepts/design/personal-apps).
 
 ![Personal app with multiple tabs including settings built using SharePoint Framework](../images/build-for-teams/build-for-teams-personal-app.png)
 
@@ -55,7 +55,7 @@ Alternatively, you could store user settings in a list. You could create a hidde
 
 #### Store user configuration in application’s personal folder
 
-One of the less-known options for persisting application- and user-specific configuration is using the [application’s personal folder](https://docs.microsoft.com/graph/api/drive-get-specialfolder?view=graph-rest-1.0&tabs=http). Application’s specific folder is located in the user’s OneDrive for Business site. Each application gets a designated folder in which it can store any number of files.
+One of the less-known options for persisting application- and user-specific configuration is using the [application’s personal folder](/graph/api/drive-get-specialfolder?tabs=http). Application’s specific folder is located in the user’s OneDrive for Business site. Each application gets a designated folder in which it can store any number of files.
 
 ![Application’s personal folder created for SharePoint Framework applications](../images/build-for-teams/build-for-teams-application-personal-folder.png)
 

@@ -120,11 +120,11 @@ Additional permission scopes can be requested by developers and granted by tenan
 
 ### Azure AD roles with delegated authentication
 
-The MSGraphClient currently uses implicit authentication flow when requesting delegated permissions from Microsoft Graph.  As stated in [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens#payload-claims), the `wids` claim may not be present when using implicit authentication flow because of length concerns.  The `wids` claim contains the listing of Azure AD tenant-wide roles that have been assigned to the delegated user.
+The MSGraphClient currently uses implicit authentication flow when requesting delegated permissions from Microsoft Graph.  As stated in [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens#payload-claims), the `wids` claim may not be present when using implicit authentication flow because of length concerns.  The `wids` claim contains the listing of Azure AD tenant-wide roles that have been assigned to the delegated user.
 
 As a result, queries to Microsoft Graph endpoints that rely on Azure AD roles also to delegated permissions may fail because of the `wids` claim not being present.  At the time of writing this includes the following endpoints:
 
-- [Office 365 usage reports](https://docs.microsoft.com/graph/reportroot-authorization)
+- [Office 365 usage reports](/graph/reportroot-authorization)
 
 ## See also
 

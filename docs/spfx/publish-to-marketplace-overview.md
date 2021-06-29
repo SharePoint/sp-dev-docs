@@ -11,7 +11,7 @@ localization_priority: Priority
 Publishing your SharePoint Framework solutions to [marketplace (also known as AppSource)](https://appsource.microsoft.com/) and to SharePoint store, which allows you to reach other organizations and let them easily install your application in their Microsoft 365 tenant. Following sections describe considerations that you should take into account before publishing your solutions to the marketplace.
 
 > [!NOTE]
-> Please see the [Microsoft 365 App Stores documentation](https://docs.microsoft.com/office/dev/store/) for the general process for submitting your solution to the store. This guidance is the same for all different application types in Microsoft 365. Documentation also includes details on the submission process.
+> Please see the [Microsoft 365 App Stores documentation](/office/dev/store/) for the general process for submitting your solution to the store. This guidance is the same for all different application types in Microsoft 365. Documentation also includes details on the submission process.
 
 > [!IMPORTANT]
 > You will need to use SharePoint Framework v1.11 or later for the solutions which are submitted to store.

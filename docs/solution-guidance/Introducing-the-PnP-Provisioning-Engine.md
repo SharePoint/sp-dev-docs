@@ -53,7 +53,7 @@ To export that site as a provisioning template, you can either use PowerShell or
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
-To use the PowerShell cmdlets for SharePoint Online or SharePoint, go to [PnP PowerShell overview](https://docs.microsoft.com/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), and install the SharePoint PnP PowerShell module. 
+To use the PowerShell cmdlets for SharePoint Online or SharePoint, go to [PnP PowerShell overview](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets), and install the SharePoint PnP PowerShell module. 
 
 After you have connected your PowerShell environment to SharePoint Online by using the **Connect-PnPOnline** cmdlet, you can use the following PowerShell cmdlet: 
 

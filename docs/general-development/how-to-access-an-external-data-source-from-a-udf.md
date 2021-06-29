@@ -1,5 +1,6 @@
 ---
 title: Access an external data source from a UDF
+description: This example shows how to access an external database from a user-defined function (UDF). 
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
@@ -21,7 +22,7 @@ This example shows how to access an external database from a user-defined functi
 ## Example
 
 
-```cs
+```csharp
 
 using System;
 using System.Collections.Generic;

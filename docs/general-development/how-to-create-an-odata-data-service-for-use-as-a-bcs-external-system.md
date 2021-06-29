@@ -1,5 +1,6 @@
 ---
 title: Create an OData data service for use as a BCS external system
+description: Learn how to create an Internet-addressable WCF service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7d7b3aa6-85b7-400d-8ea5-50bebac56a1d
@@ -182,7 +183,7 @@ However, for SharePoint to enable BCS to receive notifications from remote syste
   
 4. Replace the comment  `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is **AdventureWorksEntities**. The class definition should look like the following:
     
-```cs
+```csharp
   
 public class AdventureWorks : DataService<AdventureWorksEntities>
 ```
@@ -197,7 +198,7 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 
 - In the code for the data service, replace the placeholder code in the **InitializeService** function with the following.
     
-```cs
+```csharp
 config.SetEntitySetAccessRule("*", EntitySetRights.All);
 config.SetServiceOperationAccessRule("*", ServiceOperationRights.All);
 ```
@@ -221,7 +222,7 @@ The last step in creating the service is to add service operations for the **Sub
 
 - In the AdventureWorks.cs page, add the following string variable declaration.
     
-```cs
+```csharp
 public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\SubscriptionStore.xml";
 ```
 
@@ -230,7 +231,7 @@ public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\Sub
 
 Then add the following two **WebGet** methods to handle the subscriptions.
 
-```cs
+```csharp
 [WebGet]
 public string Subscribe(string deliveryUrl, string eventType)
 {

@@ -25,7 +25,7 @@ For a sample that shows you how to apply an existing or custom theme, see [Brand
 
 Use the **ApplyTheme** client-side method when you use remote provisioning to apply themes, as shown in the following example.
 
-```cs
+```csharp
 public void ApplyTheme(
 	    	string colorPaletteUrl,
 	    	string fontSchemeUrl,
@@ -51,7 +51,7 @@ The **ApplyTheme** method uses the following parameters:
 
 You can use CSOM code to get information about the composed looks that are applied to a site. The [ThemeInfo](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.themeinfo.aspx) class gets the context associated with the themes, as shown in the following example.
 
-```cs
+```csharp
 public ThemeInfo ThemeInfo { get; }
 ```
 

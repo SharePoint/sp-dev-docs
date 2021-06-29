@@ -74,6 +74,11 @@
             "source_path": "docs/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md",
             "redirect_url": "docs/spfx/deployment-spfx-teams-solutions.md",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/general-development/office-365-cdn.md",
+            "redirect_url": "/office365/enterprise/use-office-365-cdn-with-spo",
+            "redirect_document_id": false
         }
     ]
 }

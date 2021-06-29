@@ -61,7 +61,7 @@ After you've requested SharePoint to add your webhook, SharePoint validates that
 
 Take a look at the reference implementation, and you'll see that all webhook CRUD operations are consolidated in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project. Adding a webhook is done by using the **AddListWebHookAsync** method:
 
-```cs
+```csharp
 /// <summary>
 /// This method adds a webhook to a SharePoint list. Note that you need your webhook endpoint being passed into this method to be up and running and reachable from the internet
 /// </summary>
@@ -81,7 +81,7 @@ public async Task<SubscriptionModel> AddListWebHookAsync(string siteUrl, string 
 
 When making a call to SharePoint, you need to provide authentication information, and in this case you're using a **Bearer** authentication header with an **access token**. To obtain the access token, intercept the token via an **ExecutingWebRequest** event handler:
 
-```cs
+```csharp
 ClientContext cc = null;
 
 // Create SharePoint ClientContext object...

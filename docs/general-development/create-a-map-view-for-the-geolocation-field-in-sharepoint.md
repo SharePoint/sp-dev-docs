@@ -1,5 +1,6 @@
 ---
 title: Create a map view for the Geolocation field in SharePoint
+description: Learn how to display location information by using a map view in SharePoint lists.
 ms.date: 05/09/2020
 ms.prod: sharepoint
 ms.assetid: 0cd8ba27-3326-4b60-a2d0-d289a94f11bb
@@ -91,7 +92,7 @@ Follow these steps to create a map view for a SharePoint list programmatically.
     > [!NOTE]
     > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.
 
-    ```cs
+    ```csharp
     class Program
     {
       static void Main(string[] args)

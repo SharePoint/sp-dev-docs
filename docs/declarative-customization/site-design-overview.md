@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design and site script overview
 description: Use SharePoint site scripts and site designs to provide custom configurations to apply when new sites are created.
-ms.date: 04/15/2021
+ms.date: 06/14/2021
 localization_priority: Priority
 ---
 
@@ -12,6 +12,7 @@ localization_priority: Priority
 > - In previous versions of SharePoint, site templates were called site designs but will be referred to as site templates moving forward.
 > - SharePoint has a new site template experience that will be available to all SharePoint user with permissions to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
 > - As of today, the site template experience cannot be disabled.
+> - Site templates created by your organization and set as the default template will automatically apply when new sites are created but can be updated by the site owner by selecting **Settings** and then **Apply a site template.**
 > - Site template version history is not currently available for the new site template experience but will be included in future iterations.
 
 Use site templates and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations. 
@@ -140,16 +141,16 @@ Available actions include:
 - Adding principals (users and groups) to SharePoint roles
 - Setting external sharing capability for the site
 
-For a complete list of available actions and their parameters, see the [JSON schema](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema).
+For a complete list of available actions and their parameters, see the [JSON schema](site-design-json-schema.md).
 
 > [!NOTE]
-> For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
+> For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
 
 For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list. 
 
-We'd previously capped the limit of site script actions to 30. This remains the limit for scripts applied synchronously using the [Invoke-SPOSiteDesign](https://docs.microsoft.com/powershell/module/sharepoint-online/Invoke-SPOSiteDesign)  command, but based on customer feedback and support for additional actions we have bumped this limit to 300 actions (or 100,000 characters) when the scripts are applied asynchronously (either through the UI or using the [Add-SPOSiteDesignTask](https://docs.microsoft.com/powershell/module/sharepoint-online/Add-SPOSiteDesignTask) command).
+We'd previously capped the limit of site script actions to 30. This remains the limit for scripts applied synchronously using the [Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/Invoke-SPOSiteDesign)  command, but based on customer feedback and support for additional actions we have bumped this limit to 300 actions (or 100,000 characters) when the scripts are applied asynchronously (either through the UI or using the [Add-SPOSiteDesignTask](/powershell/module/sharepoint-online/Add-SPOSiteDesignTask) command).
 
 There is also a limit of 100 site scripts and 100 site templates per tenant.
 

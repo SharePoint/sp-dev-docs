@@ -16,7 +16,7 @@ To use Power Automate and build flows, you need a Microsoft 365 tenant.
 
 If you already have an Office 365 tenant, see section **Create Projects list** below.
 
-For step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription, see the [Office 365 Developer Program documentation](https://docs.microsoft.com/office/developer-program/office-365-developer-program).
+For step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription, see the [Office 365 Developer Program documentation](/office/developer-program/office-365-developer-program).
 
 ## Create Projects list
 

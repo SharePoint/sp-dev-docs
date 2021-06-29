@@ -1,5 +1,6 @@
 ---
 title: Specify a range address and sheet name
+description: This example shows how to specify range addresses by using range coordinates, named ranges, rows, and columns. It also shows how to specify a sheet name and the relationship between a sheet name and a range address.
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,set range
 f1_keywords:
@@ -26,7 +27,7 @@ A range specification must contain a sheet name; Excel Web Services does not rec
 
 - As part of the range address—for example, "Sheet3!B12:D18"—in which case the sheet name argument can be empty:
     
-```cs
+```csharp
   
 object[] rangeResult1 = xlservice.GetRangeA1(sessionId, String.Empty, "Sheet2!A12:G18", true, out outStatus);
 ```
@@ -38,7 +39,7 @@ object[] rangeResult1 = xlservice.GetRangeA1(sessionId, String.Empty, "Sheet2!A1
 
 - In a separate sheet name argument, in which case the range address argument does not have to include the sheet name:
     
-```cs
+```csharp
   xlservice.SetCell(sessionId, "Sheet3", 0, 11, 1000);
 ```
 
@@ -49,7 +50,7 @@ object[] rangeResult1 = xlservice.GetRangeA1(sessionId, String.Empty, "Sheet2!A1
 
 - In both the sheet name and range address, in which case the name of the sheet must match:
     
-```cs
+```csharp
   object[] rangeResult = xlservice.GetCellA1(sessionId, "Sheet3", "Sheet3!G18", true, out outStatus);
 ```
 
@@ -61,7 +62,7 @@ object[] rangeResult1 = xlservice.GetRangeA1(sessionId, String.Empty, "Sheet2!A1
 The only case that does not require a sheet name is a named range, because some named ranges have a workbook scope. For example, you can refer to named ranges without specifying the sheet name argument:
 
 
-```cs
+```csharp
 xlServices.SetCellA1(sessionId, String.Empty, "MyNamedRange", 8);
 ```
 
@@ -82,7 +83,7 @@ If you specify a sheet name, the ranges you reference must exist on the sheet yo
     
 
 
-```cs
+```csharp
 using System;
 using System.Text;
 using System.Web.Services.Protocols;

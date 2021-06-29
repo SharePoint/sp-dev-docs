@@ -1,5 +1,6 @@
 ---
 title: Common error messages in SharePoint workflow development
+description: A listing of common error messages that you might encounter while developing SharePoint workflows and guidance for solving the underlying problem.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e9bf6878-c722-4b1f-b5b5-b302ae0ea4da
@@ -41,7 +42,7 @@ Although this list doesn't cover every possible error you may encounter when dev
 -  [The e-mail message cannot be sent. Make sure the outgoing e-mail settings for the server are configured correctly](#bkmk_error07)
 
 
-- [The e-mail message cannot be sent. Email non-delivery reports in Exchange Online](https://docs.microsoft.com/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
+- [The e-mail message cannot be sent. Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)
     
   
 -  [The workflow could not update the item, possibly because one or more columns for the item require a different type of information](#bkmk_error08)
@@ -151,7 +152,7 @@ Errors sending e-mail can also happen because of Exchange non-delivery.  Review 
 
 
 
-- [Email non-delivery reports in Exchange Online](https://docs.microsoft.com/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)    
+- [Email non-delivery reports in Exchange Online](/exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online)    
 
   
 ### The workflow could not update the item, possibly because one or more columns for the item require a different type of information

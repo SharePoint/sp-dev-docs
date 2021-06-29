@@ -46,7 +46,7 @@ To follow the procedures in this article, be sure you have the following:
 - Familiarity with digital certificates—what they are and how to use them. See: 
 
   - [Digital Certificates](https://msdn.microsoft.com/library/e523b335-0156-4f47-b55c-b80495587c4f.aspx) 
-  - [Working with Certificates](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/working-with-certificates) 
+  - [Working with Certificates](/dotnet/framework/wcf/feature-details/working-with-certificates) 
 
 
 <a name="Cert2"> </a>
@@ -59,7 +59,7 @@ The following procedure describes how to create and export a test certificate by
 
 Alternatively, you can also use the MakeCert test program to generate an X.509 certificate. For more information about how to use MakeCert, see [Signing and checking code with Authenticode](https://msdn.microsoft.com/library/ms537364(VS.85).aspx).
 
-You'll create a test .pfx certificate file first, and then a corresponding test .cer file. The .pfx certificate contains the private key that is used by the remote web application to sign its communications to SharePoint. The .cer contains the public key that SharePoint uses to decrypt the messages, verify that they come from the remote web application, and verify that the remote web application has an access token from a token issuer that SharePoint trusts. For more information about .pfx and .cer files, see [Software Publisher Certificate](https://docs.microsoft.com/windows-hardware/drivers/install/software-publisher-certificate).
+You'll create a test .pfx certificate file first, and then a corresponding test .cer file. The .pfx certificate contains the private key that is used by the remote web application to sign its communications to SharePoint. The .cer contains the public key that SharePoint uses to decrypt the messages, verify that they come from the remote web application, and verify that the remote web application has an access token from a token issuer that SharePoint trusts. For more information about .pfx and .cer files, see [Software Publisher Certificate](/windows-hardware/drivers/install/software-publisher-certificate).
 
 ### To create a self-signed test .pfx certificate file
 

@@ -1,17 +1,17 @@
 ### YamlMime:Landing
 
-title: SharePoint Development documentation # < 60 chars
+title: SharePoint developer documentation # < 60 chars
 summary: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # < 160 chars
 
 metadata:
-  title: SharePoint Development documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: SharePoint developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # Required; article description that is displayed in search results. < 160 chars.
   ms.prod: sharepoint #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   ms.audience: Developer # Optional; Remove if no collection is used.
   author: VesaJuvonen #Required; your GitHub user alias, with correct capitalization.
   ms.author: vesaj #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/10/2020 #Required; mm/dd/yyyy format.
+  ms.date: 26/05/2021 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -135,7 +135,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: SharePoint sites and content API overview
-            url: https://docs.microsoft.com/en-us/graph/sharepoint-concept-overview
+            url: https://docs.microsoft.com/graph/sharepoint-concept-overview
 
   # Card (optional)
   - title: SharePoint REST service
@@ -143,7 +143,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Get to know the SharePoint REST service
-            url: https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
+            url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
       - linkListType: reference
         links:
           - text: Complete basic operations

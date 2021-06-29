@@ -1,5 +1,6 @@
 ---
 title: Accessibility in SharePoint
+description: Learn about the features, products, and services that make SharePoint accessible for people with disabilities, and find developer resources that can help you design and build apps and websites that support key accessibility scenarios.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c9106d47-c523-49c1-b9f1-cdd7420abd5e
@@ -37,7 +38,7 @@ Users who have site administrator responsibilities typically use the SharePoint 
   
     
     
-Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](https://docs.microsoft.com/windows/desktop/uxguide/inter-touch) on MSDN, and the [Office Touch Guide](https://office.microsoft.com/support/office-touch-guide-HA102823845.aspx) on Office.com.
+Users who have devices that support touch can use gestures to complete operations. For more information, see  [Touch](/windows/desktop/uxguide/inter-touch) on MSDN, and the [Office Touch Guide](https://office.microsoft.com/support/office-touch-guide-HA102823845.aspx) on Office.com.
   
     
     

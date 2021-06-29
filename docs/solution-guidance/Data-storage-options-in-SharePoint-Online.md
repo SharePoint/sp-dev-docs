@@ -43,7 +43,7 @@ Before you use this sample, make sure that you have the following:
 
 - A Microsoft Azure account where you can deploy an Azure SQL Database and create an Azure Storage account. 
     
-- A [SharePoint developer site](https://docs.microsoft.com/office/developer-program/office-365-developer-program) so that you can deploy the sample from Visual Studio.
+- A [SharePoint developer site](/office/developer-program/office-365-developer-program) so that you can deploy the sample from Visual Studio.
     
 Also, you need to deploy the Northwind database to Microsoft Azure.
 

@@ -49,7 +49,7 @@ body:
     "WebTemplate":"SITEPAGEPUBLISHING#0",
     "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
     "Owner":"owner@yourtenant.onmicrosoft.com",
-    "WebTemplateExtensionID":"00000000-0000-0000-0000-000000000000"
+    "WebTemplateExtensionId":"00000000-0000-0000-0000-000000000000"
   }
 }
 ```
@@ -70,7 +70,7 @@ The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell
 ...
     "SiteDesignId":"00000000-0000-0000-0000-000000000000",
     "Owner":"owner@yourtenant.onmicrosoft.com",
-    "WebTemplateExtensionID":"<your site design ID>"
+    "WebTemplateExtensionId":"<your site design ID>"
 ...
 ```
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]

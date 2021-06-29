@@ -193,6 +193,8 @@
         href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
       - name: Use Microsoft Graph in web parts
         href: spfx/web-parts/get-started/using-microsoft-graph-apis.md
+      - name: Use Microsoft Graph Toolkit in web parts
+        href: spfx/web-parts/get-started/build-web-part-microsoft-graph-toolkit.md
       - name: Provision assets from a web part
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Build Microsoft Teams channel/group tabs with SPFx
@@ -412,6 +414,8 @@
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator
       href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: Microsoft Graph Toolkit
+      href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging
     items:
     - name: Debug in Visual Studio Code
@@ -5187,4 +5191,4 @@
 - name: Tutorials
   href: training/training.md
 - name: SharePoint Framework API reference
-  href: https://docs.microsoft.com/javascript/api/overview/sharepoint?view=sp-typescript-latest
+  href: https://docs.microsoft.com/javascript/api/overview/sharepoint

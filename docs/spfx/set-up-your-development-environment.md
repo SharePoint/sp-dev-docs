@@ -1,14 +1,14 @@
 ---
 title: Set up your SharePoint Framework development environment
-description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 04/28/2021
+description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
+ms.date: 06/29/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
 ---
 # Set up your SharePoint Framework development environment
 
-You can use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a macOS, Windows, or Linux environment as well.
+You can use any text editor to build SharePoint Framework solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
@@ -16,6 +16,9 @@ You can use Visual Studio or your own custom development environment to build Sh
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/-2-jWsEa2Yw]
+
+> [!IMPORTANT]
+> The following steps assume you're building solutions for SharePoint Online using the latest version of the SharePoint Framework. If you're building solutions for SharePoint Server 2019 or SharePoint Server 2016, refer to the additional documentation referenced in the [See also](#see-also) section below.
 
 ## Install Node.js
 
@@ -47,7 +50,7 @@ The SharePoint Framework v1.12.1 is supported on the following Node.js versions:
 - Node.js v14.15.0+ (*Fermium*)
 
 > [!CAUTION]
-> If you're building SharePoint Framework components for SharePoint Server 2016, see **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section for additional details on which version of Node.js you should install.
+> If you're building SharePoint Framework components for SharePoint on-prem deployments, refer to the additional pages listed in the [See also](#see-also) section for more information.
 
 ## Install a code editor
 
@@ -135,19 +138,26 @@ Following are some tools that might come in handy as well:
 - [Oh My Zsh for macOS](http://ohmyz.sh/)
 - [Git source control tools](https://git-scm.com/)
 
-## SPFx & SharePoint Server 2016
-
-SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1. Around this the time of the v1.1 release, Node.js was transitioning from Node.js v6.x to v8.x. In this update, Node.js introduced a change where the default HTTP protocol switched from HTTP1 to HTTP2. SPFx v1.1 was written for HTTP1, not HTTP2, so this change affected the local web server for SPFx v1.1 projects.
-
-In Node.js v8.x, you can force HTTP1 by setting the following environment variable to instruct Node.js to use HTTP1 instead of the default HTTP2: `NODE_NO_HTTP2=1`. This environment variable only exists in Node.js v8.x. That's why if you're building SPFx solutions for SharePoint Server 2016, you should use Node.js v8.x.
-
-This issue doesn't impact later versions of SPFx because they've been updated to support HTTPs.
-
-For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-docs/issues/1002).
-
 ## Next steps
 
 You're now ready to [build your first client-side web part](web-parts/get-started/build-a-hello-world-web-part.md)!
+
+## SPFx & SharePoint Server (on-prem)
+
+The SPFx is available on SharePoint Online (SPO), SharePoint Server 2019, & SharePoint Server 2016. The configuration instructions on this page assume you're creating solutions using the latest version of the SPFx for SharePoint Online.
+
+SharePoint Online contains all versions of the SPFx, including all previous and the latest version. Each SPFx solution contains information to tell SPO which SPFx runtime it depends.
+
+If you're building solutions for a SharePoint Server on-prem deployment, review to the [See also](#see-also) section for details on specific SharePoint versions. Each SharePoint on-prem only supports a specific version of SPFx. This can introduce complicated development environment configurations if you're creating different solutions for different SharePoint deployments.
+
+Depending on your scenario, you may need to maintain different development environments. Developers have used the following approaches to address these challenges:
+
+- virtual machines
+- Docker
+- Node Version Manager (NVM)
+
+- **SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1.**
+- **SharePoint Server 2019 uses the SharePoint Framework (SPFx) v1.4.1.**
 
 ## Troubleshooting
 
@@ -161,16 +171,16 @@ npm list --global --depth=0️
 
 ### Unable to Trust the Self-signed Development Certificate
 
-#### Scenario: SPFx latest & SharePoint Online
-
 If you're having trouble trusting your self-signed certificate when you run **gulp trust-dev-cert** & you've verified that the correct versions of all dependencies are installed, one solution we usually see resolve the issue is to uninstall all globally installed packages, uninstall Node.js, reboot & start again.
-
-#### Scenario: SPFx v1.1 & SharePoint Server 2016
-
-If you're working with SharePoint Server 2016 / SPFx v1.1, first check the **[SPFx & SharePoint Server 2016](#spfx--sharepoint-server-2016)** section to ensure you're running a supported version of Node.js.
 
 In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder. Locate & delete the folder **<homedir>/.gcb-serve-data** and then try to trust the self-signed development certificate again.
 
 ### Unable to Install Packages with NPM - Corporate Proxies
 
 If your development environment is behind a corporate proxy, you need to configure NPM to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [How to setup Node.js and Npm behind a corporate web proxy](https://jjasonclark.com/how-to-setup-node-behind-web-proxy/)
+
+## See also
+
+- [SharePoint Framework development tools and libraries compatibility](compatibility.md)
+- [SharePoint Framework development with SharePoint Server 2016 Feature Pack 2](sharepoint-2016-support.md)
+- [SharePoint Framework development with SharePoint Server 2019](sharepoint-2019-support.md)

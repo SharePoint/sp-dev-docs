@@ -274,7 +274,7 @@ Your custom security trimmer must implement the **ISecurityTrimmerPost** interfa
 
 1. Set the return value of the **CheckAccess** method to **urlStatusArray**, as shown in the following code.
 
-    ```cs
+    ```csharp
     return urlStatusArray;
     ```
 

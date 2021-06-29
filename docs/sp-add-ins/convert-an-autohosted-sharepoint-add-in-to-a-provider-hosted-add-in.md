@@ -72,7 +72,7 @@ Converting a SharePoint autohosted add-in to a provider-hosted add-in involves m
 
 ## Deploy the Azure SQL Database
 
-The first step in converting the autohosted add-in to a provider-hosted add-in is to deploy the Azure SQL Database that the ASP.NET web application relies on. There are many different ways to create an Azure SQL Database, some of which are documented on the Azure documentation site: [SQL Server database migration to SQL Database in the cloud](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate).
+The first step in converting the autohosted add-in to a provider-hosted add-in is to deploy the Azure SQL Database that the ASP.NET web application relies on. There are many different ways to create an Azure SQL Database, some of which are documented on the Azure documentation site: [SQL Server database migration to SQL Database in the cloud](/azure/sql-database/sql-database-cloud-migrate).
 
 The approach outlined in the following steps uses the data-tier application deployment model because that is how the database is deployed in a SharePoint autohosted add-in. This involves generating a data-tier application package (*.dacpac) and using it to create the database.
 
@@ -261,15 +261,15 @@ Now the ASP.NET MVC web application files need to be deployed to the Azure websi
 After deploying the website, Visual Studio launches the default debugging browser and navigates to the Azure website. However, the site renders with an error because the ASP.NET MVC controllers are decorated with an attribute (specifically the `SharePointContextFilter`) that expects SharePoint to send certain values to the controller in the header of an HTTP POST request, but by default the browser launched an HTTP GET request, so this error is expected.
  
 > [!NOTE] 
-> For additional options for deploying ASP.NET web applications to an Azure website, see [Local Git Deployment to Azure App Service](https://docs.microsoft.com/azure/app-service/app-service-deploy-local-git).
+> For additional options for deploying ASP.NET web applications to an Azure website, see [Local Git Deployment to Azure App Service](/azure/app-service/app-service-deploy-local-git).
 
 ### Custom domains and SSL certificates for Azure websites
 
 All Azure websites use the following naming convention: `http[s]://[site-name].azurewebsites.net`. Microsoft has already added a wildcard SSL certificate to all websites under the `*.azurewebsites.net` domain, but customers are free to associate a custom domain with their Azure website as well as use their own SSL certificates for these custom domains.
  
-For information about using custom domains, see [Map an existing custom DNS name to Azure Web Apps](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain). 
+For information about using custom domains, see [Map an existing custom DNS name to Azure Web Apps](/azure/app-service/app-service-web-tutorial-custom-domain). 
 
-For information about adding a custom SSL certificate for your custom domain name, see [Bind an existing custom SSL certificate to Azure Web Apps](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl).
+For information about adding a custom SSL certificate for your custom domain name, see [Bind an existing custom SSL certificate to Azure Web Apps](/azure/app-service/app-service-web-tutorial-custom-ssl).
 
 ## Reconfigure the SharePoint Add-in project
 

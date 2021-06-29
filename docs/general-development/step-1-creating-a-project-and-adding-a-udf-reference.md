@@ -1,5 +1,6 @@
 ---
 title: Step 1 Creating a Project and Adding a UDF Reference
+description: In this step, you will create a project and add a reference to Microsoft.Office.Excel.Server.Udf.dll.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 4c6f1279-28df-45af-8488-42a6573d526d
@@ -52,7 +53,7 @@ The following project uses Microsoft Visual Studio 2005.
   
 8. You should see the following code in the Class1.cs file:
     
-```cs
+```csharp
   
 using System;
 using System.Collections.Generic;

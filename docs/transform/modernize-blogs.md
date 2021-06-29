@@ -1,11 +1,10 @@
 ---
 title: Modernize Delve blogs and classic blogs
 description: Modernize your Delve blogs and classic blogs
-ms.date: 06/05/2020
+ms.date: 06/22/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
-
 # Modernize Delve blogs and classic blogs
 
 > [!IMPORTANT]
@@ -16,7 +15,7 @@ SharePoint started supporting classic blogging via a blog site template as of Sh
 Next to the above mentioned classic blog pages SharePoint Online users can also use Delve blogs. Delve blogs are being deprecated and therefore it's highly recommended that you transform your business relevant Delve blog pages to modern pages in a modern communication site.
 
 > [!IMPORTANT]
-> Delve blogs are retired.  
+> Delve blogs are retired.
 
 ## Step 1: Understand where there are actively used blogs in your tenant
 
@@ -43,7 +42,7 @@ To create a communication site you can either use the SharePoint user interface 
 When you're using [PnP PowerShell](https://aka.ms/sppnp-powershell) follow these steps:
 
 ```PowerShell
-# Connect to a site in your tentant
+# Connect to a site in your tenant
 Connect-PnPOnline -Url https://contoso.sharepoint.com
 
 # Create a new communication site based upon an English template
@@ -130,4 +129,4 @@ Above `ConvertTo-PnPClientSidePage` cmdlet will read the Delve blog page with ti
 
 Above script snippet showed how to modernize a single Delve blog page, but often you would want to modernize all the posts in your Delve blog site. If that's needed then below script can be used.
 
-[!code-powershell[delveblogmodernization](../../sp-dev-modernization/Scripts/PageTransformation/Convert-DelveBlogPages.ps1 "Convert Delve blog pages into modern pages")]
+[Convert-DelveBlogPages.ps1](https://github.com/pnp/sp-dev-modernization/blob/master/Scripts/PageTransformation/Convert-DelveBlogPages.ps1)

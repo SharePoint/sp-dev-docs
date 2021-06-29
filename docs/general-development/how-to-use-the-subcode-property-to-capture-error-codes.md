@@ -1,5 +1,6 @@
 ---
 title: Use the SubCode property to capture error codes
+description: Excel Services generates errors in the SOAP exception based on errors that occur in Excel Services. To make it easier for the developer to catch specific error conditions, an Excel Calculation Services alert has an associated error code.
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,subcode
 f1_keywords:
@@ -14,7 +15,7 @@ localization_priority: Normal
 
 Excel Services generates errors in the SOAP exception based on errors that occur in Excel Services. To make it easier for the developer to catch specific error conditions, an Excel Calculation Services alert has an associated error code. The Excel Web Services then returns the error using properties from the **SoapException** class.
 
-The following examples show how to capture the error codes by using the [SubCode](https://docs.microsoft.com/dotnet/api/system.web.services.protocols.soapexception.subcode?view=netframework-4.7.2) property of the **SoapException** class.
+The following examples show how to capture the error codes by using the [SubCode](/dotnet/api/system.web.services.protocols.soapexception.subcode) property of the **SoapException** class.
 
 > [!NOTE] 
 > To be able to use the **SubCode** property, you must use Microsoft Visual Studio 2005. The **SubCode** property does not exist in earlier versions of Visual Studio.
@@ -25,7 +26,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
 
 1. After adding a Web reference to the Excel Web Services, add the following using directive so that you can use the **SoapException** class without having to qualify it with a full namespace:
     
-    ```cs
+    ```csharp
 
     using System.Web.Services.Protocols;
     ```
@@ -37,7 +38,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
 
 2. To capture the Excel Services error codes using the **SubCode** property, you must use the SOAP12 protocol version. After instantiating the Excel Web Services proxy class, set the SOAP protocol version as follows:
     
-    ```cs
+    ```csharp
       // Instantiate the Web service.
      ExcelService xlservice = new ExcelService();
 
@@ -57,7 +58,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
 
 3. To catch the error codes using the **SubCode** property, add a SOAP exception catch block to your code, for example:
     
-    ```cs
+    ```csharp
 
     catch (SoapException e)
     {
@@ -85,7 +86,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
   
 2. After you add a reference, add the following **using** directive to your code so that you can use the **SoapException** class without having to qualify it with a full namespace:
     
-    ```cs
+    ```csharp
 
     using System.Web.Services.Protocols;
     ```
@@ -100,7 +101,7 @@ For a list of error codes, see [Excel Services Error Codes](excel-services-error
   
 4. To catch the error codes using the **SubCode** property, add a SOAP exception catch block to your code, for example:
     
-    ```cs
+    ```csharp
       catch (SoapException e)
     {
         Console.WriteLine("SOAP Exception Message: {0}", e.Message);
@@ -128,7 +129,7 @@ The sheet that was requested could not be found. Please try a different one.
 ```
 
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Text;

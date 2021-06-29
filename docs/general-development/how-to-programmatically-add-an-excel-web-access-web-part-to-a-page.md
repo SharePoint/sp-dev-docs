@@ -56,7 +56,7 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
 
 1. Instantiate and initialize the Excel Web Access web part, as follows:
 
-    ```cs
+    ```csharp
     ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
     ```
 
