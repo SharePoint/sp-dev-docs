@@ -1,14 +1,14 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 06/22/2021
+ms.date: 06/29/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ms.custom: scenarios:getting-started
 ---
 # Set up your SharePoint Framework development environment
 
-You can use nay text editor to build SharePoint Framework solutions. You can use a macOS, Windows, or Linux environment as well.
+You can use any text editor to build SharePoint Framework solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
