@@ -1,19 +1,19 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
-ms.date: 04/17/2020
+ms.date: 07/06/2021
 localization_priority: Priority
 ---
 
 # Get started creating site designs and site scripts
 
-You can create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
+You can create site designs to provide reusable lists, themes, layouts, pages (experimental), or custom actions so that your users can quickly build new SharePoint sites with the features they need.
 
 This article describes how to build a simple site design that adds a SharePoint list for tracking customer orders. You'll use the site design to create a new SharePoint site with the custom list. You'll learn how to use SharePoint PowerShell cmdlets to create site scripts and site designs. You can also use REST APIs to perform the same actions. The corresponding REST calls are shown for reference in each step.
 
 ## Create the site script in JSON
 
-A site design is a collection of actions that SharePoint runs when creating a new site. Actions describe changes to apply to the new site, such as creating a new list or applying a theme. The actions are specified in a JSON script, which is a list of all actions to apply. When a script runs, SharePoint completes each action in the order listed.
+A site script is a collection of actions that SharePoint runs when creating a new site. Actions describe changes to apply to the new site, such as creating a new list or applying a theme. The actions are specified in a JSON script, which is a list of all actions to apply. When a script runs, SharePoint completes each action in the order listed.
 
 Each action is specified by the "verb" value in the JSON script. Also, actions can have subactions that are also "verb" values. In the following JSON, the script specifies to create a new list named **Customer Tracking**, and then subactions set the description and add several fields to define the list.
 
@@ -71,7 +71,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
     '
    ```
 
-The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design) if applied programmatically using the Invoke-SPOSiteDesign command. If they are applied through the UX or using the Add-SPOSiteDesignTask command then the limit is 300 cumulative actions (or 100K characters).
+The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design) if applied programmatically using the `Invoke-SPOSiteDesign` command. If they are applied through the UI or using the `Add-SPOSiteDesignTask` command then the limit is 300 cumulative actions (or 100K characters).
 
 ## Add the site script
 
@@ -117,7 +117,7 @@ Now that you've added a site script and site design, you can use it to create ne
 1. Go to the home page of the SharePoint site that you are using for development.
 1. Choose **Create site**.
 1. Choose **Team site**.
-1. In the **Choose a design** drop-down, select your site design **customer orders**.
+1. In the **Choose a design** drop-down, select your site design **Contoso customer tracking**.
 1. In **Site name**, enter a name for the new site **Customer order tracking**.
 1. Choose **Next**.
 1. Choose **Finish**.
