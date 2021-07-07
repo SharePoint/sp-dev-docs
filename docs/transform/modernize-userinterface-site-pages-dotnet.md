@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using .NET
 description: Explains how to transform classic wiki and web part pages into modern modern pages using the SharePoint .NET
-ms.date: 04/29/2021
+ms.date: 07/07/2021
 ms.prod: sharepoint
 localization_priority: Normal
 ---
@@ -250,7 +250,7 @@ using (var cc = am.GetSharePointOnlineAuthenticatedContextTenant(siteUrl))
 
 ### Modern site pages don't work on the site I want to transform pages in
 
-By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will tell you which sites have turned of the modern page feature. To remediate this use below sample PnP PowerShell script:
+By default the modern site page capability is enabled on most sites but maybe it was turned off afterwards. If that's the case the [SharePoint Modernization scanner](https://aka.ms/sppnp-modernizationscanner) will tell you which sites have turned off the modern page feature. To remediate this use below sample PnP PowerShell script:
 
 ```PowerShell
 $minimumVersion = New-Object System.Version("1.3.0")
