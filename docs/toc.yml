@@ -244,7 +244,7 @@
     - name: After publishing your app
       href: spfx/publish-to-marketplace-after-publishing.md
     - name: Frequently asked questions
-      href: spfx/publish-to-marketplace-faq.md
+      href: spfx/publish-to-marketplace-faq.yml
   - name: Migrate existing customizations
     items:
     - name: Script Editor web part
@@ -1266,7 +1266,7 @@
             - name: Test and call UDFs from cells
               href: general-development/step-4-testing-and-calling-udfs-from-cells.md
           - name: FAQ about UDFs
-            href: general-development/frequently-asked-questions-about-excel-services-udfs.md
+            href: general-development/frequently-asked-questions-about-excel-services-udfs.yml
           - name: Enable UDFs
             href: general-development/how-to-enable-udfs.md
           - name: Create a UDF that calls a web service
@@ -1540,7 +1540,7 @@
         - name: SharePoint Designer customized forms report
           href: transform/modernize-scanner-reports-customizedforms.md
       - name: Scanner FAQ
-        href: transform/modernize-scanner-faq.md
+        href: transform/modernize-scanner-faq.yml
     - name: SharePoint modernization guidance
       items:
       - name: Overview

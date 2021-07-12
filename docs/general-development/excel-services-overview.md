@@ -1,5 +1,6 @@
 ---
 title: Excel Services Overview
+description: "Excel Services is a service application that enables you to load, calculate, and display Microsoft Excel workbooks on Microsoft SharePoint."
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5fa22ebb-e507-4ffc-a425-e755502feae2
@@ -283,7 +284,7 @@ From there you can use OData system query options to get specific information ab
 -  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
     
   
--  [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+-  [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.yml)
     
   
 -  [Unsupported Features in Excel Services](https://msdn.microsoft.com/library/5868e672-4786-4fed-9168-07ff538f6f5c%28Office.15%29.aspx)

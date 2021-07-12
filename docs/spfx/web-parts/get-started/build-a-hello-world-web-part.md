@@ -69,7 +69,7 @@ When the project scaffolding and dependency install process is complete, Yeoman 
 >
 > NPM may display a message about running `npm audit` at the end of the process. Don't run this command as it will upgrade packages and nested dependencies that may not have been tested by the SharePoint Framework.
 
-For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
+For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.yml).
 
 ### Use your favorite code editor
 
@@ -101,7 +101,7 @@ This command executes a series of gulp tasks to create and start a local webserv
 > [!NOTE]
 > If you're seeing issues with the certificate in browser, please see details on installing a developer certificate: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
 >
-> If you're still seeing issues, see: [SharePoint Framework known issues and frequently asked questions](../../known-issues-and-common-questions.md)
+> If you're still seeing issues, see: [SharePoint Framework known issues and frequently asked questions](../../known-issues-and-common-questions.yml)
 
 ![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
 

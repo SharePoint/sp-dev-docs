@@ -1,5 +1,6 @@
 ---
 title: Excel Services User-Defined Functions
+description: "This section contains information about user-defined functions (UDFs) and how to use UDF attributes in your code."
 ms.date: 09/25/2017
 keywords: functions
 f1_keywords:
@@ -35,7 +36,7 @@ This section contains information about user-defined functions (UDFs) and how to
 > Get step-by-step instructions about developing Excel Services UDFs by using Microsoft Visual C#.
     
   
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.yml)
   
     
     
