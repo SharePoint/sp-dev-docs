@@ -235,6 +235,20 @@
       href: spfx/library-component-overview.md
     - name: Library component tutorial
       href: spfx/library-component-tutorial.md
+  - name: Viva Connections extensibility
+    items:
+    - name: Overview
+      href: spfx/viva/overview-viva-connections.md
+    - name: Tutorials
+      items:
+      - name: Build your first SharePoint Adaptive Card Extension
+        href: spfx/viva/build-first-sharepoint-adaptive-card-extension.md
+      - name: Advanced Card View Functionality
+        href: spfx/viva/advanced-card-view-functionality.md
+      - name: Advanced Quick View Functionality
+        href: spfx/viva/advanced-quick-view-functionality.md
+      - name: Adaptive Card Extensions and Teams Apps
+        href: spfx/viva/adaptive-card-extensions-and-teams.md
   - name: Publish to marketplace
     items:
     - name: Overview
