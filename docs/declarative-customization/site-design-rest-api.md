@@ -491,7 +491,7 @@ Applies a site design to an existing site collection.
 Here's an example of applying a site design to the ProjectGo site collection.
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.sharepoint.com/sites/projectgo"});
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {"siteDesignId": "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.sharepoint.com/sites/projectgo"});
 ```
 
 ## AddSiteDesignTaskToCurrentWeb
