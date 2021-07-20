@@ -1,7 +1,7 @@
 ---
 title: Deployment options for SharePoint Framework solutions for Microsoft Teams
 description: Learn what options are available to deploy SharePoint Framework solutions for Microsoft Teams
-ms.date: 03/15/2021
+ms.date: 07/20/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -51,7 +51,7 @@ If a SPFx solution contains multiple web parts designated for use in Microsoft T
 
 ## Developer-provided Microsoft Teams app manifest & package
 
-When you need more control over the Microsoft Teams app manifest or app package, you can create your own package. In this case, when an administrator selects the **Sync to Teams** button, SharePoint Online will look for the following file in the **\*.sppkg** file: **./src/teams/TeamsSPFxApp.zip**.
+When you need more control over the Microsoft Teams app manifest or app package, you can create your own package. In this case, when an administrator selects the **Sync to Teams** button, SharePoint Online will look for the following file in the **\*.sppkg** file: **./teams/TeamsSPFxApp.zip**.
 
 If this file is present, SharePoint Online will deploy it to the tenant's Microsoft Teams app store instead of dynamically creating it. This option gives developers full control over the Microsoft Teams app manifest & app package.
 
