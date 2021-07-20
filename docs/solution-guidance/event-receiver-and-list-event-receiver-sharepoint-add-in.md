@@ -1,7 +1,7 @@
 ---
 title: Event receivers and list event receivers in the SharePoint Add-in model
 description: In an SharePoint Add-in model scenario, event receivers are created outside of SharePoint inside a web service and registered with SharePoint. These are called as Remote Event Receivers (RER). In this scenario, the event receiver code runs on the web server where the web service is hosted.
-ms.date: 01/29/2021
+ms.date: 07/20/2021
 localization_priority: Priority
 ---
 # Event receivers and list event receivers in the SharePoint Add-in model
@@ -38,8 +38,7 @@ If the event receiver end point URL is unavailable the event receiver code will 
 Additionally, if there is a bug in poorly written event receiver code there is no way to notify SharePoint the bug occurred and the event should be executed again.  You can work around this to some degree with event receivers attached to SharePoint lists.  See below for more information about this approach.
 
 - When an event receiver executes a significant amount of code an asynchronous pattern should be used.
-  - See the following MSDN blog post for more information about this pattern. [Using Azure storage queues and WebJobs for async actions in Office 365 (MSDN Blog Post)](https://blogs.msdn.com/b/vesku/archive/2015/03/02/using-azure-storage-queues-and-webjobs-for-async-actions-in-office-365.aspx)
-  - See the following MSDN article for more information about timeouts in event receivers.  (Search for timeout in the article.)  [Handle events in add-ins for SharePoint (MSDN Article)](https://msdn.microsoft.com/library/office/jj220048.aspx)
+- See the following MSDN article for more information about timeouts in event receivers.  (Search for timeout in the article.)  [Handle events in add-ins for SharePoint (MSDN Article)](https://msdn.microsoft.com/library/office/jj220048.aspx)
 - When event receivers operate on SharePoint lists we recommend using a specific change tracking mechanism along with the event receiver to ensure higher quality processing.
   - See the following O365 PnP Code Sample for more information about this pattern and how to implement it.  [Core.ListItemChangeMonitor (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ListItemChangeMonitor)
 
@@ -53,7 +52,6 @@ To debug event receivers you need to configure a few different things in Azure a
 
 - [Core.EventReceivers (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EventReceivers)
   - This sample hows how a SharePoint Add-in can use the App Installed event to perform additional work in the host web, such as attaching event receivers to lists in the host web.
-  - See the following MSDN blog post for more information about this pattern. [Attaching Remote Event Receivers to Lists in the Host Web (MSDN Blog Post)](https://blogs.msdn.com/b/kaevans/archive/2014/02/26/attaching-remote-event-receivers-to-lists-in-the-host-web.aspx)
 - [Core.AppEvents.HandlerDelegation (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.AppEvents.HandlerDelegation)
   - This sample shows how to implement handlers for the AppInstalled and AppUninstalling events that:
       1. Incorporate rollback logic if the handler encounters an error.
