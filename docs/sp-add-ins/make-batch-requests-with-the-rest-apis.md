@@ -1,7 +1,7 @@
 ---
 title: Make batch requests with the REST APIs
 description: Use the $batch query option with the REST/OData APIs.
-ms.date: 1/15/2020
+ms.date: 07/20/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -88,6 +88,9 @@ GET https://fabrikam.sharepoint.com/_api/Web/lists HTTP/1.1
 
 --batch_7ba8d60b-efce-4a2f-b719-60c27cc0e70e--
 ```
+
+> [!CAUTION]
+> Batch requests can reduce the number of round-trip requests to the SharePoint REST API. However, uploading multiple files in a single batch is not supported.
 
 ## OData libraries
 
