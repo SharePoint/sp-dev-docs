@@ -1,10 +1,9 @@
 ---
 title: Scaffold projects by using Yeoman SharePoint generator
 description: Use the Yeoman SharePoint generator to scaffold new client-side solution projects to build, package, and deploy SharePoint solutions.
-ms.date: 11/10/2020
+ms.date: 07/20/2021
 ms.prod: sharepoint
 ---
-
 # Scaffold projects by using Yeoman SharePoint generator
 
 [Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. Using the Yeoman SharePoint generator, developers are able to scaffold new client-side solution projects to build, package, and deploy SharePoint solutions. The generator provides common build tools, boilerplate code, and a common playground website to host web parts for testing.
@@ -46,25 +45,11 @@ yo @microsoft/sharepoint --help
 
 ### Command-line options**
 
-Option | Description
------|------
-`--help`|Print the generator's options and usage.
-`--skip-cache`|Do not remember prompt answers. Default: *false*.
-`--skip-install`|Do not automatically install dependencies. Default: *false*.
-`--component-type`|The type of component. Currently "webpart", "extension", or "library" is supported.
-`--component-description`|Description of the component.
-`--component-name`|Name of the component.
-`--framework`|Framework to use for the solution. Choose one from "none", "react", "knockout".
-`--plusbeta`| Use the beta packages. Scaffolding should be done with @plusbeta
-`--extension-type`|The type of extension: Currently ApplicationCustomizer, FieldCustomizer, ListViewCommandSet.
-`--solution-name`|Client-side solution name, as well as folder name.
-`--environment`|The target environment for the solution. Either "onprem", "onprem19" or "spo".
-`--package-manager`|The package manager for the solution. Options are: "npm", "pnpm", or "yarn". Default: *npm*
-`--skip-feature-deployment`|If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites. Default: *false*.
-`--is-domain-isolated`|If 'y', web part will be rendered in isolated domain using IFrame. If set to "y", sets the component type as web part.
+To view a list of the command line options, pass the `--help` argument when executing the generator:
 
-> [!WARNING]
-> `skip-feature-deployment` command line support was introduced with the SharePoint Framework v1.5. This option was previously a command line argument called `skipFeatureDeployment`. Also `solution-name`, `extension-type`, `component-type`, `component-description` and `component-name` have been renamed.
+```console
+yo @microsoft/sharepoint --help
+```
 
 Following is an example of a command that creates a solution called "hello-world" with:
 
@@ -83,7 +68,7 @@ yo @microsoft/sharepoint
   --component-description "HelloWorld web part"
   --skip-install
   --environment "spo"
-  --skip-feature-deployment true
+  --skip-feature-deployment
 ```
 
 > [!NOTE]
