@@ -1,7 +1,7 @@
 ---
 title: Guidance - Migrate from classic workflows to Power Automate flows in SharePoint
 description: This article specifically provides guidance about how to plan for transitioning from classic SharePoint Workflows to Power Automate flows.
-ms.date: 07/21/2020
+ms.date: 07/20/2021
 search.app:
   - Flow
 search.appverid: met150
@@ -29,7 +29,6 @@ Classic workflows in SharePoint constitutes two workflow systems namely
 While both workflow systems allow users to build and publish workflows in SharePoint, see the following key differences:
 
 - SharePoint 2010 workflows, released along with SharePoint Server 2010, are hosted, and executed in SharePoint workflow runtime.
-
 - SharePoint 2013 workflows, released along with SharePoint Server 2013, are hosted in SharePoint, and executed in Workflow Manager, that runs independently.
 
 Users primarily use SharePoint Designer to author and publish workflows in SharePoint, while professional developers, looking to extend and build workflows, use Visual Studio to build and publish workflows in SharePoint.
@@ -45,7 +44,6 @@ Since the release of classic workflows, SharePoint and Microsoft 365 apps have e
 Using Microsoft Power Automate, SharePoint users can use the SharePoint Connector to create automations for when data changes in a list or a library. Users can build simple to complex workflows such as, but not limited to:
 
 - Send an email when a new item is created in a list.
-
 - Start approval when a new file is added in a library.
 
 To create and author flows, users primarily use [Power Automate website](https://flow.microsoft.com/) while users can also [create flows from within SharePoint](https://support.microsoft.com/office/create-a-flow-for-a-list-or-library-in-sharepoint-or-onedrive-a9c3e03b-0654-46af-a254-20252e580d01?ui=en-us&rs=en-us&ad=us) or using the [Power Automate mobile app](/power-automate/mobile-create-flow).
@@ -69,12 +67,10 @@ While these pain points do exist, you can see there are workarounds for each of 
 Approvals are the most common workflow scenario when it comes to automating business processes in SharePoint. Transitioning to Power Automate flows, approvals can be streamlined for data in SharePoint, Dynamics 365, forms, SQL, and so on. You can create approvals in your workflow, and view sent and received requests in a unified Actions center. Power Automate approvals enable users to customize flows and create approvals for the following types:
 
 - [Single approvals](/power-automate/modern-approvals)
-
 - [Sequential approvals](/power-automate/sequential-modern-approvals)
-
 - [Parallel approvals](/power-automate/parallel-modern-approvals)
 
-SharePoint approvals such as [page approvals](customize-page-approvals.md), [document approvals][Require approval of documents in SharePoint using Power Automate](require-doc-approval.md), and [hub association approvals](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098#bkmk_managesiteassociationapprovals) are all integrated and powered by Power Automate flows, providing users the flexibility to customize the business process for each of the approval scenarios.
+SharePoint approvals such as [page approvals](customize-page-approvals.md), [document approvals](require-doc-approval.md), and [hub association approvals](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098#bkmk_managesiteassociationapprovals) are all integrated and powered by Power Automate flows, providing users the flexibility to customize the business process for each of the approval scenarios.
 
 ## Authoring classic workflows and flows
 
@@ -88,144 +84,144 @@ While the following lists show some of the most common workflow capabilities, Po
 
 - [Microsoft SharePoint Connector in Power Automate](../sharepoint-connector-actions-triggers.md)
 - [Learn Power Automate](/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
-- [Power Automate Documentation](/power-automate/?utm_source=flow-sidebar&utm_medium=web)
+- [Power Automate Documentation](/power-automate)
 
 ### Workflow concepts
 
-|Workflow concept |SharePoint workflow |Power Automate |
-|:-------|:-------|:--------|
-| A condition that causes the workflow to run or execute   | Start options and events   |  Trigger   |
-| Building blocks that allow users to customize workflow with business logic | Actions | Actions |
-| Apply and perform conditional business logic in workflows | Conditions | Conditions (available under Actions) |
-| Get additional input from users when running manual workflows | Initiation form | Trigger Inputs |
+|                              Workflow concept                              |   SharePoint workflow    |            Power Automate            |
+| :------------------------------------------------------------------------- | :----------------------- | :----------------------------------- |
+| A condition that causes the workflow to run or execute                     | Start options and events | Trigger                              |
+| Building blocks that allow users to customize workflow with business logic | Actions                  | Actions                              |
+| Apply and perform conditional business logic in workflows                  | Conditions               | Conditions (available under Actions) |
+| Get additional input from users when running manual workflows              | Initiation form          | Trigger Inputs                       |
 
 ### Workflow types
 
-|Workflow type |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| List workflows   | Yes   | Yes |
-| Library workflows | Yes | Yes |
-| Reusable workflows | Yes | Not available |
-| Site workflows | Yes | Not available |
+|   Workflow type    | SharePoint workflow | Power Automate flow |
+| :----------------- | :------------------ | :------------------ |
+| List workflows     | Yes                 | Yes                 |
+| Library workflows  | Yes                 | Yes                 |
+| Reusable workflows | Yes                 | Not available       |
+| Site workflows     | Yes                 | Not available       |
 
 ### SharePoint integrations
 
-|SharePoint integration |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Create a custom workflow from a list or library   | Yes   |  Yes, only in Modern Experiences   |
-| Run or start a custom workflow for an item or a file or a folder | Yes | Yes, only in Modern Experiences |
-| Create and respond to standard approval for an item or a file | Yes | Yes |
-| Create and respond to classic publishing page approvals | Yes | Not available |
-| Create and respond to modern page approvals | Not available | Yes |
-| Create and manage Hub Site association approval requests | Not available | Yes |
+|                      SharePoint integration                      | SharePoint workflow |       Power Automate flow       |
+| :--------------------------------------------------------------- | :------------------ | :------------------------------ |
+| Create a custom workflow from a list or library                  | Yes                 | Yes, only in Modern Experiences |
+| Run or start a custom workflow for an item or a file or a folder | Yes                 | Yes, only in Modern Experiences |
+| Create and respond to standard approval for an item or a file    | Yes                 | Yes                             |
+| Create and respond to classic publishing page approvals          | Yes                 | Not available                   |
+| Create and respond to modern page approvals                      | Not available       | Yes                             |
+| Create and manage Hub Site association approval requests         | Not available       | Yes                             |
 
 ### List triggers
 
-|List trigger |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| When an item is created   | Yes   | Yes |
-| When an item is modified | Yes | Yes |
-| When an item is created or modified | Not available | Yes |
-| Site workflows | Yes | Not available |
-| When an item is deleted | Not available | Yes |
-| For a selected item | Yes | Yes |
+|            List trigger             | SharePoint workflow | Power Automate flow |
+| :---------------------------------- | :------------------ | :------------------ |
+| When an item is created             | Yes                 | Yes                 |
+| When an item is modified            | Yes                 | Yes                 |
+| When an item is created or modified | Not available       | Yes                 |
+| Site workflows                      | Yes                 | Not available       |
+| When an item is deleted             | Not available       | Yes                 |
+| For a selected item                 | Yes                 | Yes                 |
 
 ### List actions
 
-|List action |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Get items   | Not available   | Yes |
-| Create an item | Yes | Yes |
-| Update an item | Yes | Yes |
-| Delete an item | Yes | Yes |
-| Copy a list item | Yes | Yes, by reusing ‘Create an item' action |
-| Get attachments | Not available | Yes |
-| Get attachment content | Not available | Yes |
-| Add attachment | Not available | Yes |
-| Delete attachment | Not available | Yes |
-| Set field value in current item | Yes | Yes, using ‘Update an item’ action |
-| Get changes for an item | No | Yes |
+|           List action           | SharePoint workflow |           Power Automate flow           |
+| :------------------------------ | :------------------ | :-------------------------------------- |
+| Get items                       | Not available       | Yes                                     |
+| Create an item                  | Yes                 | Yes                                     |
+| Update an item                  | Yes                 | Yes                                     |
+| Delete an item                  | Yes                 | Yes                                     |
+| Copy a list item                | Yes                 | Yes, by reusing ‘Create an item' action |
+| Get attachments                 | Not available       | Yes                                     |
+| Get attachment content          | Not available       | Yes                                     |
+| Add attachment                  | Not available       | Yes                                     |
+| Delete attachment               | Not available       | Yes                                     |
+| Set field value in current item | Yes                 | Yes, using ‘Update an item’ action      |
+| Get changes for an item         | No                  | Yes                                     |
 
 ### File triggers
 
-|List action |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| When a file is created   | Yes, using List triggers   | Yes |
-| When a file is created in a folder | Not available | Yes |
-| When a file is modified | Yes, using List triggers | Yes |
-| When a file is created or modified | Not available | Yes |
-| When a file is created or modified in a folder | Not available | Yes |
-| When a file is deleted | Not available | Yes |
-| For a selected file | Yes, using List triggers | Yes |
+|                  List action                   |   SharePoint workflow    | Power Automate flow |
+| :--------------------------------------------- | :----------------------- | :------------------ |
+| When a file is created                         | Yes, using List triggers | Yes                 |
+| When a file is created in a folder             | Not available            | Yes                 |
+| When a file is modified                        | Yes, using List triggers | Yes                 |
+| When a file is created or modified             | Not available            | Yes                 |
+| When a file is created or modified in a folder | Not available            | Yes                 |
+| When a file is deleted                         | Not available            | Yes                 |
+| For a selected file                            | Yes, using List triggers | Yes                 |
 
 ### File actions
 
-|File action |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Get files   | Not available   | Yes |
-| Create file content | Not available | Yes |
-| Get file properties | Not available | Yes |
-| Create a file | Not available | Yes |
-| Create new folder | Not available | Yes |
-| Update file properties | Yes, using List triggers | Yes |
-| Delete a file | Yes, using List triggers | Yes |
-| Copy file | Not available | Yes |
-| Copy folder | Not available | Yes |
-| Move file | Not available | Yes |
-| Get changes for a file (properties only) | No | Yes |
+|               File action                |   SharePoint workflow    | Power Automate flow |
+| :--------------------------------------- | :----------------------- | :------------------ |
+| Get files                                | Not available            | Yes                 |
+| Create file content                      | Not available            | Yes                 |
+| Get file properties                      | Not available            | Yes                 |
+| Create a file                            | Not available            | Yes                 |
+| Create new folder                        | Not available            | Yes                 |
+| Update file properties                   | Yes, using List triggers | Yes                 |
+| Delete a file                            | Yes, using List triggers | Yes                 |
+| Copy file                                | Not available            | Yes                 |
+| Copy folder                              | Not available            | Yes                 |
+| Move file                                | Not available            | Yes                 |
+| Get changes for a file (properties only) | No                       | Yes                 |
 
 ### Document management actions
 
-|Document management action |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Check in file   | Yes   | Yes |
-| Check out file | Yes | Yes |
-| Discard checkout | Yes | Yes |
-| Delete drafts | Yes | Not available |
-| Wait for change in document check out status | Yes | Not available |
+|          Document management action          | SharePoint workflow | Power Automate flow |
+| :------------------------------------------- | :------------------ | :------------------ |
+| Check in file                                | Yes                 | Yes                 |
+| Check out file                               | Yes                 | Yes                 |
+| Discard checkout                             | Yes                 | Yes                 |
+| Delete drafts                                | Yes                 | Not available       |
+| Wait for change in document check out status | Yes                 | Not available       |
 
 ### Permissions management actions
 
-|Permissions management action |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Grant access to an item or a folder   | Yes   | Yes |
-| Stop sharing an item or a file | Yes | Yes |
-| Create sharing link for a file or folder | Not available | Yes |
+|      Permissions management action       | SharePoint workflow | Power Automate flow |
+| :--------------------------------------- | :------------------ | :------------------ |
+| Grant access to an item or a folder      | Yes                 | Yes                 |
+| Stop sharing an item or a file           | Yes                 | Yes                 |
+| Create sharing link for a file or folder | Not available       | Yes                 |
 
 ### Approval actions
 
-|Approval action |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Set content approval status of an item or a file or a page | Yes  | Yes |
-| Create and wait for approval for an item or a file | Yes | Yes |
-| Include attachments in approval requests | Not available | Yes |
-| Respond to approvals | Yes | Yes |
-| Create sequential approvals | Yes | Yes |
-| Create parallel approvals | Yes | Yes |
-| Cancel approvals | Yes | Yes |
-| Reassign approvals | Yes | Yes |
-| Custom approval buttons | Yes | Yes |
-| Unified approval center | Not available | Yes |
+|                      Approval action                       | SharePoint workflow | Power Automate flow |
+| :--------------------------------------------------------- | :------------------ | :------------------ |
+| Set content approval status of an item or a file or a page | Yes                 | Yes                 |
+| Create and wait for approval for an item or a file         | Yes                 | Yes                 |
+| Include attachments in approval requests                   | Not available       | Yes                 |
+| Respond to approvals                                       | Yes                 | Yes                 |
+| Create sequential approvals                                | Yes                 | Yes                 |
+| Create parallel approvals                                  | Yes                 | Yes                 |
+| Cancel approvals                                           | Yes                 | Yes                 |
+| Reassign approvals                                         | Yes                 | Yes                 |
+| Custom approval buttons                                    | Yes                 | Yes                 |
+| Unified approval center                                    | Not available       | Yes                 |
 
 ### Workflow controls capabilities
 
-|Workflow controls capability |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Workflow primitives: Loops, do until, switch-case, parallels   | Yes   | Yes |
-| Workflow stage | Yes | Yes, works only with Modern Permissions |
-| Schedule-based flows | Yes | Yes |
-| Variables | Yes | Yes |
-| Email designer and rich text editor | Not available | Yes |
-| Versioning of workflows | Not available | Not available |
-| Copy/paste actions |Yes | Yes |
+|                 Workflow controls capability                 | SharePoint workflow |           Power Automate flow           |
+| :----------------------------------------------------------- | :------------------ | :-------------------------------------- |
+| Workflow primitives: Loops, do until, switch-case, parallels | Yes                 | Yes                                     |
+| Workflow stage                                               | Yes                 | Yes, works only with Modern Permissions |
+| Schedule-based flows                                         | Yes                 | Yes                                     |
+| Variables                                                    | Yes                 | Yes                                     |
+| Email designer and rich text editor                          | Not available       | Yes                                     |
+| Versioning of workflows                                      | Not available       | Not available                           |
+| Copy/paste actions                                           | Yes                 | Yes                                     |
 
 ## Workflow administration
 
-|Workflow administration |SharePoint workflow |Power Automate flow |
-|:-------|:-------|:--------|
-| Central location to view all workflows   | Yes, only available to view for a given list or library   | Yes, 'My flows' lists user flows |
-| Share workflows with list or library users | Yes | Yes |
-| Share workflows with users | Not available | Yes |
-| Save a copy of workflow to create a copy of the workflow | Not available | Yes |
-| Workflow versioning | Not available | No |
-| Create a workflow with elevated permissions | Yes, by granting permissions to workflow app and then using App Step action and SharePoint Add-ins | Not available
+|                 Workflow administration                  |                                        SharePoint workflow                                         |       Power Automate flow        |
+| :------------------------------------------------------- | :------------------------------------------------------------------------------------------------- | :------------------------------- |
+| Central location to view all workflows                   | Yes, only available to view for a given list or library                                            | Yes, 'My flows' lists user flows |
+| Share workflows with list or library users               | Yes                                                                                                | Yes                              |
+| Share workflows with users                               | Not available                                                                                      | Yes                              |
+| Save a copy of workflow to create a copy of the workflow | Not available                                                                                      | Yes                              |
+| Workflow versioning                                      | Not available                                                                                      | No                               |
+| Create a workflow with elevated permissions              | Yes, by granting permissions to workflow app and then using App Step action and SharePoint Add-ins | Not available                    |
