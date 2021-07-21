@@ -1,7 +1,7 @@
 ---
 title: Adaptive Card Extensions and Teams Apps
 description: "This tutorial builds off the tutorial 'Advanced Quick View Functionality'."
-ms.date: 07/19/2021
+ms.date: 07/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,7 +9,7 @@ localization_priority: Priority
 
 This tutorial builds off the following tutorial: [Advanced Quick View Functionality](advanced-quick-view-functionality.md).
 
-[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 Adaptive Card Extensions can be used as supplemental pieces to a larger Teams App story. An ACE on the Viva Connections Dashboard can link directly to a Teams Personal Tab or Bot.
 
@@ -20,7 +20,7 @@ In this tutorial, you'll use an ACE within a Microsoft Teams app.
 Start with the solution from the previous tutorials and add a new SPFx component to the project using the SPFx generator. Execute the following statement in command prompt from your project's root folder:
 
 ```console
-yo @microsoft/sharepoint --plusbeta
+yo @microsoft/sharepoint
 ```
 
 When prompted, accept the default option for all prompts by the generator.
@@ -100,7 +100,7 @@ Open your new Personal Tab and copy the following highlighted portion from the U
 Create a second ACE using the SPFx generator by executing the following statement in command prompt from your project's root folder:
 
 ```console
-yo @microsoft/sharepoint --plusbeta
+yo @microsoft/sharepoint
 ```
 
 When prompted, enter the following values (*select the default option for all prompts omitted below*):

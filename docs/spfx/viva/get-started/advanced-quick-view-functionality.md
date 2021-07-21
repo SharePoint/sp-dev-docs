@@ -9,7 +9,7 @@ localization_priority: Priority
 
 This tutorial builds off the following tutorial: [Advanced Card View Functionality](advanced-quick-view-functionality.md).
 
-[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Functionality](advanced-quick-view-functionality.md). The HelloWorld ACE displays either the count of total steps or one individual step at a time. Using the Quick view, the ACE can show a list of all the steps. Additionally, the ACE can show more details about a particular step if it's selected.
 

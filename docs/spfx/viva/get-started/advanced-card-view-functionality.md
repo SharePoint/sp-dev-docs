@@ -1,7 +1,7 @@
 ---
 title: Advanced Card View Functionality
 description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
-ms.date: 07/19/2021
+ms.date: 07/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,7 +9,7 @@ localization_priority: Priority
 
 This tutorial builds off the following tutorial: [Build your first SharePoint Adaptive Card Extension](build-first-sharepoint-adaptive-card-extension.md)
 
-[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 In this tutorial, you'll implement advanced card view functionality.
 

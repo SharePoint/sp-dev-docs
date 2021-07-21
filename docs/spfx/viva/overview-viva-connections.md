@@ -1,7 +1,7 @@
 ---
 title: Overview of Viva Connections Extensibility
 description: Build engaging experiences for Microsoft Viva Connections with the SharePoint Framework.
-ms.date: 07/19/2021
+ms.date: 07/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -12,13 +12,13 @@ Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/mic
 > [!TIP]
 > To learn more about the Microsoft Viva Connections developer preview, see [Microsoft 365: Developer Blog - Announcing upcoming Microsoft Viva Connections public developer preview](https://developer.microsoft.com/microsoft-365/blogs/announcing-upcoming-microsoft-viva-connections-public-developer-preview/).
 
-[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 ## Prerequisites
 
 In order to build solutions for the Microsoft Viva Connections developer preview, you'll need to meet the following prerequisites:
 
-You must have the latest beta of the of the SPFx v1.13 beta installed.
+You must have the latest beta of the of the [SPFx v1.13](../release-1.13.md) beta installed.
 
 SPFx v1.13 beta has the following dependencies:
 

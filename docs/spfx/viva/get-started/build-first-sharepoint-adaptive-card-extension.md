@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 07/19/2021
+ms.date: 07/22/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,17 +9,20 @@ localization_priority: Priority
 
 Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enables developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. Since Adaptive Card Extensions use Microsoft's Adaptive Card Framework to generate UI with its declarative JSON schema, you only need to focus on your component's business logic and let the SharePoint Framework (SPFx) handle making your component look good and work across all platforms.
 
-[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
 
+> [!IMPORTANT]
+> This tutorial assumes you have installed the SPFx v1.13 beta version. For more information on installing the SPFx v1.13 beta, see [SharePoint Framework v1.13 release notes](../../release-1.13.md).
+
 ## Step 1 - Scaffold an Adaptive Card Extension project
 
-Create a new HelloWorld ACE by running the Yeoman SharePoint Generator with the `--plusbeta` argument.
+Create a new HelloWorld ACE by running the Yeoman SharePoint Generator.
 
 ```console
-yo @microsoft/sharepoint --plusbeta
+yo @microsoft/sharepoint
 ```
 
 When prompted, enter the following values (*select the default option for all prompts omitted below*):
