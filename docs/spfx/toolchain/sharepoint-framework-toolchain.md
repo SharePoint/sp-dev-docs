@@ -145,7 +145,7 @@ Following properties are available as a part of the `developer` section:
 `websiteUrl`   | URL of a website with additional information about the application                                                          | Yes
 `mpnId`        | Microsoft Partner Network ID (more details on [MS Partner Network](/partner-center/mpn-overview)) | No (but highly recommended)
 `privacyUrl`   | Privacy statement URL                                                                                                       | Yes
-`termOfUseUrl` | Terms of use URL                                                                                                            | Yes
+`termsOfUseUrl` | Terms of use URL                                                                                                            | Yes
 
 ## Build tasks
 
