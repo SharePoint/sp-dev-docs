@@ -22,7 +22,7 @@ Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, w
 Create a new HelloWorld ACE by running the Yeoman SharePoint Generator.
 
 ```console
-yo @microsoft/sharepoint
+yo @microsoft/sharepoint --plusBeta
 ```
 
 When prompted, enter the following values (*select the default option for all prompts omitted below*):
