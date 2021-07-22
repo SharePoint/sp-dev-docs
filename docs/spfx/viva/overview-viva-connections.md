@@ -12,7 +12,7 @@ Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/mic
 > [!TIP]
 > To learn more about the Microsoft Viva Connections developer preview, see [Microsoft 365: Developer Blog - Announcing upcoming Microsoft Viva Connections public developer preview](https://developer.microsoft.com/microsoft-365/blogs/announcing-upcoming-microsoft-viva-connections-public-developer-preview/).
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
+[!INCLUDE [spfx-release-beta](../../../includes/snippets/spfx-release-beta.md)]
 
 ## Prerequisites
 

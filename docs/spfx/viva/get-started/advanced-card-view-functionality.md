@@ -9,7 +9,7 @@ localization_priority: Priority
 
 This tutorial builds off the following tutorial: [Build your first SharePoint Adaptive Card Extension](build-first-sharepoint-adaptive-card-extension.md)
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
+[!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
 
 In this tutorial, you'll implement advanced card view functionality.
 

@@ -242,13 +242,13 @@
     - name: Tutorials
       items:
       - name: Build your first SharePoint Adaptive Card Extension
-        href: spfx/viva/build-first-sharepoint-adaptive-card-extension.md
+        href: spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension.md
       - name: Advanced Card View Functionality
-        href: spfx/viva/advanced-card-view-functionality.md
+        href: spfx/viva/get-started/advanced-card-view-functionality.md
       - name: Advanced Quick View Functionality
-        href: spfx/viva/advanced-quick-view-functionality.md
+        href: spfx/viva/get-started/advanced-quick-view-functionality.md
       - name: Adaptive Card Extensions and Teams Apps
-        href: spfx/viva/adaptive-card-extensions-and-teams.md
+        href: spfx/viva/get-started/adaptive-card-extensions-and-teams.md
   - name: Publish to marketplace
     items:
     - name: Overview
