@@ -70,7 +70,11 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
 - **Unsupported use cases**
 
-    Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
+    Unsupported use of SharePoint OnliMne may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
+    
+- **Creating multiple AppIDs for the same application**
+
+    Do not create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resource of the tenant. Historically some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant.
 
 ## Why can't you just tell me the exact throttling limits?
 
