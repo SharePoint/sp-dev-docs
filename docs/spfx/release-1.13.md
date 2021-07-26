@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.13 release notes
 description: Release notes for the SharePoint Framework v1.13 release
-ms.date: 07/22/2021
+ms.date: 07/26/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
