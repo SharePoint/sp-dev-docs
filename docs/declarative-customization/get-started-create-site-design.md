@@ -136,6 +136,8 @@ You can apply a published site design to:
 1. Classic team site
 1. Classic publishing site
 
+The REST API to apply a site design to an existing site collection is **ApplySiteDesign**.
+
 ### Associate with a hub site
 
 You can also associate a published site design to a hub site in hub site settings so it can be applied to all joining sites. For details on how to associate the site design either through the UI or using the `Set-SPOHubSite` cmdlet please review the [PowerShell cmdlets for SharePoint hub sites](../features/hub-site/hub-site-powershell.md) article.
