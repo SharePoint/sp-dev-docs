@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 07/22/2021
+ms.date: 07/27/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -34,7 +34,7 @@ When prompted, enter the following values (*select the default option for all pr
 
 When prompted by the generator for which ACE template to use, select **Primary Text Template** for this tutorial.
 
-At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes.
+At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take few minutes.
 
 ## Step 2 - Serve the ACE in the workbench
 
@@ -49,7 +49,7 @@ The following arguments are used in the previous command:
 - `-l`: skips tests and `tslint` to make the inner loop faster
 - `--nobrowser`: skips trying to launch the `localhost` test page
 
-Once local webserver is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once local webserver is running, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 Open the Web Part Toolbox and select your ACE:
 
@@ -70,11 +70,11 @@ The second way an ACE can render is called the **Quick view**. When you interact
 > [!NOTE]
 > ACE interaction is disabled while in **Edit** mode. The Workbench or Page must be in *Preview* or *Read* mode to interact with the ACE.
 
-Switch the Workbench to **Preview** mode.
+Switch the workbench to **Preview** mode.
 
 :::image type="content" source="../../../images/viva-extensibility/lab1-preview.png" alt-text="Set the workbench to preview mode":::
 
-Select on the **Quick View** button on the ACE:
+Select the **Quick View** button on the ACE:
 
 :::image type="content" source="../../../images/viva-extensibility/lab1-hw-ql.png" alt-text="Select the Quick View button on the ACE":::
 
@@ -104,7 +104,7 @@ protected renderCard(): string | undefined {
 }
 ```
 
-The `renderCard()` method is `virtual` that returns a string identifier to a registered View; more on View registration later. This method is invoked during the **initial** render of the Card view.
+The `renderCard()` method is `virtual` that returns a string identifier to a registered view; more on view registration later. This method is invoked during the **initial** render of the Card view.
 
 If `renderCard()` isn't overridden, then a default Card view will be rendered.
 
@@ -131,7 +131,7 @@ The default Card view, will render using the following properties from the manif
 > [!NOTE]
 > Unlike with the Card view, there is no default Quick view.
 
-### Register a view for hte ACE
+### Register a view for the ACE
 
 For a View to be used, it must be registered with its respective `ViewNavigator`.
 
@@ -184,7 +184,7 @@ Each of these Views will render differently and have different constraints on wh
 > [!NOTE]
 > The card views for Adaptive Card templates are fixed and cannot be changed.
 
-Additionally there two generics for the `properties` and `state` objects shared between the view and the ACE.
+Additionally, there are two generics for the `properties` and `state` objects shared between the view and the ACE.
 
 - **TProperties**: The View's properties interface, the same interface used by persisted properties of the ACE (*property bag*).
 - **TState**: The View's generic state interface, which must be the same as the ACE's state interface
@@ -256,14 +256,14 @@ public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | u
 
 Selecting the Card will now open the Quick view.
 
-### ACE Quick Views
+### Quick Views
 
 Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**.
 
-Quick views must extend the **BaseAdaptiveCardView** base case. There are three optional generics that can be defined:
+Quick views must extend the **BaseAdaptiveCardView** base class. There are three optional generics that can be defined:
 
 - **TData**: The type returned from the `data()` getter method.
-- **TProperties**: Similar to the Quick view, this is the same interface used by persisted properties of the ACE (*property bag*).
+- **TProperties**: Similar to the Card view, this is the same interface used by persisted properties of the ACE (*property bag*).
 - **TState** Similar to the Card view, this is the set of stateful data the View needs to render. **TState** must share properties with the ACE's state interface.
 
 A Quick View has more control over the Adaptive Card template schema than a Card view. The
@@ -355,7 +355,9 @@ public get data(): IPrimaryTextCardParameters {
 > [!NOTE]
 > In its `template()` getter, the Quick view of the ACE you generated returns the object from a JSON file.
 
-Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. Replace the contents of this file with the following JSON:
+Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**.
+
+Replace the contents of this file with the following JSON:
 
 ```json
 {
@@ -429,7 +431,7 @@ public onAction(action: IActionArguments): void {
 }
 ```
 
-Selecting on either button will now set the state's `subTitle` to the `data.message` value, causing a re-render (*more on this later*). The Quick view's Adaptive Card will now display this message, since its template binds to `subTitle`.
+Selecting either button will now set the state's `subTitle` to the `data.message` value, causing a re-render (*more on this later*). The Quick view's Adaptive Card will now display this message, since its template binds to `subTitle`.
 
 ### Property Pane
 
@@ -497,7 +499,7 @@ protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newVal
 }
 ```
 
-Passing `setState()` a `Partial<TState>` object will update all Views with the new values. Updating the **Description Field** in the Property Pane will now update the `subTitle` displayed on the Quick view.
+Passing a `Partial<TState>` object to `setState()` method will update all Views with the new values. Updating the **Description Field** in the Property Pane will now update the `subTitle` displayed on the Quick view.
 
 > [!NOTE]
 > If no value or identical values are passed, a re-render will still occur.
@@ -519,8 +521,8 @@ public onInit(): Promise<void> {
 
 Unlike with `properties`, `state` isn't persisted past the current session and should only be used for ephemeral View state.
 
-> [!Note]
-The scaffolded AdaptiveCardExtension maintains a `description` property in the `state` object. This is obsolete, since the AdaptiveCardExtension and all its views can simply reference the `description` stored in `properties`.
+> [!NOTE]
+> The scaffolded AdaptiveCardExtension maintains a `description` property in the `state` object. This is obsolete, since the AdaptiveCardExtension and all its views can simply reference the `description` stored in `properties`.
 
 ## Step 4 - Card designer
 
