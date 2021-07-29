@@ -17,7 +17,7 @@ When you create "modern" sites in SharePoint Online, you can optionally select a
 
 ## Enable site classification in your tenant
 
-To benefit from site classification, you need to enable this capability at the Azure AD level, in your target tenant. After you have enabled this capability, you see an additional field **How sensititive is your data?** while creating new "modern" sites. In the following figure, you can see what the site classification field looks like.
+To benefit from site classification, you need to enable this capability at the Azure AD level, in your target tenant. After you have enabled this capability, you see an additional field **How sensitive is your data?** while creating new "modern" sites. In the following figure, you can see what the site classification field looks like.
 
 ![The site classification option while creating a "modern" site in SharePoint Online](media/modern-experiences/site-classification-ui.png)
 
@@ -262,3 +262,4 @@ using (var clientContext = new ClientContext("https://[tenant].sharepoint.com/si
 
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
 - [Implement a SharePoint site classification solution](implement-a-sharepoint-site-classification-solution.md)
+- [Manage Teams connected sites and channel sites](/SharePoint/teams-connected-sites)
