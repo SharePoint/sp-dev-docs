@@ -608,7 +608,7 @@ You're now ready to build, bundle, package, and deploy the solution.
 
    A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the `webApiPermissionRequests` property in the **package-solution.json** file.
 
-1. In the modern SharePoint Online Admin Center, in the left quick launch menu, under **Advnced** select the **API access** menu item. You'll see a page similar to the following.
+1. In the modern SharePoint Online Admin Center, in the left quick launch menu, under **Advanced** select the **API access** menu item. You'll see a page similar to the following.
 
    ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
