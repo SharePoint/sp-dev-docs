@@ -1,7 +1,7 @@
 ---
 title: Isolated web parts
 description: Overview of the isolated web parts capability in the SharePoint Framework
-ms.date: 06/16/2020
+ms.date: 07/29/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -20,6 +20,7 @@ Isolated web parts introduce a new way to isolate access to APIs secured with Az
 
 > [!IMPORTANT]
 > The isolated web parts capability is available only in SharePoint Framework v1.8 and later.
+> Isolated web parts can only be deployed to the [tenant app catalog](https://docs.microsoft.com/sharepoint/use-app-catalog) and not to a [site collection app catalog](https://docs.microsoft.com/sharepoint/dev/general-development/site-collection-app-catalog).
 
 ![Architectural overview illustrating how isolated web parts work](../../images/isolated-web-parts.png)
 
