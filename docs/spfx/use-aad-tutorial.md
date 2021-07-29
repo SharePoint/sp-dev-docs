@@ -1,7 +1,7 @@
 ---
 title: Consume the Microsoft Graph in the SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to the Microsoft Graph in SharePoint Framework solutions.
-ms.date: 12/04/2020
+ms.date: 07/29/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -608,11 +608,7 @@ You're now ready to build, bundle, package, and deploy the solution.
 
    A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the `webApiPermissionRequests` property in the **package-solution.json** file.
 
-1. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, select **Try the preview**.
-
-   ![Screenshot of the Try the new SharePoint admin center link](../images/use-aadhttpclient-enterpriseapi-grant-trypreview.png)
-
-1. In the new Admin Center, in the left quick launch menu, select the **API management** menu item. You'll see a page similar to the following.
+1. In the modern SharePoint Online Admin Center, in the left quick launch menu, under **Advnced** select the **API access** menu item. You'll see a page similar to the following.
 
    ![Screenshot of the WebApiPermission management page](../images/use-aadhttpclient-enterpriseapi-grant-newsharepointadmincenter.png)
 
