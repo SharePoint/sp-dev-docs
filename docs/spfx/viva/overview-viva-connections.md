@@ -30,7 +30,7 @@ For more information about installing SPFx, see [Set up your SharePoint Framewor
 
 ## Start building for Microsoft Viva Connections
 
-Once you've completed the prerequisites, start creating your first Adaptive Card Experience (ACE) in the following tutorials:
+Once you've completed the prerequisites, start creating your first Adaptive Card Extension (ACE) in the following tutorials:
 
 - [Build your first SharePoint Adaptive Card Extension](get-started/build-first-sharepoint-adaptive-card-extension.md)
 - [Advanced Card View Functionality](get-started/advanced-card-view-functionality.md)
