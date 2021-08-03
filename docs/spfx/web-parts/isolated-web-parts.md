@@ -20,7 +20,8 @@ Isolated web parts introduce a new way to isolate access to APIs secured with Az
 
 > [!IMPORTANT]
 > The isolated web parts capability is available only in SharePoint Framework v1.8 and later.
-> The isolated web parts are only supported on modern pages. While you might be able to add isolated web parts to classic pages, upon publishing, the web part will not render and generate an error.
+> Isolated web parts are only supported on modern pages. While you might be able to add isolated web parts to classic pages, upon publishing, the web part will not render and generate an error.
+> Isolated web parts can only be installed into the tenant app catalog.  They will not work from a Site Collection app catalog.
 
 ![Architectural overview illustrating how isolated web parts work](../../images/isolated-web-parts.png)
 
