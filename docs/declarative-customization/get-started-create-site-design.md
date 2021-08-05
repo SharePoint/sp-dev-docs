@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
-ms.date: 07/06/2021
+ms.date: 08/05/2021
 localization_priority: Priority
 ---
 
@@ -135,6 +135,8 @@ You can apply a published site design to:
 1. Communication site
 1. Classic team site
 1. Classic publishing site
+
+The REST API to apply a site design to an existing site collection is **ApplySiteDesign**.
 
 ### Associate with a hub site
 
