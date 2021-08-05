@@ -1,7 +1,7 @@
 ---
 title: Use OData query operations in SharePoint REST requests
 description: Use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service.
-ms.date: 1/15/2020
+ms.date: 08/05/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
