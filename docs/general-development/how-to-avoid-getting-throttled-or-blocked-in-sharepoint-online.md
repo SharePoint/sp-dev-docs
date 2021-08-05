@@ -42,7 +42,7 @@ If the offending process continues to exceed usage limits, SharePoint Online mig
 
 ### Application Throttling
 
-In addition to throttling by user account, limits are also applied to each application. Every application in SharePoint Online has its own available resources, but multiple applications running against the same tenant ultimately share from the same resource bucket and in rare occurrences can cause rate limiting.
+In addition to throttling by user account, limits are also applied to each application in a tenant. Every application in SharePoint Online has its own available resources per tenant, but multiple applications running against the same tenant ultimately share from the same resource bucket and in rare occurrences can cause rate limiting.
 In these cases, SharePoint Online will attempt to prioritize interactive user requests over background activities.
 
 ## Common throttling scenarios in SharePoint Online
@@ -72,9 +72,13 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
     Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
 
+- **Creating multiple AppIDs for the same application**
+
+    Do not create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resource of the tenant. Historically some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant.
+
 ## Why can't you just tell me the exact throttling limits?
 
-Setting and publishing exact throttling limits sounds straightforward, but in fact it would result in more restrictive limits. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online.
+Setting and publishing exact throttling limits sounds straightforward, but in fact it would result in more restrictive limits. We continually monitor resource usage on SharePoint Online. Depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online, and application limits are set based on the overall user traffic, usage and a few other factors of the tenant.
 
 That's why it's so important for your code to honor the `Retry-After` HTTP header value; this lets your code run as fast as possible on any given day, and it lets your code back off "just enough" if it hits throttling limits. The code samples later in this article show you how to use the `Retry-After` HTTP header.
 
