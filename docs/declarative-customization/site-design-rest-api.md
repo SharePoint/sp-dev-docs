@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design REST API
 description: Work with SharePoint site designs through the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations.
-ms.date: 04/07/2021
+ms.date: 08/05/2021
 localization_priority: Priority
 ---
 
@@ -491,7 +491,7 @@ Applies a site design to an existing site collection.
 Here's an example of applying a site design to the ProjectGo site collection.
 
 ```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.sharepoint.com/sites/projectgo"});
+RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {"siteDesignId": "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.sharepoint.com/sites/projectgo"});
 ```
 
 ## AddSiteDesignTaskToCurrentWeb
