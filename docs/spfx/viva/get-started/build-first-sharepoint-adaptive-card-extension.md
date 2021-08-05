@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 07/27/2021
+ms.date: 08/05/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -49,7 +49,7 @@ The following arguments are used in the previous command:
 - `-l`: skips tests and `tslint` to make the inner loop faster
 - `--nobrowser`: skips trying to launch the `localhost` test page
 
-Once local webserver is running, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once local webserver is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 Open the Web Part Toolbox and select your ACE:
 
@@ -70,7 +70,7 @@ The second way an ACE can render is called the **Quick view**. When you interact
 > [!NOTE]
 > ACE interaction is disabled while in **Edit** mode. The Workbench or Page must be in *Preview* or *Read* mode to interact with the ACE.
 
-Switch the workbench to **Preview** mode.
+Switch the Workbench to **Preview** mode.
 
 :::image type="content" source="../../../images/viva-extensibility/lab1-preview.png" alt-text="Set the workbench to preview mode":::
 
@@ -104,7 +104,7 @@ protected renderCard(): string | undefined {
 }
 ```
 
-The `renderCard()` method is `virtual` that returns a string identifier to a registered view; more on view registration later. This method is invoked during the **initial** render of the Card view.
+The `renderCard()` method is `virtual` that returns a string identifier to a registered View; more on View registration later. This method is invoked during the **initial** render of the Card view.
 
 If `renderCard()` isn't overridden, then a default Card view will be rendered.
 
@@ -256,7 +256,7 @@ public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | u
 
 Selecting the Card will now open the Quick view.
 
-### Quick Views
+### ACE Quick Views
 
 Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**.
 
