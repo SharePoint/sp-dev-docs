@@ -1,7 +1,7 @@
 ---
 title: Field element (List)
 manager: soliver
-ms.date: 01/18/2021
+ms.date: 08/05/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -64,7 +64,7 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   JoinRowOrdinal = "Integer"
   JoinType = "INNER" | "LEFT OUTER" | "RIGHT OUTER"
   LCID = "Integer"  LinkToItem = "TRUE" | "FALSE"  LinkToItemAllowed = "Text"
-  List = "Text"  ListItemMenu = "TRUE" | "FALSE"  ListItemMenuAllowed = "Text
+  List = "Text"  ListItemMenu = "TRUE" | "FALSE"  ListItemMenuAllowed = "Text"
   Max = "Number"
   MaxLength = "Integer"
   Min = "Number" 
