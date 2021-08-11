@@ -78,11 +78,9 @@ The result of extracting and saving the template is, depending of the extension 
       <pnp:Navigation AddNewPagesToNavigation="true" CreateFriendlyUrlsForNewPages="true">
         <pnp:CurrentNavigation NavigationType="StructuralLocal">
           <pnp:StructuralNavigation RemoveExistingNodes="true">
-            <pnp:NavigationNode Title="Who we are" Url="http://linkless.header/" IsExternal="true">
-            </pnp:NavigationNode>
-            <pnp:NavigationNode Title="What's happening" Url="http://linkless.header/" IsExternal="true">
-            <pnp:NavigationNode Title="Find it" Url="http://linkless.header/" IsExternal="true">
-            </pnp:NavigationNode>
+            <pnp:NavigationNode Title="Who we are" Url="http://linkless.header/" IsExternal="true"/>
+            <pnp:NavigationNode Title="What's happening" Url="http://linkless.header/" IsExternal="true"/>
+            <pnp:NavigationNode Title="Find it" Url="http://linkless.header/" IsExternal="true"/>
           </pnp:StructuralNavigation>
         </pnp:CurrentNavigation>
       </pnp:Navigation>
@@ -131,6 +129,7 @@ The result of extracting and saving the template is, depending of the extension 
                 </pnp:CanvasControl>
                 <pnp:CanvasControl WebPartType="Button" JsonControlData="{&quot;id&quot;: &quot;0f087d7f-520e-42b7-89c0-496aaf979d58&quot;, &quot;instanceId&quot;: &quot;deb39e2b-11a0-4141-8ac1-1078fe7cc392&quot;, &quot;title&quot;: &quot;..." ControlId="0f087d7f-520e-42b7-89c0-496aaf979d58" Order="3" Column="1" />
                 <pnp:CanvasControl WebPartType="Image" JsonControlData="{&quot;id&quot;: &quot;d1d91016-032f-456d-98a4-721247c305e8&quot;, &quot;instanceId&quot;: &quot;e0b59b5b-8a5a-406e-9deb-6e6f9de4bd3b&quot;, &quot;title&quot;: &quot;Image&quot;, ..." ControlId="d1d91016-032f-456d-98a4-721247c305e8" Order="1" Column="2" />
+               </pnp:Controls>            
             </pnp:Section>
           </pnp:Sections>
         </pnp:ClientSidePage>
