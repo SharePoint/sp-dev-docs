@@ -133,7 +133,7 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 - If you're building your own JavaScript libraries, which are used to call SharePoint Online APIs, make sure that you include the User Agent information to your http request and potentially register your web application also as an Application, where suitable.
 
 > [!NOTE]
-> Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. its also fine to append existing user agent string with the requested information.
+> Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. It is also fine to append existing user agent string with the requested information.
 
 > [!NOTE]
 > If you are developing front end components executing in the browser, most of modern browsers don't allow overwriting the user agent string and you don't need to implement this.
