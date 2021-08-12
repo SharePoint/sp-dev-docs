@@ -756,7 +756,7 @@ There is no change from current published full 2013 package schema.
     </xs:sequence>
   </xs:complexType>
 
-  <!-- Generic complex Type definition that wraps a Sharepoint top-level element -->
+  <!-- Generic complex Type definition that wraps a SharePoint top-level element -->
   <xs:complexType name="SPGenericObject">
     <xs:sequence>
       <xs:choice minOccurs="0" maxOccurs="1">
@@ -809,7 +809,7 @@ There is no change from current published full 2013 package schema.
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- Enumeration of all the top-level serialized Sharepoint Types -->
+  <!-- Enumeration of all the top-level serialized SharePoint Types -->
   <xs:simpleType name="SPObjectType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="SPList" />
@@ -828,7 +828,7 @@ There is no change from current published full 2013 package schema.
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- Enumeration of all the non-top level serialized Sharepoint Types -->
+  <!-- Enumeration of all the non-top level serialized SharePoint Types -->
   <xs:simpleType name="OtherObjectType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="SPFileVersion" />
