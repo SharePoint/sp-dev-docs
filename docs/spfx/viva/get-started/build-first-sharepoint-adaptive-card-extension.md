@@ -27,14 +27,14 @@ yo @microsoft/sharepoint
 
 When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
-- **Do you want to allow tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?** Yes
+- **Do you want to allow tenant admin the choice of deploying the solution to all sites immediately without running any feature deployment or adding apps in sites?** Yes
 - **Which type of client-side component to create?** Adaptive Card Extension
 - **What is your Adaptive Card Extension name?** HelloWorld
 - **What is your Adaptive Card Extension description?** Hello World description
 
 When prompted by the generator for which ACE template to use, select **Primary Text Template** for this tutorial.
 
-At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take few minutes.
+At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
 ## Step 2 - Serve the ACE in the workbench
 
@@ -122,7 +122,7 @@ protected renderCard(): string | undefined {
 
 Let's undo this by uncommenting `renderCard()` method.
 
-The default Card view, will render using the following properties from the manifest:
+The default Card view will render using the following properties from the manifest:
 
 - Icon - `iconImageUrl`
 - Title - `title`
@@ -483,7 +483,7 @@ protected get iconProperty(): string {
 
 Re-rendering happens when a property is updated in the PropertyPane or if `setState()` is called.
 
-Update the Property Pane **Description Field** value. This will update the description of the Card.
+Update the Property Pane **Description Field** value, which results in an of the description on the Card.
 
 Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
 
