@@ -1,15 +1,15 @@
 ---
-title: Get started creating SharePoint site designs and site scripts
-description: Create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
-ms.date: 08/05/2021
+title: Get started creating SharePoint site templates and site scripts
+description: Create site templates to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
+ms.date: 08/23/2021
 localization_priority: Priority
 ---
 
-# Get started creating site designs and site scripts
+# Get started creating site templates and site scripts
 
-You can create site designs to provide reusable lists, themes, layouts, pages (experimental), or custom actions so that your users can quickly build new SharePoint sites with the features they need.
+You can create site templates to provide reusable lists, themes, layouts, pages (experimental), or custom actions so that your users can quickly build new SharePoint sites with the features they need.
 
-This article describes how to build a simple site design that adds a SharePoint list for tracking customer orders. You'll use the site design to create a new SharePoint site with the custom list. You'll learn how to use SharePoint PowerShell cmdlets to create site scripts and site designs. You can also use REST APIs to perform the same actions. The corresponding REST calls are shown for reference in each step.
+This article describes how to build a simple site template that adds a SharePoint list for tracking customer orders. You'll use the site template to create a new SharePoint site with the custom list. You'll learn how to use SharePoint PowerShell cmdlets to create site scripts and site templates. You can also use REST APIs to perform the same actions. The corresponding REST calls are shown for reference in each step.
 
 ## Create the site script in JSON
 
@@ -71,7 +71,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
     '
    ```
 
-The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design) if applied programmatically using the `Invoke-SPOSiteDesign` command. If they are applied through the UI or using the `Add-SPOSiteDesignTask` command then the limit is 300 cumulative actions (or 100K characters).
+The previous script creates a new SharePoint list named **Customer Tracking**. It sets the description and adds four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site template) if applied programmatically using the `Invoke-SPOSiteDesign` command. If they are applied through the UI or using the `Add-SPOSiteDesignTask` command then the limit is 300 cumulative actions (or 100K characters).
 
 ## Add the site script
 
@@ -84,15 +84,15 @@ C:\> Add-SPOSiteScript
  -Description "Creates list for tracking customer contact information"
 ```
 
-After running the cmdlet, you get a result that lists the site script **ID** of the added script. Keep track of this ID somewhere because you will need it later when you create the site design.
+After running the cmdlet, you get a result that lists the site script **ID** of the added script. Keep track of this ID somewhere because you will need it later when you create the site template.
 
 The REST API to add a new site script is **CreateSiteScript**.
 
-## Create the site design
+## Create the site template
 
-Next, you need to create the site design. The site design appears in a drop-down list when someone creates a new site from one of the templates. It can run one or more site scripts that have already been added.
+Next, you need to create the site template. The site template appears in a drop-down list when someone creates a new site from one of the templates. It can run one or more site scripts that have already been added.
 
-- Run the following cmdlet to add a new site design. Replace `<ID>` with the site script ID from when you added the site script.
+- Run the following cmdlet to add a new site template. Replace `<ID>` with the site script ID from when you added the site script.
 
 ```powershell
 C:\> Add-SPOSiteDesign
@@ -102,46 +102,60 @@ C:\> Add-SPOSiteDesign
  -Description "Tracks key customer data in a list"
 ```
 
-The previous cmdlet creates a new site design named Contoso customer tracking. The `-WebTemplate` value selects which base template to associate with. The value `"64"` indicates Team site template, and the value `"68"` indicates the Communication site template. If you have disabled modern Group creation (or restricted to a subset of users) and wish to still allow your users to apply site designs to the "group-less" modern Team site template, publish your site designs using the `-WebTemplate` value `"1"`.
+The previous cmdlet creates a new site template named Contoso customer tracking. 
 
-The JSON response displays the **ID** of the new site design. You can use it in subsequent cmdlets to update or modify the site design.
+| Parameter            | Value                | Site template type |
+| :------------------- | :------------------- |:----------------|
+| WebTemplate  | 64 | Team site template |
+| WebTemplate 1 | 64 | Team site (with group creation disabled) |
+| WebTemplate    | 68 | Communication site template |![image](https://user-images.githubusercontent.com/55893502/130496134-3a586073-3632-49d7-bac9-42faed0a985f.png)
 
-The REST API to add a new site design is **CreateSiteDesign**.
 
-## Use the new site design
+The JSON response displays the **ID** of the new site template. You can use it in subsequent cmdlets to update or modify the site template.
 
-Now that you've added a site script and site design, you can use it to create new sites through the self-service site creation experience or apply the site design to an existing site using the **Invoke-SPOSiteDesign** command in PowerShell. If you are using hub sites you can even associate a site design to a hub so it gets applied to all joining sites.
+The REST API to add a new site template is **CreateSiteDesign**.
+
+## Use the new site template
+
+Now that you've added a site script and site template, you can use it to create new sites through the self-service site creation experience or apply the site template to an existing site using the **Invoke-SPOSiteDesign** command in PowerShell. If you are using hub sites you can even associate a site template to a hub so it gets applied to all joining sites.
 
 ### New site creation
 
 1. Go to the home page of the SharePoint site that you are using for development.
 1. Choose **Create site**.
-1. Choose **Team site**.
-1. In the **Choose a design** drop-down, select your site design **Contoso customer tracking**.
-1. In **Site name**, enter a name for the new site **Customer order tracking**.
-1. Choose **Next**.
-1. Choose **Finish**.
-1. A notification bar will be displayed indicating that your script is being applied. To invoke the site design information panel, click the **View progress** link. Once the script(s) have completed the notification banner message will change to **Site Design applied. Refresh this site to see the changes.**, allowing you to either invoke the panel or refresh the page.
-1. You will see the custom list on the page.
+1. Choose **Team site**. SharePoint will create a team site using the Microsoft **Team collaboration template**.
+2. Choose **Next**.
+7. Choose **Finish**.
+4. In **Site name**, enter a name for the new site **Customer order tracking**.
+5. Next, go to **Settings** and select **Apply a site template**.
+5. Select the site template you just created.
+8. A progress bar will be display indicating that your new template is being applied. 
+9. When the new template has been applied, you will see the custom list on the page.
 
 ### Apply to an existing site collection
 
-You can also apply a published site design to an existing site collection using the [Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/Invoke-SPOSiteDesign) cmdlet.
+You can also apply a published site templates to existing sites. On the home page of the site, site owners can navigate to **Settings** and then **Apply a site template** to browse and apply templates provided by your organization and Microsoft.
 
-You can apply a published site design to:
+You can apply templates to existing site collections in bulk by using the [Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/Invoke-SPOSiteDesign) cmdlet.
 
-1. Group-connected Team site
-1. Team site not connected to a Microsoft 365 group
-1. Communication site
-1. Classic team site
-1. Classic publishing site
+**Published site templates can be applied to:**
 
-The REST API to apply a site design to an existing site collection is **ApplySiteDesign**.
+1. Group-connected team sites
+1. Team sites that not connected to a Microsoft 365 group
+1. Communication sites
+2. Channel sites
+3. Classic team sites
+4. Classic publishing sites
+
+The REST API to apply a site template to an existing site collection is **ApplySiteDesign**.
 
 ### Associate with a hub site
 
-You can also associate a published site design to a hub site in hub site settings so it can be applied to all joining sites. For details on how to associate the site design either through the UI or using the `Set-SPOHubSite` cmdlet please review the [PowerShell cmdlets for SharePoint hub sites](../features/hub-site/hub-site-powershell.md) article.
+Apply a published site template to a new or existing hub site. Then, all associated sites will inherit the hub site template and theme. Navigate to the home page of the hub and go to **Settings** and then **Apply a site template**. Learn more about how to [enable site associations for your hub site](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098).
+
+You can also use the `Set-SPOHubSite` cmdlet. Review the [PowerShell cmdlets for SharePoint hub sites](../features/hub-site/hub-site-powershell.md) article.
 
 ## See also
 
-- [SharePoint site design and site script overview](site-design-overview.md)
+- [SharePoint site template and site script overview](site-design-overview.md)
+- [How to apply and customize SharePoint site templates](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398)
