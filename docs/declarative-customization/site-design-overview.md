@@ -1,14 +1,14 @@
 ---
-title: SharePoint site design and site script overview
-description: Use SharePoint site scripts and site designs to provide custom configurations to apply when new sites are created.
+title: SharePoint site template and site script overview
+description: Use SharePoint site scripts and site templates to provide custom configurations to apply when new sites are created.
 ms.date: 06/14/2021
 localization_priority: Priority
 ---
 
-# SharePoint site design and site script overview
+# SharePoint site template and site script overview
 
 > [!NOTE]
-> - Site designs and site scripts are currently only supported by SharePoint Online.
+> - Site templates and site scripts are currently only supported by SharePoint Online.
 > - In previous versions of SharePoint, site templates were called site designs but will be referred to as site templates moving forward.
 > - SharePoint has a new site template experience that will be available to all SharePoint user with permissions to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
 > - As of today, the site template experience cannot be disabled.
@@ -35,33 +35,16 @@ You create site templates and register them in SharePoint to one of the modern t
 
 3. Choose **Communication site**.
 
-The Communication site has a **Choose a design** box, which comes with the following site templates:
+- SharePoint will automatically create a communication site using the **Topic** site template.
+- Had you chosen the default Team site, SharePoint will create a new site useing the **Team collaboration** template. 
 
-- Topic
-- Showcase
-- Blank
+For more information about how you can change the default site templates, see [Customize a default site template](customize-default-site-design.md).
 
-These are the default site templates. For each site template, there is a title, description, and image.
+When a site template is selected, SharePoint creates the new site, and runs site scripts for the site template. The site scripts provide the details for the template such as creating new lists or applying a theme. These script actions are run in the background. When the scripts are complete the page will refresh to display the site script details.
 
-![Default site design title, description, and image on Communication site template](images/site-designs-listed-on-communication-site-template.png)
+The site template information panel can be invoked by a site owner at any time to see what site templates have been applied to the site (and their script details) as well as to apply new or updated site templates. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
-Had you chosen the Team site template, it contains only one default site template named **Team site**. 
-
-For more information about how you can change the default site templates, see [Customize a default site design](customize-default-site-design.md).
-
-When a site template is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists or applying a theme. These script actions are run in the background. A notification bar will be displayed, which the site creator can click to view the status of the actions being applied. 
-
-![Notification bar showing application of script actions in progress](images/site-design-notification-bar-in-progress-state.png)
-
-When the scripts are complete the notification bar message will change - allowing the site creator to either refresh the page to see the results of the applied scripts or to view the site script details.
-
-![Notification bar showing application of script actions is complete](images/site-design-notification-bar-completed-state.png)
-
-The site template information panel can be invoked by a site owner at any time to see what site templates have been applied to the site (and their script details) as well as to apply new or updated site templates. 
-
-When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
-
-![Site Design Information Panel](images/site-design-information-panel-applied-site-designs.png)
+![Site template Information Panel](images/site-design-information-panel-applied-site-designs.png)
 
 > [!NOTE]
 > Site templates can now be applied to previously created modern site collections. For more information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
@@ -244,14 +227,21 @@ RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScri
 
 <br/>
 
-In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPOSiteDesign** cmdlet or **CreateSiteDesign** REST API.
+In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script ID. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPOSiteDesign** cmdlet or **CreateSiteDesign** REST API.
 
-The **WebTemplate** parameter set to the value 64 indicates registering this site design with the Team site template. If you have disabled modern Group creation, then publish your site designs using WebTemplate 1 so that they display for the "Group-less" Team site template. The value 68 would indicate registering with the Communication site template. The **Title** and **Description** parameters are displayed when a user views site designs as they create a new Team site.
+| Parameter            | Value                | Site template type  |
+| :------------------- | :------------------- |:----------------|
+| WebTemplate  | 64 | Team site template |
+| WebTemplate 1 | 64 | Team site (with group creation disabled) |
+| WebTemplate    | 68 | Communication site template |![image](https://user-images.githubusercontent.com/55893502/130493853-b72bb035-eb03-4d9a-b5f2-87c38d942a11.png)
+
+
+For step-by-step information about creating a site template, see [Get started creating site templates](get-started-create-site-design.md).
 
 > [!NOTE]
-> A site template can run multiple scripts. The script IDs are passed in an array, and they run in the order listed.
+> - A site template can run multiple scripts. The script IDs are passed in an array, and they run in the order listed.
+> - The former term for site templates may still appear in certain cmdlet and script labels as "site design."
 
-For step-by-step information about creating a site template, see [Get started creating site designs](get-started-create-site-design.md).
 
 ## PnP provisioning and customization using Power Automate
 
@@ -273,7 +263,7 @@ The process works as follows:
 
 4. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations. 
 
-For a step-by-step tutorial about how to configure your own Power Automate flow with PnP provisioning, see [Build a complete site design using the PnP provisioning engine](site-design-pnp-provisioning.md).
+For a step-by-step tutorial about how to configure your own Power Automate flow with PnP provisioning, see [Build a complete site template using the PnP provisioning engine](site-design-pnp-provisioning.md).
 
 ## Scoping
 
@@ -286,7 +276,7 @@ The following example shows how to add Nestor (a user at the fictional Contoso s
 ```powershell
 Grant-SPOSiteDesignRights `
   -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-  -Principals "nestorw@contoso.onmicrosoft.com" `
+  -Principals "nestorw@onmicrosoft.com" `
   -Rights View
 ```
 
@@ -296,13 +286,13 @@ RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScri
 ```
 -->
 
-For more information about working with scopes, see [Scoping access to site designs](site-design-scoping.md).
+For more information about working with scopes, see [Scoping access to site templates](site-design-scoping.md).
 
 ## See also
 
 - [Get started creating site template](get-started-create-site-design.md)
-- [Apply a scope to your site design](site-design-scoping.md)
-- [Site design JSON schema](site-design-json-schema.md)
-- [PowerShell cmdlets for SharePoint site designs and site scripts](site-design-powershell.md)
-- [Site design and site script REST API](site-design-rest-api.md)
-- [Site design examples](https://github.com/SharePoint/sp-dev-site-scripts)
+- [Apply a scope to your site template](site-design-scoping.md)
+- [Site template JSON schema](site-design-json-schema.md)
+- [PowerShell cmdlets for SharePoint site templates and site scripts](site-design-powershell.md)
+- [Site template and site script REST API](site-design-rest-api.md)
+- [Site template examples](https://github.com/SharePoint/sp-dev-site-scripts)
