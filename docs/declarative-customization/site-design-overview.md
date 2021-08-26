@@ -110,7 +110,7 @@ The following example is a script that has two top-level actions. First, it appl
 
 Each action in a site script is specified by a **verb** value in the JSON. In the previous script, the first action is specified by the **applyTheme** verb. Next, the **createSPList** verb creates the list. Notice that the **createSPList** verb contains its own set of verbs that run additional actions on only the list.
 
-Available actions include:
+**Available actions include:**
 
 - Creating a new list or library (or modifying the default one created with the site)
 - Creating site columns, content types, and configuring other list settings
@@ -121,12 +121,13 @@ Available actions include:
 - Triggering a Power Automate flow
 - Installing a deployed solution from the app catalog
 - Setting regional settings for the site
-- Adding principals (users and groups) to SharePoint roles
-- Setting external sharing capability for the site
+- Adding principals (users and groups) to SharePoint roles**
+- Setting external sharing capability for the site**
 
 For a complete list of available actions and their parameters, see the [JSON schema](site-design-json-schema.md).
 
 > [!NOTE]
+> ** These actions are automatically blocked for channel sites
 > For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
@@ -229,11 +230,13 @@ RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScri
 
 In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script ID. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPOSiteDesign** cmdlet or **CreateSiteDesign** REST API.
 
+
 | Parameter            | Value                | Site template type  |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
 | WebTemplate 1 | 64 | Team site (with group creation disabled) |
-| WebTemplate    | 68 | Communication site template |![image](https://user-images.githubusercontent.com/55893502/130493853-b72bb035-eb03-4d9a-b5f2-87c38d942a11.png)
+| WebTemplate    | 68 | Communication site template |
+
 
 
 For step-by-step information about creating a site template, see [Get started creating site templates](get-started-create-site-design.md).
