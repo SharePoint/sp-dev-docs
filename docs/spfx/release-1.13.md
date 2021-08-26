@@ -1,17 +1,18 @@
 ---
 title: SharePoint Framework v1.13 release notes
 description: Release notes for the SharePoint Framework v1.13 release
-ms.date: 07/27/2021
+ms.date: 08/26/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
 # SharePoint Framework v1.13 release notes
 
-This marks first release with our new release flow, where we'll release multiple beta builds using the **@next** tag in the [NPMJS.org](https://www.npmjs.org) registry before final release candidates and a final public release.
+We will be releasing multiple public beta builds using the **@next** tag in the [NPMJS.org](https://www.npmjs.org) registry before final release candidates and a final public release.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-**Released:** July 22, 2021
+* beta.17 **Released:** August 22, 2021
+* beta.15 - **Released:** July 22, 2021
 
 ## Install the latest beta release
 
