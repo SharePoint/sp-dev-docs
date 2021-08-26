@@ -17,7 +17,7 @@ To customize a default site template, apply a new template script using PowerShe
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
 | WebTemplate 1 | 64 | Team site (with group creation disabled) |
-| WebTemplate    | 68 | Communication site template |![image](https://user-images.githubusercontent.com/55893502/130501908-abeb4cb4-8f8b-4c72-80ab-e6e8a2d116d7.png)
+| WebTemplate    | 68 | Communication site template |
 
 
 The following example shows how to use the **IsDefault** switch to apply the Contoso company theme to the default site templates. The site script referenced by ID contains the JSON script to apply the correct theme.
