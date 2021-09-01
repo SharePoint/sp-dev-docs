@@ -16,7 +16,7 @@ To customize a default site template, apply a new template script using PowerShe
 | Parameter            | Value                | Site template type          |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
-| WebTemplate 1 | 64 | Team site (with group creation disabled) |
+| WebTemplate 1 | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
 
 
