@@ -7,7 +7,7 @@ localization_priority: Priority
 
 # Get started creating site templates and site scripts
 
-You can create site templates to provide reusable lists, themes, layouts, pages (experimental), or custom actions so that your users can quickly build new SharePoint sites with the features they need.
+You can create site templates to provide reusable lists, themes, layouts, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
 
 This article describes how to build a simple site template that adds a SharePoint list for tracking customer orders. You'll use the site template to create a new SharePoint site with the custom list. You'll learn how to use SharePoint PowerShell cmdlets to create site scripts and site templates. You can also use REST APIs to perform the same actions. The corresponding REST calls are shown for reference in each step.
 
@@ -107,7 +107,7 @@ The previous cmdlet creates a new site template named Contoso customer tracking.
 | Parameter            | Value                | Site template type |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
-| WebTemplate 1 | 64 | Team site (with group creation disabled) |
+| WebTemplate 1 | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
 
 
@@ -123,18 +123,18 @@ Now that you've added a site script and site template, you can use it to create 
 
 1. Go to the home page of the SharePoint site that you are using for development.
 1. Choose **Create site**.
-1. Choose **Team site**. SharePoint will create a team site using the Microsoft **Team collaboration template**.
+1. Choose the type of site you need to use. SharePoint will create a team site using the Microsoft **Team collaboration template** or a communication site using the Microsoft **Topic** template unless another custom site template is set as default.
 2. Choose **Next**.
-7. Choose **Finish**.
 4. In **Site name**, enter a name for the new site **Customer order tracking**.
+7. Choose **Finish**.
 5. Next, go to **Settings** and select **Apply a site template**.
 5. Select the site template you just created.
-8. A progress bar will be display indicating that your new template is being applied. 
+8. Once applied, your new template will display under the tab in the template viewer titled **From your organization.**
 9. When the new template has been applied, you will see the custom list on the page.
 
-### Apply to an existing site collection
+### Apply to an existing site 
 
-You can also apply a published site templates to existing sites. On the home page of the site, site owners can navigate to **Settings** and then **Apply a site template** to browse and apply templates provided by your organization and Microsoft.
+You can also apply a published site template to existing sites. On the home page of the site, site owners can navigate to **Settings** and then **Apply a site template** to browse and apply templates provided by your organization and Microsoft.
 
 You can apply templates to existing site collections in bulk by using the [Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/Invoke-SPOSiteDesign) cmdlet.
 
