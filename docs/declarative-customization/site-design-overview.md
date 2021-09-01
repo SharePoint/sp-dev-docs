@@ -10,7 +10,7 @@ localization_priority: Priority
 > [!NOTE]
 > - Site templates and site scripts are currently only supported by SharePoint Online.
 > - In previous versions of SharePoint, site templates were called site designs but will be referred to as site templates moving forward.
-> - SharePoint has a new site template experience that will be available to all SharePoint user with permissions to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
+> - SharePoint has a new site template experience that will be available to all SharePoint users with permissions to create SharePoint sites.  [Learn more about the new site template experience](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US).
 > - As of today, the site template experience cannot be disabled.
 > - Site templates created by your organization and set as the default template will automatically apply when new sites are created but can be updated by the site owner by selecting **Settings** and then **Apply a site template.**
 > - Site template version history is not currently available for the new site template experience but will be included in future iterations.
@@ -33,18 +33,17 @@ You create site templates and register them in SharePoint to one of the modern t
 
    You'll see the two modern template sites: **Team site** and **Communication site**.
 
-3. Choose **Communication site**.
+3. Choose the type of site needed.
 
 - SharePoint will automatically create a communication site using the **Topic** site template.
 - Had you chosen the default Team site, SharePoint will create a new site useing the **Team collaboration** template. 
 
 For more information about how you can change the default site templates, see [Customize a default site template](customize-default-site-design.md).
 
+4. Navigate to the **Settings** icon, and select **Apply site template** to review Microsoft-provided site templates based on the type of site you chose in step three.
+
 When a site template is selected, SharePoint creates the new site, and runs site scripts for the site template. The site scripts provide the details for the template such as creating new lists or applying a theme. These script actions are run in the background. When the scripts are complete the page will refresh to display the site script details.
 
-The site template information panel can be invoked by a site owner at any time to see what site templates have been applied to the site (and their script details) as well as to apply new or updated site templates. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
-
-![Site template Information Panel](images/site-design-information-panel-applied-site-designs.png)
 
 > [!NOTE]
 > Site templates can now be applied to previously created modern site collections. For more information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
@@ -127,8 +126,8 @@ Each action in a site script is specified by a **verb** value in the JSON. In th
 For a complete list of available actions and their parameters, see the [JSON schema](site-design-json-schema.md).
 
 > [!NOTE]
-> ** These actions are automatically blocked for channel sites
-> For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
+> - Actions marked with ** are automatically blocked for channel sites.
+> - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
 
@@ -234,12 +233,12 @@ In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript*
 | Parameter            | Value                | Site template type  |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
-| WebTemplate 1 | 64 | Team site (with group creation disabled) |
+| WebTemplate 1 | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
 
 
 
-For step-by-step information about creating a site template, see [Get started creating site templates](get-started-create-site-design.md).
+For step-by-step information about creating a site template, see [Get started creating site templates.](get-started-create-site-design.md)
 
 > [!NOTE]
 > - A site template can run multiple scripts. The script IDs are passed in an array, and they run in the order listed.
