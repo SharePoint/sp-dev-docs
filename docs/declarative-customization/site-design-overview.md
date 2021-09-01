@@ -126,8 +126,8 @@ Each action in a site script is specified by a **verb** value in the JSON. In th
 For a complete list of available actions and their parameters, see the [JSON schema](site-design-json-schema.md).
 
 > [!NOTE]
-> Actions marked with ** are automatically blocked for channel sites.
-> For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
+> - Actions marked with ** are automatically blocked for channel sites.
+> - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
 
