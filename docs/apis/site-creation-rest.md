@@ -98,7 +98,7 @@ accept: application/json;odata.metadata=none
 odata-version: 4.0
 body:
 {
-  "SiteId":"d11e59ca-1465-424c-be90-c847ba849af5"
+  "siteId":"d11e59ca-1465-424c-be90-c847ba849af5"
 }
 ```
 ### Response
