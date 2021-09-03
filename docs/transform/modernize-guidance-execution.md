@@ -124,7 +124,7 @@ Before running the Modernization it’s important to validate the input (alias m
 
 ## Modernize a wave of site collections
 
-Yes, you’re ready to run Teamwork Transformation for your site collections!
+Now you are ready to process this set of the site collections with following scripts.
 
 - **Task:** Run the ModernizeSiteCollections.ps1 script and provide it your prepared site collection CSV file and the other information in needs.
 - **Task:** Review the created logs (there are the modernization log files and the page transformation log file) for issues.
