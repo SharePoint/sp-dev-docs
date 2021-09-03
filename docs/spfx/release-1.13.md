@@ -12,7 +12,7 @@ We will be releasing multiple public beta builds using the **@next** tag in the 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
 * beta.17 **Released:** August 22, 2021
-* beta.15 - **Released:** July 22, 2021
+* beta.15 **Released:** July 22, 2021
 
 ## Install the latest beta release
 
