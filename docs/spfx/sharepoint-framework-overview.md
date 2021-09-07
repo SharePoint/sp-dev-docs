@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Framework (SPFx)
 description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams.
-ms.date: 06/12/2020
+ms.date: 09/07/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -26,7 +26,7 @@ Key features of the SharePoint Framework include:
 - SPFx web parts can be added to both classic and modern pages.
 - SPFx solutions can be used to extend Microsoft Teams.
 
-The runtime model improves on the Script Editor web part. It includes a robust client API, an HttpClient object that handles authentication to SharePoint and Office 365, contextual information, easy property definition and configuration, and more.
+The runtime model improves on the Script Editor web part. It includes a robust client API, an HttpClient object that handles authentication to SharePoint and Microsoft 365, contextual information, easy property definition and configuration, and more.
 
 If you work primarily with C#, you want to learn more about client-side JavaScript development. Most of your existing JavaScript knowledge related to SharePoint, however, is transferable, as the data models haven't changed, and you’ll use the same [REST services](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md) depending on your requirements. If you're a C# developer, TypeScript is a nice transition into the JavaScript world. The choice of IDE is up to you. Many developers like to use the cross-platform IDE [Visual Studio Code](https://code.visualstudio.com).
 
@@ -46,11 +46,11 @@ There are a few downsides to this approach. First, while you can package your so
 
 The current option for solutions that run in NoScript sites is the add-in/app-part model introduced in SharePoint Server 2013. This implementation creates an **iFrame** where the actual experience resides and executes. The advantage is that because it's external to the system and has no access to the current DOM/connection, it's easier for information workers to trust and deploy. End users can install add-ins on NoScript sites.
 
-There are some downsides to this approach as well. First, they run in an **iFrame**. iFrames are slower than the Script Editor web part, because it requires a new request to another page. The page has to go through the complete authentication and authorization, make its own calls to get SharePoint data, load various JavaScript libraries, and more. A Script Editor web part might typically take, for example, 100 milliseconds to load and render, while an app part might take 2 seconds or more. Additionally, the **iFrame** boundary makes it more difficult to create responsive designs and inherit CSS and theming information. iFrames do have stronger security, which can be useful for you (your page is inaccessible by other controls on the page) and for the end user (the control has no access to their connection to Office 365).
+There are some downsides to this approach as well. First, they run in an **iFrame**. iFrames are slower than the Script Editor web part, because it requires a new request to another page. The page has to go through the complete authentication and authorization, make its own calls to get SharePoint data, load various JavaScript libraries, and more. A Script Editor web part might typically take, for example, 100 milliseconds to load and render, while an app part might take 2 seconds or more. Additionally, the **iFrame** boundary makes it more difficult to create responsive designs and inherit CSS and theming information. iFrames do have stronger security, which can be useful for you (your page is inaccessible by other controls on the page) and for the end user (the control has no access to their connection to Microsoft 365).
 
 ### SharePoint Framework
 
-Historically, we created web parts as full trust C# assemblies that were installed on the cloud servers. However, current development models for the most part involve JavaScript running in a browser making REST API calls to the SharePoint and Office 365 back-end workloads. C# assemblies don’t work in this world. We needed a new development model. The SharePoint Framework is the next evolution in SharePoint development.
+Historically, we created web parts as full trust C# assemblies that were installed on the cloud servers. However, current development models for the most part involve JavaScript running in a browser making REST API calls to the SharePoint and Microsoft 365 back-end workloads. C# assemblies don’t work in this world. We needed a new development model. The SharePoint Framework is the next evolution in SharePoint development.
 
 ## SharePoint Framework License
 
