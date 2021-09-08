@@ -330,7 +330,7 @@
     - name: Deploy web parts to Azure CDN
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Deployment options for SPFx solutions & Microsoft Teams
-      href: spfx/deployment-spfx-teams-solutions.md
+      href: https://docs.microsoft.com/sharepoint/dev/spfx/deployment-spfx-teams-solutions
     - name: Custom build tasks
       href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
     - name: Extend Webpack
@@ -435,9 +435,9 @@
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md
     - name: Microsoft Teams
-      href: spfx/build-for-teams-overview.md
+      href: https://docs.microsoft.com/sharepoint/dev/spfx/build-for-teams-overview
     - name: Microsoft Viva Connections
-      href: spfx/viva/overview-viva-connections.md
+      href: https://docs.microsoft.com/sharepoint/dev/spfx/viva/overview-viva-connections
   - name: Release notes & roadmap
     items:
     - name: Overview
