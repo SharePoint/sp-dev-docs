@@ -484,16 +484,20 @@
     href: spfx/build-for-teams-overview.md
   - name: Expose web parts in Microsoft Teams
     href: spfx/build-for-teams-expose-webparts-teams.md
-  - name: Build Microsoft Teams channel/group tabs with SPFx
-    href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
   - name: Configure web parts in Microsoft Teams
     href: spfx/build-for-teams-configure-in-teams.md
   - name: 'Scenario: Build a Me-experience in Microsoft Teams'
     href: spfx/build-for-teams-me-experience.md
-  - name: 'Tutorial: Build meeting apps for Microsoft Teams with SPFx'
-    href: spfx/build-for-teams-meeting-app.md
   - name: Considerations
     href: spfx/build-for-teams-considerations.md
+  - name: Deployment SPFx solutions to Microsoft Teams
+    href: spfx/deployment-spfx-teams-solutions.md
+  - name: Tutorials
+    items:
+    - name: Build Microsoft Teams channel/group tabs with SPFx
+      href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
+    - name: Build meeting apps for Microsoft Teams with SPFx
+      href: spfx/build-for-teams-meeting-app.md
 - name: Microsoft Viva Connections
   items:
   - name: Overview
