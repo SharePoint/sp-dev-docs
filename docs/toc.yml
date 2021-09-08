@@ -125,6 +125,8 @@
   items:
   - name: Overview
     href: spfx/sharepoint-framework-overview.md
+  - name: Why the SharePoint Framework?
+    href: spfx/sharepoint-framework-why.md
   - name: Getting started
     items:
     - name: Set up Microsoft 365 tenant
