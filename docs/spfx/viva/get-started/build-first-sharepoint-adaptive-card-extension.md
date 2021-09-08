@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Adaptive Card Extension
 description: Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, which enable developers to build rich, native extensions to Viva Connections' Dashboards and SharePoint Pages. In this tutorial, you'll build and explore your first ACE.
-ms.date: 08/05/2021
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,15 +11,12 @@ Adaptive Card Extensions (ACEs) are a new SharePoint Framework component type, w
 
 [!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
 
-> [!NOTE]
-> Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
-
 > [!IMPORTANT]
-> This tutorial assumes you have installed the SPFx v1.13 beta version. For more information on installing the SPFx v1.13 beta, see [SharePoint Framework v1.13 release notes](../../release-1.13.md).
+> This tutorial assumes you have installed the SPFx v1.13. For more information on installing the SPFx v1.13, see [SharePoint Framework v1.13 release notes](../../release-1.13.md).
 
 ## Step 1 - Scaffold an Adaptive Card Extension project
 
-Create a new HelloWorld ACE by running the Yeoman SharePoint Generator.
+Create a new HelloWorld ACE by running the Yeoman SharePoint generator.
 
 ```console
 yo @microsoft/sharepoint
@@ -51,7 +48,7 @@ The following arguments are used in the previous command:
 
 Once local webserver is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
-Open the Web Part Toolbox and select your ACE:
+Open the **Web Part Toolbox** and select your ACE:
 
 :::image type="content" source="../../../images/viva-extensibility/lab1-toolbox.png" alt-text="Select the ACE from the toolbox":::
 
@@ -86,7 +83,7 @@ Locate and open the following file in your project: **./src/adaptiveCardExtensio
 
 ```typescript
 export default class HelloWorldAdaptiveCardExtension
-    extends BaseAdaptiveCardExtension<IHelloWorldAdaptiveCardExtensionProps,IHelloWorldAdaptiveCardExtensionState> {
+  extends BaseAdaptiveCardExtension<IHelloWorldAdaptiveCardExtensionProps,IHelloWorldAdaptiveCardExtensionState> {
   // ...
 }
 ```
