@@ -434,6 +434,10 @@
       href: spfx/sharepoint-2019-support.md
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md
+    - name: Microsoft Teams
+      href: spfx/build-for-teams-overview.md
+    - name: Microsoft Viva Connections
+      href: spfx/viva/overview-viva-connections.md
   - name: Release notes & roadmap
     items:
     - name: Overview
