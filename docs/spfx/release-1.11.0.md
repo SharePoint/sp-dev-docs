@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.11 release notes
 description: Release notes for the SharePoint Framework v1.11 release
-ms.date: 07/17/2020
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -9,9 +9,11 @@ localization_priority: Priority
 
 New in this release, support for additional attributes in the solution for enabling SharePoint Framework support in store and new messaging extension support for Microsoft Teams.
 
-* [Announcing SharePoint Framework 1.11: Extend more of Microsoft Teams, and publish to AppSource](https://developer.microsoft.com/microsoft-365/blogs/announcing-sharepoint-framework-1-11-extend-more-of-microsoft-teams-and-publish-to-appsource/)
+- [Announcing SharePoint Framework 1.11: Extend more of Microsoft Teams, and publish to AppSource](https://developer.microsoft.com/microsoft-365/blogs/announcing-sharepoint-framework-1-11-extend-more-of-microsoft-teams-and-publish-to-appsource/)
 
 **Released:** July 16, 2020
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Upgrading projects from v1.10 to v1.11
 
@@ -27,13 +29,11 @@ New in this release, support for additional attributes in the solution for enabl
         ```console
         npm install @microsoft/{spfx-package-name}@1.11 --save --save-exact
         ```
+
 > [!IMPORTANT]
-> Be sure you update the package-solution.json with the new developers information as described in the article [Docs: SharePoint Framework toolchain - Update developer information](toolchain/sharepoint-framework-toolchain.md). Not providing such information will generate an error during gulp package-solution process.
+> Be sure you update the **package-solution.json** with the new developers information as described in the article [Docs: SharePoint Framework toolchain - Update developer information](toolchain/sharepoint-framework-toolchain.md). Not providing such information will generate an error during gulp package-solution process.
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 

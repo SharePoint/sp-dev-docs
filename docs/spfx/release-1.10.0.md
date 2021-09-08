@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.10 release notes
 description: Release notes for the SharePoint Framework v1.10 release
-ms.date: 07/03/2020
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,6 +10,8 @@ localization_priority: Priority
 New in this release, preview code for **Office Add-Ins** and a new Extension type **Search Extensions**. We also added support for personal apps in Microsoft Teams and Teams mobile support.
 
 **Released:** January 7, 2020
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Upgrading projects from v1.9.1 to v1.10
 
@@ -26,10 +28,7 @@ New in this release, preview code for **Office Add-Ins** and a new Extension typ
         npm install @microsoft/{spfx-package-name}@1.10.0 --save --save-exact
         ```
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 
