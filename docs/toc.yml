@@ -235,20 +235,6 @@
       href: spfx/library-component-overview.md
     - name: Library component tutorial
       href: spfx/library-component-tutorial.md
-  - name: Viva Connections extensibility
-    items:
-    - name: Overview
-      href: spfx/viva/overview-viva-connections.md
-    - name: Tutorials
-      items:
-      - name: Build your first SharePoint Adaptive Card Extension
-        href: spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension.md
-      - name: Advanced Card View Functionality
-        href: spfx/viva/get-started/advanced-card-view-functionality.md
-      - name: Advanced Quick View Functionality
-        href: spfx/viva/get-started/advanced-quick-view-functionality.md
-      - name: Adaptive Card Extensions and Teams Apps
-        href: spfx/viva/get-started/adaptive-card-extensions-and-teams.md
   - name: Publish to marketplace
     items:
     - name: Overview
@@ -351,10 +337,6 @@
       href: spfx/tenant-scoped-deployment.md
     - name: Optimize builds for production
       href: spfx/toolchain/optimize-builds-for-production.md
-    - name: SharePoint 2016 support
-      href: spfx/sharepoint-2016-support.md
-    - name: SharePoint 2019 support
-      href: spfx/sharepoint-2019-support.md
   - name: Concepts & scenarios
     items:
     - name: Localize web parts
@@ -440,6 +422,16 @@
       href: spfx/use-developer-dashboard.md
     - name: Maintenance mode for client-side web parts
       href: general-development/client-side-web-parts-maintenance-mode.md
+  - name: Supported extensibility platforms
+    items:
+    - name: Overview
+      href: spfx/supported-extensibility-platforms-overview.md
+    - name: SharePoint Online
+      href: spfx/spfx-sharepoint-online.md
+    - name: SharePoint 2019 support
+      href: spfx/sharepoint-2019-support.md
+    - name: SharePoint 2016 support
+      href: spfx/sharepoint-2016-support.md
   - name: Release notes & roadmap
     items:
     - name: Overview
@@ -480,7 +472,7 @@
       href: spfx/release-1.1.md
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
-- name: Build for Microsoft Teams
+- name: Microsoft Teams
   items:
   - name: Overview
     href: spfx/build-for-teams-overview.md
@@ -496,6 +488,20 @@
     href: spfx/build-for-teams-meeting-app.md
   - name: Considerations
     href: spfx/build-for-teams-considerations.md
+- name: Microsoft Viva Connections
+  items:
+  - name: Overview
+    href: spfx/viva/overview-viva-connections.md
+  - name: Tutorials
+    items:
+    - name: Build your first SharePoint Adaptive Card Extension
+      href: spfx/viva/get-started/build-first-sharepoint-adaptive-card-extension.md
+    - name: Advanced Card View Functionality
+      href: spfx/viva/get-started/advanced-card-view-functionality.md
+    - name: Advanced Quick View Functionality
+      href: spfx/viva/get-started/advanced-quick-view-functionality.md
+    - name: Adaptive Card Extensions and Teams Apps
+      href: spfx/viva/get-started/adaptive-card-extensions-and-teams.md
 - name: Business Apps & Process Automation
   items:
   - name: Overview
