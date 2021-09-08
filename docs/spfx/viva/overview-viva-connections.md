@@ -26,6 +26,8 @@ To learn more about customizing modern pages in SharePoint with SPFx, see [Overv
 
 The Viva Connections dashboard & mobile experience can be extended and customized using Adaptive Card Extensions (ACEs). Developers must use the SPFx create custom ACEs enabling customized experiences in Viva Connections dashboards and the Viva Connections mobile app.
 
+To learn more about creating ACEs, see the following tutorial: [Build your first SharePoint Adaptive Card Extension](get-started/build-first-sharepoint-adaptive-card-extension.md).
+
 ## Prerequisites
 
 The SPFx v1.13 introduced support for building solutions to customize and extend Microsoft Viva Connections. To learn more about SPFx v1.13, including prerequisites & how to install it, see: [SharePoint Framework v1.13 release notes](../release-1.13.md).
