@@ -36,7 +36,7 @@ The easiest way to use view formatting is to start from an example and edit it t
 
 You can use **`additionalRowClass`** to apply one or more classes to the entire list row depending on the value of one or more fields in the row. These examples leave the content and structure of list rows intact.
 
-For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#style-guidelines) in the [Column Formatting reference document](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting).
+For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](/../../blob/master/docs/declarative-customization/column-formatting.md#style-guidelines) in the [Column Formatting reference document](/../../blob/master/docs/declarative-customization/column-formatting.md).
 
 > [!TIP]
 > Using the `additionalRowClass` property to apply classes to list rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
@@ -794,7 +794,7 @@ Creating custom view formatting JSON from scratch is simple if user understands 
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](/../../blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
 
 > [!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -831,7 +831,7 @@ Optional element. Defines the width of the card in pixels for 'Gallery' layout. 
 
 ### formatter
 
-JSON object that defines the layout of cards for 'Gallery' layout. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'Gallery' layout.
+JSON object that defines the layout of cards for 'Gallery' layout. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](/../../blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference). Only valid for 'Gallery' layout.
 
 ### groupProps
 
@@ -839,11 +839,11 @@ Groups the group related customization options. Valid in 'List', 'Compact List' 
 
 ### headerFormatter
 
-JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Valid in 'List', 'Compact List' and 'Gallery' layouts.
+JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](/../../blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference). Valid in 'List', 'Compact List' and 'Gallery' layouts.
 
 ### footerFormatter
 
-JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Valid in 'List' and 'Compact List' layouts.
+JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](/../../blob/master/docs/declarative-customization/column-formatting.md#detailed-syntax-reference). Valid in 'List' and 'Compact List' layouts.
 
 ### hideFooter
 
@@ -869,7 +869,7 @@ The `@group` object has the following properties (with example values):
 }
 ```
 
-You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Column Format special string values](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#special-string-values).
+You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Column Format special string values](/../../blob/master/docs/declarative-customization/column-formatting.md#special-string-values).
 
 ```JSON
 {
@@ -906,7 +906,7 @@ The `@columnAggregate` object has the following properties (with example values)
 
 Provides access to array of aggregated column's value, display name and aggregate type. Valid in 'List', 'Compact List' and 'Gallery' layouts. Available only inside `groupProps`.
 
-The `@aggregates` object has the following properties (with example value), and can be iterated on using [Column Format forEach](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#foreach) property.
+The `@aggregates` object has the following properties (with example value), and can be iterated on using [Column Format forEach](/../../blob/master/docs/declarative-customization/column-formatting.md#foreach) property.
 
 ```JSON
 [
