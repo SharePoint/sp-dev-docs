@@ -8,7 +8,7 @@ localization_priority: Priority
 
 # SharePoint Framework support on SharePoint Online
 
-SharePoint Online always has the broadest and most up-to-date support for the SHarePoint Framework (SPFx). The SharePoint Framework is also the recommended customization and extensibility development model for SharePoint Online.
+SharePoint Online always has the broadest and most up-to-date support for the SharePoint Framework (SPFx). The SharePoint Framework is also the recommended customization and extensibility development model for SharePoint Online.
 
 All published versions of SFPx, as well as the latest betas, are published and available on SharePoint Online. This means that regardless of the version you use to build custom SPFx components, they'll always work on SharePoint Online sites.
 
