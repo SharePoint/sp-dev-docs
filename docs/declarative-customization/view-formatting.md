@@ -170,6 +170,9 @@ In the example below we have list with group headers formatted according to colu
 
 In this example below, the `headerFormatter` for `groupProps` is used to format the group header and the `@group` is used to access group info.
 
+> [!NOTE]
+> The JSON below contains line breaks. These have been added to improve the readability of the code. 
+
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
@@ -188,13 +191,22 @@ In this example below, the `headerFormatter` for `groupProps` is used to format 
         "margin": "1px 4px 4px 1px"
       },
       "attributes": {
-        "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
+        "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', 
+                   if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', 
+                   if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', 
+                   if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', 
+                   if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 
+                   'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
       },
       "children": [
         {
           "elmType": "img",
           "attributes": {
-            "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
+            "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', 
+                     if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', 
+                     if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', 
+                     if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', 
+                     if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
           },
           "style": {
             "max-width": "24px",
@@ -252,6 +264,9 @@ In the example below we have list with group headers formatted with group aggreg
 
 In this example the `hideFooter` for `groupProps` is set to `true` - to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
 
+> [!NOTE]
+> The JSON below contains line breaks. These have been added to improve the readability of the code.  
+
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
@@ -271,13 +286,22 @@ In this example the `hideFooter` for `groupProps` is set to `true` - to hide the
         "margin": "1px 4px 4px 1px"
       },
       "attributes": {
-        "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
+        "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', 
+                   if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', 
+                   if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', 
+                   if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', 
+                   if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 
+                   'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
       },
       "children": [
         {
           "elmType": "img",
           "attributes": {
-            "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
+            "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', 
+                     if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', 
+                     if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', 
+                     if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', 
+                     if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
           },
           "style": {
             "max-width": "24px",
@@ -552,6 +576,7 @@ In the example below we have gallery view with formatted group headers as per co
 
 > [!NOTE]
 > Gallery card formatter is skipped in the below JSON for simplicity.
+> The example below also contains line breaks. These have been added to improve the readability of the code. 
 
 ```JSON
 {
@@ -577,13 +602,22 @@ In the example below we have gallery view with formatted group headers as per co
             "margin": "1px 4px 4px 1px"
           },
           "attributes": {
-            "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary'))))"
+            "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', 
+                       if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', 
+                       if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', 
+                       if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', 
+                       if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 
+                       'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary'))))"
           },
           "children": [
             {
               "elmType": "img",
               "attributes": {
-                "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
+                "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', 
+                         if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', 
+                         if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', 
+                         if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', 
+                         if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
               },
               "style": {
                 "max-width": "24px",
@@ -651,6 +685,7 @@ In this example the `@aggregates` array is used to display a summary in the grou
 
 > [!NOTE]
 > Gallery card formatter is skipped in the below JSON for simplicity.
+> The example below also contains line breaks. These have been added to improve the readability of the code.
 
 ```JSON
 {
@@ -678,13 +713,21 @@ In this example the `@aggregates` array is used to display a summary in the grou
             "margin": "1px 4px 4px 1px"
           },
           "attributes": {
-            "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
+            "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37', 
+                       if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50', 
+                       if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50', 
+                       if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50', 
+                       if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
           },
           "children": [
             {
               "elmType": "img",
               "attributes": {
-                "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
+                "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png', 
+                         if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png', 
+                         if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png', 
+                         if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png', 
+                         if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
               },
               "style": {
                 "max-width": "24px",
