@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.7.1 release notes
 description: Release notes for the SharePoint Framework v1.7.1 release
-ms.date: 07/03/2020
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,6 +10,8 @@ localization_priority: Priority
 This release is primarily a bug fix release to address few regressions and missed bugs that were introduced in the 1.7 release. This didn't contain any critical issues, we rather wanted to fix few inconveniences with the latest release.
 
 **Released:** December 18, 2018
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Upgrading projects from v1.7 to v1.7.1
 
@@ -26,10 +28,7 @@ This release is primarily a bug fix release to address few regressions and misse
         npm install @microsoft/{spfx-package-name}@1.7.1.0 --save --save-exact
         ```
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## Changes in this release
 

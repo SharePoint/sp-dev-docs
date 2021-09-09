@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.13 release notes
 description: Release notes for the SharePoint Framework v1.13 release
-ms.date: 08/26/2021
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -11,8 +11,10 @@ We will be releasing multiple public beta builds using the **@next** tag in the 
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-* beta.17 **Released:** August 22, 2021
-* beta.15 **Released:** July 22, 2021
+- beta.17 **Released:** August 22, 2021
+- beta.15 **Released:** July 22, 2021
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Install the latest beta release
 
@@ -37,8 +39,7 @@ npm install @microsoft/generator-sharepoint@next --global
         npm install @microsoft/{spfx-package-name}@next --save --save-exact
         ```
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 
@@ -49,11 +50,10 @@ npm install @microsoft/generator-sharepoint@next --global
 > [!NOTE]
 > The extensibility model for the upcoming Viva Connections feature is currently rolling out in production and might not be available across all tenants yet. If you want to immediately start working with ACEs you can do that by creating a link to the workbench (for example `https://contoso.sharepoint.com/_layouts/15/workbench.aspx`) in a navigation node in a modern page. Then use that node to access the workbench.
 
-
 ## Deprecations and removed items in this release
 
 - **Local workbench removed**: This release will also mark the removal of the local workbench, as well as the removal of the on-prem questions in the Yeoman generator. On-prem is still supported, and the SPFx v1.12.1 Yeoman generator, as well as previous versions, continue to generate on-prem solutions. The hosted workbench is now the way to test your code.
 
     To configure the browser launch correctly, update the `initialPage` property within the **./config/serve.json** to point to your SharePoint Online tenant. For example: `https://contoso.sharepoint.com/_layouts/15/workbench.aspx`.
-    
+
     Not performing this configuration task will result in an error the first time `gulp serve` runs.

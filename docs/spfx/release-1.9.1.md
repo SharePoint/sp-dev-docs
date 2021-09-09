@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.9.1 release notes
 description: Release notes for the SharePoint Framework v1.9.1 release
-ms.date: 07/03/2020
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,6 +10,8 @@ localization_priority: Priority
 This is a minor release that includes **Library component moving to general availability** and the tooling move from WebPack 3 to **WebPack 4**. There are some minor changes in support for the **Teams SDK** as well.
 
 **Released:** August 14, 2019
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Upgrading projects from v1.8.2 to v1.9.1
 
@@ -26,10 +28,7 @@ This is a minor release that includes **Library component moving to general avai
         npm install @microsoft/{spfx-package-name}@1.9.1.0 --save --save-exact
         ```
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 

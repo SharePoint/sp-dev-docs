@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.8.2 release notes
 description: Release notes for the SharePoint Framework v1.8.2 release
-ms.date: 02/09/2021
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,6 +10,8 @@ localization_priority: Priority
 This is a minor patch release that mostly focuses on build and tooling issues, with some changes to the scaffolded projects and APIs.
 
 **Released:** May 7, 2019
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Upgrading projects from v1.8.1 to v1.8.2
 
@@ -26,10 +28,7 @@ This is a minor patch release that mostly focuses on build and tooling issues, w
         npm install @microsoft/{spfx-package-name}@1.8.2.0 --save --save-exact
         ```
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## Changes in this release
 

@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.8.0 release notes
 description: Release notes for the SharePoint Framework v1.8.0 release
-ms.date: 07/03/2020
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,6 +10,8 @@ localization_priority: Priority
 We'll release more updated documentation and guidance videos during upcoming days and weeks. Your feedback on needed assets and topics is more than welcome.
 
 **Released:** March 14, 2019
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Upgrading projects from v1.7.1 to v1.8.0
 
@@ -50,10 +52,7 @@ We'll release more updated documentation and guidance videos during upcoming day
 
 1. Fix all the new and interesting tslint errors that are now getting raised with a newer compiler. For large projects, this might take a while. The default behavior of the TypeScript compilers is getting stricter, but your code will be the better for it.
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 

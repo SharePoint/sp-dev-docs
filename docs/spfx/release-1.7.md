@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.7 release notes
 description: Release notes for the SharePoint Framework v1.7 release
-ms.date: 07/03/2020
+ms.date: 09/08/2021
 ms.prod: sharepoint
 localization_priority: Priority
 ---
@@ -10,6 +10,8 @@ localization_priority: Priority
 This is probably the biggest release for new features we've had since the original preview (or maybe the preview of extensions).
 
 **Released:** November 8, 2018
+
+[!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Upgrading projects from v1.6 to v1.7
 
@@ -26,14 +28,11 @@ This is probably the biggest release for new features we've had since the origin
         npm install @microsoft/{spfx-package-name}@1.7.0 --save --save-exact
         ```
 
-> [!TIP]
-> The [CLI for Microsoft 365](https://aka.ms/o365cli) provides an easy step-by-step guidance to [upgrade](https://pnp.github.io/cli-microsoft365/cmd/spfx/project/project-upgrade/) your solutions to latest SharePoint Framework version.
-
-[!INCLUDE [pnp-o365cli](../../includes/snippets/open-source/pnp-o365cli.md)]
+[!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
 
-###  Dynamic Data
+### Dynamic Data
 
 For the **Dynamic Data** feature, we've made a number of improvements in the GA (general availability) work.
 
@@ -43,6 +42,7 @@ For the **Dynamic Data** feature, we've made a number of improvements in the GA 
 #### Author configuration
 
 The main bulk of the additions between developer preview and GA are around the property pane. There are different kinds of classes introduced to support this, including
+
 - `IPropertyPaneConditionalGroup`, which allows you to have different groups appear based on some condition
 - `IDynamicDataSharedPropertyConfiguration`, `IDynamicDataSharedPropertyFilters`, `IDynamicDataSharedSourceConfiguration`, `IDynamicDataSharedSourceFilters`, `IPropertyPaneDynamicFieldSetProps`, that can be used to create controls in the property pane that allow authors to pick a dynamic data source and property.
 - We've deprecated (and will remove completely in a future release) the developer preview `IPropertyPaneDynamicTextFieldProps` interface and `PropertyPaneDynamicTextField` function that was the quick-and-dirty way to edit a dynamic property.
