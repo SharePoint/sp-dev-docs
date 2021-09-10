@@ -9,7 +9,7 @@ localization_priority: Priority
 
 SharePoint offers several [site templates that are already available](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398). These are the default site templates and they can be modified by using PowerShell or the REST APIs to control the entire site provisioning experience. For example, you can ensure that your company theme is applied to every site that gets created, or you can make sure a logging mechanism always runs regardless of which site template is chosen.
 
-## Apply a site scipt to a default site template
+## Apply a site script to a default site template
 
 To customize a default site template, apply a new template script using PowerShell **Add-SPOSiteDesign** cmdlet or the **CreateSiteDesign** REST API. Specify the **IsDefault** switch to apply the site template as the default template. 
 
