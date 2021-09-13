@@ -821,6 +821,10 @@ Optional element. Specifies whether the ability to select rows in the view is di
 
 For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
+### fillHorizontally
+
+Optional element. Specifies whether the cards in the row should be stretched horizontally to fill the row. `false` is the default behavior (meaning cards in a row are stacked without resizing until they overflow). `true` means cards in the row are stretched horizontally only if necessary to fill the row. Only valid for 'Gallery' layout.
+
 ### hideColumnHeader
 
 Optional element. Specifies whether the column headers in the view are hidden or not. `false` is the default behavior inside a list view (meaning column headers will be visible). `true` means that the view will not display column headers. Only valid for 'List' and 'Compact List' layouts.
