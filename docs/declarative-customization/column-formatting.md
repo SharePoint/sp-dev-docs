@@ -1496,12 +1496,12 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Binary operators** - The following are operators that expect two operands:
 
-- **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
+- **indexOf**: takes 2 operands. The first is the text (or array) you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string (or array). Indexes start at 0. If the search term is not found within the text (or array), -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
   - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
   - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
   - `"txtContent": "=indexOf('DogFood', 'Cat')"` results in _-1_
   - `"txtContent": "=indexOf('DogFood', 'f')"` results in _-1_
-  
+
 - **join**: takes 2 operands. The first is an array (multi-select person or choice field) and the second is the separating string. Returns a string concatenation of the array values separated by the separating string. - _Only available in SharePoint Online_
   - `"txtContent": "=join(@currentField, ', ')"` might result in _"Apple, Orange, Cherry"_ (depending on the selected values)
   - `"txtContent": "=join(@currentField.title, '|')"` might result in _"Chris Kent|Vesa Juvonen|Jeff Teper"_ (depending on the selected persons)
@@ -1509,7 +1509,7 @@ Operators specify the type of operation to perform. The following operators are 
 - **pow**: returns the base to the exponent power. - _Only available in SharePoint Online_
   - `"txtContent":"=pow(2,3)"` results in _8_
 
-- **lastIndexOf**: returns the position of the last occurrence of a specified value in a string
+- **lastIndexOf**: returns the position of the last occurrence of a specified value in a string (or array)
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Dog')"` results in _8_
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'F')"` results in _11_
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Cat')"` results in _-1_
