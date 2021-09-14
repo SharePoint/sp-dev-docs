@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 06/01/2021
+ms.date: 09/14/2021
 localization_priority: Priority
 ---
 
@@ -17,11 +17,15 @@ You can use view formatting to customize how items in SharePoint lists and libra
 
 ## Get started with view formatting
 
-To open the view formatting pane, open the view dropdown and choose **Format current view**. <img src="../images/view-dropdown-menu.png" alt="View dropdown menu" width="260" height="310"/>
+To open the view formatting pane, open the view dropdown and choose **Format current view**.
+
+![View dropdown menu](../images/view-dropdown-menu.png)
 
 The pane will look like the following depending on the current layout:
 
-<img src="../images/sp-viewformatting-panel-listlayout.png" alt="List layout formatting pane"/> <img src="../images/sp-viewformatting-panel-tileslayout.png" alt="Gallery layout formatting pane"/>
+![List layout formatting pane](../images/sp-viewformatting-panel-listlayout.png)
+
+![Gallery layout formatting pane](../images/sp-viewformatting-panel-tileslayout.png)
 
 > [!NOTE]
 > We have simplified the View formatting pane experience to separate out the List and Gallery layout formatting JSON. With this change, you do not need to add `tileProps` prop anymore.
@@ -36,7 +40,7 @@ The easiest way to use view formatting is to start from an example and edit it t
 
 You can use **`additionalRowClass`** to apply one or more classes to the entire list row depending on the value of one or more fields in the row. These examples leave the content and structure of list rows intact.
 
-For a list of recommended classes to use inside view formats, please see the [Style Guidelines section](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#style-guidelines) in the [Column Formatting reference document](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting).
+For a list of recommended classes to use inside view formats, please see the [Style guidelines](column-formatting.md#style-guidelines) in the [Use column formatting to customize SharePoint](column-formatting.md).
 
 > [!TIP]
 > Using the `additionalRowClass` property to apply classes to list rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
@@ -170,6 +174,9 @@ In the example below we have list with group headers formatted according to colu
 
 In this example below, the `headerFormatter` for `groupProps` is used to format the group header and the `@group` is used to access group info.
 
+> [!NOTE]
+> The JSON below contains line breaks. These have been added to improve the readability of the code.
+
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
@@ -189,22 +196,21 @@ In this example below, the `headerFormatter` for `groupProps` is used to format 
       },
       "attributes": {
         "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37',
-                    if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
-                    if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
-                    if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
-                    if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50',
-                    'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary'))))"
+                   if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
+                   if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
+                   if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
+                   if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50',
+                   'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
       },
       "children": [
         {
           "elmType": "img",
           "attributes": {
             "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png',
-                    if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
-                    if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
-                    if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
-                    if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png',
-                    ''))))"
+                     if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
+                     if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
+                     if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
+                     if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
           },
           "style": {
             "max-width": "24px",
@@ -262,6 +268,9 @@ In the example below we have list with group headers formatted with group aggreg
 
 In this example the `hideFooter` for `groupProps` is set to `true` - to hide the group footer and the `@aggregates` array is used to display a summary in the group header.
 
+> [!NOTE]
+> The JSON below contains line breaks. These have been added to improve the readability of the code.
+
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
@@ -282,22 +291,21 @@ In this example the `hideFooter` for `groupProps` is set to `true` - to hide the
       },
       "attributes": {
         "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37',
-                    if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
-                    if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
-                    if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
-                    if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50',
-                    'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary'))))"
+                   if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
+                   if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
+                   if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
+                   if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50',
+                   'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
       },
       "children": [
         {
           "elmType": "img",
           "attributes": {
             "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png',
-                    if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
-                    if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
-                    if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
-                    if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png',
-                    ''))))"
+                     if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
+                     if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
+                     if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
+                     if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
           },
           "style": {
             "max-width": "24px",
@@ -572,6 +580,7 @@ In the example below we have gallery view with formatted group headers as per co
 
 > [!NOTE]
 > Gallery card formatter is skipped in the below JSON for simplicity.
+> The example below also contains line breaks. These have been added to improve the readability of the code.
 
 ```JSON
 {
@@ -598,22 +607,21 @@ In the example below we have gallery view with formatted group headers as per co
           },
           "attributes": {
             "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37',
-                        if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
-                        if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
-                        if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
-                        if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50',
-                        'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary'))))"
+                       if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
+                       if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
+                       if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
+                       if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50',
+                       'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary'))))"
           },
           "children": [
             {
               "elmType": "img",
               "attributes": {
                 "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png',
-                    if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
-                    if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
-                    if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
-                    if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png',
-                    ''))))"
+                         if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
+                         if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
+                         if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
+                         if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
               },
               "style": {
                 "max-width": "24px",
@@ -681,6 +689,7 @@ In this example the `@aggregates` array is used to display a summary in the grou
 
 > [!NOTE]
 > Gallery card formatter is skipped in the below JSON for simplicity.
+> The example below also contains line breaks. These have been added to improve the readability of the code.
 
 ```JSON
 {
@@ -709,22 +718,20 @@ In this example the `@aggregates` array is used to display a summary in the grou
           },
           "attributes": {
             "class": "=if(@group.fieldData == 'California', 'sp-css-backgroundColor-blueBackground37',
-                      if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
-                      if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
-                      if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
-                      if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50',
-                      'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary'))))"
+                       if(@group.fieldData == 'Chicago', 'sp-css-backgroundColor-successBackground50',
+                       if(@group.fieldData == 'New York', 'sp-css-backgroundColor-warningBackground50',
+                       if(@group.fieldData == 'Seattle', 'sp-css-backgroundColor-blockingBackground50',
+                       if(@group.fieldData == 'Washington DC', 'sp-css-backgroundColor-errorBackground50', 'sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary')))))"
           },
           "children": [
             {
               "elmType": "img",
               "attributes": {
                 "src": "=if(@group.fieldData == 'California', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/1920px-Flag_of_California.svg.png',
-                        if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
-                        if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
-                        if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
-                        if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png',
-                        ''))))"
+                         if(@group.fieldData == 'Chicago', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Flag_of_Chicago%2C_Illinois.svg/1920px-Flag_of_Chicago%2C_Illinois.svg.png',
+                         if(@group.fieldData == 'New York', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_New_York_City.svg/2560px-Flag_of_New_York_City.svg.png',
+                         if(@group.fieldData == 'Seattle', 'https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Flag_of_Seattle.svg/1920px-Flag_of_Seattle.svg.png',
+                         if(@group.fieldData == 'Washington DC', 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_the_District_of_Columbia.svg/2560px-Flag_of_the_District_of_Columbia.svg.png', '')))))"
               },
               "style": {
                 "max-width": "24px",
@@ -791,7 +798,7 @@ Creating custom view formatting JSON from scratch is simple if user understands 
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
 
 > [!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -828,7 +835,7 @@ Optional element. Defines the width of the card in pixels for 'Gallery' layout. 
 
 ### formatter
 
-JSON object that defines the layout of cards for 'Gallery' layout. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Only valid for 'Gallery' layout.
+JSON object that defines the layout of cards for 'Gallery' layout. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Only valid for 'Gallery' layout.
 
 ### groupProps
 
@@ -836,11 +843,11 @@ Groups the group related customization options. Valid in 'List', 'Compact List' 
 
 ### headerFormatter
 
-JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Valid in 'List', 'Compact List' and 'Gallery' layouts.
+JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Valid in 'List', 'Compact List' and 'Gallery' layouts.
 
 ### footerFormatter
 
-JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format detailed syntax reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#detailed-syntax-reference). Valid in 'List' and 'Compact List' layouts.
+JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Valid in 'List' and 'Compact List' layouts.
 
 ### hideFooter
 
@@ -866,7 +873,7 @@ The `@group` object has the following properties (with example values):
 }
 ```
 
-You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Column Format special string values](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#special-string-values).
+You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Column Format Special string values](column-formatting.md#special-string-values).
 
 ```JSON
 {
@@ -903,7 +910,7 @@ The `@columnAggregate` object has the following properties (with example values)
 
 Provides access to array of aggregated column's value, display name and aggregate type. Valid in 'List', 'Compact List' and 'Gallery' layouts. Available only inside `groupProps`.
 
-The `@aggregates` object has the following properties (with example value), and can be iterated on using [Column Format forEach](https://docs.microsoft.com/sharepoint/dev/declarative-customization/column-formatting#foreach) property.
+The `@aggregates` object has the following properties (with example value), and can be iterated on using for [Column Format forEach](column-formatting.md#foreach) property.
 
 ```JSON
 [
