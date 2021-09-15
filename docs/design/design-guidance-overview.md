@@ -2,7 +2,7 @@
 title: Designing great SharePoint experiences
 description: Create compelling SharePoint experiences and effectively communicate your brand and message to your audience.
 ms.date: 1/23/2018
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Designing great SharePoint experiences

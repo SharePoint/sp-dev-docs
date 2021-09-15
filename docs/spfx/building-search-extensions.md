@@ -3,7 +3,7 @@ title: Modifying Microsoft Search experience using SharePoint Framework extensio
 description: You can modify the Microsoft Search experiences using SharePoint Framework extensions
 ms.date: 06/19/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Modifying Microsoft Search experience using SharePoint Framework extensions

@@ -3,7 +3,7 @@ title: High-trust configuration scripts for SharePoint
 description: Get customizable Windows PowerShell scripts that configure a SharePoint farm to use a high-trust SharePoint Add-in.
 ms.date: 03/25/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

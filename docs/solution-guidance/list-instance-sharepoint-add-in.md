@@ -2,7 +2,7 @@
 title: List instance in the SharePoint Add-in model
 description: The approach you take to create list instances is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list instances were created with declarative code and deployed via SharePoint Solutions.
 ms.date: 01/06/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # List instance in the SharePoint Add-in model
 

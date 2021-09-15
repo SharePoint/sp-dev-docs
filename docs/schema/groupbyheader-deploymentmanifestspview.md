@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 80342bb9-0523-41e4-8810-8946b38f25c7
 description: Represents the definition of a Group By Header parameter (GroupByHeader) in a view. 
 ---

@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 68683b19-b395-4342-b047-3d16e236ccda
 description: Returns the name of the application in which a document was created, based on the file name extension and ProgID.
 ---

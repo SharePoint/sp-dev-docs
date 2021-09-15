@@ -4,7 +4,7 @@ description: Visio Services in Microsoft SharePoint enables you to load, display
 ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: ed8c5d12-e17d-4ceb-b195-601c26824370
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Visio Services in SharePoint
 

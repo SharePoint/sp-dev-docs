@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - field type definition schema, propertyschema element (field types)
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - Field Types XML
 ms.assetid: 5723244b-2041-4424-97e5-8dbd828ecdf7

@@ -2,7 +2,7 @@
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
 ms.date: 06/29/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Use column formatting to customize SharePoint

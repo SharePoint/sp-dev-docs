@@ -8,7 +8,7 @@ ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.FilterDescriptors
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 33d8e418-ddbb-e1ac-b145-836ed9f36e5c
 ---
 

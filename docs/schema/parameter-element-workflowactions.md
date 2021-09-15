@@ -7,7 +7,7 @@ ms.topic: reference
 f1_keywords:
 - SharePoint workflows
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 29d78788-1ef1-4cd7-a07d-43b6952839ec
 ---
 

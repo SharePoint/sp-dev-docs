@@ -2,7 +2,7 @@
 title: SharePoint site theming - PowerShell cmdlets
 description: SharePoint tenant administrators can use PowerShell cmdlets to create, retrieve, and remove site themes. Developers can use the SharePoint REST API to handle theme management tasks.
 ms.date: 03/22/2018
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # SharePoint site theming: PowerShell cmdlets

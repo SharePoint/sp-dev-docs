@@ -2,7 +2,7 @@
 title: Connect to new Microsoft 365 group - CSOM development
 description: Client-side object model development for connecting to a new Microsoft 365 group operation.
 ms.date: 11/18/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Connect to new Microsoft 365 group: CSOM development

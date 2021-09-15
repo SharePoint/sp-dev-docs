@@ -8,7 +8,7 @@ ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LocalizedDisplayNames
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 3202aecf-f98f-20cb-1fdd-f3a054cb24aa
 ---
 

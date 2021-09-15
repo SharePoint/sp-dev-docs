@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - feature. custom action [sharepoint 2010],custom action ID [SharePoint 2010]
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 6889686e-f6e6-4da0-bfd4-099878614980
 ---
 

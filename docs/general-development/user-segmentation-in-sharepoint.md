@@ -3,7 +3,7 @@ title: User segmentation in SharePoint
 description: Display content you tailor for user segments you define—for example, based on locale, interests, gender, or referral links—by using a combination of term sets, the Content Search web part, and query rules in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

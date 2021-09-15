@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: bc5be9c9-a11f-0441-e8bf-436492c66428
 description: Lists the types in the SPS15XSDSearchSet5 XML schema.
 ---

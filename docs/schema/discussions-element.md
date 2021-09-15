@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: e8918228-508f-4fba-96c9-040259d153ed
 description: Contains information about the Web discussions for a document.
 ---

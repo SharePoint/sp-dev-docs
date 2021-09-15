@@ -4,7 +4,7 @@ ms.date: 12/22/2020
 ms.prod: sharepoint
 ms.assetid: 36681335-f772-4499-8445-f94481bc18e7
 description: Create SharePoint Add-ins that integrate SharePoint and mobile devices such as Windows Phone 8 and Windows Phone 7.
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Build Windows Phone apps that access SharePoint

@@ -9,7 +9,7 @@ audience: ITPro
 f1.keywords:
 - NOCSH
 ms.topic: conceptual
-localization_priority: Priority
+ms.localizationpriority: high
 ms.collection:
 - SPMigration
 - M365-collaboration

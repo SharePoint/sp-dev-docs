@@ -2,7 +2,7 @@
 title: Replace SharePoint files deployed using modules in farm solutions
 description: Replace files, such as master pages and page layouts in SharePoint, that were deployed using modules in farm solutions by uploading and updating references to use new files.
 ms.date: 5/4/2018
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Replace SharePoint files deployed using modules in farm solutions

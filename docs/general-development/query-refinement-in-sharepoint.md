@@ -4,7 +4,7 @@ description: Learn how to use SharePoint query refinement features programmatica
 ms.date: 01/27/2021
 ms.prod: sharepoint
 ms.assetid: ec31782e-1bc5-4dc3-8df7-c29cd5f7f05c
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Query Refinement in SharePoint
 

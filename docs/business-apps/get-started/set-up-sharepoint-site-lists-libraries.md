@@ -3,7 +3,7 @@ title: Set up your SharePoint site with lists and libraries
 description: Set up your SharePoint site with lists and libraries
 ms.date: 6/23/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Set up your SharePoint site with lists and libraries

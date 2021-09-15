@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - Mobile Document Viewer XML
 ms.assetid: dae1e50e-da90-4131-b8e0-155aa488d6fc

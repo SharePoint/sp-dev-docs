@@ -7,7 +7,7 @@ f1_keywords:
 - how to,howdoi,howto,webpart
 ms.prod: sharepoint
 ms.assetid: 858bb0f6-654a-4f12-ba0b-4776bda5ff6d
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Programmatically add an Excel Web Access web part to a page
 

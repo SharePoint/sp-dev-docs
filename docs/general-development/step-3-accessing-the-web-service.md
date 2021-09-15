@@ -4,7 +4,7 @@ description: After you have added a reference to Excel Web Services to your proj
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d27f654d-242f-4f34-8385-be857c170532
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 

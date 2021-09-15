@@ -4,7 +4,7 @@ description: Learn about the two kinds of custom security trimmer interfaces, IS
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

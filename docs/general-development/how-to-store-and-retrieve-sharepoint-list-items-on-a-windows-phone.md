@@ -4,7 +4,7 @@ description: Learn about the Windows Phone application life cycle and storing ne
 ms.date: 06/22/2021
 ms.prod: sharepoint
 ms.assetid: 14ca37a2-5b45-430d-9004-ff3016f89834
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Store and retrieve SharePoint list items on a Windows Phone
 

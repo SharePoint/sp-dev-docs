@@ -3,7 +3,7 @@ title: The SharePoint modernization scanner reports for the workflow scanner mod
 description: Explains the workflow output created by the modernization scanner
 ms.date: 10/23/2019
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # SharePoint Modernization scanner reports: Workflow reports

@@ -2,7 +2,7 @@
 title: Empty states for web parts
 description: The empty state is a visual representation of a web part, pre-configured to a content source like a list or with placeholder content, such as images and text.
 ms.date: 4/16/2018 
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Empty state of a web part

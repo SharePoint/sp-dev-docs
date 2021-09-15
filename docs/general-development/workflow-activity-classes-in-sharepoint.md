@@ -4,7 +4,7 @@ description: Provides a summary of the SharePoint workflow activity classes that
 ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: 70d5ca8d-520d-40a9-b24e-52bb31bd6c22
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Workflow activity classes in SharePoint

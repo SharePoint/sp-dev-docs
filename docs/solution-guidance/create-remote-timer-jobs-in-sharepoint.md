@@ -2,7 +2,7 @@
 title: Create remote timer jobs in SharePoint
 description: Create remote timer jobs to manage SharePoint by monitoring and taking action on SharePoint data.
 ms.date: 5/9/2018
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Create remote timer jobs in SharePoint

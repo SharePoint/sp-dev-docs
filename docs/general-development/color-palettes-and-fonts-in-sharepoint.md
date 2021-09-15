@@ -4,7 +4,7 @@ description: Use this reference to define the color palette or font scheme that 
 ms.date: 05/20/2020
 ms.prod: sharepoint
 ms.assetid: c17d375b-151f-48ae-ac32-f2ce9e68d63f
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Color palettes and fonts in SharePoint
 

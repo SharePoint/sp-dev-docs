@@ -2,7 +2,7 @@
 title: Authorization considerations for tenants hosted in the Germany, China or US Government environments
 description: When your Office 365 tenant is hosted in an specific environment like the Germany, China or US Government environments then you'll need to take this in account when you're developing against your tenant. 
 ms.date: 4/22/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Authorization considerations for tenants hosted in the Germany, China or US Government environments
 

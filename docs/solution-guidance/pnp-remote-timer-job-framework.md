@@ -2,7 +2,7 @@
 title: PnP remote timer job framework
 description:
 ms.date: 5/9/2018
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # PnP remote timer job framework

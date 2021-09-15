@@ -4,7 +4,7 @@ description: This article uses SharePoint with the March 2013 Public Update appl
 ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 26873259-330c-493f-b935-297a7a5a086d
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Create custom SharePoint workflow forms with Visual Studio 2012
 

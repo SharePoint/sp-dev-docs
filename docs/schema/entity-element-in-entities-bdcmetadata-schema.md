@@ -8,7 +8,7 @@ ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Entity
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 ---
 

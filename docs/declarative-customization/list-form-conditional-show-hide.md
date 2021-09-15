@@ -2,7 +2,7 @@
 title: Show or hide columns in a list form
 description: Customize which columns to show or hide using a conditional formula in the list form by constructing a simple formula that are equations performing conditional checks on values in a SharePoint list or library.
 ms.date: 05/07/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Show or hide columns in a list or library form

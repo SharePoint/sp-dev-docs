@@ -6,7 +6,7 @@ ms.date: 12/14/2020
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 53176171-c597-47a0-8b34-b064c415d9df
 ---
 

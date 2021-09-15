@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: d6ce2770-f2a8-472a-aa67-90da4c8ac238
 description: Transfers server locale information to the client to display and edit dates and numbers properly.
 ---

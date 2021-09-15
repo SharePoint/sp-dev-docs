@@ -4,7 +4,7 @@ description: Customize the data queries on which the views in a Windows Phone ap
 ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 32f89b97-8274-4cb0-9164-7898735a18aa
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Customize list item queries and filter data for Windows Phone apps
 

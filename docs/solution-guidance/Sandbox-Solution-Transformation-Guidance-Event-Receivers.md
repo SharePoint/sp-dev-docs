@@ -2,7 +2,7 @@
 title: Replace event receivers in sandbox solutions
 description: Identify options and strategies for replacing existing event receivers from your sandbox solutions.
 ms.date: 04/22/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Replace event receivers in sandbox solutions 

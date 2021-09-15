@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: cbafc593-010d-4278-af89-e38295da9a67
 description: Returns the URL to the icon that is used to indicate filtering on a list.
 ---

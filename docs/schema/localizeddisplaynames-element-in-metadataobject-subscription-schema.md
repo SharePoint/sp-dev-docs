@@ -6,7 +6,7 @@ ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: edb3742e-054c-f683-7033-b15b31d836bf
 ---
 

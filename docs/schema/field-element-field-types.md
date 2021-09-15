@@ -5,7 +5,7 @@ ms.date: 3/20/2019
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - Field Types XML
 ms.assetid: c168e8bc-8aba-4b72-a9c4-a0ad7a4aff9a

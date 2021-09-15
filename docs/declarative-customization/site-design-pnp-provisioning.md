@@ -2,7 +2,7 @@
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
 ms.date: 03/23/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Calling the PnP provisioning engine from a site script

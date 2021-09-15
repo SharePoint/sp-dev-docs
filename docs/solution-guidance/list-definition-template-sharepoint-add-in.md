@@ -2,7 +2,7 @@
 title: List definition / list template in the SharePoint Add-in model
 description: The approach you take to create list definitions / list templates is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, custom list definitions / list templates were created with declarative code and deployed via SharePoint Solutions.
 ms.date: 11/03/2017
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # List definition / list template in the SharePoint Add-in model
 

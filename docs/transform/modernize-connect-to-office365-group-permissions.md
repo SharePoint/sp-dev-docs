@@ -3,7 +3,7 @@ title: Site permissions after Microsoft 365 group connection
 description: Connect a Microsoft 365 group to an existing SharePoint site does have an impact on the SharePoint site permissions, which is explained in this article
 ms.date: 03/11/2021
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Site permissions after Microsoft 365 group connection

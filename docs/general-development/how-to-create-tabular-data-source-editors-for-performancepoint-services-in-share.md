@@ -4,7 +4,7 @@ description: Learn how to create the editor component of a custom tabular data s
 ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 3136420a-f8a2-4677-8b69-1d5d9705d96f
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Create tabular data source editors for PerformancePoint Services in SharePoint

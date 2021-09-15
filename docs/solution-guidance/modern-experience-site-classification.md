@@ -2,7 +2,7 @@
 title: SharePoint "modern" sites classification
 description: Configure out-of-the-box site classification for modern SharePoint sites.
 ms.date: 08/05/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # SharePoint "modern" sites classification

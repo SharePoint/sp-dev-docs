@@ -2,7 +2,7 @@
 title: Bulk update custom user profile properties for SharePoint Online
 description: To replicate custom attributes to the SharePoint user profile service, use the UserProfile.BatchUpdate.API.
 ms.date: 06/05/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Bulk update custom user profile properties for SharePoint Online

@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - field type definition schema, renderpattern element (field types)
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - Field Types XML
 ms.assetid: d1b292bf-6be1-4372-b529-2c87d1f83d7d

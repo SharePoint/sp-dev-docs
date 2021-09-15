@@ -2,7 +2,7 @@
 title: Master pages in the SharePoint Add-in model
 description: The approach you take to implement custom master pages in SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code / Farm Solutions. In a typical Full Trust Code (FTC) / Farm Solution branding scenario, custom master pages are created to implement a custom brand. The master pages are typically packaged in a feature that uses declarative code and a FTC / Farm Solution to deploy the master pages and register them with the SharePoint site.
 ms.date: 11/03/2017
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Master pages in the SharePoint Add-in model
 

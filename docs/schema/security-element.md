@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 20e21cab-8353-449a-a5a9-da18e16c1a0c
 description: Contains the Read, Schema, and Write security settings that specify how the security for a list is configured.
 ---

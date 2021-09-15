@@ -3,7 +3,7 @@ title: SharePoint Framework v1.7 release notes
 description: Release notes for the SharePoint Framework v1.7 release
 ms.date: 09/08/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # SharePoint Framework v1.7 release notes
 

@@ -4,7 +4,7 @@ description: Learn how to create the data provider component in a custom filter 
 ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 25508ec6-86bf-4eea-acf0-00f88e4faa55
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Create filter data providers for PerformancePoint Services in SharePoint
 

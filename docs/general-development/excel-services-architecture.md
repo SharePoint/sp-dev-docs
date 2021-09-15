@@ -6,7 +6,7 @@ f1_keywords:
 - excel services design
 ms.prod: sharepoint
 ms.assetid: e0349b4a-2d52-46c4-a167-801e9c24eaca
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

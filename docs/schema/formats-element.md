@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 8f037ff1-15d9-4da3-a0ab-715241b91869
 description: Contains column and row formatting used in a Datasheet view.
 ---

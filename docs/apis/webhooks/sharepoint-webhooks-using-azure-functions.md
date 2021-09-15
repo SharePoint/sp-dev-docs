@@ -3,7 +3,7 @@ title: Using Azure Functions with SharePoint webhooks
 description: Set up and use Azure Functions for your webhooks to take care of the hosting and scaling of your function.
 ms.date: 05/09/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 

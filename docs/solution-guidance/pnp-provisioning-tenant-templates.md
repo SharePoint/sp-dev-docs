@@ -2,7 +2,7 @@
 title: PnP Provisioning Tenant Templates
 description: 
 ms.date: 06/05/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # PnP Provisioning Tenant Templates

@@ -4,7 +4,7 @@ description: Create Windows Phone apps that use data from multiple SharePoint li
 ms.date: 01/06/2021
 ms.prod: sharepoint
 ms.assetid: 5251d35a-d659-49b3-8e0d-dfd4a7faee6b
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Use multiple SharePoint lists in a Windows Phone app
 

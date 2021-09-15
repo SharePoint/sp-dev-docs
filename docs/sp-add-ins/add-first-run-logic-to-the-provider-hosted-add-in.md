@@ -3,7 +3,7 @@ title: Add first-run logic to the provider-hosted add-in
 description: Include "first run" code in a provider-hosted SharePoint Add-in by creating the basic class for deploying components, adding the basic startup logic, and programmatically deploying a SharePoint list. 
 ms.date: 04/02/2021
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

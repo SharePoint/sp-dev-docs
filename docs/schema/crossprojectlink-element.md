@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: bbc895b6-366e-4acc-b03f-a953a9070a29
 description: This type or member supports Microsoft SharePoint Foundation and is not intended to be used directly from your code.
 ---

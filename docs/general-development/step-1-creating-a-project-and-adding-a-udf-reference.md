@@ -4,7 +4,7 @@ description: In this step, you will create a project and add a reference to Micr
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 4c6f1279-28df-45af-8488-42a6573d526d
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: Migrating from the permissive browser file handling to the default strict browser file handling
 ms.date: 06/05/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Introduction

@@ -4,7 +4,7 @@ description: Using site collection app catalogs, SharePoint tenant administrator
 ms.date: 09/07/2020
 ms.prod: sharepoint
 ms.assetid: fdf7ecb1-9951-475b-b058-3285fba77b68
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Use the site collection app catalog

@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - workflow schemas, overview
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 34e1e631-e1b5-437b-a861-029ef327d3d3
 ---
 

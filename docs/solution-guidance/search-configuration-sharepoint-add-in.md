@@ -2,7 +2,7 @@
 title: Search configuration in the SharePoint Add-in model
 description: The approach you take to configure search is different in the new SharePoint Add-in model than it was with Full Trust Code.
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Search configuration in the SharePoint Add-in model
 

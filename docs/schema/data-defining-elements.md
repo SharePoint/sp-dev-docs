@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: e873b640-c1ee-436a-81ef-ae8f6a439e61
 description:  CAML field rendering elements are designed for use when rendering individual field values.
 ---

@@ -6,7 +6,7 @@ f1_keywords:
 - roadmap
 ms.prod: sharepoint
 ms.assetid: 5c789f58-9cdb-4601-9047-9c6f83f2fbba
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 946664a0-2144-ccfd-3376-73f42e3ff259
 description: Lists the types in the schema_Microsoft.Office.Server.Search.Administration XML schema.
 ---

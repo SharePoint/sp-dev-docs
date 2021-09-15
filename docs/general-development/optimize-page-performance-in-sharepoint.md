@@ -4,7 +4,7 @@ description: Learn about features to improve performance in pages in SharePoint.
 ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Optimize page performance in SharePoint

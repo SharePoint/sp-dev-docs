@@ -3,7 +3,7 @@ title: SharePoint Add-ins
 description: Create self-contained extensions of SharePoint websites, called SharePoint Add-ins, that run without custom code on the SharePoint server.
 ms.date: 12/14/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # SharePoint Add-ins

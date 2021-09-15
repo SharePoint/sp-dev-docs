@@ -2,7 +2,7 @@
 title: Information management policy in the SharePoint Add-in model
 description: The approach you take to apply information management policy is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, information management policy was managed and applied via the SharePoint Server Side Object Model and deployed via SharePoint Farm Solutions, usually as part of a Timer Job.
 ms.date: 11/03/2017
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Information management policy in the SharePoint Add-in model
 

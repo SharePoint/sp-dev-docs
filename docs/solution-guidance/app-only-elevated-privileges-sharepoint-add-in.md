@@ -2,7 +2,7 @@
 title: App-only and elevated privileges in the SharePoint Add-in model
 description: The approach you take to elevate privileges in your code is different in the new SharePoint Add-in model than it was with full trust code. In a typical full trust code (FTC) / Farm Solution scenario, the RunWithElevatedPrivileges API is used with the SharePoint server-side object model code and deployed via Farm Solutions.
 ms.date: 01/06/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # App-only and elevated privileges in the SharePoint Add-in model

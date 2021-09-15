@@ -4,7 +4,7 @@ description: Learn how to work with Following People features by using the Share
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

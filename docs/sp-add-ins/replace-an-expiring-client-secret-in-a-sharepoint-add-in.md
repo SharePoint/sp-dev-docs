@@ -3,7 +3,7 @@ title: Replace an expiring client secret in a SharePoint Add-in
 description: Add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
 ms.date: 06/22/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Replace an expiring client secret in a SharePoint Add-in

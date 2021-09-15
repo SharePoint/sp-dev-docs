@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: cb5f7cb0-362a-37d9-dbf5-a2fbec8b1658
 description: Lists the types in the schema_Microsoft.Office.Server.Search.Query.Rules XML schema.
 ---

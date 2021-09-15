@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 02b87839-e514-4f59-a26d-55094a0ea725
 description: Returns the ProgID for the given URL of a particular document.
 ---

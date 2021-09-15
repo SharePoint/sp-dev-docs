@@ -6,7 +6,7 @@ ms.topic: article
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 6f2336fc-0cdd-6596-fdb7-45607006b2c8
 description: "Last modified: March 09, 2015"
 ---

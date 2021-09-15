@@ -6,7 +6,7 @@ f1_keywords:
 - guidelines
 ms.prod: sharepoint
 ms.assetid: 56fa3913-c156-49da-bed0-a6a106fc129f
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

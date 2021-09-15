@@ -3,7 +3,7 @@ title: SharePoint workflow development best practices
 description: Provides a collection of best practices for developers using Visual Studio to create workflows in SharePoint.
 ms.date: 01/27/2021
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

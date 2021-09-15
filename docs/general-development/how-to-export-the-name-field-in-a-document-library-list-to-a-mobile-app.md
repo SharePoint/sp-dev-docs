@@ -4,7 +4,7 @@ description: Export the Name field of a Document Library list to a mobile app by
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 901c2012-18c6-4dbd-a787-f8650a0cc7a8
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

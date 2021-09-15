@@ -7,7 +7,7 @@ author: JoanneHendrickson
 manager: pamgreen
 audience: ITPro
 ms.topic: article
-localization_priority: Priority
+ms.localizationpriority: high
 ms.collection:
   - SPMigration
   - m365-collaboration

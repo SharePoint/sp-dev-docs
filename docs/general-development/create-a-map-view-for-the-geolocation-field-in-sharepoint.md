@@ -4,7 +4,7 @@ description: Learn how to display location information by using a map view in Sh
 ms.date: 05/09/2020
 ms.prod: sharepoint
 ms.assetid: 0cd8ba27-3326-4b60-a2d0-d289a94f11bb
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Create a map view for the Geolocation field in SharePoint

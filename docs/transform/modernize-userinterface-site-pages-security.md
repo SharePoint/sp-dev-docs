@@ -3,7 +3,7 @@ title: Security requirements for using page transformation
 description: Explains the required permission levels for page transformation
 ms.date: 02/11/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Security requirements for using page transformation

@@ -2,7 +2,7 @@
 title: PnP provisioning engine and the Core library
 description: Take a high-level look at the remote provisioning process, including a closer look at the OfficeDevPnP.Core library.
 ms.date: 02/23/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # PnP provisioning engine and the Core library

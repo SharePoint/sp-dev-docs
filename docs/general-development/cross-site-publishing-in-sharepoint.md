@@ -4,7 +4,7 @@ description: SharePoint introduces a cross-site publishing feature that enables 
 ms.date: 06/18/2019
 ms.prod: sharepoint
 ms.assetid: 33f49e69-c1d3-4a6e-8887-5df683cba022
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Cross-site publishing in SharePoint

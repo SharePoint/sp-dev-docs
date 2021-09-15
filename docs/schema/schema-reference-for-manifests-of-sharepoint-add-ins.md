@@ -6,7 +6,7 @@ ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: overview
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 1f8c5d44-3b60-0bfe-9069-1df821220691
 ---
 

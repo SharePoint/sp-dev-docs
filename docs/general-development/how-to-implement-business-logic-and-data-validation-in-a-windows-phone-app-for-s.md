@@ -4,7 +4,7 @@ description: Implement data validation in a Windows Phone app created by using t
 ms.date: 01/05/2020
 ms.prod: sharepoint
 ms.assetid: fbbedc38-9651-4cd6-b523-d93cbf1cd39d
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Implement business logic and data validation in a Windows Phone app for SharePoint
 

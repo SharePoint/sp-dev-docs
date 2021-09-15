@@ -4,7 +4,7 @@ description: Learn how to retrieve user profile properties programmatically by u
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 236ebaf8-f92e-4192-9b51-0a9de0210885
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 

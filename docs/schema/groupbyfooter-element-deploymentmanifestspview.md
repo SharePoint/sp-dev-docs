@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: c4456c92-6a37-421c-b48d-3090798fc0ad
 description: Represents the definition of a Group By Footer (GroupByFooter) used in a view. 
 ---

@@ -3,7 +3,7 @@ title: Tenant-scoped solution deployment for SharePoint Framework solutions
 description: Configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant app catalog.
 ms.date: 10/26/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Tenant-scoped solution deployment for SharePoint Framework solutions
 

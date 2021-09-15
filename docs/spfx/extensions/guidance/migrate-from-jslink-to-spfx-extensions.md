@@ -3,7 +3,7 @@ title: Tutorial - Migrating from JSLink to SharePoint Framework extensions
 description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
 ms.date: 06/29/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Migrating from JSLink to SharePoint Framework extensions

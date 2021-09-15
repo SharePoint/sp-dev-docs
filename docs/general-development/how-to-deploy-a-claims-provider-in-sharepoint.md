@@ -4,7 +4,7 @@ description: Learn how to deploy a SharePoint claims provider by using the featu
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3a5fcedc-aa9a-4ff4-95c0-0e0a7dea9d1f
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

@@ -2,7 +2,7 @@
 title: Set up a Multi-Geo sample application
 description: Configure sample applications for a Multi-Geo tenant.
 ms.date: 04/22/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Set up a Multi-Geo sample application

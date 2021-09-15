@@ -4,7 +4,7 @@ description: Learn how to create and delete microblog posts and retrieve social 
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e8c21960-6ea0-43c0-821e-2db2a0ecec90
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 9bd3c468-7211-4a3f-a304-2228f2997854
 description: Contains a script fragment.
 ---

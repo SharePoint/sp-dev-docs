@@ -4,7 +4,7 @@ description: Learn how to create the data source provider component in a custom 
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8d734ed6-7636-40c5-a99b-bc038362cffe
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

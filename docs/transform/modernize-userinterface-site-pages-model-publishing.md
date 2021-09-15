@@ -3,7 +3,7 @@ title: Understanding and configuring the publishing page transformation model
 description: Provides detailed guidance on how to configure and use the publishing page transformation model
 ms.date: 02/11/2021
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Understanding and configuring the publishing page transformation model (as of June 2019 version)

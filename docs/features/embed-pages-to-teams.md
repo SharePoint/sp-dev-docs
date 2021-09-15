@@ -2,7 +2,7 @@
 title: Embedding modern SharePoint pages in Microsoft Teams as personal apps (preview)
 description: SharePoint pages can be embedded as personal apps in the Microsoft Teams.
 ms.date: 04/20/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Embedding modern SharePoint pages in Microsoft Teams as personal apps (preview)

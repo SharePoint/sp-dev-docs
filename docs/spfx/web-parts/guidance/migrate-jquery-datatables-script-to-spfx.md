@@ -3,7 +3,7 @@ title: Migrate jQuery and DataTables solution built using Script Editor web part
 description: Migrate a SharePoint customization using DataTables to build powerful data overviews of data coming from SharePoint and external APIs.
 ms.date: 08/19/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Migrate jQuery and DataTables solution built using Script Editor web part to SharePoint Framework

@@ -3,7 +3,7 @@ title: Host your client-side web part from Microsoft 365 CDN (Hello World part 4
 description: An easy solution to host your assets directly from your own Microsoft 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online.
 ms.date: 06/29/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 

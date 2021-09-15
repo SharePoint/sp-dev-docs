@@ -2,7 +2,7 @@
 title: Replace feature receivers in sandbox solutions
 description: Feature receivers are typically used to apply different kinds of configurations or settings to SharePoint sites when the feature is activated or when the site is created (if the feature is associated to a site template or web template). Feature receivers have been deployed by using sandbox solutions in SharePoint Online; however, because code-based customizations can no longer be used, you must use an alternative design. 
 ms.date: 06/05/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Replace feature receivers in sandbox solutions 

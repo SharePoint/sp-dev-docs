@@ -4,7 +4,7 @@ description: Building web parts that respond to query string changes.
 ms.author: bekaise
 ms.date: 07/01/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Intercepting Query String Changes in Web Parts

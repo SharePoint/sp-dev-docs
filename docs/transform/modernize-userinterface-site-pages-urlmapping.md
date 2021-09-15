@@ -3,7 +3,7 @@ title: URL mapping during cross site page transformation
 description: Explains how to the default URL mapping works when transforming pages cross site collection + also explains how to use a custom URL mapping file
 ms.date: 11/04/2019
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # URL mapping during cross site page transformation

@@ -2,7 +2,7 @@
 title: Web part in the SharePoint Add-in model
 description: The approach you take to create portable page components is different in the new SharePoint Add-in model than it was with Full Trust Code.
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Web part in the SharePoint Add-in model
 

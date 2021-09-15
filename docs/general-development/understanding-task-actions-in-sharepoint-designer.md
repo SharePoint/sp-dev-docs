@@ -4,7 +4,7 @@ description: Learn to use Task Actions in SharePoint Designer 2013.
 ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: 6fd69e94-ebe1-4d5d-98db-b2f3ce16f098
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Understanding Task Actions in SharePoint Designer 2013
 

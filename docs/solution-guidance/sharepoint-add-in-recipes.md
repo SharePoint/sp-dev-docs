@@ -2,7 +2,7 @@
 title: SharePoint Add-in recipes
 description: The articles in this section show you how to use the SharePoint Add-in model to customize your SharePoint sites. The following table lists the articles that are included.
 ms.date: 06/14/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # SharePoint Add-in recipes
 

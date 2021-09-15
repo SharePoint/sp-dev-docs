@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: a088c6ef-6e66-04d6-5fa4-232a4e513598
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Administration.
 ---

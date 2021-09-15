@@ -7,7 +7,7 @@ f1_keywords:
 - errors,how to,howdoi,howto
 ms.prod: sharepoint
 ms.assetid: de5fdb67-201b-4d7a-90a8-99ab7e51ea4e
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

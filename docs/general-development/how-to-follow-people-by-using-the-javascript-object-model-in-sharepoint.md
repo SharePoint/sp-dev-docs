@@ -4,7 +4,7 @@ description: Learn how to work with Following People features by using the Share
 ms.date: 01/05/2021
 ms.prod: sharepoint
 ms.assetid: 2643c286-47c9-4a7a-9273-7474394477d6
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Follow people by using the JavaScript object model in SharePoint
 

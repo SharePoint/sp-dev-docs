@@ -3,7 +3,7 @@ title: Getting Ranges Using Atom Feed and HTML Fragment
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

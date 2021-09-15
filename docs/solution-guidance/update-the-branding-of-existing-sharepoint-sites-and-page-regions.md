@@ -2,7 +2,7 @@
 title: Update the branding of existing SharePoint sites and page regions
 description: Customize and then refresh the branding of existing SharePoint sites or regions of SharePoint pages, including the ribbon, the site navigation, the Settings menu, the tree view, and the page content.
 ms.date: 4/12/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Update the branding of existing SharePoint sites and page regions

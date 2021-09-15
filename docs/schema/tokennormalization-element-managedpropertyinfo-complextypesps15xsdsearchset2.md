@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 9085bad4-90c4-801f-5fd0-d59fcb593b97
 description: "Last modified: March 09, 2015"
 ---

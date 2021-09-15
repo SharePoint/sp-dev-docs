@@ -2,7 +2,7 @@
 title: Search solutions for SharePoint
 description: Find out about the SharePoint search architecture, search APIs, and search add-ins.
 ms.date: 5/03/2018
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Search solutions for SharePoint

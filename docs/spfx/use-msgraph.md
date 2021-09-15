@@ -3,7 +3,7 @@ title: Use the MSGraphClient to connect to Microsoft Graph
 description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
 ms.date: 12/04/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Use the MSGraphClient to connect to Microsoft Graph

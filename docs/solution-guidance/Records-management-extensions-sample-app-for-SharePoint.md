@@ -2,7 +2,7 @@
 title: Records management extensions sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can enable and change in-place records management settings on your SharePoint sites and lists.
 ms.date: 5/2/2018
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Records management extensions sample SharePoint Add-in

@@ -2,7 +2,7 @@
 title: Connect to external data using BCS and the Secure Store Service in a Multi-Geo tenant
 description: To use external data, such as data from your other business applications or partner resources in SharePoint Online, you can use Business Connectivity Services (BCS) together with the Secure Store Service. 
 ms.date: 6/18/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Connect to external data using BCS and the Secure Store Service in a Multi-Geo tenant 

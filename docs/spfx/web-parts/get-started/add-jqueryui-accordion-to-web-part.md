@@ -3,7 +3,7 @@ title: Add the jQueryUI Accordion to your SharePoint client-side web part
 description: Adding the jQueryUI Accordion to your web part project involves creating a new web part.
 ms.date: 07/17/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 

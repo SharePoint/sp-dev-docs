@@ -2,7 +2,7 @@
 title: Select audiences for SharePoint site templates
 description: Determine which audiences can access certain site templates.
 ms.date: 08/23/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Scoping access to site templates

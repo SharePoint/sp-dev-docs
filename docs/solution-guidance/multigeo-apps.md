@@ -2,7 +2,7 @@
 title: Manage apps and add-ins in a Multi-Geo tenant
 description: In a Multi-Geo tenant, you have an app catalog per geo location, which is something to consider if you want to deploy your apps across all geo locations.
 ms.date: 6/18/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Manage apps and add-ins in a Multi-Geo tenant

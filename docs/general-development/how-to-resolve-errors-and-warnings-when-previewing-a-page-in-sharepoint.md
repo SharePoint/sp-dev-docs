@@ -4,7 +4,7 @@ description: After you convert an HTML file into a SharePoint master page, or af
 ms.date: 06/22/2021
 ms.prod: sharepoint
 ms.assetid: 03f72f65-b22b-4304-be92-f44ce0619372
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Resolve errors and warnings when previewing a page in SharePoint
 

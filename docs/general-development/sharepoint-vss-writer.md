@@ -4,7 +4,7 @@ description: The VSS included with Windows Server is the infrastructure that pro
 ms.date: 01/27/2021
 ms.prod: sharepoint
 ms.assetid: f83577e4-ebb8-44e5-8dec-a3ca5878b7fd
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

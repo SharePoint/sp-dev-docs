@@ -3,7 +3,7 @@ title: Building a query suggestion extension using SharePoint Framework
 description: Tutorial on creating a query suggestion extension with SharePoint Framework
 ms.date: 08/19/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Building a query suggestion extension using SharePoint Framework

@@ -4,7 +4,7 @@ description: Learn how to use Visual Studio 2012 to discover a published OData s
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bc60ea49-c44e-4531-af62-06b8cf77d35d
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 

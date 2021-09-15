@@ -3,7 +3,7 @@ title: Tenant Wide Deployment of SharePoint Framework Extensions
 description: Activating SharePoint Framework extensions across tenant from centralized location.
 ms.date: 02/16/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Tenant-wide Deployment of SharePoint Framework Extensions
 

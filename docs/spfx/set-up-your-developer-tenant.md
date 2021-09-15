@@ -3,7 +3,7 @@ title: Set up your Microsoft 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
 ms.date: 02/26/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to create an Internet-addressable WCF service that uses O
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7d7b3aa6-85b7-400d-8ea5-50bebac56a1d
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

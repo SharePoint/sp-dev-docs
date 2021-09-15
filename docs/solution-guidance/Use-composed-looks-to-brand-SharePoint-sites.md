@@ -2,7 +2,7 @@
 title: Use composed looks to brand SharePoint sites
 description: Apply composed looks, including colors, fonts, and a background image, to your SharePoint and SharePoint Online sites by using the SharePoint theming engine.
 ms.date: 4/25/2018
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Use composed looks to brand SharePoint sites

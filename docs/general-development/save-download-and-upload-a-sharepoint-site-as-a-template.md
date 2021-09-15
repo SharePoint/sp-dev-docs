@@ -4,7 +4,7 @@ description: Learn how to design and build robust applications by using SharePoi
 ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Save, download, and upload a SharePoint site as a template
 

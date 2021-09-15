@@ -4,7 +4,7 @@ description: You must set credentials for your users before they can call Excel 
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: eb819681-5a4f-49ae-b7f4-334366c51112
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

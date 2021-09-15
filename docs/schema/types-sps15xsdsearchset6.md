@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 3f873519-f1b6-f88b-7b1a-75e3617de801
 description: Lists the types in the schema_Microsoft.Office.Server.Search XML schema.
 ---

@@ -4,7 +4,7 @@ description: Learn how to integrate location information and maps in SharePoint 
 ms.date: 01/05/2020
 ms.prod: sharepoint
 ms.assetid: 7e0550bc-92d1-407f-b8ba-1371c63bd16e
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Integrate maps with Windows Phone apps and SharePoint lists
 

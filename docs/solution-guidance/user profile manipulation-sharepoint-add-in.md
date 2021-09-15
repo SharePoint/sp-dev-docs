@@ -2,7 +2,7 @@
 title: User profile manipulation in the SharePoint Add-in model
 description: The approach you take to perform Create, Read, Update and Delete (CRUD) operations in the user profile service is different in the new SharePoint Add-in model than it was with Full Trust Code.
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # User profile manipulation in the SharePoint Add-in model
 

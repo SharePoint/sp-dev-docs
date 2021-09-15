@@ -3,7 +3,7 @@ title: Configure SharePoint Framework web parts in Microsoft Teams
 description: To accommodate your users' preferences, you can let them configure your web parts when used in Microsoft Teams.
 ms.date: 06/15/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Configure SharePoint Framework web parts in Microsoft Teams

@@ -2,7 +2,7 @@
 title: Developing using Tenant permissions with App-Only in SharePoint Online
 description: The developer experience has changed for SharePoint Provider-hosted Add-ins that require Tenant permission in combination with app-only. This article walks you through the new experience for developing and debugging these solutions.
 ms.date: 06/14/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Developing using Tenant permissions with App-Only in SharePoint Online
 

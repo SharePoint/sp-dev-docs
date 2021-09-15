@@ -3,7 +3,7 @@ title: Tutorial for creating Outlook Web Access extension using SharePoint Frame
 description: Creating Outlook add-ins using SharePoint Framework
 ms.date: 08/19/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Tutorial for creating Outlook Web Access extension using SharePoint Framework

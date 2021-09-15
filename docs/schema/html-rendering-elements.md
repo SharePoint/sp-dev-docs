@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: faf4b117-a392-4d91-9259-085506d57832
 description: The page (HTML) rendering CAML elements are designed for use in rendering pages, such as when you need to extract the property of a specific field and render it on a page.
 ---

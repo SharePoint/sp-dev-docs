@@ -3,7 +3,7 @@ title: Connect SharePoint Framework components using dynamic data
 description: High-level description on how to use dynamic data concept for connecting different SharePoint Framework components
 ms.date: 07/31/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Connect SharePoint Framework components using dynamic data

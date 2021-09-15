@@ -5,7 +5,7 @@ ms.date: 08/05/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - List schema
 api_type:

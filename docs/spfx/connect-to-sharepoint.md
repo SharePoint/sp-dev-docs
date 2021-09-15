@@ -3,7 +3,7 @@ title: Connect to SharePoint APIs
 description: Different approaches of connecting to SharePoint APIs from your SharePoint Framework solutions
 ms.date: 12/04/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Connect to SharePoint APIs

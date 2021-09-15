@@ -3,7 +3,7 @@ title: Overview of Viva Connections Extensibility
 description: Build engaging experiences for Microsoft Viva Connections with the SharePoint Framework.
 ms.date: 09/08/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Overview of Viva Connections Extensibility
 

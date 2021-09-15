@@ -4,7 +4,7 @@ description: Learn about constructing complex search queries for Search in Share
 ms.date: 12/22/2020
 ms.prod: sharepoint
 ms.assetid: bd98a41b-623c-41d4-a15d-26c0d4ba4311
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # FAST Query Language (FQL) syntax reference

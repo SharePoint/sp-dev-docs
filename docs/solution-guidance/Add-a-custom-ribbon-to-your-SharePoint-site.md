@@ -1,7 +1,7 @@
 ---
 title: Add a custom ribbon to your SharePoint site
 ms.date: 11/03/2017
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Add a custom ribbon to your SharePoint site
 

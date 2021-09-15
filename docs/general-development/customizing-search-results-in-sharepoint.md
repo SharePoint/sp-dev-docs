@@ -4,7 +4,7 @@ description: Learn how to group similar items or remove duplicate items in a sea
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Customizing search results in SharePoint
 

@@ -3,7 +3,7 @@ title: Create custom actions to deploy with SharePoint Add-ins
 description: Create a custom action in SharePoint that deploys to the host web when you deploy a SharePoint Add-in.
 ms.date: 12/20/2017
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Create custom actions to deploy with SharePoint Add-ins

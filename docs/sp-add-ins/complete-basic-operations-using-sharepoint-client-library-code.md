@@ -3,7 +3,7 @@ title: Complete basic operations using SharePoint client library code
 description: Write code to perform basic operations with the SharePoint .NET Framework client object model (CSOM).
 ms.date: 9/1/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Complete basic operations using SharePoint client library code

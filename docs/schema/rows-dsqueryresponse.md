@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - dsQueryResponse XML
 ms.assetid: c4c14d0d-5002-445f-8663-bd38fd21434e

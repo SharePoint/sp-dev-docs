@@ -3,7 +3,7 @@ title: Office Web Widgets - Experimental overview
 description: Experimental widgets that you can use in Office Add-ins, SharePoint Add-ins, and websites.
 ms.date: 12/20/2017
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Office Web Widgets - Experimental overview

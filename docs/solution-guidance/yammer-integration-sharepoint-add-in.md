@@ -2,7 +2,7 @@
 title: Yammer integration in the SharePoint Add-in model
 description: The approach you take to integrate Yammer with SharePoint is the same in the new SharePoint Add-in model as it is with Full Trust Code.
 ms.date: 11/03/2017
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Yammer integration in the SharePoint Add-in model

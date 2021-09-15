@@ -4,7 +4,7 @@ description: Learn the steps for creating external event receivers for on-premis
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c6d5f486-6247-47f9-9876-fab12f13342f
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

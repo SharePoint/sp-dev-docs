@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 11e82e82-33db-4cd1-b7aa-eef1f6152ddd
 description: Renders a form for the particular list that is specified by a previous SetList element.
 ---

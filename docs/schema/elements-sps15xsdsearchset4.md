@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 25eeee29-60ba-b21e-f170-5400a81b72bf
 description: Lists the elements in the schema_Microsoft.Office.Server.Search.Query.Rules XML schema.
 ---

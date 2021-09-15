@@ -4,7 +4,7 @@ description: Learn about the query APIs available in SharePoint that enable you 
 ms.date: 01/16/2020
 ms.prod: sharepoint
 ms.assetid: ae9d73ed-1140-430b-9287-01dbbe8ae7d1
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Using the SharePoint search Query APIs

@@ -4,7 +4,7 @@ description: This topic describes some advanced REST scenarios and additional sa
 ms.date: 01/14/2021
 ms.prod: sharepoint
 ms.assetid: 110bcc88-2b55-4d80-ab5c-dc3b9658e48d
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Advanced Scenarios and Additional Samples
 

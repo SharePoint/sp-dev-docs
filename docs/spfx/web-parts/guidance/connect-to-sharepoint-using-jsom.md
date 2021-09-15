@@ -3,7 +3,7 @@ title: Connect to SharePoint using the JavaScript Object Model (JSOM)
 description: How to use SharePoint JSOM when building solutions on the SharePoint Framework.
 ms.date: 06/29/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Connect to SharePoint using the JavaScript Object Model (JSOM)

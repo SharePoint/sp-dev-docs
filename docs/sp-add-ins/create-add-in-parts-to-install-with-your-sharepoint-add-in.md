@@ -3,7 +3,7 @@ title: Create add-in parts to install with your SharePoint Add-in
 description: Create an add-in part in SharePoint that is available in the Web Part Gallery of the host web when you install your SharePoint Add-in.
 ms.date: 12/14/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Create add-in parts to install with your SharePoint Add-in

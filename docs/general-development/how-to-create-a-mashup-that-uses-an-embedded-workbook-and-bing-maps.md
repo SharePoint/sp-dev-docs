@@ -4,7 +4,7 @@ description: This article walks you through a powerful Web-based mashup that com
 ms.date: 12/22/2020
 ms.prod: sharepoint
 ms.assetid: 3cfeb8d7-84b8-4673-bc92-b176cba4ac3e
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Create a mashup that uses an embedded workbook and Bing Maps

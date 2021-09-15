@@ -5,7 +5,7 @@ ms.author: v-johnco
 ms.date: 2/5/2020
 ms.audience: Developer
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Support and feedback

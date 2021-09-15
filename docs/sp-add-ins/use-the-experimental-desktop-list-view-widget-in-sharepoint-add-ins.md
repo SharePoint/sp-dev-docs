@@ -3,7 +3,7 @@ title: Use the experimental Desktop List View widget in SharePoint Add-ins
 description: Use the Desktop List View widget in your add-ins to display data in lists that are hosted on a SharePoint site.
 ms.date: 12/20/2017
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Use the experimental Desktop List View widget in SharePoint Add-ins

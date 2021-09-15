@@ -4,7 +4,7 @@ description: Learn how to modify the components in your SharePoint project to ta
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c967be7c-f29f-481a-9ce2-915ead315dcd
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

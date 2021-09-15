@@ -4,7 +4,7 @@ description: Learn how to create, retrieve, and change SharePoint user profiles 
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

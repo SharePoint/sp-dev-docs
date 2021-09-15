@@ -4,7 +4,7 @@ description: Learn how to programmatically add a Geolocation column to a list in
 ms.date: 02/17/2021
 ms.prod: sharepoint
 ms.assetid: f31a3594-c328-4731-b8eb-5da6b85103ad
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Add a Geolocation column to a list programmatically in SharePoint
 

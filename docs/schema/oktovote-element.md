@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: cb803116-b471-4893-87b8-d03ef0632b9c
 description: Used to determine whether a specific user can vote in a survey.
 ---

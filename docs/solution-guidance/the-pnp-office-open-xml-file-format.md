@@ -2,7 +2,7 @@
 title: The PnP Office Open XML File format
 description: 
 ms.date: 06/05/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # The PnP Office Open XML File Format (.pnp)

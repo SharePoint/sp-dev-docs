@@ -6,7 +6,7 @@ author: JoanneHendrickson
 manager: pamgreen
 audience: ITPro
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 search.appverid: MET150
 msCollection: 
 - SPMigration

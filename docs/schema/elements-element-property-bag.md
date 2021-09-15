@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - Property Bag Schema
 ms.assetid: 940b595e-6db7-4c71-99c6-d0de773c7b86

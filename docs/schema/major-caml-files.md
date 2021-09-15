@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: f2332dea-1113-424e-b245-9785c09ed3cc
 description: The major schema files that use Collaborative Application Markup Language (CAML) schemas for data definition or HTML rendering, and their locations.
 ---

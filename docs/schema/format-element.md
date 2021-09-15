@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 55dae1d8-d415-445c-8c6c-5d9a1b140b64
 description: Contains definitions of column and row formatting that are used in a Datasheet view.
 ---

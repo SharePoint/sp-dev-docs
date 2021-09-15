@@ -3,7 +3,7 @@ title: Migrating user custom actions and ECB menu items to SharePoint Framework 
 description: Benefits of migrating, along with similarities and differences between the platforms.
 ms.date: 06/29/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Migrating user custom actions and ECB menu items to SharePoint Framework Extensions

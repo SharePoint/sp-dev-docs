@@ -2,7 +2,7 @@
 title: Feature Stapling in the SharePoint Add-in model
 description: Features were used to package and deploy artifacts, configurations, and branding assets associated with a SharePoint site and features were stapled to the site definition.  Then the stapled features were automatically installed and activated upon site provisioning.
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Feature Stapling in the SharePoint Add-in model
 

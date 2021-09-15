@@ -7,7 +7,7 @@ author: JoanneHendrickson
 manager: serdars
 search.appverid: MET150
 description: "This article provides in depth information on how to use the SPO Migration API."
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # SharePoint Import Migration API (CreationMigrationJob)
 

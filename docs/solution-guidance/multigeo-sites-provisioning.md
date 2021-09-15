@@ -2,7 +2,7 @@
 title: Provision classic team sites in a Multi-Geo environment
 description: When your custom development (script, app, console application, node.js app) needs to provision sites, it's important to be aware of the geo locations in your Multi-Geo tenant. 
 ms.date: 6/18/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Provision classic team sites in a Multi-Geo environment

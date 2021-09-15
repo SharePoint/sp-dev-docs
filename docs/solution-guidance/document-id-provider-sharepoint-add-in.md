@@ -2,7 +2,7 @@
 title: Document ID provider in the SharePoint Add-in model
 description: The approach you take to set unique identifiers for documents in SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, list item event handlers running SharePoint Server-side Object Model code were used to set unique identifiers for documents and they were deployed via SharePoint Solutions.
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Document ID provider in the SharePoint Add-in model
 

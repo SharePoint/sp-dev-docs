@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - workflow definition schema, statuspageurl element (workflow)
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 844cbf61-91bb-467b-ac38-cbfb027c9159
 ---
 

@@ -3,7 +3,7 @@ title: Options to control the page transformation process
 description: Explains how to configure the page transformation process
 ms.date: 02/11/2021
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Page transformation configuration options

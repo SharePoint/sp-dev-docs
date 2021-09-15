@@ -2,7 +2,7 @@
 title: JoinHubSite REST method
 description: Associates a site with an existing hub site. You can also use this method to disassociate a site from a hub site.
 ms.date: 6/18/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # JoinHubSite

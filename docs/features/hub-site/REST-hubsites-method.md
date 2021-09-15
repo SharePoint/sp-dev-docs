@@ -2,7 +2,7 @@
 title: HubSites REST method
 description: Gets information about all hub sites that the current user can access.
 ms.date: 6/18/2019
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # HubSites

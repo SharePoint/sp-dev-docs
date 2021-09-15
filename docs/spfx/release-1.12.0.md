@@ -3,7 +3,7 @@ title: SharePoint Framework v1.12.0 release notes
 description: Release notes for the SharePoint Framework v1.12.0 release
 ms.date: 03/30/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # SharePoint Framework v1.12.0 release notes
 

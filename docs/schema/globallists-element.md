@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 2d55466f-0fe1-4715-8454-b8008070494f
 description: Top-level element used in the file BASE.XML to define the built-in lists of websites based on Microsoft SharePoint Foundation.
 ---

@@ -4,7 +4,7 @@ description: Learn about the new capabilities in Excel Services in SharePoint an
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f7e13fcb-a86a-4a1e-af59-3bace98ce9d7
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Excel Services in SharePoint
 

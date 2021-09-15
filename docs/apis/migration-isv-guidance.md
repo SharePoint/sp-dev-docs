@@ -8,7 +8,7 @@ manager: pamgreen
 audience: Dev
 ms.topic: article
 ms.prod: sharepoint-server-itpro
-localization_priority: Priority
+ms.localizationpriority: high
 ms.collection:
   - SPMigration
   - M365-collaboration

@@ -2,7 +2,7 @@
 title: Office 365 development and SharePoint patterns and practices (PnP) solution guidance
 description: Provides insights and details based on scenarios and functional requirements.
 ms.date: 6/18/2019
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Office 365 development and SharePoint PnP solution guidance

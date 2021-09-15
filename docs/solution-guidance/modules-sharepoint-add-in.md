@@ -2,7 +2,7 @@
 title: Modules in the SharePoint Add-in model
 description: The approach you take to deploy artifacts to a SharePoint environment is different in the new SharePoint Add-in model than it was with Full Trust Code. In a typical Full Trust Code (FTC) / Farm Solution scenario, modules defined in declarative code (feature framework XML files) were added to SharePoint features.
 ms.date: 11/03/2017
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Modules in the SharePoint Add-in model
 

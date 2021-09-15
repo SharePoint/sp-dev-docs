@@ -4,7 +4,7 @@ description: Learn the concepts behind creating remote event receivers in ShareP
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e48e4812-a185-43c5-b243-04b1d79b88ee
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # External events and alerts in SharePoint
 

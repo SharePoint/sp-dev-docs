@@ -3,7 +3,7 @@ title: Advanced Card View Functionality
 description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
 ms.date: 07/22/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Advanced Card View Functionality
 

@@ -6,7 +6,7 @@ f1_keywords:
 - errors
 ms.prod: sharepoint
 ms.assetid: a4e7030b-05c2-484e-b21f-46cba937b803
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

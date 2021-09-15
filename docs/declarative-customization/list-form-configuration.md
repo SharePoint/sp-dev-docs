@@ -2,7 +2,7 @@
 title: Configure the list form
 description: Configure list form with a custom header, footer and body with one or more sections.
 ms.date: 04/23/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Configure the list form

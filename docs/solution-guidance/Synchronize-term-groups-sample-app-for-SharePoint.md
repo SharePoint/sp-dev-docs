@@ -2,7 +2,7 @@
 title: Synchronize term groups sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can synchronize term groups across multiple SharePoint term stores.
 ms.date: 5/2/2018
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Synchronize term groups sample SharePoint Add-in

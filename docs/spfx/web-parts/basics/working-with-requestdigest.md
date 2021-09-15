@@ -3,7 +3,7 @@ title: Work with __REQUESTDIGEST
 description: Add a valid request digest to your request when executing non-GET REST requests to the SharePoint API.
 ms.date: 06/29/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Work with __REQUESTDIGEST
 

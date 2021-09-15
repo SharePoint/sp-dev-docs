@@ -2,7 +2,7 @@
 title: Performance considerations in the SharePoint Add-in model
 description: The approaches you take to ensure optimal performance with SharePoint is different in the new SharePoint Add-in model than it was with Full Trust Code.
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Performance considerations in the SharePoint Add-in model
 

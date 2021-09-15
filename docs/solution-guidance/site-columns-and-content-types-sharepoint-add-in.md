@@ -2,7 +2,7 @@
 title: Site columns and content types in the SharePoint Add-in model
 description: The approach you take to create site columns and content types in SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code.
 ms.date: 11/03/2017
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Site columns and content types in the SharePoint Add-in model
 

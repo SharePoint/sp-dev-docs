@@ -4,7 +4,7 @@ description: Get an overview of development with the authentication APIs of the 
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 00ee657f-a32a-495e-80b4-83ac0f60df44
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

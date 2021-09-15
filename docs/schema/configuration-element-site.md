@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - customizing site definitions
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - Site schema
 api_type:

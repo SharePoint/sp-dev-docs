@@ -3,7 +3,7 @@ title: "Tutorial: Build meeting apps for Microsoft Teams with SPFx"
 description: Build meeting apps for Microsoft Teams with the SharePoint Framework.
 ms.date: 04/28/2021
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Build meeting apps for Microsoft Teams with SPFx

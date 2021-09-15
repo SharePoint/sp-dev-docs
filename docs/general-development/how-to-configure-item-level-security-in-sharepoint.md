@@ -4,7 +4,7 @@ description: Learn how to configure item level security when crawling external d
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

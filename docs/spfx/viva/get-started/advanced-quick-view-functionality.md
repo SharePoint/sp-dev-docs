@@ -3,7 +3,7 @@ title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
 ms.date: 07/19/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Advanced Quick View Functionality
 

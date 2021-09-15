@@ -3,7 +3,7 @@ title: SharePoint Online tenant properties
 description: Manage and read tenant properties, which allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components.
 ms.date: 09/07/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # SharePoint Online tenant properties

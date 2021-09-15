@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - workflow definition schema, associationcategories element
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 4296c120-5ebc-4b22-97cd-214146d5a65e
 ---
 

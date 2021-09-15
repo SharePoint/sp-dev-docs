@@ -3,7 +3,7 @@ title: Social feed REST API reference for SharePoint
 ms.date: 11/10/2020
 ms.prod: sharepoint
 ms.assetid: f1cb914f-1e91-4e23-bf53-d2ab323eac13
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Social feed REST API reference for SharePoint
 Find SharePoint REST endpoints for reading and writing to social feeds by using the **SocialRestFeedManager** resource.

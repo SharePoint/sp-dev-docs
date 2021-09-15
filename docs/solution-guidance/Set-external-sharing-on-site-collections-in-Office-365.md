@@ -1,7 +1,7 @@
 ---
 title: Set external sharing on site collections in Office 365
 ms.date: 11/03/2017
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Set external sharing on site collections in Office 365
 

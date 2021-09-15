@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 1b2ced37-1ef8-4774-9fdd-610be88b8ba0
 description: Returns the URL to the image file that is used to indicate how a column is sorted. 
 ---

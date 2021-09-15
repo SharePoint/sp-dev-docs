@@ -6,7 +6,7 @@ ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint
-localization_priority: normal
+ms.localizationpriority: medium
 ---
 
 # Accessing SharePoint using an application context, also known as app-only

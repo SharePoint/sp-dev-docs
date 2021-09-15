@@ -3,7 +3,7 @@ title: Understanding how wiki and web part page layouts are mapped to modern pag
 description: Provides detailed information on the mapping of layouts between source pages and target modern  pages
 ms.date: 12/13/2019
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Understanding the layout transformation

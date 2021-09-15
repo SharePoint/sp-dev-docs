@@ -3,7 +3,7 @@ title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoin
 description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
 ms.date: 09/03/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Migrate Edit Control Block (ECB) menu items to SharePoint Framework extensions

@@ -4,7 +4,7 @@ description: Learn how to add comment-style markup to a CSS file so that it can 
 ms.date: 06/21/2021
 ms.prod: sharepoint
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Make custom CSS files themable in SharePoint
 

@@ -5,7 +5,7 @@ author: JoanneHendrickson
 manager: pamgreen
 ms.date: 04/23/2020
 description: "One of the Main requirement for using our Migration API is the usage of an Azure container as a temporary storage. We now provide a default container that can be used for using the migration API."
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # SPO provided Migration Azure container and queue

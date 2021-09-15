@@ -4,7 +4,7 @@ description: Implement data-conversion logic to support SharePoint field types i
 ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: 301e6e58-5153-4ca9-a419-8ae0535ebbed
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Support and convert SharePoint field types for Windows Phone apps
 

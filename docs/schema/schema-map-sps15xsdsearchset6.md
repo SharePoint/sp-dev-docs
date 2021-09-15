@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 8969fd16-5505-5e36-07ab-c94d2b693093
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.
 ---

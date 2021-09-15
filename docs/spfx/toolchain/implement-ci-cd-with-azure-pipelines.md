@@ -3,7 +3,7 @@ title: Implement Continuous Integration and Continuous deployment using Azure Pi
 description: Streamlining the build and deployment process by automating manual steps using Azure Pipelines.
 ms.date: 12/02/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Implement Continuous Integration and Continuous deployment using Azure Pipelines
 Azure Pipelines is the newer version of the Azure DevOps build and release features.  

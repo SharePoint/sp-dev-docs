@@ -4,7 +4,7 @@ description: Different tutorials and other resources around SharePoint developme
 ms.date: 02/27/2020
 ms.prod: sharepoint
 
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Tutorials and training material for SharePoint Development

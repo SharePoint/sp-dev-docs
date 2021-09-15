@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 3447b7ec-4e99-f88d-66be-c17a87371431
 description: Lists the types in the schema_Microsoft.Office.Server.Search.Portability XML schema.
 ---

@@ -3,7 +3,7 @@ title: Using Office UI Fabric Core and Fabric React in SharePoint Framework
 description: Information about the Fabric Core and Fabric React packages, and challenges with using CSS.
 ms.date: 02/09/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Using Office UI Fabric Core and Fabric React in SharePoint Framework

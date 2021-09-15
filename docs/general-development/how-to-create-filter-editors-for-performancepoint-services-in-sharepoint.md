@@ -3,7 +3,7 @@ title: Create filter editors for PerformancePoint Services in SharePoint
 description: Learn how to create the editor component of a custom filter extension for PerformancePoint Services.
 ms.date: 12/29/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Create filter editors for PerformancePoint Services in SharePoint
 

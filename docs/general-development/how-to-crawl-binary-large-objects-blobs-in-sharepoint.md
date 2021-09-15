@@ -4,7 +4,7 @@ description: Learn how to modify the BDC model file for a database BCS indexing 
 ms.date: 12/22/2020
 ms.prod: sharepoint
 ms.assetid: 99b3dd51-1651-4300-a2de-33681f4cc258
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Crawl binary large objects (BLOBs) in SharePoint
 

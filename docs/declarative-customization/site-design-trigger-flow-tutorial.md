@@ -2,7 +2,7 @@
 title: Using site designs and Power Automate to track site creation requests
 description: Invoke a Power Automate flow using the site script triggerFlow action to capture the site creation event and build a site directory. This tutorial is intended to illustrate a simple example of using site designs and Power Automate.
 ms.date: 06/05/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Calling Power Automate from a site script

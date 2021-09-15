@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - upgrading - [sharepoint 2010], definition schema
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
 - Upgrade schema
 api_type:

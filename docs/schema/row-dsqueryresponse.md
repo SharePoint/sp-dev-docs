@@ -6,7 +6,7 @@ ms.date: 12/14/2020
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_name:
   - dsQueryResponse XML
 ms.assetid: e2d1bbbe-c920-41d0-994a-f06a122ba3fd

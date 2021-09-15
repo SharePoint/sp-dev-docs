@@ -3,7 +3,7 @@ title: Minimal Download Strategy overview
 description: Learn about Minimal Download Strategy (MDS), a new feature in SharePoint that reduces page load time by sending only the differences when users navigate to a new page.
 ms.date: 01/27/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Minimal Download Strategy overview
 

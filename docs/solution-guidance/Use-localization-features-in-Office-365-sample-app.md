@@ -2,7 +2,7 @@
 title: Use localization features in Office 365 sample add-in
 description: Use the localization features in Office 365 to provide localized values for SharePoint sites, lists, content types, and site columns. 
 ms.date: 4/25/2018
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Use localization features in Office 365 sample add-in

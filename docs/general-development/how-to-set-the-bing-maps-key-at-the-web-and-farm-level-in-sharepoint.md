@@ -4,7 +4,7 @@ description: Learn how to set the Bing Maps key programmatically at the web (Sha
 ms.date: 06/05/2020
 ms.prod: sharepoint
 ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Set the Bing Maps key at the web and farm level in SharePoint

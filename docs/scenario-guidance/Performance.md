@@ -1,7 +1,7 @@
 ---
 title: Performance
 ms.date: 04/21/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Performance
 

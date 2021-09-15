@@ -2,7 +2,7 @@
 title: Search customizations for SharePoint
 description: Create customized SharePoint and SharePoint Online search scenarios by using a search-based site directory, personalized search, or search configuration portability.
 ms.date: 12/14/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Search customizations for SharePoint
 

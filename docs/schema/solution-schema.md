@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - solution schema - [sharepoint 2010],XML schema - [SharePoint 2010]
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 api_type:
 - schema
 ms.assetid: 48efc045-5b54-4332-abed-6813d011c803

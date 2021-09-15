@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - content type definition schema, xmldocuments element (contenttype)
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 90198d80-5f53-4f05-967e-40bb367b48ac
 ---
 

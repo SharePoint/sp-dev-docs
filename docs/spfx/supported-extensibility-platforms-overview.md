@@ -3,7 +3,7 @@ title: Supported extensibility platforms - overview
 description: Learn what platforms support customizations and rely on the SharePoint Framework for their extensibility opportunities available to developers.
 ms.date: 09/08/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Supported extensibility platforms - overview

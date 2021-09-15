@@ -4,7 +4,7 @@ metadata:
   description: he SharePoint modernization scanner FAQ
   ms.date: 07/22/2020
   ms.prod: sharepoint
-  localization_priority: Priority
+  ms.localizationpriority: high
     
 title: Frequently Asked Questions
 summary: |

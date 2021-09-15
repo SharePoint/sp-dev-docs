@@ -2,7 +2,7 @@
 title: Personalize search results sample SharePoint Add-in
 description: Personalize SharePoint by filtering information that is shown to the user based on the value of a user profile property.
 ms.date: 5/7/2018
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Personalize search results sample SharePoint Add-in

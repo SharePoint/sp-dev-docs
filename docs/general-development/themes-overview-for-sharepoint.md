@@ -4,7 +4,7 @@ description: Learn about the theming experience in SharePoint and how themes can
 ms.date: 05/20/2020
 ms.prod: sharepoint
 ms.assetid: ae585dd3-82fe-46bb-ac93-065edc0a16f4
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 

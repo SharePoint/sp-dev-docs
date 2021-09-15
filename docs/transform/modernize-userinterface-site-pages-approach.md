@@ -3,7 +3,7 @@ title: Understanding in-place page transformation versus cross-site page transfo
 description: Explains the differences between in-place and cross-site page transformation and when to use which one
 ms.date: 02/11/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Understanding in-place page transformation versus cross-site page transformation

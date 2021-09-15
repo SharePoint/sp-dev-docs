@@ -3,7 +3,7 @@ title: The SharePoint modernization scanner reports for the InfoPath scanner mod
 description: Explains the InfoPath output created by the modernization scanner
 ms.date: 10/23/2019
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # SharePoint Modernization scanner reports: InfoPath reports

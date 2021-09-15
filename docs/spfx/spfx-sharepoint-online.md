@@ -3,7 +3,7 @@ title: SharePoint Framework support on SharePoint Online
 description: SharePoint Online always has the broadest and most up-to-date support for the SHarePoint Framework (SPFx). The SharePoint Framework is also the recommended customization and extensibility development model for SharePoint Online.
 ms.date: 09/08/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # SharePoint Framework support on SharePoint Online

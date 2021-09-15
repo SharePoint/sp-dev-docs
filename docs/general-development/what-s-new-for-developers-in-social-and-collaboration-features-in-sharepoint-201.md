@@ -4,7 +4,7 @@ description: Learn about new and changed social and collaboration features for M
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 65365b1d-cde5-47cd-8b04-1b76be0e3490
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

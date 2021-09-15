@@ -3,7 +3,7 @@ title: "Analyze and use the scanner data: Connect to Office 365"
 description: Understand and process the scanner results to help your sites be in optimal shape for connecting a Microsoft 365 group to them.
 ms.date: 01/27/2021
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Analyze and use the scanner data: Connect to Office 365

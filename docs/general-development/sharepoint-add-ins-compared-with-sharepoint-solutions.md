@@ -4,7 +4,7 @@ description: Learn about when to develop your SharePoint extension as a SharePoi
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 

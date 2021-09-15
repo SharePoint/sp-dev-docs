@@ -2,7 +2,7 @@
 title: Deployment guidance for SharePoint Online portals
 description: Compares past deployment strategies with the now recommended strategy of using a phased roll-out plan and telemetry.
 ms.date: 08/19/2021
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Deployment guidance for SharePoint Online portals

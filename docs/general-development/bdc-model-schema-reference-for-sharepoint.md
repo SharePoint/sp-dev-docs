@@ -4,7 +4,7 @@ description: Contains reference documentation for the BDC model schema (BDCMetad
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 979a5ffc-f033-4e72-b2d1-11d8cb1b294a
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

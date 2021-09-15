@@ -3,7 +3,7 @@ title: Manage per user expiration for existing users on a site
 description: Explains how using client side object model to change a users expiration date for sharing links
 ms.date: 05/15/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Manage per user expiration for existing users on a site

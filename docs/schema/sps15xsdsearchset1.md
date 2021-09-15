@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: c265497c-bb29-8191-f9bf-1452de82e513
 description: Specifies XML that represents result sources.
 ---

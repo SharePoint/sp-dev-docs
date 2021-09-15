@@ -2,7 +2,7 @@
 title: Delegate controls in the SharePoint Add-in model
 description: The approach you take to implement delegate controls in your code is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, delegate controls were built as user controls or web controls, registered with features, and deployed via SharePoint Solutions.
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Delegate controls in the SharePoint Add-in model
 

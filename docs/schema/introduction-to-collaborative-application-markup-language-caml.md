@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: 031feabc-095e-4c62-91b6-904a739da923
 description: CAML is an XML-based language that is used in Microsoft SharePoint Foundation to define the fields and views that are used in sites and lists.
 ---

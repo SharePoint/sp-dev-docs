@@ -4,7 +4,7 @@ description: Learn how to work with Following Content features by using the Shar
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 84366e01-4961-459d-8109-2f1d2d714353
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

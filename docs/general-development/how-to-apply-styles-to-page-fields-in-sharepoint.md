@@ -4,7 +4,7 @@ description: In a page layout, you can apply styles to a page field, and those s
 ms.date: 12/22/2020
 ms.prod: sharepoint
 ms.assetid: e227613d-0e4d-4312-924d-bb55e1fe4293
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Apply styles to page fields in SharePoint
 

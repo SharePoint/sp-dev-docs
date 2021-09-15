@@ -3,7 +3,7 @@ title: Managed navigation in SharePoint
 description: Learn about the taxonomy-driven managed navigation feature in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

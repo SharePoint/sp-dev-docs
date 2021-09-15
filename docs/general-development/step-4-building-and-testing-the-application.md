@@ -4,7 +4,7 @@ description: In this step, you will build and test your application. Visual Stud
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f2feeecb-1b4c-4049-be4e-11d414f13d9f
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

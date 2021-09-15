@@ -3,7 +3,7 @@ title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
 ms.date: 10/2/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 

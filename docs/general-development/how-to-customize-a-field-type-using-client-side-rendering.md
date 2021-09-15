@@ -4,7 +4,7 @@ description: Learn how to customize a field type by using the client-side render
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

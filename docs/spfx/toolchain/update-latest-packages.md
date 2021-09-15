@@ -3,7 +3,7 @@ title: Update SharePoint Framework packages
 description: Update the npm packages that you've installed in your project and those you've installed globally.
 ms.date: 10/26/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 # Update SharePoint Framework packages
 

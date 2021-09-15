@@ -3,7 +3,7 @@ title: Connect to a Microsoft 365 group
 description: Connect a Microsoft 365 group to an existing SharePoint site to modernize it and have it benefit from all other group-connected services such as Microsoft Teams and Planner.
 ms.date: 01/14/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Connect to a Microsoft 365 group

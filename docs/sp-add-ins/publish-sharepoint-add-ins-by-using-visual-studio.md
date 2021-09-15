@@ -3,7 +3,7 @@ title: Publish SharePoint Add-ins by using Visual Studio
 description: Learn how to publish your SharePoint Add-in by using Microsoft Visual Studio 2013 or Visual Studio 2012. If the add-in has an associated web application, you deploy it first.
 ms.date: 12/14/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Publish SharePoint Add-ins by using Visual Studio

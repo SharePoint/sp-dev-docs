@@ -2,7 +2,7 @@
 title: Customize OneDrive sites
 description: The actual patterns that you can use with the add-in model to customize OneDrive sites. 
 ms.date: 03/09/2021
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Customize OneDrive sites

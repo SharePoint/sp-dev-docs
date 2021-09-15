@@ -4,7 +4,7 @@ description: Learn about upgrade issues with themes customizations, such as cust
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8d1a4e3a-ae6f-41a5-bd80-3398ba541207
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 

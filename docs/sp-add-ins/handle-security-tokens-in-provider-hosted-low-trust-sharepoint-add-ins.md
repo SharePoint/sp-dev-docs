@@ -3,7 +3,7 @@ title: Handle security tokens in provider-hosted low-trust SharePoint Add-ins
 description: The context, access, and refresh tokens that are used for authorization by low-trust, provider-hosted SharePoint Add-ins, and how to work with them in your code.
 ms.date: 05/01/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Handle security tokens in provider-hosted low-trust SharePoint Add-ins

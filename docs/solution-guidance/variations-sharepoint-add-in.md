@@ -1,7 +1,7 @@
 ---
 title: Variations in the SharePoint Add-in model
 ms.date: 05/20/2020
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 Variations in the SharePoint Add-in model
 =========================================

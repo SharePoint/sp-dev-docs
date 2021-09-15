@@ -4,7 +4,7 @@ description: Learn to use Microsoft PowerPoint Automation Services to do server-
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 168c7dc0-fbdc-41a2-84db-65d211d3d673
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 

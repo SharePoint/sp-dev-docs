@@ -2,7 +2,7 @@
 title: Authoring pages in a SharePoint site
 description: Author pages using Edit mode, Published mode, and consider the mobile view.
 ms.date: 1/23/2018
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Authoring pages in a SharePoint site

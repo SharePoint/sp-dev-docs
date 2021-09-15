@@ -2,7 +2,7 @@
 title: Performance guidance for SharePoint Online portals
 description: Describes the evolution of the SharePoint Online customization model, general performance guidelines for client-side web applications, and the Client-Side Data Access Layer (DAL) Framework.
 ms.date: 06/05/2020
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Performance guidance for SharePoint Online portals

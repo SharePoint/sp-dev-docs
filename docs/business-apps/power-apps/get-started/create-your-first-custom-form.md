@@ -3,7 +3,7 @@ title: Customize a form for a SharePoint list
 description: Customize a form for a SharePoint list
 ms.date: 05/18/2021
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Customize a form for a SharePoint list

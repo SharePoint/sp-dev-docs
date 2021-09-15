@@ -5,7 +5,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: c9fd975a-7133-4d0a-a3a2-9072ef08feee
 description: "Last modified: March 09, 2015"
 ---

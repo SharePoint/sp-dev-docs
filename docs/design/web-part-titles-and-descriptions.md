@@ -2,7 +2,7 @@
 title: Titles and descriptions for SharePoint web parts
 description: Add titles and descriptions to web parts to help users understand their purpose.
 ms.date: 01/23/2018 
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Titles and descriptions for SharePoint web parts

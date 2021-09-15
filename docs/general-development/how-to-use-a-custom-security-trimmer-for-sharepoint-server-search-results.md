@@ -4,7 +4,7 @@ description: This how-to guides you through the steps to implement—create, dep
 ms.date: 12/29/2020
 ms.prod: sharepoint
 ms.assetid: e1a8664e-fb43-45c2-83aa-9635fe1efc99
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 # Use a custom security trimmer for SharePoint Server search results
 

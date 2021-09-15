@@ -3,7 +3,7 @@ title: Localize SharePoint Framework client-side web parts
 description: Broaden the appeal of your web part by localizing it for different languages spoken by SharePoint users all over the world.
 ms.date: 8/9/2020
 ms.prod: sharepoint
-localization_priority: Priority
+ms.localizationpriority: high
 ---
 
 # Localize SharePoint Framework client-side web parts

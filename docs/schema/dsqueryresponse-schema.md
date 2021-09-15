@@ -5,7 +5,7 @@ ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: bd8dbc57-7a9f-46e3-9287-e1d57a4a8619
 description: Used by the XSLT list view rendering system of Microsoft SharePoint Foundation to represent the data of a list.
 ---

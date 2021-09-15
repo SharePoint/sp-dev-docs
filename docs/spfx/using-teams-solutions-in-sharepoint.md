@@ -3,7 +3,7 @@ title: Hosting Microsoft Teams Tabs as a solution in SharePoint
 description: You can install and use your Microsoft Teams tabs also in SharePoint
 ms.date: 06/18/2020
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Hosting Microsoft Teams Tabs as a solution in SharePoint

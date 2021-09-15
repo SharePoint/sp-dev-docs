@@ -7,7 +7,7 @@ ms.topic: reference
 keywords:
 - workflow definition schema, modification_guid_name element (workflow)
 ms.prod: sharepoint
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: ca629084-42d0-4e22-9559-34ed1158b30a
 ---
 
