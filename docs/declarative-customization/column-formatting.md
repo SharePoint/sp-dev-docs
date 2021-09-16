@@ -1667,9 +1667,6 @@ The location field object has the following properties (with example values):
 }
 ```
 
-> [!NOTE] 
-> Location fields do not currently have a "Format this column" option in the list view and formats applied directly to these fields will need to be done through field settings.
-
 <br/>
 
 The following example shows how a location field might be used on a current field.
