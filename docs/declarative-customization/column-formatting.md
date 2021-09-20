@@ -998,6 +998,7 @@ Specifies the type of element to create. Valid elements include:
 - svg
 - path
 - button
+- p
 
 Any other value will result in an error.
 
