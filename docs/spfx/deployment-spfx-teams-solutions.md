@@ -71,7 +71,7 @@ To use your own Microsoft Teams app manifest & app package instead of letting Sh
     > [!IMPORTANT]
     > Don't compress the folder, instead compress the contents of the folder. If you ZIP the folder, it will a top-level subfolder to the resulting ZIP file which isn't a valid app package in Microsoft Teams.
 
-1. Save the **TeamsSPFxApp.zip** in the SPFx solution's **./src/teams** folder.
+1. Save the **TeamsSPFxApp.zip** in the SPFx solution's **./teams** folder.
 1. Create the SPFx package the same way you would with a regular SPFx solution, using **gulp package-solution**. It will include the custom Microsoft Teams app package in the **\*.sppkg**.
 
 ### Dynamically reference the underlying SharePoint site URLs
