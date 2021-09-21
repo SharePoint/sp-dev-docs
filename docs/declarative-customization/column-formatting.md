@@ -1211,6 +1211,9 @@ An optional property that specifies style attributes to apply to the element spe
 'text-wrap'
 'word-break'
 'word-wrap'
+
+'stroke'
+'fill-opacity'
 ```
 
 The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section. 
@@ -1523,6 +1526,8 @@ Operators specify the type of operation to perform. The following operators are 
 - **endsWith**: determines whether a string ends with the characters of a specified string
   - `"txtContent":"=endsWith('DogFood', 'Dog')"` results in _false_
   - `"txtContent":"=endsWith('DogFood', 'Food')"` results in _true_
+
+- **getUserImage**: 
 
 **Ternary operators** - The following are operators that expect three operands:
 
