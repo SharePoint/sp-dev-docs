@@ -937,6 +937,7 @@ The following column types support column formatting:
 * Yes/No
 * Managed Metadata
 * Average Rating
+* Likes
 
 The following are currently **not** supported:
 
