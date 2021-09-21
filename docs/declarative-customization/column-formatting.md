@@ -1272,6 +1272,7 @@ An optional property that specifies additional attributes to add to the element 
 - data-interception
 - viewBox
 - preserveAspectRatio
+- draggable
 
 Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to http://finance.yahoo.com/quote/ + the value of the current field (`@currentField`). 
 
