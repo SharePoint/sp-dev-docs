@@ -289,7 +289,9 @@ Here's the same sample from above, using the Excel-style expression syntax:
 
 ## Create clickable actions
 
-You can use column formatting to provide hyperlinks that go to other webpages, or start custom functionality. This functionality is limited to static links that can be parameterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, or `mailto:`.
+You can use column formatting to provide hyperlinks that go to other webpages, or start custom functionality. This functionality is limited to static links that can be parameterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, `mailto:` or `tel:`.
+
+`tel:` protocol only allows digits, `*+#` special characters and `.-/()` visual separators.
 
 ### Turn field values into hyperlinks (basic)
 
