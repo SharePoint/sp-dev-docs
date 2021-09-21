@@ -936,6 +936,7 @@ The following column types support column formatting:
 * Title (in Lists)
 * Yes/No
 * Managed Metadata
+* Average Rating
 
 The following are currently **not** supported:
 
