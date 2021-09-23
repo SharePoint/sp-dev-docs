@@ -114,19 +114,19 @@ Each action in a site script is specified by a **verb** value in the JSON. In th
 - Creating a new list or library (or modifying the default one created with the site)
 - Creating site columns, content types, and configuring other list settings
 - Set site branding properties like navigation layout, header layout and header background
-- Applying a theme
+- Applying a theme**
 - Setting a site logo
-- Adding links to quick launch or hub navigation
+- Adding links to quick launch or hub navigation**
 - Triggering a Power Automate flow
 - Installing a deployed solution from the app catalog
-- Setting regional settings for the site
+- Setting regional settings for the site**
 - Adding principals (users and groups) to SharePoint roles**
 - Setting external sharing capability for the site**
 
 For a complete list of available actions and their parameters, see the [JSON schema](site-design-json-schema.md).
 
 > [!NOTE]
-> - Actions marked with ** are automatically blocked for channel sites.
+> - Actions marked with ** are automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 > - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
@@ -235,6 +235,7 @@ In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript*
 | WebTemplate  | 64 | Team site template |
 | WebTemplate 1 | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
+| WebTemplate    | 69 | Channel site template |
 
 
 
