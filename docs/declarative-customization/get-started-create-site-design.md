@@ -107,8 +107,8 @@ The previous cmdlet creates a new site template named Contoso customer tracking.
 | Parameter            | Value                | Site template type |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
-| WebTemplate 1 | 1 | Team site (with group creation disabled) |
-| WebTemplate    | 68 | Communication site template |
+| WebTemplate  | 1 | Team site (with group creation disabled) |
+| WebTemplate  | 68 | Communication site template |
 
 
 The JSON response displays the **ID** of the new site template. You can use it in subsequent cmdlets to update or modify the site template.
