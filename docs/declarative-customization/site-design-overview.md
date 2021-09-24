@@ -36,7 +36,7 @@ You create site templates and register them in SharePoint to one of the modern t
 3. Choose the type of site needed.
 
 - SharePoint will automatically create a communication site using the **Topic** site template.
-- Had you chosen the default Team site, SharePoint will create a new site useing the **Team collaboration** template. 
+- Had you chosen the default Team site, SharePoint will create a new site using the **Team collaboration** template. 
 
 For more information about how you can change the default site templates, see [Customize a default site template](customize-default-site-design.md).
 
