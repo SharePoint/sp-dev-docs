@@ -25,6 +25,10 @@ This article describes how you can use site templates and site scripts to provid
 
 Site templates can be used each time a new site is created to apply a consistent set of actions. They can also be applied to existing modern sites (group-connected Team and Communication sites). Most actions typically affect the site itself, such as setting the theme or creating lists. But a site template can also include other actions, such as recording the new site URL to a log, or sending a tweet.
 
+> [!NOTE]
+> - Site templates created using custom site scripts will display in the **From your organization** tab in the site template gallery.
+> - Custom site templates made by your organization will display in the site template gallery based on the type of site chosen by the user - either a communication site or a team site. Therefore, it is likely users will not see all site templates from your organization in the site template gallery. Soon, users will have the ability to browse all site templates provided by your organization regardless of which type of site was chosen.  
+
 You create site templates and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 
 1. Go to the SharePoint start page on your developer tenant. 
