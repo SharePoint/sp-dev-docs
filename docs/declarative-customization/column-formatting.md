@@ -685,7 +685,7 @@ This examples uses operator `loopIndex` to control the margins all rows but the 
                         {
                             "elmType": "img",
                             "attributes": {
-                                "src": "=[$person.picture]"
+                                "src": "=getUserImage([$person.email], 'S')"
                             },
                             "style": {
                                 "width": "3em",
@@ -799,7 +799,7 @@ Both the example uses defaultHoverField
                 "margin": "2px"
             },
             "attributes": {
-                "src": "='/_layouts/15/userphoto.aspx?size=S&accountname=' + [$Editor.email]",
+                "src": "='getUserImage([$Editor.email], 's')",
                 "title": "[$Editor.title]"
             }
         },
@@ -1533,7 +1533,7 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=endsWith('DogFood', 'Dog')"` results in _false_
   - `"txtContent":"=endsWith('DogFood', 'Food')"` results in _true_
 
-- **getUserImage**: get user image URL for a given email and preferred size
+- **getUserImage**: returns a URL pointing to user's profile image for a given email and preferred size
   - `"src":"=getUserImage('kaylat@contoso.com', 'small')"` returns a URL pointing to user's profile picture in small resolution
   - `"src":"=getUserImage('kaylat@contoso.com', 's')"` returns a URL pointing to user's profile picture in small resolution
   - `"src":"=getUserImage('kaylat@contoso.com', 'medium')"` returns a URL pointing to user's profile picture in medium resolution
