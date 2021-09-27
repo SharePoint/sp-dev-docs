@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site templates and site scripts
 description: Create site templates to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
-ms.date: 08/23/2021
+ms.date: 09/24/2021
 ms.localizationpriority: high
 ---
 
