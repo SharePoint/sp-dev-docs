@@ -1429,6 +1429,7 @@ Operators specify the type of operation to perform. The following operators are 
 - replace
 - padStart
 - padEnd
+- getUserImage
 
 **Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1532,7 +1533,13 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=endsWith('DogFood', 'Dog')"` results in _false_
   - `"txtContent":"=endsWith('DogFood', 'Food')"` results in _true_
 
-- **getUserImage**: 
+- **getUserImage**: get user image URL for a given email and preferred size
+  - `"src":"=getUserImage('kaylat@contoso.com', 'small')"` returns a URL pointing to user's profile picture in small resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 's')"` returns a URL pointing to user's profile picture in small resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'medium')"` returns a URL pointing to user's profile picture in medium resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'm')"` returns a URL pointing to user's profile picture in medium resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'large')"` returns a URL pointing to user's profile picture in large resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'l')"` returns a URL pointing to user's profile picture in large resolution
 
 **Ternary operators** - The following are operators that expect three operands:
 
