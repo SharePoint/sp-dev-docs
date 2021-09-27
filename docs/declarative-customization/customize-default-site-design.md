@@ -1,7 +1,7 @@
 ---
 title: Customize default site templates in SharePoint
 description: Customize the default site templates for the SharePoint Team site or Communication site template.
-ms.date: 08/23/2021
+ms.date: 09/24/2021
 ms.localizationpriority: high
 ---
 
