@@ -1,7 +1,7 @@
 ---
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 10/09/2020
+ms.date: 09/24/2021
 ms.localizationpriority: high
 ---
 
@@ -699,6 +699,9 @@ Get-Content '<Folder_location_to_site_script>\site-script.json' -Raw -Encoding U
 
 Use the `applyTheme` verb to add a custom theme to the site. For more information about how to construct and upload these themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview.md). This site action only works for applying custom themes; to apply one of our in-product SharePoint themes, create a copy as a custom one and reference that one.
 
+> [!NOTE]
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+
 #### JSON value
 
 - `themeName`: The name of the theme to apply.
@@ -756,6 +759,7 @@ Use the `setSiteBranding` verb to specify the navigation layout, the header layo
 
 > [!NOTE]
 > Setting the navigation layout only works on the communication site template and for the hub navigation.
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
 
 #### JSON value
 
@@ -797,6 +801,9 @@ Use the `setSiteLogo` verb to specify a logo for your site.
 ```
 
 ## Join a hub site
+
+> [!NOTE]
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
 
 Use the `joinHubSite` verb to join the site to a designated hub site.
 
@@ -917,6 +924,9 @@ Use the `triggerFlow` verb to kick off a custom flow.
 
 ## Configure regional settings
 
+> [!NOTE]
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+
 Use the `setRegionalSettings` action to configure the regional settings of the site (*/_layouts/15/regionalsetng.aspx*).
 
 #### JSON values
@@ -939,6 +949,9 @@ Use the `setRegionalSettings` action to configure the regional settings of the s
 ```
 
 ## Add users (principals) to SharePoint Groups
+
+> [!NOTE]
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
 
 Use the `addPrincipalToSPGroup` action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Microsoft 365 groups.
 
@@ -976,6 +989,9 @@ Use the `addPrincipalToSPGroup` action to manage addition of users and groups to
 ```
 
 ## Manage guest access
+
+> [!NOTE]
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
 
 Use the `setSiteExternalSharingCapability` action to manage guest access. For more information, see [Manage external sharing for your SharePoint Online environment](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 

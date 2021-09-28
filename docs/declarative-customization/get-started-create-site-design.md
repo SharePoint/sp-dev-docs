@@ -109,6 +109,7 @@ The previous cmdlet creates a new site template named Contoso customer tracking.
 | WebTemplate  | 64 | Team site template |
 | WebTemplate  | 1 | Team site (with group creation disabled) |
 | WebTemplate  | 68 | Communication site template |
+| WebTemplate    | 69 | Channel site template |
 
 
 The JSON response displays the **ID** of the new site template. You can use it in subsequent cmdlets to update or modify the site template.
@@ -154,6 +155,10 @@ The REST API to apply a site template to an existing site collection is **ApplyS
 Apply a published site template to a new or existing hub site. Then, all associated sites will inherit the hub site template and theme. Navigate to the home page of the hub and go to **Settings** and then **Apply a site template**. Learn more about how to [enable site associations for your hub site](https://support.microsoft.com/office/set-up-your-sharepoint-hub-site-e2daed64-658c-4462-aeaf-7d1a92eba098).
 
 You can also use the `Set-SPOHubSite` cmdlet. Review the [PowerShell cmdlets for SharePoint hub sites](../features/hub-site/hub-site-powershell.md) article.
+
+>[!NOTE]
+> [Channel sites](/sharepoint/teams-connected-sites) are automatically blocked from joining a hub site.
+
 
 ## See also
 
