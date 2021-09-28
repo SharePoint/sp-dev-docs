@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 06/29/2021
+ms.date: 09/28/2021
 ms.localizationpriority: high
 ---
 
@@ -1666,9 +1666,6 @@ The location field object has the following properties (with example values):
    "LocationUri": "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
 }
 ```
-
-> [!NOTE] 
-> Location fields do not currently have a "Format this column" option in the list view and formats applied directly to these fields will need to be done through field settings.
 
 <br/>
 
