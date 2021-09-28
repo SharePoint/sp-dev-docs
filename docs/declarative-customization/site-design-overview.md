@@ -1,7 +1,7 @@
 ---
 title: SharePoint site template and site script overview
 description: Use SharePoint site scripts and site templates to provide custom configurations to apply when new sites are created.
-ms.date: 06/14/2021
+ms.date: 09/24/2021
 ms.localizationpriority: high
 ---
 
@@ -24,6 +24,10 @@ This article describes how you can use site templates and site scripts to provid
 ## How site templates work
 
 Site templates can be used each time a new site is created to apply a consistent set of actions. They can also be applied to existing modern sites (group-connected Team and Communication sites). Most actions typically affect the site itself, such as setting the theme or creating lists. But a site template can also include other actions, such as recording the new site URL to a log, or sending a tweet.
+
+> [!NOTE]
+> - Site templates created using custom site scripts will display in the **From your organization** tab in the site template gallery.
+> - Custom site templates made by your organization will display in the site template gallery based on the type of site chosen by the user - either a communication site or a team site. Therefore, it is likely users will not see all site templates from your organization in the site template gallery. Soon, users will have the ability to browse all site templates provided by your organization regardless of which type of site was chosen.  
 
 You create site templates and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 
@@ -114,19 +118,19 @@ Each action in a site script is specified by a **verb** value in the JSON. In th
 - Creating a new list or library (or modifying the default one created with the site)
 - Creating site columns, content types, and configuring other list settings
 - Set site branding properties like navigation layout, header layout and header background
-- Applying a theme
+- Applying a theme**
 - Setting a site logo
-- Adding links to quick launch or hub navigation
+- Adding links to quick launch or hub navigation**
 - Triggering a Power Automate flow
 - Installing a deployed solution from the app catalog
-- Setting regional settings for the site
+- Setting regional settings for the site**
 - Adding principals (users and groups) to SharePoint roles**
 - Setting external sharing capability for the site**
 
 For a complete list of available actions and their parameters, see the [JSON schema](site-design-json-schema.md).
 
 > [!NOTE]
-> - Actions marked with ** are automatically blocked for channel sites.
+> - Actions marked with ** are automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 > - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
 
 Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
@@ -235,6 +239,7 @@ In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript*
 | WebTemplate  | 64 | Team site template |
 | WebTemplate 1 | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
+| WebTemplate    | 69 | Channel site template |
 
 
 
