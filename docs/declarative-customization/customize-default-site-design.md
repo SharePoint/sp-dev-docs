@@ -1,7 +1,7 @@
 ---
 title: Customize default site templates in SharePoint
 description: Customize the default site templates for the SharePoint Team site or Communication site template.
-ms.date: 08/23/2021
+ms.date: 09/24/2021
 ms.localizationpriority: high
 ---
 
@@ -18,6 +18,7 @@ To customize a default site template, apply a new template script using PowerShe
 | WebTemplate  | 64 | Team site template |
 | WebTemplate 1 | 1 | Team site (with group creation disabled) |
 | WebTemplate    | 68 | Communication site template |
+| WebTemplate    | 69 | Channel site template |
 
 
 The following example shows how to use the **IsDefault** switch to apply the Contoso company theme to the default site templates. The site script referenced by ID contains the JSON script to apply the correct theme.
