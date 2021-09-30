@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site templates and site scripts
 description: Create site templates to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
-ms.date: 09/24/2021
+ms.date: 09/28/2021
 ms.localizationpriority: high
 ---
 
@@ -107,8 +107,8 @@ The previous cmdlet creates a new site template named Contoso customer tracking.
 | Parameter            | Value                | Site template type |
 | :------------------- | :------------------- |:----------------|
 | WebTemplate  | 64 | Team site template |
-| WebTemplate 1 | 1 | Team site (with group creation disabled) |
-| WebTemplate    | 68 | Communication site template |
+| WebTemplate  | 1 | Team site (with group creation disabled) |
+| WebTemplate  | 68 | Communication site template |
 | WebTemplate    | 69 | Channel site template |
 
 
