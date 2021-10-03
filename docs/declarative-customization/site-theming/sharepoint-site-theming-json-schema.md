@@ -149,7 +149,7 @@ The following table shows the color palette used by the Teal theme.
 </tr>
 </table>
 
-The following code shows how to define a dictionary in PowerShell for the Red theme's color palette.
+The following code shows how to define a dictionary in PowerShell for the Teal theme's color palette.
 
 ```powershell
 { 
