@@ -2041,23 +2041,23 @@
       - name: Overview
         href: apis/syntex/syntex-model-rest-api.md
       - name: Create model
-        href: apis/syntex/rest-api/rest-createmodel-method.md
+        href: apis/syntex/rest-createmodel-method.md
       - name: GetByUniqueId
-        href: apis/syntex/rest-api/rest-getbyuniqueid-method.md
+        href: apis/syntex/rest-getbyuniqueid-method.md
       - name: GetByTitle
-        href: apis/syntex/rest-api/rest-getbytitle-method.md
+        href: apis/syntex/rest-getbytitle-method.md
       - name: Apply model
-        href: apis/syntex/rest-api/rest-applymodel-method.md
+        href: apis/syntex/rest-applymodel-method.md
       - name: Get model and library information
-        href: apis/syntex/rest-api/rest-getmodelandlibraryinfo.md
+        href: apis/syntex/rest-getmodelandlibraryinfo.md
       - name: UpdateModelSettings
-        href: apis/syntex/rest-api/rest-updatemodelsettings-method.md        
+        href: apis/syntex/rest-updatemodelsettings-method.md        
       - name: BatchDelete
-        href: apis/syntex/rest-api/rest-batchdelete-method.md
+        href: apis/syntex/rest-batchdelete-method.md
       - name: Create file classification request
-        href: apis/syntex/rest-api/rest-createclassificationrequest.md
+        href: apis/syntex/rest-createclassificationrequest.md
       - name: Create folder classification request
-        href: apis/syntex/rest-api/rest-createfolderclassificationrequest.md
+        href: apis/syntex/rest-createfolderclassificationrequest.md
   - name: PnP Sites Core API reference
     href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
