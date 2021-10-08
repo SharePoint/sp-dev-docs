@@ -2036,6 +2036,28 @@
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
         href: apis/migration-api-encryption.md
+  - name: SharePoint Syntex REST API
+    items:
+      - name: Overview
+        href: apis/syntex/syntex-model-rest-api.md
+      - name: Create model
+        href: apis/syntex/rest-api/rest-createmodel-method.md
+      - name: GetByUniqueId
+        href: apis/syntex/rest-api/rest-getbyuniqueid-method.md
+      - name: GetByTitle
+        href: apis/syntex/rest-api/rest-getbytitle-method.md
+      - name: Apply model
+        href: apis/syntex/rest-api/rest-applymodel-method.md
+      - name: Get model and library information
+        href: apis/syntex/rest-api/rest-getmodelandlibraryinfo.md
+      - name: UpdateModelSettings
+        href: apis/syntex/rest-api/rest-updatemodelsettings-method.md        
+      - name: BatchDelete
+        href: apis/syntex/rest-api/rest-batchdelete-method.md
+      - name: Create file classification request
+        href: apis/syntex/rest-api/rest-createclassificationrequest.md
+      - name: Create folder classification request
+        href: apis/syntex/rest-api/rest-createfolderclassificationrequest.md
   - name: PnP Sites Core API reference
     href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
