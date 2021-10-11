@@ -1,7 +1,7 @@
 ---
 title: Building Microsoft Teams Tabs using SharePoint Framework
 description: You can build your Microsoft Teams tabs using SharePoint Framework and utilize the tooling
-ms.date: 03/15/2021
+ms.date: 10/11/2021
 ms.prod: sharepoint
 ---
 # Building Microsoft Teams Tabs using SharePoint Framework
@@ -36,7 +36,7 @@ You can start developing Microsoft Teams tabs simply by using the SharePoint Fra
     ```
 
 1. Deploy the web part using tenant-scoped deployment option to your SharePoint app catalog
-1. Activate the SharePoint Framework solution, which you deployed and select **Sync to Teams** button in the App Catalog
+1. Activate the SharePoint Framework solution, which you deployed, and select **Sync to Teams** button in the App Catalog
 
 ## Deployment options
 
