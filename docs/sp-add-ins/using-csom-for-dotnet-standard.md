@@ -31,6 +31,10 @@ Support for legacy authentication flows (so called cookie based auth using the `
 `Microsoft.SharePoint.Client.Utilities.HttpUtility` class | Yes | No | Switch to similar classes in .NET such as `System.Web.HttpUtility`
 `Microsoft.SharePoint.Client.EventReceivers` namespace | Yes | No | Switch to modern eventing concepts such as [Web Hooks](../apis/webhooks/get-started-webhooks.md).
 
+> [!Note]
+> .NET Standard version of the CSOM Assemblies are included on the existing NuGet package called Microsoft.SharePointOnline.CSOM from the version 16.1.20211.12000 onwards.
+> The below sample requires this version or higher to work in a .Net core/standard targeted project.
+
 ## Using modern authentication with CSOM for .NET Standard
 
 Using user/password based authentication, implemented via the `SharePointOnlineCredentials` class, is a common approach for developers using CSOM for .NET Framework. In CSOM for .NET Standard this isn't possible anymore, it's up to the developer using CSOM for .NET Standard to obtain an OAuth access token and use that when making calls to SharePoint Online. The recommended approach for getting access tokens for SharePoint Online is by setting up an Azure AD application. For CSOM for .NET Standard the only thing that matters are that you obtain a valid access token, this can be using resource owner password credential flow, using device login, using certificate based auth,...  
