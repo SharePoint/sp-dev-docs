@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 06/22/2021
+ms.date: 10/11/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -127,15 +127,14 @@ To see how you can use preconfigured entries when building web parts, you'll bui
     cd react-preconfiguredentries
     ```
 
-1. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project.
+1. Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
 
     ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
+    The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    - **What is your solution name?** react-preconfiguredentries
     - **Which type of client-side component to create?** WebPart
     - **What is your Web part name?** Gallery
     - **What is your Web part description?** Shows items from the selected list
