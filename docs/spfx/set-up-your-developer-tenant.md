@@ -1,7 +1,7 @@
 ---
 title: Set up your Microsoft 365 tenant
 description: Build and deploy client-side web parts using the SharePoint Framework by setting up a Microsoft 365 tenant.
-ms.date: 02/26/2021
+ms.date: 10/11/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -14,9 +14,6 @@ To build and deploy client-side web parts using the SharePoint Framework, you ne
 If you already have a Microsoft 365 tenant, see the section [Create app catalog site](#create-app-catalog-site).
 
 If you don't have one, you can get a Microsoft 365 developer subscription when you join the [Microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program). See the [Microsoft 365 Developer Program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription.
-
-> [!NOTE]
-> Make sure that you are signed out of any existing Microsoft 365 tenants before you sign up for the Microsoft 365 Developer Program.
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
@@ -31,13 +28,13 @@ You need an app catalog to upload and deploy web parts. If you've already set up
 1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Microsoft 365 tenant prefix.
 
     Commercial Tenant
-    
+
     ```http
     https://{your-tenant-prefix}-admin.sharepoint.com
     ```
-    
+
     GCC High Tenant
-    
+
     ```http
     https://{your-tenant-prefix}-admin.sharepoint.us
     ```
@@ -63,13 +60,13 @@ You also need a site collection and a site for your testing. You can create a ne
 1. Navigate to **SharePoint Admin Center** by entering the following URL in your browser. Replace **{your-tenant-prefix}** with your Microsoft 365 tenant prefix:
 
     Commercial Tenant
-    
+
     ```http
     https://{your-tenant-prefix}-admin.sharepoint.com
     ```
 
     GCC High Tenant
-    
+
     ```http
     https://{your-tenant-prefix}-admin.sharepoint.us
     ```
