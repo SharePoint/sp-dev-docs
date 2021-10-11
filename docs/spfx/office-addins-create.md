@@ -1,7 +1,7 @@
 ---
 title: Create Outlook Add-ins using SharePoint Framework
-description: Create Outlook Web App Add-ins using the SharePoint Framework
-ms.date: 07/21/2020
+description: Create Outlook Web App Add-ins using the SharePoint Framework (experimental)
+ms.date: 10/11/2021
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -18,10 +18,10 @@ Using the SharePoint Framework as the platform for your Outlook Web App Add-ins 
 - Simplified authentication to access different services in Microsoft 365
 - You can benefit from the same permission and access management model as within SharePoint, with easy access to Microsoft Graph APIs and other services
 
-[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
+[!INCLUDE [experimental-notice](../../includes/snippets/experimental-notice.md)]
 
-> [!NOTE]
-> During developer preview, this feature is only supported in Outlook Web Access. Once this feature reaches general availability, it will be supported across all Office desktop and web clients.
+> [!CAUTION]
+> This experimental feature is only supported in Outlook Web Access at this time.
 
 ## Development process
 

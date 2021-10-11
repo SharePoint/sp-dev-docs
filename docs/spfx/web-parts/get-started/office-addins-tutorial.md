@@ -1,7 +1,7 @@
 ---
 title: Tutorial for creating Outlook Web Access extension using SharePoint Framework
-description: Creating Outlook add-ins using SharePoint Framework
-ms.date: 08/19/2020
+description: Creating Outlook add-ins using SharePoint Framework (experimental)
+ms.date: 10/11/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -10,15 +10,17 @@ ms.localizationpriority: high
 
 Starting with the SharePoint Framework v1.10, you can also implement your Office add-ins using SharePoint Framework. This significantly simplifies add-in development process as SharePoint Framework web parts are automatically hosted within SharePoint without any need for external services. In preview time frame, this model is only supported for the Outlook Web Access, but will be extended across all Office web and desktop clients.
 
-* [Build your first web part](build-a-hello-world-web-part.md)
-* [Connect your web part to SharePoint](connect-to-sharepoint.md)
-* [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
+- [Build your first web part](build-a-hello-world-web-part.md)
+- [Connect your web part to SharePoint](connect-to-sharepoint.md)
+- [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 > [!IMPORTANT]
 > This lab requires that you are using at least version 1.10 of the SharePoint Framework as these capabilities are not available in earlier versions.
 
+[!INCLUDE [experimental-notice](../../../../includes/snippets/experimental-notice.md)]
+
 > [!NOTE]
-> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the library (*see [Try SharePoint Framework preview capabilities](../../try-preview-capabilities.md) for more information*).
+> In order to use experimental features or features in developer preview, ensure you use the `--plusbeta` version of the library (*see [Try SharePoint Framework preview capabilities](../../try-preview-capabilities.md) for more information*).
 
 > [!Video https://www.youtube.com/embed/QtGjTAjbIKU]
 
@@ -42,22 +44,12 @@ Starting with the SharePoint Framework v1.10, you can also implement your Office
     yo @microsoft/sharepoint --plusbeta
     ```
 
-1. When prompted:
+    The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    * Accept the default **outlook-add-in** as your solution name, and then select Enter.
-    * Select **SharePoint Online only (latest)**, and then select Enter.
-    * Select **Use the current folder** as the location for the files.
-    * Select **y** to ensure that your web part is automatically deployed tenant-wide when it's added to the tenant App Catalog.
-    * Select **N** on the question if solution contains unique permissions.
-    * Select **WebPart** as the client-side component type to be created.
-
-1. The next set of prompts asks for specific information about your web part:
-
-    * Enter **MyFirstOWAaddin** for the web part name, and then select Enter.
-    * Enter **My first Outlook add-in** as the description of the web part, and then select Enter.
-    * Accept the default **No JavaScript web framework** option for the framework, and then select Enter to continue.
-
-    ![Yeoman prompts](../../../images/add-in-yeoman.png)
+    - Select **WebPart** as the client-side component type to be created.
+    - Enter **MyFirstOWAaddin** for the web part name, and then select Enter.
+    - Enter **My first Outlook add-in** as the description of the web part, and then select Enter.
+    - Accept the default **No JavaScript web framework** option for the framework, and then select Enter to continue.
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyFirstOWAaddin** web part, which will act as the add-in in Outlook Web App.
 
@@ -73,7 +65,7 @@ Starting with the SharePoint Framework v1.10, scaffolding will also include addi
 
 **officeAddin** folder contains the following file:
 
-  * **[componentId]_outlookManifest.xml** - Default manifest definition for your solution
+- **[componentId]_outlookManifest.xml** - Default manifest definition for your solution
 
 Manifest file contains by default definition to expose your add-in as a tool pane add-in the Outlook Web App with default values. You can modify the structure as needed based on your business requirements.
 
@@ -89,9 +81,11 @@ This adds the needed intelligence for the Office JavaScript SDK types when you d
 
 ## Making solution aware of the Office context
 
-1.  Open **src\webparts\myFirstOwAaddin\MyFirstOwAaddinWebPart.ts** for the needed edits on making our solution aware of the Office context, if it's used as an Outlook Web App add-in.
+1. Open **src\webparts\myFirstOwAaddin\MyFirstOwAaddinWebPart.ts**.
 
-1. Update the **render** method as follows. Notice how we are rendering different content dependent if the code is rendered as an Outlook Web App add-in or as a web part in SharePoint. We can detect if solution is hosted Outlook Web App by checking the `this.context.sdks.office` property.
+1. Update the **render()** method as follows.
+
+    Notice how we are rendering different content dependent if the code is rendered as an Outlook Web App add-in or as a web part in SharePoint. We can detect if solution is hosted Outlook Web App by checking the `this.context.sdks.office` property.
 
     ```typescript
     public render(): void {
@@ -130,7 +124,6 @@ This adds the needed intelligence for the Office JavaScript SDK types when you d
             </div>
             </div>
         </div>`;
-
     }
     ```
 
