@@ -1,9 +1,12 @@
 ---
-title: Use column formatting to customize SharePoint
-description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 10/08/2021
+title: Advanced formatting concepts
+description: Advanced formatting concepts
+ms.date: 10/12/2021
 ms.localizationpriority: high
 ---
+# Advanced formatting concepts
+
+You can use some of the following features to make your view and column formatting more information rich and interactable.
 
 ## Create a button to launch a Flow
 
@@ -11,7 +14,7 @@ The following screenshot shows a list with a Flow button added to the Action col
 
 ![screenshot of the sample](../images/sp-columnformatting-flow.png)
 
-You can use column formatting to create buttons that, when selected, run Flows on the corresponding list item.  The Flow Launch Panel will be displayed after choosing the button and the Flow will just run.
+You can use formatting to create buttons that, when selected, run Flows on the corresponding list item.  The Flow Launch Panel will be displayed after choosing the button and the Flow will just run.
 
 To use the sample below, you must substitute the ID of the Flow you want to run.  This ID is contained within the `customRowAction` attribute inside the `button` element.  To obtain a Flow's ID:
 
@@ -68,7 +71,7 @@ On hover - Metadata on the column "Status" is made available in column formattin
 
 
 
-You can use column and view formatting to define custom call out that can be commissioned basis user defined actions like click or hover
+You can use formatting to define custom call out that can be commissioned basis user defined actions like click or hover
 
 This example uses customCardProps, openOnEvent, directionalHint and isBeakVisible
 
