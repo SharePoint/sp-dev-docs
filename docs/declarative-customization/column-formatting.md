@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 09/28/2021
+ms.date: 10/08/2021
 ms.localizationpriority: high
 ---
 
@@ -289,7 +289,9 @@ Here's the same sample from above, using the Excel-style expression syntax:
 
 ## Create clickable actions
 
-You can use column formatting to provide hyperlinks that go to other webpages, or start custom functionality. This functionality is limited to static links that can be parameterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, or `mailto:`.
+You can use column formatting to provide hyperlinks that go to other webpages, or start custom functionality. This functionality is limited to static links that can be parameterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, `mailto:` or `tel:`.
+
+`tel:` protocol only allows digits, `*+#` special characters and `.-/()` visual separators.
 
 ### Turn field values into hyperlinks (basic)
 
@@ -683,7 +685,7 @@ This examples uses operator `loopIndex` to control the margins all rows but the 
                         {
                             "elmType": "img",
                             "attributes": {
-                                "src": "=[$person.picture]"
+                                "src": "=getUserImage([$person.email], 'S')"
                             },
                             "style": {
                                 "width": "3em",
@@ -797,7 +799,7 @@ Both the example uses defaultHoverField
                 "margin": "2px"
             },
             "attributes": {
-                "src": "='/_layouts/15/userphoto.aspx?size=S&accountname=' + [$Editor.email]",
+                "src": "='getUserImage([$Editor.email], 's')",
                 "title": "[$Editor.title]"
             }
         },
@@ -936,6 +938,8 @@ The following column types support column formatting:
 * Title (in Lists)
 * Yes/No
 * Managed Metadata
+* Average Rating
+* Likes
 
 The following are currently **not** supported:
 
@@ -998,6 +1002,7 @@ Specifies the type of element to create. Valid elements include:
 - svg
 - path
 - button
+- p
 
 Any other value will result in an error.
 
@@ -1210,6 +1215,9 @@ An optional property that specifies style attributes to apply to the element spe
 'text-wrap'
 'word-break'
 'word-wrap'
+
+'stroke'
+'fill-opacity'
 ```
 
 The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section. 
@@ -1268,6 +1276,7 @@ An optional property that specifies additional attributes to add to the element 
 - data-interception
 - viewBox
 - preserveAspectRatio
+- draggable
 
 Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to http://finance.yahoo.com/quote/ + the value of the current field (`@currentField`). 
 
@@ -1420,6 +1429,7 @@ Operators specify the type of operation to perform. The following operators are 
 - replace
 - padStart
 - padEnd
+- getUserImage
 
 **Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -1496,12 +1506,12 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Binary operators** - The following are operators that expect two operands:
 
-- **indexOf**: takes 2 operands. The first is the text you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string. Indexes start at 0. If the search term is not found within the text, -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
+- **indexOf**: takes 2 operands. The first is the text (or array) you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string (or array). Indexes start at 0. If the search term is not found within the text (or array), -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
   - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
   - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
   - `"txtContent": "=indexOf('DogFood', 'Cat')"` results in _-1_
   - `"txtContent": "=indexOf('DogFood', 'f')"` results in _-1_
-  
+
 - **join**: takes 2 operands. The first is an array (multi-select person or choice field) and the second is the separating string. Returns a string concatenation of the array values separated by the separating string. - _Only available in SharePoint Online_
   - `"txtContent": "=join(@currentField, ', ')"` might result in _"Apple, Orange, Cherry"_ (depending on the selected values)
   - `"txtContent": "=join(@currentField.title, '|')"` might result in _"Chris Kent|Vesa Juvonen|Jeff Teper"_ (depending on the selected persons)
@@ -1509,7 +1519,7 @@ Operators specify the type of operation to perform. The following operators are 
 - **pow**: returns the base to the exponent power. - _Only available in SharePoint Online_
   - `"txtContent":"=pow(2,3)"` results in _8_
 
-- **lastIndexOf**: returns the position of the last occurrence of a specified value in a string
+- **lastIndexOf**: returns the position of the last occurrence of a specified value in a string (or array)
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Dog')"` results in _8_
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'F')"` results in _11_
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Cat')"` results in _-1_
@@ -1522,6 +1532,14 @@ Operators specify the type of operation to perform. The following operators are 
 - **endsWith**: determines whether a string ends with the characters of a specified string
   - `"txtContent":"=endsWith('DogFood', 'Dog')"` results in _false_
   - `"txtContent":"=endsWith('DogFood', 'Food')"` results in _true_
+
+- **getUserImage**: returns a URL pointing to user's profile image for a given email and preferred size
+  - `"src":"=getUserImage('kaylat@contoso.com', 'small')"` returns a URL pointing to user's profile picture in small resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 's')"` returns a URL pointing to user's profile picture in small resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'medium')"` returns a URL pointing to user's profile picture in medium resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'm')"` returns a URL pointing to user's profile picture in medium resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'large')"` returns a URL pointing to user's profile picture in large resolution
+  - `"src":"=getUserImage('kaylat@contoso.com', 'l')"` returns a URL pointing to user's profile picture in large resolution
 
 **Ternary operators** - The following are operators that expect three operands:
 

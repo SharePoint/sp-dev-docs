@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 09/14/2021
+ms.date: 10/08/2021
 ms.localizationpriority: high
 ---
 
@@ -820,6 +820,10 @@ Optional element. Specifies a CSS class(es) that is applied to the entire row. S
 Optional element. Specifies whether the ability to select rows in the view is disabled or not. `false` is the default behavior inside a list view (meaning selection is visible and enabled). `true` means that users will not be able to select list items. Valid in 'List', 'Compact List' and 'Gallery' layouts.
 
 For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored.
+
+### fillHorizontally
+
+Optional element. Specifies whether the cards in the row should be stretched horizontally to fill the row. `false` is the default behavior (meaning cards in a row are stacked without resizing until they overflow). `true` means cards in the row are stretched horizontally only if necessary to fill the row. Only valid for 'Gallery' layout.
 
 ### hideColumnHeader
 
