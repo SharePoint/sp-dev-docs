@@ -1,13 +1,13 @@
 ---
-title: Use column formatting to customize SharePoint
-description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 10/08/2021
+title: Formatting detailed syntax reference
+description: Formatting detailed syntax reference
+ms.date: 10/12/2021
 ms.localizationpriority: high
 ---
 
-## Detailed syntax reference
+# Formatting detailed syntax reference
 
-### elmType
+## elmType
 
 Specifies the type of element to create. Valid elements include:
 
@@ -22,65 +22,11 @@ Specifies the type of element to create. Valid elements include:
 
 Any other value will result in an error.
 
-#### button elements
-
-`Button` elements can be used to launch a specific action on the parent item.  Every `button` element has a required property, `customRowAction`, that specifies an `action` that's taken when the button is clicked. This action must be one of the following values:
-
-- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in opening the list item. Adding this example button to a document library simulates a click on the file or folder, which results in the file or folder being opened.
-
-```JSON
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-  "elmType": "button",
-  "txtContent": "Open this item",
-  "customRowAction": {
-    "action": "defaultClick"
-  }
-}
-
-```
-
-- **share**:  Clicking the button will open the sharing dialog. Below is an example of this type of button.
-
-```JSON
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-  "elmType": "button",
-  "txtContent": "Share this item",
-  "customRowAction": {
-    "action": "share"
-  }
-}
-
-```
-
-- **delete**: Clicking the button will open the delete confirmation dialog.
-- **editProps**:  Clicking the button will open the item properties page in edit mode.
-- **openContextMenu**:  Clicking the button will open the item's default context menu.
-- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
-
-```JSON
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-  "elmType": "button",
-  "txtContent": "It's Flow Time!",
-  "customRowAction": {
-    "action": "executeFlow",
-    "actionParams": "{\"id\":\"f7ecec0b-15c5-419f-8211-302a5d4e94f1\", \"headerText\":\"It's Flow Time!\",\"runFlowButtonText\":\"Do it\"}"
-  }
-}
-```
-
-The `actionParams` attribute can have the following options when using the `executeFlow` action:
-- **id**: ID of the Flow to launch _(required)_
-- **headerText**: Sets the text at the top of the flow panel _(optional)_
-- **runFlowButtonText**: Sets the text of the primary button in the flow panel _(optional)_
-
-### txtContent
+## txtContent
 
 An optional property that specifies the text content of the element specified by `elmType`. The value of this property can either be a string (including special strings) or an Expression object. 
 
-### style
+## style
 
 An optional property that specifies style attributes to apply to the element specified by `elmType`. This is an object with name-value pairs that correspond to CSS names and values. The values of each property in the style object can either be a string (including special strings) or an Expression object. The following style attributes are allowed.
 
@@ -275,7 +221,7 @@ Here's the same sample from above, using the Excel-style expression syntax:
 }
 ```
 
-### attributes
+## attributes
 
 An optional property that specifies additional attributes to add to the element specified by `elmType`. This is an object with name-value pairs. Attribute names must be one of the following:
 
@@ -304,15 +250,15 @@ Any other attribute name will result in an error. Attribute values can either be
 }
 ```
 
-### children
+## children
 
 An optional property that specifies child elements of the element specified by `elmType`. The value is specified as an array of `elm` objects. There can be an arbitrary level of nesting. If an element has the `txtContent` property, the child properties are ignored. 
 
-### debugMode
+## debugMode
 
 An optional property that is meant for debugging. It outputs error messages and logs warnings to the console. 
 
-### forEach
+## forEach
 
 An optional property that allows an element to duplicate itself for each member of a specific multi-value field. The value of `"forEach"` property should be in the format of either `"iteratorName in @currentField"` or `"iteratorName in [$FieldName]"`.
 
@@ -326,13 +272,94 @@ In the element with `forEach` or its children elements, the iterator variable ca
 
 See [here](#formatting-multi-value-fields) for examples.
 
-### Expressions
+## customRowAction
+
+`button` elements can be used to launch a specific action on the parent item.  Every `button` element has a required property, `customRowAction`, that specifies an `action` that's taken when the button is clicked. This action must be one of the following values:
+
+- **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in opening the list item. Adding this example button to a document library simulates a click on the file or folder, which results in the file or folder being opened.
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "Open this item",
+  "customRowAction": {
+    "action": "defaultClick"
+  }
+}
+
+```
+
+- **share**:  Clicking the button will open the sharing dialog. Below is an example of this type of button.
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "Share this item",
+  "customRowAction": {
+    "action": "share"
+  }
+}
+
+```
+
+- **delete**: Clicking the button will open the delete confirmation dialog.
+- **editProps**:  Clicking the button will open the item properties page in edit mode.
+- **openContextMenu**:  Clicking the button will open the item's default context menu.
+- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see the [Create a button to launch a Flow](#create-a-button-to-launch-a-flow) section in this document. Below is an example of this type of button.
+
+```JSON
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "It's Flow Time!",
+  "customRowAction": {
+    "action": "executeFlow",
+    "actionParams": "{\"id\":\"f7ecec0b-15c5-419f-8211-302a5d4e94f1\", \"headerText\":\"It's Flow Time!\",\"runFlowButtonText\":\"Do it\"}"
+  }
+}
+```
+
+The `actionParams` attribute can have the following options when using the `executeFlow` action:
+- **id**: ID of the Flow to launch _(required)_
+- **headerText**: Sets the text at the top of the flow panel _(optional)_
+- **runFlowButtonText**: Sets the text of the primary button in the flow panel _(optional)_
+- 
+
+## customCardProps
+
+Add a custom card to the element, that shows up on hover or click event. Following customization is available - 
+- `"formatter"` - JSON object that defines formatting for custom cards 
+- `"openOnEvent"` - Event on which the customCard should open. `"click"` or `"hover"` are the two allowed values.
+- `"directionalHint"` - Specify the direction relative to the target in which custom card will be positioned.
+- `"isBeakVisible"` - Specify if the beak is to be shown or not.
+- `"beakStyle"` - Specifies the style object for custom card's beak.
+
+## defaultHoverField
+
+Adds the profile card for the people fields or file hover card for files in document library.
+
+- `"defaultHoverField": "[$Editor]"` adds a profile card for the editor field
+- `"defaultHoverField": "[$FileLeafRef]"` adds a file hover card in documentLibrary
+
+## columnFormatterReference
+
+This will be replaced with the referenced column's formatter JSON. Multi level reference is not supported.
+
+```JSON
+{
+    "columnFormatterReference": "[$FieldName]"
+}
+```
+
+## Expressions
 
 Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects.
 
 Expressions can be written using Excel-style expressions in SharePoint Online, or by using Abstract Syntax Tree expressions in SharePoint Online and SharePoint 2019.
 
-#### Excel-style expressions
+### Excel-style expressions
 
 All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online (not SharePoint 2019).
 
@@ -357,7 +384,7 @@ Non-conditional operators that take one or two operands can be written like this
 =toString(60 + (sin(6.2831853 * @currentField) * 60)) 
 ```
 
-#### Abstract Syntax Tree expressions
+### Abstract Syntax Tree expressions
 
 The following example contains an Expression object that performs the following expression:
 
@@ -398,7 +425,7 @@ The following example contains an Expression object that performs the following 
 }
 ```
 
-### Operators
+## Operators
 
 Operators specify the type of operation to perform. The following operators are valid values:
 
@@ -609,15 +636,15 @@ See [here](#formatting-multi-value-fields) for examples.
 
 `indexOf` Since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string. 
 
-### operands
+## Operands
 
 Specifies the parameters, or operands for an expression. This is an array of Expression objects or base values.
 
-### Special string values
+## Special string values
 
 The values for `txtContent`, styles, and attributes can be either strings or Expression objects. A few special string patterns for retrieving values from the fields in the list and the user's context are supported.
 
-#### "@currentField"
+### "@currentField"
 
 Will evaluate to the value of the current field. 
 
@@ -837,24 +864,24 @@ The following example shows how an image field can be used on a current field.
 ```
 
 
-#### "[$FieldName]"
+### "[$FieldName]"
 
 The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
-#### "[!FieldName]"
+### "[!FieldName]"
 
 In column and view formatting, you can refer to any field's metadata by specifying the **internal name** of the field surrounded by square brackets and preceded by a exclamation mark: `[!InternalName]`.
 
 Currently field's display name is available in this metadata, and can be accessed using DisplayName property: `[!SalesLead.DisplayName]`.
 
 
-#### "@currentWeb"
+### "@currentWeb"
 
 This will evaluate to the absolute URL for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
 
-#### "@me"
+### "@me"
 
 This will evaluate to the email address of the current logged in user.
 
@@ -897,11 +924,11 @@ Here's the same sample from above, using the Excel-style expression syntax:
 }
 ```
 
-#### "@now"
+### "@now"
 
 This will evaluate to the current date and time.
 
-#### "@rowIndex"
+### "@rowIndex"
 
 This will evaluate to the rendered index of a row within a view. This value is based on render position and will remain consistent based on position even as views are sorted and filtered. Indexes start at 0. This value is only available in SharePoint Online.
 
@@ -914,15 +941,15 @@ Here's an example of using the value within a view format to apply alternating s
 }
 ```
 
-#### "@window.innerHeight"
+### "@window.innerHeight"
 
 This will evaluate to a number equal to the height of the browser window (in pixels) when the list was rendered.
 
-#### "@window.innerWidth"
+### "@window.innerWidth"
 
 This will evaluate to a number equal to the width of the browser window (in pixels) when the list was rendered.
 
-#### Thumbnails
+### Thumbnails
 
 In a document library, there is a series of tokens that can be used to retrieve the URL to the thumbnail of a file, including:
 
@@ -969,7 +996,7 @@ Default file hover card using FileLeafRef
 }
   ```
 
-#### displayValue
+### displayValue
 
 The following column types can use displayValue property to get the default rendered value, based on the column setting
 * Date/Time
@@ -988,15 +1015,5 @@ This also works with field name
  {
     "elmType": "div",
     "txtContent": "[$FieldName.displayValue]"
-}
-```
-
-#### columnFormatterReference
-
-This will be replaced with the referenced column's formatter JSON. Multi level reference is not supported.
-
-```JSON
-{
-    "columnFormatterReference": "[$FieldName]"
 }
 ```
