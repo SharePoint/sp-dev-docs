@@ -23,7 +23,7 @@ You can also follow these steps by watching the video on the SharePoint PnP YouT
 
 **Applies to** Office 365 Multi Tenant (MT).
 
-Microsoft Azure is used to host the various components needed to implement Azure webhooks.
+Microsoft Azure is used to host the various components needed to implement SharePoint webhooks.
 
 Source code and other materials for the reference implementation are available in two flavors: 
 - A SharePoint provider-hosted application version
@@ -37,9 +37,9 @@ The application shows you how to manage webhooks, specifically for a SharePoint 
 
 ### Deployment guides
 
-- The [SharePoint web hooks reference implementation deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the SharePoint provider-hosted reference implementation. 
+- The [SharePoint webhooks reference implementation deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the SharePoint provider-hosted reference implementation. 
 
-- To deploy the Office 365 Azure AD application, use the steps described at [SharePoint web hooks Azure AD reference implementation deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List.AzureAD/Deployment%20guide.md), which shows you how to use a Web API function as webhook service. 
+- To deploy the Office 365 Azure AD application, use the steps described at [SharePoint webhooks Azure AD reference implementation deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List.AzureAD/Deployment%20guide.md), which shows you how to use a Web API function as webhook service. 
 
 - If you're more interested in using Azure Functions, see the [Azure Functions guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List.AzureAD/azure%20functions%20guide.md) for more details on how to use Azure Functions in this reference implementation.
 
