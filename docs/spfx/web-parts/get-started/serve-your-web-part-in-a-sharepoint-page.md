@@ -112,7 +112,7 @@ The **Site Contents** page shows you the installation status of your client-side
 
 Now that you've deployed and installed the client-side solution, add the web part to a SharePoint page. Remember that resources such as JavaScript and CSS are available from the local computer, so rendering of the web parts will fail unless your localhost is running.
 
-1. Open the **<your-webpart-guid>.manifest.json** from the **dist** folder.
+1. Open the **{{your-webpart-guid}}.manifest.json** from the **dist** folder.
 
     Notice that the `internalModuleBaseUrls` property in the `loaderConfig` entry still refers to your local computer:
 
@@ -158,7 +158,7 @@ You should see the **HelloWorld** web part you built in the previous article tha
 
 1. Edit the **Description** property, and enter **Client-side web parts are awesome!**
 
-    ![Hello World web part in modern page](../../../images/sp-wp-modern-page-pp.png)
+    ![Hello World web part in modern page with property pane](../../../images/sp-wp-modern-page-pp.png)
 
 1. Notice that you still have the same behaviors such as a reactive pane where the web part is updated as you type.
 1. Select the **x** icon to close the client-side property pane.

@@ -197,7 +197,7 @@ Now the web part is deployed and is automatically available cross the SharePoint
 
 ## Approve the requested Microsoft Graph permissions
 
-1. Move to the SharePoint tenant administrative UIs located at **https://<tenant>-admin.sharepoint.com**.
+1. Move to the SharePoint tenant administrative UIs located at **https://{{tenant}}-admin.sharepoint.com**.
 1. Move to **Advanced > API management** in the left menu option to see the currently pending permission requests. Notice that the request for **Mail.Read** permission for Microsoft Graph is pending for approval.
 
     ![API management](../../../images/graph-helloworld-api-admin.png)
@@ -225,11 +225,11 @@ At this point, the requested permissions needed for the web part have been appro
 
 1. Choose **MyFirstGraphWebPart** from the list and notice how the web part renders the latest five emails from the current user using information from the Microsoft Graph API
 
-    ![web part picker](../../../images/graph-helloworld-webpart-on-page.png)
+    ![Rendered web part](../../../images/graph-helloworld-webpart-on-page.png)
 
 ## See also
 
-- [Use the MSGraphClient to connect to Microsoft Graph](https://docs.microsoft.com/sharepoint/dev/spfx/use-msgraph)
-- [Consume the Microsoft Graph in the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/use-aad-tutorial)
+- [Use the MSGraphClient to connect to Microsoft Graph](/sharepoint/dev/spfx/use-msgraph)
+- [Consume the Microsoft Graph in the SharePoint Framework](/sharepoint/dev/spfx/use-aad-tutorial)
 - [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 - [Get started with Microsoft Graph and JavaScript](https://developer.microsoft.com/graph/get-started/javascript)
