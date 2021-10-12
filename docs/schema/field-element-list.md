@@ -1,7 +1,7 @@
 ---
 title: Field element (List)
 manager: soliver
-ms.date: 08/05/2021
+ms.date: 10/09/2021
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -33,22 +33,27 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   CanToggleHidden = "TRUE" | "FALSE"
   ClassInfo = "Text"
   ColName = "Text"  ColName2 = "Text"
-  Commas = "TRUE" | "FALSE"  Customization = "Text"
+  Commas = "TRUE" | "FALSE"
+  Customization = "Text"
   Decimals = "Integer"
   Description = "Text"
-  Dir = "Text"  Direction = "Text"
+  Dir = "Text"
+  Direction = "Text"
   DisplaceOnUpgrade = "TRUE" | "FALSE"
   DisplayImage = "Text"
   DisplayName = "Text"
-  DisplayNameSrcField = "Text"  DisplaySize = "Integer"
+  DisplayNameSrcField = "Text"
+  DisplaySize = "Integer"
   Div = "Number"
-  EnableLookup = "TRUE" | "FALSE"  EnforceUniqueValues = "TRUE" | "FALSE"
+  EnableLookup = "TRUE" | "FALSE"
+  EnforceUniqueValues = "TRUE" | "FALSE"
   ExceptionImage = "Text"
   FieldRef = "Text"
   FillInChoice = "TRUE" | "FALSE"
   Filterable = "TRUE" | "FALSE"
   FilterableNoRecurrence = "TRUE" | "FALSE"
-  ForcedDisplay = "Text"  ForcePromoteDemote = "TRUE" | "FALSE"
+  ForcedDisplay = "Text"
+  ForcePromoteDemote = "TRUE" | "FALSE"
   Format = "Text"
   FromBaseType = "TRUE" | "FALSE"
   Group = "Text"
@@ -59,12 +64,16 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   ID = "Text"  Id = "Text"
   IMEMode = "inactive"
   Indexed = "TRUE" | "FALSE"
-  IsolateStyles = "TRUE" | "FALSE"  IsRelationship = "TRUE" | "FALSE"
+  IsolateStyles = "TRUE" | "FALSE"
+  IsRelationship = "TRUE" | "FALSE"
   JoinColName = "Text"
   JoinRowOrdinal = "Integer"
   JoinType = "INNER" | "LEFT OUTER" | "RIGHT OUTER"
-  LCID = "Integer"  LinkToItem = "TRUE" | "FALSE"  LinkToItemAllowed = "Text"
-  List = "Text"  ListItemMenu = "TRUE" | "FALSE"  ListItemMenuAllowed = "Text"
+  LCID = "Integer"  LinkToItem = "TRUE" | "FALSE"
+  LinkToItemAllowed = "Text"
+  List = "Text"
+  ListItemMenu = "TRUE" | "FALSE"
+  ListItemMenuAllowed = "Text"
   Max = "Number"
   MaxLength = "Integer"
   Min = "Number" 
@@ -83,7 +92,8 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   PrimaryPIAttribute = "Text"
   PrimaryPITarget = "Text"
   ReadOnly = "TRUE" | "FALSE"
-  ReadOnlyEnforced = "TRUE" | "FALSE"  RelationshipDeleteBehavior = "Text"
+  ReadOnlyEnforced = "TRUE" | "FALSE"
+  RelationshipDeleteBehavior = "Text"
   RenderXMLUsingPattern = "TRUE" | "FALSE"
   Required = "TRUE" | "FALSE"
   RestrictedMode = "TRUE" | "FALSE"
@@ -94,7 +104,8 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   Sealed = "TRUE" | "FALSE"
   SeparateLine = "TRUE" | "FALSE"
   SetAs = "Text"
-  ShowAddressBookButton = "TRUE" | "FALSE"  ShowAlways = "TRUE" | "FALSE"
+  ShowAddressBookButton = "TRUE" | "FALSE"
+  ShowAlways = "TRUE" | "FALSE"
   ShowField = "Text" | "Choice" | "Counter"
   ShowInDisplayForm = "TRUE" | "FALSE"
   ShowInEditForm = "TRUE" | "FALSE"
@@ -117,8 +128,10 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   URLEncode = "TRUE" | "FALSE"
   URLEncodeAsUrl = "TRUE" | "FALSE"
   UserSelectionMode = "Text"
-  UserSelectionScope = "Integer"  Version = "Text"
-  Viewable = "TRUE" | "FALSE"  WebId = "Text"
+  UserSelectionScope = "Integer"
+  Version = "Text"
+  Viewable = "TRUE" | "FALSE"
+  WebId = "Text"
   Width = "Integer"
   WikiLinking = "TRUE" | "FALSE"
   XName = "Text">
@@ -311,7 +324,8 @@ In addition to the preceding types, the following predefined fields are used wit
 |**ModifiedBy** <br/> |A field that contains a **Lookup** value to the UserInfo table indicating the user who last modified the item.  <br/> |
 |**Title** <br/> |The generic display name of every item. It may have a different display name in different lists but the same internal field name of **Title**. The title is the default text to display for **Lookup** fields to lists.  <br/> |
 |**LinkTitle** <br/> |A computed field that displays hyperlinks to items, containing the title texts and generating URLs (and new icon references) to the items. There is no additional storage for this field; it relies on the ID and Title fields for rendering of its UI.  <br/> |
-   
+
+
 > [!NOTE]
 > The fields returned in a **Fields** enumeration are affected by the display mode. Fields that are marked with the **Hidden** attribute are never returned. Fields that are marked with the **ReadOnly** attribute are not returned if a form is being rendered (if **Fields** is called from within a **ListForm** element). Fields that are marked with the **ShowInNewForm** attribute are not returned in the NEW or PREVIEWNEW display modes. Fields marked with the **ShowInFileDlg** attribute are not returned when rendering the **NewForm** dialog form. 
   
