@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.13 release notes
 description: Release notes for the SharePoint Framework v1.13 release
-ms.date: 09/08/2021
+ms.date: 10/14/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -11,6 +11,9 @@ We will be releasing multiple public beta builds using the **@next** tag in the 
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- rc.1 **Released:** October 13, 2021
+- beta.22 **Released:** September 30, 2021
+- beta.20 **Released:** September 11, 2021
 - beta.17 **Released:** August 22, 2021
 - beta.15 **Released:** July 22, 2021
 
@@ -46,6 +49,9 @@ npm install @microsoft/generator-sharepoint@next --global
 - The biggest new feature of this release is the extensibility model for the upcoming Viva Connections feature. The beta will allow you to create Adaptive Card Extensions (ACEs) and test them in the hosted workbench.
   - *See [Overview of Viva Connections Extensibility](viva/overview-viva-connections.md) for more details.*
 - Update the Microsoft Teams SDK to v1.10.
+- Support version 3.9 of TypeScript
+- Release of image rendering APIs for optimized performance
+- Numerous additional fixes and improvements based on issues reported by the community at https://aka.ms/spfx-issues
 
 > [!NOTE]
 > The extensibility model for the upcoming Viva Connections feature is currently rolling out in production and might not be available across all tenants yet. If you want to immediately start working with ACEs you can do that by creating a link to the workbench (for example `https://contoso.sharepoint.com/_layouts/15/workbench.aspx`) in a navigation node in a modern page. Then use that node to access the workbench.
