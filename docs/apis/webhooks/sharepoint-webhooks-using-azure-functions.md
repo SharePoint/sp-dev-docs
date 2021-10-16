@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 ## Create an Azure Function App
 
-The first step you need to do is create an Azure Function App, which is a special Azure Web App focused on hosting Azure Functions.
+The first step you need to do is to create an Azure Function App, which is a special Azure Web App focused on hosting Azure Functions.
 
 1. Navigate to [https://portal.azure.com](https://portal.azure.com), search for **function app**.  Select **Function App** from the search results.
 
