@@ -56,7 +56,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 }
 ```
 
-Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](./formatting-syntax-reference.md#customRowAction) portion of the Detailed syntax reference for more details.
+Additionally, you can use `headerText` and `runFlowButtonText` options within the `actionParams` property to customize portions of the Flow panel itself! See the [button elements](./formatting-syntax-reference.md#customrowaction) portion of the Detailed syntax reference for more details.
 ## Custom cards on hover 
 
 The following image shows a list with a custom hover added to a List:
