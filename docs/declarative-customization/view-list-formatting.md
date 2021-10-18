@@ -1,13 +1,13 @@
 ---
-title: Use view formatting to customize SharePoint
-description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
+title: Format list view to customize SharePoint
+description: Customize how list views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements and the styles to be applied to those elements.
 ms.date: 10/08/2021
 ms.localizationpriority: high
 ---
 
-## List layout customizations
+# List layout customizations
 
-### Apply conditional classes on rows
+## Apply conditional classes on rows
 
 You can use **`additionalRowClass`** to apply one or more classes to the entire list row depending on the value of one or more fields in the row. These examples leave the content and structure of list rows intact.
 
@@ -16,7 +16,7 @@ For a list of recommended classes to use inside view formats, please see the [St
 > [!TIP]
 > Using the `additionalRowClass` property to apply classes to list rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
 
-#### Example: Conditional classes based on a date field
+### Example: Conditional classes based on a date field
 
 The following image shows a list layout with a class applied based on the value of a date column:
 
@@ -31,7 +31,7 @@ This example applies the class `sp-field-severity--severeWarning` to a list row 
 }
 ```
 
-#### Example: Conditional classes based on the value in a text or choice field
+### Example: Conditional classes based on the value in a text or choice field
 
 This example was adopted from a column formatting example, [Conditional formatting based on the value in a text or choice field](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/column-samples/text-conditional-format), with some important differences to apply the concept to list rows. The column formatting example applies both an icon and a class to a column based on the value of `@currentField`. The `additionalRowClass` attribute in view formatting, however, only allows you to specify a class and not an icon. Additionally, since `@currentField` always resolves to the value of the `Title` field when referenced inside a view format, this sample refers to the `Status` field directly (by using the [$Field] syntax inside the additionalRowClass property to determine which class to apply to the row).
 
@@ -44,7 +44,7 @@ This example was adopted from a column formatting example, [Conditional formatti
 
 You can find this sample with additional details here: [Conditional formatting based on choice field](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/text-conditional-format)
 
-#### Example: Alternate Row Formatting based on Modulus
+### Example: Alternate Row Formatting based on Modulus
 
 This example applies `% (Mod)` to a list row with alternate coloring the rows:
 
@@ -55,11 +55,11 @@ This example applies `% (Mod)` to a list row with alternate coloring the rows:
 }
 ```
 
-### Build custom list rows
+## Build custom list rows
 
 You can use **`rowFormatter`** to define a totally custom layout of field values inside a row using the same syntax used in [Column Formatting](column-formatting.md).
 
-#### Example: Multi-line view style
+### Example: Multi-line view style
 
 The following image shows a list with a custom multi-line view style applied:
 
@@ -133,11 +133,11 @@ This example uses the `rowFormatter` element, which totally overrides the render
 
 You can find this sample with additional details here: [Multi-line view rendering](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/multi-line-view)
 
-### Build custom group headers and footers
+## Build custom group headers and footers
 
 You can use `groupProps` to format group headers with flexibility to add grouped column's data, display name and item count. You can also add group aggregates in the group headers or format it directly in the group footers.
 
-#### Example: Color coded group header
+### Example: Color coded group header
 
 In the example below we have list with group headers formatted according to column metadata.
 
@@ -231,7 +231,7 @@ In this example below, the `headerFormatter` for `groupProps` is used to format 
 }
 ```
 
-#### Example: Color coded group header with aggregate
+### Example: Color coded group header with aggregate
 
 In the example below we have list with group headers formatted with group aggregates.
 
@@ -328,7 +328,7 @@ In this example the `hideFooter` for `groupProps` is set to `true` - to hide the
 
 ```
 
-#### Example: Custom group footer
+### Example: Custom group footer
 
 In the example below we have list with group footer formatted according to aggregate value.
 
@@ -371,11 +371,11 @@ In this example the `footerFormatter` for `groupProps` are used to format the gr
 }
 ```
 
-### Build custom list footers
+## Build custom list footers
 
 You can use `footerFormatter` to format list footer with access to column aggregates.
 
-#### Example: Custom list footer
+### Example: Custom list footer
 
 In the example below we have list with formatted footer as per the aggregate value.
 
@@ -434,7 +434,7 @@ In this example the `footerFormatter` is set to format the list footer and the `
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Only valid for 'List' and 'Compact List' layouts.
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). 
 
 > [!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -447,127 +447,20 @@ Despite sharing the same schema, there are some differences in behavior between 
 
 ### additionalRowClass
 
-Optional element. Specifies a CSS class(es) that is applied to the entire row. Supports expressions. Only valid for 'List' and 'Compact List' layouts.
+Optional element. Specifies a CSS class(es) that is applied to the entire row. Supports expressions. 
 
 `additionalRowClass` only takes effect when there is no `rowFormatter` element specified. If a `rowFormatter` is specified, then `additionalRowClass` is ignored.
 
 ### hideSelection
 
-Optional element. Specifies whether the ability to select rows in the view is disabled or not. `false` is the default behavior inside a list view (meaning selection is visible and enabled). `true` means that users will not be able to select list items. Valid in 'List', 'Compact List' and 'Gallery' layouts.
+Optional element. Specifies whether the ability to select rows in the view is disabled or not. `false` is the default behavior inside a list view (meaning selection is visible and enabled). `true` means that users will not be able to select list items.
 
 For list & compact list layout, `hideSelection` only takes effect when there's a `rowFormatter` element specified. If no `rowFormatter` is specified, then `hideSelection` is ignored.
 
-### fillHorizontally
-
-Optional element. Specifies whether the cards in the row should be stretched horizontally to fill the row. `false` is the default behavior (meaning cards in a row are stacked without resizing until they overflow). `true` means cards in the row are stretched horizontally only if necessary to fill the row. Only valid for 'Gallery' layout.
-
 ### hideColumnHeader
 
-Optional element. Specifies whether the column headers in the view are hidden or not. `false` is the default behavior inside a list view (meaning column headers will be visible). `true` means that the view will not display column headers. Only valid for 'List' and 'Compact List' layouts.
-
-### height
-
-Optional element. Defines the height of the card in pixels for 'Gallery' layout. Only valid for 'Gallery' layout.
-
-### width
-
-Optional element. Defines the width of the card in pixels for 'Gallery' layout. Can go from height/2 to 3 x height. Only valid for 'Gallery' layout.
-
-### formatter
-
-JSON object that defines the layout of cards for 'Gallery' layout. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Only valid for 'Gallery' layout.
+Optional element. Specifies whether the column headers in the view are hidden or not. `false` is the default behavior inside a list view (meaning column headers will be visible). `true` means that the view will not display column headers. 
 
 ### groupProps
 
-Groups the group related customization options. Valid in 'List', 'Compact List' and 'Gallery' layouts.
-
-### headerFormatter
-
-JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Valid in 'List', 'Compact List' and 'Gallery' layouts.
-
-### footerFormatter
-
-JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). Valid in 'List' and 'Compact List' layouts.
-
-### hideFooter
-
-Optional element. Specifies whether the list footers or the group footers in the view are hidden or not. `false` is the default behavior (meaning footer is visible). `true` means that view will not display footers. Valid in 'List' and 'Compact List' layouts.
-
-For list & compact list layout, `hideFooter` overrides the `footerFormatter`, if present.
-
-### Special string values
-
-The values for `txtContent`, styles, and attributes can be either strings or expression objects. A few special string patterns for retrieving values from group and aggregate are supported.
-
-#### "@group"
-
-Provides access to the grouped column's data, display name and item count. Valid in 'List', 'Compact List' and 'Gallery' layouts. Available only inside `groupProps`.
-
-The `@group` object has the following properties (with example values):
-
-```JSON
-{
-    "fieldData": "California",
-    "columnDisplayName": "City",
-    "count": 3
-}
-```
-
-You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Column Format Special string values](column-formatting.md#special-string-values).
-
-```JSON
-{
-  "fieldData": {
-    "id": "122",
-    "title": "Kalya Tucker",
-    "email": "kaylat@contoso.com",
-    "sip": "kaylat@contoso.com",
-    "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
-    "department": "Human Resources",
-    "jobTitle": "HR Manager"
-  },
-  "columnDisplayName": "Author",
-  "count": 5
-}
-
-```
-
-#### "@columnAggregate"
-
-Provides access to the aggregated column's value, display name and aggregate type. Valid in 'List' and 'Compact List' layouts. Available only inside `footerFormatter`.
-
-The `@columnAggregate` object has the following properties (with example values):
-
-```JSON
-{
-  "value": "3",
-  "columnDisplayName": "Approved",
-  "type": "Count"
-}
-```
-
-#### "@aggregates"
-
-Provides access to array of aggregated column's value, display name and aggregate type. Valid in 'List', 'Compact List' and 'Gallery' layouts. Available only inside `groupProps`.
-
-The `@aggregates` object has the following properties (with example value), and can be iterated on using for [Column Format forEach](column-formatting.md#foreach) property.
-
-```JSON
-[
-  {
-    "value": "3",
-    "columnDisplayName": "Approved",
-    "type": "Count"
-  },
-  {
-    "value": "1.2",
-    "columnDisplayName": "Growth",
-    "type": "Average"
-  },
-  {
-    "value": "0.33%",
-    "columnDisplayName": "Rate of change",
-    "type": "Variance"
-  }
-]
-```
+Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](view-group-formatting)
