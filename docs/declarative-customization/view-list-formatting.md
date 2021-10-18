@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 You can use **`additionalRowClass`** to apply one or more classes to the entire list row depending on the value of one or more fields in the row. These examples leave the content and structure of list rows intact.
 
-For a list of recommended classes to use inside view formats, please see the [Style guidelines](column-formatting.md#style-guidelines) in the [Use column formatting to customize SharePoint](column-formatting.md).
+For a list of recommended classes to use inside view formats, please see the [Style guidelines](./column-formatting.md#style-guidelines) in the [Use column formatting to customize SharePoint](column-formatting.md).
 
 > [!TIP]
 > Using the `additionalRowClass` property to apply classes to list rows will leave the formatting of individual columns in place. This allows you to combine view formats with column formatting for some powerful visualizations.
@@ -434,7 +434,7 @@ In this example the `footerFormatter` is set to format the list footer and the `
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Column Format Detailed syntax reference](column-formatting.md#detailed-syntax-reference). 
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Formatting detailed syntax reference](./formatting-syntax-reference). 
 
 > [!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -461,4 +461,4 @@ Optional element. Specifies whether the column headers in the view are hidden or
 
 ### groupProps
 
-Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](view-group-formatting)
+Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](./view-group-formatting)
