@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ---
 # Designing Viva Connections custom cards for your dashboard
 
-Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) for building engaging experiences with the widely adopted SharePoint Framework (SPFx). Viva Connections is your gateway to a modern employee experience where you can build and integrate apps that shape culture and foster connections to help employees thrive. With SPFx, you have multiple ways to extend – using the same out-of-the-box or custom SPFx web parts, SPFx extensions (e.g. header, footer), and specific components for optimized mobile experiences.
+Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) for building engaging experiences with the widely adopted SharePoint Framework (SPFx). Viva Connections is your gateway to a modern employee experience where you can build and integrate apps that shape culture and foster connections to help employees thrive. With SPFx, you have multiple ways to extend – using the same out-of-the-box or custom SPFx web parts, SPFx extensions (for example header, footer), and specific components for optimized mobile experiences.
 
 [!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
 
@@ -15,17 +15,17 @@ Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/mic
 
 ### Intro
 
-Use this toolkit to help you design custom cards for your dashboard. You'll learn the structure of cards, how users can interact with them, and the design principles to help you make them attractive and engaging for mobile and desktop use. 
+Use this toolkit to help you design custom cards for your dashboard. You'll learn the structure of cards, how users can interact with them, and the design principles to help you make them attractive and engaging for mobile and desktop use.
 
-To learn more about how to create custom cards, see Getting Started - Adaptive Cards 
+To learn more about how to create custom cards, see Getting Started - Adaptive Cards.
 
 ### What is a Dashboard?
 
-The Viva Connections Dashboard is the digital toolbelt for your employees. You can create a curated experience using dashboard cards to give your employees access to their most critical content and tools. 
+The Viva Connections Dashboard is the digital toolset for your employees. You can create a curated experience using dashboard cards to give your employees access to their most critical content and tools. 
 
-The cards are designed to enable quick task completion by interacting with a card directly or by opening a quick view. 
+The cards are designed to enable quick task completion by interacting with a card directly or by opening a quick view.
 
-[image dashboard_overview.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_dashboard_overview.jpg" alt-text="Dashboard in mobile and in Desktop view":::
 
 
 ## Interactions Flow
@@ -34,7 +34,7 @@ The cards are designed to enable quick task completion by interacting with a car
 
 Cards, Quick View
 
-[image Card + Quick view]
+:::image type="content" source="../../../images/viva-design/viva-design_dashboard_qview.jpg" alt-text="Dashboard and Quick View":::
 
 ### User Interaction principles
 
@@ -43,7 +43,8 @@ Reflect dynamic content that refreshes based on a user action.
 Display a quick view with more information or an input form.
 Maintain consistency between the card and its quick view.
 
-[image ia_schema.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_ia_schema.jpg" alt-text="Interaction flows":::
+
 
 ## Components
 
@@ -63,7 +64,7 @@ Bring cards to life with relevant and dynamically refreshable data. Company stoc
 
 You can choose from medium or large card sizes. Card size will determine how the space in the dashboard is utilized. It's useful to start with medium size cards and then try out large as your dashboard comes together.
 
-[image two_cards.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_two_cards.jpg" alt-text="Medium and Large designs":::
 
 #### Layouts (anatomy)
 
@@ -72,7 +73,8 @@ Setting buttons aside, there are three possible card layouts to choose from: Hea
 > [!NOTE]
 > Image and heading layout does not have buttons with M size cards due to lack of space.
 
-[image card_layouts.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_card_layouts.jpg" alt-text="Card layouts":::
+
 
 #### Interaction
 
@@ -80,41 +82,40 @@ Each card must be linked to a destination like a SharePoint page, a web site, or
 
 Buttons are either filled or outlined. Filled represents a user action, while outlined opens a Quick view.
 
-[image card_patterns.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_card_patterns.jpg" alt-text="Buttons":::
 
 #### States
 
-[image card_states.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_card_states.jpg" alt-text="Different states":::
 
 #### Examples (collections)
 
-[image card_collections.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_card_collections.jpg" alt-text="Example cards":::
+
 
 ### Quick view
 
 #### Principles
 
-Use Quick view to do things like present details or more information, or to provide users a way to accomplish tasks without opening a separate app. 
+Use Quick view to do things like present details or more information, or to provide users a way to accomplish tasks without opening a separate app.
 
-Avoid adding too many navigation levels within the Quick view. It's best to keep it simple so that it's easy for users to accomplish their task quickly. 
+Avoid adding too many navigation levels within the Quick view. It's best to keep it simple so that it's easy for users to accomplish their task quickly.
 
 #### Back stack
 
 While theoretically you can open several children quick views from the parent quick view, we recommend not to navigate more than one level down.
 
-[image qv_backstack.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_qv_backstack.jpg" alt-text="Quick view back stack":::
 
 #### Implementing Quick View experiences
 
-The Quick View experience works across platforms and form-factors based on a single JSON. This introduces significant limitations in terms of styling and placement on controls and how they show up on mobile devices. There are also styling issues which may be on mobile form factor and may not be there in web or vice versa. 
+The Quick View experience works across platforms and form-factors based on a single JSON. This introduces significant limitations in terms of styling and placement on controls and how they show up on mobile devices. There are also styling issues which may be on mobile form factor and may not be there in web or vice versa.
 
 #### Out of the box controls
 
-## Platforms & Theming
+## Platforms
 
 Design for different screens, platforms, and colors.
-
-[image web_ios_android.jpg]
 
 ### Platforms
 
@@ -122,22 +123,20 @@ The dashboard can be viewed on a mobile device: iOS / Android or in a browser: S
 
 The stylistic differences are fairly minimal and adhere to Microsoft Fluent language (see Resources page for more details). To quickly call out just a few main ones: different font families Segoe UI, SF Display Pro, and Roboto and font sizes.
 
-[image cards_platforms.jpg]
-
-Devices Examples: iOS/Android, Web
+:::image type="content" source="../../../images/viva-design/viva-design_cards_platforms.jpg" alt-text="Examples of iOS, Android and Web rendering":::
 
 ### Theming
 
-When designing for light and dark themes, keep in mind the following: 
+When designing for light and dark themes, keep in mind the following:
 
-- Colors from your SharePoint intranet theme are automatically applied. 
-- Use monochrome SVG icons so that they are automatically colored based on your SharePoint intranet theme. 
-- Check that your images are visible and work well on light and dark backgrounds. 
+- Colors from your SharePoint intranet theme are automatically applied.
+- Use monochrome SVG icons so that they are automatically colored based on your SharePoint intranet theme.
+- Check that your images are visible and work well on light and dark backgrounds.
 
 > [!NOTE]
 > Note: Quick view currently supports only a light theme.
 
-[image light_dark.jpg]
+:::image type="content" source="../../../images/viva-design/viva-design_light_dark.jpg" alt-text="Light and dark team samples":::
 
 
 ## Resources
