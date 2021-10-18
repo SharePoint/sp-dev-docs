@@ -355,3 +355,8 @@ JSON object that defines the layout of cards. The schema of this JSON object is 
 ### groupProps
 
 Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](view-group-formatting)
+
+## See also
+- [Group customization syntax reference](./view-group-formatting)
+- [Advanced formatting concepts](./formatting-advanced)
+- [Formatting syntax reference](./formatting-syntax-reference)

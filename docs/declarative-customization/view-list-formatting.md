@@ -462,3 +462,8 @@ Optional element. Specifies whether the column headers in the view are hidden or
 ### groupProps
 
 Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](./view-group-formatting)
+
+## See also
+- [Group customization syntax reference](./view-group-formatting)
+- [Advanced formatting concepts](./formatting-advanced)
+- [Formatting syntax reference](./formatting-syntax-reference)
