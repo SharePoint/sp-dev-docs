@@ -1,7 +1,7 @@
 ---
 title: Group formatting detailed syntax reference	
 description: Group formatting detailed syntax reference	
-ms.date: 10/08/2021
+ms.date: 10/18/2021
 ms.localizationpriority: high
 ---
 

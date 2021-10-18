@@ -1,7 +1,7 @@
 ---
 title: Format list view to customize SharePoint
 description: Customize how list views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements and the styles to be applied to those elements.
-ms.date: 10/08/2021
+ms.date: 10/18/2021
 ms.localizationpriority: high
 ---
 
