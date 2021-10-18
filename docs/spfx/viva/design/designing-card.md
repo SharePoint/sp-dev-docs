@@ -111,8 +111,6 @@ While theoretically you can open several children quick views from the parent qu
 
 The Quick View experience works across platforms and form-factors based on a single JSON. This introduces significant limitations in terms of styling and placement on controls and how they show up on mobile devices. There are also styling issues which may be on mobile form factor and may not be there in web or vice versa.
 
-#### Out of the box controls
-
 ## Platforms
 
 Design for different screens, platforms, and colors.
