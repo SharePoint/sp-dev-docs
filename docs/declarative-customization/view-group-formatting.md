@@ -13,11 +13,11 @@ Groups the group related customization options. Valid in 'List', 'Compact List' 
 
 ## headerFormatter
 
-JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Formatting detailed syntax reference](./formatting-syntax-reference). Valid in 'List', 'Compact List' and 'Gallery' layouts.
+JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Formatting detailed syntax reference](./formatting-syntax-reference.md). Valid in 'List', 'Compact List' and 'Gallery' layouts.
 
 ## footerFormatter
 
-JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Formatting detailed syntax reference](./formatting-syntax-reference). Valid in 'List' and 'Compact List' layouts.
+JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Formatting detailed syntax reference](./formatting-syntax-reference.md). Valid in 'List' and 'Compact List' layouts.
 
 ## hideFooter
 
@@ -43,7 +43,7 @@ The `@group` object has the following properties (with example values):
 }
 ```
 
-You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Formatting Special string values](./formatting-syntax-reference#special-string-values).
+You can also access sub properties for fields with rich data, e.g. People field, as mentioned under [Formatting Special string values](./formatting-syntax-reference.md#special-string-values).
 
 ```JSON
 {
@@ -80,7 +80,7 @@ The `@columnAggregate` object has the following properties (with example values)
 
 Provides access to array of aggregated column's value, display name and aggregate type. Valid in 'List', 'Compact List' and 'Gallery' layouts. Available only inside `groupProps`.
 
-The `@aggregates` object has the following properties (with example value), and can be iterated on using for [Formatting forEach](./formatting-syntax-reference#foreach) property.
+The `@aggregates` object has the following properties (with example value), and can be iterated on using for [Formatting forEach](./formatting-syntax-reference.md#foreach) property.
 
 ```JSON
 [

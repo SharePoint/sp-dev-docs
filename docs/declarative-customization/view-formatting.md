@@ -45,8 +45,8 @@ Creating custom view formatting JSON from scratch is simple if user understands 
 > You can start from a HTML using [**formatter helper tool**](https://pnp.github.io/List-Formatting/tools/), which can convert HTML and CSS into formatter JSON with inline styles.
 
 ## See also
-- [List layout customization](./view-list-formatting)
-- [Gallery layout customization](./view-gallery-formatting)
-- [Group customization syntax reference](./view-group-formatting)
-- [Advanced formatting concepts](./formatting-advanced)
-- [Formatting syntax reference](./formatting-syntax-reference)
+- [List layout customization](./view-list-formatting.md)
+- [Gallery layout customization](./view-gallery-formatting.md)
+- [Group customization syntax reference](./view-group-formatting.md)
+- [Advanced formatting concepts](./formatting-advanced.md)
+- [Formatting syntax reference](./formatting-syntax-reference.md)

@@ -757,6 +757,6 @@ Creating custom column formatting JSON from scratch is simple if user understand
 ## See also
 
 - [Column formatting](https://support.office.com/article/Column-formatting-1f927342-2bed-4745-b727-ff8b7ff96b22?ui=en-US&rs=en-US&ad=US)
-- [View formatting](./view-formatting)
-- [Advanced formatting concepts](./formatting-advanced)
-- [Formatting syntax reference](./formatting-syntax-reference)
+- [View formatting](./view-formatting.md)
+- [Advanced formatting concepts](./formatting-advanced.md)
+- [Formatting syntax reference](./formatting-syntax-reference.md)

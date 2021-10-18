@@ -434,7 +434,7 @@ In this example the `footerFormatter` is set to format the list footer and the `
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Formatting detailed syntax reference](./formatting-syntax-reference). 
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Formatting detailed syntax reference](./formatting-syntax-reference.md). 
 
 > [!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -461,9 +461,9 @@ Optional element. Specifies whether the column headers in the view are hidden or
 
 ### groupProps
 
-Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](./view-group-formatting)
+Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](./view-group-formatting.md)
 
 ## See also
-- [Group customization syntax reference](./view-group-formatting)
-- [Advanced formatting concepts](./formatting-advanced)
-- [Formatting syntax reference](./formatting-syntax-reference)
+- [Group customization syntax reference](./view-group-formatting.md)
+- [Advanced formatting concepts](./formatting-advanced.md)
+- [Formatting syntax reference](./formatting-syntax-reference.md)

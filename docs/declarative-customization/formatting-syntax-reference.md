@@ -270,7 +270,7 @@ In the element with `forEach` or its children elements, the iterator variable ca
 
 `forEach` cannot be applied to the root element, and will render no element if there is no value in the field.
 
-See [here](./column-formatting#formatting-multi-value-fields) for examples.
+See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 
 ## customRowAction
 
@@ -307,7 +307,7 @@ See [here](./column-formatting#formatting-multi-value-fields) for examples.
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.
-- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see [Create a button to launch a Flow](./formatting-advanced#create-a-button-to-launch-a-flow). Below is an example of this type of button.
+- **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see [Create a button to launch a Flow](./formatting-advanced.md#create-a-button-to-launch-a-flow). Below is an example of this type of button.
 
 ```JSON
 {
@@ -625,7 +625,7 @@ Operators specify the type of operation to perform. The following operators are 
 
 `loopIndex`, when provided with a name of iterator variable, returns the current index (starting from 0) of the iterator. The name of iterator must be provided as a string literal. `loopIndex` would only work within the element with respective `forEach` enabled or its children elements.
 
-See [here](./column-formatting#formatting-multi-value-fields) for examples.
+See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 
 **String related operators** - Some of the previously detailed operators can be used when working with string values
 
