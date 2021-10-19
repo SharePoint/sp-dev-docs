@@ -434,7 +434,7 @@ In this example the `footerFormatter` is set to format the list footer and the `
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Formatting detailed syntax reference](./formatting-syntax-reference.md). 
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Formatting syntax reference](./formatting-syntax-reference.md). 
 
 > [!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.

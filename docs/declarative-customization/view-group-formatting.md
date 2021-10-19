@@ -1,11 +1,11 @@
 ---
-title: Group formatting detailed syntax reference	
-description: Group formatting detailed syntax reference	
+title: Group customization syntax reference	
+description: Group customization syntax reference	
 ms.date: 10/18/2021
 ms.localizationpriority: high
 ---
 
-# Group formatting detailed syntax reference
+# Group customization syntax reference	
 
 ## groupProps
 
@@ -13,11 +13,11 @@ Groups the group related customization options. Valid in 'List', 'Compact List' 
 
 ## headerFormatter
 
-JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Formatting detailed syntax reference](./formatting-syntax-reference.md). Valid in 'List', 'Compact List' and 'Gallery' layouts.
+JSON object that defines the format for group header. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see the [Formatting syntax reference](./formatting-syntax-reference.md). Valid in 'List', 'Compact List' and 'Gallery' layouts.
 
 ## footerFormatter
 
-JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Formatting detailed syntax reference](./formatting-syntax-reference.md). Valid in 'List' and 'Compact List' layouts.
+JSON object that defines the format for group and list footer. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Formatting syntax reference](./formatting-syntax-reference.md). Valid in 'List' and 'Compact List' layouts.
 
 ## hideFooter
 

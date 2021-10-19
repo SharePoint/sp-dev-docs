@@ -350,7 +350,7 @@ Optional element. Defines the width of the card in pixels. Can go from height/2 
 
 ### formatter
 
-JSON object that defines the layout of cards. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Formatting detailed syntax reference](./formatting-syntax-reference.md).
+JSON object that defines the layout of cards. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Formatting syntax reference](./formatting-syntax-reference.md).
 
 ### groupProps
 

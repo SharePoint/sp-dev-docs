@@ -1,11 +1,11 @@
 ---
-title: Formatting detailed syntax reference
-description: Formatting detailed syntax reference
+title: Formatting syntax reference
+description: Formatting syntax reference
 ms.date: 10/18/2021
 ms.localizationpriority: high
 ---
 
-# Formatting detailed syntax reference
+# Formatting syntax reference
 
 ## elmType
 
