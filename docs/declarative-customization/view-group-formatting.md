@@ -59,7 +59,6 @@ You can also access sub properties for fields with rich data, e.g. People field,
   "columnDisplayName": "Author",
   "count": 5
 }
-
 ```
 
 ### "@columnAggregate"
