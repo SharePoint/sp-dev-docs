@@ -76,7 +76,6 @@ You can use formatting to define custom call out that can be commissioned basis 
 This example uses customCardProps, openOnEvent, directionalHint and isBeakVisible
 
 ```JSON
-
 {
     "elmType": "div",
     "style": {
@@ -97,6 +96,7 @@ This example uses customCardProps, openOnEvent, directionalHint and isBeakVisibl
     }
 }
 ```
+
 ## Default cards on hover
 
 Users can now have profile card or file hover card on formatters too, some of the things users can now do -
@@ -115,7 +115,6 @@ Hover on a person column with formatting with default Profile card
 Both the example uses defaultHoverField 
 
 ```JSON
-
 {
     "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "div",
@@ -145,16 +144,17 @@ Both the example uses defaultHoverField
     ],
     "defaultHoverField": "[$Editor]"
 }
-
 ```
+
 ## Column formatter reference
 
 Users can refer to a column's formatter JSON inside another column/view formatter and use it along with other elements to build a custom column visualization. This can be done by using `columnFormatterReference` property.
 
 The following image shows a list with a Gallery layout referencing the Category column formatter:
-<img src="../images/sp-columnformatting-formatter-reference-1.png" alt="Gallery layout referring Category column"/>
 
-<img src="../images/sp-columnformatting-formatter-reference-2.png" alt="List layout with Category column formatted"/>
+![Gallery layout referring Category column](../images/sp-columnformatting-formatter-reference-1.png)
+
+![List layout with Category column formatted](../images/sp-columnformatting-formatter-reference-2.png)
 
 ``` JSON
 {
