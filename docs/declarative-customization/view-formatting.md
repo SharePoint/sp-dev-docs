@@ -23,9 +23,7 @@ To open the view formatting pane, open the view dropdown and choose **Format cur
 
 The pane will look like the following depending on the current layout:
 
-![List layout formatting pane](../images/sp-viewformatting-panel-listlayout.png)
-
-![Gallery layout formatting pane](../images/sp-viewformatting-panel-tileslayout.png)
+![List layout formatting pane](../images/sp-viewformatting-panel-listlayout.png)  ![Gallery layout formatting pane](../images/sp-viewformatting-panel-tileslayout.png)
 
 > [!NOTE]
 > We have simplified the View formatting pane experience to separate out the List and Gallery layout formatting JSON. With this change, you do not need to add `tileProps` prop anymore.
