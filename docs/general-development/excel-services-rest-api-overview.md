@@ -12,7 +12,7 @@ ms.localizationpriority: high
 The REST API in Excel Services is new in Microsoft SharePoint Server 2010. By using the REST API, you can access workbook parts or elements directly through a URL.
   
 > [!NOTE]
-> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For For Office 365 Education, Business, and Enterprise accounts,, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/docs/api-reference/v1.0/resources/excel) endpoint.
+> The Excel Services REST API for SharePoint Online will no longer be supported for Microsoft 365 accounts from February 28th, 2022 forward. Instead, please use the REST API that’s part of the  [Microsoft Graph](http://graph.microsoft.io/docs/api-reference/v1.0/resources/excel) endpoint.
   
     
     

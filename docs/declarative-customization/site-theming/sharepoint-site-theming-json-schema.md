@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - JSON schema
 description: The new SharePoint site theming features use a JSON schema to store color settings and other information about each theme.
-ms.date: 05/09/2020
+ms.date: 10/02/2021
 ms.localizationpriority: high
 ---
 
@@ -149,7 +149,7 @@ The following table shows the color palette used by the Teal theme.
 </tr>
 </table>
 
-The following code shows how to define a dictionary in PowerShell for the Red theme's color palette.
+The following code shows how to define a dictionary in PowerShell for the Teal theme's color palette.
 
 ```powershell
 { 
@@ -351,45 +351,45 @@ The following table shows the color palette used by the Green theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#094c23">themeDarker: #094c23</td>
+<td style="color:white; background-color:#094c23">themeDarker: #294903</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#0c602c">themeDark: #0c602c</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+<td style="color:white; background-color:#0c602c">themeDark: #386304</td>
+<td style="color:white; background-color:#212121">neutralDark: #201f1e</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#0f7c39">themeDarkAlt: #0f7c39</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td style="color:white; background-color:#0f7c39">themeDarkAlt: #427505</td>
+<td style="color:white; background-color:#333">neutralPrimary: #323130</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#10893e">themePrimary: #10893e</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#10893e">themePrimary: #498205</td>
+<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3b3a39</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+<td style="color:white; background-color:#666666">neutralSecondary: #605e5c</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a19f9d</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#14a94e">themeSecondary: #14a94e</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td style="color:white; background-color:#14a94e">themeSecondary: #5a9117</td>
+<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c6c4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#7aefa7">themeTertiary: #7aefa7</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+<td style="color:black; background-color:#7aefa7">themeTertiary: #85b44c</td>
+<td style="color:black; background-color:#eaeaea">neutralLight: #edebe9</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#bff7d5">themeLight: #bff7d5</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
+<td style="color:black; background-color:#bff7d5">themeLight: #bdda9b</td>
+<td style="color:black; background-color:#f4f4f4">neutralLighter: #f3f2f1</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#dffbea">themeLighter: #dffbea</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+<td style="color:black; background-color:#dffbea">themeLighter: #dbebc7</td>
+<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #faf9f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#effdf4">themeLighterAlt: #effdf4</td>
+<td style="color:black; background-color:#effdf4">themeLighterAlt: #f6faf0</td>
 <td style="color:black; background-color:#fff">white: #fff</td>
 </tr>
 </table>
@@ -398,32 +398,32 @@ The following code shows how to define a dictionary in PowerShell for the Green 
 
 ```powershell
 { 
-    themePrimary: '#10893e', 
-    themeLighterAlt: '#effdf4', 
-    themeLighter: '#dffbea', 
-    themeLight: '#bff7d5', 
-    themeTertiary: '#7aefa7', 
-    themeSecondary: '#14a94e', 
-    themeDarkAlt: '#0f7c39', 
-    themeDark: '#0c602c', 
-    themeDarker: '#094c23', 
-    neutralLighterAlt: '#f8f8f8', 
-    neutralLighter: '#f4f4f4', 
-    neutralLight: '#eaeaea', 
-    neutralQuaternaryAlt: '#dadada', 
-    neutralQuaternary: '#d0d0d0', 
-    neutralTertiaryAlt: '#c8c8c8', 
-    neutralTertiary: '#a6a6a6', 
-    neutralSecondaryAlt: '#767676', 
-    neutralSecondary: '#666666', 
-    neutralPrimary: '#333', 
-    neutralPrimaryAlt: '#3c3c3c', 
-    neutralDark: '#212121', 
+    themePrimary: '#498205', 
+    themeLighterAlt: '#f6faf0', 
+    themeLighter: '#dbebc7', 
+    themeLight: '#bdda9b', 
+    themeTertiary: '#85b44c', 
+    themeSecondary: '#5a9117', 
+    themeDarkAlt: '#427505', 
+    themeDark: '#386304', 
+    themeDarker: '#294903', 
+    neutralLighterAlt: '#faf9f8', 
+    neutralLighter: '#f3f2f1', 
+    neutralLight: '#edebe9', 
+    neutralQuaternaryAlt: '#e1dfdd', 
+    neutralQuaternary: '#d2d0ce', 
+    neutralTertiaryAlt: '#c8c6c4', 
+    neutralTertiary: '#a19f9d', 
+    neutralSecondaryAlt: '#8a8886', 
+    neutralSecondary: '#605e5c', 
+    neutralPrimary: '#323130', 
+    neutralPrimaryAlt: '#3b3a39', 
+    neutralDark: '#201f1e', 
     black: '#000000', 
     white: '#fff', 
     primaryBackground: '#fff', 
     primaryText: '#333',
-    accent: '#038387'
+    accent: '#03787c'
 }
 ```
 
