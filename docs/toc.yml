@@ -515,7 +515,7 @@
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
   - name: Design Guidance
-    href: spfx/viva/design/design-card.md    
+    href: spfx/viva/design/designing-card.md    
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
