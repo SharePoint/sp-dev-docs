@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 08/19/2020
+ms.date: 10/11/2021
 ms.localizationpriority: high
 ms.prod: sharepoint
 ---
@@ -35,18 +35,16 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     cd graph-apis
     ```
 
-1. Create a new solution by running the Yeoman SharePoint Framework Generator:
+1. Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
 
     ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
+    The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    - **What is your solution name?**: graph-apis
     - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
     - **Which type of client-side component to create?**: WebPart
-    - **What is your Web part name?**: MyFirstGraphWebPart
     - **Which framework would you like to use?**: No JavaScript framework
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyFirstGraphWebPart** web part as well.
@@ -199,7 +197,7 @@ Now the web part is deployed and is automatically available cross the SharePoint
 
 ## Approve the requested Microsoft Graph permissions
 
-1. Move to the SharePoint tenant administrative UIs located at **https://<tenant>-admin.sharepoint.com**.
+1. Move to the SharePoint tenant administrative UIs located at **https://{{tenant}}-admin.sharepoint.com**.
 1. Move to **Advanced > API management** in the left menu option to see the currently pending permission requests. Notice that the request for **Mail.Read** permission for Microsoft Graph is pending for approval.
 
     ![API management](../../../images/graph-helloworld-api-admin.png)
@@ -227,11 +225,11 @@ At this point, the requested permissions needed for the web part have been appro
 
 1. Choose **MyFirstGraphWebPart** from the list and notice how the web part renders the latest five emails from the current user using information from the Microsoft Graph API
 
-    ![web part picker](../../../images/graph-helloworld-webpart-on-page.png)
+    ![Rendered web part](../../../images/graph-helloworld-webpart-on-page.png)
 
 ## See also
 
-- [Use the MSGraphClient to connect to Microsoft Graph](https://docs.microsoft.com/sharepoint/dev/spfx/use-msgraph)
-- [Consume the Microsoft Graph in the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/use-aad-tutorial)
+- [Use the MSGraphClient to connect to Microsoft Graph](/sharepoint/dev/spfx/use-msgraph)
+- [Consume the Microsoft Graph in the SharePoint Framework](/sharepoint/dev/spfx/use-aad-tutorial)
 - [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 - [Get started with Microsoft Graph and JavaScript](https://developer.microsoft.com/graph/get-started/javascript)

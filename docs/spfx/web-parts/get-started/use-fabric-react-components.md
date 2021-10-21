@@ -1,7 +1,7 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
 description: Build a web part that uses the DocumentCard component of Office UI Fabric React.
-ms.date: 06/22/2020
+ms.date: 10/11/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -50,22 +50,16 @@ This page will continue to refer to the Office UI Fabric packages until Microsof
     cd documentcardexample-webpart
     ```
 
-1. Make sure you have the latest version of **\@microsoft/generator-sharepoint** installed and create a new web part by running the Yeoman SharePoint generator:
+1. Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
 
     ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
+    The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    - **What is your solution name?**: documentcardexample-webpart
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
-    - **Where do you want to place the files?**: Use the current folder
     - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
-    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?**: No
     - **Which type of client-side component to create?**: Web Part
-    - **What is your Web part name?**: DocumentCardExample
-    - **What is your Web part description?**: DocumentCardExample description
     - **Which framework would you like to use?**: React
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files.
@@ -210,14 +204,15 @@ Copy the following images to your **src\webparts\documentCardExample\components*
 > [!NOTE]
 > In the code, we were referencing these images using relative path from the root location. As your reference the images in the code, it will cause them to be included in the **\*.sppkg** solution package as long as you have the `includeClientSideAssets` set as `true` in the **package-solution.json** file.
 
-## Preview the web part in workbench
+## Preview the web part in the hosted workbench
 
-1. In the console, enter the following to preview your web part in workbench:
+1. In the console, enter the following to preview your web part in the SharePoint hosted workbench:
 
     ```console
-    gulp serve
+    gulp serve --nobrowser
     ```
 
+1. Open a browser and navigate to your SharePoint site's hosted workbench: `https://enter-your-SharePoint-site/_layouts/workbench.aspx`.
 1. In the toolbox, select your `DocumentCardExample` web part to add:
 
     ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)

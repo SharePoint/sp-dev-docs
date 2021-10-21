@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 06/29/2021
+ms.date: 10/11/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -40,10 +40,10 @@ This version is the currently recommended version of Node.js to use with the Sha
 You can check if you already have Node.js already installed, including installed version, by running the following command:
 
 ```console
-node -v
+node --version
 ```
 
-The SharePoint Framework v1.12.1 is supported on the following Node.js versions:
+The SharePoint Framework v1.13.0 is supported on the following Node.js versions:
 
 - Node.js v10.13.0+ (*Dubnium*)
 - Node.js v12.13.0+ (*Erbium*)
@@ -70,21 +70,18 @@ The SharePoint Framework development and build toolchain leverages various popul
 > You can install all three of the following tools in a single line:
 >
 > ```console
-> npm install gulp yo @microsoft/generator-sharepoint --global
+> npm install gulp-cli yo @microsoft/generator-sharepoint --global
 > ```
 
 ### Install Gulp
 
 [Gulp](https://gulpjs.com) is a JavaScript-based task runner used to automate repetitive tasks. The SharePoint Framework build toolchain uses Gulp tasks to build projects, create JavaScript bundles, and the resulting packages used to deploy solutions.
 
-Enter the following command to install Gulp:
+Enter the following command to install the Gulp CLI:
 
 ```console
-npm install gulp --global
+npm install gulp-cli --global
 ```
-
-> [!IMPORTANT]
-> If you're using Node.js v12+ or higher, you must use Gulp v4+. If you're using a version of Node.js lower than v12, you must use Gulp v3. For more information, see: [SharePoint Framework v1.12.1 release notes | Gulp versions & Node.js v12+](release-1.12.1.md#gulp-versions--nodejs-v12)
 
 ### Install Yeoman
 
@@ -110,7 +107,7 @@ For more information about the Yeoman SharePoint generator, see [Scaffold projec
 
 ## Install a modern web browser
 
-You should be using a modern web browser like [Microsoft Edge](https://www.microsoft.com/edge), [Google Chrome](https://www.google.com/chrome/), or [Firefox](https://www.mozilla.org/firefox/new/) as the development browser. Local workbench doesn't support usage of Internet Explorer 11.
+You should be using a modern web browser like [Microsoft Edge](https://www.microsoft.com/edge), [Google Chrome](https://www.google.com/chrome/), or [Firefox](https://www.mozilla.org/firefox/new/) as the development browser.
 
 ## Trusting the self-signed developer certificate
 
@@ -150,14 +147,14 @@ SharePoint Online contains all versions of the SPFx, including all previous and 
 
 If you're building solutions for a SharePoint Server on-prem deployment, review to the [See also](#see-also) section for details on specific SharePoint versions. Each SharePoint on-prem only supports a specific version of SPFx. This can introduce complicated development environment configurations if you're creating different solutions for different SharePoint deployments.
 
+- **SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1.**
+- **SharePoint Server 2019 uses the SharePoint Framework (SPFx) v1.4.1.**
+
 Depending on your scenario, you may need to maintain different development environments. Developers have used the following approaches to address these challenges:
 
 - virtual machines
 - Docker
 - Node Version Manager (NVM)
-
-- **SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1.**
-- **SharePoint Server 2019 uses the SharePoint Framework (SPFx) v1.4.1.**
 
 ## Troubleshooting
 
@@ -173,7 +170,7 @@ npm list --global --depth=0️
 
 If you're having trouble trusting your self-signed certificate when you run **gulp trust-dev-cert** & you've verified that the correct versions of all dependencies are installed, one solution we usually see resolve the issue is to uninstall all globally installed packages, uninstall Node.js, reboot & start again.
 
-In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder. Locate & delete the folder **<homedir>/.gcb-serve-data** and then try to trust the self-signed development certificate again.
+In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder. Locate & delete the folder **{{homedir}}/.gcb-serve-data** and then try to trust the self-signed development certificate again.
 
 ### Unable to Install Packages with NPM - Corporate Proxies
 
