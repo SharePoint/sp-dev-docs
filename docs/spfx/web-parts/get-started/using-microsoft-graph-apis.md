@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 10/11/2021
+ms.date: 10/21/2021
 ms.localizationpriority: high
 ms.prod: sharepoint
 ---

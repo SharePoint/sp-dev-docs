@@ -10,8 +10,7 @@ ms.localizationpriority: high
 This release introduces a new component type, Adaptive Card Extensions (ACE), that can be used to extend Viva Connections.
 
 
-**Released:** October 18, 2021
-
+- **Released:** October 21, 2021
 - rc.1 **Released:** October 13, 2021
 - beta.22 **Released:** September 30, 2021
 - beta.20 **Released:** September 11, 2021
