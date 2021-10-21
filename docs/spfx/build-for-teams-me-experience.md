@@ -6,7 +6,7 @@ ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 
-# Build a Me-experience in Microsoft Teams
+# Build a Me-experience in Microsoft Teams 
 
 Microsoft Teams is the hub for collaboration. It's where you meet your colleagues, where you exchange ideas and where you work together on files. It's where you can open your organization's applications without leaving the context of your work. It's also where you meet your business partners.
 
