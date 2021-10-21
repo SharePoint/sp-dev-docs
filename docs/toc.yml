@@ -79,8 +79,20 @@
     items:
     - name: Column formatting
       href: declarative-customization/column-formatting.md
+    - name: Advanced formatting concepts
+      href: declarative-customization/formatting-advanced.md  
+    - name: Formatting syntax reference
+      href: declarative-customization/formatting-syntax-reference.md  
     - name: View formatting
-      href: declarative-customization/view-formatting.md
+      items:
+      - name: Overview
+        href: declarative-customization/view-formatting.md
+      - name: List layout customization
+        href: declarative-customization/view-list-formatting.md
+      - name: Gallery layout customization
+        href: declarative-customization/view-gallery-formatting.md
+      - name: Group customization syntax reference
+        href: declarative-customization/view-group-formatting.md
     - name: Forms configuration
       items:
       - name: Show or hide columns in a form
