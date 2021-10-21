@@ -454,7 +454,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.13 (beta) - July 26, 2021
+    - name: SPFx v1.13 - October 21, 2021
       href: spfx/release-1.13.md      
     - name: SPFx v1.12.1 - April 28, 2021
       href: spfx/release-1.12.1.md
