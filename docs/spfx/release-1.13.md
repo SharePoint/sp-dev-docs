@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.13 release notes
 description: Release notes for the SharePoint Framework v1.13 release
-ms.date: 10/21/2021
+ms.date: 10/25/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -9,13 +9,7 @@ ms.localizationpriority: high
 
 This release introduces a new component type, Adaptive Card Extensions (ACE), that can be used to extend Viva Connections.
 
-
-- **Released:** October 21, 2021
-- rc.1 **Released:** October 13, 2021
-- beta.22 **Released:** September 30, 2021
-- beta.20 **Released:** September 11, 2021
-- beta.17 **Released:** August 22, 2021
-- beta.15 **Released:** July 22, 2021
+**Released:** October 21, 2021
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
