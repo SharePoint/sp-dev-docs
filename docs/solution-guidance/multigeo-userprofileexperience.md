@@ -64,7 +64,7 @@ public string GetUserPersonalSiteHostUrlCSOM(string userPrincipalName)
 
 When you have the personal site host URL, you can use that along with the [Multi-Geo discovery](multigeo-discovery.md) information to get the tenant admin site URL for the geo location that hosts the user's profile.
 
-To learn more, see the [MultiGeo.UserProfileUpdates](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.UserProfileUpdates) sample.
+To learn more, see the [MultiGeo.UserProfileUpdates](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.UserProfileUpdates) sample.
 
 ### Use Microsoft Graph to detect user's personal site URL
 
