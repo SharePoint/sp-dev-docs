@@ -515,7 +515,7 @@
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
   - name: Design Guidance
-    href: spfx/viva/design/designing-card.md    
+    href: spfx/viva/design/designing-card.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
@@ -526,6 +526,8 @@
       href: spfx/viva/get-started/advanced-quick-view-functionality.md
     - name: Adaptive Card Extensions and Teams Apps
       href: spfx/viva/get-started/adaptive-card-extensions-and-teams.md
+  - name: Known issues
+    href: spfx/viva/known-issues-adaptive-cards.md
 - name: Business Apps & Process Automation
   items:
   - name: Overview
