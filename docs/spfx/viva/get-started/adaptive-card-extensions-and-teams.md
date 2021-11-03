@@ -9,8 +9,6 @@ ms.localizationpriority: high
 
 This tutorial builds off the following tutorial: [Advanced Quick View Functionality](advanced-quick-view-functionality.md).
 
-[!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
-
 Adaptive Card Extensions can be used as supplemental pieces to a larger Teams App story. An ACE on the Viva Connections Dashboard can link directly to a Teams Personal Tab or Bot.
 
 In this tutorial, you'll use an ACE within a Microsoft Teams app.
