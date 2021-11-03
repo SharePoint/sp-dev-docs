@@ -212,7 +212,7 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
       "configurations": [
         {
           "name": "Local workbench",
-          "type": "edge",
+          "type": "msedge",
           "request": "launch",
           "url": "https://localhost:4321/temp/workbench.html",
           "webRoot": "${workspaceRoot}",
@@ -270,7 +270,7 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
       "configurations": [
         {
           "name": "Local workbench",
-          "type": "edge",
+          "type": "msedge",
           "request": "launch",
           "url": "https://localhost:4321/temp/workbench.html",
           "webRoot": "${workspaceRoot}",
@@ -284,7 +284,7 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
         },
         {
           "name": "Hosted workbench",
-          "type": "edge",
+          "type": "msedge",
           "request": "launch",
           "url": "https://contoso.sharepoint.com/_layouts/workbench.aspx",
           "webRoot": "${workspaceRoot}",
