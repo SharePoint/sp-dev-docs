@@ -1,7 +1,7 @@
 ---
 title: Query SharePoint change log with ChangeQuery and ChangeToken
-description: You can query the SharePoint change log by using ChangeQuery to find and process changes made on a SharePoint content database, site collection, site, or list. Leanr how to use SharePoint's change log to find & process changes in SharePoint lists.
-ms.date: 04/20/2021
+description: You can query the SharePoint change log by using ChangeQuery to find and process changes made on a SharePoint content database, site collection, site, or list. Learn how to use SharePoint's change log to find & process changes in SharePoint lists.
+ms.date: 11/02/2021
 ms.localizationpriority: high
 ---
 # Query SharePoint change log with ChangeQuery and ChangeToken
