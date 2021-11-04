@@ -1,6 +1,6 @@
 ---
 title: Manage list item and file permissions with Power Automate
-ms.date: 07/16/2020
+ms.date: 11/02/2021
 search.app: 
   - Flow
 search.appverid: met150
@@ -34,7 +34,7 @@ Depending on the user, you may want to grant them either access to edit or read.
 
 ![Choose the right role to grant access to an item or a file](../../../images/grant-access-item-file-roles-flow.png)
 
-The permission roles map to [simplified standard SharePoint permission groups](https://docs.microsoft.com/sharepoint/modern-experience-sharing-permissions):
+The permission roles map to [simplified standard SharePoint permission groups](/sharepoint/modern-experience-sharing-permissions):
 - Members
 - Owners 
 
@@ -61,9 +61,9 @@ You can find the role Id in the *category* property of an role item.
 ![SharePoint site role definitions](../../../images/sp-web-roledefinitions.png)
 
 ## Grant access using sharing links
-Instead of granting users access to files directly, you can provide access to a specific file using [shareable links](https://docs.microsoft.com/sharepoint/modern-experience-sharing-permissions#sharable-links). 
+Instead of granting users access to files directly, you can provide access to a specific file using [shareable links](/sharepoint/modern-experience-sharing-permissions#sharable-links). 
 
-You can use the '[Create sharing link for a file or folder](https://docs.microsoft.com/sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers#create-sharing-link-for-a-file-or-folder)' action to create shareable links for a given file. 
+You can use the '[Create sharing link for a file or folder](/sharepoint/dev/business-apps/power-automate/sharepoint-connector-actions-triggers#create-sharing-link-for-a-file-or-folder)' action to create shareable links for a given file. 
 
 > [!NOTE]
 > 'Create sharing link for a file or folder' only supports files or folders in a document library. List items are not supported yet.
@@ -84,4 +84,4 @@ The 'Stop sharing an item or a file' action requires the following inputs:
 
 ![Stop sharing an item or a file flow action](../../../images/stop-sharing-item-action-flow.png)
 
-Applying this flow action will reset all permissions except on that item or the file except for site owners. 
+Applying this flow action will remove all permissions on that item or file except for site owners. 
