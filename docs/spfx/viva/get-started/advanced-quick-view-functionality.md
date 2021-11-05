@@ -49,11 +49,11 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
             "type": "Action.Submit",
             "data": {
               "id": "selectAction",
-              "newIndex": "${index}",
+              "newIndex": "${index}"
             }
           },
           "separator": true,
-          "items": [ // The template for an item in `items`
+          "items": [
             {
               "type": "TextBlock",
               "text": "${title}",
