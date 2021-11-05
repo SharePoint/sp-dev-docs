@@ -78,6 +78,22 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
       ]
     }
     ```
+1. As you can see in the JSON template, we use the ${index} to pass the selected item index to the QuickView. To allow this to works, we must add and populate _index_ property of  the _IListItem_ object defined in the previous tutorial. Open and locate the file **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**, than add the property _index_ to the _IListItem_ definition:
+```typescript
+export interface IListItem {
+  title: string;
+  description: string;
+  index: number;
+}
+```
+1. Finally locate the _\_fetchData_ method in the same class and modify the map function inside it, to: 
+```typescript
+...
+.then((jsonResponse) => jsonResponse.value.map(
+    (item, index) => { return { title: item.Title, description: item.Description, index: index }; })
+)
+...
+```
 
 Build and launch the ACE in the hosted workbench:
 
