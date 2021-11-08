@@ -45,7 +45,6 @@ node --version
 
 The SharePoint Framework v1.13.0 is supported on the following Node.js versions:
 
-- Node.js v10.13.0+ (*Dubnium*)
 - Node.js v12.13.0+ (*Erbium*)
 - Node.js v14.15.0+ (*Fermium*)
 
