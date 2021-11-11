@@ -1,7 +1,7 @@
 ---
 title: Advanced formatting concepts
 description: Advanced formatting concepts
-ms.date: 10/18/2021
+ms.date: 11/12/2021
 ms.localizationpriority: high
 ---
 # Advanced formatting concepts
@@ -321,26 +321,26 @@ The below JSON will set value of `FieldInternalName_1`, `FieldInternalName_2` an
   - Text values:
     - a valid string like `"Choice 1"`
     - value from other columns : `[$ColumnName]`
-    - an [expression](./formatting-syntax-reference#expressions) like <br>
+    - an [expression](./formatting-syntax-reference.md#expressions) like <br>
     `"if([$column]> 10, "Choice A", "Choice B")"` <br>
     or
     `{operator: "+", operands" : ["Choice", "A"]}`
   - Number:
     - a valid number
     - value from other columns : `[$ColumnName]`
-    - an [expression](./formatting-syntax-reference#expressions)
+    - an [expression](./formatting-syntax-reference.md#expressions)
   - Date values :
     - a date string
     - `@now` token
-    - [expressions](./formatting-syntax-reference#expressions) which return a date using builtin date functions
-    - `addDays` and `addMinutes`, two new functions to support [expressions](./formatting-syntax-reference#expressions) like 7 days from today
+    - [expressions](./formatting-syntax-reference.md#expressions) which return a date using builtin date functions
+    - `addDays` and `addMinutes`, two new functions to support [expressions](./formatting-syntax-reference.md#expressions) like 7 days from today
   - Multi-Choice and Multi-Person:
     Multi value fields are special, as they need an array value to save multiple values.
     - `appendTo` and `removeFrom`, two new functions which operate on multivalue fields.
         - `appendTo([$MultiChoiceField], 'MyValue')`
   - Person field values:
     - User Name or Email
-    - an [expression](./formatting-syntax-reference#expressions) which returns these values
+    - an [expression](./formatting-syntax-reference.md#expressions) which returns these values
     > [!NOTE]
     > A query runs with the string value provided on people column and the first person in the returned results is used
 
