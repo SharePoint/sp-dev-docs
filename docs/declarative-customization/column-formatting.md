@@ -705,6 +705,7 @@ The following column types support column formatting:
 * Managed Metadata
 * Average Rating
 * Likes
+* Approval Status
 
 The following are currently **not** supported:
 
