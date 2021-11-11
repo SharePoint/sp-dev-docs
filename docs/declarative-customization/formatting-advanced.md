@@ -242,3 +242,105 @@ The following image shows a list with a Gallery layout referencing the Category 
   }
 }
 ```
+## Inline Editing
+
+With inline editing, formatters have the ability to load field editors to edit field data on an item. 
+Users need to have edit permissions on the list item and the field type should belong to set of supported types for this feature to work.
+
+A special json property `inlineEditField` is used with value as the field internal name __`[$FieldName]`__ at the target element in the json.
+
+```json
+{
+  "elmType": "div",
+  "inlineEditField": "[$FieldName]",
+  "txtContent": "[$FieldName]"
+}
+```
+
+<img src="../images/sp-columnformatting-inline-editing.gif" alt="Inline Editing using inlineEditField property"/>
+
+This allows the users to edit items in-place, within the view, without navigating away to grid based editing or to a item edit form.
+
+### Supported Field Types
+List of supported field types for inline editing
+- Single line text
+- Multi line text (without RTF)
+- Number
+- DateTime
+- Choice and MultiChoice
+- User and Multi user
+- Lookup
+
+### Hover Borders and Customizations
+The inline editing adds a hover border on the elements to indicate these elements have an associated action. The default border is `neutralSecondary` , and on click, the editor appears with a `themePrimary` border. These border colors can be overriden via setting style on the same element with `inlineEditField` by using some special attributes - `--inline-editor-border-width`, `--inline-editor-border-style`, `--inline-editor-border-radius` and `--inline-editor-border-color`.
+
+```json
+{
+  "elmType": "div",
+  "inlineEditField": "[$FieldName]",
+  "txtContent": "[$FieldName]",
+  "style": {
+    "--inline-editor-border-color": "transparent transparent red transparent",
+    "border-color": "gray",
+    "border-width": "1px",
+    "border-style": "solid"
+  }
+}
+```
+
+## Set multiple field values of an Item using customRowAction
+
+With the new `setValue` `customRowAction`, formatters can render action buttons which modify the item internally without opening editors or forms. `setValue` also allows setting multiple field values of the item at once.
+
+The below JSON will set value of `FieldInternalName_1`, `FieldInternalName_2` and `FieldInternalName_3`with the values provided.
+
+```json
+{
+  "elmType": "div",
+  "txtContent": "[$FieldName]",
+  "customRowAction":{
+    "action": "setValue",
+    "actionInput": {
+      "FieldInternalName_1": "FieldValue_1",
+      "FieldInternalName_2": "FieldValue_2",
+      "FieldInternalName_3": "=if([$Status] == 'Completed', 'yes', 'no')"
+    }
+  }
+}
+```
+
+### Supported Field Types
+- Single line text
+- Multi line text (without RTF)
+- Number
+- DateTime
+- Choice and MultiChoice
+- User and Multi user
+
+### Value Field values in `actionInput` :
+  - Text values:
+    - a valid string like `"Choice 1"`
+    - value from other columns : `[$ColumnName]`
+    - an [expression](./formatting-syntax-reference#expressions) like <br>
+    `"if([$column]> 10, "Choice A", "Choice B")"` <br>
+    or
+    `{operator: "+", operands" : ["Choice", "A"]}`
+  - Number:
+    - a valid number
+    - value from other columns : `[$ColumnName]`
+    - an [expression](./formatting-syntax-reference#expressions)
+  - Date values :
+    - a date string
+    - `@now` token
+    - [expressions](./formatting-syntax-reference#expressions) which return a date using builtin date functions
+    - `addDays` and `addMinutes`, two new functions to support [expressions](./formatting-syntax-reference#expressions) like 7 days from today
+  - Multi-Choice and Multi-Person:
+    Multi value fields are special, as they need an array value to save multiple values.
+    - `appendTo` and `removeFrom`, two new functions which operate on multivalue fields.
+        - `appendTo([$MultiChoiceField], 'MyValue')`
+  - Person field values:
+    - User Name or Email
+    - an [expression](./formatting-syntax-reference#expressions) which returns these values
+    > [!NOTE]
+    > A query runs with the string value provided on people column and the first person in the returned results is used
+
