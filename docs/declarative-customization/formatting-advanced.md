@@ -256,8 +256,9 @@ A special json property `inlineEditField` is used with value as the field intern
   "txtContent": "[$FieldName]"
 }
 ```
+<br />
 
-<img src="../images/sp-columnformatting-inline-editing.gif" alt="Inline Editing using inlineEditField property"/>
+![Inline Editing using inlineEditField property](../images/sp-columnformatting-inline-editing.gif)
 
 This allows the users to edit items in-place, within the view, without navigating away to grid based editing or to a item edit form.
 
