@@ -1,7 +1,7 @@
 ---
 title: Advanced formatting concepts
 description: Advanced formatting concepts
-ms.date: 10/18/2021
+ms.date: 11/16/2021
 ms.localizationpriority: high
 ---
 # Advanced formatting concepts
@@ -14,14 +14,14 @@ The following screenshot shows a list with a Flow button added to the Action col
 
 ![screenshot of the sample](../images/sp-columnformatting-flow.png)
 
-You can use column formatting to create buttons that, when selected, run Flows on the corresponding list item.  For flows that are [solution-aware](https://docs.microsoft.com/power-automate/overview-solution-flows), the Flow Launch Panel will be displayed after choosing the button and you must select Run Flow to start the flow. For flows that are not solution-aware, The Flow Launch Panel will be displayed after choosing the button and the Flow will just run.
+You can use column formatting to create buttons that, when selected, run Flows on the corresponding list item.  For flows that are [solution-aware](/power-automate/overview-solution-flows), the Flow Launch Panel will be displayed after choosing the button and you must select Run Flow to start the flow. For flows that are not solution-aware, The Flow Launch Panel will be displayed after choosing the button and the Flow will just run.
 
 To use the sample below, you must substitute the ID of the Flow you want to run.  This ID is contained within the `actionParams` property of the `customRowAction` attribute inside the `button` element.
 
 To obtain the ID of a flow that is solution-aware:
 
 1. Choose Flow > See your flows in the SharePoint list where the Flow is configured.
-2. If applicable, [switch to the environment](https://docs.microsoft.com/power-platform/admin/working-with-environments#switch-the-environment) in which the Flow is hosted.
+2. If applicable, [switch to the environment](/power-platform/admin/working-with-environments#switch-the-environment) in which the Flow is hosted.
 3. Choose the Solutions area.
 4. Choose the solution in which the Flow was created.
 5. Filter for Cloud flows and select the Flow you want to run.
