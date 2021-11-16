@@ -410,6 +410,44 @@ Select the **Next** button until you get to the last item in the list. The card 
 
 :::image type="content" source="../../../images/viva-extensibility/lab2-ace-6.png" alt-text="Card displaying the last item in the list with only a Previous button":::
 
+## Caching Card view and ACE state
+Starting in the upcoming 1.14.0.beta.1 release, ACEs have a client-side caching layer that can be configured to store:
+
+1. The latest rendered card.
+2. The state of the ACE.
+
+### Rendering from cached Card view
+
+If the latest rendered card is stored, the Dashboard renders this cached card before the ACE is initialized, improving perceived performance.
+
+The settings for this cache can be configured by overriding the following method:
+
+  ```typescript
+  protected getCacheSettings(): Partial<ICacheSettings> {
+    return {
+      isEnabled: true, // can be set to false to disable caching
+      expiryTimeInSeconds: 86400, // controls how long until the cached card and state are stale
+      cachedCardView: () => new CardView() // function that returns the custom Card view that will be used to generate the cached card
+    };
+  }
+  ```
+  
+### Rehydrating from cached ACE state
+
+The subset of the ACE state that is cached can be configured by overriding the following method:
+
+  ```typescript
+  protected getCachedState(state: TState): Partial<TState>;
+  ```
+ 
+The object returned by this method will be serialized and cached. By default, no state is cached. In the next call to `onInit`, the deserialized value will be passed to onInit as part of the `ICachedLoadParameters`
+
+  ```typescript
+  public onInit(cachedLoadParameters?: ICachedLoadParameters): Promise<void>;
+  ```
+
+The value can then be used to rehydrate the state of the newly initialized ACE.
+
 ## Conclusion
 
 After this lab you should be familiar with:
@@ -419,3 +457,4 @@ After this lab you should be familiar with:
 - Creating and registering Card views
 - Conditionally rendering Card view elements
 - Advanced Card view manipulation
+- Caching Card view and ACE state
