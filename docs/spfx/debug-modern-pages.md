@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 10/21/2020
+ms.date: 11/16/2020
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -131,7 +131,7 @@ The `customActions` parameter has the following tokens that should be replaced:
 
 | Token              | Description                                                                                                                                                                             |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `<extensionId>`    | Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension `manifest.json` file. |
+| `<extensionId>`    | Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension **manifest.json** file. |
 | `<extensionType>`  | The type of custom action. Use `ClientSideExtension.ApplicationCustomizer` for the Application Customizer extension.                                                                    |
 | `<propertiesJSON>` | An optional JSON object that contains properties that are available via the `this.properties` member.                                                                                      |
 
@@ -313,7 +313,7 @@ You can then start your local server  by running:
 gulp serve --nobrowser
 ```
 
-Now you can go back to a SharePoint site where the solution has been deployed and add the web parts to any page, modern or classic, and the web part code will be loaded from your local development environment. You can debug your web parts just as you would if you ran `gulp serve` and added your web part to the workbench.
+Now you can go back to a SharePoint site where the solution has been deployed and add the web parts to any page, modern or classic, and the web part code will be loaded from your local development environment. You can debug your web parts just as you would if you ran **gulp serve** and added your web part to the workbench.
 
 This approach should only be used when you're in development mode. If you deploy an app to the app catalog that points to your local host, it will fail to run if your development environment isn't running.
 
