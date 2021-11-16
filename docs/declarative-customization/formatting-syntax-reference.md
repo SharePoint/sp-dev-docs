@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 10/18/2021
+ms.date: 11/11/2021
 ms.localizationpriority: high
 ---
 
@@ -863,6 +863,35 @@ The following example shows how an image field can be used on a current field.
 }
 ```
 
+**Approval Status fields**
+
+The Approval Status field object has the following property (with example value):
+
+```JSON
+{
+   "displayValue": "Approved",
+}
+```
+`displayValue` is localized string of the approval status.
+
+`@currentField` or `[$__ModerationStatus]` will resolve to the internal code - 
+- 0 : Approved
+- 1 : Denied
+- 2 : Pending
+- 3 : Draft
+- 4 : Scheduled
+
+The following example shows how a approval status field might be used on a current field.
+
+```JSON
+{
+   "elmType": "div",
+   "txtContent": "@currentField.displayValue",
+   "style": {
+      "color": "=if(@currentField == 2, 'red', '')"
+   }
+}
+```
 
 ### "[$FieldName]"
 
@@ -1003,6 +1032,7 @@ The following column types can use displayValue property to get the default rend
 * Number
 * Yes/No
 * Currency
+* Approval Status
 
 ```JSON
  {
