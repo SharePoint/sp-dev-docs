@@ -312,6 +312,21 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.
+- **setValue**:  Clicking the element will update the item with the field values provided.
+
+```JSON
+{
+  "elmType": "div",
+  "txtContent": "[$FieldName]",
+  "customRowAction":{
+    "action": "setValue",
+    "actionInput": {
+      "FieldInternalName_1": "FieldValue_1",
+      "FieldInternalName_2": "FieldValue_2",
+    }
+  }
+}
+```
 - **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see [Create a button to launch a Flow](./formatting-advanced.md#create-a-button-to-launch-a-flow). Below is an example of this type of button.
 
 ```JSON
@@ -330,22 +345,6 @@ The `actionParams` attribute can have the following options when using the `exec
 - **id**: ID of the Flow to launch _(required)_
 - **headerText**: Sets the text at the top of the flow panel _(optional)_
 - **runFlowButtonText**: Sets the text of the primary button in the flow panel _(optional)_
-
-- **setValue**:  Clicking the element will update the item with the field values provided.
-
-```JSON
-{
-  "elmType": "div",
-  "txtContent": "[$FieldName]",
-  "customRowAction":{
-    "action": "setValue",
-    "actionInput": {
-      "FieldInternalName_1": "FieldValue_1",
-      "FieldInternalName_2": "FieldValue_2",
-    }
-  }
-}
-```
 
 ## customCardProps
 
