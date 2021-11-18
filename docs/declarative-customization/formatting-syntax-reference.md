@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 11/11/2021
+ms.date: 11/16/2021
 ms.localizationpriority: high
 ---
 
@@ -180,6 +180,11 @@ An optional property that specifies style attributes to apply to the element spe
 
 'stroke'
 'fill-opacity'
+
+'--inline-editor-border-width'
+'--inline-editor-border-style'
+'--inline-editor-border-radius'
+'--inline-editor-border-color'
 ```
 
 The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section. 
@@ -307,6 +312,21 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.
+- **setValue**:  Clicking the element will update the item with the field values provided.
+
+```JSON
+{
+  "elmType": "div",
+  "txtContent": "[$FieldName]",
+  "customRowAction":{
+    "action": "setValue",
+    "actionInput": {
+      "FieldInternalName_1": "FieldValue_1",
+      "FieldInternalName_2": "FieldValue_2",
+    }
+  }
+}
+```
 - **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see [Create a button to launch a Flow](./formatting-advanced.md#create-a-button-to-launch-a-flow). Below is an example of this type of button.
 
 ```JSON
@@ -325,7 +345,6 @@ The `actionParams` attribute can have the following options when using the `exec
 - **id**: ID of the Flow to launch _(required)_
 - **headerText**: Sets the text at the top of the flow panel _(optional)_
 - **runFlowButtonText**: Sets the text of the primary button in the flow panel _(optional)_
-- 
 
 ## customCardProps
 
@@ -350,6 +369,18 @@ This will be replaced with the referenced column's formatter JSON. Multi level r
 ```JSON
 {
     "columnFormatterReference": "[$FieldName]"
+}
+```
+
+## inlineEditField
+
+Adds the field editor for the referenced column. 
+
+```JSON
+{
+  "elmType": "div",
+  "inlineEditField": "[$FieldName]",
+  "txtContent": "[$FieldName]"
 }
 ```
 
@@ -473,6 +504,10 @@ Operators specify the type of operation to perform. The following operators are 
 - padStart
 - padEnd
 - getUserImage
+- addDays
+- addMinutes
+- appendTo
+- removeFrom
 
 **Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -584,6 +619,22 @@ Operators specify the type of operation to perform. The following operators are 
   - `"src":"=getUserImage('kaylat@contoso.com', 'large')"` returns a URL pointing to user's profile picture in large resolution
   - `"src":"=getUserImage('kaylat@contoso.com', 'l')"` returns a URL pointing to user's profile picture in large resolution
 
+- **appendTo**: returns an array with the given entry appended to the given array
+  - `"txtContent": "=appendTo(@currentField, 'Choice 4')"` returns an array with 'Choice 4' added to the @currentField array
+  - `"txtContent": "=appendTo(@currentField, 'kaylat@contoso.com')"` returns an array with 'kaylat@contoso.com' added to the @currentField array
+
+- **removeFrom**: returns an array with the given entry removed from the given array, if present
+  - `"txtContent": "=removeFrom(@currentField, 'Choice 4')"` returns an array with 'Choice 4' removed from the @currentField array
+  - `"txtContent": "=removeFrom(@currentField, 'kaylat@contoso.com')"` returns an array with 'kaylat@contoso.com' removed from the @currentField array
+
+- **addDays**: returns a datetime object with days added (or deducted) from the given datetime value
+  - `"txtContent": "=addDays(Date('11/14/2021'), 3)"` returns a 11/17/2021, 12:00:00 AM
+  - `"txtContent": "=addDays(Date('11/14/2021'), -1)"` returns a 11/13/2021, 12:00:00 AM
+
+- **addMinutes**: returns a datetime object with minutes added (or deducted) from the given datetime value
+  - `"txtContent": "=addMinutes(Date('11/14/2021'), 3)"` returns a 11/14/2021, 12:03:00 AM
+  - `"txtContent": "=addMinutes(Date('11/14/2021'), -1)"` returns a 11/13/2021, 11:59:00 AM
+ 
 **Ternary operators** - The following are operators that expect three operands:
 
 - **substring**: returns the part of the string between the start and end indices. - _Only available in SharePoint Online_
