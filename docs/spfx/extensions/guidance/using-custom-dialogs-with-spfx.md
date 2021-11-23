@@ -199,7 +199,7 @@ To associate the custom dialog box with your custom ListView Command Set, add th
 
   ```typescript
   import ColorPickerDialog from './ColorPickerDialog';
-  import { IColor } from 'office-ui-fabric-react';
+  import { IColor } from 'office-ui-fabric-react/lib/Color';
   ```
 
 3. Add the following `_colorCode` variable definition above the `onInit` function in the `DialogDemoCommandSet` class. This is used to store the color picker dialog box result.
