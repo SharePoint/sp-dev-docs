@@ -13,7 +13,7 @@ This is a bug fix release to address few specific regressions, which were introd
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Upgrading projects from v1.13 to v1.13
+## Upgrading projects from v1.13 to v1.13.1
 
 1. In the project's **package.json** file, identify all SPFx v1.13 packages. For each SPFx package:
     1. Uninstall the existing v1.13 package:
@@ -22,7 +22,7 @@ This is a bug fix release to address few specific regressions, which were introd
         npm uninstall @microsoft/{spfx-package-name}@1.13
         ```
 
-    1. Install the refreshed v1.13 {version-release} package:
+    1. Install the refreshed v1.13.1 {version-release} package:
 
         ```console
         npm install @microsoft/{spfx-package-name}@1.13.1 --save --save-exact
