@@ -103,16 +103,11 @@ In the extension manifest, configure the extension to have only one button. In t
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BaseDialog, IDialogConfiguration } from '@microsoft/sp-dialog';
-import {  
-  ColorPicker,
-  PrimaryButton,
-  Button,
-  DialogFooter,
-  DialogContent,
-  IColor
-} from 'office-ui-fabric-react';
-
-  ```
+import { PrimaryButton, DefaultButton } from 'office-ui-fabric-react/lib/Button';
+import { ColorPicker } from 'office-ui-fabric-react/lib/ColorPicker';
+import { DialogFooter, DialogContent } from 'office-ui-fabric-react/lib/Dialog';
+import { IColor } from 'office-ui-fabric-react/lib/Color';
+```
 
 3. Add the following interface definition just under the import statements. This is used to pass information and functions between your ListView Command Set extension and your custom dialog box.
 
@@ -146,7 +141,7 @@ class ColorPickerDialogContent extends React.Component<IColorPickerDialogContent
         >
         <ColorPicker color={this._pickedColor} onChange={this._onColorChange} />
         <DialogFooter>
-            <Button text='Cancel' title='Cancel' onClick={this.props.close} />
+            <DefaultButton text='Cancel' title='Cancel' onClick={this.props.close} />
             <PrimaryButton text='OK' title='OK' onClick={() => { this.props.submit(this._pickedColor); }} />
         </DialogFooter>
         </DialogContent>;
