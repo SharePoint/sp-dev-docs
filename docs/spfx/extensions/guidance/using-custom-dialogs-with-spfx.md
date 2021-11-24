@@ -44,6 +44,7 @@ To create a custom dialog box, you need to follow the steps in [Set up your deve
   * Select **SharePoint Online only (latest)**, and then select Enter.
   * Select **Use the current folder**, and then select Enter.
   * Select **N** to require the extension to be installed on each site explicitly when it's being used.
+  * Select **N** to the question about the ability of components in the solution to access to an external API 
   * Select **Extension** as the client-side component type to be created. 
   * Select **ListView Command Set** as the extension type to be created.
 
@@ -65,8 +66,15 @@ To create a custom dialog box, you need to follow the steps in [Set up your deve
   ```sh
   npm install office-ui-fabric-react  --save
   ```
+  
+7. Because in this tutorial you'll using [Office UI Fabric React components](https://developer.microsoft.com/fabric#/components) to design the dialog in React, enter the following to install the React and ReactDom as a dependencies, and the correlated types definitions as development dependencies to your solution (for the react and react-dom packages, the specified version is necessary to allow the solution to works, because the `@microsoft/sp-dialog` depends on this version and does'nt works with higter versions):
 
-7. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer. To open the folder in Visual Studio Code, use the following command in the console:
+  ```sh
+  npm install react@16.13.1 react-dom@16.13.1 --save
+  npm install @types/react @types/react-dom --save-dev
+  ```
+
+8. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer. To open the folder in Visual Studio Code, use the following command in the console:
 
   ```sh
   code .
@@ -95,9 +103,11 @@ In the extension manifest, configure the extension to have only one button. In t
 
 ## Create a custom dialog box
 
-1. Create a new file called **ColorPickerDialog.tsx** in the **./src/extensions/dialogDemo/** folder.
+1. Create a new folder called **components** as a subfolder of **./src/extensions/dialogDemo/** folder.
 
-2. Add the following import statements at the top of the newly created file. You're creating your custom dialog box by using the [Office UI Fabric React components](https://developer.microsoft.com/fabric#/components), so the implementation is in React. 
+2. Create a new file called **ColorPickerDialog.tsx** in the **./src/extensions/dialogDemo/components/** folder.
+
+3. Add the following import statements at the top of the newly created file. You're creating your custom dialog box by using the [Office UI Fabric React components](https://developer.microsoft.com/fabric#/components), so the implementation is in React. 
 
   ```typescript
 import * as React from 'react';
@@ -109,7 +119,7 @@ import { DialogFooter, DialogContent } from 'office-ui-fabric-react/lib/Dialog';
 import { IColor } from 'office-ui-fabric-react/lib/Color';
 ```
 
-3. Add the following interface definition just under the import statements. This is used to pass information and functions between your ListView Command Set extension and your custom dialog box.
+4. Add the following interface definition just under the import statements. This is used to pass information and functions between your ListView Command Set extension and your custom dialog box.
 
   ```typescript
 interface IColorPickerDialogContentProps {
@@ -120,7 +130,7 @@ interface IColorPickerDialogContentProps {
 }
   ```
 
-4. Add the following class just under the interface definition. This React class is responsible for rendering the UI experiences inside the custom dialog box. Notice that you use the Office UI Fabric React components for actual rendering and just pass the needed properties.  
+5. Add the following class just under the interface definition. This React class is responsible for rendering the UI experiences inside the custom dialog box. Notice that you use the Office UI Fabric React components for actual rendering and just pass the needed properties.  
 
   ```typescript
 class ColorPickerDialogContent extends React.Component<IColorPickerDialogContentProps, {}> {
@@ -153,7 +163,7 @@ class ColorPickerDialogContent extends React.Component<IColorPickerDialogContent
 }
   ```
 
-5. Add the following class definition for your custom dialog box under the `ColorPickerDialogContent` class that you just added. This is the actual custom dialog box that is called from the ListView Command Set button click and is inherited from the `BaseDialog`.
+6. Add the following class definition for your custom dialog box under the `ColorPickerDialogContent` class that you just added. This is the actual custom dialog box that is called from the ListView Command Set button click and is inherited from the `BaseDialog`.
 
   ```typescript
 export default class ColorPickerDialog extends BaseDialog {
@@ -198,7 +208,7 @@ To associate the custom dialog box with your custom ListView Command Set, add th
 2. Add the following import statements under the existing **strings** import. These are for using the custom dialog box in the context of your ListView Command Set and using the IColor type to pass colors to and from our dialog. 
 
   ```typescript
-  import ColorPickerDialog from './ColorPickerDialog';
+  import ColorPickerDialog from './components/ColorPickerDialog';
   import { IColor } from 'office-ui-fabric-react/lib/Color';
   ```
 
