@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.13.1 release notes
 description: Release notes for the SharePoint Framework v1.13.1 release
-ms.date: 11/23/2021
+ms.date: 11/24/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -30,9 +30,10 @@ This is a bug fix release to address few specific regressions, which were introd
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
-
 ## Changes in this release
 
+- 1.13.0 for "Create a subfolder with solution name" does not work
+  - [#7429](https://github.com/SharePoint/sp-dev-docs/issues/7429)
 - Cannot use custom dialogs with SPFx v 1.13
   - [#7431](https://github.com/SharePoint/sp-dev-docs/issues/7431)
 - Generator Creates an Unusual Folder Structure when Running with CLI Arguments
