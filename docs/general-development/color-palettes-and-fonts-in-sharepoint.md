@@ -1,7 +1,7 @@
 ---
 title: Color palettes and fonts in SharePoint
 description: Use this reference to define the color palette or font scheme that is used in a SharePoint site.
-ms.date: 05/20/2020
+ms.date: 11/25/2021
 ms.prod: sharepoint
 ms.assetid: c17d375b-151f-48ae-ac32-f2ce9e68d63f
 ms.localizationpriority: high
@@ -9,6 +9,8 @@ ms.localizationpriority: high
 # Color palettes and fonts in SharePoint
 
 Use this reference to define the color palette or font scheme that is used in a SharePoint site.
+
+[!IMPORTANT] This extensibility option is only available for classic SharePoint experiences. You cannot use this option with modern experiences in SharePoint Online, like with communication sites.
 
 ## Color palettes
 <a name="color"> </a>
@@ -77,13 +79,6 @@ A color palette is the combination of colors that are used in a SharePoint site.
 
 
   For more information, see  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
-
-
-
-> **Tip:**
-> You can use the SharePoint color palette tool to help you create SharePoint designs. You can  [download the SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) from the Microsoft Download Center.
-
-
 
 
 
