@@ -66,6 +66,17 @@ To use your own Microsoft Teams app manifest & app package instead of letting Sh
 1. Create a Microsoft Teams app manifest per the Microsoft Teams documentation:
     - [Microsoft Teams: Create an app package for your Microsoft Teams app](/microsoftteams/platform/concepts/build-and-test/apps-package)
     - [Microsoft Teams: Manifest schema for Microsoft Teams](/microsoftteams/platform/resources/schema/manifest-schema)
+
+  > [!IMPORTANT]
+    > in the Teams app manifest ensure you add the following entry:
+    > ```json
+    > "webApplicationInfo": {
+    > "resource": "https://{teamSiteDomain}",
+    > "id": "00000003-0000-0ff1-ce00-000000000000"
+    > }
+    > ```
+    > That is required to ensure any API call in the component will succeed from Microsoft Teams rich clients.
+
 1. Create the Microsoft Teams app package named **TeamsSPFxApp.zip** by compressing the contents of the **./teams** folder.
 
     > [!IMPORTANT]
