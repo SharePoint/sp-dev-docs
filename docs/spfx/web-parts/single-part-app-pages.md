@@ -55,7 +55,7 @@ You can also use [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/
 
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/marketing
-Set-PnPClientSidePage -Identity "Page" -LayoutType SingleWebPartAppPage
+Set-PnPPage -Identity "Page" -LayoutType SingleWebPartAppPage
 ```
 
 > Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/set-PnPClientSidePage) for complete details and examples on this cmdlet.
