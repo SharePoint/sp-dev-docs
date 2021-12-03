@@ -51,6 +51,7 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
 
 ## How to consume a third-party SPFx library (for local testing)
 
+1. Run `gulp bundle --ship` from the root directory of library solution. a simple `gulp build` not work.
 1. Run `npm link` from the root directory of library solution. In this case, it would be from the **corporate-library** folder.
 1. Right after creating the symbolic link to your new SPFx library component, don't forget to run at least once `gulp build`. Compile your library component at least once in order to be able to import it as a module into a different project. Remember that the **package.json** says that `"main": "lib/index.js"`, so that location needs to exist before any **import** attempt.
 1. This will create a local npm link to the library with the name, which is provided in the **package.json**.
