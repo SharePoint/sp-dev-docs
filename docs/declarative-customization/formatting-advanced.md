@@ -1,7 +1,7 @@
 ---
 title: Advanced formatting concepts
 description: Advanced formatting concepts
-ms.date: 11/16/2021
+ms.date: 12/12/2021
 ms.localizationpriority: high
 ---
 # Advanced formatting concepts
@@ -141,7 +141,7 @@ Both the example uses defaultHoverField
                 "margin": "2px"
             },
             "attributes": {
-                "src": "='getUserImage([$Editor.email], 's')",
+                "src": "=getUserImage([$Editor.email], 's')",
                 "title": "[$Editor.title]"
             }
         },
