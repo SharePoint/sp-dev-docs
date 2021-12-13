@@ -55,7 +55,7 @@ In this tutorial, you'll create a SharePoint Framework (SPFx) library component 
 1. Run `npm link` from the root directory of library solution. In this case, it would be from the **corporate-library** folder.
 1. Right after creating the symbolic link to your new SPFx library component, don't forget to run at least once `gulp build`. Compile your library component at least once in order to be able to import it as a module into a different project. Remember that the **package.json** says that `"main": "lib/index.js"`, so that location needs to exist before any **import** attempt.
 1. This will create a local npm link to the library with the name, which is provided in the **package.json**.
-1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions from [here](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part **CorporateWebPart**.
+1. Create a web part project in a **separate project folder, so not in the library project folder structure**, following the instructions from [here](/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part#to-create-a-new-web-part-project). Name your web part **CorporateWebPart**.
 1. From the root of the new web part folder, run the command `npm link corporate-library`
 1. This will create a symbolic link to that locally built library in to the web part and will make it available to your web part.
 1. Open the web part solution in your preferred editor and navigate to **src/webparts/corporateWebPart/CorporateWebPartWebPart.ts**
