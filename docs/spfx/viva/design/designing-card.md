@@ -1,7 +1,7 @@
 ---
 title: Dashboard cards design guidance
 description: Design guidance for the Viva Connections custom cards
-ms.date: 10/18/2021
+ms.date: 12/28/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

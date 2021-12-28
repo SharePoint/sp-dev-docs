@@ -1,6 +1,6 @@
 ---
-title: Design guidance for Viva Connections mobile experiences
-description: Design guidance for Viva Connections mobile experiences
+title: Design guidance for Viva Connections cards
+description: Design guidance for Viva Connections cards
 ms.date: 12/28/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
