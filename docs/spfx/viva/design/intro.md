@@ -1,7 +1,7 @@
 ---
-title:  Designing custom cards for your dashboard
-description: Design guidance for the Viva Connections custom cards
-ms.date: 10/18/2021
+title: Design guidance for Viva Connections mobile experiences
+description: Design guidance for Viva Connections mobile experiences
+ms.date: 12/28/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
