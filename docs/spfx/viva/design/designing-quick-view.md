@@ -15,6 +15,9 @@ Here are a few examples of quick views:
 
 :::image type="content" source="../../../images/viva-design/img_quickviews.jpg" alt-text="Card container and elements":::
 
+> [!TIP]
+> Sample adaptive card designs for the quick views are available from [GitHub](https://github.com/pnp/AdaptiveCards-Templates)
+
 The Quick View experience works across different platforms and form-factors based on a single JSON. This introduces certain limitations in terms of available styling and placement on controls. You should not expect identical or pixel perfect comparison of a quick view rendered on web / iOS or Android.
 
 > [!TIP]
@@ -63,7 +66,7 @@ While you can open several children quick views from the parent quick view, we r
 
 ### Quick views vs Web views
 
-Despite being visually similar, they are two very different surfaces for different use cases.
+Despite being visually similar, they are two different surfaces for different use cases.
 
 :::image type="content" source="../../../images/viva-design/img_quickview_webview.jpg" alt-text="Card container and elements":::
 
