@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development with SharePoint 2016 Feature Pack 2
 description: SharePoint Server 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted in classic SharePoint pages.
-ms.date: 06/22/2021
+ms.date: 12/28/2021
 ms.localizationpriority: high
 ---
 # SharePoint Framework development with SharePoint Server 2016 Feature Pack 2
@@ -54,12 +54,24 @@ The dependencies for SPFx v1.1 frameworks, tools, and the associated versions do
 
 For example, Gulp v3.* is only supported up to Node.js v10, while Gulp v4.* is supported from Node.js v12 and higher. Because SPFx v1.1 is only supported on Node.js v6 and Node.js v8, you need to ensure you have an older version of Node.js installed as well as an older version of Gulp & Yeoman.
 
-If you're building SPFx v1.1 solutions, install the following specific versions of Gulp & Yeoman:
+> [!NOTE]
+> The Gulp team introduced a separate package, [gulp-cli](https://www.npmjs.com/package/gulp-cli), that should be installed globally. It can be used by projects that use either Gulp v3 & Gulp v4.
+>
+> Learn more about the gulp-cli here: [gulpjs/gulp/#2324](https://github.com/gulpjs/gulp/issues/2324).
 
-```console
-npm install --global gulp@3.9.1
-npm install --global yo@3.1.1
-```
+Microsoft recommends using the most recent version of the Yeoman generator for the SharePoint Framework ([@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint)) that supports creating on-premises projects: SPFx v1.6.0.
+
+> [!IMPORTANT]
+> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.md). However, SPFx 1.1.1 only supports up to Node.js v6. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework (v1.6.0) that works on the same version of Node.js (v6) that SPFx v1.1.0 is supported on.
+
+1. Install [Node.js v6.17.1](https://nodejs.org/download/release/v6.17.1/)
+1. Install global dependencies
+
+    ```console
+    npm install gulp-cli@2.3.0 --global
+    npm install yo@2.0.0 --global
+    npm install @microsoft/generator-sharepoint@1.6.0 --global
+    ```
 
 For more information, see [SharePoint Framework development tools and libraries compatibility](compatibility.md).
 
