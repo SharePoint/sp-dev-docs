@@ -1,7 +1,7 @@
 ---
 title: Advanced formatting concepts
 description: Advanced formatting concepts
-ms.date: 12/12/2021
+ms.date: 01/04/2022
 ms.localizationpriority: high
 ---
 # Advanced formatting concepts
