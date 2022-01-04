@@ -645,7 +645,7 @@ Operators specify the type of operation to perform. The following operators are 
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 
-- **replace**: searches a string (or array) for a specified value and returns a new string (or array) where the specified value is replaced. Only the first instance of the value will be replaced.
+- **replace**: searches a string (or array) for a specified value and returns a new string (or array) where the specified value is replaced. Incase of string, only the first instance of the value will be replaced.
   - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
   - `"txtContent":"=replace([$MultiChoiceField], 'Choice 1', 'Choice 2')"` returns an array replacing Choice 1 with Choice 2
   - `"txtContent":"=replace([$MultiUserField], @me, 'kaylat@contoso.com')"` returns an array replacing @me with 'kaylat@contoso.com'
