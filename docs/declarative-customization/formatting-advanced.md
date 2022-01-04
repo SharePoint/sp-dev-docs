@@ -347,12 +347,16 @@ The below JSON will set value of `FieldInternalName_1`, `FieldInternalName_2` an
     - `@now` token
     - [expressions](./formatting-syntax-reference.md#expressions) which return a date using builtin date functions
     - `addDays` and `addMinutes`, two new functions to support [expressions](./formatting-syntax-reference.md#expressions) like 7 days from today
+    - An empty string `""` clears the field value
   - Multi-Choice and Multi-Person:
-    Multi value fields are special, as they need an array value to save multiple values.
-    - `appendTo` and `removeFrom`, two new functions which operate on multivalue fields.
+    - Multi value fields are special, as they need an array value to save multiple values.
+    - `appendTo`, `removeFrom` and `replace`, three functions which can operate on multivalue fields.
         - `appendTo([$MultiChoiceField], 'MyValue')`
+        - `removeFrom([$MultiUserField], @me)` : removes all occurences that match the second parameter
+        - `replace([$MultiChoiceField], 'Choice 1', 'Choice 3')` : replaces all occurences of second parameter with third.
   - Person field values:
     - User Name or Email
+    - An empty string `""` clears the field value
     - an [expression](./formatting-syntax-reference.md#expressions) which returns these values
     > [!NOTE]
     > A query runs with the string value provided on people column and the first person in the returned results is used
