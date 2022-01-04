@@ -923,16 +923,44 @@ The Approval Status field object has the following property (with example value)
 ```JSON
 {
    "displayValue": "Approved",
+   "numeric": 0
 }
 ```
 `displayValue` is localized string of the approval status.
 
-`@currentField` or `[$__ModerationStatus]` will resolve to the internal code - 
+`@currentField` or `[$__ModerationStatus]`will also internally map to the following internal numeric value - 
+```
 - 0 : Approved
 - 1 : Denied
 - 2 : Pending
 - 3 : Draft
 - 4 : Scheduled
+```
+`[$_ModerationStatus]` field supports comparisions to both strings as well as the numeric value. The numeric comparisions work across locales and languages, and that will be the recommended way for this field.
+
+The following expressions evaluate to the output on the right, for when the status is `Pending`:
+
+```JS
+  // reading field value
+  "[$_ModerationStatus]" => "Pending"
+
+  // obtaining the internal numeric value:
+  "=Number([$_ModerationStatus])" => 2
+  "=[$_ModerationStatus.numeric]" => 2
+
+  // addition results in string concatenation:
+  "='status:'+[$_ModerationStatus]" => 'status:Pending'
+
+  // numeric comparisions
+  "=([$_ModerationStatus] == 2)" => true
+  "=([$_ModerationStatus] != 1)" => true
+
+  // other comparators are rarely useful, for cases where you want might want to exclude Draft & Scheduled
+  "=([$_ModerationStatus] < 3)" => true
+
+  // localized string comparision, works only with one locale (en-us here)
+  "=if([$_ModerationStatus]=='Pending','This Works too!', 'Nope!')" => 'This Works too!'
+```
 
 The following example shows how a approval status field might be used on a current field.
 
