@@ -309,8 +309,6 @@
       href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
     - name: CSS styles
       href: spfx/web-parts/guidance/reference-third-party-css-styles.md
-    - name: SP PnP JS
-      href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
   - name: Connect to APIs
     items:
     - name: Connect to SharePoint APIs
