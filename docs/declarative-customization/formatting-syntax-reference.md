@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 11/16/2021
+ms.date: 01/06/2022
 ms.localizationpriority: high
 ---
 
@@ -24,7 +24,7 @@ Any other value will result in an error.
 
 ## txtContent
 
-An optional property that specifies the text content of the element specified by `elmType`. The value of this property can either be a string (including special strings) or an Expression object. 
+An optional property that specifies the text content of the element specified by `elmType`. The value of this property can either be a string (including special strings) or an Expression object.
 
 ## style
 
@@ -143,7 +143,7 @@ An optional property that specifies style attributes to apply to the element spe
 'float'
 'left'
 'overflow'
-'position' 
+'position'
 'right'
 'top'
 'visibility'
@@ -187,29 +187,29 @@ An optional property that specifies style attributes to apply to the element spe
 '--inline-editor-border-color'
 ```
 
-The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section. 
+The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section.
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "div",
-   "style": {
-      "padding": "4px",
-      "background-color": {
-         "operator": "?",
-         "operands": [
-            {
-               "operator": "<",
-               "operands": [
-                  "@currentField",
-                  40
-               ]
-            },
-            "#ff0000",
-            "#00ff00"
-         ]
-      }
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "padding": "4px",
+    "background-color": {
+      "operator": "?",
+      "operands": [
+        {
+          "operator": "<",
+          "operands": [
+            "@currentField",
+            40
+          ]
+        },
+        "#ff0000",
+        "#00ff00"
+      ]
+    }
+  }
 }
 ```
 
@@ -217,12 +217,12 @@ Here's the same sample from above, using the Excel-style expression syntax:
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "div",
-   "style": {
-      "padding": "4px",
-      "background-color": "=if(@currentField < 40, '#ff0000', '#00ff00')"
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+  "padding": "4px",
+  "background-color": "=if(@currentField < 40, '#ff0000', '#00ff00')"
+  }
 }
 ```
 
@@ -245,23 +245,23 @@ An optional property that specifies additional attributes to add to the element 
 - preserveAspectRatio
 - draggable
 
-Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to http://finance.yahoo.com/quote/ + the value of the current field (`@currentField`). 
+Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to `http://finance.yahoo.com/quote/` + the value of the current field (`@currentField`).
 
 ```JSON
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-    "target": "_blank",
-    "href": "='http://finance.yahoo.com/quote/' + @currentField"
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "target": "_blank",
+  "href": "='http://finance.yahoo.com/quote/' + @currentField"
 }
 ```
 
 ## children
 
-An optional property that specifies child elements of the element specified by `elmType`. The value is specified as an array of `elm` objects. There can be an arbitrary level of nesting. If an element has the `txtContent` property, the child properties are ignored. 
+An optional property that specifies child elements of the element specified by `elmType`. The value is specified as an array of `elm` objects. There can be an arbitrary level of nesting. If an element has the `txtContent` property, the child properties are ignored.
 
 ## debugMode
 
-An optional property that is meant for debugging. It outputs error messages and logs warnings to the console. 
+An optional property that is meant for debugging. It outputs error messages and logs warnings to the console.
 
 ## forEach
 
@@ -283,77 +283,78 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 
 - **defaultClick**: buttons with this action will do the same thing as clicking the list item in an uncustomized view. Below is an example of a button that, when clicked, simulates a click on the item, which results in opening the list item. Adding this example button to a document library simulates a click on the file or folder, which results in the file or folder being opened.
 
-```JSON
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-  "elmType": "button",
-  "txtContent": "Open this item",
-  "customRowAction": {
-    "action": "defaultClick"
-  }
-}
-
-```
-
+    ```JSON
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+      "elmType": "button",
+      "txtContent": "Open this item",
+      "customRowAction": {
+        "action": "defaultClick"
+      }
+    }
+    ```
+    
 - **share**:  Clicking the button will open the sharing dialog. Below is an example of this type of button.
 
-```JSON
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-  "elmType": "button",
-  "txtContent": "Share this item",
-  "customRowAction": {
-    "action": "share"
-  }
-}
-
-```
-
+    ```JSON
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+      "elmType": "button",
+      "txtContent": "Share this item",
+      "customRowAction": {
+        "action": "share"
+      }
+    }
+    ```
+    
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.
 - **setValue**:  Clicking the element will update the item with the field values provided.
 
-```JSON
-{
-  "elmType": "div",
-  "txtContent": "[$FieldName]",
-  "customRowAction":{
-    "action": "setValue",
-    "actionInput": {
-      "FieldInternalName_1": "FieldValue_1",
-      "FieldInternalName_2": "FieldValue_2",
+    ```JSON
+    {
+      "elmType": "div",
+      "txtContent": "[$FieldName]",
+      "customRowAction":{
+        "action": "setValue",
+        "actionInput": {
+          "FieldInternalName_1": "FieldValue_1",
+          "FieldInternalName_2": "FieldValue_2",
+        }
+      }
     }
-  }
-}
-```
+    ```
+
 - **executeFlow**:  Clicking the button will launch the specified Flow, specified by ID inside the `actionParams` attribute.  For an example of this, see [Create a button to launch a Flow](./formatting-advanced.md#create-a-button-to-launch-a-flow). Below is an example of this type of button.
 
-```JSON
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
-  "elmType": "button",
-  "txtContent": "It's Flow Time!",
-  "customRowAction": {
-    "action": "executeFlow",
-    "actionParams": "{\"id\":\"f7ecec0b-15c5-419f-8211-302a5d4e94f1\", \"headerText\":\"It's Flow Time!\",\"runFlowButtonText\":\"Do it\"}"
-  }
-}
-```
+    ```JSON
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+      "elmType": "button",
+      "txtContent": "It's Flow Time!",
+      "customRowAction": {
+        "action": "executeFlow",
+        "actionParams": "{\"id\":\"f7ecec0b-15c5-419f-8211-302a5d4e94f1\", \"headerText\":\"It's Flow Time!\",\"runFlowButtonText\":\"Do it\"}"
+      }
+    }
+    ```
 
 The `actionParams` attribute can have the following options when using the `executeFlow` action:
+
 - **id**: ID of the Flow to launch _(required)_
 - **headerText**: Sets the text at the top of the flow panel _(optional)_
 - **runFlowButtonText**: Sets the text of the primary button in the flow panel _(optional)_
 
 ## customCardProps
 
-Add a custom card to the element, that shows up on hover or click event. Following customization is available - 
-- `"formatter"` - JSON object that defines formatting for custom cards 
-- `"openOnEvent"` - Event on which the customCard should open. `"click"` or `"hover"` are the two allowed values.
-- `"directionalHint"` - Specify the direction relative to the target in which custom card will be positioned.
-- `"isBeakVisible"` - Specify if the beak is to be shown or not.
-- `"beakStyle"` - Specifies the style object for custom card's beak.
+Add a custom card to the element, that shows up on hover or click event. Following customization is available -
+
+- `"formatter"`: JSON object that defines formatting for custom cards.
+- `"openOnEvent"`: Event on which the customCard should open. `"click"` or `"hover"` are the two allowed values.
+- `"directionalHint"`: Specify the direction relative to the target in which custom card will be positioned.
+- `"isBeakVisible"`: Specify if the beak is to be shown or not.
+- `"beakStyle"`: Specifies the style object for custom card's beak.
 
 ## defaultHoverField
 
@@ -368,13 +369,13 @@ This will be replaced with the referenced column's formatter JSON. Multi level r
 
 ```JSON
 {
-    "columnFormatterReference": "[$FieldName]"
+  "columnFormatterReference": "[$FieldName]"
 }
 ```
 
 ## inlineEditField
 
-Adds the field editor for the referenced column. 
+Adds the field editor for the referenced column.
 
 ```JSON
 {
@@ -395,24 +396,29 @@ Expressions can be written using Excel-style expressions in SharePoint Online, o
 All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online (not SharePoint 2019).
 
 This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to \`\` otherwise:
+
 ```JSON
-=if(@me != [$Author.email], 'none', '') 
+=if(@me != [$Author.email], 'none', '')
 ```
 
 More complex if/else statements can be written like this:
+
 ```JSON
-=if([$Sentiment] <= 0.3, 'sp-field-severity--blocked', if([$Sentiment] < 0.9,'sp-field-severity--warning','sp-field-severity--good')) 
+=if([$Sentiment] <= 0.3, 'sp-field-severity--blocked', if([$Sentiment] < 0.9,'sp-field-severity--warning','sp-field-severity--good'))
 ```
 
 Non-conditional operators that take one or two operands can be written like this:
+
 ```JSON
-=[$foo] * -7 
+=[$foo] * -7
 ```
+
 ```JSON
-=sin(@currentField) 
+=sin(@currentField)
 ```
+
 ```JSON
-=toString(60 + (sin(6.2831853 * @currentField) * 60)) 
+=toString(60 + (sin(6.2831853 * @currentField) * 60))
 ```
 
 ### Abstract Syntax Tree expressions
@@ -423,36 +429,36 @@ The following example contains an Expression object that performs the following 
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "operator": "?",
-   "operands": [
-      {
-         "operator": ">",
-         "operands": [
-            "@currentField",
-            "40"
-         ]
-      },
-      "100%",
-      {
-         "operator": "+",
-         "operands": [
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "operator": "?",
+  "operands": [
+    {
+      "operator": ">",
+      "operands": [
+        "@currentField",
+        "40"
+      ]
+    },
+    "100%",
+    {
+      "operator": "+",
+      "operands": [
+        {
+          "operator": "toString()",
+          "operands": [
             {
-               "operator": "toString()",
-               "operands": [
-                  {
-                     "operator": "*",
-                     "operands": [
-                        "@currentField",
-                        2.5
-                     ]
-                  }
-               ]
-            },
-            "%"
-         ]
-      }
-   ]
+              "operator": "*",
+              "operands": [
+                "@currentField",
+                2.5
+              ]
+            }
+          ]
+        },
+        "%"
+      ]
+    }
+  ]
 }
 ```
 
@@ -496,7 +502,7 @@ Operators specify the type of operation to perform. The following operators are 
 - getDate
 - getMonth
 - getYear
-- toUpperCase 
+- toUpperCase
 - lastIndexOf
 - startsWith
 - endsWith
@@ -509,7 +515,7 @@ Operators specify the type of operation to perform. The following operators are 
 - appendTo
 - removeFrom
 
-**Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands: 
+**Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands:
 
 - \+
 - \-
@@ -523,94 +529,70 @@ Operators specify the type of operation to perform. The following operators are 
 - <=
 - \>=
 
-**Unary operators** - The following are standard unary operators that expect only one operand: 
+**Unary operators** - The following are standard unary operators that expect only one operand:
 
 - **toString()**: returns a string representing the object
   - `"txtContent": "=toString(45)"` results in _"45"_
-  
 - **Number()**: returns the numeric value, if the operand is not a number, NaN is returned
   - `"txtContent": "=Number('365')"` results in _365_
   - `"txtContent": "=Number('Wowee')"` results in _NaN_
   - `"txtContent": "=Number(Date('12/26/1981'))"` results in _378190800000_
-  
 - **Date()**: returns a datetime object from the parameter (converts strings or numbers to dates, sensitive to locale)
   - `"txtContent": "=Date('12/26/1981')"` results in _12/26/1981, 12:00:00 AM_
-  
 - **cos**: returns the cosine of the specified angle which should be specified in radians
   - `"txtContent": "=cos(5)"` results in _0.28366218546322625_
-  
 - **sin**: returns the sine of a number
   - `"txtContent": "=sin(90)"` results in _0.8939966636005579_
-  
 - **toLocaleString()**: returns a language sensitive representation of a date
   - `"txtContent":"=toLocaleString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019, 1:22:24 PM"_
-  
 - **toLocaleDateString()**: returns a language sensitive representation of just the date portion of a date
   - `"txtContent":"=toLocaleDateString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019"_
-  
 - **toLocaleTimeString()**: returns a language sensitive representation of just the time portion of a date
   - `"txtContent":"=toLocaleTimeString(@now)"` results vary based on user's locale, but en-us looks like _"1:22:24 PM"_
-  
 - **toLowerCase**: returns the value converted to lower case (only works on strings) - _Only available in SharePoint Online_
   - `"txtContent":"=toLowerCase('DogFood')"` results in _"dogfood"_
-  
 - **abs**: returns the absolute value for a given number - _Only available in SharePoint Online_
   - `"txtContent":"=abs(-45)"` results in _45_
-  
 - **length**: returns the number of items in an array (multi-select person or choice field), for all other value types it returns 1 when true and 0 when false. It does NOT provide the length of a string value (*see the `indexOf` workaround explained later on for such operation*). - _Only available in SharePoint Online_
   - `"txtContent":"=length(@currentField)"` might result in _2_ if there are 2 selected values
   - `"txtContent":"=length('Some Text')"` results in _1_
   - `"txtContent":"=length('')"` results in _0_
   - `"txtContent":"=length(45)"` results in _1_
   - `"txtContent":"=length(0)"` results in _0_
-
 - **floor**: returns the largest integer less than or equal to a given number. - _Only available in SharePoint Online_
-  - `"txtContent":"=floor(45.5)"` results in _45_ 
-  
+  - `"txtContent":"=floor(45.5)"` results in _45_
 - **ceiling**: rounds the given number up to the next largest whole number or integer. - _Only available in SharePoint Online_
-  - `"txtContent":"=ceiling(45.5)"` results in _46_ 
-  
+  - `"txtContent":"=ceiling(45.5)"` results in _46_
 - **getDate**: returns the day of the month of the given date. - _Only available in SharePoint Online_
-  - `"txtContent":"=getDate(Date('12/26/1981'))"` results in _26_ 
-  
+  - `"txtContent":"=getDate(Date('12/26/1981'))"` results in _26_
 - **getMonth**:  returns the month in the specified date according to local time, as a zero-based value (where zero indicates the first month of the year). - _Only available in SharePoint Online_
-  - `"txtContent":"=getMonth(Date('12/26/1981'))"` results in _11_ 
-
+  - `"txtContent":"=getMonth(Date('12/26/1981'))"` results in _11_
 - **getYear**: returns the year of the given date. - _Only available in SharePoint Online_
-  - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_ 
-
+  - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_
 - **toUpperCase**: returns the value converted to upper case (only works on strings) - _Only available in SharePoint Online_
-  - `"txtContent":"=toUpperCase('DogFood')"` results in _"DOGFOOD"_  
-
+  - `"txtContent":"=toUpperCase('DogFood')"` results in _"DOGFOOD"_
 **Binary operators** - The following are operators that expect two operands:
-
 - **indexOf**: takes 2 operands. The first is the text (or array) you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string (or array). Indexes start at 0. If the search term is not found within the text (or array), -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
   - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
   - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
   - `"txtContent": "=indexOf('DogFood', 'Cat')"` results in _-1_
   - `"txtContent": "=indexOf('DogFood', 'f')"` results in _-1_
-
 - **join**: takes 2 operands. The first is an array (multi-select person or choice field) and the second is the separating string. Returns a string concatenation of the array values separated by the separating string. - _Only available in SharePoint Online_
   - `"txtContent": "=join(@currentField, ', ')"` might result in _"Apple, Orange, Cherry"_ (depending on the selected values)
   - `"txtContent": "=join(@currentField.title, '|')"` might result in _"Chris Kent|Vesa Juvonen|Jeff Teper"_ (depending on the selected persons)
-  
 - **pow**: returns the base to the exponent power. - _Only available in SharePoint Online_
   - `"txtContent":"=pow(2,3)"` results in _8_
-
 - **lastIndexOf**: returns the position of the last occurrence of a specified value in a string (or array)
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Dog')"` results in _8_
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'F')"` results in _11_
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'Cat')"` results in _-1_
   - `"txtContent": "=lastIndexOf('DogFood DogFood', 'f')"` results in _-1_
-
 - **startsWith**: determines whether a string begins with the characters of a specified string
   - `"txtContent":"=startsWith('DogFood', 'Dog')"` results in _true_
   - `"txtContent":"=startsWith('DogFood', 'Food')"` results in _false_
-
 - **endsWith**: determines whether a string ends with the characters of a specified string
   - `"txtContent":"=endsWith('DogFood', 'Dog')"` results in _false_
   - `"txtContent":"=endsWith('DogFood', 'Food')"` results in _true_
-
 - **getUserImage**: returns a URL pointing to user's profile image for a given email and preferred size
   - `"src":"=getUserImage('kaylat@contoso.com', 'small')"` returns a URL pointing to user's profile picture in small resolution
   - `"src":"=getUserImage('kaylat@contoso.com', 's')"` returns a URL pointing to user's profile picture in small resolution
@@ -618,23 +600,19 @@ Operators specify the type of operation to perform. The following operators are 
   - `"src":"=getUserImage('kaylat@contoso.com', 'm')"` returns a URL pointing to user's profile picture in medium resolution
   - `"src":"=getUserImage('kaylat@contoso.com', 'large')"` returns a URL pointing to user's profile picture in large resolution
   - `"src":"=getUserImage('kaylat@contoso.com', 'l')"` returns a URL pointing to user's profile picture in large resolution
-
 - **appendTo**: returns an array with the given entry appended to the given array
   - `"txtContent": "=appendTo(@currentField, 'Choice 4')"` returns an array with 'Choice 4' added to the @currentField array
   - `"txtContent": "=appendTo(@currentField, 'kaylat@contoso.com')"` returns an array with 'kaylat@contoso.com' added to the @currentField array
-
 - **removeFrom**: returns an array with the given entry removed from the given array, if present
   - `"txtContent": "=removeFrom(@currentField, 'Choice 4')"` returns an array with 'Choice 4' removed from the @currentField array
   - `"txtContent": "=removeFrom(@currentField, 'kaylat@contoso.com')"` returns an array with 'kaylat@contoso.com' removed from the @currentField array
-
 - **addDays**: returns a datetime object with days added (or deducted) from the given datetime value
   - `"txtContent": "=addDays(Date('11/14/2021'), 3)"` returns a 11/17/2021, 12:00:00 AM
   - `"txtContent": "=addDays(Date('11/14/2021'), -1)"` returns a 11/13/2021, 12:00:00 AM
-
 - **addMinutes**: returns a datetime object with minutes added (or deducted) from the given datetime value
   - `"txtContent": "=addMinutes(Date('11/14/2021'), 3)"` returns a 11/14/2021, 12:03:00 AM
   - `"txtContent": "=addMinutes(Date('11/14/2021'), -1)"` returns a 11/13/2021, 11:59:00 AM
- 
+
 **Ternary operators** - The following are operators that expect three operands:
 
 - **substring**: returns the part of the string between the start and end indices. - _Only available in SharePoint Online_
@@ -645,14 +623,14 @@ Operators specify the type of operation to perform. The following operators are 
 
   The substring() method returns the part of the string between the start and end indexes, or to the end of the string.
 
-- **replace**: searches a string for a specified value and returns a new string where the specified value is replaced. Only the first instance of the value will be replaced.
+- **replace**: searches a string (or array) for a specified value and returns a new string (or array) where the specified value is replaced. Incase of string, only the first instance of the value will be replaced.
   - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
-
+  - `"txtContent":"=replace([$MultiChoiceField], 'Choice 1', 'Choice 2')"` returns an array replacing Choice 1 with Choice 2
+  - `"txtContent":"=replace([$MultiUserField], @me, 'kaylat@contoso.com')"` returns an array replacing @me with 'kaylat@contoso.com'
 - **padStart**: pads the current string with another string until the resulting string reaches the given length. The padding is applied from the start of the current string.
   - `"txtContent":"=padStart('DogFood', 10, 'A')"` results in _AAADogFood_
   - `"txtContent":"=padStart('DogFood', 10, 'AB')"` results in _ABADogFood_
   - `"txtContent":"=padStart('DogFood', 5, 'A')"` results in _DogFood_
-
 - **padEnd**: pads the current string with a given string until the resulting string reaches the given length. The padding is applied from the end of the current string.
   - `"txtContent":"=padEnd('DogFood', 10, 'A')"` results in _DogFoodAAA_
   - `"txtContent":"=padEnd('DogFood', 10, 'AB')"` results in _DogFoodABA_
@@ -685,7 +663,7 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 
 `+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text"`
 
-`indexOf` Since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string. 
+`indexOf` Since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string.
 
 ## Operands
 
@@ -697,7 +675,7 @@ The values for `txtContent`, styles, and attributes can be either strings or Exp
 
 ### "@currentField"
 
-Will evaluate to the value of the current field. 
+Will evaluate to the value of the current field.
 
 Some field types are represented as objects. To output a value from an object, refer to a particular property inside that object. For example, if the current field is a person/group field, specify `@currentField.title` to retrieve the person's name, which is normally displayed in list views. The following are the field types that are represented as objects with a list of their properties.
 
@@ -710,51 +688,54 @@ The people field object has the following properties (with example values):
 
 ```JSON
 {
-   "id": "122",
-   "title": "Kalya Tucker",
-   "email": "kaylat@contoso.com",
-   "sip": "kaylat@contoso.com",
-   "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
-   "department":"Human Resources",
-   "jobTitle":"HR Manager"
+  "id": "122",
+  "title": "Kalya Tucker",
+  "email": "kaylat@contoso.com",
+  "sip": "kaylat@contoso.com",
+  "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
+  "department":"Human Resources",
+  "jobTitle":"HR Manager"
 }
 ```
-People field can have profile hover cards along with formatting
+
+People field can have profile hover cards along with formatting:
 
 ```json
 {
-   "elmType": "div",
-   "txtContent": "[$Editor.title]",
-   "defaultHoverField": "[$Editor]"  
+  "elmType": "div",
+  "txtContent": "[$Editor.title]",
+  "defaultHoverField": "[$Editor]"
 }
 ```
+
 **Date/Time fields**
 
-The value of Date/Time fields can be retrieved a few different ways, depending on the date format you'd like to display. The following methods for converting date values to specific formats are supported: 
+The value of Date/Time fields can be retrieved a few different ways, depending on the date format you'd like to display. The following methods for converting date values to specific formats are supported:
 
-* `toLocaleString()` - Displays a date type fully expanded with date and time.
-* `toLocaleDateString()` - Displays a date type with just the date.
-* `toLocaleTimeString()` - Displays a date type with just the time.
+- `toLocaleString()` - Displays a date type fully expanded with date and time.
+- `toLocaleDateString()` - Displays a date type with just the date.
+- `toLocaleTimeString()` - Displays a date type with just the time.
 
 For example, the following JSON will display the current field (assuming it's a date field) as a date and time string.
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "div",
-   "txtContent": {
-        "operator": "toLocaleString()",
-        "operands" : ["@currentField"]
-    }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "txtContent": {
+    "operator": "toLocaleString()",
+    "operands" : ["@currentField"]
+  }
 }
 ```
 
 Here's the same sample from above, using the Excel-style expression syntax:
+
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "div",
-   "txtContent": "=toLocaleString(@currentField)"
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "txtContent": "=toLocaleString(@currentField)"
 }
 ```
 
@@ -764,22 +745,20 @@ The location field object has the following properties (with example values):
 
 ```JSON
 {
-   "Address": {
-      "City": "Knoxville",
-      "CountryOrRegion": "United States",
-      "State": "TN",
-      "Street": "963 Worlds Fair Park Dr"
-   },
-   "Coordinates": {
-      "Latitude": "35.961673736572266",
-      "Longitude": "-83.92420959472656"
-   },
-   "DisplayName": "World's Fair Park",
-   "LocationUri": "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
+  "Address": {
+    "City": "Knoxville",
+    "CountryOrRegion": "United States",
+    "State": "TN",
+    "Street": "963 Worlds Fair Park Dr"
+  },
+  "Coordinates": {
+    "Latitude": "35.961673736572266",
+    "Longitude": "-83.92420959472656"
+  },
+  "DisplayName": "World's Fair Park",
+  "LocationUri": "https://www.bingapis.com/api/v6/localentities/8346bf26-6da4-104c-6ba5-2334b83f6ac8?setLang=en"
 }
 ```
-
-<br/>
 
 The following example shows how a location field might be used on a current field.
 
@@ -819,37 +798,34 @@ The following example shows how a location field might be used on a current fiel
 }
 ```
 
-
 **Lookup fields**
 
 The lookup field object has the following properties (with example values):
 
 ```JSON
 {
-   "lookupId": "100",
-   "lookupValue": "North America",
+  "lookupId": "100",
+  "lookupValue": "North America",
 }
 ```
-
-<br/>
 
 The following example shows how a lookup field might be used on a current field.
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "a",
-   "txtContent": "@currentField.lookupValue",
-   "attributes": {
-      "href": {
-         "operator": "+",
-         "operands": [
-            "https://contoso.sharepoint.com/teams/Discovery/Lists/Regions/DispForm.aspx?ID=",
-            "@currentField.lookupId"
-         ]
-      },
-      "target": "_blank"
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "a",
+  "txtContent": "@currentField.lookupValue",
+  "attributes": {
+    "href": {
+      "operator": "+",
+      "operands": [
+        "https://contoso.sharepoint.com/teams/Discovery/Lists/Regions/DispForm.aspx?ID=",
+        "@currentField.lookupId"
+      ]
+    },
+    "target": "_blank"
+  }
 }
 ```
 
@@ -859,11 +835,9 @@ The hyperlink field object has the following property (with example value):
 
 ```JSON
 {
-   "desc": "SharePoint Patterns and Practices",
+  "desc": "SharePoint Patterns and Practices",
 }
 ```
-
-<br/>
 
 To reference the URL value, use `@currentField`.
 
@@ -871,13 +845,13 @@ The following example shows how a hyperlink field might be used on a current fie
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "a",
-   "txtContent": "@currentField.desc",
-   "attributes": {
-      "href": "@currentField",
-      "target": "_blank"
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "a",
+  "txtContent": "@currentField.desc",
+  "attributes": {
+    "href": "@currentField",
+    "target": "_blank"
+  }
 }
 ```
 
@@ -892,25 +866,22 @@ The image field object has the following properties (with example values):
   "serverRelativeUrl": "/teams/Discovery/SiteAssets/Lists/ad6ed939-0db2-4d85-8a39-8f3497f41eee/image.png",
   "serverUrl": "https://contoso.sharepoint.com"
 }
-
 ```
-
-<br/>
 
 The following example shows how an image field can be used on a current field.
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "img",
-   "attributes": {
-      "src": "@currentField.serverRelativeUrl",
-      "alt": "@currentField.fileName"
-   },
-   "style": {
-      "width": "100%",
-      "max-width": "100%"
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "img",
+  "attributes": {
+    "src": "@currentField.serverRelativeUrl",
+    "alt": "@currentField.fileName"
+  },
+  "style": {
+    "width": "100%",
+    "max-width": "100%"
+  }
 }
 ```
 
@@ -920,27 +891,58 @@ The Approval Status field object has the following property (with example value)
 
 ```JSON
 {
-   "displayValue": "Approved",
+  "displayValue": "Approved",
+  "numeric": 0
 }
 ```
+
 `displayValue` is localized string of the approval status.
 
-`@currentField` or `[$__ModerationStatus]` will resolve to the internal code - 
+`@currentField` or `[$__ModerationStatus]`will also internally map to the following internal numeric value:
+
+```
 - 0 : Approved
 - 1 : Denied
 - 2 : Pending
 - 3 : Draft
 - 4 : Scheduled
+```
+
+`[$_ModerationStatus]` field supports comparisons to both strings as well as the numeric value. The numeric comparisons work across locales and languages, and that will be the recommended way for this field.
+
+The following expressions evaluate to the output on the right, for when the status is `Pending`:
+
+```javascript
+// reading field value
+"[$_ModerationStatus]" => "Pending"
+
+// obtaining the internal numeric value:
+"=Number([$_ModerationStatus])" => 2
+"=[$_ModerationStatus.numeric]" => 2
+
+// addition results in string concatenation:
+"='status:'+[$_ModerationStatus]" => 'status:Pending'
+
+// numeric comparisons
+"=([$_ModerationStatus] == 2)" => true
+"=([$_ModerationStatus] != 1)" => true
+
+// other comparators are rarely useful, for cases where you want might want to exclude Draft & Scheduled
+"=([$_ModerationStatus] < 3)" => true
+
+// localized string comparison, works only with one locale (en-us here)
+"=if([$_ModerationStatus]=='Pending','This Works too!', 'Nope!')" => 'This Works too!'
+```
 
 The following example shows how a approval status field might be used on a current field.
 
 ```JSON
 {
-   "elmType": "div",
-   "txtContent": "@currentField.displayValue",
-   "style": {
-      "color": "=if(@currentField == 2, 'red', '')"
-   }
+  "elmType": "div",
+  "txtContent": "@currentField.displayValue",
+  "style": {
+    "color": "=if(@currentField == 2, 'red', '')"
+  }
 }
 ```
 
@@ -956,7 +958,6 @@ In column and view formatting, you can refer to any field's metadata by specifyi
 
 Currently field's display name is available in this metadata, and can be accessed using DisplayName property: `[!SalesLead.DisplayName]`.
 
-
 ### "@currentWeb"
 
 This will evaluate to the absolute URL for the site. This is equivalent to the `webAbsoluteUrl` value within the page context. This value is only available in SharePoint Online.
@@ -965,29 +966,29 @@ This will evaluate to the absolute URL for the site. This is equivalent to the `
 
 This will evaluate to the email address of the current logged in user.
 
-This field can be used to display the current user's email address, but more likely it will be used within conditions. The following is an example of setting the color for a person field to red when it is equal to the current logged in user and blue otherwise: 
+This field can be used to display the current user's email address, but more likely it will be used within conditions. The following is an example of setting the color for a person field to red when it is equal to the current logged in user and blue otherwise:
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "div",
-   "txtContent": "@currentField.title",
-   "style": {
-      "color": {
-         "operator": "?",
-         "operands": [
-            {
-               "operator": "==",
-               "operands": [
-                  "@me",
-                  "@currentField.email"
-               ]
-            },
-            "red",
-            "blue"
-         ]
-      }
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "txtContent": "@currentField.title",
+  "style": {
+    "color": {
+      "operator": "?",
+      "operands": [
+        {
+            "operator": "==",
+            "operands": [
+              "@me",
+              "@currentField.email"
+            ]
+        },
+          "red",
+          "blue"
+      ]
+    }
+  }
 }
 ```
 
@@ -995,12 +996,12 @@ Here's the same sample from above, using the Excel-style expression syntax:
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "div",
-   "txtContent": "@currentField.title",
-   "style": {
-      "color": "=if(@me == @currentField.email, 'red', 'blue')"
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "txtContent": "@currentField.title",
+  "style": {
+    "color": "=if(@me == @currentField.email, 'red', 'blue')"
+  }
 }
 ```
 
@@ -1047,38 +1048,40 @@ These tokens will yield no value on non-file items including folders.
 
 ```JSON
 {
-   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
-   "elmType": "img",
-   "attributes": {
-      "src": "@thumbnail.200x150",
-      "alt": "='Thumbnail of file ' + [$FileLeafRef]"
-   },
-   "style": {
-      "width": "100%",
-      "max-width": "100%"
-   }
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "img",
+  "attributes": {
+    "src": "@thumbnail.200x150",
+    "alt": "='Thumbnail of file ' + [$FileLeafRef]"
+  },
+  "style": {
+    "width": "100%",
+    "max-width": "100%"
+  }
 }
 ```
+
 Default file hover card using FileLeafRef
 
 ```JSON
- {
-    "elmType": "img",
-    "style": {
-        "width": "100%",
-        "height": "100%",
-        "display": "=if([$File_x0020_Type] == '', 'none', '')"
-    },
-    "attributes": {
-        "src": "@thumbnail.300x300"
-    },
-    "defaultHoverField": "[$FileLeafRef]"
+{
+  "elmType": "img",
+  "style": {
+    "width": "100%",
+    "height": "100%",
+    "display": "=if([$File_x0020_Type] == '', 'none', '')"
+  },
+  "attributes": {
+    "src": "@thumbnail.300x300"
+  },
+  "defaultHoverField": "[$FileLeafRef]"
 }
-  ```
+```
 
 ### displayValue
 
 The following column types can use displayValue property to get the default rendered value, based on the column setting
+
 * Date/Time
 * Number
 * Yes/No
@@ -1086,15 +1089,17 @@ The following column types can use displayValue property to get the default rend
 * Approval Status
 
 ```JSON
- {
-    "elmType": "div",
-    "txtContent": "@currentField.displayValue"
+{
+  "elmType": "div",
+  "txtContent": "@currentField.displayValue"
 }
 ```
+
 This also works with field name
+
 ```JSON
- {
-    "elmType": "div",
-    "txtContent": "[$FieldName.displayValue]"
+{
+  "elmType": "div",
+  "txtContent": "[$FieldName.displayValue]"
 }
 ```
