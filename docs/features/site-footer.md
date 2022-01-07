@@ -28,7 +28,8 @@ You can control the footer existence with a `FooterEnabled` property in the `Web
 
 ```powershell
 Connect-PnPOnline -Url "<SiteURL>" –Credentials (Get-Credential) 
-Set-PnPFooter -Enabled:$false
+Set-PnPFooter -Enabled:$false # for disabling the footer
+Set-PnPFooter -Enabled:$true # for enabling the footer
 ```
 
 > [!NOTE]
