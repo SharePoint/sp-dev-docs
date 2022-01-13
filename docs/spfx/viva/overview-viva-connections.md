@@ -32,8 +32,6 @@ To learn more about creating ACEs, see the following tutorial: [Build your first
 
 The SPFx v1.13 introduced support for building solutions to customize and extend Microsoft Viva Connections. To learn more about SPFx v1.13, including prerequisites & how to install it, see: [SharePoint Framework v1.13 release notes](../release-1.13.md).
 
-[!INCLUDE [spfx-release-beta](../../../includes/snippets/spfx-release-beta.md)]
-
 ## Start building for Microsoft Viva Connections
 
 Once you've completed the prerequisites, start creating your first Adaptive Card Extension (ACE) in the following tutorials:
