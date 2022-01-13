@@ -1,7 +1,7 @@
 ---
 title: Deployment options for SharePoint Framework solutions for Microsoft Teams
 description: Learn what options are available to deploy SharePoint Framework solutions for Microsoft Teams
-ms.date: 09/28/2021
+ms.date: 01/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -67,7 +67,7 @@ To use your own Microsoft Teams app manifest & app package instead of letting Sh
     - [Microsoft Teams: Create an app package for your Microsoft Teams app](/microsoftteams/platform/concepts/build-and-test/apps-package)
     - [Microsoft Teams: Manifest schema for Microsoft Teams](/microsoftteams/platform/resources/schema/manifest-schema)
 
-  > [!IMPORTANT]
+    > [!IMPORTANT]
     > in the Teams app manifest ensure you add the following entry:
     > ```json
     > "webApplicationInfo": {
@@ -76,6 +76,7 @@ To use your own Microsoft Teams app manifest & app package instead of letting Sh
     > }
     > ```
     > That is required to ensure any API call in the component will succeed from Microsoft Teams rich clients.
+    > **teamSiteDomain** will be the same tenant that the Teams client is using, this will not work cross-tenant/cross-domain so you cannot hardcode another domain in.
 
 1. Create the Microsoft Teams app package named **TeamsSPFxApp.zip** by compressing the contents of the **./teams** folder.
 
