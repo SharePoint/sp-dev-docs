@@ -49,6 +49,17 @@ When SharePoint creates the app manifest, it will use values from the SPFx solut
 
 If a SPFx solution contains multiple web parts designated for use in Microsoft Teams, SharePoint Online will repeat the above process for each of them.
 
+> [!NOTE]
+> If you are curious on the generated package structure, you can use use the following REST API to download the package for specific solutions:
+> 
+> `_api/web/tenantappcatalog/downloadteamssolution(id)/$value`
+> 
+> id is the numeric identifier of the solution in the app catalog library.
+> 
+> You can request this API in the context of your app catalog, for example with URL of `https://[yourtenant]].sharepoint.com/sites/appcatalog/_api/web/tenantappcatalog/downloadteamssolution(123)/$value` 
+> API call will start download process of the generated manifest package.
+
+
 ## Developer-provided Microsoft Teams app manifest & package
 
 When you need more control over the Microsoft Teams app manifest or app package, you can create your own package. In this case, when an administrator selects the **Sync to Teams** button, SharePoint Online will look for the following file in the **\*.sppkg** file: **./teams/TeamsSPFxApp.zip**.
