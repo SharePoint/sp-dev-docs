@@ -56,8 +56,7 @@ If a SPFx solution contains multiple web parts designated for use in Microsoft T
 > 
 > id is the numeric identifier of the solution in the app catalog library.
 > 
-> You can request this API in the context of your app catalog, for example with URL of `https://[yourtenant]].sharepoint.com/sites/appcatalog/_api/web/tenantappcatalog/downloadteamssolution(123)/$value` 
-> API call will start download process of the generated manifest package.
+> You can request this API in the context of your app catalog, for example with URL of `https://[yourtenant]].sharepoint.com/sites/appcatalog/_api/web/tenantappcatalog/downloadteamssolution(12)/$value`. API call will start download process of the generated manifest package.
 
 
 ## Developer-provided Microsoft Teams app manifest & package
