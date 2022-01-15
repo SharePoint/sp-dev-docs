@@ -38,9 +38,7 @@ landingContent:
           - text: Build Microsoft Teams tab using SharePoint Framework - Tutorial
             url: /sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab
           - text: Use Microsoft Graph in your SharePoint Framework solution
-            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis
-          - text: Use Microsoft Graph in your SharePoint Framework solution
-            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis            
+            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis         
   
   # Card (optional)
   - title: Contact us
