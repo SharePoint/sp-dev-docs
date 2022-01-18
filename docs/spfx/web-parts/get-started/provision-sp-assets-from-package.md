@@ -18,7 +18,7 @@ Before you start, complete the procedures in the following articles to ensure th
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/_oHjmahz4B8]
+> [!Video https://www.youtube.com/embed/09uoG6Voeew]
 
 ## Create a new web part project
 
