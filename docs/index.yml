@@ -45,16 +45,16 @@ landingContent:
     linkLists:
       - linkListType: video
         links:
-          - text: Microsoft 365 & SharePoint Community - PnP
+          - text: Microsoft 365 Community
             url: https://www.youtube.com/channel/UC_mKdhw-V6CeCM7gTo_Iy7w
       - linkListType: overview
         links:
           - text: Developer Blog
-            url: https://developer.microsoft.com/microsoft-365/blogs/
+            url: https://devblogs.microsoft.com/microsoft365dev/
           - text: Community
             url: https://pnp.github.io/
           - text: Submit a new idea
-            url: https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform
+            url: https://aka.ms/feedback/sharepoint
           - text: Issues
             url: https://github.com/SharePoint/sp-dev-docs/issues
           - text: Forum
