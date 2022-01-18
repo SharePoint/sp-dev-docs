@@ -11,7 +11,7 @@ metadata:
   ms.audience: Developer # Optional; Remove if no collection is used.
   author: VesaJuvonen #Required; your GitHub user alias, with correct capitalization.
   ms.author: vesaj #Required; microsoft alias of author; optional team alias.
-  ms.date: 26/05/2021 #Required; mm/dd/yyyy format.
+  ms.date: 01/18/2022 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -38,9 +38,7 @@ landingContent:
           - text: Build Microsoft Teams tab using SharePoint Framework - Tutorial
             url: /sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab
           - text: Use Microsoft Graph in your SharePoint Framework solution
-            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis
-          - text: Use Microsoft Graph in your SharePoint Framework solution
-            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis            
+            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis         
   
   # Card (optional)
   - title: Contact us
