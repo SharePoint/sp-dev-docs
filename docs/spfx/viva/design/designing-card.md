@@ -17,7 +17,7 @@ Cards are used to link resources, surface information, and power direct interact
 
 **Bring cards to life with relevant and dynamically refreshable data:** Company stock price, due dates for training or projects, task assignment updates, and remaining vacation days are some examples.
 
-:::image type="content" source="../../../images/viva-design/img-card-design.gif" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img-card-design2.gif" alt-text="Card container and elements":::
 
 ## Anatomy of cards
 
@@ -25,17 +25,17 @@ Each dashboard card has the following elements:
 
 :::image type="content" source="../../../images/viva-design/img_card_base.jpg" alt-text="Card container and elements":::
 
-1. Container: All card content sits within the container.
+1. **Container**: All card content sits within the container.
 
-1. Icon: Unique visual representation of this card. You can choose the icon from the pre-defined set or upload a customized icon.
+1. **Icon**: Unique visual representation of this card. You can choose the icon from the pre-defined set or upload a customized icon.
 
-Icons from the pre-defined set are theme-friendly and will automatically adjust to light and dark themes using theme primary color.
+    Icons from the pre-defined set are theme-friendly and will automatically adjust to light and dark themes using theme primary color.
 
-For customized icons, maximum size is 24 px by 24 px. Recommended formats are PNG or SVG. SVG icons scale better across different screen resolutions. Make sure the icon has a transparent background, and it looks good both on light and dark theme. Learn about SharePoint themes.
+    For customized icons, maximum size is 24 px by 24 px. Recommended formats are PNG or SVG. SVG icons scale better across different screen resolutions. Make sure the icon has a transparent background, and it looks good both on light and dark theme. Learn about SharePoint themes.
 
-1. Title: Typically the app name. All titles should be in sentence case.
+1. **Title**: Typically the app name. All titles should be in sentence case.
 
-1. Heading: Most visually prominent text on the card. Used to communicate key information. Heading text can be static or dynamically updated. All headings should be in sentence case.
+1. **Heading**: Most visually prominent text on the card. Used to communicate key information. Heading text can be static or dynamically updated. All headings should be in sentence case.
 
 When adding the title and heading, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes (more information about sizes is given below) and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the title, in most cases, a length of 10-12 characters should fit the card width well.
 
@@ -108,7 +108,7 @@ Dashboard cards are supported on iOS, Android, and Web. However there are slight
 
 :::image type="content" source="../../../images/viva-design/img_card_platforms.jpg" alt-text="Card container and elements":::
 
-Dashboard cards also support both light and dark mode theme. Ensure that colors you use work for both modes – text should be legible, and buttons and icons should be clearly recognizable against the background. To meet accessibility criteria, text should have a color ratio of 4.5:1 against the button background, and non-text components like icon should have a color ratio of 3:1 against the background. Use this tool to check color contrast.
+Dashboard cards also support both light and dark mode theme. Ensure that colors you use work for both modes – text should be legible, and buttons and icons should be clearly recognizable against the background. To meet accessibility criteria, text should have a color ratio of 4.5:1 against the button background, and non-text components like icon should have a color ratio of 3:1 against the background. [Use this tool to check color contrast](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html).
 
 :::image type="content" source="../../../images/viva-design/img_card_modes.jpg" alt-text="Card container and elements":::
 
@@ -122,11 +122,11 @@ To display your custom app in the dashboard picker, you will need the following:
 
 :::image type="content" source="../../../images/viva-design/img_card_toolbox2.jpg" alt-text="Card container and elements":::
 
-**1. Icon:** Unique visual representation of this app. Your custom icon maximum size is 24 px by 24 px and should preferably in PNG or SVG format. SVG icons scale better across different screen resolutions. It is preferable to use a monochromatic icon, but you can use color icons if you want to represent your unique brand with the icons. Either way, make sure the icon has a transparent background, and it looks good both on light and dark theme. ​​​​​​​Learn about SharePoint themes.. The same icon is to be used for the dashboard card (see above).
+**1. Icon:** Unique visual representation of this app. Your custom icon maximum size is 24 px by 24 px and should preferably in PNG or SVG format. SVG icons scale better across different screen resolutions. It is preferable to use a monochromatic icon, but you can use color icons if you want to represent your unique brand with the icons. Either way, make sure the icon has a transparent background, and it looks good both on light and dark theme. [​​​​​​​Learn about SharePoint themes](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview). The same icon is to be used for the dashboard card (see above).
 
-**1. Title:** Make sure the title of the app is concise and is not truncated. Recommended length is 10-12 characters. The same title should be used for the dashboard card (see above) and the quick view (link quick view page) (if used). If you have multiple apps, it is recommended that each app has a unique title. All titles should be sentence case.
+**2. Title:** Make sure the title of the app is concise and is not truncated. Recommended length is 10-12 characters. The same title should be used for the dashboard card (see above) and the quick view (link quick view page) (if used). If you have multiple apps, it is recommended that each app has a unique title. All titles should be sentence case.
 
-**1. Descriptive text:** A clear, concise description explains the purpose of the card and provides information about how to use it. It should show up in the tooltip on hover (in web). Make sure the text wraps appropriately and is not too wide or too narrow in the tooltip. The optimal line length is considered to be 50-60 characters per line, including spaces.
+**3. Descriptive text:** A clear, concise description explains the purpose of the card and provides information about how to use it. It should show up in the tooltip on hover (in web). Make sure the text wraps appropriately and is not too wide or too narrow in the tooltip. The optimal line length is considered to be 50-60 characters per line, including spaces.
 
 ### Defining settings for the card
 
