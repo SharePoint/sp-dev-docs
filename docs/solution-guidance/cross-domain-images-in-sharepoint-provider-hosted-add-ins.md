@@ -11,7 +11,7 @@ _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
 You might want to display images from a SharePoint site in your provider-hosted add-ins. Because provider-hosted add-ins run on a remote web, the domains for your provider-hosted add-in and your SharePoint site are different. For example, your add-in might run on Microsoft Azure, and you're trying to show an image from Office 365. Because your provider-hosted add-in crosses domains to access the image, SharePoint requires user authorization before the provider-hosted add-in shows the image.
 
-The [Core.CrossDomainImages](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.CrossDomainImages) code sample shows how a provider-hosted add-in can use a SharePoint access token and a REST service to retrieve images from SharePoint. The REST service returns a Base64-encoded string, which is used to show the image in the browser. Use the solution in this sample to show images stored in SharePoint in provider-hosted add-ins by using either server-side or client-side code.
+The [Core.CrossDomainImages](https://github.com/pnp/PnP/tree/master/Samples/Core.CrossDomainImages) code sample shows how a provider-hosted add-in can use a SharePoint access token and a REST service to retrieve images from SharePoint. The REST service returns a Base64-encoded string, which is used to show the image in the browser. Use the solution in this sample to show images stored in SharePoint in provider-hosted add-ins by using either server-side or client-side code.
 
 > [!NOTE] 
 > Because the sample uses a REST endpoint, you can use either server-side or client-side code to retrieve your image.
