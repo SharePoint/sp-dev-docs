@@ -18,7 +18,7 @@ The [Core.CrossDomainImages](https://github.com/SharePoint/PnP/tree/dev/Samples/
 
 ## Before you begin
 
-To get started, download the [Core.CrossDomainImages](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.CrossDomainImages) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.CrossDomainImages](https://github.com/pnp/PnP/tree/master/Samples/Core.CrossDomainImages) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/PnP/PnP) project on GitHub.
 
 ## Using the Core.CrossDomainImages code sample
 
