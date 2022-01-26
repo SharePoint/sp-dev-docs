@@ -248,16 +248,6 @@ IClientSideWebPartStatusRenderer.renderError(domElement: HTMLElement, error: Err
 
 Use `clearDomElementCallback` to clear the DOM node.
 
-### Changes to Scaffolding Options and Prompts
-
-The next prompts  were deprecated in favor to their defaults:
-
-- Solution description
-- Environment (SharePoint) version
-- Tenant-wide deployment
-- Isolated permissions
-- Component description
-
 ### ipAddress Property in serve.json
 
 New property `ipAddress` has been added to `serve.json` configuration. This parameter is helpful when using Docker containers. For example, to set the serve host as '0.0.0.0'.
