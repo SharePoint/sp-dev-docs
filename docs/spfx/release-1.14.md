@@ -155,6 +155,14 @@ Override this method to handle errors from Adaptive Card actions.
 > [!NOTE]
 > These new actions are **only available in the browser** currently. Viva Connections desktop and Viva Connections mobile support will be enabled later.
 
+After General Availability the support matrix for actions will look like:
+
+Action       | Viva Connection Desktop | Viva Connections Mobile | Browser
+------------- | ------------- | ------------- | -------------
+Select Media  | Supported   | Supported | Supported
+Get Location  | Not Supported | Supported | Supported
+Show Location | Not Supported | Supported | Supported
+
 ```typescript
 ISPFxAdaptiveCard.actions?: (
     | ISubmitAction
@@ -180,6 +188,11 @@ The SelectMedia and Location action can be configured as shown below:
       type: 'VivaAction.GetLocation',
       id: 'Get Location',
       parameters: {chooseLocationOnMap: true}
+    },
+    {
+      type: 'VivaAction.ShowLocation',
+      id: 'Show Location',
+      parameters: parameters: {locationCoordinates: {latitude: 40, longitude: 40}}
     }
   ]
 ```
