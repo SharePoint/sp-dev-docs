@@ -39,7 +39,7 @@
         href: features/hub-site/REST-sphubsite-type.md
       - name: SPHubSiteData type
         href: features/hub-site/REST-sphubsitedata-type.md
-  - name: Site designs & site scripts
+  - name: Site templates & site scripts
     items:
     - name: Overview
       href: declarative-customization/site-design-overview.md

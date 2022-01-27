@@ -1,7 +1,7 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 09/24/2021
+ms.date: 01/27/2022
 ms.localizationpriority: high
 ---
 
@@ -24,11 +24,11 @@ The overall JSON structure is specified as follows:
 }
 ```
 
-You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
+> [!TIP]
+> You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
-#### Applying site temlpates multiple times
-
-**Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema.
+> [!NOTE]
+> **Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema.
 
 ## Create a new SharePoint list
 
@@ -37,7 +37,7 @@ Use the **createSPList** verb to create a new SharePoint list.
 > [!NOTE]
 > Once **createSPList** is applied on a site, runnning the **createSPList** with the same list name will act as an update to the existing list.
 
-#### JSON values
+### JSON values
 
 - `listName`: The name of the list.
 - `templateType`: Which template to apply to the list. Typically you would use value 100. The full list of template type values is documented in [SPListTemplateType enumeration](/previous-versions/office/sharepoint-server/ms413878(v=office.15)) - but the ones we currently support include:
@@ -152,7 +152,7 @@ Deletes a default field that was provided by the selected template type.
 
 ### addSPFieldXml
 
-Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
 
 Currently these field constructs can't be designated as site columns nor added to content types. To create site columns with Field XML, use the **createSiteColumnXml** action.
 
@@ -172,7 +172,7 @@ Currently these field constructs can't be designated as site columns nor added t
 
 ### addSPLookupFieldXml
 
-Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
@@ -218,7 +218,7 @@ Defines and adds a view to the list. Use this action to specify the desired colu
 
 - `name`: The name of the view.
 - `viewFields`: An array of the internal names of the fields in your view.
-- `query`: A CAML query string that contains the `where` clause for the view's query. See [CAML schemas] (https://docs.microsoft.com/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas).
+- `query`: A CAML query string that contains the `where` clause for the view's query. See [CAML schemas](/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas).
 - `rowLimit`: The row limit of the view.
 - `isPaged`: Specifies whether the view is paged.
 - `makeDefault`: If **True**, the view will be made the default for the list; otherwise, **False**.
@@ -374,7 +374,7 @@ In this example, we are formatting a number column as a data bar.
 
 ### associateFieldCustomizer
 
-Registers field extension for a list field. For more information on these client-side extensions, see [Build field customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) tutorial.
+Registers field extension for a list field. For more information on these client-side extensions, see [Build field customizer](/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) tutorial.
 
 #### JSON values
 
@@ -873,10 +873,10 @@ Use the `associateExtension` action to register a deployed SharePoint Framework 
 #### JSON values
 
 - `title`: The title of the extension in the App Catalog.
-- `location`: Used to specify the extension type. If its used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
+- `location`: Used to specify the extension type. If it's used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
 - `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
 - `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
-- `registrationId`: An optional parameter, which indicates the type of the list the extension is associated to (if its a list extension).
+- `registrationId`: An optional parameter, which indicates the type of the list the extension is associated to (if it's a list extension).
 - `registrationType`: An optional parameter, which should be specified if the extension is associated with a list.
 - `scope`: Indicates whether the extension is associated with a `Web` or a `Site`.
 
