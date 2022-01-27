@@ -1,13 +1,13 @@
 ---
-title: Site design JSON schema
-description: JSON schema reference for building site designs for SharePoint.
+title: Site template JSON schema
+description: JSON schema reference for building site templates for SharePoint.
 ms.date: 09/24/2021
 ms.localizationpriority: high
 ---
 
-# Site design JSON schema
+# Site template JSON schema
 
-The site design is a list of **actions**. For more complex actions, such as creating a list, there are also **subactions**. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time.
+The site template is a list of **actions**. For more complex actions, such as creating a list, there are also **subactions**. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time.
 
 The overall JSON structure is specified as follows:
 
@@ -26,7 +26,7 @@ The overall JSON structure is specified as follows:
 
 You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
-#### Applying site designs multiple times
+#### Applying site temlpates multiple times
 
 **Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema.
 
@@ -282,6 +282,23 @@ Adds a content type to the list. Currently these are limited to the default cont
 }
 ```
 
+### addContentTypesFromHub
+
+Manually syncs content types from a content type hub to a specific site.
+
+#### JSON value
+
+- `ids`: An array of the content type IDs that need to be synced.
+
+#### Example
+
+```json
+{
+  "verb": "addContentTypesFromHub",
+  "ids": ["0x01007CE30DD1206047728BAFD1C39A850120"]
+}
+```
+
 ### removeContentType
 
 Removes a content type that was provided by the selected template type.
@@ -396,7 +413,7 @@ Registers field extension for a list field. For more information on these client
       "verb": "associateFieldCustomizer",
       "internalName": "ElectricSlide",
       "clientSideComponentId": "35944670-3111-4482-b152-9e9d1sean9f7",
-      "clientSideComponentProperties": "{\"sampleText\":\"Yes - added by a site design, what?\"}"
+      "clientSideComponentProperties": "{\"sampleText\":\"Yes - added by a site template, what?\"}"
     }
   ]
 }
@@ -445,7 +462,7 @@ Associates a ListViewCommandSet to the list
         "title": "HelloWorld",
         "location": "CommandBar",
         "clientSideComponentId": "13234283-d6c2-408f-a9ef-31a920c8ae78",
-        "clientSideComponentProperties": "{\"sampleText\":\"added by a site design\"}"
+        "clientSideComponentProperties": "{\"sampleText\":\"added by a site template\"}"
       }
   ]
 }
@@ -456,7 +473,7 @@ Associates a ListViewCommandSet to the list
 Renames the list. To create a new list with a specific name, instead of using setTitle use the `listName` parameter in the `CreateSPList` action.
 
 > [!NOTE]
-> Using `setTitle` will rename the list, preventing the list from updating if the site design is reapplied.
+> Using `setTitle` will rename the list, preventing the list from updating if the site template is reapplied.
 
 #### JSON value
 
@@ -1012,4 +1029,4 @@ Use the `setSiteExternalSharingCapability` action to manage guest access. For mo
 
 ## See also
 
-- [SharePoint site design and site script overview](site-design-overview.md)
+- [SharePoint site template and site script overview](site-design-overview.md)
