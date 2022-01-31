@@ -44,18 +44,18 @@ Use the **createSPList** verb to create a new SharePoint list.
 
   | List Template Name | Enum |
   |--------------|---------|
-   Generic List | 100
-   Document Library | 101
-   Survey | 102
-   Links | 103
-   Announcements | 104
-   Contacts | 105
-   Events | 106
-   Tasks | 107
-   Discussion Board | 108
-   PictureLibrary | 109
-   Site Pages | 119
-   Issue Tracking | 1100
+  |Generic List | 100|
+  |Document Library | 101|
+  |Survey | 102|
+  |Links | 103|
+  |Announcements | 104|
+  |Contacts | 105|
+  |Events | 106|
+  |Tasks | 107|
+  |Discussion Board | 108|
+  |PictureLibrary | 109|
+  |Site Pages | 119|
+  |Issue Tracking | 1100|
 
   If you use 101 or 119 and reference the default names ("Documents" or "Site Pages"), you can modify the library created with the template. See example below.
 - `subactions`: An array of actions that run in the order listed to create your list.
