@@ -1,7 +1,7 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 01/27/2022
+ms.date: 01/31/2022
 ms.localizationpriority: high
 ---
 
@@ -35,12 +35,12 @@ The overall JSON structure is specified as follows:
 Use the **createSPList** verb to create a new SharePoint list.
 
 > [!NOTE]
-> Once **createSPList** is applied on a site, runnning the **createSPList** with the same list name will act as an update to the existing list.
+> Once **createSPList** is applied on a site, running the **createSPList** with the same list name will act as an update to the existing list.
 
 ### JSON values
 
 - `listName`: The name of the list.
-- `templateType`: Which template to apply to the list. Typically you would use value 100. The full list of template type values is documented in [SPListTemplateType enumeration](/previous-versions/office/sharepoint-server/ms413878(v=office.15)) - but the ones we currently support include:
+- `templateType`: Which template to apply to the list. Typically, you would use value 100. The full list of template type values is documented in [SPListTemplateType enumeration](/previous-versions/office/sharepoint-server/ms413878(v=office.15)) - but the ones we currently support include:
 
   | List Template Name | Enum |
   |--------------|---------|
@@ -198,7 +198,7 @@ Subaction to add a previously defined site column directly to a list (existing o
 #### JSON value
 
 - `internalName`: The internal name of the site column to add.
-- `addToDefaultView`: Optional attribute that defaults to false. If true, the newly added field will also be added to the default view.
+- `addToDefaultView`: Optional attribute that defaults to **False**. If **True**, the newly added field will also be added to the default view.
 
 #### Example
 
@@ -223,7 +223,7 @@ Defines and adds a view to the list. Use this action to specify the desired colu
 - `isPaged`: Specifies whether the view is paged.
 - `makeDefault`: If **True**, the view will be made the default for the list; otherwise, **False**.
 - `scope`: An optional setting to specify the scope of the view. For more information, see [SPViewScope enumeration](/previous-versions/office/sharepoint-server/ms458474(v=office.15)).
-- `formatterJSON`: An optional setting to specify the JSON formatting for the view
+- `formatterJSON`: An optional setting to specify the JSON formatting for the view.
 
 #### Example
 
@@ -617,13 +617,13 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
 
 #### JSON values
 
-- `url`: The url of the link to add.
+- `url`: The URL of the link to add.
 - `displayName`: The display name of the link.
 - `navComponent`: The component where to add the link, QuickLaunch, Hub, or Footer. The default is **QuickLaunch**.
 - `isWebRelative`: **True** if the link is web relative; otherwise, **False**. The default is **False**.
 - `parentDisplayName`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
-- `parentUrl`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this url. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
-- `isParentUrlWebRelative`: An optional parameter. **True** if the link is web relative; otherwise, **False**. The default is **False**.
+- `parentUrl`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this URL. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
+- `isParentUrlWebRelative`: An optional parameter. **True** if the link is web relative; otherwise, **False**. The default value is **False**.
 
 #### Example
 
@@ -670,7 +670,7 @@ Use the `removeNavLink` verb to remove a navigation link from the site.
 
 #### JSON values
 
-- `url`: The url of the link to remove.
+- `url`: The URL of the link to remove.
 - `displayName`: The display name of the link.
 - `navComponent`: The component where to remove the link from, QuickLaunch, Hub, or Footer. The default is **QuickLaunch**.
 - `isWebRelative`: **True** if the link is web relative; otherwise, **False**.
@@ -678,7 +678,7 @@ Use the `removeNavLink` verb to remove a navigation link from the site.
 #### Example
 
 > [!NOTE]
-> This action can be used to remove site links added by the collaboration and communication site templates (for example, "home", "documents", "pages", "conversations", etc.).
+> This action can be used to remove site links added by the collaboration and communication site templates (for example, "home", "documents", "pages", and "conversations").
 
 ```json
 {
@@ -806,7 +806,7 @@ Use the `setSiteLogo` verb to specify a logo for your site.
 
 #### JSON value
 
-- `url`: The url of the logo image to use.
+- `url`: The URL of the logo image to use.
 
 #### Example
 
