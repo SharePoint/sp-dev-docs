@@ -1,13 +1,13 @@
 ---
-title: Set up a development environment for SharePoint Add-ins on Office 365
-description: Install Visual Studio and sign up for an Office 365 developer subscription.
-ms.date: 03/14/2018
+title: Set up a development environment for SharePoint Add-ins on Microsoft 365
+description: Install Visual Studio and sign up for a Microsoft 365 developer subscription.
+ms.date: 02/04/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
 
-# Set up a development environment for SharePoint Add-ins on Office 365
+# Set up a development environment for SharePoint Add-ins on Microsoft 365
 
 To get an understanding of your options before you carry out any procedures in this article, see [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md). 
 
@@ -38,18 +38,18 @@ The registry path will change in future versions of Visual Studio.
 
 <a name="o365_signup"> </a>
 
-## Sign up for an Office 365 developer subscription
+## Sign up for a Microsoft 365 developer subscription
 
 > [!NOTE]
-> You might already have access to an Office 365 developer subscription: 
-> - **Are you a Visual Studio (MSDN) subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 developer subscription as a benefit. [Redeem your benefit today](https://msdn.microsoft.com/subscriptions/manage/default.aspx). 
-> - **Do you have one of the following Office 365 subscription plans?** If so, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
+> You might already have access to a Microsoft 365 developer subscription: 
+> - **Are you a Visual Studio (MSDN) subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive a Microsoft 365 developer subscription as a benefit. [Redeem your benefit today](https://msdn.microsoft.com/subscriptions/manage/default.aspx). 
+> - **Do you have one of the following Microsoft 365 subscription plans?** If so, see [Create a developer site on an existing Microsoft 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
 
-To get an Office 365 plan: 
+To get a Microsoft 365 plan: 
 
-- [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/office/dev-program).
+- [Sign up for a Microsoft 365 developer subscription through the Microsoft 365 Developer Program](https://developer.microsoft.com/office/dev-program).
 
-- See the [Office 365 Developer Program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription. 
+- See the [Microsoft 365 Developer Program documentation](/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Microsoft 365 Developer Program and sign up and configure your subscription. 
 
 ### Open your developer site 
  
