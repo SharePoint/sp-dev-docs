@@ -240,6 +240,7 @@ ACEs can use the **ViewNavigator** to manipulate the stack.
 - `ViewNavigator.push()`: Pushes a new View to the top of the View stack.
 - `ViewNavigator.replace()`: Replaces the top View with a new View.
 - `ViewNavigator.pop()`: If there's more than one View, pops the top View from the View stack.
+- `ViewNavigator.close()`: Closes the current view and removes top view from View stack.
 
 ### Navigate between views
 
