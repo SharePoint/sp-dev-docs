@@ -253,6 +253,14 @@ Use `clearDomElementCallback` to clear the DOM node.
 New property `ipAddress` has been added to `serve.json` configuration. This parameter is helpful when using Docker containers. For example, to set the serve host as '0.0.0.0'.
 This property will be explicitly used to wind up the server, meaning all debug URLs and webpack configurations won't be affected.
 
+### Image Helper API
+
+The **ImageHelper** static class (in @microsoft/sp-image-helper) has been added to allow SPFx developers runtime access to:
+
+- Urls of auto-generated thumbnail images of pages and documents stored in SharePoint
+- More optimized Urls to images stored in SharePoint
+
+Learn more: [Image Helper API](image-helper-api.md)
 
 ### Changes to Scaffolding Options and Prompts
 
