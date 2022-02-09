@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.14 release notes
 description: Release notes for the SharePoint Framework v1.14 release
-ms.date: 1/26/2022
+ms.date: 2/9/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -11,6 +11,7 @@ There will be multiple public preview release using the **@next** tag in the [NP
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- Release Candidate 1 **Released:** February 9, 2022
 - beta.5 **Released:** January 26, 2022
 - beta.4 **Released:** December 8, 2021
 
@@ -231,6 +232,12 @@ ListViewAccessor.listViewStateChangedEvent: SPEvent<ListViewStateChangedEventArg
 
 This event gets raised every time the list view state changes. The arguments contain type of occurred event (see `ListViewAccessorStateChanges`) and previous state of the list view (see `IListViewAccessorState`).
 
+#### List Command Set Command Disabled Property
+
+```typescript
+Command.disabled: boolean | undefined;
+```
+
 ### Predefined Web Part Picker Group for Web Parts in Development
 
 ```typescript
@@ -267,6 +274,9 @@ This property will be explicitly used to wind up the server, meaning all debug U
 
 ## Deprecations and removed items in this release
 
+> [!IMPORTANT]
+> Any existing solution which is using removed APIs will keep on working without issues. Removal will mean that you cannot created any new solutions which are using these APIs.
+
 - Deprecated APIs from `@microsoft/sp-listview-extensibility`:
   - `BaseListViewCommandSet.onListViewUpdated`
 - Deprecated APIs from `@microsoft/sp-core-library`
@@ -284,7 +294,7 @@ This property will be explicitly used to wind up the server, meaning all debug U
 
 ## Fixed Issues
 
-### November-December Timeframe
+### November-February Timeframe
 
 - [#5131](https://github.com/SharePoint/sp-dev-docs/issues/5131) - Theme tokens in SCSS files in SPFx 1.10.0 don't work anymore
 - [#4808](https://github.com/SharePoint/sp-dev-docs/issues/4808) - SPFX and react-dnd
@@ -309,3 +319,4 @@ This property will be explicitly used to wind up the server, meaning all debug U
 - [#4680](https://github.com/SharePoint/sp-dev-docs/issues/4680) - SPFx 1.9.1, office-ui-fabric-react and sp-property-pane
 - [#6232](https://github.com/SharePoint/sp-dev-docs/issues/6232) - Getting errors about `<div>` cannot be nested in `<p>` when looking at web part data in workbench testing environment
 - [#7386](https://github.com/SharePoint/sp-dev-docs/issues/7386) - Build fails when setting `skipFeatureDeployment` to true
+- [#7691](https://github.com/SharePoint/sp-dev-docs/issues/7691) - 1.13.1 TypeError: Cannot read property 'toJson' of undefined when bundling/serving large project
