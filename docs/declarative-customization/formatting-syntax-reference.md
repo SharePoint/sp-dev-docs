@@ -635,6 +635,8 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=padEnd('DogFood', 10, 'A')"` results in _DogFoodAAA_
   - `"txtContent":"=padEnd('DogFood', 10, 'AB')"` results in _DogFoodABA_
   - `"txtContent":"=padEnd('DogFood', 5, 'A')"` results in _DogFood_
+- **getThumbnailImage**: returns a URL pointing to image for a given image field and preferred size.
+  - `"src":"=getThumbnailImage([$ImageField], 400, 200)"` results in a URL pointing to image for a given image field with 400 width and 200 height
 
 **Conditional operator** - The conditional operator is:
 
@@ -864,7 +866,12 @@ The image field object has the following properties (with example values):
   "fileName": "image.png",
   "id": "6bb1d843-0633-4c9a-9a16-90bc5abd1d8e",
   "serverRelativeUrl": "/teams/Discovery/SiteAssets/Lists/ad6ed939-0db2-4d85-8a39-8f3497f41eee/image.png",
-  "serverUrl": "https://contoso.sharepoint.com"
+  "serverUrl": "https://contoso.sharepoint.com",
+  "thumbnailRenderer": {
+        "spItemUrl": "https://contoso.sharepoint.com:443/_api/v2.1/drives/b!7196759210defdc0/items/2303b15bfa48c74a74758135a0df1201",
+        "fileVersion": 3,
+        "sponsorToken": "3u+UR6n8AgABAAAAHxxdXKmiOmUoqKnZlf8lTOhlPYy93EAkbPfs5+49YLFd/B1+omSKbW7DoqNM40/EeVnwJ8kYoXv9zy9D5C5m5A=="
+      }
 }
 ```
 
@@ -875,7 +882,7 @@ The following example shows how an image field can be used on a current field.
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
   "elmType": "img",
   "attributes": {
-    "src": "@currentField.serverRelativeUrl",
+    "src": "=getThumbnailImage(@currentField, 400, 300)",
     "alt": "@currentField.fileName"
   },
   "style": {
