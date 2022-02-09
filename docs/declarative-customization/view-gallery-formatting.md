@@ -334,8 +334,7 @@ In this example the `@aggregates` array is used to display a summary in the grou
 
 ### hideSelection
 
-Optional element. Specifies whether the ability to select rows in the view is disabled or not. `false` is the default behavior inside a list view (meaning selection is visible and enabled). `true` means that users will not be able to select list items.
-
+Optional element. Specifies whether the ability to select cards in the view is disabled or not. `false` is the default behavior inside a gallery view (meaning selection is visible and enabled). `true` means that users will not be able to select list items.
 ### fillHorizontally
 
 Optional element. Specifies whether the cards in the row should be stretched horizontally to fill the row. `false` is the default behavior (meaning cards in a row are stacked without resizing until they overflow). `true` means cards in the row are stretched horizontally only if necessary to fill the row.

@@ -91,6 +91,8 @@
         href: declarative-customization/view-list-formatting.md
       - name: Gallery layout customization
         href: declarative-customization/view-gallery-formatting.md
+      - name: Board view customization
+        href: declarative-customization/view-board-formatting.md
       - name: Group customization syntax reference
         href: declarative-customization/view-group-formatting.md
     - name: Forms configuration
