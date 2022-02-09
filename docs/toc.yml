@@ -80,9 +80,9 @@
     - name: Column formatting
       href: declarative-customization/column-formatting.md
     - name: Advanced formatting concepts
-      href: declarative-customization/formatting-advanced.md  
+      href: declarative-customization/formatting-advanced.md
     - name: Formatting syntax reference
-      href: declarative-customization/formatting-syntax-reference.md  
+      href: declarative-customization/formatting-syntax-reference.md
     - name: View formatting
       items:
       - name: Overview
@@ -145,6 +145,8 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
+    - name: Yeoman generator for the SharePoint Framework
+      href: spfx/yeoman-generator-for-spfx-intro.md
   - name: Web parts
     items:
     - name: Overview
@@ -453,9 +455,9 @@
     - name: Overview
       href: spfx/roadmap.md
     - name: SPFx v1.14 beta - January 26, 2021
-      href: spfx/release-1.14.md      
+      href: spfx/release-1.14.md
     - name: SPFx v1.13.1 - November 23, 2021
-      href: spfx/release-1.13.1.md            
+      href: spfx/release-1.13.1.md
     - name: SPFx v1.13 - October 21, 2021
       href: spfx/release-1.13.md
     - name: SPFx v1.12.1 - April 28, 2021
@@ -523,7 +525,7 @@
     - name: Card Design
       href: spfx/viva/design/designing-card.md
     - name: Quick View Design
-      href: spfx/viva/design/designing-quick-view.md            
+      href: spfx/viva/design/designing-quick-view.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
@@ -2075,7 +2077,7 @@
       - name: Get model and library information
         href: apis/syntex/rest-getmodelandlibraryinfo.md
       - name: UpdateModelSettings
-        href: apis/syntex/rest-updatemodelsettings-method.md        
+        href: apis/syntex/rest-updatemodelsettings-method.md
       - name: BatchDelete
         href: apis/syntex/rest-batchdelete-method.md
       - name: Create file classification request
