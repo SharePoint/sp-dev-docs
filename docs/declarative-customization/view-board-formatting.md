@@ -5,7 +5,7 @@ ms.date: 02/09/2022
 ms.localizationpriority: high
 ---
 
-# Board layout customizations
+# Board view customizations
 
 ## Build custom cards
 
