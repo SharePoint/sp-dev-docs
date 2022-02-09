@@ -1,7 +1,7 @@
 ---
 title: Format gallery view to customize SharePoint
 description: Customize how gallery views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements and the styles to be applied to those elements.
-ms.date: 10/18/2021
+ms.date: 02/09/2022
 ms.localizationpriority: high
 ---
 
