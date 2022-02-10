@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.14 release notes
 description: Release notes for the SharePoint Framework v1.14 release
-ms.date: 2/9/2022
+ms.date: 2/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -11,7 +11,7 @@ There will be multiple public preview release using the **@next** tag in the [NP
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-- Release Candidate 1 **Released:** February 9, 2022
+- Release Candidate 1 **Released:** February 10, 2022
 - beta.5 **Released:** January 26, 2022
 - beta.4 **Released:** December 8, 2021
 

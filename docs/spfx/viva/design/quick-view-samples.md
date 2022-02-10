@@ -1,5 +1,5 @@
 ---
-title: Viva Connections Quick View samples
+title: Viva Connections Adaptive Card Extension Quick View samples
 ms.date: 2/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
@@ -7,7 +7,7 @@ ms.localizationpriority: high
 
 # Viva Connections Adaptive Card Extension Quick View samples
 
-We have provided 12 different quick view samples for the Viva Connections Adaptive Card extensions. These samples can be used for inspiration on how the quick views could look like. Samples can be reused and copied to your own solutions as needed.
+You can find 12 different quick view samples for the Viva Connections Adaptive Card extensions provided by Microsoft. These samples can be used for inspiration on how the quick views could look like. Samples can be reused and copied to your own solutions.
 
 > [!TIP]
 > Sample adaptive card designs for the quick views are available from [GitHub](https://github.com/pnp/AdaptiveCards-Templates)
@@ -22,7 +22,7 @@ Design for presenting news and company updates with numerous referenced articles
 
 ## Event schedule
 
-Design for listing two day event schedule in a tabs with optionally visible form for the attendee registration.
+Design for listing two day event schedule in a tab with optionally visible form for the attendee registration.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/event-schedule)
 
@@ -62,7 +62,7 @@ Design for showing payslip details in adaptive card format.
 
 ## Simple list with praise information
 
-Design for showing simple list of people in prase scenario.
+Design for showing simple list of people in praise scenario.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/simple-list)
 
