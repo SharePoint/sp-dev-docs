@@ -526,6 +526,8 @@
       href: spfx/viva/design/designing-card.md
     - name: Quick View Design
       href: spfx/viva/design/designing-quick-view.md
+    - name: Quick View Samples
+      href: spfx/viva/design/quick-view-samples.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
