@@ -51,7 +51,7 @@ The following actions occur:
 
 Using the following template, create a flow in Power Automate.
 
-1. In the SharePoint library, from the command bar, select **Automate** > **Power Automate** > **Create a flow**.
+1. In the SharePoint library, from the command bar, select **Integrate** > **Power Automate** > **Create a flow**.
 1. Next, select the template: **When a new file is added in SharePoint, complete a custom action**.
 
 ![File add custom action](../../../images/create-flow-template-file-added.png)
