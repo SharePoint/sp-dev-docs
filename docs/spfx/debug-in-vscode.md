@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 10/21/2020
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -348,5 +348,5 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
 
 - [How to debug your SharePoint Framework web part (Elio Struyf)](https://www.eliostruyf.com/how-to-debug-your-sharepoint-framework-web-part/)
 - [Debug SPFx React web part with Visual Studio Code (Velin Georgiev)](https://blog.velingeorgiev.com/how-debug-sharepoint-framework-webpart-visual-studio-code)
-- [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md)
+- [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)

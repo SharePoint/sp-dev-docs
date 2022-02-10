@@ -145,8 +145,6 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
-    - name: Yeoman generator for the SharePoint Framework
-      href: spfx/yeoman-generator-for-spfx-intro.md
   - name: Web parts
     items:
     - name: Overview
@@ -422,8 +420,8 @@
       href: spfx/tools-and-libraries.md
     - name: Toolchain
       href: spfx/toolchain/sharepoint-framework-toolchain.md
-    - name: Yeoman generator
-      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: Yeoman generator for the SharePoint Framework
+      href: spfx/yeoman-generator-for-spfx-intro.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging

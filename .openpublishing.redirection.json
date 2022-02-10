@@ -79,6 +79,11 @@
             "source_path": "docs/general-development/office-365-cdn.md",
             "redirect_url": "/office365/enterprise/use-office-365-cdn-with-spo",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md",
+            "redirect_url": "docs/spfx/yeoman-generator-for-spfx-intro.md",
+            "redirect_document_id": false
         }
     ]
 }
