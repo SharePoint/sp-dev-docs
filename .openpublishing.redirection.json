@@ -84,6 +84,16 @@
             "source_path": "docs/spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md",
             "redirect_url": "docs/spfx/yeoman-generator-for-spfx-intro.md",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/spfx/office-addins-create.md",
+            "redirect_url": "docs/spfx/release-1.14.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/spfx/web-parts/get-started/office-addins-tutorial.md",
+            "redirect_url": "docs/spfx/release-1.14.md",
+            "redirect_document_id": false
         }
     ]
 }

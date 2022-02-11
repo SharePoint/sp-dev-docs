@@ -199,8 +199,6 @@
           href: spfx/integrate-with-teams-introduction.md
         - name: Hosting Microsoft Teams Tabs in SharePoint
           href: spfx/using-teams-solutions-in-sharepoint.md
-      - name: Building Office add-ins (experimental)
-        href: spfx/office-addins-create.md
     - name: Tutorials
       items:
       - name: Add jQueryUI Accordion to a web part
@@ -213,8 +211,6 @@
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Build Microsoft Teams channel/group tabs with SPFx
         href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
-      - name: Build Office add-ins with SPFx (experimental)
-        href: spfx/web-parts/get-started/office-addins-tutorial.md
   - name: Extensions
     items:
     - name: Overview
