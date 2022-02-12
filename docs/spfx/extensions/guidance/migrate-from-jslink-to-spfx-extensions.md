@@ -1,7 +1,7 @@
 ---
 title: Tutorial - Migrating from JSLink to SharePoint Framework extensions
 description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
-ms.date: 06/29/2020
+ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -128,11 +128,10 @@ To migrate the previous solution to the SharePoint Framework, see the following 
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: spfx-custom-field-extension
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** Field Customizer
     - **What is your Field Customizer name?** CustomColorField
-    - **Which framework would you like to use?**:  No JavaScript framework
+    - **Which template would you like to use?**:  No JavaScript framework
 
 1. Start Visual Studio Code (or the code editor of your choice) and start developing the solution. To start Visual Studio Code, you can execute the following statement.
 

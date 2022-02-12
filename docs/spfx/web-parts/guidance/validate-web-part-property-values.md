@@ -36,10 +36,8 @@ When working with SharePoint Framework client-side web parts, users can configur
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: react-listinfo
-    - **Where do you want to place the files?**: Use the current folder
     - **What is your Web part name?**: List info
-    - **What is your Web part description?**: Shows information about the selected list
-    - **Which framework would you like to use?**: No JavaScript framework
+    - **Which template would you like to use?**: No JavaScript framework
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 

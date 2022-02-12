@@ -1,7 +1,7 @@
 ---
 title: Localize SharePoint Framework client-side web parts
 description: Broaden the appeal of your web part by localizing it for different languages spoken by SharePoint users all over the world.
-ms.date: 8/9/2020
+ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -38,14 +38,9 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 1. When prompted, enter the following values:
 
     - **What is your solution name?** react-localization
-    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
-    - **Where do you want to place the files?** Use the current folder
-    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?** Yes
-    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?** No
     - **Which type of client-side component to create?** WebPart
     - **What is your Web part name?** Greeting
-    - **What is your Web part description?** Greets the user
-    - **Which framework would you like to use?** React
+    - **Which template would you like to use?** React
 
 1. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 

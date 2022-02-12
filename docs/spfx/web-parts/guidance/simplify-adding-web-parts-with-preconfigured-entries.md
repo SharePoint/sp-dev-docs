@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 10/11/2021
+ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -137,8 +137,7 @@ To see how you can use preconfigured entries when building web parts, you'll bui
 
     - **Which type of client-side component to create?** WebPart
     - **What is your Web part name?** Gallery
-    - **What is your Web part description?** Shows items from the selected list
-    - **Which framework would you like to use?** React
+    - **Which template would you like to use?** React
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor you prefer.
 

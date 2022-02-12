@@ -1,7 +1,7 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
 description: Build a web part that uses the DocumentCard component of Office UI Fabric React.
-ms.date: 10/21/2021
+ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -58,9 +58,8 @@ This page will continue to refer to the Office UI Fabric packages until Microsof
 
     The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
     - **Which type of client-side component to create?**: Web Part
-    - **Which framework would you like to use?**: React
+    - **Which template would you like to use?**: React
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files.
 
