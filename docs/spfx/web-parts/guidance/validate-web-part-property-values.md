@@ -355,7 +355,7 @@ In this step, you validate the provided list name and check if it corresponds to
 
 1. Add the web part to the canvas and open its properties. Because you haven't specified a default value for the list name, which is a required property, you see a validation error.
 
-    ![Validation error displayed on a required property without a value specified](../../../images/property-validation-empty-list-name-error.png)
+    ![Validation error displayed on a required property (last name) without a value specified](../../../images/property-validation-empty-list-name-error.png)
 
     If you provide the name of a list that doesn't exist, the web part displays a validation error stating that the list you specified doesn't exist in the current site.
 

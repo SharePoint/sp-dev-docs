@@ -175,9 +175,9 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
 
     ![Allow Debug Manifest question from the page](../images/ext-app-debug-manifest-message.png)
 
-    When the page loads, you should now be able to see the Extension on your page(in this case a list view command extension):
+    When the page loads, you should now be able to see the Extension on your page (in this case a list view command extension):
 
-    ![Hitting Breakpoints in the Visual Studio Code](../images/debug-Extension-Loaded.png)
+    ![SPFx extension loaded in the page](../images/debug-Extension-Loaded.png)
 
     In addition, you can now toggle Breakpoints and step through the code:
 
