@@ -1,6 +1,7 @@
 ---
 title: Require approval of documents in SharePoint using Power Automate
-ms.date: 05/19/2020
+description: Documents that contain sensitive information often require approvals. With the content approval feature in SharePoint, you can put a simple approval process for documents in a specific document library. Using this content approval process, documents pending approval will not be visible to users until they are approved.
+ms.date: 02/14/2022
 search.app: 
   - Flow
 search.appverid: met150
