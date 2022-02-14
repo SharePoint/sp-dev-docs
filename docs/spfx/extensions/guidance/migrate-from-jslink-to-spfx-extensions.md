@@ -1,11 +1,10 @@
 ---
 title: Tutorial - Migrating from JSLink to SharePoint Framework extensions
-description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
+description: Migrate from old "classic" customizations (JSLink) to the new model based on SharePoint Framework extensions.
 ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
-
 # Migrating from JSLink to SharePoint Framework extensions
 
 Since Microsoft SharePoint 2013, most of the enterprise solutions built on top of Microsoft 365 and SharePoint Online leveraged the `JSLink` property of fields and list views to customize the rendering of fields.
@@ -421,7 +420,7 @@ Prepare and deploy the solution for SharePoint Online tenant:
 
 1. After the application installation is completed, create a new custom list, edit the list settings, and add a new column from already existing site columns. Select the group of columns called **SPFx Columns** and add the **Color** field.
 
-    ![The Field Customizer in action](../../../images/spfx-custom-field-extension-add-field.png)
+    ![Add the field to the list](../../../images/spfx-custom-field-extension-add-field.png)
 
 1. Edit the added field and configure some color values (such as Red, Green, Blue, Yellow), and then save the field settings.
 

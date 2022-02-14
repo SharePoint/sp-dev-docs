@@ -420,15 +420,15 @@ With the package been updated in the app catalog, we can move to the SharePoint 
 
     This presents the current details around the installed SharePoint Framework solution. This page also now shows the text as **There is a new version of this app. Get it now** to indicate that there's a new version available.
 
-    ![Context menu of existing package in site](../../../images/tutorial-feature-solution-app-details.png)
+    ![Details of the app package](../../../images/tutorial-feature-solution-app-details.png)
 
 1. Select the **GET IT** button to start the update process for the package.
 
-    ![App status updated to updating in the site contents page](../../../images/tutorial-feature-solution-updating-app.png)
+    ![App status updated to updating in the site contents page (modern)](../../../images/tutorial-feature-solution-updating-app.png)
 
     If you move to the classic experience, you can see more details on the actual upgrade action being applied for the SharePoint Framework solution.
 
-    ![App status updated to updating in the site contents page](../../../images/tutorial-feature-solution-updating-app-classic.png)
+    ![App status updated to updating in the site contents page (classic)](../../../images/tutorial-feature-solution-updating-app-classic.png)
 
     > [!NOTE]
     > Because the SharePoint Framework uses the same app infrastructure as SharePoint Add-ins, the status for the upgrade indicates that the update can happen for an add-in or an app.
