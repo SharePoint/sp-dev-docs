@@ -9,6 +9,9 @@ ms.localizationpriority: high
 
 Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) for building engaging experiences with the widely adopted SharePoint Framework (SPFx). Viva Connections is your gateway to a modern employee experience where you can build and integrate apps that shape culture and foster connections to help employees thrive. With SPFx, you have multiple ways to extend – using the same out-of-the-box or custom SPFx web parts, SPFx extensions (for example header, footer), and specific components for optimized mobile experiences.
 
+> [!IMPORTANT]
+> For the Viva Connections Desktop design guidance, please see [Designing great SharePoint experiences](/sharepoint/dev/design/design-guidance-overview)
+
 ## Overview
 
 ### Intro
