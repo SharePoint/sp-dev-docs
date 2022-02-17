@@ -147,8 +147,6 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
-    - name: Yeoman generator for the SharePoint Framework
-      href: spfx/yeoman-generator-for-spfx-intro.md
   - name: Web parts
     items:
     - name: Overview
@@ -203,8 +201,6 @@
           href: spfx/integrate-with-teams-introduction.md
         - name: Hosting Microsoft Teams Tabs in SharePoint
           href: spfx/using-teams-solutions-in-sharepoint.md
-      - name: Building Office add-ins (experimental)
-        href: spfx/office-addins-create.md
     - name: Tutorials
       items:
       - name: Add jQueryUI Accordion to a web part
@@ -217,8 +213,6 @@
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Build Microsoft Teams channel/group tabs with SPFx
         href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
-      - name: Build Office add-ins with SPFx (experimental)
-        href: spfx/web-parts/get-started/office-addins-tutorial.md
   - name: Extensions
     items:
     - name: Overview
@@ -424,8 +418,8 @@
       href: spfx/tools-and-libraries.md
     - name: Toolchain
       href: spfx/toolchain/sharepoint-framework-toolchain.md
-    - name: Yeoman generator
-      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: Yeoman generator for the SharePoint Framework
+      href: spfx/yeoman-generator-for-spfx-intro.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging

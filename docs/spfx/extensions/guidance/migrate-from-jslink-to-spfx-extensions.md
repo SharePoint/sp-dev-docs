@@ -1,11 +1,10 @@
 ---
 title: Tutorial - Migrating from JSLink to SharePoint Framework extensions
-description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
-ms.date: 06/29/2020
+description: Migrate from old "classic" customizations (JSLink) to the new model based on SharePoint Framework extensions.
+ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
-
 # Migrating from JSLink to SharePoint Framework extensions
 
 Since Microsoft SharePoint 2013, most of the enterprise solutions built on top of Microsoft 365 and SharePoint Online leveraged the `JSLink` property of fields and list views to customize the rendering of fields.
@@ -128,11 +127,10 @@ To migrate the previous solution to the SharePoint Framework, see the following 
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: spfx-custom-field-extension
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** Field Customizer
     - **What is your Field Customizer name?** CustomColorField
-    - **Which framework would you like to use?**:  No JavaScript framework
+    - **Which template would you like to use?**:  No JavaScript framework
 
 1. Start Visual Studio Code (or the code editor of your choice) and start developing the solution. To start Visual Studio Code, you can execute the following statement.
 
@@ -422,7 +420,7 @@ Prepare and deploy the solution for SharePoint Online tenant:
 
 1. After the application installation is completed, create a new custom list, edit the list settings, and add a new column from already existing site columns. Select the group of columns called **SPFx Columns** and add the **Color** field.
 
-    ![The Field Customizer in action](../../../images/spfx-custom-field-extension-add-field.png)
+    ![Add the field to the list](../../../images/spfx-custom-field-extension-add-field.png)
 
 1. Edit the added field and configure some color values (such as Red, Green, Blue, Yellow), and then save the field settings.
 

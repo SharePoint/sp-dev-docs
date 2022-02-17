@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions on modern SharePoint pages
 description: Guidance on how to debug SharePoint Framework solutions on modern SharePoint pages
-ms.date: 11/16/2020
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -322,5 +322,5 @@ This approach should only be used when you're in development mode. If you deploy
 - [Debug SharePoint Framework solutions in Visual Studio Code](debug-in-vscode.md)
 - [Easily test SharePoint Framework web parts on modern pages (Waldek Mastykarz, Rencore)](https://rencore.com/blog/easily-test-sharepoint-framework-web-parts-modern-pages)
 - [Testing and debugging your SPFx solutions in production without causing any impact (Elio Struyf)](https://www.eliostruyf.com/testing-and-debugging-your-spfx-solutions-in-production-without-causing-any-impact/)
-- [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md)
+- [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)

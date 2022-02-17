@@ -1,7 +1,7 @@
 ---
 title: Host your client-side web part from Microsoft 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Microsoft 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online.
-ms.date: 10/21/2021
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -113,7 +113,7 @@ If Microsoft 365 CDN *is enabled*, it's used automatically with default settings
     ![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../images/cdn-web-part-f12-source.png)
 
 > [!NOTE]
-> If you would not have CDN enabled in your tenant, and the `includeClientSideAssets` setting would be `true`in the **package-solution.json**, the loading URL for the assets would be dynamically updated and pointing directly to the ClientSideAssets folder located in the app catalog site collection. In this example case, the URL would be **https://sppnp.microsoft.com/sites/apps/ClientSideAssets/**. This change is automatic depending on your tenant settings and it does not require any changes in the actual solution package.
+> If you would not have CDN enabled in your tenant, and the `includeClientSideAssets` setting would be `true`in the **package-solution.json**, the loading URL for the assets would be dynamically updated and pointing directly to the ClientSideAssets folder located in the app catalog site collection. In this example case, the URL would be `https://sppnp.microsoft.com/sites/apps/ClientSideAssets/`. This change is automatic depending on your tenant settings and it does not require any changes in the actual solution package.
 
 Now you've deployed your custom web part to SharePoint Online and it's being hosted automatically from the Microsoft 365 CDN.
 

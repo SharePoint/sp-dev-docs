@@ -1,7 +1,7 @@
 ---
 title: Yeoman generator for the SharePoint Framework
 description: On this page, learn how to use the Yeoman generator for the SharePoint Framework to create SPFx projects.
-ms.date: 02/08/2022
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -78,6 +78,20 @@ Skipping package manager install.
 
 > [!TIP]
 > The different component types and options are addressed throughout the documentation in this site. Every option isn't covered on this page. For more information about the details on each component type, see the relevant topics throughout the documentation.
+
+## Install the SharePoint Online SPFx Yeoman Generator
+
+The SPFx generator is available as an [npm package](https://www.npmjs.com/package/@microsoft/generator-sharepoint). Install latest version of the the SPFx generator by executing the following command in a console:
+
+```console
+npm install @microsoft/generator-sharepoint -g
+```
+
+You can also install a specific version of the generator by specifying the version number in the package name, seperated with an `@1`. For example, to install the SPFx generator v1.10, execute the following command:
+
+```console
+npm install @microsoft/generator-sharepoint@1.10 -g
+```
 
 ## Project template options
 
@@ -239,3 +253,11 @@ In the [SPFx v1.14 release](release-1.14.md), the following prompts were retired
 The values of these prompts were set on the `preConfiguredEntries[0].description.default` & `preConfiguredEntries[0].properties.description` properties in the component's **\*.manifest.json** file.
 
 Starting with SPFx v1.14, these properties are set to empty strings. You can change the value of these properties after creating the project, if necessary.
+
+## SPFx generator command line options
+
+You can use the SPFx generator's command-line options to create projects in one command instead of going through the prompts. Execute the following command to see the list of command-line options available for the SharePoint generator:
+
+```console
+yo @microsoft/sharepoint --help
+```

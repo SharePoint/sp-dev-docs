@@ -1,7 +1,7 @@
 ---
 title: Connect to SharePoint using the JavaScript Object Model (JSOM)
 description: How to use SharePoint JSOM when building solutions on the SharePoint Framework.
-ms.date: 06/29/2020
+ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -42,11 +42,9 @@ Each of these approaches has advantages and disadvantages, and it's important fo
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: react-sharepointlists
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: SharePoint lists
-    - **What is your Web part description?**: Shows names of lists in the current site
-    - **Which framework would you like to use?**: React
+    - **Which template would you like to use?**: React
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor you prefer.
 

@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 11/08/2021
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -43,7 +43,7 @@ You can check if you already have Node.js already installed, including installed
 node --version
 ```
 
-The SharePoint Framework v1.13.1 is supported on the following Node.js versions:
+The SharePoint Framework v1.14.1 is supported on the following Node.js versions:
 
 - Node.js v12.13.0+ (*Erbium*)
 - Node.js v14.15.0+ (*Fermium*)
@@ -105,7 +105,7 @@ To install the SharePoint Framework Yeoman generator globally, enter the followi
 npm install @microsoft/generator-sharepoint --global
 ```
 
-For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
+For more information about the Yeoman SharePoint generator, see [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md).
 
 ## Install a modern web browser
 

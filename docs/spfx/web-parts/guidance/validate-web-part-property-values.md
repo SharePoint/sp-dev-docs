@@ -1,7 +1,7 @@
 ---
 title: Validate web part property values
 description: Validate property values in SharePoint Framework client-side web parts by validating the value directly inside a web part's code, or by calling an external API.
-ms.date: 06/16/2020
+ms.date: 02/11/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -36,10 +36,8 @@ When working with SharePoint Framework client-side web parts, users can configur
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: react-listinfo
-    - **Where do you want to place the files?**: Use the current folder
     - **What is your Web part name?**: List info
-    - **What is your Web part description?**: Shows information about the selected list
-    - **Which framework would you like to use?**: No JavaScript framework
+    - **Which template would you like to use?**: No JavaScript framework
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
@@ -355,7 +353,7 @@ In this step, you validate the provided list name and check if it corresponds to
 
 1. Add the web part to the canvas and open its properties. Because you haven't specified a default value for the list name, which is a required property, you see a validation error.
 
-    ![Validation error displayed on a required property without a value specified](../../../images/property-validation-empty-list-name-error.png)
+    ![Validation error displayed on a required property (last name) without a value specified](../../../images/property-validation-empty-list-name-error.png)
 
     If you provide the name of a list that doesn't exist, the web part displays a validation error stating that the list you specified doesn't exist in the current site.
 
@@ -368,8 +366,6 @@ In this step, you validate the provided list name and check if it corresponds to
 ### Optimize validation using remote APIs
 
 When validating web part properties using remote APIs, SharePoint Framework monitors changes in the property pane controls and sends updated values for validation to the specified validation handler. By default, the SharePoint Framework waits 200 ms before triggering the validation process. If the user hasn't changed the particular value for 200 ms, the SharePoint Framework starts the validation process. When the validation handler uses a remote API, each time the validation process starts, that method issues a web request to the API to validate the specified value. If users don't type fast enough, this results in partially completed values being sent over for validation, unnecessarily stressing the network and the API. In such cases, you should consider increasing the validation delay.
-
-![Network tools in Microsoft Edge showing web requests with partial list name being sent over for validation](../../../images/property-validation-partial-list-name-validation.png)
 
 You can configure the validation delay for each property separately, depending on the type of value that users need to provide.
 

@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 10/21/2021
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -37,8 +37,7 @@ The Yeoman SharePoint Generator will prompt you with a series of questions. For 
 
 - **Which type of client-side component to create?**: WebPart
 - **What is your Web part name?**: HelloWorld
-- **What is your Web part description?**: HelloWorld description
-- **Which framework would you like to use?**: No JavaScript framework
+- **Which template would you like to use?**: No framework
 
 At this point, Yeoman creates the project scaffolding (folders & files) and installs the required dependencies by running `npm install`. This usually takes 1-3 minutes depending on your internet connection.
 
@@ -170,7 +169,7 @@ One of the capabilities of the property pane is to configure its update behavior
 
 ## Web part project structure
 
-### To use Visual Studio Code to explore the web part project structure
+### Use Visual Studio Code to explore the web part project structure
 
 1. In the console, stop the local web server by terminating the process. Selecting <kbd>CTRL</kbd>+<kbd>C</kbd> on Windows or macOS.
 1. Enter the following command to open the web part project in VS Code (or use your favorite editor):
@@ -211,20 +210,30 @@ The DOM element where the web part should be rendered is available in the `rende
 ```typescript
 public render(): void {
   this.domElement.innerHTML = `
-    <div class="${ styles.helloWorld }">
-      <div class="${ styles.container }">
-        <div class="${ styles.row }">
-          <div class="${ styles.column }">
-            <span class="${ styles.title }">Welcome to SharePoint!</span>
-            <p class="${ styles.subTitle }">Customize SharePoint experiences using web parts.</p>
-            <p class="${ styles.description }">${escape(this.properties.description)}</p>
-            <a href="https://aka.ms/spfx" class="${ styles.button }">
-              <span class="${ styles.label }">Learn more</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>`;
+  <section class="${styles.helloWorld} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
+    <div class="${styles.welcome}">
+      <img alt="" src="${this._isDarkTheme ? require('./assets/welcome-dark.png') : require('./assets/welcome-light.png')}" class="${styles.welcomeImage}" />
+      <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
+      <div>${this._environmentMessage}</div>
+      <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
+    </div>
+    <div>
+      <h3>Welcome to SharePoint Framework!</h3>
+      <p>
+      The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
+      </p>
+      <h4>Learn more about SPFx development:</h4>
+        <ul class="${styles.links}">
+          <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
+          <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
+        </ul>
+    </div>
+  </section>`;
 }
 ```
 
@@ -237,7 +246,7 @@ The property pane is defined in the `HelloWorldWebPart` class. The `getPropertyP
 When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the `render()` method:
 
 ```typescript
-<p class="${styles.description}">${escape(this.properties.description)}</p>
+<div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
 ```
 
 Notice that we're executing an HTML escape on the property's value to ensure a valid string. To learn more about how to work with the property pane and property pane field types, see [Make your SharePoint client-side web part configurable](../basics/integrate-with-property-pane.md).
@@ -328,17 +337,17 @@ Let's now add a few more properties to the property pane: a checkbox, a drop-dow
 
     Locate the following line:
 
-    ```typescript
-    <p class="${ styles.description }">${escape(this.properties.description)}</p>
+    ```html
+    <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
     ```
 
     Add the following immediately after the previously mentioned line:
 
-    ```typescript
-    <p class="${ styles.description }">${escape(this.properties.test)}</p>
-    <p class="${ styles.description }">${this.properties.test1}</p>
-    <p class="${ styles.description }">${escape(this.properties.test2)}</p>
-    <p class="${ styles.description }">${this.properties.test3}</p>
+    ```html
+    <p>${escape(this.properties.test)}</p>
+    <p>${this.properties.test1}</p>
+    <p>${escape(this.properties.test2)}</p>
+    <p>${this.properties.test3}</p>
     ```
 
     To set the default value for the properties, you need to update the web part manifest's `properties` property bag.
@@ -376,7 +385,7 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
   // Components that allow authors to embed arbitrary script code should set this to true.
   // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
-  "supportedHosts": ["SharePointWebPart"],
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
 
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
