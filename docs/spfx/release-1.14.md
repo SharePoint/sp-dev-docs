@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.14 release notes
 
-There will be multiple public preview release using the **@next** tag in the [NPMJS.org](https://www.npmjs.org) registry before final release candidates and a final public release.
+This release introduces updates across the features around Microsoft Viva, Microsoft Teams and SharePoint.
 
 **Released:** February 17, 2021
 
