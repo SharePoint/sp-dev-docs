@@ -13,13 +13,6 @@ There will be multiple public preview release using the **@next** tag in the [NP
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install the latest preview release
-
-Install the latest preview release of the SharePoint Framework (SPFx) by including the **@next** tag:
-
-```console
-npm install @microsoft/generator-sharepoint@next --global
-```
 
 ## Upgrading projects from v1.13.1 to v1.14
 
@@ -30,10 +23,10 @@ npm install @microsoft/generator-sharepoint@next --global
         npm uninstall @microsoft/generator-sharepoint@1.13.1
         ```
 
-    2. Install the new v1.14 preview package:
+    2. Install the new v1.14 package:
 
         ```console
-        npm install @microsoft/generator-sharepoint@next --save --save-exact
+        npm install @microsoft/generator-sharepoint --save --save-exact
         ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
