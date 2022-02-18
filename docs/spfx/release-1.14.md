@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.14 release notes
 description: Release notes for the SharePoint Framework v1.14 release
-ms.date: 02/18/2022
+ms.date: 2/18/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -155,6 +155,15 @@ The default value of `isGroupNameHidden` is false.
 New property `ipAddress` has been added to `serve.json` configuration. This parameter is helpful when using Docker containers. For example, to set the serve host as '0.0.0.0'.
 This property will be explicitly used to wind up the server, meaning all debug URLs and webpack configurations will not be affected.
 
+#### Image Helper API
+
+The **ImageHelper** static class (in @microsoft/sp-image-helper) has been added to allow SPFx developers runtime access to:
+
+- Urls of auto-generated thumbnail images of pages and documents stored in SharePoint
+- More optimized Urls to images stored in SharePoint
+
+Learn more: [Image Helper API](image-helper-api.md)
+
 ## Preview Features and Capabilities
 
 Following features are still in preview status as part of the 1.14 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.15 release.
@@ -291,47 +300,6 @@ The Select Media Action can be used to select Images from your native device. In
 
 ![Image showing a site footer with a logo](../images/release-notes/114/media-panel.jpg)
 
-### Predefined Web Part Picker Group for Web Parts in Development
-
-```typescript
-PredefinedGroup.Local = '8b7bf6f1-a56a-4aa3-8657-7eb6e7e6af61';
-```
-
-The group displays locally debugged web parts.
-
-### Call back to Clear DOM Element Before Loading Indicator or Error Element is Displayed
-
-```typescript
-IClientSideWebPartStatusRenderer.displayLoadingIndicator(domElement: Element, loadingMessage: string, timeout?: number, clearDomElementCallback?: ClearDomElementCallback): void;
-IClientSideWebPartStatusRenderer.renderError(domElement: HTMLElement, error: Error | string, clearDomElementCallback?: ClearDomElementCallback);
-```
-
-Use `clearDomElementCallback` to clear the DOM node.
-
-### ipAddress Property in serve.json
-
-New property `ipAddress` has been added to `serve.json` configuration. This parameter is helpful when using Docker containers. For example, to set the serve host as '0.0.0.0'.
-This property will be explicitly used to wind up the server, meaning all debug URLs and webpack configurations won't be affected.
-
-### Image Helper API
-
-The **ImageHelper** static class (in @microsoft/sp-image-helper) has been added to allow SPFx developers runtime access to:
-
-- Urls of auto-generated thumbnail images of pages and documents stored in SharePoint
-- More optimized Urls to images stored in SharePoint
-
-Learn more: [Image Helper API](image-helper-api.md)
-
-### Changes to Scaffolding Options and Prompts
-
-- New prompt for solution description is added.
-- "Tenant-wide deployment" prompt is removed. The property is set to `true` by default and can be changed manually or using `skip-feature-deployment` argument.
-- The next prompts were deprecated in favor to their defaults:
-  - Solution description
-  - Environment (SharePoint) version
-  - Tenant-wide deployment
-  - Isolated permissions
-  - Component description
 
 ## Deprecations and removed items in this release
 
