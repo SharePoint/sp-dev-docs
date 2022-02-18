@@ -1,7 +1,7 @@
 ---
 title: Advanced Card View Functionality
 description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
-ms.date: 10/25/2021
+ms.date: 02/18/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -411,7 +411,8 @@ Select the **Next** button until you get to the last item in the list. The card 
 :::image type="content" source="../../../images/viva-extensibility/lab2-ace-6.png" alt-text="Card displaying the last item in the list with only a Previous button":::
 
 ## Caching Card view and ACE state
-Starting in the upcoming 1.14.0.beta.1 release, ACEs have a client-side caching layer that can be configured to store:
+
+Starting in SPFx v1.14, ACEs have a client-side caching layer that can be configured to store:
 
 1. The latest rendered card.
 2. The state of the ACE.
