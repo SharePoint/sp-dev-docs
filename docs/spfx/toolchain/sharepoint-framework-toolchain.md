@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework toolchain
 description: The toolchain is the set of build tools, framework packages, and other items that manage building and deploying your SharePoint Framework client-side projects.
-ms.date: 08/05/2021
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -204,5 +204,5 @@ In SHIP mode, the build tasks copy all of the web part assets, including the web
 ## See also
 
 - [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
-- [Scaffold projects by using Yeoman SharePoint generator](scaffolding-projects-using-yeoman-sharepoint-generator.md)
+- [Yeoman generator for the SharePoint Framework](../yeoman-generator-for-spfx-intro.md)
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)

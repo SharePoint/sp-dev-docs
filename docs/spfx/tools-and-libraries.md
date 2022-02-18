@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development tools and libraries
 description: Use client-side JavaScript libraries to build your solutions and develop client-side web parts.
-ms.date: 01/27/2021
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -82,7 +82,7 @@ For more information about Yeoman, see the following:
 
 - [Scaffold a web app with Yeoman](http://yeoman.io/codelab/index.html)
 - [List of available Yeoman generators](http://yeoman.io/generators/)
-- [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md)
+- [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
 
 The following are some common Yeoman generators that you can try, depending on your choice of framework:
 

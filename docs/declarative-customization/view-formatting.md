@@ -1,7 +1,7 @@
 ---
 title: Use view formatting to customize SharePoint
 description: Customize how views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed in a list view, and the styles to be applied to those elements.
-ms.date: 10/18/2021
+ms.date: 02/09/2022
 ms.localizationpriority: high
 ---
 
@@ -26,9 +26,9 @@ The pane will look like the following depending on the current layout:
 ![List layout formatting pane](../images/sp-viewformatting-panel-listlayout.png)  ![Gallery layout formatting pane](../images/sp-viewformatting-panel-tileslayout.png)
 
 > [!NOTE]
-> We have simplified the View formatting pane experience to separate out the List and Gallery layout formatting JSON. With this change, you do not need to add `tileProps` prop anymore.
+> We have simplified the View formatting pane experience to separate out layout specific formatting JSON. With this change, you do not need to add layout specific props like `tileProps` anymore.
 
-To format rows in 'List' or 'Compact List' layout, select 'List' in 'Choose layout' dropdown in the formatting pane and use the `rowFormatter` or `additionalRowClass` properties. To format cards in 'Gallery' layout, select 'Gallery' in 'Choose layout' dropdown in the formatting pane and use the `formatter` property.
+To format rows in 'List' or 'Compact List' layout, select 'List' in 'Choose layout' dropdown in the formatting pane and use the `rowFormatter` or `additionalRowClass` properties. To format cards in 'Gallery' layout, select 'Gallery' in 'Choose layout' dropdown in the formatting pane and use the `formatter` property. To format cards in 'Board' view just use the `formatter` property.
 
 The easiest way to use view formatting is to start from an example and edit it to apply to your specific view. The following sections contain examples that you can copy, paste, and customize for your specific needs. There are also several samples available in the [SharePoint/sp-dev-list-formatting repository](https://github.com/SharePoint/sp-dev-list-formatting).
 
@@ -45,6 +45,7 @@ Creating custom view formatting JSON from scratch is simple if user understands 
 ## See also
 - [List layout customization](./view-list-formatting.md)
 - [Gallery layout customization](./view-gallery-formatting.md)
+- [Board view customization](./view-gallery-formatting.md)
 - [Group customization syntax reference](./view-group-formatting.md)
 - [Advanced formatting concepts](./formatting-advanced.md)
 - [Formatting syntax reference](./formatting-syntax-reference.md)

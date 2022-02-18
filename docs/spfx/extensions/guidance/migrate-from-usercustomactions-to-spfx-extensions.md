@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Migrating from UserCustomAction to SharePoint Framework extensions
-description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
+description: Migrate from old "classic" customizations (CustomAction) to the new model based on SharePoint Framework extensions.
 ms.date: 06/29/2020
 ms.prod: sharepoint
 ms.localizationpriority: medium
@@ -214,37 +214,37 @@ The UI elements of the custom footer are rendered using React and a custom React
 
       // This private member holds a reference to the page's footer
       private _bottomPlaceholder: PlaceholderContent | undefined;
-  
+
       @override
       public onInit(): Promise<void> {
         Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
-  
+
         let message: string = this.properties.testMessage;
         if (!message) {
           message = '(No properties were provided.)';
         }
-  
+
         // Call render method for rendering the needed html elements
         this._renderPlaceHolders();
-  
+
         return Promise.resolve();
       }
-  
+
       private _renderPlaceHolders(): void {
-  
+
         // Handling the bottom placeholder
         if (!this._bottomPlaceholder) {
           this._bottomPlaceholder =
             this.context.placeholderProvider.tryCreateContent(PlaceholderName.Bottom);
-  
+
           // The extension should not assume that the expected placeholder is available.
           if (!this._bottomPlaceholder) {
             console.error('The expected placeholder (Bottom) was not found.');
             return;
           }
-  
+
           const element: React.ReactElement<{}> = React.createElement(CustomFooter);
-  
+
           ReactDom.render(element, this._bottomPlaceholder.domElement);
         }
       }
@@ -273,24 +273,24 @@ The UI elements of the custom footer are rendered using React and a custom React
               <div className={`ms-Grid`}>
                 <div className="ms-Grid-row">
                   <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton 
+                    <CommandButton
                         data-automation="CopyRight"
                         href={`CRM.aspx`}>&copy; 2017, Contoso Inc.</CommandButton>
                   </div>
                   <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton 
+                    <CommandButton
                             data-automation="CRM"
                             iconProps={ { iconName: 'People' } }
                             href={`CRM.aspx`}>CRM</CommandButton>
                   </div>
                   <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton 
+                    <CommandButton
                             data-automation="SearchCenter"
                             iconProps={ { iconName: 'Search' } }
                             href={`SearchCenter.aspx`}>Search Center</CommandButton>
                   </div>
                   <div className="ms-Grid-col ms-sm2 ms-md2 ms-lg2">
-                    <CommandButton 
+                    <CommandButton
                         data-automation="Privacy"
                         iconProps={ { iconName: 'Lock' } }
                         href={`Privacy.aspx`}>Privacy Policy</CommandButton>
@@ -306,9 +306,9 @@ The UI elements of the custom footer are rendered using React and a custom React
     ```
 
     Teaching you how to write a React component is out of scope for this document. Notice the `import` statements at the beginning, where the component imports React, and the `CommandButton` React component from the Office UI Fabric components library.
-    
+
     In the `render()` method of the component, it defined the output of the `CustomFooter` with few instances of the `CommandButton` component for the links in the footer. All the HTML output is wrapped within a Grid layout of Office UI Fabric.
-    
+
     > [!NOTE]
     > For more information about the grid layout of Office UI Fabric, see [Responsive Layout](https://developer.microsoft.com/fabric#/styles/layout).
 

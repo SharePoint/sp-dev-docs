@@ -1,7 +1,7 @@
 ---
 title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
-ms.date: 11/11/2021
+ms.date: 02/08/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -240,6 +240,7 @@ ACEs can use the **ViewNavigator** to manipulate the stack.
 - `ViewNavigator.push()`: Pushes a new View to the top of the View stack.
 - `ViewNavigator.replace()`: Replaces the top View with a new View.
 - `ViewNavigator.pop()`: If there's more than one View, pops the top View from the View stack.
+- `ViewNavigator.close()`: Closes the current view and removes top view from View stack.
 
 ### Navigate between views
 

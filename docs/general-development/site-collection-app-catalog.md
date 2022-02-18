@@ -88,7 +88,7 @@ Add-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/marke
 Alternatively, use the `spo site appcatalog add` command if you are using the CLI for Microsoft 365:
 
 ```console
-spo site appcatalog add --url https://contoso.sharepoint.com/sites/marketing
+m365 spo site appcatalog add --url https://contoso.sharepoint.com/sites/marketing
 ```
 
 After executing this script, the **Apps for SharePoint** library will be added to your site collection where you will be able to deploy SharePoint add-ins and SharePoint Framework solutions.
@@ -116,7 +116,7 @@ Remove-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/ma
 Alternatively, use the `spo site appcatalog remove` command if you are using the CLI for Microsoft 365
 
 ```console
-spo site appcatalog remove --url https://contoso.sharepoint.com/sites/marketing
+m365 spo site appcatalog remove --url https://contoso.sharepoint.com/sites/marketing
 ```
 
 After executing this script, the **Apps for SharePoint** library will be still visible in your site collection, but you will not be able to deploy or use any solutions deployed in it.
