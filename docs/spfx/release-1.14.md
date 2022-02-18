@@ -20,13 +20,13 @@ This release introduces updates across the features around Microsoft Viva, Micro
     1. Uninstall the existing v1.13.1 package:
 
         ```console
-        npm uninstall @microsoft/generator-sharepoint@1.13.1
+        npm uninstall @microsoft/{spfx-package-name}@1.13.1
         ```
 
     2. Install the new v1.14 package:
 
         ```console
-        npm install @microsoft/generator-sharepoint --save --save-exact
+        npm install @microsoft/{spfx-package-name}@1.14.0 --save --save-exact
         ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
