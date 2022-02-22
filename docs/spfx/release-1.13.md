@@ -37,7 +37,6 @@ This release introduces a new component type, Adaptive Card Extensions (ACE), th
 - Update the Microsoft Teams SDK to v1.10.
 - Update React to v16.13.1.
 - Update TypeScript to v3.9.
-- Release of image rendering APIs for optimized performance
 - Numerous additional fixes and improvements based on issues reported by the community at https://aka.ms/spfx-issues
 
 > [!NOTE]

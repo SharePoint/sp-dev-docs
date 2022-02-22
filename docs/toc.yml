@@ -412,6 +412,8 @@
       href: spfx/use-theme-colors-in-your-customizations.md
     - name: Office UI Fabric integration
       href: spfx/office-ui-fabric-integration.md
+    - name: Image Helper API
+      href: spfx/image-helper-api.md
   - name: Tools & libraries
     items:
     - name: Overview

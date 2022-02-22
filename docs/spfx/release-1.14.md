@@ -155,6 +155,15 @@ The default value of `isGroupNameHidden` is false.
 New property `ipAddress` has been added to `serve.json` configuration. This parameter is helpful when using Docker containers. For example, to set the serve host as '0.0.0.0'.
 This property will be explicitly used to wind up the server, meaning all debug URLs and webpack configurations will not be affected.
 
+#### Image Helper API
+
+The **ImageHelper** static class (in @microsoft/sp-image-helper) has been added to allow SPFx developers runtime access to:
+
+- Urls of auto-generated thumbnail images of pages and documents stored in SharePoint
+- More optimized Urls to images stored in SharePoint
+
+Learn more: [Image Helper API](image-helper-api.md)
+
 ## Preview Features and Capabilities
 
 Following features are still in preview status as part of the 1.14 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.15 release.
@@ -290,6 +299,7 @@ The Location Action can be used to get your current location, show your current 
 The Select Media Action can be used to select Images from your native device. In the browser it uses the file picker to help access relavant files:
 
 ![Screenshot of media panel](../images/release-notes/114/media-panel.jpg)
+
 
 ## Deprecations and removed items in this release
 
