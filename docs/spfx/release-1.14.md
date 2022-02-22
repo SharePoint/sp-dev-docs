@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 This release introduces updates across the features around Microsoft Viva, Microsoft Teams and SharePoint.
 
-**Released:** February 17, 2021
+**Released:** February 17, 2022
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
