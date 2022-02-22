@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 02/09/2022
+ms.date: 02/22/2022
 ms.localizationpriority: high
 ---
 
@@ -19,8 +19,21 @@ Specifies the type of element to create. Valid elements include:
 - path
 - button
 - p
+- [filepreview](#filepreview)
 
 Any other value will result in an error.
+
+### filepreview
+
+Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document libary. 
+If the thumbnail loads successfully, a small [brand type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/office-brand-icons) is visible on the bottom left. If the thumbanil fails to load (or if the file type doesn't support thumbnails), a [file type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/file-type-icons) is shown instead.
+
+```json
+"elmType": "filepreview",
+"attributes": {
+  "src": "@thumbnail.medium"
+ }
+```
 
 ## txtContent
 
@@ -382,6 +395,30 @@ Adds the field editor for the referenced column.
   "elmType": "div",
   "inlineEditField": "[$FieldName]",
   "txtContent": "[$FieldName]"
+}
+```
+## filePreviewProps
+
+An optional property, that allows overriding the default styles of file type icon and brand type icon in `filepreview` elmType.
+
+- `fileTypeIconClass` and `brandTypeIconClass` can be used to provide CSS class names to the file type icon and the brand type icon elements respectively.
+
+- `fileTypeIconStyle` and `brandTypeIconStyle` can be used to provide [styles](#style) to the file type icon and the brand type icon respectively. These styles will take precedence over the same styles coming from the CSS classes provided by the above 2 properties.
+
+```json
+"elmType": "filepreview",
+"attributes": {
+  "src": "@thumbnail.medium",
+ },
+"filePreviewProps": {
+  "fileTypeIconClass": "sp-css-borderColor-neutralLight",
+  "fileTypeIconStyle": {
+    "width": "100px"
+  },
+  "brandTypeIconClass": "sp-css-borderColor-neutralLight",
+  "brandTypeIconStyle": {
+    "width": "68px"
+  }
 }
 ```
 
