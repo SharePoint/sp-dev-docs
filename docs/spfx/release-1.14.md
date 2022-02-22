@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.14 release notes
 description: Release notes for the SharePoint Framework v1.14 release
-ms.date: 2/17/2022
+ms.date: 02/22/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -277,19 +277,19 @@ The actions  will be rendered as below
 
 Location Action:
 
-![Image showing a site footer with a logo](../images/release-notes/114/location-action.jpg)
+![Screenshot of location action](../images/release-notes/114/location-action.jpg)
 
 Select Media Action:
 
-![Image showing a site footer with a logo](../images/release-notes/114/file-action.jpg)
+![Screenshot of file action](../images/release-notes/114/file-action.jpg)
 
 The Location Action can be used to get your current location, show your current or a custom location on a map, and choose your current location from a map. In the browser it uses Bing Maps as the mapping interface:
 
-![Image showing a site footer with a logo](../images/release-notes/114/location-panel.jpg)
+![Screenshot of location panel](../images/release-notes/114/location-panel.jpg)
 
 The Select Media Action can be used to select Images from your native device. In the browser it uses the file picker to help access relavant files:
 
-![Image showing a site footer with a logo](../images/release-notes/114/media-panel.jpg)
+![Screenshot of media panel](../images/release-notes/114/media-panel.jpg)
 
 ## Deprecations and removed items in this release
 
