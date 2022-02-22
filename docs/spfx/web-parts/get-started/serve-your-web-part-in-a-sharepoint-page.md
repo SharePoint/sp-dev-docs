@@ -50,7 +50,11 @@ You can also follow these steps by watching this video on the SharePoint PnP You
       }
     }
     ```
+1. In the console window, enter the following command to bundle your client-side solution:
 
+    ```console
+    gulp bundle
+    ```
 1. In the console window, enter the following command to package your client-side solution that contains the web part:
 
     ```console
