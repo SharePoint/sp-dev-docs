@@ -12,7 +12,7 @@ You may choose to use the [@pnp/sp](https://www.npmjs.com/package/@pnp/sp) libra
 
 [!INCLUDE [pnp-js](../../../../includes/snippets/open-source/pnp-js.md)]
 
-You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tree/master/samples/eact-pnp-js-sample) for this article from the samples site.
+You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-pnp-js-sample) for this article from the samples site.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
@@ -76,6 +76,7 @@ npm install @pnp/logging @pnp/sp --save
 ```
 
 ### For SPFx Version 1.14.x or those that aren't supporting typescript v4.x
+
 >Note: PnPjs version 3.x is only supported in SPFx version 1.14 and higher and NodeJs version 12.x and higher.
 
 1. Update the rush stack compiler to 4.2. This is covered in this [great article by Elio](https://www.eliostruyf.com/define-the-typescript-version-you-want-to-use-in-sharepoint-framework/), but the steps are listed below.
@@ -380,6 +381,6 @@ The @pnp/sp library contains a great range of functionality and extensibility. F
 
 ## See also
 
-- [Download the full sample](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-async-await-sp-pnp-js)
+- [Download the full sample](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-pnp-js-sample)
 - [Provide feedback or report issues](https://github.com/SharePoint/PnP-JS-Core/issues)
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
