@@ -1,11 +1,13 @@
 ---
-title: Command bar formatting syntax reference
-description: Command bar formatting syntax reference
+title: Command bar customization syntax reference
+description: Command bar customization syntax reference
 ms.date: 02/23/2022
 ms.localizationpriority: high
 ---
 
-# Command bar formatting syntax reference
+# Command bar customization syntax reference
+
+Command bar customization helps personalize a list to suit specific requirements. The JSON based feature allows basic changes to the command bar, including modification of icon and/or text, hiding existing options or repositioning commands.
 
 ## commandBarProps
 Properties for Command bar customization. Valid in all types of layouts.
