@@ -93,8 +93,12 @@
         href: declarative-customization/view-gallery-formatting.md
       - name: Board view customization
         href: declarative-customization/view-board-formatting.md
+      - name: Calendar view customization
+        href: declarative-customization/view-calendar-formatting.md
       - name: Group customization syntax reference
         href: declarative-customization/view-group-formatting.md
+      - name: Command bar customization syntax reference
+        href: declarative-customization/view-commandbar-formatting.md
     - name: Forms configuration
       items:
       - name: Show or hide columns in a form

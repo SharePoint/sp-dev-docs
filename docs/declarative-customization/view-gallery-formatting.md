@@ -355,7 +355,12 @@ JSON object that defines the layout of cards. The schema of this JSON object is 
 
 Groups the group related customization options. For details on `groupProps`, see [Group Customization syntax reference](./view-group-formatting.md)
 
+### commandBarProps
+
+Groups the command bar customization options. For details on `commandBarProps`, see [Command bar customization syntax reference](./view-commandbar-formatting.md)
+
 ## See also
 - [Group customization syntax reference](./view-group-formatting.md)
+- [Command bar customization syntax reference](./view-commandbar-formatting.md)
 - [Advanced formatting concepts](./formatting-advanced.md)
 - [Formatting syntax reference](./formatting-syntax-reference.md)
