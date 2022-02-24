@@ -21,6 +21,11 @@ Optional element. Specifies whether the ability to select cards in the view is d
 
 JSON object that defines the layout of cards. The schema of this JSON object is identical to the schema of a column format (and that of rowFormatter). For details on this schema and its capabilities, see the [Formatting syntax reference](./formatting-syntax-reference.md).
 
+### commandBarProps
+
+Groups the command bar customization options. For details on `commandBarProps`, see [Command bar customization syntax reference](./view-commandbar-formatting.md)
+
 ## See also
+- [Command bar customization syntax reference](./view-commandbar-formatting.md)
 - [Advanced formatting concepts](./formatting-advanced.md)
 - [Formatting syntax reference](./formatting-syntax-reference.md)
