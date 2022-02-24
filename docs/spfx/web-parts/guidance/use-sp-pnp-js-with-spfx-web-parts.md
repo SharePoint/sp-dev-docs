@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 12/02/2020
+ms.date: 02/24/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -12,7 +12,7 @@ You may choose to use the [@pnp/sp](https://www.npmjs.com/package/@pnp/sp) libra
 
 [!INCLUDE [pnp-js](../../../../includes/snippets/open-source/pnp-js.md)]
 
-You can download the [full source](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/knockout-sp-pnp-js) for this article from the samples site.
+You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-pnp-js-sample) for this article from the samples site.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
@@ -40,21 +40,13 @@ You can download the [full source](https://github.com/SharePoint/sp-dev-fx-webpa
 1. Enter the following values when prompted during the setup of the new project:
 
     - **spfx-pnp-js-example** as the solution name (keep default)
+    - **spfx-pnp-js-example description** as the solution description (keep default)
     - **SharePoint Online only (latest)** as the baseline packages version
-    - **Current Folder** as the solution location
-    - **Y** as allow tenant admin to deploy solution to all sites
+    - **N** to allow access to unique web APIs
     - **WebPart** as the component to create
     - **PnPJSExample** as the name of the web part
-    - **Example of using pnp-js within SPFx** as the description
-    - **Knockout** as the framework
-
-    ![Completed Project Scaffolding](../../../images/sp-pnp-js-guide-completed-setup.png)
-
-1. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
-
-    ```console
-    npm shrinkwrap
-    ```
+    - **PnPJSExample description** as the description
+    - **React** as the framework
 
 1. Open the project in the code editor of your choosing. The screenshots shown here demonstrate [Visual Studio Code](https://code.visualstudio.com/). To open the directory within Visual Studio Code, enter the following in the console:
 
@@ -64,307 +56,316 @@ You can download the [full source](https://github.com/SharePoint/sp-dev-fx-webpa
 
     ![Project as first opened in Visual Studio Code](../../../images/sp-pnp-js-guide-first-open.png)
 
-## Install and set up @pnp/sp
+1. Set up the location of your SharePoint hosted workbench by modifying the `initialPage` value in the config/serve.json to point to your tenant/site.
 
-After your project is created, you must install and set up @pnp/sp , starting with installing the package. These steps are common for any project type (React, etc).
-
-```console
-npm install @pnp/logging @pnp/common @pnp/odata @pnp/sp --save
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "initialPage": "https://{your tenant name}/sites/dev/_layouts/15/workbench.aspx"
+}
 ```
 
-Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within classic sites and pages, we can make use of the global `_spPageContextInfo` variable. Within SPFx, this is not available, or if it is, it may not be correct. So we need to rely on the [context](/javascript/api/sp-webpart-base/webpartcontext) object
-supplied by the framework.
+## Install and set up @pnp/sp
 
-There are [two ways](https://pnp.github.io/pnpjs/sp/docs/#getting-started-sharepoint-framework) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
+After your project is created, you must install and set up @pnp/sp package. In addition we'll use the @pnp/logging extension, but that is optional. These steps are common for any project type (React, etc).
+
+```console
+npm install @pnp/logging @pnp/sp --save
+```
+
+### For SPFx Version 1.14.x or those that aren't supporting typescript v4.x
+
+>Note: PnPjs version 3.x is only supported in SPFx version 1.14 and higher and NodeJs version 12.x and higher.
+
+1. Update the rush stack compiler to 4.2. This is covered in this [great article by Elio](https://www.eliostruyf.com/define-the-typescript-version-you-want-to-use-in-sharepoint-framework/), but the steps are listed below.
+    - Uninstall existing rush stack compiler (replace the x with the version installed in your package.json file):
+      `npm uninstall @microsoft/rush-stack-compiler-3.x`
+    - Install 4.2 version:
+      `npm i @microsoft/rush-stack-compiler-4.2`
+    - Update tsconfig.json to extend the 4.2 config:
+      `"extends": "./node_modules/@microsoft/rush-stack-compiler-4.2/includes/tsconfig-web.json"`
+
+1. Replace the contents of the gulpfile.js with:
+
+   ```JS
+   'use strict';
+   
+   const build = require('@microsoft/sp-build-web');
+   
+   build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
+   
+   var getTasks = build.rig.getTasks;
+   build.rig.getTasks = function () {
+     var result = getTasks.call(build.rig);
+   
+     result.set('serve', result.get('serve-deprecated'));
+   
+     return result;
+   };
+   
+   // ********* ADDED *******
+   // disable tslint
+   build.tslintCmd.enabled = false;
+   // ********* ADDED *******
+   
+   build.initialize(require('gulp'));
+   ```
 
 ### Update onInit in PnPjsExampleWebPart.ts
 
-1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp root object:
+Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within SPFx, we need to rely on the [context](/javascript/api/sp-webpart-base/webpartcontext) object supplied by the framework.
+
+There are [two ways](https://pnp.github.io/pnpjs/sp/docs/#getting-started-sharepoint-framework) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
+
+1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp project configuratino file (more on this file below):
 
     ```typescript
-    import { sp } from "@pnp/sp";
+    import { getSP } from './pnpjsConfig';
     ```
 
-1. In the `onInit()` method, update the code to appear as follows. Add the block after the `super.onInit()` call. We do this after the `super.onInit()` to ensure that the framework has a chance to initialize anything required, and that we are setting up the library after those steps are completed.
+1. In the `onInit()` method, update the code to appear as follows. Add the call to initialize our project configuration after the `super.onInit()` call. We do this after the `super.onInit()` to ensure that the framework has a chance to initialize anything required, and that we are setting up the library after those steps are completed.
 
     ```typescript
     /**
     * Initialize the web part.
     */
-    protected onInit(): Promise<void> {
-      this._id = _instance++;
+    public async onInit(): Promise<void> {
+      this._environmentMessage = this._getEnvironmentMessage();
 
-      const tagName: string = `ComponentElement-${this._id}`;
-      this._componentElement = this._createComponentElement(tagName);
-      this._registerComponent(tagName);
+      await super.onInit();
 
-      // When web part description is changed, notify view model to update.
-      this._koDescription.subscribe((newValue: string) => {
-        this._shouter.notifySubscribers(newValue, 'description');
-      });
-
-      const bindings: IPnPjsExampleBindingContext = {
-        description: this.properties.description,
-        shouter: this._shouter
-      };
-
-      ko.applyBindings(bindings, this._componentElement);
-
-      sp.setup({
-        spfxContext: this.context
-      });
-
-      // optional, we are setting up the @pnp/logging for debugging
-      Logger.activeLogLevel = LogLevel.Info;
-      Logger.subscribe(new ConsoleListener());
-
-      return super.onInit();
+      //Initialize our _sp object that we can then use in other packages without having to pass around the context.
+      // Check out pnpjsConfig.ts for an example of a project setup file.
+      getSP(this.context);
     }
+
     ```
 
-## Update the ViewModel
+## Add a project configuration file
 
-Next, replace the contents of the **PnPjsExampleViewModel.ts** file with the following code. We added an import statement for the pnp items, an interface to define our list item's fields, some observables to track both our list of items and the new item form, and methods to support getting, adding, and deleting items.
+Next, let's create a project configuration file for PnPjs. This file allows us to set up the imports we will need for hte project as well as initialize a instance of the sp object for use on any of our other components.
 
-We also added an `ensureList()` method, which uses the @pnp/sp `lists.ensure()` method to always ensure that we have the list (and to create it if necessary). There are many ways to provision resources, but this method was chosen to demonstrate creating a list, field, and items by using batching within a single method.
+Note all the imports for webs, lists, items, and batching. In our component we will be making calls to get items from a library, so we need to include those imports for future reference. In addition we create a variable that will hold our configured instance of the `SharePoint Querable` that will be created with the factory instance. If you'll recall from our `onInit` function above we're calling the exported getSP with the SPFx context passed in as a property. By doing so we're able to establish context with the PnPjs library so that we can subsequently make calls to the SharePoint API. Subsequent calls to `getSP` without the context will return the object that has alredy been configured.
 
-The takeaway is that by using @pnp/sp, we write much less code to handle requests and can focus on our business logic.
+This sample also shows how we can add an additional `behavior` to the instance which enables logging for all the calls. This will use the default logging but we could expand to include our own logging functions.
 
 ```typescript
-import * as ko from 'knockout';
-import styles from './PnPjsExample.module.scss';
-import { IPnPjsExampleWebPartProps } from './PnPjsExampleWebPart';
-require("tslib");
-require("@pnp/logging");
-require("@pnp/common");
-require("@pnp/odata");
-import { sp, List, ListEnsureResult, ItemAddResult, FieldAddResult } from "@pnp/sp";
+import { WebPartContext } from "@microsoft/sp-webpart-base";
 
-export interface IPnPjsExampleBindingContext extends IPnPjsExampleWebPartProps {
-  shouter: KnockoutSubscribable<{}>;
-}
+// import pnp and pnp logging system
+import { spfi, SPFI, SPFx } from "@pnp/sp";
+import { LogLevel, PnPLogging } from "@pnp/logging";
+import "@pnp/sp/webs";
+import "@pnp/sp/lists";
+import "@pnp/sp/items";
+import "@pnp/sp/batching";
 
-/**
- * Interface which defines the fields in our list items
- */
-export interface OrderListItem {
-  Id: number;
-  Title: string;
-  OrderNumber: string;
-}
+var _sp: SPFI = null;
 
-export default class PnPjsExampleViewModel {
-  public description: KnockoutObservable<string> = ko.observable('');
-  public newItemTitle: KnockoutObservable<string> = ko.observable('');
-  public newItemNumber: KnockoutObservable<string> = ko.observable('');
-  public items: KnockoutObservableArray<OrderListItem> = ko.observableArray([]);
-
-  public labelClass: string = styles.label;
-  public helloWorldClass: string = styles.pnPjsExample;
-  public containerClass: string = styles.container;
-  public rowClass: string = `ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`;
-  public buttonClass: string = `ms-Button ${styles.button}`;
-
-  constructor(bindings: IPnPjsExampleBindingContext) {
-    this.description(bindings.description);
-
-    // When web part description is updated, change this view model's description.
-    bindings.shouter.subscribe((value: string) => {
-      this.description(value);
-    }, this, 'description');
-
-    // call the load the items
-    this.getItems().then(items => {
-
-      this.items(items);
-    });
+export const getSP = (context?: WebPartContext): SPFI => {
+  if (_sp === null && context != null) {
+    //You must add the @pnp/logging package to include the PnPLogging behavior it is no longer a peer dependency
+    // The LogLevel set's at what level a message will be written to the console
+    _sp = spfi().using(SPFx(context)).using(PnPLogging(LogLevel.Warning));
   }
-
-  /**
-   * Gets the items from the list
-   */
-  private getItems(): Promise<OrderListItem[]> {
-
-    return this.ensureList().then(list => {
-
-      // here we are using the getAs operator so that our returned value will be typed
-      return list.items.select("Id", "Title", "OrderNumber").get<OrderListItem[]>();
-    });
-  }
-
-  /**
-   * Adds an item to the list
-   */
-  public addItem(): void {
-
-    if (this.newItemTitle() !== "" && this.newItemNumber() !== "") {
-
-      this.ensureList().then(list => {
-
-        // add the new item to the SharePoint list
-        list.items.add({
-          Title: this.newItemTitle(),
-          OrderNumber: this.newItemNumber(),
-        }).then((iar: ItemAddResult) => {
-
-          // add the new item to the display
-          this.items.push({
-            Id: iar.data.Id,
-            OrderNumber: iar.data.OrderNumber,
-            Title: iar.data.Title,
-          });
-
-          // clear the form
-          this.newItemTitle("");
-          this.newItemNumber("");
-        });
-      });
-    }
-  }
-
-  /**
-   * Deletes an item from the list
-   */
-  public deleteItem(data): void {
-
-    if (confirm("Are you sure you want to delete this item?")) {
-      this.ensureList().then(list => {
-        list.items.getById(data.Id).delete().then(_ => {
-          this.items.remove(data);
-        });
-      }).catch((e: Error) => {
-        alert(`There was an error deleting the item ${e.message}`);
-      });
-    }
-  }
-
-  /**
-   * Ensures the list exists and if it creates it adds some default example data
-   */
-  private ensureList(): Promise<List> {
-
-    return new Promise<List>((resolve, reject) => {
-
-      // use lists.ensure to always have the list available
-      sp.web.lists.ensure("SPPnPJSExampleList").then((ler: ListEnsureResult) => {
-
-        if (ler.created) {
-
-          // we created the list on this call so let's add a column
-          ler.list.fields.addText("OrderNumber").then(_ => {
-
-            // and we will also add a few items so we can see some example data
-            // here we use batching
-
-            // create a batch
-            let batch = sp.web.createBatch();
-
-            ler.list.getListItemEntityTypeFullName().then(typeName => {
-
-              ler.list.items.inBatch(batch).add({
-                Title: "Title 1",
-                OrderNumber: "4826492"
-              }, typeName);
-
-              ler.list.items.inBatch(batch).add({
-                Title: "Title 2",
-                OrderNumber: "828475"
-              }, typeName);
-
-              ler.list.items.inBatch(batch).add({
-                Title: "Title 3",
-                OrderNumber: "75638923"
-              }, typeName);
-
-              // excute the batched operations
-              batch.execute().then(_ => {
-                // all of the items have been added within the batch
-
-                resolve(ler.list);
-
-              }).catch(e => reject(e));
-
-            }).catch(e => reject(e));
-
-          }).catch(e => reject(e));
-
-        } else {
-
-          resolve(ler.list);
-        }
-
-      }).catch(e => reject(e));
-    });
-  }
-}
-
+  return _sp;
+};
 ```
 
-## Update the template
+## Add an interface file for the data model
 
-Finally, we need to update the template to match the functionality that we added into the ViewModel. Copy the following code into the **PnPjsExample.template.html** file. We added a title row, a `foreach` repeater for the items collection, and a form allowing you to add new items to the list.
+Add a new file in the root of the components folder called `interfaces.ts`. Replace the contents with the following defintions which will be referenced by our component.
 
-```html
-<div data-bind="attr: {class:spPnPjsExampleClass}">
-  <div data-bind="attr: {class:containerClass}">
+```typescript
+// create File item to work with it internally
+export interface IFile {
+  Id: number;
+  Title: string;
+  Name: string;
+  Size: number;
+}
 
-    <div data-bind="attr: {class:rowClass}">
-      <div class="ms-Grid-col ms-u-sm12">
-        <span class="ms-font-xl ms-fontColor-white ms-fontWeight-semibold" data-bind="text: description"></span>
-      </div>
-    </div>
+// create PnP JS response interface for File
+export interface IResponseFile {
+  Length: number;
+}
 
-    <div data-bind="attr: {class:rowClass}">
-      <div class="ms-Grid-col ms-u-sm6">
-        <span class="ms-font-l ms-fontColor-white ms-fontWeight-semibold">Title</span>
-      </div>
-      <div class="ms-Grid-col  ms-u-sm6">
-        <span class="ms-font-l ms-fontColor-white ms-fontWeight-semibold">Order Number</span>
-      </div>
-    </div>
+// create PnP JS response interface for Item
+export interface IResponseItem {
+  Id: number;
+  File: IResponseFile;
+  FileLeafRef: string;
+  Title: string;
+}
+```
 
-    <!-- ko foreach: items -->
-    <div data-bind="attr: {class:$parent.rowClass}">
-      <div class="ms-Grid-col ms-u-sm6">
-        <span class="ms-font-l ms-fontColor-white" data-bind="text: Title"></span>
-      </div>
-      <div class="ms-Grid-col  ms-u-sm5">
-        <span class="ms-font-l ms-fontColor-white" data-bind="text: OrderNumber"></span>
-      </div>
-      <div class="ms-Grid-col  ms-u-sm1">
-        <i class="ms-Icon ms-Icon--Delete" aria-hidden="true" data-bind="click: $parent.deleteItem.bind($parent, $data)"></i>
-      </div>
-    </div>
-    <!-- /ko -->
+## Update the default component
 
-    <div data-bind="attr: {class:rowClass}">
-      <div class="ms-Grid-col  ms-u-sm12">
-        <span class="ms-font-l ms-fontColor-white ms-fontWeight-semibold">Add New</span>
-      </div>
-    </div>
+Finally, we need to do a bit of cleanup to create our based component. First replace the entire contents of the PnPjsExample.tsx file with the following code.
 
-    <div data-bind="attr: {class:rowClass}">
-      <form data-bind="submit: addItem">
-        <div class="ms-Grid-col ms-u-sm5">
-          <input class="ms-TextField-field" placeholder="Title" data-bind='value: newItemTitle, valueUpdate: "afterkeydown"' />
-        </div>
-        <div class="ms-Grid-col ms-u-sm5">
-          <input class="ms-TextField-field" placeholder="Order Number" data-bind='value: newItemNumber, valueUpdate: "afterkeydown"'
-          />
-        </div>
-        <div class="ms-Grid-col ms-u-sm2">
-          <button class="ms-Button--default ms-Button" type="submit" data-bind="enable: newItemTitle().length > 0 && newItemNumber().length > 0"><span class="ms-Button-label">Add</span></button>
-        </div>
-      </form>
-    </div>
+```typescript
+import * as React from 'react';
+import styles from './PnPjsExample.module.scss';
+import { IPnPjsExampleProps } from './IPnPjsExampleProps';
 
-  </div>
-</div>
+// import interfaces
+import { IFile, IResponseItem } from "./interfaces";
+
+import { Caching } from "@pnp/queryable";
+import { getSP } from "../pnpjsConfig";
+import { SPFI, spfi } from "@pnp/sp";
+import { Logger, LogLevel } from "@pnp/logging";
+import { IItemUpdateResult } from "@pnp/sp/items";
+import { Label, PrimaryButton } from '@microsoft/office-ui-fabric-react-bundle';
+
+export interface IAsyncAwaitPnPJsProps {
+  description: string;
+}
+
+export interface IIPnPjsExampleState {
+  items: IFile[];
+  errors: string[];
+}
+
+export default class PnPjsExample extends React.Component<IPnPjsExampleProps, IIPnPjsExampleState> {
+  private LOG_SOURCE = "🅿PnPjsExample";
+  private LIBRARY_NAME = "Documents";
+  private _sp: SPFI;
+
+  constructor(props: IPnPjsExampleProps) {
+    super(props);
+    // set initial state
+    this.state = {
+      items: [],
+      errors: []
+    };
+    this._sp = getSP();
+  }
+
+  public componentDidMount(): void {
+    // read all file sizes from Documents library
+    this._readAllFilesSize();
+  }
+
+  public render(): React.ReactElement<IAsyncAwaitPnPJsProps> {
+    // calculate total of file sizes
+    const totalDocs: number = this.state.items.length > 0
+      ? this.state.items.reduce<number>((acc: number, item: IFile) => {
+        return (acc + Number(item.Size));
+      }, 0)
+      : 0;
+    return (
+      <div className={styles.pnPjsExample}>
+        <Label>Welcome to PnP JS Version 3 Demo!</Label>
+        <PrimaryButton onClick={this._updateTitles}>Update Item Titles</PrimaryButton>
+        <Label>List of documents:</Label>
+        <table width="100%">
+          <tr>
+            <td><strong>Title</strong></td>
+            <td><strong>Name</strong></td>
+            <td><strong>Size (KB)</strong></td>
+          </tr>
+          {this.state.items.map((item, idx) => {
+            return (
+              <tr key={idx}>
+                <td>{item.Title}</td>
+                <td>{item.Name}</td>
+                <td>{(item.Size / 1024).toFixed(2)}</td>
+              </tr>
+            );
+          })}
+          <tr>
+            <td></td>
+            <td><strong>Total:</strong></td>
+            <td><strong>{(totalDocs / 1024).toFixed(2)}</strong></td>
+          </tr>
+        </table>
+      </div >
+    );
+  }
+
+  private _readAllFilesSize = async (): Promise<void> => {
+    try {
+      // do PnP JS query, some notes:
+      //   - .expand() method will retrive Item.File item but only Length property
+      //   - .get() always returns a promise
+      //   - await resolves proimises making your code act syncronous, ergo Promise<IResponseItem[]> becomes IResponse[]
+
+      //Extending our sp object to include caching behavior, this modification will add caching to the sp object itself
+      //this._sp.using(Caching("session"));
+
+      //Creating a new sp object to include caching behavior. This way our original object is unchanged.
+      const spCache = spfi(this._sp).using(Caching("session"));
+
+      const response: IResponseItem[] = await spCache.web.lists
+        .getByTitle(this.LIBRARY_NAME)
+        .items
+        .select("Id", "Title", "FileLeafRef", "File/Length")
+        .expand("File/Length")();
+
+      // use map to convert IResponseItem[] into our internal object IFile[]
+      const items: IFile[] = response.map((item: IResponseItem) => {
+        return {
+          Id: item.Id,
+          Title: item.Title || "Unknown",
+          Size: item.File?.Length || 0,
+          Name: item.FileLeafRef
+        };
+      });
+
+      // Add the items to the state
+      this.setState({ items });
+    } catch (err) {
+      Logger.write(`${this.LOG_SOURCE} (_readAllFilesSize) - ${JSON.stringify(err)} - `, LogLevel.Error);
+    }
+  }
+
+  private _updateTitles = async (): Promise<void> => {
+    try {
+      //Will create a batch call that will update the title of each item
+      //  in the library by adding `-Updated` to the end. 
+      const [batchedSP, execute] = this._sp.batched();
+
+      //Clone items from the state
+      const items = JSON.parse(JSON.stringify(this.state.items));
+
+      let res: IItemUpdateResult[] = [];
+
+      for (let i = 0; i < items.length; i++) {
+        // you need to use .then syntax here as otherwise the application will stop and await the result
+        batchedSP.web.lists
+          .getByTitle(this.LIBRARY_NAME)
+          .items
+          .getById(items[i].Id)
+          .update({ Title: `${items[i].Name}-Updated` })
+          .then(r => res.push(r));
+      }
+      // Executes the batched calls
+      await execute();
+
+      // Results for all batched calls are available
+      for (let i = 0; i < res.length; i++) {
+        //If the result is successful update the item
+        //NOTE: This code is over simplified, you need to make sure the Id's match
+        const item = await res[i].item.select("Id, Title")<{ Id: number, Title: string }>();
+        items[i].Name = item.Title;
+      }
+
+      //Update the state which rerenders the component
+      this.setState({ items });
+    } catch (err) {
+      Logger.write(`${this.LOG_SOURCE} (_updateTitles) - ${JSON.stringify(err)} - `, LogLevel.Error);
+    }
+  }
+}
+
 ```
 
 ## Run the example
 
-Start the sample, and add the web part to your SharePoint-hosted Workbench (/_layouts/workbench.aspx) to see it in action.
+Start the sample, and add the web part to your SharePoint-hosted Workbench (/_layouts/15/workbench.aspx) to see it in action.
 
 ```console
 gulp serve --nobrowser
@@ -378,194 +379,8 @@ You can delete existing items by selecting the trashcan icon, or you can add new
 
 The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/documentation/getting-started/).
 
-## Deploy to production
-
-When you are ready to deploy your solution and want to build by using the `--ship` flag, you need to mark @pnp/sp as an external library in the configuration. This is done by updating the SPFx **config/config.js** file to include these lines in the externals section:
-
-```json
-"externals": {
-    "tslib": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/tslib/1.9.3/tslib.min.js",
-      "globalName": "tslib"
-    },
-    "@pnp/common": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-common/1.2.5/common.es5.umd.bundle.min.js",
-      "globalName": "pnp.common"
-    },
-    "@pnp/logging": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-logging/1.2.5/logging.es5.umd.min.js",
-      "globalName": "pnp.logging",
-      "globalDependencies": [
-        "tslib"
-      ]
-    },
-    "@pnp/odata": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-odata/1.2.5/odata.es5.umd.min.js",
-      "globalName": "pnp.odata",
-      "globalDependencies": [
-        "@pnp/common",
-        "@pnp/logging",
-        "tslib"
-      ]
-    },
-    "@pnp/sp": {
-      "path": "https://cdnjs.cloudflare.com/ajax/libs/pnp-sp/1.2.5/sp.es5.umd.min.js",
-      "globalName": "pnp.sp",
-      "globalDependencies": [
-        "@pnp/logging",
-        "@pnp/common",
-        "@pnp/odata",
-        "tslib"
-      ]
-    }
-  },
-```
-
-In this configuration, we use the public CDN, but the URL can be an internal path or any other location you would like to use. Be sure, however, to update the version number in the URL to match the version you are targeting.
-
-## Improve the mock data example
-
-Ideally, the sample should work within both the local Workbench as well as the SharePoint-hosted Workbench. To enable this, we need to mock our ViewModel and make an update to the web part code as outlined in the following sections.
-
-### Add mock ViewModel file
-
-Add a new file named **MockPnPjsExampleViewModel.ts** alongside the other web part files. Update the content of this file using the following code. This provides the same set of functionality and works in the local environment, but does not rely on SharePoint being available.
-
-```typescript
-import * as ko from 'knockout';
-import styles from './PnPjsExample.module.scss';
-import { IPnPjsExampleBindingContext, OrderListItem } from './PnPjsExampleViewModel';
-
-export default class MockPnPjsExampleViewModel {
-  public description: KnockoutObservable<string> = ko.observable('');
-  public newItemTitle: KnockoutObservable<string> = ko.observable('');
-  public newItemNumber: KnockoutObservable<string> = ko.observable('');
-  public items: KnockoutObservableArray<OrderListItem> = ko.observableArray([]);
-
-  public labelClass: string = styles.label;
-  public helloWorldClass: string = styles.pnPjsExample;
-  public containerClass: string = styles.container;
-  public rowClass: string = `ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`;
-  public buttonClass: string = `ms-Button ${styles.button}`;
-
-  constructor(bindings: IPnPjsExampleBindingContext) {
-    this.description(bindings.description);
-
-    // When web part description is updated, change this view model's description.
-    bindings.shouter.subscribe((value: string) => {
-      this.description(value);
-    }, this, 'description');
-
-    // call the load the items
-    this.getItems().then(items => {
-      this.items(items);
-    });
-  }
-
-  /**
-   * Gets the items from the list
-   */
-  private getItems(): Promise<OrderListItem[]> {
-    return Promise.resolve([{
-      Id: 1,
-      Title: "Mock Item 1",
-      OrderNumber: "12345"
-    },
-    {
-      Id: 2,
-      Title: "Mock Item 2",
-      OrderNumber: "12345"
-    },
-    {
-      Id: 3,
-      Title: "Mock Item 3",
-      OrderNumber: "12345"
-    }]);
-  }
-
-  /**
-   * Adds an item to the list
-   */
-  public addItem(): void {
-    if (this.newItemTitle() !== "" && this.newItemNumber() !== "") {
-      // add the new item to the display
-      this.items.push({
-        Id: this.items.length,
-        OrderNumber: this.newItemNumber(),
-        Title: this.newItemTitle(),
-      });
-
-      // clear the form
-      this.newItemTitle("");
-      this.newItemNumber("");
-    }
-  }
-
-  /**
-   * Deletes an item from the list
-   */
-  public deleteItem(data): void {
-    if (confirm("Are you sure you want to delete this item?")) {
-      this.items.remove(data);
-    }
-  }
-}
-```
-
-### Update web part
-
-Finally, we need to update the web part to use the mock data when appropriate.
-
-1. Open the **PnPjsExampleWebPart.ts** file, and import the mock ViewModel web just created:
-
-    ```typescript
-    import MockSpPnPjsExampleViewModel from './MockPnPjsExampleViewModel';
-    ```
-
-1. Import the `Environment` and `EnvironmentType` types that you use to detect the type of
-environment the web part is running in:
-
-    ```typescript
-    import { Version, Environment, EnvironmentType } from '@microsoft/sp-core-library';
-    ```
-
-1. Locate the `_registerComponent` method and update it as shown:
-
-    ```typescript
-    private _registerComponent(tagName: string): void {
-      if (Environment.type === EnvironmentType.Local) {
-        console.log("here I am.")
-        ko.components.register(
-          tagName,
-          {
-            viewModel: MockSpPnPjsExampleViewModel,
-            template: require('./PnPjsExample.template.html'),
-            synchronous: false
-          }
-        );
-      } else {
-        ko.components.register(
-          tagName,
-          {
-            viewModel: PnPjsExampleViewModel,
-            template: require('./PnPjsExample.template.html'),
-            synchronous: false
-          }
-        );
-      }
-    }
-    ```
-
-1. Type **gulp serve** in the console to bring up the local Workbench, which now works with the mock data. (If you already have the server running, stop it by selecting Ctrl+C, and then restart it):
-
-    ```console
-    gulp serve
-    ```
-
-    ![Project as it appears running in the local workbench with mock data](../../../images/sp-pnp-js-guide-with-mock-data.png)
-
 ## See also
 
-- [Download the full sample](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/knockout-sp-pnp-js)
+- [Download the full sample](https://github.com/pnp/sp-dev-fx-webparts/tree/main/samples/react-pnp-js-sample)
 - [Provide feedback or report issues](https://github.com/SharePoint/PnP-JS-Core/issues)
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
