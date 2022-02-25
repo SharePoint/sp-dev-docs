@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.14 release notes
 description: Release notes for the SharePoint Framework v1.14 release
-ms.date: 02/22/2022
+ms.date: 02/25/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -12,7 +12,6 @@ This release introduces updates across the features around Microsoft Viva, Micro
 **Released:** February 17, 2022
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
-
 
 ## Upgrading projects from v1.13.1 to v1.14
 
@@ -152,17 +151,9 @@ empty group header being displayed.
 The default value of `isGroupNameHidden` is false.
 
 #### ipAddress Property in serve.json
+
 New property `ipAddress` has been added to `serve.json` configuration. This parameter is helpful when using Docker containers. For example, to set the serve host as '0.0.0.0'.
 This property will be explicitly used to wind up the server, meaning all debug URLs and webpack configurations will not be affected.
-
-#### Image Helper API
-
-The **ImageHelper** static class (in @microsoft/sp-image-helper) has been added to allow SPFx developers runtime access to:
-
-- Urls of auto-generated thumbnail images of pages and documents stored in SharePoint
-- More optimized Urls to images stored in SharePoint
-
-Learn more: [Image Helper API](image-helper-api.md)
 
 ## Preview Features and Capabilities
 
@@ -300,6 +291,14 @@ The Select Media Action can be used to select Images from your native device. In
 
 ![Screenshot of media panel](../images/release-notes/114/media-panel.jpg)
 
+#### Image Helper API
+
+The **ImageHelper** static class (in @microsoft/sp-image-helper) has been added to allow SPFx developers runtime access to:
+
+- Urls of auto-generated thumbnail images of pages and documents stored in SharePoint
+- More optimized Urls to images stored in SharePoint
+
+Learn more: [Image Helper API](image-helper-api.md)
 
 ## Deprecations and removed items in this release
 
