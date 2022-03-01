@@ -14,9 +14,11 @@ Learn about the Machine Translation Service, which is a new service application 
 <a name="TranslationSvc_Overview"> </a>
 
 > [!NOTE]
-> Using machine translation will allow users to send content to Microsoft for translation. Microsoft may use content users send us to improve the quality of translations. If you use the Machine Translation Service in your application, you are responsible for informing users that this application will allow users to send content to Microsoft for translation and that Microsoft may use content users send us to improve the quality of translations. See Microsoft Translator Privacy for more information. 
-  
-    
+> - In September 2018 it was announced that Machine Translation Services would be deprecated in SharePoint for Microsoft 365 but would remain supported. This service will become unavailable and unsupported entirely by the end of July 2022. 
+> - The Machine Translation Service API is marked as deprecated and will not be available through the SharePoint CSOM.
+> - All existing instances of Machine Translation Server APIs will no longer display multilingual functionality in your Microsoft 365 environment by the end of July 2022. 
+> - This article will be retired in December of 2022.
+> - If you're using modern communication sites in SharePoint, we recommend that you use the [modern multilingual sites and pages feature](https://support.microsoft.com/office/create-multilingual-communication-sites-pages-and-news-2bb7d610-5453-41c6-a0e8-6f40b3ed750c)  instead of the variations Machine Translation Services feature. 
     
 
 Machine Translation Service is a new service application in SharePoint that provides automatic machine translation of files and sites. When the Machine Translation Service application processes a translation request, it forwards the request to the  [Microsoft Translator](https://www.microsoft.com/translator/) cloud-hosted machine translation service, where the actual translation work is performed. This cloud-service also powers the Microsoft Office, Lync, Yammer and Bing translation features.
