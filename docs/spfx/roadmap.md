@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
-ms.date: 03/23/2021
+ms.date: 03/01/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -31,6 +31,8 @@ The following is a list of key capabilities released after General Availability:
 - [Pre-allocate space for the extensions while rendering page in server side](./extensions/basics/preallocated-space-placeholders.md)
 - [Use the SPFx API to determine & react to changes in the web part's rendered size](./web-parts/basics/determine-web-part-width.md)
 - [Use SPFx solutions in Microsoft Teams - support multiple deployment options](./deployment-spfx-teams-solutions.md)
+- [Use SPFx solutions to extend Microsoft Viva Connections](./viva/overview-viva-connections.md)
+- [Building meeting apps for Microsoft Teams with SPFx](./build-for-teams-meeting-app.md)
 
 ## Release notes
 
@@ -44,11 +46,16 @@ Refer to the table of contents menu for details on each of the SharePoint Framew
 > [!NOTE]
 > The following list is subject to change.
 
-- Microsoft Viva Connections
-  - New extensibility options for Viva Connections starting from the v1.13 release of SPFx
+- General improvements
+  - Support overriding new, edit, and view experiences with SPFx in Lists and Libraries
+  - Improved solution metadata support in solution packages
+  - Service principal registration for full API package model
+  - Performance improvements across apps (dev and runtime)
+
 - Microsoft Teams improvements
   - Store acquisition - target SPFx solutions directly to Microsoft Teams store
-  - Building meeting solutions with SPFx
+  - Teams store support for partner SPFx solutions
+
 - Store improvements
   - Modernize Store app catalog and store UX
   - Modernize end-to-end acquisition process for store solutions
