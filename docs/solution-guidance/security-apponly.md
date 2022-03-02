@@ -29,7 +29,9 @@ App-Only does not work in following cases:
  - Search when using SharePoint On-Premises. SharePoint Online support for it has been added ([blog post](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/))
  - User Profile CSOM write operations do not work with **Azure AD application** - read operations work. Both read and write operations work through **SharePoint App-Only principal**
  - User Profile Bulk Update API can be used with app-only permissions
- - Manipulating files via WebDav protocol and CSOM (using `File.SaveBinaryDirect`) does not work with app-only
+ - Manipulating files via WebDav protocol and CSOM (using `File.SaveBinaryDirect` or `File.OpenBinaryDirect`) does not work with app-only. Use `File.SaveBinary` and `File.OpenBinaryStream` instead.
+ - The use of the `Microsoft.SharePoint.Client.Web.ShareObject()` API was not tested with app-only permissions, and may not work consistently. 
+The recommendation is to use it only with an app+user context.
 
 > [!IMPORTANT]
 > If the above scenarios are critical for you it's recommended to define a service account, grant that one permissions and then use it in your application. See the [Governance.EnsurePolicy](https://github.com/SharePoint/PnP/tree/master/Solutions/Governance.EnsurePolicy) sample to learn more on how you can grant tenant wide permissions for a service account. Also the article explaining an [alternative model for web app policies in SharePoint Online](security-webapppolicies.md) does contain a lot of information on this topic.
