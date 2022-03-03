@@ -1,7 +1,7 @@
 ---
 title: Replace an expiring client secret in a SharePoint Add-in
 description: Add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
-ms.date: 06/22/2021
+ms.date: 03/03/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -14,10 +14,12 @@ Client secrets for SharePoint Add-ins that are registered by using the AppRegNew
 > This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets).
 
 ## Recommended maintenance schedule
-We recommend to create new secrets a minimum of 30 days before they expire. This gives you a month of time before the old credentials expire.
-We recommend to only remove secrets a minimum of 7 days after expiration, provided you have removed them from the application configuration.
-Removing an expired secret from ACS before you remove it from the application configuration will cause errors.
 
+We recommend to create new secrets a minimum of 30 days before they expire. This gives you a month of time before the old credentials expire.
+
+We recommend to only remove secrets a minimum of 7 days after expiration, provided you have removed them from the application configuration.
+
+Removing an expired secret from ACS before you remove it from the application configuration will cause errors.
 
 ## Prerequisites
 
