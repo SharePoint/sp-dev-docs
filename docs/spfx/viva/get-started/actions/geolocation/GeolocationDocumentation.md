@@ -133,11 +133,10 @@ For the location APIs to work, the user has to grant the permission to access de
 
 
   Error Code        | Error Description
-  ----------------- | ------------------
+  ----------------- | -----------------
   PermissionDenied  | User has denied the permission to access location
   InternalError     | An unexpected error happened while invoking the location APIs
   HostNotSupported  | The location action is being used in an unsupported environment
-<br/>
 
 
 ### Callbacks for Card Developers
@@ -146,8 +145,6 @@ When the action `VivaAction.GetLocation` is invoked, then we pass the location c
 > onAction callback is not invoked for `VivaAction.ShowLocation`.
 
 For actions: `VivaAction.GetLocation` and `VivaAction.ShowLocation`, if the user lands into an error state, then an onError callback will get invoked, to which we pass the action name and the error code.
-
-<br/>
 
 ### Availability of geolocation actions
 
