@@ -1,6 +1,14 @@
+---
+title: Hands on tutorial for creating an Adaptive Card Extension Card with geolocation action
+description: Step by step guide on creating Adaptive Card Extension for Geolocation action.
+ms.date: 03/04/2022
+ms.prod: sharepoint
+ms.localizationpriority: high
+---
+# Hands on tutorial for creating an Adaptive Card Extension with geolocation action
 > [!NOTE]
 > This tutorial assumes that you have installed the SPFx v1.14<br/>
-> For more information on installing the SPFx v1.14, see [SharePoint Framework v1.14 release notes](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/release-1.14).
+> For more information on installing the SPFx v1.14, see [SharePoint Framework v1.14 release notes](../../../../release-1.14.md).
 
 ## Scaffold an Adaptive Card Extension project
 Create a new project directory for your project and change your current folder to that directory.
@@ -45,10 +53,9 @@ At this point, if you do `gulp serve`, then you will see the `GeoLocation` card:
 
 <br/>
 
- ![](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionAppIcon.png)
+ ![See the GeoLocation card icon in the webpart toolbox](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionAppIcon.png)
 
 ## Add geolocation actions to your Adaptive Card Extension
-<br/>
 
 At this point we have got the out of the box scaffolded code. Now, let us try adding geolocation actions to the Card View and Quick View experiences. <br/>
 
@@ -57,9 +64,6 @@ In the Quick View, we will provide three buttons which will perform the followin
 * Get user's current location
 * Let user choose a location from the map
 * Show a specific location on the map
-
-<br/>
-<br/>
 
 ### Update the labels that will show up on the card 
 Before we start adding the actions, let us first update the strings that you will see on the card.
@@ -90,8 +94,6 @@ Add
 ShowCurrentLocation: string;
 ``` 
 to `IGeoLocationAdaptiveCardExtensionStrings` interface 
-
-<br/>
 
 ### Add actions on the Card View <br/>
 
@@ -131,15 +133,9 @@ Next, replace the content of `onCardSelection` function with the following:
 ```
 This change implies that when a user clicks the Card View, then it should open a Quick View for them.
 
-<br/>
-
 With the changes made so far, your Card View would look like:
 
-<br/>
-
-![](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionCardView.png)
-
-<br/>
+![Card appearance after introducing the strings and changes in the card-view](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionCardView.png)
 
 ### Add actions on the Quick View <br/>
 
@@ -201,11 +197,7 @@ With this, we are providing two text-blocks to show the `Latitude` and `Longitud
 
 After adding these actions, your Quick View would look like:
 
-<br/>
-
-![](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionQuickView.png)
-
-<br/>
+![Card appearance after introducing changes in the quick-view](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionQuickView.png)
 
 ### Set up the state for our Adaptive Card Extension
 So far we have created our Card View and Quick View. If you do a `gulp serve` at this point, then you will be able to perform the actions that were described above.<br/>
