@@ -24,19 +24,17 @@ Gives user’s current device location or opens a location picker and returns th
 The ACE action for Get Location is: `VivaAction.GetLocation`. <br/>
 It takes an optional boolean parameter: `ChooseLocationOnMap`.
 
-If the property `ChooseLocationOnMap` is set to `true`, then the action will open a map, and user will get to choose a location on the map, otherwise, it will give user's current device location.
+If the property `ChooseLocationOnMap` is set to `true`, then the action will open a map, and user will get to choose a location on the map, otherwise, it will fetch user's current device location.
 
 ### Show Location:
-With this action, a map shows up on the screen on which you can either show your current location on the map or you can show your specified coordinates on the map.
-
-<br/>
+With this action, a map shows up on the screen on which you can either show the user's current location on the map or you can show your specified coordinates on the map.
 
 The ACE action for Show Location is: `VivaAction.ShowLocation`. <br/>
-It takes an optional location parameter: `locationCoordinates`. <br/>
+It takes an optional location parameter: `locationCoordinates`.
 To show a specific location, you should pass the location coordinates (latitude and longitude) via the `locationCoordinates` parameter. <br/>
 
 The `locationCoordinates` object consists of the following properties:
-```json
+```typescript
 {
   /**
    * Latitude of the location.
@@ -49,12 +47,12 @@ The `locationCoordinates` object consists of the following properties:
   longitude: number;
 
   /**
-   * Timestamp
+   * Timestamp (optional).
    */
   timestamp?: number;
 
   /**
-   * Accuracy of the location.
+   * Accuracy of the location (optional).
    */
   accuracy?: number;
 }
@@ -77,6 +75,8 @@ In your template JSON, introduce the following action:
         ]
     ```
     When this action gets invoked, user's current geolocation is fetched and is passed to the Third Party Developer via the onAction callback.
+    > [!NOTE]
+    > In this case, map doesn't show up. 
 
 2. <b> Select location from a map </b>
 <br/>
@@ -90,7 +90,7 @@ In your template JSON, introduce the following action:
           }
         ]
     ```
-    When this action gets invoked, a map opens up and user gets to select and share the location of their choice. The selected location's coordinates are passed to the Third Party Developer via the onAction callback.
+    When this action gets invoked, a map pointing to user's current location opens up and the user gets to select and share the location of their choice. The selected location's coordinates are passed to the Third Party Developer via the onAction callback.
 
 3. <b> Display user's current location </b>
 <br/>
@@ -101,7 +101,7 @@ In your template JSON, introduce the following action:
           id: 'Show Location'
         }]
     ```
-    When this action gets invoked, a map opens up and user's current location coordinates are shown on it.
+    When this action gets invoked, a map opens up and the user's current location coordinates are shown on it.
 
 4. <b> Display a specified location </b>
 <br/>
@@ -140,7 +140,7 @@ For the location APIs to work, the user has to grant the permission to access de
 
 
 ### Callbacks for Card Developers
-When the action `VivaAction.GetLocation` is invoked, then we pass the location coordinates via the onAction callback.
+When the action `VivaAction.GetLocation` is invoked, we pass the fetched location coordinates via the onAction callback.
 > [!NOTE]
 > onAction callback is not invoked for `VivaAction.ShowLocation`.
 

@@ -43,7 +43,10 @@ For our example, we are putting in `27.98884062493244` as the value for the text
 ![Set the on-click action to "Display a specified or current location" from the drop-down menu for the secondary button and pass coordinates of your choice in the respective location text-boxes](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionPropertyPaneSecondaryButtonAction.png)
 
 ### Try the geolocation actions
-Now close the property pane and click `Preview` from the top right hand corner of the page. <br/>
+Now close the property pane and click `Preview` from the top right hand corner of the page: <br/>
+* Click on the card itself to select a location from the map
+* Clicking on `My location` will open a map showing your current location
+* Clicking on `Show custom location` will open a map showing your custom location (Mount Everest)
 
 You can now check out the three geolocation actions that you introduced via the property pane. 
 

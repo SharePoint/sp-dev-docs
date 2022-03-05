@@ -90,7 +90,7 @@ Next, locate and open the following file in your project: <br/>
  `./src/adaptiveCardExtensions/geoLocation/loc/mystring.d.ts`
 
 Add 
-```json 
+```typescript
 ShowCurrentLocation: string;
 ``` 
 to `IGeoLocationAdaptiveCardExtensionStrings` interface 
@@ -209,7 +209,7 @@ In order to do this, we will first introduce new states. First locate and open t
 `./src/adaptiveCardExtensions/geoLocation/GeoLocationAdaptiveCardExtension.ts`
 
 Here, add the following `states` to the `IGeoLocationAdaptiveCardExtensionState` interface:
-```json
+```typescript
   latitude: string;
   longitude: string;
 ```  
@@ -225,12 +225,12 @@ Locate and open the following file in your project:
 `./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts`
 
 Add the following properties to the `IQuickViewData` interface:
-```json
+```typescript
   latitude: string;
   longitude: string;
 ```
 and then add the following two lines in the returned object of `data` getter:
-```json
+```typescript
       latitude: "Latitude: " + this.state.latitude,
       longitude: "Longitude: " + this.state.longitude
 ```
@@ -240,7 +240,9 @@ and then add the following two lines in the returned object of `data` getter:
 ### Implement the onAction function
 So far we have created defined our geolocation actions and wired in our states. Now we can finally implement the `onAction` function, which gives the ability to the Third Party Developer to decide what they wish to do with the location coordinates that the user has shared with them. <br/>
 For this, open the QuickView.ts file (`./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts`) and import the `IActionArguments` interface, as follows: <br/>
-`import IActionArguments from @microsoft/sp-adaptive-card-extension-base` <br/>
+```typescript
+import IActionArguments from @microsoft/sp-adaptive-card-extension-base
+```
 
 Finally, introduce the following `onAction` function in the QuickView class:
 ```typescript
