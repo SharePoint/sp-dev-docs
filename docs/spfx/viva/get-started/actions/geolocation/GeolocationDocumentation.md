@@ -8,8 +8,10 @@ ms.localizationpriority: high
 # Location capabilities in Adaptive Card Extension
 
 > [!NOTE]
-> This tutorial assumes that you have installed the SPFx v1.14 and have already built your first SharePoint Adaptive Card Extension.<br/>
-> For more information on installing the SPFx v1.14, see [SharePoint Framework v1.14 release notes](../../../../release-1.14.md).
+> The geolocation capability in Adaptive Card Extension will be available in SPFx v1.15.
+> So make sure that you have installed it before proceeding further.<br/>
+> For more information on installing the SPFx v1.15 Preview, see [SharePoint Framework v1.15 release notes](../../../../release-1.15.md).
+> This tutorial also assumes that you have already built a SharePoint Adaptive Card Extension.
 > To learn how to create your first SharePoint Adaptive Card Extension, try out [this tutorial](../../../get-started/build-first-sharepoint-adaptive-card-extension.md).
 
 ### New action types for geolocation
