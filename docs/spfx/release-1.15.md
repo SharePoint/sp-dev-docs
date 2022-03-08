@@ -11,7 +11,7 @@ There will be multiple public preview release using the @next tag in the NPMJS.o
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-**beta.1:** March 3, 2022
+**beta.1:** March 8, 2022
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -56,10 +56,6 @@ this.context.msGraphClientFactory.getClient('3');
 ### Updated Command Set Extension Template
 
 The template was updated to use `listViewStateChanged` event instead of deprecated `onListViewUpdated` event.
-
-### Node 16 LTS
-
-- Node engines updated in package.json files to include Node 16 LTS `>=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0`.
 
 ## Deprecations
 
