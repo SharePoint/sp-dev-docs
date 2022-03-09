@@ -32,7 +32,7 @@ npm install @microsoft/generator-sharepoint@next --global
         npm uninstall @microsoft/generator-sharepoint@1.14
         ```
 
-    2. Install the new v1.14 preview package:
+    2. Install the new v1.15 preview package:
 
         ```console
         npm install @microsoft/generator-sharepoint@next --save --save-exact
