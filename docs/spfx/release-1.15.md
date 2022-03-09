@@ -32,7 +32,7 @@ npm install @microsoft/generator-sharepoint@next --global
         npm uninstall @microsoft/generator-sharepoint@1.14
         ```
 
-    2. Install the new v1.14 preview package:
+    2. Install the new v1.15 preview package:
 
         ```console
         npm install @microsoft/generator-sharepoint@next --save --save-exact
@@ -42,12 +42,12 @@ npm install @microsoft/generator-sharepoint@next --global
 
 ## New features and capabilities
 
-### Microsoft Graph V3 Support
+### Microsoft Graph JavaScript SDK v3 Support
 
-`MSGraphClientFactory` allows a developer to select the version of the Microsoft Graph API to use.
+The **MSGraphClientFactory** allows a developer to select the version of the Microsoft Graph JavaScript SDK to use.
 
 > [!NOTE]
-> Default behavior is to use v1 of the Microsoft Graph API for backward compatibility.
+> Default behavior is to use v1 of the Microsoft Graph JavaScript SDK for backward compatibility.
 
 ```typescript
 this.context.msGraphClientFactory.getClient('3');
