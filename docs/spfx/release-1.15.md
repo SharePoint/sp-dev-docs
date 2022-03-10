@@ -29,13 +29,13 @@ npm install @microsoft/generator-sharepoint@next --global
     1. Uninstall the existing v1.14 package:
 
         ```console
-        npm uninstall @microsoft/generator-sharepoint@1.14
+        npm uninstall @microsoft/{spfx-package-name}@1.14
         ```
 
     2. Install the new v1.15 preview package:
 
         ```console
-        npm install @microsoft/generator-sharepoint@next --save --save-exact
+        npm install @microsoft/{spfx-package-name}@next --save --save-exact
         ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
