@@ -91,14 +91,6 @@ We support the following query methods and operators.
 * eq
 * ne
 
-### Date and time functions
-* day()
-* month()
-* year()
-* hour()
-* minute()
-* second()
-
 ## Order by query
 To order items based off of a column either in ascending or descending order, you can also specify an order by query. For example:
 
