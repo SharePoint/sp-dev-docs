@@ -113,7 +113,8 @@ The following are restrictions on individual source data files:
 
 - Maximum file size: 2 GB
 - Maximum number of properties: 500,000
-- The source file must be uploaded to the same SharePoint Online tenant where the process is started.
+- Backslashes (\) in property values need escaping by prepending with another backslash
+- The source file must be uploaded to the same SharePoint Online tenant where the process is started
 
 > [!NOTE]
 > The update file must have the Byte Order Mark (BOM) specified if any characters are not part of the Western European encoding (iso-8859-1) which is the default. International characters may not be interpreted correctly with the default encoding, so it is recommended to use the UTF-8 encoding. This encoding has a BOM of 'EF BB BF' in hex. This would be placed at the beginning of the byte array of the file when creating the file stream. If using a text editor, select the endoding type as UTF-8 before saving.
@@ -357,38 +358,13 @@ $context.ExecuteQuery();
 Write-Host "Import job created with the following identifier:" $workItemId.Value
 ```
 
-### Sample PowerShell script using PnP PowerShell
+### Updating the SharePoint Online User Profile using PnP PowerShell
 
-To initiate a bulk import using [PnP PowerShell](https://aka.ms/pnp-powershell), you can use:
+To synchronize user profile properties from Azure Active Directory to SharePoint Online user profiles, you can leverage the [PnP PowerShell](https://pnp.github.io/powershell) cmdlet [Sync-PnPSharePointUserProfilesFromAzureActiveDirectory](https://pnp.github.io/powershell/cmdlets/Sync-PnPSharePointUserProfilesFromAzureActiveDirectory.html).
 
-```powershell
-@"
- {
-  "value": [
-    {
-      "IdName": "mikaels@contoso.com",
-      "Department": "PnP",
-    },
-  {
-      "IdName": "vesaj@contoso.com",
-      "Department": "PnP",
-    }
-  ]
-}
-"@ > profiles.json
+Alternatively, if you want to synchronize user profile properties from another source, you can use [New-PnPUPABulkImportJob](https://pnp.github.io/powershell/cmdlets/New-PnPUPABulkImportJob.html).
 
-New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
-```
-
-For more information, see [New-PnPUPABulkImportJob](/powershell/module/sharepoint-pnp/new-pnpupabulkimportjob)
-
-To check on the processing status of a bulk import job, you can use:
-
-```powershell
-Get-PnPUPABulkImportStatus
-```
-
-For more information, see [Get-PnPUPABulkImportStatus](/powershell/module/sharepoint-pnp/get-pnpupabulkimportstatus)
+To check on the processing status of a bulk import job, you can use [Get-PnPUPABulkImportStatus](https://pnp.github.io/powershell/cmdlets/Get-PnPUPABulkImportStatus.html).
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
