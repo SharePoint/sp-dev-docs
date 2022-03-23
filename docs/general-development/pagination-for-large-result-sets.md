@@ -62,7 +62,7 @@ To use the same approach in CSOM, see the following example:
 if (startRow == 0) // When issueing the query for first time, we don't have a DocId value yet
     keywordQuery.QueryText = "sharepoint";
 else  // Putting the IndexDocId first and then the 'actual' query matters (in this case searching for the keyword 'sharepoint')
-    keywordQuery.QueryText = string.Format("IndexDocId > {0} AND (sharepoint)", startRow);
+    keywordQuery.QueryText = string.Format("IndexDocId>{0} AND (sharepoint)", startRow);
 keywordQuery.EnableSorting = true;
 keywordQuery.SortList.Add("[DocId]", Microsoft.SharePoint.Client.Search.Query.SortDirection.Ascending);
 ...
