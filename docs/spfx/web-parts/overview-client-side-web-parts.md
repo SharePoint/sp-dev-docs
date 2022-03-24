@@ -1,7 +1,7 @@
 ---
 title: Overview of SharePoint client-side web parts
 description: Controls that appear inside a SharePoint page and run client-side browser; the building blocks of pages that appear on a SharePoint site.
-ms.date: 06/15/2020
+ms.date: 03/24/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
