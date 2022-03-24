@@ -1,7 +1,7 @@
 ---
 title: Host your client-side web part from Microsoft 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Microsoft 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online.
-ms.date: 02/10/2022
+ms.date: 03/24/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -36,7 +36,7 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
 
 1. Switch to the console and make sure you're still in the project directory that you used to set up your web part project.
 1. If you are still running the local webserver by executing **gulp serve** in the previous tutorial, press <kbd>CTRL</kbd>+<kbd>C</kbd> to terminate it.
-1. Ensure ensure you're in your project directory:
+1. Ensure you're in your project directory:
 
     ```console
     cd helloworld-webpart
