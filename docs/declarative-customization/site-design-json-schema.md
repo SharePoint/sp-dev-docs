@@ -1,7 +1,7 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 01/31/2022
+ms.date: 03/2431/2022
 ms.localizationpriority: high
 ---
 
@@ -29,6 +29,29 @@ The overall JSON structure is specified as follows:
 
 > [!NOTE]
 > **Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema.
+
+
+
+## addContentTypesFromHub
+
+Use the **addContentTypesFromHub** verb to sync content types from a content type hub to the site.
+
+> [!NOTE]
+> Once **addContentTypesFromHub** is applied on a site, the **addContentType** subaction on a list will be able to add it to the list by name.
+
+### JSON value
+
+- `ids`: An array of the content type IDs that need to be synced.
+
+#### Example
+
+```json
+{
+  "verb": "addContentTypesFromHub",
+  "ids": ["0x01007CE30DD1206047728BAFD1C39A850120"]
+}
+```
+
 
 ## Create a new SharePoint list
 
@@ -279,23 +302,6 @@ Adds a content type to the list. Currently these are limited to the default cont
 {
   "verb": "addContentType",
   "name": "name"
-}
-```
-
-### addContentTypesFromHub
-
-Manually syncs content types from a content type hub to a specific site.
-
-#### JSON value
-
-- `ids`: An array of the content type IDs that need to be synced.
-
-#### Example
-
-```json
-{
-  "verb": "addContentTypesFromHub",
-  "ids": ["0x01007CE30DD1206047728BAFD1C39A850120"]
 }
 ```
 
