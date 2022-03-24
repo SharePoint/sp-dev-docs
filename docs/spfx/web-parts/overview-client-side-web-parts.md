@@ -1,7 +1,7 @@
 ---
 title: Overview of SharePoint client-side web parts
 description: Controls that appear inside a SharePoint page and run client-side browser; the building blocks of pages that appear on a SharePoint site.
-ms.date: 06/15/2020
+ms.date: 03/24/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -12,7 +12,7 @@ SharePoint client-side web parts are controls that appear inside a SharePoint pa
 
 You can build client-side web parts using modern client-side development tools and the SharePoint workbench (*a development test surface*). You can deploy your client-side web parts to both modern pages and classic web part pages in Microsoft 365 tenants.
 
-In addition to plain JavaScript projects, you can build web parts with popular web frameworks such as React, Angular, Vue.js, and others. For example, you can use React along with components from [Office UI Fabric React](https://developer.microsoft.com/fluentui#/) to quickly create experiences based on the same components used in Microsoft 365.
+In addition to plain JavaScript projects, you can build web parts with popular web frameworks such as React, Angular, Vue.js, and others. For example, you can use React along with components from [Fluent UI](https://developer.microsoft.com/fluentui#/) to quickly create experiences based on the same components used in Microsoft 365.
 
 ## Use client-side web parts beyond SharePoint
 
