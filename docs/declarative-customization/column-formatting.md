@@ -505,7 +505,8 @@ This example uses the `length` operator to detect the number of members of the f
     "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "a",
     "style": {
-        "display": "=if(length(@currentField) > 0, 'flex', 'none')"
+        "display": "=if(length(@currentField) > 0, 'flex', 'none')",
+        "text-decoration": "none"
     },
     "attributes": {
         "href": {
