@@ -148,6 +148,7 @@ The full set of values for `SiteStatus` are as follows:
 + `1` - Provisioning.  The site is currently being provisioned.
 + `2` - Ready.  The site has been created.
 + `3` - Error.  An error occurred while provisioning the site.
++ `4` - Site with requested URL already exist.
 
 ## See also
 
