@@ -1,7 +1,7 @@
 ---
 title: Create Modern SharePoint Sites using REST
 description: Create and get the status of a new modern SharePoint site by using the REST interface.
-ms.date: 09/02/2021
+ms.date: 03/29/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
