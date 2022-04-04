@@ -32,13 +32,6 @@ New in this release, preview code for **Office Add-Ins** and a new Extension typ
 
 ## New features and capabilities
 
-- Create Office Add-Ins using SPFx web parts (dev preview)
-  - [Docs: Create Outlook add-ins using SharePoint Framework](office-addins-create.md)
-  - [Tutorial: Create Outlook Web Access extension using SharePoint Framework](web-parts/get-started/office-addins-tutorial.md)
-
-    > [!NOTE]
-    > The Outlook Web Access support is being currently rolled out and can take until end of the release week (10th of January), before it's fully functional in your tenant
-
 - Create Search Extensions (dev preview)
   - [Modifying Microsoft Search experience using SharePoint Framework extensions](building-search-extensions.md)
 - Create Teams Personal Apps (GA)
