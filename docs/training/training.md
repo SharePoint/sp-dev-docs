@@ -23,7 +23,7 @@ Here are the different tutorials and training assets available for you to get st
 - [Building Microsoft Teams tab using SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab) | [video](https://www.youtube.com/watch?v=JoTAC2i-XeU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=8)
 - [Add jQueryUI Accordion to your SharePoint client-side web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part) | [video](https://www.youtube.com/watch?v=N0C9azIyiTo&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=10)
 - [Use Office UI Fabric React components in your SharePoint client-side web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/use-fabric-react-components) | [video](https://www.youtube.com/watch?v=kNrYd8nYaZY&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=11)
-- [Tutorial for creating Outlook Web App extension using SharePoint Framework - Preview](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/office-addins-tutorial) | [video](https://www.youtube.com/watch?v=QtGjTAjbIKU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=9)
+
 
 ## Getting started tutorials for SharePoint Framework extensions
 
