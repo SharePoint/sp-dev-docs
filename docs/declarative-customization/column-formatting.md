@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 02/10/2022
+ms.date: 03/27/2022
 ms.localizationpriority: high
 ---
 
@@ -505,7 +505,8 @@ This example uses the `length` operator to detect the number of members of the f
     "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
     "elmType": "a",
     "style": {
-        "display": "=if(length(@currentField) > 0, 'flex', 'none')"
+        "display": "=if(length(@currentField) > 0, 'flex', 'none')",
+        "text-decoration": "none"
     },
     "attributes": {
         "href": {
