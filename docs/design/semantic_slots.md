@@ -1,7 +1,7 @@
 ---
 title:  Designing for section backgrounds using semantic slots
 description: Learn how to design your web part to take advantage of section backgrounds using semantic slots.
-ms.date: 05/18/2021
+ms.date: 04/06/2022
 ms.localizationpriority: medium
 ---
 
@@ -64,7 +64,7 @@ In the table below, you can see all eight palette colors defined for the bodyTe
 
 ## Identifying semantic slots in your designs
 
-Semantic slots should be assigned based on the function of a page element. The name of a semantic slot can quickly tell you how it’s meant to be used. You can find all existing semantic slots and their use case examples in the [Fabric semantic colors documentation](/fluentui#/styles/web/colors/theme-slots).
+Semantic slots should be assigned based on the function of a page element. The name of a semantic slot can quickly tell you how it’s meant to be used. You can find all existing semantic slots and their use case examples in the [Fabric semantic colors documentation](https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/theme-slots).
 
 Fabric palette colors should be referenced from your site theme’s color ramp. If your site is using a SharePoint out of the box theme, you can reference [SharePoint theme color ramps](https://fluentfabric.azurewebsites.net/#/color/products). If your site is using a custom theme, you can generate a unique color ramp using the [Fluent UI Theme Designer](https://aka.ms/themedesigner).
 
