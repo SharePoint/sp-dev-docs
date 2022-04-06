@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.10 release notes
 description: Release notes for the SharePoint Framework v1.10 release
-ms.date: 09/08/2021
+ms.date: 04/06/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -31,13 +31,6 @@ New in this release, preview code for **Office Add-Ins** and a new Extension typ
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
-
-- Create Office Add-Ins using SPFx web parts (dev preview)
-  - [Docs: Create Outlook add-ins using SharePoint Framework](office-addins-create.md)
-  - [Tutorial: Create Outlook Web Access extension using SharePoint Framework](web-parts/get-started/office-addins-tutorial.md)
-
-    > [!NOTE]
-    > The Outlook Web Access support is being currently rolled out and can take until end of the release week (10th of January), before it's fully functional in your tenant
 
 - Create Search Extensions (dev preview)
   - [Modifying Microsoft Search experience using SharePoint Framework extensions](building-search-extensions.md)
