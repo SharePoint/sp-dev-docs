@@ -93,3 +93,6 @@ Quick views will follow SharePoint default and custom company-created themes.
 Currently dark themes are not supported for quick views on iOS and Android mobile.
 
 :::image type="content" source="../../../images/viva-design/img_quickview_ios_theme.jpg" alt-text="Card container and elements":::
+
+### Behavior for links and Single sign-on
+For some cards, you will use links to URLs. Depending on the location of the content, links to URLs may display content in Microsoft Teams or elsewhere and Single sign-on (SSO) behavior can differ. Get more information about how links to URLs and SSO behave depending on the location of the content you are linking to. [Learn more](/viva/connections/create-dashboard.md#how-urls-and-single-sign-on-works)
