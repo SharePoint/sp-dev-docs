@@ -7,6 +7,7 @@ ms.reviewer: ssquires
 audience: admin
 ms.topic: reference
 ms.prod: microsoft-365-enterprise
+ms.date: 04/06/2022
 search.appverid: 
 ms.collection: m365initiative-syntex
 ms.localizationpriority: high
@@ -55,5 +56,5 @@ The remove model method just removes the model from one or more libraries where 
 
 ## See also
 
-[Document understanding overview](../document-understanding-overview.md)
+[Document understanding overview](/microsoft-365/contentunderstanding/document-understanding-overview)
 
