@@ -523,7 +523,7 @@
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
   - name: Location capabilities in Adaptive Card Extension
-    href: spfx/viva/GeolocationDocumentation.md
+    href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
   - name: Design Guidance
     items:
     - name: Introduction
@@ -545,9 +545,9 @@
     - name: Adaptive Card Extensions and Teams Apps
       href: spfx/viva/get-started/adaptive-card-extensions-and-teams.md
     - name: Create an Adaptive Card Extension with geolocation action
-      href: spfx/viva/GeolocationTutorial.md
+      href: spfx/viva/get-started/actions/geolocation/GeolocationTutorial.md
     - name: Geolocation capabilityes with the property pane of an ACE
-      href: spfx/viva/GeolocationPropertyPane.md
+      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
 - name: Business Apps & Process Automation
