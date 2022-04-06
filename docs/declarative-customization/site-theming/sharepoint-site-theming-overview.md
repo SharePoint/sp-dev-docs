@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming
 description: New options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
-ms.date: 06/05/2020
+ms.date: 04/06/2020
 ms.localizationpriority: high
 ---
 
