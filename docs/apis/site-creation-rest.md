@@ -1,7 +1,7 @@
 ---
 title: Create Modern SharePoint Sites using REST
 description: Create and get the status of a new modern SharePoint site by using the REST interface.
-ms.date: 09/02/2021
+ms.date: 03/29/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -148,6 +148,7 @@ The full set of values for `SiteStatus` are as follows:
 + `1` - Provisioning.  The site is currently being provisioned.
 + `2` - Ready.  The site has been created.
 + `3` - Error.  An error occurred while provisioning the site.
++ `4` - Site with requested URL already exist.
 
 ## See also
 
