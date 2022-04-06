@@ -1,5 +1,5 @@
 ---
-title: Tutorial on how to use geolocation actions via the property pane of the card designer card.
+title: Explore Geolocation capability via property pane of card-desinger card in Adaptive Card Extension
 description: Geolocation is a new action that the SharePoint Adaptive Card Extension framework supports, and in this tutorial we see how we can explore this capability via the property pane of the card-designer card.
 ms.date: 03/04/2022
 ms.prod: sharepoint
