@@ -65,7 +65,7 @@ The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell
 - Blank: `f6cc5403-0d63-442e-96c0-285923709ffc`
 
 > [!IMPORTANT]
-> To apply your custom site designs as retrieved with [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/powershell/module/sharepoint-pnp/get-pnpsitedesign) (PnP PowerShell) you will have to change the JSON as follows:
+> To apply your custom site designs as retrieved with [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/sharepoint/dev/declarative-customization/site-design-pnppowershell) (PnP PowerShell) you will have to change the JSON as follows:
 ```json
 ...
     "SiteDesignId":"00000000-0000-0000-0000-000000000000",
