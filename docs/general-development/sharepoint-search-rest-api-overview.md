@@ -587,7 +587,7 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;hithighlighted
 
 A Boolean value that specifies whether to perform result type processing for the query.
 
-**true** to perform result type processing; otherwise, **false**. The default value is **true**.
+**false** to perform result type processing; otherwise, **true**. The default value is **true**.
 
 #### Sample GET request
 
