@@ -50,19 +50,47 @@ For information on enabling and configuring the Microsoft 365 CDN in your ShareP
     The **package-solution.json** file defines the package metadata as shown in the following code:
 
     ```json
-    {
-      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-      "solution": {
-        "name": "helloword-webpart-client-side-solution",
-        "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
-        "version": "1.0.0.0",
-        "includeClientSideAssets": true,
-        "isDomainIsolated": false
-      },
-      "paths": {
-        "zippedPackage": "solution/helloword-webpart.sppkg"
-      }
+   {
+        "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+        "solution": {
+            "name": "mysolution-client-side-solution",
+            "id": "ee1a495d-c7bb-499b-bd71-728aaeb79cd2",
+            "version": "1.0.0.0",
+            "includeClientSideAssets": true,
+            "skipFeatureDeployment": true,
+            "isDomainIsolated": false,
+            "developer": {
+                "name": "",
+                "websiteUrl": "",
+                "privacyUrl": "",
+                "termsOfUseUrl": "",
+                "mpnId": "Undefined-1.14.0"
+            },
+            "metadata": {
+            "shortDescription": {
+                "default": "mysolution description"
+            },
+            "longDescription": {
+                "default": "mysolution description"
+            },
+            "screenshotPaths": [],
+            "videoUrl": "",
+            "categories": []
+            },
+            "features": [
+            {
+                "title": "mysolution Feature",
+                "description": "The feature that activates elements of the mysolution solution.",
+                "id": "d72e47b2-d5a2-479f-9f9a-85e1e7472dee",
+                "version": "1.0.0.0"
+            }
+            ]
+        },
+        "paths": {
+            "zippedPackage": "solution/mysolution.sppkg"
+        }
     }
+
     ```
 
 The default value for the `includeClientSideAssets` is `true`, which means that static assets are packaged automatically in the **\*.sppkg** files, and you don't need to separately host your assets from an external system.
@@ -89,15 +117,15 @@ If Microsoft 365 CDN *is enabled*, it's used automatically with default settings
     > If you're interested in what actually got packaged inside of the **\*.sppkg** file, you can look in the content of the **sharepoint/solution/debug** folder.
 
 1. Upload or drag and drop the newly created client-side solution package to the app catalog in your tenant.
-1. Because you already deployed the package, you're prompted as to whether to replace the existing package. Select **Replace It**.
+1. Because you already deployed the package, you're prompted as to whether to replace the existing package. Select **Replace**.
 
     ![Override existing solution](../../../images/cdn-override-helloworld-webpart-package.png)
 
-1. Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Microsoft 365 CDN or from the app catalog, depending on the tenant settings. Select **Deploy**.
+1. Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Microsoft 365 CDN or from the app catalog, depending on the tenant settings. Select **Enable app**.
 
     ![Installation popup from app catalog for the SPFx solution](../../../images/cnd-trust-helloworld-webpart-solution.png)
 
-1. Open the site where you previously installed the **helloworld-webpart-client-side-solution** or installed the solution to a new site.
+1. Open the site where you previously installed the **helloworld-webpart-client-side-solution** or install the solution to a new site.
 1. After the solution has been installed, select **Add a page** from the *gear* menu, and select **HelloWorld** from the modern page web part picker to add your custom web part to page.
 
     ![HelloWorld web part visible in web part picker for modern page](../../../images/cdn-web-part-picker.png)
