@@ -48,13 +48,20 @@ Ensure the following before you begin:
 
     foreach ($appentry in $applist) {
         $principalId = $appentry.AppPrincipalId
-        $principalName = $appentry.DisplayName
 
-        Get-MsolServicePrincipalCredential -AppPrincipalId $principalId -ReturnKeyValues $false | ? { $_.Type -eq "Password" } | % { "$principalName;$principalId;" + $_.KeyId.ToString() +";" + $_.StartDate.ToString() + ";" + $_.EndDate.ToString() } | out-file -FilePath c:\temp\appsec.txt -append
+        Get-MsolServicePrincipalCredential -AppPrincipalId $principalId -ReturnKeyValues $false | Where-Object { $_.Type -eq "Password" } | ForEach-Object {
+            [PSCustomObject][Ordered]@{
+                PrincipalName = $appentry.DisplayName
+                PrincipalId = $principalId
+                KeyID = $_.KeyId
+                StartDate = $_.StartDate
+                EndDate = $_.EndDate
+            } | Export-Csv -Path C:\temp\appsec.csv -NoTypeInformation -Delimiter ';' -Append
+        }
     }
     ```
 
-1. Open the file C:\temp\appsec.txt to see the report. Leave the Windows PowerShell window open for the next procedure, if any of the secrets are near expiration.
+1. Open the file C:\temp\appsec.csv to see the report. Leave the Windows PowerShell window open for the next procedure, if any of the secrets are near expiration.
 
 ## Generate a new secret
 
