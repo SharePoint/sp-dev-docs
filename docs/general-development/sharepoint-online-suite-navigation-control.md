@@ -1,6 +1,6 @@
 ---
 title: SharePoint Online Suite Navigation control
-ms.date: 09/25/2017
+ms.date: 04/08/2022
 ms.prod: sharepoint
 ms.assetid: ba93e5c0-e591-48d0-a716-a08ec7ef6cea
 ms.localizationpriority: medium
@@ -8,12 +8,10 @@ ms.localizationpriority: medium
 
 
 # SharePoint Online Suite Navigation control
-Learn about master page markup for the Suite Navigation control in SharePoint Online. 
-{insert introductory content}
-  
-    
-    
+Learn about master page markup for the Suite Navigation control in classic SharePoint Online.
 
+> **Important:**
+> Be aware that the guidance given on this page only applies to classic SharePoint Online and cannot be applied to modern SharePoint Online pages.
 
 ## SharePoint Online Suite Navigation control
 
@@ -21,11 +19,11 @@ The Suite Navigation control renders a consistent top navigation bar in SharePoi
   
     
     
-If a master page was customized, it will not pick up the new Suite Navigation control. To add this control to your custom master page, replace the  `suiteBar` `<div>` with the markup that corresponds to the type of site you're using.
+If a master page was customized, it will not pick up the Suite Navigation control. To add this control to your custom master page, replace the  `suiteBar` `<div>` with the markup that corresponds to the type of site you're using.
   
     
     
-The new Suite Navigation control supports any theme applied to the site. If you want to change the color of the top navigation bar, apply a theme.
+The Suite Navigation control supports any theme applied to the site. If you want to change the color of the top navigation bar, apply a theme.
   
     
     
