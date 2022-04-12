@@ -1,7 +1,7 @@
 ---
 title: SharePoint Search REST API overview
 description: Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
-ms.date: 04/06/2022
+ms.date: 04/12/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -587,7 +587,7 @@ GET http:// _server_/_api/search/query?querytext='sharepoint'&amp;hithighlighted
 
 A Boolean value that specifies whether to perform result type processing for the query.
 
-**true** to perform result type processing; otherwise, **false**. The default value is **true**.
+**false** to perform result type processing; otherwise, **true**. The default value is **true**.
 
 #### Sample GET request
 
