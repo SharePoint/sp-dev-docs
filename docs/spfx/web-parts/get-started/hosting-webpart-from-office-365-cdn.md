@@ -26,7 +26,7 @@ Make sure that you've completed the following tasks before you begin:
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/wl2ur1SBp3Q]
+> [!Video https://www.youtube.com/embed/N-KowN-UwTM]
 
 ## Enable CDN in your Microsoft 365 tenant
 

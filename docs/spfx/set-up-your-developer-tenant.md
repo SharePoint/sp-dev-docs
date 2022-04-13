@@ -17,7 +17,7 @@ If you don't have one, you can get a Microsoft 365 developer subscription when y
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/yc1IYgYp7qQ]
+> [!Video https://www.youtube.com/embed/ijaJgc3J-iE]
 
 ## Create app catalog site
 

@@ -12,7 +12,7 @@ Connect your web part to SharePoint to access functionality and data in SharePoi
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/4F65TmsHucY]
+> [!Video https://www.youtube.com/embed/5M3zDpgxIMs]
 
 > [!NOTE]
 > This article continues building the Hello World web part built in the previous article [Build your first web part](./build-a-hello-world-web-part.md).

@@ -16,7 +16,7 @@ Ensure that you've completed the procedures in the following articles before you
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/CMJEp8TS4aU]
+> [!Video https://www.youtube.com/embed/FkFg32NSTM0]
 
 ## Package the HelloWorld web part
 

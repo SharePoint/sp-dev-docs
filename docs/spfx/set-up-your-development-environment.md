@@ -15,7 +15,7 @@ You can use any text editor to build SharePoint Framework solutions. You can use
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/-2-jWsEa2Yw]
+> [!Video https://www.youtube.com/embed/Cxx9MdjEiEw]
 
 > [!IMPORTANT]
 > The following steps assume you're building solutions for SharePoint Online using the latest version of the SharePoint Framework. If you're building solutions for SharePoint Server 2019 or SharePoint Server 2016, refer to the additional documentation referenced in the [See also](#see-also) section below.

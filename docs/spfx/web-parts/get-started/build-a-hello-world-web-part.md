@@ -21,7 +21,7 @@ Client-side web parts support:
 
 You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/_O2Re5uRLoo]
+> [!Video https://www.youtube.com/embed/6WTtjXP5yW4]
 
 ## Create a new web part project
 
