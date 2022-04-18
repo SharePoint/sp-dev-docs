@@ -32,9 +32,9 @@ export default class LatestDocumentsWebPart extends BaseClientSideWebPart<ILates
   private _listSubscriptionFactory: ListSubscriptionFactory;
   private _listSubscription: IListSubscription;
 
-  private createListSubscription(): void {
+  private async createListSubscription(): Promise<void> {
     this._listSubscriptionFactory = new ListSubscriptionFactory(this);
-    this._listSubscription = this._listSubscriptionFactory.createSubscription({
+    this._listSubscription = await this._listSubscriptionFactory.createSubscription({
       listId: Guid.parse(this.properties.listId),
       callbacks: {
         notification: this._loadDocuments.bind(this)
