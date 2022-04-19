@@ -11,7 +11,8 @@ There will be multiple public preview release using the @next tag in the NPMJS.o
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-**beta.1:** March 8, 2022
+- beta.6 **Released:** April 19, 2022
+- beta.1 **Released:**  March 8, 2022
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -42,6 +43,20 @@ npm install @microsoft/generator-sharepoint@next --global
 
 ## New features and capabilities
 
+### Form Customizer Extension
+
+The Form Customizer Extension allows developers to customize new, edit and display forms of the lists and document libraries. 
+
+> [!NOTE]
+> The API to apply form customizers to a content type or list is still work in progress. 
+> Developers can use local debugging and direct link to `SPListForm.aspx` page to test the customizers.
+> Please, check `config\serve.json` file created during the provisioning for more details.
+> You can see live demo of this process from following YouTube video - [Preview on upcoming list extensibility options with SPFx v1.15](https://www.youtube.com/watch?v=90DWB9hjo-k).
+
+### Node.js v16 Support
+
+SPFx solutions now support [Node.js v16](https://nodejs.org/).
+
 ### Microsoft Graph JavaScript SDK v3 Support
 
 The **MSGraphClientFactory** allows a developer to select the version of the Microsoft Graph JavaScript SDK to use.
@@ -63,8 +78,13 @@ The template was updated to use `listViewStateChanged` event instead of deprecat
 
 ## Fixed Issues
 
-### February Timeframe
+### February & March Timeframe
 
+- [#7684](https://github.com/SharePoint/sp-dev-docs/issues/7684) - SPFx app inside Microsoft Teams authentication error (sso-getAdalSsoToken-receive)
+- [#7739](https://github.com/SharePoint/sp-dev-docs/issues/7739) - CommandSet Extensions don't work in Document Library when navigating from LHN link on site home page
+- [#7794](https://github.com/SharePoint/sp-dev-docs/issues/7794) - `listViewStateChangedEvent` does not trigger for grouped list views
+- [#7805](https://github.com/SharePoint/sp-dev-docs/issues/7805) - SPFx is loading library component old version for some users
+- [#7795](https://github.com/SharePoint/sp-dev-docs/issues/7795) - `this.context.pageContext.list.serverRelativeUrl` doesn't refresh
 - [#7680](https://github.com/SharePoint/sp-dev-docs/issues/7680) - Theme colors do not load (immediately) on SP listpage or site contents page
 - [#6403](https://github.com/SharePoint/sp-dev-docs/issues/6403) - DynamicData.tryGetValue() should not fail if disposed
 - [#5979](https://github.com/SharePoint/sp-dev-docs/issues/5979) - Problem popup when remove SPFx Teams Tab
