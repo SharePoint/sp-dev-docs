@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 ms.prod: sharepoint
-ms.date: 08/19/2021
+ms.date: 04/19/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -20,7 +20,7 @@ You can find latest version of the SharePoint Online Client Side Object Model (C
 >[!Important]
 > Files larger than 15 GB must now create the required checksum using [QuickXorHash](/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
 > 
->The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirementt.
+>The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirement.
 >
 >The previous method of MD5Hash is still required for files smaller than 2 GB; however this requirement will be removed at some point in the future.
 
@@ -406,13 +406,13 @@ The Migration API requires the Azure Container for content passing and also for 
 
 There are two new optional parameters in manifest.xml:
 
-- QuickXorHash
+- Checksum
 - MD5Hash
 
 ### Preparing the package
 The method for calling the migration job doesn’t change; only the package generation needs to be changed.
 
-In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *QuickXorHash* and *MD5Hash*. <br>
+In the Manifest container one file is named Manifest.xml. There are 2 optional attributes added to the file node: *Checksum* and *MD5Hash*. <br>
 
 **Example for files over 15 GB:**
 
@@ -428,7 +428,7 @@ In the Manifest container one file is named Manifest.xml. There are 2 optional a
     </DocumentLibrary> 
   </SPObject> 
   <SPObject Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ObjectType="SPFile" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
-    <File Url="Shared Documents/MyFile.txt" Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Name="MyFile.txt" ListItemIntId="1" ListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" TimeCreated="2021-01-06T18:43:38" TimeLastModified="2018-06-07T17:54:28" Version="1.0" FileValue="MyFile.txt" FileSize="17662712" Author="1" ModifiedBy="1" MD5Hash="qVBFIb8MJLzT5INrE4XcDQ==" Checksum="3k59aOUae2xygD5B/jtxY4x0Xko=" /> 
+    <File Url="Shared Documents/MyFile.txt" Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Name="MyFile.txt" ListItemIntId="1" ListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" TimeCreated="2021-01-06T18:43:38" TimeLastModified="2018-06-07T17:54:28" Version="1.0" FileValue="MyFile.txt" FileSize="17662712" Author="1" ModifiedBy="1" Checksum="3k59aOUae2xygD5B/jtxY4x0Xko=" /> 
   </SPObject> 
   <SPObject Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ObjectType="SPListItem" ParentId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
     <ListItem FileUrl="Shared Documents/MyFile.txt" DocType="File" ParentFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Order="100" Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" Name="MyFile.txt" DirName="/Shared Documents" IntId="1" DocId="aef2bb11-7ee8-4343-87cd-5938d260e647" Version="1.0" Author="1" ModifiedBy="1" TimeLastModified="2018-06-07T17:54:28" TimeCreated="2021-01-06T18:43:38" ModerationStatus="Approved"> 
@@ -441,7 +441,7 @@ In the Manifest container one file is named Manifest.xml. There are 2 optional a
 **Example for files under 2 GB:**
 
 ```xml
-<File … MD5Hash="CXPP/MWYxY87NjjnLZrFg==" InitializationVector="4WlC5zQK0r9s39LoB2w==" />
+<File … MD5Hash="CXPP/MWYxY87NjjnLZrFg==" />
 ```
 
 ## Best Practices and Special Mentions
