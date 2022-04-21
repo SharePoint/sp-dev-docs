@@ -99,6 +99,6 @@ If at a later state you want to remove this consent, login to your Azure Portal,
 
 ## See also
 
-- [SharePoint Patterns and Practices](https://github.com/SharePoint/PnP/)
+- [Microsoft 365 Patterns and Practices](https://pnp.github.io/)
 - [SharePoint Developer Group at Microsoft Tech Community](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev) 
 - [PnP remote provisioning](pnp-remote-provisioning.md)
