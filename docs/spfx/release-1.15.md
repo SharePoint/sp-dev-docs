@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.15 preview release notes
 description: Release notes for the SharePoint Framework v1.15 preview release
-ms.date: 3/19/2022
+ms.date: 4/21/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -52,10 +52,6 @@ The Form Customizer Extension allows developers to customize new, edit and displ
 > Developers can use local debugging and direct link to `SPListForm.aspx` page to test the customizers.
 > Please, check `config\serve.json` file created during the provisioning for more details.
 > You can see live demo of this process from following YouTube video - [Preview on upcoming list extensibility options with SPFx v1.15](https://www.youtube.com/watch?v=90DWB9hjo-k).
-
-### Node.js v16 Support
-
-SPFx solutions now support [Node.js v16](https://nodejs.org/).
 
 ### Microsoft Graph JavaScript SDK v3 Support
 
