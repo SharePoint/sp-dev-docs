@@ -19,7 +19,7 @@ The 'Grant access to an item or a folder' action requires the following inputs:
 - SharePoint site URL
 - List or library name or identifier
 - The item or the file identifier for which to grant access
-- The recipients whom you want to grant access
+- The recipients whom you want to grant access must be separated by semicolons
 - The permission role you want to grant
 
 ![Grant access to an item or a folder](../../../images/grant-access-item-file-action-flow.png)
