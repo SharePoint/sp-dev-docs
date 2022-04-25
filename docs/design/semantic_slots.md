@@ -1,7 +1,7 @@
 ---
 title:  Designing for section backgrounds using semantic slots
 description: Learn how to design your web part to take advantage of section backgrounds using semantic slots.
-ms.date: 04/06/2022
+ms.date: 04/25/2022
 ms.localizationpriority: medium
 ---
 
@@ -15,7 +15,7 @@ Section background is a feature that applies background color to a canvas secti
 
 ## Variant vs. Section background
 
-A variant describes different values of color generated from an existing theme. A variant will share the same set of colors as the original theme it was generated from, but will apply those colors differently. See [Office UI Fabric variant documentation](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/packages/variants/README.md) for more detail.
+A variant describes different values of color generated from an existing theme. A variant will share the same set of colors as the original theme it was generated from, but will apply those colors differently. See [@fluentui/scheme-utilities](https://github.com/microsoft/fluentui/blob/master/packages/scheme-utilities/README.md) for more detail.
 
 A Section Background allows the user to apply a variant color from the theme to a canvas section. Both concepts share "Neutral", "Soft", and "Strong" options and can be used interchangeably when describing color usage.
 
@@ -25,39 +25,16 @@ A semantic slot is a theming slot that targets specific page elements. A Offic
 
 For example, default text uses the "bodyText" semantic slot. On the None, Neutral, and Soft section backgrounds, bodyText is assigned neutralPrimary. On the Strong section background, the palette color of bodyText changes to white. Semantic slots can be assigned palette colors for all variants in dark themes as well.
 
-In the table below, you can see all eight palette colors defined for the bodyText slot. 
+In the table below, you can see all eight palette colors defined for the bodyText slot.
 
 ![Example table showing semantic slots on light and dark theme variants](../images/doc-semantic-slot-940px-table.png)
 
-<br/> 
-<table>
-<tr>
-<td> </td>
-<td> Light themes</td>
-<td> Dark themes</td>
-</tr>
-<tr>
-<td>None</td>
-<td>neutralPrimary #333333</td>
-<td>neutralPrimary #ffffff</td>
-</tr>
-<tr>
-<td>Neutral</td>
-<td style="background-color:red">neutralPrimary #333333</td>
-<td>neutralPrimary #ffffff</td>
-</tr>
-<tr>
-<td>Soft</td>
-<td>neutralPrimary #333333</td>
-<td>neutralPrimary #ffffff</td>
-</tr>
-<tr>
-<td>Strong</td>
-<td>white #ffffff</td>
-<td>white #1f1f1f</td>
-</tr>
-</table>
-<br/>
+|         |      Light themes      |      Dark themes       |
+| ------- | ---------------------- | ---------------------- |
+| None    | neutralPrimary #333333 | neutralPrimary #ffffff |
+| Neutral | neutralPrimary #333333 | neutralPrimary #ffffff |
+| Soft    | neutralPrimary #333333 | neutralPrimary #ffffff |
+| Strong  | white #ffffff          | white #ffffff          |
 
 > [!NOTE]
 > The current semantic slot list is defined by commonly used design patterns in SharePoint. We want to avoid creating case-specific semantic slots. When designing a new web part, consider aligning to an existing design pattern. Office UI Fabric's policy is that semantic slots may never be removed from the list, so any additions are permanent.
