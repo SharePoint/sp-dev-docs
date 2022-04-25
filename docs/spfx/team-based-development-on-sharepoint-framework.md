@@ -108,7 +108,7 @@ A new SharePoint Framework project scaffolded by the SharePoint Framework Yeoman
 
 A common solution to avoid the risk of dependencies changing during the project, in projects built on the open-source toolchain, is to lock the version of all dependencies. When adding a dependency to the project developers can choose to install the dependency with a specific version rather than a version range by calling the **npm install** command with the **--save-exact** argument.
 
-This however doesn't affect the child dependencies of the particular package. To effectively lock the version of all dependencies and their children in the project, developers can use the native lock file capability supported by NPM. For more information, see [npm-package-locks: An explanation of NPM lock files](https://docs.npmjs.com/configuring-npm/package-locks.html).
+This however doesn't affect the child dependencies of the particular package. To effectively lock the version of all dependencies and their children in the project, developers can use the native lock file capability supported by NPM. For more information, see [npm-package-locks: An explanation of NPM lock files](https://docs.npmjs.com/cli/v8/configuring-npm/package-lock-json).
 
 ### Add the project to source control
 
