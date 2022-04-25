@@ -22,7 +22,7 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
 ## Install Node.js
 
-Install the latest version of **[Node.js](https://www.nodejs.org) LTS v14**.
+Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v14**.
 
 This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
