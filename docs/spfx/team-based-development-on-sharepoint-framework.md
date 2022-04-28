@@ -1,7 +1,7 @@
 ---
 title: Team-based development on the SharePoint Framework
 description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
-ms.date: 07/21/2020
+ms.date: 04/28/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -138,7 +138,7 @@ Using existing packages to accomplish specific tasks allows you to be more produ
 > [!IMPORTANT]
 > Since there's no formal verification process before a package is published to **https://www.npmjs.com**, you should carefully examine if you can use the particular package both from the contents and license point of view.
 
-To add a package to your SharePoint Framework project execute the **npm install <package> --save** or **npm install <package> --save-dev** command in the command line, for example: **npm install angular --save**. Using the **--save** or **--save-dev** argument ensures that the package is added to the **package.json** file and other developers on your team will get it as well when restoring dependencies. Without it building the project on a machine other than your own will fail. When adding packages that are required by your solution on runtime, such as Angular or jQuery, you should use the **--save** argument. Packages that are required in the build process, such as additional Gulp tasks, should be installed with the **--save-dev** argument.
+To add a package to your SharePoint Framework project execute the **npm install {package} --save** or **npm install {package} --save-dev** command in the command line, for example: **npm install angular --save**. Using the **--save** or **--save-dev** argument ensures that the package is added to the **package.json** file and other developers on your team will get it as well when restoring dependencies. Without it building the project on a machine other than your own will fail. When adding packages that are required by your solution on runtime, such as Angular or jQuery, you should use the **--save** argument. Packages that are required in the build process, such as additional Gulp tasks, should be installed with the **--save-dev** argument.
 
 When installing a package, if you don't specify a version, npm will install the latest version available in the package registry (**https://www.npmjs.com** by default), which usually is the version that you'll want to use. One specific case when you have to specify the version of the package is when you're using **npm-shrinkwrap.json** and want to upgrade an existing package to a newer version. By default npm will install the version listed in the **npm-shrinkwrap.json** file. Specifying the version number in the **npm install** command, like **npm install angular@1.5.9 --save**, will install that package and update the version number in the **npm-shrinkwrap.json** file.
 
@@ -166,7 +166,7 @@ To simplify the installation and management of a private package registry, most 
 An alternative to using a private registry is linking packages. While it doesn't involve setting up a registry, it requires careful coordination on all developer machines and the build server.
 
 First, every developer on the team must get a copy of the shared package on their development machine. In the command line, they have to change the working directory to the one of the shared packages and then they must execute the **npm link** command. This command registers the particular package as a global package on that particular development machine.
-Next, developers have to change the working directory to the directory of the project in which they would like to use the shared package. Then they install the package the same way they would install any other package by executing the **npm install <shared_package> --save** command in the command line. As the shared package is installed globally, npm will use that version as the source to install the package from. At this point, from the project point of view, the package is installed just like any other public package and developers can choose how they want to bundle the package with the project.
+Next, developers have to change the working directory to the directory of the project in which they would like to use the shared package. Then they install the package the same way they would install any other package by executing the **npm install {shared_package} --save** command in the command line. As the shared package is installed globally, npm will use that version as the source to install the package from. At this point, from the project point of view, the package is installed just like any other public package and developers can choose how they want to bundle the package with the project.
 
 Linking the package must be executed on all development machines and on the build server. If the shared package isn't linked using the **npm link** command, restoring project dependencies will fail and break the build.
 
@@ -256,10 +256,10 @@ SharePoint Framework solutions are deployed using an **\*.sppkg** file installed
 
 ### Update dependencies
 
-One of the reasons for an update of a SharePoint Framework project might be a change to one of the underlying dependencies, for example a new release of Angular with bug fixes and performance improvements. If your team follows the recommended approach of using npm shrinkwrap for locking dependency versions, then you would use the **npm install <package>@<version> --save** command to update your dependency to the specific version and test your project to verify that it works as expected with the latest updates. Depending on how the changes to the underlying dependencies impact the project, the overall project update might vary from a patch to a full major release.
+One of the reasons for an update of a SharePoint Framework project might be a change to one of the underlying dependencies, for example a new release of Angular with bug fixes and performance improvements. If your team follows the recommended approach of using npm shrinkwrap for locking dependency versions, then you would use the **npm install {package}@{version} --save** command to update your dependency to the specific version and test your project to verify that it works as expected with the latest updates. Depending on how the changes to the underlying dependencies impact the project, the overall project update might vary from a patch to a full major release.
 
 > [!IMPORTANT]
-> Don't modify the version numbers of dependencies in the **package.json** file manually. If you're using a lock file such as npm shrinkwrap, your manual changes to the package.json file will be ignored and the version numbers recorded in the lock files will be used instead which will lead to hard to track errors in your project.
+> Don't modify the version numbers of dependencies in the **package.json** file manually. If you're using a lock file such as npm shrinkwrap, your manual changes to the **package.json** file will be ignored and the version numbers recorded in the lock files will be used instead which will lead to hard to track errors in your project.
 
 #### Mind project structure changes
 
