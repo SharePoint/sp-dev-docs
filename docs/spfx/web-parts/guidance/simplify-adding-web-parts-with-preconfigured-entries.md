@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 02/14/2022
+ms.date: 04/28/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -13,7 +13,7 @@ More complex SharePoint Framework client-side web parts likely have many propert
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 > [!WARNING]
-> SPFx solutions targetting SharePoint Server 2016 are limited to setting only a single web part property as a preconfigured entry. For more information, see [issue #5260](https://github.com/SharePoint/sp-dev-docs/issues/5260).
+> SPFx solutions targeting SharePoint Server 2016 are limited to setting only a single web part property as a preconfigured entry. For more information, see [issue #5260](https://github.com/SharePoint/sp-dev-docs/issues/5260).
 
 ## Web part preconfigured entries
 
