@@ -7,7 +7,7 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AccessControlEntry
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 85e24489-0a6b-dfda-fb03-474fe7b0d947
 ---

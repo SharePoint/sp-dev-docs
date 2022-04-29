@@ -1,7 +1,8 @@
 ---
 title: Upgrade site customizations for SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 4b515860-69ae-4af8-8013-cd071c0ddca6
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,7 @@
 title: Work with external data in SharePoint
 description: Resources and guidance for accessing and manipulating external data with JavaScript on pages in SharePoint Add-ins.
 ms.date: 12/22/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

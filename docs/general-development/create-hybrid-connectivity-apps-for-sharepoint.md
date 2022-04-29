@@ -1,7 +1,8 @@
 ---
 title: Create hybrid connectivity apps for SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 311f036e-3442-4497-b35e-442b665462d3
 ms.localizationpriority: medium
 ---

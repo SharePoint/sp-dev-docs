@@ -1,7 +1,8 @@
 ---
 title: SharePoint Design Manager image renditions
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: d08a74c0-5674-4f26-8646-11ea1f081c85
 ms.localizationpriority: high
 ---

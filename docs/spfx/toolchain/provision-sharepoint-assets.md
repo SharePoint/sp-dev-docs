@@ -2,7 +2,8 @@
 title: Provision SharePoint assets with your solution package
 description: SharePoint Framework toolchain allows you to package and deploy SharePoint items with your client-side solution package. These items are then provisioned when the client-side solution is installed on a site. 
 ms.date: 02/02/2018
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

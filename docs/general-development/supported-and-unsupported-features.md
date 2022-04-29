@@ -1,7 +1,8 @@
 ---
 title: Supported and Unsupported Features
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 6e4acad6-7665-493c-94cc-d38684b2842f
 ms.localizationpriority: high
 ---

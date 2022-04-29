@@ -2,7 +2,7 @@
 title: Complete basic operations using SharePoint REST endpoints
 description: Perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.
 ms.date: 10/22/2019
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 # Complete basic operations using SharePoint REST endpoints

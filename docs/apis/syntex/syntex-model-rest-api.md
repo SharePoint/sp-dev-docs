@@ -6,7 +6,7 @@ manager: pamgreen
 ms.reviewer: ssquires
 audience: admin
 ms.topic: reference
-ms.prod: microsoft-365-enterprise
+ms.service: microsoft-365-enterprise
 ms.date: 04/06/2022
 search.appverid: 
 ms.collection: m365initiative-syntex

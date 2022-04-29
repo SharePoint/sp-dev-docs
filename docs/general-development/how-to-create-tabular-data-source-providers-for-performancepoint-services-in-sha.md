@@ -2,7 +2,8 @@
 title: Create tabular data source providers for PerformancePoint Services in SharePoint
 description: Learn how to create the data source provider component in a custom tabular data source extension for PerformancePoint Services.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 8d734ed6-7636-40c5-a99b-bc038362cffe
 ms.localizationpriority: medium
 ---

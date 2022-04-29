@@ -2,7 +2,8 @@
 title: Retrieve user profile properties by using the JavaScript object model in SharePoint
 description: Learn how to retrieve user properties and user profile properties programmatically by using the SharePoint JavaScript object model.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c6e1ca38-134f-428a-8d21-b8b2615b161b
 ms.localizationpriority: high
 ---

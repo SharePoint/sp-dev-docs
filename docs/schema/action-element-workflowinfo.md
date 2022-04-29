@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cd9ce74a-ac5a-4ebc-8e4c-3b16bcad828e
 ---

@@ -4,7 +4,7 @@ manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d7f1d00f-0f32-c744-65bd-cc2c8ceee2b9
 ---

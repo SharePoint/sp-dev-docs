@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0b1ecfc3-a648-be87-6198-148a3946ebdd
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Portability.

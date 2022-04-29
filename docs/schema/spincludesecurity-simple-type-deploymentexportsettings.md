@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e5fe8d3f-5010-41ad-a75e-dc40240dc870
 description: "Last modified: March 09, 2015"

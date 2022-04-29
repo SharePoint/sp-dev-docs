@@ -1,7 +1,8 @@
 ---
 title: Convert an add-in-scoped external content type to tenant-scoped
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 35c5d670-e402-4641-b3c5-6f61ae1ec69b
 ms.localizationpriority: medium
 ---

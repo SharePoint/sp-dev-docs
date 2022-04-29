@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a2a0a9b3-461b-4901-85e4-88f578748470
 description: Specifies column and row formatting used in a Datasheet view.

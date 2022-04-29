@@ -1,7 +1,8 @@
 ---
 title: Excel Services REST API Overview
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 5872f311-e180-4578-ac80-2519c1081951
 ms.localizationpriority: high
 ---

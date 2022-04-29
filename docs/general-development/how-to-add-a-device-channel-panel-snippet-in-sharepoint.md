@@ -1,7 +1,8 @@
 ---
 title: Add a Device Channel Panel snippet in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 612780a8-6267-49f6-a32d-33600bb5f6b4
 ms.localizationpriority: medium
 ---

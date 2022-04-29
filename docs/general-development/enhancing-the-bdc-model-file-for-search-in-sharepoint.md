@@ -1,7 +1,8 @@
 ---
 title: Enhancing the BDC model file for Search in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 3c67b1cf-5fca-4805-a1b5-c9ac1ff8aede
 ms.localizationpriority: medium
 ---

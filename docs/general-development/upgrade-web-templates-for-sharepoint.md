@@ -1,7 +1,8 @@
 ---
 title: Upgrade web templates for SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 69048e4c-6d6d-4e4e-b74c-7c72ae444354
 ms.localizationpriority: medium
 ---

@@ -1,7 +1,8 @@
 ---
 title: Search connector framework in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 38560a3b-69c6-4a56-97ca-3625bbd5755e
 ms.localizationpriority: high
 ---

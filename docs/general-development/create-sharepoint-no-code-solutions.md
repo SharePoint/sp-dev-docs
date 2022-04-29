@@ -1,7 +1,8 @@
 ---
 title: Create SharePoint no-code solutions
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 9511846c-d2c6-4f23-b5de-24be4749598a
 ms.localizationpriority: high
 ---

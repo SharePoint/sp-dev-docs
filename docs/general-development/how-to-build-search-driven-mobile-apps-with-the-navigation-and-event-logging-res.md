@@ -1,7 +1,8 @@
 ---
 title: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
 ms.localizationpriority: medium
 ---

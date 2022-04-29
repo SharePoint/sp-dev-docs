@@ -2,7 +2,7 @@
 title: The SharePoint modernization scanner reports
 description: Explains the output created by the modernization scanner
 ms.date: 02/04/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

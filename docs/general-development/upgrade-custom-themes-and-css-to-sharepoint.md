@@ -2,7 +2,8 @@
 title: Upgrade custom themes and CSS to SharePoint
 description: Learn about upgrade issues with themes customizations, such as custom CSS and custom master pages, and how to update customizations to work in SharePoint.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 8d1a4e3a-ae6f-41a5-bd80-3398ba541207
 ms.localizationpriority: medium
 ---

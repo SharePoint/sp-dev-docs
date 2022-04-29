@@ -5,7 +5,8 @@ ms.date: 01/05/2020
 keywords: how to,howdoi,howto,webpart
 f1_keywords:
 - how to,howdoi,howto,webpart
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 858bb0f6-654a-4f12-ba0b-4776bda5ff6d
 ms.localizationpriority: medium
 ---

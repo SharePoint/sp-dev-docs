@@ -2,7 +2,7 @@
 title: Create a new subscription
 description: Creates a new webhook subscription on a SharePoint list.
 ms.date: 02/08/2018
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

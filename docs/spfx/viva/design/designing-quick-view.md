@@ -2,7 +2,8 @@
 title: Quick view design guidance
 description: Design guidance for the Viva Connections quick views
 ms.date: 12/28/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # Designing Viva Connections Quick Views

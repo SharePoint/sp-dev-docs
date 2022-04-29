@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 33c9ee16-a90e-44f5-9e9c-8818e7a9468e
 description: Top-level element used in the BASE.XML file to contain the schema definitions for tables in the content database.

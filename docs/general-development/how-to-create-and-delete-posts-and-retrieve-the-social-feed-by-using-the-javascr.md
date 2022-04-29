@@ -2,7 +2,8 @@
 title: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint
 description: Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint JavaScript object model.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: e8c21960-6ea0-43c0-821e-2db2a0ecec90
 ms.localizationpriority: medium
 ---

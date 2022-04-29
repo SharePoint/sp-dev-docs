@@ -1,7 +1,8 @@
 ---
 title: Create a minimal master page in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 634aa471-07e1-41d6-aa80-27f7ef7e9dc8
 ms.localizationpriority: high
 ---

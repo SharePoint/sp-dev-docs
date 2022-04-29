@@ -1,7 +1,8 @@
 ---
 title: Shapes in the SharePoint Server workflow template in Visio
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: f35bdf5d-c102-4e2d-8a23-1d2df17155b9
 ms.localizationpriority: high
 ---

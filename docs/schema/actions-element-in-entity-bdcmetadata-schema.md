@@ -7,7 +7,7 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Actions
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c5a6c08d-a3df-61db-3ce3-1e6837bbf221
 ---

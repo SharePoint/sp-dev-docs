@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: af3c177e-6ac7-9acf-4748-b9c7c3b1b112
 description: Lists the elements in the schema_Microsoft.Office.Server.Search.Portability XML schema.

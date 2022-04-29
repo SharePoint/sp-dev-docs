@@ -8,7 +8,7 @@ f1_keywords:
 - SharePoint workflows
 keywords:
 - customizing site definitions,site definition configurations [SharePoint 2010]
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8c873040-28c8-4fa9-a411-6638af47131b
 ---

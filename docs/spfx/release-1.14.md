@@ -2,7 +2,8 @@
 title: SharePoint Framework v1.14 release notes
 description: Release notes for the SharePoint Framework v1.14 release
 ms.date: 02/25/2022
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.14 release notes

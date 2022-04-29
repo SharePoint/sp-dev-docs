@@ -5,7 +5,8 @@ ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 39115503-8352-4589-87f4-cfa9c07260b6
 ms.localizationpriority: medium
 ---

@@ -1,7 +1,8 @@
 ---
 title: Working with the SharePoint Workflow Services Client Side Object Model
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: e180c2fb-a903-4ded-884e-b7584fa99189
 ms.localizationpriority: high
 ---

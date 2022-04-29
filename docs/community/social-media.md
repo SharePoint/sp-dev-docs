@@ -4,7 +4,7 @@ author: andrewconnell
 ms.author: v-johnco
 ms.date: 2/5/2020
 ms.audience: Developer
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

@@ -2,7 +2,7 @@
 title: SharePoint modernization guidance - Strategy
 description: Modernization offerings that IT Teams and partners can use with their customers - strategy step
 ms.date: 12/06/2019
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

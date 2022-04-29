@@ -1,7 +1,8 @@
 ---
 title: SharePoint workflow object model
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: be615a89-3201-4cd8-bbc7-15f3abf9f668
 ms.localizationpriority: medium
 ---

@@ -1,7 +1,8 @@
 ---
 title: Excel Services ECMAScript Overview
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: f8c1be86-df19-44c3-a3bc-c0da2b80df10
 ms.localizationpriority: medium
 ---

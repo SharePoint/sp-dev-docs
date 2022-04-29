@@ -1,7 +1,8 @@
 ---
 title: Build reusable components for SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: bb4467e2-57f0-4cf1-91b8-4d3d8d2358cb
 ms.localizationpriority: medium
 ---

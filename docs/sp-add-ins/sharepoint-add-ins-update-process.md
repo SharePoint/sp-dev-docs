@@ -2,7 +2,7 @@
 title: SharePoint Add-ins update process
 description: Update and migrate SharePoint Add-ins.
 ms.date: 11/02/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

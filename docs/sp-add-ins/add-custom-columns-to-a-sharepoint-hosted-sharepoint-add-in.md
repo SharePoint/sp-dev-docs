@@ -2,7 +2,7 @@
 title: Add custom columns to a SharePoint-hosted SharePoint Add-in
 description: Create custom column types, run the add-in, and test the columns.
 ms.date: 01/06/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

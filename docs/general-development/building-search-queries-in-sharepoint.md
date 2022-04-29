@@ -1,7 +1,8 @@
 ---
 title: Building search queries in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c4372fcc-4574-4c81-a345-a1bb282ca8f7
 ms.localizationpriority: high
 ---

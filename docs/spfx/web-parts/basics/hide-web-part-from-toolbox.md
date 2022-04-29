@@ -2,7 +2,8 @@
 title: Hide a web part from the toolbox
 description: How to hide a web part from showing up in the web part toolbox on a modern page
 ms.date: 06/16/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

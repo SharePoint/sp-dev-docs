@@ -2,7 +2,8 @@
 title: Connect to anonymous APIs
 description: Different approaches of connecting to anonymous APIs from your SharePoint Framework solutions
 ms.date: 12/04/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

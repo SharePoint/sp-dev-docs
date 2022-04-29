@@ -1,7 +1,8 @@
 ---
 title: Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ff9b0314-eea1-47e4-87c7-53ed4de98c30
 ms.localizationpriority: medium
 ---

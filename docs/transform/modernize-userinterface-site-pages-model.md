@@ -2,7 +2,7 @@
 title: Understanding and configuring the page transformation model
 description: Provides detailed guidance on how to configure and use the page transformation model
 ms.date: 02/11/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

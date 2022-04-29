@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - customizing site definitions
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema

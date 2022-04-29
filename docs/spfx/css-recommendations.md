@@ -2,7 +2,8 @@
 title: Recommendations for working with CSS in SharePoint Framework solutions
 description: Use CSS to define how your SharePoint Framework customization should look and behave.
 ms.date: 1/24/2018
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

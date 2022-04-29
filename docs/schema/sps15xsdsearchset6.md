@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fdb6eb6a-0f87-8e96-ae04-ce71b4ab55f4
 description: Specifies XML that represents enumerations used in the Microsoft.Office.Server.Search.Administration schema.

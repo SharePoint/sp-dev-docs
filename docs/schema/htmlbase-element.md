@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 585ef30b-b7b6-45bf-9bb2-f356043665a7
 description: Returns a string that sets the base element for the current page.

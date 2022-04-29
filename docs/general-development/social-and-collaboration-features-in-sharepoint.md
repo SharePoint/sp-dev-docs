@@ -1,7 +1,8 @@
 ---
 title: Social and collaboration features in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 5060f676-9aaa-41fe-88ef-e862ee2e1c52
 ms.localizationpriority: high
 ---

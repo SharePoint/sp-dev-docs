@@ -2,7 +2,8 @@
 title: Deploy a claims provider in SharePoint
 description: Learn how to deploy a SharePoint claims provider by using the features infrastructure and creating a class that inherits from  SPClaimProviderFeatureReceiver.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 3a5fcedc-aa9a-4ff4-95c0-0e0a7dea9d1f
 ms.localizationpriority: medium
 ---

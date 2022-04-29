@@ -1,7 +1,8 @@
 ---
 title: SharePoint Composites Handbook
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 0989bf64-ff2a-4ad4-b0da-43901040da98
 ms.localizationpriority: high
 ---

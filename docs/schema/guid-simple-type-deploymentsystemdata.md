@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 45ea2502-bbc8-4c04-9823-be6b6e1ef562
 description: "Last modified: July 15, 2011"

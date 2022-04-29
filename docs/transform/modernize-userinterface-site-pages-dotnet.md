@@ -2,7 +2,7 @@
 title: Transform classic pages to modern pages using .NET
 description: Explains how to transform classic wiki and web part pages into modern modern pages using the SharePoint .NET
 ms.date: 04/29/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

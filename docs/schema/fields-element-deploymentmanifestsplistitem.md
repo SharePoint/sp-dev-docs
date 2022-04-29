@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3cc3a411-0d17-4281-a4d5-0d20ba307b75
 description: Represents a collection of SPField object instances on a Windows SharePoint Services 3.0 SPListItem.

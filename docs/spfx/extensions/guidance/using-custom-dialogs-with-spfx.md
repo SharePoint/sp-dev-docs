@@ -2,7 +2,8 @@
 title: Tutorial - Use custom dialog boxes with SharePoint Framework Extensions
 description: Create a custom dialog box and use it within the context of a ListView Command Set extension.
 ms.date: 12/13/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

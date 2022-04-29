@@ -1,7 +1,8 @@
 ---
 title: The XLIFF interchange file format in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 660c0f07-7030-4576-957e-b9f2cd0fa895
 ms.localizationpriority: medium
 ---

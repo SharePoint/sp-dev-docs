@@ -2,7 +2,8 @@
 title: Excel Services in SharePoint
 description: Learn about the new capabilities in Excel Services in SharePoint and how you can use them in your own development efforts.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: f7e13fcb-a86a-4a1e-af59-3bace98ce9d7
 ms.localizationpriority: medium
 ---

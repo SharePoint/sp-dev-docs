@@ -2,7 +2,8 @@
 title: Create a claims provider in SharePoint
 description: Learn how to create and implement a SharePoint claims provider that fulfills the requirements for claims augmentation and claims picking.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 8f3228ca-57fd-4253-a07d-abeb63298c58
 ms.localizationpriority: medium
 ---

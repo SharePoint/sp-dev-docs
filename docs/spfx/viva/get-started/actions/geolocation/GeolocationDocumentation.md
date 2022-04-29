@@ -2,7 +2,8 @@
 title: Location capabilities in Adaptive Card Extension
 description: Geolocation is a new action that the SharePoint Adaptive Card Extension framework supports, which enables third party developers to come up with their location specific scenarios.
 ms.date: 04/06/2022
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # Location capabilities in Adaptive Card Extension

@@ -1,7 +1,8 @@
 ---
 title: Understanding how to package and deploy workflow in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 545b4930-ac05-4c9d-9980-5818cb800cf1
 ms.localizationpriority: high
 ---

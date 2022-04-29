@@ -1,7 +1,8 @@
 ---
 title: SharePoint workflow samples
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ffaccd6b-426d-4ca0-b62f-bc7b14641a49
 ms.localizationpriority: high
 ---

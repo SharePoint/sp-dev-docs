@@ -2,7 +2,7 @@
 title: Get started creating SharePoint-hosted SharePoint Add-ins
 description: Set up a development environment and create your first SharePoint-hosted SharePoint Add-in.
 ms.date: 03/14/2018
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

@@ -2,7 +2,8 @@
 title: Work with social feeds in SharePoint
 description: Learn about common programming tasks for working with social feeds and microblog posts in SharePoint.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 39f2163e-15cc-43bc-b131-041d5afdcd90
 ms.localizationpriority: medium
 ---

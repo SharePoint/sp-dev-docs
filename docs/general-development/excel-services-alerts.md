@@ -4,7 +4,8 @@ ms.date: 09/25/2017
 keywords: errors
 f1_keywords:
 - errors
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: a4e7030b-05c2-484e-b21f-46cba937b803
 ms.localizationpriority: medium
 ---

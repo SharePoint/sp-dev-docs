@@ -2,7 +2,7 @@
 title: Creating SharePoint Add-ins that use the cross-domain library
 description: Intended for scenarios where the add-in has cloud-hosted components, but the customer's corporate firewall makes it difficult to use the low-trust system. The user's browser blocks scripts from other domains, but the JavaScript library encapsulates a secure system for working around this restriction.
 ms.date: 12/27/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

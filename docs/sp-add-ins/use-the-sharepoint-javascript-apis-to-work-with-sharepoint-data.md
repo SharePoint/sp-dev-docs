@@ -2,7 +2,7 @@
 title: Use the SharePoint JavaScript APIs to work with SharePoint data
 description: Create JavaScript and a button to invoke it, and run and test the add-in.
 ms.date: 1/18/2020
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

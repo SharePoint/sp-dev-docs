@@ -2,7 +2,7 @@
 title: Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins
 description: Use the cross-domain library in SharePoint when the host web and add-in pages are in different security zones in Internet Explorer.
 ms.date: 12/29/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

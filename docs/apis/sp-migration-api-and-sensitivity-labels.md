@@ -7,7 +7,7 @@ author: JoanneHendrickson
 manager: serdars
 search.appverid: MET150
 ms.localizationpriority: high
-ms.prod: sharepoint
+ms.service: sharepoint
 ---
 # Sensitivity Labels and the SharePoint Migration API
 

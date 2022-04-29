@@ -1,7 +1,8 @@
 ---
 title: Resources URI for Excel Services REST API
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 79f95305-ec9e-4842-b937-85f66ced98e4
 ms.localizationpriority: medium
 ---

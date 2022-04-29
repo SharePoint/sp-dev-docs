@@ -4,7 +4,8 @@ ms.date: 09/25/2017
 keywords: blogger
 f1_keywords:
 - blogger
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c0b137cd-126d-4c74-a3f7-eb9debe3c35f
 ms.localizationpriority: medium
 ---

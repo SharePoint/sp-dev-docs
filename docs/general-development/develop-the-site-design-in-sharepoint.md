@@ -1,7 +1,8 @@
 ---
 title: Develop the site design in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 4c061484-2ba5-45ea-9860-aec9d7c8f80e
 ms.localizationpriority: high
 ---

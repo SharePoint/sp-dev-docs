@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 88568c7a-ed02-4d08-9190-c621a62e5ead
 description: Contains the URLs of attachments for a specified list item.

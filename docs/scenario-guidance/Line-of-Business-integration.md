@@ -2,7 +2,7 @@
 title: Line of Business Integration
 description: Line of Business Integration
 ms.date: 12/12/2018
-ms.prod: sharepoint
+ms.service: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint

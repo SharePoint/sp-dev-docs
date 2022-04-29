@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - solution schema - [sharepoint 2010],XML schema - [SharePoint 2010]
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 api_type:
 - schema

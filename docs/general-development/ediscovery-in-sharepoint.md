@@ -1,7 +1,8 @@
 ---
 title: eDiscovery in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 45cb324a-75f5-444d-a0fa-5c223df19016
 ms.localizationpriority: high
 ---

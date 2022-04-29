@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, elements element
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 69befd3c-5076-4e00-ab65-771c068c6d7e
 ---

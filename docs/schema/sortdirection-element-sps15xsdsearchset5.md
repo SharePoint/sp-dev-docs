@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 05a1d58c-45b8-9d5b-5844-f2c792607c8c
 description: "Last modified: March 09, 2015"

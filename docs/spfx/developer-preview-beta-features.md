@@ -2,7 +2,8 @@
 title: SharePoint Framework developer preview releases
 description: Details on how to use developer preview pre-release packages with SharePoint Framework.
 ms.date: 04/17/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # SharePoint Framework developer preview releases

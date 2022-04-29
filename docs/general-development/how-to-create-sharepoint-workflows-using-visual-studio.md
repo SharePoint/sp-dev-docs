@@ -1,7 +1,8 @@
 ---
 title: Create SharePoint workflows using Visual Studio
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 739af178-96b3-4630-bbc0-5def02065eeb
 ms.localizationpriority: high
 ---

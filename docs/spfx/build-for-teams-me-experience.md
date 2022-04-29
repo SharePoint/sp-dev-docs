@@ -2,7 +2,8 @@
 title: Build a Me-experience in Microsoft Teams
 description: Extend Microsoft Teams using SharePoint Framework to offer your colleagues a Me-experience.
 ms.date: 10/13/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 

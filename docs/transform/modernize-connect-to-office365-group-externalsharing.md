@@ -2,7 +2,7 @@
 title: External sharing after Microsoft 365 group connection
 description: Connect a Microsoft 365 group to an existing SharePoint site can result in different external sharing settings between the Microsoft 365 group and the SharePoint site
 ms.date: 06/19/2018
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

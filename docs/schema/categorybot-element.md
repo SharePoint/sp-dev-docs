@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bdc50402-f16c-41a0-8f5d-5c4e15e7c344
 description: Inserts into a page a component that expands into a list of hyperlinks to documents in the site that are identified by a particular category. 

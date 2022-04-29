@@ -2,7 +2,7 @@
 title: Create UX components in SharePoint
 description: Create UX components for your add-ins in SharePoint.
 ms.date: 12/14/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

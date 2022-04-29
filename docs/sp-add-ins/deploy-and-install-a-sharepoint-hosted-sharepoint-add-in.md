@@ -2,7 +2,7 @@
 title: Deploy and install a SharePoint-hosted SharePoint Add-in
 description: Create an add-in catalog, package and upload the add-in to the catalog, install and remove the add-in.
 ms.date: 12/04/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

@@ -2,7 +2,8 @@
 title: Build mobile apps for other platforms using SharePoint
 description: Learn how to use Representational State Transfer (REST) to create a SharePoint mobile app for any platform.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 017df869-44fb-4ffe-82fb-4654e01329ad
 ms.localizationpriority: high
 ---

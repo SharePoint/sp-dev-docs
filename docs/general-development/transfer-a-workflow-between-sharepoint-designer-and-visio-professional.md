@@ -1,7 +1,8 @@
 ---
 title: Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: dbe6f019-b4f2-480f-a8e7-bcb8842ab924
 ms.localizationpriority: medium
 ---

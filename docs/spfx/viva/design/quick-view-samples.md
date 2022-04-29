@@ -1,7 +1,8 @@
 ---
 title: Viva Connections Adaptive Card Extension Quick View samples
 ms.date: 2/10/2022
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

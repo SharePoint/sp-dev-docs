@@ -2,7 +2,8 @@
 title: Query Refinement in SharePoint
 description: Learn how to use SharePoint query refinement features programmatically when you are working with search queries and results.
 ms.date: 01/27/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ec31782e-1bc5-4dc3-8df7-c29cd5f7f05c
 ms.localizationpriority: high
 ---

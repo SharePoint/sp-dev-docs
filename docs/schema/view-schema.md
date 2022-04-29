@@ -3,7 +3,7 @@ title: View schema in CAML
 ms.date: 12/05/2020
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema

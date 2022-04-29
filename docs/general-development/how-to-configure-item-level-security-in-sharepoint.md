@@ -2,7 +2,8 @@
 title: Configure item-level security in SharePoint
 description: Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
 ms.localizationpriority: medium
 ---

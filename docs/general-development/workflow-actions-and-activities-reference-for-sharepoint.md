@@ -1,7 +1,8 @@
 ---
 title: Workflow actions and activities reference for SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 88e09f75-480f-4a68-87a6-b496350345cc
 ms.localizationpriority: high
 ---

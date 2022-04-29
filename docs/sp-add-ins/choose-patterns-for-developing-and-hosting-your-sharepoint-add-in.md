@@ -2,7 +2,7 @@
 title: Choose patterns for developing and hosting your SharePoint Add-in
 description: Match your hosting pattern to development goals, choose a pattern for provider-hosted add-ins, combine provider hosting and SharePoint hosting, and use add-ins in Azure Web Roles.
 ms.date: 02/05/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

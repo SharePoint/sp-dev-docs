@@ -2,7 +2,8 @@
 title: SharePoint Framework roadmap
 description: Key modern customization capabilities released after General Availability.
 ms.date: 03/01/2022
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

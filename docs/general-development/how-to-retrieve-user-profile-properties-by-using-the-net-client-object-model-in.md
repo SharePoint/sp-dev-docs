@@ -2,7 +2,8 @@
 title: Retrieve user profile properties by using the .NET client object model in SharePoint
 description: Learn how to retrieve user profile properties programmatically by using the SharePoint .NET client object model.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 236ebaf8-f92e-4192-9b51-0a9de0210885
 ms.localizationpriority: high
 ---

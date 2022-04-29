@@ -2,7 +2,7 @@
 title: Learning page transformation via short videos
 description: Contains a list of short videos that help you better understand and use page transformation
 ms.date: 12/13/2019
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

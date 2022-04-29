@@ -1,7 +1,8 @@
 ---
 title: SharePoint Design Manager design packages
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 85ad1993-4d75-4806-9097-b934865a899a
 ms.localizationpriority: high
 ---

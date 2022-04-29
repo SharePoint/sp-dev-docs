@@ -1,7 +1,8 @@
 ---
 title: What's new in SharePoint eDiscovery and compliance
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 39a1cc3f-c78d-478f-8c15-928b96386a52
 ms.localizationpriority: medium
 ---

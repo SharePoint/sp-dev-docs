@@ -6,7 +6,7 @@ author: JoanneHendrickson
 manager: pamgreen
 audience: Dev
 ms.topic: article
-ms.service: sharepoint-online
+ms.service: sharepoint
 ms.localizationpriority: high
 ms.collection:
 - SPMigration

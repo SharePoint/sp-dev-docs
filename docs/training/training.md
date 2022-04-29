@@ -2,7 +2,7 @@
 title:  Tutorials and training for SharePoint Development
 description: Different tutorials and other resources around SharePoint development.
 ms.date: 04/06/2022
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

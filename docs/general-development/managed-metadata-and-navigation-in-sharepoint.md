@@ -2,7 +2,8 @@
 title: Managed metadata and navigation in SharePoint
 description: Learn about enterprise managed metadata (EMM) and navigation features in SharePoint.
 ms.date: 05/18/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
 ms.localizationpriority: medium
 ---

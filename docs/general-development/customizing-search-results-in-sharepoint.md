@@ -2,7 +2,8 @@
 title: Customizing search results in SharePoint
 description: Learn how to group similar items or remove duplicate items in a search result set in SharePoint so you can display these results in a concise, readable way.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
 ms.localizationpriority: high
 ---

@@ -1,7 +1,8 @@
 ---
 title: Crawl associated external content types in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 187ec42e-f749-4e22-abef-1df604143063
 ms.localizationpriority: medium
 ---

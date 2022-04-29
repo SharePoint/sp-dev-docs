@@ -1,7 +1,8 @@
 ---
 title: Workflow conditions quick reference (SharePoint 2010 Workflow platform)
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 71fab25b-d4f3-4871-b9ad-08d3537098fc
 ms.localizationpriority: high
 ---

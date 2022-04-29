@@ -1,7 +1,8 @@
 ---
 title: BCS client object model reference for SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: fe7d12a3-6ea9-47f9-b69e-f66da9e661dc
 ms.localizationpriority: medium
 ---

@@ -5,7 +5,8 @@ ms.date: 09/25/2017
 keywords: how to,howdoi,howto,set range
 f1_keywords:
 - how to,howdoi,howto,set range
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ccc7e204-f857-45a9-81ec-3a8484e6d454
 ms.localizationpriority: medium
 ---

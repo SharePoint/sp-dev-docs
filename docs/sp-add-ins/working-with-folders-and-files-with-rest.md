@@ -2,7 +2,7 @@
 title: Working with folders and files with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on folders and files with the SharePoint REST interface.
 ms.date: 02/05/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

@@ -2,7 +2,8 @@
 title: Cross-site publishing in SharePoint
 description: SharePoint introduces a cross-site publishing feature that enables you to reuse content across multiple site collections. It uses built-in search capabilities to enable publishing scenarios and architectures. For the first time, you can design sites that cross SharePoint farms—enabling your sites to span the boundary between intranets and the Internet.
 ms.date: 06/18/2019
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 33f49e69-c1d3-4a6e-8887-5df683cba022
 ms.localizationpriority: medium
 ---

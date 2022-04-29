@@ -2,7 +2,8 @@
 title: Implement business logic and data validation in a Windows Phone app for SharePoint
 description: Implement data validation in a Windows Phone app created by using the Windows Phone SharePoint List Application template.
 ms.date: 01/05/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: fbbedc38-9651-4cd6-b523-d93cbf1cd39d
 ms.localizationpriority: medium
 ---

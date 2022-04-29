@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3138e6e7-e2d0-4e65-9e4d-8727df22e8bb
 description: Returns TRUE if the current code context pertains to rendering a list form for creating, editing, or displaying items; otherwise, FALSE.

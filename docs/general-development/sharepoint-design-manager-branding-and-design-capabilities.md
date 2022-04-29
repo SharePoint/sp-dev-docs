@@ -1,7 +1,8 @@
 ---
 title: SharePoint Design Manager branding and design capabilities
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 2f81acbb-1263-4f9d-8865-36eb7a3f907b
 ms.localizationpriority: high
 ---

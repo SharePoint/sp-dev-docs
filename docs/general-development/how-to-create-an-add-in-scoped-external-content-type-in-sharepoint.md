@@ -1,7 +1,8 @@
 ---
 title: Create an add-in-scoped external content type in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: de4b50a3-84da-48ce-9ba0-fe06571e52a8
 ms.localizationpriority: medium
 ---

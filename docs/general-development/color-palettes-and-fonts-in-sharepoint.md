@@ -2,7 +2,8 @@
 title: Color palettes and fonts in SharePoint
 description: Use this reference to define the color palette or font scheme that is used in a SharePoint site.
 ms.date: 11/25/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c17d375b-151f-48ae-ac32-f2ce9e68d63f
 ms.localizationpriority: high
 ---

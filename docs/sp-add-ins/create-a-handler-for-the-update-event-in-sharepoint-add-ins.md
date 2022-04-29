@@ -2,7 +2,7 @@
 title: Create a handler for the update event in SharePoint Add-ins
 description: Create and use a handler and apply rollback logic for the update event of a SharePoint Add-in.
 ms.date: 11/02/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

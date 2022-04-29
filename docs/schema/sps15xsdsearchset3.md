@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9b323c99-8bf6-783a-f73e-4b97bcf63732
 description: Specifies XML that represents settings which include query rules, result sources, managed properties, crawled properties, and ranking models.

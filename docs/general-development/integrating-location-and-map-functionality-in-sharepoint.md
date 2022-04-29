@@ -1,7 +1,8 @@
 ---
 title: Integrating location and map functionality in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 10d4a904-ed27-4513-8c20-d2098aebf22c
 ms.localizationpriority: high
 ---

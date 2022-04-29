@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - field type definition schema, renderpattern element (field types)
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Field Types XML

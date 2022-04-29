@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - site definition configurations [sharepoint 2010]
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema

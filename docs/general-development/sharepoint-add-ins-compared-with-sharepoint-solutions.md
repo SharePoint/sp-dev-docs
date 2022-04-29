@@ -2,7 +2,8 @@
 title: SharePoint Add-ins compared with SharePoint solutions
 description: Learn about when to develop your SharePoint extension as a SharePoint Add-in and when to develop it as a SharePoint farm solution or a no-code sandboxed solution.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
 ms.localizationpriority: high
 ---

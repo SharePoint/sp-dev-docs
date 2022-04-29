@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 219b4aa9-0f70-4700-bcc7-069acd056b95
 description: The mobile document viewer XML is used to redirect requests from mobile devices for a specific document to a page that hosts a viewer that is capable of displaying documents of that type. 

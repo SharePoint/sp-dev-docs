@@ -2,7 +2,8 @@
 title: Optimize SharePoint Framework builds for production
 description: The differences between debug and release builds and how you can optimize your bundle for use in production environments.
 ms.date: 10/26/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 # Optimize SharePoint Framework builds for production

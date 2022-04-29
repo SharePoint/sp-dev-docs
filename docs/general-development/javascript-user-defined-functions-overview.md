@@ -1,7 +1,8 @@
 ---
 title: JavaScript user-defined functions overview
 ms.date: 12/21/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: fee38837-1985-4319-ba4e-b99c6ec66336
 ms.localizationpriority: medium
 ---

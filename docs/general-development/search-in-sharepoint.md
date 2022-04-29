@@ -1,7 +1,8 @@
 ---
 title: Search in SharePoint
 ms.date: 05/12/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 59220f81-0e5e-4945-8056-cf0a116446cb
 ms.localizationpriority: high
 ---

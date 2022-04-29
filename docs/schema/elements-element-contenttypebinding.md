@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type binding definition schema, elements element
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 402f84f7-12b5-4f1c-8ff3-2004c3fc1759
 ---

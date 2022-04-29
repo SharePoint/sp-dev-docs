@@ -2,7 +2,8 @@
 title: What's new for developers in social and collaboration features in SharePoint
 description: Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 65365b1d-cde5-47cd-8b04-1b76be0e3490
 ms.localizationpriority: medium
 ---

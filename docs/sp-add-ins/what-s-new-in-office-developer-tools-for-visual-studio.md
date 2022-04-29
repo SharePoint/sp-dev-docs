@@ -2,7 +2,7 @@
 title: What's new in Office Developer Tools for Visual Studio 2013
 description: August 2015 update.
 ms.date: 11/03/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

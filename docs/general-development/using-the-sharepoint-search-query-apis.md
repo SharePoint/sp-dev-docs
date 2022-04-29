@@ -2,7 +2,8 @@
 title: Using the SharePoint search Query APIs
 description: Learn about the query APIs available in SharePoint that enable you to add search functionality to custom solutions and applications.
 ms.date: 01/16/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ae9d73ed-1140-430b-9287-01dbbe8ae7d1
 ms.localizationpriority: high
 ---

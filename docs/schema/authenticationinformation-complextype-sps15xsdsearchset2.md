@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 54e7606c-7f3f-a2ec-89da-f59a1f3639ae
 description: "Last modified: March 09, 2015"

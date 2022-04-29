@@ -2,7 +2,8 @@
 title: Design guidance for Viva Connections cards
 description: Design guidance for Viva Connections cards
 ms.date: 12/28/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # Designing Viva Connections custom cards for your dashboard

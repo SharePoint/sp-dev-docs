@@ -3,7 +3,8 @@ title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and deployed to SharePoint sites when the solution is installed on it.
 ms.date: 02/14/2022
 ms.localizationpriority: high
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.custom: scenarios:getting-started
 ---
 

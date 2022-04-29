@@ -2,7 +2,7 @@
 title: SharePoint modernization guidance
 description: Modernization offerings that IT Teams can use with their customers
 ms.date: 04/25/2022
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

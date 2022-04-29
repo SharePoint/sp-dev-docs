@@ -2,7 +2,8 @@
 title: Pagination for large result sets
 description: If you have a large number of search results (for example, over 50,000) to page through in a query, it is recommended to use the approach explained in this article instead of the approach of StartRow.
 ms.date: 10/14/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

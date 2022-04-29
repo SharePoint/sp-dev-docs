@@ -1,7 +1,8 @@
 ---
 title: Visio shapes in SharePoint Designer 2013 A quick reference guide (SharePoint 2010 Workflow platform)
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 51bc37fd-37de-4ad0-a75a-bdf7333bc80c
 ms.localizationpriority: medium
 ---

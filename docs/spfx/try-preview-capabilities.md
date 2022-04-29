@@ -2,7 +2,8 @@
 title: Try SharePoint Framework preview capabilities
 description: Details on how to use new "in preview" packages with SharePoint Framework or newer versions.
 ms.date: 06/05/2018
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 

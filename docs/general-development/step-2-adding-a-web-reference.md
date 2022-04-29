@@ -1,7 +1,8 @@
 ---
 title: Step 2 Adding a Web Reference
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: e9175863-ddb4-4750-847d-d53cb59b33cb
 ms.localizationpriority: high
 ---

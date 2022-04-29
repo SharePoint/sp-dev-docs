@@ -8,7 +8,7 @@ audience: ITPro
 f1.keywords:
 - NOCSH
 ms.topic: article
-ms.service: sharepoint-online
+ms.service: sharepoint
 ms.localizationpriority: high
 ms.collection:
 - SPMigration

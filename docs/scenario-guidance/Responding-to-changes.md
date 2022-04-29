@@ -2,7 +2,7 @@
 title: Responding to changes
 description: Responding to changes
 ms.date: 12/12/2018
-ms.prod: sharepoint
+ms.service: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint

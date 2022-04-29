@@ -2,7 +2,7 @@
 title: The SharePoint modernization scanner reports for the customized forms scanner mode
 description: Explains the customized forms output created by the modernization scanner
 ms.date: 02/04/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

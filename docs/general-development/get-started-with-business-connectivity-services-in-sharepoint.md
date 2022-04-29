@@ -1,7 +1,8 @@
 ---
 title: Get started with Business Connectivity Services in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c6bf3db0-db79-4b13-9834-891d24b2c9e5
 ms.localizationpriority: medium
 ---

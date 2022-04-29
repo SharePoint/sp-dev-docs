@@ -2,7 +2,8 @@
 title: Implement Continuous Integration and Continuous deployment using Azure DevOps
 description: Streamlining the build and deployment process by automating manual steps.
 ms.date: 09/16/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

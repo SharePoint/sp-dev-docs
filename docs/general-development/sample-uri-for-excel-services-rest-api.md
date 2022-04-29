@@ -1,7 +1,8 @@
 ---
 title: Sample URI For Excel Services REST API
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 4ebe1da2-9861-416f-bef1-4a62599efe2e
 ms.localizationpriority: high
 ---

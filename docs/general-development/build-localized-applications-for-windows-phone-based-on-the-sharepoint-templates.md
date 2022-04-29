@@ -1,7 +1,8 @@
 ---
 title: Build localized applications for Windows Phone based on the SharePoint templates
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c12d7fd4-8c6b-446b-970b-1eb0e5d0a9b2
 ms.localizationpriority: medium
 ---

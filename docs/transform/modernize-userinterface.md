@@ -2,7 +2,7 @@
 title: Modernize the user interface
 description: Make the switch to a modern user interface by updating your SharePoint lists and libraries and site pages.
 ms.date: 04/23/2018
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Using OData sources with Business Connectivity Services in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 7a87e5bf-4428-4055-b113-7665a93e7326
 ms.localizationpriority: high
 ---

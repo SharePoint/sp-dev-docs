@@ -2,7 +2,8 @@
 title: Maintain and support your published app
 description: Tips to maintain and support your SharePoint Framework app after publishing it to the Marketplace
 ms.date: 07/16/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

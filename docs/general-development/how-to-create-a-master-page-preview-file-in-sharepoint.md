@@ -2,7 +2,8 @@
 title: Create a master page preview file in SharePoint
 description: Learn how to create master page preview files that are used in the SharePoint theming experience to display a preview of selected theme components.
 ms.date: 01/06/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
 ms.localizationpriority: medium
 ---

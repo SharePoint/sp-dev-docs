@@ -1,7 +1,8 @@
 ---
 title: SharePoint Server 2019 development platform
 ms.date: 01/29/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: e0602381-ae11-41be-6a7e-9e47e9f246d6
 ms.localizationpriority: high
 ---

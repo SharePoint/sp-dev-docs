@@ -1,7 +1,8 @@
 ---
 title: General Guidelines
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 437541f8-5cd9-46f4-92b6-3bf9d7e62f69
 ms.localizationpriority: medium
 ---

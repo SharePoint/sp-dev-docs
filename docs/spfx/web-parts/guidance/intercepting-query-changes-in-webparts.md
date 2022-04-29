@@ -3,7 +3,8 @@ title: Intercepting Query String Changes in Web Parts
 description: Building web parts that respond to query string changes.
 ms.author: bekaise
 ms.date: 07/01/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 

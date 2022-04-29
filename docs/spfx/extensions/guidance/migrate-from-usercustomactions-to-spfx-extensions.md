@@ -2,7 +2,8 @@
 title: Tutorial - Migrating from UserCustomAction to SharePoint Framework extensions
 description: Migrate from old "classic" customizations (CustomAction) to the new model based on SharePoint Framework extensions.
 ms.date: 06/29/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 

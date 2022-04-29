@@ -2,7 +2,7 @@
 title: Authorization and authentication of SharePoint Add-ins
 description: Authentication and authorization in SharePoint is used to authorize requests by a SharePoint Add-in to access SharePoint resources.
 ms.date: 12/26/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

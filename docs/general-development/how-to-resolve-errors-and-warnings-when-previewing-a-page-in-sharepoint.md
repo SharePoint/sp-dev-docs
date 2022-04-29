@@ -2,7 +2,8 @@
 title: Resolve errors and warnings when previewing a page in SharePoint
 description: After you convert an HTML file into a SharePoint master page, or after you create a page layout, you can preview that page in the browser. But before you can preview a master page or page layout, you may have to resolve any issues that prevent the server-side preview from rendering your page.
 ms.date: 06/22/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 03f72f65-b22b-4304-be92-f44ce0619372
 ms.localizationpriority: high
 ---

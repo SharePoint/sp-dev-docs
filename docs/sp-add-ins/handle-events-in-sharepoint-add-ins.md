@@ -2,7 +2,7 @@
 title: Handle events in SharePoint Add-ins
 description: Handle list events, list item events, and add-in events in provider-hosted SharePoint add-ins.
 ms.date: 12/22/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

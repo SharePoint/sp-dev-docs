@@ -2,7 +2,8 @@
 title: Design considerations for SharePoint client-side web parts
 description: Use Office UI Fabric React components to build and style your web parts.
 ms.date: 01/24/2018
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

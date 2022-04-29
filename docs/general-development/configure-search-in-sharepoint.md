@@ -1,7 +1,8 @@
 ---
 title: Configure search in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: e447127c-2b11-4d65-b46e-01a18cdcdee5
 ms.localizationpriority: medium
 ---

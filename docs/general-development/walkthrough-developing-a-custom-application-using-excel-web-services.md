@@ -1,7 +1,8 @@
 ---
 title: Walkthrough Developing a Custom Application Using Excel Web Services
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 2f9bf243-281a-4d70-917e-9eaf0b867631
 ms.localizationpriority: high
 ---

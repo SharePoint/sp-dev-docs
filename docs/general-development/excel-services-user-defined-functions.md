@@ -5,7 +5,8 @@ ms.date: 09/25/2017
 keywords: functions
 f1_keywords:
 - functions
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 27dd8024-7e00-40de-a688-afc67c880603
 ms.localizationpriority: medium
 ---

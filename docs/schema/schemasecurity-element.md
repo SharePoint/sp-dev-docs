@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 879efff7-9ac3-4653-b9e8-cf5b4e31e2b2
 description: Contains the Schema security setting for a list.

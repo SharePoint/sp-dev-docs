@@ -2,7 +2,8 @@
 title: PowerPoint Automation Services in SharePoint
 description: Learn to use Microsoft PowerPoint Automation Services to do server-side presentation conversions to and from a variety of file formats.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 168c7dc0-fbdc-41a2-84db-65d211d3d673
 ms.localizationpriority: high
 ---

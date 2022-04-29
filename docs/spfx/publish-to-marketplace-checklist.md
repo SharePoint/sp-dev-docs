@@ -2,7 +2,8 @@
 title: Prepare your SharePoint Framework application for publishing to the Marketplace
 description: Tips & tricks to help you get your SharePoint Framework application published in the Marketplace
 ms.date: 09/15/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

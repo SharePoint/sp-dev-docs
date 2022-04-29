@@ -1,7 +1,8 @@
 ---
 title: Accessing a Schema
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 02613912-36f6-4edc-a915-165d12e60bc8
 ms.localizationpriority: high
 ---

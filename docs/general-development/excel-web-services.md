@@ -1,7 +1,8 @@
 ---
 title: Excel Web Services
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: e30ef4e3-72ff-43de-beba-b377141d4d19
 ms.localizationpriority: high
 ---

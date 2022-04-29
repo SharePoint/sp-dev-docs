@@ -2,7 +2,7 @@
 title: Get to know the SharePoint REST service
 description: Basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.
 ms.date: 03/03/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

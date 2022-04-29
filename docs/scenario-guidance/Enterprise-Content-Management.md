@@ -3,7 +3,7 @@ title: Enterprise Content Management
 ms.date: 12/05/2020
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
+ms.service: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.localizationpriority: medium

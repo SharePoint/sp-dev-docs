@@ -1,7 +1,8 @@
 ---
 title: Master pages, the Master Page Gallery, and page layouts in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 80b9a360-bc2e-46c6-b0ca-1bc487b73db6
 ms.localizationpriority: high
 ---

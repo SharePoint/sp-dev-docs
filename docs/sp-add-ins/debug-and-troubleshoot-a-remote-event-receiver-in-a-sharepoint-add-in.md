@@ -2,7 +2,7 @@
 title: Debug and troubleshoot a remote event receiver in a SharePoint Add-in
 description: Set up your development environment to debug remote events by using Visual Studio.
 ms.date: 12/22/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

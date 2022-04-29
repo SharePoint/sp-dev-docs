@@ -2,7 +2,8 @@
 title: Read and write to the social feed by using the .NET client object model in SharePoint
 description: Create a console application that reads and writes to the social feed by using the SharePoint .NET client object model.
 ms.date: 01/05/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 3c15ede5-8a59-47e6-a0b2-c17ec6bf4ae1
 ms.localizationpriority: medium
 ---

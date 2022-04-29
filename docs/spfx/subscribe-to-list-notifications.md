@@ -2,7 +2,8 @@
 title: Subscribe to list notifications
 description: Get notified and respond to changes to files in SharePoint Document Libraries
 ms.date: 04/27/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 

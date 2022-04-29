@@ -1,7 +1,8 @@
 ---
 title: What's new with SharePoint site development
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ac1e9891-5ce9-4707-84e5-6e2fc02fda6b
 ms.localizationpriority: high
 ---

@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 849d6d71-7b1d-4ce1-a184-93b9d20494c5
 description: Collaborative Application Markup Language (CAML) elements and attributes that were deprecated in Windows SharePoint Services 3.0.

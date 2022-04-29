@@ -2,7 +2,7 @@
 title: Create and use access tokens in provider-hosted high-trust SharePoint Add-ins
 description: The role of access tokens in high-trust SharePoint Add-ins and how your code creates and passes the access token.
 ms.date: 12/29/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

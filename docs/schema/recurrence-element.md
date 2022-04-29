@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5f164e5b-47b6-4242-b6b9-8d650090a831
 description: This type or member supports Microsoft SharePoint Foundation and is not intended to be used directly from your code.

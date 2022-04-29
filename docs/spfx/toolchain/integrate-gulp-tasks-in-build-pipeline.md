@@ -2,7 +2,8 @@
 title: Integrate gulp tasks in SharePoint Framework toolchain
 description: Integrate your custom gulp tasks in the build pipeline.
 ms.date: 10/26/2018
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # Integrate gulp tasks in SharePoint Framework toolchain

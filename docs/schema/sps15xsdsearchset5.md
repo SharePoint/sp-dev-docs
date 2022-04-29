@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7fa9d436-3c1a-a6a2-8067-932ca5cb71be
 description: Specifies XML that represents enumerations such as ResultType, which are used in other schemas.

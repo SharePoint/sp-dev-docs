@@ -2,7 +2,7 @@
 title: Create SharePoint Add-ins in Visual Studio
 description: Develop SharePoint Add-ins using templates for projects and project items in Visual Studio.
 ms.date: 11/03/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

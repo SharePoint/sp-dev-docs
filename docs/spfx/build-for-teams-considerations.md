@@ -2,7 +2,8 @@
 title: Considerations for building for Microsoft Teams using SharePoint Framework
 description: There are a number of things that you should take into account when building for Microsoft Teams using SharePoint Framework
 ms.date: 03/15/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 

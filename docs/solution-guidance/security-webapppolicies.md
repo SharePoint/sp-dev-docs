@@ -2,7 +2,7 @@
 title: Alternative model for web app policies in SharePoint Online
 description: Web app policies are a concept that allows SharePoint administrators to either grant or deny permissions to users and groups for all sites under a web application. These permission grants and denies take preference over the permissions set at the sites in the web application and therefore are a mechanism typically used in multiple scenarios.
 ms.date: 12/14/2020
-ms.prod: sharepoint
+ms.service: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint

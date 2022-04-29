@@ -1,7 +1,8 @@
 ---
 title: Publish SharePoint sites
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 46b5a79c-962f-4a07-8316-d5005eabd0e0
 ms.localizationpriority: medium
 ---

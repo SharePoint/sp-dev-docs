@@ -2,7 +2,7 @@
 title: Get started with SharePoint webhooks
 description: Build an application that adds and handles SharePoint webhook requests.
 ms.date: 03/14/2018
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

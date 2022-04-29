@@ -2,7 +2,8 @@
 title: SharePoint Framework v1.10 release notes
 description: Release notes for the SharePoint Framework v1.10 release
 ms.date: 04/06/2022
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.10 release notes

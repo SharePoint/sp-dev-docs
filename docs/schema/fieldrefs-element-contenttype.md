@@ -4,7 +4,7 @@ description: Represents a collection of column references included in the conten
 ms.date: 12/14/2020
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e7a61a08-dd2a-4ce8-8e1b-d4fbbdc4749d
 ---

@@ -2,7 +2,8 @@
 title: Tutorial - Migrating from JSLink to SharePoint Framework extensions
 description: Migrate from old "classic" customizations (JSLink) to the new model based on SharePoint Framework extensions.
 ms.date: 02/14/2022
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # Migrating from JSLink to SharePoint Framework extensions

@@ -4,7 +4,8 @@ ms.date: 09/25/2017
 keywords: vs.sharepointtools.workflow4.workflowlist,VS.SharePointTools.Workflow4.WorkflowName
 f1_keywords:
 - vs.sharepointtools.workflow4.workflowlist,VS.SharePointTools.Workflow4.WorkflowName
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: a2643cd7-474d-4e4c-85bb-00f0b6685a1d
 ms.localizationpriority: high
 ---

@@ -2,7 +2,8 @@
 title: Add an external library to your SharePoint client-side web part
 description: Bundle a JavaScript external library and share libraries.
 ms.date: 01/25/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

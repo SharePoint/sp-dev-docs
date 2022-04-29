@@ -1,7 +1,8 @@
 ---
 title: Protocol handler error due to deprecated interface in SharePoint 2016
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c80cb77c-89db-4c78-b576-f63d39ca330a
 ms.localizationpriority: medium
 ---

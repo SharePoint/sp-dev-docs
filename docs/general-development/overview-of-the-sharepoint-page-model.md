@@ -1,7 +1,8 @@
 ---
 title: Overview of the SharePoint page model
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 808b1af3-89ab-4f02-89cc-ea86cb1f9a6e
 ms.localizationpriority: high
 ---

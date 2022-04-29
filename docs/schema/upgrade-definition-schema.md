@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - upgrading - [sharepoint 2010], definition schema
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Upgrade schema

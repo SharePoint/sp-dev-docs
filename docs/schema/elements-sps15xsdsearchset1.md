@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 20bc0905-610c-8a8b-a07f-fa1f9f7c7518
 description: Lists the elements in the schema_Microsoft.Office.Server.Search.Administration.Query XML schema.

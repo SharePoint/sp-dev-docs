@@ -2,7 +2,8 @@
 title: Adaptive Card Extensions and Teams Apps
 description: "This tutorial builds off the tutorial 'Advanced Quick View Functionality'."
 ms.date: 07/22/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 # Adaptive Card Extensions and Teams Apps

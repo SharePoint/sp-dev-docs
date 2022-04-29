@@ -4,7 +4,7 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a992fb73-66c2-44d4-9df8-45fcb0cc5970
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Query.Rules.

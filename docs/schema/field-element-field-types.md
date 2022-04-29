@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/20/2019
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Field Types XML

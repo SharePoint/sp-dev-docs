@@ -1,7 +1,8 @@
 ---
 title: Excel Web Access
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: eef8991d-0844-4b35-a092-33c957102dee
 ms.localizationpriority: medium
 ---

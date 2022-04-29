@@ -2,7 +2,8 @@
 title: Set various credentials
 description: You must set credentials for your users before they can call Excel Web Services by using your custom application.
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: eb819681-5a4f-49ae-b7f4-334366c51112
 ms.localizationpriority: medium
 ---

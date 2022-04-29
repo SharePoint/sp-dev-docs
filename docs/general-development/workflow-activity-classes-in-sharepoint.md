@@ -2,7 +2,8 @@
 title: Workflow activity classes in SharePoint
 description: Provides a summary of the SharePoint workflow activity classes that are available in SharePoint.
 ms.date: 12/14/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 70d5ca8d-520d-40a9-b24e-52bb31bd6c22
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,7 @@
 title: Update host web components in SharePoint
 description: Update custom actions and add-in parts in the host web of a SharePoint Add-in.
 ms.date: 11/02/2017
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

@@ -2,7 +2,8 @@
 title: Build solutions with the library component type in SharePoint Framework
 description: Build solutions with the library component type in SharePoint Framework
 ms.date: 12/13/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

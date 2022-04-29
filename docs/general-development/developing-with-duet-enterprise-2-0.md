@@ -1,7 +1,8 @@
 ---
 title: Developing with Duet Enterprise 2.0
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: c3ef38aa-559e-4832-95c7-75e222c77624
 ms.localizationpriority: medium
 ---

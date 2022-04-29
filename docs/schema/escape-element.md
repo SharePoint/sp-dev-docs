@@ -4,7 +4,7 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3269e06e-bc2d-4f96-8c33-867e15a2d40b
 description: In vCard support, escapes certain characters in strings.

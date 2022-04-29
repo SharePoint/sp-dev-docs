@@ -1,7 +1,8 @@
 ---
 title: Custom content processing with the Content Enrichment web service callout
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: bdda92c8-9c8d-416e-9a6b-4a9373686fa0
 ms.localizationpriority: medium
 ---

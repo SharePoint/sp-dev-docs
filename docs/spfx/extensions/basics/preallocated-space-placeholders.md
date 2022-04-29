@@ -2,7 +2,8 @@
 title: Pre-allocate space for SharePoint Framework extension placeholders
 description: Pre-allocate rendering space for the extension placeholders
 ms.date: 06/19/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: medium
 ---
 

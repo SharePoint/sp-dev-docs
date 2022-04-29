@@ -1,7 +1,8 @@
 ---
 title: Access external data by using REST in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 0663cc8c-a736-434d-9858-6ce12ce7f748
 ms.localizationpriority: high
 ---

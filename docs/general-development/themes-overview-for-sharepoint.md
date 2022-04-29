@@ -2,7 +2,8 @@
 title: Themes overview for SharePoint
 description: Learn about the theming experience in SharePoint and how themes can be used to customize the look and feel of sites.
 ms.date: 05/20/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: ae585dd3-82fe-46bb-ac93-065edc0a16f4
 ms.localizationpriority: high
 ---

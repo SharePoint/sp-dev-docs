@@ -2,7 +2,7 @@
 title: User mapping during page transformation
 description: Explains how to the user mapping works when transforming pages
 ms.date: 02/11/2021
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: high
 ---
 

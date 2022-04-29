@@ -1,7 +1,8 @@
 ---
 title: What's New in Excel Web Services
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: cb342e94-0308-4608-b027-b73ebe8107b0
 ms.localizationpriority: medium
 ---

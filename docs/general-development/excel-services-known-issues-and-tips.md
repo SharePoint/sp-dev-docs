@@ -1,7 +1,8 @@
 ---
 title: Excel Services Known Issues and Tips
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: b4a41437-4f00-4f88-8510-627fa0252004
 ms.localizationpriority: medium
 ---

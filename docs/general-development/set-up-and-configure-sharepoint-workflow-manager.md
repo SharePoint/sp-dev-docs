@@ -1,7 +1,8 @@
 ---
 title: Set up and configure Workflow Manager with SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 4cd68a3e-9c3b-4fb9-bb66-e96cf0faec69
 ms.localizationpriority: high
 ---

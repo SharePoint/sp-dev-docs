@@ -2,7 +2,8 @@
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
 ms.date: 12/13/2021
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.localizationpriority: high
 ---
 

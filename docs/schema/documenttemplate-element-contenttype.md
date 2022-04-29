@@ -6,7 +6,7 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, documenttemplate element
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7434d1f8-551a-425c-8b9b-d4e961cd4f5e
 ---

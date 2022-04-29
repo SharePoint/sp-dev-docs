@@ -1,7 +1,8 @@
 ---
 title: Add a web part zone snippet in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 7583b217-200c-4569-8f88-fe975c8ebd72
 ms.localizationpriority: high
 ---

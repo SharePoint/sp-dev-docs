@@ -2,7 +2,7 @@
 title: Page Transformation Functions and Selectors
 description: Page Transformation Functions and Selectors
 ms.date: 02/06/2020
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.localizationpriority: medium
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Access SharePoint from mobile and native device apps
 ms.date: 05/01/2020
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 42014171-5ee5-421d-9cde-413efc3aecef
 ms.localizationpriority: high
 ---

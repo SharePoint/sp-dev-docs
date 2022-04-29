@@ -1,7 +1,8 @@
 ---
 title: External content types in SharePoint
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: 11d7adb5-5388-4517-ae03-beb7be1c6981
 ms.localizationpriority: high
 ---

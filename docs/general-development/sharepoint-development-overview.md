@@ -1,7 +1,8 @@
 ---
 title: SharePoint development overview
 ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.service: sharepoint
+ms.subservice: sharepoint-framework
 ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
 ms.localizationpriority: high
 ---
