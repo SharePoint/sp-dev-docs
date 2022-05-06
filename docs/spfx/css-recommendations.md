@@ -300,7 +300,7 @@ The resulting CSS in the package is converted to the following code.
 }
 ```
 
-For more information about auto-prefixing, see the [autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository. The database for this process is available on [Can I use__?](https://caniuse.com).
+For more information about auto-prefixing, see the [autoprefixer](https://github.com/postcss/autoprefixer) GitHub repository, autoprefixer has an [online version](https://goonlinetools.com/autoprefixer/) that allows you to enter your non-prefixed CSS and gives you a prefix-added version. The database for this process is available on [Can I use__?](https://caniuse.com).
 
 ## Integrate Office UI Fabric
 
