@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample client-side object model (CSOM) and REST code you can use to make your task easier.
-ms.date: 07/07/2021
+ms.date: 05/11/2022
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
@@ -183,17 +183,16 @@ HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse(
 Add this extension method in a static class and use `ExecuteQueryWithIncrementalRetry` instead of `ExecuteQuery` to make your code handle throttling requests.
 
 ```csharp
-public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount, int delay)
+public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount)
 {
   int retryAttempts = 0;
-  int backoffInterval = delay;
   int retryAfterInterval = 0;
   bool retry = false;
   ClientRequestWrapper wrapper = null;
   if (retryCount <= 0)
+  {
     throw new ArgumentException("Provide a retry count greater than zero.");
-  if (delay <= 0)
-    throw new ArgumentException("Provide a delay greater than zero.");
+  }
 
   // Do while retry attempt is less than retry count
   while (retryAttempts < retryCount)
@@ -234,25 +233,11 @@ public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientCon
           wrapper = (ClientRequestWrapper)ex.Data["ClientRequest"];
           retry = true;
 
-          // Determine the retry after value - use the `Retry-After` header when available
-          string retryAfterHeader = response.GetResponseHeader("Retry-After");
-          if (!string.IsNullOrEmpty(retryAfterHeader))
-          {
-            if (!Int32.TryParse(retryAfterHeader, out retryAfterInterval))
-            {
-              retryAfterInterval = backoffInterval;
-            }
-          }
-          else
-          {
-            retryAfterInterval = backoffInterval;
-          }
+          // Determine the retry after value - use the `Retry-After` header
+          retryAfterInterval = Int32.Parse(response.GetResponseHeader("Retry-After"));
 
           // Delay for the requested seconds
           Thread.Sleep(retryAfterInterval * 1000);
-
-          // Increase counters
-          backoffInterval = backoffInterval * 2;
         }
         else
         {
