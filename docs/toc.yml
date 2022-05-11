@@ -1815,8 +1815,6 @@
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
     - name: Avoid getting throttled or blocked in SharePoint Online
       href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
-    - name: Handle SharePoint Online throttling
-      href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
     - name: Set up app-only access to SharePoint
       href: solution-guidance/security-apponly.md
       items:
