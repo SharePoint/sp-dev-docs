@@ -330,7 +330,7 @@
     - name: Deploy web parts to Azure CDN
       href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Deployment options for SPFx solutions & Microsoft Teams
-      href: https://docs.microsoft.com/sharepoint/dev/spfx/deployment-spfx-teams-solutions
+      href: /sharepoint/dev/spfx/deployment-spfx-teams-solutions
     - name: Custom build tasks
       href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
     - name: Extend Webpack
@@ -435,9 +435,9 @@
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md
     - name: Microsoft Teams
-      href: https://docs.microsoft.com/sharepoint/dev/spfx/build-for-teams-overview
+      href: /sharepoint/dev/spfx/build-for-teams-overview
     - name: Microsoft Viva Connections
-      href: https://docs.microsoft.com/sharepoint/dev/spfx/viva/overview-viva-connections
+      href: /sharepoint/dev/spfx/viva/overview-viva-connections
   - name: Release notes & roadmap
     items:
     - name: Overview
@@ -2059,9 +2059,9 @@
       - name: Create folder classification request
         href: apis/syntex/rest-createfolderclassificationrequest.md
   - name: PnP Sites Core API reference
-    href: https://docs.microsoft.com/dotnet/api/?term=Officedevpnp
+    href: /dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
-    href: https://docs.microsoft.com/dotnet/api/?term=microsoft.sharepoint
+    href: /dotnet/api/?term=microsoft.sharepoint
 - name: SharePoint schema reference
   href: schema/schema-reference-for-sharepoint.md
   items:
@@ -5245,4 +5245,4 @@
 - name: Tutorials
   href: training/training.md
 - name: SharePoint Framework API reference
-  href: https://docs.microsoft.com/javascript/api/overview/sharepoint
+  href: /javascript/api/overview/sharepoint
