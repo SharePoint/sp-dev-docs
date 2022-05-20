@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 ms.prod: sharepoint
-ms.date: 04/19/2022
+ms.date: 05/19/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -17,12 +17,12 @@ The following API description is based upon use of the SharePoint Client Side Ob
 
 You can find latest version of the SharePoint Online Client Side Object Model (CSOM) package from the [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/). Use the ID `Microsoft.SharePointOnline.CSOM`.
 
->[!Important]
+> [!Important]
 > Files larger than 15 GB must now create the required checksum using [QuickXorHash](/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
 > 
->The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirement.
+> The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirement.
 >
->The previous method of MD5Hash is still required for files smaller than 2 GB; however this requirement will be removed at some point in the future.
+> The previous method of MD5Hash is still required for files smaller than 2 GB; however this requirement will be removed at some point in the future.
 
 
 ## Methods
@@ -452,8 +452,8 @@ Even if the API support 15GB files, we recommend package sizes of up to 250 MB O
 
 ### File size
 
->[!Note]
->The Migration API supports individual files over **15 GB**. The maximum size is current to that set by SharePoint Online.
+> [!Note]
+> The Migration API supports individual files over **15 GB**. The maximum size is current to that set by SharePoint Online.
 
 ### Only un-compressed packages are supported
 
@@ -492,6 +492,51 @@ The import pipeline is using Azure Blob Storage security model as is. This means
 ### Events and event handlers
 
 The import pipeline allows event handlers to be referenced on list items but doesn’t allow defining event handlers at the list level at this time. The import pipeline does not fire events as items are imported, so existing event handlers will not fire due to the import event.
+### Entering user identifiers in UserGroup.XML
+
+Follow these guidelines when generating the **UserGroup.XML** in the submitted package:
+
+- A person can be identified only once in a single package
+- The 'login' attribute of the user identifier requires a UPN. **Do not** enter a non-UPN email address.
+
+
+> [!Important]
+> As of March 2, 2022, the Migration API now validates and enforces a maximum of one identifier per user in a single package. 
+>
+> While using a non-UPN email won't result in a failed job, it may bring unexpected results in SharePoint Online.
+
+**Examples**
+
+The following examples show the correct and incorrect ways of entering the user identifier in UserGroup.XML.
+
+In this case, the user has the following identifiers:
+
+- **UPN**: robert@contoso.com
+- **Email**: robert.downey@contoso.com. 
+
+
+**Correct**
+
+- In this example, the user is entered only once, using a UPN email address.
+
+    ```xml
+    <User Id="1" Login="i:0#.f|membership|robert@contoso.com" …/>
+    ```
+
+**Incorrect**
+
+- **Example 1:** This example uses a non-UPN email address and incorrectly includes more than identifier for a single user.
+
+    ```xml
+    <User Id="1" Login="i:0#.f|membership|robert@contoso.com" …/>
+    <User Id="2" Login="i:0#.f|membership|robert.downey@contoso.com" …/>
+    ```
+
+- **Example 2:** This example incorrectly uses a non-UPN email address.
+
+    ```xml
+    <User Id="2" Login="i:0#.f|membership|robert.downey@contoso.com" …/>
+    ```
 
 ### Resolving Users
 
@@ -500,7 +545,7 @@ If the Migration API was unable to resolve a user using the login provided in th
 1. This user will be replaced by “System Account” in the associated metadata within the package ( author, editor etc.).
 1. A warning will be reported in the ImportLogs –  “Failed to ensure user 'user@contoso.com'”
 
-If the migration API was unable to resolve a user using the login provided in the UserGroup.xml and the System ID is provided (which is the SID for the user in the on-premises AD), then:
+    If the migration API was unable to resolve a user using the login provided in the UserGroup.xml and the System ID is provided (which is the SID for the user in the on-premises AD), then:
 
 1. A new deleted user with the provided login and SystemId is created and is used in the associated metadata within the package.
 1. A warning will be reported in the ImportLogs- “Failed to retrieve user 'user@contoso.com' attributes from the SiteUsers; falling back to passed in values”
