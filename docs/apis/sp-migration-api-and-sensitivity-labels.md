@@ -1,7 +1,7 @@
 ---
 title: "Sensitivity labels and the SharePoint Migration API"
 description: Learn how to have sensitivity labels applied to content before migration with the SharePoint Migration API.
-ms.date: 02/01/2021
+ms.date: 05/24/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -30,4 +30,5 @@ Apply sensitivity labels using the MIP SDK.
 
 If you're currently using Azure Information Protection, you must migrate your labels to Office 365 Security and Compliance Center. For more information on the process, see [How to migrate Azure Information Protection labels to the Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels).
 
-**Step 4:** Migrate content using the [SharePoint Import Migration API (CreationMigrationJob)](migration-api-overview.md)
+**Step 4:**
+Migrate content using the [SharePoint Import Migration API (CreationMigrationJob)](migration-api-overview.md)
