@@ -1593,6 +1593,8 @@
       href: transform/modernize-customizations.md
     - name: Modernize site branding
       href: transform/modernize-branding.md
+    - name: Modernize SharePoint 2013 workflow
+      href: transform/modernize-workflows.md
     - name: Connect to a Microsoft 365 group
       items:
       - name: Overview
