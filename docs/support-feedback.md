@@ -2,7 +2,7 @@
 title: Support and Feedback
 author: andrewconnell
 ms.author: v-johnco
-ms.date: 2/5/2020
+ms.date: 05/25/2022
 ms.audience: Developer
 ms.prod: sharepoint
 ms.localizationpriority: high
@@ -34,4 +34,4 @@ Be sure to describe the steps to reproduce the bug.
 
 ## Feature requests
 
-If our platform doesn't empower you to do what you need, or if you have an idea for a new feature, or change to an existing, please make your features suggestions on the [Microsoft SharePoint Dev Platform feedback portal on UserVoice](https://aka.ms/spdev-uservoice).
+If our platform doesn't empower you to do what you need, or if you have an idea for a new feature, or change to an existing, please make your features suggestions on the [Microsoft SharePoint Dev Platform feedback portal](https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472).
