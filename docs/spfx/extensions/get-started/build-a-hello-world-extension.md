@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 10/2/2020
+ms.date: 05/31/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -39,10 +39,9 @@ You can also follow the steps in this article by watching the video on the Share
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: app-extension
-    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
+    - **Which type of client-side extension to create?**: Application Customizer
     - **What is your Application Customizer name?** HelloWorld
-    - **What is your Application Customizer description?** HelloWorld description
 
     > [!NOTE]
     > If you use a name for the extension that is too long, you might encounter issues. The entries provided are used to generate an alias entry for the Application Customizer manifest JSON file. If the alias is longer than 40 characters, you get an exception when you try to serve the extension by using **gulp serve --nobrowser**. You can resolve this by updating the alias entry afterward.
@@ -92,7 +91,6 @@ Open the **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.ts** file
 Notice that base class for the Application Customizer is imported from the **\@microsoft/sp-application-base** package, which contains SharePoint framework code required by the Application Customizer.
 
 ```typescript
-import { override } from '@microsoft/decorators';
 import { Log } from '@microsoft/sp-core-library';
 import {
     BaseApplicationCustomizer
@@ -108,19 +106,18 @@ The logic for your Application Customizer is contained in the `onInit()` method,
 The following are the contents of `onInit()` in the default solution. This default solution writes a log to the Dev Dashboard, and then displays a simple JavaScript alert when the page renders.
 
 ```typescript
- @override
-  public onInit(): Promise<void> {
-    Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
+public onInit(): Promise<void> {
+  Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-    let message: string = this.properties.testMessage;
-    if (!message) {
-      message = '(No properties were provided.)';
-    }
-
-    Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
-
-    return Promise.resolve();
+  let message: string = this.properties.testMessage;
+  if (!message) {
+    message = '(No properties were provided.)';
   }
+
+  Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
+
+  return Promise.resolve();
+}
 ```
 
 > [!NOTE]
@@ -130,7 +127,7 @@ If your Application Customizer uses the `ClientSideComponentProperties` JSON inp
 
 ## Debug your Application Customizer
 
-You can't use the local Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. However, you don't have to deploy your customization to the app catalog to test the solution, which makes the debugging experience simple and efficient.
+You can't use the SharePoint Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. However, you don't have to deploy your customization to the app catalog to test the solution, which makes the debugging experience simple and efficient.
 
 1. Open the **./config/serve.json** file.
 
