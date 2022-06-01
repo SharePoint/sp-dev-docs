@@ -17,7 +17,7 @@ Ensure that you've completed the following steps before you start:
 
 - [Build your first web part](build-a-hello-world-web-part.md)
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/N0C9azIyiTo]
 

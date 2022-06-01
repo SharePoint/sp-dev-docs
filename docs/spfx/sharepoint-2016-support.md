@@ -8,7 +8,7 @@ ms.localizationpriority: high
 
 SharePoint Server 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted in classic SharePoint pages.
 
-An introduction to SharePoint Framework development in SharePoint Server 2016 using Feature Pack 2 is also covered in the following video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=LGLMxnmHk6U&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG).
+An introduction to SharePoint Framework development in SharePoint Server 2016 using Feature Pack 2 is also covered in the following video on the [Microsoft 365 Platform Communtiy (PnP) YouTube Channel](https://www.youtube.com/watch?v=LGLMxnmHk6U&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG).
 
 > [!VIDEO https://www.youtube.com/embed/LGLMxnmHk6U?list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG]
 

@@ -11,7 +11,7 @@ You can configure your SharePoint Framework (SPFx) components to be immediately 
 
 When the solution has this attribute enabled, the tenant administrator is provided the option to enable the solution to be available automatically across all site collections and sites in the tenant when the solution package is installed to the tenant app catalog.
 
-You can also see the tenant-wide deployment option demonstrated by watching the following video on the SharePoint PnP YouTube Channel:
+You can also see the tenant-wide deployment option demonstrated by watching the following video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/pemHOZCSwZI]
 

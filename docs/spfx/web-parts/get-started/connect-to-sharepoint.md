@@ -10,7 +10,7 @@ ms.custom: scenarios:getting-started
 
 Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users.
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/5M3zDpgxIMs]
 

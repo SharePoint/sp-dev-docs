@@ -6,9 +6,9 @@ ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
-# SharePoint Developer Community (SharePoint PnP) resources
+# Microsoft 365 Platform Community (PnP) resources around SharePoint Framework
 
-The SharePoint Development Community (also known as the SharePoint PnP community) is an open-source initiative coordinated by SharePoint engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
+The Microsoft 365 Platform Community (also known as M365 PnP community) is an open-source initiative coordinated by Microsoft 365 engineering. This community controls SharePoint development documentation, samples, reusable controls, and other relevant open-source initiatives related to SharePoint development.
 
 ## Blog posts, videos, and social media
 

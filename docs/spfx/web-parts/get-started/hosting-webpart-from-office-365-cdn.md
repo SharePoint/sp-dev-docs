@@ -24,7 +24,7 @@ Make sure that you've completed the following tasks before you begin:
 - [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 - [Deploy your client-side web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md)
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/N-KowN-UwTM]
 

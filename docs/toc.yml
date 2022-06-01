@@ -239,6 +239,8 @@
       href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
     - name: Search Query extension
       href: spfx/building-search-extensions.md
+    - name: Form customizer
+      href: spfx/extensions/get-started/building-form-customizer.md
     - name: Concepts & scenarios
       items:
       - name: Tenant wide deployment
@@ -498,6 +500,8 @@
       href: spfx/release-1.1.md
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
+  - name: SharePoint Framework Learn module
+    href: https://docs.microsoft.com/en-us/learn/paths/m365-sharepoint-associate/
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -547,9 +551,11 @@
     - name: Create an Adaptive Card Extension with geolocation action
       href: spfx/viva/get-started/actions/geolocation/GeolocationTutorial.md
     - name: Geolocation capabilities with the property pane of an ACE
-      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md
+      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md     
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
+  - name: Viva Connections Extensibility Learn module
+    href: https://docs.microsoft.com/en-us/learn/paths/m365-extend-viva-connections/   
 - name: Business Apps & Process Automation
   items:
   - name: Overview

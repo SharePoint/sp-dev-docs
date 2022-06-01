@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 At times, you may need to provision a SharePoint list or a document library along with your client-side solution package so that the list or library is available for your client-side components, such as web parts. SharePoint Framework toolchain allows you to package and deploy SharePoint items with your client-side solution package. These items are then provisioned when the client-side solution is installed on a site. 
 
-You can also find details on the provisioning options in this SharePoint PnP webcast available on the SharePoint PnP YouTube Channel:
+You can also find details on the provisioning options in this SharePoint PnP webcast available on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 <br/>
 

@@ -16,7 +16,7 @@ Be sure you've completed the procedures in the following articles before you beg
 - [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
 - [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
 
-You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/tReoZGtAYB4]
 
