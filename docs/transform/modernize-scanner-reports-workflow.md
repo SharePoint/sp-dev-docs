@@ -8,6 +8,9 @@ ms.localizationpriority: high
 
 # SharePoint Modernization scanner reports: Workflow reports
 
+> [!Note]
+> Assessing your workflow 2013 usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool)
+
 ## Excel dashboard
 
 ![Workflow dashboard](media/modernize/excel_workflowusage.png)
