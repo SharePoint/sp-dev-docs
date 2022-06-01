@@ -239,6 +239,8 @@
       href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
     - name: Search Query extension
       href: spfx/building-search-extensions.md
+    - name: Form customizer
+      href: spfx/extensions/get-started/building-form-customizer.md
     - name: Concepts & scenarios
       items:
       - name: Tenant wide deployment
