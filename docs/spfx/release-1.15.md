@@ -48,6 +48,8 @@ npm install @microsoft/generator-sharepoint@next --global
 
 The Form Customizer Extension allows developers to customize new, edit and display forms of the lists and document libraries. 
 
+* [Tutorial on creating your first form customizer](extensions/get-started/building-form-customizer.md)
+
 > [!NOTE]
 > The API to apply form customizers to a content type or list is still work in progress. 
 > Developers can use local debugging and direct link to `SPListForm.aspx` page to test the customizers.
