@@ -17,7 +17,7 @@ Before you start, complete the procedures in the following articles to ensure th
 - [Deploy your client-side web part to a SharePoint page](provision-sp-assets-from-package.md)
 
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/tHzbh5JoC-A]
 

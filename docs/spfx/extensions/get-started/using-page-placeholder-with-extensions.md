@@ -14,7 +14,7 @@ This model is similar to using a **UserCustomAction** collection in a **Site** o
 
 This article describes how to extend your [Hello World extension](./build-a-hello-world-extension.md) to take advantage of page placeholders.
 
-You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/Wm1PG8U5bSw]
 

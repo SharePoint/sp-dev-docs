@@ -12,7 +12,7 @@ ms.custom: scenarios:getting-started
 
 SharePoint Framework (SPFx) Extensions are client-side components that run inside the context of a SharePoint page. You can deploy extensions to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-You can also follow the steps in this article by watching the video on the SharePoint PnP YouTube Channel:
+You can also follow the steps in this article by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/DnfRIl2YN8g]
 
