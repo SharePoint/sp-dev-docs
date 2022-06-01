@@ -1,12 +1,15 @@
 ---
-title: SharePoint Framework development with SharePoint 2019
+title: SharePoint Framework development with SharePoint Server 2019 & SharePoint Server SE
 description: SharePoint Server 2019 supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
-ms.date: 06/22/2021
+ms.date: 04/25/2022
 ms.localizationpriority: high
 ---
-# SharePoint Framework development with SharePoint Server 2019
+# SharePoint Framework development with SharePoint Server 2019 & SharePoint Server SE
 
-SharePoint Server 2019 supports SharePoint Framework client-side web parts in classic and pages, and extensions in modern pages.
+SharePoint Server 2019 supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
+
+> [!IMPORTANT]
+> SharePoint Server Subscription Edition (SE) has all the same dependencies and requirements for the SharePoint Framework as SharePoint Server 2019.
 
 ## Which version of the SharePoint Framework to use
 
@@ -24,18 +27,30 @@ If Internet access isn't available for the development machines, you can set up 
 
 The [Team-based development on the SharePoint Framework](team-based-development-on-sharepoint-framework.md) guidance document includes different options for development environment setup including when you might need to support multiple SharePoint Framework versions.
 
-### Node.js, Gulp & Yeoman versions
+### Node.js, Gulp, & Yeoman versions
 
 The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SPFx. In these cases, you may need to install specific versions of the tools.
 
 For example, Gulp v3.* is only supported up to Node.js v10, while Gulp v4.* is supported from Node.js v12 and higher. Because SPFx v1.4.1 is only supported on Node.js v6 and Node.js v8, you need to ensure you have an older version of Node.js installed as well as an older version of Gulp & Yeoman.
 
-If you're building SPFx v1.1 solutions, install the following specific versions of Gulp & Yeoman:
+> [!NOTE]
+> The Gulp team introduced a separate package, [gulp-cli](https://www.npmjs.com/package/gulp-cli), that should be installed globally. It can be used by projects that use either Gulp v3 & Gulp v4.
+>
+> Learn more about the gulp-cli here: [gulpjs/gulp/#2324](https://github.com/gulpjs/gulp/issues/2324).
 
-```console
-npm install --global gulp@3.9.1
-npm install --global yo@3.1.1
-```
+Microsoft recommends using the most recent version of the Yeoman generator for the SharePoint Framework ([@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint)) that supports creating on-premises projects: SPFx v1.10.1.
+
+> [!IMPORTANT]
+> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.md). However, SPFx 1.4.1 only supports up to Node.js v10. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework (v1.10.0) that works on the same version of Node.js (v10) that SPFx v1.4.1 is supported on. Solution structure is created then with the v1.4.1 version packages as long as you select the environmen target properly in the Yeoman generator flow.
+
+1. Install [Node.js v10.24.1](https://nodejs.org/download/release/v10.24.1/)
+1. Install global dependencies
+
+    ```console
+    npm install gulp-cli@2.3.0 --global
+    npm install yo@2.0.6 --global
+    npm install @microsoft/generator-sharepoint@1.10.0 --global
+    ```
 
 For more information, see [SharePoint Framework development tools and libraries compatibility](compatibility.md).
 
@@ -64,3 +79,5 @@ For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-doc
 
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)
 - [SharePoint Server 2019 development platform](../general-development/sharepoint-2019-development-platform.md)
+- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2019](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2019/)
+- [Definitive guide for developers: SharePoint Framework for SharePoint Server SE](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-subscription-edition/)

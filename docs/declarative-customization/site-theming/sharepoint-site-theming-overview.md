@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming
 description: New options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
-ms.date: 06/05/2020
+ms.date: 04/06/2022
 ms.localizationpriority: high
 ---
 
@@ -93,7 +93,7 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 
     `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
 
-For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/powershell-scripting).
+For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/overview).
 
 ## See also
 

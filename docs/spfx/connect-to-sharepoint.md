@@ -1,7 +1,7 @@
 ---
 title: Connect to SharePoint APIs
 description: Different approaches of connecting to SharePoint APIs from your SharePoint Framework solutions
-ms.date: 12/04/2020
+ms.date: 02/24/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -84,15 +84,13 @@ The SPHttpClient offers basic support for communicating with the SharePoint REST
 
 ## Connect to SharePoint using PnPjs
 
-[PnPjs](https://pnp.github.io/pnpjs/) is an open-source JavaScript library for communicating with SharePoint and Office 365. It exposes a fluent API that allows you to easily consume SharePoint and Office 365 REST APIs in a type-safe way. To retrieve the title of the current site using PnPjs, you would execute the following code:
+[PnPjs](https://pnp.github.io/pnpjs/) is an open-source JavaScript library for communicating with SharePoint and Microsoft 365. It exposes a fluent API that allows you to easily consume SharePoint and Microsoft 365 REST APIs in a type-safe way. To retrieve the title of the current site using PnPjs, you would execute the following code:
 
 ```typescript
-sp.web
+const web = await sp.web
   .select('Title')
-  .get<{Title: string;}>()
-  .then(web => {
-    console.log(web.Title);
-  });
+  .get<{Title: string;}>();
+console.log(web.Title);
 ```
 
 [!INCLUDE [pnp-js](../../includes/snippets/open-source/pnp-js.md)]
@@ -119,4 +117,4 @@ PnPjs is an additional dependency that you need to add to your project and manag
 
 #### Additional payload
 
-PnPjs offers a rich set of capabilities for communicating with SharePoint APIs. But these capabilities add extra load to your project. Compressed, PnPjs will add ~40 KB to the generated bundle size.
+PnPjs offers a rich set of capabilities for communicating with SharePoint APIs. The library supports selective imports so with carful curation the overall impact to your bundle size can be mitigated. For more information please see the documentation at [https://pnp.github.io/pnpjs/](https://pnp.github.io/pnpjs/).

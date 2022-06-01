@@ -1,7 +1,7 @@
 ---
 title: Replace an expiring client secret in a SharePoint Add-in
 description: Add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
-ms.date: 06/22/2021
+ms.date: 04/12/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -12,6 +12,14 @@ Client secrets for SharePoint Add-ins that are registered by using the AppRegNew
 
 > [!NOTE]
 > This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets).
+
+## Recommended maintenance schedule
+
+We recommend to create new secrets a minimum of 30 days before they expire. This gives you a month of time before the old credentials expire.
+
+We recommend to only remove secrets a minimum of 7 days after expiration, provided you have removed them from the application configuration.
+
+Removing an expired secret from ACS before you remove it from the application configuration will cause errors.
 
 ## Prerequisites
 
@@ -40,13 +48,20 @@ Ensure the following before you begin:
 
     foreach ($appentry in $applist) {
         $principalId = $appentry.AppPrincipalId
-        $principalName = $appentry.DisplayName
 
-        Get-MsolServicePrincipalCredential -AppPrincipalId $principalId -ReturnKeyValues $false | ? { $_.Type -eq "Password" } | % { "$principalName;$principalId;" + $_.KeyId.ToString() +";" + $_.StartDate.ToString() + ";" + $_.EndDate.ToString() } | out-file -FilePath c:\temp\appsec.txt -append
+        Get-MsolServicePrincipalCredential -AppPrincipalId $principalId -ReturnKeyValues $false | Where-Object { $_.Type -eq "Password" } | ForEach-Object {
+            [PSCustomObject][Ordered]@{
+                PrincipalName = $appentry.DisplayName
+                PrincipalId = $principalId
+                KeyID = $_.KeyId
+                StartDate = $_.StartDate
+                EndDate = $_.EndDate
+            } | Export-Csv -Path C:\temp\appsec.csv -NoTypeInformation -Delimiter ';' -Append
+        }
     }
     ```
 
-1. Open the file C:\temp\appsec.txt to see the report. Leave the Windows PowerShell window open for the next procedure, if any of the secrets are near expiration.
+1. Open the file C:\temp\appsec.csv to see the report. Leave the Windows PowerShell window open for the next procedure, if any of the secrets are near expiration.
 
 ## Generate a new secret
 

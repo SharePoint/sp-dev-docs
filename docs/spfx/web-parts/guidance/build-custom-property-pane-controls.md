@@ -1,7 +1,7 @@
 ---
 title: Build custom controls for the property pane
 description: Build a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface of the SharePoint client-side web part.
-ms.date: 06/16/2020
+ms.date: 02/11/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -40,15 +40,11 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
 
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
-    - **What is your solution name?** react-custompropertypanecontrol
-    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
-    - **Where do you want to place the files?** Use the current folder
     - **Which type of client-side component to create?** WebPart
     - **What is your Web part name?** List items
-    - **What is your Web part description?** Shows list items from the selected list
-    - **Which framework would you like to use?** React
+    - **Which template would you like to use?** React
 
-1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
+1. Open your project folder in your code editor.
 
 ## Define web part property for storing the selected list
 
@@ -68,10 +64,11 @@ The web part you're building shows list items from the selected SharePoint list.
     }
     ```
 
-1. Open the **src/webparts/listItems/IListItemsWebPartProps.ts** file and replace its contents with the following
+1. Open the **src/webparts/listItems/ListItemsWebPart.ts** file and update the `IListItemsWebPartProps` interface to the following:
 
     ```typescript
     export interface IListItemsWebPartProps {
+      description: string;
       listName: string;
     }
     ```
@@ -83,9 +80,17 @@ The web part you're building shows list items from the selected SharePoint list.
       // ...
 
       public render(): void {
-        const element: React.ReactElement<IListItemsProps> = React.createElement(ListItems, {
-          listName: this.properties.listName
-        });
+        const element: React.ReactElement<IListItemsProps> = React.createElement(
+          ListItems,
+          {
+            listName: this.properties.listName,
+            description: this.properties.description,
+            isDarkTheme: this._isDarkTheme,
+            environmentMessage: this._environmentMessage,
+            hasTeamsContext: !!this.context.sdks.microsoftTeams,
+            userDisplayName: this.context.pageContext.user.displayName
+          }
+        );
 
         ReactDom.render(element, this.domElement);
       }
@@ -127,26 +132,41 @@ The web part you're building shows list items from the selected SharePoint list.
     }
     ```
 
-1. In the **src/webparts/listItems/loc/mystrings.d.ts** file, change the `IListItemsWebPartStrings` interface to:
+1. In the **src/webparts/listItems/loc/mystrings.d.ts** file, add a new property `ListFieldLabel` of type `string` to the existing `IListItemsWebPartStrings` interface:
 
     ```typescript
     declare interface IListItemsWebPartStrings {
       PropertyPaneDescription: string;
       BasicGroupName: string;
+      ..
       ListFieldLabel: string;
     }
     ```
 
-1. In the **src/webparts/listItems/loc/en-us.js** file, add the missing definition for the `ListFieldLabel` string.
+1. In the **src/webparts/listItems/loc/en-us.js** file, add a new property `ListFieldLabel` to the returned object:
 
     ```javascript
     define([], function() {
       return {
         "PropertyPaneDescription": "Description",
         "BasicGroupName": "Group Name",
+        ...
         "ListFieldLabel": "List"
       }
     });
+    ```
+
+1. Open the **src/webparts/listItems/components/IListItemsProps.ts** file, add the `listName` property to the list interface:
+
+    ```typescript
+    export interface IListItemsProps {
+      description: string;
+      isDarkTheme: boolean;
+      environmentMessage: string;
+      hasTeamsContext: boolean;
+      userDisplayName: string;
+      listName: string;
+    }
     ```
 
 1. In the **src/webparts/listItems/components/ListItems.tsx** file, change the contents of the `render()` method to:
@@ -154,31 +174,26 @@ The web part you're building shows list items from the selected SharePoint list.
     ```tsx
     export default class ListItems extends React.Component<IListItemsProps, {}> {
       public render(): React.ReactElement<IListItemsProps> {
+        const {
+          description,
+          isDarkTheme,
+          environmentMessage,
+          hasTeamsContext,
+          userDisplayName,
+          listName
+        } = this.props;
+
         return (
-          <div className={styles.listItems}>
-            <div className={styles.container}>
-              <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
-                <div className="ms-Grid-col ms-lg10 ms-xl8 ms-xlPush2 ms-lgPush1">
-                  <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-                  <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
-                  <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
-                  <a href="https://aka.ms/spfx" className={styles.button}>
-                    <span className={styles.label}>Learn more</span>
-                  </a>
-                </div>
-              </div>
+          <section className={`${styles.listItems} ${hasTeamsContext ? styles.teams : ''}`}>
+            <div className={styles.welcome}>
+              <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
+              <h2>Well done, {escape(userDisplayName)}!</h2>
+              <div>{environmentMessage}</div>
+              <div>List name: <strong>{escape(listName)}</strong></div>
             </div>
-          </div>
+          </section>
         );
       }
-    }
-    ```
-
-1. Open the **src/webparts/listItems/components/IListItemsProps.ts** file, and replace its contents with:
-
-    ```typescript
-    export interface IListItemsProps {
-      listName: string;
     }
     ```
 
@@ -227,7 +242,7 @@ When creating a custom property pane control that uses React in the SharePoint F
     - The `selectedKey` property specifies the selected value, which can be a string or a number.
     - The `disabled` property specifies if the dropdown control is disabled or not.
     - The `stateKey` property is used to force the React component to re-render.
-    
+
 1. Define asynchronous dropdown React component interface. In the **src/controls/PropertyPaneAsyncDropdown/components** folder, create a new file named **IAsyncDropdownState.ts**, and enter the following code:
 
     ```typescript
@@ -499,43 +514,34 @@ export interface IListInfo {
     import { update, get } from '@microsoft/sp-lodash-subset';
     ```
 
-1. Add method to load available lists. In the `ListItemsWebPart` class, add a method to load available lists. In this article, you use mock data, but you could also call the SharePoint REST API to retrieve the list of available lists from the current web. To simulate loading options from an external service, the method uses a two-second delay.
+1. Add a method to load available lists. In the `ListItemsWebPart` class, add the following `loadLists()` method to load available lists. In this article, you use mock data, but you could also call the SharePoint REST API to retrieve the list of available lists from the current web. To simulate loading options from an external service, the method uses a two-second delay.
 
     ```typescript
-    export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-      // ...
-
-      private loadLists(): Promise<IDropdownOption[]> {
-        return new Promise<IDropdownOption[]>((resolve: (options: IDropdownOption[]) => void, reject: (error: any) => void) => {
-          setTimeout(() => {
-            resolve([{
-              key: 'sharedDocuments',
-              text: 'Shared Documents'
-            },
-              {
-                key: 'myDocuments',
-                text: 'My Documents'
-              }]);
-          }, 2000);
-        });
-      }
-
-      // ...
+    private loadLists(): Promise<IDropdownOption[]> {
+      return new Promise<IDropdownOption[]>((resolve: (options: IDropdownOption[]) => void, reject: (error: any) => void) => {
+        setTimeout(() => {
+          resolve([{
+            key: 'sharedDocuments',
+            text: 'Shared Documents'
+          },
+            {
+              key: 'myDocuments',
+              text: 'My Documents'
+            }]);
+        }, 2000);
+      });
     }
     ```
 
 1. Add method to handle the change of the value in the dropdown. In the `ListItemsWebPart` class, add a new method named `onListChange()`.
 
     ```typescript
-    export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-      // ...
-      private onListChange(propertyPath: string, newValue: any): void {
-        const oldValue: any = get(this.properties, propertyPath);
-        // store new value in web part properties
-        update(this.properties, propertyPath, (): any => { return newValue; });
-        // refresh web part
-        this.render();
-      }
+    private onListChange(propertyPath: string, newValue: any): void {
+      const oldValue: any = get(this.properties, propertyPath);
+      // store new value in web part properties
+      update(this.properties, propertyPath, (): any => { return newValue; });
+      // refresh web part
+      this.render();
     }
     ```
 
@@ -600,6 +606,7 @@ When building SharePoint Framework web parts, you might need to implement a conf
       "preconfiguredEntries": [{
         ...
         "properties": {
+          "description": "List items",
           "listName": "",
           "item": ""
         }
@@ -607,25 +614,27 @@ When building SharePoint Framework web parts, you might need to implement a conf
     }
     ```
 
-1. Change the code in the **src/webparts/listItems/IListItemsWebPartProps.ts** file to:
+1. Change the code in the **IListItemsWebPartProps** interface in the **src/webparts/listItems/ListItemsWebPart.ts** file to:
 
     ```typescript
     export interface IListItemsWebPartProps {
+      description: string;
       listName: string;
       item: string;
     }
     ```
 
-1. Change the contents of the **src/webparts/listItems/components/IListItemsProps.ts** file to:
+1. Update the contents of the **src/webparts/listItems/components/IListItemsProps.ts** file to add the `item` property:
 
     ```typescript
     export interface IListItemsProps {
+      ...
       listName: string;
-      item: string;
+      itemName: string;
     }
     ```
 
-1. In the **src/webparts/listItems/ListItemsWebPart.ts** file, change the code of the `render()` method to:
+1. In the **src/webparts/listItems/ListItemsWebPart.ts** file, change the code of the `render()` method to include the `item` property:
 
     ```typescript
     export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
@@ -634,7 +643,8 @@ When building SharePoint Framework web parts, you might need to implement a conf
       public render(): void {
         const element: React.ReactElement<IListItemsProps> = React.createElement(ListItems, {
           listName: this.properties.listName,
-          item: this.properties.item
+          itemName: this.properties.item,
+          ...
         });
 
         ReactDom.render(element, this.domElement);
@@ -644,10 +654,11 @@ When building SharePoint Framework web parts, you might need to implement a conf
     }
     ```
 
-1. In the **src/webparts/listItems/loc/mystrings.d.ts** file, change the `IListItemsWebPartStrings` interface to:
+1. In the **src/webparts/listItems/loc/mystrings.d.ts** file, change the `IListItemsWebPartStrings` interface to include the `ItemFieldLabel` property:
 
     ```typescript
     declare interface IListItemsWebPartStrings {
+      ...
       PropertyPaneDescription: string;
       BasicGroupName: string;
       ListFieldLabel: string;
@@ -660,6 +671,7 @@ When building SharePoint Framework web parts, you might need to implement a conf
     ```javascript
     define([], function() {
       return {
+        ...
         "PropertyPaneDescription": "Description",
         "BasicGroupName": "Group Name",
         "ListFieldLabel": "List",
@@ -675,22 +687,26 @@ In the **src/webparts/listItems/components/ListItems.tsx** file, change the `ren
 ```tsx
 export default class ListItems extends React.Component<IListItemsProps, {}> {
   public render(): React.ReactElement<IListItemsProps> {
+    const {
+      description,
+      isDarkTheme,
+      environmentMessage,
+      hasTeamsContext,
+      userDisplayName,
+      listName,
+      itemName
+    } = this.props;
+
     return (
-      <div className={styles.listItems}>
-        <div className={styles.container}>
-          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
-            <div className="ms-Grid-col ms-lg10 ms-xl8 ms-xlPush2 ms-lgPush1">
-              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
-              <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
-              <p className="ms-font-l ms-fontColor-white">{escape(this.props.item)}</p>
-              <a href="https://aka.ms/spfx" className={styles.button}>
-                <span className={styles.label}>Learn more</span>
-              </a>
-            </div>
-          </div>
+      <section className={`${styles.listItems} ${hasTeamsContext ? styles.teams : ''}`}>
+        <div className={styles.welcome}>
+          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
+          <h2>Well done, {escape(userDisplayName)}!</h2>
+          <div>{environmentMessage}</div>
+          <div>List name: <strong>{escape(listName)}</strong></div>
+          <div>Item name: <strong>{escape(itemName)}</strong></div>
         </div>
-      </div>
+      </section>
     );
   }
 }
@@ -701,46 +717,41 @@ export default class ListItems extends React.Component<IListItemsProps, {}> {
 In the **src/webparts/listItems/ListItemsWebPart.ts** file, in the `ListItemsWebPart` class, add a new method to load available list items from the selected list. Like the method for loading available lists, you use mock data. Depending on the previously selected list, the `loadItems()` method returns mock list items. When no list has been selected, the method resolves the promise without any data.
 
 ```typescript
-export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-  // ...
-
-  private loadItems(): Promise<IDropdownOption[]> {
-    if (!this.properties.listName) {
-      // resolve to empty options since no list has been selected
-      return Promise.resolve();
-    }
-
-    const wp: ListItemsWebPart = this;
-
-    return new Promise<IDropdownOption[]>((resolve: (options: IDropdownOption[]) => void, reject: (error: any) => void) => {
-      setTimeout(() => {
-        const items = {
-          sharedDocuments: [
-            {
-              key: 'spfx_presentation.pptx',
-              text: 'SPFx for the masses'
-            },
-            {
-              key: 'hello-world.spapp',
-              text: 'hello-world.spapp'
-            }
-          ],
-          myDocuments: [
-            {
-              key: 'isaiah_cv.docx',
-              text: 'Isaiah CV'
-            },
-            {
-              key: 'isaiah_expenses.xlsx',
-              text: 'Isaiah Expenses'
-            }
-          ]
-        };
-        resolve(items[wp.properties.listName]);
-      }, 2000);
-    });
+private loadItems(): Promise<IDropdownOption[]> {
+  if (!this.properties.listName) {
+    // resolve to empty options since no list has been selected
+    return Promise.resolve([]);
   }
 
+  const wp: ListItemsWebPart = this;
+
+  return new Promise<IDropdownOption[]>((resolve: (options: IDropdownOption[]) => void, reject: (error: any) => void) => {
+    setTimeout(() => {
+      const items = {
+        sharedDocuments: [
+          {
+            key: 'spfx_presentation.pptx',
+            text: 'SPFx for the masses'
+          },
+          {
+            key: 'hello-world.spapp',
+            text: 'hello-world.spapp'
+          }
+        ],
+        myDocuments: [
+          {
+            key: 'isaiah_cv.docx',
+            text: 'Isaiah CV'
+          },
+          {
+            key: 'isaiah_expenses.xlsx',
+            text: 'Isaiah Expenses'
+          }
+        ]
+      };
+      resolve(items[wp.properties.listName]);
+    }, 2000);
+  });
 }
 ```
 
@@ -749,15 +760,12 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 In the `ListItemsWebPart` class, add a new method named `onListItemChange()`. After selecting an item in the items dropdown, the web part should store the new value in web part properties and re-render the web part to reflect the changes in the user interface.
 
 ```typescript
-export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-  // ...
-  private onListItemChange(propertyPath: string, newValue: any): void {
-    const oldValue: any = get(this.properties, propertyPath);
-    // store new value in web part properties
-    update(this.properties, propertyPath, (): any => { return newValue; });
-    // refresh web part
-    this.render();
-  }
+private onListItemChange(propertyPath: string, newValue: any): void {
+  const oldValue: any = get(this.properties, propertyPath);
+  // store new value in web part properties
+  update(this.properties, propertyPath, (): any => { return newValue; });
+  // refresh web part
+  this.render();
 }
 ```
 
@@ -826,28 +834,22 @@ Initially when no list is selected, the items dropdown is disabled and becomes e
 1. To implement this logic, extend the previously defined `onListChange()` method to:
 
     ```typescript
-    export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-      // ...
-
-      private onListChange(propertyPath: string, newValue: any): void {
-        const oldValue: any = get(this.properties, propertyPath);
-        // store new value in web part properties
-        update(this.properties, propertyPath, (): any => { return newValue; });
-        // reset selected item
-        this.properties.item = undefined;
-        // store new value in web part properties
-        update(this.properties, 'item', (): any => { return this.properties.item; });
-        // refresh web part
-        this.render();
-        // reset selected values in item dropdown
-        this.itemsDropDown.properties.selectedKey = this.properties.item;
-        // allow to load items
-        this.itemsDropDown.properties.disabled = false;
-        // load items and re-render items dropdown
-        this.itemsDropDown.render();
-      }
-
-      // ...
+    private onListChange(propertyPath: string, newValue: any): void {
+      const oldValue: any = get(this.properties, propertyPath);
+      // store new value in web part properties
+      update(this.properties, propertyPath, (): any => { return newValue; });
+      // reset selected item
+      this.properties.item = undefined;
+      // store new value in web part properties
+      update(this.properties, 'item', (): any => { return this.properties.item; });
+      // refresh web part
+      this.render();
+      // reset selected values in item dropdown
+      this.itemsDropDown.properties.selectedKey = this.properties.item;
+      // allow to load items
+      this.itemsDropDown.properties.disabled = false;
+      // load items and re-render items dropdown
+      this.itemsDropDown.render();
     }
     ```
 
@@ -879,7 +881,7 @@ Initially when no list is selected, the items dropdown is disabled and becomes e
 
     ![Selected list and item rendered in the web part](../../../images/custom-property-pane-control-cascading-selected-list-item.png)
 
-1. Stop the local webserver by pressing <kbd>CTRL<kbd>+<kbd>C<kbd> in the console.
+1. Stop the local webserver by pressing <kbd>CTRL</kbd>+<kbd>C</kbd> in the console.
 
 ## See also
 

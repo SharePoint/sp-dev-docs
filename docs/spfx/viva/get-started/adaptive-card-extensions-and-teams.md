@@ -9,13 +9,11 @@ ms.localizationpriority: high
 
 This tutorial builds off the following tutorial: [Advanced Quick View Functionality](advanced-quick-view-functionality.md).
 
-[!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
-
 Adaptive Card Extensions can be used as supplemental pieces to a larger Teams App story. An ACE on the Viva Connections Dashboard can link directly to a Teams Personal Tab or Bot.
 
-In this tutorial, you'll use an ACE within a Microsoft Teams app.
+In this tutorial, you'll use an ACE within a Microsoft Teams app. 
 
-## Step 1 - Scaffold a SPFx Teams Personal App
+## Scaffold a SPFx Teams Personal App
 
 Start with the solution from the previous tutorials and add a new SPFx component to the project using the SPFx generator. Execute the following statement in command prompt from your project's root folder:
 
@@ -140,7 +138,7 @@ public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | u
 
 Repeat the steps in the section [Package and deploy the solution](#package-and-deploy-the-solution) above to rebuild, package, and deploy the updated solution.
 
-## Step 4 - Viva Connections Dashboard
+## Viva Connections Dashboard
 
 The Viva Connections Dashboard is available on the Home Site of the tenant.
 

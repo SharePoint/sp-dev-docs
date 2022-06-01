@@ -1,7 +1,7 @@
 ---
 title: Build Microsoft Teams tab using SharePoint Framework - Tutorial
 description: Tutorial on how to build Microsoft Teams tabs using SharePoint Framework. Capability was released to general availability in SharePoint Framework v1.8.
-ms.date: 05/18/2021
+ms.date: 10/21/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -19,7 +19,7 @@ Before you start, complete the procedures in the following articles to ensure th
 > [!IMPORTANT]
 > This tutorials requires that you are using the SharePoint Framework v1.10 or higher as some capabilities and framework properties are not available in earlier versions.
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/JoTAC2i-XeU]
 
@@ -37,20 +37,18 @@ You can also follow these steps by watching this video on the SharePoint PnP You
     cd teams-tab
     ```
 
-1. Create a new solution by running the Yeoman SharePoint Framework Generator:
+1. Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
 
     ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
+    The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    - **What is your solution name?**: teams-tab
     - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: MyFirstTeamsTab
     - **What is your Web part description?**: My first Teams tab
-    - **Which framework would you like to use?**: No JavaScript web framework
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyFirstTeamsTab** web part as well.
 

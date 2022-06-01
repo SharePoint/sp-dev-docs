@@ -13,7 +13,7 @@ The SharePoint Patterns and Practices (PnP) reference implementation shows how y
 
 The reference implementation only works with [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks.md). 
 
-You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 <br/>
 

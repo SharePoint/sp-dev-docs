@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 07/31/2020
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -19,50 +19,29 @@ Client-side web parts support:
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/_O2Re5uRLoo]
+> [!Video https://www.youtube.com/embed/6WTtjXP5yW4]
 
 ## Create a new web part project
 
-1. Create a new project directory in your favorite location.
+Create a new project directory for your project and change your current folder to that directory.
 
-    ```console
-    md helloworld-webpart
-    ```
+Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
 
-1. Go to the project directory.
+```console
+yo @microsoft/sharepoint
+```
 
-    ```console
-    cd helloworld-webpart
-    ```
+The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-1. Create a new HelloWorld web part by running the Yeoman SharePoint Generator.
-
-    ```console
-    yo @microsoft/sharepoint
-    ```
-
-1. When prompted:
-
-    - **What is your solution name?**: helloworld-webpart
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online only (latest)
-    - **Where do you want to place the files?**: Use the current folder
-    - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: N
-    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?**: N
-    - **Which type of client-side component to create?**: WebPart
-
-1. The next set of prompts ask for specific information about your web part:
-
-    - **What is your Web part name?**: HelloWorld
-    - **What is your Web part description?**: HelloWorld description
-    - **Which framework would you like to use?**: No JavaScript framework
+- **Which type of client-side component to create?**: WebPart
+- **What is your Web part name?**: HelloWorld
+- **Which template would you like to use?**: No framework
 
 At this point, Yeoman creates the project scaffolding (folders & files) and installs the required dependencies by running `npm install`. This usually takes 1-3 minutes depending on your internet connection.
 
-When the project scaffolding and dependency install process is complete, Yeoman will display a message similar to the following indicating it was successful:
-
-![SharePoint client-side solution scaffolded successfully](../../../images/yeoman-sp-complete.png)
+When the project scaffolding and dependency install process are complete, Yeoman will display a message similar to the following indicating it was successful:
 
 > [!IMPORTANT]
 > NPM may display warnings and error messages during the installation of dependencies while it runs the `npm install` command. You can safely ignore these log warnings & error messages.
@@ -79,43 +58,90 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 - [Atom](https://atom.io)
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
-The SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code (VS Code) is a lightweight but powerful source code editor from Microsoft that runs on your desktop. VS Code available for Windows, macOS, and Linux. It comes with built-in support for JavaScript, TypeScript, Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
+The SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code (VS Code) is a lightweight but powerful source code editor from Microsoft that runs on your desktop. VS Code available for Windows, macOS, and Linux. It comes with built-in support for JavaScript, TypeScript, Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP).
 
 ## Preview the web part
 
-You can preview and test your client-side web part locally on your workstation. The client-side toolchain uses HTTPS endpoint by default. Part of the [Set up your development environment](../../set-up-your-development-environment.md) process included trusting the development SSL certificate included in the toolchain on your local environment. This is required so your browser will trust the certificate.
+You can preview and test your client-side web part in the SharePoint hosted workbench without deploying your solution to SharePoint. This is done by starting a local web server the hosted workbench can load files from using the gulp task **serve**.
+
+The client-side toolchain uses HTTPS endpoints by default. Part of the [Set up your development environment](../../set-up-your-development-environment.md) process included trusting the development SSL certificate included in the toolchain on your local environment. This is required so your browser will trust the certificate.
 
 > [!IMPORTANT]
 > Trusting the developer certificate is required. This is a one-time process and is only required when you run your first SharePoint Framework project on a new workstation. You don't need to do this for every SharePoint Framework project.
 >
 > If you didn't trust the dev cert, follow the steps outlined on this page: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
 
-Now that we've installed the developer certificate, enter the following command in the console to build and preview your web part:
+### Update your project's hosted workbench URL
+
+When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
+
+- Locate and open the file **./config/serve.json** in your project.
+- Locate the property `initialPage`:
+
+    ```json
+    {
+      "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+      "port": 4321,
+      "https": true,
+      "initialPage": "https://enter-your-SharePoint-site/_layouts/workbench.aspx"
+    }
+    ```
+
+- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+
+> [!TIP]
+> You can also start the local web server without launching a browser by including the `nobrowser` argument to the **gulp serve** command. For example, you may not want to modify the **serve.json** file in all your projects and instead, use a bookmark to launch your hosted workbench.
+>
+> ```console
+> gulp serve --nobrowser
+> ```
+
+### Start the local web server & launch the hosted workbench
+
+Assuming you've installed & trusted developer certificate, execute the following command in the console to build and preview your web part:
 
 ```console
 gulp serve
 ```
 
-This command executes a series of gulp tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the workbench preview web parts from your local dev environment.
+This command executes a series of gulp tasks to create and start a local webserver hosting the endpoints **localhost:4321** and **localhost:5432**. It will then open your default browser and load the hosted workbench preview web parts from your local dev environment.
 
 > [!NOTE]
-> If you're seeing issues with the certificate in browser, please see details on installing a developer certificate: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
+> If you're seeing issues working with the hosted workbench, please see details on installing a developer certificate: [Set up your development environment: Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate).
 >
 > If you're still seeing issues, see: [SharePoint Framework known issues and frequently asked questions](../../known-issues-and-common-questions.yml)
 
-![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
+```console
+gulp serve
+Build target: DEBUG
+[12:13:24] Using gulpfile d:\pnp\helloworld-webpart\gulpfile.js
+[12:13:24] Starting 'serve'...
+[12:13:24] Starting gulp
+[12:13:24] Starting subtask 'spfx-serve'...
+[12:13:24] [spfx-serve] To load your scripts, use this query string: ?debug=true&noredir=true&debugManifestsFile=https://localhost:4321/temp/manifests.js
+[12:13:25] Starting server...
+[12:13:25] Finished subtask 'spfx-serve' after 1.24 s
+[12:13:25] Starting subtask 'pre-copy'...
+[12:13:26] Finished subtask 'pre-copy' after 533 ms
+[12:13:26] Starting subtask 'copy-static-assets'...
+[12:13:26] Starting subtask 'sass'...
+[12:13:26] Server started https://localhost:4321
+[12:13:26] LiveReload started on port 35729
+[12:13:26] Running server
+[12:13:26] Opening https://sppnp.sharepoint.com/_layouts/workbench.aspx using the default OS app
+```
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the task runner to handle build process tasks such as:
 
-- Compiling TypeScript files to JavaScript.
-- Compiling SASS files to CSS.
-- Bundling and minifying JavaScript and CSS files.
+- Transpile TypeScript files to JavaScript.
+- Compile SASS files to CSS.
+- Bundle and minify JavaScript and CSS files.
 
 VS Code provides built-in support for gulp and other task runners. Select <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on Windows or <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> on macOS to debug and preview your web part.
 
 The SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Workbench includes the client-side page and the client-side canvas in which you can add, delete, and test your web parts in development.
 
-![SharePoint Workbench running locally](../../../images/sp-workbench.png)
+![SharePoint Workbench running locally](../../../images/sp-workbench-o365.png)
 
 ### Use SharePoint Workbench to preview and test your web part
 
@@ -143,7 +169,7 @@ One of the capabilities of the property pane is to configure its update behavior
 
 ## Web part project structure
 
-### To use Visual Studio Code to explore the web part project structure
+### Use Visual Studio Code to explore the web part project structure
 
 1. In the console, stop the local web server by terminating the process. Selecting <kbd>CTRL</kbd>+<kbd>C</kbd> on Windows or macOS.
 1. Enter the following command to open the web part project in VS Code (or use your favorite editor):
@@ -184,20 +210,30 @@ The DOM element where the web part should be rendered is available in the `rende
 ```typescript
 public render(): void {
   this.domElement.innerHTML = `
-    <div class="${ styles.helloWorld }">
-      <div class="${ styles.container }">
-        <div class="${ styles.row }">
-          <div class="${ styles.column }">
-            <span class="${ styles.title }">Welcome to SharePoint!</span>
-            <p class="${ styles.subTitle }">Customize SharePoint experiences using web parts.</p>
-            <p class="${ styles.description }">${escape(this.properties.description)}</p>
-            <a href="https://aka.ms/spfx" class="${ styles.button }">
-              <span class="${ styles.label }">Learn more</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>`;
+  <section class="${styles.helloWorld} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
+    <div class="${styles.welcome}">
+      <img alt="" src="${this._isDarkTheme ? require('./assets/welcome-dark.png') : require('./assets/welcome-light.png')}" class="${styles.welcomeImage}" />
+      <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
+      <div>${this._environmentMessage}</div>
+      <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
+    </div>
+    <div>
+      <h3>Welcome to SharePoint Framework!</h3>
+      <p>
+      The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
+      </p>
+      <h4>Learn more about SPFx development:</h4>
+        <ul class="${styles.links}">
+          <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
+          <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
+          <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
+        </ul>
+    </div>
+  </section>`;
 }
 ```
 
@@ -210,7 +246,7 @@ The property pane is defined in the `HelloWorldWebPart` class. The `getPropertyP
 When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the `render()` method:
 
 ```typescript
-<p class="${styles.description}">${escape(this.properties.description)}</p>
+<div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
 ```
 
 Notice that we're executing an HTML escape on the property's value to ensure a valid string. To learn more about how to work with the property pane and property pane field types, see [Make your SharePoint client-side web part configurable](../basics/integrate-with-property-pane.md).
@@ -301,17 +337,17 @@ Let's now add a few more properties to the property pane: a checkbox, a drop-dow
 
     Locate the following line:
 
-    ```typescript
-    <p class="${ styles.description }">${escape(this.properties.description)}</p>
+    ```html
+    <div>Web part property value: <strong>${escape(this.properties.description)}</strong></div>
     ```
 
     Add the following immediately after the previously mentioned line:
 
-    ```typescript
-    <p class="${ styles.description }">${escape(this.properties.test)}</p>
-    <p class="${ styles.description }">${this.properties.test1}</p>
-    <p class="${ styles.description }">${escape(this.properties.test2)}</p>
-    <p class="${ styles.description }">${this.properties.test3}</p>
+    ```html
+    <p>${escape(this.properties.test)}</p>
+    <p>${this.properties.test1}</p>
+    <p>${escape(this.properties.test2)}</p>
+    <p>${this.properties.test3}</p>
     ```
 
     To set the default value for the properties, you need to update the web part manifest's `properties` property bag.
@@ -349,7 +385,7 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
   // Components that allow authors to embed arbitrary script code should set this to true.
   // https://support.office.com/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
   "requiresCustomScript": false,
-  "supportedHosts": ["SharePointWebPart"],
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
 
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
@@ -373,31 +409,6 @@ Now that we have introduced new properties, ensure that you're again hosting the
 ```console
 gulp serve
 ```
-
-### Preview the web part in SharePoint's hosted workbench
-
-SharePoint Workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you're running in SharePoint context and you're able to interact with SharePoint data.
-
-1. Go to the following URL: **https://your-sharepoint-tenant.sharepoint.com/_layouts/workbench.aspx**
-
-    > [!NOTE]
-    > If you do not have the SPFx developer certificate installed, Workbench notifies you that it is configured not to load scripts from localhost. Stop the currently running process in the console window, and execute the **gulp trust-dev-cert** command in your project directory console to install the developer certificate before running the **gulp serve** command again. For more information, see [Trusting the self-signed developer certificate](../../set-up-your-development-environment.md#trusting-the-self-signed-developer-certificate)
-
-    ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
-
-1. Notice that the SharePoint Workbench now has the Office 365 Suite navigation bar.
-1. Select the **add** icon in the canvas to reveal the toolbox. The toolbox now shows the web parts available on the site where the SharePoint Workbench is hosted along with your **HelloWorldWebPart**.
-
-    ![Toolbox in SharePoint Workbench running in SharePoint Online site](../../../images/sp-workbench-o365-toolbox.png)
-
-1. Add **HelloWorld** from the toolbox. Now you're running your web part in a page hosted in SharePoint!
-
-    ![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365-helloworld-wp.png)
-
-> [!NOTE]
-> The color of the web part depends on the colors of the site. By default, web parts inherit the core colors from the site by dynamically referencing Office UI Fabric Core styles used in the site where the web part is hosted.
-
-Because you're still developing and testing your web part, there is no need to package and deploy your web part to SharePoint.
 
 ## Next steps
 

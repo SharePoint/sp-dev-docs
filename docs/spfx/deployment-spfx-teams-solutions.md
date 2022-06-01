@@ -1,7 +1,7 @@
 ---
 title: Deployment options for SharePoint Framework solutions for Microsoft Teams
 description: Learn what options are available to deploy SharePoint Framework solutions for Microsoft Teams
-ms.date: 09/28/2021
+ms.date: 01/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -49,6 +49,16 @@ When SharePoint creates the app manifest, it will use values from the SPFx solut
 
 If a SPFx solution contains multiple web parts designated for use in Microsoft Teams, SharePoint Online will repeat the above process for each of them.
 
+> [!NOTE]
+> If you are curious on the generated package structure, you can use use the following REST API to download the package for specific solutions:
+> 
+> `_api/web/tenantappcatalog/downloadteamssolution(id)/$value`
+> 
+> id is the numeric identifier of the solution in the app catalog library.
+> 
+> You can request this API in the context of your app catalog, for example with URL of `https://[yourtenant]].sharepoint.com/sites/appcatalog/_api/web/tenantappcatalog/downloadteamssolution(12)/$value`. API call will start download process of the generated manifest package.
+
+
 ## Developer-provided Microsoft Teams app manifest & package
 
 When you need more control over the Microsoft Teams app manifest or app package, you can create your own package. In this case, when an administrator selects the **Sync to Teams** button, SharePoint Online will look for the following file in the **\*.sppkg** file: **./teams/TeamsSPFxApp.zip**.
@@ -66,6 +76,18 @@ To use your own Microsoft Teams app manifest & app package instead of letting Sh
 1. Create a Microsoft Teams app manifest per the Microsoft Teams documentation:
     - [Microsoft Teams: Create an app package for your Microsoft Teams app](/microsoftteams/platform/concepts/build-and-test/apps-package)
     - [Microsoft Teams: Manifest schema for Microsoft Teams](/microsoftteams/platform/resources/schema/manifest-schema)
+
+    > [!IMPORTANT]
+    > in the Teams app manifest ensure you add the following entry:
+    > ```json
+    > "webApplicationInfo": {
+    > "resource": "https://{teamSiteDomain}",
+    > "id": "00000003-0000-0ff1-ce00-000000000000"
+    > }
+    > ```
+    > That is required to ensure any API call in the component will succeed from Microsoft Teams rich clients.
+    > **teamSiteDomain** will be the same tenant that the Teams client is using, this will not work cross-tenant/cross-domain so you cannot hardcode another domain in.
+
 1. Create the Microsoft Teams app package named **TeamsSPFxApp.zip** by compressing the contents of the **./teams** folder.
 
     > [!IMPORTANT]

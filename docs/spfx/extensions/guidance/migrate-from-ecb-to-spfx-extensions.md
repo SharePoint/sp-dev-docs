@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extension
-description: Migrate from old "classic" customizations to the new model based on SharePoint Framework extensions.
+description: Migrate from old "classic" customizations (ECB) to the new model based on SharePoint Framework extensions.
 ms.date: 09/03/2020
 ms.prod: sharepoint
 ms.localizationpriority: medium

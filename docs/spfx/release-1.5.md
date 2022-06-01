@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.5 release notes
 description: Release notes for the SharePoint Framework v1.5 release
-ms.date: 09/08/2021
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -88,7 +88,7 @@ For example:
 yo @microsoft/sharepoint --package-manager pnpm
 ```
 
-- [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md)
+- [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
 
 ### Support for customized Yeoman Generators
 

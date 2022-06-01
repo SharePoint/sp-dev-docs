@@ -1,18 +1,21 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
-ms.date: 06/22/2021
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 # Connect your client-side web part to SharePoint (Hello World part 2)
 
-Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users. This article continues building the Hello World web part built in the previous article [Build your first web part](./build-a-hello-world-web-part.md).
+Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users.
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/4F65TmsHucY]
+> [!Video https://www.youtube.com/embed/5M3zDpgxIMs]
+
+> [!NOTE]
+> This article continues building the Hello World web part built in the previous article [Build your first web part](./build-a-hello-world-web-part.md).
 
 ## Run gulp serve
 
@@ -25,9 +28,7 @@ gulp serve
 
 ## Get access to page context
 
-When the workbench is hosted locally, you don't have the SharePoint page context. You can still test your web part in many different ways. For example, you can concentrate on building the web part's UX and use mock data to simulate SharePoint interaction when you don't have the SharePoint context.
-
-However, when the workbench is hosted in SharePoint, you get access to the page context, which provides various key properties such as:
+The hosted workbench in SharePoint enables access to the page context, which exposes the following key properties such as:
 
 - Web title
 - Web absolute URL
@@ -36,51 +37,41 @@ However, when the workbench is hosted in SharePoint, you get access to the page 
 
 ### To get access to the page context
 
-To access contextual information in your web part, you'll be using the following object in your code:
+To access contextual information in your web part, you'll use the following object in your code:
 
 ```typescript
 this.context.pageContext
 ```
 
-1. Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\helloWorld\HelloWorldWebPart.ts**.
-1. Inside the `render()` method, replace the **innerHTML** code block with the following code:
+1. Within Visual Studio Code, locate & open **.\src\webparts\helloWorld\HelloWorldWebPart.ts**.
+1. Inside the `render()` method, replace the **innerHTML** code block with the following:
 
     ```tsx
     this.domElement.innerHTML = `
-      <div class="${ styles.helloWorld }">
-        <div class="${ styles.container }">
-          <div class="${ styles.row }">
-            <div class="${ styles.column }">
-              <span class="${ styles.title }">Welcome to SharePoint!</span>
-              <p class="${ styles.subTitle }">Customize SharePoint experiences using web parts.</p>
-              <p class="${ styles.description }">${escape(this.properties.description)}</p>
-              <p class="${ styles.description }">${escape(this.properties.test)}</p>
-              <p class="${ styles.description }">Loading from ${escape(this.context.pageContext.web.title)}</p>
-              <a href="https://aka.ms/spfx" class="${ styles.button }">
-                <span class="${ styles.label }">Learn more</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>`;
+    <section class="${styles.helloWorld} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
+      <div class="${styles.welcome}">
+        <img alt="" src="${this._isDarkTheme ? require('./assets/welcome-dark.png') : require('./assets/welcome-light.png')}" class="${styles.welcomeImage}" />
+        <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
+        <div>${this._environmentMessage}</div>
+      </div>
+      <div>
+        <h3>Welcome to SharePoint Framework!</h3>
+        <div>Web part description: <strong>${escape(this.properties.description)}</strong></div>
+        <div>Web part test: <strong>${escape(this.properties.test)}</strong></div>
+        <div>Loading from: <strong>${escape(this.context.pageContext.web.title)}</strong></div>        
+      </div>
+    </section>`;
     ```
 
-1. Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Because this web part loads from the local environment, the title is **Local workbench**.
+1. Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `div` is used to display `this.context.pageContext.web.title`.
 1. Save the file. The **gulp serve** running in your console detects this save operation and:
 
-    - Builds and bundles the updated code automatically.
-    - Refreshes your local workbench page (as the web part code needs to be reloaded).
+    - builds and bundles the updated code automatically
 
     > [!NOTE]
     > Keep the console window and Visual Studio Code side-by-side to see gulp automatically compile as you save changes in Visual Studio Code.
 
-1. In your browser, switch to the local **SharePoint workbench** tab. If you've already closed the tab, the URL is `https://localhost:4321/temp/workbench.html`.
-
-    You should see the following in the web part:
-
-    ![SharePoint page context in localhost](../../../images/sp-mock-localhost-wp.png)
-
-1. Navigate to the SharePoint workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that on the SharePoint Online side, you need to refresh the page to see the changes.
+1. Navigate to your SharePoint site's hosted workbench hosted. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Refresh the hosted workbench to pick up the changes from the rebuilt code bundle.
 
     You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
@@ -90,8 +81,8 @@ this.context.pageContext
 
 You need a list model to start working with SharePoint list data. To retrieve the lists, you need two models.
 
-1. Switch to Visual Studio Code and go to **src\webparts\helloWorld\HelloWorldWebPart.ts**.
-1. Define the following `interface` models just above the `HelloWorldWebPart` class:
+1. Within Visual Studio Code, locate and open **.\src\webparts\helloWorld\HelloWorldWebPart.ts**.
+1. Define the following interfaces immediately before the `HelloWorldWebPart` class declaration:
 
     ```typescript
     export interface ISPLists {
@@ -106,65 +97,6 @@ You need a list model to start working with SharePoint list data. To retrieve th
 
     The **ISPList** interface holds the SharePoint list information that we're connecting to.
 
-## Retrieve lists from mock store
-
-To test in the local workbench, you need a mock store that returns mock data.
-
-### To create a mock store
-
-1. Create a new file inside the **src\webparts\helloWorld** folder named **MockHttpClient.ts**.
-1. Copy the following code into **MockHttpClient.ts**:
-
-    ```typescript
-    import { ISPList } from './HelloWorldWebPart';
-
-    export default class MockHttpClient  {
-
-      private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' },
-                                          { Title: 'Mock List 2', Id: '2' },
-                                          { Title: 'Mock List 3', Id: '3' }];
-
-      public static get(): Promise<ISPList[]> {
-        return new Promise<ISPList[]>((resolve) => {
-          resolve(MockHttpClient._items);
-        });
-      }
-    }
-    ```
-
-    Things to note about the code:
-
-    - Because there are multiple exports in **HelloWorldWebPart.ts**, the specific one to import is specified by using `{ }`. In this case, only the data model `ISPList` is required.
-    - You don't need to type the file extension when importing from the default module, which in this case is `HelloWorldWebPart`.
-    - It exports the `MockHttpClient` class as a default module so that it can be imported in other files.
-    - It builds the initial `ISPList` mock array and returns.
-
-1. Save the file.
-
-You can now use the `MockHttpClient` class in the `HelloWorldWebPart` class. You first need to import the `MockHttpClient` module.
-
-### To import the **MockHttpClient** module
-
-1. Open the **HelloWorldWebPart.ts** file.
-1. Copy and paste the following code just under `import * as strings from 'HelloWorldWebPartStrings';`.
-
-    ```typescript
-    import MockHttpClient from './MockHttpClient';
-    ```
-
-1. Add the following private method that mocks the list retrieval inside the `HelloWorldWebPart` class.
-
-    ```typescript
-    private _getMockListData(): Promise<ISPLists> {
-      return MockHttpClient.get()
-        .then((data: ISPList[]) => {
-          var listData: ISPLists = { value: data };
-          return listData;
-        }) as Promise<ISPLists>;
-    }
-    ```
-
-1. Save the file.
 
 ## Retrieve lists from SharePoint site
 
@@ -175,7 +107,7 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
 ### To use this helper class, import them from the @microsoft/sp-http module
 
 1. Scroll to the top of the **HelloWorldWebPart.ts** file.
-1. Copy and paste the following code just under `import MockHttpClient from './MockHttpClient';`:
+1. Locate the line `import * as strings from 'HelloWorldWebPartStrings';` and add the following code immediately after it:
 
     ```typescript
     import {
@@ -184,7 +116,7 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
     } from '@microsoft/sp-http';
     ```
 
-1. Add the following private method to retrieve lists from SharePoint inside the **HelloWorldWebPart** class.
+1. Add the following method to retrieve lists from SharePoint inside the **HelloWorldWebPart** class.
 
     ```typescript
     private _getListData(): Promise<ISPLists> {
@@ -195,7 +127,7 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
     }
     ```
 
-    The method uses the `spHttpClient` helper class and issues an HTTP **GET** request. It uses the `ISPLists` model and also applies a filter to not retrieve hidden lists.
+    The method uses the `spHttpClient` helper class and issues an HTTP **GET** request. It uses the `ISPLists` interface and also applies a filter to not retrieve hidden lists.
 
 1. Save the file.
 1. Switch to the console window that is running **gulp serve** and check if there are any errors. If there are errors, gulp reports them in the console, and you need to fix them before proceeding.
@@ -210,7 +142,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 
     By default, the styles are scoped to your web part. You can see that as the styles are defined under `.helloWorld`.
 
-1. Add the following styles after the `.button` style, but still inside the main `.helloWorld` style section:
+2. Add the following styles after the `.links` style:
 
     ```css
     .list {
@@ -242,7 +174,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
     }
     ```
 
-1. Save the file.
+3. Save the file.
 
     Gulp rebuilds the code in the console as soon as you save the file. This generates the corresponding typings in the **HelloWorldWebPart.module.scss.ts** file. After compiled to TypeScript, you can then import and reference these styles in your web part code.
 
@@ -252,25 +184,15 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
     You can see that in the `render()` method of the web part:
 
     ```html
-    <div class="${styles.row}">
+    <div class="${styles.welcome}">
     ```
 
 ## Render lists information
 
 Open the `HelloWorldWebPart` class.
 
-SharePoint workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the `EnvironmentType` module.
-
-### To use the EnvironmentType module
-
-1. Import the `Environment` and the `EnvironmentType` modules from the **\@microsoft/sp-core-library** bundle. Add it to the `import` section at the top as shown in the following code:
-
-    ```typescript
-    import {
-      Environment,
-      EnvironmentType
-    } from '@microsoft/sp-core-library';
-    ```
+> [!NOTE]
+> SharePoint Framework provides you options to detect environment details and host location using the `isServedFromLocalhost` property or with EnvironmentType details. In this case we'll focus on connecting to the data in the site which is hosting the online workbench.
 
 1. Add the following private method inside the `HelloWorldWebPart` class:
 
@@ -293,33 +215,20 @@ SharePoint workbench gives you the flexibility to test web parts in your local e
 
     This method references the new CSS styles added earlier by using the `styles` variable and is used to render list information that will be received from REST API.
 
-1. Save the file.
-1. Add the following private method inside the `HelloWorldWebPart` class to call the respective methods to retrieve list data:
+2. Save the file.
+3. Add the following private method inside the `HelloWorldWebPart` class to call the method to retrieve list data:
 
     ```typescript
     private _renderListAsync(): void {
-      // Local environment
-      if (Environment.type === EnvironmentType.Local) {
-        this._getMockListData().then((response) => {
+      this._getListData()
+        .then((response) => {
           this._renderList(response.value);
         });
-      }
-      else if (Environment.type == EnvironmentType.SharePoint ||
-               Environment.type == EnvironmentType.ClassicSharePoint) {
-        this._getListData()
-          .then((response) => {
-            this._renderList(response.value);
-          });
-      }
     }
     ```
 
-    Things to note about `EnvironmentType` in the `_renderListAsync()` method:
+4. Save the file.
 
-    - The `Environment.type` property helps you check if you are in a local or SharePoint environment.
-    - The correct method is called depending on where your workbench is hosted.
-
-1. Save the file.
 
 ## Retrieve list data
 
@@ -327,23 +236,20 @@ SharePoint workbench gives you the flexibility to test web parts in your local e
 
     ```typescript
     this.domElement.innerHTML = `
-      <div class="${ styles.helloWorld }">
-        <div class="${ styles.container }">
-          <div class="${ styles.row }">
-            <div class="${ styles.column }">
-              <span class="${ styles.title }">Welcome to SharePoint!</span>
-              <p class="${ styles.subTitle }">Customize SharePoint experiences using web parts.</p>
-              <p class="${ styles.description }">${escape(this.properties.description)}</p>
-              <p class="${ styles.description }">${escape(this.properties.test)}</p>
-              <p class="${ styles.description }">Loading from ${escape(this.context.pageContext.web.title)}</p>
-              <a href="https://aka.ms/spfx" class="${ styles.button }">
-                <span class="${ styles.label }">Learn more</span>
-              </a>
-            </div>
-          </div>
-          <div id="spListContainer" />
-        </div>
-      </div>`;
+    <section class="${styles.helloWorld} ${!!this.context.sdks.microsoftTeams ? styles.teams : ''}">
+      <div class="${styles.welcome}">
+        <img alt="" src="${this._isDarkTheme ? require('./assets/welcome-dark.png') : require('./assets/welcome-light.png')}" class="${styles.welcomeImage}" />
+        <h2>Well done, ${escape(this.context.pageContext.user.displayName)}!</h2>
+        <div>${this._environmentMessage}</div>
+      </div>
+      <div>
+        <h3>Welcome to SharePoint Framework!</h3>
+        <div>Web part description: <strong>${escape(this.properties.description)}</strong></div>
+        <div>Web part test: <strong>${escape(this.properties.test)}</strong></div>
+        <div>Loading from: <strong>${escape(this.context.pageContext.web.title)}</strong></div>
+      </div>
+      <div id="spListContainer" />
+    </section>`;
 
     this._renderListAsync();
     ```
@@ -352,17 +258,11 @@ SharePoint workbench gives you the flexibility to test web parts in your local e
 
     Notice in the **gulp serve** console window that it rebuilds the code. Make sure you don't see any errors.
 
-1. Switch to your local workbench and add the HelloWorld web part.
+1. If you're using the SharePoint Framework v1.12.1 or earlier, for instance if you're on SharePoint Server on-premises, switch to your local workbench and add the HelloWorld web part.
 
-    You should see the mock data returned.
+    You should see the list data returned.
 
-    ![Render lists data from localhost](../../../images/sp-lists-render-localhost.png)
-
-1. Switch to the workbench hosted in SharePoint. Refresh the page and add the HelloWorld web part.
-
-    You should see lists returned from the current site.
-
-    ![Render lists data from SharePoint](../../../images/sp-lists-render-spsite.png)
+    ![Render lists data from localhost](../../../images/sp-lists-render-online-workbench.png)
 
 1. Now you can stop the server from running. Switch to the console and stop **gulp serve**. Select <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the gulp task.
 

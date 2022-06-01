@@ -1,7 +1,7 @@
 ---
 title: Supported extensibility platforms - overview
 description: Learn what platforms support customizations and rely on the SharePoint Framework for their extensibility opportunities available to developers.
-ms.date: 09/08/2021
+ms.date: 11/16/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -41,6 +41,6 @@ Learn more about using SPFx for Microsoft Teams: [SPFx support for Microsoft Tea
 
 ## Microsoft Viva Connections
 
-Microsoft Viva Connections, your gateway to modern engagement experiences is designed to keep everyone in your organization engaged and informed. Viva Connections entirely relies on SharePoint for it's customization and extensibility story. This includes both the Viva Connections desktop and mobile experiences. Both of these experiences rely on the SPFx for all customizations.
+Microsoft Viva Connections, your gateway to modern engagement experiences is designed to keep everyone in your organization engaged and informed. Viva Connections entirely relies on SharePoint for its customization and extensibility story. This includes both the Viva Connections desktop and mobile experiences. Both of these experiences rely on the SPFx for all customizations.
 
 Learn more about using SPFx on Viva Connections: [SPFx support for Viva Connections](viva/overview-viva-connections.md).

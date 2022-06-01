@@ -1,13 +1,13 @@
 ---
-title: Site design JSON schema
-description: JSON schema reference for building site designs for SharePoint.
-ms.date: 09/24/2021
+title: Site template JSON schema
+description: JSON schema reference for building site templates for SharePoint.
+ms.date: 03/2431/2022
 ms.localizationpriority: high
 ---
 
-# Site design JSON schema
+# Site template JSON schema
 
-The site design is a list of **actions**. For more complex actions, such as creating a list, there are also **subactions**. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time.
+The site template is a list of **actions**. For more complex actions, such as creating a list, there are also **subactions**. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used; otherwise, an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time.
 
 The overall JSON structure is specified as follows:
 
@@ -24,38 +24,61 @@ The overall JSON structure is specified as follows:
 }
 ```
 
-You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
+> [!TIP]
+> You can view - and reference - the latest schema here: https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json
 
-#### Applying site designs multiple times
+> [!NOTE]
+> **Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema.
 
-**Actions** can be run more than once on a site. Rerunning **actions** on the same site with the same parameters will result in an update to the existing schema and not duplication of schema.
+
+
+## addContentTypesFromHub
+
+Use the **addContentTypesFromHub** verb to sync content types from a content type hub to the site.
+
+> [!NOTE]
+> Once **addContentTypesFromHub** is applied on a site, the **addContentType** subaction on a list will be able to add it to the list by name.
+
+### JSON value
+
+- `ids`: An array of the content type IDs that need to be synced.
+
+#### Example
+
+```json
+{
+  "verb": "addContentTypesFromHub",
+  "ids": ["0x01007CE30DD1206047728BAFD1C39A850120"]
+}
+```
+
 
 ## Create a new SharePoint list
 
 Use the **createSPList** verb to create a new SharePoint list.
 
 > [!NOTE]
-> Once **createSPList** is applied on a site, runnning the **createSPList** with the same list name will act as an update to the existing list.
+> Once **createSPList** is applied on a site, running the **createSPList** with the same list name will act as an update to the existing list.
 
-#### JSON values
+### JSON values
 
 - `listName`: The name of the list.
-- `templateType`: Which template to apply to the list. Typically you would use value 100. The full list of template type values is documented in [SPListTemplateType enumeration](/previous-versions/office/sharepoint-server/ms413878(v=office.15)) - but the ones we currently support include:
+- `templateType`: Which template to apply to the list. Typically, you would use value 100. The full list of template type values is documented in [SPListTemplateType enumeration](/previous-versions/office/sharepoint-server/ms413878(v=office.15)) - but the ones we currently support include:
 
   | List Template Name | Enum |
   |--------------|---------|
-   Generic List | 100
-   Document Library | 101
-   Survey | 102
-   Links | 103
-   Announcements | 104
-   Contacts | 105
-   Events | 106
-   Tasks | 107
-   Discussion Board | 108
-   PictureLibrary | 109
-   Site Pages | 119
-   Issue Tracking | 1100
+  |Generic List | 100|
+  |Document Library | 101|
+  |Survey | 102|
+  |Links | 103|
+  |Announcements | 104|
+  |Contacts | 105|
+  |Events | 106|
+  |Tasks | 107|
+  |Discussion Board | 108|
+  |PictureLibrary | 109|
+  |Site Pages | 119|
+  |Issue Tracking | 1100|
 
   If you use 101 or 119 and reference the default names ("Documents" or "Site Pages"), you can modify the library created with the template. See example below.
 - `subactions`: An array of actions that run in the order listed to create your list.
@@ -152,7 +175,7 @@ Deletes a default field that was provided by the selected template type.
 
 ### addSPFieldXml
 
-Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining fields and their elements using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
 
 Currently these field constructs can't be designated as site columns nor added to content types. To create site columns with Field XML, use the **createSiteColumnXml** action.
 
@@ -172,7 +195,7 @@ Currently these field constructs can't be designated as site columns nor added t
 
 ### addSPLookupFieldXml
 
-Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](https://docs.microsoft.com/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
+Enables defining lookup fields and their dependent lists element using Collaborative Application Markup Language (CAML). For reference, see [Field element (Field)](/sharepoint/dev/schema/field-element-field). Providing the ID attribute in the field schemaXml is important in order to prevent the field from being created multiple times if the script is run more than once.
 
 #### JSON value
 
@@ -198,7 +221,7 @@ Subaction to add a previously defined site column directly to a list (existing o
 #### JSON value
 
 - `internalName`: The internal name of the site column to add.
-- `addToDefaultView`: Optional attribute that defaults to false. If true, the newly added field will also be added to the default view.
+- `addToDefaultView`: Optional attribute that defaults to **False**. If **True**, the newly added field will also be added to the default view.
 
 #### Example
 
@@ -218,12 +241,12 @@ Defines and adds a view to the list. Use this action to specify the desired colu
 
 - `name`: The name of the view.
 - `viewFields`: An array of the internal names of the fields in your view.
-- `query`: A CAML query string that contains the `where` clause for the view's query. See [CAML schemas] (https://docs.microsoft.com/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas).
+- `query`: A CAML query string that contains the `where` clause for the view's query. See [CAML schemas](/sharepoint/dev/schema/collaborative-application-markup-language-caml-schemas).
 - `rowLimit`: The row limit of the view.
 - `isPaged`: Specifies whether the view is paged.
 - `makeDefault`: If **True**, the view will be made the default for the list; otherwise, **False**.
 - `scope`: An optional setting to specify the scope of the view. For more information, see [SPViewScope enumeration](/previous-versions/office/sharepoint-server/ms458474(v=office.15)).
-- `formatterJSON`: An optional setting to specify the JSON formatting for the view
+- `formatterJSON`: An optional setting to specify the JSON formatting for the view.
 
 #### Example
 
@@ -357,7 +380,7 @@ In this example, we are formatting a number column as a data bar.
 
 ### associateFieldCustomizer
 
-Registers field extension for a list field. For more information on these client-side extensions, see [Build field customizer](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) tutorial.
+Registers field extension for a list field. For more information on these client-side extensions, see [Build field customizer](/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) tutorial.
 
 #### JSON values
 
@@ -396,7 +419,7 @@ Registers field extension for a list field. For more information on these client
       "verb": "associateFieldCustomizer",
       "internalName": "ElectricSlide",
       "clientSideComponentId": "35944670-3111-4482-b152-9e9d1sean9f7",
-      "clientSideComponentProperties": "{\"sampleText\":\"Yes - added by a site design, what?\"}"
+      "clientSideComponentProperties": "{\"sampleText\":\"Yes - added by a site template, what?\"}"
     }
   ]
 }
@@ -445,7 +468,7 @@ Associates a ListViewCommandSet to the list
         "title": "HelloWorld",
         "location": "CommandBar",
         "clientSideComponentId": "13234283-d6c2-408f-a9ef-31a920c8ae78",
-        "clientSideComponentProperties": "{\"sampleText\":\"added by a site design\"}"
+        "clientSideComponentProperties": "{\"sampleText\":\"added by a site template\"}"
       }
   ]
 }
@@ -456,7 +479,7 @@ Associates a ListViewCommandSet to the list
 Renames the list. To create a new list with a specific name, instead of using setTitle use the `listName` parameter in the `CreateSPList` action.
 
 > [!NOTE]
-> Using `setTitle` will rename the list, preventing the list from updating if the site design is reapplied.
+> Using `setTitle` will rename the list, preventing the list from updating if the site template is reapplied.
 
 #### JSON value
 
@@ -600,13 +623,13 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
 
 #### JSON values
 
-- `url`: The url of the link to add.
+- `url`: The URL of the link to add.
 - `displayName`: The display name of the link.
 - `navComponent`: The component where to add the link, QuickLaunch, Hub, or Footer. The default is **QuickLaunch**.
 - `isWebRelative`: **True** if the link is web relative; otherwise, **False**. The default is **False**.
 - `parentDisplayName`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this displayName. If both this and parentUrl are provided, it searches for a link that matches both to be the parent.
-- `parentUrl`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this url. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
-- `isParentUrlWebRelative`: An optional parameter. **True** if the link is web relative; otherwise, **False**. The default is **False**.
+- `parentUrl`: An optional parameter. If provided, it makes this navigation link a child (sub link) of the navigation link with this URL. If both this and parentDisplayName are provided, it searches for a link that matches both to be the parent.
+- `isParentUrlWebRelative`: An optional parameter. **True** if the link is web relative; otherwise, **False**. The default value is **False**.
 
 #### Example
 
@@ -653,7 +676,7 @@ Use the `removeNavLink` verb to remove a navigation link from the site.
 
 #### JSON values
 
-- `url`: The url of the link to remove.
+- `url`: The URL of the link to remove.
 - `displayName`: The display name of the link.
 - `navComponent`: The component where to remove the link from, QuickLaunch, Hub, or Footer. The default is **QuickLaunch**.
 - `isWebRelative`: **True** if the link is web relative; otherwise, **False**.
@@ -661,7 +684,7 @@ Use the `removeNavLink` verb to remove a navigation link from the site.
 #### Example
 
 > [!NOTE]
-> This action can be used to remove site links added by the collaboration and communication site templates (for example, "home", "documents", "pages", "conversations", etc.).
+> This action can be used to remove site links added by the collaboration and communication site templates (for example, "home", "documents", "pages", and "conversations").
 
 ```json
 {
@@ -789,7 +812,7 @@ Use the `setSiteLogo` verb to specify a logo for your site.
 
 #### JSON value
 
-- `url`: The url of the logo image to use.
+- `url`: The URL of the logo image to use.
 
 #### Example
 
@@ -814,7 +837,8 @@ Use the `joinHubSite` verb to join the site to a designated hub site.
 
 #### Example
 
-[!NOTE] To get the hubSiteId, sign in to a site by using the Connect-PnPOnline cmdlet, and then run:
+> [!NOTE]
+> To get the `hubSiteId`, sign in to a site by using the **Connect-PnPOnline** cmdlet, and then run:
 
 ```PowerShell
 $hubSiteName = "My Hub Site"
@@ -856,10 +880,10 @@ Use the `associateExtension` action to register a deployed SharePoint Framework 
 #### JSON values
 
 - `title`: The title of the extension in the App Catalog.
-- `location`: Used to specify the extension type. If its used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
+- `location`: Used to specify the extension type. If it's used to create commands, then where the command would be displayed; otherwise this should be set to ClientSideExtension.ApplicationCustomizer.
 - `clientSideComponentId`: The identifier (GUID) of the extension in the App Catalog. This property value can be found in the manifest.json file or in the elements.xml file.
 - `clientSideComponentProperties`: An optional parameter, which can be used to provide properties for the extension instance.
-- `registrationId`: An optional parameter, which indicates the type of the list the extension is associated to (if its a list extension).
+- `registrationId`: An optional parameter, which indicates the type of the list the extension is associated to (if it's a list extension).
 - `registrationType`: An optional parameter, which should be specified if the extension is associated with a list.
 - `scope`: Indicates whether the extension is associated with a `Web` or a `Site`.
 
@@ -1012,4 +1036,4 @@ Use the `setSiteExternalSharingCapability` action to manage guest access. For mo
 
 ## See also
 
-- [SharePoint site design and site script overview](site-design-overview.md)
+- [SharePoint site template and site script overview](site-design-overview.md)

@@ -58,6 +58,14 @@ API permissions granted on the tenant-level can be used by any SharePoint Framew
 
 When added to the page, isolated web parts are displayed using an iframe. This iframe points to a unique domain assigned to the SharePoint Framework solution where the web part is located. This domain is also referenced in the return URL of the Azure AD application created to host the isolated permissions for the particular SharePoint Framework solution. Using the unique domain allows to ensure, that only web parts from the particular SharePoint Framework solution can obtain an access token for the isolated set of permissions.
 
+### Property pane for isolated web parts
+Property pane for isolated web parts is rendered as a separate iframe with _additional_ instance of the same web part. It brings some specifics that developers should be aware of:
+- Isolated web part's lifecycle events such as `render` will be called twice: once for the web part itself and once for the property pane.
+- The property pane's iframe size is limited to the panel's dimensions. Take it into consideration if you plan to use modals or any wide controls in your property pane.
+
+### Disposal of isolated web parts
+`onDispose` method for isolated web parts _may not be called_ as iframe removal from DOM automatically cleans all the resources, including socket connections, associated with the iframe's document.
+
 ### Upgrading existing project to use isolated permissions
 
 If you're upgrading an existing SharePoint Framework project to v1.8.0 and want to use the isolated permissions capability, you can do it, by setting in the **config/package-solution.json** file, the `isDomainIsolated` property to `true`. You should ensure, that your project contains only web parts.

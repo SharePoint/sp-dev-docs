@@ -1,7 +1,7 @@
 ---
 title: Create Modern SharePoint Sites using REST
 description: Create and get the status of a new modern SharePoint site by using the REST interface.
-ms.date: 09/02/2021
+ms.date: 04/06/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -58,14 +58,14 @@ body:
 > If you use an app-only context to create the site collection the **Owner property is required**. In other cases this is an optional property and if not present will default to the user calling the REST endpoint.
 
 
-The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/powershell/module/sharepoint-pnp/get-pnpsitedesign) (PnP PowerShell) cmdlets. If you want to apply an out-of-the-box available site design, use the following values:
+The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/sharepoint/dev/declarative-customization/site-design-pnppowershell) (PnP PowerShell) cmdlets. If you want to apply an out-of-the-box available site design, use the following values:
 
 - Topic: `96c933ac-3698-44c7-9f4a-5fd17d71af9e` or null
 - Showcase: `6142d2a0-63a5-4ba0-aede-d9fefca2c767`
 - Blank: `f6cc5403-0d63-442e-96c0-285923709ffc`
 
 > [!IMPORTANT]
-> To apply your custom site designs as retrieved with [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/powershell/module/sharepoint-pnp/get-pnpsitedesign) (PnP PowerShell) you will have to change the JSON as follows:
+> To apply your custom site designs as retrieved with [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/sharepoint/dev/declarative-customization/site-design-pnppowershell) (PnP PowerShell) you will have to change the JSON as follows:
 ```json
 ...
     "SiteDesignId":"00000000-0000-0000-0000-000000000000",
@@ -148,6 +148,7 @@ The full set of values for `SiteStatus` are as follows:
 + `1` - Provisioning.  The site is currently being provisioned.
 + `2` - Ready.  The site has been created.
 + `3` - Error.  An error occurred while provisioning the site.
++ `4` - Site with requested URL already exist.
 
 ## See also
 

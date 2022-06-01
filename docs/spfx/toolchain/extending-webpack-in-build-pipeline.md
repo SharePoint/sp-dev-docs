@@ -132,7 +132,7 @@ Now that we've configured the loader, let's update our code and add a few files 
 1. To use this HTML string in any of your source **.ts** files, add the following `require()` line at the top of the file after your imports, for example:
 
     ```typescript
-    const markdownString: string = require<string>('./../../../../src/readme.md');
+    const markdownString: string = require<string>('./../../../../src/my-markdown.md');
     ```
 
     Webpack by default looks in the `lib` folder for the file, but by default `.md` files don't get copied to the `lib` folder, meaning that we need to create a rather lengthy relative path. We can control this setting by defining a config file to tell the toolchain to copy `md` files to the lib folder.

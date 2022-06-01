@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 10/21/2020
+ms.date: 04/25/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Visual Studio Code is a popular code editor frequently used for building SharePoint Framework solutions. By setting up debugging of your SharePoint Framework solution in Visual Studio Code, you can more efficiently step through your code and fix errors.
 
-You can also see the required steps to enable debugging in Visual Studio Code in this video on the SharePoint PnP YouTube Channel:
+You can also see the required steps to enable debugging in Visual Studio Code in this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!VIDEO https://www.youtube.com/embed/oNChcluMrm8]
 
@@ -20,11 +20,6 @@ The easiest way to configure Visual Studio Code to debug SharePoint Framework so
 The default SharePoint Framework web parts and extensions project templates include the prerequisites and prompt for the required Visual Studio Code extensions to install. In this case, it prompts to install Debugger for Chrome Visual Studio Code extension.
 
 You also need **Google Chrome**. [Download and install the latest version of Google Chrome](https://www.google.com/chrome/browser/desktop/index.html).
-
-> [!TIP]
-> If you're using a version of SharePoint Framework Yeoman generator that is older than version 1.3.4, you can [install the Chrome debugger extension for Visual Studio Code from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome).
-
-In case you want to debug your projects with **Microsoft Edge**, you need to [install the Debugger for Edge extension for Visual Studio Code from the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) and follow the steps in [Debugging with Microsoft Edge or older projects](#debugging-with-microsoft-edge-or-older-projects).
 
 ## Debug configurations
 
@@ -175,9 +170,9 @@ Debugging an Extension in a hosted workbench is similar to the steps for a Web P
 
     ![Allow Debug Manifest question from the page](../images/ext-app-debug-manifest-message.png)
 
-    When the page loads, you should now be able to see the Extension on your page(in this case a list view command extension):
+    When the page loads, you should now be able to see the Extension on your page (in this case a list view command extension):
 
-    ![Hitting Breakpoints in the Visual Studio Code](../images/debug-Extension-Loaded.png)
+    ![SPFx extension loaded in the page](../images/debug-Extension-Loaded.png)
 
     In addition, you can now toggle Breakpoints and step through the code:
 
@@ -212,7 +207,7 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
       "configurations": [
         {
           "name": "Local workbench",
-          "type": "edge",
+          "type": "msedge",
           "request": "launch",
           "url": "https://localhost:4321/temp/workbench.html",
           "webRoot": "${workspaceRoot}",
@@ -270,7 +265,7 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
       "configurations": [
         {
           "name": "Local workbench",
-          "type": "edge",
+          "type": "msedge",
           "request": "launch",
           "url": "https://localhost:4321/temp/workbench.html",
           "webRoot": "${workspaceRoot}",
@@ -284,7 +279,7 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
         },
         {
           "name": "Hosted workbench",
-          "type": "edge",
+          "type": "msedge",
           "request": "launch",
           "url": "https://contoso.sharepoint.com/_layouts/workbench.aspx",
           "webRoot": "${workspaceRoot}",
@@ -348,5 +343,5 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
 
 - [How to debug your SharePoint Framework web part (Elio Struyf)](https://www.eliostruyf.com/how-to-debug-your-sharepoint-framework-web-part/)
 - [Debug SPFx React web part with Visual Studio Code (Velin Georgiev)](https://blog.velingeorgiev.com/how-debug-sharepoint-framework-webpart-visual-studio-code)
-- [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md)
+- [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md)
 - [SharePoint Framework Overview](sharepoint-framework-overview.md)

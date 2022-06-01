@@ -1,7 +1,7 @@
 ---
 title: Add the jQueryUI Accordion to your SharePoint client-side web part
 description: Adding the jQueryUI Accordion to your web part project involves creating a new web part.
-ms.date: 07/17/2020
+ms.date: 10/21/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -17,7 +17,7 @@ Ensure that you've completed the following steps before you start:
 
 - [Build your first web part](build-a-hello-world-web-part.md)
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/N0C9azIyiTo]
 
@@ -41,23 +41,22 @@ The developer toolchain uses Webpack & SystemJS to bundle and load your web part
     cd jquery-webpart
     ```
 
-1. Create a new jQuery web part by running the Yeoman SharePoint Generator:
+1. Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
 
     ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted:
-1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
+    The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    - **What is your solution name?**: jquery-webpart
     - **Which type of client-side component to create?**: WebPart
-    - **What is your Web part name?**: jQuery
     - **Which framework would you like to use?**: No JavaScript framework
 
-At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **jQueryWebPart** as well.
+At this point, Yeoman installs the required dependencies and scaffolds the solution files, including the web part. This might take a few minutes.
 
 ## Install jQuery and jQuery UI NPM Packages
+
+The web part uses jQuery and the Accordion included in the jQuery UI project. To use these, add them to the project's dependencies:
 
 1. In the console, execute the following to install the jQuery NPM package:
 
@@ -71,26 +70,20 @@ At this point, Yeoman installs the required dependencies and scaffolds the solut
     npm install jqueryui
     ```
 
-1. Next, we need to install the TypeScript type declarations for our project.
+1. Next, we need to install the TypeScript type declarations for our project to simplify the development process.
 
-    Open your console and install the needed types:
+    In the console, execute the following commands to install the type declaration packages:
 
     ```console
     npm install @types/jquery@2 --save-dev
     npm install @types/jqueryui --save-dev
     ```
 
-### To unbundle external dependencies from web part bundle
+### Exclude external dependencies from web part bundle
 
-By default, all dependencies referenced in your project's code are bundled into the resulting web part bundle. In most cases, this isn't ideal because it unnecessarily increases the file size. You can configure the project to exclude the dependencies from the web part bundle.
+By default, all dependencies referenced in your project's code are included in the resulting web part bundle. In most cases, this isn't ideal because it unnecessarily increases the file size. You can configure the project to exclude the dependencies from the web part bundle and instead, instruct the SharePoint Framework runtime to load them as dependencies before the web part's bundle is loaded.
 
-1. Enter the following to open the web part project in Visual Studio Code:
-
-    ```console
-    code .
-    ```
-
-1. In Visual Studio Code, open the file **config\config.json**.
+1. In Visual Studio Code (VS Code), open the file **config\config.json**.
 
     This file contains information about your bundle(s) and external dependencies.
 
@@ -115,24 +108,20 @@ By default, all dependencies referenced in your project's code are bundled into 
     "externals": {},
     ```
 
-1. To exclude `jQuery` and `jQueryUI` from the generated bundle, add the following two modules to the `externals` property:
+1. Exclude `jQuery` and `jQueryUI` from the generated bundle by adding the following two modules to the `externals` property:
 
     ```json
     {
-      //...
-
       "externals": {
         "jquery": "node_modules/jquery/dist/jquery.min.js",
         "jqueryui": "node_modules/jqueryui/jquery-ui.min.js"
       },
-
-      //...
     }
     ```
 
     Now when you build your project, `jQuery` and `jQueryUI` are not bundled into your default web part bundle.
 
-    The full content of the **config.json** file is currently as follows:
+    The completed **config.json** file should look similar to the following:
 
     ```json
     {
@@ -160,81 +149,83 @@ By default, all dependencies referenced in your project's code are bundled into 
 
 ## Build the Accordion
 
-Open the project folder **jquery-webpart** in Visual Studio Code. Your project should have the jQuery web part that you added earlier under the **/src/webparts/jQuery** folder.
+At this point, the project is configured to depend on jQuery and jQueryUI, but to not include the in the resulting solution's bundle. The next step is to implement the web part by adding the Accordion to the web part.
 
-### To add the Accordion HTML
+### Add the Accordion HTML
 
-1. Add a new file  **MyAccordionTemplate.ts** in the **src/webparts/jQuery** folder.
-1. Create and export (as a module) a class `MyAccordionTemplate` that holds the HTML code for the accordion:
+1. In VS Code, Add a new file **MyAccordionTemplate.ts** in the **./src/webparts/jQuery** folder.
+1. Add class `MyAccordionTemplate` that contains the HTML for the accordion. Add the following code to the **MyAccordionTemplate.ts** file:
 
     ```typescript
     export default class MyAccordionTemplate {
-        public static templateHtml: string =  `
-          <div class="accordion">
-            <h3>Section 1</h3>
-            <div>
-                <p>
-                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-                </p>
-            </div>
-            <h3>Section 2</h3>
-            <div>
-                <p>
-                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                suscipit faucibus urna.
-                </p>
-            </div>
-            <h3>Section 3</h3>
-            <div>
-                <p>
-                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                </p>
-                <ul>
-                <li>List item one</li>
-                <li>List item two</li>
-                <li>List item three</li>
-                </ul>
-            </div>
-            <h3>Section 4</h3>
-            <div>
-                <p>
-                Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                mauris vel est.
-                </p>
-                <p>
-                Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                inceptos himenaeos.
-                </p>
-            </div>
-        </div>`;
+      public static templateHtml: string =  `
+        <div class="accordion">
+          <h3>Section 1</h3>
+          <div>
+              <p>
+              Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+              ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+              amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+              odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+              </p>
+          </div>
+          <h3>Section 2</h3>
+          <div>
+              <p>
+              Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+              purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+              velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+              suscipit faucibus urna.
+              </p>
+          </div>
+          <h3>Section 3</h3>
+          <div>
+              <p>
+              Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+              Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+              ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+              lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+              </p>
+              <ul>
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+              </ul>
+          </div>
+          <h3>Section 4</h3>
+          <div>
+              <p>
+              Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+              et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+              mauris vel est.
+              </p>
+              <p>
+              Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos.
+              </p>
+          </div>
+      </div>`;
     }
     ```
 
 1. Save the file.
 
-### To import the Accordion HTML
+### Import the Accordion HTML
 
-1. In Visual Studio Code, open **src\webparts\jQuery\JQueryWebPart.ts**.
-1. Add the following `import` statement after the existing `import` statements at the top of the file:
+1. In VS Code, open **./src/webparts/jQuery/JQueryWebPart.ts**.
+1. Add the following `import` statement immediately after the existing `import` statements at the top of the file:
 
     ```typescript
     import MyAccordionTemplate from './MyAccordionTemplate';
     ```
 
-### To import jQuery and jQueryUI
+### Import jQuery and jQueryUI
 
-1. You can import jQuery to your web part in the same way that you imported `MyAccordionTemplate`. Add the following `import` statement after the existing `import` statements:
+1. Import jQuery to your web part in the same way that you imported `MyAccordionTemplate`.
+
+    Add the following `import` statement after the existing `import` statements:
 
     ```typescript
     import * as jQuery from 'jquery';
@@ -243,13 +234,17 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 
 1. The jQueryUI project uses an external CSS file to implement it's user experience. Your web part needs to load this CSS file at runtime:
 
-    1. To load a CSS file at runtime, use the SharePoint module loader by utilizing the `SPComponentLoader` object. Add the following `import` statement.
+    1. To load a CSS file at runtime, use the SharePoint module loader by utilizing the `SPComponentLoader` object.
+    
+        Add the following `import` statement.
 
         ```typescript
         import { SPComponentLoader } from '@microsoft/sp-loader';
         ```
 
-    1. Load the jQueryUI styles in the `JQueryWebPart` web part class by adding a constructor and use the `SPComponentLoader`. Add the following constructor to your web part:
+    1. Load the jQueryUI styles in the `JQueryWebPart` web part class by adding a constructor and use the `SPComponentLoader`.
+    
+        Add the following constructor to your web part:
 
         ```typescript
         public constructor() {
@@ -259,15 +254,15 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
         }
         ```
 
-          This code does the following:
+        This code does the following:
 
         - Calls the parent constructor with the context to initialize the web part.
         - Asynchronously loads the accordion styles in the CSS file from a CDN.
 
-### To render Accordion
+### Render the Accordion
 
-1. In the **jQueryWebPart.ts** file, go to the `render()` method.
-1. Set the web part's inner HTML to render the accordion HTML:
+1. In the **jQueryWebPart.ts** file, locate the `render()` method.
+1. Set the web part's inner HTML to render the accordion HTML by replacing the contents of the `render()` method with the following:
 
     ```typescript
     this.domElement.innerHTML = MyAccordionTemplate.templateHtml;
@@ -288,7 +283,7 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 
     The jQueryUI typed declaration allows you to create a typed variable called `JQueryUI.AccordionOptions` and specify the supported properties.
 
-    If you play around with the IntelliSense, you notice that you get full support for available methods under `JQueryUI.` as well as the method parameters.
+    If you play around with the IntelliSense, you'll notice that you'll get full support for available methods under `JQueryUI.` as well as the method parameters.
 
 1. Finally, initialize the accordion:
 
@@ -324,15 +319,12 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 1. In your console, ensure that you're still in the **jquery-webpart** folder, and execute the following to build and preview your web part:
 
     ```console
-    gulp serve
+    gulp serve --nobrowser
     ```
 
-    > [!NOTE]
-    > Visual Studio Code provides built-in support for gulp and other task runners. You can select <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> in Windows or <kbd>CMD</kbd>+<kbd>SHIFT</kbd>+<kbd>B</kbd> in macOS to debug and preview your web part.
+    Once the web server starts, open a browser and navigate to a SharePoint site's hosted workbench to test your project. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-    Gulp executes the tasks and opens the local SharePoint web part Workbench.
-
-1. On the workbench page that loads in the browser, select the **+** (plus sign) to show the list of web parts, and add the jQuery web part. You should now see the jQueryUI Accordion!
+1. On the workbench, select the **+** (plus sign) to show the list of web parts, and add the jQuery web part. You should now see the jQueryUI Accordion!
 
     ![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Use cascading dropdowns in web part properties
 description: Create cascading dropdown controls in the SharePoint client-side web part property pane without developing a custom property pane control.
-ms.date: 06/16/2020
+ms.date: 02/11/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -39,12 +39,9 @@ The source of the working web part is available on GitHub at [sp-dev-fx-webparts
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: react-cascadingdropdowns
-    - **Which baseline packages do you want to target for your component(s)?**: SharePoint Online
-    - **Where do you want to place the files?**: Use the current folder
     - **Which type of client-side component to create?**: WebPart
     - **What is your Web part name?**: List items
-    - **What is your Web part description?**: Shows list items from the selected list
-    - **Which framework would you like to use?**: React
+    - **Which template would you like to use?**: React
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
@@ -66,7 +63,7 @@ You'll build a web part that displays list items from a selected SharePoint list
     }
     ```
 
-1. Open the **src/webparts/listItems/IListItemsWebPartProps.ts** file, and replace its contents with:
+1. Open the **src/webparts/listItems/ListItemsWebPart.ts** file, and replace the `IListItemsWebPartProps` interface with the following:
 
     ```typescript
     export interface IListItemsWebPartProps {
@@ -147,25 +144,21 @@ You'll build a web part that displays list items from a selected SharePoint list
 1. In the **src/webparts/listItems/components/ListItems.tsx** file, change the contents of the `render()` method to:
 
     ```tsx
-    export default class ListItems extends React.Component<IListItemsProps, {}> {
     public render(): JSX.Element {
-        return (
-            <div className={styles.listItems}>
-            <div className={styles.container}>
-              <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
-                <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-                  <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-                  <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
-                  <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
-                  <a href="https://aka.ms/spfx" className={styles.button}>
-                    <span className={styles.label}>Learn more</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+      const {
+        listName
+      } = this.props;
+
+      return (
+        <section className={`${styles.listItems} ${hasTeamsContext ? styles.teams : ''}`}>
+          <div className={styles.welcome}>
+            <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
+            <h2>Well done, {escape(userDisplayName)}!</h2>
+            <div>{environmentMessage}</div>
+            <div>List name: <strong>{escape(listName)}</strong></div>
           </div>
-        );
-      }
+        </section>
+      );
     }
     ```
 
@@ -430,22 +423,21 @@ In the **src/webparts/listItems/components/ListItems.tsx** file, change the `ren
 ```tsx
 export default class ListItems extends React.Component<IListItemsProps, {}> {
   public render(): JSX.Element {
+    const {
+      listName,
+      itemName
+    } = this.props;
+
     return (
-        <div className={styles.listItems}>
-        <div className={styles.container}>
-          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
-            <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using web parts.</p>
-              <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
-              <p className="ms-font-l ms-fontColor-white">{escape(this.props.itemName)}</p>
-              <a href="https://aka.ms/spfx" className={styles.button}>
-                <span className={styles.label}>Learn more</span>
-              </a>
-            </div>
-          </div>
+      <section className={`${styles.listItems} ${hasTeamsContext ? styles.teams : ''}`}>
+        <div className={styles.welcome}>
+          <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
+          <h2>Well done, {escape(userDisplayName)}!</h2>
+          <div>{environmentMessage}</div>
+          <div>List name: <strong>{escape(listName)}</strong></div>
+          <div>Item name: <strong>{escape(itemName)}</strong></div>
         </div>
-      </div>
+      </section>
     );
   }
 }

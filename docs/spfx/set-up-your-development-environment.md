@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 06/29/2021
+ms.date: 04/25/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -13,16 +13,16 @@ You can use any text editor to build SharePoint Framework solutions. You can use
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/-2-jWsEa2Yw]
+> [!Video https://www.youtube.com/embed/Cxx9MdjEiEw]
 
 > [!IMPORTANT]
 > The following steps assume you're building solutions for SharePoint Online using the latest version of the SharePoint Framework. If you're building solutions for SharePoint Server 2019 or SharePoint Server 2016, refer to the additional documentation referenced in the [See also](#see-also) section below.
 
 ## Install Node.js
 
-Install the latest version of **[Node.js](https://www.nodejs.org) LTS v14**.
+Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v14**.
 
 This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
@@ -40,12 +40,11 @@ This version is the currently recommended version of Node.js to use with the Sha
 You can check if you already have Node.js already installed, including installed version, by running the following command:
 
 ```console
-node -v
+node --version
 ```
 
-The SharePoint Framework v1.12.1 is supported on the following Node.js versions:
+The SharePoint Framework v1.14.0 is supported on the following Node.js versions:
 
-- Node.js v10.13.0+ (*Dubnium*)
 - Node.js v12.13.0+ (*Erbium*)
 - Node.js v14.15.0+ (*Fermium*)
 
@@ -70,25 +69,25 @@ The SharePoint Framework development and build toolchain leverages various popul
 > You can install all three of the following tools in a single line:
 >
 > ```console
-> npm install gulp yo @microsoft/generator-sharepoint --global
+> npm install gulp-cli yo @microsoft/generator-sharepoint --global
 > ```
 
 ### Install Gulp
 
 [Gulp](https://gulpjs.com) is a JavaScript-based task runner used to automate repetitive tasks. The SharePoint Framework build toolchain uses Gulp tasks to build projects, create JavaScript bundles, and the resulting packages used to deploy solutions.
 
-Enter the following command to install Gulp:
+Enter the following command to install the Gulp CLI:
 
 ```console
-npm install gulp --global
+npm install gulp-cli --global
 ```
-
-> [!IMPORTANT]
-> If you're using Node.js v12+ or higher, you must use Gulp v4+. If you're using a version of Node.js lower than v12, you must use Gulp v3. For more information, see: [SharePoint Framework v1.12.1 release notes | Gulp versions & Node.js v12+](release-1.12.1.md#gulp-versions--nodejs-v12)
 
 ### Install Yeoman
 
 [Yeoman](https://yeoman.io/) helps you kick-start new projects, and prescribes best practices and tools to help you stay productive. SharePoint client-side development tools include a Yeoman generator for creating new web parts. The generator provides common build tools, common boilerplate code, and a common playground website to host web parts for testing.
+
+> [!IMPORTANT]
+> Yeoman version 4.x is required for the SharePoint Framework 1.13 forward.
 
 Enter the following command to install Yeoman:
 
@@ -106,11 +105,11 @@ To install the SharePoint Framework Yeoman generator globally, enter the followi
 npm install @microsoft/generator-sharepoint --global
 ```
 
-For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
+For more information about the Yeoman SharePoint generator, see [Yeoman generator for the SharePoint Framework](yeoman-generator-for-spfx-intro.md).
 
 ## Install a modern web browser
 
-You should be using a modern web browser like [Microsoft Edge](https://www.microsoft.com/edge), [Google Chrome](https://www.google.com/chrome/), or [Firefox](https://www.mozilla.org/firefox/new/) as the development browser. Local workbench doesn't support usage of Internet Explorer 11.
+You should be using a modern web browser like [Microsoft Edge](https://www.microsoft.com/edge), [Google Chrome](https://www.google.com/chrome/), or [Firefox](https://www.mozilla.org/firefox/new/) as the development browser.
 
 ## Trusting the self-signed developer certificate
 
@@ -150,14 +149,14 @@ SharePoint Online contains all versions of the SPFx, including all previous and 
 
 If you're building solutions for a SharePoint Server on-prem deployment, review to the [See also](#see-also) section for details on specific SharePoint versions. Each SharePoint on-prem only supports a specific version of SPFx. This can introduce complicated development environment configurations if you're creating different solutions for different SharePoint deployments.
 
+- **SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1.**
+- **SharePoint Server 2019 uses the SharePoint Framework (SPFx) v1.4.1.**
+
 Depending on your scenario, you may need to maintain different development environments. Developers have used the following approaches to address these challenges:
 
 - virtual machines
 - Docker
 - Node Version Manager (NVM)
-
-- **SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1.**
-- **SharePoint Server 2019 uses the SharePoint Framework (SPFx) v1.4.1.**
 
 ## Troubleshooting
 
@@ -173,11 +172,13 @@ npm list --global --depth=0️
 
 If you're having trouble trusting your self-signed certificate when you run **gulp trust-dev-cert** & you've verified that the correct versions of all dependencies are installed, one solution we usually see resolve the issue is to uninstall all globally installed packages, uninstall Node.js, reboot & start again.
 
-In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder. Locate & delete the folder **<homedir>/.gcb-serve-data** and then try to trust the self-signed development certificate again.
+In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder.
+Locate & delete the folder **{{homedir}}/.gcb-serve-data** for SPFx version earlier than v1.12.1. For later versions delete folder **{{homedir}}/.rushstack** then try to trust the self-signed development certificate again. Otherwise running **gulp untrust-dev-cert** will have same effect to remove the certificate files from the profile folder.
+In case the certificate is not added to the Trusted Root Certification Authority despite running **gulp trust-dev-cert** because of some policies blocking the action, the **rushstack-serve.pem** file from **{{homedir}}/.rushstack** folder can be imported manually into the Certificate Manager under Trusted Root Certification Authority with a local admin account.
 
 ### Unable to Install Packages with NPM - Corporate Proxies
 
-If your development environment is behind a corporate proxy, you need to configure NPM to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [How to setup Node.js and Npm behind a corporate web proxy](https://jjasonclark.com/how-to-setup-node-behind-web-proxy/)
+If your development environment is behind a corporate proxy, you need to configure NPM to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure NPM for a coporate web proxy](https://www.voitanos.io/blog/node-npm-fix-proxy-config/)
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 06/22/2021
+ms.date: 04/28/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -13,7 +13,7 @@ More complex SharePoint Framework client-side web parts likely have many propert
 > Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 > [!WARNING]
-> SPFx solutions targetting SharePoint Server 2016 are limited to setting only a single web part property as a preconfigured entry. For more information, see [issue #5260](https://github.com/SharePoint/sp-dev-docs/issues/5260).
+> SPFx solutions targeting SharePoint Server 2016 are limited to setting only a single web part property as a preconfigured entry. For more information, see [issue #5260](https://github.com/SharePoint/sp-dev-docs/issues/5260).
 
 ## Web part preconfigured entries
 
@@ -127,19 +127,17 @@ To see how you can use preconfigured entries when building web parts, you'll bui
     cd react-preconfiguredentries
     ```
 
-1. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project.
+1. Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
 
     ```console
     yo @microsoft/sharepoint
     ```
 
-1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
+    The Yeoman SharePoint Generator will prompt you with a series of questions. For all questions, accept the default options except for the following questions:
 
-    - **What is your solution name?** react-preconfiguredentries
     - **Which type of client-side component to create?** WebPart
     - **What is your Web part name?** Gallery
-    - **What is your Web part description?** Shows items from the selected list
-    - **Which framework would you like to use?** React
+    - **Which template would you like to use?** React
 
 1. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor you prefer.
 

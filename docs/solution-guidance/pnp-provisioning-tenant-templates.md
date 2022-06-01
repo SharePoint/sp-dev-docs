@@ -1,7 +1,7 @@
 ---
 title: PnP Provisioning Tenant Templates
-description: 
-ms.date: 06/05/2020
+description: Think of Tenant Templates as an extension on top of PnP Provisioning or Site Templates. Instead of just provisioning artifacts to a site, you can now create sites, create teams, provision Azure AD entries, provision taxonomy etc.
+ms.date: 04/28/2022
 ms.localizationpriority: high
 ---
 
@@ -99,6 +99,6 @@ If at a later state you want to remove this consent, login to your Azure Portal,
 
 ## See also
 
-- [SharePoint Patterns and Practices](https://github.com/SharePoint/PnP/)
+- [Microsoft 365 Patterns and Practices](https://pnp.github.io/)
 - [SharePoint Developer Group at Microsoft Tech Community](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev) 
 - [PnP remote provisioning](pnp-remote-provisioning.md)

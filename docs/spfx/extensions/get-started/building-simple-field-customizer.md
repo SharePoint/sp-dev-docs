@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
-ms.date: 06/15/2021
+ms.date: 02/14/2022
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -10,7 +10,7 @@ ms.custom: scenarios:getting-started
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-You can follow these steps by watching the video on the SharePoint PnP YouTube Channel:
+You can follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/mBZ7Sq_KfDA]
 
@@ -37,12 +37,10 @@ You can follow these steps by watching the video on the SharePoint PnP YouTube C
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: field-extension
-    - **Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant? (y/n)** n
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** Field Customizer
     - **What is your Field Customizer name?** HelloWorld
-    - **What is your Field Customizer description?** HelloWorld description
-    - **Which framework would you like to use?**: No JavaScript Framework
+    - **Which template would you like to use?**: No JavaScript Framework
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** extension. This might take a few minutes.
 

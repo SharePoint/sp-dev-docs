@@ -1,7 +1,7 @@
 ---
 title: Tenant-scoped solution deployment for SharePoint Framework solutions
 description: Configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant app catalog.
-ms.date: 10/26/2020
+ms.date: 10/25/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -11,16 +11,16 @@ You can configure your SharePoint Framework (SPFx) components to be immediately 
 
 When the solution has this attribute enabled, the tenant administrator is provided the option to enable the solution to be available automatically across all site collections and sites in the tenant when the solution package is installed to the tenant app catalog.
 
-You can also see the tenant-wide deployment option demonstrated by watching the following video on the SharePoint PnP YouTube Channel:
+You can also see the tenant-wide deployment option demonstrated by watching the following video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/pemHOZCSwZI]
 
 > [!NOTE]
 > You have to update to the latest SharePoint Framework Yeoman template version to be able to use this capability. You can update your global installation by executing **npm install -g @microsoft/generator-sharepoint**.
 >
-> Tenant-wide deployment is not available for SharePoint 2016 Feature Pack 2 since it only supports SPFX 1.1, and this deployment option was released in version 1.4.
+> Tenant-wide deployment is released in SPFx version 1.4 and can be used when developing webparts that will be deployed on SharePoint 2019 and SharePoint Online. This deployment option is not available for SharePoint 2016 Feature Pack 2 since it only supports SPFx 1.1.
 >
-> If you are utilizing a SPFX webpart older than 1.4 you can upgrade with instructions via the [CLI for Microsoft 365](https://aka.ms/o365cli)
+> If you are utilizing a SPFx webpart older than 1.4 you can upgrade with instructions via the [CLI for Microsoft 365](https://aka.ms/o365cli)
 
 ## Solution-specific requirements
 

@@ -27,9 +27,10 @@
     "bjansen@microsoft.com",
     "v-licapu@microsoft.com"
   ],
+  "sync_notification_subscribers": null,
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/SharePoint/sp-dev-docs",
-  "git_repository_branch_open_to_public_contributors": "master",
+  "git_repository_branch_open_to_public_contributors": "main",
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "contribution_branch_mappings": {},
@@ -37,13 +38,13 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
@@ -60,11 +61,11 @@
     ]
   },
   "need_generate_pdf_url_template": true,
-  "Targets": {  
-    "Pdf": {  
-    "template_folder": "_themes.pdf"  
-    }  
-   },
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "JoinTOCPlugin": [
     {
       "ConceptualTOC": "/docs/toc.yml",

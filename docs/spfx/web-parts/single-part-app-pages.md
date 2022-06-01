@@ -1,7 +1,7 @@
 ---
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
-ms.date: 06/14/2021
+ms.date: 12/13/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -55,10 +55,10 @@ You can also use [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/
 
 ```powershell
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/marketing
-Set-PnPClientSidePage -Identity "Page" -LayoutType SingleWebPartAppPage
+Set-PnPPage -Identity "Page" -LayoutType SingleWebPartAppPage
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/set-PnPClientSidePage) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/set-PnPPage) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 

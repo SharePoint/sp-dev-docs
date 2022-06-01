@@ -16,7 +16,7 @@ This article explains the steps involved in setting up your Azure DevOps environ
 
 There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.  
 Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
-Azure multi-stage Pipelines is a newer feature still in preview, is relies on pipeline definitions stored as YAML files on the repository providing transparency, version history and repeatability.  
+
 Both approaches are described for the SharePoint Framework:
 
 - Azure Build and Release (this article)

@@ -1,7 +1,7 @@
 ---
 title: Save, download, and upload a SharePoint site as a template
 description: Learn how to design and build robust applications by using SharePoint site templates.
-ms.date: 12/14/2020
+ms.date: 11/16/2021
 ms.prod: sharepoint
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
 ms.localizationpriority: high
@@ -11,7 +11,7 @@ ms.localizationpriority: high
 > [!IMPORTANT]
 > The functionality of saving a site as a template described in this article is **only supported** in SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019 **(classic sites only)**, and SharePoint Online **(classic sites only)**.
 >
-> It is **not supported** in SharePoint Online **(modern sites)** or SharePoint Server 2019 **(modern sites)**.
+> It is **not supported** in SharePoint Online **(modern sites)** or SharePoint Server 2019 **(modern sites)**. SharePoint Online environments should use the [new Site Templates](/sharepoint/dev/declarative-customization/site-design-overview). 
 
 Learn how to design and build robust applications by using SharePoint site templates.
 

@@ -39,7 +39,7 @@
         href: features/hub-site/REST-sphubsite-type.md
       - name: SPHubSiteData type
         href: features/hub-site/REST-sphubsitedata-type.md
-  - name: Site designs & site scripts
+  - name: Site templates & site scripts
     items:
     - name: Overview
       href: declarative-customization/site-design-overview.md
@@ -79,8 +79,26 @@
     items:
     - name: Column formatting
       href: declarative-customization/column-formatting.md
+    - name: Advanced formatting concepts
+      href: declarative-customization/formatting-advanced.md
+    - name: Formatting syntax reference
+      href: declarative-customization/formatting-syntax-reference.md
     - name: View formatting
-      href: declarative-customization/view-formatting.md
+      items:
+      - name: Overview
+        href: declarative-customization/view-formatting.md
+      - name: List layout customization
+        href: declarative-customization/view-list-formatting.md
+      - name: Gallery layout customization
+        href: declarative-customization/view-gallery-formatting.md
+      - name: Board view customization
+        href: declarative-customization/view-board-formatting.md
+      - name: Calendar view customization
+        href: declarative-customization/view-calendar-formatting.md
+      - name: Group customization syntax reference
+        href: declarative-customization/view-group-formatting.md
+      - name: Command bar customization syntax reference
+        href: declarative-customization/view-commandbar-formatting.md
     - name: Forms configuration
       items:
       - name: Show or hide columns in a form
@@ -187,8 +205,6 @@
           href: spfx/integrate-with-teams-introduction.md
         - name: Hosting Microsoft Teams Tabs in SharePoint
           href: spfx/using-teams-solutions-in-sharepoint.md
-      - name: Building Office add-ins
-        href: spfx/office-addins-create.md
     - name: Tutorials
       items:
       - name: Add jQueryUI Accordion to a web part
@@ -201,8 +217,6 @@
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
       - name: Build Microsoft Teams channel/group tabs with SPFx
         href: spfx/web-parts/get-started/using-web-part-as-ms-teams-tab.md
-      - name: Build Office add-ins with SPFx
-        href: spfx/web-parts/get-started/office-addins-tutorial.md
   - name: Extensions
     items:
     - name: Overview
@@ -225,6 +239,8 @@
       href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
     - name: Search Query extension
       href: spfx/building-search-extensions.md
+    - name: Form customizer
+      href: spfx/extensions/get-started/building-form-customizer.md
     - name: Concepts & scenarios
       items:
       - name: Tenant wide deployment
@@ -297,8 +313,6 @@
       href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
     - name: CSS styles
       href: spfx/web-parts/guidance/reference-third-party-css-styles.md
-    - name: SP PnP JS
-      href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
   - name: Connect to APIs
     items:
     - name: Connect to SharePoint APIs
@@ -404,14 +418,16 @@
       href: spfx/use-theme-colors-in-your-customizations.md
     - name: Office UI Fabric integration
       href: spfx/office-ui-fabric-integration.md
+    - name: Image Helper API
+      href: spfx/image-helper-api.md
   - name: Tools & libraries
     items:
     - name: Overview
       href: spfx/tools-and-libraries.md
     - name: Toolchain
       href: spfx/toolchain/sharepoint-framework-toolchain.md
-    - name: Yeoman generator
-      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: Yeoman generator for the SharePoint Framework
+      href: spfx/yeoman-generator-for-spfx-intro.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging
@@ -430,7 +446,7 @@
       href: spfx/supported-extensibility-platforms-overview.md
     - name: SharePoint Online
       href: spfx/spfx-sharepoint-online.md
-    - name: SharePoint 2019 support
+    - name: SharePoint 2019 & SE support
       href: spfx/sharepoint-2019-support.md
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md
@@ -442,8 +458,14 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.13 (beta) - July 26, 2021
-      href: spfx/release-1.13.md      
+    - name: SPFx v1.15 - April 19, 2022
+      href: spfx/release-1.15.md      
+    - name: SPFx v1.14 - February 17, 2022
+      href: spfx/release-1.14.md
+    - name: SPFx v1.13.1 - November 23, 2021
+      href: spfx/release-1.13.1.md
+    - name: SPFx v1.13 - October 21, 2021
+      href: spfx/release-1.13.md
     - name: SPFx v1.12.1 - April 28, 2021
       href: spfx/release-1.12.1.md
     - name: SPFx v1.11.0 - July 16, 2020
@@ -478,6 +500,8 @@
       href: spfx/release-1.1.md
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
+  - name: SharePoint Framework Learn module
+    href: https://docs.microsoft.com/en-us/learn/paths/m365-sharepoint-associate/
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -502,6 +526,18 @@
   items:
   - name: Overview
     href: spfx/viva/overview-viva-connections.md
+  - name: Location capabilities in Adaptive Card Extension
+    href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
+  - name: Design Guidance
+    items:
+    - name: Introduction
+      href: spfx/viva/design/design-intro.md
+    - name: Card Design
+      href: spfx/viva/design/designing-card.md
+    - name: Quick View Design
+      href: spfx/viva/design/designing-quick-view.md
+    - name: Quick View Samples
+      href: spfx/viva/design/quick-view-samples.md
   - name: Tutorials
     items:
     - name: Build your first SharePoint Adaptive Card Extension
@@ -512,6 +548,14 @@
       href: spfx/viva/get-started/advanced-quick-view-functionality.md
     - name: Adaptive Card Extensions and Teams Apps
       href: spfx/viva/get-started/adaptive-card-extensions-and-teams.md
+    - name: Create an Adaptive Card Extension with geolocation action
+      href: spfx/viva/get-started/actions/geolocation/GeolocationTutorial.md
+    - name: Geolocation capabilities with the property pane of an ACE
+      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md     
+  - name: Known issues
+    href: spfx/viva/known-issues-adaptive-cards.md
+  - name: Viva Connections Extensibility Learn module
+    href: https://docs.microsoft.com/en-us/learn/paths/m365-extend-viva-connections/   
 - name: Business Apps & Process Automation
   items:
   - name: Overview
@@ -2053,7 +2097,7 @@
       - name: Get model and library information
         href: apis/syntex/rest-getmodelandlibraryinfo.md
       - name: UpdateModelSettings
-        href: apis/syntex/rest-updatemodelsettings-method.md        
+        href: apis/syntex/rest-updatemodelsettings-method.md
       - name: BatchDelete
         href: apis/syntex/rest-batchdelete-method.md
       - name: Create file classification request

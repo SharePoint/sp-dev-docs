@@ -1,7 +1,7 @@
 ---
 title: Deploy your client-side web part to a SharePoint page (Hello World part 3)
 description: Deploy your client-side web part to SharePoint and see it working on a modern SharePoint page.
-ms.date: 06/16/2020
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -14,9 +14,9 @@ Ensure that you've completed the procedures in the following articles before you
 - [Build your first SharePoint client-side web part](./build-a-hello-world-web-part.md)
 - [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 
-You can also follow these steps by watching this video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
-> [!Video https://www.youtube.com/embed/CMJEp8TS4aU]
+> [!Video https://www.youtube.com/embed/FkFg32NSTM0]
 
 ## Package the HelloWorld web part
 
@@ -37,20 +37,51 @@ You can also follow these steps by watching this video on the SharePoint PnP You
 
     ```json
     {
-      "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
-      "solution": {
-        "name": "helloworld-webpart-client-side-solution",
-        "id": "3c1af394-bbf0-473c-bb7d-0798f0587cb7",
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "mysolution-client-side-solution",
+        "id": "ee1a495d-c7bb-499b-bd71-728aaeb79cd2",
         "version": "1.0.0.0",
         "includeClientSideAssets": true,
-        "isDomainIsolated": false
-      },
-      "paths": {
-        "zippedPackage": "solution/helloworld-webpart.sppkg"
-      }
+        "skipFeatureDeployment": true,
+        "isDomainIsolated": false,
+        "developer": {
+        "name": "",
+        "websiteUrl": "",
+        "privacyUrl": "",
+        "termsOfUseUrl": "",
+        "mpnId": "Undefined-1.14.0"
+        },
+        "metadata": {
+        "shortDescription": {
+            "default": "mysolution description"
+        },
+        "longDescription": {
+            "default": "mysolution description"
+        },
+        "screenshotPaths": [],
+        "videoUrl": "",
+        "categories": []
+        },
+        "features": [
+        {
+            "title": "mysolution Feature",
+            "description": "The feature that activates elements of the mysolution solution.",
+            "id": "d72e47b2-d5a2-479f-9f9a-85e1e7472dee",
+            "version": "1.0.0.0"
+        }
+        ]
+    },
+    "paths": {
+        "zippedPackage": "solution/mysolution.sppkg"
+    }
     }
     ```
+1. In the console window, enter the following command to bundle your client-side solution:
 
+    ```console
+    gulp bundle
+    ```
 1. In the console window, enter the following command to package your client-side solution that contains the web part:
 
     ```console
@@ -76,11 +107,16 @@ The JavaScript files, CSS, and other assets are packaged in the package when the
 
 Next, you need to deploy the package that was generated to the app catalog.
 
+
 > [!NOTE]
 > If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
 
 1. Go to your site's app catalog.
-1. Upload or drag and drop the **helloworld-webpart.sppkg** to the app catalog.
+1. If you see classic experience in the app catalog, choose to move the new experience by clicking **Try the new Manage Apps page** in the header
+
+    ![New app catalog experience notice](../../../images/new-app-catalog-experience-notice.png)
+
+2. Upload or drag and drop the **helloworld-webpart.sppkg** to the app catalog.
 
     ![Upload solution to app catalog](../../../images/upload-solution-app-catalog.png)
 
@@ -88,7 +124,7 @@ Next, you need to deploy the package that was generated to the app catalog.
 
     ![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png)
 
-1. Select **Deploy**.
+3. Select **Deploy**.
 
 Notice that you can see if there's any exceptions or issues in the package by looking the **App Package Error Message** column in the app catalog.
 
@@ -102,9 +138,10 @@ Notice that you can see if there's any exceptions or issues in the package by lo
 
 1. Select the **helloworld-webpart-client-side-solution** app to install the app on the site.
 
-    ![Trust app](../../../images/app-installed-your-site.png)
+    ![Installed app](../../../images/app-installed-your-site.png)
 
-    The client-side solution and the web part are installed on your developer site.
+    The client-side solution and the web part are installed on your developer site. 
+
 
 The **Site Contents** page shows you the installation status of your client-side solution. Make sure the installation is complete before going to the next step.
 
@@ -112,14 +149,14 @@ The **Site Contents** page shows you the installation status of your client-side
 
 Now that you've deployed and installed the client-side solution, add the web part to a SharePoint page. Remember that resources such as JavaScript and CSS are available from the local computer, so rendering of the web parts will fail unless your localhost is running.
 
-1. Open the **<your-webpart-guid>.manifest.json** from the **dist** folder.
+1. Open the **{{your-webpart-guid}}.manifest.json** from the **dist** folder.
 
     Notice that the `internalModuleBaseUrls` property in the `loaderConfig` entry still refers to your local computer:
 
     ```json
     "internalModuleBaseUrls": [
-      "https://`your-local-machine-name`:4321/"
-    ]
+      "https://localhost:4321/dist/"
+    ],
     ```
 
 1. *Before* adding the web part to a SharePoint server-side page, run the local server.
@@ -158,7 +195,7 @@ You should see the **HelloWorld** web part you built in the previous article tha
 
 1. Edit the **Description** property, and enter **Client-side web parts are awesome!**
 
-    ![Hello World web part in modern page](../../../images/sp-wp-modern-page-pp.png)
+    ![Hello World web part in modern page with property pane](../../../images/sp-wp-modern-page-pp.png)
 
 1. Notice that you still have the same behaviors such as a reactive pane where the web part is updated as you type.
 1. Select the **x** icon to close the client-side property pane.

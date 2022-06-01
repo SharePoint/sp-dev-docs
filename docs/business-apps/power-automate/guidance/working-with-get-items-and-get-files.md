@@ -1,6 +1,7 @@
 ---
 title: In-depth analysis into 'Get items' and 'Get files' SharePoint actions for flows in Power Automate
-ms.date: 03/11/2020
+description: In this article, learn more about the SharePoint actions get items & get files actions with Power Automate.
+ms.date: 03/24/2022
 search.app: 
   - Flow
 search.appverid: met150
@@ -90,14 +91,6 @@ We support the following query methods and operators.
 * substringOf
 * eq
 * ne
-
-### Date and time functions
-* day()
-* month()
-* year()
-* hour()
-* minute()
-* second()
 
 ## Order by query
 To order items based off of a column either in ascending or descending order, you can also specify an order by query. For example:

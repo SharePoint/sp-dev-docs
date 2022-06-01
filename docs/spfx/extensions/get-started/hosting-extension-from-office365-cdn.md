@@ -17,7 +17,7 @@ Be sure you've completed the procedures in the following articles before you beg
 - [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
 - [Deploy your extension to SharePoint (Hello World part 3)](./serving-your-extension-from-sharepoint.md)
 
-You can also follow these steps by watching the video on the SharePoint PnP YouTube Channel:
+You can also follow these steps by watching the video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/xsZbRliakyM]
 

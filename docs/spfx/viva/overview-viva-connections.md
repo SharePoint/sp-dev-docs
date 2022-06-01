@@ -1,16 +1,16 @@
 ---
 title: Overview of Viva Connections Extensibility
 description: Build engaging experiences for Microsoft Viva Connections with the SharePoint Framework.
-ms.date: 09/08/2021
+ms.date: 11/16/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Overview of Viva Connections Extensibility
 
-Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) for building engaging experiences with the widely adopted SharePoint Framework (SPFx). Viva Connections is your gateway to a modern employee experience where you can build and integrate apps that shape culture and foster connections to help employees thrive. With SPFx, you have multiple ways to extend – using the same out-of-the-box or custom SPFx web parts, SPFx extensions (e.g. header, footer), and specific components for optimized mobile experiences.
+Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) for building engaging experiences with the widely adopted SharePoint Framework (SPFx). Viva Connections is your gateway to a modern employee experience where you can build and integrate apps that shape culture and foster connections to help employees thrive. With SPFx, you have multiple ways to extend – using the same out-of-the-box or custom SPFx web parts, SPFx extensions (for example, header and footer), and specific components for optimized mobile experiences.
 
 > [!TIP]
-> To learn more about Microsoft Viva Connections, see [Microsoft 365: Developer Blog - Announcing upcoming Microsoft Viva Connections public developer preview](https://developer.microsoft.com/microsoft-365/blogs/announcing-upcoming-microsoft-viva-connections-public-developer-preview/).
+> See the [Extend Microsoft Viva Connections learning path](https://aka.ms/m365/dev/learn/connections) for a structured way to learn how you can extend Viva Connections, what tools you need and how to get started.
 
 ## Extensibility opportunities
 
@@ -31,8 +31,6 @@ To learn more about creating ACEs, see the following tutorial: [Build your first
 ## Prerequisites
 
 The SPFx v1.13 introduced support for building solutions to customize and extend Microsoft Viva Connections. To learn more about SPFx v1.13, including prerequisites & how to install it, see: [SharePoint Framework v1.13 release notes](../release-1.13.md).
-
-[!INCLUDE [spfx-release-beta](../../../includes/snippets/spfx-release-beta.md)]
 
 ## Start building for Microsoft Viva Connections
 

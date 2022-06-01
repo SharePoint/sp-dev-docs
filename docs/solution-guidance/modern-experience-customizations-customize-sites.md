@@ -123,7 +123,6 @@ Set-PnPTheme -ColorPaletteUrl "SiteAssets/sppnp.spcolor" -BackgroundImageUrl "Si
 !["Modern" team site with custom theme](media/modern-experiences/modern-site-with-custom-theme.png)
 
 > [!NOTE]
-> - You can use the [SharePoint Color Palette Tool](https://www.microsoft.com/download/details.aspx?id=38182) to create a custom theme file (.spcolor) with the custom color definition. In general, "modern" team sites try to preserve the feel of the theme by automatically converting "classic" site theming elements to the "modern" side. Preserved areas are background image and the following theme slots: ContentAccent1, PageBackground, and BackgroundOverlay.
 > - You can change the logo of "modern" team site by using the Groups Graph API as shown by the SharePoint [PnP UpdateUnifiedGroup method](https://github.com/SharePoint/PnP-Sites-Core/blob/master/Core/OfficeDevPnP.Core/Framework/Graph/UnifiedGroupsUtility.cs#L350).
 > - Applying a custom theme to a "modern" team site can cause timeouts. The resolution for this is to turn off all available [user interface languages](https://support.office.com/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) for the site before applying the theme, and turn them back on afterwards.
 

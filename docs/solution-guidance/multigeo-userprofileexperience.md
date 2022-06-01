@@ -1,7 +1,7 @@
 ---
 title: Work with user profiles in a Multi-Geo tenant
 description: Define a preferred data location for a user, detect a user's profile location and personal site URL, and read and update default and custom user profile properties.
-ms.date: 6/18/2019
+ms.date: 11/02/2021
 ms.localizationpriority: medium
 ---
 
@@ -64,7 +64,7 @@ public string GetUserPersonalSiteHostUrlCSOM(string userPrincipalName)
 
 When you have the personal site host URL, you can use that along with the [Multi-Geo discovery](multigeo-discovery.md) information to get the tenant admin site URL for the geo location that hosts the user's profile.
 
-To learn more, see the [MultiGeo.UserProfileUpdates](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.UserProfileUpdates) sample.
+To learn more, see the [MultiGeo.UserProfileUpdates](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.UserProfileUpdates) sample.
 
 ### Use Microsoft Graph to detect user's personal site URL
 

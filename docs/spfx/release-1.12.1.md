@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.12.1 release notes
 description: Release notes for the SharePoint Framework v1.12.1 release
-ms.date: 09/08/2021
+ms.date: 12/28/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -43,10 +43,11 @@ This release introduces a new property & event in the Web Part API to detect the
 
 - Add support for **Node.js v12.13.x & v14.15.x**
   - *See [Set up your SharePoint Framework development environment](set-up-your-development-environment.md) for details.*
-  - **Gulp v4** (installed globally) is required (*see [Regarding Gulp versions & Node.js v12+](#gulp-versions--nodejs-v12) for details*)
+  - **Gulp-CLI** is strongly recommended. Our prior guidance was to install Gulp v3 or v4 globally, but the guidance from the Gulp team is to only install Gulp CLI globally. By using the Gulp CLI, you can have projects that use Gulp v3 and others that use Gulp v4.
 - For all projects:
   - Update the default version of TypeScript to **v3.7** (*via **@microsoft/rush-stack-compiler-3.7** v0.2.3*)
-  - Update the **Gulp** version used to **v4.0.2**
+  - Update **Gulp** version used to **v4.0.2**
+      > *see [Regarding Gulp versions & Node.js v12+](#gulp-versions--nodejs-v12) for details*
 - For projects that use React:
   - Update the React NPM packages (**react** & **react-dom**) to **v16.9.0**.
   - Update the Office UI Fabric React NPM package / Microsoft Fluent UI (**office-ui-fabric-react**) to **v7.156.0**.

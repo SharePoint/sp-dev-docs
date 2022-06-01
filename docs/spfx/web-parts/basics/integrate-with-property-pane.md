@@ -1,7 +1,7 @@
 ---
 title: Make your SharePoint client-side web part configurable
 description: Configure custom properties in your web part by using the property pane.
-ms.date: 06/22/2020
+ms.date: 04/06/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -106,7 +106,7 @@ This is then available in your web part by using `this.properties.targetProperty
 <p class="ms-font-l ms-fontColor-white">${escape(this.properties.targetProperty)}</p>
 ```
 
-When the properties are defined, you can access them in your web part by using the `this.properties.[property-name]`. For more information, see [Build a HellowWorld web part: Web part render() method](../get-started/build-a-hello-world-web-part.md#web-part-render-method).
+When the properties are defined, you can access them in your web part by using the `this.properties.[property-name]`. For more information, see [Build a HelloWorld web part: Web part render() method](../get-started/build-a-hello-world-web-part.md#web-part-render-method).
 
 ## Handle field changes
 
