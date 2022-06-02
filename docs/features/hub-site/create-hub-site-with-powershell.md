@@ -49,7 +49,7 @@ First, we will create the marketing site that will serve as a hub site that othe
 3. Register the new marketing site as a hub site by using the [Register-PnPHubSite](https://pnp.github.io/powershell/cmdlets/Register-PnPHubSite.html) cmdlet:
 
    ```powershell
-   Register-SPOHubSite -Site https://contoso.sharepoint.com/sites/marketing
+   Register-PnPHubSite -Site https://contoso.sharepoint.com/sites/marketing
    ```
 
 ## Set properties and permissions on the hub site
