@@ -176,7 +176,7 @@ Copy the following provisioning template XML to a new file and save the file as 
     }
     ```
 
-    Save the file. Notice, that if you do no intent to use the Azure PowerShell Cmdlets you can remove that entry from this file. The requirements.psd1 file makes sure that specific PowerShell modules will be available to all functions. At the first execution of the Azure Function these modules will be downloaded and made available. You can also use wildcard references for the version. See for more information about this file here: https://docs.microsoft.com/azure/azure-functions/functions-reference-powershell?tabs=portal#dependency-management
+    Save the file. Notice, that if you do no intent to use the Azure PowerShell Cmdlets you can remove that entry from this file. The requirements.psd1 file makes sure that specific PowerShell modules will be available to all functions. At the first execution of the Azure Function these modules will be downloaded and made available. You can also use wildcard references for the version. [See for more information about this file](/azure/azure-functions/functions-reference-powershell?tabs=portal#dependency-management).
 
 1. Create a new Azure Function **Functions** > **Add**:
 

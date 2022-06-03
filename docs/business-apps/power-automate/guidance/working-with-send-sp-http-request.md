@@ -1,5 +1,6 @@
 ---
 title: Working with the SharePoint Send HTTP Request flow action in Power Automate
+description: In Power Automate, the SharePoint Send HTTP Request flow action lets you construct and execute SharePoint REST API queries.
 ms.date: 03/11/2020
 search.app: 
   - Flow
@@ -17,7 +18,7 @@ To work effectively with the SharePoint Send HTTP Request action, see the follow
 > This is a developer-focused action. You must understand how SharePoint REST API works and also how to parse JSON strings in Power Automate.
 
 ## Get to know the SharePoint REST/OData APIs
-SharePoint has many APIs. The focus here is the REST/OData APIs. For the complete set of REST/OData APIs, see [Get to know the SharePoint REST service](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service#bk_learnmore).
+SharePoint has many APIs. The focus here is the REST/OData APIs. For the complete set of REST/OData APIs, see [Get to know the SharePoint REST service](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service#bk_learnmore).
 
 Although, in some cases, you can use the SharePoint 2010 REST APIs *(_vti_bin/listdata.svc)*, we recommend using REST/OData APIs instead.
 

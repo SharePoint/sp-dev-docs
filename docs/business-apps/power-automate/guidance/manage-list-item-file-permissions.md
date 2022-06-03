@@ -1,5 +1,6 @@
 ---
 title: Manage list item and file permissions with Power Automate
+description: "SharePoint connector in Power Automate lets you grant access, create sharing links, or rescind access for items or folders."
 ms.date: 11/02/2021
 search.app: 
   - Flow
