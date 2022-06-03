@@ -107,45 +107,45 @@ The following table shows the color palette used by the Teal theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#014446">themeDarker: #014446</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
+<td>themeDarker: #014446</td>
+<td>black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#025c5f">themeDark: #025c5f</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+<td>themeDark: #025c5f</td>
+<td>neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#026d70">themeDarkAlt: #026d70</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td>themeDarkAlt: #026d70</td>
+<td>neutralPrimary: #333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#03787c">themePrimary: #03787c</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td rowspan="3">themePrimary: #03787c</td>
+<td>neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+<td>neutralSecondary: #666666</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+<td>neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#13898d">themeSecondary: #13898d</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td>themeSecondary: #13898d</td>
+<td>neutralTertiaryAlt: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#49aeb1">themeTertiary: #49aeb1</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+<td>themeTertiary: #49aeb1</td>
+<td>neutralLight: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#98d6d8">themeLight: #98d6d8</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td></tr>
+<td>themeLight: #98d6d8</td>
+<td>neutralLighter: #f4f4f4</td></tr>
 <tr>
-<td style="color:black; background-color:#c5e9ea">themeLighter: #c5e9ea</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+<td>themeLighter: #c5e9ea</td>
+<td>neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#f0f9fa">themeLighterAlt: #f0f9fa</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td>themeLighterAlt: #f0f9fa</td>
+<td>white: #fff</td>
 </tr>
 </table>
 
@@ -188,45 +188,45 @@ The following table shows the color palette used by the Red theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#751b1e">themeDarker: #751b1e</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
+<td>themeDarker: #751b1e</td>
+<td>black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#952226">themeDark: #952226</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+<td>themeDark: #952226</td>
+<td>neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#c02b30">themeDarkAlt: #c02b30</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td>themeDarkAlt: #c02b30</td>
+<td>neutralPrimary: #333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#d13438">themePrimary: #d13438</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td rowspan="3">themePrimary: #d13438</td>
+<td>neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+<td>neutralSecondary: #666666</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+<td>neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#d6494d">themeSecondary: #d6494d</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td>themeSecondary: #d6494d</td>
+<td>neutralTertiaryAlt: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#ecaaac">themeTertiary: #ecaaac</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+<td>themeTertiary: #ecaaac</td>
+<td>neutralLight: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#f6d6d8">themeLight: #f6d6d8</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td></tr>
+<td>themeLight: #f6d6d8</td>
+<td>neutralLighter: #f4f4f4</td></tr>
 <tr>
-<td style="color:black; background-color:#faebeb">themeLighter: #faebeb</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+<td>themeLighter: #faebeb</td>
+<td>neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#fdf5f5">themeLighterAlt: #fdf5f5</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td>themeLighterAlt: #fdf5f5</td>
+<td>white: #fff</td>
 </tr>
 </table>
 
@@ -269,46 +269,46 @@ The following table shows the color palette used by the Orange theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#6f2d09">themeDarker: #6f2d09</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
+<td>themeDarker: #6f2d09</td>
+<td>black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#8d390b">themeDark: #8d390b</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+<td>themeDark: #8d390b</td>
+<td>neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#b5490f">themeDarkAlt: #b5490f</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td>themeDarkAlt: #b5490f</td>
+<td>neutralPrimary: #333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#ca5010">themePrimary: #ca5010</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td rowspan="3">themePrimary: #ca5010</td>
+<td>neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+<td>neutralSecondary: #666666</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+<td>neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#e55c12">themeSecondary: #e55c12</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td>themeSecondary: #e55c12</td>
+<td>neutralTertiaryAlt: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#f6b28d">themeTertiary: #f6b28d</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+<td>themeTertiary: #f6b28d</td>
+<td>neutralLight: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#fbdac9">themeLight: #fbdac9</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
+<td>themeLight: #fbdac9</td>
+<td>neutralLighter: #f4f4f4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#fdede4">themeLighter: #fdede4</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+<td>themeLighter: #fdede4</td>
+<td>neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#fef6f1">themeLighterAlt: #fef6f1</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td>themeLighterAlt: #fef6f1</td>
+<td>white: #fff</td>
 </tr>
 </table>
 
@@ -351,46 +351,46 @@ The following table shows the color palette used by the Green theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#094c23">themeDarker: #294903</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
+<td>themeDarker: #294903</td>
+<td>black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#0c602c">themeDark: #386304</td>
-<td style="color:white; background-color:#212121">neutralDark: #201f1e</td>
+<td>themeDark: #386304</td>
+<td>neutralDark: #201f1e</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#0f7c39">themeDarkAlt: #427505</td>
-<td style="color:white; background-color:#333">neutralPrimary: #323130</td>
+<td>themeDarkAlt: #427505</td>
+<td>neutralPrimary: #323130</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#10893e">themePrimary: #498205</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3b3a39</td>
+<td rowspan="3">themePrimary: #498205</td>
+<td>neutralPrimaryAlt: #3b3a39</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #605e5c</td>
+<td>neutralSecondary: #605e5c</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a19f9d</td>
+<td>neutralTertiary: #a19f9d</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#14a94e">themeSecondary: #5a9117</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c6c4</td>
+<td>themeSecondary: #5a9117</td>
+<td>neutralTertiaryAlt: #c8c6c4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#7aefa7">themeTertiary: #85b44c</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #edebe9</td>
+<td>themeTertiary: #85b44c</td>
+<td>neutralLight: #edebe9</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#bff7d5">themeLight: #bdda9b</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f3f2f1</td>
+<td>themeLight: #bdda9b</td>
+<td>neutralLighter: #f3f2f1</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#dffbea">themeLighter: #dbebc7</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #faf9f8</td>
+<td>themeLighter: #dbebc7</td>
+<td>neutralLighterAlt: #faf9f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#effdf4">themeLighterAlt: #f6faf0</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td>themeLighterAlt: #f6faf0</td>
+<td>white: #fff</td>
 </tr>
 </table>
 
@@ -433,46 +433,46 @@ The following table shows the color palette used by the Blue theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#004578">themeDarker: #004578</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
+<td>themeDarker: #004578</td>
+<td>black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#005a9e">themeDark: #005a9e</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+<td>themeDark: #005a9e</td>
+<td>neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#106ebe">themeDarkAlt: #106ebe</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td>themeDarkAlt: #106ebe</td>
+<td>neutralPrimary: #333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#0078d7">themePrimary: #0078d7</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td rowspan="3">themePrimary: #0078d7</td>
+<td>neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+<td>neutralSecondary: #666666</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+<td>neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#2b88d8">themeSecondary: #2b88d8</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td>themeSecondary: #2b88d8</td>
+<td>neutralTertiaryAlt: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#71afe5">themeTertiary: #71afe5</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+<td>themeTertiary: #71afe5</td>
+<td>neutralLight: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#c7e0f4">themeLight: #c7e0f4</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
+<td>themeLight: #c7e0f4</td>
+<td>neutralLighter: #f4f4f4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#deecf9">themeLighter: #deecf9</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+<td>themeLighter: #deecf9</td>
+<td>neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#eff6fc">themeLighterAlt: #eff6fc</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td>themeLighterAlt: #eff6fc</td>
+<td>white: #fff</td>
 </tr>
 </table>
 
@@ -515,46 +515,46 @@ The following table shows the color palette used by the Purple theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#27268a">themeDarker: #27268a</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
+<td>themeDarker: #27268a</td>
+<td>black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#3230b0">themeDark: #3230b0</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+<td>themeDark: #3230b0</td>
+<td>neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#5250cf">themeDarkAlt: #5250cf</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td>themeDarkAlt: #5250cf</td>
+<td>neutralPrimary: #333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#6b69d6">themePrimary: #6b69d6</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td rowspan="3">themePrimary: #6b69d6</td>
+<td>neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+<td>neutralSecondary: #666666</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+<td>neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#7a78da">themeSecondary: #7a78da</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td>themeSecondary: #7a78da</td>
+<td>neutralTertiaryAlt: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#c1c0ee">themeTertiary: #c1c0ee</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+<td>themeTertiary: #c1c0ee</td>
+<td>neutralLight: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#e1e1f7">themeLight: #e1e1f7</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
+<td>themeLight: #e1e1f7</td>
+<td>neutralLighter: #f4f4f4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#f0f0fb">themeLighter: #f0f0fb</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+<td>themeLighter: #f0f0fb</td>
+<td>neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#f8f7fd">themeLighterAlt: #f8f7fd</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td>themeLighterAlt: #f8f7fd</td>
+<td>white: #fff</td>
 </tr>
 </table>
 
@@ -597,46 +597,46 @@ The following table shows the color palette used by the Gray theme.
 
 <table>
 <tr>
-<td style="color:white; background-color:#323130">themeDarker: #323130</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
+<td>themeDarker: #323130</td>
+<td>black: #000000</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#403e3d">themeDark: #403e3d</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+<td>themeDark: #403e3d</td>
+<td>neutralDark: #212121</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#53504e">themeDarkAlt: #53504e</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+<td>themeDarkAlt: #53504e</td>
+<td>neutralPrimary: #333</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#5d5a58">themePrimary: #5d5a58</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+<td rowspan="3">themePrimary: #5d5a58</td>
+<td>neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+<td>neutralSecondary: #666666</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+<td>neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#6d6a67">themeSecondary: #6d6a67</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+<td>themeSecondary: #6d6a67</td>
+<td>neutralTertiaryAlt: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#bbb9b8">themeTertiary: #bbb9b8</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+<td>themeTertiary: #bbb9b8</td>
+<td>neutralLight: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#dfdedd">themeLight: #dfdedd</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
+<td>themeLight: #dfdedd</td>
+<td>neutralLighter: #f4f4f4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#efeeee">themeLighter: #efeeee</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+<td>themeLighter: #efeeee</td>
+<td>neutralLighterAlt: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#f7f7f7">themeLighterAlt: #f7f7f7</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
+<td>themeLighterAlt: #f7f7f7</td>
+<td>white: #fff</td>
 </tr>
 </table>
 
@@ -679,46 +679,46 @@ The following table shows the color palette used by the Dark Yellow theme.
 
 <table>
 <tr>
-<td style="color:black; background-color:#fff171">themeDarker: #fff171</td>
-<td style="color:black; background-color:#f8f8f8">black: #f8f8f8</td>
+<td>themeDarker: #fff171</td>
+<td>black: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#ffed4b">themeDark: #ffed4b</td>
-<td style="color:black; background-color:#f4f4f4">neutralDark: #f4f4f4</td>
+<td>themeDark: #ffed4b</td>
+<td>neutralDark: #f4f4f4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#ffe817">themeDarkAlt: #ffe817</td>
-<td style="color:black; background-color:#ffffff">neutralPrimary: #ffffff</td>
+<td>themeDarkAlt: #ffe817</td>
+<td>neutralPrimary: #ffffff</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#fce100">themePrimary: #fce100</td>
-<td style="color:black; background-color:#eaeaea">neutralPrimaryAlt: #eaeaea</td>
+<td rowspan="3">themePrimary: #fce100</td>
+<td>neutralPrimaryAlt: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#dadada">neutralSecondary: #dadada</td>
+<td>neutralSecondary: #dadada</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#c8c8c8">neutralTertiary: #c8c8c8</td>
+<td>neutralTertiary: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#e3cc00">themeSecondary: #e3cc00</td>
-<td style="color:white; background-color:#6d6d6d">neutralTertiaryAlt: #6d6d6d</td>
+<td>themeSecondary: #e3cc00</td>
+<td>neutralTertiaryAlt: #6d6d6d</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#6a5f00">themeTertiary: #6a5f00</td>
-<td style="color:white; background-color:#3f3f3f">neutralLight: #3f3f3f</td>
+<td>themeTertiary: #6a5f00</td>
+<td>neutralLight: #3f3f3f</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#322d00">themeLight: #322d00</td>
-<td style="color:white; background-color:#313131">neutralLighter: #313131</td>
+<td>themeLight: #322d00</td>
+<td>neutralLighter: #313131</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#191700">themeLighter: #191700</td>
-<td style="color:white; background-color:#282828">neutralLighterAlt: #282828</td>
+<td>themeLighter: #191700</td>
+<td>neutralLighterAlt: #282828</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#0d0b00">themeLighterAlt: #0d0b00</td>
-<td style="color:white; background-color:#1f1f1f">white: #1f1f1f</td>
+<td>themeLighterAlt: #0d0b00</td>
+<td>white: #1f1f1f</td>
 </tr>
 </table>
 
@@ -762,46 +762,46 @@ The following table shows the color palette used by the Dark Blue theme.
 
 <table>
 <tr>
-<td style="color:black; background-color:#6cdfff">themeDarker: #6cdfff</td>
-<td style="color:black; background-color:#f8f8f8">black: #f8f8f8</td>
+<td>themeDarker: #6cdfff</td>
+<td>black: #f8f8f8</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#44d6ff">themeDark: #44d6ff</td>
-<td style="color:black; background-color:#f4f4f4">neutralDark: #f4f4f4</td>
+<td>themeDark: #44d6ff</td>
+<td>neutralDark: #f4f4f4</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#0ecbff">themeDarkAlt: #0ecbff</td>
-<td style="color:black; background-color:#ffffff">neutralPrimary: #ffffff</td>
+<td>themeDarkAlt: #0ecbff</td>
+<td>neutralPrimary: #ffffff</td>
 </tr>
 <tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#00bcf2">themePrimary: #00bcf2</td>
-<td style="color:black; background-color:#eaeaea">neutralPrimaryAlt: #eaeaea</td>
+<td rowspan="3">themePrimary: #00bcf2</td>
+<td>neutralPrimaryAlt: #eaeaea</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#dadada">neutralSecondary: #dadada</td>
+<td>neutralSecondary: #dadada</td>
 </tr>
 <tr>
-<td style="color:black; background-color:#c8c8c8">neutralTertiary: #c8c8c8</td>
+<td>neutralTertiary: #c8c8c8</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#00abda">themeSecondary: #00abda</td>
-<td style="color:white; background-color:#646e8a">neutralTertiaryAlt: #646e8a</td>
+<td>themeSecondary: #00abda</td>
+<td>neutralTertiaryAlt: #646e8a</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#005066">themeTertiary: #005066</td>
-<td style="color:white; background-color:#404759">neutralLight: #404759</td>
+<td>themeTertiary: #005066</td>
+<td>neutralLight: #404759</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#002630">themeLight: #002630</td>
-<td style="color:white; background-color:#353a49">neutralLighter: #353a49</td>
+<td>themeLight: #002630</td>
+<td>neutralLighter: #353a49</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#001318">themeLighter: #001318</td>
-<td style="color:white; background-color:#2e3340">neutralLighterAlt: #2e3340</td>
+<td>themeLighter: #001318</td>
+<td>neutralLighterAlt: #2e3340</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#00090c">themeLighterAlt: #00090c</td>
-<td style="color:white; background-color:#262a35">white: #262a35</td>
+<td>themeLighterAlt: #00090c</td>
+<td>white: #262a35</td>
 </tr>
 </table>
 
