@@ -1,6 +1,6 @@
 ---
 title: SPHubSite object type
-description: Contains data describing a SharePoint hub site.
+description: The SPHubSite object type contains data describing a SharePoint hub site.
 ms.date: 6/18/2019
 ms.localizationpriority: medium
 ---
