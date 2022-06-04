@@ -1,5 +1,6 @@
 ---
 title: Enhancing the BDC model file for Search in SharePoint
+description: Describes enhancing the BDC model file for Search in Sharepoint and provides a table of search properties for BDC model files.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3c67b1cf-5fca-4805-a1b5-c9ac1ff8aede
@@ -47,7 +48,7 @@ The following table describes the BDC model properties that are applicable to Se
 **Table 1. Search properties for BDC model files**
 
 
-|**Name**|**Metadata Object**|**Description**|
+|Name|Metadata Object|Description|
 |:-----|:-----|:-----|
 |ShowInSearchUI  <br/> |Model  <br/> |Specifies that an **LobSystemInstance** element in the model file should be displayed in the search user interface. This value is ignored for custom connectors. <br/> |
 |InputUriProcessor  <br/> |LobSystem  <br/> |Specifies the name of the class that processes the input URL before passing it to the connector. Applies to .NET and custom BCS indexing connectors. For more information, see  [Creating a Custom Indexing Connector](https://msdn.microsoft.com/library/ec2df34d-178c-4ae1-a2b0-a6af04ee57bd%28Office.15%29.aspx).  <br/> |

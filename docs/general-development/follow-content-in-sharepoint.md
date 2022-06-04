@@ -1,5 +1,6 @@
 ---
 title: Follow content in SharePoint
+description: Describes the APIs for programmatically following content in SharePoint and provides lists of SharePoint APIs.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 30e68cd6-6e55-4cf9-afd6-7139b0a97288
@@ -65,7 +66,7 @@ Table 1 shows the manager and other key objects (or REST resources) in the APIs 
 
 **Table 1. SharePoint APIs used for following content programmatically**
 
-|**API**|**Key objects**|
+|API|Key objects|
 |:-----|:-----|
 |.NET client object model  <br/> See:  [How to: Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)|Manager object:            [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) <br/> Primary namespace:            [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) <br/> Other key objects:            [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) , [SocialActorInfo](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorInfo.aspx) , [SocialActorType](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorType.aspx) , [SocialActorTypes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorTypes.aspx) <br/> Class library:           Microsoft.SharePoint.Client.UserProfiles.dll  |
 |JavaScript object model|Manager object:            [SocialFollowingManager](https://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) <br/> Primary namespace:            [SP.Social](https://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) <br/> Other key objects:            [SocialActor](https://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx),  [SocialActorInfo](https://msdn.microsoft.com/library/d940db32-1561-c868-bb66-0612e2031f17%28Office.15%29.aspx),  [SocialActorType](https://msdn.microsoft.com/library/fbde74da-f292-dc87-0b7e-81bc5b7a880c%28Office.15%29.aspx),  [SocialActorTypes](https://msdn.microsoft.com/library/a460c3e6-ed88-117d-6755-4c5803a154a0%28Office.15%29.aspx) <br/> Class library:           SP.UserProfiles.js  |
@@ -88,7 +89,7 @@ Table 2 shows common programming tasks for following content and the members tha
 **Table 2. API for common tasks for following content in SharePoint**
 
 
-|**Task**|**Members**|
+|Task|Members|
 |:-----|:-----|
 |Create an instance of a manager object in the context of the current user|CSOM:  [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) <br/> JSOM:  [SocialFollowingManager](https://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) <br/> REST:  `<siteUri>/_api/social.following` <br/> SSOM:  [SPSocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.aspx)|
 |Create an instance of a manager object in the context of a specified user|CSOM: not implemented  <br/> JSOM: not implemented  <br/> REST: not implemented  <br/> SSOM:  [SPSocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.aspx) (overloaded)|

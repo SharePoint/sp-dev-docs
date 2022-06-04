@@ -1,6 +1,6 @@
 ---
 title: FAST Query Language (FQL) syntax reference
-description: Learn about constructing complex search queries for Search in SharePoint using the FAST Query Language (FQL). This reference describes the elements of an FQL query and how to use property specifications, token expressions, and operators in your FQL queries.
+description: Learn about constructing complex search queries for Search in SharePoint using the FAST Query Language (FQL).
 ms.date: 12/22/2020
 ms.prod: sharepoint
 ms.assetid: bd98a41b-623c-41d4-a15d-26c0d4ba4311
@@ -656,7 +656,7 @@ Use the **RANGE** operator for numeric and date/time managed properties. The ope
 
 #### Parameters
 
-| Parameter |        Value        |     Description      |                                                                                                                                                                                                                                                                     |
+| Parameter |        Value        |     &nbsp;     |  Description |
 | :-------- | :------------------ | :------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _start_   | _\<numeric_value\>\ | \<date/time_value\>_ | Start value for the range.  To specify that the range has no lower bound, use the reserved word **min**.                                                                                                                                                            |
 | _stop_    | _\<numeric_value\>\ | \<date/time_value\>_ | End value for the range.  To specify that the range has no upper bound, use the reserved word **max**.                                                                                                                                                              |

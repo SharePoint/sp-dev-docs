@@ -1,5 +1,6 @@
 ---
 title: Excel Services Best Practices
+description: Describes the best practices for working with Excel Services and provides general advice and details on mitigating threats.
 ms.date: 09/25/2017
 keywords: guidelines
 f1_keywords:

@@ -1,5 +1,6 @@
 ---
 title: Excel Services REST API Overview
+description: Provides an overview of the Excel Services REST API and provides a link to an article about the Microsoft Graph REST API endpoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5872f311-e180-4578-ac80-2519c1081951

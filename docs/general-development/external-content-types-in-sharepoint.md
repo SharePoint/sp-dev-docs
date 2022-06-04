@@ -1,5 +1,6 @@
 ---
 title: External content types in SharePoint
+description: Describes external content types in SharePoint and provides the prerequisites and steps to create external content types.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 11d7adb5-5388-4517-ae03-beb7be1c6981
@@ -129,7 +130,7 @@ Table 1 contains examples of tasks that illustrate working with external content
 **Table 1. Basic tasks for working with external content types**
 
 
-|**Task**|**Description**|
+|Task|Description|
 |:-----|:-----|
 | [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md) <br/> |Learn how to use Visual Studio 2012 to discover a published OData source, and create a reusable external content type for use in SharePoint Business Connectivity Services (BCS).  <br/> |
 | [How to: Create external content types for SQL Server in SharePoint](how-to-create-external-content-types-for-sql-server-in-sharepoint.md) <br/> |Learn how to create an external content type based on a SQL Server database.  <br/> |

@@ -1,6 +1,6 @@
 ---
 title: Customizing search results in SharePoint
-description: Learn how to group similar items or remove duplicate items in a search result set in SharePoint so you can display these results in a concise, readable way.
+description: Describes group similar items or remove duplicate items in a search result set in SharePoint to display these results in a concise, readable way.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
@@ -65,13 +65,13 @@ The following table lists the fields of the  _Spec_ parameter.
 **Table 1. Spec parameter fields**
 
 
-|**Element in parameter**|**Description**|
+|Element in parameter|Description|
 |:-----|:-----|
 | _Spec_ <br/> | `Subspec(<space>Subspec)*` <br/> |
 | _Subspec_ <br/> | `Prop(','Prop)*[':'Dups]` <br/> |
 | _Prop_ <br/> |A valid managed property or an alias of a managed property.  _Prop_ is case-insensitive. The managed property must be queryable and either sortable or refineable. <br/> |
 | _Dups_ <br/> |An integer specifying the number of items to retain. The default value is 1.  <br/> |
-| _<space>_ <br/> |Properties are combined by using the **OR** operator. <br/> |
+| _&lt;space&gt;_ <br/> |Properties are combined by using the **OR** operator. <br/> |
 | _,_ <br/> |Properties are combined by using the **AND** operator. <br/> |
 | _*_ <br/> |Indicates more items.  <br/> |
 | _() or []_ <br/> |Indicates optional items.  <br/> |
@@ -93,7 +93,7 @@ The following table shows a product catalog from the Contoso company. The next s
 
 
 
-|**Category**|**Product**|**Variant**|**Title**|
+|Category|Product|Variant|Title|
 |:-----|:-----|:-----|:-----|
 |Laptops  <br/> |WWI  <br/> |19W X0196 Black  <br/> |Computer 1  <br/> |
 |Laptops  <br/> |Adventure Works  <br/> |12 M1201 Red  <br/> |Computer 2  <br/> |
@@ -130,7 +130,7 @@ This should return the following results.
 
 
 
-|**Category**|**Product**|**Variant**|**Title**|
+|Category|Product|Variant|Title|
 |:-----|:-----|:-----|:-----|
 |Laptops  <br/> |WWI  <br/> |19W X0196 Black  <br/> |Computer 1  <br/> |
 |Laptops  <br/> |Adventure  <br/> |12 M1201 Red  <br/> |Computer 2  <br/> |
@@ -188,7 +188,7 @@ This should return the following results.
 
 
 
-|**Category**|**Product**|**Variant**|**Title**|
+|Category|Product|Variant|Title|
 |:-----|:-----|:-----|:-----|
 |Laptops  <br/> |WWI  <br/> |19W X0196 Black  <br/> |Computer 1  <br/> |
 |Laptops  <br/> |Adventure Works  <br/> |12 M1201 Red  <br/> |Computer 2  <br/> |

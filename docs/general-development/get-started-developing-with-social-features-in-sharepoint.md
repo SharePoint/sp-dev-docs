@@ -1,5 +1,6 @@
 ---
 title: Get started developing with social features in SharePoint
+description: Describes how to get started with developing SharePoint social features and provides links to articles and tutorials.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8852ce36-8309-45a7-a141-2e10ac17a123
@@ -113,7 +114,7 @@ After you set up your development environment and choose your scenario, you can 
 **Table 1. How-to articles for developing with social features**
 
 
-|**Feature area**|**Description**|
+|Feature area|Description|
 |:-----|:-----|
 | [How to: Learn to read and write to the social feed by using the .NET client object model in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-net-client-object.md)|Walk through detailed steps for creating an application that reads and writes to the social feed by using the .NET client object model.|
 | [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)|Walk through detailed steps for creating an application that reads and writes to the social feed by using the REST service.|
@@ -141,7 +142,7 @@ Although apps and solutions access SharePoint differently, after you do access S
 **Table 2. APIs for programming with social features**
 
 
-|**API name**|**Source and path**|
+|API name|Source and path|
 |:-----|:-----|
 | [.NET client object model](https://msdn.microsoft.com/library/9cc3f70c-78ac-4d2d-b46e-77522ee5d937%28Office.15%29.aspx)|Microsoft.SharePoint.Client.UserProfiles.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI|
 |Silverlight client object model|Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\ClientBin|
@@ -172,7 +173,7 @@ App permission requests are scoped to the SharePoint deployment landscape. Table
 **Table 3. App permission scopes and available rights for social features in SharePoint**
 
 
-|**Scope name**|**Description**|**Available rights**|
+|Scope name|Description|Available rights|
 |:-----|:-----|:-----|
 |User Profiles<br/>`http://sharepoint/social/tenant`|The permission request scope used to access all user profiles. Only the profile picture can be changed; all other user profile properties are read-only for SharePoint Add-ins. Must be installed by a tenant administrator.|Read, Write, Manage, FullControl|
 |Core<br/>`http://sharepoint/social/core`|The permission request scope used to access the user's followed content and shared metadata that is used by microblogging features. This scope applies only to personal sites that support following content. If the app installs on any other type of site, use the Tenant scope.|Read, Write, Manage, FullControl|

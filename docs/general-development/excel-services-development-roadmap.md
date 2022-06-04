@@ -1,5 +1,6 @@
 ---
 title: Excel Services Development Roadmap
+description: Provides a roadmap for developing with Excel Services, focusing on Excel Web Service and the REST API.
 ms.date: 09/25/2017
 keywords: roadmap
 f1_keywords:

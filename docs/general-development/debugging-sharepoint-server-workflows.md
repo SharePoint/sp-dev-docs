@@ -126,7 +126,7 @@ The first step is to first define the default proxy configuration for .NET Frame
 - `%systemdrive%\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\Config\\machine.config`
 - `%systemdrive%\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\Config\\machine.config`
 
-Next, add the following markup to the bottom of each file, just before the closing **<configuration>** element:
+Next, add the following markup to the bottom of each file, just before the closing **&lt;configuration&gt;** element:
 
 ```xml
 <system.net>

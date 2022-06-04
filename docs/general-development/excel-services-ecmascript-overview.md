@@ -1,5 +1,6 @@
 ---
 title: Excel Services ECMAScript Overview
+description: Provides an overview on ECMAScript in Excel Services and describes how to use the ECMAScript object model.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f8c1be86-df19-44c3-a3bc-c0da2b80df10
