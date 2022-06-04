@@ -11,7 +11,7 @@ There will be multiple public preview release using the @next tag in the NPMJS.o
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-- rc.1 **Released:** June 1, 2022
+- rc.0 **Released:** June 1, 2022
 - beta.6 **Released:** April 19, 2022
 - beta.1 **Released:**  March 8, 2022
 
