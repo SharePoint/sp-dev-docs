@@ -1,5 +1,6 @@
 ---
 title: Create an external list using an OData data source in SharePoint
+description: Describes how to create an external list programmatically and bind it to an OData-based external content type in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 601fbfce-a0c6-43dd-8398-540d094c083c

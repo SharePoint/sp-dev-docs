@@ -1,5 +1,6 @@
 ---
 title: Create a minimal master page in SharePoint
+description: Describes how to create a minimal master page in SharePoint, which contains only elements that SharePoint requires to render the page.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 634aa471-07e1-41d6-aa80-27f7ef7e9dc8

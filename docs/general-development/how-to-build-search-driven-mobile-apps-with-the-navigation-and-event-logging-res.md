@@ -1,5 +1,6 @@
 ---
 title: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+description: Describes how to build search-driven mobile apps for mobile devices that run on non-Windows operating systems.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
@@ -50,7 +51,7 @@ Typically the **Home** page is displayed when the app starts up. The **Home** pa
   
     
     
-![Build search-driven mobile apps](../images/SP15_Buildsearch-drivenmobileappspages_home.gif)
+![Diagram that shows the Mobile App communicating with a REST navigation HTTP call to Share Point, which gives a Navigation structure response back.](../images/SP15_Buildsearch-drivenmobileappspages_home.gif)
   
     
     
@@ -92,7 +93,7 @@ The **Category** page displays many items in a selected category. Each item list
   
     
     
-![Build search-driven mobile apps](../images/Buildsearch-drivenmobileappspages.gif)
+![Diagram that shows the Mobile App communicating with a REST search query to Share Point, which gives the search results back.](../images/Buildsearch-drivenmobileappspages.gif)
   
     
     

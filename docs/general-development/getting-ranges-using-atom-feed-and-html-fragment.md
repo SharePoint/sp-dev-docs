@@ -1,5 +1,6 @@
 ---
 title: Getting Ranges Using Atom Feed and HTML Fragment
+description: Describes the Atom feed method and the HTML fragment method to access ranges by using the REST API in Excel Services.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
@@ -48,7 +49,7 @@ Therefore, for a workbook with the file name **sampleWorkbook.xlsx** that is sav
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model
 ```
 
-Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
+Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _&lt;ServerName&gt;_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
   
     
     
@@ -184,19 +185,19 @@ The feed item contains XML that represents the data inside the range. Following 
     
     
 
-- **<range>** The range element. Represents the container of the returned range.
+- **&lt;range&gt;** The range element. Represents the container of the returned range.
     
   
-- **<row>** The row element. Represents each row in the range.
+- **&lt;row&gt;** The row element. Represents each row in the range.
     
   
-- **<c>** The cell element. Represents each cell in a row.
+- **&lt;c&gt;** The cell element. Represents each cell in a row.
     
   
-- **<fv>** The formatted value element. Represents the value as it is formatted by Excel. If the value is of type string in the workbook, the formatted value element is the only element under **<c>**. 
+- **&lt;fv&gt;** The formatted value element. Represents the value as it is formatted by Excel. If the value is of type string in the workbook, the formatted value element is the only element under **&lt;c&gt;**. 
     
   
-- **<v>** The value element. Represents a number value. If the value in the cell is a number instead of a string, the value element contains that information.
+- **&lt;v&gt;** The value element. Represents a number value. If the value in the cell is a number instead of a string, the value element contains that information.
     
   
 Using XML gives you an easier way to get data out of an Excel range so that you can use it in your application. 

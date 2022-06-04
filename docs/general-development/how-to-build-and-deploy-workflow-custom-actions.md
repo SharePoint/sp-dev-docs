@@ -1,5 +1,6 @@
 ---
 title: Build and deploy workflow custom actions
+description: Describes how to create custom workflow actions in SharePoint and provides an example that creates, packages, and deploys a custom activity.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 9d2fa681-30c2-4549-9df2-ea9ed757fda9

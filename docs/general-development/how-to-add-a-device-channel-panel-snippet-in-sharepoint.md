@@ -1,5 +1,6 @@
 ---
 title: Add a Device Channel Panel snippet in SharePoint
+description: Describes how to add a Device Channel Panel that can be added to a master page or page layout to control how content is rendered in created channels.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 612780a8-6267-49f6-a32d-33600bb5f6b4
