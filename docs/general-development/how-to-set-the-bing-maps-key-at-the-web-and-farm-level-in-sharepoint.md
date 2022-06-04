@@ -119,7 +119,7 @@ class Program
 
 ```
 
-8. Replace the <Site Url> and  _<Valid Bing Maps Key>_ with valid values.
+8. Replace the &lt;Site Url&gt; and  _&lt;Valid Bing Maps Key&gt;_ with valid values.
 9. Set the target framework in Project Properties as .NET Framework 4.0, and run the example.
 10. The key should now be set at the web level.
 

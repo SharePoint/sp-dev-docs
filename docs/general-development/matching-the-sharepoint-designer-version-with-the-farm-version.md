@@ -1,5 +1,6 @@
 ---
 title: Matching the SharePoint Designer version with the farm version
+description: Provides information on different versions of SharePoint Designer and provides links to related articles.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 6ea44d3f-0b05-43d4-99ae-98886b6909f0

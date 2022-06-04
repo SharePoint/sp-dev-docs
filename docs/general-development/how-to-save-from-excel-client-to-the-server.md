@@ -1,5 +1,6 @@
 ---
 title: Save from Excel client to the server
+description: Describes how to create a workbook with editable ranges, save it to a trusted SharePoint document library, and change values in the workbook.
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:

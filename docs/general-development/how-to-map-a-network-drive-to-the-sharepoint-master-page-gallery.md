@@ -1,5 +1,6 @@
 ---
 title: Map a network drive to the SharePoint Master Page Gallery
+description: Describes how to map a network drive to the Master Page Gallery in order to use Design Manager to upload design files in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7d416f6e-2471-4d03-97ae-4e8d907784c6

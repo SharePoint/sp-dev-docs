@@ -1,5 +1,6 @@
 ---
 title: Protocol handler error due to deprecated interface in SharePoint 2016
+description: Describes how to resolve the protocol handler error due to a deprecated interface in SharePoint 2016.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c80cb77c-89db-4c78-b576-f63d39ca330a

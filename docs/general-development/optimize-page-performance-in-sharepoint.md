@@ -1,6 +1,6 @@
 ---
 title: Optimize page performance in SharePoint
-description: Learn about features to improve performance in pages in SharePoint. These features can be used to enhance the experience in geographically distributed implementations.
+description: Learn about features to improve performance in SharePoint pages and enhance experiences in geographically distributed implementations.
 ms.date: 12/14/2020
 ms.prod: sharepoint
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
@@ -490,7 +490,7 @@ The Developer Dashboard is rebuilt for SharePoint to provide more information, i
 
 To learn more about the Developer Dashboard:
 
-- [Use the developer dashboard](https://docs.microsoft.com/sharepoint/dev/spfx/use-developer-dashboard).
+- [Use the developer dashboard](/sharepoint/dev/spfx/use-developer-dashboard).
 - [Renewed Developer Dashboard](https://download.microsoft.com/download/7/7/3/773CA2C2-579B-408C-808E-A6F561194E20/Ig15_SP_IT_M10V3_devdash.pptx) (PowerPoint slide deck).
 
 To enable the Developer Dashboard, use the following Windows PowerShell snippet code.

@@ -1,5 +1,6 @@
 ---
 title: Use SAP workflow with Duet Enterprise 2.0
+description: Describes how to use SAP workflows and provides steps on how to create and configure an app using information from SAP workflows.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 816e28ed-8cea-4e33-98e5-d3d27136e2e6

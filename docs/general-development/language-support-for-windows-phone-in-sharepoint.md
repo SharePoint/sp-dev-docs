@@ -1,5 +1,6 @@
 ---
 title: Language support for Windows Phone in SharePoint
+description: Describes the language support for the Windows Phone mobile app development Visual Studio templates installed by the SharePoint SDK.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 2c396a91-0fc1-4e25-942b-fffad49bd2c6

@@ -1,5 +1,6 @@
 ---
 title: Overview of Design Manager in SharePoint
+description: Provides an overview of the Design Manager in SharePoint, which is a publishing feature that brands SharePoint websites.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 29834b3f-3815-4347-91d3-296387663114

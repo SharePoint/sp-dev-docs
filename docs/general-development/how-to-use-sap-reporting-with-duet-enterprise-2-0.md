@@ -1,5 +1,6 @@
 ---
 title: Use SAP Reporting with Duet Enterprise 2.0
+description: Describes how to use SAP reporting with Duet Enterprise 2.0 and provides steps on how to enable the Duet reporting features.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a54c6cd2-2283-440d-af55-e98e3212caa1
