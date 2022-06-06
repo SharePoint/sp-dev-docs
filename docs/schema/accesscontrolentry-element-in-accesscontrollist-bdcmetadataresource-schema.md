@@ -31,10 +31,6 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 <table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Attribute</p></th>
@@ -53,10 +49,6 @@ The following sections describe attributes, child elements, and parent elements.
 ### Child elements
 
 <table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>
@@ -74,10 +66,6 @@ The following sections describe attributes, child elements, and parent elements.
 ### Parent elements
 
 <table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>

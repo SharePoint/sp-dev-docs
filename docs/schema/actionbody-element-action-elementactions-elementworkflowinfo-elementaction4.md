@@ -58,11 +58,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Parent elements
 
 <table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>

@@ -50,10 +50,6 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 <table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Attribute</p></th>
@@ -123,9 +119,6 @@ The following sections describe attributes, child elements, and parent elements.
 ### Child elements
 
 <table>
-<colgroup>
-<col width="100%" />
-</colgroup>
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="parameters-element-workflowinfo.md">Parameters</a></p>
@@ -143,9 +136,6 @@ The following sections describe attributes, child elements, and parent elements.
 ### Parent elements
 
 <table>
-<colgroup>
-<col width="100%" />
-</colgroup>
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="workflowactions-element-workflowactions.md">WorkflowActions</a></p></td>
