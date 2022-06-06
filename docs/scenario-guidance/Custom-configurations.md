@@ -52,11 +52,11 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ### Articles
 
-- [Make your SharePoint client-side web part configurable](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/basics/integrate-with-property-pane)
-- [Simplify adding web parts with preconfigured entries](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries)
-- [Validate web part property values](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/validate-web-part-property-values)
-- [Integrate web part properties with SharePoint](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint)
-- [Build custom controls for the property pane](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/build-custom-property-pane-controls)
+- [Make your SharePoint client-side web part configurable](/sharepoint/dev/spfx/web-parts/basics/integrate-with-property-pane)
+- [Simplify adding web parts with preconfigured entries](/sharepoint/dev/spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries)
+- [Validate web part property values](/sharepoint/dev/spfx/web-parts/guidance/validate-web-part-property-values)
+- [Integrate web part properties with SharePoint](sharepoint/dev/spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint)
+- [Build custom controls for the property pane](/sharepoint/dev/spfx/web-parts/guidance/build-custom-property-pane-controls)
 
 ### Videos
 
