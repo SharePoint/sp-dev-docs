@@ -112,7 +112,7 @@ You must register the CSS file with a master page before the CSS file can be use
 
 Replace _CSSFileLocation_ with the location of the CSS file.
 
-The following is an example of an **<SharePoint:CssRegistration>** element.
+The following is an example of an **&lt;SharePoint:CssRegistration&gt;** element.
 
 ```HTML
 <head>
