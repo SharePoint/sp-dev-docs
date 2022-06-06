@@ -1,6 +1,6 @@
 ---
 title: Performance
-description: Outlines how performance is one of the important factors that influence user-experience and how efficient users can work with the portal.
+description: Outlines how performance is one of the important factors that influence user-experience and how efficiently users can work with the portal.
 ms.date: 04/21/2020
 ms.localizationpriority: medium
 ---
