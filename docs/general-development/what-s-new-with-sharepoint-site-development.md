@@ -241,7 +241,7 @@ To learn more about cross-site publishing, see  [Scenario: Create SharePoint sit
 
 ### SEO enhancements
 
-Many business site users are referred to Internet business sites from large search engines like Bing and its global competitors. SharePoint includes features like friendly URLs, home page redirects, XML sitemaps, custom SEO properties that enable you to flexibly define the browser title and **/<Meta/>** tag descriptions and keywords, and easier-to-understand URLs for multilingual site variations.
+Many business site users are referred to Internet business sites from large search engines like Bing and its global competitors. SharePoint includes features like friendly URLs, home page redirects, XML sitemaps, custom SEO properties that enable you to flexibly define the browser title and **\<Meta\>** tag descriptions and keywords, and easier-to-understand URLs for multilingual site variations.
   
     
     
