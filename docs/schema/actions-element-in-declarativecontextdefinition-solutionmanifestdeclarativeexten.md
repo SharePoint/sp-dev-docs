@@ -1,5 +1,6 @@
 ---
 title: Actions element in DeclarativeContextDefinition
+description: Describes the code and syntax for the actions element in DeclarativeContextDefinition for SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -48,11 +49,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">UrlAction element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><a href="urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">UrlAction element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
 <td align="left"><p>Enables you to compose a URL. You can embed one or more fields from the external content type's view into the URL.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">CodeMethodAction element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><a href="codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">CodeMethodAction element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
 <td align="left"><p>Execute a custom code action or one of the predefined actions provided by Microsoft Business Connectivity Services (BCS).</p></td>
 </tr>
 </tbody>
@@ -73,7 +74,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition element (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
 <td align="left"><p>The context definition that is associated with this external content type.</p></td>
 </tr>
 </tbody>

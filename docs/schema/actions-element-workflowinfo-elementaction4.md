@@ -1,5 +1,6 @@
 ---
 title: Actions element (WorkflowInfo element)
+description: Discusses how you can create custom workflow activities and expand the palette of workflow actions that you can use to model unique business processes.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -30,7 +31,7 @@ Allows you to create custom workflow activities and expand the palette of availa
 
 ## Element information
 
-|   |   |
+| &nbsp;  | &nbsp;  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -218,14 +219,14 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>**Parallel**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a></span> sentence.</p></td>
+<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a> sentence.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequential**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a></span> sentence.</p></td>
+<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a> sentence.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 </tbody>
