@@ -1,5 +1,6 @@
 ---
 title: ContentType Element (ContentType)
+description: This article with links defines the content type ContentType for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

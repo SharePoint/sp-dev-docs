@@ -1,5 +1,6 @@
 ---
 title: ContentType element
+description: This article specifies a content type to retrieve fields.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

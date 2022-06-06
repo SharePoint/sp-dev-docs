@@ -1,5 +1,6 @@
 ---
 title: Content Type Definitions
+description: This is an article with links providing Content Type Definitions for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

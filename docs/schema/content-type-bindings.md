@@ -1,5 +1,6 @@
 ---
 title: Content Type Bindings
+description: This article with links defining Content Type Bindings for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

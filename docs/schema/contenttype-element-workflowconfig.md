@@ -1,5 +1,6 @@
 ---
 title: ContentType Element (WorkflowConfig)
+This article with links defines the content type WorkflowConfig for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -62,7 +63,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -75,7 +76,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttypes-element-workflowconfig.md">ContentTypes Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><a href="contenttypes-element-workflowconfig.md">ContentTypes Element (WorkflowConfig)</a></p></td>
 </tr>
 </tbody>
 </table>
