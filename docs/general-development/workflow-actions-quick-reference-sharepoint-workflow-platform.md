@@ -1,5 +1,6 @@
 ---
 title: Workflow actions quick reference (SharePoint Workflow platform)
+description: This reference lists the workflow actions that are supported in the current build of SharePoint Designer 2013, in addition to those that are not available.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: eb3434e5-bc75-4474-8873-4980062fd29c

@@ -1,5 +1,6 @@
 ---
 title: What's new with SharePoint site development
+description: Learn about the new site authoring and publishing model in SharePoint that enables you to create publishing sites.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ac1e9891-5ce9-4707-84e5-6e2fc02fda6b
@@ -240,7 +241,7 @@ To learn more about cross-site publishing, see  [Scenario: Create SharePoint sit
 
 ### SEO enhancements
 
-Many business site users are referred to Internet business sites from large search engines like Bing and its global competitors. SharePoint includes features like friendly URLs, home page redirects, XML sitemaps, custom SEO properties that enable you to flexibly define the browser title and **<Meta>** tag descriptions and keywords, and easier-to-understand URLs for multilingual site variations.
+Many business site users are referred to Internet business sites from large search engines like Bing and its global competitors. SharePoint includes features like friendly URLs, home page redirects, XML sitemaps, custom SEO properties that enable you to flexibly define the browser title and **/<Meta/>** tag descriptions and keywords, and easier-to-understand URLs for multilingual site variations.
   
     
     

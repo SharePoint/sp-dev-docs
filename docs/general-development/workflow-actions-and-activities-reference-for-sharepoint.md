@@ -1,5 +1,6 @@
 ---
 title: Workflow actions and activities reference for SharePoint
+description: Learn about the workflow actions that are available for workflow authoring in SharePoint Designer 2013.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 88e09f75-480f-4a68-87a6-b496350345cc

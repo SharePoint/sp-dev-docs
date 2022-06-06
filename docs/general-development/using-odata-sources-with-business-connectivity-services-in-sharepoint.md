@@ -1,5 +1,6 @@
 ---
 title: Using OData sources with Business Connectivity Services in SharePoint
+description: Learn how to get started creating external content types based on OData sources and using that data in SharePoint or Office 2013 components.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7a87e5bf-4428-4055-b113-7665a93e7326

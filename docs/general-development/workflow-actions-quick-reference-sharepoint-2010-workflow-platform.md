@@ -1,5 +1,6 @@
 ---
 title: Workflow actions quick reference (SharePoint 2010 Workflow platform)
+description: Learn about the workflow actions that are available in the SharePoint 2010 Workflow Platform in Microsoft SharePoint Designer 2013.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: b033f79f-2179-4cfd-9d1c-7c04f83d4a4b

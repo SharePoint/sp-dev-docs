@@ -1,5 +1,6 @@
 ---
 title: Workflows in SharePoint
+description: Learn about the Workflow Manager Client 1.0 authoring framework and workflow scenarios for SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e0602371-ae22-44be-8a7e-9e47e9f046d6

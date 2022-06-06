@@ -1,5 +1,6 @@
 ---
 title: What's new in Access
+description: Learn about the features in Access 2013 makes it easy to create, deploy, and manage collaborative web-based applications on premise or in the cloud.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 625bc1d0-55db-4420-a02e-aee04028b215

@@ -1,5 +1,6 @@
 ---
 title: Using OData with Excel Services REST in SharePoint
+description: SharePoint adds a new way to request data from Excel Services that uses the Open Data Protocol (OData).
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8a20225a-323c-4420-bbb4-eef60aed4b42

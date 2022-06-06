@@ -1,5 +1,6 @@
 ---
 title: URLs and tokens in SharePoint
+description: Learn how to formulate URLs and how to use URL tokens in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.localizationpriority: high
