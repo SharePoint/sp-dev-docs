@@ -1,5 +1,6 @@
 ---
 title: ActionBody element (WorkflowActions)
+description: Discusses the syntax and code for the definition, elements and attributes for ActionBody element (WorkflowActions).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

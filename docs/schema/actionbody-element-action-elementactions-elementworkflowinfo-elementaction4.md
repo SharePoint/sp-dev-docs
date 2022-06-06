@@ -1,5 +1,6 @@
 ---
 title: ActionBody element
+description: Discusses the usage, element information, definition, and attributes as it relates to the ActionBody element.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: ActionBody element (WorkflowInfo)
+description: Discusses code, syntax, definitions, elements, and attributes for the ActionBody element (WorkflowInfo).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
