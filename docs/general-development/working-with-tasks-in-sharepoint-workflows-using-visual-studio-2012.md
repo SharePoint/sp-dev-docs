@@ -1,5 +1,6 @@
 ---
 title: Working with Tasks in SharePoint Workflows using Visual Studio 2012
+description: Learn about the new and revised workflow task framework that was introduced in SharePoint, which is built on the new Workflow Manager.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
@@ -76,7 +77,7 @@ This new **Workflow Task** content type differs from the earlier **Task** conten
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig1](../images/WorkingWithTasksSharePointWorkflowsFig1.png)
+  ![Workflows in SharePoint are not limited to just the two options Approved and Rejected.](../images/WorkingWithTasksSharePointWorkflowsFig1.png)
   
 
   
@@ -100,7 +101,7 @@ Prior to SharePoint, the workflow task list used the same list template as the s
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig2](../images/WorkingWithTasksSharePointWorkflowsFig2.png)
+![This list, called the hierarchy tasks list, introduces a timeline view at the top of the page to show the scheduling of tasks.](../images/WorkingWithTasksSharePointWorkflowsFig2.png)
   
     
     
@@ -129,7 +130,7 @@ Both SharePoint Designer 2013 and Visual Studio 2012 provide workflow authors tw
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig3](../images/WorkingWithTasksSharePointWorkflowsFig3.png)
+![You can modify the properties either in the Properties tool window, or with the wizard.](../images/WorkingWithTasksSharePointWorkflowsFig3.png)
   
     
     
@@ -147,7 +148,7 @@ SharePoint lets you specify whether multiple tasks should run serially or in par
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig4](../images/WorkingWithTasksSharePointWorkflowsFig4.png)
+![To create multiple tasks in Visual Studio 2012, use the CompositeTask activity, whose wizard and properties resemble the **SingleTask** activity.](../images/WorkingWithTasksSharePointWorkflowsFig4.png)
   
     
     
@@ -196,7 +197,7 @@ We are going to create a task in our workflow and assign it to the person who cr
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig4](../images/WorkingWithTasksSharePointWorkflowsFig5.png)
+  ![Create an AnnouncementItemAuthorId variable to store the ID of the person who created the list item](../images/WorkingWithTasksSharePointWorkflowsFig5.png)
   
 
   
@@ -226,7 +227,7 @@ We are going to create a task in our workflow and assign it to the person who cr
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig5](../images/WorkingWithTasksSharePointWorkflowsFig6.png)
+  ![Assign the Created By path to the variable AnnouncementItemAuthorId](../images/WorkingWithTasksSharePointWorkflowsFig6.png)
   
 
   
@@ -255,7 +256,7 @@ At this point we can create and assign the task to the author of the announcemen
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig7](../images/WorkingWithTasksSharePointWorkflowsFig7.png)
+  ![Modify the title and body of the task.](../images/WorkingWithTasksSharePointWorkflowsFig7.png)
   
 
   
@@ -279,7 +280,7 @@ Notice in Figure 8 the email options that you can set. Among other options, you 
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig8](../images/WorkingWithTasksSharePointWorkflowsFig8.png)
+![Notice the email options you can set.](../images/WorkingWithTasksSharePointWorkflowsFig8.png)
   
     
     
@@ -297,7 +298,7 @@ You can also set the task outcome options. You can select the workflow task cont
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig9](../images/WorkingWithTasksSharePointWorkflowsFig9.png)
+![You can select the workflow task content type, the Outcome Field, and the Default Outcome.](../images/WorkingWithTasksSharePointWorkflowsFig9.png)
   
     
     
@@ -326,7 +327,7 @@ Once you have accepted values in the **Task Options** dialog box, select the **S
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig10](../images/WorkingWithTasksSharePointWorkflowsFig10.png)
+![Once you have accepted values in the Task Options dialog box, select the SingleTask activity and then inspect the Properties property grid](../images/WorkingWithTasksSharePointWorkflowsFig10.png)
   
     
     
@@ -348,7 +349,7 @@ Notice that the **Outcome** property automatically created a variable named **ou
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig11](../images/WorkingWithTasksSharePointWorkflowsFig11.png)
+![Add a WriteToHistory activity on the design surface and update the message to write out the result](../images/WorkingWithTasksSharePointWorkflowsFig11.png)
   
     
     
@@ -380,7 +381,7 @@ To test the workflow, do the following:
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig13](../images/WorkingWithTasksSharePointWorkflowsFig12.png)
+  ![Note the Task Name and Assigned To fields that were defined in the workflow](../images/WorkingWithTasksSharePointWorkflowsFig12.png)
   
 
   
@@ -392,7 +393,7 @@ To test the workflow, do the following:
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig13](../images/WorkingWithTasksSharePointWorkflowsFig13.png)
+  ![Notice that the result of the task is shown in the Workflow History list for the workflow instance.](../images/WorkingWithTasksSharePointWorkflowsFig13.png)
   
 
   
@@ -423,7 +424,7 @@ This approach can pose a challenge, however, in that the content type that the c
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig14](../images/WorkingWithTasksSharePointWorkflowsFig14.png)
+![If the default outcome is not removed, then the users completing the task would be presented with all available outcome options.](../images/WorkingWithTasksSharePointWorkflowsFig14.png)
   
     
     
@@ -565,7 +566,7 @@ Now we create a workflow so we can test the custom site column and content type.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig15](../images/WorkingWithTasksSharePointWorkflowsFig15.png)
+  ![Create an Int32 variable and name it "ItemAuthorId".](../images/WorkingWithTasksSharePointWorkflowsFig15.png)
   
 
   
@@ -600,7 +601,7 @@ Now we collect the list item properties.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig16](../images/WorkingWithTasksSharePointWorkflowsFig16.png)
+  ![Change the Entity Type to List Item of Announcements to give the dialog box a context and assign the Created By path to the variable ItemAuthorId.](../images/WorkingWithTasksSharePointWorkflowsFig16.png)
   
 
   
@@ -629,7 +630,7 @@ Now we can create the single task.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig17](../images/WorkingWithTasksSharePointWorkflowsFig17.png)
+  ![Change the title of the task.](../images/WorkingWithTasksSharePointWorkflowsFig17.png)
   
 
   
@@ -644,7 +645,7 @@ Now we can create the single task.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig18](../images/WorkingWithTasksSharePointWorkflowsFig18.png)
+  ![The dialog box determines what is available by looking at all the content types that are derived from the Workflow Task (SharePoint) content type.](../images/WorkingWithTasksSharePointWorkflowsFig18.png)
   
 
   
@@ -664,7 +665,7 @@ Also, notice that the **Outcome** property automatically created a variable name
 
 ### Update the workflow task list
 
-The final step is to configure the workflow task list. By default, the task list that the app creates only accepts the content type **Workflow Task (SharePoint)**. This workflow uses a custom content type for the custom outcome. Open the  `Elements.xml` file for the workflow task list and change the **<ContentTypeBinding>** element's **ContentTypeId** attribute to match the content type in the project, as shown in the code example following.
+The final step is to configure the workflow task list. By default, the task list that the app creates only accepts the content type **Workflow Task (SharePoint)**. This workflow uses a custom content type for the custom outcome. Open the  `Elements.xml` file for the workflow task list and change the **\<ContentTypeBinding\>** element's **ContentTypeId** attribute to match the content type in the project, as shown in the code example following.
   
     
     
@@ -711,7 +712,7 @@ Now let's test the workflow.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig19](../images/WorkingWithTasksSharePointWorkflowsFig.png)
+  ![The second two buttons are the default Save and Cancel buttons that simply update the list item without completing the task.](../images/WorkingWithTasksSharePointWorkflowsFig.png)
   
 
   
