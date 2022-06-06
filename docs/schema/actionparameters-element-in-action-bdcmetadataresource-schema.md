@@ -46,7 +46,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md">ActionParameter element in ActionParameters (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><a href="actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md">ActionParameter element in ActionParameters (BDCMetadataResource Schema)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -64,7 +64,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action element in Actions (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action element in Actions (BDCMetadataResource Schema)</a></p></td>
 </tr>
 </tbody>
 </table>

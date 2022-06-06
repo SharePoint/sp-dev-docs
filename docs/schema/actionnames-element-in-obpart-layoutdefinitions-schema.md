@@ -1,5 +1,6 @@
 ---
 title: ActionNames element in OBPart
+description: Describes the ActionNames element in OBPart SharePoint which are exposed by the External Data Part.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -48,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionname-element-in-arrayofactions-layoutdefinitions-schema.md">ActionName element in ArrayOfActions (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><p><a href="actionname-element-in-arrayofactions-layoutdefinitions-schema.md">ActionName element in ArrayOfActions (LayoutDefinitions Schema)</a></p></td>
 <td align="left"><p>The name of the action.</p></td>
 </tr>
 </tbody>

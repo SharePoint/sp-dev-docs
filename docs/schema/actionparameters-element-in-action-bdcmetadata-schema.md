@@ -49,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadata-schema.md">ActionParameter element in ActionParameters (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="actionparameter-element-in-actionparameters-bdcmetadata-schema.md">ActionParameter element in ActionParameters (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>An **ActionParameter**.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadata-schema.md">Action element in Actions (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="action-element-in-actions-bdcmetadata-schema.md">Action element in Actions (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>The **Action** that these **ActionParameters** belong to.</p></td>
 </tr>
 </tbody>

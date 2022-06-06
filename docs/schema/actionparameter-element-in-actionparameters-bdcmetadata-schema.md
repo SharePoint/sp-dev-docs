@@ -136,11 +136,11 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>The localized display names for the **ActionParameter**.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>The properties of the **ActionParameter**.</p></td>
 </tr>
 </tbody>
@@ -163,7 +163,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>The **ActionParameters** element that contains this **ActionParameter**.</p></td>
 </tr>
 </tbody>
