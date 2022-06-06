@@ -88,11 +88,10 @@ To ensure the service remains fast and reliable, queries using such permission a
 When searching using a result source that requests people results, we may throttle any requests exceeding a limit of 25 QPS. This limit applies jointly to all requests using the out-of-the-box "Local People Results" result source and all requests using custom people search result sources.
 
 If you have applications or components which are causing your people search requests to get throttled, we recommend that you:
-1. Consider if the requests are really necessary for your application. For example, if you are using a custom search site which makes many simultaneous queries, check whether some of those requests can be removed without any significant impact to your search experience. Alternatively, consider trying our modern [Microsoft Search experience](/sharepoint/get-started-with-modern-search-experience) in hub sites, which has been optimised for the best performance and search relevance.
-2. Avoid making simultaneous requests. For example, instead of issuing 10 requests all at once, issue them consecutively, i.e. only issue the next query after the previous one has completed. You may need to consider caching these results if you need them quickly, for example on a page load.
+1. Consider if the requests are really necessary for your application. For example, if you are using a custom search site which makes many simultaneous queries, check whether some of those requests can be removed without any significant impact to your search experience. Alternatively, consider trying our modern [Microsoft Search experience](/sharepoint/get-started-with-modern-search-experience) in hub sites, which has been optimised for better performance and more relevant results.
+2. Avoid making concurrent requests. For example, instead of issuing 10 requests all at once, issue them consecutively - only issue the next query after the previous one has completed. You may need to consider caching these results if you need them quickly, for example on a page load.
 3. Try consolidating the requests into a single query. For example, instead making 10 simultaneous queries for `WorkEmail:user1@constoso.com`, `WorkEmail:user2@constoso.com`,..., `WorkEmail:user10@contoso.com`, try the single query, `WorkEmail:user1@constoso.com WorkEmail:user2@constoso.com ... WorkEmail:user10@contoso.com`.
-4. Try simplifying your queries. If your request are complex, they may consume more resources, which can lead to more aggressive throttling. Try removing unecessary query terms, selecting fewer properties to be returned, or asking for fewer results.
-5. Consider using the [Microsoft Graph API](/graph/people-example#search-people) if a high-request-volume scenario (in excess of 25 QPS) is truly necessary.
+4. Consider using the [Microsoft Graph API](/graph/people-example#search-people) if a high-request-volume scenario (in excess of 25 QPS) is truly necessary.
 
 ### Other scenarios
 
