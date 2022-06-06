@@ -53,7 +53,7 @@ Table 1 shows the resources for setting up a development environment and beginni
 
 **Table 1. Resources to help you get started with SharePoint Framework solutions**
 
-|**Topic**|**Description**|
+|Topic|Description|
 |:-----|:-----|
 | [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint Framework development environment.  <br/> |
 | [Build your first SharePoint client-side web part](/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) <br/> | Describes how to build your first client-side web part using SharePoint Framework <br/> |
@@ -66,7 +66,7 @@ Table 2 shows the resources for setting up a development environment and beginni
 
 **Table 2. Resources to help you get started with SharePoint farm solutions development**
 
-|**Topic**|**Description**|
+|Topic|Description|
 |:-----|:-----|
 | [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint development environment.  <br/> |
 | [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md) <br/> |Describes the several sets of APIs that are provided in SharePoint, including the server object model and the various client-side object models, and the REST/OData web service.  <br/> |

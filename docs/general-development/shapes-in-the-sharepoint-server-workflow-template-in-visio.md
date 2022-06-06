@@ -47,7 +47,7 @@ The following table shows a list of all the shapes that are contained in the Sha
 
 
 
-|**Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer**|**Action in the SharePoint Designer 2013 Declarative Designer**|**Properties in SharePoint Designer 2013 Visual Designer**|**Description**|
+|Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer|Action in the SharePoint Designer 2013 Declarative Designer|Properties in SharePoint Designer 2013 Visual Designer|Description|
 |:-----|:-----|:-----|:-----|
 |Add a Comment  <br/> |**Add a Comment** <br/> |**Comment** <br/> |Enables you to leave informative comments in the workflow designer for reference purposes. This is especially helpful when there are other users collaborating on the workflow.  <br/> |
 |Add Time to Date  <br/> |**Add Time to Date** <br/> |**Months** <br/> **Days** <br/> **Hours** <br/> **Minutes** <br/> **Date** <br/> **Output** <br/> |Adds a specific time in minutes, hours, days, or months to a date, and stores the output value as a variable. The date can be a current data, specific date, or a lookup. The 'Current Date' value returns UTC midnight.  <br/> |
@@ -101,7 +101,7 @@ The following table shows a list of all the shapes that are contained in the Sha
     
 
 
-|**Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer**|**Action in the SharePoint Designer 2013 Declarative Designer**|**Properties in SharePoint Designer 2013 Visual Designer**|**Description**|
+|Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer|Action in the SharePoint Designer 2013 Declarative Designer|Properties in SharePoint Designer 2013 Visual Designer|Description|
 |:-----|:-----|:-----|:-----|
 |If Any Value Equals Value  <br/> |**If any value equals value** <br/> |**Value** <br/> **Operand** <br/> **Value** <br/> |Compares two values. You can specify whether the values should be equal or not equal.  <br/> |
 |Person is a Valid SharePoint User  <br/> |**Person is a valid SharePoint user** <br/> |**User** <br/> |Checks to see whether a specific user is a registered user or a member of a group on the SharePoint site.  <br/> |
@@ -117,7 +117,7 @@ The following table shows a list of all the shapes that are contained in the Sha
     
 
 
-|**Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer**|**Action in the SharePoint Designer 2013 Declarative Designer**|**Properties in SharePoint Designer 2013 Visual Designer**|**Description**|
+|Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer|Action in the SharePoint Designer 2013 Declarative Designer|Properties in SharePoint Designer 2013 Visual Designer|Description|
 |:-----|:-----|:-----|:-----|
 |Start  <br/> |NA  <br/> |NA  <br/> |Begins the workflow. Every SharePoint workflow diagram must have only one Start shape.  <br/> |
 |Stage  <br/> |**Stage** <br/> |NA  <br/> |Contains any number of shapes and may include branching. All actions in the workflow must be contained by a stage. Stage shapes are visualized by using container shapes. A Stage shape requires that an Enter and an Exit shape be added to the edges of the container to define the paths in and out of the stage.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md).  <br/> |
