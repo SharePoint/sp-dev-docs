@@ -34,7 +34,7 @@ You can identify a reference thread by its  [ThreadType](https://msdn.microsoft.
 **Table 1. Types of reference thread**
 
 
-|**Reference type**|**Description**|
+|Reference type|Description|
 |:-----|:-----|
 | [LikeReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) **** <br/> |A reference to a post that a user likes.  <br/> |
 | [MentionReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) <br/> |A reference to a post that mentions a user.  <br/> |
