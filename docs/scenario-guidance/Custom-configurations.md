@@ -25,7 +25,7 @@ Tenant properties allow tenant administrators to add properties in the App Catal
 
 ### Articles
 
-- [SharePoint Online tenant properties](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-properties)
+- [SharePoint Online tenant properties](/sharepoint/dev/spfx/tenant-properties)
 
 ### Videos
 
