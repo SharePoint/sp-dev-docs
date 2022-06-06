@@ -1,5 +1,6 @@
 ---
 title: Building search queries in SharePoint
+description: Article with links about the search syntax supported in SharePoint for building query rules and search queries.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c4372fcc-4574-4c81-a345-a1bb282ca8f7

@@ -481,7 +481,7 @@ The namespace is **Microsoft.BusinessData.MetadataModel**.
 <a name="bkmk_ClientObjectModelFAQ"> </a>
 
 
-- **Does the <Method> tag need to be included in a CAML query when querying an external list**
+- **Does the \<Method\> tag need to be included in a CAML query when querying an external list**
     
     No. 
     

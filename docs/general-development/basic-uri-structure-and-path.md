@@ -60,7 +60,7 @@ Following is an example of how a REST URL in Excel Services looks with all three
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Charts('SampleChart')
 ```
 
-The workbook is stored in a document library. The full path to the workbook is  `http://` _<ServerName>_ `/Docs/Documents/sampleWorkbook.xlsx`.
+The workbook is stored in a document library. The full path to the workbook is  `http://` _\<ServerName\>_ `/Docs/Documents/sampleWorkbook.xlsx`.
   
     
     
@@ -69,7 +69,7 @@ The three parts of the REST URL are:
     
     
 
-1. **REST aspx Page URI**: `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx`
+1. **REST aspx Page URI**: `http://` _\<ServerName\>_ `/_vti_bin/ExcelRest.aspx`
     
   
 2. **Workbook Location**: `/Docs/Documents/sampleWorkbook.xlsx`
@@ -117,7 +117,7 @@ Following is the aspx page for the REST service in Excel Services:
 http://<ServerName>/_vti_bin/ExcelRest.aspx
 ```
 
-To access the REST service in Excel Services, you must preface the URL with  `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx`.
+To access the REST service in Excel Services, you must preface the URL with  `http://` _\<ServerName\>_ `/_vti_bin/ExcelRest.aspx`.
   
     
     
