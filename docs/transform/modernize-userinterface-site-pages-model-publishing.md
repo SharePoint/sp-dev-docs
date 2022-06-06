@@ -396,7 +396,7 @@ See [Page Transformation Functions and Selectors](modernize-userinterface-site-p
 
 When you transform you classic publishing page to a modern page you sometimes want to add an **additional** modern web part on the created page, without that there's a classic version of that web part on the classic publishing page. This can be done by adjusting your webpartmapping.xml and page layout mapping files as shown below.
 
-First define your custom web part in your **webpartmapping.xml** file by **adding** it the `WebParts` element in the file like shown in this [standard SPFX Hello World web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part):
+First define your custom web part in your **webpartmapping.xml** file by **adding** it the `WebParts` element in the file like shown in this [standard SPFX Hello World web part](/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part):
 
 ```XML
 <WebParts>

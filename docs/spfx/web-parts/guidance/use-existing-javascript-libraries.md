@@ -75,11 +75,11 @@ However, bundling existing JavaScript libraries with SharePoint Framework client
 
 When bundling existing JavaScript frameworks in the SharePoint Framework, all referenced scripts are included in the generated bundle file. Following the Angular example, an optimized web part bundle including Angular is over 170 KB.
 
-![Bundle file size highlighted in Explorer](../../../images/external-scripts-bundle-size.png)
+![Screenshot of the File Explorer screen's deploy folder showing the Hello World bundle JavaScript file being highlighted.](../../../images/external-scripts-bundle-size.png)
 
 If you add another web part to your project that also uses Angular and you build the project, you get two bundle files, one for each web part, each of them being over 170 KB.
 
-![Two bundle files highlighted in Explorer](../../../images/external-scripts-two-bundles-size.png)
+![Screenshot of the File Explorer screen's deploy folder showing two Hello World bundle JavaScript files being highlighted.](../../../images/external-scripts-two-bundles-size.png)
 
 If you add these web parts to a page, each user would download Angular multiple times, once with each web part on the page. This approach is inefficient and slows down page load time.
 
@@ -162,11 +162,11 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
 
 If you build your project now and take a look at the size of the generated bundle file, you notice that it's only 6 KB.
 
-![Bundle file size highlighted in Explorer](../../../images/external-scripts-external-angular-bundle-size.png)
+![Screenshot of File Explorer showing the deploy folder with the Hello Word JavaScript file being highlighted.](../../../images/external-scripts-external-angular-bundle-size.png)
 
 If you add another web part to your project that also uses Angular, and you build the project again, both bundles would be 6 KB each.
 
-![Two bundle files highlighted in Explorer](../../../images/external-scripts-external-angular-two-bundles-size.png)
+![Screenshot of File Explorer showing the deploy folder with two Hello Word JavaScript files being highlighted.](../../../images/external-scripts-external-angular-two-bundles-size.png)
 
 It isn't correct to assume that you've saved over 300 KB. Both web parts still need Angular and load it the first time the user visits the page where one of the web parts is placed.
 

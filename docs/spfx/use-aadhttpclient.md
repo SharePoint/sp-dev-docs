@@ -188,12 +188,12 @@ Global and SharePoint administrators can also use the SharePoint Online Manageme
   > [!NOTE]
   > SharePoint doesn't verify if the requested permissions have already been granted or not, so before approving or rejecting a permission request, check which permissions have already been granted in your tenant.
 
-- To *approve the specific permission request*, use the **Approve-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>** cmdlet, specifying the ID of the permission request that you want to approve.
+- To *approve the specific permission request*, use the **Approve-SPOTenantServicePrincipalPermissionRequest -RequestId &lt;Guid&gt;** cmdlet, specifying the ID of the permission request that you want to approve.
 
     > [!NOTE]
     > If you try to approve a request for a permission that has already been granted, you get an error.
 
-- To *deny a permission request* (if the requested permission has already been granted, or the request is against your organizational policies), use the **Deny-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>** cmdlet, specifying the ID of the permission request that you want to deny.
+- To *deny a permission request* (if the requested permission has already been granted, or the request is against your organizational policies), use the **Deny-SPOTenantServicePrincipalPermissionRequest -RequestId %lt;Guid&gt;** cmdlet, specifying the ID of the permission request that you want to deny.
 
     > [!NOTE]
     > Denying a permission request issued by a SharePoint Framework application doesn't prevent that application from being deployed in the app catalog and installed on sites.
@@ -206,7 +206,7 @@ Global and SharePoint administrators can also use the SharePoint Online Manageme
   - **ResourceId**: The objectId of the resource service principal to which access has been granted.
   - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 
-- To *revoke a previously granted permission*, use the **Revoke-SPOTenantServicePrincipalPermission -ObjectId <String>** cmdlet. In the **ObjectId** parameter, you should specify the objectId of the grant that you want to revoke, which you can obtain by using the **Get-SPOTenantServicePrincipalPermissionGrants** cmdlet.
+- To *revoke a previously granted permission*, use the **Revoke-SPOTenantServicePrincipalPermission -ObjectId &lt;String&gt;** cmdlet. In the **ObjectId** parameter, you should specify the objectId of the grant that you want to revoke, which you can obtain by using the **Get-SPOTenantServicePrincipalPermissionGrants** cmdlet.
 
     > [!NOTE]
     > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.

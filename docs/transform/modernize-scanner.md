@@ -21,7 +21,7 @@ This scanner is a key tool to use if you want to prepare for modernizing your cl
 
 > [!NOTE]
 > - Assessing your workflow 2013 usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool), this tool will step by step replace the still relevant features from the modernization scanner
-> - The SharePoint modernization scanner only is supported for running against SharePoint Online. For scanning on-premises SharePoint you can consider using the [SharePoint Migration Assessment Tool](https://docs.microsoft.com/sharepointmigration/overview-of-the-sharepoint-migration-assessment-tool) (SMAT) or the [Microsoft Consulting Services open source version of the on-premises workflow scanner](https://github.com/microsoft/SP-Server-Workflow-Scanner).
+> - The SharePoint modernization scanner only is supported for running against SharePoint Online. For scanning on-premises SharePoint you can consider using the [SharePoint Migration Assessment Tool](/sharepointmigration/overview-of-the-sharepoint-migration-assessment-tool) (SMAT) or the [Microsoft Consulting Services open source version of the on-premises workflow scanner](https://github.com/microsoft/SP-Server-Workflow-Scanner).
 >
 > [!IMPORTANT]
 > Modernization tooling and all other PnP components are open-source tools backed by an active community providing support for them. There is no SLA for open-source tool support from official Microsoft support channels.

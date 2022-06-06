@@ -143,7 +143,7 @@ Occurrence of theme tokens within SharePoint UI may differ depending upon select
 
 ### Customizing theme colors
 
-In order to customize theme colors, a custom theme should be created and added to a SharePoint tenant for selection on a target site or hub. See [SharePoint site theming](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview) for more information.
+In order to customize theme colors, a custom theme should be created and added to a SharePoint tenant for selection on a target site or hub. See [SharePoint site theming](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview) for more information.
 
 ## See also
 

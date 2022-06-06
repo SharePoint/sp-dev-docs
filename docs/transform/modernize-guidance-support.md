@@ -23,5 +23,5 @@ You’ve added a cool extension, fixed a type, fixed a bug…any contribution to
 
 What else can you consider combining with the modernization:
 
-- Make the Teams experience richer by populating the created Teams team with channels and messages. See https://docs.microsoft.com/sharepoint/dev/solution-guidance/pnp-provisioning-tenant-templates on how to get started with PnP Tenant templates that provision Teams content.
-- Create SharePoint Framework based customizations to replace existing, business critical, classic customizations. The customizations can also be hosted in Teams. See https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview to learn more.
+- Make the Teams experience richer by populating the created Teams team with channels and messages. See /sharepoint/dev/solution-guidance/pnp-provisioning-tenant-templates on how to get started with PnP Tenant templates that provision Teams content.
+- Create SharePoint Framework based customizations to replace existing, business critical, classic customizations. The customizations can also be hosted in Teams. See /sharepoint/dev/spfx/sharepoint-framework-overview to learn more.

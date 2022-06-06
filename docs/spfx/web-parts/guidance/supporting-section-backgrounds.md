@@ -13,11 +13,11 @@ Starting with SharePoint Framework v1.8, web parts can be made aware of any sect
 
 The section background color you can set is based upon the main color of the theme you applied. To set the background of a section open its properties:
 
-![Setting properties of a background](../../../images/supporting-section-backgrounds-modify-section.png)
+![Screenshot of a red arrow pointing to the background properties icon.](../../../images/supporting-section-backgrounds-modify-section.png)
 
 In the properties you can define which type of section background you want to set:
 
-![Setting properties of a background](../../../images/supporting-section-backgrounds-modify-section2.png)
+![Screenshot of the Layout options pane with the One column option being highlighted.](../../../images/supporting-section-backgrounds-modify-section2.png)
 
 ## Making your web part theme aware
 

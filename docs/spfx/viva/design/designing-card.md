@@ -5,7 +5,7 @@ ms.date: 12/28/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
-# Designing Viva Connections custom cards for your dashboard
+# Dashboard cards design guidance
 
 ## Principles
 
@@ -17,13 +17,13 @@ Cards are used to link resources, surface information, and power direct interact
 
 **Bring cards to life with relevant and dynamically refreshable data:** Company stock price, due dates for training or projects, task assignment updates, and remaining vacation days are some examples.
 
-:::image type="content" source="../../../images/viva-design/img-card-design2.gif" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img-card-design2.gif" alt-text="Moving image that shows process of clocking in for a shift.":::
 
 ## Anatomy of cards
 
 Each dashboard card has the following elements:
 
-:::image type="content" source="../../../images/viva-design/img_card_base.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_base.jpg" alt-text="Diagram showing the card container and card elements, showing the Time off and paid time off available options.":::
 
 1. **Container**: All card content sits within the container.
 
@@ -39,7 +39,7 @@ Each dashboard card has the following elements:
 
 When adding the title and heading, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes (more information about sizes is given below) and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the title, in most cases, a length of 10-12 characters should fit the card width well.
 
-:::image type="content" source="../../../images/viva-design/img_card_truncation.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_truncation.jpg" alt-text="Diagram that shows the submit time of... and Time off options, with the Time off option being the recommended option.":::
 
 ### Layouts and sizes
 
@@ -55,19 +55,19 @@ All layouts come in two sizes: medium or large. Card size will determine how the
 
 Use when the heading is sufficient to communicate the key information in the card.
 
-:::image type="content" source="../../../images/viva-design/img_card_heading.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_heading.jpg" alt-text="Diagram of the Time Off task and shows the Heading relationship between the two tasks.":::
 
 #### Heading + Description​​​​​​​
 
 Use when the description can add informational value to the heading and can make it easier to understand the purpose of the card. Avoid repeating information already communicated in the heading.
 
-:::image type="content" source="../../../images/viva-design/img_card_description.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_description.jpg" alt-text="Diagram of the two Time Off tasks and showing the Heading and Description for Medium and Large tasks.":::
 
 ### Heading + Image​​​​​​​
 
 Images draw viewer's eye, so use images carefully either to create recognition of a familiar app or website, or increase overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
 
-:::image type="content" source="../../../images/viva-design/img_card_image.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_image.jpg" alt-text="Showing the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
 
 ## Interaction
 
@@ -77,7 +77,7 @@ There are three possible ways to interact with a card:
 - Primary button
 - Secondary button
 
-:::image type="content" source="../../../images/viva-design/img_card_interactions.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_interactions.jpg" alt-text="Screenshot of the card, primary button, and secondary button interactions.":::
 
 Each of these interactions can be customized. Use these to perform an instant action, send a request to server, open a quick view (add link), link to a Teams app, open an external website and so on.
 
@@ -99,28 +99,28 @@ Here are the best practices for designing card interactions:
 
 ​​​​​​​Here are some example cards for how these layouts can be used
 
-:::image type="content" source="../../../images/viva-design/img_card_collections.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_collections.jpg" alt-text="Screenshot showing various example cards, including cards for Shifts, Tasks, COVID-19, and Tutorials.":::
 
 
 ## Platforms and modes
 
 Dashboard cards are supported on iOS, Android, and Web. However there are slight differences the styling between different platforms – fonts (Segoe UI for desktop, Roboto for Android, SF Display Pro for iOS), colors, sizes, and spacing is slightly tweaked to better suit the respective platform and make the cards look consistent with the overall experience of that platform.
 
-:::image type="content" source="../../../images/viva-design/img_card_platforms.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_platforms.jpg" alt-text="Screenshot showing how the same card appears on web, i O S, and Android platforms.":::
 
 Dashboard cards also support both light and dark mode theme. Ensure that colors you use work for both modes – text should be legible, and buttons and icons should be clearly recognizable against the background. To meet accessibility criteria, text should have a color ratio of 4.5:1 against the button background, and non-text components like icon should have a color ratio of 3:1 against the background. [Use this tool to check color contrast](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html).
 
-:::image type="content" source="../../../images/viva-design/img_card_modes.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_modes.jpg" alt-text="Screenshot that shows how the same card appears in light mode versus how it appears in dark mode.":::
 
 ### Displaying your app in the toolbox
 
 New cards are added to that dashboard using the following toolbox.
 
-:::image type="content" source="../../../images/viva-design/img_card_toolbox.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_toolbox.jpg" alt-text="Screenshot of the Relecloud screen showing the Dashboard, which displays various tools.":::
 
 To display your custom app in the dashboard picker, you will need the following:
 
-:::image type="content" source="../../../images/viva-design/img_card_toolbox2.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_toolbox2.jpg" alt-text="Screenshot of the dashboard with a focus on the icon, title, and descriptive text for each tool in the dashboard.":::
 
 **1. Icon:** Unique visual representation of this app. Your custom icon maximum size is 24 px by 24 px and should preferably in PNG or SVG format. SVG icons scale better across different screen resolutions. It is preferable to use a monochromatic icon, but you can use color icons if you want to represent your unique brand with the icons. Either way, make sure the icon has a transparent background, and it looks good both on light and dark theme. [​​​​​​​Learn about SharePoint themes](/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview). The same icon is to be used for the dashboard card (see above).
 
@@ -132,7 +132,7 @@ To display your custom app in the dashboard picker, you will need the following:
 
 When the app is clicked, the card is displayed on the dashboard. The card can be edited using the settings panel on the right.
 
-:::image type="content" source="../../../images/viva-design/img_card_settings.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_card_settings.jpg" alt-text="Screenshot of the Rerecloud application showing an edit pane that allows the user to edit the title, heading, and description of a card.":::
 
 Here are some best practices for offering customization settings:
 

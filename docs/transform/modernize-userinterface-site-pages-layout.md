@@ -14,7 +14,7 @@ Each source page that gets transformed does have a certain layout, typically one
 
 Source page layout|Target page layout
 :-----|:----------
-![full page](media/modernize/layout_wp_fullpage.png)|1 column row
+![Diagram showing the top column row of a screen.](media/modernize/layout_wp_fullpage.png)|1 column row
 ![header, left column, body](media/modernize/layout_wp_h2cleft.png)|1 column row + 2 column row left
 ![header, right column body](media/modernize/layout_wp_h2cright.png)|1 column row + 2 column row right
 ![header, footer, 3 columns](media/modernize/layout_wp_hf3c.png)|1 column row + 3 column row + 1 column row
@@ -27,7 +27,7 @@ Source page layout|Target page layout
 
 Source page layout|Target page layout
 :-----|:----------
-![full page](media/modernize/layout_wiki_1c.png)|1 column row
+![Screenshot of the One column text next to a one column icon.](media/modernize/layout_wiki_1c.png)|1 column row
 ![2 columns](media/modernize/layout_wiki_2c.png)|2 column row
 ![2 columns left](media/modernize/layout_wiki_2cleft.png)|2 column row left
 ![header, 2 columns](media/modernize/layout_wiki_h2c.png)|1 column row + 2 column row

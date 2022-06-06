@@ -523,9 +523,9 @@ Name|Description
 
 #### Input parameters
 
-Name|Description
-:-----|:----------
-{ContactLoginName}|User account to lookup (in i:0#.f|membership|joe@contoso.onmicrosoft.com format)
+Name|Description| Membership
+:-----|:----------|:----
+{ContactLoginName}|User account to lookup (in i:0#.f|joe@contoso.onmicrosoft.com
 #### Output parameters
 
 Name|Description
@@ -726,8 +726,8 @@ Name|Description
 Name|Description
 :-----|:----------
 {Taxonomy Field}|The taxonomy field to update
-{'term ids split by |'}|List of term id's to set, multiple values can also be used when the taxonomy field is configured to accept multiple terms
-{'static boolean value'}|Static bool ('true', 'false') to indicate if the default term values have to be set in case the fiels already contains terms
+{'term ids split by &#124;'}|List of term id's to set, multiple values can also be used when the taxonomy field is configured to accept multiple terms
+{'static boolean value'}|Static bool ('true', 'false') to indicate if the default term values have to be set in case the fields already contains terms
 #### Output parameters
 
 Name|Description

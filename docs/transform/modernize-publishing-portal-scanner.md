@@ -38,7 +38,7 @@ Publishing portals in this category do only have one sub site level or no sub si
 
 All the portals in this category also use structural navigation, recommended way forward here is to ensure the needed global navigation elements appear in the hub site navigation and the current navigation entries are defined in the respective communication sites (the ones replacing the sub sites).
 
-See [Planning Navigation for the modern SharePoint experience](https://docs.microsoft.com/sharepoint/plan-navigation-modern-experience) for more information.
+See [Planning Navigation for the modern SharePoint experience](/sharepoint/plan-navigation-modern-experience) for more information.
 
 #### Page layouts and publishing features
 
@@ -46,13 +46,13 @@ All the portals in the  `Simple` complexity category only use out-of-the-box pub
 
 Portals having more advanced publishing features like scheduled publishing or approval workflows are not listed in this category which means that with the basic configuration you get from a communication site you should be set.
 
-See [Moving from Publishing sites to Communication sites](https://docs.microsoft.com/sharepoint/publishing-sites-classic-to-modern-experience) for more information.
+See [Moving from Publishing sites to Communication sites](/sharepoint/publishing-sites-classic-to-modern-experience) for more information.
 
 #### Portal branding
 
 The publishing portal categorization is not taking in account possible branding done via customer master pages and alternate CSS. Branding in a modern portal is fundamentally different which means that it requires work regardless of the portal complexity.
 
-See [Branding your SharePoint Online site](https://docs.microsoft.com/sharepoint/branding-sharepoint-online-sites-modern-experience) for more information.
+See [Branding your SharePoint Online site](/sharepoint/branding-sharepoint-online-sites-modern-experience) for more information.
 
 #### Multi-lingual features
 
@@ -66,7 +66,7 @@ Publishing portals in this category do only have up to three levels of sub sites
 
 Portals in this category can have managed navigation defined for either their global or current navigation. Configuring navigation based upon a termset is currently not supported in communication sites, hence you'll need to use the foreseen navigation options (hub navigation, regular communication site navigation) to reimplement your desired navigation.
 
-See [Planning Navigation for the modern SharePoint experience](https://docs.microsoft.com/sharepoint/plan-navigation-modern-experience) for more information.
+See [Planning Navigation for the modern SharePoint experience](/sharepoint/plan-navigation-modern-experience) for more information.
 
 #### Page layouts and publishing features
 
@@ -74,13 +74,13 @@ Portals in the `Medium` complexity category can have customized page layouts, wh
 
 These portals can also use more advanced publishing capabilities like an approval workflow or scheduled publishing. For the first you do have the option to configure page approval using Microsoft Flow, for the latter there's currently no out-of-the-box equivalent available.
 
-See [Moving from Publishing sites to Communication sites](https://docs.microsoft.com/sharepoint/publishing-sites-classic-to-modern-experience) for more information.
+See [Moving from Publishing sites to Communication sites](/sharepoint/publishing-sites-classic-to-modern-experience) for more information.
 
 #### Portal branding
 
 The publishing portal categorization is not taking in account possible branding done via customer master pages and alternate CSS. Branding in a modern portal is fundamentally different which means that it requires work regardless of the portal complexity.
 
-See [Branding your SharePoint Online site](https://docs.microsoft.com/sharepoint/branding-sharepoint-online-sites-modern-experience) for more information.
+See [Branding your SharePoint Online site](/sharepoint/branding-sharepoint-online-sites-modern-experience) for more information.
 
 #### Multi-lingual features
 
@@ -89,6 +89,6 @@ Portals are only in the `Medium` complexity category if they're not using multi-
 ## See also
 
 - [Modernize your classic SharePoint sites](modernize-classic-sites.md)
-- [Planning Navigation for the modern SharePoint experience](https://docs.microsoft.com/sharepoint/plan-navigation-modern-experience)
-- [Moving from Publishing sites to Communication sites](https://docs.microsoft.com/sharepoint/publishing-sites-classic-to-modern-experience)
-- [Branding your SharePoint Online site](https://docs.microsoft.com/sharepoint/branding-sharepoint-online-sites-modern-experience)
+- [Planning Navigation for the modern SharePoint experience](/sharepoint/plan-navigation-modern-experience)
+- [Moving from Publishing sites to Communication sites](/sharepoint/publishing-sites-classic-to-modern-experience)
+- [Branding your SharePoint Online site](/sharepoint/branding-sharepoint-online-sites-modern-experience)

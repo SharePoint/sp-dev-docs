@@ -16,7 +16,7 @@ SharePoint Online allows you to create a tenant App Catalog where you centrally 
 
 Applications that you acquire from the Marketplace, you can install only in tenant App Catalogs. After installing the application, you can decide whether you want to deploy it globally and make it available to all sites in your tenant or if you want to deploy it only to specific sites.
 
-For more information about managing SharePoint Framework solution in the App Catalog visit: [https://docs.microsoft.com/sharepoint/use-app-catalog](https://docs.microsoft.com/sharepoint/use-app-catalog) and [https://docs.microsoft.com/sharepoint/dev/general-development/site-collection-app-catalog](https://docs.microsoft.com/sharepoint/dev/general-development/site-collection-app-catalog).
+For more information about managing SharePoint Framework solution in the App Catalog visit: [/sharepoint/use-app-catalog](/sharepoint/use-app-catalog) and [/sharepoint/dev/general-development/site-collection-app-catalog](/sharepoint/dev/general-development/site-collection-app-catalog).
 
 ## Permissions required to install applications from the Marketplace
 
