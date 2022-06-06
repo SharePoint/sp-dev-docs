@@ -1,6 +1,6 @@
 ---
 title: Office 2013 documentation copyright notice
-description: Provides a copyright notice for Office 2013 documentation.
+description: Provides a documentation copyright notice for Microsoft Office 2013, which includes trademark information for various Microsoft applications.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: a9c2f3d9-cea2-49a3-b709-40dc614b9f86
