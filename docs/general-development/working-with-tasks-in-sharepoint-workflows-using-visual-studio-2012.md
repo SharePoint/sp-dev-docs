@@ -197,7 +197,7 @@ We are going to create a task in our workflow and assign it to the person who cr
 
   
 
-  ![The screenshot shows how to create an AnnouncementItemAuthorId variable to store the ID of the person who created the list item.](../images/WorkingWithTasksSharePointWorkflowsFig5.png)
+  ![The screenshot shows how to create an AnnouncementItemAuthorId variable to store the I D of the person who created the list item.](../images/WorkingWithTasksSharePointWorkflowsFig5.png)
   
 
   
