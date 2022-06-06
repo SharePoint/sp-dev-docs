@@ -1,5 +1,6 @@
 ---
 title: Action element (WorkflowActions)
+description: Describes the code and syntax for the Action element (WorkflowActions) which contains the information that is needed for the workflow engine to process a workflow activity
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -63,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**ClassName**</p></td>
-<td align="left"><p>Required **text**. Fully qualified name of the class that implements the workflow action; for example, <span sdata="cer" target="T:Microsoft.SharePoint.WorkflowActions.EmailActivity"><span class="nolink">Microsoft.SharePoint.WorkflowActions.EmailActivity</span>.</p></td>
+<td align="left"><p>Required **text**. Fully qualified name of the class that implements the workflow action; for example, Microsoft.SharePoint.WorkflowActions.EmailActivity.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Assembly**</p></td>
