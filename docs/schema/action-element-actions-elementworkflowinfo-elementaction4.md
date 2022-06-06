@@ -38,7 +38,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 
 ## Element information
 
-|   |   |
+|  &nbsp; | &nbsp;   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

@@ -1,5 +1,6 @@
 ---
 title: ActionConditions element (WorkflowActions)
+description: Describes the definition, elements and attributes, as well as specifies conditional logic for the ActionConditions element (WorkflowActions).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

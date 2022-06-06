@@ -32,7 +32,7 @@ Specifies the body of a custom action.
 
 ## Element information
 
-|   |   |
+| &nbsp;  |&nbsp;   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

@@ -1,5 +1,6 @@
 ---
 title: ActionName element in ArrayOfActions
+description: Describes the ActionName element in ArrayOfActions including elements and attributes, and text value
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -53,7 +54,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
+<td align="left"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames element in OBPart (LayoutDefinitions Schema)</a></p></td>
 <td align="left"><p>The list of actions that contains this action.</p></td>
 </tr>
 </tbody>
