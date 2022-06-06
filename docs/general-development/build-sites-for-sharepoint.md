@@ -1,5 +1,6 @@
 ---
 title: Build sites for SharePoint
+description: Article with links to learn about the new site authoring and publishing model for websites in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3b372a63-7cdf-462a-abb4-750e611e967d
