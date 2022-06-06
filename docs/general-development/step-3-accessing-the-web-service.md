@@ -28,7 +28,7 @@ You use the calls to open a workbook, get the session ID, pass in the default cr
 ### To add directives
 
 
-1. When you added the Web reference earlier, it created an object named ExcelService in a namespace called <yourProject>.<webReferenceName>. In this example, the object is named SampleApplication.ExcelWebService. This walkthrough also shows how to catch SOAP exceptions. To do so, you use the **System.Web.Services.Protocols** object. The **System.Web.Services.Protocols** namespace consists of the classes that define the protocols used to transmit data across the wire during the communication between XML Web service clients and XML Web services created using ASP.NET.
+1. When you added the Web reference earlier, it created an object named ExcelService in a namespace called &lt;yourProject&gt;.&lt;webReferenceName&gt;. In this example, the object is named SampleApplication.ExcelWebService. This walkthrough also shows how to catch SOAP exceptions. To do so, you use the **System.Web.Services.Protocols** object. The **System.Web.Services.Protocols** namespace consists of the classes that define the protocols used to transmit data across the wire during the communication between XML Web service clients and XML Web services created using ASP.NET.
   
     
     

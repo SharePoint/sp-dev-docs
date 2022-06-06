@@ -1,5 +1,6 @@
 ---
 title: Step 2 Adding a Web Reference
+description: Provides steps and describes how to add a Web reference to the Web service client project in Visual Studio.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e9175863-ddb4-4750-847d-d53cb59b33cb

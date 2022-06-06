@@ -1,5 +1,6 @@
 ---
 title: Understanding Dictionary actions in SharePoint Designer 2013
+description: Describes the Dictionary variable type in the SharePoint Workflow platform and provides details on how to use Dictionary actions.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 73df233e-bad8-4ea1-b05d-61ecab597924

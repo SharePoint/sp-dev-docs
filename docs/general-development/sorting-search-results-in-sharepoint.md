@@ -179,7 +179,7 @@ The sort specification has the following format:  `[formula:<sort-formula>]`
   
     
     
-In the format,  _<sort-formula>_ is the sort formula expression.
+In the format,  _&lt;sort-formula&gt;_ is the sort formula expression.
   
 > [!NOTE]
 > The square brackets are part of the sort specification syntax. 

@@ -1,5 +1,6 @@
 ---
 title: The XLIFF interchange file format in SharePoint
+description: Describes the XLIFF interchange file format in SharePoint and provides schema reference information and an XML example.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 660c0f07-7030-4576-957e-b9f2cd0fa895

@@ -1,5 +1,6 @@
 ---
 title: ApplyElementManifests element (Feature)
+description: Describes the ApplyElementManifests element (Feature) schema and provides the schema's definition, child elements, parent elements, and occurrences.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

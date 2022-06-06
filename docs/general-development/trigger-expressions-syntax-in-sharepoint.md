@@ -1,5 +1,6 @@
 ---
 title: Trigger expressions syntax in SharePoint
+description: Describe trigger expressions, which can be used to create trigger conditions that configure the web service callout in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.localizationpriority: medium
