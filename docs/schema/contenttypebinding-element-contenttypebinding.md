@@ -1,5 +1,6 @@
 ---
 title: ContentTypeBinding Element (ContentTypeBinding)
+description: This is an article with links about the ContentTypeBinding Element for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -79,7 +80,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-contenttypebinding.md">Elements Element (ContentTypeBinding)</a></span></p></td>
+<td align="left"><p><a href="elements-element-contenttypebinding.md">Elements Element (ContentTypeBinding)</a></p></td>
 </tr>
 </tbody>
 </table>

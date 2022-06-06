@@ -1,5 +1,6 @@
 ---
 title: Content migration schemas
+description: This is an article with links about content migration schemas for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -38,39 +39,39 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="deploymentmanifest-schema.md">DeploymentManifest schema</a></span></p></td>
+<td align="left"><p><a href="deploymentmanifest-schema.md">DeploymentManifest schema</a></p></td>
 <td align="left">
 <p>Provides validation for the Manifest.xml file that is exported into the content migration package.</p>
 <p>Provides a comprehensive manifest containing listings of both the contents and the structure of the source site. The migration operation uses the manifest file to reconstitute the source site and its components when it is imported to the destination site.</p>
 </td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="deploymentexportsettings-schema.md">DeploymentExportSettings schema</a></span></p></td>
+<td align="left"><p><a href="deploymentexportsettings-schema.md">DeploymentExportSettings schema</a></p></td>
 <td align="left"><p>Provides validation for the ExportSettings.xml file exported into the content migration package.</p>
 <p>ExportSettings.xml does the following:</p>
 <ul>
-<li><p>Contains the export settings specified by using the <span sdata="cer" target="T:Microsoft.SharePoint.Deployment.SPExportSettings"><span class="nolink">SPExportSettings</span></span> class and other classes that are part of the content migration object model.</p></li>
+<li><p>Contains the export settings specified by using the <a href "T:Microsoft.SharePoint.Deployment.SPExportSettings"><span class="nolink">SPExportSettings</span> class and other classes that are part of the content migration object model.</p></li>
 <li><p>Ensures that the subsequent import process (at the migration target site) enforces the directives specified in the export settings.</p></li>
 <li><p>Maintains a catalog of all objects exported to the migration package.</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="deploymentlookuplistmap-schema.md">DeploymentLookupListMap schema</a></span></p></td>
+<td align="left"><p><a href="deploymentlookuplistmap-schema.md">DeploymentLookupListMap schema</a></p></td>
 <td align="left"><p>Provides validation for the LookupListMap.xml file exported into the content migration package.</p>
 <p>LookupListMap.xml maintains a simple lookup list that records SharePoint list item (list item to list item) references.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="deploymentrequirements-schema.md">DeploymentRequirements schema</a></span></p></td>
+<td align="left"><p><a href="deploymentrequirements-schema.md">DeploymentRequirements schema</a></p></td>
 <td align="left"><p>Provides validation for the Requirements.xml file exported into the content migration package.</p>
 <p>Requirements.xml maintains list of deployment requirements in the form of installation requirements on the migration target, such as feature definitions, template versions, web part assemblies, language packs, and so forth.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="deploymentrootobjectmap-schema.md">DeploymentRootObjectMap schema</a></span></p></td>
+<td align="left"><p><a href="deploymentrootobjectmap-schema.md">DeploymentRootObjectMap schema</a></p></td>
 <td align="left"><p>Provides validation for the RootObjectMap.xml file exported into the content migration package.</p>
 <p>RootObjectMap.xml maintains a list of mappings of secondary (dependent) objects, which allows the import phase of the migration operation to correctly place the dependent objects relative to the locations of the root object mappings.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="deploymentsystemdata-schema.md">DeploymentSystemData schema</a></span></p></td>
+<td align="left"><p><a href="deploymentsystemdata-schema.md">DeploymentSystemData schema</a></p></td>
 <td align="left"><p>Provides validation for the SystemData.xml file exported into the content migration package.</p>
 <p>SystemData.xml does the following:</p>
 <ul>
@@ -79,12 +80,12 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="deploymentusergroupmap-schema.md">DeploymentUserGroupMap schema</a></span></p></td>
+<td align="left"><p><a href="deploymentusergroupmap-schema.md">DeploymentUserGroupMap schema</a></p></td>
 <td align="left"><p>Provides validation for the UserGroup.xml file exported into the content migration package.</p>
 <p>UserGroup.xml maintains a list of users and user security groups with respect to access security and permissions.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="deploymentviewformslist-schema.md">DeploymentViewFormsList schema</a></span></p></td>
+<td align="left"><p><a href="deploymentviewformslist-schema.md">DeploymentViewFormsList schema</a></p></td>
 <td align="left"><p>Provides validation for the ViewFormsList.xml file exported into the content migration package.</p>
 <p>ViewFormsList.xml maintains a list of web parts and tracks whether each is a view or form.</p></td>
 </tr>
