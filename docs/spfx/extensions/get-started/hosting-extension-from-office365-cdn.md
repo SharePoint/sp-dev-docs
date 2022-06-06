@@ -66,7 +66,7 @@ Follow the steps outlined in the following document to ensure the Microsoft 365 
     gulp package-solution --ship
     ```
 
-1. Upload or drag-and-drop the newly created client-side solution package to the tenant app catalog. When prompted select the **Deploy** button to trust the solution. Notice the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Microsoft 365 CDN:
+1. Upload or drag-and-drop the newly created client-side solution package to the tenant app catalog. When prompted, select the **Only enable this app** radio button and then select the **Enable app** button. Notice the domain definition is updated as **SharePoint Online** as your assets will be now automatically hosted with Microsoft 365 CDN:
 
     ![App catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
 
