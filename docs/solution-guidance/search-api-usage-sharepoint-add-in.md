@@ -161,7 +161,7 @@ In this option you use the REST API to execute searches with the SharePoint Sear
 
 - This API is the most flexible because it is available in both server-side and client-side code.
 - The SharePoint Search Service REST API root endpoint is:
-  - https://<tenant>/site/_api/search/query
+  - https://&lt;tenant&gt;/site/_api/search/query
 - Here are some simple examples:
   - Keyword search
 

@@ -1,5 +1,6 @@
 ---
 title: Migrating from the permissive browser file handling to the default strict browser file handling
+description: Describes how to migrate from the permissive browser file and outlines the remediation of other file types.
 ms.date: 06/05/2020
 ms.localizationpriority: high
 ---
