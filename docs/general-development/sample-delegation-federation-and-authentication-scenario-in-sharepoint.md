@@ -1,5 +1,6 @@
 ---
 title: Sample delegation, federation, and authentication scenario in SharePoint
+description: Provides sample scenarios for identity delegation, identity federation, and authentication in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.localizationpriority: medium

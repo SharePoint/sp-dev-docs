@@ -1,5 +1,6 @@
 ---
 title: SharePoint development overview
+description: Provides an overview of the SharePoint development platform and provides resources for developing with the SharePoint Framework.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
@@ -22,7 +23,7 @@ SharePoint is a versatile development platform for building client-side componen
 
 The following article can help you get acquainted with SharePoint Framework and determine whether they are a good option for you.
 
-- [Overview of the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
+- [Overview of the SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
 
 **For SharePoint Add-ins development**
 
@@ -54,9 +55,9 @@ Table 1 shows the resources for setting up a development environment and beginni
 
 |**Topic**|**Description**|
 |:-----|:-----|
-| [Set up your SharePoint Framework development environment](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint Framework development environment.  <br/> |
-| [Build your first SharePoint client-side web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) <br/> | Describes how to build your first client-side web part using SharePoint Framework <br/> |
-| [Build your first SharePoint Framework Extension](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension) <br/> | Describes how to build your first SharePoint Framework Extension  <br/> |
+| [Set up your SharePoint Framework development environment](/sharepoint/dev/spfx/set-up-your-development-environment) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint Framework development environment.  <br/> |
+| [Build your first SharePoint client-side web part](/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part) <br/> | Describes how to build your first client-side web part using SharePoint Framework <br/> |
+| [Build your first SharePoint Framework Extension](/sharepoint/dev/spfx/extensions/get-started/build-a-hello-world-extension) <br/> | Describes how to build your first SharePoint Framework Extension  <br/> |
 
 
 **For SharePoint solutions and add-ins for mobility features development**
@@ -83,10 +84,10 @@ When you know the kinds of SharePoint Add-in that you want to create, we provide
 |**Topic**|**Description**|
 |:-----|:-----|
 |||
-| [Set up a development environment for SharePoint Add-ins on Office 365](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) <br/> |Explains how to sign up for and use an Office 365 Developer Site for developing SharePoint Add-ins.  <br/> |
-| [Set up an on-premises development environment for SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins) <br/> |Explains how to set up a local, on-premises installation of SharePoint and configure it for developing SharePoint Add-ins.  <br/> |
-| [Get started creating provider-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted separately from a SharePoint site.  <br/> |
-| [Get started creating SharePoint-hosted SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted on a SharePoint site.  <br/> |
+| [Set up a development environment for SharePoint Add-ins on Office 365](/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) <br/> |Explains how to sign up for and use an Office 365 Developer Site for developing SharePoint Add-ins.  <br/> |
+| [Set up an on-premises development environment for SharePoint Add-ins](/sharepoint/dev/sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins) <br/> |Explains how to set up a local, on-premises installation of SharePoint and configure it for developing SharePoint Add-ins.  <br/> |
+| [Get started creating provider-hosted SharePoint Add-ins](/sharepoint/dev/sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted separately from a SharePoint site.  <br/> |
+| [Get started creating SharePoint-hosted SharePoint Add-ins](/sharepoint/dev/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted on a SharePoint site.  <br/> |
 
 ## See also
 

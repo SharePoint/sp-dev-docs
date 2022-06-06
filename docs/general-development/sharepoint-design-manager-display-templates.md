@@ -1,5 +1,6 @@
 ---
 title: SharePoint Design Manager display templates
+description: Provides an overview of display templates and describes their structure, their relation to Search web parts, and creating custom display templates.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1a782bac-48ee-4baf-8751-0f943a306e0f

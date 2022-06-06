@@ -1,5 +1,6 @@
 ---
 title: SharePoint Design Manager image renditions
+description: Describes how to create an image rendition, how to add the rendition to a page, and how to crop the rendition.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d08a74c0-5674-4f26-8646-11ea1f081c85

@@ -1,5 +1,6 @@
 ---
 title: SharePoint Design Manager snippets
+description: Describes how to use snippets and the Snippet Gallery in Design Manager to add SharePoint functionality to HTML master pages or page layout.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 68caef4c-5941-4a88-b34b-f88122801cef

@@ -1,5 +1,6 @@
 ---
 title: SharePoint workflow samples
+description: Provides example workflows to show how to create and implement SharePoint workflows in the new Workflow Manager Client 1.0 framework.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ffaccd6b-426d-4ca0-b62f-bc7b14641a49

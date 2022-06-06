@@ -1,5 +1,6 @@
 ---
 title: SharePoint workflow fundamentals
+description: Provides an overview of the workflow infrastructure in SharePoint, including a view of the platform architecture and the workflow interop bridge.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1e622296-f78b-4e3a-a1e7-8effa24111a8

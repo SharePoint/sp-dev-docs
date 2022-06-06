@@ -77,7 +77,7 @@ If the user account is a membership user, SharePoint queries the ASP.NET **RoleM
 
 
 
-If SharePoint can't obtain the user's group memberships from Active Directory or **<roleManager>**, the newly generated token contains only the user's unique security ID (SID). No exception is thrown, but an entry is written into the ULS server log. The new token is also written into the SharePoint database so that it will not be regenerated within 24 hours.
+If SharePoint can't obtain the user's group memberships from Active Directory or **&lt;roleManager&gt;**, the newly generated token contains only the user's unique security ID (SID). No exception is thrown, but an entry is written into the ULS server log. The new token is also written into the SharePoint database so that it will not be regenerated within 24 hours.
 
 
 

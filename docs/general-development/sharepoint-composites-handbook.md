@@ -1,5 +1,6 @@
 ---
 title: SharePoint Composites Handbook
+description: Describes the SharePoint Composites Handbook, which provides an overview of pertinent SharePoint and Office 2013 features, products, and components.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0989bf64-ff2a-4ad4-b0da-43901040da98

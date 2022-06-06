@@ -104,7 +104,7 @@ CSS files must be checked in and published. If CSS files are changed, you must r
 
 ## Register the CSS file
 
-You must register the CSS file with a master page before the CSS file can be used by the theming engine. This directs the master page to the CSS file when you apply a theme to a site. To register a CSS file, you add a **<SharePoint:CssRegistration>** element to the **<head>** element of the master page. The following shows the format of the **<SharePoint:CssRegistration>** element.
+You must register the CSS file with a master page before the CSS file can be used by the theming engine. This directs the master page to the CSS file when you apply a theme to a site. To register a CSS file, you add a **&lt;SharePoint:CssRegistration&gt;** element to the **<head>** element of the master page. The following shows the format of the **&lt;SharePoint:CssRegistration&gt;** element.
 
 ```HTML
 <SharePoint:CssRegistration Name="CSSFileLocation" runat="server" />

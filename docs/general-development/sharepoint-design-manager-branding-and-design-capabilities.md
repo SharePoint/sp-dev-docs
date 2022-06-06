@@ -1,5 +1,6 @@
 ---
 title: SharePoint Design Manager branding and design capabilities
+description: Provides links to documentation about using Design Manager's branding and design capabilities in SharePoint.
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 2f81acbb-1263-4f9d-8865-36eb7a3f907b
