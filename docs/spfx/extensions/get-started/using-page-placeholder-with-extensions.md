@@ -139,7 +139,6 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 8. Update the `onInit()` method code as follows:
 
     ```typescript
-    @override
     public onInit(): Promise<void> {
       Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
@@ -147,7 +146,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
       // render.
       this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
 
-      return Promise.resolve<void>();
+      return Promise.resolve();
     }
     ```
 
