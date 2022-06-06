@@ -62,7 +62,7 @@ Moreover, the PnP provisioning engine supports versioning and delta handling, so
 The PnP provisioning engine can target both classic sites, as well as modern sites.
 
 ### Articles
-* [Introducing the PnP provisioning engine](sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine)
+* [Introducing the PnP provisioning engine](/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine)
 * [PnP provisioning engine and the core library](/sharepoint/dev/solution-guidance/pnp-provisioning-engine-and-the-core-library)
 
 ### Samples
