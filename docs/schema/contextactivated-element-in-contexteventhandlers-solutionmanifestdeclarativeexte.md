@@ -1,6 +1,6 @@
 ---
 title: ContextActivated Element in ContextEventHandlers
-description: This article describes the ContextActivated elements attributes, child elements and parent elements.
+description: Provides the elements and attributes for the ContextActivated Element in ContextEventHandlers
 manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer

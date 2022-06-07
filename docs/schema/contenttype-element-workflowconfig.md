@@ -1,6 +1,6 @@
 ---
 title: ContentType Element (WorkflowConfig)
-description: This article with links defines the content type WorkflowConfig for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
+description: Provides a definition, example, elements and attributes for the ContentType element WorkflowConfig in Sharepoint.
 manager: laurawi
 ms.date: 06/07/2022
 ms.audience: Developer

@@ -1,6 +1,6 @@
 ---
 title: ContentTypeBinding Element (ContentTypeBinding)
-description: This is an article with links about the ContentTypeBinding Element for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
+description: Outlines information, a definition, elements and attributes for the ContentTypeBinding element in Sharepoint.
 manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer

@@ -1,6 +1,6 @@
 ---
 title: Content Type Definitions
-description: This is an article with links providing Content Type Definitions for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
+description: Provides XML schema definition, elements and an example for the content type definitions in Sharepoint.
 manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer

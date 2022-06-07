@@ -1,6 +1,6 @@
 ---
 title: ContentType Element (WorkflowActions)
-description: This article with links defines the content type WorkflowActions for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
+description: Provides a definition, elements and attributes for the ContentType element WorkflowActions in Sharepoint.
 manager: laurawi
 ms.date: 06/07/2022
 ms.audience: Developer
