@@ -1,5 +1,6 @@
 ---
 title: FeaturePropertyDefinitions complexType
+description: Outlines information, a definition, and elements and attributes for the FeaturePropertyDefinitions complexType in Sharepoint.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,11 +19,11 @@ ms.assetid: 89621dc1-7a85-8403-5ad1-01d62c4f9fdc
 
 ## Type information
 
-|   |   |
+| Resource  |  File |
 |---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-| **Extension base**  | None |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
+| Extension base  | None |
 
 ## Definition
 
