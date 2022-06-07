@@ -1,7 +1,7 @@
 ---
 title: Claims-based identity in SharePoint
 description: This is an article with links to learn about the fundamentals of claims-based identity architecture in SharePoint.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 32b6af2a-72f3-4302-a6af-5f00143cbf67
 ms.localizationpriority: high

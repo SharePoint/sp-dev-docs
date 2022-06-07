@@ -1,7 +1,7 @@
 ---
 title: Create hybrid connectivity apps for SharePoint
 description: This is an article with links to learn about the process of developing and deploying apps for SharePoint hybrid connectivity solutions.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 311f036e-3442-4497-b35e-442b665462d3
 ms.localizationpriority: medium

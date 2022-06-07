@@ -1,7 +1,7 @@
 ---
 title: Choose the right API set in SharePoint
 description: Article with links to learn about SharePoint APIs including the server object model, various client object models and the REST/OData web service.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: f36645da-77c5-47f1-a2ca-13d4b62b320d
 ms.localizationpriority: high

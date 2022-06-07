@@ -1,7 +1,7 @@
 ---
 title: Content Search web part in SharePoint
 description: This is an article with links to learn about the Content Search web part (CSWP) in SharePoint.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
 ms.localizationpriority: high
