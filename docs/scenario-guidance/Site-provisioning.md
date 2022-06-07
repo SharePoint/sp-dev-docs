@@ -1,7 +1,7 @@
 ---
 title: Site Provisioning
 description: Site Provisioning
-ms.date: 12/12/2018
+ms.date: 06/07/2022
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
