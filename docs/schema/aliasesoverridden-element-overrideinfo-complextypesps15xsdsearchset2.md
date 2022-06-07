@@ -1,5 +1,6 @@
 ---
 title: "AliasesOverridden element (OverrideInfo complexType) (SPS15XSDSearchSet2)"
+description: Discusses element information, definitions, elements, and attributes for the AliasesOverridden element (OverrideInfo complexType) (SPS15XSDSearchSet2)
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,14 +8,14 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 50dd1094-9768-b6e5-dd9c-b086979c5207
-description: "Last modified: March 09, 2015"
+
 ---
 
 # AliasesOverridden element (OverrideInfo complexType) (SPS15XSDSearchSet2)
  
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

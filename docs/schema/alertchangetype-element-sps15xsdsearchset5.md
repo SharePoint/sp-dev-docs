@@ -1,5 +1,6 @@
 ---
 title: "AlertChangeType element (SPS15XSDSearchSet5)"
+description: Discusses the element information, definition, elements and attributes for the AlertChangeType element (SPS15XSDSearchSet5).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -16,7 +17,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |tns:AlertChangeType  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |

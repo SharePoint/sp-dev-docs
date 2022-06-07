@@ -1,5 +1,6 @@
 ---
 title: "AlertChangeType simpleType (SPS15XSDSearchSet5)"
+description: Discusses the type information, definitions, enumeration values for the AlertChangeType simpleType (SPS15XSDSearchSet5).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3f7286b9-dab0-3629-5734-308ba2b430cc
-description: "Last modified: March 09, 2015"
 ---
 
 # AlertChangeType simpleType (SPS15XSDSearchSet5)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
