@@ -1,6 +1,6 @@
 ---
 title: Actions element (WorkflowInfo)
-description: Microsoft SharePoint provides a number of default actions to a declarative, that can be used to build workflows that address common business needs.
+description: The Actions element (WorkflowInfo) provides a number of default actions to a declarative, and can be used to build workflows.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

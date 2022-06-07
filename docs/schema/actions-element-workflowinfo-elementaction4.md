@@ -1,6 +1,6 @@
 ---
 title: Actions element (WorkflowInfo element)
-description: Discusses how you can create custom workflow activities and expand the palette of workflow actions that you can use to model unique business processes.
+description: Discusses the use, elements and definitions for the Actions element (WorkflowInfo element) to expand the palette of workflow actions.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
