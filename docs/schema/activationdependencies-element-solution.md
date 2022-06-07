@@ -1,5 +1,6 @@
 ---
 title: "ActivationDependencies element (Solution)"
+description: Discusses the attributes, child elements, and parent elements of the ActivationDependencies element (Solution).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: d6ea8200-bea4-4366-9244-e0eceda99942
-description: Specifies the activation dependencies for a solution.
 ---
 
 # ActivationDependencies element (Solution)

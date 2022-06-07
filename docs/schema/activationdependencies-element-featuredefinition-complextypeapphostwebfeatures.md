@@ -1,5 +1,6 @@
 ---
 title: ActivationDependencies element (FeatureDefinition complexType)
+description: Discusses the definitions and attributes of the ActivationDependencies element (FeatureDefinition complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 79b463d1-7b48-a56d-f9b5-0b0a3f91375b
 
 ## Element information
 
-|   |   |
+| &nbsp;  |&nbsp;   |
 |---|---|
 | **Element type**  | FeatureActivationDependencyDefinitions |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

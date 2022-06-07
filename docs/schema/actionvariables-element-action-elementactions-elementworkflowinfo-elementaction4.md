@@ -1,5 +1,6 @@
 ---
 title: ActionVariables element (Action element)
+description: Discusses the ActionVariables element (Action element) use and syntax including definitions and code samples.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -31,7 +32,7 @@ Specifies local variables for the action.
 
 ## Element information
 
-|   |   |
+| &nbsp;  |&nbsp;   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
