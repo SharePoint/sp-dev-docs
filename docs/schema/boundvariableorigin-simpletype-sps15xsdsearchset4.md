@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ef2b82d9-950d-08ed-9ff9-4047a1759b6a
-description: "Last modified: March 09, 2015"
+description: Learn about BoundVariableOrigin simpleType (SPS15XSDSearchSet4).
 ---
 
 # BoundVariableOrigin simpleType (SPS15XSDSearchSet4)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |

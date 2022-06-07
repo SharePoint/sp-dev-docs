@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c493345d-44bd-ed3b-56ec-2b53b14605a3
-description: "Last modified: March 09, 2015"
+description: Learn about Boost element (ReorderingRule complexType) (SPS15XSDSearchSet5).
 ---
 
 # Boost element (ReorderingRule complexType) (SPS15XSDSearchSet5)
@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |

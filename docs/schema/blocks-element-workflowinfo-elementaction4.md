@@ -1,5 +1,6 @@
 ---
 title: Blocks element
+description: Blocks element provides a container element for Block elements.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -27,7 +28,7 @@ Provides container element for **Block** elements.
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

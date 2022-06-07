@@ -1,5 +1,6 @@
 ---
-title: Block element
+title: Block element represents visual building blocks on the workflow designer surface.
+description: Block element
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -27,7 +28,7 @@ Represents visual building blocks on the workflow designer surface.
 
 ## Element information
 
-|   |   |
+|  Information |  Location |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

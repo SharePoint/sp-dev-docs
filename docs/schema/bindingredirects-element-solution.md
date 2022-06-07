@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: 264029a5-9193-42f8-80f7-ea1745bbf22a
-description: Specifies a global resource file for a solution.
+description: BindingRedirects element (Solution) specifies a global resource file for a solution.
 ---
 
 # BindingRedirects element (Solution)

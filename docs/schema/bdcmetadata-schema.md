@@ -1,5 +1,6 @@
 ---
 title: BDCMetadata schema
+description: This article contains links to more information to learn about BDCMetadata schema.
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: BinarySerializedWebPart element (Module)
+description: BinarySerializedWebPart element (Module) specifies a web part that has been serialized into binary data. 
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
