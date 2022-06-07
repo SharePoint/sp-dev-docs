@@ -1,7 +1,8 @@
 ---
 title: AppPermissionRequest element (AppPermissionRequestsDefinition complexType)
+description: Outlines information, a definition, and elements and attributes for the AppPermissionRequest element in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -21,12 +22,11 @@ The add-in permission requests.
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
+**Element type**: AppPermissionRequestDefinition
 
-|   |   |
-|---|---|
-| **Element type**  | AppPermissionRequestDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
+
+**Schema file**: appmanifest.xsd
 
 ## Definition
 

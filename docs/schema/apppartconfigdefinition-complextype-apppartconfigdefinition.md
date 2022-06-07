@@ -1,7 +1,8 @@
 ---
 title: AppPartConfigDefinition complexType
+description: Outlines information, a definition, and elements and attributes for the AppPartConfigDefinition complexType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,12 +20,11 @@ ms.assetid: 01abeb84-0904-12b8-c7ea-aae75a2b87e4
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration`
 
-|   |   |
-|---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration` |
-| **Schema file**  | apppartconfig.xsd |
-| **Extension base**  | None |
+**Schema file**: apppartconfig.xsd
+
+**Extension base**: None
 
 ## Definition
 

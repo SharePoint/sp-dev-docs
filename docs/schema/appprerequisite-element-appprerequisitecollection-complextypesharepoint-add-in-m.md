@@ -1,7 +1,8 @@
 ---
 title: AppPrerequisite element (AppPrerequisiteCollection complexType)
+description: Outlines information, a definition, and elements and attributes for the AppPrerequisite element in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -25,12 +26,11 @@ Identifies a SharePoint Feature or capability that the add-in depends on. The Sh
 ```
 
 ## Element information
+**Element type**: AppPrerequisite
 
-|   |   |
-|---|---|
-| **Element type**  | AppPrerequisite |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
+
+**Schema file**: appmanifest.xsd
 
 ## Definition
 
