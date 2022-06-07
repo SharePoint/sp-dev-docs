@@ -89,7 +89,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="even">
 <td align="left"><p>**Collation**</p></td>
 <td align="left"><p>**int**</p></td>
-<td align="left"><p>Optional. The ID of the collation system for websites that are created from the web template. For more information, see "P:Microsoft.SharePoint.SPRegionalSettings.Collation"<span class="nolink">Collation</span></span>.</p></td>
+<td align="left"><p>Optional. The ID of the collation system for websites that are created from the web template. For more information, see "P:Microsoft.SharePoint.SPRegionalSettings.Collation"<span class="nolink">Collation.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ContainsDefaultLists**</p></td>
