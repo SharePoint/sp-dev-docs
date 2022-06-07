@@ -1,5 +1,6 @@
 ---
 title: "AliasInfo complexType (SPS15XSDSearchSet2)"
+description: Discusses the type information, definitions, elements, and attributes for the AliasInfo complexType (SPS15XSDSearchSet2).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,14 +8,13 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 96483d28-b4c0-8241-9773-c74963047fc9
-description: "Last modified: March 09, 2015"
 ---
 
 # AliasInfo complexType (SPS15XSDSearchSet2)
 
 ## Type information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |

@@ -1,5 +1,6 @@
 ---
 title: "AliasInfo element (SPS15XSDSearchSet2)"
+description: Discusses the element information, definitions, elements, and attributes for the AliasInfo element (SPS15XSDSearchSet2).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,14 +8,13 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3a373dcc-3609-b14e-4640-4bf53f3588b2
-description: "Last modified: March 09, 2015"
 ---
 
 # AliasInfo element (SPS15XSDSearchSet2)
 
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |tns:AliasInfo  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
