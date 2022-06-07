@@ -1,6 +1,6 @@
 ---
 title: Claims-based identity in SharePoint
-ms.date: 06/07/2022
+ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 32b6af2a-72f3-4302-a6af-5f00143cbf67
 ms.localizationpriority: high

@@ -1,6 +1,6 @@
 ---
 title: Custom content processing with the Content Enrichment web service callout
-ms.date: 06/07/2022
+ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bdda92c8-9c8d-416e-9a6b-4a9373686fa0
 ms.localizationpriority: medium

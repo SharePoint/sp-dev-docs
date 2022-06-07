@@ -1,6 +1,6 @@
 ---
 title: Business Connectivity Services in SharePoint
-ms.date: 06/07/2022
+ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 64b7d032-4b83-4e9e-bc08-f0a161af5457
 ms.localizationpriority: high
