@@ -1,7 +1,7 @@
 ---
 title: Modernize customizations
 description: Overview of the customizations that are not compatible with the modern user interface in SharePoint, and guidelines on how to remediate them.
-ms.date: 12/13/2018
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

@@ -1,7 +1,7 @@
 ---
 title: Quick view design guidance
 description: Design guidance for the Viva Connections quick views
-ms.date: 12/28/2021
+ms.date: 04/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner reports for the Lists scanner mode
 description: Explains the lists output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

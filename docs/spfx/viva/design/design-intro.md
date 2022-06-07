@@ -1,7 +1,7 @@
 ---
 title: Design guidance for Viva Connections cards
 description: Design guidance for Viva Connections cards
-ms.date: 12/28/2021
+ms.date: 02/15/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

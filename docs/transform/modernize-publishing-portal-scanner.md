@@ -1,7 +1,7 @@
 ---
 title: "Analyze and use the scanner data: Publishing portal scanner"
 description: Understand and process the publishing portal scanner results to help you prepare the modernization of these portals
-ms.date: 01/27/2021
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
