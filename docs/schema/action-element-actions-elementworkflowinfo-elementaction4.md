@@ -200,6 +200,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <col width="15%" />
 <col width="35%" />
 <col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Attribute</p></th>
