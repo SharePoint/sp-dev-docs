@@ -8,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 236dd6e7-89ae-18a4-c301-568c15133f56
-description: "Last modified: March 09, 2015"
 ---
 
 # AlertChangeType element (SPS15XSDSearchSet5)
