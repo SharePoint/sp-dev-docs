@@ -1,5 +1,6 @@
 ---
 title: Workflow schemas
+description: Provides various workflow schema references as they relate to SharePoint 2016, SharePoint Foundation 2013, SharePoint Online, and SharePoint Server 2013.
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer

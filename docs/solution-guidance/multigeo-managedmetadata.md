@@ -38,5 +38,5 @@ The following are important points to know about managed metadata in Multi-Geo t
 
 ## See also
 
-- [Plan hybrid SharePoint taxonomy and hybrid content types](https://docs.microsoft.com/SharePoint/hybrid/plan-hybrid-sharepoint-taxonomy-and-hybrid-content-types) 
+- [Plan hybrid SharePoint taxonomy and hybrid content types](/SharePoint/hybrid/plan-hybrid-sharepoint-taxonomy-and-hybrid-content-types) 
 - [OneDrive and SharePoint Online Multi-Geo](multigeo-introduction.md)

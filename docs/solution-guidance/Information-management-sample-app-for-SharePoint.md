@@ -22,7 +22,7 @@ To get started, download the [Core.InformationManagement](https://github.com/Sha
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
-We recommend that you create at least one site policy and assign it to your site before you run this add-in. Otherwise, the add-in will start without displaying sample data. For more information, see [Overview of site policies in SharePoint Server](https://docs.microsoft.com/SharePoint/sites/site-policy-overview).
+We recommend that you create at least one site policy and assign it to your site before you run this add-in. Otherwise, the add-in will start without displaying sample data. For more information, see [Overview of site policies in SharePoint Server](/SharePoint/sites/site-policy-overview).
 
 ## Using the Core.InformationManagement sample add-in
 

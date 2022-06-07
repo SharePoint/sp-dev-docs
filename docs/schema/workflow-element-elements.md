@@ -1,5 +1,6 @@
 ---
 title: Workflow Element (Elements)
+description: Describes the Workflow element (elements) and provides the element's definition, attributes, remarks, and an example.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

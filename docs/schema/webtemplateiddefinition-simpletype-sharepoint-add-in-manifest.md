@@ -1,5 +1,6 @@
 ---
 title: WebTemplateIdDefinition simpleType
+description: Describes the WebTemplateIdDefinition simpleType and provides the type's definition, base type, namespace, and schema file.
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
@@ -30,7 +31,7 @@ The following is an example:
 
 ## Type information
 
-|   |   |
+|  Resource |  File |
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

@@ -1,5 +1,6 @@
 ---
 title: XmlDocument Element (ContentType)
+description: Describes the XmlDocument element (ContentType) and provides the element's definition, attributes, parent elements, remarks, and an example.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
