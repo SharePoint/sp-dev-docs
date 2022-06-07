@@ -2,7 +2,7 @@
 title: "ContentTypes element (DeploymentManifest)"
 description: This article with links defines the content types DeploymentManifest for SharePoint 2016, SharePoint Foundation 2013, SharePoint Online and SharePoint Server 2013.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

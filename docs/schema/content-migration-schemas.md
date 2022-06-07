@@ -50,7 +50,7 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 <td align="left"><p>Provides validation for the ExportSettings.xml file exported into the content migration package.</p>
 <p>ExportSettings.xml does the following:</p>
 <ul>
-<li><p>Contains the export settings specified by using the <a href "T:Microsoft.SharePoint.Deployment.SPExportSettings">SPExportSettings class and other classes that are part of the content migration object model.</p></li>
+<li><p>Contains the export settings specified by using the <span sdata="cer" target="T:Microsoft.SharePoint.Deployment.SPExportSettings">SPExportSettings</span> class and other classes that are part of the content migration object model.</p></li>
 <li><p>Ensures that the subsequent import process (at the migration target site) enforces the directives specified in the export settings.</p></li>
 <li><p>Maintains a catalog of all objects exported to the migration package.</p></li>
 </ul></td>
