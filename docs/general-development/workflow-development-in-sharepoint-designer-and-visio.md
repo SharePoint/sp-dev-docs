@@ -1,7 +1,7 @@
 ---
 title: Workflow development in SharePoint Designer and Visio
 description: Learn to use Visio 2013 and SharePoint Designer 2013 to create and publish workflows to a SharePoint site without needing any code.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 496780d5-47d6-4a43-bf14-70aefb8d820c
 ms.localizationpriority: high

@@ -1,7 +1,7 @@
 ---
 title: Visio shapes in SharePoint Designer 2013 A quick reference guide (SharePoint 2010 Workflow platform)
 description: This guide identifies Visio shapes that can be used in a workflow that is then exported to Microsoft SharePoint Designer 2013.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 51bc37fd-37de-4ad0-a75a-bdf7333bc80c
 ms.localizationpriority: medium

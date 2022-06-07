@@ -1,7 +1,7 @@
 ---
 title: What's new in Business Connectivity Services in SharePoint
 description: Learn about changes and new features in Business Connectivity Services (BCS) for SharePoint.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 3c96be6a-a8ff-43ad-8361-999293aff71f
 ms.localizationpriority: medium

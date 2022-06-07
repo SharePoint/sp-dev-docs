@@ -1,7 +1,7 @@
 ---
 title: Validation issues in Visio (SharePoint 2010 Workflow platform)
 description: This article describes validation issues that might arise when you use the SharePoint 2010 Workflow platform in SharePoint Designer 2013.
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 416c8269-3c4e-40f4-bc20-a625f07a4dac
 ms.localizationpriority: medium
