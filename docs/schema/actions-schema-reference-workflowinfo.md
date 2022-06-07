@@ -1,5 +1,6 @@
 ---
 title: Actions Schema Reference (WorkflowInfo)
+description: Discusses definition, elements and attributes for Actions Schema Reference (WorkflowInfo) which is used to validate custom files.
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: ActivationDependencies element (Feature)
+description: Discusses definition, elements and attributes for ActivationDependencies (Feature) which specifies a list of features.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

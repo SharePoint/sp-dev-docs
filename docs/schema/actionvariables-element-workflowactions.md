@@ -1,5 +1,6 @@
 ---
 title: ActionVariables element (WorkflowActions)
+description: Discusses definition, elements and attributes for ActionVariables element (WorkflowActions) which specifies local variables for the action.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
