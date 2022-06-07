@@ -1,6 +1,6 @@
 ---
 title: CommandUIHandler element
-description: Describes the CommandUIHandler element, which defines the handler for a command.
+description: Describes the CommandUIHandler element, which defines the handler for a command and includes elements, attributes, and occurences.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

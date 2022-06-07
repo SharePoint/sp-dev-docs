@@ -165,7 +165,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Displayed in the rule designer sentence when two or more conditions are used in the same conditional branch, and when all conditions must be satisfied before workflow actions can be executed. The value is not case-sensitive.</p>
 <p>The default value is **and** (applies only to the English language version of SharePoint).</p>
-<p>**Example**: `&lt;Conditions And="and">`</p></td>
+<p>**Example**: `\<Conditions And="and">`</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
@@ -174,7 +174,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch activity is added to the workflow. The value is not case-sensitive.</p>
 <p>The default value is **Else if** (applies only to the English language version of SharePoint).</p>
-<p>**Example**: `&lt;Conditions Else="Else if">`</p></td>
+<p>**Example**: `\<Conditions Else="Else if">`</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
@@ -182,7 +182,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when there are two or more conditions in the same conditional branch and any value will satisfy the conditions, allowing the workflow actions to execute. The value is not case-sensitive. The default value is **not**.</p>
-<p>**Example**: `&lt;Conditions Not="not">`</p></td>
+<p>**Example**: `\<Conditions Not="not">`</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
@@ -190,7 +190,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when there are two or more conditions in the same conditional branch and any value will satisfy the conditions, allowing the workflow actions to execute. The value is not case-sensitive. The default value is **or**.</p>
-<p>**Example**: `&lt;Conditions Or="or">`</p></td>
+<p>**Example**: `\<Conditions Or="or">`</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">

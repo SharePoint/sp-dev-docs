@@ -1,6 +1,6 @@
 ---
 title: CommandUIHandlers element (CommandUIExtensionType complexType)
-description: Describes the CommandUIHandlers element (CommandUIExtensionType complexType), including element information, definition, attributes, and parent & child elements.
+description: Describes the CommandUIHandlers element (CommandUIExtensionType complexType), including attributes and parent & child elements.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer

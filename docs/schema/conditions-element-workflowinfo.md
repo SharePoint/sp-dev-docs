@@ -57,7 +57,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>Required **text**. The text that is defined in this attribute is displayed in the rule designer sentence when two or more conditions are used in the same conditional branch, and when all conditions must be satisfied before workflow actions can be executed. The value is not case-sensitive.</p>
 <p>The default value is **and** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>**Example:**</p>
-<p>`&lt;Conditions And="and">`</p></td>
+<p>`\<Conditions And="and">`</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Else**</p></td>
