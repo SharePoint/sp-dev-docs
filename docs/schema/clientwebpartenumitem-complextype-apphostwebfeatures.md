@@ -1,5 +1,6 @@
 ---
 title: ClientWebPartEnumItem complexType
+description: Describes the definition, element, type, and attribute information for ClientWebPartEnumItem complexType.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,11 +19,11 @@ ms.assetid: c3e4c77e-caf3-e22a-9b0c-925f2cf3baae
 
 ## Type information
 
-|   |   |
-|---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-| **Extension base**  | None |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/`
+
+**Schema file**: apphostwebfeatures.xsd
+
+**Extension base**: None
 
 ## Definition
 

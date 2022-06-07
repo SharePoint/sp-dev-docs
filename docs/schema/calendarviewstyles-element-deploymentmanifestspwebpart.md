@@ -1,5 +1,6 @@
 ---
 title: "CalendarViewStyles element (DeploymentManifest - SPWebPart)"
+description: "CalendarViewStyles element (DeploymentManifest - SPWebPart) represents an object specifying the style of a SharePoint calendar web part."
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b2a4215f-151c-4e5d-863f-a55bf9cf5b01
-description: "Last modified: March 09, 2015"
 ---
 
 # CalendarViewStyles element (DeploymentManifest - SPWebPart)

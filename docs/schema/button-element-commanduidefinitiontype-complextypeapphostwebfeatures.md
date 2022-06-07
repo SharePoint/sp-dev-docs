@@ -1,5 +1,6 @@
 ---
 title: Button element (CommandUIDefinitionType complexType)
+description: "Describes the definition, element, and attribute information for Button element (CommandUIDefinitionType complexType)."
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,11 +19,11 @@ ms.assetid: 36526b46-2384-3dfc-e5cf-68a5782f3fb0
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | ButtonType |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+**Element type**: ButtonType
+
+**Namespace**: `http://schemas.microsoft.com/sharepoint/`
+
+**Schema file**: apphostwebfeatures.xsd
 
 ## Definition
 

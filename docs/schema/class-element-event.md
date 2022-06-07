@@ -1,5 +1,6 @@
 ---
 title: Class element (Event)
+description: Describes the definition, element, and attribute information for Class element (Event), which contains the name of the class that implements the event receiver.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

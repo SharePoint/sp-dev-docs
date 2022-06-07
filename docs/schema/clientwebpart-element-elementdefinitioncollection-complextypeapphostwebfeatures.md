@@ -1,5 +1,6 @@
 ---
 title: ClientWebPart element (ElementDefinitionCollection complexType)
+description: Describes the definition, element, type, and attribute information for ClientWebPart element (ElementDefinitionCollection complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -9,20 +10,20 @@ ms.localizationpriority: medium
 ms.assetid: 591cae5f-359c-267b-6cd6-27f45ed437f3
 ---
 
-# ClientWebPart element (ElementDefinitionCollection complexType) 
+# ClientWebPart element (ElementDefinitionCollection complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | ClientWebPartDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+**Element type**: ClientWebPartDefinition
+
+**Namespace**: `http://schemas.microsoft.com/sharepoint/`
+
+**Schema file**: apphostwebfeatures.xsd
 
 ## Definition
 

@@ -1,5 +1,6 @@
 ---
 title: Categories element (Workflow)
+description: Describes the definition, element, and attribute information for Categories element (Workflow).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
