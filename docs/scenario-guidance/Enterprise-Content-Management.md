@@ -1,7 +1,7 @@
 ---
 title: Enterprise Content Management
 description: This article is about services, capabilities, and options to manage ECM and content in SharePoint, with links to additional resources.
-ms.date: 12/05/2020
+ms.date: 06/07/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
