@@ -1,5 +1,6 @@
 ---
 title: ContextActivated Element in ContextEventHandlers
+description: This article describes the ContextActivated elements attributes, child elements and parent elements.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -77,7 +78,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contexteventhandlers-element-in-declarativecontextdefinition-solutionmanifestdec.md">ContextEventHandlers Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><a href="contexteventhandlers-element-in-declarativecontextdefinition-solutionmanifestdec.md">ContextEventHandlers Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
 <td align="left"><p>The context event handlers for the context.</p></td>
 </tr>
 </tbody>
