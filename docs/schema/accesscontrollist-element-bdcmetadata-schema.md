@@ -1,5 +1,6 @@
 ---
 title: AccessControlList element
+description: Discusses elements and attributes for the AccessControlList element for SharePoint and specifies an access control list (ACL) for the parent element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -40,6 +41,10 @@ None.
 ### Child elements
 
 <table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>
@@ -57,6 +62,10 @@ None.
 ### Parent elements
 
 <table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>element</p></th>

@@ -1,5 +1,6 @@
 ---
 title: Action element
+description: Discusses docs/schema/action-element-actions-elementworkflowinfo-elementaction4.md for the Action element for for Workflow Manager Client 1.0
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -37,7 +38,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 
 ## Element information
 
-|   |   |
+| &nbsp;  |&nbsp;   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -111,6 +112,11 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Parent elements
 
 <table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>
@@ -132,6 +138,11 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Child elements
 
 <table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>
@@ -183,6 +194,12 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 <table>
+<colgroup>
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="35%" />
+<col width="20%" />
 <thead>
 <tr class="header">
 <th align="left"><p>Attribute</p></th>

@@ -1,5 +1,6 @@
 ---
 title: ActionBody element
+description: Describes the use, element information, definition, elements and attributes for the ActionBody element.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -31,7 +32,7 @@ Specifies the body of a custom action.
 
 ## Element information
 
-|   |   |
+| &nbsp;  | &nbsp;  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -58,6 +59,11 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Parent elements
 
 <table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>

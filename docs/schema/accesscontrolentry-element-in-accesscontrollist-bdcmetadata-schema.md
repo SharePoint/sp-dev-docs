@@ -70,7 +70,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadata-schema.md">Right element in AccessControlEntry (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="right-element-in-accesscontrolentry-bdcmetadata-schema.md">Right element in AccessControlEntry (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>A **Right** element that specifies the permissions available to the security principal.</p></td>
 </tr>
 </tbody>
@@ -91,7 +91,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList element (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>The access control list (ACL) that contains this ACE.</p></td>
 </tr>
 </tbody>
