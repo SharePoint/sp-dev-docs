@@ -1,5 +1,6 @@
 ---
 title: "Dictionary element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
+description: Discusses the element information, definition, and attributes of the Dictionary elements (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6e21603d-c7b1-cf6e-1c2c-fe399042bca0
-description: "Last modified: March 09, 2015"
 ---
 
 # Dictionary element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |q11:ArrayOfKeyValueOfstringCrawledPropertyInfoy6h3NzC8  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

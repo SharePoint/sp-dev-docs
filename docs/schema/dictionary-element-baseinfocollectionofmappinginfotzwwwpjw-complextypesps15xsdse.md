@@ -1,5 +1,6 @@
 ---
 title: "Dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
+description: Discusses definitions, elements, and attributes of the Dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9e2022cc-81d5-96c2-161d-9b9d32fa4ea8
-description: "Last modified: March 09, 2015"
 ---
 
 # Dictionary element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |q15:ArrayOfKeyValueOfstringMappingInfoy6h3NzC8  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

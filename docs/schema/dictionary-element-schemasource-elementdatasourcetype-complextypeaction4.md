@@ -1,5 +1,6 @@
 ---
 title: Dictionary element
+description: Discusses definitions, elements, and attributes of the Dictionary element (SchemaSource element) (dataSourceType complexType) (Action4).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
