@@ -1,6 +1,6 @@
 ---
 title: CommandUIExtension element
-description: 
+description: Describes the CommandUIExtension element, which contains elements that extend the user interface.
 manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer

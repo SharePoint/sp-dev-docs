@@ -19,7 +19,7 @@ ms.assetid: afe44678-bdae-e38e-297e-bcfc6ffcb020
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  | ClientWebPartDefinitionContent |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
