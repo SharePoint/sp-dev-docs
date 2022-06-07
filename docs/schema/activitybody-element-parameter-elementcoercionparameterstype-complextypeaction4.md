@@ -1,5 +1,6 @@
 ---
 title: ActivityBody element
+description: Discusses the ActivityBody element which is a complex type coercionParametersType, for complex binding of an activity that is used as a coercion.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -29,7 +30,7 @@ An element in the complex type **coercionParametersType**, **ActivityBody** for 
 
 ## Element information
 
-|   |   |
+| &nbsp;  |&nbsp;   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

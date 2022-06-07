@@ -1,5 +1,6 @@
 ---
 title: "Active element (Source complexType) (SPS15XSDSearchSet1)"
+description: Discusses element information, definitions elements and attributes for the Active element (Source complexType) (SPS15XSDSearchSet1).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a64fd1d3-c3de-3cb9-8d47-1623f2e3756e
-description: "Last modified: March 09, 2015"
 ---
 
 # Active element (Source complexType) (SPS15XSDSearchSet1)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |

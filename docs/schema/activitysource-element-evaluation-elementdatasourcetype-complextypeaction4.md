@@ -1,5 +1,6 @@
 ---
 title: ActivitySource element (Evaluation element)
+description: Discusses the use, element information, definitions, elements and attributes for the ActivitySource element (Evaluation element).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -27,7 +28,7 @@ Specifies that the evaluation value is retrieved from the fields of the parent d
 
 ## Element information
 
-|   |   |
+|  &nbsp; |&nbsp;   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

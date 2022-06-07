@@ -1,5 +1,6 @@
 ---
 title: ActivitySource element (WorkflowInfo)
+description: Discusses the definition, elements and attributes for the ActivitySource element (WorkflowInfo).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

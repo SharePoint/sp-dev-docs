@@ -1,5 +1,6 @@
 ---
 title: "ActivationDependency element (Solution)"
+description: Discusses the elements, attributes and examples for the ActivationDependency element (Solution) for SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: b8ab216f-4363-44f3-b79e-eaa7262f44ee
-description: Specifies the activation dependencies for a solution.
 ---
 
 # ActivationDependency element (Solution)

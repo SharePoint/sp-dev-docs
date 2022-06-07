@@ -1,5 +1,6 @@
 ---
 title: AddContentTypeField element (Feature)
+description: Discusses the definitions, elements and attributes for the AddContentTypeField element (Feature) for SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

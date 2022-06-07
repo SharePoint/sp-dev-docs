@@ -1,5 +1,6 @@
 ---
 title: ActivitySource element (WorkflowActions)
+description: Discusses the definitions, elements and attributes of the ActivitySource element (WorkflowActions).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: "Aggregations element (DeploymentManifest - SPWebPart)"
+description: Discusses the definitions, elements and attributes for the Aggregations element (DeploymentManifest - SPWebPart).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0a1c2a28-93cf-4b65-b101-f985f6112461
-description: "Last modified: March 09, 2015"
 ---
 
 # Aggregations element (DeploymentManifest - SPWebPart)
