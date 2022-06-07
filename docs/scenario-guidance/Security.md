@@ -1,7 +1,7 @@
 ---
 title: Security
 description: Lists resources about how SharePoint supports security for user access at the website, list, list or library folder, and item levels.
-ms.date: 02/07/2018
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Security
