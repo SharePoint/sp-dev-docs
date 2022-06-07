@@ -1,5 +1,6 @@
 ---
 title: User information
+description: User profiles contain each user's personal information and enable you to search for and connect with people within your organization.
 ms.date: 04/21/2020
 ms.localizationpriority: medium
 ---
@@ -16,7 +17,7 @@ _**Applies to:** Office 365_
 ### Articles
 
 - [Working with users in Microsoft Graph](https://developer.microsoft.com/graph/docs/api-reference/v1.0/resources/users)
-- [Work with user profiles in a SharePoint Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-userprofileexperience)
+- [Work with user profiles in a SharePoint Multi-Geo tenant](/sharepoint/dev/solution-guidance/multigeo-userprofileexperience)
 - [Adding custom app data to Microsoft Graph now in preview](https://developer.microsoft.com/office/blogs/adding-customer-data-to-resources-in-Microsoft-Graph-preview)
 
 ### Videos
@@ -25,7 +26,7 @@ _**Applies to:** Office 365_
 
 ### Solutions
 
-- [Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)
+- [Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)
 
 ### Samples
 
@@ -43,12 +44,12 @@ In SharePoint, user profiles represent SharePoint users. User profile properties
 
 ### Articles
 
-- [Work with user profiles in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/work-with-user-profiles-in-sharepoint)
-- [User profile manipulation in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/user%20profile%20manipulation-sharepoint-add-in)
+- [Work with user profiles in SharePoint](/sharepoint/dev/general-development/work-with-user-profiles-in-sharepoint)
+- [User profile manipulation in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/user%20profile%20manipulation-sharepoint-add-in)
 - [User profiles REST API reference](https://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx)
-- [Work with user profiles and organization profiles by using the server object model in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj)
-- [Get user identity and properties in SharePoint](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-user-identity-and-properties-in-sharepoint)
-- [User segmentation in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/user-segmentation-in-sharepoint)
+- [Work with user profiles and organization profiles by using the server object model in SharePoint](/sharepoint/dev/general-development/how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj)
+- [Get user identity and properties in SharePoint](/sharepoint/dev/sp-add-ins/get-user-identity-and-properties-in-sharepoint)
+- [User segmentation in SharePoint](/sharepoint/dev/general-development/user-segmentation-in-sharepoint)
 - [Pattern: Retrieving user data](https://github.com/SharePoint/PnP-Transformation/blob/master/InfoPath/Guidance/Patterns/Retrieving%20user%20data.md)
 - [User Personalization and OneDrive for Business Operations Using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/07%20User%20Personalization%20and%20OneDrive%20for%20Business%20Operations%20Using%20add-in%20model)
 
@@ -58,10 +59,10 @@ In SharePoint, user profiles represent SharePoint users. User profile properties
 
 ### Solutions
 
-- [User profile solutions for SharePoint 2013 and SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/user-profile-solutions-for-sharepoint)
-- [Upload user profile pictures sample add-in for SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/upload-user-profile-pictures-sample-app-for-sharepoint)
-- [Personalize search results sample add-in for SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/personalize-search-results-sample-app-for-sharepoint)
-- [Migrate user profile properties sample add-in for SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/migrate-user-profile-properties-sample-app-for-sharepoint)
+- [User profile solutions for SharePoint 2013 and SharePoint Online](/sharepoint/dev/solution-guidance/user-profile-solutions-for-sharepoint)
+- [Upload user profile pictures sample add-in for SharePoint](/sharepoint/dev/solution-guidance/upload-user-profile-pictures-sample-app-for-sharepoint)
+- [Personalize search results sample add-in for SharePoint](/sharepoint/dev/solution-guidance/personalize-search-results-sample-app-for-sharepoint)
+- [Migrate user profile properties sample add-in for SharePoint](/sharepoint/dev/solution-guidance/migrate-user-profile-properties-sample-app-for-sharepoint)
 - [UserProfile.MIMSync toolset](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/UserProfile.MIMSync)
 - [User Profiles PnP PowerShell cmdlets](https://msdn.microsoft.com/pnp_powershell/userprofiles-category)
 
@@ -78,7 +79,7 @@ _**Applies to:** Office 365_
 
 ### Solutions
 
-- [Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online](https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)
+- [Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online](/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)
 
 ### Samples
 
