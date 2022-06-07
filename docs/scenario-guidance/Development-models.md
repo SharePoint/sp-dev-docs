@@ -24,11 +24,11 @@ _**Applies to:** Office 365 | SharePoint Online | SharePoint 2016 FP2_
 The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and support for open source tooling. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are natively responsive and mobile-ready. The SharePoint Framework works for SharePoint Online and for on-premises (from SharePoint 2016 Feature Pack 2 forward). You can built client-side web parts and SharePoint Framework Extensions with the SharePoint Framework.
 
 ### Articles
-* [Overview of the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
-* [Overview of SharePoint client-side web parts](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/overview-client-side-web-parts)
-* [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/sharepoint/dev/spfx/extensions/overview-extensions)
-* [SharePoint Framework (SPFx) enterprise guidance](https://docs.microsoft.com/sharepoint/dev/spfx/enterprise-guidance)
-* [SharePoint Framework roadmap](https://docs.microsoft.com/sharepoint/dev/spfx/roadmap)
+* [Overview of the SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
+* [Overview of SharePoint client-side web parts](/sharepoint/dev/spfx/web-parts/overview-client-side-web-parts)
+* [Overview of SharePoint Framework Extensions](/sharepoint/dev/spfx/extensions/overview-extensions)
+* [SharePoint Framework (SPFx) enterprise guidance](/sharepoint/dev/spfx/enterprise-guidance)
+* [SharePoint Framework roadmap](/sharepoint/dev/spfx/roadmap)
 
 ### Samples
 * [SharePoint Framework client-side web part samples & tutorial materials](https://github.com/SharePoint/sp-dev-fx-webparts)
@@ -59,9 +59,9 @@ Moreover, a SharePoint Add-in can include classic SharePoint components such as 
 
 ### Articles
 
-* [SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/sharepoint-add-ins)
-* [SharePoint Add-ins compared with SharePoint solutions](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
-* [Transform farm solutions to the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
+* [SharePoint Add-ins](/sharepoint/dev/sp-add-ins/sharepoint-add-ins)
+* [SharePoint Add-ins compared with SharePoint solutions](/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
+* [Transform farm solutions to the SharePoint Add-in model](/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 
 ### Samples
 
@@ -88,7 +88,7 @@ Code-based sandbox solutions were deprecated back in 2014 and in SharePoint Onli
 * [Sandbox Solutions in SharePoint 2010](https://msdn.microsoft.com/library/office/ee536577.aspx)
 * [Sandbox Solutions Architecture in SharePoint 2010](https://msdn.microsoft.com/library/office/ee539417.aspx)
 * [Removing Code-Based Sandbox Solutions in SharePoint Online](https://developer.microsoft.com/office/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
-* [Sandbox solution transformation guidance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance)
+* [Sandbox solution transformation guidance](/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance)
 
 ### Solutions
 
@@ -108,8 +108,8 @@ Farm Solutions are distributed as SharePoint solution packages that farm adminis
 
 ### Articles
 
-* [Build farm solutions in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/build-farm-solutions-in-sharepoint)
-* [SharePoint Add-ins compared with SharePoint solutions](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
+* [Build farm solutions in SharePoint](/sharepoint/dev/general-development/build-farm-solutions-in-sharepoint)
+* [SharePoint Add-ins compared with SharePoint solutions](/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
 
 ## Script Editor or Content Editor web part
 
@@ -122,4 +122,4 @@ This however raises a security challenges as scripts can be deployed to SharePoi
 Moreover any custom code hosted within the Script Editor web part does not have any kind of maintenance capability, governance, or life-cycle management. That's why starting from 2017 Microsoft introduced the [SharePoint Framework](#SharePointFramework) model, which is similar to the Script Editor web part, but works in the "modern" UI, supports the no-script flag and provides centralized governance and control for the SharePoint administrators.
 
 ### Articles
-* [Migrate existing Script Editor web part customizations to the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
+* [Migrate existing Script Editor web part customizations to the SharePoint Framework](/sharepoint/dev/spfx/web-parts/guidance/migrate-script-editor-web-part-customizations)
