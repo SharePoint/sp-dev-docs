@@ -1,6 +1,6 @@
 ---
 title: Configuration, administration, and resources in SharePoint
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: e7d8c919-7aa6-466a-acb0-27366129061c
 ms.localizationpriority: high

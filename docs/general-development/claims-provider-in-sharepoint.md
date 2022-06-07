@@ -1,6 +1,6 @@
 ---
 title: Claims provider in SharePoint
-ms.date: 09/25/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 5918d5b6-5fd6-4f41-9473-a15b1491d056
 ms.localizationpriority: high

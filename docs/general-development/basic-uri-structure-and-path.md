@@ -1,7 +1,7 @@
 ---
 title: Basic URI Structure and Path
-ms.date: 09/25/2017
-ms.prod: sharepoint
+ms.date: 06/07/2022
+//ms.prod: sharepoint
 ms.assetid: d73cf6c2-0677-4726-8a3e-2ad130e1a12c
 ms.localizationpriority: high
 ---
