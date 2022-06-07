@@ -1,7 +1,7 @@
 ---
 title: Custom security trimming for Search in SharePoint
 description: Learn about the two kinds of custom security trimmer interfaces and how to create a custom security trimmer.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
 ms.localizationpriority: medium

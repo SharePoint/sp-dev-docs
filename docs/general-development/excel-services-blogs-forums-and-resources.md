@@ -1,7 +1,7 @@
 ---
 title: Excel Services Blogs, Forums, and Resources
 description: Provides links to Excel Services blogs, forums, and resources, as well as links to articles on Excel Services concepts.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 keywords: blogger
 f1_keywords:
 - blogger

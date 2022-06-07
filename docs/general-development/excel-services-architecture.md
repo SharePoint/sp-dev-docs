@@ -1,7 +1,7 @@
 ---
 title: Excel Services Architecture
 description: Describes the Excel Services architecture and provides details on web front-end and back-end application servers, Excel web access, and more.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 keywords: excel services design
 f1_keywords:
 - excel services design

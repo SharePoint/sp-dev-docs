@@ -1,7 +1,7 @@
 ---
 title: Excel Web Services
 description: Describes Excel Web Services, explains how to use it to develop custom applications, and provides links to articles and tutorials.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: e30ef4e3-72ff-43de-beba-b377141d4d19
 ms.localizationpriority: high

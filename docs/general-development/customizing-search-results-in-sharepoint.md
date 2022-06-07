@@ -1,7 +1,7 @@
 ---
 title: Customizing search results in SharePoint
 description: Describes group similar items or remove duplicate items in a search result set in SharePoint to display these results in a concise, readable way.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
 ms.localizationpriority: high
