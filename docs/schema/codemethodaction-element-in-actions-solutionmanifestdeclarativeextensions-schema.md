@@ -1,5 +1,6 @@
 ---
 title: CodeMethodAction element in Actions
+description: The CodeMethodAction element is used to execute a custom code action or to execute one of the predefined actions provided by Microsoft Business Connectivity Services (BCS).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -212,7 +213,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>Actions can take parameters. The **Parameters** element lists the parameters of the action.</p></td>
 </tr>
 </tbody>
@@ -233,7 +234,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **Actions** element that contains this action.</p></td>
 </tr>
 </tbody>

@@ -1,5 +1,6 @@
 ---
 title: Coercion element
+description: Describes the definition, usage, attribute and element information for Coercion element, which specifies a coercion for converting data from one form to another.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -27,11 +28,7 @@ Specifies a coercion for converting data from one form to another.
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  |  |
-| **Namespace**     |  |
-| **Schema file**   | Actions4.xsd |
+**Schema file**: Actions4.xsd
 
 ## Definition
 
@@ -148,7 +145,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>**ClassName**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Uniquely identifies the class in the binary file that is specified by the <span class="parameter" sdata="paramReference">Assembly</span> value.</p></td>
+<td align="left"><p>Uniquely identifies the class in the binary file that is specified by the <span class="parameter">Assembly</span> value.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
