@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8aedbc91-7e08-d35e-d0ce-172e36b9d309
-description: "Last modified: March 09, 2015"
+description: AuthInfo element (Source complexType) (SPS15XSDSearchSet1) is an XML element.
 ---
 
 # AuthInfo element (Source complexType) (SPS15XSDSearchSet1)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |q1:AuthenticationInformation  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |

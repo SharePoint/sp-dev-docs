@@ -1,5 +1,6 @@
 ---
 title: AutoDeployedWebApplication element (AppPrincipalDefinition complexType)
+description: AutoDeployedWebApplication element (AppPrincipalDefinition complexType). Do not use. For possible future use only.
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
@@ -22,7 +23,7 @@ Do not use. For possible future use only.
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  | Not defined |
 | **Namespace**  |  `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

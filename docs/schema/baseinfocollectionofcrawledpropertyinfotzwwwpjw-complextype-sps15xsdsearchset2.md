@@ -7,7 +7,7 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 52ba1cb8-c8ca-53e9-d4e7-6773e848b379
-description: "Last modified: March 09, 2015"
+description: BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType (SPS15XSDSearchSet2) is an XML type.
 ---
 
 # BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |

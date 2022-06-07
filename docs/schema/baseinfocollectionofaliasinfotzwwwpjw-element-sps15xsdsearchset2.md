@@ -7,14 +7,14 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8831ac65-3f1b-e7d0-75da-7d01a8052835
-description: "Last modified: March 09, 2015"
+description: BaseInfoCollectionOfAliasInfoTzWWwPjw element (SPS15XSDSearchSet2) is an XML element.
 ---
 
 # BaseInfoCollectionOfAliasInfoTzWWwPjw element (SPS15XSDSearchSet2)
 
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:BaseInfoCollectionOfAliasInfoTzWWwPjw  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

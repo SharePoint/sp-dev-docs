@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9634ffe7-daaf-4c0a-9195-516d913ee0a9
-description: "Last modified: March 09, 2015"
+description: Attachments element (DeploymentManifest) represents a container, or collection, of Windows SharePoint Services 3.0 Attachment object instances.
 ---
 
 # Attachments element (DeploymentManifest)

@@ -7,7 +7,7 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 61ea34d3-1197-b212-fbf4-bd77ab5b45ad
-description: "Last modified: March 09, 2015"
+description: BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw element (SPS15XSDSearchSet2) is an XML element.
 ---
 
 # BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw element (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
