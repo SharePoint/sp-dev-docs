@@ -2,7 +2,7 @@
 title: "_SsoAppId element (SsoAuthData complexType) (SPS15XSDSearchSet2)"
 description: Outlines information, a definition, and elements and attributes for the _SsoAppId element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint

@@ -1,7 +1,7 @@
 ---
 title: Development models
 description: Development models
-ms.date: 04/21/2020
+ms.date: 06/07/2022
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
