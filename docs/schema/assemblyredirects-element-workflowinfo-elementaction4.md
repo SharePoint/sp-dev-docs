@@ -1,5 +1,6 @@
 ---
 title: AssemblyRedirects element
+description: Specifies transformations from one binary file to another in a versioned binary file system so that there is sufficient information to load the desired file.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -27,7 +28,7 @@ Specifies transformations from one binary file to another binary file in a versi
 
 ## Element information
 
-|   |   |
+| Element information  | file  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

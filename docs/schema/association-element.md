@@ -1,5 +1,6 @@
 ---
 title: Association element
+description: The Association element is used to describe an association.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

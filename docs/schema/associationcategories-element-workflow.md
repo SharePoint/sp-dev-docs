@@ -1,5 +1,6 @@
 ---
 title: AssociationCategories element (Workflow)
+description: Specifies the categories of list and content types to which you can associate this workflow.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

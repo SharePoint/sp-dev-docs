@@ -1,5 +1,6 @@
 ---
 title: Associations element in Subscription
+description: Lists the subscription associations in this cache subscription.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -48,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.md">Association element in Associations (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span><a href="association-element-in-associations-subscription-schema.md">Association element in Associations (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A subscription association.</p></td>
 </tr>
 </tbody>
@@ -69,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.md">Subscription element (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span><a href="subscription-element-subscription-schema.md">Subscription element (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The subscription that contains this list of associations.</p></td>
 </tr>
 </tbody>

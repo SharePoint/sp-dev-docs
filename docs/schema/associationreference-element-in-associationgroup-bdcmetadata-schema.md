@@ -1,5 +1,6 @@
 ---
 title: AssociationReference element in AssociationGroup
+description: Specifies an AssociationReference in an AssociationGroup.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -92,7 +93,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **AssociationGroup** that this **AssociationReference** belongs to.</p></td>
 </tr>
 </tbody>

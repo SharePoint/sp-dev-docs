@@ -83,15 +83,15 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized names of the **AssociationGroup**.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the **AssociationGroup**.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationreference-element-in-associationgroup-bdcmetadata-schema.md">AssociationReference element in AssociationGroup (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="associationreference-element-in-associationgroup-bdcmetadata-schema.md">AssociationReference element in AssociationGroup (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An **AssociationReference** of an **AssociationGroup**.</p></td>
 </tr>
 </tbody>
@@ -112,7 +112,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadata-schema.md">AssociationGroups element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="associationgroups-element-in-entity-bdcmetadata-schema.md">AssociationGroups element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **AssociationGroups** element that contains this **AssociationGroup**.</p></td>
 </tr>
 </tbody>
