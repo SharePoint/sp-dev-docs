@@ -1,5 +1,6 @@
 ---
 title: CommandUIHandlers element (CommandUIExtensionType complexType)
+description: Describes the CommandUIHandlers element (CommandUIExtensionType complexType), including element information, definition, attributes, and parent & child elements.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 14b21d4c-b5ce-ff31-7a91-9bbc3403579b
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  | CommandUIHandlersType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

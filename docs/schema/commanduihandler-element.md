@@ -1,5 +1,6 @@
 ---
 title: CommandUIHandler element
+description: Describes the CommandUIHandler element, which defines the handler for a command.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -53,10 +54,10 @@ The following sections describe attributes, child elements, and parent elements.
 <p>The value of the attribute can contain substitution tokens that are transformed at rendering. The following tokens are recognized:</p>
 <ul>
 <li><p>`{ItemId}` - ID (GUID) taken from the list view.</p></li>
-<li><p>`{ItemUrl}` - Web-relative URL of the list item (<span sdata="cer" target="P:Microsoft.SharePoint.SPListItem.Url"><span class="nolink">Url</span></span>).</p></li>
-<li><p>`{RecurrenceId}` - ID of a recurrent item (<span sdata="cer" target="P:Microsoft.SharePoint.SPListItem.RecurrenceID"><span class="nolink">RecurrenceID</span></span>).</p></li>
-<li><p>`{SiteUrl}` - The fully qualified URL to the site (<span sdata="cer" target="P:Microsoft.SharePoint.SPWeb.Url"><span class="nolink">Url</span></span>).</p></li>
-<li><p>`{ListId}` - ID (GUID) of the list (<span sdata="cer" target="P:Microsoft.SharePoint.SPList.ID"><span class="nolink">ID</span></span>).</p></li>
+<li><p>`{ItemUrl}` - Web-relative URL of the list item (Url).</p></li>
+<li><p>`{RecurrenceId}` - ID of a recurrent item (RecurrenceID).</p></li>
+<li><p>`{SiteUrl}` - The fully qualified URL to the site (Url).</p></li>
+<li><p>`{ListId}` - ID (GUID) of the list (ID).</p></li>
 <li><p>`{ListUrlDir}` - Server-relative URL of the site plus the list's folder.</p></li>
 <li><p>`{Source}` - Fully qualified request URL.</p></li>
 <li><p>`{SelectedListId}` - ID (GUID) of the list that is currently selected from a list view.</p></li>

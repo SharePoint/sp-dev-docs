@@ -7,7 +7,7 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f54a4a4c-704d-c0af-36c9-bd246a7aa5c1
-description: "Last modified: March 09, 2015"
+description: "Describes CompleteMatching element (ManagedPropertyInfo complexType), including basic definition, elements and attributes, and parent and child elements."
 ---
 
 # CompleteMatching element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Name | Value |
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

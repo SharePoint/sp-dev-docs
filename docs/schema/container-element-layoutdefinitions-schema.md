@@ -1,5 +1,6 @@
 ---
 title: Container element
+description: Describes the Container element (LayoutDefinitions Schema), which specifies the layout for the External Data Parts.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -93,11 +94,11 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties element in UIelement (LayoutDefinitions schema)</a></span></p></td>
+<td align="left"><p><span><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties element in UIelement (LayoutDefinitions schema)</a></span></p></td>
 <td align="left"><p>The list of the custom properties.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.md">Children element in Container (LayoutDefinitions schema)</a></span></p></td>
+<td align="left"><p><span><a href="children-element-in-container-layoutdefinitions-schema.md">Children element in Container (LayoutDefinitions schema)</a></span></p></td>
 <td align="left"><p>The list of the Office External Parts in this layout.</p></td>
 </tr>
 </tbody>

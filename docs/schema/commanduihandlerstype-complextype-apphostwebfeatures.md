@@ -1,5 +1,6 @@
 ---
 title: CommandUIHandlersType complexType
+description: Describes the CommandUIHandlersType complexType, including type information and definition, elements and attributes, and child elements.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: ba5406fa-43ab-29b1-e853-c21f12682ec1
 
 ## Type information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

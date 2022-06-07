@@ -1,7 +1,8 @@
 ---
 title: CommandUIExtension element
+description: 
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

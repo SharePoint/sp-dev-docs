@@ -1,5 +1,6 @@
 ---
 title: Content element (ClientWebPartDefinition complexType)
+description: Describes the Content element (ClientWebPartDefinition complexType), including element information, attributes, and parent and child elements.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer

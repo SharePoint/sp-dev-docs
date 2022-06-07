@@ -1,5 +1,6 @@
 ---
 title: CompositeSteps element
+description: Describes the CompositeSteps element, which is a container for the steps in a composite workflow activity represented by CompositeStep elements.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -27,7 +28,7 @@ Container for the steps in a composite workflow activity, which are represented 
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

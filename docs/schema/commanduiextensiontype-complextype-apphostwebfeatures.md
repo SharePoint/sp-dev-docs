@@ -1,5 +1,6 @@
 ---
 title: CommandUIExtensionType complexType
+description: Describes the CommandUIExtensionType complexType, including type information, elements, attributes, and child elements.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 1e7626eb-2820-374e-ae39-be3a3178b2ab
 
 ## Type information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
