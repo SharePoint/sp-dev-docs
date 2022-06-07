@@ -1,7 +1,7 @@
 ---
 title: Read and write to the social feed by using the REST service in SharePoint
 description: Describes how to create a SharePoint-hosted app that uses the REST service to publish a post and get a personal feed for the current user.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: 1da8d484-3666-42c3-8a8f-8b3ef93e96e9
 ms.localizationpriority: medium

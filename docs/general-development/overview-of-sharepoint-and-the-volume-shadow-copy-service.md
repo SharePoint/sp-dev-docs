@@ -1,7 +1,7 @@
 ---
 title: Overview of SharePoint and the Volume Shadow Copy Service
 description: Provides an overview of SharePoint and the Volume Shadow Copy Service (VSS), which simplifies backing up server solutions.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: d1cb6653-bfc0-4af2-b221-d7d30cb40d84
 ms.localizationpriority: medium

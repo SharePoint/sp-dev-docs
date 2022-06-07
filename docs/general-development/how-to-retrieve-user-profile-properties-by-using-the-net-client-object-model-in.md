@@ -1,7 +1,7 @@
 ---
 title: Retrieve user profile properties by using the .NET client object model in SharePoint
 description: Learn how to retrieve user profile properties programmatically by using the SharePoint .NET client object model.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: 236ebaf8-f92e-4192-9b51-0a9de0210885
 ms.localizationpriority: high
@@ -242,7 +242,7 @@ The following code example shows how to retrieve a specific set of user profile 
     
     
 
-Unlike the previous code example that retrieves a  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object for the target user, this example calls the [PeopleManager.GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) method and passes in a [UserProfilePropertiesForUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfilePropertiesForUser.aspx) object that specifies the target user and the user profile properties to retrieve. [GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) returns an **IEnumerable&lt;string&gt;** collection that contains the values of the properties that you specify.
+Unlike the previous code example that retrieves a  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object for the target user, this example calls the [PeopleManager.GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) method and passes in a [UserProfilePropertiesForUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfilePropertiesForUser.aspx) object that specifies the target user and the user profile properties to retrieve. [GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) returns an **IEnumerable\<string\>** collection that contains the values of the properties that you specify.
   
 > [!NOTE]
 > Replace the  `http://serverName/` and `domainName\\\\userName` placeholder values before you run the code.
