@@ -1,7 +1,7 @@
 ---
 title: Working with the SharePoint Send HTTP Request flow action in Power Automate
 description: In Power Automate, the SharePoint Send HTTP Request flow action lets you construct and execute SharePoint REST API queries.
-ms.date: 03/11/2020
+ms.date: 06/03/2022
 search.app: 
   - Flow
 search.appverid: met150

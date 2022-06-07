@@ -1,7 +1,7 @@
 ---
 title: Accessing the SOAP API
 description: The SOAP API consists of methods and a set of complex type objects that you can use to access the complete functionality of Excel Web Services.
-ms.date: 09/25/2017
+ms.date: 06/03/2022
 keywords: soap
 f1_keywords:
 - soap
