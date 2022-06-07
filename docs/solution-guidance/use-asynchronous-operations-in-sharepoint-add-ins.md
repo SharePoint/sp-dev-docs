@@ -123,7 +123,7 @@ The following table describes all the Visual Studio projects in the Core.QueueWe
 
 |Visual Studio project|Description|
 |:-----|:-----|
-|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul> http://www.w3.org/1999/xlink <br> http://msdn2.microsoft.com/mtps <br> https://msdn.microsoft.com/mshelp <br> http://ddue.schemas.microsoft.com/authoring/2003/5 <br> urn:schemas-microsoft-com:xslt<li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
+|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul> https://www.w3.org/1999/xlink <br> https://msdn2.microsoft.com/mtps <br> https://msdn.microsoft.com/mshelp <br> https://ddue.schemas.microsoft.com/authoring/2003/5 <br> urn:schemas-microsoft-com:xslt<li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
 |Core.QueueWebJobUsage.Common|Contains the business objects and business logic code &mdash; such as the methods to add messages to the storage queue &mdash; for this solution. This project is included to share business objects and business logic between different projects. You may not need this in your implementation.|
 |Core.QueueWebJobUsage.Job|The Azure WebJob that runs when a new message is added to the Azure Storage queue. This project contains your custom business logic code. |
 |Core.QueueWebJobUsageWeb|The provider-hosted add-in that contains the UI for the Core.QueueWebJobUsage project. |

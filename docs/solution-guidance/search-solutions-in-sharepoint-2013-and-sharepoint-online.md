@@ -324,7 +324,7 @@ The following are some additional resources for display templates and result typ
 - [How to create a new result type in SharePoint Server](/SharePoint/search/how-to-create-a-new-result-type)
 - [How to display values from custom managed properties in search results - option 1 in SharePoint Server](/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-1)
 - [How to display values from custom managed properties in search results - option 2 in SharePoint Server](/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-2)
-- [How to display values from custom managed properties in the hover panel in SharePoint Server](SharePoint/search/how-to-display-values-from-custom-managed-properties-in-the-hover-panel)
+<!--- - [How to display values from custom managed properties in the hover panel in SharePoint Server](SharePoint/search/how-to-display-values-from-custom-managed-properties-in-the-hover-panel) --->
 
 ## Query APIs and search add-ins
 

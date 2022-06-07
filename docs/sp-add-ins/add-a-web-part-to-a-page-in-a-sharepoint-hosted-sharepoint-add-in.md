@@ -18,8 +18,8 @@ In this article, you add a web part to the default page of the Employee Orientat
 ## Add a web part to a page
 
 1. In **Solution Explorer**, open the Default.aspx file.
-1. Because we'll be adding a list view web part to the page that surfaces the New Employees in Seattle list, we no longer need a link to the list view page for the list. Remove the <!---**<asp:HyperLink>**---> element from the <!---**<asp:Content>**---> element whose **ContentPlaceHolderId** is `PlaceHolderMain`.
-1. Inside the same <!---**<asp:Content>**---> element, add the following **WebPartZone**.
+1. Because we'll be adding a list view web part to the page that surfaces the New Employees in Seattle list, we no longer need a link to the list view page for the list. Remove the **\<asp:HyperLink\>** element from the **\<asp:Content\>** element whose **ContentPlaceHolderId** is `PlaceHolderMain`.
+1. Inside the same **\<asp:Content\>** element, add the following **WebPartZone**.
 
     ```XML
       <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly"
