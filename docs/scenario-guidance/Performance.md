@@ -1,6 +1,7 @@
 ---
 title: Performance
-ms.date: 04/21/2020
+description: Outlines how performance is one of the important factors that influence user-experience and how efficiently users can work with the portal.
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Performance
@@ -24,8 +25,8 @@ SharePoint Online uses throttling to prevent users from over-consuming resources
 
 ### Articles
 
-- [Handle SharePoint Online throttling by using exponential back off](https://docs.microsoft.com/sharepoint/dev/solution-guidance/handle-sharepoint-online-throttling-by-using-exponential-back-off)
-- [Avoid getting throttled or blocked in SharePoint Online](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)
+- [Handle SharePoint Online throttling by using exponential back off](/sharepoint/dev/solution-guidance/handle-sharepoint-online-throttling-by-using-exponential-back-off)
+- [Avoid getting throttled or blocked in SharePoint Online](/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)
 
 ### Samples
 
@@ -37,12 +38,12 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ### Articles
 
-- [Optimize builds for production](https://docs.microsoft.com/sharepoint/dev/spfx/toolchain/optimize-builds-for-production)
-- [JavaScript Patterns and Performance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
-- [Make batch requests with the REST APIs](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis)
-- [SharePoint Framework (SPFx) enterprise guidance](https://docs.microsoft.com/sharepoint/dev/spfx/enterprise-guidance)
-- [Use existing JavaScript libraries in SharePoint Framework client-side web parts](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/guidance/use-existing-javascript-libraries)
-- [Use the Office 365 content delivery network (CDN)](https://docs.microsoft.com/sharepoint/dev/general-development/office-365-cdn)
+- [Optimize builds for production](/sharepoint/dev/spfx/toolchain/optimize-builds-for-production)
+- [JavaScript Patterns and Performance](/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
+- [Make batch requests with the REST APIs](/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis)
+- [SharePoint Framework (SPFx) enterprise guidance](/sharepoint/dev/spfx/enterprise-guidance)
+- [Use existing JavaScript libraries in SharePoint Framework client-side web parts](/sharepoint/dev/spfx/web-parts/guidance/use-existing-javascript-libraries)
+- [Use the Office 365 content delivery network (CDN)](/sharepoint/dev/general-development/office-365-cdn)
 
 ## SharePoint Add-ins
 
@@ -52,10 +53,10 @@ The approaches you take to ensure optimal performance with SharePoint is differe
 
 ### Articles
 
-- [JavaScript Patterns and Performance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
-- [Performance considerations in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/performance-considerations-sharepoint-add-in)
-- [Improve performance in SharePoint provider-hosted add-ins](https://docs.microsoft.com/sharepoint/dev/solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins)
-- [Make batch requests with the REST APIs](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis)
+- [JavaScript Patterns and Performance](/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
+- [Performance considerations in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/performance-considerations-sharepoint-add-in)
+- [Improve performance in SharePoint provider-hosted add-ins](/sharepoint/dev/solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins)
+- [Make batch requests with the REST APIs](/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis)
 
 ### Videos
 
@@ -71,10 +72,10 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ### Articles
 
-- [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-performance)
-- [Proven Practices for SharePoint Online Portals - Navigation Solutions](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-navigation)
-- [JavaScript Patterns and Performance](https://docs.microsoft.com/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
-- [Optimize page performance in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint)
+- [Proven Practices for SharePoint Online Portals - Performance](/sharepoint/dev/solution-guidance/portal-performance)
+- [Proven Practices for SharePoint Online Portals - Navigation Solutions](/sharepoint/dev/solution-guidance/portal-navigation)
+- [JavaScript Patterns and Performance](/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
+- [Optimize page performance in SharePoint](/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint)
 
 ### Videos
 

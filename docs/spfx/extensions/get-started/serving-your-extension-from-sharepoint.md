@@ -1,7 +1,7 @@
 ---
 title: Deploy your extension to SharePoint (Hello World part 3)
 description: Deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages.
-ms.date: 06/01/2022
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -65,18 +65,10 @@ The `ClientSideComponentProperties` property is set to the default structure and
 
 The configuration uses the specific location of `ClientSideExtension.ApplicationCustomizer` to define that this is an Application Customizer. Because this **elements.xml** is associated to a `Web` scoped feature by default, this `CustomAction` is automatically added to the `Web.UserCustomAction` property in the site where the solution is being installed.
 
-Ensure that the configuration matches updates executed in the Application Customizer. Update the `ClientSideComponentProperties` as in the following XML structure. Don't copy the whole structure because it would cause a mismatch with your `ClientSideComponentId`:
+Ensure that the configuration matches the changes made to the properties of the Application Customizer. Set the `ClientSideComponentProperties` property to the following HTML encoded JSON string that contains the property values:
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <CustomAction
-    Title="SPFxApplicationCustomizer"
-    Location="ClientSideExtension.ApplicationCustomizer"
-    ClientSideComponentId="46606aa6-5dd8-4792-b017-1555ec0a43a4"
-    ClientSideComponentProperties="{&quot;Top&quot;:&quot;Top area of the page&quot;,&quot;Bottom&quot;:&quot;Bottom area in the page&quot;}">
-  </CustomAction>
-</Elements>
+{&quot;Top&quot;:&quot;Top area of the page&quot;,&quot;Bottom&quot;:&quot;Bottom area in the page&quot;}
 ```
 
 ### What about ClientSideInstance.xml file in assets folder?
@@ -85,7 +77,7 @@ Ensure that the configuration matches updates executed in the Application Custom
 
 **Tenant-Wide Extensions** list can be used to automatically activate extensions in tenant from a centralized location. Tenant-wide deployment is supported for Application customizers and list view command sets. You can specify different target definitions, like activation based on the site type or list type.
 
-For this tutorial, we don't need this file as we'll be activating solution in a specific site using feature xml based provisioning.
+For this tutorial, we don't need this file as we'll be activating solution in a specific site using feature XML based provisioning.
 
 > [!TIP]
 > For more information, see: [Tenant-wide Deployment of SharePoint Framework Extensions](../basics/tenant-wide-deployment-extensions.md)
@@ -122,15 +114,34 @@ The **./config/package-solution.json** now looks similar to the following exampl
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "app-extension-client-side-solution",
-    "id": "98a9fe4f-175c-48c1-adee-63fb927faa70",
+    "id": "65e15d73-515b-4d57-8c92-66ba5890c7b4",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
     "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "app-extension description"
+      },
+      "longDescription": {
+        "default": "app-extension description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
     "features": [
       {
-        "title": "Application Extension - Deployment of custom action.",
+        "title": "Application Extension - Deployment of custom action",
         "description": "Deploys a custom action with ClientSideComponentId association",
-        "id": "4678966b-de68-445f-a74e-e553a7b937ab",
+        "id": "41b490c7-49f7-4db4-b7ea-c632d0fb9785",
         "version": "1.0.0.0",
         "assets": {
           "elementManifests": [
@@ -164,12 +175,11 @@ Now you're ready to deploy the solution to a SharePoint site and have the `Custo
 
    This command creates the following package: **./sharepoint/solution/app-extension.sppkg**.
 
-1. You now need to deploy the package to the app catalog. Go to your tenant's **app catalog** and open the **Apps for SharePoint** library.
-1. Upload or drag and drop the **./sharepoint/solution/app-extension.sppkg** file to the app catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
+1. You now need to deploy the package to the app catalog. Go to your tenant's **app catalog** and upload or drag and drop the **./sharepoint/solution/app-extension.sppkg** file into the **Apps for SharePoint** list. SharePoint displays a panel that asks you to enable the client-side solution.
 
    We did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to **https://localhost:4321**.
 
-1. Select the **Deploy** button.
+1. Select the **Only enable this app** radio button and then select the **Enable app** button.
 
    ![Trust operation in app catalog upload](../../../images/ext-app-sppkg-deploy-trust.png)
 
@@ -185,9 +195,9 @@ Now you're ready to deploy the solution to a SharePoint site and have the `Custo
 
     ![installing Field Customizer to site](../../../images/ext-app-install-solution-to-site.png)
 
-1. Select the **app-extension-client-side-solution** app to install the solution on the site. When the installation is completed, refresh the page by selecting F5.
+1. Select the **app-extension-client-side-solution** app to install the solution on the site. When the installation is completed, navigate back to the site where you installed the app.
 
-    When the application has been successfully installed, you can see the header and footer being rendered just like with the debug query parameters.
+    You can now see the header and footer being rendered just like with the debug query parameters.
 
     ![Custom header and footer elements rendered in the page](../../../images/ext-app-header-footer-visible.png)
 
