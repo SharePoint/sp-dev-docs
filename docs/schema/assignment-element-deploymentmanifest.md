@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b0cabb42-a2ed-488f-a736-0a5bf121a703
-description: Represents a Windows SharePoint Services 3.0 deployment assignment object instance.
+description: Assignment element (DeploymentManifest) represents a Windows SharePoint Services 3.0 deployment assignment object instance.
 ---
 
 # Assignment element (DeploymentManifest)

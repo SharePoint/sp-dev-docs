@@ -1,6 +1,6 @@
 ---
 title: AssemblyRedirects element (WorkflowInfo)
-description: Specifies transformations from one binary file to another binary file in a versioned binary file system.
+description: AssemblyRedirects element specifies transformations from one binary file to another binary file in a versioned binary file system.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

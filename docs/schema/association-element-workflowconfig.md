@@ -1,6 +1,6 @@
 ---
 title: Association element (WorkflowConfig)
-description: Contains the information necessary for a declarative rules-based, code-free workflow editor, such as Microsoft SharePoint Designer 2010.
+description:  Association element (WorkflowConfig) contains the information necessary for a declarative rules-based, code-free workflow editor.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

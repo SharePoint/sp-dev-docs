@@ -1,6 +1,6 @@
 ---
 title: AssociationData element (Workflow)
-description: Specifies any custom, valid XML data to pass to the workflow association form.
+description: AssociationData element (Workflow) specifies any custom, valid XML data to pass to the workflow association form.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

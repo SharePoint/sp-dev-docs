@@ -1,6 +1,6 @@
 ---
 title: Associations element in Subscription
-description: Lists the subscription associations in this cache subscription.
+description: Associations element in Subscription lists the subscription associations in this cache subscription.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
