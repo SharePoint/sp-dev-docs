@@ -28,7 +28,7 @@ Specifies a content type from which to retrieve fields.
 
 ## Element information
 
-|   |   |
+| Content  |  File |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
