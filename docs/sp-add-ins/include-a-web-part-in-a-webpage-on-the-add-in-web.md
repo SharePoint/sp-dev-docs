@@ -15,8 +15,8 @@ For a code sample that illustrates the guidance of this topic, see [OfficeDev/Co
 
 1. Create a SharePoint-hosted SharePoint Add-in project in Visual Studio. For details, see [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md).
 1. Open the .aspx file to which you want to add a web part. This topic uses Default.aspx as an example.
-1. Add a **WebPartZone** to the `<asp:Content>` element where you want the web part with markup. Typically, you want to add it to the `<asp:Content>` whose `ContentPlaceHolderId` is `PlaceHolderMain`. The following is an example.
-
+1. Add a **WebPartZone** to the `<asp:Content>` element where you want the web part with markup. Typically, you want to add it to the `<asp:Content>` whose `ContentPlaceHolderId` is `PlaceHolderMain`. <!---The following is an example.--->
+<!---
     ```XML
       <asp:Content ContentPlaceHolderId="PlaceHolderMain" runat="server">
         <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly"
@@ -26,6 +26,8 @@ For a code sample that illustrates the guidance of this topic, see [OfficeDev/Co
 
     > [!WARNING]
     > It is possible to add a web part element, such as **<WebPartPages:XsltListViewWebPart>** as a child of the **WebPartZone**. But this is generally a bad practice in a SharePoint Add-in. If the add-in ever needs to be updated, a web part element inserted in the .aspx file can cause the update to fail in some scenarios with the message "A web part with this ID has already been added to this page." We recommend that you add web parts to the elements manifest for the page as described later in this procedure.
+
+--->
 
 1. Open the element manifest file for the page. This is usually called elements.xml and is located in the same project folder as the .aspx file.
 1. In the **File** element for the page, add a child **AllUsersWebPart** element, and set its **WebPartZoneID** to the value of the web part zone that you created on the page, as this example shows.

@@ -20,7 +20,7 @@ In the following sections, we present a few ways of how you could implement a Me
 
 ## Embed a modern SharePoint page
 
-Recently SharePoint Online introduced the ability to [embed modern SharePoint pages in Microsoft Teams](https://docs.microsoft.com/sharepoint/dev/features/embed-pages-to-teams?WT.mc_id=m365-9762-wmastyka). Using this capability, you can create a modern SharePoint page with several SharePoint Framework web parts that show personalized information for the current user such as recent documents or upcoming meetings.
+Recently SharePoint Online introduced the ability to [embed modern SharePoint pages in Microsoft Teams](/sharepoint/dev/features/embed-pages-to-teams?WT.mc_id=m365-9762-wmastyka). Using this capability, you can create a modern SharePoint page with several SharePoint Framework web parts that show personalized information for the current user such as recent documents or upcoming meetings.
 
 ![Modern SharePoint page with several SharePoint Framework web parts showing personalized information for the current user](../images/me-experience/me-experience-sharepoint-page.png)
 
@@ -29,7 +29,7 @@ Once the page is ready, in Microsoft Teams, you would create a personal app poin
 ![Building personal Teams app using App Studio](../images/me-experience/me-experience-app-studio.png)
 
 > [!CAUTION]
-> When embedding a modern SharePoint page in Teams, you shouldn't use the URL of the page as it won't work in the desktop Teams app. Instead, use a special [URL pointing to the `teamslogon.aspx` page](https://docs.microsoft.com/sharepoint/dev/features/embed-pages-to-teams?WT.mc_id=m365-9762-wmastyka#embed-sharepoint-modern-sites--pages-into-microsoft-teams-with-app-studio).
+> When embedding a modern SharePoint page in Teams, you shouldn't use the URL of the page as it won't work in the desktop Teams app. Instead, use a special [URL pointing to the `teamslogon.aspx` page](/sharepoint/dev/features/embed-pages-to-teams?WT.mc_id=m365-9762-wmastyka#embed-sharepoint-modern-sites--pages-into-microsoft-teams-with-app-studio).
 
 To improve the experience, you would enable showing the page in full screen, which will remove the header and navigation allowing users to focus on the content.
 
@@ -53,7 +53,7 @@ It also doesn't matter if the web parts you put on the page are provided by Micr
 
 #### Package and distribute application in your organization without code
 
-To offer the Me-experience built this way to your users, you would package it as a personal Teams app. Using [App Studio]( https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/app-studio-overview?WT.mc_id=m365-9762-wmastyka), you can create the personal app and publish it to your organizational catalog for everyone else to use.
+To offer the Me-experience built this way to your users, you would package it as a personal Teams app. Using [App Studio](/microsoftteams/platform/concepts/build-and-test/app-studio-overview?WT.mc_id=m365-9762-wmastyka), you can create the personal app and publish it to your organizational catalog for everyone else to use.
 
 ### Considerations for embedding SharePoint pages as tabs
 
@@ -73,11 +73,11 @@ This approach is ideal for organizations that want to offer their users a Me-exp
 
 ## Build a multi-tab personal Teams app
 
-Another approach to offer your users a Me-experience in Microsoft Teams using SharePoint Framework is by building a multi-tab [personal Teams app]( https://docs.microsoft.com/microsoftteams/platform/concepts/design/personal-apps?WT.mc_id=m365-9762-wmastyka).
+Another approach to offer your users a Me-experience in Microsoft Teams using SharePoint Framework is by building a multi-tab [personal Teams app](/microsoftteams/platform/concepts/design/personal-apps?WT.mc_id=m365-9762-wmastyka).
 
 ![Multi-tab personal Teams app built using SharePoint Framework](../images/me-experience/me-experience-multitab-personal-app.png)
 
-Personal Teams apps can consist of one or more tabs. Each tab points to a different URL. When [building personal Teams app using SharePoint Framework]( https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction?WT.mc_id=m365-9762-wmastyka), you can make each tab point to a SharePoint Framework web part. By combining relevant web parts in a single personal Teams app, you can offer users a single place to access relevant information.
+Personal Teams apps can consist of one or more tabs. Each tab points to a different URL. When [building personal Teams app using SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction?WT.mc_id=m365-9762-wmastyka), you can make each tab point to a SharePoint Framework web part. By combining relevant web parts in a single personal Teams app, you can offer users a single place to access relevant information.
 
 In this approach, you would start by putting all web parts that you want to expose in a SharePoint Framework project.
 
@@ -187,7 +187,7 @@ While not necessary, having all web parts in the same project will help you simp
 
 #### Custom web part required for exposing settings
 
-Personal Teams apps don't have a standard UI for configuring settings. Instead, the recommended pattern is to [expose settings on a separate tab]( https://docs.microsoft.com/microsoftteams/platform/concepts/design/personal-apps?WT.mc_id=m365-9762-wmastyka#help-and-settings). The developer is in control of the user experience of that tab and can adjust it to match the specific application requirements.
+Personal Teams apps don't have a standard UI for configuring settings. Instead, the recommended pattern is to [expose settings on a separate tab](/microsoftteams/platform/concepts/design/personal-apps?WT.mc_id=m365-9762-wmastyka#help-and-settings). The developer is in control of the user experience of that tab and can adjust it to match the specific application requirements.
 
 Translating this to SharePoint Framework, it means that you would need to build a separate web part that allows users to configure the application. The settings tab can expose configuration for all the other tabs so that users can configure the whole application from one place.
 
@@ -195,7 +195,7 @@ Translating this to SharePoint Framework, it means that you would need to build 
 
 Personal Teams apps don't offer any infrastructure for persisting their configuration. Each application must decide for itself how and where it persists user's preferences.
 
-While SharePoint Framework web parts have a standard way of persisting settings when used on SharePoint pages or in Microsoft Teams tabs, when exposed as personal Teams apps, they can't use this infrastructure. Instead, you need to [choose a way to store user's preferences]( https://docs.microsoft.com/sharepoint/dev/spfx/build-for-teams-configure-in-teams?WT.mc_id=m365-9762-wmastyka). Additionally, you need to ensure that your web parts can retrieve their configuration from this location.
+While SharePoint Framework web parts have a standard way of persisting settings when used on SharePoint pages or in Microsoft Teams tabs, when exposed as personal Teams apps, they can't use this infrastructure. Instead, you need to [choose a way to store user's preferences](/sharepoint/dev/spfx/build-for-teams-configure-in-teams?WT.mc_id=m365-9762-wmastyka). Additionally, you need to ensure that your web parts can retrieve their configuration from this location.
 
 #### Each web part is a separate tab
 

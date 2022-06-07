@@ -631,7 +631,7 @@ Within SharePoint, ETags apply only to SharePoint lists and list items.
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
-- [SharePoint: Perform basic data access operations on files and folders by using REST](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/working-with-folders-and-files-with-rest)
+- [SharePoint: Perform basic data access operations on files and folders by using REST](/sharepoint/dev/sp-add-ins/working-with-folders-and-files-with-rest)
 - [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
 - [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
 - [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
