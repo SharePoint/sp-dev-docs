@@ -96,7 +96,7 @@ To override the create site link open the settings page in the SharePoint admin 
 
 Then, check the Use the form at this URL checkbox and enter the URL to the Provider-hosted SharePoint Add-in that implements the site creation functionality (shown below).
 
-![An OK Cancel dialog box entitled Message from webpage which says, By changing the location where users create sites, you may be permitting them to run custom script which can access other sites (for more details, see http://go.microsoft.com/fwlink/?LinkId=164264). To prevent this, run the following SharePoint Online Management Shell command: Set-SPOsite &lt;SiteURL&gt; -DenyAddAndCustomizePages 1 Do you still want to change the location where users create sites?](media/Recipes/SiteProvisioning/override-warning.png)
+![An OK Cancel dialog box entitled Message from webpage which says, By changing the location where users create sites, you may be permitting them to run custom script which can access other sites (for more details, see http://go.microsoft.com/fwlink/?LinkId=164264). To prevent this, run the following SharePoint Online Management Shell command: Set-SPOsite \<SiteURL\> -DenyAddAndCustomizePages 1 Do you still want to change the location where users create sites?](media/Recipes/SiteProvisioning/override-warning.png)
 
 Notice SharePoint warns you (in the dialog below) about the security implications associated with this approach and provides you with an option to disable this type of functionality.
 

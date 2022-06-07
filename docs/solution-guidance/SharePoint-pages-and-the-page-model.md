@@ -141,7 +141,7 @@ When a SharePoint user loads a wiki page (either by using the Enterprise wiki te
 
 To learn more about how to provision a wiki page by using the remote provisioning pattern, see the [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages) sample.
 
-### Minimal download strategy and &lt;AjaxDelta&gt; controls
+### Minimal download strategy and \<AjaxDelta&gt\> controls
 
 In SharePoint, the minimal download strategy feature manages which specific content on a master page to refresh before the page renders. When the strategy is enabled, the content associated with content placeholders wrapped in  `<SharePoint:AjaxDelta>` tags on the master page refreshes before the page renders. Conversely, content placeholders not wrapped in `<SharePoint:AjaxDelta>` tags does not render when the minimal download strategy is enabled.
 
