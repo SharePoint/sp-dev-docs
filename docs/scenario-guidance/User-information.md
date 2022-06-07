@@ -1,7 +1,7 @@
 ---
 title: User information
 description: User profiles contain each user's personal information and enable you to search for and connect with people within your organization.
-ms.date: 04/21/2020
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # User information

@@ -1,7 +1,7 @@
 ---
 title: Multi-Geo Capabilities
 description: The Multi-Geo Capabilities in Office 365 are a feature that helps multinational customers address their data residency requirements in Office 365.
-ms.date: 03/21/2018
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 
