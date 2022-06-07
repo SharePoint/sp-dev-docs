@@ -1,7 +1,7 @@
 ---
 title: Add a Security Trim snippet in SharePoint
 description: Describes how to add a Security Trim snippet in SharePoint to display content only to specific and authenticated users.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: 4beaab08-760b-408a-b768-906312779379
 ms.localizationpriority: high

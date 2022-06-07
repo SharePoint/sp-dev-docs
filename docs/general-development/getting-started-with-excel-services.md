@@ -1,7 +1,7 @@
 ---
 title: Getting Started with Excel Services
 description: Provides an overview of Excel Services and its architecture, and provides links to Excel Service articles and reference topics.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: 392e4734-5ca0-4647-8f6d-e671daa45a4d
 ms.localizationpriority: medium

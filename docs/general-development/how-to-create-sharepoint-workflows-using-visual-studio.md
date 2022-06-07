@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint workflows using Visual Studio
 description: Describes how to create a SharePoint workflow in the new SharePoint workflow platform using Visual Studio.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: 739af178-96b3-4630-bbc0-5def02065eeb
 ms.localizationpriority: high
@@ -189,7 +189,7 @@ To create a custom workflow using Visual Studio 2012 or later, ensure that you h
 5. When prompted by the **SharePoint Customization Wizard** for a name, leave the default, then set it to be a **List Workflow**. Click **Next**.
     
   
-6. On the next page of the wizard, check the box to create an association, then select the **Announcements** list that we just created; select **&lt;Create New&gt;** for the required workflow history and task lists and then click **Next**.
+6. On the next page of the wizard, check the box to create an association, then select the **Announcements** list that we just created; select **\<Create New\>** for the required workflow history and task lists and then click **Next**.
     
   
 7. On the final page of the wizard, check the box to start the workflow manually, leaving the two automatic start options unchecked; then click **Finish**. Visual Studio automatically adds the required elements to the project and loads the Workflow.xaml file into the designer, as shown in Figure 4.

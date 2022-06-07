@@ -1,7 +1,7 @@
 ---
 title: Change the preview page in SharePoint Design Manager
 description: Describes how to set, create, and change the preview page in Design Manager in SharePoint, and provides additional resources.
-ms.date: 09/25/2017
+ms.date: 09/15/2021
 ms.prod: sharepoint
 ms.assetid: e5dfd8df-65de-44fc-aa97-23b4685d33ee
 ms.localizationpriority: high
