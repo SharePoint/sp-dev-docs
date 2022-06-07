@@ -141,7 +141,7 @@ var result = appManager.Add(filePath);
 Add-PnPApp -Path ./sharepoint-solution-package.sppkg
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/add-pnpapp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Add-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -200,7 +200,7 @@ appManager.Deploy('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 Publish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Publish-PnPApp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Publish-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -248,7 +248,7 @@ appManager.Retract('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 Unpublish-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Unpublish-PnPApp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Unpublish-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -284,7 +284,7 @@ appManager.Remove('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 Remove-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Remove-PnPApp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Remove-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -367,7 +367,7 @@ var allAppPackages = appManager.GetAvailable();
 Get-PnPApp
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Get-PnPApp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Get-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -474,7 +474,7 @@ appManager.Install('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 Install-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Install-PnPApp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Install-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -522,7 +522,7 @@ if (appPackage.CanUpgrade) {
 Update-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/update-pnpapp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Update-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -569,7 +569,7 @@ appManager.Uninstall('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 Uninstall-PnPApp -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/Uninstall-PnPApp) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Uninstall-PnPApp.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -613,7 +613,7 @@ appManager.SyncToTeams('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 Sync-PnPAppToTeams -Identity xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/sync-pnpapptoteams) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Sync-PnPAppToTeams.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 

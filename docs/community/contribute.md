@@ -15,7 +15,7 @@ There are multiple ways to contribute to the SharePoint Developer Community (Sha
 * Do a live demo of your sample, solution, or architecture design in the SharePoint community calls.
 * Report and fix issues within the GitHub repositories in the [SharePoint GitHub Organization](http://github.com/sharepoint).
 * Report issues in the GitHub issue lists to help others find where they can assist.
-* Provide input on new feature requests within [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform).
+* Provide input on new feature requests within SharePoint Developer UserVoice.
 
 ## FAQ
 
