@@ -68,7 +68,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**ClassName**</p></td>
-<td align="left"><p>Required **text**. Fully qualified name of the class that implements the workflow action; for example, <span sdata="cer" target="T:Microsoft.SharePoint.WorkflowActions.EmailActivity"><span class="nolink">Microsoft.SharePoint.WorkflowActions.EmailActivity</span>.</p></td>
+<td align="left"><p>Required **text**. Fully qualified name of the class that implements the workflow action; for example, Microsoft.SharePoint.WorkflowActions.EmailActivity.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Assembly**</p></td>

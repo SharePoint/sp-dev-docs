@@ -221,14 +221,14 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>**AppliesTo**</p></td>
 <td align="left"><p><a href="appliestotypes-simpletype-action4.md">appliesToTypes</a></p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Indicates what this workflow action should be. Valid values include <strong>site</strong>, <strong>list</strong>, <strong>doclib</strong>, and <strong>all</strong>. The value <strong>all</strong> means that the action is available under any scope and will always show up in the <span class="ui">Actions</span> list.</p></td>
+<td align="left"><p>Indicates what this workflow action should be. Valid values include <strong>site</strong>, <strong>list</strong>, <strong>doclib</strong>, and <strong>all</strong>. The value <strong>all</strong> means that the action is available under any scope and will always show up in the Actions list.</p></td>
 <td align="left"><p>Values of the appliesToTypes type.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Assembly**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>The assembly name that contains instructions for implementing the <strong>Action</strong> element. The text should include the <span class="parameter" sdata="paramReference">PublicKeyToken</span>, <span class="parameter" sdata="paramReference">Version</span>, and <span class="parameter" sdata="paramReference">Culture</span> values.</p></td>
+<td align="left"><p>The assembly name that contains instructions for implementing the <strong>Action</strong> element. The text should include the PublicKeyToken, Version, and Culture values.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
