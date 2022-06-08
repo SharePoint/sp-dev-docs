@@ -8,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5e1549be-c95f-4414-b72f-e9d0e124abd8
-description: "Last modified: March 09, 2015"
 ---
 
 # Field element (DeploymentManifest - DeploymentFieldTemplate)
