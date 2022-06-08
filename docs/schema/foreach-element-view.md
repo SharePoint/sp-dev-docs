@@ -1,5 +1,6 @@
 ---
 title: ForEach element (View)
+description: ForEach element (View) provides a basic mechanism for enumerating a collection of views or fields defined in the current list.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: b92ddf6a-951e-45aa-8302-daa342563394
-description: "Last modified: March 09, 2015"
 ---
 
 # ForEach element (View)

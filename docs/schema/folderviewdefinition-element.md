@@ -1,5 +1,6 @@
 ---
 title: FolderViewDefinition Element
+description: Describes the definition, element, and attribute information for the FolderViewDefinition Element, which describes a folder view in Microsoft Outlook.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -19,6 +20,7 @@ Describes a folder view in Microsoft Outlook 2010.
 
 **Schema**: SolutionManifestDefinitions
 
+## Definition
 ```XML
 <FolderViewDefinition ViewName = "String" ViewType = "ViewType" IsDefault = "Boolean" ViewFileName = "String" Name = "String" Description = "String"> </FolderViewDefinition>
 ```

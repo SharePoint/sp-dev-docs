@@ -1,5 +1,6 @@
 ---
 title: Flow element
+description: Flow element represents the activity underlying the 'Go to a stage' action in the visual workflow designer.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -91,7 +92,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <tr class="odd">
 <td align="left"><p><a href="flows-element-workflowinfo-elementaction4.md">Flows</a></p></td>
 <td align="left"><p></p></td>
-<td align="left"><p>Container element for individual <span sdata="link"><a href="flow-element-flows-elementworkflowinfo-elementaction4.md">Flow element (Flows element) (WorkflowInfo element) (Action4)</a></span> elements.</p></td>
+<td align="left"><p>Container element for individual <a href="flow-element-flows-elementworkflowinfo-elementaction4.md">Flow element (Flows element) (WorkflowInfo element) (Action4)</a> elements.</p></td>
 </tr>
 </tbody>
 </table>

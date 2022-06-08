@@ -1,5 +1,6 @@
 ---
 title: "FormsAuthCredentials element (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for FormsAuthCredentials element (SPS15XSDSearchSet2)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 58de7e07-32fd-104b-7f06-ac4113e5148b
-description: "Last modified: March 09, 2015"
 ---
 
 # FormsAuthCredentials element (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |tns:FormsAuthCredentials  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+**Element type**: tns:FormsAuthCredentials
+
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
+
+**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
    
 ## Definition
 

@@ -1,5 +1,6 @@
 ---
 title: "FormsAuthCredentials complexType (SPS15XSDSearchSet2)"
+description: "Describes the definition, type, element, and attribute information for FormsAuthCredentials complexType (SPS15XSDSearchSet2)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5059c9ce-bd07-88e6-0227-bfc6e6759ef7
-description: "Last modified: March 09, 2015"
 ---
 
 # FormsAuthCredentials complexType (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
-|:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:SecurableAuthData  <br/> |
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
+
+**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
+
+**Extension base**: tns:SecurableAuthData
    
 ## Definition
 

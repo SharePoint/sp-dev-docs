@@ -1,5 +1,6 @@
 ---
 title: "Folder Element (DeploymentManifest)"
+description: Folder Element (DeploymentManifest) represents an instance of a Windows SharePoint Services 3.0 folder (SPFolder) object.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79010d5f-246c-45bd-a11c-18dc09e84455
-description: "Last modified: March 09, 2015"
 ---
 
 # Folder Element (DeploymentManifest)

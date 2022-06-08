@@ -1,5 +1,6 @@
 ---
 title: FormRegion Element
+description: FormRegion Element describes the form region in which external data will be displayed in Microsoft Outlook 2010.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
