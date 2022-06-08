@@ -1,5 +1,6 @@
 ---
 title: "LastItemName element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
+description: Describes the LastItemName element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2) and provides the element information, a definition, and elements and attributes.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
