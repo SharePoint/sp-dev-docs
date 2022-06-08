@@ -1,5 +1,6 @@
 ---
 title: FilterValues Element in Association
+description: Describes the FilterValues Element in Association, which specifies a list of filter values to use for an association method instance in this cache subscription.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -48,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalue-element-in-filtervalues-subscription-schema.md">FilterValue Element in FilterValues (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span><a href="filtervalue-element-in-filtervalues-subscription-schema.md">FilterValue Element in FilterValues (Subscription Schema)</a></span></p></td>
 <td align="left"><p>A filter value for this association method instance.</p></td>
 </tr>
 </tbody>
@@ -69,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The association that contains this list of filter values.</p></td>
 </tr>
 </tbody>

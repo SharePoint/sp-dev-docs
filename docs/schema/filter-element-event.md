@@ -1,5 +1,6 @@
 ---
 title: Filter Element (Event)
+description: Describes the definition, element, and attribute information for the Filter Element (Event), which specifies the filter for the event receiver.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -41,7 +42,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="receiver-element-event.md">Receiver Element (Event)</a></span></p></td>
+<td align="left"><p><span><a href="receiver-element-event.md">Receiver Element (Event)</a></span></p></td>
 </tr>
 </tbody>
 </table>

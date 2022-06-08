@@ -1,5 +1,6 @@
 ---
 title: FilterValue Element in FilterValues
+description: Describes the FilterValue Element in FilterValues, which specifies a filter value for a query or association. The element can contain a mix of character data and child elements.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -21,6 +22,7 @@ Specifies a filter value for a query or association. The FilterValue element can
 
 **Schema**: Subscription
 
+## Definition
 ```XML
 <FilterValue FilterDescriptorName = "String" Type = "String" FilterIndex = "Integer"> </FilterValue>
 ```
@@ -83,11 +85,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The **FilterValues** element that contains this filter value.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues Element in Association (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues Element in Association (Subscription Schema)</a></span></p></td>
 <td align="left"><p>The **FilterValues** element that contains this filter value.</p></td>
 </tr>
 </tbody>
