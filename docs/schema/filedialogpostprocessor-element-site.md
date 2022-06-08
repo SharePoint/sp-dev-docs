@@ -12,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 5c1876ef-9e45-410f-85dc-e478b01aeaac
-description: "Last modified: March 09, 2015"
 ---
 
 # FileDialogPostProcessor element (Site)

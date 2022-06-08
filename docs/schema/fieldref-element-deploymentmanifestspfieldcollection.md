@@ -8,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1af74fb6-0e33-4e84-8b49-5e7027100699
-description: "Last modified: March 09, 2015"
 ---
 
 # FieldRef Element (DeploymentManifest - SPFieldCollection)
