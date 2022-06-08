@@ -1,5 +1,6 @@
 ---
 title: ElementManifest Element (Feature)
+description: Discusses the definition, elements and attributes for the ElementManifest Element which specifies a file that contains a definition for a feature element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

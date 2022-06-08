@@ -1,5 +1,6 @@
 ---
 title: ElementManifests Element (Feature)
+description: Discusses the ElementManifests which contains references to element manifests and element files that contain definitions for the Feature elements.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

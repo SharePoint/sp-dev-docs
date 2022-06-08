@@ -1,5 +1,6 @@
 ---
 title: ElementManifestReferences complexType
+description: Discusses the type information, definition, elements and attributes for the ElementManifestReferences complexType.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: b7a6739c-2a8a-abc2-a8f7-2a898c329709
 
 ## Type information
 
-|   |   |
+|  &nbsp; |&nbsp;   |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
