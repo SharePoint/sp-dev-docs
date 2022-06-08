@@ -1,6 +1,6 @@
 ---
 title: CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
-description: Details on the CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
+description: Describes the definition, element, and attribute information for CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures).
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer
@@ -17,11 +17,11 @@ ms.assetid: ab5fbcf3-20bc-c93b-518c-f6a542c44c34
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | CommandUIDefinitionType |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+**Element type**: CommandUIDefinitionType
+
+**Namespace**: `http://schemas.microsoft.com/sharepoint/`
+
+**Schema file**: apphostwebfeatures.xsd
 
 ## Definition
 

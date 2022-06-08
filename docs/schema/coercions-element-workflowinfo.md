@@ -1,5 +1,6 @@
 ---
 title: Coercions element (WorkflowInfo)
+description: Coercions element (WorkflowInfo) specifies the available coercions for converting data from one form to another.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

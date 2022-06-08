@@ -1,5 +1,6 @@
 ---
 title: ColorPicker element (CommandUIDefinitionType complexType)
+description: Describes the definition, element, and attribute information for ColorPicker element (CommandUIDefinitionType complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,11 +19,11 @@ ms.assetid: a1eecc4c-e732-c2ed-2323-1828f69dccbf
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | ColorPickerType |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+**Element type**: ColorPickerType
+
+**Namespace**: `http://schemas.microsoft.com/sharepoint/`
+
+**Schema file**: apphostwebfeatures.xsd
 
 ## Definition
 

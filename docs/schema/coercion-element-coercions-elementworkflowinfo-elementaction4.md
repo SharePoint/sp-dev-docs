@@ -28,6 +28,10 @@ Specifies a coercion for converting data from one form to another.
 
 ## Element information
 
+**Element type**: ---
+
+**Namespace**: ---
+
 **Schema file**: Actions4.xsd
 
 ## Definition
