@@ -1,5 +1,6 @@
 ---
 title: FeatureVersion simpleType
+description: Outlines information and a definition for the FeatureVersion simpleType in Sharepoint.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,10 +19,10 @@ ms.assetid: f48e399b-a510-ec1e-b538-094c76323236
 
 ## Type information
 
-|   |   |
+| Resource  |  File |
 |---|---|
-| **Base Type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
+| Base Type  | xs:string |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
 
 ## Definition

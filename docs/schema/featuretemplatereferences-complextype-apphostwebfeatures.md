@@ -1,5 +1,6 @@
 ---
 title: FeatureTemplateReferences complexType
+description: Outlines information, a definition, and elements and attributes for the FeatureTemplateReferences complexType in Sharepoint.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,11 +19,11 @@ ms.assetid: a1f9ee64-f188-16ac-9d9d-bdb4f703f963
 
 ## Type information
 
-|   |   |
+| Resource  | File  |
 |---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-| **Extension base**  | None |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
+| Extension base  | None |
 
 ## Definition
 
