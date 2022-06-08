@@ -1,5 +1,6 @@
 ---
 title: Layouts Element in DeclarativeContextDefinition
+description: Describes the Layouts element in DeclarativeContextDefinition and provides the elements and attributes.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -49,7 +50,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="layout-element-in-layouts-solutionmanifestdeclarativeextensions-schema.md">Layout Element in Layouts (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="layout-element-in-layouts-solutionmanifestdeclarativeextensions-schema.md">Layout Element in Layouts (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>Specifies the location of the layout file that contains layout.</p></td>
 </tr>
 </tbody>
@@ -70,7 +71,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>Specifies the context definition the layouts are for.</p></td>
 </tr>
 </tbody>

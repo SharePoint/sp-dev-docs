@@ -1,5 +1,6 @@
 ---
 title: Layout Element in Layouts
+description: Describes the Layout element in Layouts and provides the elements and attributes.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -107,7 +108,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **Layouts** element that contains this layout.</p></td>
 </tr>
 </tbody>
