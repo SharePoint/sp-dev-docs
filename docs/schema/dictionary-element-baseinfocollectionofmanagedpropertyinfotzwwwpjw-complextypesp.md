@@ -1,6 +1,6 @@
 ---
 title: "Dictionary element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
-description: "Last modified: March 09, 2015"
+description: Discusses the element information, definition, elements and attributes for the Dictionary element.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro

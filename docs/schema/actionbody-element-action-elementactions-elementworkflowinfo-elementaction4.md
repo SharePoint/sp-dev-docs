@@ -1,5 +1,6 @@
 ---
 title: ActionBody element
+description: Discusses the usage, element information, definition, elements and attributes for the ActionBody element.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -31,7 +32,7 @@ Specifies the body of a custom action.
 
 ## Element information
 
-|   |   |
+| &nbsp;  |&nbsp;   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

@@ -1,5 +1,6 @@
 ---
 title: Action element (WorkflowActions)
+description: Discusses definition, elements and attributes with regard to the Action element (WorkflowActions).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
