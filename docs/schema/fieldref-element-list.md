@@ -1,5 +1,6 @@
 ---
 title: "FieldRef element (List)"
+description: test
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
