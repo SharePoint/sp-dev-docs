@@ -1,6 +1,6 @@
 ---
 title: Entities Element in LobSystem (BDCMetadataResource Schema)
-description: Details on the Entities Element in LobSystem (BDCMetadataResource Schema)
+description: Details on the Entities Element in LobSystem (BDCMetadataResource Schema) too short
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer
