@@ -1,5 +1,6 @@
 ---
 title: "File Element (DeploymentManifest - SPGenericObject)"
+new description
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
