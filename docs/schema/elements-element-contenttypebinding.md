@@ -1,5 +1,6 @@
 ---
 title: Elements Element (ContentTypeBinding)
+description: Discusses the elements and attributes for the Elements Element (ContentTypeBinding) which is a top-level element in a feature manifest file.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -58,7 +59,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttypebinding-element-contenttypebinding.md">ContentTypeBinding Element (ContentTypeBinding)</a></span></p></td>
+<td align="left"><p><a href="contenttypebinding-element-contenttypebinding.md">ContentTypeBinding Element (ContentTypeBinding)</a></p></td>
 </tr>
 </tbody>
 </table>

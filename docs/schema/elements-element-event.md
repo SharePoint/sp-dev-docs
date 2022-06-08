@@ -1,5 +1,6 @@
 ---
 title: Elements Element (Event)
+description: Discusses the definition, elements, and attributes for the Elements Element (Event) for SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
