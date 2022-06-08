@@ -1,5 +1,6 @@
 ---
 title: ElementFile Element (Feature)
+description: Discusses the definition, elements and attributes for the ElementFile Element which Specifies a support file required for the Feature.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
