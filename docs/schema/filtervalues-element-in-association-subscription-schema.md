@@ -49,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="filtervalue-element-in-filtervalues-subscription-schema.md">FilterValue Element in FilterValues (Subscription Schema)</a></span></p></td>
+<td align="left"><p><a href="filtervalue-element-in-filtervalues-subscription-schema.md">FilterValue Element in FilterValues (Subscription Schema)</a></p></td>
 <td align="left"><p>A filter value for this association method instance.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></span></p></td>
+<td align="left"><p><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></p></td>
 <td align="left"><p>The association that contains this list of filter values.</p></td>
 </tr>
 </tbody>

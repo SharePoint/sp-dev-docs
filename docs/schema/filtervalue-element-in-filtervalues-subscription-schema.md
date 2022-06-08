@@ -85,11 +85,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
+<td align="left"><p><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></p></td>
 <td align="left"><p>The **FilterValues** element that contains this filter value.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues Element in Association (Subscription Schema)</a></span></p></td>
+<td align="left"><p><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues Element in Association (Subscription Schema)</a></p></td>
 <td align="left"><p>The **FilterValues** element that contains this filter value.</p></td>
 </tr>
 </tbody>

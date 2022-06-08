@@ -42,7 +42,7 @@ None
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="receiver-element-event.md">Receiver Element (Event)</a></span></p></td>
+<td align="left"><p><a href="receiver-element-event.md">Receiver Element (Event)</a></p></td>
 </tr>
 </tbody>
 </table>

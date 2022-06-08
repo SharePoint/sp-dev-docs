@@ -49,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="filtervalue-element-in-filtervalues-subscription-schema.md">FilterValue Element in FilterValues (Subscription Schema)</a></span></p></td>
+<td align="left"><p><a href="filtervalue-element-in-filtervalues-subscription-schema.md">FilterValue Element in FilterValues (Subscription Schema)</a></p></td>
 <td align="left"><p>A filter value for this query execution. If filter values are not provided, any filter values provided in the model for this method instance are used. If the model does not contain filter values, default values are used.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="query-element-in-queries-subscription-schema.md">Query Element in Queries (Subscription Schema)</a></span></p></td>
+<td align="left"><p><a href="query-element-in-queries-subscription-schema.md">Query Element in Queries (Subscription Schema)</a></p></td>
 <td align="left"><p>The query that this list of filter values belongs to.</p></td>
 </tr>
 </tbody>
