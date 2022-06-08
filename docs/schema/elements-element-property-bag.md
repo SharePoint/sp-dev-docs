@@ -1,5 +1,6 @@
 ---
 title: Elements Element (Property Bag)
+description: stupid description
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
