@@ -1,5 +1,6 @@
 ---
 title: FieldBind Element (WorkflowInfo)
+description: Outlines a definition, elements and attributes, an example and links for the FieldBind Element (WorkflowInfo) in Sharepoint.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

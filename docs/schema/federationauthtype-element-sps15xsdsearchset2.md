@@ -1,5 +1,6 @@
 ---
 title: "FederationAuthType element (SPS15XSDSearchSet2)"
+description: Outlines element information, a definition, and elements and attributes for the FederationAuthType element (SPS15XSDSearchSet2) in Sharepoint.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -16,11 +17,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Resource | File|
 |:-----|:-----|
-|**Element type** <br/> |tns:FederationAuthType  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|Element type <br/> |tns:FederationAuthType  <br/> |
+|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
+|Schema file <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
    
 ## Definition
 

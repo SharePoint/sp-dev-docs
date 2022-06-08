@@ -1,5 +1,6 @@
 ---
 title: "Field element (DeploymentManifest - FieldDataCollection)"
+description: Provides a definition, type, and elements and attributes for the Field element (DeploymentManifest - FieldDataCollection) in SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

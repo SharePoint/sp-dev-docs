@@ -1,5 +1,6 @@
 ---
 title: "Field element (DeploymentManifest - SPFieldCollection)"
+description: Provides a definition, type, and elements and attributes for the Field element (DeploymentManifest - SPFieldCollection) in SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: FieldBind Element (WorkflowActions)
+description: Outlines a definition, elements and attributes, an example and links for the FieldBind Element (WorkflowActions) in Sharepoint.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
