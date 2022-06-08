@@ -1,5 +1,6 @@
 ---
 title: "MaximumResponseLength element (Source complexType) (SPS15XSDSearchSet1)"
+description: "Describes the definition, element, and attribute information for the MaximumResponseLength element (Source complexType) (SPS15XSDSearchSet1)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 773546f6-df8e-fa51-70dd-3331e1562984
-description: "Last modified: March 09, 2015"
 ---
 
 # MaximumResponseLength element (Source complexType) (SPS15XSDSearchSet1)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |

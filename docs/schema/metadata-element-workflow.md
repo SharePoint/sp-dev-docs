@@ -1,5 +1,6 @@
 ---
 title: MetaData Element (Workflow)
+description: The MetaData Element (Workflow) contains any additional, custom metadata elements that are valid XML for the workflow.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
