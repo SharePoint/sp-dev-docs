@@ -1,5 +1,6 @@
 ---
 title: ElementDefinitionCollection complexType
+description: Discusses the type information, definition, elements and attributes for the ElementDefinitionCollection complexType.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: f0351444-6719-ef7b-ae5b-ca2478624444
 
 ## Type information
 
-|   |   |
+| &nbsp;  |&nbsp;   |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

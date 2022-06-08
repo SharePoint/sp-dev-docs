@@ -1,5 +1,6 @@
 ---
 title: DropDown element (CommandUIDefinitionType complexType)
+description: Discusses the element information, definition, elements and attributes for the DropDown element (CommandUIDefinitionType complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 02ae200c-9856-b264-2303-36ce7c44e520
 
 ## Element information
 
-|   |   |
+|&nbsp;  |&nbsp;   |
 |---|---|
 | **Element type**  | DropDownType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
