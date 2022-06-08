@@ -8,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 61b7c55e-64d7-8cdc-ada6-db514bbeb748
-description: "Last modified: March 09, 2015"
 ---
 
 # InternalID element (ResultItemType complexType) (SPS15XSDSearchSet2)
