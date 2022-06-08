@@ -1,5 +1,6 @@
 ---
 title: Modification element
+description: Describes the Modification element and provides the usage, element information, a definition, and elements and attributes in SharePoint.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

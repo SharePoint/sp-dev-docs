@@ -45,13 +45,13 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -69,7 +69,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadataresource-schema.md">MethodInstances Element in Method (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="methodinstances-element-in-method-bdcmetadataresource-schema.md">MethodInstances Element in Method (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

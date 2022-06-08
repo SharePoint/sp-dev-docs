@@ -1,5 +1,6 @@
 ---
 title: Modules
+description: This article describes Modules and provides examples and links to related information.
 manager: soliver
 ms.date: 12/7/2015
 ms.audience: Developer

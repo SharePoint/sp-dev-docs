@@ -49,11 +49,11 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An association.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadata-schema.md">MethodInstance Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="methodinstance-element-in-methodinstances-bdcmetadata-schema.md">MethodInstance Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A method instance.</p></td>
 </tr>
 </tbody>
@@ -74,7 +74,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The method that this method instance belongs to.</p></td>
 </tr>
 </tbody>

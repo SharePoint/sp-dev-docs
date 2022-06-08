@@ -1,5 +1,6 @@
 ---
 title: Modification Element (WorkflowInfo)
+description: Describes the Modification element (WorkflowInfo) and provides a definition and the elements and attributes in SharePoint.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: "Method element (List)"
+description: Provides a definition and the elements and attributes of the Method element (List) in SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 6848da4e-e6f2-4663-bef9-0413f74b0251
-description: "Last modified: March 09, 2015"
 ---
 
 # Method element (List)

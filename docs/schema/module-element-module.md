@@ -1,5 +1,6 @@
 ---
 title: Module Element (Module)
+description: Describes the Module element (Module) and provides a definition, the elements and attributes, and an example. 
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

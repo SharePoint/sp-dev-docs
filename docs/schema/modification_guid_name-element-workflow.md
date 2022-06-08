@@ -1,5 +1,6 @@
 ---
 title: Modification_GUID_Name Element (Workflow)
+description: Describes the Modification_GUID_Name element (Workflow) and provides a definition, the elements and attributes, and an example.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -68,7 +69,7 @@ None
 
 The modification name is displayed as the link text for the modification link on the workflow status page.
 
-To specify a modification form, you must first set the <span sdata="cer" target="P:Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification.ModificationId"><span class="nolink">ModificationId</span></span> property of the <span sdata="cer" target="T:Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification"><span class="nolink">EnableWorkflowModification</span></span> activity to the GUID you generated for your modification form. You can have multiple modifications available in your workflow; you must assign each modification a unique identifier.
+To specify a modification form, you must first set the <span><span class="nolink">ModificationId</span></span> property of the <span sdata="cer" target="T:Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification"><span class="nolink">EnableWorkflowModification</span></span> activity to the GUID you generated for your modification form. You can have multiple modifications available in your workflow; you must assign each modification a unique identifier.
 
 ## Example
 

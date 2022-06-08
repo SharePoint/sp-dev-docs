@@ -45,10 +45,10 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadataresource-schema.md">Association Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="association-element-in-methodinstances-bdcmetadataresource-schema.md">Association Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md">MethodInstance Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md">MethodInstance Element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -66,7 +66,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
