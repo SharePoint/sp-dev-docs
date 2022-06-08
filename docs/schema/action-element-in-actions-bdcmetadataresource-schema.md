@@ -35,6 +35,9 @@ None.
 ### Child elements
 
 <table>
+<colgroup>
+<col width="100%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Element</p></th>
@@ -58,6 +61,9 @@ None.
 ### Parent elements
 
 <table>
+<colgroup>
+<col width="100%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left"><p>Description</p></th>
