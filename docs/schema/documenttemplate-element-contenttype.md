@@ -1,5 +1,6 @@
 ---
 title: DocumentTemplate Element (ContentType)
+description: Discusses the definition, elements and attributes for the DocumentTemplate Element (ContentType).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -72,7 +73,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttype-element-contenttype.md">ContentType Element (ContentType)</a></span></p></td>
+<td align="left"><p><a href="contenttype-element-contenttype.md">ContentType Element (ContentType)</a></p></td>
 </tr>
 </tbody>
 </table>

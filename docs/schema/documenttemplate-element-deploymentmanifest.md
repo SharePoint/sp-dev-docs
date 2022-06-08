@@ -1,5 +1,6 @@
 ---
 title: "DocumentTemplate Element (DeploymentManifest)"
+description: Discusses the definition, type, elements and attributes for the DocumentTemplate Element (DeploymentManifest).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

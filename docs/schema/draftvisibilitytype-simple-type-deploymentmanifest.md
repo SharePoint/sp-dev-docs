@@ -1,5 +1,6 @@
 ---
 title: "DraftVisibilityType Simple Type (DeploymentManifest)"
+description: Discusses the values for the DraftVisibilityType Simple Type (DeploymentManifest) which specifies the type of user who can view a draft document.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1bd5d4fe-5ab7-4098-a9de-cd4a8d1adc21
-description: "Last modified: March 09, 2015"
 ---
 
 # DraftVisibilityType Simple Type (DeploymentManifest)
