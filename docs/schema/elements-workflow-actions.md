@@ -1,5 +1,6 @@
 ---
 title: Elements (Workflow actions)
+description: Provides a list of links and XML schema topics for elements (Workflow actions) including those which are backwards compatible.
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer

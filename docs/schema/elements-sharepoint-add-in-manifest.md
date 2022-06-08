@@ -1,5 +1,6 @@
 ---
 title: Elements (SharePoint Add-in Manifest)
+description: Provides a list of links and XML topics for Elements (SharePoint Add-in Manifest) including those which are backwards compatible.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: Elements (Web Template)
+description: Discusses the definition, elements and attributes for the Elements (Web Template)  in an elements.xml file for Sharepoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

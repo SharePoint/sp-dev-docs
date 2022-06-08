@@ -1,5 +1,6 @@
 ---
 title: Elements Element (Workflow)
+description: Discusses the definition, elements and attributes for the Elements Element (Workflow) for Sharepoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
