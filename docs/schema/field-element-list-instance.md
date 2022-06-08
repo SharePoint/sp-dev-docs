@@ -43,8 +43,8 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example, `<Field Name="ID"/>`).</p></td>
+<td align="left"><p><b>Name</b></p></td>
+<td align="left"><p>Optional <b>Text</b>. Allows the <b>Field</b> element to be used outside the field rendering context by supplying an ID (for example, &ltField Name="ID"/&gt.)</p></td>
 </tr>
 </tbody>
 </table>
