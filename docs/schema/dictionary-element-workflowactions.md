@@ -1,5 +1,6 @@
 ---
 title: Dictionary element (WorkflowActions)
+description: Discusses the definition, elements and attributes for the Dictionary element (WorkflowActions) which specifies a dictionary of name-value pairs.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

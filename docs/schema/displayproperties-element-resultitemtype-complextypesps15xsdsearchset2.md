@@ -1,5 +1,6 @@
 ---
 title: "DisplayProperties element (ResultItemType complexType) (SPS15XSDSearchSet2)"
+description: Discusses the element information, definition, elements and attributes of the DisplayProperties element.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f05e096d-0055-ebfc-5cf8-f52ead59d95c
-description: "Last modified: March 09, 2015"
 ---
 
 # DisplayProperties element (ResultItemType complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

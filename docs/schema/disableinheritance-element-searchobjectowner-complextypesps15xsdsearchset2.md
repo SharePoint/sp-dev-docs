@@ -1,5 +1,6 @@
 ---
 title: "DisableInheritance element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)"
+description: Discusses the element information, definition, elements and attributes for the DisableInheritance element (SearchObjectOwner complexType).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e4dfd832-60aa-97c0-81a1-9271e247443a
-description: "Last modified: March 09, 2015"
 ---
 
 # DisableInheritance element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|&nbsp;|&nbsp;|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
