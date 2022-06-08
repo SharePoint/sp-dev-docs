@@ -1,5 +1,6 @@
 ---
 title: Groups element (CommandUIDefinitionType complexType)
+description: Learn more about the Groups element (CommandUIDefinitionType complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -19,7 +20,7 @@ ms.assetid: fc7b1798-4709-6df2-0363-b660df3bf275
 ## Element information
 
 
-|   |   |
+|  Information |  Location |
 |---|---|
 | **Element type**  | GroupsTypes |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

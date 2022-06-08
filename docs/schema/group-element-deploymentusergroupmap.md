@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e63f9c59-018f-4438-a861-f0d3db3b8e7f
-description: "Last modified: March 09, 2015"
+description: Group Element (DeploymentUserGroupMap) represents an instance of a deployment group object for generating the group map file exported to the content migration package.
 ---
 
 # Group Element (DeploymentUserGroupMap)

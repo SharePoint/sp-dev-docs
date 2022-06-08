@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 52b6a7ad-02b1-4e8f-8b30-73fc2b330848
-description: "Last modified: March 09, 2015"
+description: Forms Element (DeploymentManifest) represents a collection of Windows SharePoint Services 3.0 form object instances.
 ---
 
 # Forms Element (DeploymentManifest)

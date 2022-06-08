@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 45ea2502-bbc8-4c04-9823-be6b6e1ef562
-description: "Last modified: July 15, 2011"
+description: Guid Simple Type (DeploymentSystemData) supports the use of a unique identifier (GUID) as a Guid attribute field value in the SystemObject Element (DeploymentSystemData).
 ---
 
 # Guid Simple Type (DeploymentSystemData)

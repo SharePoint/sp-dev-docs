@@ -1,5 +1,6 @@
 ---
 title: Gallery element (CommandUIDefinitionType complexType)
+description: Learn about Gallery element (CommandUIDefinitionType complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: c7d94a88-407f-5ef6-d6dd-dbc4084f6df7
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  | GalleryType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

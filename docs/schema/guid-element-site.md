@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: d00f61bb-1547-425f-9764-cae4f05947e9
-description: "Last modified: March 09, 2015"
+description: Learn more about GUID element (Site).
 ---
 
 # GUID element (Site)

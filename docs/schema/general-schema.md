@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e4df2439-f74e-48fa-b8d5-b09e94af2906
-description: "Last modified: July 15, 2011"
+description: The General schema section of the Microsoft SharePoint Foundation Software Development Kit (SDK) describes elements that do not belong to major schemas that are described in this reference. 
 ---
 
 # General schema

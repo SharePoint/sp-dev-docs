@@ -1,5 +1,6 @@
 ---
 title: GUID element (Module)
+description: The GUID element (Module) specifies the GUID of the GUIDMap.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: aff7ea4c-6599-4770-bedb-e61e2158291f
-description: Defines a gallery button.
+description: GalleryButton element (Gallery) (Server Ribbon) defines a gallery button.
 ---
 
 # GalleryButton element (Gallery) (Server Ribbon)
