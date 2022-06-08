@@ -1,5 +1,6 @@
 ---
 title: DeploymentSystemData schema
+description: The DeploymentSystemData schema provides validation for the SystemData.xml file exported into the content migration package.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -34,36 +35,36 @@ The following table lists elements in the schema file DeploymentSystemData.xsd f
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="manifestfile-element-deploymentsystemdata.md">ManifestFile element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span><a href="manifestfile-element-deploymentsystemdata.md">ManifestFile element (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Represents system data files exported to the content migration package and listed on the deployment manifest.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="manifestfiles-element-deploymentsystemdata.md">ManifestFiles element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span><a href="manifestfiles-element-deploymentsystemdata.md">ManifestFiles element (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Represents a collection of system data files exported to the content migration package.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="schemaversion-element-deploymentsystemdata.md">SchemaVersion element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span><a href="schemaversion-element-deploymentsystemdata.md">SchemaVersion element (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Represents an object (**SPSchemaVersion**) that lists versioning data for the content migration manifest schema.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="systemobject-element-deploymentsystemdata.md">SystemObject element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span><a href="systemobject-element-deploymentsystemdata.md">SystemObject element (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Represents a SharePoint Foundation system object instance (**SPSystemObject**) exported to the content migration package.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="systemobjects-element-deploymentsystemdata.md">SystemObjects element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span><a href="systemobjects-element-deploymentsystemdata.md">SystemObjects element (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Represents a collection of SharePoint Foundation system object (**SPSystemObject**) instances.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="systemdata-element-deploymentsystemdata.md">SystemData element (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p><span><a href="systemdata-element-deploymentsystemdata.md">SystemData element (DeploymentSystemData)</a></span></p></td>
 <td align="left"><p>Represents a system data wrapper object (**SPSystemData**) that contains the deployment system data object collections. This is the schema root element.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentsystemdata.md">SPDeploymentObjectType Simple Type (DeploymentSystemData)</a></span></p></td>
-<td align="left"><p>Enumeration simple type that provides values for the **Type** attribute on the <span sdata="link"><a href="systemobject-element-deploymentsystemdata.md">SystemObject element (DeploymentSystemData)</a>. The value specifies the system object type.</p></td>
+<td align="left"><p><span><a href="spdeploymentobjecttype-simple-type-deploymentsystemdata.md">SPDeploymentObjectType Simple Type (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p>Enumeration simple type that provides values for the **Type** attribute on the <span><a href="systemobject-element-deploymentsystemdata.md">SystemObject element (DeploymentSystemData)</a>. The value specifies the system object type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentsystemdata.md">Guid Simple Type (DeploymentSystemData)</a></span></p></td>
-<td align="left"><p>Supports the use of a unique identifier (GUID) as a **Guid** attribute field value in the <span sdata="link"><a href="systemobject-element-deploymentsystemdata.md">SystemObject element (DeploymentSystemData)</a> of the DeploymentLRootObjectMap schema.</p></td>
+<td align="left"><p><span><a href="guid-simple-type-deploymentsystemdata.md">Guid Simple Type (DeploymentSystemData)</a></span></p></td>
+<td align="left"><p>Supports the use of a unique identifier (GUID) as a **Guid** attribute field value in the <span><a href="systemobject-element-deploymentsystemdata.md">SystemObject element (DeploymentSystemData)</a> of the DeploymentLRootObjectMap schema.</p></td>
 </tr>
 </tbody>
 </table>

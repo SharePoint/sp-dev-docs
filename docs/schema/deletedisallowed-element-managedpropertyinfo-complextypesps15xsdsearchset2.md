@@ -7,7 +7,7 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3d328663-218f-7dac-8c93-86a8dd014d8a
-description: "Last modified: March 09, 2015"
+description: Learn about DeleteDisallowed element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2).
 ---
 
 # DeleteDisallowed element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

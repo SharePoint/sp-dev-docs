@@ -1,5 +1,6 @@
 ---
 title: DefaultValues Element in TypeDescriptor
+description: DefaultValues Element in TypeDescriptor specifies a list of DefaultValues of a TypeDescriptor.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -50,7 +51,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="defaultvalue-element-in-defaultvalues-bdcmetadata-schema.md">DefaultValue Element in DefaultValues (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="defaultvalue-element-in-defaultvalues-bdcmetadata-schema.md">DefaultValue Element in DefaultValues (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The default value of a **TypeDescriptor** for a **MethodInstance**.</p></td>
 </tr>
 </tbody>
@@ -75,7 +76,7 @@ None.
 <td align="left"><p>The **TypeDescriptor** that these **DefaultValues** belong to.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

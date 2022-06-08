@@ -1,5 +1,6 @@
 ---
 title: Default Workflow Actions (WorkflowInfo)
+description: Actions represent the Microsoft SharePoint Foundation 2010 implementation of Windows Workflow Foundation activities.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

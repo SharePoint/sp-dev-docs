@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 128f7174-b2d1-4150-a966-c1abfc0e1bf8
-description: "Last modified: March 09, 2015"
+description: DeploymentObject element (DeploymentExportSettings) represents a deployment object or objects marked for export to the content migration package.
 ---
 
 # DeploymentObject element (DeploymentExportSettings)

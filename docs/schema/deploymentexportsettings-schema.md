@@ -1,5 +1,6 @@
 ---
 title: DeploymentExportSettings schema
+description: The DeploymentExportSettings schema provides validation for the ExportSettings.xml file.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -43,7 +44,7 @@ The following table lists elements in the DeploymentExportSettings.xsd schema fi
 </tr>
 <tr class="even">
 <td align="left"><p><a href="deploymentobject-element-deploymentexportsettings.md">DeploymentObject element (DeploymentExportSettings)</a></p></td>
-<td align="left"><p>Represents instances of deployment objects (<span sdata="cer" target="T:Microsoft.SharePoint.Deployment.SPExportObject"><span class="nolink">SPExportObject</span></span>) marked for export to the content migration package.</p></td>
+<td align="left"><p>Represents instances of deployment objects (<span><span class="nolink">SPExportObject</span></span>) marked for export to the content migration package.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="exportobjects-element-deploymentexportsettings.md">ExportObjects element (DeploymentExportSettings)</a></p></td>

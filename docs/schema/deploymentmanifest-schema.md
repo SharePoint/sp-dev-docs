@@ -1,5 +1,6 @@
 ---
 title: DeploymentManifest schema
+description: The DeploymentManifest.xsd schema file supports validation of the Manifest.xml file (or files) on export.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

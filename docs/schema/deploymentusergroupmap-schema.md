@@ -1,5 +1,6 @@
 ---
 title: DeploymentUserGroupMap schema
+description: The DeploymentUserGroupMap schema provides validation for the UserGroup.xml file exported into the content migration package.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -34,27 +35,27 @@ The following table lists elements in the DeploymentUserGroupMap.xsd schema file
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="group-element-deploymentusergroupmap.md">Group element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span><a href="group-element-deploymentusergroupmap.md">Group element (DeploymentUserGroupMap)</a></span></p></td>
 <td align="left"><p>Represents a deployment group object instance (**DeploymentGroup**) exported to the content migration package.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="groups-element-deploymentusergroupmap.md">Groups element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span><a href="groups-element-deploymentusergroupmap.md">Groups element (DeploymentUserGroupMap)</a></span></p></td>
 <td align="left"><p>Represents a container object that holds deployment group (**DeploymentGroup**) object instances.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="user-element-deploymentusergroupmap.md">User element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span><a href="user-element-deploymentusergroupmap.md">User element (DeploymentUserGroupMap)</a></span></p></td>
 <td align="left"><p>Represent a deployment user object instance (**DeploymentUser**) for export to the content migration package.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="users-element-deploymentusergroupmap.md">Users element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span><a href="users-element-deploymentusergroupmap.md">Users element (DeploymentUserGroupMap)</a></span></p></td>
 <td align="left"><p>Represents a container object that holds deployment user object instances (**DeploymentUser**).</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="member-element-deploymentusergroupmap.md">Member element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span><a href="member-element-deploymentusergroupmap.md">Member element (DeploymentUserGroupMap)</a></span></p></td>
 <td align="left"><p>Represents a member of a Microsoft SharePoint Foundation deployment group object (**DeploymentGroup**).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="usergroupmap-element-deploymentusergroupmap.md">UserGroupMap element (DeploymentUserGroupMap)</a></span></p></td>
+<td align="left"><p><span><a href="usergroupmap-element-deploymentusergroupmap.md">UserGroupMap element (DeploymentUserGroupMap)</a></span></p></td>
 <td align="left"><p>Represents an object (**DeploymentUserGroupMap**) that holds mappings for the Microsoft SharePoint Foundation deployment users and deployment groups that are exported to the content migration package.</p></td>
 </tr>
 </tbody>

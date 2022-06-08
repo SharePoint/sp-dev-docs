@@ -1,5 +1,6 @@
 ---
 title: Default Workflow Conditions (WorkflowInfo)
+description: Conditions are rules that you configure to direct the flow of your workflow.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -47,7 +48,7 @@ The following table lists the default workflow conditions that are included with
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**Compare** *<list or document library name>* **field**</p></td>
+<td align="left"><p>**Compare** *\&ltlist\&gt* **field**</p></td>
 <td align="left"><p>Instructs the workflow designer to compare a field in the current list or document library to a specified value.</p>
 <p>**Rule Sentence**:</p>
 <p>If fieldequalsvalue</p>

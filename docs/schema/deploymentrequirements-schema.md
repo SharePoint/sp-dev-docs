@@ -1,5 +1,6 @@
 ---
 title: DeploymentRequirements schema
+description: The DeploymentRequirements schema provides validation for the Requirements.xml file exported to the content migration package.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -34,16 +35,16 @@ The following table lists elements in the DeploymentRequirements.xsd schema file
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p><span><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a></span></p></td>
 <td align="left"><p>Represents specific deployment export requirement objects (**SPRequirement**).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="requirements-element-deploymentrequirements.md">Requirements element (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p><span><a href="requirements-element-deploymentrequirements.md">Requirements element (DeploymentRequirements)</a></span></p></td>
 <td align="left"><p>Represents a container of deployment export requirement objects.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="sprequirementobjecttype-simple-type-deploymentrequirements.md">SPRequirementObjectType Simple Type (DeploymentRequirements)</a></span></p></td>
-<td align="left"><p>Enumeration simple type that provides values for the **Type** attribute on the <span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a>. The value specifies the object type of the deployment requirement specified with the content migration package.</p></td>
+<td align="left"><p><span><a href="sprequirementobjecttype-simple-type-deploymentrequirements.md">SPRequirementObjectType Simple Type (DeploymentRequirements)</a></span></p></td>
+<td align="left"><p>Enumeration simple type that provides values for the **Type** attribute on the <span><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a>. The value specifies the object type of the deployment requirement specified with the content migration package.</p></td>
 </tr>
 </tbody>
 </table>

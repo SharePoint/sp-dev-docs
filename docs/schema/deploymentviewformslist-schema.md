@@ -1,5 +1,6 @@
 ---
 title: DeploymentViewFormsList schema
+description: The DeploymentViewFormsList schema provides validation for the ViewFormsList.xml file exported into the content migration package.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -34,11 +35,11 @@ The following table lists elements in the schema file DeploymentViewFormsList.xs
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="viewform-element-deploymentviewformslist.md">ViewForm element (DeploymentViewFormsList)</a></span></p></td>
+<td align="left"><p><span><a href="viewform-element-deploymentviewformslist.md">ViewForm element (DeploymentViewFormsList)</a></span></p></td>
 <td align="left"><p>Represents the specific web part object instances (**SPViewForm**) that are exported to the content migration package and lists whether each is a view or a form.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="viewformslist-element-deploymentviewformslist.md">ViewFormsList element (DeploymentViewFormsList)</a></span></p></td>
+<td align="left"><p><span><a href="viewformslist-element-deploymentviewformslist.md">ViewFormsList element (DeploymentViewFormsList)</a></span></p></td>
 <td align="left"><p>Represents a collection object (**SPViewFormsList**) that lists view form (**SPViewForm**) instances exported to the content migration package.</p></td>
 </tr>
 </tbody>
