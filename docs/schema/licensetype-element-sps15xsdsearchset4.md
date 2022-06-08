@@ -1,5 +1,6 @@
 ---
 title: "LicenseType element (SPS15XSDSearchSet4)"
+description: Describes the LicenseType element (SPS15XSDSearchSet4) and provides the element information, a definition, and elements and attributes.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 03cde5ba-7ed5-53fe-fd99-229de37c670f
-description: "Last modified: March 09, 2015"
 ---
 
 # LicenseType element (SPS15XSDSearchSet4)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Resource | File |
 |:-----|:-----|
-|**Element type** <br/> |tns:LicenseType  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+|Element type <br/> |tns:LicenseType  <br/> |
+|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
+|Schema file <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
    
 ## Definition
 
