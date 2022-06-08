@@ -123,7 +123,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><p>**Attribute**</p></th>
+<th align="left"><p>Attribute</p></th>
 <th align="left"><p>Type</p></th>
 <th align="left"><p>Required</p></th>
 <th align="left"><p>Description</p></th>
@@ -132,87 +132,87 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**Assembly**</p></td>
+<td align="left"><p><b>Assembly</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>Specifies the binary file in which the coercion is implemented.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**CatchAll**</p></td>
+<td align="left"><p><b>CatchAll</b></p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Set to **true** to show the coercion in scenarios in which either the **DestinationType** or the **DestinationFieldType** allows it, regardless of **SourceType** or **SourceFieldType** values. Set to **false** to show the coercion only in scenarios in which **SourceType** or **SourceFieldType** specifies that it should be shown.</p></td>
+<td align="left"><p>Set to <b>true</b> to show the coercion in scenarios in which either the <b>DestinationType</b> or the <b>DestinationFieldType</b> allows it, regardless of <b>SourceType</b> or <b>SourceFieldType</b> values. Set to <b>false</b> to show the coercion only in scenarios in which <b>SourceType</b> or <b>SourceFieldType</b> specifies that it should be shown.</p></td>
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**ClassName**</p></td>
+<td align="left"><p><b>ClassName</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Uniquely identifies the class in the binary file that is specified by the <span class="parameter">Assembly</span> value.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**DestinationFieldType**</p></td>
+<td align="left"><p><b>DestinationFieldType</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The output field type of the coercion. If the destination cannot handle this type, the coercion is not displayed.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**DestinationType**</p></td>
+<td align="left"><p><b>DestinationType</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The output class type of the coercion value. If the destination cannot handle this type, the coercion is not displayed.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**DisplayName**</p></td>
+<td align="left"><p><b>DisplayName</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Specifies the display name of the coercion.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**Id**</p></td>
+<td align="left"><p><b>Id</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Unique guid identifier of the coercion.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**Name**</p></td>
+<td align="left"><p><b>Name</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The internal name for the coercion.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**RankDefault**</p></td>
+<td align="left"><p><b>RankDefault</b></p></td>
 <td align="left"><p>s:integer</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Specifies a sort value for the list of coercions.</p></td>
 <td align="left"><p>Values of the s:integer type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**SourceFieldType**</p></td>
+<td align="left"><p><b>SourceFieldType</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>The field type to use to determine whether to show the coercion. If set, the client shows the coercion only when the previous value is of the matching type unless **SourceFieldType** or **CatchAll** specifies otherwise.</p></td>
+<td align="left"><p>The field type to use to determine whether to show the coercion. If set, the client shows the coercion only when the previous value is of the matching type unless <b>SourceFieldType</b> or <b>CatchAll</b> specifies otherwise.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>**SourceProperty**</p></td>
+<td align="left"><p><b>SourceProperty</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The name of the argument in the activity that is to be used to bind to the input.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**SourceType**</p></td>
+<td align="left"><p><b>SourceType</b></p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>A class type from which the data is converted. If set, the client shows the coercion only when the previous value is of the matching type unless **SourceFieldType** or **CatchAll** specifies otherwise.</p></td>
+<td align="left"><p>A class type from which the data is converted. If set, the client shows the coercion only when the previous value is of the matching type unless <b>SourceFieldType</b> or <b>CatchAll</b> specifies otherwise.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 </tbody>
