@@ -1,6 +1,6 @@
 ---
 title: Feature/Site Template Associations
-description: Provides and example of Feature/Site Template Associations in Sharepoint.
+description: Provides an example of Feature/Site Template Associations in Sharepoint.
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

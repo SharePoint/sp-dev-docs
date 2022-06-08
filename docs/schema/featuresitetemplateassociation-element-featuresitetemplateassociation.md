@@ -1,6 +1,6 @@
 ---
 title: FeatureSiteTemplateAssociation Element 
-description: Describes the FeatureSiteTemplateAssociation Element and provides the definition, elements and attributes, and an example.
+description: Describes the FeatureSiteTemplateAssociation element and provides the definition, elements and attributes, and an example.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
