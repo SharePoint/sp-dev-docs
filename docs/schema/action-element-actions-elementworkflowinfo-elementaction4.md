@@ -1,5 +1,6 @@
 ---
 title: Action element
+description: Discusses the usage, definition, elements and attributes for the Action element which contains the information for the Workflow Manager Client 1.0.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -37,7 +38,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 
 ## Element information
 
-|   |   |
+| Information  |Location   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -211,7 +212,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>**Assembly**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>The assembly name that contains instructions for implementing the <strong>Action</strong> element. The text should include the <span class="parameter" sdata="paramReference">PublicKeyToken</span>, <span class="parameter" sdata="paramReference">Version</span>, and <span class="parameter" sdata="paramReference">Culture</span> values.</p></td>
+<td align="left"><p>The assembly name that contains instructions for implementing the <strong>Action</strong> element. The text should include the PublicKeyToken, Version, and Culture values.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
