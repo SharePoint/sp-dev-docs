@@ -1,6 +1,6 @@
 ---
-title: Block element represents visual building blocks on the workflow designer surface.
-description: Block element
+title: Block element 
+description: Learn about the Block element that represents visual building blocks on the workflow designer surface.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
