@@ -1,6 +1,6 @@
 ---
 title: "CrawledPropertyInfo element (ArrayOfCrawledPropertyInfo complexType) (SPS15XSDSearchSet2)"
-description: Outlines information, a definition, and elements and attributes for the CrawledPropertyInfo element in Sharepoint.
+description: Outlines information, a definition, and elements and attributes for the CrawledPropertyInfo element in Microsoft Sharepoint.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
