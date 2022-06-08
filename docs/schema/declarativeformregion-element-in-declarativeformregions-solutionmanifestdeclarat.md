@@ -1,5 +1,6 @@
 ---
 title: DeclarativeFormRegion Element in DeclarativeFormRegions
+description: The DeclarativeFormRegion element is used to describe the form region in which external data is displayed in Microsoft Outlook 2010.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -136,7 +137,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md">Picture Element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md">Picture Element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **Picture** element is used to describe the icon to use in Outlook 2010 for the form region.</p></td>
 </tr>
 </tbody>
@@ -157,7 +158,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.md">DeclarativeFormRegions Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.md">DeclarativeFormRegions Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
 <td align="left"><p>The **DeclarativeFormRegions** element that contains this form region.</p></td>
 </tr>
 </tbody>

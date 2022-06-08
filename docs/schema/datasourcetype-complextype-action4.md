@@ -1,5 +1,6 @@
 ---
 title: dataSourceType complexType (Action4)
+description: Learn more about dataSourceType complexType (Action4).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: DataSources Element (WorkflowInfo)
+description: DataSources Element (WorkflowInfo) specifies the data sources for the action or composite step.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

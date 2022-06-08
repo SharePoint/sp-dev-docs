@@ -1,5 +1,6 @@
 ---
 title: DataSources Element (WorkflowActions)
+description: DataSources Element (WorkflowActions) specifies the data sources for the action.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

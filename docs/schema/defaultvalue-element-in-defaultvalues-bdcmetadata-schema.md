@@ -1,5 +1,6 @@
 ---
 title: DefaultValue Element in DefaultValues
+description: DefaultValue Element in DefaultValues represents a default value.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -103,7 +104,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md">DefaultValues Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md">DefaultValues Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>

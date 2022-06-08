@@ -1,5 +1,6 @@
 ---
 title: DataSourceRef Element (WorkflowActions)
+description: DataSourceRef Element (WorkflowActions) specifies the possible values from DataSource elements associated with the Action element.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

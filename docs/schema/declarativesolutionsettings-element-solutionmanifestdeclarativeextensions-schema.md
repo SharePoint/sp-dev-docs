@@ -1,5 +1,6 @@
 ---
 title: DeclarativeSolutionSettings Element
+description: The SolutionSettings element is used to define the settings for the declarative solution, such as the ID, display name, description, and so on.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

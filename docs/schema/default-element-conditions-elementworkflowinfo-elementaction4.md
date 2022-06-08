@@ -1,5 +1,6 @@
 ---
 title: Default element (Conditions element)
+description: The Default element is a container for other elements.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

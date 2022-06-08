@@ -1,5 +1,6 @@
 ---
 title: DataSources element (Action element)
+description: DataSources element (Action element) specifies the data sources for an action.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -29,7 +30,7 @@ Specifies the data sources for an action.
 
 ## Element information
 
-|   |   |
+| Information  |  Location |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

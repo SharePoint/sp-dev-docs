@@ -1,5 +1,6 @@
 ---
 title: DeclarativeAssociation Element
+description: The DeclarativeAssociation element derives from the Association element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -46,7 +47,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**DisplayNameOfficeItemPropertyName**</p></td>
-<td align="left"><p>The display name of the <span class="ui">Office Item Property Name</span> from the Solution Manifest.</p>
+<td align="left"><p>The display name of the <span>Office Item Property Name</span> from the Solution Manifest.</p>
 <p>Optional.</p>
 <p>Attribute type: **String**</p></td>
 </tr>

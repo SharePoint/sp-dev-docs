@@ -1,5 +1,6 @@
 ---
 title: "DefaultItemOpen Simple Type (DeploymentManifest)"
+description: DefaultItemOpen Simple Type (DeploymentManifest) specifies the default environment for a SharePoint item upon opening.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f8487ce9-1aef-4380-ad96-6f841f5c926e
-description: "Last modified: March 09, 2015"
 ---
 
 # DefaultItemOpen Simple Type (DeploymentManifest)

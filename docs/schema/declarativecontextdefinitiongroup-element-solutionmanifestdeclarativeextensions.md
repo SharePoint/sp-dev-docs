@@ -1,5 +1,6 @@
 ---
 title: DeclarativeContextDefinitionGroup Element
+description: The DeclarativeContextDefinitionGroup element derives from the ContextDefinitionGroup. element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -116,7 +117,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/sharepoint/dev/schema/declarativecontextdefinitiongroup-element-solutionmanifestdeclarativeextensions">ContextDefinition</a></p></td>
+<td align="left"><p><a href="/sharepoint/dev/schema/declarativecontextdefinitiongroup-element-solutionmanifestdeclarativeextensions">ContextDefinition</a></p></td>
 <td align="left"><p>The **ContextDefinition** element is used to define a context for an external content type that is of this Outlook Item Type.</p></td>
 </tr>
 </tbody>

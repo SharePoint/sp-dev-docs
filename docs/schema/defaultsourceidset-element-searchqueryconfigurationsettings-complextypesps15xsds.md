@@ -7,7 +7,7 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 484bf192-49e4-16d8-2b2c-547b1055b678
-description: "Last modified: March 09, 2015"
+description: "Learn more about DefaultSourceIdSet element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)."
 ---
 
 # DefaultSourceIdSet element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |

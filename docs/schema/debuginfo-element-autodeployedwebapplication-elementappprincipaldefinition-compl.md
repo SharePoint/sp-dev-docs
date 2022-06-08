@@ -1,5 +1,6 @@
 ---
 title: DebugInfo element (AutoDeployedWebApplication element)
+description: DebugInfo element (AutoDeployedWebApplication element) is for possible future use only.
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
@@ -22,7 +23,7 @@ For possible future use only.
 
 ## Element information
 
-|   |   |
+|  Information | Location  |
 |---|---|
 | **Element type**  | AutoDeployedWebApplicationDebugInfoDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

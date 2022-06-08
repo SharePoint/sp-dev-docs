@@ -1,5 +1,6 @@
 ---
 title: DataSourceRef element
+description: DataSourceRef element specifies the possible values from the DataSource element that are associated with the Action or Condition element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -27,7 +28,7 @@ Specifies the possible values from the [DataSource element (dataSourcesType comp
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

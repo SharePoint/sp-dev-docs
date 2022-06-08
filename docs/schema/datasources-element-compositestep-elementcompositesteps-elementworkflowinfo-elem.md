@@ -1,5 +1,6 @@
 ---
 title: DataSources element (CompositeStep element)
+description: DataSources element (CompositeStep element) specifies the data sources for a composite step.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -29,7 +30,7 @@ Specifies the data sources for a composite step.
 
 ## Element information
 
-|   |   |
+|  Information | Location  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

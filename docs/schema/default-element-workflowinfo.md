@@ -1,5 +1,6 @@
 ---
 title: Default element (WorkflowInfo)
+description: The Default element is a container for other elements and has no definable attributes.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

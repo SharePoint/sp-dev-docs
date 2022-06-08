@@ -1,5 +1,6 @@
 ---
 title: DataSource Element (List Instance)
+description: DataSource Element (List Instance) specifies the data source that is used to provision the list instance.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

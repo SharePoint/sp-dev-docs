@@ -1,5 +1,6 @@
 ---
 title: DataSource element
+description: Learn about the DataSource element.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -26,7 +27,7 @@ ms.assetid: 020a3861-ae16-6031-6d91-a5c775f4cadd
 
 ## Element information
 
-|   |   |
+|  Information |  Location |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -125,7 +126,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>**InternalName**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Specifies the internal name for the data source for a reference from a <span sdata="link"><a href="datasourceref-element-fieldbind-elementruledesignertype-complextypeaction4.md">DataSourceRef element (FieldBind element) (ruleDesignerType complexType) (Action4)</a></span>.</p></td>
+<td align="left"><p>Specifies the internal name for the data source for a reference from a <span><a href="datasourceref-element-fieldbind-elementruledesignertype-complextypeaction4.md">DataSourceRef element (FieldBind element) (ruleDesignerType complexType) (Action4)</a></span>.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
@@ -139,7 +140,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <td align="left"><p>**NameProperty**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Specifies how to differentiate the user interface (UI) elements defined in a <span sdata="link"><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource element (dataSourcesType complexType) (Action4)</a></span>.</p><p>If the value begins with "Parent.", the value is retrieved from the parent of the action or composite step that declares the **DataSource** element.</p></td>
+<td align="left"><p>Specifies how to differentiate the user interface (UI) elements defined in a <span><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource element (dataSourcesType complexType) (Action4)</a></span>.</p><p>If the value begins with "Parent.", the value is retrieved from the parent of the action or composite step that declares the **DataSource** element.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 </tbody>
