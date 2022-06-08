@@ -39,7 +39,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
+| Attribute | Description |
 |:-----|:-----|
 |HyperlinkBaseUrl** <br/> |Optional **Text**.  <br/> |
 |IncludeFolders** <br/> |Optional **Text**.  <br/> |

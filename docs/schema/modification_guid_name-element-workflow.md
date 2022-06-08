@@ -69,7 +69,7 @@ None
 
 The modification name is displayed as the link text for the modification link on the workflow status page.
 
-To specify a modification form, you must first set the <span><span class="nolink">ModificationId</span></span> property of the <span sdata="cer" target="T:Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification"><span class="nolink">EnableWorkflowModification</span></span> activity to the GUID you generated for your modification form. You can have multiple modifications available in your workflow; you must assign each modification a unique identifier.
+To specify a modification form, you must first set the Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification.ModificationId"><span class="nolink">ModificationId</span></span> property of the T:Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification</span></span> activity to the GUID you generated for your modification form. You can have multiple modifications available in your workflow; you must assign each modification a unique identifier.
 
 ## Example
 

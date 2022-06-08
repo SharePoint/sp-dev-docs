@@ -1,6 +1,6 @@
 ---
 title: "Method element (List)"
-description: Provides a definition and the elements and attributes of the Method element (List) in SharePoint.
+description: Describes the the Method element (List) and provides a definition and the elements and attributes in SharePoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
