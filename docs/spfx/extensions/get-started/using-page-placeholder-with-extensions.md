@@ -1,7 +1,7 @@
 ---
 title: Use page placeholders from Application Customizer (Hello World part 2)
 description: Extend your Hello World extension to take advantage of page placeholders by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/22/2020
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -139,7 +139,6 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 8. Update the `onInit()` method code as follows:
 
     ```typescript
-    @override
     public onInit(): Promise<void> {
       Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
@@ -147,7 +146,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
       // render.
       this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
 
-      return Promise.resolve<void>();
+      return Promise.resolve();
     }
     ```
 
