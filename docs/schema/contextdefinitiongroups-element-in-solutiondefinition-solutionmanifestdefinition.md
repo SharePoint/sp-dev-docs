@@ -1,5 +1,6 @@
 ---
 title: ContextDefinitionGroups Element in SolutionDefinition
+description: Outlines the ContextDefinitionGroups element, which lists the context definitions that are part of this Microsoft Business Connectivity Services (BCS) solution
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -48,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md">ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><a href="contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md">ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)</a></p></td>
 <td align="left"><p>Defines a context definition group containing a list of context definitions for one of the Outlook Item Types such as Contact, Task, Post, or Calendar, or if showing related data in a task pane, an EntityView.</p></td>
 </tr>
 </tbody>
@@ -71,7 +72,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="solutiondefinition-element-solutionmanifestdefinitions-schema.md">SolutionDefinition Element (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><a href="solutiondefinition-element-solutionmanifestdefinitions-schema.md">SolutionDefinition Element (SolutionManifestDefinitions Schema)</a></p></td>
 <td align="left"><p>The solution definition that contains these context definition groups.</p></td>
 </tr>
 </tbody>

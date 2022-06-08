@@ -1,5 +1,6 @@
 ---
 title: Control Element (Delegate Control)
+description: Outlines the Control element in Sharepoint, which identifies the control to implement in a delegate control.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

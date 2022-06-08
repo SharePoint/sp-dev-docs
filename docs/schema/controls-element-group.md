@@ -1,5 +1,6 @@
 ---
 title: "Controls element (Group) (Server Ribbon)"
+description: Outlines the Controls element in Sharepoint, including attributes, child elements, parent elements, and occurrences. 
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: d3635d99-fb58-4327-864f-6e59b222833d
-description: Contains elements that define controls.
 ---
 
 # Controls element (Group) (Server Ribbon)

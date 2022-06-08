@@ -1,5 +1,6 @@
 ---
 title: Controls element (CommandUIDefinitionType complexType)
+description: Outline information, a definition, and elements and attributes for the Controls element in Sharepoint.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,11 +19,11 @@ ms.assetid: 747506d5-af8d-a6ca-7fae-a1e7fc22b7ae
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | ControlsType |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+**Element type**: ControlsType
+
+**Namespace**: `http://schemas.microsoft.com/sharepoint/`
+
+**Schema file**: apphostwebfeatures.xsd
 
 ## Definition
 

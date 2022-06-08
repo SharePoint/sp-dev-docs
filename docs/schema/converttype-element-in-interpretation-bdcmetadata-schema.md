@@ -1,5 +1,6 @@
 ---
 title: ConvertType Element in Interpretation
+description: Outlines the ConvertType element in Sharepoint, which specifies the rule to convert the data type of a data value into another data type.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -96,7 +97,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></p></td>
 <td align="left"><p>The rules to apply to the data stored in the data structures that are represented by a **TypeDescriptor**.</p></td>
 </tr>
 </tbody>
