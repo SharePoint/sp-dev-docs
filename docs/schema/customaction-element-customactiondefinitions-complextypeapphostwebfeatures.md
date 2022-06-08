@@ -1,5 +1,6 @@
 ---
 title: CustomAction element (CustomActionDefinitions complexType)
+description: Outlines information, a definition, and elements and attributes for the CustomAction element in Sharepoint.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -17,12 +18,11 @@ ms.assetid: cb7b6514-f038-eb1a-88a8-9515425b150e
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
 
 ## Element information
+**Element type**: CustomActionDefinition
 
-|   |   |
-|---|---|
-| **Element type**  | CustomActionDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/`
+
+**Schema file**: apphostwebfeatures.xsd
 
 ## Definition
 

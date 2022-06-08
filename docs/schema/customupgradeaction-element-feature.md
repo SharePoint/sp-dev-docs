@@ -1,5 +1,6 @@
 ---
 title: CustomUpgradeAction Element (Feature)
+description: Outlines a definition and elements and attributes for the CustomUpgradeAction element in Sharepoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

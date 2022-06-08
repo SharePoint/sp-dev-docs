@@ -1,5 +1,6 @@
 ---
 title: CustomActionGroup Element (Custom Action)
+description: Outlines information, a definition, and elements and attributes for the CustomActionGroup element in Sharepoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

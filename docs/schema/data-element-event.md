@@ -1,5 +1,6 @@
 ---
 title: Data Element (Event)
+description: Outlines information, a definition, and elements and attributes for the Data element in Microsoft Sharepoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: CustomAction Element
+description: Outlines the CustomAction element, which defines an extension to the user interface, such as a button on a toolbar or a link on a site settings page.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -134,7 +135,7 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 <tr class="even">
 <td align="left"><p>**Rights**</p></td>
-<td align="left"><p>Optional **Text**. Specifies a set of rights that the user must have for the link to be visible, for example, `"ViewListItems,ManageAlerts"`. If it is not specified, the action always appears in the list of actions. To specify multiple rights, separate the values by using commas. The set of rights are grouped logically according to **AND** logic, which means that a user must have all the specified rights to see an action. For a list of possible values, see <span sdata="cer" target="T:Microsoft.SharePoint.SPBasePermissions"><span class="nolink">Microsoft.SharePoint.SPBasePermissions</span></span>.</p></td>
+<td align="left"><p>Optional **Text**. Specifies a set of rights that the user must have for the link to be visible, for example, `"ViewListItems,ManageAlerts"`. If it is not specified, the action always appears in the list of actions. To specify multiple rights, separate the values by using commas. The set of rights are grouped logically according to **AND** logic, which means that a user must have all the specified rights to see an action. For a list of possible values, see <span class="nolink">Microsoft.SharePoint.SPBasePermissions</span>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>
