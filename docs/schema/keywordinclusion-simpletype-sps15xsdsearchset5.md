@@ -7,7 +7,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8f29b9aa-9de2-ea26-7bf9-e3287b37c0ab
-description: "Last modified: March 09, 2015"
 ---
 
 # KeywordInclusion simpleType (SPS15XSDSearchSet5)
@@ -18,11 +17,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+| Resource | File |
 |:-----|:-----|
-|**Base type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+|Base type <br/> |xs:string  <br/> |
+|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
+|Schema file <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
    
 ## Definition
 
