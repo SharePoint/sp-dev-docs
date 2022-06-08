@@ -1,5 +1,6 @@
 ---
 title: "File Element (DeploymentManifest - SPFileVersionCollection)"
+description: Describes the definition, type, element, and attribute information for the File Element (DeploymentManifest - SPFileVersionCollection).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5c90bc0c-03a4-48c3-80f9-e8f974edb8c6
-description: "Last modified: March 09, 2015"
 ---
 
 # File Element (DeploymentManifest - SPFileVersionCollection)

@@ -1,5 +1,6 @@
 ---
 title: "FileDialogPostProcessor element (Site)"
+description: Describes the definition, element, and attribute information for the FileDialogPostProcessor element (Site).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

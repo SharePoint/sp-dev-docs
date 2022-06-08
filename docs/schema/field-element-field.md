@@ -1,5 +1,6 @@
 ---
 title: Field element (Field)
+description: Describes the definition, element, and attribute information for the Field element (Field), which defines a site column.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

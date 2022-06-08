@@ -1,5 +1,6 @@
 ---
 title: Fields element (WorkflowInfo)
+description: Describes the definition, element, and attribute information for the Fields element (WorkflowInfo).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

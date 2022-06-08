@@ -1,5 +1,6 @@
 ---
 title: Field element (List Instance)
+description: Describes the definition, element, and attribute information for the Field element (List Instance), which defines a reference to a field.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

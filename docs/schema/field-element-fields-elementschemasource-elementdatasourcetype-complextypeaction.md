@@ -1,5 +1,6 @@
 ---
 title: Field element (Fields element)
+description: Describes the definition, usage, element, and attribute information for the Field element (Fields element), which specifies a field in which to display data obtained from the parent data source.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
