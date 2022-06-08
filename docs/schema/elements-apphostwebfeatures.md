@@ -1,5 +1,6 @@
 ---
 title: Elements (AppHostWebFeatures)
+description: Provides a list of elements for the AppHostWebFeatures XML schema with links to further topics and explanations.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer

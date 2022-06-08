@@ -1,5 +1,6 @@
 ---
 title: Elements (AppPartConfigDefinition)
+description: Provides links to the topic elements that apply to the AppPartConfigDefinition XML schema for SharePoint.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
