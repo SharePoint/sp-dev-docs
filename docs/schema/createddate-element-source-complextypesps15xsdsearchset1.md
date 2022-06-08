@@ -1,5 +1,6 @@
 ---
 title: "CreatedDate element (Source complexType) (SPS15XSDSearchSet1)"
+description: Outlines information, a definition, and elements and attributes for the CreatedDate element in Sharepoint.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 55a2fe57-e8ce-dfb7-6d0f-ef2e6038da01
-description: "Last modified: March 09, 2015"
 ---
 
 # CreatedDate element (Source complexType) (SPS15XSDSearchSet1)
@@ -15,12 +15,11 @@ description: "Last modified: March 09, 2015"
 **Applies to:** SharePoint Server 2013
   
 ## Element information
+**Element type**: xs:dateTime 
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |xs:dateTime  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  <br/> |
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query 
+
+**Schema file**: schema_Microsoft.Office.Server.Search.Administration.Query.xsd 
    
 ## Definition
 
