@@ -1,5 +1,6 @@
 ---
 title: "MappingInfo complexType (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the MappingInfo complexType (SPS15XSDSearchSet2)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9f76cdfb-9587-98cc-768f-bc22433c088f
-description: "Last modified: March 09, 2015"
 ---
 
 # MappingInfo complexType (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |

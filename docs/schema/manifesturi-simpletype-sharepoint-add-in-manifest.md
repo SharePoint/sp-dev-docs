@@ -1,5 +1,6 @@
 ---
 title: ManifestUri simpleType
+description: Describes the definition and type information for ManifestUri simpleType.
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
@@ -20,7 +21,7 @@ ms.assetid: a6861f44-9d24-40f6-efc5-89033c101b4d
 
 ## Type information
 
-|   |   |
+| Information  |  Location |
 |---|---|
 | **Base type**  | xs:anyURI |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

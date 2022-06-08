@@ -1,5 +1,6 @@
 ---
 title: "MappingOrder element (MappingInfo complexType) (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the MappingOrder element (MappingInfo complexType) (SPS15XSDSearchSet2)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7f9c78ab-3f1e-2fa2-89f3-2861338f82e9
-description: "Last modified: March 09, 2015"
 ---
 
 # MappingOrder element (MappingInfo complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

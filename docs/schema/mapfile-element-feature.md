@@ -1,5 +1,6 @@
 ---
 title: MapFile element (Feature)
+description: Describes the definition, element, and attribute information for MapFile element (Feature), which specifies a mapping between files during a Feature upgrade.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

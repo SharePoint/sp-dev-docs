@@ -1,5 +1,6 @@
 ---
 title: "MappingInfo element (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the MappingInfo element (SPS15XSDSearchSet2)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 63a42ae4-b372-8070-7f3f-a9914be2fc10
-description: "Last modified: March 09, 2015"
 ---
 
 # MappingInfo element (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:MappingInfo  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
