@@ -1,5 +1,6 @@
 ---
 title: "InternalID element (ResultItemType complexType) (SPS15XSDSearchSet2)"
+description: Learn about InternalID element (ResultItemType complexType) (SPS15XSDSearchSet2).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -16,7 +17,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

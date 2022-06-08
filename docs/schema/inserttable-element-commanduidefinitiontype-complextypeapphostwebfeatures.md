@@ -1,5 +1,6 @@
 ---
 title: InsertTable element (CommandUIDefinitionType complexType)
+description: Learn about InsertTable element (CommandUIDefinitionType complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 49a6f617-a2d0-7e83-35cf-edc99d7ac10a
 
 ## Element information
 
-|   |   |
+| Information  |  Location |
 |---|---|
 | **Element type**  | InsertTableType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

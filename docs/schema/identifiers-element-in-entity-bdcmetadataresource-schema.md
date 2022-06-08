@@ -45,7 +45,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identifier-element-in-identifiers-bdcmetadataresource-schema.md">Identifier Element in Identifiers (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="identifier-element-in-identifiers-bdcmetadataresource-schema.md">Identifier Element in Identifiers (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -63,7 +63,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

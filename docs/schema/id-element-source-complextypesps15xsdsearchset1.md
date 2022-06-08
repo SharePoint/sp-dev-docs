@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c18fc433-14a4-7e55-a0bf-05035d912eab
-description: "Last modified: March 09, 2015"
+description: Learn more about ID element (Source complexType) (SPS15XSDSearchSet1).
 ---
 
 # ID element (Source complexType) (SPS15XSDSearchSet1)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |

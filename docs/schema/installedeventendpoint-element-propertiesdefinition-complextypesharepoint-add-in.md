@@ -1,5 +1,6 @@
 ---
 title: InstalledEventEndpoint element (PropertiesDefinition complexType)
+description: InstalledEventEndpoint element (PropertiesDefinition complexType) is the URL of the installed event receiver endpoint.
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
@@ -22,7 +23,7 @@ The Url of the installed event receiver endpoint.
 
 ## Element information
 
-|   |   |
+| Information  | location  |
 |---|---|
 | **Element type**  | UrlElementDefinitions |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

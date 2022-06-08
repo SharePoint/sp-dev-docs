@@ -1,5 +1,6 @@
 ---
 title: Initiation Element (WorkflowConfig)
+description: Initiation Element (WorkflowConfig) contains workflow initiation information, such as the workflow initiation form and the data fields on the initiation form.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -58,8 +59,8 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-workflowconfig.md">Parameters Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span><a href="parameters-element-workflowconfig.md">Parameters Element (WorkflowConfig)</a></span></p>
+<p><span><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -72,7 +73,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig Element</a></span></p></td>
+<td align="left"><p><span><a href="workflowconfig-element.md">WorkflowConfig Element</a></span></p></td>
 </tr>
 </tbody>
 </table>

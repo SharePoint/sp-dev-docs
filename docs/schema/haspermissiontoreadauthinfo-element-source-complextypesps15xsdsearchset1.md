@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ad460beb-4a00-0f73-b27c-dd892ea3d4ea
-description: "Last modified: March 09, 2015"
+description: Learn about HasPermissionToReadAuthInfo element (Source complexType) (SPS15XSDSearchSet1).
 ---
 
 # HasPermissionToReadAuthInfo element (Source complexType) (SPS15XSDSearchSet1)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |

@@ -1,5 +1,6 @@
 ---
 title: Identity element in Identities
+description: Identity element in Identities specifies an explicit identity contained by this cache subscription.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -52,7 +53,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identities-element-in-subscription-subscription-schema.md">Identities Element in Subscription (Subscription Schema)</a></span></p></td>
+<td align="left"><p><span><a href="identities-element-in-subscription-subscription-schema.md">Identities Element in Subscription (Subscription Schema)</a></span></p></td>
 <td align="left"><p>An **Identities** element that lists the serialized values of identities.</p></td>
 </tr>
 </tbody>

@@ -1,5 +1,6 @@
 ---
 title: InitiationType Element (Workflow)
+description: InitiationType Element (Workflow) specifies which events are enabled, at workflow association, to initiate the workflow.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -59,10 +59,10 @@ The following sections describe attributes, chiidentifiers-element-in-entity-bdc
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -80,7 +80,7 @@ The following sections describe attributes, chiidentifiers-element-in-entity-bdc
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identifiers-element-in-entity-bdcmetadataresource-schema.md">Identifiers Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="identifiers-element-in-entity-bdcmetadataresource-schema.md">Identifiers Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
