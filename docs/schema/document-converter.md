@@ -1,5 +1,6 @@
 ---
 title: Document Converter
+description: Describes how each element can manifest a file that defines document converters which must adhere to the Document Converter Definition schema.
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

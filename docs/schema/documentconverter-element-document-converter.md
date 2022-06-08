@@ -1,5 +1,6 @@
 ---
 title: DocumentConverter Element (Document Converter)
+description: Discusses the definition, elements and attributes for the DocumentConverter Element (Document Converter).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -104,7 +105,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-document-converter.md">Elements Element (Document Converter)</a></span></p></td>
+<td align="left"><p><a href="elements-element-document-converter.md">Elements Element (Document Converter)</a></p></td>
 </tr>
 </tbody>
 </table>

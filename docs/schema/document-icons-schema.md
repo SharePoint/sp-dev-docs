@@ -1,5 +1,6 @@
 ---
 title: "Document Icons schema"
+description: Discusses how the Document Icons schema is used in the DocIcon.xml file to map file name extensions and ProgIDs.
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: ddffbd19-b644-4155-ba9d-21f80d64fa84
-description: "Last modified: July 15, 2011"
 ---
 
 # Document Icons schema
