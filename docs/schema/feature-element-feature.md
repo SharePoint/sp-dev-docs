@@ -112,7 +112,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="odd">
 <td align="left"><p>**RequireResources**</p></td>
 <td align="left"><p>Optional **Boolean**. **TRUE** to specify that SharePoint Foundation check whether resources exist for the Feature by verifying that the standard "sentinel" resource for the Feature is present for a particular culture.</p>
-<p>The resource file is named according to the format `\<Feature Directory\>/Resources/Resources.\<Culture Name\>.resx`, where `\<Culture Name\>` is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
+<p>The resource file is named according to the format `\<Feature Directory\>/Resources/Resources.\<Culture Name\>.resx`, where `<Culture Name>` is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
 <p>`ll-CC`</p>
 <p>`ll-Ssss-CC`</p><br/>
 <p>**Culture name examples:**</p>
