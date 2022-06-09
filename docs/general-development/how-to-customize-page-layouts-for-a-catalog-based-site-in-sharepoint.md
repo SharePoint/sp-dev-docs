@@ -1,7 +1,7 @@
 ---
 title: Customize page layouts for a catalog-based site in SharePoint
 description: Describes how to create and customize category page and catalog-item page layouts for a SharePoint cross-site publishing site.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 21d8db99-73b3-4429-b6cb-04e375af9f55
 ms.localizationpriority: high

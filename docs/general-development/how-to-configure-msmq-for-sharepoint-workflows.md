@@ -1,7 +1,7 @@
 ---
 title: Configure MSMQ for SharePoint workflows
 description: Describes how to configure Microsoft Message Queuing (MSMQ) for asynchronous event messaging in SharePoint workflows.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: c0e130f6-c210-44ea-83ed-b327f04551d6
 ms.localizationpriority: medium

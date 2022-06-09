@@ -1,7 +1,7 @@
 ---
 title: Getting Ranges Using Atom Feed and HTML Fragment
 description: Describes the Atom feed method and the HTML fragment method to access ranges by using the REST API in Excel Services.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
 ms.localizationpriority: medium

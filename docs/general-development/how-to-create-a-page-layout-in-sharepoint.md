@@ -1,7 +1,7 @@
 ---
 title: Create a page layout in SharePoint
 description: Describes how to create a page layout using Design Manager in SharePoint and provides steps and code examples.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 5447e6a1-2f14-4667-81d0-7514b468be80
 ms.localizationpriority: high

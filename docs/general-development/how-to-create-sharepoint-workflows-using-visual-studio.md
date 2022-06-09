@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint workflows using Visual Studio
 description: Describes how to create a SharePoint workflow in the new SharePoint workflow platform using Visual Studio.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 739af178-96b3-4630-bbc0-5def02065eeb
 ms.localizationpriority: high

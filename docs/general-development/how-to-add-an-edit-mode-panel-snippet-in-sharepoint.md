@@ -1,7 +1,7 @@
 ---
 title: Add an Edit Mode Panel snippet in SharePoint
 description: Describes how to add an Edit Mode Panel snippet in SharePoint to display instructions or other content to content authors.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 39fa1e32-9129-407d-914f-96f4c6e66dc8
 ms.localizationpriority: medium

@@ -1,7 +1,7 @@
 ---
 title: Get started with Business Connectivity Services in SharePoint
 description: Describes how to get started with Business Connectivity Services in SharePoint and provides lists of core concepts and basic tasks.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: c6bf3db0-db79-4b13-9834-891d24b2c9e5
 ms.localizationpriority: medium
