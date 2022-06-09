@@ -1,13 +1,13 @@
 ---
 title: "Personalizations Element (DeploymentManifest)"
+description: Describes the Personalization element (DeploymentManifest) and provides a definition, type, and  the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a771f7ce-7108-4dc7-a14d-7f2e5ec59fe8
-description: "Last modified: March 09, 2015"
 ---
 
 # Personalizations Element (DeploymentManifest)

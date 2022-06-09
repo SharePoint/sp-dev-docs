@@ -1,7 +1,8 @@
 ---
 title: PropertiesDefinition complexType
+description: Describes the PropertiesDefinition complexType) and provides the type information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -20,11 +21,11 @@ ms.assetid: 2c430e31-cb39-7c9a-67fa-1e584068245f
 
 ## Type information
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
-| **Extension base**  | None |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| Schema file  | appmanifest.xsd |
+| Extension base  | None |
 
 ## Definition
 
