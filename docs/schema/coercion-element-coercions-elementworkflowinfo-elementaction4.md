@@ -2,7 +2,7 @@
 title: Coercion element
 description: Describes the definition, usage, attribute and element information for Coercion element, which specifies a coercion for converting data from one form to another.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

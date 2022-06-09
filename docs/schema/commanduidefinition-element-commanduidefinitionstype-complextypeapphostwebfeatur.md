@@ -2,7 +2,7 @@
 title: CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures)
 description: Describes the definition, element, and attribute information for CommandUIDefinition element (CommandUIDefinitionsType complexType) (AppHostWebFeatures).
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

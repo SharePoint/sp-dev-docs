@@ -2,7 +2,7 @@
 title: CodeMethodAction element in Actions
 description: The CodeMethodAction element is used to execute a custom code action or to execute one of the predefined actions provided by Microsoft Business Connectivity Services (BCS).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

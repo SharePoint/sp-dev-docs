@@ -2,7 +2,7 @@
 title: Coercions element
 description: Coercions element specifies the available coercions for converting data from one form to another.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
