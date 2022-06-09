@@ -32,7 +32,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |Attribute|Description|
 |---------|-----------|
-|Name|Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example, \<Field Name="ID"/\>).|
+|**Name**|Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example, \<Field Name="ID"/\>).|
 
 ### Child elements
 
