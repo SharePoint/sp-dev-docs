@@ -1,7 +1,7 @@
 ---
 title: Navigation solutions for SharePoint Online portals
 description: Explains the pros and cons of using an out-of-the-box navigation solution versus a custom navigation solution.
-ms.date: 4/30/2018
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
 

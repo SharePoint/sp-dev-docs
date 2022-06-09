@@ -1,7 +1,7 @@
 ---
 title: Building well performing classic publishing portals for SharePoint Online
 description: Guidelines for developing well-performing SharePoint Online portals. 
-ms.date: 4/30/2018
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
 

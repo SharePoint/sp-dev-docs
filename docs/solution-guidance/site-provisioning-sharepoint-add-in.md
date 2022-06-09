@@ -1,7 +1,7 @@
 ---
 title: Site provisioning in the SharePoint Add-in model
 description: The approach you take to provision site collections and sub sites is different in the new SharePoint Add-in model, compared to how it was in Full Trust Code.
-ms.date: 11/03/2017
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Site provisioning in the SharePoint Add-in model

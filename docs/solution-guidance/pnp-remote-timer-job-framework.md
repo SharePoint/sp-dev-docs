@@ -1,7 +1,7 @@
 ---
 title: PnP remote timer job framework
 description: Describes the PnP remote timer job framework, provides a table that outlines a description for various articles, and provides additional references.
-ms.date: 5/9/2018
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Search API usage in the SharePoint Add-in model
 description: The approach you take to execute searches with the SharePoint Search Service is different in the new SharePoint Add-in model than it was with Full Trust Code.  In a typical Full Trust Code (FTC) / Farm Solution scenario, the SharePoint server-side object model (Content By Query web part overrides) or the Search Web Services were used to execute searches with the SharePoint Search Service.
-ms.date: 12/29/2020
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Search API usage in the SharePoint Add-in model

@@ -1,7 +1,7 @@
 ---
 title: Security and Performance
 description: Provides a table that outlines various articles that show you how to use the add-in model for improving the security and performance of SharePoint sites.
-ms.date: 11/03/2017
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Security and Performance

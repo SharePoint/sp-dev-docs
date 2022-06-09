@@ -1,7 +1,7 @@
 ---
 title: Convert an autohosted SharePoint Add-in to a provider-hosted add-in
 description: Steps to convert an autohosted SharePoint Add-in to a provider-hosted add-in, including deploying to Azure SQL, creating an Azure website, and registering the add-in.
-ms.date: 12/27/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---

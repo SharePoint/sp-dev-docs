@@ -1,7 +1,7 @@
 ---
 title: Variations in the SharePoint Add-in model
 description: Describes variations in the SharePoint Add-in model and provides high-level guidelines, related links, and PnP samples.
-ms.date: 05/20/2020
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 Variations in the SharePoint Add-in model

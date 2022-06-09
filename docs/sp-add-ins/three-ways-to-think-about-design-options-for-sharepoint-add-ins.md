@@ -1,7 +1,7 @@
 ---
 title: Three ways to think about design options for SharePoint Add-ins
 description: Overview of the design and architecture options available with SharePoint Add-ins. 
-ms.date: 11/02/2017
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -51,7 +51,7 @@ Another way to think about your add-in architecture options is to think of the a
 
 **Remote components in provider-hosted add-ins: options for each tier**
 
-|**Tier**|**Options**|**Good for**|
+|Tier|Options|Good for|
 |:-----|:-----|:-----|
 |UI|ASP.NET pages in an ASP.NET form or MVC application that is hosted in an Azure web role|Leveraging the skills of an ASP.NET development staff|
 ||HTML 5 page with JavaScript|Rich user interface|
@@ -69,7 +69,7 @@ Another way to think about your add-in architecture options is to think of the a
 **SharePoint components: options for each tier**
 
 
-|**Tier**|**Options**|**Good for**|
+|Tier|Options|Good for|
 |:-----|:-----|:-----|
 |UI|Custom views of SharePoint lists and libraries on add-in webpages |Maximizing integration with SharePoint appearance and behavior|
 ||Silverlight application hosted in a web part (or within \<object\> tags) on an add-in webpage|Leveraging existing Silverlight development experience; rich user interface|
