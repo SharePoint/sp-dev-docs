@@ -36,22 +36,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 |Attribute|Description|
 |---------|-----------|
-|**IsStatic**|Optional.<br /><br />Specifies whether the execution of this method requires an external item (**EntityInstance**) to serve as a context for execution. If set to **true**, the method represents a static method and does not require a specific **EntityInstance** to provide context for execution. If set to **false**, the method represents an instance method and requires an **EntityInstance** to provide the context for execution.<br /><br />Default value: **true**<br /><br />Attribute type: **Boolean**
-|**LobName**|Optional.<br /><br />The name of the operation defined in the external system that is represented by this method.<br /><br />Attribute type: **String**
-|**Name**|Required.<br /><br />The name of this method.<br /><br />Attribute type: **String**
-|**DefaultDisplayName**|Optional.<br /><br />The default display name of the method.<br /><br />Attribute type: **String**
-|**IsCached**|Optional.<br /><br />Specifies whether this method is used frequently. If set to **true**, Business Data Connectivity (BDC) service caches this method in memory.<br /><br />Default value: **true**<br /><br />Attribute type: **Boolean**
+|**IsStatic**|Optional.<br /><br />Specifies whether the execution of this method requires an external item (**EntityInstance**) to serve as a context for execution. If set to **true**, the method represents a static method and does not require a specific **EntityInstance** to provide context for execution. If set to **false**, the method represents an instance method and requires an **EntityInstance** to provide the context for execution.<br /><br />Default value: **true**<br /><br />Attribute type: **Boolean**|
+|**LobName**|Optional.<br /><br />The name of the operation defined in the external system that is represented by this method.<br /><br />Attribute type: **String**|
+|**Name**|Required.<br /><br />The name of this method.<br /><br />Attribute type: **String**|
+|**DefaultDisplayName**|Optional.<br /><br />The default display name of the method.<br /><br />Attribute type: **String**|
+|**IsCached**|Optional.<br /><br />Specifies whether this method is used frequently. If set to **true**, Business Data Connectivity (BDC) service caches this method in memory.<br /><br />Default value: **true**<br /><br />Attribute type: **Boolean**|
 
 ### Child elements
 
 |Element|Description|
 |-------|-----------|
-|[LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md)|The localized display names of the method.
-|[Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md)|The properties of the method.
-|[AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md)|The access control list (ACL) of this method.
-|[FilterDescriptors Element in Method (BDCMetadata Schema)](filterdescriptors-element-in-method-bdcmetadata-schema.md)|The filter descriptors of the method.
-[Parameters Element in Method (BDCMetadata Schema)](parameters-element-in-method-bdcmetadata-schema.md)|The parameters of the method. A method cannot have more than one return parameter.
-[MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md)|The method instances of the method.
+|[LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md)|The localized display names of the method.|
+|[Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md)|The properties of the method.|
+|[AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md)|The access control list (ACL) of this method.|
+|[FilterDescriptors Element in Method (BDCMetadata Schema)](filterdescriptors-element-in-method-bdcmetadata-schema.md)|The filter descriptors of the method.|
+|[Parameters Element in Method (BDCMetadata Schema)](parameters-element-in-method-bdcmetadata-schema.md)|The parameters of the method. A method cannot have more than one return parameter.|
+|[MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md)|The method instances of the method.|
 
 ### Parent elements
 

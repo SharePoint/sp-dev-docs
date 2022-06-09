@@ -37,7 +37,7 @@ None.
 
 |Element|
 |-------|
-|[LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)
+|[LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)|
 |[Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)|
 |[AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md)|
 |[FilterDescriptors Element in Method (BDCMetadataResource Schema)](filterdescriptors-element-in-method-bdcmetadataresource-schema.md)|
