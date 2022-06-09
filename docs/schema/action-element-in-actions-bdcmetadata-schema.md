@@ -38,124 +38,32 @@ Actions travel with an external content type. That is, after you define an actio
 The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
-
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Position**</p></td>
-<td align="left"><p>Required.</p>
-<p>The suggested position of this action among the other actions of this external content type.</p>
-<p>Attribute type: **Integer**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**IsOpenedInNewWindow**</p></td>
-<td align="left"><p>Optional.</p>
-<p>Specifies whether the results of executing an action are presented in a new user interface window.</p>
-<p>Default value: **false**</p>
-<p>Attribute type: **Boolean**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Url**</p></td>
-<td align="left"><p>Required.</p>
-<p>The URL to go to when the action is invoked. The URL string is a Microsoft .NET Framework format string. Each format specifier (for example, {0}) corresponds to an **Action** parameter.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ImageUrl**</p></td>
-<td align="left"><p>Optional.</p>
-<p>The absolute or relative path to the icon image for the action. The icon image should be 16 x 16 pixels.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required.</p>
-<p>The name of this action.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**DefaultDisplayName**</p></td>
-<td align="left"><p>Optional.</p>
-<p>The default display name for this action.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**IsCached**</p></td>
-<td align="left"><p>Optional.</p>
-<p>Specifies whether this action is used frequently. This is used by the BDC client runtime to cache this action.</p>
-<p>Default value: **true**</p>
-<p>Attribute type: **Boolean**</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Attribute | Description |
+| --- | --- |
+| **Position** | Required.</br>The suggested position of this action among the other actions of this external content type.</br>Attribute type: **Integer** |
+| **IsOpenedInNewWindow** | Optional.</br>Specifies whether the results of executing an action are presented in a new user interface window.</br>Default value: **false**</br>Attribute type: **Boolean** |
+| **Url** | Required.</br>The URL to go to when the action is invoked. The URL string is a Microsoft .NET Framework format string. Each format specifier (for example, {0}) corresponds to an **Action** parameter.</br>Attribute type: **String** |
+| **ImageUrl** | Optional.</br>The absolute or relative path to the icon image for the action. The icon image should be 16 x 16 pixels.</br>Attribute type: **String** |
+| **Name** | Required.</br>The name of this action.</br>Attribute type: **String** |
+| **DefaultDisplayName** | Optional.</br>The default display name for this action.</br>Attribute type: **String** |
+| **IsCached** | Optional.</br>Specifies whether this action is used frequently. This is used by the BDC client runtime to cache this action.</br>Default value: **true**</br>Attribute type: **Boolean** |
 
 <br/>
 
 ### Child elements
+  
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the action. |
+| [Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the action. |
+| [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md) | The parameters of the action. |
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized names of the action.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of the action.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The parameters of the action.</p></td>
-</tr>
-</tbody>
-</table>
 
 <br/>
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The list of actions of an external content type.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+  
+| Element | Description |
+| --- | --- |
+| [Actions element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md) | The list of actions of an external content type. |

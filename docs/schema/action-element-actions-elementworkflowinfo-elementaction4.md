@@ -43,7 +43,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
+</br>
 ## Definition
 
 ```XML 
