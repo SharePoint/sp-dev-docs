@@ -8,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bb088270-da19-42a2-85ef-7555a57e8d69
-description: "Last modified: March 09, 2015"
 ---
 
 # Property element (DeploymentManifest)
