@@ -2,7 +2,7 @@
 title: Property element in Properties (BDCMetadataResource)
 description: Describes the Property element in Properties (BDCMetadataResource) and provides the elements and attributes.
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 6/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
