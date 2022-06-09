@@ -2,7 +2,7 @@
 title: ClientWebPartEnumItem complexType
 description: Describes the definition, element, type, and attribute information for ClientWebPartEnumItem complexType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

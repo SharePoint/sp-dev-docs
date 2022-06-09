@@ -2,7 +2,7 @@
 title: Categories element (Workflow)
 description: Describes the definition, element, and attribute information for Categories element (Workflow).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
