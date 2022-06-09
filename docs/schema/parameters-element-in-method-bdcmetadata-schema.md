@@ -1,8 +1,8 @@
 ---
 title: Parameters Element in Method (BDCMetadata Schema)
-description: Details on the Parameters Element in Method (BDCMetadata Schema)
+description: Describes the Parameters element in Method (BDCMetadata Schema) and provides the elements and attributes.
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -49,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadata-schema.md">Parameter Element in Parameters (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="parameter-element-in-parameters-bdcmetadata-schema.md">Parameter Element in Parameters (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A parameter.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The method these parameters belong to.</p></td>
 </tr>
 </tbody>

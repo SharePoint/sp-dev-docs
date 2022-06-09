@@ -1,8 +1,8 @@
 ---
 title: Parameters Element in Method (BDCMetadataResource Schema)
-description: Details on the Parameters Element in Method (BDCMetadataResource Schema)
+description: Describes the Parameters element in Method (BDCMetadataResource Schema) and provides the elements and attributes.
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -45,7 +45,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadataresource-schema.md">Parameter Element in Parameters (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="parameter-element-in-parameters-bdcmetadataresource-schema.md">Parameter Element in Parameters (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -63,7 +63,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

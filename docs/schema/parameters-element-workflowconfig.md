@@ -1,7 +1,8 @@
 ---
 title: Parameters Element (WorkflowConfig)
+description: Describes the Parameters element (WorkflowConfig) and provides a definition, the elements and attributes, remarks, and an example.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -49,7 +50,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-workflowconfig.md">Parameter Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span><a href="parameter-element-workflowconfig.md">Parameter Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>
