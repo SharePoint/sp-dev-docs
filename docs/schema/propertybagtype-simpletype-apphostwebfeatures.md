@@ -1,7 +1,8 @@
 ---
 title: PropertyBagType simpleType
+description: Describes the PropertyBagType simpleType and provides the type information, a definition, and the enumeration values.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,11 +20,11 @@ ms.assetid: 28cd4136-0394-13b0-a2a6-17bdc2891beb
 ## Type information
 
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Base Type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| Base Type  | xs:string |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
 
 ## Definition
 

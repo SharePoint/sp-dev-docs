@@ -1,7 +1,8 @@
 ---
 title: Property element (AppPermissionRequestDefinition complexType)
+description: Describes the Property element (AppPermissionRequestDefinition complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,11 +23,11 @@ Add-in Permission Property.
 
 ## Element information
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Element type**  | AppPermissionPropertyDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
+| Element type  | AppPermissionPropertyDefinition |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| Schema file  | appmanifest.xsd |
 
 ## Definition
 

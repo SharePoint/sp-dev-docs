@@ -1,7 +1,8 @@
 ---
 title: PropertyBagDefinition complexType
+description: Describes the PropertyBagDefinition complexType and provides the type information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,11 +19,11 @@ ms.assetid: 8e445cc3-7419-cd8a-befd-35b720f06815
 
 ## Type information
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-| **Extension base**  | None |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
+| Extension base  | None |
 
 ## Definition
 
