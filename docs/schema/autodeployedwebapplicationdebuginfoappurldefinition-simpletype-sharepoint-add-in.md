@@ -2,7 +2,7 @@
 title: AutoDeployedWebApplicationDebugInfoAppUrlDefinition simpleType
 description: AutoDeployedWebApplicationDebugInfoAppUrlDefinition simpleType is the type for add-in URLs of an auto-deployed web application.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
