@@ -1,6 +1,6 @@
 ---
 title: Parameter Element in Parameters (BDCMetadataResource Schema)
-description: Details on the Parameter element in Parameters (BDCMetadataResource Schema)
+description: Describes the Parameter element in Parameters (BDCMetadataResource Schema) and provides the elements and attributes.
 manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer

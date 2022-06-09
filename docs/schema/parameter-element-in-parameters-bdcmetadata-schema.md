@@ -1,6 +1,6 @@
 ---
 title: Parameter Element in Parameters (BDCMetadata Schema)
-description: Details on the  Parameter element in Parameters (BDCMetadata Schema)
+description: Describes the Parameter element in Parameters (BDCMetadata Schema) and provides the elements and attributes.
 manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
@@ -127,7 +127,7 @@ The following sections describe attributes, child elements, and parent elements.
 <td align="left"><p>The properties of the parameter.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span><a href="https://docs.microsoft.com/sharepoint/dev/schema/typedescriptor-element-bdcmetadata-schema">TypeDescriptor</a><span></p></td>
+<td align="left"><p><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor</a></p></td>
 <td align="left"><p>The root type descriptor of the parameter.</p></td>
 </tr>
 </tbody>
