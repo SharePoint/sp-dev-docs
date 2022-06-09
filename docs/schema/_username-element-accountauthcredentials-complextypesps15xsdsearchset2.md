@@ -1,6 +1,6 @@
 ---
 title: "_UserName element (AccountAuthCredentials complexType) (SPS15XSDSearchSet2)"
-test
+description: Discusses element information, definition, elements and attributes for _UserName element (AccountAuthCredentials complexType) (SPS15XSDSearchSet2).
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -8,14 +8,13 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 33cd0df6-6ccf-b150-10b9-03dae7dde29c
-description: "Last modified: March 09, 2015"
 ---
 
 # _UserName element (AccountAuthCredentials complexType) (SPS15XSDSearchSet2)
 
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

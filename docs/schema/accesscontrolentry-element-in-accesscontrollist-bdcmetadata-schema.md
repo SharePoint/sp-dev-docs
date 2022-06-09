@@ -34,73 +34,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Principal**</p></td>
-<td align="left"><p>Required.</p>
-<p>The name of the security principal that has this ACE.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-</tbody>
-</table>
+| Attribute | Description |
+| --- | --- |
+| **Principal** | Required. </br> The name of the security principal that has this ACE. </br> Attribute type: **String** |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadata-schema.md">Right element in AccessControlEntry (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A **Right** element that specifies the permissions available to the security principal.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Right element in AccessControlEntry (BDCMetadata Schema)](right-element-in-accesscontrolentry-bdcmetadata-schema.md) | A **Right** element that specifies the permissions available to the security principal. |
+
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The access control list (ACL) that contains this ACE.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+  
+| element | Description |
+| --- | --- |
+| [AccessControlList element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | The access control list (ACL) that contains this ACE. |
