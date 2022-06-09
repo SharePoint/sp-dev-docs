@@ -21,7 +21,7 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 |**Blog Name**|**Links**|
 |:-----|:-----|
-|Cum Grano Salis  <br/> | [Home page](https://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](https://blogs.msdn.microsoft.com/cumgranosalis/tag/excel-services/) <br/> |
+|Cum Grano Salis  <br/> | [Home page](https://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](/archive/blogs/cumgranosalis/#excel-services) <br/> |
 |Microsoft Excel: The official blog of the Microsoft Excel product team  <br/> | [Home page](https://www.microsoft.com/microsoft-365/blog/excel) <br/>  |
    
 

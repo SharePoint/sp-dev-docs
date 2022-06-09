@@ -565,7 +565,7 @@ If the Migration API was unable to resolve a user using the login provided in th
 ### Helpful Resources
 
 - [SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038)
-- [Azure Windows Azure SDK for .NET - 2.4](https://www.microsoft.com/download/details.aspx?id=43709)
+- [Azure Windows Azure SDK for .NET - 2.4](https://azure.microsoft.com/downloads/)
 - [Bulk Creation of OneDrive for Business sites](https://msdn.microsoft.com/library/office/jj163783(v=office.15).aspx)
 - [Restrictions and limitations when you sync SharePoint libraries to your computer through OneDrive for Business](https://support.office.com/article/restrictions-and-limitations-when-you-sync-files-and-folders-7787566e-c352-4bd4-9409-fd100a0165f6)
 - [Types of files that cannot be added to a list or library](https://support.office.com/Article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3?ui=en-US&rs=en-US&ad=US)

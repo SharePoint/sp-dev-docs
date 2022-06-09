@@ -178,5 +178,5 @@ You can make many other customizations both to the CAML queries on which views a
 - [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
 - [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
 - [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
-- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 - [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

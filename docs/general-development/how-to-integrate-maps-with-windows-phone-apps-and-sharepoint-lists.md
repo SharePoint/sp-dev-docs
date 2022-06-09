@@ -146,5 +146,5 @@ In this step, you can run your app and validate it.
 - [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md)
 - [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
 - [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
-- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 - [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

@@ -41,7 +41,7 @@ You cannot upgrade a THMX file from SharePoint 2010 to SharePoint. If you applie
   
     
     
-For more information about creating themes customizations, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md). You can also use the SharePoint color palette tool to help you create SharePoint designs. You can  [ download the SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) from the Microsoft Download Center.
+For more information about creating themes customizations, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md). You can also use the SharePoint color palette tool to help you create SharePoint designs. You can  [download the SharePoint color palette tool](https://techcommunity.microsoft.com/t5/sharepoint/download-sharepoint-color-palette-tool/m-p/63394) from the Microsoft Download Center.
   
     
     

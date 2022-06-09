@@ -67,7 +67,7 @@ To perform Following Content tasks by using the REST API, you send HTTP **GET** 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
   
 > [!NOTE]
-> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](https://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to sign up for a Developer Site and start using Napa.
+> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) to sign up for a Developer Site and start using Napa.
   
     
     
