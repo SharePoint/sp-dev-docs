@@ -164,7 +164,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |Element|Description|
 |-------|-----------|
-|[Children element in Container (LayoutDefinitions Schema)](children-element-in-container-layoutdefinitions-schema.md)|
+|[Children element in Container (LayoutDefinitions Schema)](children-element-in-container-layoutdefinitions-schema.md)||
 
 
 
