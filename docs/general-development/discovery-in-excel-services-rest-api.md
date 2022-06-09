@@ -1,7 +1,7 @@
 ---
 title: Discovery in Excel Services REST API
 description: Describes the discovery mechanisms built into the Excel Services REST API and provides code examples.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: e3a8e057-f803-446d-81c9-4eb8ef3691e1
 ms.localizationpriority: medium

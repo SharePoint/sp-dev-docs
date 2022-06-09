@@ -1,7 +1,7 @@
 ---
 title: FAST Query Language (FQL) syntax reference
 description: Learn about constructing complex search queries for Search in SharePoint using the FAST Query Language (FQL).
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: bd98a41b-623c-41d4-a15d-26c0d4ba4311
 ms.localizationpriority: high

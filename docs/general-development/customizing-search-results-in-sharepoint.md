@@ -1,7 +1,7 @@
 ---
 title: Customizing search results in SharePoint
 description: Describes group similar items or remove duplicate items in a search result set in SharePoint to display these results in a concise, readable way.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
 ms.localizationpriority: high
@@ -71,7 +71,7 @@ The following table lists the fields of the  _Spec_ parameter.
 | _Subspec_ <br/> | `Prop(','Prop)*[':'Dups]` <br/> |
 | _Prop_ <br/> |A valid managed property or an alias of a managed property.  _Prop_ is case-insensitive. The managed property must be queryable and either sortable or refineable. <br/> |
 | _Dups_ <br/> |An integer specifying the number of items to retain. The default value is 1.  <br/> |
-| _&lt;space&gt;_ <br/> |Properties are combined by using the **OR** operator. <br/> |
+| _\<space\>_ <br/> |Properties are combined by using the **OR** operator. <br/> |
 | _,_ <br/> |Properties are combined by using the **AND** operator. <br/> |
 | _*_ <br/> |Indicates more items.  <br/> |
 | _() or []_ <br/> |Indicates optional items.  <br/> |

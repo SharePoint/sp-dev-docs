@@ -1,7 +1,7 @@
 ---
 title: External content types in SharePoint
 description: Describes external content types in SharePoint and provides the prerequisites and steps to create external content types.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 11d7adb5-5388-4517-ae03-beb7be1c6981
 ms.localizationpriority: high

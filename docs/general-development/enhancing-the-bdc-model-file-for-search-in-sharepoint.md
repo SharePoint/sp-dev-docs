@@ -1,7 +1,7 @@
 ---
 title: Enhancing the BDC model file for Search in SharePoint
 description: Describes enhancing the BDC model file for Search in Sharepoint and provides a table of search properties for BDC model files.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 3c67b1cf-5fca-4805-a1b5-c9ac1ff8aede
 ms.localizationpriority: medium

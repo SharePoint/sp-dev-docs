@@ -1,7 +1,7 @@
 ---
 title: Custom security trimming for Search in SharePoint
 description: Learn about the two kinds of custom security trimmer interfaces and how to create a custom security trimmer.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
 ms.localizationpriority: medium
@@ -86,7 +86,7 @@ To create a custom security post-trimmer for search results, you must create a c
 
 
 
-The **ISecurityTrimmerPost** interface contains two methods that you must implement: [Initialize(NameValueCollection, SearchServiceApplication)](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.Initialize.aspx) and **CheckAccess(IList&lt;String&gt;, IList&lt;String&gt;, IDictionary&lt;String, Object&gt;, IIdentity)**.
+The **ISecurityTrimmerPost** interface contains two methods that you must implement: [Initialize(NameValueCollection, SearchServiceApplication)](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.Initialize.aspx) and **CheckAccess(IList\<String\>, IList\<String\>, IDictionary\<String, Object\>, IIdentity)**.
 
 
 

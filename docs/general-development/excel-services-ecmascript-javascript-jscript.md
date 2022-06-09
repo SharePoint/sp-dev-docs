@@ -1,7 +1,7 @@
 ---
 title: Excel Services ECMAScript (JavaScript, JScript)
 description: Describes ECMAScript (JavaScript and JScript) in Excel Services and provides links to ECMAScript tutorials.
-ms.date: 09/15/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 2355ffd0-8190-4385-955c-3f72bce7efc6
 ms.localizationpriority: medium
