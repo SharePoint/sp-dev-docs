@@ -2,7 +2,7 @@
 title: Content element (ClientWebPartDefinition complexType)
 description: Describes the Content element (ClientWebPartDefinition complexType), including element information, attributes, and parent and child elements.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -69,6 +69,11 @@ None.
 <br/>
 
 ### Attributes
+
+| Header1 | Header2 |
+| --- | --- |
+|data1|data2|
+|data11|data12|
 
 <table>
 <colgroup>
