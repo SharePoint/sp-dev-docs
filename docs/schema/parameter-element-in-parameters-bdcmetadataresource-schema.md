@@ -1,8 +1,8 @@
 ---
 title: Parameter Element in Parameters (BDCMetadataResource Schema)
-description: Details on the Parameter Element in Parameters (BDCMetadataResource Schema)
+description: Details on the Parameter element in Parameters (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -45,13 +45,13 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-parameter-bdcmetadataresource-schema.md">TypeDescriptor Element in Parameter (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="typedescriptor-element-in-parameter-bdcmetadataresource-schema.md">TypeDescriptor Element in Parameter (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -69,7 +69,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-method-bdcmetadataresource-schema.md">Parameters Element in Method (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="parameters-element-in-method-bdcmetadataresource-schema.md">Parameters Element in Method (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

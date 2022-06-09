@@ -1,8 +1,8 @@
 ---
 title: Parameter Element in Parameters (BDCMetadata Schema)
-description: Details on the  Parameter Element in Parameters (BDCMetadata Schema)
+description: Details on the  Parameter element in Parameters (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -119,15 +119,15 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized names of the parameter.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the parameter.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/sharepoint/dev/schema/typedescriptor-element-bdcmetadata-schema">TypeDescriptor</a></p></td>
+<td align="left"><p><span><a href="https://docs.microsoft.com/sharepoint/dev/schema/typedescriptor-element-bdcmetadata-schema">TypeDescriptor</a><span></p></td>
 <td align="left"><p>The root type descriptor of the parameter.</p></td>
 </tr>
 </tbody>
@@ -148,7 +148,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-method-bdcmetadata-schema.md">Parameters Element in Method (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="parameters-element-in-method-bdcmetadata-schema.md">Parameters Element in Method (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The **Parameters** element that contains this parameter.</p></td>
 </tr>
 </tbody>
