@@ -12,7 +12,7 @@ ms.assetid: 6cc11fe1-c73a-4878-8d4a-b307af972dd6
 
 # FieldRef Element (DeploymentManifest - SPFieldLinkCollection)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
   
 Represents field data to display in a view.
 
