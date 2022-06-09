@@ -105,15 +105,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 |Element|Description|
 |---|---|
-|[LocalizedDisplayNames element in MetadataObject (Subscription Schema)](/sharepoint/dev/schema/localizeddisplaynames-element-in-metadataobject-subscription-schema)|The list of the localized display names of this subscription association.|
-|[Properties element in MetadataObject (Subscription Schema)](/sharepoint/dev/schema/properties-element-in-metadataobject-subscription-schema)|Not used by Business Connectivity Services in this release.|
-|[FilterValues element in Association (Subscription Schema)](/sharepoint/dev/schema/filtervalues-element-in-association-subscription-schema)|The list of the filter values for the **Association** method instance execution.|
+|[LocalizedDisplayNames element in MetadataObject (Subscription Schema)](localizeddisplaynames-element-in-metadataobject-subscription-schema.md)|The list of the localized display names of this subscription association.|
+|[Properties element in MetadataObject (Subscription Schema)](properties-element-in-metadataobject-subscription-schema.md)|Not used by Business Connectivity Services in this release.|
+|[FilterValues element in Association (Subscription Schema)](filtervalues-element-in-association-subscription-schema.md)|The list of the filter values for the **Association** method instance execution.|
 
 ### Parent elements
 
 |Element|Description|
 |---|---|
-|[Associations element in Subscription (Subscription Schema)](/sharepoint/dev/schema/association-element-in-associations-subscription-schema)|The **Associations** element that contains this subscription association.|
+|[Associations element in Subscription (Subscription Schema)](associations-element-in-subscription-subscription-schema.md)|The **Associations** element that contains this subscription association.|
 
 
 
