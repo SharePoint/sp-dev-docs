@@ -8,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
-description: "Last modified: March 09, 2015"
 ---
 
 # AccountAuthCredentials complexType (SPS15XSDSearchSet2)
