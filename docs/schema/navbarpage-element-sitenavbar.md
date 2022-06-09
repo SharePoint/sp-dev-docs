@@ -1,7 +1,8 @@
 ---
 title: "NavBarPage element (Site - NavBar)"
+description: "Describes the definition, element, and attribute information for the NavBarPage element (Site - NavBar)."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,13 +12,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2dd54346-63b3-4498-8217-8aaa07283ac3
-description: "Last modified: March 09, 2015"
 ---
 
 # NavBarPage element (Site - NavBar)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
+## Definition
+
 ```XML
 <NavBarPage
   Name = "Text"

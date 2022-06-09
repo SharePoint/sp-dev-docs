@@ -1,7 +1,8 @@
 ---
 title: NestedInitiationFieldNodes element (WorkflowActions)
+description: NestedInitiationFieldNodes element (WorkflowActions) specifies that fields are retrieved from the schema of the data used to begin the workflow.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

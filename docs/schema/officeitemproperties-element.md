@@ -1,7 +1,8 @@
 ---
 title: OfficeItemProperties element
+description: Describes the definition, element, and attribute information for the OfficeItemProperties element, which describes the fields of an external content type.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -15,9 +16,13 @@ ms.assetid: e9509ca9-8dbe-48d9-b90a-bf0dd27fbb36
 
 Describes the fields of an external content type.
 
+## Element Information
+
 **Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
+
+## Definition
 
 ```XML
 <OfficeItemProperties> </OfficeItemProperties>
