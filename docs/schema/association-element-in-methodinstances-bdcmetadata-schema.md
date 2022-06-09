@@ -2,7 +2,7 @@
 title: Association element in MethodInstances (BDCMetadata Schema)
 description: Details on the Association element in MethodInstances (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -199,63 +199,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The LocalizedDisplayNames element specifies a list of localized names for the Association.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The Properties element specifies the properties of the Association.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The AccessControlList element specifies a set of access rights for the Association.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="sourceentity-element-in-association-bdcmetadata-schema.md">SourceEntity element in Association (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The SourceEntity element specifies the source external content type in the association.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="destinationentity-element-in-association-bdcmetadata-schema.md">DestinationEntity element in Association (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The DestinationEntity element specifies the destination external content type in the Association.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|---|---|
+|[LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md)|The LocalizedDisplayNames element specifies a list of localized names for the Association|
+|[Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md)|The Properties element specifies the properties of the Association.|
+|[AccessControlList element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md)|The AccessControlList element specifies a set of access rights for the Association.|
+|[SourceEntity element in Association (BDCMetadata Schema)](sourceentity-element-in-association-bdcmetadata-schema.md)|The SourceEntity element specifies the source external content type in the association.|
+|[DestinationEntity element in Association (BDCMetadata Schema)](destinationentity-element-in-association-bdcmetadata-schema.md)|The DestinationEntity element specifies the destination external content type in the Association.|
 
-<br/>
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="methodinstances-element-in-method-bdcmetadata-schema.md">MethodInstances element in Method (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The MethodInstances element that contains the Association.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|---|---|
+|[MethodInstances element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md)|The MethodInstances element that contains the Association.|
 
 
 
