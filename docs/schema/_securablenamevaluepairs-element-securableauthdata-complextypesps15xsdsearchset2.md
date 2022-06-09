@@ -1,24 +1,23 @@
 ---
 title: "_SecurableNameValuePairs element (SecurableAuthData complexType) (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the _SecurableNameValuePairs element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: da20408a-ff9b-9f13-29e2-60520489c5d9
-description: "Last modified: March 09, 2015"
 ---
 
 # _SecurableNameValuePairs element (SecurableAuthData complexType) (SPS15XSDSearchSet2)
 
 ## Element information
+**Element type**: q8:ArrayOfKeyValueOfstringSecureStringX9wx7DhE
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |q8:ArrayOfKeyValueOfstringSecureStringX9wx7DhE  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
+
+**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd 
    
 ## Definition
 
