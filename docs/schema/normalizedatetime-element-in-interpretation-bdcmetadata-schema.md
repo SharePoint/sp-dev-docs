@@ -93,7 +93,7 @@ None.
 
 |Element|Description|
 |-------|-----------|
-|[Interpretation element in TypeDescriptor (BDCMetadata Schema)](interpretation-element-in-typedescriptor-bdcmetadata-schema.md)|An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.
+|[Interpretation element in TypeDescriptor (BDCMetadata Schema)](interpretation-element-in-typedescriptor-bdcmetadata-schema.md)|An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.|
 
 
 
