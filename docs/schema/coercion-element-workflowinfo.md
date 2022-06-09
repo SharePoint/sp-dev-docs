@@ -45,44 +45,44 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><b>Name</b></p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>Required text. The internal name for the coercion.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>Assembly</b></p></td>
+<td align="left"><p>**Assembly**</p></td>
 <td align="left"><p>Required text. Specifies the binary file in which the coercion is implemented.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>DisplayName</b></p></td>
+<td align="left"><p>**DisplayName**</p></td>
 <td align="left"><p>Required text. Specifies the display name of the coercion.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>CatchAll</b></p></td>
-<td align="left"><p>Required Boolean. <b>True</b> to show the coercion in scenarios in which either the <b>DestinationType</b> or the <b>DestinationFieldType</b> allows it, regardless of <b>SourceType</b> or <b>SourceFieldType</b> values. <b>False</b> to show the coercion only in scenarios in which <b>SourceType</b> or <b>SourceFieldType</b> specifies that it should be shown.</p></td>
+<td align="left"><p>**CatchAll**</p></td>
+<td align="left"><p>Required Boolean. **True** to show the coercion in scenarios in which either the **DestinationType** or the **DestinationFieldType** allows it, regardless of **SourceType** or **SourceFieldType** values. **False** to show the coercion only in scenarios in which **SourceType** or **SourceFieldType** specifies that it should be shown.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>RankDefault</b></p></td>
+<td align="left"><p>**RankDefault**</p></td>
 <td align="left"><p>Required integer. Specifies a sort value for the list of coercions.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>SourceType</b></p></td>
-<td align="left"><p>Optional text. A class type from which the data is converted. If set, the client shows the coercion only when the previous value is of the matching type unless <b>SourceFieldType</b> or <b>CatchAll</b> specifies otherwise.</p></td>
+<td align="left"><p>**SourceType**</p></td>
+<td align="left"><p>Optional text. A class type from which the data is converted. If set, the client shows the coercion only when the previous value is of the matching type unless **SourceFieldType** or **CatchAll** specifies otherwise.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>SourceFieldType</b></p></td>
-<td align="left"><p>Optional <b>FieldInternalType</b>. The field type to use to determine whether to show the coercion. If set, the client shows the coercion only when the previous value is of the matching type unless <b>SourceFieldType</b> or <b>CatchAll</b> specifies otherwise.</p></td>
+<td align="left"><p>**SourceFieldType**</p></td>
+<td align="left"><p>Optional **FieldInternalType**. The field type to use to determine whether to show the coercion. If set, the client shows the coercion only when the previous value is of the matching type unless **SourceFieldType** or **CatchAll** specifies otherwise.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>DestinationType</b></p></td>
+<td align="left"><p>**DestinationType**</p></td>
 <td align="left"><p>Required text. The output class type of the coercion value. If the destination cannot handle this type, the coercion is not displayed.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>DestinationFieldType</b></p></td>
-<td align="left"><p>Optional <b>FieldInternalType</b>. The output field type of the coercion. If the destination cannot handle this type, the coercion is not displayed.</p></td>
+<td align="left"><p>**DestinationFieldType**</p></td>
+<td align="left"><p>Optional **FieldInternalType**. The output field type of the coercion. If the destination cannot handle this type, the coercion is not displayed.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>ClassName</b></p></td>
-<td align="left"><p>Optional text. Uniquely identifies the class in the binary file that is specified by the <b>Assembly</b>.</p></td>
+<td align="left"><p>**ClassName**</p></td>
+<td align="left"><p>Optional text. Uniquely identifies the class in the binary file that is specified by the **Assembly**.</p></td>
 </tr>
 </tbody>
 </table>

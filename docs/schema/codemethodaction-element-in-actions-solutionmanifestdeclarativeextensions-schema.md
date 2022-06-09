@@ -45,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><b>MethodType</b></p></td>
+<td align="left"><p>**MethodType**</p></td>
 <td align="left"><p>The type of the action to execute.</p>
 <p>Required.</p>
 <p>The following table lists the possible values for this attribute.</p>
@@ -111,50 +111,50 @@ The following sections describe attributes, child elements, and parent elements.
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>QualifiedTypeName</b></p></td>
+<td align="left"><p>**QualifiedTypeName**</p></td>
 <td align="left"><p>The assembly-qualified name of the class that defines the code action, which includes the name of the assembly from which the class was loaded. For more information about how to specify this value, see <a href="https://msdn.microsoft.com/library/system.type.assemblyqualifiedname.aspx">Type.AssemblyQualifiedName Property</a>.</p>
 <p><span class="code">Example: QualifiedTypeName="CustomCodeActionNameSpace.CustomCodeActionCalssName, CustomCodeActionAssemblyName, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c6b236b1e85d97a"</span></p>
 <p>Optional.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>MethodName</b></p></td>
+<td align="left"><p>**MethodName**</p></td>
 <td align="left"><p>The name of the method to execute in the class.</p>
 <p>Optional.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>Caption</b></p></td>
+<td align="left"><p>**Caption**</p></td>
 <td align="left"><p>The caption for the action. This is displayed as a caption for the action in the Outlook user interface.</p>
 <p>Optional.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>Tooltip</b></p></td>
+<td align="left"><p>**Tooltip**</p></td>
 <td align="left"><p>The tooltip for the action. This is displayed as a tooltip for the action in the Outlook user interface.</p>
 <p>Optional.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>Image</b></p></td>
+<td align="left"><p>**Image**</p></td>
 <td align="left"><p>The path to an icon file. The icon is displayed for the action in the Outlook user interface. The path should be relative to the location of the solution manifest.</p>
 <p>Optional.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>DisplayLocations</b></p></td>
+<td align="left"><p>**DisplayLocations**</p></td>
 <td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0** (none, action is not displayed anywhere), **1** (action is displayed on the external data parts menu), **2** (action is displayed on the item context menu), **4** (action is displayed on the ribbon).</p>
 <p>Optional.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>DisplayOrder</b></p></td>
+<td align="left"><p>**DisplayOrder**</p></td>
 <td align="left"><p>Used if the action is surfaced in a List External Data Part. Specifies the suggested position of this action among the other actions of this external content type in the menu.</p>
 <p>Optional.</p>
-<p>Attribute type: <b>Int</b></p></td>
+<p>Attribute type: **Int**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>Scope</b></p></td>
+<td align="left"><p>**Scope**</p></td>
 <td align="left"><p>Used if the action is surfaced in a List External Data Part. Specifies whether this action needs an item to be selected in a List External Data Part.</p>
 <p>Optional.</p>
 <p>The following table lists the possible values for this attribute.</p>
@@ -184,16 +184,16 @@ The following sections describe attributes, child elements, and parent elements.
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p><b>Name</b></p></td>
+<td align="left"><p>**Name**</p></td>
 <td align="left"><p>A name for this action.</p>
 <p>Required.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><b>Description</b></p></td>
+<td align="left"><p>**Description**</p></td>
 <td align="left"><p>A description for this action.</p>
 <p>Optional.</p>
-<p>Attribute type: <b>String</b></p></td>
+<p>Attribute type: **String**</p></td>
 </tr>
 </tbody>
 </table>
@@ -214,7 +214,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>Actions can take parameters. The <b>Parameters</b> element lists the parameters of the action.</p></td>
+<td align="left"><p>Actions can take parameters. The **Parameters** element lists the parameters of the action.</p></td>
 </tr>
 </tbody>
 </table>
@@ -235,7 +235,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The <b>Actions</b> element that contains this action.</p></td>
+<td align="left"><p>The **Actions** element that contains this action.</p></td>
 </tr>
 </tbody>
 </table>
