@@ -6,7 +6,7 @@ ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
-- SharePoint workflows
+- SharePoint Workflows
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6b49e059-250e-4b9f-b32e-72ca5fe150c9
