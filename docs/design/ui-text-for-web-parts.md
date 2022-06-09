@@ -1,7 +1,7 @@
 ---
 title: UI text guidelines for SharePoint web parts
 description: Use simple, understandable, and concise UI text to create effective web parts in SharePoint.
-ms.date: 01/23/2018 
+ms.date: 06/03/2022
 ms.localizationpriority: medium
 ---
 
@@ -21,11 +21,11 @@ Always capitalize:
 - The word following a colon in a title or heading. For example, "Step 1: Begin by entering your account information."
 - Proper nouns, such as the names of people, cities, and so on. 
 
-<img alt="An image web part with sentence-style capitalization highlighted" src="../images/design-uitext-01.png" width="800">
+<img alt="Screenshot of an image alternative-text web part with sentence-style capitalization highlighted" src="../images/design-uitext-01.png" width="800">
 
 <br/>
 
-<img alt="An image web part with sentence-style capitalization highlighted" src="../images/design-uitext-02.png" width="800">
+<img alt="Screenshot of an image gallery add web part with sentence-style capitalization highlighted" src="../images/design-uitext-02.png" width="800">
 
 ## Punctuation
 

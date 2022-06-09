@@ -1,6 +1,7 @@
 ---
 title: Accessing the SOAP API
-ms.date: 09/25/2017
+description: The SOAP API consists of methods and a set of complex type objects that you can use to access the complete functionality of Excel Web Services.
+ms.date: 06/03/2022
 keywords: soap
 f1_keywords:
 - soap
@@ -58,7 +59,7 @@ The following table describes each element in the URL.
 |:-----|:-----|
 | _server_ <br/> |The name of the server on which Microsoft SharePoint Server 2010 is deployed.  <br/> |
 | _customsite_ <br/> |A custom SharePoint Server 2010 site that the server administrator creates.  <br/> |
-| _<endpointname>.asmx_ <br/> |The name of the Web service endpoint. For Excel Web Services, it is  `ExcelService.asmx`.  <br/> |
+| _\<endpointname\>.asmx_ <br/> |The name of the Web service endpoint. For Excel Web Services, it is  `ExcelService.asmx`.  <br/> |
    
 For more information about the WSDL format, see the World Wide Web Consortium (W3C) WSDL specification at http://www.w3.org/TR/wsdl.
   

@@ -1,6 +1,7 @@
 ---
 title: Commanding within a web part
-ms.date: 4/16/2018 
+description: Commanding within a web part consists of a single line of commands that sits under the web part title.
+ms.date: 06/03/2022
 ms.localizationpriority: medium
 ---
 
