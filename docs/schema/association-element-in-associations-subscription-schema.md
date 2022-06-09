@@ -106,7 +106,7 @@ The following sections describe attributes, child elements, and parent elements.
 |Element|Description|
 |---|---|
 |[LocalizedDisplayNames element in MetadataObject (Subscription Schema)](/sharepoint/dev/schema/localizeddisplaynames-element-in-metadataobject-subscription-schema)|The list of the localized display names of this subscription association.|
-|[Properties element in MetadataObject (Subscription Schema)](sharepoint/dev/schema/properties-element-in-metadataobject-subscription-schema)|Not used by Business Connectivity Services in this release.|
+|[Properties element in MetadataObject (Subscription Schema)](/sharepoint/dev/schema/properties-element-in-metadataobject-subscription-schema)|Not used by Business Connectivity Services in this release.|
 |[FilterValues element in Association (Subscription Schema)](/sharepoint/dev/schema/filtervalues-element-in-association-subscription-schema)|The list of the filter values for the **Association** method instance execution.|
 
 ### Parent elements
