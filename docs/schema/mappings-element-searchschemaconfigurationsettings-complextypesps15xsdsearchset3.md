@@ -2,7 +2,7 @@
 title: "Mappings element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)"
 description: "Describes the definition, element, and attribute information for the Mappings element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint

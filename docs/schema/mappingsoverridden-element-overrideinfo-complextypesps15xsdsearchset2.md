@@ -2,7 +2,7 @@
 title: "MappingsOverridden element (OverrideInfo complexType) (SPS15XSDSearchSet2)"
 description: "Describes the definition, element, and attribute information for the MappingsOverridden element (OverrideInfo complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
