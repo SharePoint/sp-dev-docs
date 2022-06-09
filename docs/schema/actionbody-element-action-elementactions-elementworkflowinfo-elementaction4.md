@@ -1,5 +1,6 @@
 ---
 title: ActionBody element
+description: Discusses the usage, definition, parent,elements, child elements and attributes for the ActionBody element.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,7 +10,7 @@ ms.localizationpriority: medium
 ms.assetid: c9996ac3-be53-440c-8810-55b91031869b
 ---
 
-# ActionBody element 
+# ActionBody element
 
 (Action element) (Actions element) (WorkflowInfo element) (Action4)
 
@@ -31,12 +32,11 @@ Specifies the body of a custom action.
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
 
 ## Definition
 
@@ -54,43 +54,16 @@ Specifies the body of a custom action.
 ## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+## Parent elements
+  
+| Element | Type | Description |
+| --- | --- | --- |
+| [Action](action-element-actions-elementworkflowinfo-elementaction4.md) |     |     |
 
-### Parent elements
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="action-element-actions-elementworkflowinfo-elementaction4.md">Action</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
-
-### Child elements
+## Child elements
 
 None.
 
-### Attributes
+## Attributes
 
-None.
-
-
-
-
-
-
-
-
+None
