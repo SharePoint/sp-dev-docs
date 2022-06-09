@@ -1,5 +1,6 @@
 ---
 title: List Template files
+description: Describes the ListTemplate element, which points to a list definition contained in the Schema.xml file of a particular list type. 
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer

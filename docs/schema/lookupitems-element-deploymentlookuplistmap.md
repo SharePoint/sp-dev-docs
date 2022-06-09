@@ -1,5 +1,6 @@
 ---
 title: "LookupItems Element (DeploymentLookupListMap)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the LookupItems element in Sharepoint.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d9c835b9-7008-4431-a819-c354f042d817
-description: "Last modified: March 09, 2015"
 ---
 
 # LookupItems Element (DeploymentLookupListMap)

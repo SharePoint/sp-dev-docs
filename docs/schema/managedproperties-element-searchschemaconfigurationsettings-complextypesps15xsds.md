@@ -1,5 +1,6 @@
 ---
 title: "ManagedProperties element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)"
+description: Outlines information, a definition, and elements and attributes for the ManagedProperties element in Sharepoint.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -15,12 +16,11 @@ description: "Last modified: March 09, 2015"
  
   
 ## Element information
+**Element type**: q11:ManagedPropertyInfoCollection
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |q11:ManagedPropertyInfoCollection  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability 
+
+**Schema file**: schema_Microsoft.Office.Server.Search.Portability.xsd 
    
 ## Definition
 

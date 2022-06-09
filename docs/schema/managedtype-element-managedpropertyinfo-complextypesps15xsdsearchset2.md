@@ -1,5 +1,6 @@
 ---
 title: "ManagedType element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the ManagedType element (ManagedPropertyInfo complexType) Sharepoint.
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8388c95c-6012-8e3f-bb8d-4df78d70a689
-description: "Last modified: March 09, 2015"
 ---
 
 # ManagedType element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)
@@ -15,12 +15,11 @@ description: "Last modified: March 09, 2015"
  
   
 ## Element information
+**Element type**: tns:ManagedDataType
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |tns:ManagedDataType  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration 
+
+**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd 
    
 ## Definition
 
