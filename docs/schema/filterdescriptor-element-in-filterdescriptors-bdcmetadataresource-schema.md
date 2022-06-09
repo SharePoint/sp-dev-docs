@@ -2,7 +2,7 @@
 title: FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)
 description: Details on the FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

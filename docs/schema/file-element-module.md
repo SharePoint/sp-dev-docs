@@ -2,7 +2,7 @@
 title: File Element (Module)
 description: Describes the definition, element, and attribute information for the File Element (Module), which specifies a file to include within a module in a site definition.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
