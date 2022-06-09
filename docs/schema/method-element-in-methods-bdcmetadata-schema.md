@@ -2,7 +2,7 @@
 title: Method element in Methods (BDCMetadata)
 description: Describes the definition, element, and attribute information for the Method element in Methods (BDCMetadata), which specifies a method of an external content type.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
