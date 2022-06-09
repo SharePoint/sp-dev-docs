@@ -47,7 +47,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |:-----|:-----|:-----|
 |[_UserName](_username-element-accountauthcredentials-complextypesps15xsdsearchset2.md) </br> |xs:string  </br> ||
 |[Password](password-element-accountauthcredentials-complextypesps15xsdsearchset2.md) </br> |xs:string  </br> ||
-   
+
 ### Attributes
 
 None.
