@@ -36,47 +36,17 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md">ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)</a></p></td>
-<td align="left"><p>Defines a context definition group containing a list of context definitions for one of the Outlook Item Types such as Contact, Task, Post, or Calendar, or if showing related data in a task pane, an EntityView.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)](contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md)|Defines a context definition group containing a list of context definitions for one of the Outlook Item Types such as Contact, Task, Post, or Calendar, or if showing related data in a task pane, an EntityView.|
 
 <br/>
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="solutiondefinition-element-solutionmanifestdefinitions-schema.md">SolutionDefinition Element (SolutionManifestDefinitions Schema)</a></p></td>
-<td align="left"><p>The solution definition that contains these context definition groups.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[SolutionDefinition Element (SolutionManifestDefinitions Schema)](solutiondefinition-element-solutionmanifestdefinitions-schema.md)|The solution definition that contains these context definition groups.|
 
 <br/>
 

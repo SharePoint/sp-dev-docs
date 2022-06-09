@@ -36,49 +36,16 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="contextactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeexte.md">ContextActivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
-<td align="left"><p>The action to be executed when a context becomes active.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="contextdeactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeex.md">ContextDeactivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
-<td align="left"><p>The action to be executed when a context is deactivated.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[ContextActivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)](contextactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeexte.md)|The action to be executed when a context becomes active.|
+|[ContextDeactivated Element in ContextEventHandlers (SolutionManifestDeclarativeExtensions Schema)](contextdeactivated-element-in-contexteventhandlers-solutionmanifestdeclarativeex.md)|The action to be executed when a context is deactivated.|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
-<td align="left"><p>The context that these actions apply to.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)](declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md)|The context that these actions apply to.|
 
 <br/>
 

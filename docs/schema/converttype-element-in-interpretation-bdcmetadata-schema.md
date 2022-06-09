@@ -84,25 +84,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></p></td>
-<td align="left"><p>The rules to apply to the data stored in the data structures that are represented by a **TypeDescriptor**.</p></td>
-</tr>
-</tbody>
-</table>
-
+|Element|Description|
+|----------|-----------|
+|[Interpretation Element in TypeDescriptor (BDCMetadata Schema)](interpretation-element-in-typedescriptor-bdcmetadata-schema.md)|The rules to apply to the data stored in the data structures that are represented by a **TypeDescriptor**.|
 
 
 
