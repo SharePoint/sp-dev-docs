@@ -1,5 +1,6 @@
 ---
 title: Actions element (WorkflowInfo element)
+description: Discusses the use, elements and definitions for the Actions element (WorkflowInfo element) to expand the palette of workflow actions.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,7 +10,7 @@ ms.localizationpriority: medium
 ms.assetid: 9323e205-67aa-89b9-45db-2a050cead9e1
 ---
 
-# Actions element (WorkflowInfo element) 
+# Actions element (WorkflowInfo element)
 
 (Action4)
 
@@ -30,12 +31,11 @@ Allows you to create custom workflow activities and expand the palette of availa
 
 ## Element information
 
-|   |   |
+|Information|Location   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
 
 ## Definition
 
@@ -141,100 +141,21 @@ Allows you to create custom workflow activities and expand the palette of availa
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-action4.md">WorkflowInfo</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Type | Description |
+| --- | --- | --- |
+| [WorkflowInfo](workflowinfo-element-action4.md) |     |     |
 
 ### Child elements
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="action-element-actions-elementworkflowinfo-elementaction4.md">Action</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="default-element-actions-elementworkflowinfo-elementaction4.md">Default</a></p></td>
-<td align="left"><p><a href="defaultelementtype-complextype-action4.md">defaultElementType</a></p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Type | Description |
+| --- | --- | --- |
+| [Action](action-element-actions-elementworkflowinfo-elementaction4.md) |     |     |
+| [Default](default-element-actions-elementworkflowinfo-elementaction4.md) | [defaultElementType](defaultelementtype-complextype-action4.md) |     |
 
 ### Attributes
-
-<table>
-<colgroup>
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="35%" />
-<col width="20%" />
-
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Required</p></th>
-<th align="left"><p>Description</p></th>
-<th align="left"><p>Possible values</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Parallel**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a></span> sentence.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Sequential**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a></span> sentence.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+  
+| Attribute | Type | Required | Description | Possible values |
+| --- | --- | --- | --- | --- |
+| **Parallel** | s:string | optional | Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the [RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)](ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md) sentence. | Values of the s:string type. |
+| **Sequential** | s:string | optional | Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the [RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)](ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md) sentence. | Values of the s:string type. |

@@ -1,5 +1,6 @@
 ---
-title: .ACTIONS File Example (WorkflowInfo)</td>
+title: .ACTIONS File Example (WorkflowInfo)
+description: Discusses definition, elements and attributes for .ACTIONS File Example (WorkflowInfo) which shows the general structure of a valid .ACTIONS file.
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -99,11 +100,3 @@ The following XML is an example of how an .ACTIONS file could be constructed to 
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

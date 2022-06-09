@@ -1,5 +1,6 @@
 ---
 title: Actions element (WorkflowInfo)
+description: The Actions element (WorkflowInfo) provides a number of default actions to a declarative, and can be used to build workflows.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -33,58 +34,21 @@ Microsoft SharePoint Foundation 2010 provides a number of default actions to a d
 The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
-
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Parallel**</p></td>
-<td align="left"><p>Required **text**. If the user who is creating the workflow indicates that all workflow actions should be executed in parallel, the string that is defined in this attribute is used to join the **Actions** elements in the **RuleDesigner** sentence.</p>
-<p>The default value for this attribute is **and** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Sequential**</p></td>
-<td align="left"><p>Required **text**. If the user who is creating the workflow indicates that all workflow actions should be executed in sequence, the string that is defined in this attribute is used to join the **Actions** elements in the **RuleDesigner** sentence.</p>
-<p>The default value is **then** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Attribute | Description |
+| --- | --- |
+| **Parallel** | Required **text**. If the user who is creating the workflow indicates that all workflow actions should be executed in parallel, the string that is defined in this attribute is used to join the **Actions** elements in the **RuleDesigner** sentence. </br> The default value for this attribute is **and** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file. |
+| **Sequential** | Required **text**. If the user who is creating the workflow indicates that all workflow actions should be executed in sequence, the string that is defined in this attribute is used to join the **Actions** elements in the **RuleDesigner** sentence. </br> The default value is **then** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file. |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="action-element-workflowinfo.md">Action</a></p>
-<p><a href="default-element-workflowinfo.md">Default</a></p></td>
-</tr>
-</tbody>
-</table>
+[Action](action-element-workflowinfo.md)
+
+[Default](default-element-workflowinfo.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="workflowinfo-element-workflowinfo.md">WorkFlowInfo</a></p></td>
-</tr>
-</tbody>
-</table>
+[WorkFlowInfo](workflowinfo-element-workflowinfo.md)
 
 ## Example
 
@@ -131,11 +95,3 @@ The following example demonstrates how to construct the **Actions** element so t
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-
