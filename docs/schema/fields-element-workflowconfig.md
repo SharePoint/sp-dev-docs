@@ -29,44 +29,17 @@ Represents a collection of the data fields included on the workflow initiation f
 
 The following sections describe attributes, child elements, and parent elements.
 
-### Attributes
+|Attributes|
+|----------|
+|None.|
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None.</p></td>
-</tr>
-</tbody>
-</table>
+|Child elements|
+|--------------|
+|[Field Element (Field)](field-element-field.md) (see Remarks)|
 
-### Child elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="field-element-field.md">Field Element (Field)</a></span> (see Remarks)</p></td>
-</tr>
-</tbody>
-</table>
-
-### Parent elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Parent elements|
+|---------------|
+|[Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)|
 
 ### Remarks
 

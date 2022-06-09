@@ -30,24 +30,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><b>Name</b></p></td>
-<td align="left"><p>Optional <b>Text</b>. Allows the <b>Field</b> element to be used outside the field rendering context by supplying an ID (for example, &ltField Name="ID"/&gt.)</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|
+|---------|-----------|
+|Name|Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example, \<Field Name="ID"/\>).|
 
 ### Child elements
 
