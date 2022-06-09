@@ -2,7 +2,7 @@
 title: XmlDocument Element (ContentType)
 description: Describes the XmlDocument element (ContentType) and provides the element's definition, attributes, parent elements, remarks, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
@@ -32,66 +32,22 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**NamespaceURI**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the URI to the schema namespace for the contents of this **XmlDocument** element.</p></td>
-</tr>
-</tbody>
-</table>
+| Attribute | Description |
+| --- | --- |
+| **NamespaceURI** | Optional **Text**. Specifies the URI to the schema namespace for the contents of this **XmlDocument** element. |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None.</p></td>
-</tr>
-</tbody>
-</table>
+None
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="xmldocuments-element-contenttype.md">XmlDocuments</a></p></td>
-</tr>
-</tbody>
-</table>
+- [XmlDocuments](xmldocuments-element-contenttype.md)
 
 ### Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Maximum: No limit</p></td>
-</tr>
-</tbody>
-</table>
+- Minimum: 0 
+- Maximum: No limit
 
 ### Remarks
 

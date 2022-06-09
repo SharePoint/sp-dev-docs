@@ -1,7 +1,7 @@
 ---
 title: Customize your SharePoint site UI by using JavaScript
 description: Describes how to customize your SharePoint site UI by using JavaScript and outlines how to use the Core.EmbedJavaScript application.
-ms.date: 04/29/2019
+ms.date: 06/09/2022
 ms.localizationpriority: high
 ---
 # Customize your SharePoint site UI by using JavaScript

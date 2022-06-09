@@ -2,7 +2,7 @@
 title: WorkflowActions3 schema reference
 description: Provides various element contained in the WorkflowActions3 schema as it applies to SharePoint 2016, SharePoint Foundation 2013, and SharePoint Online.
 manager: laurawi
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -1,7 +1,7 @@
 ---
 title: Information management sample SharePoint Add-in
 description: As part of your Enterprise Content Management (ECM) strategy, you can get or set site policies to manage the lifecycle of your SharePoint site.
-ms.date: 5/2/2018
+ms.date: 06/09/2022
 ms.localizationpriority: medium
 ---
 

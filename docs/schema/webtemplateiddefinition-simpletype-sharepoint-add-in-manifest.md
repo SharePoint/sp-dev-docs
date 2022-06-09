@@ -2,7 +2,7 @@
 title: WebTemplateIdDefinition simpleType
 description: Describes the WebTemplateIdDefinition simpleType and provides the type's definition, base type, namespace, and schema file.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/06/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

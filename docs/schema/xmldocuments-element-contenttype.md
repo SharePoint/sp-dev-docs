@@ -2,7 +2,7 @@
 title: XmlDocuments Element (ContentType)
 description: Describes the XmlDocuments element (ContentType) and provides the element's definition, child elements, parent elements, remarks, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
@@ -31,66 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**None**</p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
+None
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="xmldocument-element-contenttype.md">XmlDocument</a></p></td>
-</tr>
-</tbody>
-</table>
+- [XmlDocument](xmldocument-element-contenttype.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="contenttype-element-contenttype.md">ContentType</a></p></td>
-</tr>
-</tbody>
-</table>
+- [ContentType](contenttype-element-contenttype.md)
 
 ### Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
+- Minimum: 0 
+- Maximum: 1
 
 ### Remarks
 

@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" team sites
 description: Apply a custom theme to a "modern" team site in SharePoint Online. 
-ms.date: 02/21/2021
+ms.date: 06/09/2022
 ms.localizationpriority: high
 ---
 

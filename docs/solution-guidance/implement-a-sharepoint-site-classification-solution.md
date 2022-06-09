@@ -1,7 +1,7 @@
 ---
 title: Implement a SharePoint site classification solution
 description: Use the Core.SiteClassification sample to implement a site classification solution and use SharePoint site policies to enforce deletion.
-ms.date: 4/26/2018
+ms.date: 06/09/2022
 ms.localizationpriority: high
 ---
 

@@ -2,7 +2,7 @@
 title: WorkflowInfo Element (WorkflowInfo)
 description: Describes the WorkflowInfo element (WorkflowInfo) and provides the element's definition, attributes, child elements, and an example.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -33,38 +33,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Language**</p></td>
-<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States" (see <a href="https://msdn.microsoft.com/library/ms776260.aspx">Locale Identifier Constants and Strings</a>).</p></td>
-</tr>
-</tbody>
-</table>
+| Attribute | Description |
+| --- | --- |
+| **Language** | Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States" (see [Locale Identifier Constants and Strings](https://msdn.microsoft.com/library/ms776260.aspx)). |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="conditions-element-workflowinfo.md">Conditions</a></p>
-<p><a href="actions-element-workflowinfo.md">Actions</a></p></td>
-</tr>
-</tbody>
-</table>
+- [Conditions](conditions-element-workflowinfo.md)
+
+- [Actions](actions-element-workflowinfo.md)
 
 ### Parent elements
 

@@ -2,7 +2,7 @@
 title: WorkflowActions Element (WorkflowActions)
 description: Describes the WorkflowActions element (WorkflowActions) and provides the element's definition, child elements, and additional references.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -37,17 +37,8 @@ None
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="action-element-workflowactions.md">Action</a></p>
-<p><a href="default-element-workflowactions.md">Default</a></p></td>
-</tr>
-</tbody>
-</table>
+- [Action](action-element-workflowactions.md)
+- [Default](default-element-workflowactions.md)
 
 ### Parent elements
 
