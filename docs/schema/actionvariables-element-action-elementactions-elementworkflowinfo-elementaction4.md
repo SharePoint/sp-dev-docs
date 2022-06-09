@@ -1,5 +1,6 @@
 ---
 title: ActionVariables element (Action element)
+description: Discusses the ActionVariables element (Action element) use and syntax including definitions and code samples.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -31,12 +32,11 @@ Specifies local variables for the action.
 
 ## Element information
 
-|   |   |
+|Information|Location   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
 
 ## Definition
 
@@ -57,28 +57,10 @@ Specifies local variables for the action.
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="action-element-actions-elementworkflowinfo-elementaction4.md">Action</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Type | Description |
+| --- | --- | --- |
+| [Action](action-element-actions-elementworkflowinfo-elementaction4.md) |     |     |
 
 ### Child elements
 
@@ -87,11 +69,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

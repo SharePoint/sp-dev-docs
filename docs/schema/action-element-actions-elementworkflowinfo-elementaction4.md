@@ -20,7 +20,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 
 ## Usage
 
-```XML 
+```XML
     <Actions>
         <Action>
             <Parameters />
@@ -43,11 +43,12 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
+
 </br>
 
 ## Definition
 
-```XML 
+```XML
     <xs:element name="Action" minOccurs="0" maxOccurs="unbounded">
     <xs:complexType>
        <xs:all>
@@ -115,6 +116,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 | Element | Type | Description |
 | --- | --- | --- |
 | [Actions](actions-element-workflowinfo-elementaction4.md) |     |     |
+
 </br>
 
 ### Child elements

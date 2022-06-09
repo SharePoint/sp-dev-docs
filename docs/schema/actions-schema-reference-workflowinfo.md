@@ -1,5 +1,6 @@
 ---
 title: Actions Schema Reference (WorkflowInfo)
+description: Discusses definition, elements and attributes for Actions Schema Reference (WorkflowInfo) which is used to validate custom files.
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -17,12 +18,12 @@ ms.assetid: 9758b06a-a1ff-4352-bc25-7fd84a8932bd
 
 The Actions schema that is used to validate custom .ACTIONS files does not actually exist in the form of an .xsd file on the server file system. The following XML is only a representation of that schema, to ease development. Valid values have been furnished where available and strings that represent the type of data that is required for an attribute have also been provided.
 
-> [!NOTE] 
+> [!NOTE]
 > This schema reference is for XML development purposes and should be used only when creating .ACTIONS files in a developer environment, not a production environment. This XML has been formatted for readability.
 
 ## Actions schema example
 
-```XML 
+```XML
     <?xml version="1.0" encoding="utf-8"?>
     <xs:schema elementFormDefault="qualified"  
                xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -406,11 +407,3 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

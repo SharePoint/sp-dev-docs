@@ -1,5 +1,6 @@
 ---
 title: ActivationDependencies element (Feature)
+description: Discusses definition, elements and attributes for ActivationDependencies (Feature) which specifies a list of features.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -32,43 +33,17 @@ None
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="activationdependency-element-feature.md">ActivationDependency</a></p></td>
-</tr>
-</tbody>
-</table>
+[ActivationDependency](activationdependency-element-feature.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="feature-element-feature.md">Feature</a></p></td>
-</tr>
-</tbody>
-</table>
+[Feature](feature-element-feature.md)
 
 ### Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
+Minimum: 0
+
+Maximum: 1
 
 ### Remarks
 
@@ -87,12 +62,4 @@ If included within a [Feature](feature-element-feature.md) element, the followin
 
 For another example of how this element is used, see [Feature.xml Files](feature-xml-files.md).
 
-<br/>
-
-
-
-
-
-
-
-
+</br>
