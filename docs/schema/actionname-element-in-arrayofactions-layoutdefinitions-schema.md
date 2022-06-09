@@ -1,5 +1,6 @@
 ---
 title: ActionName element in ArrayOfActions
+description: Describes the ActionName element in ArrayOfActions including elements and attributes, and text value.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -9,7 +10,7 @@ ms.localizationpriority: medium
 ms.assetid: 3bcfca05-2eff-830a-b058-cba0184efc8d
 ---
 
-# ActionName element in ArrayOfActions 
+# ActionName element in ArrayOfActions
 
 (LayoutDefinitions Schema)
 
@@ -39,34 +40,11 @@ None.
 None.
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The list of actions that contains this action.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [ActionNames element in OBPart (LayoutDefinitions Schema)](actionnames-element-in-obpart-layoutdefinitions-schema.md) | The list of actions that contains this action. |
 
 ## Text value
 
 **String**
-
-
-
-
-
-
-
-
