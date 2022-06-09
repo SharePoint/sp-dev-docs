@@ -2,7 +2,7 @@
 title: "DatabaseId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)"
 description: Outlines information, a definition, and elements and attributes for the DatabaseId element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint

@@ -2,7 +2,7 @@
 title: "Customization element (List)"
 description: Outlines attributes, child elements, parent elements, and occurrences for the Customization element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

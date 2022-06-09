@@ -2,7 +2,7 @@
 title: CustomAction Element
 description: Outlines the CustomAction element, which defines an extension to the user interface, such as a button on a toolbar or a link on a site settings page.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

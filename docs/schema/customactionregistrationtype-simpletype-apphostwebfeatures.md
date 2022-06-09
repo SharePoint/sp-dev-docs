@@ -2,7 +2,7 @@
 title: CustomActionRegistrationType simpleType
 description: Outlines information, a definition, and enumeration values for the CustomActionRegistrationType simpleType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
