@@ -1,7 +1,7 @@
 ---
 title: "Analyze and use the scanner data: Modernize lists & libraries"
 description: Understand and process the scanner results to help your sites to get the most out of the modern list and library experience
-ms.date: 09/15/2021
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
