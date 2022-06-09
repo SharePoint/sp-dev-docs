@@ -33,11 +33,13 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-| Element |
+
+|Element|
 | --- |
 | [LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
 | [Properties element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
 | [ActionParameters element in Action (BDCMetadataResource Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md) |
+
 </br>
 
 ### Parent elements

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.assetid: 98829cd3-8f68-351b-6e33-c0e27e174b58
 ---
 
-# Action element 
+# Action element
 
 (Actions element) (WorkflowInfo element) (Action4)
 
@@ -44,6 +44,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
 </br>
+
 ## Definition
 
 ```XML 
@@ -127,6 +128,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 | [Modifications](modifications-element-action-elementactions-elementworkflowinfo-elementaction4.md) |     |     |
 | [Parameters](parameters-element-action-elementactions-elementworkflowinfo-elementaction4.md) | [parametersType](parameterstype-complextype-action4.md) |     |
 | [RuleDesigner](ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md) | [ruleDesignerType](ruledesignertype-complextype-action4.md) |     |
+
 </br>
 
 ### Attributes
