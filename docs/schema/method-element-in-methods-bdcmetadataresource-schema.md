@@ -48,7 +48,7 @@ None.
 
 |Element|
 |-------|
-[Methods Element in Entity (BDCMetadataResource Schema)](methods-element-in-entity-bdcmetadataresource-schema.md)
+|[Methods Element in Entity (BDCMetadataResource Schema)](methods-element-in-entity-bdcmetadataresource-schema.md)|
 
 
 
