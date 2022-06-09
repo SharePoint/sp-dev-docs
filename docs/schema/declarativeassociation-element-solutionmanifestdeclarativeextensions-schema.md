@@ -2,7 +2,7 @@
 title: DeclarativeAssociation Element
 description: The DeclarativeAssociation element derives from the Association element.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -33,62 +33,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**DisplayNameOfficeItemPropertyName**</p></td>
-<td align="left"><p>The display name of the <span>Office Item Property Name</span> from the Solution Manifest.</p>
-<p>Optional.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**AssociationName**</p></td>
-<td align="left"><p>The name of the association from the BDC model.</p>
-<p>Required.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**EntityTypeNamespace**</p></td>
-<td align="left"><p>The name of the entity namespace from the BDC model.</p>
-<p>Required.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**EntityTypeName**</p></td>
-<td align="left"><p>The entity name from the BDC model.</p>
-<p>Required.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ReferenceOfficeItemPropertyName**</p></td>
-<td align="left"><p>The name of the Outlook property in which you want to store the entity instance reference of the association. Must match the name of an **OfficeItemProperty** in the Solution Manifest.</p>
-<p>Required.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>A name for the association.</p>
-<p>Required.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Description**</p></td>
-<td align="left"><p>A description for the association.</p>
-<p>Optional.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|
+|---|---|
+|**DisplayNameOfficeItemPropertyName**|The display name of the Office Item Property Name from the Solution Manifest. Optional. Attribute type: **String**|
+|**AssociationName**|The name of the association from the BDC model. Required. Attribute type: **String**|
+|**EntityTypeNamespace**|The name of the entity namespace from the BDC model. Required. Attribute type: **String**|
+|**EntityTypeName**|The entity name from the BDC model. Required. Attribute type: **String**|
+|**ReferenceOfficeItemPropertyName**|The name of the Outlook property in which you want to store the entity instance reference of the association. Must match the name of an **OfficeItemProperty** in the Solution Manifest. Required. Attribute type: **String**|
+|**Name**|A name for the association. Required. Attribute type: **String**|
+|**Description**|A description for the association. Optional. Attribute type: **String**|
 
 ### Child elements
 

@@ -2,7 +2,7 @@
 title: DataSourceRef element
 description: DataSourceRef element specifies the possible values from the DataSource element that are associated with the Action or Condition element.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

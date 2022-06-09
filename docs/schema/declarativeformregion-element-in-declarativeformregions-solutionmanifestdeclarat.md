@@ -2,7 +2,7 @@
 title: DeclarativeFormRegion Element in DeclarativeFormRegions
 description: The DeclarativeFormRegion element is used to describe the form region in which external data is displayed in Microsoft Outlook 2010.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -124,45 +124,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md">Picture Element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **Picture** element is used to describe the icon to use in Outlook 2010 for the form region.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Picture Element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions Schema)](picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md) | The **Picture** element is used to describe the icon to use in Outlook 2010 for the form region. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.md">DeclarativeFormRegions Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **DeclarativeFormRegions** element that contains this form region.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [DeclarativeFormRegions Element (SolutionManifestDeclarativeExtensions Schema)](declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.md) | The **DeclarativeFormRegions** element that contains this form region. |
 
 
 

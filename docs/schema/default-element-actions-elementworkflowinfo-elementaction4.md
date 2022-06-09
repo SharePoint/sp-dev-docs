@@ -2,7 +2,7 @@
 title: Default element (Actions element)
 description: The Default element (Actions element) serves as a container for other elements and has no definable attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -2,7 +2,7 @@
 title: Default Custom Action Locations and IDs
 description: Learn more about Default Custom Action Locations and IDs.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
