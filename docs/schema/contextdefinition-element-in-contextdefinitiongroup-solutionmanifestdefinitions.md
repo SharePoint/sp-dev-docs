@@ -2,7 +2,7 @@
 title: ContextDefinition Element in ContextDefinitionGroup
 description: Outlines the ContextDefinition element, which defines a context for an external content type of Outlook Item Type that this context definition group defines.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

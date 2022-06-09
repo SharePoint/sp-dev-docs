@@ -2,7 +2,7 @@
 title: ContextEventHandlers Element in DeclarativeContextDefinition
 description: Outlines the ContextEventHandlers element, which is used to specify the actions to be executed when a context becomes active.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

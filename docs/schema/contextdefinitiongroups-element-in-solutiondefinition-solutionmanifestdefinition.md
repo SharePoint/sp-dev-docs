@@ -2,7 +2,7 @@
 title: ContextDefinitionGroups Element in SolutionDefinition
 description: Outlines the ContextDefinitionGroups element, which lists the context definitions that are part of this Microsoft Business Connectivity Services (BCS) solution
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

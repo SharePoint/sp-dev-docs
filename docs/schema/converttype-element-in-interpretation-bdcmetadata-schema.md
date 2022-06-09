@@ -2,7 +2,7 @@
 title: ConvertType Element in Interpretation
 description: Outlines the ConvertType element in Sharepoint, which specifies the rule to convert the data type of a data value into another data type.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

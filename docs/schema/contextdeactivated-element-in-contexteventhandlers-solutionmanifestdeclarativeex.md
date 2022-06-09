@@ -2,7 +2,7 @@
 title: ContextDeactivated Element in ContextEventHandlers
 description: Outlines the ContextDeactivated element, which enables you to execute a specified action when a context is deactivated. 
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

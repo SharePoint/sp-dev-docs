@@ -2,7 +2,7 @@
 title: ContextDefinitionGroup Element in ContextDefinitionGroups
 description: Outlines the ContextDefinitionGroup element, which defines a context definition group containing a list of context definitions for one of the Outlook Item Types
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

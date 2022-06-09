@@ -2,7 +2,7 @@
 title: "Controls element (Group) (Server Ribbon)"
 description: Outlines the Controls element in Sharepoint, including attributes, child elements, parent elements, and occurrences. 
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
