@@ -1,6 +1,6 @@
 ---
 title: Action element in Actions (BDCMetadataResource Schema)
-description: Details on the Action element in Actions (BDCMetadataResource Schema)
+description: Details on the Action element in Actions (BDCMetadataResource Schema).
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer

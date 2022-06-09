@@ -1,6 +1,6 @@
 ---
 title: Action element in Actions (BDCMetadata Schema)
-description: Details on the Action element in Actions (BDCMetadata Schema)
+description: Details on the Action element in Actions (BDCMetadata Schema).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -24,8 +24,7 @@ Specifies an action supported by an external content type.
 
 Actions bridge the gap between Microsoft SharePoint 2010 and Microsoft Office 2010 and an external system's user interface by providing a link back to the external system.
 
-By default, the Business Data Connectivity (BDC) service provides actions such as **View Item**, **Edit Item**, and **Delete Item** after you model these operations in the BDC model. In addition to these default actions, you can create ams.date: 01/27/2021
-tions for other functionality that you want to attach to your external content type. For example, you can use actions to perform simple actions such as to send email messages to a customer from the Customer external content type or to open a customer's home page in a browser.
+By default, the Business Data Connectivity (BDC) service provides actions such as **View Item**, **Edit Item**, and **Delete Item** after you model these operations in the BDC model. In addition to these default actions, you can create actions for other functionality that you want to attach to your external content type. For example, you can use actions to perform simple actions such as to send email messages to a customer from the Customer external content type or to open a customer's home page in a browser.
 
 Actions travel with an external content type. That is, after you define an action for an external content type, the action appears everywhere you display that external content type—whether in an external list or Business Data web part or in an External Data column.
 
@@ -49,7 +48,7 @@ The following sections describe attributes, child elements, and parent elements.
 | **DefaultDisplayName** | Optional.</br>The default display name for this action.</br>Attribute type: **String** |
 | **IsCached** | Optional.</br>Specifies whether this action is used frequently. This is used by the BDC client runtime to cache this action.</br>Default value: **true**</br>Attribute type: **Boolean** |
 
-<br/>
+</br>
 
 ### Child elements
   
@@ -59,8 +58,7 @@ The following sections describe attributes, child elements, and parent elements.
 | [Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the action. |
 | [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md) | The parameters of the action. |
 
-
-<br/>
+</br>
 
 ### Parent elements
   

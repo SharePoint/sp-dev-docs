@@ -16,10 +16,10 @@ ms.assetid: 33cd0df6-6ccf-b150-10b9-03dae7dde29c
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+|**Element type** </br> |xs:string  </br> |
+|**Namespace** </br> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  </br> |
+|**Schema file** </br> |schema_Microsoft.Office.Server.Search.Administration.xsd  </br> |
+
 ## Definition
 
 ```XML
@@ -29,7 +29,7 @@ ms.assetid: 33cd0df6-6ccf-b150-10b9-03dae7dde29c
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
   
 ### Parent elements
 
@@ -42,5 +42,3 @@ None.
 ### Attributes
 
 None.
-  
-

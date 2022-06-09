@@ -5,7 +5,7 @@ manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-f1_keywords:
+f1_keywords: 
 - SharePoint workflows
 ms.prod: sharepoint
 ms.localizationpriority: medium
@@ -43,7 +43,6 @@ Contains the information that is needed for the workflow engine to process a wor
 </WorkflowActions>
 ```
 
-
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -66,7 +65,9 @@ The following sections describe attributes, child elements, and parent elements.
 | **CreatedTaskFormType** | Optional **text**. Specifies the type of a created task: **DataCollectTask** to create a task that collects data from one user; **GroupAssignedTask** to create a task that collects data from one or more users; **TodoItemTask** to create a task that does not collect data from users but only exists for a user to validate that they have done something; or **TaskProcess** to create a task that has a form that allows for ad-hoc collaboration and might collect data from one or more users. |
 | **__SolutionId** | Optional **text**. Specifies a GUID that the client application writes to the implementation-specific action. The server uses the GUID to help locate the assembly at run time of the workflow. |
 | **SandboxedFunction** | Optional **Boolean**. If set to **true**, the client application inserts an implementation-specific action when this action is selected. The action should be configured to call a function defined by the conjunction of **AssemblyName**, **ClassName**, and **FunctionName**. If set, **AssemblyName**, **ClassName**, **FunctionName**, and **__SolutionId** must also be set. |
+
 ### Child elements
+
 [Parameters](parameters-element-workflowinfo.md)
 
 [RuleDesigner](ruledesigner-element-workflowinfo.md)
@@ -80,7 +81,9 @@ The following sections describe attributes, child elements, and parent elements.
 [ActionBody](actionbody-element-workflowinfo.md)
 
 [ActionConditions](actionconditions-element-workflowinfo.md)
+
 ### Parent elements
+
 [WorkflowActions](workflowactions-element-workflowactions.md)
 
 ## See also

@@ -39,12 +39,10 @@ The following sections describe attributes, child elements, and parent elements.
 | **Principal** | Required. </br> The name of the security principal that has this ACE. </br> Attribute type: **String** |
 
 ### Child elements
-
   
 | Element | Description |
 | --- | --- |
 | [Right element in AccessControlEntry (BDCMetadata Schema)](right-element-in-accesscontrolentry-bdcmetadata-schema.md) | A **Right** element that specifies the permissions available to the security principal. |
-
 
 ### Parent elements
   

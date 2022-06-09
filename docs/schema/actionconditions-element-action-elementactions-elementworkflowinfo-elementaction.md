@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 ---
 
-# ActionConditions element (Action element) 
+# ActionConditions element (Action element)
 
 (Actions element) (WorkflowInfo element) (Action4)
 
@@ -18,7 +18,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 
 ## Usage
 
-```XML 
+```XML
     <Actions>
         <Action>
             <ActionVariables />
@@ -35,7 +35,6 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
 
 ## Definition
 
@@ -67,11 +66,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

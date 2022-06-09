@@ -1,6 +1,6 @@
 ---
 title: ActionParameters element in Action (BDCMetadataResource Schema)
-description: Details on the ActionParameters element in Action (BDCMetadataResource Schema)
+description: Details on the ActionParameters element in Action (BDCMetadataResource Schema).
 manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer
@@ -20,7 +20,6 @@ For more information, see [ActionParameters element in Action (BDCMetadata Schem
 
 **Schema**: BDCMetadataResource
 
-
 ```
 <ActionParameters></ActionParameters>
 ```
@@ -35,44 +34,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md">ActionParameter element in ActionParameters (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [ActionParameter element in ActionParameters (BDCMetadataResource Schema)](actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action element in Actions (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element |
+| --- |
+| [Action element in Actions (BDCMetadataResource Schema)](action-element-in-actions-bdcmetadataresource-schema.md) |

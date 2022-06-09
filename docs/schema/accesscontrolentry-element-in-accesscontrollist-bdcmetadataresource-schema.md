@@ -34,13 +34,11 @@ The following sections describe attributes, child elements, and parent elements.
 | --- | --- |
 | **Principal** | Required.</br>Attribute type: **String** |
 
-
 ### Child elements
   
 | Element | Description |
 | --- | --- |
 | [Right element in AccessControlEntry (BDCMetadataResource Schema)](right-element-in-accesscontrolentry-bdcmetadataresource-schema.md) |     |
-
 
 ### Parent elements
   

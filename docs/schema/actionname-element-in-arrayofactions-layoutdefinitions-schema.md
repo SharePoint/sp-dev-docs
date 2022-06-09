@@ -22,8 +22,7 @@ Specifies an action for this External Data Part.
 
 **Schema**: LayoutDefinitions
 
-```
-XML
+```XML
 <ActionName></ActionName>
 ```
 

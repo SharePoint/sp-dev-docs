@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 ms.assetid: b7f97740-5d2c-f91a-1028-10e2890d4a99
 ---
 
-# AccessControlList element 
+# AccessControlList element
 
 (BDCMetadata Schema)
 

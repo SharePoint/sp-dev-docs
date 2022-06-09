@@ -45,7 +45,6 @@ Allows you to create custom workflow activities and expand the palette of availa
                <xs:sequence>
          <xs:element name="Default"      type="defaultElementType" minOccurs="0"     maxOccurs="1"    >
 
-
       </xs:element>  
          <xs:element name="Action"      minOccurs="0"     maxOccurs="unbounded"    >
                <xs:complexType>
@@ -54,19 +53,15 @@ Allows you to create custom workflow activities and expand the palette of availa
       </xs:element>  
          <xs:element name="RuleDesigner"      type="ruleDesignerType" minOccurs="1"     maxOccurs="1"    >
 
-
       </xs:element>  
          <xs:element name="DataSources"      type="dataSourcesType" minOccurs="0"     maxOccurs="1"    >
-
 
       </xs:element>  
          <xs:element name="Modifications"      minOccurs="0"     maxOccurs="1"    >
 
-
                <xs:complexType>
                <xs:sequence>
          <xs:element name="Modification"      minOccurs="1"     maxOccurs="unbounded"    >
-
 
          <xs:attribute name="TypeId"   type="s:string"      use="required"     />
          <xs:attribute name="NameFormat"   type="s:string"      use="required"     />
@@ -77,11 +72,9 @@ Allows you to create custom workflow activities and expand the palette of availa
       </xs:element>  
          <xs:element name="ActionVariables"      minOccurs="0"     maxOccurs="1"    >
 
-
                <xs:complexType>
                <xs:sequence>
          <xs:element name="ActionVariables"     >
-
 
       </xs:element>  
            </xs:sequence>
@@ -89,11 +82,9 @@ Allows you to create custom workflow activities and expand the palette of availa
       </xs:element>  
          <xs:element name="ActionBody"      minOccurs="0"     maxOccurs="1"    >
 
-
                <xs:complexType>
                <xs:sequence>
          <xs:element name="ActionBody"     >
-
 
       </xs:element>  
            </xs:sequence>
@@ -101,11 +92,9 @@ Allows you to create custom workflow activities and expand the palette of availa
       </xs:element>  
          <xs:element name="ActionConditions"      minOccurs="0"     maxOccurs="1"    >
 
-
                <xs:complexType>
                <xs:sequence>
          <xs:element name="ActionConditions"     >
-
 
       </xs:element>  
            </xs:sequence>

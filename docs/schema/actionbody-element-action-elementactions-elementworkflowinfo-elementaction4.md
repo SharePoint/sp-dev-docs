@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.assetid: c9996ac3-be53-440c-8810-55b91031869b
 ---
 
-# ActionBody element 
+# ActionBody element
 
 (Action element) (Actions element) (WorkflowInfo element) (Action4)
 
@@ -37,7 +37,6 @@ Specifies the body of a custom action.
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
 
 ## Definition
 
@@ -69,11 +68,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

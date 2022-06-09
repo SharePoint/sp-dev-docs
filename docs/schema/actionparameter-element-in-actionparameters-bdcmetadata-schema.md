@@ -24,9 +24,9 @@ Specifies the parameters of a URL-based action. Defines how to parameterize the 
 
 The URL attribute of a URL-based action can receive parameters by using the ActionParameter element.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > **ActionParameters** can either represent identifier values, or values that correspond to **TypeDescriptors** in a **SpecificFinder** of the **Entity**.
-> 
+>
 > The **ActionParameter** represents an identifier value when the **IdOrdinal** property is present. The value of the property specifies the index of the identifier whose value this **ActionParameter** represents. If the **IdOrdinal** property is not specified, the **ActionParameter** represents a **TypeDescriptor**, and the **Name** attribute specifies which type descriptor is being represented. The **Name** attribute is specified as a **Dotted Path**.
 
 The **ActionParameter** element accepts the following property.
@@ -54,10 +54,10 @@ The following sections describe attributes, child elements, and parent elements.
   
 | Attribute | Description |
 | --- | --- |
-| **Index** | Required.<br><br>An ordinal attribute that specifies the position of this **ActionParameter** among other **ActionParameters** in the URL.<br><br>Attribute type: **Integer** |
-| **Name** | Required.<br><br>The name of the **ActionParameter**.<br><br>Attribute type: **String** |
-| **DefaultDisplayName** | Optional.<br><br>The default display name for the **ActionParameter**.<br><br>Attribute type: **String** |
-| **IsCached** | Optional.<br><br>Specifies whether this **ActionParameter** is used frequently. This attribute is used by the BDC client runtime to cache this **Action**.<br><br>Default value: **true**<br><br>Attribute type: **Boolean** |
+| **Index** | Required.</br>An ordinal attribute that specifies the position of this **ActionParameter** among other **ActionParameters** in the URL.</br>Attribute type: **Integer** |
+| **Name** | Required.</br>The name of the **ActionParameter**.</br>Attribute type: **String** |
+| **DefaultDisplayName** | Optional.</br>The default display name for the **ActionParameter**.</br>Attribute type: **String** |
+| **IsCached** | Optional.</br>Specifies whether this **ActionParameter** is used frequently. This attribute is used by the BDC client runtime to cache this **Action**.</br>Default value: **true**</br>Attribute type: **Boolean** |
 
 </br>
 

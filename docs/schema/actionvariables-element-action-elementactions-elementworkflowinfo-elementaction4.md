@@ -32,7 +32,7 @@ Specifies local variables for the action.
 
 ## Element information
 
-|Information|Location   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
