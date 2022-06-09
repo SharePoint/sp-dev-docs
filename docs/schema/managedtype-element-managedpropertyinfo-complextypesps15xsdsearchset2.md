@@ -2,7 +2,7 @@
 title: "ManagedType element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)"
 description: Outlines information, a definition, and elements and attributes for the ManagedType element (ManagedPropertyInfo complexType) Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
