@@ -1,7 +1,8 @@
 ---
 title: Property Element (List Instance)
+description: Describes the Property Element (List Instance) and provides a definition, the elements and attributes, and remarks.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
