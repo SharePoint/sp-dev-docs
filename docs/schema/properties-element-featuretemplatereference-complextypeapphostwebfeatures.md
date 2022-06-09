@@ -1,7 +1,8 @@
 ---
 title: Properties element (FeatureTemplateReference complexType)
+description: Describes the Properties element (FeatureTemplateReference complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,11 +19,11 @@ ms.assetid: d0072541-fbe7-4ac4-2687-17b0829b8c43
 
 ## Element information
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Element type**  | FeaturePropertyDefinitions |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| Element type  | FeaturePropertyDefinitions |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
 
 ## Definition 
 

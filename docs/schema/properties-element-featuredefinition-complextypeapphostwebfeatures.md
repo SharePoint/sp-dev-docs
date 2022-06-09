@@ -1,7 +1,8 @@
 ---
 title: Properties element (FeatureDefinition complexType)
+description: Describes the Properties element (FeatureDefinition complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,11 +19,11 @@ ms.assetid: 13132ab0-0417-8d3f-de21-bc3b6be1e7ad
 
 ## Element information
 
-|   |   |
+| Resource | Files |
 |---|---|
-| **Element type**  | FeaturePropertyDefinitions |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| Element type  | FeaturePropertyDefinitions |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
 
 ## Definition
 
