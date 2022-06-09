@@ -1,6 +1,6 @@
 ---
 title: Parameters element (Flow element)
-description: Describes the Parameter element (Flow element) and provides the usage, the element information, a definition, and the elements and attributes.
+description: Describes the Parameters element (Flow element) and provides the usage, the element information, a definition, and the elements and attributes.
 manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
