@@ -8,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4acd20c4-a80b-2472-6674-f484ddac48c4
-description: "Last modified: March 09, 2015"
 ---
 
 # Pid element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)

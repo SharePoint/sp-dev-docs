@@ -1,6 +1,6 @@
 ---
 title: "Personalizations Element (DeploymentManifest)"
-description: Describes the Personalization element (DeploymentManifest) and provides a definition, type, and  the elements and attributes.
+description: Describes the Personalizations element (DeploymentManifest) and provides a definition, type, and  the elements and attributes.
 manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer

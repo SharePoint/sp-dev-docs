@@ -1,13 +1,13 @@
 ---
 title: "Properties Element (DeploymentManifest - SPAttachment)"
+description: Describes the Properties element (DeploymentManifest - SPAttachment) and provides a definition, the type, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 67a3c058-34d2-4b96-ae8d-b4faf6e194a9
-description: "Last modified: March 09, 2015"
 ---
 
 # Properties Element (DeploymentManifest - SPAttachment)

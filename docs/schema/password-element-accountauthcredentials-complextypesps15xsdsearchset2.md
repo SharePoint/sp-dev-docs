@@ -8,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f53fe49d-6b40-643d-2660-4f06e0fb0914
-description: "Last modified: March 09, 2015"
 ---
 
 # Password element (AccountAuthCredentials complexType) (SPS15XSDSearchSet2)

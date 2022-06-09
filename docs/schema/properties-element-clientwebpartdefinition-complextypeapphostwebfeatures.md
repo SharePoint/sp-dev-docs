@@ -1,7 +1,8 @@
 ---
 title: Properties element (ClientWebPartDefinition complexType)
+description: Describes the Properties element (ClientWebPartDefinition complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,11 +19,11 @@ ms.assetid: 4aa16313-3172-c658-a072-e477f8140709
 
 ## Element information
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Element type**  | ClientWebPartProperties |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| Element type  | ClientWebPartProperties |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
 
 ## Definition
 
