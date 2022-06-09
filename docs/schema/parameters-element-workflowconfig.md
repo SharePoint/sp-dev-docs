@@ -63,7 +63,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>
