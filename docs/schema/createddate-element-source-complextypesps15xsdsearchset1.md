@@ -2,7 +2,7 @@
 title: "CreatedDate element (Source complexType) (SPS15XSDSearchSet1)"
 description: Outlines information, a definition, and elements and attributes for the CreatedDate element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

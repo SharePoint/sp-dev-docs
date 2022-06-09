@@ -2,7 +2,7 @@
 title: CultureNameDefinition simpleType
 description: Outlines information, a definition, and elements and attributes for the CultureNameDefinition simpleType in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
