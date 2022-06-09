@@ -1,25 +1,24 @@
 ---
 title: "_AuthSubmissionMethod element (FormsAuthCredentials complexType) (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the _AuthSubmissionMethod element.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8dd91808-4eaf-e13a-70d4-8ff2638afcb0
-description: "Last modified: March 09, 2015"
 ---
 
 # _AuthSubmissionMethod element (FormsAuthCredentials complexType) (SPS15XSDSearchSet2)
 
 ## Element information
+**Element type**: xs:string
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
+
+**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
+
 ## Definition
 
 ```XML

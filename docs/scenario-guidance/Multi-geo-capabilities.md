@@ -1,6 +1,7 @@
 ---
 title: Multi-Geo Capabilities
-ms.date: 03/21/2018
+description: The Multi-Geo Capabilities in Office 365 are a feature that helps multinational customers address their data residency requirements in Office 365.
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 
@@ -14,18 +15,18 @@ Multi-Geo enables a single Office 365 tenant to span across multiple Office 365 
 In this article you can find further details about the Multi-Geo Capabilities, as well as code samples, and videos. 
 
 ### Articles
-* [Introduction to OneDrive and SharePoint Online Multi-Geo Preview](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-introduction    )
+* [Introduction to OneDrive and SharePoint Online Multi-Geo Preview](/sharepoint/dev/solution-guidance/multigeo-introduction    )
 * [Multi-Geo Capabilities in OneDrive and SharePoint Online in Office 365](https://technet.microsoft.com/library/094e86f2-9ff0-40ac-af31-28fcaba00c1d)
-    * [Permissions model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-permissions)
-    * [Discover a Multi-Geo configuration for a SharePoint tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-discovery)
-    * [Access OneDrive for Business in a Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-onedrive)
-    * [Work with SharePoint sites in a Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-sites)
-    * [Managing Apps/Add-ins in a Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-apps)
-    * [Multi-Geo user profile experience](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-userprofileexperience)
-    * [Search in a Multi-Geo SharePoint tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-search)
-    * [Managed metadata in a Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-managedmetadata)
-    * [Content type hub in a Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-contenttypehub)
-    * [BCS and the Secure Store in a Multi-Geo tenant](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-bcsandsecurestore)
+    * [Permissions model](/sharepoint/dev/solution-guidance/multigeo-permissions)
+    * [Discover a Multi-Geo configuration for a SharePoint tenant](/sharepoint/dev/solution-guidance/multigeo-discovery)
+    * [Access OneDrive for Business in a Multi-Geo tenant](/sharepoint/dev/solution-guidance/multigeo-onedrive)
+    * [Work with SharePoint sites in a Multi-Geo tenant](/sharepoint/dev/solution-guidance/multigeo-sites)
+    * [Managing Apps/Add-ins in a Multi-Geo tenant](/sharepoint/dev/solution-guidance/multigeo-apps)
+    * [Multi-Geo user profile experience](/sharepoint/dev/solution-guidance/multigeo-userprofileexperience)
+    * [Search in a Multi-Geo SharePoint tenant](/sharepoint/dev/solution-guidance/multigeo-search)
+    * [Managed metadata in a Multi-Geo tenant](/sharepoint/dev/solution-guidance/multigeo-managedmetadata)
+    * [Content type hub in a Multi-Geo tenant](/sharepoint/dev/solution-guidance/multigeo-contenttypehub)
+    * [BCS and the Secure Store in a Multi-Geo tenant](/sharepoint/dev/solution-guidance/multigeo-bcsandsecurestore)
 
 ### Samples
 * [MultiGeo.TenantInformationCollection](https://github.com/SharePoint/PnP/tree/master/Samples/MultiGeo.TenantInformationCollection)
