@@ -1,6 +1,6 @@
 ---
 title: parametersType complexType (Action4)
-description: Describes the parametersType complexType (Action4) and provides the type information, a definition, and  the elements and attributes.
+description: Describes the parametersType complexType (Action4) and provides the type information, a definition, and the elements and attributes.
 manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
