@@ -1,5 +1,6 @@
 ---
 title: Option Element (WorkflowInfo)
+description: The Option Element (WorkflowInfo) is used to populate DesignerType drop-down list box controls that are not data bound.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

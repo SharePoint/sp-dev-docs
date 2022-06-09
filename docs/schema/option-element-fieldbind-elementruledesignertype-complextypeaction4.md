@@ -1,5 +1,6 @@
 ---
 title: Option element
+description: The Option element is used to populate DesignerType drop-down list box controls that are not data bound.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
