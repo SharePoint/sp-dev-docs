@@ -48,7 +48,7 @@ None.
 
 |Element|Description|
 |-------|-----------|
-|[ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)|
+|[ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)||
 
 
 
