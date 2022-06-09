@@ -53,7 +53,7 @@ The following cmdlets are available for managing site designs and site scripts f
 - [Revoke-PnPSiteDesignRights](/powershell/module/sharepoint-pnp/Revoke-PnPSiteDesignRights)
 - [Set-PnPSiteDesign](/powershell/module/sharepoint-pnp/Set-PnPSiteDesign)
 - [Set-PnPSiteScript](/powershell/module/sharepoint-pnp/Set-PnPSiteScript)
-- [Set-PnPSiteScriptPackage](/powershell/module/sharepoint-pnp/Set-PnPSiteScriptPackage)
+- [Set-PnPSiteScriptPackage ](/powershell/module/sharepoint-pnp/Set-PnPSiteScriptPackage)
 
 ## See also
 
