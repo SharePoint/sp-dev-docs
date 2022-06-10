@@ -1,7 +1,8 @@
 ---
 title: TypeDescriptor Element in TypeDescriptors
+description: Describes the TypeDescriptor element in TypeDescriptors and provides the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -60,13 +61,13 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md">TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md">TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -84,7 +85,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md">TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md">TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

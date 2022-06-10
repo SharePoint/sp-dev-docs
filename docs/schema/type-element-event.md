@@ -1,7 +1,8 @@
 ---
 title: Type Element (Event)
+description: Describes the Type element (Event) and provides a definition, the elements and attributes, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -62,7 +63,7 @@ None
 
 ### Remarks
 
-The **Type** element contains an integer corresponding to one of the <span sdata="cer" target="T:Microsoft.SharePoint.SPEventReceiverType"><span class="nolink">Microsoft.SharePoint.SPEventReceiverType</span></span> values.
+The **Type** element contains an integer corresponding to one of the Microsoft.SharePoint.SPEventReceiverType"><span>Microsoft.SharePoint.SPEventReceiverType</span></span> values.
 
 ## Example
 

@@ -2,7 +2,7 @@
 title: TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)
 description: Details on the TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -49,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A **TypeDescriptor**.</p></td>
 </tr>
 </tbody>
@@ -70,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
