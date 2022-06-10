@@ -1,5 +1,6 @@
 ---
 title: ActionConditions element (Action element)
+description: Discusses the usage, definition, elements and attributes for the ActionConditions element for SharePoint.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
