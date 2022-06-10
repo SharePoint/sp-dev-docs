@@ -8,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 66db1937-094b-3ade-c140-66e7d891d607
-description: "Last modified: March 09, 2015"
 ---
 
 # Type element (RefinerConfiguration complexType) (SPS15XSDSearchSet2)
