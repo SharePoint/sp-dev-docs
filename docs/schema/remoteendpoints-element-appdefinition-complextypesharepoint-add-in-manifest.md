@@ -1,7 +1,8 @@
 ---
 title: RemoteEndpoints element (AppDefinition complexType)
+description: Defines the RemoteEndpoints element (AppDefinition complexType), which is a list of remote endpoints that the SharePoint Add-in may access through SP.WebProxy.invoke().
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
