@@ -2,7 +2,7 @@
 title: Delegate Controls
 description: Delegate controls provide a means to specify candidate controls for a particular functionality and to choose a functionality provider for those controls.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
