@@ -1,5 +1,6 @@
 ---
-title: .ACTIONS File Example (WorkflowInfo)</td>
+title: .ACTIONS File Example (WorkflowInfo)
+description: The example shows the structure of a valid .ACTIONS file that can be used to import custom conditions into a rules-based code-free workflow editor.
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer

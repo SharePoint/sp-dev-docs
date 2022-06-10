@@ -1,5 +1,6 @@
 ---
 title: Actions element (WorkflowInfo element)
+description: Discusses the usage, definition, elements and attributes for the Actions element (WorkflowInfo element).
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -30,7 +31,7 @@ Allows you to create custom workflow activities and expand the palette of availa
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -40,7 +41,7 @@ Allows you to create custom workflow activities and expand the palette of availa
 ## Definition
 
 ```XML
-    <xs:element name="Actions"      minOccurs="0"     maxOccurs="1"    >
+    <xs:element name="Actions" minOccurs="0" maxOccurs="1" >
                <xs:complexType>
                <xs:sequence>
          <xs:element name="Default"      type="defaultElementType" minOccurs="0"     maxOccurs="1"    >
@@ -194,47 +195,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </table>
 
 ### Attributes
-
-<table>
-<colgroup>
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="35%" />
-<col width="20%" />
-
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Required</p></th>
-<th align="left"><p>Description</p></th>
-<th align="left"><p>Possible values</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Parallel**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a></span> sentence.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Sequential**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the <span sdata="link"><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)</a></span> sentence.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+  
+| Attribute | Type | Required | Description | Possible values |
+| --- | --- | --- | --- | --- |
+| **Parallel** | s:string | optional | Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the [RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)](ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md) sentence. | Values of the s:string type. |
+| **Sequential** | s:string | optional | Specifies that workflow actions should be executed in parallel and joins the respective **action** elements in the [RuleDesigner element (Action element) (Actions element) (WorkflowInfo element) (Action4)](ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md) sentence. | Values of the s:string type. |
