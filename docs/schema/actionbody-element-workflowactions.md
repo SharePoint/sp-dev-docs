@@ -1,5 +1,6 @@
 ---
 title: ActionBody element (WorkflowActions)
+description: Discusses the definition, elements and attributes for ActionBody element (WorkflowActions) which specifies the body of a custom action.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

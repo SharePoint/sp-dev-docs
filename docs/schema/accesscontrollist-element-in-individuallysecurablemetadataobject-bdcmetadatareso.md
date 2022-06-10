@@ -1,5 +1,6 @@
 ---
 title: AccessControlList element in IndividuallySecurableMetadataObject
+description: Discusses the definition, elements and attributes for AccessControlList element in IndividuallySecurableMetadataObject.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -35,54 +36,20 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md">AccessControlEntry element in AccessControlList (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [AccessControlEntry element in AccessControlList (BDCMetadataResource Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadataresource-schema.md">Model element (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md">LobSystem element in LobSystems (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity element in Entities (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method element in Methods (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadataresource-schema.md">Association element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md">MethodInstance element in MethodInstances (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [Model element (BDCMetadataResource Schema)](model-element-bdcmetadataresource-schema.md) |
+| [LobSystem element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md) |
+| [Entity element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md) |
+| [Method element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md) |
+| [Association element in MethodInstances (BDCMetadataResource Schema)](association-element-in-methodinstances-bdcmetadataresource-schema.md) |
+| [MethodInstance element in MethodInstances (BDCMetadataResource Schema)](methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md) |
 
 
 
