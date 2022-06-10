@@ -1,5 +1,6 @@
 ---
 title: "PropertyRuleCollection element (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the PropertyRuleCollection element (SPS15XSDSearchSet2)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9e2c35d4-3f39-e9eb-cab1-4868a7b8b771
-description: "Last modified: March 09, 2015"
 ---
 
 # PropertyRuleCollection element (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:PropertyRuleCollection  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

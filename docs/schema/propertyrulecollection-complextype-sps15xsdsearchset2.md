@@ -1,5 +1,6 @@
 ---
 title: "PropertyRuleCollection complexType (SPS15XSDSearchSet2)"
+description: "Describes the definition, type, element, and attribute information for the PropertyRuleCollection complexType (SPS15XSDSearchSet2)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
@@ -7,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c055590f-4dbb-62fa-0eab-6d80c903d15a
-description: "Last modified: March 09, 2015"
 ---
 
 # PropertyRuleCollection complexType (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |None  <br/> |
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
+|**Extension base**|None|
    
 ## Definition
 
@@ -41,7 +41,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|[PropertyRules](propertyrules-element-propertyrulecollection-complextypesps15xsdsearchset2.md) <br/> |tns:ArrayOfPropertyRule  <br/> ||
+|[PropertyRules](propertyrules-element-propertyrulecollection-complextypesps15xsdsearchset2.md)|tns:ArrayOfPropertyRule||
    
 ### Attributes
 

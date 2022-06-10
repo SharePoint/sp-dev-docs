@@ -1,5 +1,6 @@
 ---
 title: Proxy element in LobSystem
+description: Proxy element in LobSystem specifies a user-provided proxy that is identical to the one that would be generated if this element were not present.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -23,6 +24,8 @@ Specifies a user-provided proxy that is identical to the one that would be gener
 
 **Schema**: BDCMetadata
 
+## Definition
+
 ```XML
 <Proxy></Proxy>
 ```
@@ -41,24 +44,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **LobSystem** element that this proxy applies to.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|-------|-----------|
+[LobSystem Element in LobSystems (BDCMetadata Schema)](lobsystem-element-in-lobsystems-bdcmetadata-schema.md)|The **LobSystem** element that this proxy applies to.|
 
 ## Text value
 

@@ -1,5 +1,6 @@
 ---
 title: PropertyValueAttributeDefinition complexType
+description: Describes the definition, type, element, and attribute information for the PropertyValueAttributeDefinition complexType.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 124616c4-9d87-64b7-e9e8-2f49a9a5ab58
 
 ## Type information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

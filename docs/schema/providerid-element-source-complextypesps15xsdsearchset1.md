@@ -1,5 +1,6 @@
 ---
 title: "ProviderId element (Source complexType) (SPS15XSDSearchSet1)"
+description: "Describes the definition, element, and attribute information for the ProviderId element (Source complexType) (SPS15XSDSearchSet1)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3813f189-967b-b672-af26-e6a445f82f31
-description: "Last modified: March 09, 2015"
 ---
 
 # ProviderId element (Source complexType) (SPS15XSDSearchSet1)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |ser:guid  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  <br/> |
+|**Element type**|ser:guid|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.Query.xsd|
    
 ## Definition
 
