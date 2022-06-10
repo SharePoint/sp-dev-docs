@@ -2,7 +2,7 @@
 title: Identities Element in Subscription
 description: Identities Element in Subscription lists the explicit identities this cache subscription contains.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -36,45 +36,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="identity-element-in-identities-subscription-schema.md">Identity Element in Identities (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The serialized value of an identity of an external item. You can get the serialized value of an identity by calling the **Serialize** method on the **Identity** object.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Identity Element in Identities (Subscription Schema)](identity-element-in-identities-subscription-schema.md) | The serialized value of an identity of an external item. You can get the serialized value of an identity by calling the **Serialize** method on the **Identity** object. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="subscription-element-subscription-schema.md">Subscription Element (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The cache subscription that contains this list of explicit identities.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Subscription Element (Subscription Schema)](subscription-element-subscription-schema.md) | The cache subscription that contains this list of explicit identities. |
 
 
 

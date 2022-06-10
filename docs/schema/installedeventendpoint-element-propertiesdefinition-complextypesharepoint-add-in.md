@@ -2,7 +2,7 @@
 title: InstalledEventEndpoint element (PropertiesDefinition complexType)
 description: InstalledEventEndpoint element (PropertiesDefinition complexType) is the URL of the installed event receiver endpoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

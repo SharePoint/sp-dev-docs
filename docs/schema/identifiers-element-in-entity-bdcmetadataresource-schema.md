@@ -2,7 +2,7 @@
 title: Identifiers Element in Entity (BDCMetadataResource Schema)
 description: Details on the Identifiers Element in Entity (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -34,39 +34,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="identifier-element-in-identifiers-bdcmetadataresource-schema.md">Identifier Element in Identifiers (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [Identifier Element in Identifiers (BDCMetadataResource Schema)](identifier-element-in-identifiers-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [Entity Element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md) |
 
 
 

@@ -2,7 +2,7 @@
 title: Interpretation Element in TypeDescriptor
 description: Learn more about the Interpretation Element in TypeDescriptor.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -40,57 +40,18 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="converttype-element-in-interpretation-bdcmetadata-schema.md">ConvertType Element in Interpretation (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A **ConvertType** element that specifies the conversion of a data type to another data type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="normalizedatetime-element-in-interpretation-bdcmetadata-schema.md">NormalizeDateTime Element in Interpretation (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A **NormalizeDateTime** element that specifies the conversion of the date and time representation of a value obtained from an external system into another representation.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>NormalizeString</p></td>
-<td align="left"><p>A **NormalizeString** element that specifies the conversion of the string representation of a value obtained from an external system into another representation.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [ConvertType Element in Interpretation (BDCMetadata Schema)](converttype-element-in-interpretation-bdcmetadata-schema.md) | A **ConvertType** element that specifies the conversion of a data type to another data type. |
+| [NormalizeDateTime Element in Interpretation (BDCMetadata Schema)](normalizedatetime-element-in-interpretation-bdcmetadata-schema.md) | A **NormalizeDateTime** element that specifies the conversion of the date and time representation of a value obtained from an external system into another representation. |
+| NormalizeString | A **NormalizeString** element that specifies the conversion of the string representation of a value obtained from an external system into another representation. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx">TypeDescriptor</a></p></td>
-<td align="left"><p>The **TypeDescriptor** element.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor Element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [TypeDescriptor](https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) | The **TypeDescriptor** element. |
+| [TypeDescriptor Element (BDCMetadata Schema)](typedescriptor-element-bdcmetadata-schema.md) |     |
 
 
 

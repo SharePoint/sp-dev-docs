@@ -2,7 +2,7 @@
 title: InsertTable element (CommandUIDefinitionType complexType)
 description: Learn about InsertTable element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

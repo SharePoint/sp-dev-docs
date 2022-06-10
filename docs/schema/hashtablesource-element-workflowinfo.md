@@ -2,7 +2,7 @@
 title: HashtableSource Element (WorkflowInfo)
 description: HashtableSource Element (WorkflowInfo) specifies that the evaluation value is retrieved from a hash table.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

@@ -2,7 +2,7 @@
 title: InitiationCategories Element (Workflow)
 description: InitiationCategories Element (Workflow) specifies the categories of applications in which users can initiate this workflow.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
