@@ -1,13 +1,13 @@
 ---
 title: "Representation element (PropertyRuleOperator complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d8887d3b-bd69-b967-e1e5-0d170c478fd0
-description: "Last modified: March 09, 2015"
+description: "Describes the Representation element (PropertyRuleOperator complexType) (SPS15XSDSearchSet2)."
 ---
 
 # Representation element (PropertyRuleOperator complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Value|
 |:-----|:-----|
 |**Element type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
