@@ -2,7 +2,7 @@
 title: Condition element (WorkflowInfo)
 description: Describes how a Condition element represents a Condition statement, which is part of a rule sentence that can be displayed in a workflow editor.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

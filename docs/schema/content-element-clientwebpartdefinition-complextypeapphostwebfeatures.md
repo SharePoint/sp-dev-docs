@@ -70,11 +70,6 @@ None.
 
 ### Attributes
 
-| Header1 | Header2 |
-| --- | --- |
-|data1|data2|
-|data11|data12|
-
 <table>
 <colgroup>
 <col width="20%" />

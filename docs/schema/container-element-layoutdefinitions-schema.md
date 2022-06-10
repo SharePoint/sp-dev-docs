@@ -83,8 +83,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 | Element | Description |
 | --- | --- |
-|[CustomProperties element in UIelement (LayoutDefinitions schema)](customproperties-element-in-uielement-layoutdefinitions-schema)|The list of the custom properties.|
-|[Children element in Container (LayoutDefinitions schema)](children-element-in-container-layoutdefinitions-schema)|The list of the Office External Parts in this layout.|
+|[CustomProperties element in UIelement (LayoutDefinitions schema)](customproperties-element-in-uielement-layoutdefinitions-schema.md)|The list of the custom properties.|
+|[Children element in Container (LayoutDefinitions schema)](children-element-in-container-layoutdefinitions-schema.md)|The list of the Office External Parts in this layout.|
 
 ### Parent elements
 

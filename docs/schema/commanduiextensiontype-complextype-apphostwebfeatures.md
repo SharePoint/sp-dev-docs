@@ -2,7 +2,7 @@
 title: CommandUIExtensionType complexType
 description: Describes the CommandUIExtensionType complexType, including type information, elements, attributes, and child elements.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

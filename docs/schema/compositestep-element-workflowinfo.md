@@ -2,7 +2,7 @@
 title: CompositeStep element (WorkflowInfo)
 description: Describes the CompositeStep element (WorkflowInfo), which specifies a step in a composite workflow activity.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
