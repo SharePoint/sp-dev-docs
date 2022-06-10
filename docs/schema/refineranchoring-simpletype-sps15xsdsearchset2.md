@@ -1,13 +1,13 @@
 ---
 title: "RefinerAnchoring simpleType (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 45d7c1b5-39dd-f86b-0a07-b2187d0de04a
-description: "Last modified: March 09, 2015"
+description: "Describes the RefinerAnchoring simpleType (SPS15XSDSearchSet2)."
 ---
 
 # RefinerAnchoring simpleType (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

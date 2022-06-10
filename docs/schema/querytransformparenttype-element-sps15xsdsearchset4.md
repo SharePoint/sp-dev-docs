@@ -1,7 +1,7 @@
 ---
 title: "QueryTransformParentType element (SPS15XSDSearchSet4)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Element type** <br/> |tns:QueryTransformParentType  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |

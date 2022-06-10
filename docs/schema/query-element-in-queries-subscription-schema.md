@@ -1,7 +1,8 @@
 ---
 title: Query Element in Queries
 manager: soliver
-ms.date: 3/9/2015
+description: Describes the Query element in Queries, which specifies a Finder or IDEnumerator method instance to execute to populate the cache.
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -84,58 +85,14 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames Element in MetadataObject (Subscription Schema)</a></span></p></td>
-<td align="left"><p>A list of localized display names for this query.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties Element in MetadataObject (Subscription Schema)</a></span></p></td>
-<td align="left"><p>This is not used by Business Connectivity Services in this release.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
-<td align="left"><p>A list of filter values for the **Finder** or the **IDEnumerator** method instance.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+| --- | --- |
+|[LocalizedDisplayNames Element in MetadataObject (Subscription Schema)](localizeddisplaynames-element-in-metadataobject-subscription-schema.md)|A list of localized display names for this query.|
+|[Properties Element in MetadataObject (Subscription Schema)](properties-element-in-metadataobject-subscription-schema.md)|This is not used by Business Connectivity Services in this release.|
+|[FilterValues Element in Query (Subscription Schema)](filtervalues-element-in-query-subscription-schema.md)|A list of filter values for the **Finder** or the **IDEnumerator** method instance.|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.md">Queries Element in Subscription (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The list of queries that contains this query.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+|Element|Description|
+| --- | --- |
+|[Queries Element in Subscription (Subscription Schema)](queries-element-in-subscription-subscription-schema.md)|The list of queries that contains this query.|

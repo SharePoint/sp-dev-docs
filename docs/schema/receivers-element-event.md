@@ -1,7 +1,8 @@
 ---
 title: Receivers Element (Event)
+description: The Receivers Element (Event) contains the description of an event receiver for handling item events in lists created through the specified list template.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -33,41 +34,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**ListTemplateId**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the index of the list template to which the event receiver applies. For a list of the default list template types, see <span sdata="cer" target="T:Microsoft.SharePoint.SPListTemplateType"><span class="nolink">SPListTemplateType</span></span>.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ListTemplateOwner**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the GUID of the list template owner if the list template is registered through Features, or the name of the site definition if the list template is registered by a site definition.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ListUrl**</p></td>
-<td align="left"><p>Optional **string**. Specifies the URL of the list to which the event receiver applies.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean**. **True** if the event receiver applies only to the root Web; otherwise, **False**.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Scope**</p></td>
-<td align="left"><p>Optional **enumeration**. The scope of the event receiver. This can be **Site** or **Web**. When the **Scope** attribute is set to **Site**, event receivers that are defined inside of a Feature that is scoped to the site collection are registered at the site collection level. When the **Scope** attribute is set to **Web**, event receivers that are defined inside of a Feature that is scoped to a Web are registered on the Web.</p></td>
-</tr>
-</tbody>
-</table>
-
+|Attribute|Description|
+| --- | --- |
+|**ListTemplateId**|Optional **Text**. Specifies the index of the list template to which the event receiver applies. For a list of the default list template types, see [SPListTemplateType](T:Microsoft.SharePoint.SPListTemplateType).|
+|**ListTemplateOwner**|Optional **Text**. Specifies the GUID of the list template owner if the list template is registered through Features, or the name of the site definition if the list template is registered by a site definition.|
+|**ListUrl**|Optional **string**. Specifies the URL of the list to which the event receiver applies.|
+|**RootWebOnly**|Optional **Boolean**. **True** if the event receiver applies only to the root Web; otherwise, **False**.|
+|**Scope**|Optional **enumeration**. The scope of the event receiver. This can be **Site** or **Web**. When the **Scope** attribute is set to **Site**, event receivers that are defined inside of a Feature that is scoped to the site collection are registered at the site collection level. When the **Scope** attribute is set to **Web**, event receivers that are defined inside of a Feature that is scoped to a Web are registered on the Web.|
 
 ### Child elements
 

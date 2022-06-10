@@ -1,7 +1,8 @@
 ---
 title: RemoteEndpointsDefinition complexType
+description: Describes the RemoteEndpointsDefinition complexType. Applies to SharePoint Add-ins, SharePoint Foundation 2013, and SharePoint Server 2013.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

@@ -1,13 +1,13 @@
 ---
 title: "RefinerConfiguration complexType (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ed726d55-576d-1801-4bc7-310389d8e93b
-description: "Last modified: March 09, 2015"
+description: "Describes the RefinerConfiguration complexType (SPS15XSDSearchSet2)."
 ---
 
 # RefinerConfiguration complexType (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
