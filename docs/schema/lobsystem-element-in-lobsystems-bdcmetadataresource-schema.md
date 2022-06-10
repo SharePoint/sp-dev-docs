@@ -34,53 +34,14 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md">LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadataresource-schema.md">Entities Element in LobSystem (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+- [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)
+- [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)
+- [AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md)
+- [LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md)
+- [Entities Element in LobSystem (BDCMetadataResource Schema)](entities-element-in-lobsystem-bdcmetadataresource-schema.md)
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystems-element-in-model-bdcmetadataresource-schema.md">LobSystems Element in Model (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
+- [LobSystems Element in Model (BDCMetadataResource Schema)](lobsystems-element-in-model-bdcmetadataresource-schema.md)
 
 
 
