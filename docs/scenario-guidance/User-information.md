@@ -34,7 +34,7 @@ _**Applies to:** Office 365_
 - [Microsoft Graph Snippets Sample for AngularJS (REST)](https://github.com/microsoftgraph/angular-snippets-rest-sample)
 - [Microsoft Graph iOS Objective C Snippets Sample](https://github.com/microsoftgraph/ios-objectiveC-snippets-sample)
 - [Office 365 Android Microsoft Graph Snippets](https://github.com/microsoftgraph/android-java-snippets-rest-sample)
-- [Get incremental changes for users](https://docs.microsoft.com/graph/delta-query-users)
+- [Get incremental changes for users](/graph/delta-query-users)
 
 ## SharePoint user profiles
 
