@@ -63,7 +63,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
   
-| element | Description |
+| Element | Description |
 | --- | --- |
 | [AccessControlList element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | The access control list (ACL) that contains this ACE. |
 
