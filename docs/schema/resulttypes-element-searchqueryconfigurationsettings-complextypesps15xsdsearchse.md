@@ -1,26 +1,25 @@
 ---
 title: "ResultTypes element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 64381654-15fe-3e5b-0882-5820056f5d31
-description: "Last modified: March 09, 2015"
+description: "Describes the ResultTypes element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)."
 ---
 
 # ResultTypes element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)
 
- 
-  
+
 ## Element information
 
-|||
+|Information|Value|
 |:-----|:-----|
-|**Element type** <br/> |q4:ArrayOfResultItemType  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
+|**Element type** |q4:ArrayOfResultItemType |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Portability.xsd |
    
 ## Definition
 
