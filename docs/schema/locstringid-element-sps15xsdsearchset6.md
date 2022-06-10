@@ -1,13 +1,13 @@
 ---
 title: "LocStringId element (SPS15XSDSearchSet6)"
+description: Outlines information, a definition, and elements and attributes for the LocStringId element (SPS15XSDSearchSet6) in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3e7ec5eb-164a-e7f7-9b24-59c176914b4d
-description: "Last modified: March 09, 2015"
 ---
 
 # LocStringId element (SPS15XSDSearchSet6)
@@ -15,12 +15,11 @@ description: "Last modified: March 09, 2015"
 **Applies to:** SharePoint Server 2013
   
 ## Element information
+**Element type**: tns:LocStringId 
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |tns:LocStringId  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.xsd  <br/> |
+**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search
+
+**Schema file**: schema_Microsoft.Office.Server.Search.xsd 
    
 ## Definition
 

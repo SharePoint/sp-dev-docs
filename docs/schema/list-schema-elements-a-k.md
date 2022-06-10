@@ -1,7 +1,8 @@
 ---
 title: "List schema elements A-K"
+description: Links to resources for list schema elements in Sharepoint. The links are listed alphabetically from A-K.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: aac6a892-7123-42ae-8551-de071d807c94
-description: "Last modified: July 15, 2011"
 ---
 
 # List schema elements A-K
