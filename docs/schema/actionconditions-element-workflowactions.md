@@ -1,5 +1,6 @@
 ---
 title: ActionConditions element (WorkflowActions)
+description: Discusses the definition, elements and attributes for the ActionConditions element which specifies conditional logic for the action.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -44,16 +45,7 @@ None
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="action-element-workflowactions.md">Action</a></p></td>
-</tr>
-</tbody>
-</table>
+[Action](action-element-workflowactions.md)
 
 ## See also
 
@@ -62,11 +54,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-
