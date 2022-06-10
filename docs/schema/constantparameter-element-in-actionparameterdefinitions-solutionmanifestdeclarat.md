@@ -136,5 +136,5 @@ None.
 
 | Element | Description |
 | --- | --- |
-|[Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)](parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch)|The **Parameters** element that contains all the parameters of an action.|
+|[Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)](parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md)|The **Parameters** element that contains all the parameters of an action.|
 
