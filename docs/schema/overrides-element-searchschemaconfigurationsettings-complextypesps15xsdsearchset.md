@@ -18,9 +18,9 @@ ms.assetid: 1f00644b-77b0-db0b-ce78-488a650bf777
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |q13:OverrideInfoCollection  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
+|**Element type**|q13:OverrideInfoCollection|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Portability.xsd|
    
 ## Definition
 

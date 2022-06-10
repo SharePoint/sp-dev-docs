@@ -18,9 +18,9 @@ ms.assetid: d4a26487-611a-70b3-92e6-126bf5e0786e
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |q2:SearchObjectOwner  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  <br/> |
+|**Element type**|q2:SearchObjectOwner|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.Query.xsd|
    
 ## Definition
 

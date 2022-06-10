@@ -18,9 +18,9 @@ ms.assetid: 1aadf191-a236-b357-9acb-0201a21c2bbc
 
 |Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:BaseInfoCollectionOfOverrideInfoTzWWwPjw  <br/> |
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
+|**Extension base**|tns:BaseInfoCollectionOfOverrideInfoTzWWwPjw|
    
 ## Definition
 

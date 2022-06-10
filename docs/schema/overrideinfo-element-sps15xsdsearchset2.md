@@ -18,9 +18,9 @@ ms.assetid: 6d7d00fb-a4fb-f657-b745-0804dd8f0457
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:OverrideInfo  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**|tns:OverrideInfo|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
    
 ## Definition
 

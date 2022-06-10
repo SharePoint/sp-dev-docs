@@ -18,9 +18,9 @@ ms.assetid: 14ee1c1b-906a-08a2-80c1-cd9eb32123da
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:SearchObjectOwner  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**|tns:SearchObjectOwner|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
    
 ## Definition
 

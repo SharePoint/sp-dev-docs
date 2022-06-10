@@ -18,9 +18,9 @@ ms.assetid: 1188de30-bc0b-a3ed-c9cc-ef96b26d6d4a
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:OverrideInfoCollection  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**|tns:OverrideInfoCollection|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
    
 ## Definition
 
