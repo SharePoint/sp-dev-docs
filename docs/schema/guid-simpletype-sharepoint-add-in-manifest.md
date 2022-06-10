@@ -2,7 +2,7 @@
 title: GUID simpleType (SharePoint Add-in Manifest)
 description: Learn more about GUID simpleType (SharePoint Add-in Manifest).
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

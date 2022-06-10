@@ -2,7 +2,7 @@
 title: HashtableSource element
 description: The HashtableSource element specifies the hash table from which the evaluation value is retrieved.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
