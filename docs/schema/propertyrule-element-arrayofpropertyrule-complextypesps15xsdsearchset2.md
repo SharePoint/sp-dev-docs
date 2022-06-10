@@ -2,7 +2,7 @@
 title: "PropertyRule element (ArrayOfPropertyRule complexType) (SPS15XSDSearchSet2)"
 description: "Describes the definition, element, and attribute information for the PropertyRule element (ArrayOfPropertyRule complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
