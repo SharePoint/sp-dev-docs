@@ -59,8 +59,6 @@ The following sections describe attributes, child elements, and parent elements.
 
 [Fields Element (WorkflowConfig)](fields-element-workflowconfig.md)
 
-
-
 ### Parent elements
 
 [ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)

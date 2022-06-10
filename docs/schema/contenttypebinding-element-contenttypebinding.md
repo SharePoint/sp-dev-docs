@@ -67,8 +67,6 @@ None
 
 [Elements Element (ContentTypeBinding)](elements-element-contenttypebinding.md)
 
-
-
 ### Remarks
 
 Lists defined in the onet.xml schema cannot be modified directly.

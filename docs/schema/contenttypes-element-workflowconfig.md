@@ -50,7 +50,6 @@ The following sections describe attributes, child elements, and parent elements.
 
 [WorkflowConfig Element](workflowconfig-element.md)
 
-
 ### Remarks
 
 The workflow task content types defined for workflows should ultimately inherit from the WorkflowTask content type.

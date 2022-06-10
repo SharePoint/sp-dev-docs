@@ -65,24 +65,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="contexteventhandlers-element-in-declarativecontextdefinition-solutionmanifestdec.md">ContextEventHandlers Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
-<td align="left"><p>The context event handlers for the context.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [ContextEventHandlers Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](contexteventhandlers-element-in-declarativecontextdefinition-solutionmanifestdec.md) | The context event handlers for the context. |
 
 <br/>
 
