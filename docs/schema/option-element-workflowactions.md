@@ -2,7 +2,7 @@
 title: Option Element (WorkflowActions)
 description: The Option Element (WorkflowActions) is used to populate DesignerType drop-down list box controls that are not data bound.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

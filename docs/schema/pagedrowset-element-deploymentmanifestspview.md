@@ -1,13 +1,13 @@
 ---
 title: "PagedRowset element (DeploymentManifest - SPView)"
+description: "PagedRowset element (DeploymentManifest - SPView) represents a paged rowset on an instance of a SharePoint view (SPView) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2e077bd2-785f-4fe3-816a-e25c9da93880
-description: "Last modified: March 09, 2015"
 ---
 
 # PagedRowset element (DeploymentManifest - SPView)

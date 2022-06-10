@@ -1,13 +1,13 @@
 ---
 title: "Owner element (ResultItemType complexType) (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the Owner element (ResultItemType complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 14ee1c1b-906a-08a2-80c1-cd9eb32123da
-description: "Last modified: March 09, 2015"
 ---
 
 # Owner element (ResultItemType complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:SearchObjectOwner  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

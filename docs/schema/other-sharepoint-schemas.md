@@ -2,7 +2,7 @@
 title: Other SharePoint schemas
 description: This section provides schema reference documentation for additional SharePoint XML schemas. 
 manager: soliver
-ms.date: 9/18/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: overview
 ms.prod: sharepoint

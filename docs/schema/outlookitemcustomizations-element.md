@@ -2,7 +2,7 @@
 title: OutlookItemCustomizations Element
 description: OutlookItemCustomizations Element describes how external data should appear in Microsoft Outlook 2010 and what other customizations you need in Outlook.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

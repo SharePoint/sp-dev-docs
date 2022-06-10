@@ -1,13 +1,13 @@
 ---
 title: "PagedClientCallbackRowset element (DeploymentManifest - SPWebPart)"
+description: "PagedClientCallbackRowset element (DeploymentManifest - SPWebPart) represents a row set returned from a callback to a paged client on an instance of SharePoint web part (WebPart) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7ce7e786-c712-4a8c-95bc-77be740c55f2
-description: "Last modified: March 09, 2015"
 ---
 
 # PagedClientCallbackRowset element (DeploymentManifest - SPWebPart)
