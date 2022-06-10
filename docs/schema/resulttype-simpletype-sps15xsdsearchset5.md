@@ -28,5 +28,3 @@ description: "Describes the ResultType simpleType (SPS15XSDSearchSet5). Applies 
 <xs:simpleType name="ResultType"></xs:simpleType>
 
 ```
-
-

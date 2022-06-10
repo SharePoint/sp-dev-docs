@@ -13,7 +13,7 @@ description: "Describes the ResultTypes element (SearchQueryConfigurationSetting
 # ResultTypes element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)
 
 
-## Element information
+## Element information 
 
 |Information|Value|
 |:-----|:-----|

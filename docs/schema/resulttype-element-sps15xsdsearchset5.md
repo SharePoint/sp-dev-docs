@@ -23,7 +23,7 @@ description: "Describes the ResultType element (SPS15XSDSearchSet5). Applies to 
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Query.xsd |
    
-## Definition
+## Definition 
 
 ```XML
 <xs:element name="ResultType" type="tns:ResultType"></xs:element>
