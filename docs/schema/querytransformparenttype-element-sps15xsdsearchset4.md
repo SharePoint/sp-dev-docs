@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0bdda245-46c6-735d-1bd8-45b4c94c2657
-description: "Last modified: March 09, 2015"
+description: "Describes the QueryTransformParentType element (SPS15XSDSearchSet4)."
 ---
 
 # QueryTransformParentType element (SPS15XSDSearchSet4)
