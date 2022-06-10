@@ -82,7 +82,7 @@ GET https://graph.microsoft.com/beta/sites?filter=siteCollection/root%20ne%20nul
 }
 ```
 
-For more information, see the [MultiGeo.TenantInformationCollection](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.TenantInformationCollection) sample.
+For more information, see the [MultiGeo.TenantInformationCollection](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.TenantInformationCollection) sample.
 
 > [!NOTE] 
 > For more information about permissions and how to configure your application, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).

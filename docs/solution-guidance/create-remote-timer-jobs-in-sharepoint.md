@@ -16,7 +16,7 @@ Examples of how timer jobs are used include:
 
 ## Before you begin
 
-To get started, download the [Core.TimerJobs.Samples](https://github.com/SharePoint/PnP/tree/dev/Solutions/Core.TimerJobs.Samples) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+To get started, download the [Core.TimerJobs.Samples](https://github.com/pnp/PnP/tree/master/Solutions/Core.TimerJobs.Samples) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.

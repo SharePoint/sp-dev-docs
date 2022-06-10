@@ -124,6 +124,6 @@ Before looking for the information stored in the local storage key, the code use
 
 ## See also
   
-- [Branding.UIElementPersonalization](https://github.com/SharePoint/PnP/tree/dev/Samples/Branding.UIElementPersonalization) 
-- [Performance.Caching](https://github.com/SharePoint/PnP/tree/dev/Samples/Performance.Caching)
+- [Branding.UIElementPersonalization](https://github.com/pnp/PnP/tree/master/Samples/Branding.UIElementPersonalization) 
+- [Performance.Caching](https://github.com/pnp/PnP/tree/master/Samples/Performance.Caching)
 - [UX components in SharePoint and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md)

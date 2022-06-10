@@ -11,11 +11,11 @@ Create UX controls in SharePoint provider-hosted add-ins that work and behave li
 
 The article describes three samples that show you how to implement UX controls in your provider-hosted add-in:
 
-- [Core.PeoplePicker](https://github.com/SharePoint/PnP/tree/dev/Components/Core.PeoplePicker) &ndash; Shows you how to add a people picker control.
+- [Core.PeoplePicker](https://github.com/pnp/PnP/tree/master/Components/Core.PeoplePicker) &ndash; Shows you how to add a people picker control.
     
-- [Core.TaxonomyMenu](https://github.com/SharePoint/PnP/tree/dev/Components/Core.TaxonomyMenu) &ndash; Shows you how to implement a localizable taxonomy menu control.
+- [Core.TaxonomyMenu](https://github.com/pnp/PnP/tree/master/Components/Core.TaxonomyMenu) &ndash; Shows you how to implement a localizable taxonomy menu control.
     
-- [Core.TaxonomyPicker](https://github.com/SharePoint/PnP/tree/dev/Components/Core.TaxonomyPicker) &ndash; Shows you how to implement a taxonomy picker control.
+- [Core.TaxonomyPicker](https://github.com/pnp/PnP/tree/master/Samples/Core.TaxonomyPicker) &ndash; Shows you how to implement a taxonomy picker control.
     
 These samples use JavaScript and the JSOM to communicate with SharePoint, and use the [cross-domain library](../sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md) to handle function calls from the add-in to the host site domain.
 
@@ -26,7 +26,7 @@ These samples use JavaScript and the JSOM to communicate with SharePoint, and us
 
 ## People picker control
 
-The [Core.PeoplePicker](https://github.com/SharePoint/PnP/tree/dev/Components/Core.PeoplePicker) sample shows you how to implement a people picker control in a provider-hosted add-in. When the user starts typing a name into the text input box, the control searches the user profile store for potential matches, and displays them in the UI. The add-in displays a configurable and extensible people picker control that runs on a remote host and queries the user profile store on the host site to match user inputs.
+The [Core.PeoplePicker](https://github.com/pnp/PnP/tree/master/Components/Core.PeoplePicker) sample shows you how to implement a people picker control in a provider-hosted add-in. When the user starts typing a name into the text input box, the control searches the user profile store for potential matches, and displays them in the UI. The add-in displays a configurable and extensible people picker control that runs on a remote host and queries the user profile store on the host site to match user inputs.
 
 **People picker control**
 
@@ -105,7 +105,7 @@ if (searchText.length >= parent.GetMinimalCharactersBeforeSearching()) {
 
 ## Taxonomy menu control
 
-The [Core.TaxonomyMenu](https://github.com/SharePoint/PnP/tree/dev/Components/Core.TaxonomyMenu) sample shows you how to implement a localizable taxonomy menu control that is populated from the term store in a provider-hosted add-in. The add-in also sets up the required term store languages, groups, sets, and terms for populating the menu, and checks the user's language preference to set the display language.
+The [Core.TaxonomyMenu](https://github.com/pnp/PnP/tree/master/Components/Core.TaxonomyMenu) sample shows you how to implement a localizable taxonomy menu control that is populated from the term store in a provider-hosted add-in. The add-in also sets up the required term store languages, groups, sets, and terms for populating the menu, and checks the user's language preference to set the display language.
 
 The add-in implements a **TaxonomyHelper** class (CSOM) that sets up the term store and populates it with terms. It then uploads into the site's root folder a JavaScript file that displays the navigational links.
 
@@ -201,7 +201,7 @@ html += "<ul style='margin-top: 0px; margin-bottom: 0px;'>"
 
 ## Taxonomy picker control
 
-The [Core.TaxonomyPicker](https://github.com/SharePoint/PnP/tree/dev/Components/Core.TaxonomyPicker) sample shows you how to implement a taxonomy picker control in a provider-hosted add-in. When the user starts typing a term into the text input box, the control searches the term store for potential matches and displays them in a list under the input box.
+The [Core.TaxonomyPicker](https://github.com/pnp/PnP/tree/master/Samples/Core.TaxonomyPicker) sample shows you how to implement a taxonomy picker control in a provider-hosted add-in. When the user starts typing a term into the text input box, the control searches the term store for potential matches and displays them in a list under the input box.
 
 The add-in creates an HTML page that conforms to the JSOM taxonomy picker requirements, and then adds and configures the control. It uses the JSOM library to query the host site's term store. The taxonomy picker communicates with the SharePoint Managed Metadata Service, which requires write permission at the taxonomy permission scope so that it can read from closed term sets and write to open term sets. Make sure that the AppManifest.xml file has set the write permission at the appropriate scope.
 

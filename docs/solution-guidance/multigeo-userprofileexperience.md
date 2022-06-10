@@ -79,7 +79,7 @@ When you have the personal site host URL, you can use that along with the [Multi
 > [!NOTE] 
 > If the user doesn't have a personal site, this approach will not work. Instead, you should use the SharePoint User Profile API.
 
-To learn more, see the [MultiGeo.UserProfileUpdates](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.UserProfileUpdates) sample.
+To learn more, see the [MultiGeo.UserProfileUpdates](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.UserProfileUpdates) sample.
 
 
 ## Update user profile properties
@@ -96,7 +96,7 @@ The following example shows how to update the **AboutMe** property for the user 
 GET https://graph.microsoft.com/v1.0/users/bert@contoso.onmicrosoft.com?$select=aboutme
 ```
 
-For more information, see the [MultiGeo.UserProfileUpdates](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.UserProfileUpdates) sample.
+For more information, see the [MultiGeo.UserProfileUpdates](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.UserProfileUpdates) sample.
 
 ### Update the preferred data location property
 
@@ -119,7 +119,7 @@ JSON payload:
 
 ```
 
-For more information, see the [MultiGeo.UserPreferredDataLocation](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.UserPreferredDataLocation) sample.
+For more information, see the [MultiGeo.UserPreferredDataLocation](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.UserPreferredDataLocation) sample.
 
 ### Add custom SharePoint user profile properties
 
@@ -149,7 +149,7 @@ peopleManager.SetSingleValueProfileProperty(userAccountName, "CostCenter", "8978
 tenantAdminContext.ExecuteQuery();
 ```
 
-For more information, see the [MultiGeo.UserProfileUpdates](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.UserProfileUpdates) sample.
+For more information, see the [MultiGeo.UserProfileUpdates](https://github.com/pnp/PnP/tree/master/Samples/MultiGeo.UserProfileUpdates) sample.
 
 ### Use the bulk user profile update API
 

@@ -25,7 +25,7 @@ Typically, farm solutions are packaged as SharePoint solution package (WSP) file
 
 ### Articles
 
-- [Advanced SharePoint Add-in model development](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658)
+- [Advanced SharePoint Add-in model development](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint)
 - [Transform farm solutions to the SharePoint Add-in model](/sharepoint/dev/solution-guidance/transform-farm-solutions-to-the-sharepoint-app-model)
 - [Work with __REQUESTDIGEST](/sharepoint/dev/spfx/web-parts/basics/working-with-requestdigest)
 - [Transformation guidance from farm solutions to add-in model training module](https://github.com/OfficeDev/TrainingContent/tree/master/SharePoint/AddIns/14%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model)

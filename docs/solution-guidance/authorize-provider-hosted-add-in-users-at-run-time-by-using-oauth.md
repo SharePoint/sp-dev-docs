@@ -11,7 +11,7 @@ _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
 Your users can access SharePoint add-ins by opening a SharePoint site, choosing  **Site Contents**, and then choosing the add-in. SharePoint redirects users to the remote web where your provider-hosted add-in runs. Because users access the add-in from SharePoint, users are authorized by SharePoint before they can access the add-in.
 
-Alternatively, if your users go directly to the URL of your provider-hosted add-in, that add-in must authorize them at run time by using OAuth. In this scenario, the provider-hosted add-in must handle authorization because your user wasn't authorized by SharePoint first. The [Core.DynamicPermissions ](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.DynamicPermissions) sample shows you how to dynamically request permissions from a website by using OAuth.
+Alternatively, if your users go directly to the URL of your provider-hosted add-in, that add-in must authorize them at run time by using OAuth. In this scenario, the provider-hosted add-in must handle authorization because your user wasn't authorized by SharePoint first. The [Core.DynamicPermissions](https://github.com/pnp/PnP/tree/master/Samples/Core.DynamicPermissions) sample shows you how to dynamically request permissions from a website by using OAuth.
 Use this solution to:
 
 - Authorize users who navigate directly to your provider-hosted add-in rather than accessing your add-in from SharePoint. For example, you might not want your users to use the SharePoint UI. Instead, your users might use a provider-hosted add-in that shows relevant data retrieved from SharePoint.
@@ -20,7 +20,7 @@ Use this solution to:
     
 ## Before you begin
 
-To get started, download the [Core.DynamicPermissions ](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.DynamicPermissions) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.DynamicPermissions](https://github.com/pnp/PnP/tree/master/Samples/Core.DynamicPermissions) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
 
 Before you run the code sample: 
 

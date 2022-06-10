@@ -7,13 +7,13 @@ ms.localizationpriority: medium
 
 # Modify SharePoint site permissions and get external sharing status
 
-You can use the [Core.SitePermissions](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SitePermissions) sample to modify the site collection administrators on any site collection, including those for OneDrive for Business on Office 365 tenants. This sample also shows you how to obtain external sharing status for Office 365 Multi-Tenant installations.
+You can use the [Core.SitePermissions](https://github.com/pnp/PnP/tree/master/Samples/Core.SitePermissions) sample to modify the site collection administrators on any site collection, including those for OneDrive for Business on Office 365 tenants. This sample also shows you how to obtain external sharing status for Office 365 Multi-Tenant installations.
 
 Using a console application, you create a **ClientContext** object to get permissions to list and/or modify administrators, and get external sharing status. You also create a registered add-in by using OAuth tokens.
 
 ## Before you begin
 
-To get started, download the [Core.SitePermissions](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.SitePermissions) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+To get started, download the [Core.SitePermissions](https://github.com/pnp/PnP/tree/master/Samples/Core.SitePermissions) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
@@ -100,5 +100,5 @@ List<ExternalUserEntity> externalUsers = ccTenant.Web.GetExternalUsersTenant();
 
 ## See also
    
-- [Provisioning.Pages sample](https://github.com/SharePoint/PnP/tree/dev/Samples/Provisioning.Pages)
+- [Provisioning.Pages sample](https://github.com/pnp/PnP/tree/master/Samples/Provisioning.Pages)
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

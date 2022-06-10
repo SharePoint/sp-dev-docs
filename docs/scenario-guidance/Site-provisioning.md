@@ -89,7 +89,6 @@ It's a technique to create a new site based on the Information Architecture of a
 
 ### Articles
 * [Web Templates](https://msdn.microsoft.com/library/aa979709%28v=office.14%29.aspx)
-* [SharePoint 2010 and web templates](https://blogs.msdn.microsoft.com/vesku/2010/10/14/sharepoint-2010-and-web-templates)
 * [Save, download, and upload a SharePoint site as a template](/sharepoint/dev/general-development/save-download-and-upload-a-sharepoint-site-as-a-template)
 * [Site definitions vs. Web templates](https://blogs.msdn.microsoft.com/vesku/2011/07/22/site-definitions-vs-web-templates/)
 

@@ -34,7 +34,7 @@ _**Applies to:** Office 365_
 - [Microsoft Graph Snippets Sample for AngularJS (REST)](https://github.com/microsoftgraph/angular-snippets-rest-sample)
 - [Microsoft Graph iOS Objective C Snippets Sample](https://github.com/microsoftgraph/ios-objectiveC-snippets-sample)
 - [Office 365 Android Microsoft Graph Snippets](https://github.com/microsoftgraph/android-java-snippets-rest-sample)
-- [Get incremental changes for users](https://developer.microsoft.com/graph/docs/concepts/delta_query_users)
+- [Get incremental changes for users](https://docs.microsoft.com/graph/delta-query-users)
 
 ## SharePoint user profiles
 
@@ -51,7 +51,7 @@ In SharePoint, user profiles represent SharePoint users. User profile properties
 - [Get user identity and properties in SharePoint](/sharepoint/dev/sp-add-ins/get-user-identity-and-properties-in-sharepoint)
 - [User segmentation in SharePoint](/sharepoint/dev/general-development/user-segmentation-in-sharepoint)
 - [Pattern: Retrieving user data](https://github.com/SharePoint/PnP-Transformation/blob/master/InfoPath/Guidance/Patterns/Retrieving%20user%20data.md)
-- [User Personalization and OneDrive for Business Operations Using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/07%20User%20Personalization%20and%20OneDrive%20for%20Business%20Operations%20Using%20add-in%20model)
+- [User Personalization and OneDrive for Business Operations Using add-in model](https://github.com/OfficeDev/TrainingContent/blob/master/SharePoint/AddIns/10%20User%20Personalization%20and%20OneDrive%20for%20Business%20Operations%20Using%20add-in%20model/Lab.md)
 
 ### Videos
 
@@ -68,7 +68,7 @@ In SharePoint, user profiles represent SharePoint users. User profile properties
 
 ### Samples
 
-- [User profile manipulation using CSOM](https://github.com/SharePoint/PnP/tree/dev/Samples/UserProfile.Manipulation.CSOM)
+- [User profile manipulation using CSOM](https://github.com/pnp/PnP/tree/master/Samples/UserProfile.Manipulation.CSOM)
 - [User profile bulk property updater](https://github.com/SharePoint/PnP/tree/master/Samples/Core.BulkUserProfileUpdater)
 
 ## Azure AD profile data

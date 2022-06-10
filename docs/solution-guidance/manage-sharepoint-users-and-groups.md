@@ -7,11 +7,11 @@ ms.localizationpriority: medium
 
 # Manage SharePoint users and groups
 
-This article shows you how to add or remove groups and users within a given site collection. The code examples in this article add users and groups, and then give them permission levels of access to SharePoint. These user and group permission level actions are implemented via extension methods in the [Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.GroupManagement) PnP sample.
+This article shows you how to add or remove groups and users within a given site collection. The code examples in this article add users and groups, and then give them permission levels of access to SharePoint. These user and group permission level actions are implemented via extension methods in the [Core.GroupManagement](https://github.com/pnp/PnP/tree/master/Samples/Core.GroupManagement) PnP sample.
 
 ## Before you begin
 
-To get started, download the [Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.GroupManagement) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
+To get started, download the [Core.GroupManagement](https://github.com/pnp/PnP/tree/master/Samples/Core.GroupManagement) sample add-in from the Office 365 Developer Patterns and Practices project on GitHub.
 
 > [!NOTE] 
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.

@@ -173,8 +173,7 @@ Large files, such as videos, images, and PowerPoint files, can cause grief for u
 
 Consider these options:
 
-- [Meet Office 365 Video](https://support.office.com/article/Meet-Office-365-Video-ca1cc1a9-a615-46e1-b6a3-40dbd99939a6)
-- [Manage your Office 365 Video portal](https://support.office.com/article/Manage-your-Office-365-Video-portal-c059465b-eba9-44e1-b8c7-8ff7793ff5da?ui=en-US&rs=en-US&ad=US)
+- [Manage your Office 365 Video portal](https://www.microsoft.com/microsoft-365/blog/2014/11/18/introducing-office-365-video/)
 
 
 For information about CDNs, see:
@@ -188,7 +187,7 @@ For information about CDNs, see:
 
 ## See also
 
-- [Overview of document deletion policies](https://support.office.com/article/overview-of-document-deletion-policies-55e8d858-f278-482b-a198-2e62d6a2e6e5?ui=en-US&rs=en-US&ad=US)
+- [Overview of document deletion policies](https://support.microsoft.com/office/overview-of-document-deletion-policies-in-sharepoint-server-2016-cbbb1a8b-9f30-41cb-8110-36f33f90a1e6#:~:text=A%20document%20deletion%20policy%20contains%20one%20or%20more,the%20document%20permanently%20or%20to%20the%20Recycle%20Bin.)
 - [Information management policies in Office 365](https://technet.microsoft.com/library/dn792007.aspx)
 - [Introduction to information management policies](https://support.office.com/article/Introduction-to-information-management-policies-63a0b501-ba59-44b7-a35c-999f3be057b2)
 - [Manage site collection storage limits](https://support.office.com/Article/Manage-site-collection-storage-limits-77389c2c-8e7e-4b16-ab97-1c7103784b08?ui=en-US&rs=en-US&ad=US)
