@@ -44,29 +44,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="contenttype-element-workflowconfig.md">ContentType Element (WorkflowConfig)</a></p></td>
-</tr>
-</tbody>
-</table>
+[ContentType Element (WorkflowConfig)](contenttype-element-workflowconfig.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="workflowconfig-element.md">WorkflowConfig Element</a></p></td>
-</tr>
-</tbody>
-</table>
+[WorkflowConfig Element](workflowconfig-element.md)
 
 
 ### Remarks

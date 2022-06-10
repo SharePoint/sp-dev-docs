@@ -57,29 +57,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></p></td>
-</tr>
-</tbody>
-</table>
+[Fields Element (WorkflowConfig)](fields-element-workflowconfig.md)
+
+
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="contenttypes-element-workflowconfig.md">ContentTypes Element (WorkflowConfig)</a></p></td>
-</tr>
-</tbody>
-</table>
+[ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)
 
 ### Remarks
 
