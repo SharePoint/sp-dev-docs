@@ -23,7 +23,7 @@ ms.assetid: 7a57baca-5ac3-1ebd-80cf-3b29f398889e
 
 ## Element information
 
-|   |   |
+|Information|Value|
 |---|---|
 | **Element type**  | RemoteEndpointsDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

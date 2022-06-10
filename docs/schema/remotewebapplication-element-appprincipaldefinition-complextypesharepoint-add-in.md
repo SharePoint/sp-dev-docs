@@ -1,7 +1,8 @@
 ---
 title: RemoteWebApplication element (AppPrincipalDefinition complexType)
+description: Defines the RemoteWebApplication element (AppPrincipalDefinition complexType), which specifies properties of a provider-hosted SharePoint Add-in.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ Specifies properties of a provider-hosted SharePoint Add-in.
 
 ## Element information
 
-|   |   |
+|Information|Value|
 |---|---|
 | **Element type**  | Not defined |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
