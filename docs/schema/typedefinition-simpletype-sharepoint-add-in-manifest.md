@@ -21,7 +21,7 @@ ms.assetid: f4d23160-091c-ca02-4997-0ea3dc33024f
 
 ## Type information
 
-| resource | File |
+| Resource | File |
 |---|---|
 | Base type  | xs:string |
 | Namespace  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
