@@ -18,9 +18,9 @@ ms.assetid: 15ffbb16-0a08-3102-ad8f-59e3996f840f
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:PropertyRuleOperator  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**|tns:PropertyRuleOperator|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
    
 ## Definition
 
