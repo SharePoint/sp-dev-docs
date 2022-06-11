@@ -1,5 +1,6 @@
 ---
 title: ActionNames element in OBPart
+description: Discusses the elements and attributes for ActionNames element in OBPart which defines the actions exposed by the External Data Part.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -34,48 +35,16 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionname-element-in-arrayofactions-layoutdefinitions-schema.md">ActionName element in ArrayOfActions (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The name of the action.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [ActionName element in ArrayOfActions (LayoutDefinitions Schema)](actionname-element-in-arrayofactions-layoutdefinitions-schema.md) | The name of the action. |
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The Office External Part.</p></td>
-</tr>
-</tbody>
-</table>
-
-
+  
+| Element | Description |
+| --- | --- |
+| [OBPart element in ArrayOfOBPart (LayoutDefinitions Schema)](obpart-element-in-arrayofobpart-layoutdefinitions-schema.md) | The Office External Part. |
 
 
 

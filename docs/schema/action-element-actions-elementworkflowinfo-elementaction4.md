@@ -1,5 +1,6 @@
 ---
 title: Action element
+description: Discusses the definition, elements and attributes for Action element which contains the information that is required for Workflow Manager Client.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -37,7 +38,7 @@ Contains the information that is required for Workflow Manager Client 1.0 to pro
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -191,135 +192,24 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Attributes
-
-<table>
-<colgroup>
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="35%" />
-<col width="20%" />
-
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Required</p></th>
-<th align="left"><p>Description</p></th>
-<th align="left"><p>Possible values</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**__SolutionId**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies a GUID that the client application writes to the implementation-specific action. The server uses the GUID to help locate the assembly at workflow runtime.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**AppliesTo**</p></td>
-<td align="left"><p><a href="appliestotypes-simpletype-action4.md">appliesToTypes</a></p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Indicates what this workflow action should be. Valid values include <strong>site</strong>, <strong>list</strong>, <strong>doclib</strong>, and <strong>all</strong>. The value <strong>all</strong> means that the action is available under any scope and will always show up in the <span class="ui">Actions</span> list.</p></td>
-<td align="left"><p>Values of the appliesToTypes type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Assembly**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>The assembly name that contains instructions for implementing the <strong>Action</strong> element. The text should include the <span class="parameter" sdata="paramReference">PublicKeyToken</span>, <span class="parameter" sdata="paramReference">Version</span>, and <span class="parameter" sdata="paramReference">Culture</span> values.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Category**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Provides a category for the workflow action. This value is used to filter the list of available actions.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ClassName**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Fully qualified name of the class that implements the workflow action.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**CreatedTaskFormType**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies the type of a task created. Use <strong>DataCollectTask</strong> to create a task that collects data from one user; use <strong>GroupAssignedTask</strong> to create a task that collects data from one or more users; use <strong>TodoItemTask</strong> to create a task that does not collect data from users but only exists for a user to validate that they have done something; use <strong>TaskProcess</strong> to create a task that has a form that allows for ad-hoc collaboration and might collect data from one or more users.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**CreatesInList**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>If set, specifies that the workflow create an item in a list or document library. Values must map to a parameter name that contains the ID of the list or document library.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**CreatesTask**</p></td>
-<td align="left"><p>s:boolean</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>If <strong>true</strong>, a task list item is created in the workflow. If left blank, the assumption is <strong>false</strong>, and no task list items are created.</p></td>
-<td align="left"><p>Values of the s:boolean type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**FunctionName**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies the name of a function to call.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**IsError**</p></td>
-<td align="left"><p>s:boolean</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>If <strong>true</strong>, instances of this <strong>Action</strong> element are considered an error by the client application.</p></td>
-<td align="left"><p>Values of the s:boolean type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**ListModeration**</p></td>
-<td align="left"><p>s:boolean</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>If <strong>true</strong>, this <strong>Action</strong> element applies to a list or document library that has content approval enabled. If left blank, the assumption is <strong>false</strong>.</p></td>
-<td align="left"><p>Values of the s:boolean type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Represents the descriptive name of the workflow action that is displayed to the workflow editor.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**SandboxedFunction**</p></td>
-<td align="left"><p>s:boolean</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>If <strong>true</strong>, the client application inserts an implementation-specific action when this action is selected. The action should be configured to call a function defined by the conjunction of AssemblyName, ClassName, and FunctionName. If set, AssemblyName, ClassName, FunctionName, and __SolutionId must also be set.</p></td>
-<td align="left"><p>Values of the s:boolean type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**ShapeImageUrl**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>The URL of a default icon shape-image file that is available for customization when creating custom actions or custom conditions.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**UsesCurrentItem**</p></td>
-<td align="left"><p>s:boolean</p></td>
-<td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies whether a given workflow action can be used in a "site" workflow. Setting this to <strong>true</strong> means that the action cannot be used and is not available for site workflows. The copy/paste function on actions is also blocked. If this attribute value is not set, <strong>false</strong> is implied.</p></td>
-<td align="left"><p>Values of the s:boolean type.</p></td>
-</tr>
-</tbody>
-</table>
-
-
+  
+| Attribute | Type | Required | Description | Possible values |
+| --- | --- | --- | --- | --- |
+| **__SolutionId** | s:string | optional | Specifies a GUID that the client application writes to the implementation-specific action. The server uses the GUID to help locate the assembly at workflow runtime. | Values of the s:string type. |
+| **AppliesTo** | [appliesToTypes](appliestotypes-simpletype-action4.md) | required | Indicates what this workflow action should be. Valid values include **site**, **list**, **doclib**, and **all**. The value **all** means that the action is available under any scope and will always show up in the Actions list. | Values of the appliesToTypes type. |
+| **Assembly** | s:string | optional | The assembly name that contains instructions for implementing the **Action** element. The text should include the PublicKeyToken, Version, and Culture values. | Values of the s:string type. |
+| **Category** | s:string | optional | Provides a category for the workflow action. This value is used to filter the list of available actions. | Values of the s:string type. |
+| **ClassName** | s:string | required | Fully qualified name of the class that implements the workflow action. | Values of the s:string type. |
+| **CreatedTaskFormType** | s:string | optional | Specifies the type of a task created. Use **DataCollectTask** to create a task that collects data from one user; use **GroupAssignedTask** to create a task that collects data from one or more users; use **TodoItemTask** to create a task that does not collect data from users but only exists for a user to validate that they have done something; use **TaskProcess** to create a task that has a form that allows for ad-hoc collaboration and might collect data from one or more users. | Values of the s:string type. |
+| **CreatesInList** | s:string | optional | If set, specifies that the workflow create an item in a list or document library. Values must map to a parameter name that contains the ID of the list or document library. | Values of the s:string type. |
+| **CreatesTask** | s:boolean | optional | If **true**, a task list item is created in the workflow. If left blank, the assumption is **false**, and no task list items are created. | Values of the s:boolean type. |
+| **FunctionName** | s:string | optional | Specifies the name of a function to call. | Values of the s:string type. |
+| **IsError** | s:boolean | optional | If **true**, instances of this **Action** element are considered an error by the client application. | Values of the s:boolean type. |
+| **ListModeration** | s:boolean | optional | If **true**, this **Action** element applies to a list or document library that has content approval enabled. If left blank, the assumption is **false**. | Values of the s:boolean type. |
+| **Name** | s:string | required | Represents the descriptive name of the workflow action that is displayed to the workflow editor. | Values of the s:string type. |
+| **SandboxedFunction** | s:boolean | optional | If **true**, the client application inserts an implementation-specific action when this action is selected. The action should be configured to call a function defined by the conjunction of AssemblyName, ClassName, and FunctionName. If set, AssemblyName, ClassName, FunctionName, and __SolutionId must also be set. | Values of the s:boolean type. |
+| **ShapeImageUrl** | s:string | optional | The URL of a default icon shape-image file that is available for customization when creating custom actions or custom conditions. | Values of the s:string type. |
+| **UsesCurrentItem** | s:boolean | optional | Specifies whether a given workflow action can be used in a "site" workflow. Setting this to **true** means that the action cannot be used and is not available for site workflows. The copy/paste function on actions is also blocked. If this attribute value is not set, **false** is implied. | Values of the s:boolean type. |
 
 
 

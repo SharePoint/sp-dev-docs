@@ -1,5 +1,6 @@
 ---
 title: ActionConditions element (Action element)
+description: Discusses the definition, elements and attributes for ActionConditions element (Action element) for SharePoint Server 2013.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -29,7 +30,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
