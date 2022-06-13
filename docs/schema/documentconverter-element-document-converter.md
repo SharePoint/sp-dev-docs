@@ -1,7 +1,8 @@
 ---
 title: DocumentConverter Element (Document Converter)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Specifies the definition of a document converter and includes a description of attributes, child elements, and parent elements.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -104,7 +105,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-document-converter.md">Elements Element (Document Converter)</a></span></p></td>
+<td align="left"><p><span><a href="elements-element-document-converter.md">Elements Element (Document Converter)</a></span></p></td>
 </tr>
 </tbody>
 </table>

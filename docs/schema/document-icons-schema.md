@@ -1,7 +1,8 @@
 ---
 title: "Document Icons schema"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
+description: Describes the Document Icons schema and includes the document icon elements.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
