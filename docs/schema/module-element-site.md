@@ -39,16 +39,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-| Attribute | Description |
+|**Attribute**|**Description**|
 |:-----|:-----|
-|HyperlinkBaseUrl** <br/> |Optional **Text**.  <br/> |
-|IncludeFolders** <br/> |Optional **Text**.  <br/> |
-|List <br/> |Optional **Integer**. Specifies the type of list, which is defined within [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
-|Name <br/> | Required **Text**. Contains the name of the file set.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|Path <br/> | Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates\ \_Site\_Definition_.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|RootWebOnly <br/> |Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level website of the site collection.  <br/> |
-|SetupPath <br/> | Optional **Text**. Specifies the physical path to a folder in the SharePoint Foundation setup directory %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE) that contains a file to include in the module.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|Url <br/> | Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.<br/><br/>The **Url** attribute cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/> |
+|**HyperlinkBaseUrl** <br/> |Optional **Text**.  <br/> |
+|**IncludeFolders** <br/> |Optional **Text**.  <br/> |
+|**List** <br/> |Optional **Integer**. Specifies the type of list, which is defined within [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx).  <br/> |
+|**Name** <br/> | Required **Text**. Contains the name of the file set.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
+|**Path** <br/> | Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates\ \_Site\_Definition_.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
+|**RootWebOnly** <br/> |Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level website of the site collection.  <br/> |
+|**SetupPath** <br/> | Optional **Text**. Specifies the physical path to a folder in the SharePoint Foundation setup directory %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE) that contains a file to include in the module.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
+|**Url** <br/> | Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.<br/><br/>The **Url** attribute cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
    
 ### Child elements
 

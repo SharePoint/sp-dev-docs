@@ -187,16 +187,16 @@ The following sections describe attributes, child elements, and parent elements.
   
 | Element | Description |
 | --- | --- |
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names of the \*\*MethodInstance\*\*. |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the \*\*MethodInstance\*\*. |
-| [AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | The access control lists (ACLs) of the \*\*MethodInstance\*\*. |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names of the **MethodInstance**. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the **MethodInstance**. |
+| [AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | The access control lists (ACLs) of the **MethodInstance**. |
 
 ### Parent elements
 
   
 | Element | Description |
 | --- | --- |
-| [MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md) | The \*\*MethodInstances\*\* element that contains this \*\*MethodInstance\*\*. |
+| [MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md) | The \*\*MethodInstances\*\* element that contains this **MethodInstance**. |
 
 
 
