@@ -1,6 +1,7 @@
 ---
 title: Add SharePoint capabilities
-ms.date: 09/25/2017
+ms.date: 06/13/2022
+description: Describes how-to information about adding SharePoint features and capabilities to custom apps.
 ms.prod: sharepoint
 ms.assetid: 11ecb65e-6dc5-4cf1-80ca-3c16418697b6
 ms.localizationpriority: high
