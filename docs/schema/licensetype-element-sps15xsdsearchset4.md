@@ -2,7 +2,7 @@
 title: "LicenseType element (SPS15XSDSearchSet4)"
 description: Describes the LicenseType element (SPS15XSDSearchSet4) and provides the element information, a definition, and elements and attributes.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

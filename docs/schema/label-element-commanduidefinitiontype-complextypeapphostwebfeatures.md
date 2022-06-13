@@ -2,7 +2,7 @@
 title: Label element (CommandUIDefinitionType complexType)
 manager: soliver
 description: Describes the Label element (CommandUIDefinitionType complexType) and provides the element information, a definition, and elements and attributes in SharePoint.
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

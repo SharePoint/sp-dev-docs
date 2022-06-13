@@ -2,7 +2,7 @@
 title: "KeywordInclusion simpleType (SPS15XSDSearchSet5)"
 description: Describes the KeywordInclusion simpleType (SPS15XSDSearchSet5) and provides the type information, a definition, and enumeration values in SharePoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

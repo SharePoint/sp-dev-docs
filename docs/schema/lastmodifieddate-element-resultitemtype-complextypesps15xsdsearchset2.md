@@ -2,7 +2,7 @@
 title: "LastModifiedDate element (ResultItemType complexType) (SPS15XSDSearchSet2)"
 description: Describes the LastModifiedDate element (ResultItemType complexType) (SPS15XSDSearchSet2) and provides the element information, a definition, and elements and attributes.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint

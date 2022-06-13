@@ -2,7 +2,7 @@
 title: "LicenseType simpleType (SPS15XSDSearchSet4)"
 description: Describes the LicenseType simpleType (SPS15XSDSearchSet4) and provides the type information and a definition.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

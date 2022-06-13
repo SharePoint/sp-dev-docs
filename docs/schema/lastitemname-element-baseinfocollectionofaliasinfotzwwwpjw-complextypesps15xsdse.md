@@ -2,7 +2,7 @@
 title: "LastItemName element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
 description: Describes the LastItemName element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2) and provides the element information, a definition, and elements and attributes in SharePoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint

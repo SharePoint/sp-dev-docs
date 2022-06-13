@@ -2,7 +2,7 @@
 title: LayoutDefinitions schema
 description: Provides links to the documentation for the Layouts schema (LayoutDefinitions.xsd) in SharePoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

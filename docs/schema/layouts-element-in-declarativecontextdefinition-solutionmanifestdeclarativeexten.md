@@ -2,7 +2,7 @@
 title: Layouts Element in DeclarativeContextDefinition
 description: Describes the Layouts element in DeclarativeContextDefinition and provides the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -37,49 +37,22 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="layout-element-in-layouts-solutionmanifestdeclarativeextensions-schema.md">Layout Element in Layouts (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>Specifies the location of the layout file that contains layout.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Layout Element in Layouts (SolutionManifestDeclarativeExtensions Schema)](layout-element-in-layouts-solutionmanifestdeclarativeextensions-schema.md) | Specifies the location of the layout file that contains layout. |
+
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>Specifies the context definition the layouts are for.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)](declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md) | Specifies the context definition the layouts are for. |
 
-<br/>
+</br>
 
-<br/>
+</br>
 
 
 
