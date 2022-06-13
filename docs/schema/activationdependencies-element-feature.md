@@ -1,7 +1,8 @@
 ---
 title: ActivationDependencies element (Feature)
+description: Discusses the definition, elements and attributes for ActivationDependencies element (Feature). 
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -87,7 +88,7 @@ If included within a [Feature](feature-element-feature.md) element, the followin
 
 For another example of how this element is used, see [Feature.xml Files](feature-xml-files.md).
 
-<br/>
+</br>
 
 
 

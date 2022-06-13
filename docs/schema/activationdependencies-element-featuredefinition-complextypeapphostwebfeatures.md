@@ -1,7 +1,8 @@
 ---
 title: ActivationDependencies element (FeatureDefinition complexType)
+description: Discusses the definition, elements and attributes for ActivationDependencies element (FeatureDefinition complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 79b463d1-7b48-a56d-f9b5-0b0a3f91375b
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | FeatureActivationDependencyDefinitions |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -58,7 +59,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
+</br>
 
 ### Child elements
 
@@ -88,9 +89,9 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 None.
 
-<br/>
+</br>
 
-<br/>
+</br>
 
 
 
