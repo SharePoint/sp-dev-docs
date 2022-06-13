@@ -2,7 +2,7 @@
 title: Entity Element in Entities (BDCMetadata Schema)
 description: Details on the Entity Element in Entities (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
