@@ -1,7 +1,7 @@
 ---
 title: Migrating JSLink customizations to SharePoint Framework Field Customizers
-description: Describes how migrating JSLink customizations to SharePoint Framework field customizers and outlines benefits of migrating existing JSLink customizations.
-ms.date: 06/07/2022
+description: Benefits of migrating, along with similarities and differences between the platforms.
+ms.date: 06/29/2020
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---

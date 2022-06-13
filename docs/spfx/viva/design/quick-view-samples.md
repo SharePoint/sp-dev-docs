@@ -1,7 +1,6 @@
 ---
 title: Viva Connections Adaptive Card Extension Quick View samples
-description: Provides Viva Connections Adaptive Card extension Quick View samples and outlines various GitHub samples for Quick View templates.
-ms.date: 06/07/2022
+ms.date: 02/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -51,7 +50,7 @@ Design for presenting inventory details from warehouse.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/inventory)
 
-:::image type="content" source="../../../images/viva-design/samples/inventory.png" alt-text="Screenshot of a sample inventory details card from a warehouse, showing Distribution center # 73's top selling items.":::
+:::image type="content" source="../../../images/viva-design/samples/inventory.png" alt-text="Inventory":::
 
 ## Payslip
 
@@ -59,7 +58,7 @@ Design for showing payslip details in adaptive card format.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/payslip)
 
-:::image type="content" source="../../../images/viva-design/samples/payslip.png" alt-text="Screenshot of payslip details populating in an adaptive card format.":::
+:::image type="content" source="../../../images/viva-design/samples/payslip.png" alt-text="Payslip":::
 
 ## Simple list with praise information
 
@@ -67,7 +66,7 @@ Design for showing simple list of people in praise scenario.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/simple-list)
 
-:::image type="content" source="../../../images/viva-design/samples/praise.png" alt-text="Screenshot of a card reading Send praise to your colleagues.":::
+:::image type="content" source="../../../images/viva-design/samples/praise.png" alt-text="Praise":::
 
 ## Team calendar
 
@@ -75,7 +74,7 @@ Design for showing calendar format and upcoming team events.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/team-calendar)
 
-:::image type="content" source="../../../images/viva-design/samples/teamcalendar.png" alt-text="Screenshot of the sample team calendar, showing upcoming team events for October 2021.":::
+:::image type="content" source="../../../images/viva-design/samples/teamcalendar.png" alt-text="Praise":::
 
 ## Timeline events
 
@@ -83,7 +82,7 @@ Design for showing a timeline with upcoming events.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/timeline-holidays)
 
-:::image type="content" source="../../../images/viva-design/samples/holidays.png" alt-text="Screenshot of a sample timeline event card, showing the Thanksgiving and Christmas Eve events in 2021.":::
+:::image type="content" source="../../../images/viva-design/samples/holidays.png" alt-text="Holidays":::
 
 ## Vacation / time off
 
@@ -99,7 +98,7 @@ Design for booking vaccination booster appointment with images and a submission 
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/vaccination-booster)
 
-:::image type="content" source="../../../images/viva-design/samples/vaccination.png" alt-text="Screenshot of the Living Well Health Center and Pharmacy providing information on scheduling a free COVID-19 booster appointment.":::
+:::image type="content" source="../../../images/viva-design/samples/vaccination.png" alt-text="Vaccination":::
 
 ## Visual list with cafeteria menu scenario
 

@@ -1,9 +1,8 @@
 ---
 title: Support and Feedback
-description: Describes how to provide support and feedback to the SharePoint product team, which includes giving programming questions and feature requests.
 author: andrewconnell
 ms.author: v-johnco
-ms.date: 06/07/2022
+ms.date: 05/25/2022
 ms.audience: Developer
 ms.prod: sharepoint
 ms.localizationpriority: high
