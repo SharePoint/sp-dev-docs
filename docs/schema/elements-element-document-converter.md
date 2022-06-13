@@ -1,7 +1,8 @@
 ---
 title: Elements Element (Document Converter)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (Document Converter) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 keywords:
@@ -58,7 +59,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="documentconverter-element-document-converter.md">DocumentConverter Element (Document Converter)</a></span></p></td>
+<td align="left"><p><span><a href="documentconverter-element-document-converter.md">DocumentConverter Element (Document Converter)</a></span></p></td>
 </tr>
 </tbody>
 </table>

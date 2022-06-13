@@ -45,25 +45,25 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="identifiers-element-in-entity-bdcmetadataresource-schema.md">Identifiers Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="identifiers-element-in-entity-bdcmetadataresource-schema.md">Identifiers Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadataresource-schema.md">Methods Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="methods-element-in-entity-bdcmetadataresource-schema.md">Methods Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadataresource-schema.md">AssociationGroups Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="associationgroups-element-in-entity-bdcmetadataresource-schema.md">AssociationGroups Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadataresource-schema.md">Actions Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="actions-element-in-entity-bdcmetadataresource-schema.md">Actions Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>
@@ -81,7 +81,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadataresource-schema.md">Entities Element in LobSystem (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span><a href="entities-element-in-lobsystem-bdcmetadataresource-schema.md">Entities Element in LobSystem (BDCMetadataResource Schema)</a></span></p></td>
 </tr>
 </tbody>
 </table>

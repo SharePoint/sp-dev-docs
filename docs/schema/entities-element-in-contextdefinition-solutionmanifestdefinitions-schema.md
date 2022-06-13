@@ -1,7 +1,8 @@
 ---
 title: Entities Element in ContextDefinition
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Entities Element in ContextDefinition and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -48,7 +49,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-solutionmanifestdefinitions-schema.md">Entity Element in Entities (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="entity-element-in-entities-solutionmanifestdefinitions-schema.md">Entity Element in Entities (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The external content type.</p></td>
 </tr>
 </tbody>
@@ -69,7 +70,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)</a></span></p></td>
+<td align="left"><p><span><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)</a></span></p></td>
 <td align="left"><p>The context definition which is associated with this external content type.</p></td>
 </tr>
 </tbody>
