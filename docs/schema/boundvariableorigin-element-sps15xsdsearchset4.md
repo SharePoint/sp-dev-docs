@@ -16,11 +16,11 @@ description: Learn about BoundVariableOrigin element (SPS15XSDSearchSet4).
   
 ## Element information
 
-|Information|Locations|
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:BoundVariableOrigin  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+|**Element type**  |tns:BoundVariableOrigin   |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Query.Rules.xsd   |
    
 ## Definition
 
