@@ -555,7 +555,7 @@
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Viva Connections Extensibility Learn module
-    href: https://docs.microsoft.com/en-us/learn/paths/m365-extend-viva-connections/
+    href: https://docs.microsoft.com/en-us/learn/paths/m365-extend-viva-connections/   
 - name: Business Apps & Process Automation
   items:
   - name: Overview

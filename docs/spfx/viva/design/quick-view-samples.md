@@ -1,6 +1,6 @@
 ---
 title: Viva Connections Adaptive Card Extension Quick View samples
-ms.date: 02/10/2022
+ms.date: 2/10/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
