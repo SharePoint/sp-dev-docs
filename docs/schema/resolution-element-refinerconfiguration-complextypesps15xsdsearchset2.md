@@ -16,7 +16,7 @@ description: "Describes the Resolution element (RefinerConfiguration complexType
   
 ## Element information
 
-|||
+|Information type|Value|
 |:-----|:-----|
 |**Element type**|xs:int |
 |**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
