@@ -423,7 +423,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
 9. Add the following code to parse the ATOM-formatted response XML. It uses the classes of the [System.Xml.Linq](https://msdn.microsoft.com/library/bb299195) namespace to parse the data that is returned and construct a [List<T>](https://msdn.microsoft.com/library/6sh2ey19) of the items from the SharePoint list. (You could also use the classes of the [System.Xml](https://msdn.microsoft.com/library/y3y47afh) namespace.) 
 
-Note that, in the XML that SharePoint returns, the child elements of the **entry** element hold metadata about the list item. The actual row data of a SharePoint list item is nested two layers down in the **properties** element. For that reason the [Elements<T>](https://msdn.microsoft.com/library/bb348465) extension method is used twice to filter out the higher levels.
+    Note that, in the XML that SharePoint returns, the child elements of the **entry** element hold metadata about the list item. The actual row data of a SharePoint list item is nested two layers down in the **properties** element. For that reason the [Elements<T>](https://msdn.microsoft.com/library/bb348465) extension method is used twice to filter out the higher levels.
       
   ```csharp
     // Response markup parsing section
