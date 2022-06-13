@@ -18,13 +18,9 @@ ms.assetid: f50e24c6-674b-241f-5af6-1b6205be93be
 
 Specifies an External Data Part.
 
-## Element Information
-
 **Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
-
-## Definition
 
 ```XML
 <OBPart PartType = "String" QualifiedTypeName = "String" DataSourceName = "String" DataSourceOrigin = "String" Description = "String" Text = "String" Expanded = "Boolean" FillParent = "Boolean"> </OBPart>
