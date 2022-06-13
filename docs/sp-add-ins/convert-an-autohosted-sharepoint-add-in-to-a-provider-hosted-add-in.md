@@ -217,7 +217,7 @@ The next step is to reconfigure the remote web application so that it can be dep
 
 ### To update the remote web application project
 
-The big change that needs to occur in the ASP.NET MVC web application is within the web.config file. Within this file there are three settings found within the **<appSettings>** node. These are the **ClientId**, **ClientSecret**, and **SqlAzureConnectionString**. The first two are used by the Microsoft-provided class, in TokenHelper.cs or .vb, to facilitate authenticating and communicating with SharePoint from the remote web application. The latter, **SqlAzureConnectionString**, is used by the add-in to connect to the Azure SQL Database.
+The big change that needs to occur in the ASP.NET MVC web application is within the web.config file. Within this file there are three settings found within the **<appSettings>** node. These are the **ClientId**, **ClientSecret**, and **SqlAzureConnectionString**. The first two are used by the Microsoft-provided class, in TokenHelper.cs or .vb, to facilitate authenticating and communicating with SharePoint from the remote web application. The latter,  **SqlAzureConnectionString**, is used by the add-in to connect to the Azure SQL Database.
 
 In a SharePoint autohosted add-in, Office 365 fills in the values for these settings when the Azure website and Azure SQL Database are created when the add-in is installed. However, in a provider-hosted add-in, these must be manually set before the add-in is deployed.
 
