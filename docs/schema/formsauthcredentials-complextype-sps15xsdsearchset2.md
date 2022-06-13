@@ -16,9 +16,11 @@ ms.assetid: 5059c9ce-bd07-88e6-0227-bfc6e6759ef7
   
 ## Type information
 
-| Namespace | Schema File | Extension Base |
-|-----------|-------------|----------------|
-| http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration | schema_Microsoft.Office.Server.Search.Administration.xsd | tns:SecurableAuthData |
+| Information | Location |
+|-------------|----------|
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | schema_Microsoft.Office.Server.Search.Administration.xsd |
+| **Extension Base** | tns:SecurableAuthData |
    
 ## Definition
 

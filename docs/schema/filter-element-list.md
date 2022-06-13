@@ -18,7 +18,6 @@ ms.assetid: ead0986f-df31-4c3b-95f8-d1c8c1d836d5
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-## Definition
 ```vb
 <Filter  Name = "Text"   Type = "Text"   Value = "Text" ></Filter> 
 ```

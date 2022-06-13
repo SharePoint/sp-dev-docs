@@ -22,7 +22,6 @@ Specifies a filter value for a query or association. The FilterValue element can
 
 **Schema**: Subscription
 
-## Definition
 ```XML
 <FilterValue FilterDescriptorName = "String" Type = "String" FilterIndex = "Integer"> </FilterValue>
 ```

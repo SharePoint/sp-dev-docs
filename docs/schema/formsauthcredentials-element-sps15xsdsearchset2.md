@@ -16,9 +16,11 @@ ms.assetid: 58de7e07-32fd-104b-7f06-ac4113e5148b
   
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|--------------|-----------|-------------|
-| tns:FormsAuthCredentials | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration | schema_Microsoft.Office.Server.Search.Administration.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | tns:FormsAuthCredentials |
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema File** | schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 

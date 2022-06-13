@@ -19,9 +19,11 @@ ms.assetid: 9067ee8d-6eff-950a-3cf3-5aa1586c1d24
 
 ## Element information
 
-| Element type | Namespace | Schema File |
-|--------------|-----------|-------------|
-| FlyoutAnchorType | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | FlyoutAnchorType |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition 
 

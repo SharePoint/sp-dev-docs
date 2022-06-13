@@ -26,22 +26,24 @@ Specifies the filter for the event receiver.
 
 The following sections describe attributes, child elements, and parent elements.
 
-| Attributes |
-|------------|
-| None |
+### Attributes
 
-| Child Elements |
-|----------------|
-| None |
+None
 
-| Parent Elements |
-|-----------------|
-| Receiver Element (Event) |
+### Child Elements
 
-| Occurrences |
-|-------------|
-| Minimum: 0 |
-| Maximum: 1 |
+None
+
+### Parent Elements
+| Element |
+|---------|
+| [Receiver Element (Event)](receiver-element-event.md) |
+
+### Occurrences
+
+Minimum: 0
+
+Maximum: 1
 
 ## Example
 
