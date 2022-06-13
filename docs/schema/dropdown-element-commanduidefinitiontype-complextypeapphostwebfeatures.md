@@ -19,8 +19,8 @@ ms.assetid: 02ae200c-9856-b264-2303-36ce7c44e520
 
 ## Element information
 
-|   |   |
-|---|---|
+|Element Type|Namespace|Schema File|
+|---|---|---|
 | **Element type**  | DropDownType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

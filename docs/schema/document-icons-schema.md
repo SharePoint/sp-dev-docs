@@ -12,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: ddffbd19-b644-4155-ba9d-21f80d64fa84
-description: "Last modified: July 15, 2011"
 ---
 
 # Document Icons schema
