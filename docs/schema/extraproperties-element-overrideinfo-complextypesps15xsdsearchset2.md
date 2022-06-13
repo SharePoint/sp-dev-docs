@@ -16,8 +16,8 @@ ms.assetid: fc7731c8-a727-f4c0-a6f7-57e614e036c8
   
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|:-----|:-----|:-----|
+| Information | Location |
+|:-----|:-----|
 |**Element type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |

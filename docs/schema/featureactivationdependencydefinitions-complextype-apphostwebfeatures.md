@@ -19,8 +19,8 @@ ms.assetid: 5be98ace-5f25-ab96-ed1e-2b9a6b7b302b
 
 ## Type information
 
-| Namespace | Schema File | Extension Base |
-|---|---|---|
+| Information | Location |
+|---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
 | **Extension base**  | None |

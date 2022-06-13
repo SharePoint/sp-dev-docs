@@ -16,7 +16,7 @@ ms.assetid: c5317093-9b2f-d11a-b610-255c05aa5d50
   
 ## Element information
 
-| Element Type | Namespace |
+| Information | Location |
 |:-----|:-----|
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

@@ -17,8 +17,8 @@ ms.assetid: 2d490115-671e-8fa3-f90f-446d92b5bd71
 
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|---|---|---|
+| Information | Location |
+|---|---|
 | **Element type**  | FeatureDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
