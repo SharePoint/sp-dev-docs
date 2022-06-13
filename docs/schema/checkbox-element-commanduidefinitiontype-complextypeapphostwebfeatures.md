@@ -19,9 +19,11 @@ ms.assetid: d3dd2b0b-a8b0-b004-4e14-042152f2e377
 
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|--------------|-----------|-------------|
-| CheckBoxType | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | CheckBoxType |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 

@@ -16,9 +16,11 @@ ms.assetid: 8530b1d3-6e1d-b99e-42e1-bd74399346a7
   
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|--------------|-----------|-------------|
-| q9:ArrayOfKeyValueOfguidCrawledPropertyInfoCollectionaSYUqUE_P | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability | schema_Microsoft.Office.Server.Search.Portability.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | q9:ArrayOfKeyValueOfguidCrawledPropertyInfoCollectionaSYUqUE_P |
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability |
+| **Schema File** | schema_Microsoft.Office.Server.Search.Portability.xsd |
    
 ## Definition
 

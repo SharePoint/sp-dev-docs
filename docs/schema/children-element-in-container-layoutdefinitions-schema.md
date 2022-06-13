@@ -20,9 +20,9 @@ Lists the External Data Parts in this layout.
 
 ## Element information
 
-| Namespace | Schema |
-|-----------|--------|
-| `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout` | LayoutDefinitions |
+**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
+
+**Schema**: LayoutDefinitions
 
 ## Definition
 
