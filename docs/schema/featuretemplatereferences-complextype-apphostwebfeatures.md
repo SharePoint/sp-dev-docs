@@ -2,7 +2,7 @@
 title: FeatureTemplateReferences complexType
 description: Outlines the type information, a definition, and elements and attributes for the FeatureTemplateReferences complexType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

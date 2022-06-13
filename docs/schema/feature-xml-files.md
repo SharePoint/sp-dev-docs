@@ -2,7 +2,7 @@
 title: Feature.xml Files
 description: Provides examples of Feature.xml files as it applies to SharePoint 2016, SharePoint Foundation 2013, SharePoint Online, and SharePoint Server 2013.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

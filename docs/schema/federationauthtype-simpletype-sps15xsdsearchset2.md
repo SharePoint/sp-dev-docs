@@ -2,7 +2,7 @@
 title: "FederationAuthType simpleType (SPS15XSDSearchSet2)"
 description: Outlines information, a definition, and enumeration values for the FederationAuthType simpleType (SPS15XSDSearchSet2) in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint

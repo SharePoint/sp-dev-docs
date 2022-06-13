@@ -2,7 +2,7 @@
 title: FeatureVersion simpleType
 description: Outlines information and a definition for the FeatureVersion simpleType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

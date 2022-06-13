@@ -2,7 +2,7 @@
 title: FeatureScope simpleType
 description: Outlines information, a definition, and enumeration values for FeatureScope simpleType in SharePoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

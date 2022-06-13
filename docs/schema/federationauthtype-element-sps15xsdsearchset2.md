@@ -2,7 +2,7 @@
 title: "FederationAuthType element (SPS15XSDSearchSet2)"
 description: Outlines element information, a definition, and elements and attributes for the FederationAuthType element (SPS15XSDSearchSet2) in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
