@@ -2,7 +2,7 @@
 title: Feature/Site Template Associations
 description: Provides an example of Feature/Site Template Associations in Sharepoint.
 manager: soliver
-ms.date: 06/13/02022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
