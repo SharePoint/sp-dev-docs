@@ -44,29 +44,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="parameter-element-workflowconfig.md">Parameter Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)
 
 ### Remarks
 

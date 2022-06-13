@@ -106,53 +106,19 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized names of the parameter.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of the parameter.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><a href="typedescriptor-element-bdcmetadata-schema.md">TypeDescriptor</a></p></td>
-<td align="left"><p>The root type descriptor of the parameter.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the parameter. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the parameter. |
+| [TypeDescriptor](typedescriptor-element-bdcmetadata-schema.md) | The root type descriptor of the parameter. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="parameters-element-in-method-bdcmetadata-schema.md">Parameters Element in Method (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **Parameters** element that contains this parameter.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Parameters Element in Method (BDCMetadata Schema)](parameters-element-in-method-bdcmetadata-schema.md) | The \*\*Parameters\*\* element that contains this parameter. |
 
 
 

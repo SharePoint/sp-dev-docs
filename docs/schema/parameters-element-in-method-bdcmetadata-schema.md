@@ -36,45 +36,17 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="parameter-element-in-parameters-bdcmetadata-schema.md">Parameter Element in Parameters (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A parameter.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Parameter Element in Parameters (BDCMetadata Schema)](parameter-element-in-parameters-bdcmetadata-schema.md) | A parameter. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The method these parameters belong to.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md) | The method these parameters belong to. |
 
 
 
