@@ -2,7 +2,7 @@
 title: MethodInstances Element in Method (BDCMetadata Schema)
 description: Details on the MethodInstances Element in Method (BDCMetadata Schema)
 manager: soliver
-ms.date: 03/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
