@@ -23,9 +23,9 @@ ms.assetid: 2c430e31-cb39-7c9a-67fa-1e584068245f
 
 | Resource | File |
 |---|---|
-| Namespace  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| Schema file  | appmanifest.xsd |
-| Extension base  | None |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file** | appmanifest.xsd |
+| **Extension base** | None |
 
 ## Definition
 

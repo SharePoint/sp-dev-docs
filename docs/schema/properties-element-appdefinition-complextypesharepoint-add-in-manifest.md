@@ -25,9 +25,9 @@ Contains information that is global to the add-in.
 
 | Resource | File |
 |---|---|
-| Element type  | PropertiesDefinition |
-| Namespace  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| Schema file  | appmanifest.xsd |
+| **Element type** | PropertiesDefinition |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file** | appmanifest.xsd |
 
 
 ## Definition
