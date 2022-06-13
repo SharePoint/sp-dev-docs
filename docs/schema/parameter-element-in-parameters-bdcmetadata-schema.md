@@ -118,7 +118,7 @@ The following sections describe attributes, child elements, and parent elements.
   
 | Element | Description |
 | --- | --- |
-| [Parameters Element in Method (BDCMetadata Schema)](parameters-element-in-method-bdcmetadata-schema.md) | The \*\*Parameters\*\* element that contains this parameter. |
+| [Parameters Element in Method (BDCMetadata Schema)](parameters-element-in-method-bdcmetadata-schema.md) | The **Parameters** element that contains this parameter. |
 
 
 

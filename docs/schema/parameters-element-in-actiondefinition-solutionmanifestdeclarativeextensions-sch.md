@@ -39,16 +39,16 @@ None.
   
 | Element | Description |
 | --- | --- |
-| [ConstantParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)](constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.md) | The \*\*ConstantParameter\*\* element defines a constant parameter for an action. |
-| [ExpressionParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)](expressionparameter-element-in-actionparameterdefinitions-solutionmanifestdeclar.md) | The \*\*ExpressionParameter\*\* element defines a parameter for an action that can take a value from the context of the current item. |
+| [ConstantParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)](constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.md) | The **ConstantParameter** element defines a constant parameter for an action. |
+| [ExpressionParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)](expressionparameter-element-in-actionparameterdefinitions-solutionmanifestdeclar.md) | The **ExpressionParameter** element defines a parameter for an action that can take a value from the context of the current item. |
 
 ### Parent elements
 
   
 | Element | Description |
 | --- | --- |
-| [UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)](urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | The \*\*UrlAction\*\* element is used to execute a URL-based action. |
-| [CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)](codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | The \*\*CodeMethodAction\*\* element is used to execute a custom code action or one of the predefined actions that are provided by Microsoft Business Connectivity Services (BCS). |
+| [UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)](urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | The **UrlAction** element is used to execute a URL-based action. |
+| [CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)](codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | The **CodeMethodAction** element is used to execute a custom code action or one of the predefined actions that are provided by Microsoft Business Connectivity Services (BCS). |
 
 <br/>
 
