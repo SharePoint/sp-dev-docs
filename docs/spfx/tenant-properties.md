@@ -88,7 +88,7 @@ Content-Type: application/json
 Get-PnPStorageEntity
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/get-pnpstorageentity) for details on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Get-PnPStorageEntity.html) for details on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -138,7 +138,7 @@ Get-SPOStorageEntity -Site <AppCatalogSiteURL> -Key <String>
 Get-PnPStorageEntity -Key <key>
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/get-pnpstorageentity) for details on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Get-PnPStorageEntity.html) for details on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -206,7 +206,7 @@ Remove-SPOStorageEntity -Site <AppCatalogSiteURL> -Key <String>
 Remove-PnPStorageEntity -Key <key>
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/remove-pnpstorageentity) for details on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Remove-PnPStorageEntity.html) for details on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 

@@ -117,7 +117,7 @@ npm install @pnp/logging @pnp/sp --save
 
 Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within SPFx, we need to rely on the [context](/javascript/api/sp-webpart-base/webpartcontext) object supplied by the framework.
 
-There are [two ways](https://pnp.github.io/pnpjs/sp/docs/#getting-started-sharepoint-framework) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
+There are [two ways](https://pnp.github.io/pnpjs/getting-started) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
 
 1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp project configuratino file (more on this file below):
 
@@ -377,7 +377,7 @@ You can delete existing items by selecting the trashcan icon, or you can add new
 
 ### Next steps
 
-The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/documentation/getting-started/).
+The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/getting-started).
 
 ## See also
 

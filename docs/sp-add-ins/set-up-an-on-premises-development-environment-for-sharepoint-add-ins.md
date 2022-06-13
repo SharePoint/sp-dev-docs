@@ -14,7 +14,7 @@ The requirements for a development environment are less stringent and costly tha
 For the instructions to set up a production environment installation of SharePoint, see:
 
 - [Overview of SharePoint installation and configuration](https://technet.microsoft.com/library/ee667264%28v=office.15%29)
-- [Hardware and software requirements for SharePoint](https://technet.microsoft.com/library/cc262485%28v=office.15%29)
+- [Hardware and software requirements for SharePoint](/SharePoint/install/hardware-software-requirements-2013)
 - [Configure an environment for SharePoint Add-ins](https://technet.microsoft.com/library/fp161236%28office.15%29.aspx) 
 
 <a name="bk_installOS"> </a>
@@ -219,7 +219,7 @@ Perform the steps in the following procedure to create an isolated add-in domain
 For information about your options for deploying your add-ins, see [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md).
  
 > [!TIP]
-> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a website that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](https://support.microsoft.com/kb/896861).
+> After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a website that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](https://support.microsoft.com/topic/fix-you-receive-the-error-message-http-error-401-1-unauthorized-sooner-than-expected-when-you-try-to-log-on-to-an-iis-7-0-web-site-by-using-invalid-credentials-eb147831-8b5d-3e06-fe81-1f31df9e3d4d).
  
 
 ## See also

@@ -67,13 +67,13 @@ A user browses to the Contoso photo-printing website, where the UI indicates tha
 
 In this example, the URL is **https://contoso.com/print/home.aspx**
 
-The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: **https://fabrikam.sharepoint.com/**
+The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: **`https://fabrikam.sharepoint.com/`**
 
 #### Step 2: The add-in redirects to the SharePoint site authorization URL
 
 ![Three-legged OAuth Flow - step 2](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_2.png)
 
-When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to **https://fabrikam.sharepoint.com/**; this redirect is an HTTP 302 Redirect Response.
+When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to **`https://fabrikam.sharepoint.com/`**; this redirect is an HTTP 302 Redirect Response.
 
 If you're using Microsoft .NET, `Response.Redirect` is one of several ways you can do the redirect from your code. Using the **TokenHelper.cs** file in your project, your code can call the overloaded `GetAuthorizationUrl` method (using the overload with three arguments). This method constructs the **OAuthAuthorize.aspx** redirect URL for you. Or, your code can manually construct the URL.
 

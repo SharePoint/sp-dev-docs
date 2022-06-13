@@ -135,7 +135,7 @@ You can't use the SharePoint Workbench to test SharePoint Framework Extensions. 
 
 1. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *For example, a welcome page of a new group associated team site, which would mean something like the following URL:*
 
-    **https://sppnp.sharepoint.com/sites/yoursite/SitePages/Home.aspx**
+    **`https://sppnp.sharepoint.com/sites/yoursite/SitePages/Home.aspx`**
 
     Your **serve.json** file should look similar to the following (updated with your tenant details):
 

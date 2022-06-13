@@ -76,7 +76,7 @@ You can register your add-in in one of three ways, depending on where you are in
         - https://www.contoso.com/Default.aspx
         - https://www.fabrikam.com/RedirectAccept.aspx
         - https://www.northwindtraders.com/home/index
-        - https://adventureworks.com/vacationdata.svc
+        - https://adventureworks.com/
 
 1. Select **Create** on the form. The page reloads and shows a confirmation of the values that you entered. Make a record of these values in a form that is easy to copy and paste. You need to enter the values in web.config and AppManifest.xml files or in the Visual Studio Publish wizard.
 

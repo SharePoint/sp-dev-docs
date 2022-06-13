@@ -100,7 +100,7 @@ You need a list model to start working with SharePoint list data. To retrieve th
 
 ## Retrieve lists from SharePoint site
 
-Next you need to retrieve lists from the current site. You'll use SharePoint REST APIs to retrieve the lists from the site, which are located at **https://yourtenantprefix.sharepoint.com/_api/web/lists**.
+Next you need to retrieve lists from the current site. You'll use SharePoint REST APIs to retrieve the lists from the site, which are located at **`https://yourtenantprefix.sharepoint.com/_api/web/lists`**.
 
 SharePoint Framework includes a helper class `spHttpClient` to execute REST API requests against SharePoint. It adds default headers, manages the digest needed for writes, and collects telemetry that helps the service to monitor the performance of an application.
 

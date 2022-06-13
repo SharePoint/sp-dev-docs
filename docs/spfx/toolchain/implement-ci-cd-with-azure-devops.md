@@ -265,7 +265,7 @@ Add the following variables
 | catalogsite | Optional. Server relative Path of the App Catalog Site eg `sites/appcatalog` when uploading to a [site collection App Catalog](../../general-development/site-collection-app-catalog.md) |
 | password | Password of the user with administrative permissions on the tenant, do not forget to check the lockpad to mask it to other users |
 | username | Username of the user with administrative permissions on the tenant |
-| tenant | Optional. Tenant name in https://tenant.sharepoint.com eg `tenant` when uploading to a site collection App Catalog |
+| tenant | Optional. Tenant name in `https://tenant.sharepoint.com` eg `tenant` when uploading to a site collection App Catalog |
 
 ![Variables setup](../../images/azure-devops-spfx-18.png)  
 

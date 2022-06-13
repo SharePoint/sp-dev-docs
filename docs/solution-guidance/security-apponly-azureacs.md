@@ -25,7 +25,7 @@ Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then
 > [!IMPORTANT]
 > Store the retrieved information (client id and client secret) since you'll need this in the next step!
 
-Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx. Once the page is loaded add your client id and look up the created principal:
+Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via `https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx`. Once the page is loaded add your client id and look up the created principal:
 
 ![Grant permissions to new principal](media/apponly/sharepointapponly2.png)
 

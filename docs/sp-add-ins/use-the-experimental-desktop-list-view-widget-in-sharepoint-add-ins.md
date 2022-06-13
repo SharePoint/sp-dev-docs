@@ -334,7 +334,7 @@ new Office.Controls.ListView(
 
 <br/>
 
-You can use the experimental Desktop List View widget to display data in SharePoint lists. The widget displays data in read-only mode. Please provide ideas and comments at the [Office Developer Platform UserVoice site](http://officespdev.uservoice.com/).
+You can use the experimental Desktop List View widget to display data in SharePoint lists. The widget displays data in read-only mode. Please provide ideas and comments at the Office Developer Platform UserVoice site.
  
 
 ## See also

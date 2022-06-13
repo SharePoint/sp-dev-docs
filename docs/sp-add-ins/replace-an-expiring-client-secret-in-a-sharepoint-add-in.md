@@ -25,7 +25,7 @@ Removing an expired secret from ACS before you remove it from the application co
 
 Ensure the following before you begin:
 
-- [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/download/details.aspx?id=39267) is installed on the development computer.
+- Microsoft Online Services Sign-In Assistant is installed on the development computer.
 - You can connect to Office 365 with PowerShell: [Connect to Office 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell)
 - You're a tenant administrator for the Office 365 tenant (or a farm administrator on the farm) where the add-in was registered with the AppRegNew.aspx page.
 

@@ -243,7 +243,7 @@ Now that we've tested our solution properly in debug mode, we can package this t
 
     You can control the requirement to add a solution containing your extension to the site with the `skipFeatureDeployment` property in **./config/package-solution.json** file. Even though you wouldn't require the solution to be installed on the site, you'd need to associate `ClientSideComponentId` to specific objects for the extension to be visible.
 
-    You can use, for example,  [Set-PnPField cmdlet](/powershell/module/sharepoint-pnp/set-pnpfield) from PnP PowerShell cmdlets to programatically associate an extension to existing fields in your sites.
+    You can use, for example,  [Set-PnPField cmdlet](https://pnp.github.io/powershell/cmdlets/Set-PnPField.html) from PnP PowerShell cmdlets to programatically associate an extension to existing fields in your sites.
 
     [!INCLUDE [pnp-powershell](../../../../includes/snippets/open-source/pnp-powershell.md)]
 

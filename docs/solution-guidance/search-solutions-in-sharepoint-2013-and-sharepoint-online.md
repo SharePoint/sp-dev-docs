@@ -11,7 +11,7 @@ Search in SharePoint combines ease of configuration and deployment with the scal
 
 SharePoint includes common patterns in the search platform to help you customize search for different scenarios. For example:
 
-- **Video search** and **conversation search** are included as out-of-the-box [search verticals](https://docs.microsoft.com/SharePoint/search/how-to-add-a-custom-search-vertical-to-your-search-results-page).
+- **Video search** and **conversation search** are included as out-of-the-box [search verticals](/SharePoint/search/how-to-add-a-custom-search-vertical-to-your-search-results-page).
 - **Topic pages** and **Content-by-Search** enhance web content management capabilities and scenarios such as search-driven sites and knowledge management sites.
 - **My tasks** pulls together project tasks so that users can track tasks assigned in multiple sites in a central location: their OneDrive for Business site.
 
@@ -91,10 +91,10 @@ All the search vertical pages contain the Search Results web part, although the 
 
 The following are additional resources to help you work with the Search Center:
 
-- [Set up a Search Center in SharePoint Server](https://docs.microsoft.com/SharePoint/search/set-up-a-search-center)
-- [How to create a Search Center Site Collection and enable crawling of your content in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-create-a-search-center-site-collection-and-enable-crawling-of-your-conten)
-- [Create a Search Center site in SharePoint Server](https://docs.microsoft.com/SharePoint/search/create-a-search-center-site)
-- [Manage the Search Center in SharePoint Server](https://docs.microsoft.com/SharePoint/search/manage-the-search-center-in-sharepoint-server)
+- [Set up a Search Center in SharePoint Server](/SharePoint/search/set-up-a-search-center)
+- [How to create a Search Center Site Collection and enable crawling of your content in SharePoint Server](/SharePoint/search/how-to-create-a-search-center-site-collection-and-enable-crawling-of-your-conten)
+- [Create a Search Center site in SharePoint Server](/SharePoint/search/create-a-search-center-site)
+- [Manage the Search Center in SharePoint Server](/SharePoint/search/manage-the-search-center-in-sharepoint-server)
 - [Manage the Search Center in SharePoint Online](https://support.office.com/article/manage-the-search-center-in-sharepoint-online-174d36e0-2f85-461a-ad9a-8b3f434a4213?ui=en-US&rs=en-US&ad=US)
 
 ### Search Center web parts
@@ -114,8 +114,8 @@ You can customize the Search Box web part by editing properties in the web part 
     
 For more information, see:
 
-- [Configure properties of the Search Box web part in SharePoint Server](https://docs.microsoft.com/SharePoint/search/configure-properties-of-the-search-box-web-part)
-- [How to change the text that is displayed in the Search Box web part in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-change-the-text-that-is-displayed-in-the-search-box-web-part)
+- [Configure properties of the Search Box web part in SharePoint Server](/SharePoint/search/configure-properties-of-the-search-box-web-part)
+- [How to change the text that is displayed in the Search Box web part in SharePoint Server](/SharePoint/search/how-to-change-the-text-that-is-displayed-in-the-search-box-web-part)
 
 #### Search Results web part
 
@@ -133,8 +133,8 @@ By changing property values, you can do the following:
     
 For more information about the Search Results web parts, see:
 
-- [Configure properties of the Search Results web part in SharePoint Server](https://docs.microsoft.com/SharePoint/search/configure-properties-of-the-search-results-web-part)
-- [How to configure the Search Results web part to use a new result source in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-configure-the-search-results-web-part-to-use-a-new-result-source)
+- [Configure properties of the Search Results web part in SharePoint Server](/SharePoint/search/configure-properties-of-the-search-results-web-part)
+- [How to configure the Search Results web part to use a new result source in SharePoint Server](/SharePoint/search/how-to-configure-the-search-results-web-part-to-use-a-new-result-source)
 
 #### Search Navigation web part
 
@@ -153,7 +153,7 @@ Additionally, on the ribbon, you can select **Site Settings** > **Search Setting
 
 #### Refinement web part
 
-The Refinement web part filters search results into categories called refiners. Users can choose these refiners to narrow search results. Refiners are managed properties that are marked as  _Refinable_ and _Queryable_. For information about these settings, see the [Managed property settings overview in Overview of the search schema in SharePoint Server](https://docs.microsoft.com/SharePoint/search/search-schema-overview#managed-property-settings-overview). 
+The Refinement web part filters search results into categories called refiners. Users can choose these refiners to narrow search results. Refiners are managed properties that are marked as  _Refinable_ and _Queryable_. For information about these settings, see the [Managed property settings overview in Overview of the search schema in SharePoint Server](/SharePoint/search/search-schema-overview#managed-property-settings-overview). 
 
 You can edit the Refinement web part properties in the web part tool pane to specify the following:
 
@@ -164,26 +164,26 @@ You can edit the Refinement web part properties in the web part tool pane to spe
     
 By default, the Refinement web part doesn't show the number of results for each refiner value. You can add refiner counts by modifying the display template for the refiner. 
 
-For more information about this feature, see [Configure properties of the Refinement web part in SharePoint Server](https://docs.microsoft.com/SharePoint/search/configure-properties-of-the-refinement-web-part).
+For more information about this feature, see [Configure properties of the Refinement web part in SharePoint Server](/SharePoint/search/configure-properties-of-the-refinement-web-part).
 
 For more information about the Refinement web part and refiners, see:
 
-- [Plan to use refiners on a search results page in SharePoint Server](https://docs.microsoft.com/SharePoint/search/plan-to-use-refiners-on-a-search-results-page)
-- [How to add refiners to your search results page in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-add-refiners-to-your-search-results-page)
+- [Plan to use refiners on a search results page in SharePoint Server](/SharePoint/search/plan-to-use-refiners-on-a-search-results-page)
+- [How to add refiners to your search results page in SharePoint Server](/SharePoint/search/how-to-add-refiners-to-your-search-results-page)
 
 ### Result sources
 
 Result sources limit searches to certain content or to a subset of search results. You can define a result source by specifying the following:
 
 - A search provider or source URL to get search results from; for example, the search index of the local SharePoint Search service.   
-- A protocol to use to get search results; for example, the [OpenSearch](http://www.opensearch.org/Home) protocol.
+- A protocol to use to get search results; for example, the [OpenSearch](https://www.opensearch.org) protocol.
 - A query transform, which can narrow results from the given search provider or URL to a specific subset of results; for example, to a set of results that has a particular content type.
     
 SharePoint provides sixteen preconfigured result sources, including Local SharePoint Results, Conversations, and Items related to current user. You can view details about result sources from the **Manage Result Sources** page (**Site Settings** > **Search** > **Result Sources**). 
 
 From the **Manage Result Sources** page, you can create new result sources in either of the following two ways:
 
-- Choose **New Result Source** and select the result source that you want. For more information, see [Configure result sources for search in SharePoint Server](https://docs.microsoft.com/SharePoint/search/configure-result-sources-for-search).
+- Choose **New Result Source** and select the result source that you want. For more information, see [Configure result sources for search in SharePoint Server](/SharePoint/search/configure-result-sources-for-search).
 - Point to the arrow next to an existing result source, choose **Copy**, and then modify the copy as necessary and save it with a new name.
     
 A result source specifies one of four protocols to obtain search results. If the result source uses a protocol other than **Local SharePoint**, the result source must also specify a URL from which to get search results.
@@ -199,8 +199,8 @@ A result source specifies one of four protocols to obtain search results. If the
 
 For more information, see the following:
 
-- [Understanding result sources for search in SharePoint Server](https://docs.microsoft.com/SharePoint/search/understanding-result-sources-for-search)
-- [About result sources and federation](https://docs.microsoft.com/SharePoint/search/plan-crawling-and-federation#about-result-sources-and-federation)
+- [Understanding result sources for search in SharePoint Server](/SharePoint/search/understanding-result-sources-for-search)
+- [About result sources and federation](/SharePoint/search/plan-crawling-and-federation#about-result-sources-and-federation)
 - [Understanding result sources](https://support.office.com/article/understanding-result-sources-3fb2c8c4-ecbd-4210-abf7-1f0df59a370b?ocmsassetID=HA102848849&CTT=1&CorrelationId=707e7332-5113-44fc-ae26-fe5242fe3de5&ui=en-US&rs=en-US&ad=US)
 - [Manage result sources](https://support.office.com/article/manage-result-sources-fd8d6ac6-c5d0-454d-80a9-51580902b25d?ui=en-US&rs=en-US&ad=US)
 
@@ -235,7 +235,7 @@ A query rule can specify three kinds of actions:
     
 - Change the ranking of results by changing the query. For example, for a query that contains *download toolbox*, a query rule could recognize the word *download* as an action term and boost search results that point to a particular download site on your intranet.
     
-For more information about query rules, see [Manage query rules in SharePoint Server](https://docs.microsoft.com/SharePoint/search/manage-query-rules).
+For more information about query rules, see [Manage query rules in SharePoint Server](/SharePoint/search/manage-query-rules).
 
 ### Query transforms
 
@@ -251,7 +251,7 @@ A user query is transformed first by the web part, then by any query rules that 
 
 You can use the Query Builder to help you write and test query transforms. You can test the query from within the Query Builder by setting temporary test values for the query variables, running the query, and previewing the search results. 
 
-For more information about query transforms, see [Plan to transform queries and order results in SharePoint Server](https://docs.microsoft.com/SharePoint/search/plan-to-transform-queries-and-order-results).
+For more information about query transforms, see [Plan to transform queries and order results in SharePoint Server](/SharePoint/search/plan-to-transform-queries-and-order-results).
 
 ### Result types and display templates
 
@@ -269,7 +269,7 @@ To display search results differently, search results have to be sorted into dif
     
 SharePoint search includes several default result types. To see them, go to **Site Settings** > **Site Collection Administration** > **Search Result Types**. You cannot edit any of the default result types. You can create new result types by copying existing ones and modifying them. 
 
-For more information about the default result types included with SharePoint, see [Result types and display templates that are used to display search results in SharePoint Server](https://docs.microsoft.com/SharePoint/technical-reference/result-types-and-display-templates-that-are-used-to-display-search-results).
+For more information about the default result types included with SharePoint, see [Result types and display templates that are used to display search results in SharePoint Server](/SharePoint/technical-reference/result-types-and-display-templates-that-are-used-to-display-search-results).
 
 #### Display templates
 
@@ -293,7 +293,7 @@ For details about display templates and their structure, see:
 - [SharePoint Design Manager design packages](../general-development/sharepoint-design-manager-design-packages.md)
 - [Search-driven web parts and display templates](../general-development/overview-of-the-sharepoint-page-model.md#search-driven-web-parts-and-display-templates)
 
-For more information about display templates available in SharePoint, see [Display template reference in SharePoint Server](https://docs.microsoft.com/SharePoint/technical-reference/display-template-reference-in-sharepoint-server).
+For more information about display templates available in SharePoint, see [Display template reference in SharePoint Server](/SharePoint/technical-reference/display-template-reference-in-sharepoint-server).
 
 #### Customize display templates
 
@@ -317,14 +317,14 @@ The next element is a `div` element. This is where you place any HTML or script 
 
 The following are some additional resources for display templates and result types:
 
-- [Customize search result types in SharePoint Server](https://docs.microsoft.com/SharePoint/search/customize-search-result-types)
-- [How to change the way search results are displayed in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-change-the-way-search-results-are-displayed)
-- [Understanding how search results are displayed in SharePoint Server](https://docs.microsoft.com/SharePoint/search/understanding-how-search-results-are-displayed)
-- [Understanding how item display templates and hit highlighting work in SharePoint Server](https://docs.microsoft.com/SharePoint/search/understanding-how-item-display-templates-and-hit-highlighting-work)
-- [How to create a new result type in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-create-a-new-result-type)
-- [How to display values from custom managed properties in search results - option 1 in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-1)
-- [How to display values from custom managed properties in search results - option 2 in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-2)
-- [How to display values from custom managed properties in the hover panel in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-the-hover-panel)
+- [Customize search result types in SharePoint Server](/SharePoint/search/customize-search-result-types)
+- [How to change the way search results are displayed in SharePoint Server](/SharePoint/search/how-to-change-the-way-search-results-are-displayed)
+- [Understanding how search results are displayed in SharePoint Server](/SharePoint/search/understanding-how-search-results-are-displayed)
+- [Understanding how item display templates and hit highlighting work in SharePoint Server](/SharePoint/search/understanding-how-item-display-templates-and-hit-highlighting-work)
+- [How to create a new result type in SharePoint Server](/SharePoint/search/how-to-create-a-new-result-type)
+- [How to display values from custom managed properties in search results - option 1 in SharePoint Server](/sharepoint/search/display-values-custom-managed-properties)
+- [How to display values from custom managed properties in search results - option 2 in SharePoint Server](/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-2)
+- [How to display values from custom managed properties in the hover panel in SharePoint Server](/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-the-hover-panel)
 
 ## Query APIs and search add-ins
 

@@ -26,7 +26,7 @@ For add-ins that are sold through the Office Store, registration to ACS is perfo
 For add-ins that are distributed in the organization add-in catalog, registration to both ACS and the service is performed on the \_Layouts\15\AppRegNew.aspx page of any SharePoint tenancy or farm where the add-in is to be installed. External, non-SharePoint, applications that access SharePoint, also need to be registered. This category includes Office Add-ins, Windows Store apps, web applications, and device apps such as smartphone apps.
  
 > [!NOTE] 
-> Registration requires that the application have an Internet domain. Any existing domain can be used for this purpose, but you can't be 100% certain that any domain you don't own will always exist, so a web application would need to be part of a native device application even if the web application component played no other role than to enable registration. For an advanced code sample that is designed in this way, see [Provision sites in batches with the add-in model](https://github.com/SharePoint/PnP/tree/dev/Samples/Provisioning.Batch).
+> Registration requires that the application have an Internet domain. Any existing domain can be used for this purpose, but you can't be 100% certain that any domain you don't own will always exist, so a web application would need to be part of a native device application even if the web application component played no other role than to enable registration. For an advanced code sample that is designed in this way, see [Provision sites in batches with the add-in model](https://github.com/pnp/PnP/tree/master/Samples/Provisioning.Batch).
  
 For more information about registration, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md).
 
