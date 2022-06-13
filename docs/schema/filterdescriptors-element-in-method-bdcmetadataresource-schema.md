@@ -45,7 +45,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md">FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><a href="filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md">FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -63,7 +63,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></p></td>
 </tr>
 </tbody>
 </table>
