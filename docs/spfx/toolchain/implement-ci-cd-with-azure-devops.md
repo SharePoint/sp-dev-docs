@@ -1,7 +1,7 @@
 ---
 title: Implement Continuous Integration and Continuous deployment using Azure DevOps
 description: Streamlining the build and deployment process by automating manual steps.
-ms.date: 09/16/2020
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -52,7 +52,7 @@ The Build Definition, as its name suggests, includes all the definitions and the
 ### Installing NodeJS version 10
 
 Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 10, as SharePoint Framework depends on it.
-![installing node 10](../../images/azure-devops-spfx-02.png)
+![Screenshot of the Select a Source screen with the Azure Repos Git option being highlighted.](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE] 
 > Make sure you specify `10.x` in the `Version Spec` field. If your project is based on SharePoint Framework 1.7.1 or earlier, use version 8.x.
@@ -209,7 +209,7 @@ When you create your continuous deployment environment, you can give a name and 
 By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 10 or later.
 Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. If your project is based on SharePoint Framework version 1.7.1 or earlier, use version 8.X.
 
-![installing node 10](../../images/azure-devops-spfx-13.png)
+![Screenshot of the NOde dot J S Tool Installer screen, showing the Display name and Version Spec fields.](../../images/azure-devops-spfx-13.png)
 
 ### Installing the CLI for Microsoft 365
 
