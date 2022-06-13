@@ -8,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 11f1a4ad-5254-421f-8e7a-049d1f4dc0ef
-description: "Last modified: March 09, 2015"
 ---
 
 # ExportObjects element (DeploymentExportSettings)

@@ -8,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c5317093-9b2f-d11a-b610-255c05aa5d50
-description: "Last modified: March 09, 2015"
 ---
 
 # EntityExtractorBitMap element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)
