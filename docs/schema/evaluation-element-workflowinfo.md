@@ -1,7 +1,8 @@
 ---
 title: Evaluation Element (WorkflowInfo)
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Evaluation Element (WorkflowInfo) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

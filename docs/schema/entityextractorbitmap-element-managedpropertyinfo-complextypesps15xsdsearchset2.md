@@ -1,7 +1,8 @@
 ---
 title: "EntityExtractorBitMap element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes EntityExtractorBitMap element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2) and includes information on elements and attributes.
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
@@ -16,7 +17,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Element Type | Namespace |
 |:-----|:-----|
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

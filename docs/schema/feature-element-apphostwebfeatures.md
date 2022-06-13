@@ -1,7 +1,8 @@
 ---
 title: Feature element (AppHostWebFeatures)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes Feature element (AppHostWebFeatures) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -16,8 +17,8 @@ ms.assetid: 2d490115-671e-8fa3-f90f-446d92b5bd71
 
 ## Element information
 
-|   |   |
-|---|---|
+| Element Type | Namespace | Schema File |
+|---|---|---|
 | **Element type**  | FeatureDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

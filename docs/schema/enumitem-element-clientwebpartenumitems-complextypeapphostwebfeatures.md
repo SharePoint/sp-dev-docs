@@ -1,7 +1,8 @@
 ---
 title: EnumItem element (ClientWebPartEnumItems complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes the EnumItem element (ClientWebPartEnumItems complexType) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,8 +19,8 @@ ms.assetid: 6a27b5f3-6452-573f-8756-f63cfddfa4bf
 
 ## Element information
 
-|   |   |
-|---|---|
+| Element Type | Namespace | Schema File |
+|-----------|-------------|----------------|
 | **Element type**  | ClientWebPartEnumItem |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

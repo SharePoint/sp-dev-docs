@@ -1,7 +1,8 @@
 ---
 title: FeatureDefinition complexType
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes FeatureDefinition complexType and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,8 +19,8 @@ ms.assetid: ab1de98a-64f7-c8d1-0b64-7650cb100167
 
 ## Type information
 
-|   |   |
-|---|---|
+| Namespace | Schema File | Extension Base |
+|---|---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
 | **Extension base**  | None |
