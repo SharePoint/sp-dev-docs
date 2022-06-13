@@ -1,7 +1,7 @@
 ---
 title: Master pages, the Master Page Gallery, and page layouts in SharePoint
 description: Provides article links about using Design Manager to work with master pages, page layouts, and display templates in publishing sites in SharePoint.
-ms.date: 09/15/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 80b9a360-bc2e-46c6-b0ca-1bc487b73db6
 ms.localizationpriority: high

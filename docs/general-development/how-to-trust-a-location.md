@@ -1,7 +1,7 @@
 ---
 title: Trust a location
 description: Describes trusted locations, provides steps on how to trust a location, and provides links to related articles.
-ms.date: 09/15/2021
+ms.date: 06/13/2022
 keywords: how to,howdoi,howto,trusted location
 f1_keywords:
 - how to,howdoi,howto,trusted location

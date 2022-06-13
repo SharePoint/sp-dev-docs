@@ -1,7 +1,7 @@
 ---
 title: Set the Bing Maps key at the web and farm level in SharePoint
 description: Learn how to set the Bing Maps key programmatically at the web (SharePoint Server and SharePoint Online) and farm (SharePoint Server) level by using the SharePoint client object model and Windows PowerShell, to enable the Bing Maps functionality in SharePoint lists and location-based web and mobile apps.
-ms.date: 09/15/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
 ms.localizationpriority: medium

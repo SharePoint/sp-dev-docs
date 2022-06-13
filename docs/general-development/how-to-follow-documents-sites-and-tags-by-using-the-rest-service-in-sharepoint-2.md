@@ -1,7 +1,7 @@
 ---
 title: Follow documents, sites, and tags by using the REST service in SharePoint
 description: Describes how to create SharePoint-hosted apps that use the REST service to follow content and to get followed content.
-ms.date: 09/15/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
 ms.localizationpriority: high

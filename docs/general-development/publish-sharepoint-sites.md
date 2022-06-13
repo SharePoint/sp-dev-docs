@@ -1,7 +1,7 @@
 ---
 title: Publish SharePoint sites
 description: Describes how to deploy SharePoint site components and content to the current site collection and other site collections.
-ms.date: 09/15/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 46b5a79c-962f-4a07-8316-d5005eabd0e0
 ms.localizationpriority: medium

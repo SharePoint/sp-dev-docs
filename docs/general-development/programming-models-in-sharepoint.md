@@ -1,7 +1,7 @@
 ---
 title: Programming models in SharePoint
 description: Describes programming models in SharePoint and provides links to related articles about SharePoint development.
-ms.date: 09/15/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 061985ec-6129-4e91-991b-a72488ce1d34
 ms.localizationpriority: high
