@@ -18,9 +18,9 @@ ms.assetid: 94e6fcb5-e01e-1cf1-cb40-6b53e4a87dbd
 
 | Resource | File |
 |:-----|:-----|
-|Base type <br/> ||
-|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|Schema file <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+| **Base type** ||
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules |
+| **Schema file** | schema_Microsoft.Office.Server.Search.Query.Rules.xsd |
    
 ## Definition
 

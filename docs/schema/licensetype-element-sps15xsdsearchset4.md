@@ -18,9 +18,9 @@ ms.assetid: 03cde5ba-7ed5-53fe-fd99-229de37c670f
 
 | Resource | File |
 |:-----|:-----|
-|Element type <br/> |tns:LicenseType  <br/> |
-|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|Schema file <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+| **Element type** |tns:LicenseType |
+| **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules |
+| **Schema file** |schema_Microsoft.Office.Server.Search.Query.Rules.xsd |
    
 ## Definition
 

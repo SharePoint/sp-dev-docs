@@ -20,9 +20,9 @@ ms.assetid: 8f29b9aa-9de2-ea26-7bf9-e3287b37c0ab
 
 | Resource | File |
 |:-----|:-----|
-|Base type <br/> |xs:string  <br/> |
-|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|Schema file <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+| **Base type** |xs:string |
+| **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  |
+| **Schema file** |schema_Microsoft.Office.Server.Search.Query.xsd |
    
 ## Definition
 

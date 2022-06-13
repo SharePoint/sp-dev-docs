@@ -77,14 +77,14 @@ The following sections describe attributes, child elements, and parent elements.
   
 | Element | Description |
 | --- | --- |
-| [Properties](https://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx) | Can contain a property named \*\*AssociatedActionType\*\* to specify the type of action that is associated with this layout. Accepted values are Edit, Create, and ViewDetails. |
+| [Properties](https://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx) | Can contain a property named **AssociatedActionType** to specify the type of action that is associated with this layout. Accepted values are Edit, Create, and ViewDetails. |
 
 ### Parent elements
 
   
 | Element | Description |
 | --- | --- |
-| [Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The \*\*Layouts\*\* element that contains this layout. |
+| [Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Layouts** element that contains this layout. |
 
 </br>
 
