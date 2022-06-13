@@ -1,7 +1,7 @@
 ---
 title: Building a query suggestion extension using SharePoint Framework
 description: Tutorial on creating a query suggestion extension with SharePoint Framework
-ms.date: 06/07/2022
+ms.date: 08/19/2020
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -17,7 +17,7 @@ Be sure you have completed the procedures in the following articles before you b
 * [Deploy your extension to SharePoint (Hello World part 3)](./serving-your-extension-from-sharepoint.md)
 
 > [!NOTE]
-> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the library (*see [this article for reference](/sharepoint/dev/spfx/try-preview-capabilities)*)
+> This feature was introduced as a developer preview feature. In order to use features in developer preview, ensure you use the `--plusbeta` version of the library (*see [this article for reference](https://docs.microsoft.com/sharepoint/dev/spfx/try-preview-capabilities)*)
 
 > [!IMPORTANT]
 > This lab requires that you are using at least version 1.10 of the SharePoint Framework as these capabilities are not available in earlier versions.

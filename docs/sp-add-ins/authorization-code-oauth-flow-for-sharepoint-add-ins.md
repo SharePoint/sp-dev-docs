@@ -1,7 +1,7 @@
 ---
 title: Authorization Code OAuth flow for SharePoint Add-ins
 description: The OAuth flow for add-ins that request permission to access SharePoint resources on the fly, and how to use the **OAuthAuthorize.aspx** page and the SharePoint redirect URI.
-ms.date: 06/07/2022
+ms.date: 06/22/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -128,7 +128,7 @@ The Fabrikam SharePoint Online site asks ACS to create a short-lived (approximat
 
 The Fabrikam SharePoint Online site redirects the browser back to Contoso via HTTP 302 Response. The URL construct for this redirection uses the redirect URI that was specified when the photo-printing add-in was registered. It also includes the authorization code as a query string.
 
-The redirect URL is structured like the following: **https://contoso.com/RedirectAccept.aspx?code=authcode**
+The redirect URL is structured like the following: **https://contoso.com/RedirectAccept.aspx?code=<authcode>**
 
 #### Step 6: The add-in uses the authorization code to request an access token from ACS, which validates the request, invalidates the authorization code, and then sends access and refresh tokens to the add-in
 

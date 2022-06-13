@@ -1,7 +1,7 @@
 ---
 title: Create a provider-hosted add-in that includes a custom SharePoint list and content type
 description: Create a SharePoint Add-in that combines a cloud-hosted web application with custom SharePoint-hosted list templates, list instances, and custom content types by using the Office Developer Tools for Visual Studio. 
-ms.date: 06/07/2022
+ms.date: 12/26/2017
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -421,9 +421,9 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-9. Add the following code to parse the ATOM-formatted response XML. It uses the classes of the [System.Xml.Linq](https://msdn.microsoft.com/library/bb299195) namespace to parse the data that is returned and construct a [List\<T\>](https://msdn.microsoft.com/library/6sh2ey19) of the items from the SharePoint list. (You could also use the classes of the [System.Xml](https://msdn.microsoft.com/library/y3y47afh) namespace.) 
+9. Add the following code to parse the ATOM-formatted response XML. It uses the classes of the [System.Xml.Linq](https://msdn.microsoft.com/library/bb299195) namespace to parse the data that is returned and construct a [List<T>](https://msdn.microsoft.com/library/6sh2ey19) of the items from the SharePoint list. (You could also use the classes of the [System.Xml](https://msdn.microsoft.com/library/y3y47afh) namespace.) 
 
-  Note that, in the XML that SharePoint returns, the child elements of the **entry** element hold metadata about the list item. The actual row data of a SharePoint list item is nested two layers down in the **properties** element. For that reason the [Elements\<T\>](https://msdn.microsoft.com/library/bb348465) extension method is used twice to filter out the higher levels.
+Note that, in the XML that SharePoint returns, the child elements of the **entry** element hold metadata about the list item. The actual row data of a SharePoint list item is nested two layers down in the **properties** element. For that reason the [Elements<T>](https://msdn.microsoft.com/library/bb348465) extension method is used twice to filter out the higher levels.
       
   ```csharp
     // Response markup parsing section
@@ -440,7 +440,7 @@ For the continuing example, you develop an ASP.NET web application. Take the fol
 
   <br/>
 
-10. Add the following LINQ query to construct an [IEnumerable\<T\>](https://msdn.microsoft.com/library/9eekhta0) collection of an anonymous type that has just the properties you need and no others. Note that although the code must refer to the item title field by its internal name `Title`, the property name in the anonymous type, to which the value is assigned, can be named `Character`. One effect of this is that when the collection is bound to a grid control, the more appropriate name **Character** appears on the page.
+10. Add the following LINQ query to construct an [IEnumerable<T>](https://msdn.microsoft.com/library/9eekhta0) collection of an anonymous type that has just the properties you need and no others. Note that although the code must refer to the item title field by its internal name `Title`, the property name in the anonymous type, to which the value is assigned, can be named `Character`. One effect of this is that when the collection is bound to a grid control, the more appropriate name **Character** appears on the page.
       
   ```csharp
     var entryFieldValues = from entry in entries
