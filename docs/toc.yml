@@ -2056,7 +2056,7 @@
   - name: SharePoint Migration Guidance
     items:
     - name: What's new in Migration API
-    href: apis/migration-api-whats-new.md
+      href: apis/migration-api-whats-new.md
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
     - name: Migration permission guidance
