@@ -1,5 +1,6 @@
 ---
 title: Property element (FeatureSiteTemplateAssociation)
+description: Describes the Property element (FeatureSiteTemplateAssociation) and provides a definition and the elements and attributes.
 manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer

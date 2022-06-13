@@ -1,5 +1,6 @@
 ---
 title: "Property element (List)"
+description: Describes the Property element (List) and provides the elements and attributes.
 manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 28ac9fde-722e-4d03-aaf3-d12882deb014
-description: "Last modified: March 09, 2015"
 ---
 
 # Property element (List)

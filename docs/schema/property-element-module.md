@@ -1,5 +1,6 @@
 ---
 title: Property element (Module)
+description: Describes the Property element (Module) and provides a definition and the elements and attributes.
 manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
