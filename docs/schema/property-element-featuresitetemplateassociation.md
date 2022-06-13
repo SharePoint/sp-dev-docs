@@ -1,7 +1,7 @@
 ---
 title: Property element (FeatureSiteTemplateAssociation)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
