@@ -1,13 +1,13 @@
 ---
 title: "SpellcheckMode simpleType (SPS15XSDSearchSet5)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SpellcheckMode simpleType (SPS15XSDSearchSet5) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9184db70-e548-9918-03af-30e47585dc1e
-description: "Last modified: March 09, 2015"
 ---
 
 # SpellcheckMode simpleType (SPS15XSDSearchSet5)

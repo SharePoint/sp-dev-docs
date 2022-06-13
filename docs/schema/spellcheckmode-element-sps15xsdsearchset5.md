@@ -1,13 +1,13 @@
 ---
 title: "SpellcheckMode element (SPS15XSDSearchSet5)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SpellcheckMode element (SPS15XSDSearchSet5) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ab677c35-51c4-f378-f372-2210f8107d2e
-description: "Last modified: March 09, 2015"
 ---
 
 # SpellcheckMode element (SPS15XSDSearchSet5)

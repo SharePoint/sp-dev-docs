@@ -1,13 +1,13 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentSystemData)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPDeploymentObjectType Simple Type (DeploymentSystemData) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 065907dd-ebca-4332-9bc1-65bace98eba3
-description: "Last modified: March 09, 2015"
 ---
 
 # SPDeploymentObjectType Simple Type (DeploymentSystemData)

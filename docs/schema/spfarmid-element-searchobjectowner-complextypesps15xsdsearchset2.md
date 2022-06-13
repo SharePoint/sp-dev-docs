@@ -1,13 +1,13 @@
 ---
 title: "SPFarmId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPFarmId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2) and includes information on elements and attributes.
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8bffa58b-bf76-4075-da69-8c3a55786ee9
-description: "Last modified: March 09, 2015"
 ---
 
 # SPFarmId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)

@@ -1,13 +1,13 @@
 ---
 title: "SPModerationStatusType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPModerationStatusType Simple Type (DeploymentManifest) and includes information on enumeration values and additional remarks.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4f48e808-aa9d-4ea5-8c3e-94024f9f1590
-description: "Last modified: March 09, 2015"
 ---
 
 # SPModerationStatusType Simple Type (DeploymentManifest)

@@ -1,13 +1,13 @@
 ---
 title: "SPRequirementObjectType Simple Type (DeploymentRequirements)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPRequirementObjectType Simple Type (DeploymentRequirements) and provides values for the Type attribute on the Requirement Element.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 978bd557-f853-42ea-b1c0-55d5a59983af
-description: "Last modified: March 09, 2015"
 ---
 
 # SPRequirementObjectType Simple Type (DeploymentRequirements)

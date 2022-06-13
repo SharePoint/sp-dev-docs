@@ -1,13 +1,13 @@
 ---
 title: "SPDictionaryEntryAccess Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPDictionaryEntryAccess Simple Type (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ce710a54-2e61-419c-81c4-66fde5557cf7
-description: "Last modified: March 09, 2015"
 ---
 
 # SPDictionaryEntryAccess Simple Type (DeploymentManifest)
