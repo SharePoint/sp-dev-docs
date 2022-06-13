@@ -2,7 +2,7 @@
 title: .ACTIONS File Example (WorkflowInfo)
 description: Discusses the definition, elements and attributes for .ACTIONS File Example (WorkflowInfo) which an be used to import custom conditions.
 manager: laurawi
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

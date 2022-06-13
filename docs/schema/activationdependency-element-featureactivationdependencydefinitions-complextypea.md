@@ -2,7 +2,7 @@
 title: ActivationDependency element (FeatureActivationDependencyDefinitions complexType)
 description: Discusses the definition, elements and attributes for ActivationDependency element (FeatureActivationDependencyDefinitions complexType).
 manager: soliver
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

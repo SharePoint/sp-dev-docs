@@ -2,7 +2,7 @@
 title: Actions Schema Reference (WorkflowInfo)
 description: Discusses the definition, elements and attributes for ctions Schema Reference (WorkflowInfo) which is used to validate a custom .ACTIONS file.
 manager: laurawi
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
