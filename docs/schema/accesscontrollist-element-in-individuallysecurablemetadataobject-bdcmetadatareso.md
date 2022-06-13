@@ -2,7 +2,7 @@
 title: AccessControlList element in IndividuallySecurableMetadataObject
 description: Discusses the definition, elements and attributes for AccessControlList element in IndividuallySecurableMetadataObject.
 manager: soliver
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 
@@ -51,11 +51,4 @@ None.
 | [Method element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md) |
 | [Association element in MethodInstances (BDCMetadataResource Schema)](association-element-in-methodinstances-bdcmetadataresource-schema.md) |
 | [MethodInstance element in MethodInstances (BDCMetadataResource Schema)](methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
 

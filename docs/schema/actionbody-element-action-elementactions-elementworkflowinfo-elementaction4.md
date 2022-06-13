@@ -2,7 +2,7 @@
 title: ActionBody element
 description: Discusses the definition, elements and attributes for ActionBody element which specifies the body of a custom action.
 manager: laurawi
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -37,7 +37,6 @@ Specifies the body of a custom action.
 | **Element type**  |  |
 | **Namespace**     |  |
 | **Schema file**   | Actions4.xsd |
-
 
 ## Definition
 
@@ -87,11 +86,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

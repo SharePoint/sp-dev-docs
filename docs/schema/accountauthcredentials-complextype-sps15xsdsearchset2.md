@@ -2,7 +2,7 @@
 title: "AccountAuthCredentials complexType (SPS15XSDSearchSet2)"
 description: Discusses the definition, elements and attributes for AccountAuthCredentials complexType (SPS15XSDSearchSet2).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
@@ -16,9 +16,9 @@ ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
 
 |Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:AuthenticationData  <br/> |
+|**Namespace** </br> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  </br> |
+|**Schema file** </br> |schema_Microsoft.Office.Server.Search.Administration.xsd  </br> |
+|**Extension base** </br> |tns:AuthenticationData  </br> |
    
 ## Definition
 
@@ -44,8 +44,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|[_UserName](_username-element-accountauthcredentials-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-|[Password](password-element-accountauthcredentials-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
+|[_UserName](_username-element-accountauthcredentials-complextypesps15xsdsearchset2.md) </br> |xs:string  </br> ||
+|[Password](password-element-accountauthcredentials-complextypesps15xsdsearchset2.md) </br> |xs:string  </br> ||
    
 ### Attributes
 

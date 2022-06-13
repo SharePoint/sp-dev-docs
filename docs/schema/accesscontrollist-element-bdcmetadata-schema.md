@@ -2,7 +2,7 @@
 title: AccessControlList element
 description: Discusses the definition, elements and attributes for AccessControlList element which Specifies an access control list (ACL) for the parent element.
 manager: soliver
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -54,11 +54,3 @@ None.
 | [Method element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md) | A method of an external content type. |
 | [Association element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md) | An association. |
 | [MethodInstance element in MethodInstances (BDCMetadata Schema)](methodinstance-element-in-methodinstances-bdcmetadata-schema.md) | A method instance of an external content type. |
-
-
-
-
-
-
-
-

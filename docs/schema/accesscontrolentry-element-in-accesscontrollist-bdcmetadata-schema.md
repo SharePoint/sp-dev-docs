@@ -2,7 +2,7 @@
 title: AccessControlEntry element in AccessControlList (BDCMetadata Schema)
 description: Details on the AccessControlEntry element in AccessControlList (BDCMetadata Schema)
 manager: soliver
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
