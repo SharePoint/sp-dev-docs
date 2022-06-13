@@ -18,7 +18,7 @@ ms.assetid: 9184db70-e548-9918-03af-30e47585dc1e
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |

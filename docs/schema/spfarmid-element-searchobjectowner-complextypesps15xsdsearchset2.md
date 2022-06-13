@@ -16,7 +16,7 @@ ms.assetid: 8bffa58b-bf76-4075-da69-8c3a55786ee9
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
