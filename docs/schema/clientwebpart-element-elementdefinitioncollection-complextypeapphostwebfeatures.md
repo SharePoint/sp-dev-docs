@@ -2,7 +2,7 @@
 title: ClientWebPart element (ElementDefinitionCollection complexType)
 description: Describes the definition, element, type, and attribute information for ClientWebPart element (ElementDefinitionCollection complexType).
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,11 +19,9 @@ ms.assetid: 591cae5f-359c-267b-6cd6-27f45ed437f3
 
 ## Element information
 
-**Element type**: ClientWebPartDefinition
-
-**Namespace**: `http://schemas.microsoft.com/sharepoint/`
-
-**Schema file**: apphostwebfeatures.xsd
+| Element Type | Namespace | Schema File |
+|--------------|-----------|-------------|
+| ClientWebPartDefinition | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
 
 ## Definition
 

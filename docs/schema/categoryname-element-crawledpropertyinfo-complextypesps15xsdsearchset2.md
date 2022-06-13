@@ -2,7 +2,7 @@
 title: "CategoryName element (CrawledPropertyInfo complexType) (SPS15XSDSearchSet2)"
 description: "Describes the definition, element, and attribute information for CategoryName element (CrawledPropertyInfo complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
@@ -16,11 +16,9 @@ ms.assetid: a088c171-8f0d-162f-73f3-cbe639601310
   
 ## Element information
 
-**Element type**: xs:string
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
+| Element Type | Namespace | Schema File |
+|--------------|-----------|-------------|
+| xs:string | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration | schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 

@@ -2,7 +2,7 @@
 title: "BuiltIn element (Source complexType) (SPS15XSDSearchSet1)"
 description: "Describes the definition, element, and attribute information for BuiltIn element (Source complexType) (SPS15XSDSearchSet1)."
 manager: arnek
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -16,12 +16,10 @@ ms.assetid: 35a03f30-ca50-809b-3bd2-fad5bcc78525
   
 ## Element information
 
-**Element type**: xs:boolean
+| Element Type | Namespace | Schema File |
+|--------------|-----------|-------------|
+| xs:boolean | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query | schema_Microsoft.Office.Server.Search.Administration.Query.xsd |
 
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.Query.xsd
-   
 ## Definition
 
 ```XML

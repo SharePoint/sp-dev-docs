@@ -2,7 +2,7 @@
 title: CheckBox element (CommandUIDefinitionType complexType)
 description: "Describes the definition, element, and attribute information for CheckBox element (CommandUIDefinitionType complexType)."
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,12 +19,9 @@ ms.assetid: d3dd2b0b-a8b0-b004-4e14-042152f2e377
 
 ## Element information
 
-**Element type**: CheckBoxType
-
-**Namespace**: `http://schemas.microsoft.com/sharepoint/`
-
-**Schema file**: apphostwebfeatures.xsd
-
+| Element Type | Namespace | Schema File |
+|--------------|-----------|-------------|
+| CheckBoxType | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
 
 ## Definition
 

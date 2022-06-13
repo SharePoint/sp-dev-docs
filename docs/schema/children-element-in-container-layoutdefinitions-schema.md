@@ -2,7 +2,7 @@
 title: Children element in Container
 description: "Describes the definition, element, and attribute information for the Children element in Container, which lists the External Data Parts in a layout."
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -20,9 +20,9 @@ Lists the External Data Parts in this layout.
 
 ## Element information
 
-**Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
-
-**Schema**: LayoutDefinitions
+| Namespace | Schema |
+|-----------|--------|
+| `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout` | LayoutDefinitions |
 
 ## Definition
 

@@ -2,7 +2,7 @@
 title: ClientWebPartDefinitionContentType simpleType
 description: Describes the definition, type information, and enumeration values for ClientWebPartDefinitionContentType simpleType.
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,11 +19,9 @@ ms.assetid: f097071f-3a01-20c3-1178-860270677478
 
 ## Type information
 
-**Base Type**: xs:string
-
-**Namespace**: `http://schemas.microsoft.com/sharepoint/`
-
-**Schema file**: apphostwebfeatures.xsd
+| Base Type | Namespace | Schema File |
+|-----------|-----------|-------------|
+| xs:string | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
 
 ## Definition
 

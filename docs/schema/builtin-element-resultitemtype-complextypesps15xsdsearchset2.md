@@ -2,7 +2,7 @@
 title: "BuiltIn element (ResultItemType complexType) (SPS15XSDSearchSet2)"
 description: "Describes the definition, element, and attribute information for BuiltIn element (ResultItemType complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
@@ -16,12 +16,10 @@ ms.assetid: 22e53efb-a9a4-89d6-d931-2204c16475fd
   
 ## Element information
 
-**Element type**: xs:boolean 
+| Element Type | Namespace | Schema File |
+|------------|---------|-----------|
+| xs:boolean | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration | schema_Microsoft.Office.Server.Search.Administration.xsd |
 
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
-   
 ## Definition
 
 ```XML
