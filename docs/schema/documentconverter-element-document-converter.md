@@ -99,16 +99,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="elements-element-document-converter.md">Elements Element (Document Converter)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|[Elements Element (Document Converter)](elements-element-document-converter.md)|
 
 ## Example
 
