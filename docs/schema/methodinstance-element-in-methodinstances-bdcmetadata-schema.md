@@ -196,7 +196,7 @@ The following sections describe attributes, child elements, and parent elements.
   
 | Element | Description |
 | --- | --- |
-| [MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md) | The \*\*MethodInstances\*\* element that contains this **MethodInstance**. |
+| [MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md) | The **MethodInstances** element that contains this **MethodInstance**. |
 
 
 
