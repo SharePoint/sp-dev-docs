@@ -11,6 +11,9 @@ Site templates are available to everyone by default. You can also scope site tem
 
 This article explains how you can control which users and groups can see specific site templates.
 
+> [!NOTE]
+> Users with the SharePoint Admin role assigned will see all site templates, regardless of scoping.
+
 ## Grant rights to a site template
 
 When a site template is first created, it is available to everyone. You can grant **View** rights to the site template. After rights are granted, only the users or groups (principals) specified have access. You can continue granting rights to more principals with subsequent API calls.
