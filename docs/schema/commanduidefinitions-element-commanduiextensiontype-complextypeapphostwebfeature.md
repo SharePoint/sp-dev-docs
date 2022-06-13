@@ -2,7 +2,7 @@
 title: CommandUIDefinitions element (CommandUIExtensionType complexType)
 description: Describes the definition, element, and attribute information for CommandUIDefinitions element (CommandUIExtensionType complexType).
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,12 +19,9 @@ ms.assetid: 802a1d04-ea23-582e-96cb-e6e067411d4e
 
 ## Element information
 
-**Element type**: CommandUIDefinitionsType
-
-**Namespace**: `http://schemas.microsoft.com/sharepoint/`
-
-**Schema file**: apphostwebfeatures.xsd
-
+| Element Type | Namespace | Schema File |
+|--------------|-----------|-------------|
+| CommandUIDefinitionsType | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
 
 ## Definition
 

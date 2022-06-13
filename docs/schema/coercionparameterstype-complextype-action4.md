@@ -2,7 +2,7 @@
 title: coercionParametersType complexType (Action4)
 description: Describes the definition, type, attribute, and element information for coercionParametersType complexType (Action4).
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -16,11 +16,9 @@ ms.assetid: 32ff0f7e-0527-50df-225c-07d990687441
 
 ## Type information
 
-**Element type**: ---
-
-**Namespace**: ---
-
-**Schema file**: Actions4.xsd
+| Element Type | Namespace | Schema File |
+|:--------------:|:-----------:|-------------|
+|---|---| Actions4.xsd |
 
 ## Definition
 

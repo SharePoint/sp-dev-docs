@@ -2,7 +2,7 @@
 title: ClientWebPartProperties complexType
 description: Describes the definition, type, element, and attribute information for ClientWebPartProperties complexType.
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,12 +19,9 @@ ms.assetid: 129a6bac-5a23-ee80-3db8-8e06c8401abe
 
 ## Type information
 
-**Namespace**: `http://schemas.microsoft.com/sharepoint/`
-
-**Schema file**: apphostwebfeatures.xsd
-
-**Extension base**: None
-
+| Namespace | Schema File | Extension Base |
+|-----------|-------------|----------------|
+| `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd | None |
 
 ## Definition
 
