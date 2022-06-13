@@ -2,7 +2,7 @@
 title: "MatchingOptions simpleType (SPS15XSDSearchSet4)"
 description: "Describes the definition, element, and attribute information for the MatchingOptions simpleType (SPS15XSDSearchSet4)."
 manager: arnek
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,9 +18,9 @@ ms.assetid: acb4696d-91a4-1637-ea9b-4d1a40c61c55
 
 |Information|Location|
 |:-----|:-----|
-|**Base type** <br/> ||
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+|**Base type**||
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Query.Rules.xsd|
    
 ## Definition
 

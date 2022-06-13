@@ -2,7 +2,7 @@
 title: "MatchingOptions element (SPS15XSDSearchSet4)"
 description: "Describes the definition, element, and attribute information for the MatchingOptions element (SPS15XSDSearchSet4)."
 manager: arnek
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -20,9 +20,9 @@ ms.assetid: 0f2de9bb-2b62-bf25-d103-f49b957e5c76
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:MatchingOptions  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+|**Element type**|tns:MatchingOptions|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Query.Rules.xsd|
    
 ## Definition
 

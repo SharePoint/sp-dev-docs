@@ -2,7 +2,7 @@
 title: "MappingInfoCollection complexType (SPS15XSDSearchSet2)"
 description: "Describes the definition, element, and attribute information for the MappingInfoCollection complexType (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 06/09/2022
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
@@ -18,9 +18,9 @@ ms.assetid: d026c8b0-de60-305c-2e5a-1faf2272d2ea
 
 |Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:BaseInfoCollectionOfMappingInfoTzWWwPjw  <br/> |
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
+|**Extension base**|tns:BaseInfoCollectionOfMappingInfoTzWWwPjw|
    
 ## Definition
 
