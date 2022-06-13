@@ -61,13 +61,35 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-- [AssociationData Element (Workflow)](associationdata-element-workflow.md)
-- [MetaData Element (Workflow)](metadata-element-workflow.md)
-- [Categories Element (Workflow)](categories-element-workflow.md)
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="associationdata-element-workflow.md">AssociationData Element (Workflow)</a></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><a href="metadata-element-workflow.md">MetaData Element (Workflow)</a></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><a href="categories-element-workflow.md">Categories Element (Workflow)</a></p></td>
+</tr>
+</tbody>
+</table>
 
 ### Parent elements
 
-- [Elements Element (Workflow)](elements-element-workflow.md)
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="elements-element-workflow.md">Elements Element (Workflow)</a></p></td>
+</tr>
+</tbody>
+</table>
 
 ### Remarks
 

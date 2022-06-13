@@ -33,6 +33,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
+<table>
+<colgroup>
+<col width="20%" />
 <col width="80%" />
 </colgroup>
 <thead>

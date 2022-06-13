@@ -45,7 +45,7 @@ The following sections describe attributes, child elements, and parent elements.
 ### Child elements
 
 |Child Elements|
-|:-|
+|:---|
 |[Template Element (WorkflowConfig)](template-element-workflowconfig.md)|
 |[Association Element (WorkflowConfig)](association-element-workflowconfig.md)|
 |[ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)|
