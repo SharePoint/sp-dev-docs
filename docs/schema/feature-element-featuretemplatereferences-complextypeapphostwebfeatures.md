@@ -21,9 +21,9 @@ ms.assetid: b4acdfbf-74c2-7baa-b29b-332478ed56e8
 
 |  Resource | File  |
 |---|---|
-| Element type  | FeatureTemplateReference |
-| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
-| Schema file  | apphostwebfeatures.xsd |
+| **Element type** | FeatureTemplateReference |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
 
 ## Definition 
 

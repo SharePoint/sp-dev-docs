@@ -18,9 +18,9 @@ ms.assetid: fb448e93-ca90-be52-4dd8-b1b34a8e0dab
 
 | Resource | File|
 |:-----|:-----|
-|Element type <br/> |tns:FederationAuthType  <br/> |
-|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|Schema file <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+| **Element type** | tns:FederationAuthType |
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema file** | schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 

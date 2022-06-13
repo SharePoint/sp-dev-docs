@@ -18,9 +18,9 @@ ms.assetid: 16c3b9eb-d3b8-919e-be2c-99a492e290fe
 
 | Resource | File |
 |:-----|:-----|
-|Base type <br/> |xs:string  <br/> |
-|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|Schema file <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+| **Base type** | xs:string |
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema file** | schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 
