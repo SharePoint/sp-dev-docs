@@ -18,8 +18,6 @@ ms.assetid: 2dd54346-63b3-4498-8217-8aaa07283ac3
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-## Definition
-
 ```XML
 <NavBarPage
   Name = "Text"
