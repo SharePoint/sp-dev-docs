@@ -1,7 +1,7 @@
 ---
 title: Set up a general development environment for SharePoint
 description: Describes and provides steps on how to set up a general SharePoint development environment by installing SharePoint and Visual Studio.
-ms.date: 09/25/2017
+ms.date: 06/13/2022
 keywords: install SharePoint,set up SharePoint,setup SharePoint
 f1_keywords:
 - install SharePoint,set up SharePoint,setup SharePoint

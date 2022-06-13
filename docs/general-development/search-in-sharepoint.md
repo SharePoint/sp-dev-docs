@@ -1,7 +1,7 @@
 ---
 title: Search in SharePoint
 description: Provides an overview of searching in SharePoint and details the search architecture and search extensibility points.
-ms.date: 05/12/2020
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 59220f81-0e5e-4945-8056-cf0a116446cb
 ms.localizationpriority: high

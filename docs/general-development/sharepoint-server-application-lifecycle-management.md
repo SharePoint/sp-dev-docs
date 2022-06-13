@@ -1,7 +1,7 @@
 ---
 title: SharePoint Application Lifecycle Management
 description: Describes common application lifecycle management concepts and practices to apply to application development that uses SharePoint technologies.
-ms.date: 09/25/2017
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a
 ms.localizationpriority: high
