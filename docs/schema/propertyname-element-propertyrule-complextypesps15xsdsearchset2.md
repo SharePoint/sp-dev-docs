@@ -18,9 +18,9 @@ ms.assetid: 41558fa1-925c-3c33-7391-aab06e42fdd0
 
 | Information | Location |
 |:-----|:-----|
-|Element type <br/> |xs:string  <br/> |
-|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|Schema file <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+| **Element type** |xs:string  <br/> |
+| **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
+| **Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
    
 ## Definition
 

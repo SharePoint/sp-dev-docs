@@ -21,9 +21,9 @@ ms.assetid: 8e87451c-6146-2e5b-c37f-a932f2a2e68a
 
 | Resource | File |
 |---|---|
-| Element type  | ClientWebPartProperty |
-| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
-| Schema file  | apphostwebfeatures.xsd |
+| **Element type** | ClientWebPartProperty |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
 
 ## Definition
 

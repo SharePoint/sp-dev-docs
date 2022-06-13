@@ -68,7 +68,7 @@ None.
   
 | Element | Description |
 | --- | --- |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The \*\*Properties\*\* element that contains this property. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The **Properties** element that contains this property. |
 
 
 

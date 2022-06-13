@@ -25,9 +25,9 @@ Add-in Permission Property.
 
 | Resource | File |
 |---|---|
-| Element type  | AppPermissionPropertyDefinition |
-| Namespace  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| Schema file  | appmanifest.xsd |
+| **Element type** | AppPermissionPropertyDefinition |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file** | appmanifest.xsd |
 
 ## Definition
 

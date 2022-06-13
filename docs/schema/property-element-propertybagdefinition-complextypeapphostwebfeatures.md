@@ -21,9 +21,9 @@ ms.assetid: b820d65f-12d5-8521-09c6-3db3902ca4a1
 
 | Information | Location |
 |---|---|
-| Element type  | PropertyValueAttributeDefinition |
-| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
-| Schema file  | apphostwebfeatures.xsd |
+| **Element type** | PropertyValueAttributeDefinition |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
 
 ## Definition
 
