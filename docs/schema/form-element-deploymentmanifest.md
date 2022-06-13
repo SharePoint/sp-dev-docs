@@ -2,7 +2,7 @@
 title: "Form Element (DeploymentManifest)"
 description: "Form Element (DeploymentManifest) represents an instance of a Windows SharePoint Services 3.0 form (SPForm) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

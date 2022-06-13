@@ -2,7 +2,7 @@
 title: Folder Element (ContentType)
 description: Folder Element (ContentType) specifies the relative folder path for the content type's resource folder.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:

@@ -2,7 +2,7 @@
 title: ForEach element (View)
 description: ForEach element (View) provides a basic mechanism for enumerating a collection of views or fields defined in the current list.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

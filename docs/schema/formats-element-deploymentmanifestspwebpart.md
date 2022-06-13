@@ -2,7 +2,7 @@
 title: "Formats Element (DeploymentManifest - SPWebPart)"
 description: "Formats Element (DeploymentManifest - SPWebPart) represents formatting parameters for a Windows SharePoint Services 3.0 web part."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

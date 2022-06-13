@@ -2,7 +2,7 @@
 title: Flow element
 description: Flow element represents the activity underlying the 'Go to a stage' action in the visual workflow designer.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -75,93 +75,24 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="flows-element-workflowinfo-elementaction4.md">Flows</a></p></td>
-<td align="left"><p></p></td>
-<td align="left"><p>Container element for individual <a href="flow-element-flows-elementworkflowinfo-elementaction4.md">Flow element (Flows element) (WorkflowInfo element) (Action4)</a> elements.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Type | Description |
+|---------|------|-------------|
+| [Flows](flows-element-workflowinfo-elementaction4.md)| | Container element for individual [Flow element (Flows element) (WorkflowInfo element) (Action4)](flow-element-flows-elementworkflowinfo-elementaction4.md) elements. |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="parameters-element-flow-elementflows-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
-<td align="left"><p>Serves as a container for **Parameter** elements, and contains no definable attributes. Includes the descriptions of the parameters in an action method signature.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><a href="ruledesigner-element-flow-elementflows-elementworkflowinfo-elementaction4.md">RuleDesigner</a></p></td>
-<td align="left"><p><a href="ruledesignertype-complextype-action4.md">ruleDesignerType</a></p></td>
-<td align="left"><p>Contains information that allows the rendering of a declarative sentence in the visual workflow editor in SharePoint Designer or Visual Studio.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Element | Type | Description |
+|---------|------|-------------|
+| [Parameters](parameters-element-flow-elementflows-elementworkflowinfo-elementaction4.md) | [parametersType](parameterstype-complextype-action4.md) | Serves as a container for **Parameter** elements, and contains no definable attributes. Includes the descriptions of the parameters in an action method signature. |
+| [RuleDesigner](ruledesigner-element-flow-elementflows-elementworkflowinfo-elementaction4.md) | [ruleDesignerType](ruledesignertype-complextype-action4.md) | Contains information that allows the rendering of a declarative sentence in the visual workflow editor in SharePoint Designer or Visual Studio. |
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="30%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Required</p></th>
-<th align="left"><p>Description</p></th>
-<th align="left"><p>Possible values</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Category**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Specifies the ribbon category in the visual designer user interface (in this case, **Common Flows**) that contains the **Go to a stage** action.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Specifies the string that identifies the action in the visual designer user interface. In this case, the name is **Go to a stage**.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-</tbody>
-</table>
+| Attribute | Type | Required | Description | Possible Values |
+|-----------|------|----------|-------------|-----------|
+| **Category** | s:string | required | Specifies the ribbon category in the visual designer user interface (in this case, **Common Flows**) that contains the **Go to a stage** action. | Values of the s:string type. |
+| **Name** | s:string | required | Specifies the string that identifies the action in the visual designer user interface. In this case, the name is **Go to a stage**. | Values of the s:string type. |
 
 
 

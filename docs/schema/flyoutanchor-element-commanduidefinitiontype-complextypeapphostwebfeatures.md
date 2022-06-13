@@ -2,7 +2,7 @@
 title: FlyoutAnchor element (CommandUIDefinitionType complexType)
 description: Describes the definition, element, and attribute information for the FlyoutAnchor element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,11 +19,9 @@ ms.assetid: 9067ee8d-6eff-950a-3cf3-5aa1586c1d24
 
 ## Element information
 
-**Element type**: FlyoutAnchorType
-
-**Namespace**: `http://schemas.microsoft.com/sharepoint/`
-
-**Schema file**: apphostwebfeatures.xsd
+| Element type | Namespace | Schema File |
+|--------------|-----------|-------------|
+| FlyoutAnchorType | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
 
 ## Definition 
 

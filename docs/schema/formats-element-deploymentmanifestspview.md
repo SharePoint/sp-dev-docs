@@ -2,7 +2,7 @@
 title: "Formats Element (DeploymentManifest - SPView)"
 description: "Formats Element (DeploymentManifest - SPView) represents formatting parameters for an instance of a SharePoint view (SPView) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

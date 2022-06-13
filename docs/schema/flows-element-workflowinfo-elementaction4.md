@@ -2,7 +2,7 @@
 title: Flows element
 description: Flows element is a container element for individual Flow element (Flows element) (WorkflowInfo element) (Action4) elements.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

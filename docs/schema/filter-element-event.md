@@ -2,7 +2,7 @@
 title: Filter Element (Event)
 description: Describes the definition, element, and attribute information for the Filter Element (Event), which specifies the filter for the event receiver.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -26,40 +26,22 @@ Specifies the filter for the event receiver.
 
 The following sections describe attributes, child elements, and parent elements.
 
-### Attributes
+| Attributes |
+|------------|
+| None |
 
-None
+| Child Elements |
+|----------------|
+| None |
 
-### Child elements
+| Parent Elements |
+|-----------------|
+| Receiver Element (Event) |
 
-None
-
-### Parent elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="receiver-element-event.md">Receiver Element (Event)</a></p></td>
-</tr>
-</tbody>
-</table>
-
-### Occurrences
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
+| Occurrences |
+|-------------|
+| Minimum: 0 |
+| Maximum: 1 |
 
 ## Example
 
