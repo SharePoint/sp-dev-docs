@@ -85,24 +85,10 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md">View Element in EntityInstanceDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The view this promoted property belongs to.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [View Element in EntityInstanceDefinition (SolutionManifestDefinitions Schema)](view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md) | The view this promoted property belongs to. |
 
 <br/>
 
