@@ -2,7 +2,7 @@
 title: Action element in Actions (BDCMetadata Schema)
 description: Details on the Action element in Actions (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

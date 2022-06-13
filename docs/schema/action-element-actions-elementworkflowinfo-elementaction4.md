@@ -2,7 +2,7 @@
 title: Action element
 description: Discusses the definition, elements and attributes for Action element which contains the information that is required for Workflow Manager Client.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

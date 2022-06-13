@@ -2,7 +2,7 @@
 title: ActionNames element in OBPart
 description: Discusses the elements and attributes for ActionNames element in OBPart which defines the actions exposed by the External Data Part.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
