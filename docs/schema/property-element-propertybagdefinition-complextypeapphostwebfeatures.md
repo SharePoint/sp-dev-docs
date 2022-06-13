@@ -1,5 +1,6 @@
 ---
 title: Property element (PropertyBagDefinition complexType)
+description: Describes the Property element (PropertyBagDefinition complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
@@ -18,11 +19,11 @@ ms.assetid: b820d65f-12d5-8521-09c6-3db3902ca4a1
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
-| **Element type**  | PropertyValueAttributeDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| Element type  | PropertyValueAttributeDefinition |
+| Namespace  | `http://schemas.microsoft.com/sharepoint/` |
+| Schema file  | apphostwebfeatures.xsd |
 
 ## Definition
 

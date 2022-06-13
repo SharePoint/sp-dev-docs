@@ -1,5 +1,6 @@
 ---
 title: Property element (Property Bag)
+description: Describes the Property element (Property Bag) and provides a definition,the elements and attributes, and an example.
 manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer

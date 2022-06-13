@@ -1,5 +1,6 @@
 ---
 title: Property element (propertiesType complexType)
+description: Describes the Property element (propertiesType complexType) and provides the usage, the element information, a definition, and the elements and attributes.
 manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
