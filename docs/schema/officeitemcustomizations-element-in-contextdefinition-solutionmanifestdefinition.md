@@ -18,13 +18,9 @@ ms.assetid: 79c8b258-dbc7-37f2-7ff5-4ea58eb376ca
 
 Describes Microsoft Outlook-specific customizations. Must be of type **OutlookItemCustomizations**.
 
-## Element Information
-
 **Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest`
 
 **Schema**: SolutionManifestDefinitions
-
-## Definition
 
 ```XML
 <OfficeItemCustomizations Description = "String"> </OfficeItemCustomizations>
