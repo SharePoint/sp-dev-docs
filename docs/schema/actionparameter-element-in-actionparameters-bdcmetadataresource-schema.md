@@ -2,7 +2,7 @@
 title: ActionParameter element in ActionParameters (BDCMetadataResource Schema)
 description: Details on the  ActionParameter element in ActionParameters (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -2,7 +2,7 @@
 title: ActionName element in ArrayOfActions
 description: Discusses the definition, elements and attributes for ActionName element in ArrayOfActions which specifies an action for this External Data Part.
 manager: soliver
-ms.date: 6/13/2022
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
