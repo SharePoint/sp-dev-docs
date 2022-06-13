@@ -99,7 +99,7 @@ Design for booking vaccination booster appointment with images and a submission 
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/vaccination-booster)
 
-:::image type="content" source="../../../images/viva-design/samples/vaccination.png" alt-text="Vaccination":::
+:::image type="content" source="../../../images/viva-design/samples/vaccination.png" alt-text="Screenshot of the Living Well Health Center and Pharmacy providing information on scheduling a free COVID-19 booster appointment.":::
 
 ## Visual list with cafeteria menu scenario
 
