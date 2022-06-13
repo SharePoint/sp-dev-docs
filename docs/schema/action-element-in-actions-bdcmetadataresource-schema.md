@@ -34,51 +34,18 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadataresource-schema.md">ActionParameters element in Action (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
+| Element |
+| --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [Properties element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [ActionParameters element in Action (BDCMetadataResource Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md) |
+</br>
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadataresource-schema.md">Actions element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
+| Description |
+| --- |
+| [Actions element in Entity (BDCMetadataResource Schema)](actions-element-in-entity-bdcmetadataresource-schema.md) |
 
 
 
