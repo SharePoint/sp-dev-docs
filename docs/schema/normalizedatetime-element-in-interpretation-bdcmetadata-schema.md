@@ -18,13 +18,9 @@ ms.assetid: bbae3bfa-0754-d576-2bee-1ac0e8508a57
 
 Specifies the rule used to convert the representation of a date and time value to another representation. For example, this rule can specify converting a value represented in Coordinated Universal Time (UTC) into a local time zone.
 
-## Element Information
-
 **Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
-
-## Definition
 
 ```XML
 <NormalizeDateTime LobDateTimeMode = "String"> </NormalizeDateTime>
