@@ -2,7 +2,7 @@
 title: DataSource element
 description: Learn about the DataSource element.
 manager: soliver
-ms.date: 6/9/2022
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
