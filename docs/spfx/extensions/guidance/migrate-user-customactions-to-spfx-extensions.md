@@ -1,7 +1,7 @@
 ---
 title: Migrating user custom actions and ECB menu items to SharePoint Framework Extensions
 description: Describes how to migrate user custom actions and ECB menu items to SharePoint Framework extensions and outlines benefits of migrating existing customizations.
-ms.date: 06/213/2022
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
