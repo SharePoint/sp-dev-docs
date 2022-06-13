@@ -28,7 +28,7 @@ Specifies transformations from one binary file to another binary file in a versi
 
 ## Element information
 
-| Element information  | file  |
+| Element information  | File  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
