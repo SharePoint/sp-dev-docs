@@ -1,7 +1,6 @@
 ---
 title: Add a custom ribbon to your SharePoint site
-description: Describes how to add a custom ribbon to your SharePoint site and outlines how to use the Core.RibbonCommands application.
-ms.date: 06/09/2022
+ms.date: 11/03/2017
 ms.localizationpriority: high
 ---
 # Add a custom ribbon to your SharePoint site

@@ -1,7 +1,6 @@
 ---
 title: Custom actions in the SharePoint Add-in model
-description: Describes custom actions in the SharePoint Add-in model and provides high-level guidelines, related links, and PnP samples.
-ms.date: 06/09/2022
+ms.date: 05/20/2020
 ms.localizationpriority: medium
 ---
 # Custom actions in the SharePoint Add-in model

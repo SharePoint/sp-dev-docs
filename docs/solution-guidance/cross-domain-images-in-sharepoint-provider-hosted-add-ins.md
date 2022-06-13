@@ -1,7 +1,6 @@
 ---
 title: Cross-domain images in SharePoint provider-hosted add-ins
-description: Describes how to use images across domains in provider-hosted add-ins as it applies to SharePoint 2013, SharePoint Add-ins, and SharePoint Online.
-ms.date: 06/09/2022
+ms.date: 11/03/2017
 ms.localizationpriority: medium
 ---
 # Cross-domain images in SharePoint provider-hosted add-ins
