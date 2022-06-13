@@ -1,7 +1,7 @@
 ---
 title: Quick view design guidance
 description: Design guidance for the Viva Connections quick views
-ms.date: 12/28/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -13,7 +13,7 @@ Create quick views to provide a bit more detailed information (for example: a de
 
 Here are a few examples of quick views:
 
-:::image type="content" source="../../../images/viva-design/img_quickviews.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_quickviews.jpg" alt-text="Screenshot of various examples of quick views.":::
 
 > [!TIP]
 > Sample adaptive card designs for the quick views are available from [GitHub](https://github.com/pnp/AdaptiveCards-Templates)
@@ -25,7 +25,7 @@ The Quick View experience works across different platforms and form-factors base
 
 ## Layout
 
-:::image type="content" source="../../../images/viva-design/img_quickview_layout.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_quickview_layout.jpg" alt-text="Screenshot of a card with a focus on the header and content area, which includes containers, elements, and inputs.":::
 
 1. Header
    1. Dismiss quick view
@@ -62,13 +62,13 @@ Avoid adding too many navigation levels within the Quick view. It's best to keep
 
 While you can open several children quick views from the parent quick view, we recommend not to navigate more than one level down.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_backstack.gif" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_quickview_backstack.gif" alt-text="Moving image of accessing the registration form task which leads to the registration F A Q card.":::
 
 ### Quick views vs Web views
 
 Despite being visually similar, they are two different surfaces for different use cases.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_webview.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_quickview_webview.jpg" alt-text="Screenshot of the registration form card and of a web browser tab of Microsoft dot com.":::
 
 #### Quick view
 
@@ -86,13 +86,13 @@ Any web page opened on mobile is going to be rendered within a web view, while i
 
 Quick views will follow SharePoint default and custom company-created themes.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_web_theme.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_quickview_web_theme.jpg" alt-text="Screenshot that shows how a card viewed on webpages appears in light mode and dark mode.":::
 
 ### Mobile
 
 Currently dark themes are not supported for quick views on iOS and Android mobile.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_ios_theme.jpg" alt-text="Card container and elements":::
+:::image type="content" source="../../../images/viva-design/img_quickview_ios_theme.jpg" alt-text="Screenshot that shows how a card viewed on mobile appears in light mode and dark mode.":::
 
 ### Behavior for links and Single sign-on
 For some cards, you will use links to URLs. Depending on the location of the content, links to URLs may display content in Microsoft Teams or elsewhere and Single sign-on (SSO) behavior can differ. Get more information about how links to URLs and SSO behave depending on the location of the content you are linking to. [Learn more](/viva/connections/create-dashboard.md#how-urls-and-single-sign-on-works)

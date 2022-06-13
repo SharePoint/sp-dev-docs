@@ -5,7 +5,7 @@ ms.date: 12/28/2021
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
-# Designing Viva Connections custom cards for your dashboard
+# Design guidance for Viva Connections cards
 
 Developers can extend [Microsoft Viva Connections](https://www.microsoft.com/microsoft-viva) for building engaging experiences with the widely adopted SharePoint Framework (SPFx). Viva Connections is your gateway to a modern employee experience where you can build and integrate apps that shape culture and foster connections to help employees thrive. With SPFx, you have multiple ways to extend – using the same out-of-the-box or custom SPFx web parts, SPFx extensions (for example header, footer), and specific components for optimized mobile experiences.
 
@@ -30,7 +30,7 @@ The cards are designed to enable quick task completion by interacting with a car
 
 ## Resources
 
-- [Sample Adaptive Cards for Viva Connections](http://aka.ms/adaptivecards/samples)
+- [Sample Adaptive Cards for Viva Connections](https://aka.ms/adaptivecards/samples)
 - [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/)
 - [Fluent Theme designer](https://fluentuipr.z22.web.core.windows.net/heads/master/theming-designer/index.html)
 - [AC Designer](https://adaptivecards.io/designer/)
