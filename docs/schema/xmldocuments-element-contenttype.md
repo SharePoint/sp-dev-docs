@@ -31,20 +31,66 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-None
+<table>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><p>Attribute</p></th>
+<th align="left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>**None**</p></td>
+<td align="left"><p></p></td>
+</tr>
+</tbody>
+</table>
 
 ### Child elements
 
-- [XmlDocument](xmldocument-element-contenttype.md)
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="xmldocument-element-contenttype.md">XmlDocument</a></p></td>
+</tr>
+</tbody>
+</table>
 
 ### Parent elements
 
-- [ContentType](contenttype-element-contenttype.md)
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="contenttype-element-contenttype.md">ContentType</a></p></td>
+</tr>
+</tbody>
+</table>
 
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: 1
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p>Minimum: 0</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>Maximum: 1</p></td>
+</tr>
+</tbody>
+</table>
 
 ### Remarks
 

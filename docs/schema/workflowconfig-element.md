@@ -31,21 +31,38 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-None
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p>None</p></td>
+</tr>
+</tbody>
+</table>
 
 ### Child elements
 
-- [Template Element (WorkflowConfig)](template-element-workflowconfig.md)
-
-- [Association Element (WorkflowConfig)](association-element-workflowconfig.md)
-
-- [ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)
-
-- [Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)
+|Child Elements|
+|:-|
+|[Template Element (WorkflowConfig)](template-element-workflowconfig.md)|
+|[Association Element (WorkflowConfig)](association-element-workflowconfig.md)|
+|[ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)|
+|[Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)|
 
 ### Parent elements
 
-None
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p>None</p></td>
+</tr>
+</tbody>
+</table>
 
 ### Remarks
 

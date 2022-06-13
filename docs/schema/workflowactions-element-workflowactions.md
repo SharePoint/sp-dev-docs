@@ -37,8 +37,17 @@ None
 
 ### Child elements
 
-- [Action](action-element-workflowactions.md)
-- [Default](default-element-workflowactions.md)
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="action-element-workflowactions.md">Action</a></p>
+<p><a href="default-element-workflowactions.md">Default</a></p></td>
+</tr>
+</tbody>
+</table>
 
 ### Parent elements
 

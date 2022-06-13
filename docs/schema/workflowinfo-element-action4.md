@@ -34,11 +34,26 @@ The root element of the Actions schema. This element must be included in any .AC
 
 ## Element information
 
-|   Resource  |  File   |
-| --- | --- |  
-| Element type |     |
-| Namespace |     |
-| Schema file | Actions4.xsd |
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span class="label">Element type</span></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span class="label">Namespace</span></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span class="label">Schema file</span></p></td>
+<td align="left"><p>Actions4.xsd</p></td>
+</tr>
+</tbody>
+</table>
 
 ## Definition
 
@@ -286,18 +301,94 @@ None.
 
 ### Child elements
 
-- [Actions](actions-element-workflowinfo-elementaction4.md)
-- [AssemblyRedirects](assemblyredirects-element-workflowinfo-elementaction4.md)
-- [Blocks](blocks-element-workflowinfo-elementaction4.md)
-- [Coercions](coercions-element-workflowinfo-elementaction4.md)
-- [CompositeSteps](compositesteps-element-workflowinfo-elementaction4.md) 
-- [Conditions](conditions-element-workflowinfo-elementaction4.md)
-- [Events](events-element-workflowinfo-elementaction4.md)
-- [Flows](flows-element-workflowinfo-elementaction4.md)
-- [VariableTypes](variabletypes-element-workflowinfo-elementaction4.md)
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><p>Element</p></th>
+<th align="left"><p>Type</p></th>
+<th align="left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><a href="actions-element-workflowinfo-elementaction4.md">Actions</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><a href="assemblyredirects-element-workflowinfo-elementaction4.md">AssemblyRedirects</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><a href="blocks-element-workflowinfo-elementaction4.md">Blocks</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><a href="coercions-element-workflowinfo-elementaction4.md">Coercions</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><a href="compositesteps-element-workflowinfo-elementaction4.md">CompositeSteps</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><a href="conditions-element-workflowinfo-elementaction4.md">Conditions</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><a href="events-element-workflowinfo-elementaction4.md">Events</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><a href="flows-element-workflowinfo-elementaction4.md">Flows</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><a href="variabletypes-element-workflowinfo-elementaction4.md">VariableTypes</a></p></td>
+<td align="left"><p></p></td>
+<td align="left"><p></p></td>
+</tr>
+</tbody>
+</table>
 
 ### Attributes
 
-| Attribute | Type | Required | Description | Possible values |
-| --- | --- | --- | --- | --- |
-| **Language** | `s:string` | optional | Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States." For more information, see [Language Identifier Constants and Strings](https://msdn.microsoft.com/library/dd318693.aspx). | Values of the s:string type. |
+<table>
+<colgroup>
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="30%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><p>Attribute</p></th>
+<th align="left"><p>Type</p></th>
+<th align="left"><p>Required</p></th>
+<th align="left"><p>Description</p></th>
+<th align="left"><p>Possible values</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>**Language**</p></td>
+<td align="left"><p>s:string</p></td>
+<td align="left"><p>optional</p></td>
+<td align="left"><p>Refers to the language of the server, not the client. This is notated as a language/culture pair. For example "en-us" is used to specify "English-United States." For more information, see <a href="https://msdn.microsoft.com/library/dd318693.aspx">Language Identifier Constants and Strings</a>.</p></td>
+<td align="left"><p>Values of the s:string type.</p></td>
+</tr>
+</tbody>
+</table>
