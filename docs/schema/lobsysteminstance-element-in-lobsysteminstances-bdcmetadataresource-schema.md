@@ -33,12 +33,15 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-- [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)
-- [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)
+| Element |
+| --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
 
 ### Parent elements
-- [LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md)
-
+| Element |
+| --- |
+| [LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md) |
 
 
 

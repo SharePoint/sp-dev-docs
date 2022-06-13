@@ -34,14 +34,19 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-- [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)
-- [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)
-- [AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md)
-- [LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md)
-- [Entities Element in LobSystem (BDCMetadataResource Schema)](entities-element-in-lobsystem-bdcmetadataresource-schema.md)
+| Element |
+| --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md) |
+| [LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md) |
+| [Entities Element in LobSystem (BDCMetadataResource Schema)](entities-element-in-lobsystem-bdcmetadataresource-schema.md) |
+
 
 ### Parent elements
-- [LobSystems Element in Model (BDCMetadataResource Schema)](lobsystems-element-in-model-bdcmetadataresource-schema.md)
+| Element |
+| --- |
+| [LobSystems Element in Model (BDCMetadataResource Schema)](lobsystems-element-in-model-bdcmetadataresource-schema.md) |
 
 
 

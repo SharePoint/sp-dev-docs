@@ -34,11 +34,15 @@ None.
 
 ### Child elements
 
-[LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md)
+| Element |
+| --- |
+| [LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-[LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md)
+| Element |
+| --- |
+| [LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md) |
 
 
 
