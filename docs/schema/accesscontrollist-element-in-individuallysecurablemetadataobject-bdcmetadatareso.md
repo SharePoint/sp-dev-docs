@@ -2,9 +2,10 @@
 title: AccessControlList element in IndividuallySecurableMetadataObject
 description: Discusses the definition, elements and attributes for AccessControlList element in IndividuallySecurableMetadataObject.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
+
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ca87912-2533-1c7d-3550-c5c3af047e73

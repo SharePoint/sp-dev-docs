@@ -2,7 +2,7 @@
 title: ActionBody element
 description: Discusses the definition, elements and attributes for ActionBody element which specifies the body of a custom action.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -2,7 +2,7 @@
 title: AccessControlList element
 description: Discusses the definition, elements and attributes for AccessControlList element which Specifies an access control list (ACL) for the parent element.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 6/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
