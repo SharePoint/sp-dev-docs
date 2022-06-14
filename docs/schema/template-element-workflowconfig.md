@@ -106,7 +106,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-[WorkflowConfig Element](workflowconfig-element.md)
+|Element|
+|---|
+|WWorkflowConfig Element](workflowconfig-element.md)
 
 ### Remarks
 
