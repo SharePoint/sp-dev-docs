@@ -19,9 +19,11 @@ ms.assetid: 34bab690-a8b8-d080-9dbc-2b8fc1a6342f
 
 ## Type information
 
-| Namespace | Schema File | Extension Base |
-|-----------|-------------|----------------|
-| `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd | None |
+| Information | Location |
+|-------------|----------|
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
+| **Extension Base** | None |
 
 ## Definition
 

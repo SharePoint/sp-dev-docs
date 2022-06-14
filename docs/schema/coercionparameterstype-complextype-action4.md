@@ -16,9 +16,11 @@ ms.assetid: 32ff0f7e-0527-50df-225c-07d990687441
 
 ## Type information
 
-| Element Type | Namespace | Schema File |
-|:--------------:|:-----------:|-------------|
-|---|---| Actions4.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | |
+| **Namespace** | |
+| **Schema File** | Actions4.xsd |
 
 ## Definition
 

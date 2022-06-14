@@ -28,9 +28,11 @@ Specifies the available coercions for converting data from one form to another.
 
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|:--------------:|:-----------:|-------------|
-|---|---| Actions4.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | |
+| **Namespace** | |
+| **Schema File** | Actions4.xsd |
 
 ## Definition
 

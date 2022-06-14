@@ -19,9 +19,11 @@ ms.assetid: a9c03296-9144-b65f-c271-97ca3875f657
 
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|--------------|-----------|-------------|
-| ComboBoxType | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | ComboBoxType |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 

@@ -200,45 +200,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
-<td align="left"><p>Actions can take parameters. The **Parameters** element lists the parameters of the action.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)](parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md) | Actions can take parameters. The **Parameters** element lists the parameters of the action. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></p></td>
-<td align="left"><p>The **Actions** element that contains this action.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Actions** element that contains this action. |
 
 
 

@@ -19,9 +19,11 @@ ms.assetid: 802a1d04-ea23-582e-96cb-e6e067411d4e
 
 ## Element information
 
-| Element Type | Namespace | Schema File |
-|--------------|-----------|-------------|
-| CommandUIDefinitionsType | `http://schemas.microsoft.com/sharepoint/` | apphostwebfeatures.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | CommandUIDefinitionType  |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 
