@@ -1,6 +1,6 @@
 ---
 title: "Dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
- description: Describes the Dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2) and provides the element information, a definition, and the elements and attributes.
+description: Describes the Dictionary element (BaseInfoCollectionOfAliasInfoTzWWwPjw complexType) (SPS15XSDSearchSet2) and provides the element information, a definition, and the elements and attributes.
 manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
