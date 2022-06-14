@@ -51,7 +51,7 @@ Design for presenting inventory details from warehouse.
 
 * Sample at [GitHub](https://github.com/pnp/AdaptiveCards-Templates/tree/main/samples/inventory)
 
-:::image type="content" source="../../../images/viva-design/samples/inventory.png" alt-text="Screenshot of a sample inventory details card from a warehouse, showing Distribution center # 73's top selling items.":::
+:::image type="content" source="../../../images/viva-design/samples/inventory.png" alt-text="Screenshot of a sample inventory details card from a warehouse, showing Distribution center number 73's top selling items.":::
 
 ## Payslip
 

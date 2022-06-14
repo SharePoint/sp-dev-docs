@@ -39,7 +39,7 @@ Each dashboard card has the following elements:
 
 When adding the title and heading, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes (more information about sizes is given below) and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the title, in most cases, a length of 10-12 characters should fit the card width well.
 
-:::image type="content" source="../../../images/viva-design/img_card_truncation.jpg" alt-text="Diagram that shows the submit time of... and Time off options, with the Time off option being the recommended option.":::
+:::image type="content" source="../../../images/viva-design/img_card_truncation.jpg" alt-text="Diagram that shows the submit time of and Time off options, with the Time off option being the recommended option.":::
 
 ### Layouts and sizes
 
@@ -67,7 +67,7 @@ Use when the description can add informational value to the heading and can make
 
 Images draw viewer's eye, so use images carefully either to create recognition of a familiar app or website, or increase overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
 
-:::image type="content" source="../../../images/viva-design/img_card_image.jpg" alt-text="Showing the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
+:::image type="content" source="../../../images/viva-design/img_card_image.jpg" alt-text="Screenshot of the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
 
 ## Interaction
 
@@ -99,7 +99,7 @@ Here are the best practices for designing card interactions:
 
 ​​​​​​​Here are some example cards for how these layouts can be used
 
-:::image type="content" source="../../../images/viva-design/img_card_collections.jpg" alt-text="Screenshot showing various example cards, including cards for Shifts, Tasks, COVID-19, and Tutorials.":::
+:::image type="content" source="../../../images/viva-design/img_card_collections.jpg" alt-text="Screenshot showing various example cards, including cards for Shifts, Tasks, COVID 19, and Tutorials.":::
 
 
 ## Platforms and modes
