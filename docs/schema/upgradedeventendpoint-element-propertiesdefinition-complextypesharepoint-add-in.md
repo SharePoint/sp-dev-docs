@@ -1,5 +1,6 @@
 ---
 title: UpgradedEventEndpoint element (PropertiesDefinition complexType)
+description: Describes the definition, element, and attribute information for the UpgradedEventEndpoint element (PropertiesDefinition complexType).
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
@@ -22,7 +23,7 @@ The Url of the upgraded event receiver endpoint.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | UrlElementDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

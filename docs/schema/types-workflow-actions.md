@@ -1,5 +1,6 @@
 ---
 title: Types (Workflow actions)
+description: This topic lists the types in the Workflow actions XML schema, which applies to Sharepoint Server 2013.
 manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer

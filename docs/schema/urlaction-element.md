@@ -1,5 +1,6 @@
 ---
 title: UrlAction Element
+description: Describes the definition, element, and attribute information for the UrlAction Element, which specifies the page URL for an action.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

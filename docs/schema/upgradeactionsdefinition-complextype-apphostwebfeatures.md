@@ -1,5 +1,6 @@
 ---
 title: UpgradeActionsDefinition complexType
+description: Describes the definition, type, element, and attribute information for UpgradeActionsDefinition complexType.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 4910c72d-f35e-bed2-c1c3-f1067abd6493
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
