@@ -15,11 +15,11 @@ ms.assetid: e948f93d-ce9b-c41e-bd84-443190d9ffdf
  
   
 ## Element information
-**Element type**: xs:string 
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
+|Name|Value|
+|:-----|:-----|
+|**Element type** |xs:string  |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd  |
    
 ## Definition
 

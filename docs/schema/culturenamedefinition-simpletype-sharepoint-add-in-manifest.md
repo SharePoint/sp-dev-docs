@@ -22,11 +22,11 @@ Identifies a locale in [Internet Engineering Task Force (IETF)](http://tools.iet
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
-**Base type**: xs:string
-
-**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
-
-**Schema file**: appmanifest.xsd
+| Name  | Value  |
+|---|---|
+| **Base type**  | xs:string |
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd |
 
 ## Definition
 

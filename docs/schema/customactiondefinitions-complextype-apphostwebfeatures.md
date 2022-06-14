@@ -18,11 +18,11 @@ ms.assetid: d284a192-92df-42d1-e84b-3521c5551d0e
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
-**Namespace**: `http://schemas.microsoft.com/sharepoint/`
-
-**Schema file**: apphostwebfeatures.xsd
-
-**Extension base**: None
+| Name  | Value  |
+|---|---|
+| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file**  | apphostwebfeatures.xsd |
+| **Extension base**  | None |
 
 ## Definition
 

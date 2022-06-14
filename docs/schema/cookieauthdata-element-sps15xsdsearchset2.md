@@ -15,11 +15,11 @@ ms.assetid: 7a37cb4e-e375-87c6-3560-92a9f679b297
  
   
 ## Element information
-**Element type**: tns:CookieAuthData
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Element type** |tns:CookieAuthData  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd   |
 
    
 ## Definition

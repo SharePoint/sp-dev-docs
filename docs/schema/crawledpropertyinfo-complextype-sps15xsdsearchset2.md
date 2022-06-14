@@ -15,11 +15,11 @@ ms.assetid: 6a4d1072-03d8-3141-d6d9-6a384c2795b8
  
   
 ## Type information
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
-
-**Extension base**: tns:BaseInfo
+|Name|Value|
+|:-----|:-----|
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
+|**Extension base** |tns:BaseInfo   |
    
 ## Definition
 

@@ -15,11 +15,11 @@ ms.assetid: 56a164e5-0817-e73b-5d1a-e5fa7f7f4b3e
  
   
 ## Element information
-**Element type**: tns:CrawledPropertyInfo
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
+|Name|Value|
+|:-----|:-----|
+|**Element type** |tns:CrawledPropertyInfo  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd  |
    
 ## Definition
 

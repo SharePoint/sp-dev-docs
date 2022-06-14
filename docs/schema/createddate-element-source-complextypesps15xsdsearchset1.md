@@ -15,11 +15,11 @@ ms.assetid: 55a2fe57-e8ce-dfb7-6d0f-ef2e6038da01
 **Applies to:** SharePoint Server 2013
   
 ## Element information
-**Element type**: xs:dateTime 
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.Query.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Element type**  |xs:dateTime  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query   |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  |
    
 ## Definition
 

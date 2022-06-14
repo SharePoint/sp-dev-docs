@@ -15,12 +15,11 @@ ms.assetid: 499867cb-cb47-5868-ddd7-c6f563d2062f
  
   
 ## Element information
-
-**Element type**: q10:CrawledPropertyInfoCollection
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Portability.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Element type**  |q10:CrawledPropertyInfoCollection  |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Portability.xsd   |
    
 ## Definition
 
