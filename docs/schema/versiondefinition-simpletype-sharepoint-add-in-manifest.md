@@ -23,7 +23,7 @@ Identifies a version for a feature, capability, add-in, product, or other softwa
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
