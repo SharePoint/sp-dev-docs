@@ -2,7 +2,7 @@
 title: "QueryAuthenticationType simpleType (SPS15XSDSearchSet5)"
 description: "Describes the definition, type information, and enumeration values for QueryAuthenticationType simpleType (SPS15XSDSearchSet5)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

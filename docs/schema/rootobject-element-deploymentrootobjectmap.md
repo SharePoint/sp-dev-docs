@@ -2,7 +2,7 @@
 title: "RootObject Element (DeploymentRootObjectMap)"
 description: "The RootObject Element (DeploymentRootObjectMap) represents an instance of a root object in a root object map exported to the content migration package."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

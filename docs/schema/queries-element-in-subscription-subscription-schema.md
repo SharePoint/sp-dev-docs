@@ -2,7 +2,7 @@
 title: Queries Element in Subscription
 description: Describes the elements and attributes for Queries Element in Subscription, which is a list of queries that this cache subscription contains.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

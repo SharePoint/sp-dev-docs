@@ -2,7 +2,7 @@
 title: "RowLimit element (DeploymentManifest - SPWebPart)"
 description: "RowLimit element (DeploymentManifest - SPWebPart) represents the limit on the number of rows (items) returned by a query on an instance of a web part object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

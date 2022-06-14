@@ -2,7 +2,7 @@
 title: "Row element (Site)"
 description: "Row element (Site) is used within the Data element in a list definition to provide a set of default data when a list is instantiated during site provisioning."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

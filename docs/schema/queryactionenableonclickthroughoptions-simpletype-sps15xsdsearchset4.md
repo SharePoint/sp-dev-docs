@@ -2,7 +2,7 @@
 title: "QueryActionEnableOnClickThroughOptions simpleType (SPS15XSDSearchSet4)"
 description: "Describes the definition and type information for QueryActionEnableOnClickThroughOptions simpleType (SPS15XSDSearchSet4)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -2,7 +2,7 @@
 title: "RowLimit element (DeploymentManifest - SPView)"
 description: "RowLimit element (DeploymentManifest - SPView) represents the limit on the number of rows (items) returned by a view query on a given page."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -2,7 +2,7 @@
 title: "QueryAuthenticationType element (SPS15XSDSearchSet5)"
 description: "Describes the definition, element, and attribute information for the QueryAuthenticationType element (SPS15XSDSearchSet5)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

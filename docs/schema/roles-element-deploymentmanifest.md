@@ -2,7 +2,7 @@
 title: "Roles Element (DeploymentManifest)"
 description: "The Roles Element (DeploymentManifest) represents a collection of Windows SharePoint Services 3.0 deployment role (DeploymentRole) objects."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

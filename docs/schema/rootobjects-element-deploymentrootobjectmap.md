@@ -2,7 +2,7 @@
 title: "RootObjects Element (DeploymentRootObjectMap)"
 description: "The RootObjects Element (DeploymentRootObjectMap) represents a collection of listed root object (SPRootObject) instances."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

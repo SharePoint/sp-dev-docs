@@ -2,7 +2,7 @@
 title: "RoleAssignmentX Element (DeploymentManifest)"
 description: "Describes the RoleAssignmentX Element, which represents a security role assignment in cases where incremental changes to the base object are being deployed."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -2,7 +2,7 @@
 title: "RoleAssignments Element (DeploymentManifest)"
 description: "Describes the RoleAssignments Element (DeploymentManifest), which Represents a collection of deployment role assignment (DeploymentRoleAssignments) objects."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

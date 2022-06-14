@@ -2,7 +2,7 @@
 title: "RoleX Element (DeploymentManifest)"
 description: "The RoleX Element (DeploymentManifest) represents a security role in cases where incremental changes to the base object are being deployed."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

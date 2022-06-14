@@ -2,7 +2,7 @@
 title: Right Element in AccessControlEntry (BDCMetadataResource Schema)
 description: Describes the elements and attributes for Right Element in AccessControlEntry (BDCMetadataResource Schema).
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

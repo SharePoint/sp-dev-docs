@@ -2,7 +2,7 @@
 title: Row Element (List Instance)
 description: The Row Element (List Instance) is used within the Data element in a list instance definition to provide a set of default data.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
