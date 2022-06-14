@@ -1,5 +1,6 @@
 ---
 title: "RoleAssignments Element (DeploymentManifest)"
+description: "Describes the RoleAssignments Element (DeploymentManifest), which Represents a collection of deployment role assignment (DeploymentRoleAssignments) objects."
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 14fccefa-96a8-4c07-bb55-87a27dbff332
-description: "Last modified: March 09, 2015"
 ---
 
 # RoleAssignments Element (DeploymentManifest)

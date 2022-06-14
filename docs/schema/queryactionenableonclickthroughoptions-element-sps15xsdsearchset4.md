@@ -1,5 +1,6 @@
 ---
 title: "QueryActionEnableOnClickThroughOptions element (SPS15XSDSearchSet4)"
+description: "Describes the definition, element, and attribute information for the QueryActionEnableOnClickThroughOptions element (SPS15XSDSearchSet4)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 83703acf-7f6f-7895-e38b-ec6ec5cb5412
-description: "Last modified: March 09, 2015"
 ---
 
 # QueryActionEnableOnClickThroughOptions element (SPS15XSDSearchSet4)
@@ -18,11 +18,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Information | Location |
 |:-----|:-----|
-|**Element type** <br/> |tns:QueryActionEnableOnClickThroughOptions  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+|**Element type**|tns:QueryActionEnableOnClickThroughOptions|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Query.Rules.xsd|
    
 ## Definition
 

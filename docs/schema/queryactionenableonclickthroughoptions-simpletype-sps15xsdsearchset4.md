@@ -1,5 +1,6 @@
 ---
 title: "QueryActionEnableOnClickThroughOptions simpleType (SPS15XSDSearchSet4)"
+description: "Describes the definition and type information for QueryActionEnableOnClickThroughOptions simpleType (SPS15XSDSearchSet4)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1eb2d949-3633-a49e-8ed7-629cbcdf165d
-description: "Last modified: March 09, 2015"
 ---
 
 # QueryActionEnableOnClickThroughOptions simpleType (SPS15XSDSearchSet4)
@@ -18,11 +18,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+| Information | Location |
 |:-----|:-----|
-|**Base type** <br/> ||
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
+|**Base type**||
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Query.Rules.xsd|
    
 ## Definition
 

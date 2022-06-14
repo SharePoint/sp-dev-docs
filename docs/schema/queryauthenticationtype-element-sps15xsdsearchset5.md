@@ -1,5 +1,6 @@
 ---
 title: "QueryAuthenticationType element (SPS15XSDSearchSet5)"
+description: "Describes the definition, element, and attribute information for the QueryAuthenticationType element (SPS15XSDSearchSet5)."
 manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -7,7 +8,6 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0a887ad1-e333-74c4-dc05-d53ba1f797ab
-description: "Last modified: March 09, 2015"
 ---
 
 # QueryAuthenticationType element (SPS15XSDSearchSet5)
@@ -18,11 +18,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Information | Location |
 |:-----|:-----|
-|**Element type** <br/> |tns:QueryAuthenticationType  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+|**Element type**|tns:QueryAuthenticationType|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Query.xsd|
    
 ## Definition
 

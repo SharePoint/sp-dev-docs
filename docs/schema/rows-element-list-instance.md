@@ -1,5 +1,6 @@
 ---
 title: Rows Element (List Instance)
+description: Describes the definition, element, and attribute information for the Rows Element (List Instance), which contains a collection of Row elements.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

@@ -1,5 +1,6 @@
 ---
 title: "Row element (Site)"
+description: "Row element (Site) is used within the Data element in a list definition to provide a set of default data when a list is instantiated during site provisioning."
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 33449e60-4a1f-4e53-bea7-72b88a742ae0
-description: "Last modified: March 09, 2015"
 ---
 
 # Row element (Site)
