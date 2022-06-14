@@ -1,28 +1,29 @@
 ---
-title: Parameters Element (WorkflowConfig)
-description: Describes the Parameters element (WorkflowConfig) and provides a definition, the elements and attributes, remarks, and an example.
+title: Parameter Element (WorkflowConfig)
 manager: laurawi
-ms.date: 06/09/2022
+ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
 ms.prod: sharepoint
 ms.localizationpriority: medium
-ms.assetid: 28c73384-447e-45ba-99a5-31ab32ee286a
+ms.assetid: 3d043e89-5b01-41bb-a5ca-541041466d5a
 ---
 
-# Parameters Element (WorkflowConfig)
+# Parameter Element (WorkflowConfig)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Represents a collection of the parameters for the workflow initiation form.
+Represents a single parameter for the workflow initiation form.
 
 ## Definition
 
 ```XML
-<Parameters>
-</Parameters>
+<Parameter 
+  Name="Text" 
+  Type="Text" 
+/>
 ```
 
 ## Elements and attributes
@@ -33,11 +34,24 @@ The following sections describe attributes, child elements, and parent elements.
 
 <table>
 <colgroup>
-<col width="100%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <tbody>
+<thead>
+<tr class="header">
+<th align="left"><p>Attribute</p></th>
+<th align="left"><p>Description</p></th>
+</tr>
+</thead>
+<tr class="even">
+<td align="left"><p>**Name**</p></td>
+<td align="left"><p>Required **Text**. Specifies the name of the parameter. The Name attribute value must be the same as the Name attribute of the corresponding **Field** element.</p>
+<p>The Name attribute value is also the same as the name of the workflow variable that represents the parameter.</p></td>
+</tr>
 <tr class="odd">
-<td align="left"><p>None</p></td>
+<td align="left"><p>**Type**</p></td>
+<td align="left"><p>The System data type of the parameter.</p></td>
 </tr>
 </tbody>
 </table>
@@ -50,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="parameter-element-workflowconfig.md">Parameter Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p>None</p></td>
 </tr>
 </tbody>
 </table>
@@ -63,7 +77,7 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="parameters-element-workflowconfig.md">Parameters Element (WorkflowConfig)</a></span></p></td>
 </tr>
 </tbody>
 </table>
