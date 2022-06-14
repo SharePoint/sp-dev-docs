@@ -1,7 +1,8 @@
 ---
 title: StatusPageUrl Element (Workflow)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes StartPage element StatusPageUrl Element (Workflow) and provides information on elements and attributes, additional remarks, and an example.
 ms.audience: Developer
 ms.topic: reference
 keywords:

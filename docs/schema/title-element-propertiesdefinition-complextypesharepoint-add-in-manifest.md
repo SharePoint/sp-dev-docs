@@ -1,7 +1,8 @@
 ---
 title: Title element (PropertiesDefinition complexType)
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes Title element (PropertiesDefinition complexType) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ The friendly title of the SharePoint Add-in. The value cannot exceed 256 charact
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | TitleDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
