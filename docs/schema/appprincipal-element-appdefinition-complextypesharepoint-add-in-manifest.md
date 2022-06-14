@@ -1,7 +1,8 @@
 ---
 title: AppPrincipal element (AppDefinition complexType)
+description: Discusses the definition, elements and attributes for AppPrincipal element (AppDefinition complexType) which applies to SharePoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ The add-in principal information.
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | AppPrincipalDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -63,7 +64,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
+
 
 ### Child elements
 
@@ -99,14 +100,14 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
+
 
 ### Attributes
 
 None.
 
-<br/>
-<br/>
+
+
 
 
 
