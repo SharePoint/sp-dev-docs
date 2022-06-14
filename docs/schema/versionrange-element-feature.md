@@ -72,16 +72,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="upgradeactions-element-feature.md">UpgradeActions Element (Feature)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[UpgradeActions Element (Feature)](upgradeactions-element-feature.md)
 
 ### Occurrences
 
