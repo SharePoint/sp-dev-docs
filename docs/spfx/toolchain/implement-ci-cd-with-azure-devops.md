@@ -209,7 +209,7 @@ When you create your continuous deployment environment, you can give a name and 
 By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 10 or later.
 Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. If your project is based on SharePoint Framework version 1.7.1 or earlier, use version 8.X.
 
-![Screenshot of the NOde dot J S Tool Installer screen, showing the Display name and Version Spec fields.](../../images/azure-devops-spfx-13.png)
+![Screenshot of the Node dot J S Tool Installer screen, showing the Display name and Version Spec fields.](../../images/azure-devops-spfx-13.png)
 
 ### Installing the CLI for Microsoft 365
 
