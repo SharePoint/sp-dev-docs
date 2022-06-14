@@ -1,7 +1,7 @@
 ---
 title: Social feed REST API reference for SharePoint
 description: Provides an overview of the social feed REST API for SharePoint and lists the resource endpoints for feed tasks with details.
-ms.date: 11/10/2020
+ms.date: 06/14/2022
 ms.prod: sharepoint
 ms.assetid: f1cb914f-1e91-4e23-bf53-d2ab323eac13
 ms.localizationpriority: high

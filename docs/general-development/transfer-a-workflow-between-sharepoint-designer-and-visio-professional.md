@@ -1,7 +1,7 @@
 ---
 title: Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)
 description: Describes how to to use SharePoint Designer to import a workflow from Visio or export a workflow to Visio.
-ms.date: 09/25/2017
+ms.date: 06/14/2022
 ms.prod: sharepoint
 ms.assetid: dbe6f019-b4f2-480f-a8e7-bcb8842ab924
 ms.localizationpriority: medium

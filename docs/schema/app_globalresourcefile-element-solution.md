@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3ccb16a3-18fc-4cf5-afbd-b5ad5cc84ea5
-description: Describes the App_GlobalResourceFile element (Solution) schema and provides the schema's attributes and parent elements.
+description: Specifies a global resource file for a solution.
 ---
 
 # App_GlobalResourceFile element (Solution)

@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 499d068b-f426-499e-bad9-1903ba8cc4ae
-description: Describes the AnonymousState Simple Type (DeployManifest) schema and provides the schema's definition and enumeration values.
+description: "Last modified: March 09, 2015"
 ---
 
 # AnonymousState Simple Type (DeploymentManifest)

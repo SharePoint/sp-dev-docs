@@ -1,6 +1,5 @@
 ---
 title: appliesToTypes simpleType (Action4)
-description: Describes the appliesToTypes simpleType (Action4) schema and provides the schema's definition and enumeration values.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -18,7 +17,7 @@ Simple type for specifying which SharePoint object type the action applies to.
 
 ## Type information
 
-|Resource|File|
+| | |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

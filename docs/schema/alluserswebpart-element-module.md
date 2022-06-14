@@ -1,6 +1,5 @@
 ---
 title: AllUsersWebPart element (Module)
-description: Describes the AllUsersWebPart element and describes the element's attributes, parent elements, and occurrences.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer

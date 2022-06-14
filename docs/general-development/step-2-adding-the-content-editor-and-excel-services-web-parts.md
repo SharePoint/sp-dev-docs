@@ -1,7 +1,7 @@
 ---
 title: Step 2 Adding the Content Editor and Excel Services web parts
 description: Provides steps and describes how to create a web parts page and add the Content Editor web part and the Excel Services web part to the page.
-ms.date: 09/25/2017
+ms.date: 06/14/2022
 ms.prod: sharepoint
 ms.assetid: c9c66843-fd77-4a0d-a512-d936d15d4429
 ms.localizationpriority: medium

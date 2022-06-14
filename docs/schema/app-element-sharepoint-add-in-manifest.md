@@ -21,7 +21,7 @@ The top level node of the manifest of a SharePoint Add-in.
 
 ## Element information
 
-|Resource|File|
+| | |
 |---|---|
 | **Element type**  | AppDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

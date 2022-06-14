@@ -1,6 +1,5 @@
 ---
 title: ApplyElementManifests element (UpgradeActionsGroup group)
-description: Describes the ApplyElementManifests element (UpgradeActionsGroup group) schema and provides the schema's definition and child elements.
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -19,7 +18,7 @@ ms.assetid: 060aa8d2-a12a-ff26-2ca4-ebf9b6dc88f1
 
 ## Element information
 
-|Resource|File|
+| | |
 |---|---|
 | **Element type**  | ElementManifestReferences |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

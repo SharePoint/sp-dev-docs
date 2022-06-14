@@ -1,7 +1,7 @@
 ---
 title: Social and collaboration features in SharePoint
 description: Provides an overview of the social and collaborative features in addition to the My Site, Community Site, and team features in SharePoint.
-ms.date: 09/25/2017
+ms.date: 06/14/2022
 ms.prod: sharepoint
 ms.assetid: 5060f676-9aaa-41fe-88ef-e862ee2e1c52
 ms.localizationpriority: high
