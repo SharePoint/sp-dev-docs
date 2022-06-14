@@ -1,13 +1,13 @@
 ---
 title: "ArrayOfSearchQueryConfigurationSettings element (SPS15XSDSearchSet3)"
+description: Discusses the definition, elements and attributes for ArrayOfSearchQueryConfigurationSettings element (SPS15XSDSearchSet3).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c6b96150-1d57-9f94-df84-c30fbac7e4fa
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfSearchQueryConfigurationSettings element (SPS15XSDSearchSet3)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:ArrayOfSearchQueryConfigurationSettings  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |

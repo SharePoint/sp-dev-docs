@@ -8,7 +8,6 @@ ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 801faafe-a507-7b34-0b85-07368704e67c
-ms.date: 06/14/2022
 ---
 
 # ArrayOfManagedPropertyInfo complexType (SPS15XSDSearchSet2)
