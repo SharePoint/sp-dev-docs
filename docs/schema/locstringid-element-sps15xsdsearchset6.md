@@ -15,11 +15,11 @@ ms.assetid: 3e7ec5eb-164a-e7f7-9b24-59c176914b4d
 **Applies to:** SharePoint Server 2013
   
 ## Element information
-**Element type**: tns:LocStringId 
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search
-
-**Schema file**: schema_Microsoft.Office.Server.Search.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Element type** |tns:LocStringId  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search |
+|**Schema file** |schema_Microsoft.Office.Server.Search.xsd  |
    
 ## Definition
 

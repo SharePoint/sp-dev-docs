@@ -15,11 +15,11 @@ ms.assetid: 16b5dcb6-d4cb-5b74-28d6-a58732b7d2b6
 **Applies to:** SharePoint Server 2013
   
 ## Type information
-**Base type**: xs:string
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search
-
-**Schema file**: schema_Microsoft.Office.Server.Search.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Base type** |xs:string   |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search |
+|**Schema file** |schema_Microsoft.Office.Server.Search.xsd   |
    
 ## Definition
 

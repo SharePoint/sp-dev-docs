@@ -31,11 +31,15 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-[LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md)
+|Element|
+|----|
+|[LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md)|
 
 
 ### Parent elements
-[Model Element (BDCMetadataResource Schema)](model-element-bdcmetadataresource-schema.md)
+|Element|
+|----|
+|[Model Element (BDCMetadataResource Schema)](model-element-bdcmetadataresource-schema.md)|
 
 
 

@@ -62,7 +62,7 @@ None.
   
 | Element | Description |
 | --- | --- |
-| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The \*\*LocalizedDisplayNames\*\* element that contains this \*\*LocalizedDisplayName\*\*. |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The **LocalizedDisplayNames** element that contains this **LocalizedDisplayName**. |
 
 
 
