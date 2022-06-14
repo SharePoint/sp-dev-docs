@@ -1,5 +1,6 @@
 ---
 title: RuleDesigner element (Flow element)
+description: RuleDesigner element (Flow element) contains information that allows the rendering of a declarative Flow sentence in the visual workflow editor.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

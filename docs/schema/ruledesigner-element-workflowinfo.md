@@ -1,5 +1,6 @@
 ---
 title: RuleDesigner Element (WorkflowInfo)
+description: RuleDesigner Element (WorkflowInfo) contains information that is needed to render a workflow sentence in a declarative, code-free workflow editor.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

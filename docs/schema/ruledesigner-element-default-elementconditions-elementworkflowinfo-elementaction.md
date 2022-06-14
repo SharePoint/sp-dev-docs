@@ -1,5 +1,6 @@
 ---
 title: RuleDesigner element (Default element)
+description: RuleDesigner element (Default element) contains information that allows the rendering of a declarative sentence in the visual workflow editor.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

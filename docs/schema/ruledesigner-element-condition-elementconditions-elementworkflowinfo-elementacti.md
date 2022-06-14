@@ -1,5 +1,6 @@
 ---
 title: RuleDesigner element (Condition element)
+description: RuleDesigner element (Condition element) contains information that allows the rendering of a declarative Condition sentence in the visual workflow editor.
 manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer

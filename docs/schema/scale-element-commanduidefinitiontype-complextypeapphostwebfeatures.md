@@ -1,5 +1,6 @@
 ---
 title: Scale element (CommandUIDefinitionType complexType)
+description: Describes the definition, element, and attribute information for the Scale element (CommandUIDefinitionType complexType).
 manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
@@ -18,7 +19,7 @@ ms.assetid: 6de35fa3-ba94-99bd-b927-9bfa70ea8ee0
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | ScaleType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

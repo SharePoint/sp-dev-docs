@@ -1,5 +1,6 @@
 ---
 title: ruleDesignerType complexType (Action4)
+description: ruleDesignerType complexType (Action4) is the base type for creating a RuleDesigner element (defaultElementType complexType) (Action4).
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
