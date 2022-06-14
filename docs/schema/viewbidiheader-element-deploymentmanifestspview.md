@@ -1,13 +1,13 @@
 ---
 title: "ViewBidiHeader Element (DeploymentManifest - SPView)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes ViewBidiHeader Element (DeploymentManifest - SPView) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6e2e912e-4016-40ef-86b1-8686cc9b5c04
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewBidiHeader Element (DeploymentManifest - SPView)

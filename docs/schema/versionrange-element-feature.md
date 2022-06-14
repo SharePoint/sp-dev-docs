@@ -1,7 +1,8 @@
 ---
 title: VersionRange Element (Feature)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes VersionRange Element (Feature) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -62,25 +63,12 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="addcontenttypefield-element-feature.md">AddContentTypeField Element (Feature)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="applyelementmanifests-element-feature.md">ApplyElementManifests Element (Feature)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customupgradeaction-element-feature.md">CustomUpgradeAction Element (Feature)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="mapfile-element-feature.md">MapFile Element (Feature)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|  Child Elements  |
+| --- |
+| [AddContentTypeField Element (Feature)](addcontenttypefield-element-feature.md) |
+| [ApplyElementManifests Element (Feature)](applyelementmanifests-element-feature.md) |
+| [CustomUpgradeAction Element (Feature)](customupgradeaction-element-feature.md) |
+| [MapFile Element (Feature)](mapfile-element-feature.md) |
 
 ### Parent elements
 

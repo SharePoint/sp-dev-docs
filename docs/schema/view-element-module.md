@@ -1,7 +1,8 @@
 ---
 title: View Element (Module)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes View Element (Module) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -159,7 +160,7 @@ The following sections describe attributes, child elements, and parent elements.
 <p>If **RowLimit** is not specified, the default number of Rows returned is 50. If "None" is specified for the view type, all the rows of the recordset are returned in one view.</p>
 <p>When a view is rendered, the render variables **ViewHasNext** and **ViewHasPrev** are set to **TRUE** or **FALSE**, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render **Next** and **Previous** buttons on the page, as in the following XML example:</p>
 <p>
-  `<Switch>
+  `\<Switch\>
       <Expr><GetVar Name="ViewHasPrev"/></Expr>
       <Case Value="TRUE">
         <![CDATA[...Previous button defined here... ]]>
@@ -177,7 +178,7 @@ The following sections describe attributes, child elements, and parent elements.
 <li><p>**Recursive**—Show all files of all folders.</p></li>
 <li><p>**RecursiveAll**—Show all files and all subfolders of all folders.</p></li>
 </ul>
-<p>If this attribute is not set, the view displays only the files and subfolders of a specific folder. The value of this attribute corresponds to the <span sdata="cer" target="P:Microsoft.SharePoint.SPView.Scope"><span class="nolink">Scope</span></span> property of the <span sdata="cer" target="T:Microsoft.SharePoint.SPView"><span class="nolink">SPView</span></span> class.</p></td>
+<p>If this attribute is not set, the view displays only the files and subfolders of a specific folder. The value of this attribute corresponds to the <span><span>Scope</span></span> property of the <span><span>SPView</span></span> class.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowHeaderUI**</p></td>

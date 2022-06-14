@@ -1,13 +1,13 @@
 ---
 title: "ViewEmpty Element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes ViewEmpty Element (DeploymentManifest - SPWebPart) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5eced88b-1b29-442c-8df6-b4637c521dc9
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewEmpty Element (DeploymentManifest - SPWebPart)

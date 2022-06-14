@@ -1,7 +1,8 @@
 ---
 title: VersionDefinition simpleType
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes VersionDefinition simpleType and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

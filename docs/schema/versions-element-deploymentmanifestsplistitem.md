@@ -1,7 +1,8 @@
 ---
 title: "Versions Element (DeploymentManifest - SPListItem)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Versions Element (DeploymentManifest - SPListItem) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

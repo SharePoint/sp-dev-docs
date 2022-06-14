@@ -1,13 +1,13 @@
 ---
 title: "ViewData Element (DeploymentManifest - SPView)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes ViewData Element (DeploymentManifest - SPView) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8406a683-d281-4372-b9f8-e993e5790f01
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewData Element (DeploymentManifest - SPView)

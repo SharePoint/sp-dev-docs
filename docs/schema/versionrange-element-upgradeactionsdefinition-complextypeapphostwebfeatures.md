@@ -1,7 +1,8 @@
 ---
 title: VersionRange element (UpgradeActionsDefinition complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
+description: Describes VersionRange element (UpgradeActionsDefinition complexType) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: b07b2138-93cd-4c67-473d-b9b9d138eff1
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | VersionRangeDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
