@@ -112,7 +112,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Remarks
 
-Applications created to work as a declarative rules-based, code-free workflow editor can use the <span>**AssociateWorkflowMarkup(String, String)**</span> method of the <span>**websvcWebPartPages**</span> Web Service to create a workflow template and associate it to a SharePoint list specifying a workflow markup file, a workflow configuration file, and optionally, a workflow rules markup file.
+Applications created to work as a declarative rules-based, code-free workflow editor can use the **AssociateWorkflowMarkup(String, String)** method of the **websvcWebPartPages** Web Service to create a workflow template and associate it to a SharePoint list specifying a workflow markup file, a workflow configuration file, and optionally, a workflow rules markup file.
 
 For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx).
 
