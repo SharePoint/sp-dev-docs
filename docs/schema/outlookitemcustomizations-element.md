@@ -33,9 +33,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 |Attribute|Description|
 |---------|-----------|
-|**ItemTypeDisplayName**|Required.<br/><br/>The display name of the Outlook item type.<br/><br/>Attribute type: **String**|
-|**MessageClass**|Required.<br/><br/>Used to identify the form used to display the item. It follows the format: `IPM.<OutlookItemType>.<ContentTypeName>`.<br/><br/>Example: IPM.Contact.Customer<br/><br/>Attribute type: **String**|
-|**Description**|Optional.<br/><br/>A description for the customizations.<br/><br/>Attribute type: **String**|
+|**ItemTypeDisplayName**|The display name of the Outlook item type.</br></br>Required.</br></br>Attribute type: **String**|
+|**MessageClass**|Used to identify the form used to display the item. It follows the format: IPM...</br></br>Example: IPM.Contact.Customer</br></br>Required</br></br>Attribute type: **String**|
+|**Description**|A description for the customizations.</br></br>Optional.</br></br>Attribute type: **String**|
 
 ### Child elements
 
