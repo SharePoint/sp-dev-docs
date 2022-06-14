@@ -36,45 +36,16 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An external content type in an external system.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Entity Element in Entities (BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md) | An external content type in an external system. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An external system.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [LobSystem Element in LobSystems (BDCMetadata Schema)](lobsystem-element-in-lobsystems-bdcmetadata-schema.md) | An external system. |
 
 
 

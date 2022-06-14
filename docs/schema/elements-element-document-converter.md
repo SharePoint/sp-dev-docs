@@ -53,16 +53,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="documentconverter-element-document-converter.md">DocumentConverter Element (Document Converter)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[DocumentConverter Element (Document Converter)](documentconverter-element-document-converter.md)
 
 ### Parent elements
 

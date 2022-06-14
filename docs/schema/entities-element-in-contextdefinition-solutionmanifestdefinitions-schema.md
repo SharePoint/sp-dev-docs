@@ -36,24 +36,9 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="entity-element-in-entities-solutionmanifestdefinitions-schema.md">Entity Element in Entities (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The external content type.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Entity Element in Entities (SolutionManifestDefinitions Schema)](entity-element-in-entities-solutionmanifestdefinitions-schema.md) | The external content type. |
 
 ### Parent elements
 

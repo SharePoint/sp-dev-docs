@@ -34,39 +34,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="identifiers-element-in-entity-bdcmetadataresource-schema.md">Identifiers Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="methods-element-in-entity-bdcmetadataresource-schema.md">Methods Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="associationgroups-element-in-entity-bdcmetadataresource-schema.md">AssociationGroups Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="actions-element-in-entity-bdcmetadataresource-schema.md">Actions Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md) |
+| [Identifiers Element in Entity (BDCMetadataResource Schema)](identifiers-element-in-entity-bdcmetadataresource-schema.md) |
+| [Methods Element in Entity (BDCMetadataResource Schema)](methods-element-in-entity-bdcmetadataresource-schema.md) |
+| [AssociationGroups Element in Entity (BDCMetadataResource Schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.md) |
+| [Actions Element in Entity (BDCMetadataResource Schema)](actions-element-in-entity-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 

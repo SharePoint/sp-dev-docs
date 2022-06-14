@@ -53,16 +53,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="contenttypebinding-element-contenttypebinding.md">ContentTypeBinding Element (ContentTypeBinding)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[ContentTypeBinding Element (ContentTypeBinding)](contenttypebinding-element-contenttypebinding.md)
 
 ### Parent elements
 

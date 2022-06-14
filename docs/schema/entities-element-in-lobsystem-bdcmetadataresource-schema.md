@@ -34,39 +34,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity Element in Entities (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [Entity Element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md">LobSystem Element in LobSystems (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md) |
 
 
 

@@ -30,94 +30,32 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**EntityTypeName**</p></td>
-<td align="left"><p>Required.</p>
-<p>The name of the external content type as defined in the BDC model.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**EntityTypeNamespace**</p></td>
-<td align="left"><p>Required.</p>
-<p>The namespace this external content type belongs to, as defined in the BDC model.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required.</p>
-<p>The name of the external content type in the solution manifest. This value can be different from the name defined in the BDC model and is used to identify the external content type only within the scope of the solution manifest.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Description**</p></td>
-<td align="left"><p>Optional.</p>
-<p>A description for the external content type.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Attribute | Description |
+| --- | --- |
+| **EntityTypeName** | Required.<br><br>The name of the external content type as defined in the BDC model.<br><br>Attribute type: **String** |
+| **EntityTypeNamespace** | Required.<br><br>The namespace this external content type belongs to, as defined in the BDC model.<br><br>Attribute type: **String** |
+| **Name** | Required.<br><br>The name of the external content type in the solution manifest. This value can be different from the name defined in the BDC model and is used to identify the external content type only within the scope of the solution manifest.<br><br>Attribute type: **String** |
+| **Description** | Optional.<br><br>A description for the external content type.<br><br>Attribute type: **String** |
 
-<br/>
-
+  
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md">View Element in EntityInstanceDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>Specifies the **SpecificFinder** method instance of the external content type that should be run to get the external data.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [View Element in EntityInstanceDefinition (SolutionManifestDefinitions Schema)](view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md) | Specifies the **SpecificFinder** method instance of the external content type that should be run to get the external data. |
 
 <br/>
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md">Entities Element in ContextDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>Contains this external content type.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Entities Element in ContextDefinition (SolutionManifestDefinitions Schema)](entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md) | Contains this external content type. |
 
 <br/>
 
-<br/>
 
 
 

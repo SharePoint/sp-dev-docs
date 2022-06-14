@@ -132,50 +132,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized display names of this external content type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of this external content type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The access control list (ACL) of this external content type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="identifiers-element-in-entity-bdcmetadata-schema.md">Identifiers Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The identifiers of the external content type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="methods-element-in-entity-bdcmetadata-schema.md">Methods Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The methods of the external content type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span><a href="associationgroups-element-in-entity-bdcmetadata-schema.md">AssociationGroups Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The association groups of the external content type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The actions of the external content type.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names of this external content type. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of this external content type. |
+| [AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | The access control list (ACL) of this external content type. |
+| [Identifiers Element in Entity (BDCMetadata Schema)](identifiers-element-in-entity-bdcmetadata-schema.md) | The identifiers of the external content type. |
+| [Methods Element in Entity (BDCMetadata Schema)](methods-element-in-entity-bdcmetadata-schema.md) | The methods of the external content type. |
+| [AssociationGroups Element in Entity (BDCMetadata Schema)](associationgroups-element-in-entity-bdcmetadata-schema.md) | The association groups of the external content type. |
+| [Actions Element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md) | The actions of the external content type. |
 
-<br/>
 
 ### Parent elements
 
