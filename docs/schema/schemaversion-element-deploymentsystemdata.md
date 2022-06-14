@@ -1,13 +1,13 @@
 ---
 title: "SchemaVersion Element (DeploymentSystemData)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 354c96b8-115a-4960-bfb6-46d3a40f1c61
-description: "Last modified: March 09, 2015"
+description: Represents an object (SPSchemaVersion) that lists versioning data for the content migration manifest schema.
 ---
 
 # SchemaVersion Element (DeploymentSystemData)

@@ -1,7 +1,8 @@
 ---
 title: Schema map (AppHostWebFeatures)
+description: This topic shows the schema definition for AppHostWebFeatures.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

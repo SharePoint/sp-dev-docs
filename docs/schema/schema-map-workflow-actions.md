@@ -1,7 +1,8 @@
 ---
 title: Schema map (Workflow actions)
+description: This topic shows the schema definition for Schema file name.
 manager: laurawi
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

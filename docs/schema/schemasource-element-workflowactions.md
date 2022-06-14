@@ -1,7 +1,8 @@
 ---
 title: SchemaSource Element (WorkflowActions)
+description: SchemaSource Element (WorkflowActions) specifies how data source fields are displayed.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
