@@ -18,9 +18,9 @@ ms.assetid: 66db1937-094b-3ade-c140-66e7d891d607
 
 | Resource | File |
 |:-----|:-----|
-|Element type <br/> |tns:RefinerType  <br/> |
-|Namespace <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|Schema file <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+| **Element type** |tns:RefinerType |
+| **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 
