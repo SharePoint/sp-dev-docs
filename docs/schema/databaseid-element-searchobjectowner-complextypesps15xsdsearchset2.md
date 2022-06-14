@@ -15,11 +15,11 @@ ms.assetid: 88f71aff-196f-88c8-f1d9-2906e609a022
  
   
 ## Element information
-**Element type**: ser:guid
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Element type**  |ser:guid  |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd   |
 
    
 ## Definition

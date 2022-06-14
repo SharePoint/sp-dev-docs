@@ -15,11 +15,11 @@ ms.assetid: 65cbadea-2006-6c9a-12e3-bd20921a346b
  
   
 ## Element information
-**Element type**: tns:AuthenticationData
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
+|Name|Value|
+|:-----|:-----|
+|**Element type** |tns:AuthenticationData  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
    
 ## Definition
 
