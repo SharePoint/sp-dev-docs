@@ -1,6 +1,6 @@
 ---
 title: "ActivationDependency element (Solution)"
-description: Specifies the activation dependencies for a solution.
+description: Discusses the definition, elements and attributes for specifies the activation dependencies for a solution.
 manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
