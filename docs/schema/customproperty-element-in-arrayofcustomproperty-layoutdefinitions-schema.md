@@ -67,7 +67,7 @@ None.
 
 |Element|Description|
 |----------|-----------|
-|[CustomProperties Element in UIElement (LayoutDefinitions Schema)]("customproperties-element-in-uielement-layoutdefinitions-schema.md)|The list of custom properties that contains this custom property. |
+|[CustomProperties Element in UIElement (LayoutDefinitions Schema)]("/customproperties-element-in-uielement-layoutdefinitions-schema.md)|The list of custom properties that contains this custom property. |
 
 
 
