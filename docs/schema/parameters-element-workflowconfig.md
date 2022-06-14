@@ -44,11 +44,15 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-[Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md)
+|Element|
+|---|
+|[Parameter Element (WorkflowConfig)](parameter-element-workflowconfig.md)|
 
 ### Parent elements
 
-[Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)
+|Element|
+|---|
+|[Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)|
 
 ### Remarks
 

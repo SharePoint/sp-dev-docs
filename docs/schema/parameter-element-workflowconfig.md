@@ -72,7 +72,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-[Parameters Element (WorkflowConfig)](parameters-element-workflowconfig.md)
+|Element|
+|---|
+|[Parameters Element (WorkflowConfig)](parameters-element-workflowconfig.md)|
 
 ### Remarks
 
