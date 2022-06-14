@@ -1,7 +1,8 @@
 ---
 title: "ActivationDependency element (Solution)"
+description: Specifies the activation dependencies for a solution.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: b8ab216f-4363-44f3-b79e-eaa7262f44ee
-description: Specifies the activation dependencies for a solution.
 ---
 
 # ActivationDependency element (Solution)
@@ -36,10 +36,10 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**SolutionId** <br/> |Required **string**. Specifies the solution ID of the dependency.  <br/> |
-|**SolutionName** <br/> |Optional **string**. Specifies the name of the solution dependency.  <br/> |
-|**SolutionTitle** <br/> |Optional **string**. Specifies the title of the solution dependency.  <br/> |
-|**SolutionUrl** <br/> |Optional **string**. Specifies the URL of the solution dependency.  <br/> |
+|**SolutionId**  |Required **string**. Specifies the solution ID of the dependency.   |
+|**SolutionName**  |Optional **string**. Specifies the name of the solution dependency.   |
+|**SolutionTitle**  |Optional **string**. Specifies the title of the solution dependency.   |
+|**SolutionUrl**  |Optional **string**. Specifies the URL of the solution dependency.   |
    
 ### Child elements
 

@@ -1,13 +1,13 @@
 ---
 title: "Aggregations element (Deployment Manifest - SPView)"
+description: Discusses the definition, elements and attributes for Aggregations element (Deployment Manifest - SPView).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0b64b8f8-7251-4e0d-b399-7e75c5d4ec5e
-description: "Last modified: March 09, 2015"
 ---
 
 # Aggregations element (Deployment Manifest - SPView)
