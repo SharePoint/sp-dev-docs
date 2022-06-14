@@ -121,8 +121,9 @@ The following sections describe attributes, child elements, and parent elements.
 None
 
 ### Parent elements
-
-[Elements](elements-element-list-template.md)
+|Elements|
+|----|
+|[Elements](elements-element-list-template.md)|
 
 ## Example
 
