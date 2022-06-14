@@ -15,11 +15,11 @@ ms.assetid: ac423b14-7d05-29cf-c458-a7f820aa6863
  
   
 ## Element information
-**Element type**: q11:ManagedPropertyInfoCollection
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Portability.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Element type** |q11:ManagedPropertyInfoCollection   |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Portability.xsd  |
    
 ## Definition
 

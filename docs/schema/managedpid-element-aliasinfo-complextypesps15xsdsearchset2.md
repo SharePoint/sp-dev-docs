@@ -15,11 +15,11 @@ ms.assetid: acd0628d-189c-4497-2418-08aa0620116c
  
   
 ## Element information
-**Element type**: xs:int
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd 
+|Name|Value|
+|:-----|:-----|
+|**Element type** |xs:int  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd   |
    
 ## Definition
 

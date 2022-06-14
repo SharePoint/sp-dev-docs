@@ -15,11 +15,11 @@ ms.assetid: 91d12373-cd92-1425-53ae-205466821c1b
  
   
 ## Type information
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd 
-
-**Extension base**: tns:BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw 
+|Name|Value|
+|:-----|:-----|
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd  |
+|**Extension base** |tns:BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw   |
    
 ## Definition
 

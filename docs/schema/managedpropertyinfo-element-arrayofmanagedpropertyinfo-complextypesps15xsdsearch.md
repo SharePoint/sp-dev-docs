@@ -15,11 +15,11 @@ ms.assetid: 18da2e4e-c878-481d-7a49-50f936a954a3
  
   
 ## Element information
-**Element type**: tns:ManagedPropertyInfo
-
-**Namespace**: http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration 
-
-**Schema file**: schema_Microsoft.Office.Server.Search.Administration.xsd
+|Name|Value|
+|:-----|:-----|
+|**Element type** |tns:ManagedPropertyInfo |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 
