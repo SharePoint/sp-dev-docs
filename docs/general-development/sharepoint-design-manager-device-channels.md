@@ -1,6 +1,6 @@
 ---
 title: SharePoint Design Manager device channels
-description: Describes provides an overview of device channels and describes how to plan for and configure a device channel in SharePoint.
+description: Provides an overview of device channels and describes how to plan for and configure a device channel in SharePoint.
 ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: a924bd7b-a5e3-41bf-b0a7-3e43945fa951
