@@ -2,7 +2,7 @@
 title: UrlActionDefinition complexType
 description: Describes the definition, type, element, and attribute information for UrlActionDefinition complexType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

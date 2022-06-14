@@ -2,7 +2,7 @@
 title: UIVersion simpleType
 description: Describes the definition and type information for UIVersion simpleType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

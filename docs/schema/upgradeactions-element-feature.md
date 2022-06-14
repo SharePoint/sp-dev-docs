@@ -2,7 +2,7 @@
 title: UpgradeActions Element (Feature)
 description: Describes the definition, element, and attribute information for the UpgradeActions Element (Feature), which specifies the upgrade actions for the Feature.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

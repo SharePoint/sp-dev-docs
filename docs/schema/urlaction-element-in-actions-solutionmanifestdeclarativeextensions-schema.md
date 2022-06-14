@@ -2,7 +2,7 @@
 title: UrlAction Element in Actions
 description: Describes UrlAction Element in Actions. The CodeMethodAction element is used to execute a URL-based action in Microsoft Outlook 2010.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
