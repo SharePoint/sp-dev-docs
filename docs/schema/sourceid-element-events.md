@@ -1,7 +1,8 @@
 ---
 title: SourceId Element (Events)
+description: SourceId Element (Events) specifies the unique identifier of the source for the event receiver.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
