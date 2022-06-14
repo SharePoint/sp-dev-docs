@@ -251,16 +251,16 @@ longitude: "Longitude: " + this.state.longitude
 
 So far we have created defined our geolocation actions and wired in our states. Now we can finally implement the `onAction` function, which gives the ability to the Third Party Developer to decide what they wish to do with the location coordinates that the user has shared with them.
 
-For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts**) and import the `IActionArguments` interface, as follows:
+For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts**) and import the `IGetLocationActionArguments` interface, as follows:
 
 ```typescript
-import IActionArguments from @microsoft/sp-adaptive-card-extension-base
+import {IGetLocationActionArguments} from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
 Finally, introduce the following `onAction` function in the QuickView class:
 
 ```typescript
-public onAction(action: IActionArguments): void {
+public onAction(action: IGetLocationActionArguments): void {
   if (action.type === 'VivaAction.GetLocation') {
     this.setState({
       latitude: action.location.latitude.toString(),
