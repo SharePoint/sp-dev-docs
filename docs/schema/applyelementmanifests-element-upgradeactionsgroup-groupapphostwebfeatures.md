@@ -18,7 +18,7 @@ ms.assetid: 060aa8d2-a12a-ff26-2ca4-ebf9b6dc88f1
 
 ## Element information
 
-| | |
+|   |   |
 |---|---|
 | **Element type**  | ElementManifestReferences |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

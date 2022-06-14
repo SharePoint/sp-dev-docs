@@ -17,7 +17,7 @@ Simple type for specifying which SharePoint object type the action applies to.
 
 ## Type information
 
-| | |
+|   |   |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
