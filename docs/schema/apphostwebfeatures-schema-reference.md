@@ -1,6 +1,6 @@
 ---
 title: AppHostWebFeatures schema reference
-description: Describes the AppHostWebFeatures scheme, which specifies the XML that may be used in features deployed to the host web in SharePoint Add-ins.
+description: Describes the AppHostWebFeatures schema, which specifies the XML that may be used in features deployed to the host web in SharePoint Add-ins.
 manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
