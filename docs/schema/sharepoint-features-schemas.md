@@ -1,7 +1,8 @@
 ---
 title: SharePoint Features schemas
+description: Learn more about SharePoint Features schemas.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
