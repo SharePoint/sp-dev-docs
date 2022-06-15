@@ -1,7 +1,8 @@
 ---
 title: View schema elements A-F
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/15/2022
+description: Describes View schema elements A-F, which applies to SharePoint 2016, SharePoint Foundation 2013, SharePoint Online, SharePoint Server 2013.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 2d6b36d8-c083-4edc-afcb-e38f06ebdcab
-description: "Last modified: July 15, 2011"
 ---
 
 # View schema elements A-F

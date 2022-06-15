@@ -1,13 +1,13 @@
 ---
 title: "ViewStyle Element (DeploymentManifest - SPView)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes ViewStyle Element (DeploymentManifest - SPView) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ee00f5f4-6f12-48da-a30a-f20edb94e0d1
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewStyle Element (DeploymentManifest - SPView)

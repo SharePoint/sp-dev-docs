@@ -1,13 +1,13 @@
 ---
 title: "ViewHeader Element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes ViewHeader Element (DeploymentManifest - SPWebPart) and provides information about elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d57b6578-ea1d-4d81-8ee6-77e84440e1e1
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewHeader Element (DeploymentManifest - SPWebPart)

@@ -1,7 +1,8 @@
 ---
 title: View schema elements M-Z
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/15/2022
+description: Describes View schema elements M-Z, which applies to SharePoint 2016, SharePoint Foundation 2013, SharePoint Online, SharePoint Server 2013.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0e4c0a69-bd93-4a50-87cc-5cca3d696af9
-description: "Last modified: July 15, 2011"
 ---
 
 # View schema elements M-Z

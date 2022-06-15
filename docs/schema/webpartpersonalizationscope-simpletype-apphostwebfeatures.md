@@ -1,7 +1,8 @@
 ---
 title: WebPartPersonalizationScope simpleType
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/15/2022
+description: Describes WebPartPersonalizationScope simpleType and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 6559a32e-1b3c-89d0-48ee-46208f7c0495
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Base Type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

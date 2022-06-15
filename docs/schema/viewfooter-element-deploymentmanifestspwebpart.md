@@ -1,13 +1,13 @@
 ---
 title: "ViewFooter Element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes ViewFooter Element (DeploymentManifest - SPWebPart) and provides information about elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 44a8d7e4-bad1-4b22-9bd5-b6c8b8cbef88
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewFooter Element (DeploymentManifest - SPWebPart)

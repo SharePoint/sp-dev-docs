@@ -1,7 +1,8 @@
 ---
 title: Views Element
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes Views Element and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

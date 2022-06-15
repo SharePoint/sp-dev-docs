@@ -1,7 +1,8 @@
 ---
 title: WebPart Element (Module)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebPart Element (Module) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
