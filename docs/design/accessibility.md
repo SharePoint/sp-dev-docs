@@ -1,7 +1,7 @@
 ---
 title: Accessibility in SharePoint web part design
 description: Guidelines for adding accessibility to your web part.
-ms.date: 03/22/2018 
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 
@@ -111,57 +111,22 @@ The following image shows theme colors on the left and neutral colors on the rig
 
 <br/>
 
-<table>
-<tr>
-    <th>Theme colors</th>
-    <th>Neutral colors</th> 
-  </tr>
-<tr>
-<td style="color:white; background-color:#004578">themeDarker: #004578</td>
-<td style="color:white; background-color:#000000">black: #000000</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#005a9e">themeDark: #005a9e</td>
-<td style="color:white; background-color:#212121">neutralDark: #212121</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#106ebe">themeDarkAlt: #106ebe</td>
-<td style="color:white; background-color:#333">neutralPrimary: #333</td>
-</tr>
-<tr>
-<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#0078d7">themePrimary: #0078d7</td>
-<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#2b88d8">themeSecondary: #2b88d8</td>
-<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#71afe5">themeTertiary: #71afe5</td>
-<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#c7e0f4">themeLight: #c7e0f4</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#deecf9">themeLighter: #deecf9</td>
-<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#eff6fc">themeLighterAlt: #eff6fc</td>
-<td style="color:black; background-color:#fff">white: #fff</td>
-</tr>
-</table>
+|Theme colors|Neutral colors|
+| --- | --- |
+|themeDarker: #004578|black: #000000|
+|themeDark: #005a9e|neutralDark: #212121|
+|themeDarkAlt: #106ebe|neutralPrimary: #333|
+|themePrimary: #0078d7|neutralPrimaryAlt: #3c3c3c|
+|themePrimary: #0078d7|neutralSecondary: #666666|
+|themePrimary: #0078d7|neutralTertiary: #a6a6a6|
+|themeSecondary: #2b88d8|neutralTertiaryAlt: #c8c8c8|
+|themeTertiary: #71afe5|data12|
+|themeLight: #c7e0f4|data2|
+|themeLighter: #deecf9|data12|
+|themeLighterAlt: #eff6fc|white: #fff|
+
 
 <br/>
-
 
 ## High contrast
 
