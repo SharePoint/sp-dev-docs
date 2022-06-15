@@ -59,13 +59,9 @@ The following sections describe attributes, child elements, and parent elements.
 | --- | --- |
 | **AggregateView** | Optional **Boolean**. **TRUE** to specify that the view is a Merge Forms view used in an XML Form library. By default, an XML Form library is provisioned with a Merge Forms view that is initially hidden. When an XML editor is used to publish an XML Form Properties (XFP) file to the Forms directory of the library along with a template used by the editor, the **AggregateView** attribute identifies the Merge Forms view, which can be made visible or hidden depending on whether the list template or definition for the library supports data merging. |
 | **BaseViewID** | Optional **Integer**. Specifies the ID of the base view. |
-
 | **ContentTypeId** | Optional **string**. Specifies the ID of the content type. |
-
 | **DefaultView** | Optional **Boolean**. **TRUE** to specify that the view is the default view. |
-
 | **DisplayName** | Optional **Text**. Specifies the name of the view that is displayed on the **Quick Launch**. |
-
 | **FailIfEmpty** | Optional **Boolean**. If the view returns no items, **TRUE** to return a blank page and an HTTP error code instead of rendering the **ViewEmpty** element. Used for programmatic manipulation of views from a client application, preventing the client application from having to parse a document to discover whether the view is empty. |
 | **FileDialog** | Optional **Boolean**. **TRUE** to specify that the view is displayed in file dialog boxes for applications used within the context of Windows SharePoint Services, which parse the output HTML to determine the contents of the list. |
 | **FPModified** | Optional **Boolean**. **TRUE** if the view has been altered through editing in a webpage editor, and the view is no longer customizable by the Microsoft Windows SharePoint Services UI. |
