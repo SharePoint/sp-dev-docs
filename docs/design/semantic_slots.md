@@ -29,12 +29,12 @@ In the table below, you can see all eight palette colors defined for the bodyTe
 
 ![Example table showing semantic slots on light and dark theme variants](../images/doc-semantic-slot-940px-table.png)
 
-|| Light themes | Dark themes |
+||Light themes|Dark themes|
 | --- | --- | --- |
-| None | neutralPrimary #333333 | neutralPrimary #ffffff |
-| Neutral | neutralPrimary #333333 | neutralPrimary #ffffff |
-| Soft | neutralPrimary #333333 | neutralPrimary #ffffff |
-| Strong | white #ffffff | white #ffffff |
+|None|neutralPrimary #333333|neutralPrimary #ffffff |
+|Neutral|neutralPrimary #333333| neutralPrimary #ffffff|
+|Soft|neutralPrimary #333333|neutralPrimary #ffffff|
+|Strong |white #ffffff|white #ffffff|
 
 > [!NOTE]
 > The current semantic slot list is defined by commonly used design patterns in SharePoint. We want to avoid creating case-specific semantic slots. When designing a new web part, consider aligning to an existing design pattern. Office UI Fabric's policy is that semantic slots may never be removed from the list, so any additions are permanent.
