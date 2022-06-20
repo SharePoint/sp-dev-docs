@@ -1,7 +1,7 @@
 ---
 title: OneDrive for Business customization in the SharePoint Add-in model
 description: In an SharePoint Add-in model scenario, timer jobs are created and scheduled outside of SharePoint.  SharePoint is not responsible for the scheduling or the execution of the timer job in this scenario.
-ms.date: 12/29/2020
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 # OneDrive for Business customization in the SharePoint Add-in model

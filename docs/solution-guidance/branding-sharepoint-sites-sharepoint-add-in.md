@@ -1,7 +1,7 @@
 ---
 title: Branding SharePoint sites in the SharePoint Add-in model
 description: The approach you take to brand SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code / Farm Solutions.
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.localizationpriority: high
 ---
 # Branding SharePoint sites in the SharePoint Add-in model

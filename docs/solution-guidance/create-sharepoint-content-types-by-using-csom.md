@@ -1,7 +1,7 @@
 ---
 title: Create SharePoint content types by using CSOM
 description: You can use the Core.SPD sample to programmatically create site columns and content types and link them together.
-ms.date: 4/26/2018
+ms.date: 06/10/2022
 ms.localizationpriority: high
 ---
 

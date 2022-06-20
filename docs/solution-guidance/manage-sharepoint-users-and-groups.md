@@ -1,7 +1,7 @@
 ---
 title: Manage SharePoint users and groups
 description: Manage users, groups, and permissions within a SharePoint site collection.
-ms.date: 4/26/2018
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Modify SharePoint site permissions and get external sharing status
 description: Modify properties of site collection administrators by using CSOM. Get the external sharing status and external users of a site collection or tenant.
-ms.date: 4/26/2018
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Deploy development Office 365 sites to Microsoft Azure
 description: The steps involved in taking an Office 365 API development project and launching it to a working sample hosted entirely in Azure by using Office 365, Azure AD, and Azure websites.
-ms.date: 5/8/2018
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 

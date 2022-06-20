@@ -1,7 +1,7 @@
 ---
 title: Create UX controls by using SharePoint provider-hosted add-ins
 description: Three samples that show you how to implement UX controls in your provider-hosted add-in.
-ms.date: 4/26/2018
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 
