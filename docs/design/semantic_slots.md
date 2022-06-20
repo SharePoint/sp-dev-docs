@@ -1,7 +1,7 @@
 ---
 title:  Designing for section backgrounds using semantic slots
 description: Learn how to design your web part to take advantage of section backgrounds using semantic slots.
-ms.date: 04/25/2022
+ms.date: 06/09/2022
 ms.localizationpriority: medium
 ---
 
