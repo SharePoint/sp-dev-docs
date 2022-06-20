@@ -1,13 +1,13 @@
 ---
 title: "IndexOffset element (Source complexType) (SPS15XSDSearchSet1)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79b97f1a-f522-49cf-ba63-8aa12b9ebb9a
-description: "Last modified: March 09, 2015"
+description: Learn more about IndexOffset element (Source complexType) (SPS15XSDSearchSet1).
 ---
 
 # IndexOffset element (Source complexType) (SPS15XSDSearchSet1)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
