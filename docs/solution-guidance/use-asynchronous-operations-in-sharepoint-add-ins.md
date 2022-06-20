@@ -1,6 +1,6 @@
 ---
 title: Use asynchronous operations in SharePoint Add-ins
-ms.date: 06/13/2022
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Use asynchronous operations in SharePoint Add-ins
