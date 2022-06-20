@@ -1,5 +1,6 @@
 ---
 title: Upload web parts in SharePoint
+description: Describes how to upload web parts in SharePoint, outlines how to use the Core.AppScriptPart add-in, and provides additional references.
 ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
