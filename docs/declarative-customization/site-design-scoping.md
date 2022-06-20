@@ -1,7 +1,7 @@
 ---
 title: Select audiences for SharePoint site templates
 description: Determine which audiences can access certain site templates.
-ms.date: 08/23/2021
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
