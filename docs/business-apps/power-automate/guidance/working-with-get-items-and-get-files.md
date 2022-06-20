@@ -1,7 +1,7 @@
 ---
 title: In-depth analysis into 'Get items' and 'Get files' SharePoint actions for flows in Power Automate
 description: In this article, learn more about the SharePoint actions get items & get files actions with Power Automate.
-ms.date: 03/24/2022
+ms.date: 06/20/2022
 search.app: 
   - Flow
 search.appverid: met150
