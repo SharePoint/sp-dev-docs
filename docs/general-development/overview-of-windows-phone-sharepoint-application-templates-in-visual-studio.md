@@ -1,6 +1,7 @@
 ---
 title: Overview of Windows Phone SharePoint application templates in Visual Studio
-ms.date: 09/25/2017
+description: Provides an overview of the Visual Studio templates installed by the Windows Phone SharePoint Software Development Kit for mobile app development.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 6ae27957-fa41-4e6f-92e3-db11dae1f6c2
 ms.localizationpriority: medium
