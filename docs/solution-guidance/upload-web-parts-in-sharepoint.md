@@ -1,6 +1,6 @@
 ---
 title: Upload web parts in SharePoint
-ms.date: 11/03/2017
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 # Upload web parts in SharePoint
