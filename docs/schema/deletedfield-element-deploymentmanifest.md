@@ -1,13 +1,13 @@
 ---
 title: "DeletedField Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fdaa2f2f-7a04-4224-a584-b4010b5c5188
-description: "Last modified: March 09, 2015"
+description: DeletedField Element (DeploymentManifest) represents a data field that was deleted from a SharePoint list.
 ---
 
 # DeletedField Element (DeploymentManifest)

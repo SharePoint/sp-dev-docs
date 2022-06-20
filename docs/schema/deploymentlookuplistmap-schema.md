@@ -1,7 +1,8 @@
 ---
 title: DeploymentLookupListMap schema
+description: The DeploymentLookupListMap schema provides validation for the LookupListMap.xml file that is exported to the content migration package.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -21,40 +22,14 @@ The following table lists elements in the DeploymentLookupListMap.xsd schema fil
 
 <br/>
 
-<table>
-<colgroup>
-<col width="40%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lookupitem-element-deploymentlookuplistmap.md">LookupItem element (DeploymentLookupListMap)</a></span></p></td>
-<td align="left"><p>Represents specific list item-to-list item lookup reference objects (**SPLookupItem**) exported to the content migration package.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="lookupitems-element-deploymentlookuplistmap.md">LookupItems element (DeploymentLookupListMap)</a></span></p></td>
-<td align="left"><p>Represents a container object for lookup item (**SPLookupItem**) instances. It provides a list of specific list item-to-list item lookup references.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lookuplist-element-deploymentlookuplistmap.md">LookupList element (DeploymentLookupListMap)</a></span></p></td>
-<td align="left"><p>Represents a lookup list object instance (**SPLookupList**) for export to a content migration package.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="lookuplists-element-deploymentlookuplistmap.md">LookupLists element (DeploymentLookupListMap)</a></span></p></td>
-<td align="left"><p>Represents a container object for deployment lookup list objects (**SPLookupLists**) exported to the content migration package.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentlookuplistmap.md">Guid Simple Type (DeploymentLookupListMap)</a></span></p></td>
-<td align="left"><p>Unique identifier for the lookup list map.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [LookupItem element (DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.md) | Represents specific list item-to-list item lookup reference objects (**SPLookupItem**) exported to the content migration package. |
+| [LookupItems element (DeploymentLookupListMap)](lookupitems-element-deploymentlookuplistmap.md) | Represents a container object for lookup item (**SPLookupItem**) instances. It provides a list of specific list item-to-list item lookup references. |
+| [LookupList element (DeploymentLookupListMap)](lookuplist-element-deploymentlookuplistmap.md) | Represents a lookup list object instance (**SPLookupList**) for export to a content migration package. |
+| [LookupLists element (DeploymentLookupListMap)](lookuplists-element-deploymentlookuplistmap.md) | Represents a container object for deployment lookup list objects (**SPLookupLists**) exported to the content migration package. |
+| [Guid Simple Type (DeploymentLookupListMap)](guid-simple-type-deploymentlookuplistmap.md) | Unique identifier for the lookup list map. |
 
 <br/>
 
