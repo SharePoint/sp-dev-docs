@@ -1,7 +1,7 @@
 ---
 title:  SharePoint Developer Community contribution
 description: Contribution options towards the SharePoint Developer Community.
-ms.date: 02/14/2020
+ms.date: 07/06/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
