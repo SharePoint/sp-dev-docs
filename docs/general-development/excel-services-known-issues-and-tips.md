@@ -1,6 +1,7 @@
 ---
 title: Excel Services Known Issues and Tips
-ms.date: 09/25/2017
+description: Describes known issues and tips for working with Excel Services and provides links to related documentation.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: b4a41437-4f00-4f88-8510-627fa0252004
 ms.localizationpriority: medium
@@ -75,7 +76,7 @@ For example, if a cell contains characters with hexadecimal values 0x1, 0x2 ... 
   
     
     
- **System.InvalidOperationException: Client found response content type of 'text/html; charset=utf-8', but expected 'text/xml'. The request failed with the error message: -- <html> <head> <title>' ', hexadecimal value 0x01, is an invalid character.</title>**
+ **System.InvalidOperationException: Client found response content type of 'text/html; charset=utf-8', but expected 'text/xml'. The request failed with the error message: -- \<html\> \<head\> \<title\>' ', hexadecimal value 0x01, is an invalid character.</title>**
   
     
     

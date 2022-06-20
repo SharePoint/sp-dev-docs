@@ -1,6 +1,7 @@
 ---
 title: General Guidelines
-ms.date: 09/25/2017
+description: Provides general information related to Excel Services and provides links to articles and tutorials about Excel Services.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 437541f8-5cd9-46f4-92b6-3bf9d7e62f69
 ms.localizationpriority: medium

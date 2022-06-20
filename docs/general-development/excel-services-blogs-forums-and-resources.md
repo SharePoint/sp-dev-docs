@@ -1,6 +1,7 @@
 ---
 title: Excel Services Blogs, Forums, and Resources
-ms.date: 09/25/2017
+description: Provides links to Excel Services blogs, forums, and resources, as well as links to articles on Excel Services concepts.
+ms.date: 06/09/2022
 keywords: blogger
 f1_keywords:
 - blogger
@@ -19,21 +20,21 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 
 
-|**Blog Name**|**Links**|
+|Blog Name|Links|
 |:-----|:-----|
 |Cum Grano Salis  <br/> | [Home page](https://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](https://blogs.msdn.microsoft.com/cumgranosalis/tag/excel-services/) <br/> |
 |Microsoft Excel: The official blog of the Microsoft Excel product team  <br/> | [Home page](https://www.microsoft.com/microsoft-365/blog/excel) <br/>  |
    
 
 
-|**Forum Name**|**Links**|
+|Forum Name|Links|
 |:-----|:-----|
 |SharePoint - Excel Services  <br/> | [Excel Services forum home page](/sharepoint/dev/general-development/excel-services-blogs-forums-and-resources) <br/> |
 |SharePoint Products and Technologies  <br/> | [List of SharePoint Products and Technologies forums](https://social.msdn.microsoft.com/forums/category/sharepoint) <br/> |
    
 
 
-|**Additional Resources**|**Links**|
+|Additional Resources|Links|
 |:-----|:-----|
 |Excel Services Resource Center  <br/> | [Excel Services Resource Center on MSDN](https://msdn.microsoft.com/office/bb203828.aspx) <br/> |
 |IT Pro \\ Administration Documentation  <br/> | [TechNet](https://technet.microsoft.com/library/ee424401%28office.14%29.aspx) <br/> |

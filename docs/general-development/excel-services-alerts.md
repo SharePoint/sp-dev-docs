@@ -1,6 +1,7 @@
 ---
 title: Excel Services Alerts
-ms.date: 09/25/2017
+description: Describes Excel service alerts and provides details on "stop" alerts, "continue" alerts, exceptions, and error codes.
+ms.date: 06/09/2022
 keywords: errors
 f1_keywords:
 - errors
