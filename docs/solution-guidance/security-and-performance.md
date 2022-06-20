@@ -16,7 +16,7 @@ The articles in this section show you how to improve the security and performanc
 |[Elevated privileges in SharePoint Add-ins](elevated-privileges-in-sharepoint-add-ins.md)|Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins.|
 |[How to provide add-in app only tenant administrative permissions in SharePoint Online](how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online.md).| Granting tenant permissions for app-only authorization requires some changes to the regular app-only authorization setup. |
 |[Set external sharing in Office 365](Set-external-sharing-on-site-collections-in-Office-365.md)|Allow external users to access your site collection.|
-[Handle SharePoint Online throttling ] <!---(Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md) ---> | Learn how to handle throttling in SharePoint Online by using the exponential back-off technique. |
+[Handle SharePoint Online throttling ](Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md) | Learn how to handle throttling in SharePoint Online by using the exponential back-off technique. |
 |[JavaScript Patterns and Performance ](javascript-patterns-and-performance.md)| Learn which JavaScript techniques you can use to improve your add-in performance.
 
 ## See also
