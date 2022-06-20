@@ -1,7 +1,8 @@
 ---
 title: NameDefinition simpleType
+description: NameDefinition simpleType is the internal name of a SharePoint Add-in. It must be ASCII characters only, with no spaces, and up to 64 characters long.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -23,7 +24,7 @@ only, with no spaces, up to 64 characters long.
 
 ## Type information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Base type**  | xs:token |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
