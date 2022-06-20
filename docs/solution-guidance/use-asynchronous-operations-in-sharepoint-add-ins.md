@@ -1,6 +1,7 @@
 ---
 title: Use asynchronous operations in SharePoint Add-ins
-ms.date: 11/03/2017
+description: Describes how to use asynchronous operations in SharePoint Add-ins as it applies to SharePoint 2013, SharePoint Add-ins, and SharePoint Online.
+ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
 # Use asynchronous operations in SharePoint Add-ins
@@ -98,7 +99,7 @@ To verify that your Azure WebJob is running:
 
 Use the information in the following table to apply configuration settings to the Core.QueueWebJobUsage Visual Studio solution.
 
-|**File location**|**Key to update**|**Value information to update**|
+|File location|Key to update|Value information to update|
 |:-----|:-----|:-----|
 |Helper Project\Core.QueueWebJobUsage.Console.SendMessage\app.config| **StorageConnectionString**| Replace **[Your Account name]** with the storage account name copied from the Azure portal.|
 ||| Replace **[Your Account Key]** with the primary access key copied from the Azure portal.|
@@ -120,9 +121,9 @@ Use the information in the following table to apply configuration settings to th
 
 The following table describes all the Visual Studio projects in the Core.QueueWebJobUsage solution.
 
-|**Visual Studio project**|**Description**|
+|Visual Studio project|Description|
 |:-----|:-----|
-|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mtps="http://msdn2.microsoft.com/mtps" xmlns:mshelp="https://msdn.microsoft.com/mshelp" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:msxsl="urn:schemas-microsoft-com:xslt"><li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
+|Core.QueueWebJobUsage|Your SharePoint Add-in project. The following permissions are required:<ul><li><p>AllowAppOnlyPolicy</p></li><li><p>FullControl permissions on the Web.</p></li></ul>|
 |Core.QueueWebJobUsage.Common|Contains the business objects and business logic code &mdash; such as the methods to add messages to the storage queue &mdash; for this solution. This project is included to share business objects and business logic between different projects. You may not need this in your implementation.|
 |Core.QueueWebJobUsage.Job|The Azure WebJob that runs when a new message is added to the Azure Storage queue. This project contains your custom business logic code. |
 |Core.QueueWebJobUsageWeb|The provider-hosted add-in that contains the UI for the Core.QueueWebJobUsage project. |
