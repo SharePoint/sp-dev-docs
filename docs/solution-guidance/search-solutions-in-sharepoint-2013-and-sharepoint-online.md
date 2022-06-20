@@ -321,7 +321,7 @@ The following are some additional resources for display templates and result typ
 - [How to change the way search results are displayed in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-change-the-way-search-results-are-displayed)
 - [Understanding how search results are displayed in SharePoint Server](https://docs.microsoft.com/SharePoint/search/understanding-how-search-results-are-displayed)
 - [Understanding how item display templates and hit highlighting work in SharePoint Server](https://docs.microsoft.com/SharePoint/search/understanding-how-item-display-templates-and-hit-highlighting-work)
-- How to create a new result type in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-create-a-new-result-type)
+- [How to create a new result type in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-create-a-new-result-type)
 - [How to display values from custom managed properties in search results - option 1 in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-1)
 - [How to display values from custom managed properties in search results - option 2 in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-2)
 - [How to display values from custom managed properties in the hover panel in SharePoint Server](https://docs.microsoft.com/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-the-hover-panel)
