@@ -1,7 +1,8 @@
 ---
 title: GalleryButton element (CommandUIDefinitionType complexType)
+description: Learn about GalleryButton element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: cf945d0d-4801-6866-821f-0af0e8530f44
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  | GalleryButtonType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
