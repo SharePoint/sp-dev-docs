@@ -1,7 +1,8 @@
 ---
 title: MaxSize element (CommandUIDefinitionType complexType)
+description: Describes the definition, element, and attribute information for the MaxSize element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 5d0fa351-a4f7-c57a-0832-3de3f4306029
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | MaxSizeType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
