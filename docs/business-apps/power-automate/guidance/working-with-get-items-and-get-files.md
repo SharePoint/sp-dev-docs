@@ -104,4 +104,6 @@ Spaces in the column name are replaced with `_x0020_` (0 is numeral zero).
 
 The format is the column name followed by asc or desc depending on ascending or descending order, respectively.
 
+### Known Limitation
+While using Get items on lists with more than 5000 items with a filter query, you may observe that no records are returned if there are no items matching the filter query in the first 5000 items. To fix this, enable Pagination on Get items from the action settings menu when working with lists with more than 5000 items.
 
