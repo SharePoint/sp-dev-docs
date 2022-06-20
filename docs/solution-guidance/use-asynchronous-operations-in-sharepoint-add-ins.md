@@ -1,5 +1,6 @@
 ---
 title: Use asynchronous operations in SharePoint Add-ins
+description: Describes how to use asynchronous operations in SharePoint Add-ins as it applies to SharePoint 2013, SharePoint Add-ins, and SharePoint Online.
 ms.date: 06/07/2022
 ms.localizationpriority: medium
 ---
