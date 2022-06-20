@@ -1,6 +1,6 @@
 ---
 title: SharePoint Application Lifecycle Management
-ms.date: 06/10/2022
+ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a
 ms.localizationpriority: high
