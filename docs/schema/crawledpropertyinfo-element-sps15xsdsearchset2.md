@@ -1,13 +1,13 @@
 ---
 title: "CrawledPropertyInfo element (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the CrawledPropertyInfo element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2696d09b-6ebe-03fd-7396-cdf61ec188fd
-description: "Last modified: March 09, 2015"
 ---
 
 # CrawledPropertyInfo element (SPS15XSDSearchSet2)
@@ -15,13 +15,12 @@ description: "Last modified: March 09, 2015"
  
   
 ## Element information
-
-|||
+|Name|Value|
 |:-----|:-----|
-|**Element type** <br/> |tns:CrawledPropertyInfo  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+|**Element type** |tns:CrawledPropertyInfo |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
+
 ## Definition
 
 ```XML
