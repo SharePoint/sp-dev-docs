@@ -336,7 +336,7 @@ As a developer, you might want to customize the look and feel of the widget. The
 
 ![HTML hierarchy in the People Picker control](../images/PeoplePicker_HTMLHierarchy.png)
 
-You can use the experimental People Picker widget to select people and groups in your tenant, and your add-in can then use the principals selected by your users. Please provide ideas and comments at the Office Developer Platform UserVoice site.
+You can use the experimental People Picker widget to select people and groups in your tenant, and your add-in can then use the principals selected by your users. Please provide ideas and comments at the [Office Developer Platform UserVoice site](https://techcommunity.microsoft.com/t5/microsoft-365-developer-platform/idb-p/Microsoft365DeveloperPlatform).
 
 
 ## See also
