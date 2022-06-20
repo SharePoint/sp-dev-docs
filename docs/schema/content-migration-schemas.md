@@ -2,7 +2,7 @@
 title: Content migration schemas
 description: Describes the Content migration schema files for SharePoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/20/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
