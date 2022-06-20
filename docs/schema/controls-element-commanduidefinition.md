@@ -1,7 +1,8 @@
 ---
 title: "Controls element (CommandUIDefinition) (Server Ribbon)"
+description: Outlines a definition, attributes, child elements, parent elements, and occurrences for the Controls element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 680c3002-c5c4-43f7-9cc2-368dd9172d92
-description: Contains elements that define controls. 
 ---
 
 # Controls element (CommandUIDefinition) (Server Ribbon)
