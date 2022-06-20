@@ -1,7 +1,8 @@
 ---
 title: Content Type Bindings
+description: Provides a definition and schema example for the ContentTypeBinding element in Sharepoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

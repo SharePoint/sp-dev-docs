@@ -1,7 +1,8 @@
 ---
 title: ContentType Element (WorkflowConfig)
+description: Provides a definition, example, elements and attributes for the ContentType element WorkflowConfig in Sharepoint.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -56,29 +57,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="fields-element-workflowconfig.md">Fields Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[Fields Element (WorkflowConfig)](fields-element-workflowconfig.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttypes-element-workflowconfig.md">ContentTypes Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)
 
 ### Remarks
 
