@@ -1,7 +1,7 @@
 ---
 title: Working with Tasks in SharePoint Workflows using Visual Studio 2012
 description: Learn about the new and revised workflow task framework that was introduced in SharePoint, which is built on the new Workflow Manager.
-ms.date: 06/07/2022
+ms.date: 06/10/2022
 ms.prod: sharepoint
 ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
 ms.localizationpriority: medium
