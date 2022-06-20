@@ -64,8 +64,6 @@ If you have pre-release (that is, "Preview") versions of SharePoint Server, Work
 
 The release version of the Visual Studio workflow components and their related updates introduce important changes that enhance performance, scalability, and reliability. Unfortunately, these upgrades require you to update workflow projects that you created using the Preview tools.
 
-To make this process easier, we provide a conversion tool that you can get through CodePlex. The tool is called the SharePoint Workflow Converter for Visual Studio 2012.
-
 Here is a summary of changes that require you to update your workflow projects:
 
 - Activity references to **Item Guid** are replaced by **Item Id**. This change has important consequences:
