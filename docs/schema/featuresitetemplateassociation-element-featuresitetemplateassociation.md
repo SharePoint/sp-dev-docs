@@ -1,7 +1,8 @@
 ---
-title: FeatureSiteTemplateAssociation Element (FeatureSiteTemplateAssociation)
+title: FeatureSiteTemplateAssociation Element 
+description: Describes the FeatureSiteTemplateAssociation element and provides the definition, elements and attributes, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
