@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.8.0 release notes
 description: Release notes for the SharePoint Framework v1.8.0 release
-ms.date: 09/08/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

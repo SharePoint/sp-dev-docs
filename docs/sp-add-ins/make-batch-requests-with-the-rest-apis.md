@@ -1,7 +1,7 @@
 ---
 title: Make batch requests with the REST APIs
 description: Use the $batch query option with the REST/OData APIs.
-ms.date: 07/20/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

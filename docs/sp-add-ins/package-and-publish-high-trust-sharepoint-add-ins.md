@@ -1,7 +1,7 @@
 ---
 title: Package and publish high-trust SharePoint Add-ins
 description: Package and publish a high-trust SharePoint Add-in for on-premises use.
-ms.date: 12/28/2017
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

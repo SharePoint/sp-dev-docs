@@ -1,7 +1,7 @@
 ---
 title: Register SharePoint Add-ins
 description: Register your SharePoint Add-ins in Azure ACS by using Visual Studio, the Seller Dashboard, or an AppRegNew.aspx page, and retrieve registration information.
-ms.date: 05/01/2020
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

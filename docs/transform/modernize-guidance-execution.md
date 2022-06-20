@@ -1,7 +1,7 @@
 ---
 title: SharePoint modernization guidance - Execution step
 description: Modernization offerings that IT Teams and partners can use with their customers - Execution step
-ms.date: 12/06/2019
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
