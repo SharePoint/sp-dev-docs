@@ -1,20 +1,20 @@
 ---
 title: "AuthenticationData element (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ca8cbf0-9123-8716-4de7-d13014e06f7a
-description: "Last modified: March 09, 2015"
+description: AuthenticationData element (SPS15XSDSearchSet2) is an XML element.
 ---
 
 # AuthenticationData element (SPS15XSDSearchSet2)
  
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:AuthenticationData  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
