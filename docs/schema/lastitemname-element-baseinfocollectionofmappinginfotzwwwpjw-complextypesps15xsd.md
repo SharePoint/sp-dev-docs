@@ -1,13 +1,13 @@
 ---
 title: "LastItemName element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
+description: Describes the LastItemName element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2) and provides the element information, a definition, and elements and attributes.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9932d6ca-0fe3-5e77-e873-d7b1b0c73047
-description: "Last modified: March 09, 2015"
 ---
 
 # LastItemName element (BaseInfoCollectionOfMappingInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Resource | File |
 |:-----|:-----|
-|**Element type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+| **Element type** | xs:string |
+| **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 
