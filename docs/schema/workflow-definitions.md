@@ -1,7 +1,8 @@
 ---
 title: Workflow Definitions
+description: Provides various workflow definitions as they relate to SharePoint 2016, SharePoint Foundations 2013, SharePoint Online, and SharePoint Server 2013.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
