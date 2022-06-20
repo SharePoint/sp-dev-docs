@@ -1,6 +1,7 @@
 ---
 title: Sample URI For Excel Services REST API
-ms.date: 09/25/2017
+description: Provides lists of sample URIs for the representational state transfer (REST) service commands in Excel Services.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 4ebe1da2-9861-416f-bef1-4a62599efe2e
 ms.localizationpriority: high
