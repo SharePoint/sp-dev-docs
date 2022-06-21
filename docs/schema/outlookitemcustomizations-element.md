@@ -1,7 +1,8 @@
 ---
 title: OutlookItemCustomizations Element
+description: OutlookItemCustomizations Element describes how external data should appear in Microsoft Outlook 2010 and what other customizations you need in Outlook.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -30,102 +31,26 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**ItemTypeDisplayName**</p></td>
-<td align="left"><p>The display name of the Outlook item type.</p>
-<p>Required.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**MessageClass**</p></td>
-<td align="left"><p>Used to identify the form used to display the item. It follows the format: `IPM.<OutlookItemType>.<ContentTypeName>`.</p>
-<p>Example: IPM.Contact.Customer</p>
-<p>Required.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Description**</p></td>
-<td align="left"><p>A description for the customizations.</p>
-<p>Optional.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
+|Attribute|Description|
+|---------|-----------|
+|**ItemTypeDisplayName**|The display name of the Outlook item type.</br></br>Required.</br></br>Attribute type: **String**|
+|**MessageClass**|Used to identify the form used to display the item. It follows the format: IPM...</br></br>Example: IPM.Contact.Customer</br></br>Required</br></br>Attribute type: **String**|
+|**Description**|A description for the customizations.</br></br>Optional.</br></br>Attribute type: **String**|
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**OfficeItemProperties**</p></td>
-<td align="left"><p>Used to describe the fields of an external content type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**FormRegions**</p></td>
-<td align="left"><p>Used to describe the properties of the form region used to display the external data.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**OutlookFolder**</p></td>
-<td align="left"><p>Used to describe Outlook folder that contains the external data.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Picture**</p></td>
-<td align="left"><p>Used to describe the icon to use in Microsoft Outlook 2010.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
+|Element|Description|
+|-------|-----------|
+|**OfficeItemProperties**|Used to describe the fields of an external content type.|
+|**FormRegions**|Used to describe the properties of the form region used to display the external data.|
+|**OutlookFolder**|Used to describe Outlook folder that contains the external data.|
+|**Picture**|Used to describe the icon to use in Microsoft Outlook 2010.|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**OfficeItemCustomizations**</p></td>
-<td align="left"><p>Describes Outlook-specific customizations.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
-
-<br/>
-
+|Element|Description|
+|-------|-----------|
+|**OfficeItemCustomizations**|Describes Outlook-specific customizations.|
 
 
 

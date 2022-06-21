@@ -1,13 +1,13 @@
 ---
 title: "PagedClientCallbackRowset element (DeploymentManifest - SPView)"
+description: "PagedClientCallbackRowset element (DeploymentManifest - SPView) represents a row set returned from a callback to a paged client on an instance of a SharePoint view (SPView) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8bd99d11-95b5-4eb1-a8e4-e313deeec7a4
-description: "Last modified: March 09, 2015"
 ---
 
 # PagedClientCallbackRowset element (DeploymentManifest - SPView)
