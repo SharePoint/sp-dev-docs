@@ -207,7 +207,7 @@ State caching and the cache expiry time can be used to determine when expensive 
 Caching can help significantly improve the perceived performance for your Adaptive Card Extension.
 
 
-### New Action types for media
+### New Action type for media
 
 After General Availability the support matrix for media action will be as follows:
 
