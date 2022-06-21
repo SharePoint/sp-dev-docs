@@ -1,5 +1,6 @@
 ---
 title: Access SharePoint from mobile and native device apps
+description: Learn how to access SharePoint from mobile apps and other native device apps, and from external web applications.
 ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 42014171-5ee5-421d-9cde-413efc3aecef
