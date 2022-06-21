@@ -133,6 +133,110 @@ The location actions can be configured as shown below:
   ]
 ```
 
+The actions  will be rendered as below
+
+Location Action:
+
+![Screenshot of location action](../images/release-notes/114/location-action.jpg)
+
+The Location Action can be used to get your current location, show your current or a custom location on a map, and choose your current location from a map. In the browser it uses Bing Maps as the mapping interface:
+
+![Screenshot of location panel](../images/release-notes/114/location-panel.jpg)
+
+
+## Preview Features and Capabilities
+
+Following features are still in preview status as part of the 1.15 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.16 release.
+
+### Adaptive Card Extensions card view caching
+
+For improved performance, SPFx now supports local caching of your Adaptive Card Extension's
+card views. The cached card view will be immediately rendered when loading your Adaptive Card
+Extension. After your Adaptive Card Extension loads, it can optionally update the card view.
+
+```typescript
+interface ICacheSettings {
+  /**
+   * Whether cache is enabled. Default: true
+   */
+  isEnabled: boolean;
+  /**
+   * Expiry time in seconds. Default: 86400 seconds (24 hours)
+   */
+  expiryTimeInSeconds: number;
+
+  /**
+   * Returns the Card View used to generate the cached card.
+   * By default, the currently rendered Card View will be used to cache the card.
+   */
+  cachedCardView?: () => BaseCardView;
+}
+BaseAdaptiveCardExtension.getCacheSettings(): Partial<ICacheSettings>;
+```
+
+By default caching is enabled with default settings. An Adaptive Card Extension can customize its
+cache settings by overriding `getCacheSettings` to return the settings it wants to override.
+
+When the last known card view shouldn't be cached, you can provide a specific card view to be
+cached and displayed on the next page load through `ICacheSettings.cachedCardView`. This card view
+doesn't need to have been previously registered.
+
+An Adaptive Card Extension can also locally cache its current state. By default no state is cached.
+
+```typescript
+BaseAdaptiveCardExtension.getCachedState(state: TState): Partial<TState>;
+```
+
+If `getCachedState` is overridden, then the cached values will be provided when the Adaptive Card
+Extension is initialized on the next page load.
+
+`onInit` has a new overload, which passes information about the cached card state. If the card wasn't
+loaded from a cached card view, then `cachedLoadParameters` will be `undefined`.
+
+```typescript
+interface ICachedLoadParameters {
+    state: TState;
+}
+BaseAdaptiveCardExtension.onInit(cachedLoadParameters?: ICachedLoadParameters): Promise<void>;
+```
+
+Your Adaptive Card Extension's initial state can be seeded from the cached state. The cached state can also be used to determine if any further logic needs to be executed.
+
+State caching and the cache expiry time can be used to determine when expensive remote calls need to be made by the Adaptive Card Extension.
+
+Caching can help significantly improve the perceived performance for your Adaptive Card Extension.
+
+
+### New Action types for media
+
+After General Availability the support matrix for media action will be as follows:
+
+Action       | Viva Connection Desktop | Viva Connections Mobile | Browser
+------------- | ------------- | ------------- | -------------
+Select Media  | Supported   | Supported | Supported
+
+
+The SelectMedia can be configured as shown below:
+
+```typescript
+  actions: [
+    {
+      type: 'VivaAction.SelectMedia',
+      id: 'Select File',
+      parameters: {mediaType: MediaType.Image, allowMultipleCapture: true, maxSizePerFile : 200000, supportedFileFormats: ['jpg']},
+      title: 'Select File'
+    }
+  ]
+```
+
+Select Media Action rendering:
+
+![Screenshot of file action](../images/release-notes/114/file-action.jpg)
+
+The Select Media Action can be used to select Images from your native device. In the browser it uses the file picker to help access relavant files:
+
+![Screenshot of media panel](../images/release-notes/114/media-panel.jpg)
+
 ## Deprecations
 
 - Deprecated SPComponentLoader#getManifests due to runtime performance overhead.
