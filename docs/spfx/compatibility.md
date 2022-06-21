@@ -34,6 +34,7 @@ The following table lists SharePoint Framework and compatible versions of common
 
 |              SPFx               |         Node.js          |                    NPM                    |   TypeScript   |    React    |
 | ------------------------------- | ------------------------ | ----------------------------------------- | -------------- | ----------- |
+| [1.15](release-1.15.md)       | LTS v12, LTS v14         | v5, v6, v7, v8                              | v4.5           | v16.13.1    |
 | [1.14](release-1.14.md)       | LTS v12, LTS v14         | v5, v6                                    | v3.9           | v16.13.1    |
 | [1.13.1](release-1.13.1.md)       | LTS v12, LTS v14         | v5, v6                                    | v3.9           | v16.13.1    |
 | [1.13.0](release-1.13.md)       | LTS v12, LTS v14         | v5, v6                                    | v3.9           | v16.13.1    |

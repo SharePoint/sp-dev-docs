@@ -1,7 +1,7 @@
 ---
-title: Build your first Form customizer extension (preview)
+title: Build your first Form customizer extension)
 description: Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type.
-ms.date: 06/01/2022
+ms.date: 06/21/2022
 ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
@@ -11,7 +11,7 @@ ms.custom: scenarios:getting-started
 Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type. Form customizer components can be used in SharePoint Online, and you build them using  modern JavaScript tools and libraries.
 
 >[!Important]
-> Form customizer will be released as part of the SharePoint Framework 1.15 which is currently still in preview status. See [v1.15 release notes](../../release-1.15.md) for details.
+> Form customizer were released as part of the SharePoint Framework 1.15, so ensure that you are using the right version in your environment. See [v1.15 release notes](../../release-1.15.md) for details.
 
 ## Create an extension project
 
@@ -175,7 +175,205 @@ You can test and debug your Form Customizer within a live SharePoint Online site
     ![List view with from customizer rendered with default outpu](../../../images/ext-forcustomizer-default-output.png)
 
 
-That's it. You have now created your first custom form component.
+## Add form item editing capabilities to the sample
+
+Now that we have created the baseline component and tested that it works properly. We will be creating a separate rendering logic for display, edit and new forms and to support saving new items to the list.
+
+1. Open the **./src/extensions/helloWorld/loc/myStrings.d.ts** file, and add new **Title** to the **IHelloWorldFormCustomizerStrings** interface . Interface should be as follows after your edits..
+
+    ```typescript
+    declare interface IHelloWorldFormCustomizerStrings {
+      Save: string;
+      Cancel: string;
+      Close: string;
+      Title: string;
+    }
+    ```
+
+1. Open the **./src/extensions/helloWorld/loc/en-us.js** file, and add new **Title** string to the file. File content should be as follows after your edits.
+
+    ```typescript
+    define([], function() {
+      return {
+        "Save": "Save",
+        "Cancel": "Cancel",
+        "Close": "Close",
+        "Title": "Title"
+      }
+    });
+    ```
+
+1. Open the **./src/extensions/helloWorld/HelloWorldFormCustomizer.module.scss** file, and update the styling definition as follows. We are adding error styling for the component.
+
+    ```scss
+    .helloWorld {
+      background-color: "[theme:white, default:#ffffff]";
+      color: "[theme:themePrimary, default:#0078d4]";
+      padding: 0.5rem;
+
+      .error {
+        color: red;
+      }
+    }
+    ```
+
+1. Move to the top of the **HelloWorldFormCustomizer.ts** file.
+1. Locate the line `import styles from './HelloWorldFormCustomizer.module.scss';` and add the following lines immediately after it:
+
+    ```typescript
+    import { FormDisplayMode } from '@microsoft/sp-core-library';
+    import {
+      SPHttpClient,
+      SPHttpClientResponse
+    } from '@microsoft/sp-http';
+    ```
+
+1. Include **_item** and **_etag** private types inside of the **HelloWorldFormCustomizer** class as shown in this code snippet. Notice that the class definition already exists in your code.
+
+    ```typescript
+    // This already exists in YOUR code
+    export default class HelloWorldFormCustomizer
+      extends BaseFormCustomizer<IHelloWorldFormCustomizerProperties> {
+    
+    // Added for the item to show in the form; use with edit and view form
+    private _item: {
+      Title?: string;
+    };
+    // Added for item's etag to ensure integrity of the update; used with edit form
+    private _etag?: string;
+    ```
+
+1. Update the **onInit()** method as follows. This code is using **this.displayMode** to determine the status of the rendering and then fetches the selected list item if that's needed.
+
+    ```typescript
+    public onInit(): Promise<void> {
+      if (this.displayMode === FormDisplayMode.New) {
+        // we're creating a new item so nothing to load
+        return Promise.resolve();
+      }
+
+      // load item to display on the form
+      return this.context.spHttpClient
+        .get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getbytitle('${this.context.list.title}')/items(${this.context.itemId})`, SPHttpClient.configurations.v1, {
+          headers: {
+            accept: 'application/json;odata.metadata=none'
+          }
+        })
+        .then(res => {
+          if (res.ok) {
+            // store etag in case we'll need to update the item
+            this._etag = res.headers.get('ETag');
+            return res.json();
+          }
+          else {
+            return Promise.reject(res.statusText);
+          }
+        })
+        .then(item => {
+          this._item = item;
+          return Promise.resolve();
+        });
+    }
+    ```
+
+1. Update the **render()** method as follows. Render the form either in display only or in the edit mode, depending on the display mode of the form. In this case we use the same renderig for new and edit experience, but you could easily have dedicated option if needed.
+
+    ```typescript
+      public render(): void {
+        // render view form
+        if (this.displayMode === FormDisplayMode.Display) {
+          
+          this.domElement.innerHTML = 
+                        `<div class="${styles.basics}">
+                          <label for="title">${strings.Title}</label>
+                          <br />
+                            ${this._item?.Title}
+                          <br />
+                          <br />
+                          <input type="button" id="cancel" value="${strings.Close}" />
+                        </div>`;
+
+          document.getElementById('cancel').addEventListener('click', this._onClose.bind(this));
+        }
+        // render new/edit form
+        else {
+          this.domElement.innerHTML = 
+                      `<div class="${styles.basics}">
+                        <label for="title">${strings.Title}</label><br />
+                        <input type="text" id="title" value="${this._item?.Title || ''}"/>
+                        <br />
+                        <br />
+                        <input type="button" id="save" value="${strings.Save}" />
+                        <input type="button" id="cancel" value="${strings.Cancel}" />
+                        <br />
+                        <br />
+                        <div class="${styles.error}"></div>
+                      </div>`;
+
+          document.getElementById('save').addEventListener('click', this._onSave.bind(this));
+          document.getElementById('cancel').addEventListener('click', this._onClose.bind(this));
+        }
+      }
+    ```
+
+1. Update the **_onSave** methods in the the **HelloWorldFormCustomizer** class as follows.
+
+    ```typescript
+    private _onSave = async (): Promise<void> => {
+      // disable all input elements while we're saving the item
+      this.domElement.querySelectorAll('input').forEach(el => el.setAttribute('disabled', 'disabled'));
+      // reset previous error message if any
+      this.domElement.querySelector(`.${styles.error}`).innerHTML = '';
+
+      let request: Promise<SPHttpClientResponse>;
+      const title: string = (document.getElementById('title') as HTMLInputElement).value;
+
+      switch (this.displayMode) {
+        case FormDisplayMode.New:
+          request = this._createItem(title);
+          break;
+        case FormDisplayMode.Edit:
+          request = this._updateItem(title);
+      }
+
+      const res: SPHttpClientResponse = await request;
+
+      if (res.ok) {
+        // You MUST call this.formSaved() after you save the form.
+        this.formSaved();
+      }
+      else {
+        const error: { error: { message: string } } = await res.json();
+
+        this.domElement.querySelector(`.${styles.error}`).innerHTML = `An error has occurred while saving the item. Please try again. Error: ${error.error.message}`;
+        this.domElement.querySelectorAll('input').forEach(el => el.removeAttribute('disabled'));
+      }
+    }
+    ```
+
+1. Add new method **_createItem** to the **HelloWorldFormCustomizer** class.
+
+    ```typescript
+    private _createItem(title: string): Promise<SPHttpClientResponse> {
+      return this.context.spHttpClient
+        .post(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getByTitle('${this.context.list.title}')/items`, SPHttpClient.configurations.v1, {
+          headers: {
+            'content-type': 'application/json;odata.metadata=none'
+          },
+          body: JSON.stringify({
+            Title: title
+          })
+        });
+    }
+    ```
+
+1. Add new method **_updateItem** to the **HelloWorldFormCustomizer** class.
+
+    ```typescript
+
+    ```
+
+Now the code is complete to support minimal New, Edit and Display experiences and you can test out the different experiences using different configurations for debugging.
 
 ## Deployment of your extension
 
