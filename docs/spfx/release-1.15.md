@@ -207,6 +207,15 @@ State caching and the cache expiry time can be used to determine when expensive 
 Caching can help significantly improve the perceived performance for your Adaptive Card Extension.
 
 
+### Error Handler Method. This method will be invoked when an Action throws an error
+
+```typescript
+BaseView.onActionError(error: IActionErrorArguments): void
+```
+
+Override this method to handle errors from Adaptive Card actions.
+
+
 ### New Action type for media
 
 After General Availability the support matrix for media action will be as follows:
