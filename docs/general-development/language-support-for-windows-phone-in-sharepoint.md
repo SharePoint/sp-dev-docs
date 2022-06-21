@@ -1,6 +1,6 @@
 ---
 title: Language support for Windows Phone in SharePoint
-ms.date: 09/25/2017
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 2c396a91-0fc1-4e25-942b-fffad49bd2c6
 ms.localizationpriority: medium
