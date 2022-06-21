@@ -1,6 +1,6 @@
 ---
 title: Authorize provider-hosted add-in users at run time by using OAuth
-ms.date: 07/31/2020
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 # Authorize provider-hosted add-in users at run time by using OAuth
@@ -11,7 +11,7 @@ _**Applies to:** SharePoint 2013 | SharePoint Add-ins | SharePoint Online_
 
 Your users can access SharePoint add-ins by opening a SharePoint site, choosing  **Site Contents**, and then choosing the add-in. SharePoint redirects users to the remote web where your provider-hosted add-in runs. Because users access the add-in from SharePoint, users are authorized by SharePoint before they can access the add-in.
 
-Alternatively, if your users go directly to the URL of your provider-hosted add-in, that add-in must authorize them at run time by using OAuth. In this scenario, the provider-hosted add-in must handle authorization because your user wasn't authorized by SharePoint first. The [Core.DynamicPermissions ](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.DynamicPermissions) sample shows you how to dynamically request permissions from a website by using OAuth.
+Alternatively, if your users go directly to the URL of your provider-hosted add-in, that add-in must authorize them at run time by using OAuth. In this scenario, the provider-hosted add-in must handle authorization because your user wasn't authorized by SharePoint first. The [Core.DynamicPermissions](https://github.com/pnp/PnP/tree/master/Samples/Core.DynamicPermissions) sample shows you how to dynamically request permissions from a website by using OAuth.
 Use this solution to:
 
 - Authorize users who navigate directly to your provider-hosted add-in rather than accessing your add-in from SharePoint. For example, you might not want your users to use the SharePoint UI. Instead, your users might use a provider-hosted add-in that shows relevant data retrieved from SharePoint.
@@ -20,7 +20,7 @@ Use this solution to:
     
 ## Before you begin
 
-To get started, download the [Core.DynamicPermissions ](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.DynamicPermissions) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.DynamicPermissions](https://github.com/pnp/PnP/tree/master/Samples/Core.DynamicPermissions) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
 
 Before you run the code sample: 
 
@@ -78,7 +78,7 @@ When choosing  **Connect** on **Connect to Office 365**,  **Connect** in Control
 **TokenRepository.Connect** calls **TokenHelper.GetAuthorizationUrl** . **TokenHelper.GetAuthorizationUrl** returns the redirect URL to OAuthAuthorize.aspx using the **hostUrl** and the desired permissions on the SharePoint resource. OAuthAuthorize.aspx is used to authorize users using OAuth. When redirected to OAuthAuthorize.aspx, the user must sign in to Office 365, and then consent to the permissions the add-in is requesting, or trust the add-in. The desired permission on the SharePoint resource is **Web.Manage** . After user authorization, the code sample creates lists on the SharePoint site. To create lists on a SharePoint site, users must have **Web.Manage** permissions.
 
 > [!NOTE] 
-> **TokenHelper.GetAuthorizationUrl** returns a URL of the form **https://contoso.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?IsDlg=1&amp;client_id=<Client ID>&amp;scope=Web.Manage&amp;response_type=code** , where **&lt;Client ID&gt;** is the add-in's Client ID. If your add-in is registered through the Seller Dashboard, any Office 365 site can install the add-in. If your add-in is not registered through the Seller Dashboard, you must register your add-in by using appregnew.aspx, and then update Core.DynamicPermissionsWeb\web.config. To learn more, see[Register SharePoint Add-ins 2013](https://msdn.microsoft.com/library/be41a5dc-2af9-4fd9-bf4e-ad6dfa849524%28Office.15%29.aspx).
+> **TokenHelper.GetAuthorizationUrl** returns a URL of the form **`https://contoso.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?IsDlg=1&amp;client_id=[Client ID]&amp;scope=Web.Manage&amp;response_type=code`** , where `[Client ID]` is the add-in's Client ID. If your add-in is registered through the Seller Dashboard, any Office 365 site can install the add-in. If your add-in is not registered through the Seller Dashboard, you must register your add-in by using appregnew.aspx, and then update Core.DynamicPermissionsWeb\web.config. To learn more, see[Register SharePoint Add-ins 2013](https://msdn.microsoft.com/library/be41a5dc-2af9-4fd9-bf4e-ad6dfa849524%28Office.15%29.aspx).
 
 ```csharp
  public void Connect(string hostUrl)

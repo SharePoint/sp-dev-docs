@@ -1,7 +1,7 @@
 ---
 title: Customize the UX by using SharePoint provider-hosted add-ins
 description: Samples that show best practices for customizing SharePoint UX components.
-ms.date: 4/26/2018
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 
@@ -28,7 +28,7 @@ This article describes samples that show best practices for customizing SharePoi
 
 ## Page manipulation
 
-The [Core.ModifyPages](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.ModifyPages) sample includes two page manipulation scenarios:
+The [Core.ModifyPages](https://github.com/pnp/PnP/tree/master/Samples/Core.ModifyPages) sample includes two page manipulation scenarios:
 
 - Create a wiki page.
 - Modify the layout of a wiki page. 
@@ -185,7 +185,7 @@ XmlDocument xd = new XmlDocument();
 
 ## Showing add-ins and data in modal dialog boxes
 
-The [Core.Dialog](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.Dialog) sample shows two methods for embedding modal dialog box links. These links display a provider-hosted add-in page into a SharePoint host site. The add-in uses the client object model (CSOM) to create the custom action and JavaScript to start and display information inside the dialog box. Because some of this information comes from the host site, it also uses the JavaScript object model (JSOM) to retrieve information from the host site. And because the add-in is running in a different domain than the SharePoint host site, it also uses the SharePoint cross-domain library to make the calls to the host site.
+The [Core.Dialog](https://github.com/pnp/PnP/tree/master/Samples/Core.Dialog) sample shows two methods for embedding modal dialog box links. These links display a provider-hosted add-in page into a SharePoint host site. The add-in uses the client object model (CSOM) to create the custom action and JavaScript to start and display information inside the dialog box. Because some of this information comes from the host site, it also uses the JavaScript object model (JSOM) to retrieve information from the host site. And because the add-in is running in a different domain than the SharePoint host site, it also uses the SharePoint cross-domain library to make the calls to the host site.
 
 > [!NOTE] 
 > For more information about using the cross-domain library in this scenario, see [Access SharePoint data from add-ins using the cross-domain library](../sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
@@ -336,10 +336,10 @@ function printAllListNamesFromHostWeb() {
 ```
 
 <a name="bmPersonalized"> </a>
-
+https://github.com/SharePoint/PnP/tree/dev/Samples/Core.AppScriptPart
 ## Personalized UI elements
 
-The [Branding.UIElementPersonalization](https://github.com/SharePoint/PnP/tree/dev/Samples/Branding.UIElementPersonalization) sample shows how to use embedded JavaScript and values stored in user profiles and SharePoint lists to personalize UI elements on the host web. It also uses HTML5 local storage to minimize calls to the host site.
+The [Branding.UIElementPersonalization](https://github.com/pnp/PnP/tree/master/Samples/Branding.UIElementPersonalization) sample shows how to use embedded JavaScript and values stored in user profiles and SharePoint lists to personalize UI elements on the host web. It also uses HTML5 local storage to minimize calls to the host site.
 
 The sample's start page prompts you to add one of three strings (XX, YY, or ZZ) to the **About Me** section of your user profile page.
 
@@ -513,7 +513,7 @@ function isKeyExpired(TimeStampKey) {
 
 ## Client-side rendering
 
-The [Branding.ClientSideRendering](https://github.com/SharePoint/PnP/tree/dev/Samples/Branding.ClientSideRendering) sample shows how to use a provider-hosted add-in to remotely provision SharePoint artifacts and JSLink files that use client-side rendering to customize the look and behavior of SharePoint list fields. JSLink files and client-side rendering give you control over how controls on a SharePoint page (list views, list fields, and add and edit forms) are rendered. This control can reduce or eliminate the need for custom field types. Client-side rendering makes it possible to remotely control list field appearance remotely.
+The [Branding.ClientSideRendering](https://github.com/pnp/PnP/tree/master/Samples/Branding.ClientSideRendering) sample shows how to use a provider-hosted add-in to remotely provision SharePoint artifacts and JSLink files that use client-side rendering to customize the look and behavior of SharePoint list fields. JSLink files and client-side rendering give you control over how controls on a SharePoint page (list views, list fields, and add and edit forms) are rendered. This control can reduce or eliminate the need for custom field types. Client-side rendering makes it possible to remotely control list field appearance remotely.
 
 The sample combines the JSLink samples from the [Client-side rendering (JSLink) code samples](https://code.msdn.microsoft.com/office/Client-side-rendering-JS-2ed3538a) into a single provider-hosted add-in for SharePoint that provisions the JSLink files. Client-side rendering enables you to use standard web technologies, such as HTML and JavaScript, to define the rendering logic of custom and predefined field types.
 
@@ -918,7 +918,7 @@ function prepareNoteFieldValue(ctx) {
 
 Sample 8 shows you how to hide fields in list item new and edit forms. The sample hides the **Predecessors** field when a user creates or edits a task list item.
 
-This sample deploys as the edit and new form for a list called **CSR-Hide-Controls list**. For information about how to view the form after you deploy the sample, see [Branding.ClientSideRendering](https://github.com/SharePoint/PnP/tree/dev/Samples/Branding.ClientSideRendering).
+This sample deploys as the edit and new form for a list called **CSR-Hide-Controls list**. For information about how to view the form after you deploy the sample, see [Branding.ClientSideRendering](https://github.com/pnp/PnP/tree/master/Samples/Branding.ClientSideRendering).
 
 The following code finds the **Predecessors** field in the HTML of the form and hides it. The field remains present in the HTML, but the user can't see it in the browser.
 
@@ -962,7 +962,7 @@ function hiddenFiledOnPreRender(ctx) {
 
 ## Web part and add-in part manipulation
 
-The [Core.AppScriptPart](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.AppScriptPart) sample shows how to use add-in script parts to embed scripts running in a provider-hosted add-in on a SharePoint page. This sample shows how to modify the UI of a page on the host site by deploying an add-in script part and adding it to a SharePoint page from the Web Part Gallery.
+The [Core.AppScriptPart](https://github.com/pnp/PnP/tree/master/Samples/Core.AppScriptPart) sample shows how to use add-in script parts to embed scripts running in a provider-hosted add-in on a SharePoint page. This sample shows how to modify the UI of a page on the host site by deploying an add-in script part and adding it to a SharePoint page from the Web Part Gallery.
 
 An add-in script part is like a web part in that you can add it to a SharePoint page from the Web Part Gallery, but in this case the .webpart file embeds a JavaScript file that runs remotely in a provider-hosted add-in. The add-in script part runs inside a  `<div>` tag on the SharePoint page and therefore provides a more responsive design and experience than you get with add-in parts that run in IFrames.
 
@@ -1053,7 +1053,7 @@ function sharePointReady() {
 
 ## Provisioning publishing features
 
-The [Provisioning.PublishingFeatures](https://github.com/SharePoint/PnP/tree/dev/Samples/Provisioning.PublishingFeatures) sample shows how to do common tasks with publishing sites that are hosted on Office 365; for example, provisioning and using page layouts, master pages, and themes, or embedding JavaScript in page layouts. It also shows how to apply filters that control what site templates are available for subsites and what page layouts are available on the host web.
+The [Provisioning.PublishingFeatures](https://github.com/pnp/PnP/tree/master/Samples/Provisioning.PublishingFeatures) sample shows how to do common tasks with publishing sites that are hosted on Office 365; for example, provisioning and using page layouts, master pages, and themes, or embedding JavaScript in page layouts. It also shows how to apply filters that control what site templates are available for subsites and what page layouts are available on the host web.
 
 The provider-hosted add-in uses CSOM to provision commonly used UI elements on publishing sites, and it uses JavaScript to create more dynamic experiences in page layouts that you can deploy to publishing sites. It also shows the differences between using master pages and themes in publishing sites.
 

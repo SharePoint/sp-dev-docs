@@ -1,7 +1,7 @@
 ---
 title: Prepare to set up and configure a SharePoint workflow development environment
 description: Learn how to set up a workflow development environment to develop SharePoint workflows as free-standing apps.
-ms.date: 12/14/2020
+ms.date: 06/10/2022
 ms.prod: sharepoint
 ms.assetid: b6a3321f-4131-4a8e-9cb7-7a1b4ab9e26b
 ms.localizationpriority: medium
@@ -63,8 +63,6 @@ If you have pre-release (that is, "Preview") versions of SharePoint Server, Work
 ### You must also update workflow projects created with the "Preview" version
 
 The release version of the Visual Studio workflow components and their related updates introduce important changes that enhance performance, scalability, and reliability. Unfortunately, these upgrades require you to update workflow projects that you created using the Preview tools.
-
-To make this process easier, we provide a conversion tool that you can get through CodePlex. The tool is called the  [SharePoint Workflow Converter for Visual Studio 2012](http://wfconverter.codeplex.com/).
 
 Here is a summary of changes that require you to update your workflow projects:
 
