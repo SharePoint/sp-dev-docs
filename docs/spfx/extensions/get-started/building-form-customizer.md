@@ -370,7 +370,19 @@ Now that we have created the baseline component and tested that it works properl
 1. Add new method **_updateItem** to the **HelloWorldFormCustomizer** class.
 
     ```typescript
-
+    private _updateItem(title: string): Promise<SPHttpClientResponse> {
+      return this.context.spHttpClient
+        .post(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/getByTitle('${this.context.list.title}')/items(${this.context.itemId})`, SPHttpClient.configurations.v1, {
+          headers: {
+            'content-type': 'application/json;odata.metadata=none',
+            'if-match': this._etag,
+            'x-http-method': 'MERGE'
+          },
+          body: JSON.stringify({
+            Title: title
+          })
+        });
+    }
     ```
 
 Now the code is complete to support minimal New, Edit and Display experiences and you can test out the different experiences using different configurations for debugging.
