@@ -1,6 +1,6 @@
 ---
 title: Set up an environment for developing mobile apps for SharePoint
-ms.date: 09/25/2017
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: acaf556d-e20d-478d-8c59-2efd8efb9dcb
 ms.localizationpriority: medium
