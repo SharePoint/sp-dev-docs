@@ -86,13 +86,61 @@ The template was updated to use `listViewStateChanged` event instead of deprecat
 
 - new command line option: `--use-heft`. If specified, the solution will build the project using [Heft](https://rushstack.io/pages/heft/overview/).
 
+### Image Helper API - General Availability
+
+The **ImageHelper** static class (in **\@microsoft\/sp-image-helper**) has been added to allow SPFx developers runtime access to:
+
+- Urls of auto-generated thumbnail images of pages and documents stored in SharePoint
+- More optimized Urls to images stored in SharePoint
+
+The helper method `ImageHelper.convertToImageUrl()` takes a Url to an asset on SharePoint, a width, and an optional height and will perform client-side operations to try to create an optimized Url.
+
+The resulting Url will point to an image that is close to the requested size. The resulting Url will also include using other SharePoint media and graph services. If available for the requested asset, public or private CDN locations to serve the resized images and thumbnails.
+
+### New Action types for geolocation
+
+The support matrix for geolocation actions looks like:
+
+Action       | Viva Connection Desktop | Viva Connections Mobile | Browser
+------------- | ------------- | ------------- | -------------
+Get Location  | Not Supported | Supported | Supported
+Show Location | Not Supported | Supported | Supported
+
+```typescript
+    ISPFxAdaptiveCard.actions?: (
+        | ISubmitAction
+        | IOpenUrlAction
+        | IShowCardAction
+        | IGetLocationAction // Get a location
+        | IShowLocationAction // Show a location on a map
+    )[];
+```
+
+The location actions can be configured as shown below:
+
+```typescript
+  actions: [
+    {
+      type: 'VivaAction.GetLocation',
+      id: 'Get Location',
+      parameters: {chooseLocationOnMap: true}
+    }
+    {
+      type: 'VivaAction.ShowLocation',
+      id: 'Show Location',
+      parameters: parameters: {locationCoordinates: {latitude: 40, longitude: 40}}
+    }
+  ]
+```
+
 ## Deprecations
 
 - Deprecated SPComponentLoader#getManifests due to runtime performance overhead.
+- Removed API from `@microsoft/sp-http` - `MSGraphClientFactory.getClient()`
 
 ## Fixed Issues
 
-### February & March Timeframe
+### February-May Timeframe
 
 - [#7680](https://github.com/SharePoint/sp-dev-docs/issues/7680) - Theme colors do not load (immediately) on SP listpage or site contents page
 - [#6403](https://github.com/SharePoint/sp-dev-docs/issues/6403) - DynamicData.tryGetValue() should not fail if disposed
