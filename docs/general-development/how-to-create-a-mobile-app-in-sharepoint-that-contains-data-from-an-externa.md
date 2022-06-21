@@ -1,5 +1,6 @@
 ---
 title: Create a mobile app in SharePoint that contains data from an external data source
+description: Describes how to create a mobile app in SharePoint that contains data from an external data source by using Business Connectivity Services.
 ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: f1d62256-aca0-4a59-8145-0add9e68a449
