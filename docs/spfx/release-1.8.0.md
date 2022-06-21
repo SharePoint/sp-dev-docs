@@ -71,7 +71,7 @@ See more from:
 
 - [Building Microsoft Teams Tabs using SharePoint Framework](integrate-with-teams-introduction.md)
 - [Build Microsoft Teams tab using SharePoint Framework - Tutorial](web-parts/get-started/using-web-part-as-ms-teams-tab.md)
-- [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](sharepoint/dev/spfx/deployment-spfx-teams-solutions)
+- [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](deployment-spfx-teams-solutions.md)
 
 ### App Pages (General Availability)
 
