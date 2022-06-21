@@ -1,7 +1,7 @@
 ---
 title:  SharePoint Developer Community open source projects
 description: Open-source projects coordinated by the SharePoint PnP initiative
-ms.date: 09/07/2020
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -13,7 +13,7 @@ There are numerous open-source projects that are coordinated by the SharePoint P
 | Repository | Description |
 |--------|--------|
 | [SharePoint Starter kit](https://github.com/SharePoint/sp-starter-kit) | A starter kit for showing how to extend modern experiences in SharePoint Online by extending them with modern extensibility options. |
-| [SharePoint Provisioning Service templates](https://github.com/SharePoint/sp-dev-provisioning-templates) | Tenant templates used by the [SharePoint Provisioning Service](https://provisioning.sharepointpnp.com) to easily provision sample content and structures demonstrating what's possible with modern SharePoint experiences. |
+| [SharePoint Provisioning Service templates](https://github.com/SharePoint/sp-dev-provisioning-templates) | Tenant templates used by the [SharePoint Provisioning Service](https://lookbook.microsoft.com/service-description) to easily provision sample content and structures demonstrating what's possible with modern SharePoint experiences. |
 | [CLI for Microsoft 365](https://pnp.github.io/cli-microsoft365/) | A cross-platform command-line interface (CLI) that allows users on any platform to manage their Microsoft 365 and SharePoint Framework projects. |
 | [Office 365 Developer PnP Core Component](https://github.com/SharePoint/PnP-Sites-Core) | An extension component that encapsulates commonly used remote CSOM/REST operations as reusable extension methods on out-of-the box CSOM objects.  |
 | [PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) | Allow you to perform complex provisioning and artifact management actions for SharePoint. The commands use CSOM and can work against both SharePoint Online as well as SharePoint on-premises. |
