@@ -2,7 +2,7 @@
 title: MethodInstances Element in Method (BDCMetadata Schema)
 description: Details on the MethodInstances Element in Method (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -36,49 +36,20 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An association.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadata-schema.md">MethodInstance Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A method instance.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md) | An association. |
+| [MethodInstance Element in MethodInstances (BDCMetadata Schema)](methodinstance-element-in-methodinstances-bdcmetadata-schema.md) | A method instance. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The method that this method instance belongs to.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md) | The method that this method instance belongs to. |
+
+
 
 
 
