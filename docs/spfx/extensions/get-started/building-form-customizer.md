@@ -13,6 +13,9 @@ Form customizers are SharePoint Framework components giving you an option to ove
 >[!Important]
 > Form customizer were released as part of the SharePoint Framework 1.15, so ensure that you are using the right version in your environment. See [v1.15 release notes](../../release-1.15.md) for details.
 
+> [!TIP]
+> You can find the output from this tutorial from [GitHub](https://github.com/pnp/spfx-reference-scenarios/tree/main/samples/spfx-formcustomizer-basics).
+
 ## Create an extension project
 
 1. Create a new project directory in your favorite location.
@@ -386,6 +389,9 @@ Now that we have created the baseline component and tested that it works properl
     ```
 
 Now the code is complete to support minimal New, Edit and Display experiences and you can test out the different experiences using different configurations for debugging.
+
+![Custom form in the context of SharePoint](../../../images/ext-forcustomizer-custom-form.png)
+
 
 ## Deployment of your extension
 
