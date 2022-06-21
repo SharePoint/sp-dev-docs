@@ -1,7 +1,7 @@
 ---
 title: Support and convert SharePoint field types for Windows Phone apps
 description: Implement data-conversion logic to support SharePoint field types in Windows Phone apps.
-ms.date: 12/29/2020
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 301e6e58-5153-4ca9-a419-8ae0535ebbed
 ms.localizationpriority: medium
