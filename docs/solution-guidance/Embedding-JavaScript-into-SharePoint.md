@@ -1,6 +1,6 @@
 ---
 title: Embedding JavaScript into SharePoint
-ms.date: 11/03/2017
+ms.date: 06/10/2022
 ms.localizationpriority: medium
 ---
 # Embedding JavaScript into SharePoint
