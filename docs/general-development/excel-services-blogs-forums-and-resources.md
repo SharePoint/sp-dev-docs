@@ -1,6 +1,6 @@
 ---
 title: Excel Services Blogs, Forums, and Resources
-ms.date: 09/25/2017
+ms.date: 06/09/2022
 keywords: blogger
 f1_keywords:
 - blogger
