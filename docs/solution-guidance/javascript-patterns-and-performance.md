@@ -437,7 +437,6 @@ For a more complex usage of asynchronous and Deferred, you can refer to the deve
 ## <a name="Resources"></a> Resources
 
 ### See Also
-- [JavaScript – Patterns and Usage](https://developer.microsoft.com/office/blogs//javascript-development-patterns-with-sharepoint)
 - [JavaScript – Performance Considerations](https://developer.microsoft.com/office/blogs//javascript-performance-considerations-with-sharepoint)
 - [Complete basic operations using JavaScript library code in SharePoint 2013](https://msdn.microsoft.com/library/office/jj163201.aspx)
 - [Client-side rendering (JS Link) code samples](https://code.msdn.microsoft.com/office/Client-side-rendering-JS-2ed3538a)
