@@ -1,7 +1,7 @@
 ---
 title: Consume the Microsoft Graph in the SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to the Microsoft Graph in SharePoint Framework solutions.
-ms.date: 07/29/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -441,7 +441,7 @@ The `resource` can be the name or the ObjectId (in Azure AD) of the resource for
 The `scope` can be the name of the permission, or the unique ID of that permission. You can get the permission name from the API documentation. You can get the permission ID from the API manifest file.
 
 > [!NOTE]
-> For a list of the permissions that are available in Microsoft Graph, see [Microsoft Graph permissions reference](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+> For a list of the permissions that are available in Microsoft Graph, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 >
 > By default, the service principal has no explicit permissions granted to access Microsoft Graph. However, if you request an access token for Microsoft Graph, you get a token with the `user_impersonation` permission that you can use to read information about the users (User.Read.All). You can request additional permissions to be granted by tenant administrators. For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 

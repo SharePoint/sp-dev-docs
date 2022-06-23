@@ -1,7 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 04/25/2022
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -15,7 +15,7 @@ You can also see the required steps to enable debugging in Visual Studio Code in
 
 ## Prerequisites
 
-The easiest way to configure Visual Studio Code to debug SharePoint Framework solutions is by using the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) or [Debugger for Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) Visual Studio Code extensions.
+The easiest way to configure Visual Studio Code to debug SharePoint Framework solutions is by using the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) or [Debugger for Edge](https://marketplace.visualstudio.com/items?itemName=ms-edgedevtools.vscode-edge-devtools) Visual Studio Code extensions.
 
 The default SharePoint Framework web parts and extensions project templates include the prerequisites and prompt for the required Visual Studio Code extensions to install. In this case, it prompts to install Debugger for Chrome Visual Studio Code extension.
 

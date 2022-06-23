@@ -15,7 +15,7 @@ You can refresh the branding on your existing SharePoint sites and site collecti
 
 ## Refresh branding of existing sites and subsites
 
-The [Branding.Refresh](https://github.com/SharePoint/PnP/tree/dev/Samples/Branding.Refresh) sample in the Office 365 Developer Patterns and Practices project on GitHub shows you how to use the OfficeDevPnP.Core library to iterate over existing sites and subsites to verify and update the applied branding. The sample shows how to update site branding, but the same concept can be used to do other things, such as deploy a new library to a list of sites, or update a custom action that was deployed during provisioning. You can use the same process to move existing sites to a newer version.
+The [Branding.Refresh](https://github.com/pnp/PnP/tree/master/Samples/Branding.Refresh) sample in the Office 365 Developer Patterns and Practices project on GitHub shows you how to use the OfficeDevPnP.Core library to iterate over existing sites and subsites to verify and update the applied branding. The sample shows how to update site branding, but the same concept can be used to do other things, such as deploy a new library to a list of sites, or update a custom action that was deployed during provisioning. You can use the same process to move existing sites to a newer version.
 
 The operation involves two steps:
 
@@ -195,7 +195,7 @@ SharePoint .master pages require that you use content placeholders, which render
 
 If you remove one of the content placeholders listed in Table 2 from a SharePoint .master page, SharePoint will throw an error. You can add a content placeholder with hidden visibility, which hides the content from end users.
 
-For more information, see [Windows SharePoint Services Default Master Pages](/previous-versions/office/developer/sharepoint-services/ms467402(v=office.12)) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](https://support.office.com/article/Working-with-content-placeholder-controls-d8b87b85-d1ef-409d-a5c7-044890f89288?CorrelationId=517ec37c-89ef-40d9-b70e-54aa63ac994f&amp;ui=en-US&amp;rs=en-US&amp;ad=US).
+For more information, see [Windows SharePoint Services Default Master Pages](/previous-versions/office/developer/sharepoint-services/ms467402(v=office.12)) (this article describes functionality in SharePoint Services 3, but the content still applies). See also [Working with content placeholder controls](/office/vba/word/Concepts/Working-with-Word/working-with-content-controls).
 
 Default SharePoint master pages such as seattle.master and oslo.master include many more content placeholders than SharePoint requires. For example, these master pages include `<SharePoint:Themes runat="server">` and `<SharePoint.CssRegistration runat="server">` controls.
 

@@ -176,7 +176,7 @@ For more information about the Refinement web part and refiners, see:
 Result sources limit searches to certain content or to a subset of search results. You can define a result source by specifying the following:
 
 - A search provider or source URL to get search results from; for example, the search index of the local SharePoint Search service.   
-- A protocol to use to get search results; for example, the [OpenSearch](http://www.opensearch.org/Home) protocol.
+- A protocol to use to get search results; for example, the [OpenSearch](https://www.opensearch.org) protocol.
 - A query transform, which can narrow results from the given search provider or URL to a specific subset of results; for example, to a set of results that has a particular content type.
     
 SharePoint provides sixteen preconfigured result sources, including Local SharePoint Results, Conversations, and Items related to current user. You can view details about result sources from the **Manage Result Sources** page (**Site Settings** > **Search** > **Result Sources**). 
@@ -324,6 +324,7 @@ The following are some additional resources for display templates and result typ
 - [How to create a new result type in SharePoint Server](/SharePoint/search/how-to-create-a-new-result-type)
 - [How to display values from custom managed properties in search results - option 1 in SharePoint Server](/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-1)
 - [How to display values from custom managed properties in search results - option 2 in SharePoint Server](/SharePoint/search/how-to-display-values-from-custom-managed-properties-in-search-resultsoption-2)
+
 
 ## Query APIs and search add-ins
 
