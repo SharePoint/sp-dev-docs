@@ -1,13 +1,13 @@
 ---
 title: "Property Element (DeploymentManifest)"
+description: Describes the Property element (DeploymentManifest) and provides a definition, the type, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bb088270-da19-42a2-85ef-7555a57e8d69
-description: "Last modified: March 09, 2015"
 ---
 
 # Property element (DeploymentManifest)

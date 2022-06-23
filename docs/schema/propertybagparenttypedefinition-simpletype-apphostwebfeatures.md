@@ -1,7 +1,8 @@
 ---
 title: PropertyBagParentTypeDefinition simpleType
+description: Describes the PropertyBagParentTypeDefinition simpleType and provides the type information, a definition, and the enumeration values.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,11 +20,11 @@ ms.assetid: 71bc7f6c-12dd-ba2e-40ba-de4be9f9c39d
 ## Type information
 
 
-|   |   |
+| Resource | File |
 |---|---|
-| **Base Type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| **Base Type** | xs:string |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| *Schema file** | apphostwebfeatures.xsd |
 
 ## Definition
 
