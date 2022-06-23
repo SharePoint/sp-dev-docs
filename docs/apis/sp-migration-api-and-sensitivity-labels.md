@@ -1,7 +1,7 @@
 ---
 title: "Sensitivity labels and the SharePoint Migration API"
 description: Learn how to have sensitivity labels applied to content before migration with the SharePoint Migration API.
-ms.date: 05/24/2022
+ms.date: 06/23/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
