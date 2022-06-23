@@ -1,7 +1,7 @@
 ---
 title: Integrate maps with Windows Phone apps and SharePoint lists
 description: Learn how to integrate location information and maps in SharePoint lists and location-based web and mobile SharePoint Add-ins, by using the new Geolocation field, and by creating your own geolocation-based field types.
-ms.date: 01/05/2020
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 7e0550bc-92d1-407f-b8ba-1371c63bd16e
 ms.localizationpriority: medium
@@ -146,5 +146,5 @@ In this step, you can run your app and validate it.
 - [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md)
 - [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
 - [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
-- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 - [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

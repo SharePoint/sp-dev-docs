@@ -27,7 +27,7 @@ For a complete description of how to configure a working hybrid solution, see  [
     
 
 > **Caution:**
-> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](https://www.microsoft.com/microsoftservices/deploy.aspx). 
+> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](https://www.microsoft.com/en-us/microsoft-365/products-apps-services). 
   
     
     

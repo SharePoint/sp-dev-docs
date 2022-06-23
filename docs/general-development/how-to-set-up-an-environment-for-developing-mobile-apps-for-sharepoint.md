@@ -88,7 +88,7 @@ To develop SharePoint Add-ins for use on Windows Phone 7, you need to set up you
     
     
 
-1. On a computer with a supported client operating system, install  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570).
+1. On a computer with a supported client operating system, install  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233).
     
     > [!NOTE]
     > An earlier version of the Windows Phone SDK was named the Windows Phone Developer Tools. 

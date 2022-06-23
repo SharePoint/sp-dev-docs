@@ -39,7 +39,7 @@ Here are the components you need. It is important that you install these items i
 1. Install the SharePoint environment
 
     - [SharePoint update (KB2767999)](https://support.microsoft.com/kb/2767999)
-    - Optionally, you can subscribe to an  [Office 365 development environment](https://msdn.microsoft.com/library/office/apps/fp179924%28v=office.15%29)
+    - Optionally, you can subscribe to an  [Office 365 development environment](/office/dev/add-ins/overview/set-up-your-dev-environment)
 
 1. Install the Workflow Manager environment
 
