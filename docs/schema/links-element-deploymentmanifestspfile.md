@@ -1,13 +1,13 @@
 ---
 title: "Links Element (DeploymentManifest - SPFile)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the Links element (DeploymentManifest - SPFile) in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 85bb7ee2-900c-492c-988b-92a3ba7bea87
-description: "Last modified: March 09, 2015"
 ---
 
 # Links Element (DeploymentManifest - SPFile)

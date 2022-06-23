@@ -1,13 +1,13 @@
 ---
 title: "ListItem Element (DeploymentManifest - SPListItemVersionCollection)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the ListItem element (DeploymentManifest - SPListItemVersionCollection).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b47189ad-7165-40df-8b8b-cee73bd6841d
-description: "Last modified: March 09, 2015"
 ---
 
 # ListItem Element (DeploymentManifest - SPListItemVersionCollection)

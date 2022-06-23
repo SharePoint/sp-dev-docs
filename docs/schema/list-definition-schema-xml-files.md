@@ -1,7 +1,8 @@
 ---
 title: List Definition (Schema.xml) Files
+description: Outlines the List element in Sharepoint and associated files including a Schema.xml file and a Feature.xml file.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
