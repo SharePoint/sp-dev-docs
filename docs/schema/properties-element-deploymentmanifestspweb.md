@@ -1,13 +1,13 @@
 ---
 title: "Properties Element (DeploymentManifest - SPWeb)"
+description: Describes the Properties element (DeploymentManifest - SPWeb) and provides a definition, the type, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 846e7a27-468e-4b7f-a911-5c923f4e774c
-description: "Last modified: March 09, 2015"
 ---
 
 # Properties Element (DeploymentManifest - SPWeb)

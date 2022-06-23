@@ -1,7 +1,8 @@
 ---
 title: MenuSection element (CommandUIDefinitionType complexType)
+description: Describes the definition, element, and attribute information for the MenuSection element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -19,7 +20,7 @@ ms.assetid: 015f7028-917f-95df-c48f-8473fff51b5d
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | MenuSectionType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

@@ -1,6 +1,7 @@
 ---
 title: Language support for Windows Phone in SharePoint
-ms.date: 09/25/2017
+description: Describes the language support for the Windows Phone mobile app development Visual Studio templates installed by the SharePoint SDK.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 2c396a91-0fc1-4e25-942b-fffad49bd2c6
 ms.localizationpriority: medium
@@ -14,7 +15,7 @@ To develop your mobile application for more than one language, you need to globa
     
     
 
-The Windows Phone SDK includes Visual Studio 2010 Express for Windows Phone, Windows Phone Emulator, XNA Game Studio, and Expression Blend. To get started, install the  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570) for Windows Phone development. Then install the [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476) to install the SharePoint templates for Windows Phone.
+The Windows Phone SDK includes Visual Studio 2010 Express for Windows Phone, Windows Phone Emulator, XNA Game Studio, and Expression Blend. To get started, install the  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233) for Windows Phone development. Then install the [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476) to install the SharePoint templates for Windows Phone.
 After you set up your development environment and install the SharePoint SDK for Windows Phone, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md).
   
     

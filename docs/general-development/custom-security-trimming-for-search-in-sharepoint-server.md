@@ -1,7 +1,7 @@
 ---
 title: Custom security trimming for Search in SharePoint
 description: Learn about the two kinds of custom security trimmer interfaces, ISecurityTrimmerPre and ISecurityTrimmerPost, and the steps you must take to create a custom security trimmer.
-ms.date: 09/25/2017
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
 ms.localizationpriority: medium
@@ -86,7 +86,7 @@ To create a custom security post-trimmer for search results, you must create a c
 
 
 
-The **ISecurityTrimmerPost** interface contains two methods that you must implement: [Initialize(NameValueCollection, SearchServiceApplication)](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.Initialize.aspx) and **CheckAccess(IList<String>, IList<String>, IDictionary<String, Object>, IIdentity)**.
+The **ISecurityTrimmerPost** interface contains two methods that you must implement: [Initialize(NameValueCollection, SearchServiceApplication)](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.Initialize.aspx) and **CheckAccess(IList\<String\>, IList\<String\>, IDictionary\<String, Object\>, IIdentity)**.
 
 
 
@@ -235,7 +235,7 @@ The following table describes the parameters that the cmdlet uses.
 **Table 1. Parameters used by the SPEnterpriseSearchSecurityTrimmer cmdlet**
 
 
-|**Parameter**|**Description**|
+|Parameter|Description|
 |:-----|:-----|
 | _SearchApplication_ <br/> |Required. The name of the Search service application, for example "Search Service Application".  <br/> |
 | _typeName_ <br/> |Required. The strong name of the custom security trimmer assembly.  <br/> |

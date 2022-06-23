@@ -1,13 +1,13 @@
 ---
 title: "FieldRef Element (DeploymentManifest - SPFieldCollection)"
+description: Describes the definition, type, element, and attribute information for the FieldRef Element, which represents field data to display in a SharePoint Services 3.0 list.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1af74fb6-0e33-4e84-8b49-5e7027100699
-description: "Last modified: March 09, 2015"
 ---
 
 # FieldRef Element (DeploymentManifest - SPFieldCollection)

@@ -1,13 +1,13 @@
 ---
 title: "GroupX Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3a227232-a224-4c30-b7b5-ce722f1f0eb9
-description: "Last modified: March 09, 2015"
+description: GroupX Element (DeploymentManifest) represents an instance of a top-level Windows SharePoint Services 3.0 deployment group object.
 ---
 
 # GroupX Element (DeploymentManifest)

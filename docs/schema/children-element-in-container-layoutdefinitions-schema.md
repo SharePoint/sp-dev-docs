@@ -1,7 +1,8 @@
 ---
 title: Children element in Container
+description: "Describes the definition, element, and attribute information for the Children element in Container, which lists the External Data Parts in a layout."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -17,9 +18,13 @@ ms.assetid: ff84af75-d4f5-885b-f728-534a101c38b8
 
 Lists the External Data Parts in this layout.
 
+## Element information
+
 **Namespace**: `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Layout`
 
 **Schema**: LayoutDefinitions
+
+## Definition
 
 ```XML
 <Children></Children>
@@ -35,45 +40,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>An External Data Part.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|-------|-----------|
+|[OBPart element in ArrayOfOBPart (LayoutDefinitions Schema)](obpart-element-in-arrayofobpart-layoutdefinitions-schema.md)|An External Data Part.|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.md">Container element (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The layout for the External Data Parts.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|-------|-----------|
+|[Container element (LayoutDefinitions Schema)](container-element-layoutdefinitions-schema.md)|The layout for the External Data Parts.|
 
 
 

@@ -1,7 +1,8 @@
 ---
 title: ContentTypeBinding Element (ContentTypeBinding)
+description: Outlines information, a definition, elements and attributes for the ContentTypeBinding element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -60,29 +61,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
+None
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-contenttypebinding.md">Elements Element (ContentTypeBinding)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[Elements Element (ContentTypeBinding)](elements-element-contenttypebinding.md)
 
 ### Remarks
 

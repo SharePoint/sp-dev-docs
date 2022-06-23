@@ -1,7 +1,8 @@
 ---
 title: AssemblyRedirect element (WorkflowInfo)
+description: AssemblyRedirect element specifies a transformation from one binary file to another binary file in a versioned binary file system.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

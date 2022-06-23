@@ -1,7 +1,8 @@
 ---
 title: Group element (CommandUIDefinitionType complexType)
+description: Learn about Group element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: fe4674b5-04c4-db12-5455-45e6f3c7c44f
 
 ## Element information
 
-|   |   |
+|  Information | Location  |
 |---|---|
 | **Element type**  | GroupTypes |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

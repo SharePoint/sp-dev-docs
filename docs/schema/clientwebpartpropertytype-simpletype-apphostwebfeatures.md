@@ -1,7 +1,8 @@
 ---
 title: ClientWebPartPropertyType simpleType
+description: Describes the definition, type, element, and attribute information for ClientWebPartPropertyType simpleType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,11 +19,11 @@ ms.assetid: aed2ce76-7e2d-84df-e80b-496d5b4bd3d8
 
 ## Type information
 
-|   |   |
-|---|---|
-| **Base Type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| Information | Location |
+|-------------|----------|
+| **Base Type** | xs:string |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 

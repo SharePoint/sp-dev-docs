@@ -1,13 +1,13 @@
 ---
 title: "Data element (AuthenticationInformation complexType) (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the Data element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 65cbadea-2006-6c9a-12e3-bd20921a346b
-description: "Last modified: March 09, 2015"
 ---
 
 # Data element (AuthenticationInformation complexType) (SPS15XSDSearchSet2)
@@ -15,12 +15,11 @@ description: "Last modified: March 09, 2015"
  
   
 ## Element information
-
-|||
+|Name|Value|
 |:-----|:-----|
-|**Element type** <br/> |tns:AuthenticationData  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type** |tns:AuthenticationData  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
    
 ## Definition
 

@@ -1,6 +1,7 @@
 ---
 title: Setting up a development environment for BCS in SharePoint
-ms.date: 09/25/2017
+description: Provides guidance on setting up a development environment for developing SharePoint solutions and SharePoint Add-ins using BCS.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: d83c8a43-49dd-47eb-94d4-23aa2cf71a9a
 ms.localizationpriority: medium

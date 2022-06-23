@@ -1,13 +1,13 @@
 ---
 title: "LocStringId simpleType (SPS15XSDSearchSet6)"
+description: Outlines information, a definition, and enumeration values for the LocStringId simpleType (SPS15XSDSearchSet6) in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 16b5dcb6-d4cb-5b74-28d6-a58732b7d2b6
-description: "Last modified: March 09, 2015"
 ---
 
 # LocStringId simpleType (SPS15XSDSearchSet6)
@@ -15,12 +15,11 @@ description: "Last modified: March 09, 2015"
 **Applies to:** SharePoint Server 2013
   
 ## Type information
-
-|||
+|Name|Value|
 |:-----|:-----|
-|**Base type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.xsd  <br/> |
+|**Base type** |xs:string   |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search |
+|**Schema file** |schema_Microsoft.Office.Server.Search.xsd   |
    
 ## Definition
 

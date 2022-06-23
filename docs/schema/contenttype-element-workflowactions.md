@@ -1,7 +1,8 @@
 ---
 title: ContentType Element (WorkflowActions)
+description: Provides a definition, elements and attributes for the ContentType element WorkflowActions in Sharepoint.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

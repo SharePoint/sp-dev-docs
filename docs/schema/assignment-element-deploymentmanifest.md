@@ -1,13 +1,13 @@
 ---
 title: "Assignment element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b0cabb42-a2ed-488f-a736-0a5bf121a703
-description: "Last modified: March 09, 2015"
+description: Assignment element (DeploymentManifest) represents a Windows SharePoint Services 3.0 deployment assignment object instance.
 ---
 
 # Assignment element (DeploymentManifest)

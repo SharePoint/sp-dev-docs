@@ -1,7 +1,8 @@
 ---
 title: Business connectivity services (BCS) schemas
+description: "Provides reference documentation for the Microsoft Business Connectivity Services (BCS) XML schemas."
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

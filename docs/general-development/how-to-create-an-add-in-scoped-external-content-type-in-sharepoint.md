@@ -1,6 +1,7 @@
 ---
 title: Create an add-in-scoped external content type in SharePoint
-ms.date: 09/25/2017
+description: Describes how to create external content types that can be installed, secured, and used in a SharePoint Add-in.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: de4b50a3-84da-48ce-9ba0-fe06571e52a8
 ms.localizationpriority: medium

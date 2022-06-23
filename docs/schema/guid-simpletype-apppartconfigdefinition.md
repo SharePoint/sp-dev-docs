@@ -1,7 +1,8 @@
 ---
 title: GUID simpleType (AppPartConfigDefinition)
+description: Learn more about GUID simpleType (AppPartConfigDefinition).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: c535cb42-5748-92ea-b258-cca570ca6e51
 
 ## Type information
 
-|   |   |
+|  Information | Location  |
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration` |

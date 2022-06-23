@@ -1,7 +1,8 @@
 ---
 title: "List schema elements L-Z"
+description: Links to resources for list schema elements in Sharepoint. The links are listed alphabetically from L-Z.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7330a8bc-fc61-43e5-b722-2a3915deb32b
-description: "Last modified: July 15, 2011"
 ---
 
 # List schema elements L-Z

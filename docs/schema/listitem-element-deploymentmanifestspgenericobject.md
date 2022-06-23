@@ -1,13 +1,13 @@
 ---
 title: "ListItem Element (DeploymentManifest - SPGenericObject)"
+description: Outlines the ListItem element (DeploymentManifest - SPGenericObject), which represents an instance of a Sharepoint list item object. 
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79ab2638-2487-4b1d-99d5-cbc151d35785
-description: "Last modified: March 09, 2015"
 ---
 
 # ListItem Element (DeploymentManifest - SPGenericObject)

@@ -1,13 +1,13 @@
 ---
 title: "ManifestFiles element (DeploymentSystemData)"
+description: "ManifestFiles element (DeploymentSystemData) represents a collection of system data (SystemData.xml) files exported to the content migration package."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b0386913-8ac3-4a6e-a021-e73c9b1b12a7
-description: "Last modified: March 09, 2015"
 ---
 
 # ManifestFiles element (DeploymentSystemData)

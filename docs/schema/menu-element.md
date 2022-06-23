@@ -1,7 +1,8 @@
 ---
 title: "Menu element (Server Ribbon)"
+description: "Describes the definition, element, and attribute information for the Menu element (Server Ribbon), which defines a menu control."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 1bc70fb9-bcf5-4758-a3dd-a3af3b4a745f
-description: "Last modified: March 09, 2015"
 ---
 
 # Menu element (Server Ribbon)

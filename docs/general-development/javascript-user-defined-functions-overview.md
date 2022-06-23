@@ -1,6 +1,7 @@
 ---
 title: JavaScript user-defined functions overview
-ms.date: 12/21/2020
+description: Provides an overview of JavaScript user-defined functions (UDFs), including basic information on how they work in Excel Services.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: fee38837-1985-4319-ba4e-b99c6ec66336
 ms.localizationpriority: medium

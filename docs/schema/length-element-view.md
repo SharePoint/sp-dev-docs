@@ -1,7 +1,8 @@
 ---
 title: "Length element (View)"
+description: Describes the Length element (View) and provides the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 27fc1bdc-c4f1-4358-ac6b-18d84a5d458e
-description: "Last modified: March 09, 2015"
 ---
 
 # Length element (View)

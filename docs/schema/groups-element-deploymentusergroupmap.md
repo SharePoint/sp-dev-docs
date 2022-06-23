@@ -1,13 +1,13 @@
 ---
 title: "Groups Element (DeploymentUserGroupMap)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 598d99ac-00a3-4730-9aaf-28008694a986
-description: "Last modified: March 09, 2015"
+description: Groups Element (DeploymentUserGroupMap) represents a collection of deployment group object instances.
 ---
 
 # Groups Element (DeploymentUserGroupMap)

@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.8.0 release notes
 description: Release notes for the SharePoint Framework v1.8.0 release
-ms.date: 09/08/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -71,7 +71,7 @@ See more from:
 
 - [Building Microsoft Teams Tabs using SharePoint Framework](integrate-with-teams-introduction.md)
 - [Build Microsoft Teams tab using SharePoint Framework - Tutorial](web-parts/get-started/using-web-part-as-ms-teams-tab.md)
-- [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](web-parts/guidance/creating-team-manifest-manually-for-webpart.md)
+- [Create Microsoft Teams manifest manually for a web part and deploy it to Microsoft Teams](deployment-spfx-teams-solutions.md)
 
 ### App Pages (General Availability)
 

@@ -1,13 +1,13 @@
 ---
 title: "Link Element (DeploymentManifest)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the Link element (DeploymentManifest) in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ae7f8996-6eea-4d95-9388-e599aa92d5c1
-description: "Last modified: March 09, 2015"
 ---
 
 # Link Element (DeploymentManifest)

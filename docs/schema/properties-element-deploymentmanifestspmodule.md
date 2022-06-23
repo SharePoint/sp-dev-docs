@@ -1,13 +1,13 @@
 ---
 title: "Properties Element (DeploymentManifest - SPModule)"
+description: Describes the Properties element (DeploymentManifest - SPModule) and provides a definition, the type, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2804fb78-9819-4cbb-b0fd-44eb0645a3b4
-description: "Last modified: March 09, 2015"
 ---
 
 # Properties Element (DeploymentManifest - SPModule)

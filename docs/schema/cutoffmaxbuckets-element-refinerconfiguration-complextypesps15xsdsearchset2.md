@@ -1,13 +1,13 @@
 ---
 title: "CutoffMaxBuckets element (RefinerConfiguration complexType) (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the CutoffMaxBuckets element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8c963212-7b05-5854-3ebd-69a46fb62d11
-description: "Last modified: March 09, 2015"
 ---
 
 # CutoffMaxBuckets element (RefinerConfiguration complexType) (SPS15XSDSearchSet2)
@@ -15,12 +15,11 @@ description: "Last modified: March 09, 2015"
  
   
 ## Element information
-
-|||
+|Name|Value|
 |:-----|:-----|
-|**Element type** <br/> |xs:int  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type** |xs:int  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd   |
    
 ## Definition
 

@@ -1,7 +1,8 @@
 ---
 title: CultureNameDefinition simpleType
+description: Outlines information, a definition, and elements and attributes for the CultureNameDefinition simpleType in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -21,8 +22,7 @@ Identifies a locale in [Internet Engineering Task Force (IETF)](http://tools.iet
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
-
-|   |   |
+| Name  | Value  |
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

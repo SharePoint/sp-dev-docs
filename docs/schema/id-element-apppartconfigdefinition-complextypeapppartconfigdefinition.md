@@ -1,7 +1,8 @@
 ---
 title: ID element (AppPartConfigDefinition complexType)
+description: ID element (AppPartConfigDefinition complexType) is the unique identifier of the app part.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ The unique identifier of the app part.
 
 ## Element information
 
-|   |   |
+|  Information | Location  |
 |---|---|
 | **Element type**  | GUID |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/partconfiguration` |

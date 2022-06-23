@@ -1,6 +1,6 @@
 ---
 title: Build Windows Phone apps that access SharePoint
-ms.date: 12/22/2020
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 36681335-f772-4499-8445-f94481bc18e7
 description: Create SharePoint Add-ins that integrate SharePoint and mobile devices such as Windows Phone 8 and Windows Phone 7.
@@ -131,7 +131,7 @@ The following how-tos and overviews delve into the specific information you need
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
 -  [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
 -  [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
--  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+-  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 -  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)
 -  [About Expression Blend](https://msdn.microsoft.com/library/cc296376%28Expression.40%29.aspx)
     

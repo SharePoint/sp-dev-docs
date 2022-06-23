@@ -1,13 +1,13 @@
 ---
 title: "Guid Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bcb1a129-684f-4ef8-a7fe-263c554a5203
-description: "Last modified: July 15, 2011"
+description: Guid Simple Type (DeploymentManifest) supports the use of globally unique identifiers (GUIDs) as attribute field values in elements and types of the DeploymentManifest Schema.
 ---
 
 # Guid Simple Type (DeploymentManifest)
