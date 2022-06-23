@@ -1,7 +1,8 @@
 ---
 title: RemoveFieldRef element (ContentType)
+description: Describes the RemoveFieldRef element (ContentType), which specifies a column reference that is included in the parent content type but is to be removed from this content type.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
