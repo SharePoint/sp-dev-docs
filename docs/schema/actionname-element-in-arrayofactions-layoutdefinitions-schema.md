@@ -1,7 +1,8 @@
 ---
 title: ActionName element in ArrayOfActions
+description: Discusses the definition, elements and attributes for ActionName element in ArrayOfActions which specifies an action for this External Data Part.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -39,25 +40,10 @@ None.
 None.
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionnames-element-in-obpart-layoutdefinitions-schema.md">ActionNames element in OBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The list of actions that contains this action.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [ActionNames element in OBPart (LayoutDefinitions Schema)](actionnames-element-in-obpart-layoutdefinitions-schema.md) | The list of actions that contains this action. |
 
 ## Text value
 
