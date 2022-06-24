@@ -63,7 +63,7 @@ None
 
 ### Remarks
 
-The **Type** element contains an integer corresponding to one of the Microsoft.SharePoint.SPEventReceiverType values.
+The **Type** element contains an integer corresponding to one of the **Microsoft.SharePoint.SPEventReceiverType** values.
 
 ## Example
 
