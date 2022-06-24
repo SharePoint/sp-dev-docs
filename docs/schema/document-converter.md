@@ -1,7 +1,8 @@
 ---
 title: Document Converter
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
+description: Describes the Document Converter Definition schema and includes a list of the elements in the Document Converter Definition schema.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
