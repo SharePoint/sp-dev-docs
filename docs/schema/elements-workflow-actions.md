@@ -1,7 +1,8 @@
 ---
 title: Elements (Workflow actions)
 manager: laurawi
-ms.date: 11/16/2014
+ms.date: 06/13/2022
+description: Describes Elements(WorkFlow actions) and lists the elements in the Workflow actions XML schema.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
