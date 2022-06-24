@@ -1,7 +1,8 @@
 ---
 title: ExpressionParameter Element in ActionParameterDefinitions
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes ExpressionParameter Element in ActionParameterDefinitions and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -77,25 +78,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters Element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **Parameters** element that contains this parameter.</p></td>
-</tr>
-</tbody>
-</table>
-
+| Element | Description |
+| --- | --- |
+| [Parameters Element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)](parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md) | The **Parameters** element that contains this parameter. |
 
 <br/>
 
