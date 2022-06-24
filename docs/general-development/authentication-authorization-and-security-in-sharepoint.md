@@ -1,6 +1,7 @@
 ---
 title: Authentication, authorization, and security in SharePoint
-ms.date: 09/25/2017
+ms.date: 06/13/2022
+description: Describes some of the enhancements added to SharePoint including updates in authentication, authorization, and security.
 ms.prod: sharepoint
 ms.assetid: 8734790c-eb75-4d78-9604-7cc23b33b693
 ms.localizationpriority: high
@@ -22,7 +23,7 @@ The following are some of the enhancements added to SharePoint:
   - SharePoint continues to offer support for both claims and classic authentication modes. Claims authentication is the default authentication option in SharePoint. Classic-mode authentication is deprecated and can be managed only by using Windows PowerShell. A lot of features in SharePoint require claims-mode. 
     
   
-  - The **MigrateUsers** method from SharePoint 2010 is now deprecated, it's no longer the correct way to migrate accounts. To migrate accounts, use the new Windows PowerShell cmdlet called `Convert-SPWebApplication`. For more information see  [Migrate from classic-mode to claims-based authentication in SharePoint](https://docs.microsoft.com/sharepoint/upgrade-and-update/migrate-from-classic-mode-to-claims-based-authentication-in-sharepoint-2013).
+  - The **MigrateUsers** method from SharePoint 2010 is now deprecated, it's no longer the correct way to migrate accounts. To migrate accounts, use the new Windows PowerShell cmdlet called `Convert-SPWebApplication`. For more information see  [Migrate from classic-mode to claims-based authentication in SharePoint](/sharepoint/upgrade-and-update/migrate-from-classic-mode-to-claims-based-authentication-in-sharepoint-2013).
     
   
   - Requirement to register claims providers is eliminated. However, you do have to pre-configure claims type. You can choose the characters for the claim type and there is no enforcement on the ordering of claim types.
