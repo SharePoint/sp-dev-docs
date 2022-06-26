@@ -18,9 +18,9 @@ ms.assetid: 853db6eb-fc40-fae5-577f-cc96da365f06
 
 |Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |ser:guid  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**  |ser:guid   |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd   |
    
 ## Definition
 
