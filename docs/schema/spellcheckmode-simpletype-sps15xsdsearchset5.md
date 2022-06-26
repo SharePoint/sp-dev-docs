@@ -20,9 +20,9 @@ ms.assetid: 9184db70-e548-9918-03af-30e47585dc1e
 
 |Information|Location|
 |:-----|:-----|
-|**Base type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+|**Base type** |xs:string  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Query.xsd  |
    
 ## Definition
 
@@ -41,8 +41,8 @@ ms.assetid: 9184db70-e548-9918-03af-30e47585dc1e
 
 |**Value**|**Description**|
 |:-----|:-----|
-|Off  <br/> |1  <br/> |
-|Suggest  <br/> |2  <br/> |
-|On  <br/> |4  <br/> |
+|Off  |1  |
+|Suggest  |2  |
+|On  |4  |
    
 
