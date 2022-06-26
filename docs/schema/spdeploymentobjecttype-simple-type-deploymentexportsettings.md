@@ -1,13 +1,13 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentExportSettings)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPDeploymentObjectType Simple Type (DeploymentExportSettings) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1e83dd6b-2946-45d7-8bd3-29c8e6ad6ddd
-description: "Last modified: March 09, 2015"
 ---
 
 # SPDeploymentObjectType Simple Type (DeploymentExportSettings)

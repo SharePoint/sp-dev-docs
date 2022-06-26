@@ -1,13 +1,13 @@
 ---
 title: "SPObjectType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPObjectType Simple Type (DeploymentManifest) and provides values for all top-level serialized SharePoint object types.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 68fee905-0ee5-41c6-ad8a-f7193baf5dbb
-description: "Last modified: March 09, 2015"
 ---
 
 # SPObjectType Simple Type (DeploymentManifest)

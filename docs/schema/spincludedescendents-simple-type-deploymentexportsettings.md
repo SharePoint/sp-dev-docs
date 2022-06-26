@@ -1,13 +1,13 @@
 ---
 title: "SPIncludeDescendents Simple Type (DeploymentExportSettings)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPIncludeDescendents Simple Type (DeploymentExportSettings) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0b56c258-c512-419a-ac7b-4593ba543b30
-description: "Last modified: March 09, 2015"
 ---
 
 # SPIncludeDescendents Simple Type (DeploymentExportSettings)
