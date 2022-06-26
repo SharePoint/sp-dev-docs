@@ -1,7 +1,7 @@
 ---
 title: Deploy your extension to SharePoint (Hello World part 3)
 description: Deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages.
-ms.date: 06/07/2022
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
@@ -22,8 +22,8 @@ You can also follow these steps by watching the video on the Microsoft 365 Platf
 
 There are few different ways on getting your SPFx extensions deployed and activated in SharePoint sites. The correct option depends on your business requirements and objectives. The primary options are as follows:
 
-- Activate the extension on specific site(s) using the Feature Framework-based activation option once the solution is installed. This is the only model that supports [site level assets getting created or deployed](https://docs.microsoft.com/sharepoint/dev/spfx/toolchain/provision-sharepoint-assets) as part of the solution activation.
-- Use the [tenant-scoped deployment option](https://docs.microsoft.com/sharepoint/dev/spfx/tenant-scoped-deployment) and activate the extension on specific sites available SharePoint APIs and interfaces.
+- Activate the extension on specific site(s) using the Feature Framework-based activation option once the solution is installed. This is the only model that supports [site level assets getting created or deployed](/sharepoint/dev/spfx/toolchain/provision-sharepoint-assets) as part of the solution activation.
+- Use the [tenant-scoped deployment option](/sharepoint/dev/spfx/tenant-scoped-deployment) and activate the extension on specific sites available SharePoint APIs and interfaces.
 - Use the tenant-wide deployment option for extensions from app catalog. This capability was introduced in the SharePoint Framework v1.6.
 
 ## Package the Hello World Application Customizer
