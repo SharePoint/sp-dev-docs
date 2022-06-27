@@ -1,7 +1,8 @@
 ---
 title: DestinationEntity Element in Association
+description: Describes the DestinationEntity Element in Association and provides the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -65,25 +66,10 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md) |
 
 
 
