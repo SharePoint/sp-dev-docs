@@ -1,13 +1,13 @@
 ---
 title: "SortDirection element (SPS15XSDSearchSet5)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 05a1d58c-45b8-9d5b-5844-f2c792607c8c
-description: "Last modified: March 09, 2015"
+description: Learn more about SortDirection element (SPS15XSDSearchSet5).
 ---
 
 # SortDirection element (SPS15XSDSearchSet5)
@@ -18,11 +18,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:SortDirection  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+|**Element type**  |tns:SortDirection   |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Query.xsd   |
    
 ## Definition
 
