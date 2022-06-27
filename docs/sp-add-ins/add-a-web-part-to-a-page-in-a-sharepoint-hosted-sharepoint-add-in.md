@@ -1,7 +1,7 @@
 ---
 title: Add a web part to a page in a SharePoint-hosted SharePoint Add-in
 description: Add a web part to a page, and run and test the add-in.
-ms.date: 06/22/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -18,8 +18,8 @@ In this article, you add a web part to the default page of the Employee Orientat
 ## Add a web part to a page
 
 1. In **Solution Explorer**, open the Default.aspx file.
-1. Because we'll be adding a list view web part to the page that surfaces the New Employees in Seattle list, we no longer need a link to the list view page for the list. Remove the **<asp:HyperLink>** element from the **<asp:Content>** element whose **ContentPlaceHolderId** is `PlaceHolderMain`.
-1. Inside the same **<asp:Content>** element, add the following **WebPartZone**.
+1. Because we'll be adding a list view web part to the page that surfaces the New Employees in Seattle list, we no longer need a link to the list view page for the list. Remove the **\<asp:HyperLink\>** element from the **\<asp:Content\>** element whose **ContentPlaceHolderId** is `PlaceHolderMain`.
+1. Inside the same **\<asp:Content\>** element, add the following **WebPartZone**.
 
     ```XML
       <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly"
@@ -32,7 +32,7 @@ In this article, you add a web part to the default page of the Employee Orientat
 1. In the **File** element, add a child **AllUsersWebPart** element, and set its **WebPartZoneID** to the ID of the web part zone that you created on the page. The file's contents should now look like the following. This markup tells SharePoint to insert an **AllUsersWebPart** into the web part zone that is named "HomePage1".
 
     ```xml
-    <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Elements xmlns="https://schemas.microsoft.com/sharepoint/">
       <Module Name="Pages">
         <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" >
           <AllUsersWebPart WebPartZoneID="HomePage1" WebPartOrder="1">
@@ -59,7 +59,7 @@ In this article, you add a web part to the default page of the Employee Orientat
 1. Add the following **webPart** markup as a child of the **webParts** element. This markup adds an **XsltListViewWebPart** and tells the web part to show the **New Employees in Seattle** list. Note that the **ViewContentTypeId** property value is just `0x`, not the actual ID of the **NewEmployee** content type.
 
     ```xml
-    <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <webPart xmlns="https://schemas.microsoft.com/WebPart/v3">
       <metaData>
         <type name="Microsoft.SharePoint.WebPartPages.XsltListViewWebPart,
                       Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral,
