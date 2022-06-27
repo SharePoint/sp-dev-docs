@@ -1,13 +1,13 @@
 ---
 title: "WebParts Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebParts Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f0392a4d-7b83-461b-83e7-797ab37e6572
-description: "Last modified: March 09, 2015"
 ---
 
 # WebParts Element (DeploymentManifest)

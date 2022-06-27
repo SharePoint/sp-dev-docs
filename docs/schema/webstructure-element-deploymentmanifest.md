@@ -1,13 +1,13 @@
 ---
 title: "WebStructure Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebStructure Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 574ed628-f2bf-44d7-8c76-7c4dc07f9c4e
-description: "Last modified: March 09, 2015"
 ---
 
 # WebStructure Element (DeploymentManifest)

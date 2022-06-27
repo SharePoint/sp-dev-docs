@@ -1,13 +1,13 @@
 ---
 title: "ViewForm Element (DeploymentViewFormsList)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes ViewForm Element (DeploymentViewFormsList) and provides information about elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 07ccf6fb-a17d-4b77-aba9-8175895a6286
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewForm Element (DeploymentViewFormsList)

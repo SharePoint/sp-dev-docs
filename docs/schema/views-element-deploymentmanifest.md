@@ -1,13 +1,13 @@
 ---
 title: "Views Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes Views Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2d9bc3a6-ed02-400b-9243-1e51de45b409
-description: "Last modified: March 09, 2015"
 ---
 
 # Views Element (DeploymentManifest)

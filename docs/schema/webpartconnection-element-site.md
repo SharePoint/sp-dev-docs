@@ -1,7 +1,8 @@
 ---
 title: "WebPartConnection element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebPartConnection element (Site) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: ed34f1b6-52b3-4f2d-a84e-c19138f9c5b3
-description: "Last modified: March 09, 2015"
 ---
 
 # WebPartConnection element (Site)

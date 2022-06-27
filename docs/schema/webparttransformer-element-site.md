@@ -1,7 +1,8 @@
 ---
 title: "WebPartTransformer element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebPartTransformer element (Site) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 5bf2e404-63ec-4e96-ad93-0e3d7751e875
-description: "Last modified: March 09, 2015"
 ---
 
 # WebPartTransformer element (Site)

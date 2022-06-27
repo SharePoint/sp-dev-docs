@@ -1,13 +1,13 @@
 ---
 title: "ViewStyle Element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes ViewStyle Element (DeploymentManifest - SPWebPart) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: efd3e323-77cf-443e-ad3f-c6f4f68b0eb8
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewStyle Element (DeploymentManifest - SPWebPart)

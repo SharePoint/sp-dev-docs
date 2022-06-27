@@ -1,7 +1,8 @@
 ---
 title: "WebPart element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebPart element (Site) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 012954bc-c7f4-44ac-93a4-4b972e4f03d1
-description: "Last modified: March 09, 2015"
 ---
 
 # WebPart element (Site)
