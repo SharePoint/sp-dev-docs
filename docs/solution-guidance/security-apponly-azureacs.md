@@ -58,11 +58,11 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/demo -ClientId [Your
 
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 
-In a first step, you add the SharePoint PnP Sites Core library nuget package: https://www.nuget.org/packages/SharePointPnPCoreOnline. Once that’s done you can use below code construct:
+In a first step, you add the PnP Framework library nuget package: https://www.nuget.org/packages/PnP.Framework. Once that’s done you can use below code construct:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/demo";
-using (var cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext(siteUrl, "[Your Client ID]", "[Your Client Secret]"))
+using (var cc = new AuthenticationManager().GetACSAppOnlyContext(siteUrl, "[Your Client ID]", "[Your Client Secret]"))
 {
     cc.Load(cc.Web, p => p.Title);
     cc.ExecuteQuery();
