@@ -1,13 +1,13 @@
 ---
 title: "CrossProjectLink element"
+description: Describes how the CrossProjectLink element supports Microsoft SharePoint Foundation and is not intended to be used directly from your code.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bbc895b6-366e-4acc-b03f-a953a9070a29
-description: This type or member supports Microsoft SharePoint Foundation and is not intended to be used directly from your code.
 ---
 
 # CrossProjectLink element

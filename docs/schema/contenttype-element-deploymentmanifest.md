@@ -1,13 +1,13 @@
 ---
 title: "ContentType Element (DeploymentManifest)"
+description: Provides a definition, elements and attributes for the ContentType element DeploymentManifest in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fd752d9d-2a30-4f6a-a0af-f1982fa2ee07
-description: "Last modified: March 09, 2015"
 ---
 
 # ContentType Element (DeploymentManifest)

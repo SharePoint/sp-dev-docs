@@ -1,7 +1,8 @@
 ---
 title: ContextDefinition Element in ContextDefinitionGroup
+description: Outlines the ContextDefinition element, which defines a context for an external content type of Outlook Item Type that this context definition group defines.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -64,51 +65,18 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md">Entities Element in ContextDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>Defines the external content type that this context definition is associated with. In the current release of the product, a context definition can be associated with only one external type, even though the schema supports more than one **Entity** element.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="officeitemcustomizations-element-in-contextdefinition-solutionmanifestdefinition.md">OfficeItemCustomizations Element in ContextDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>Lists the Outlook UI customizations defined in this context definition.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[Entities Element in ContextDefinition (SolutionManifestDefinitions Schema)](entities-element-in-contextdefinition-solutionmanifestdefinitions-schema.md)|Defines the external content type that this context definition is associated with. In the current release of the product, a context definition can be associated with only one external type, even though the schema supports more than one **Entity** element. |
+|[OfficeItemCustomizations Element in ContextDefinition (SolutionManifestDefinitions Schema)](officeitemcustomizations-element-in-contextdefinition-solutionmanifestdefinition.md)|Lists the Outlook UI customizations defined in this context definition.|
 
 <br/>
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md">ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The context definition group that contains this context definition.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[ContextDefinitionGroup Element in ContextDefinitionGroups (SolutionManifestDefinitions Schema)](contextdefinitiongroup-element-in-contextdefinitiongroups-solutionmanifestdefini.md)|The context definition group that contains this context definition.|
 
 <br/>
 

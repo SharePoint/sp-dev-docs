@@ -1,7 +1,8 @@
 ---
 title: StartPage element (PropertiesDefinition complexType)
 manager: soliver
-ms.date: 5/01/2020
+ms.date: 06/14/2022
+description: Describes StartPage element (PropertiesDefinition complexType) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -59,7 +60,7 @@ If the add-in uses OAuth, the domain part of the StartPage value must exactly ma
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | UrlElementDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

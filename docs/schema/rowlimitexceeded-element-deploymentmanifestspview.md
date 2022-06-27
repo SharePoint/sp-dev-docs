@@ -1,13 +1,13 @@
 ---
 title: "RowLimitExceeded element (DeploymentManifest - SPView)"
+description: "RowLimitExceeded element (DeploymentManifest - SPView) represents the means for displaying overflow data when a row limit is exceeded."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5b148f83-0a2c-4f00-9f6f-2de20f830ab7
-description: "Last modified: March 09, 2015"
 ---
 
 # RowLimitExceeded element (DeploymentManifest - SPView)

@@ -1,7 +1,8 @@
 ---
 title: Types (SharePoint Add-in Manifest)
+description: This article lists the types in the (SharePoint Add-in Manifest) XML schema.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

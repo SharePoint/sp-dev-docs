@@ -1,7 +1,8 @@
 ---
 title: FeatureScope simpleType
+description: Outlines information, a definition, and enumeration values for FeatureScope simpleType in SharePoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,11 +19,11 @@ ms.assetid: f716ce8f-d5fc-d717-c6bb-551fc2dc6ba2
 
 ## Type information
 
-|   |   |
+| Resource  |  File |
 |---|---|
-| **Base Type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| **Base Type** | xs:string |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
 
 ## Definition
 

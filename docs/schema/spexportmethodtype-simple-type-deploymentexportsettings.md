@@ -1,13 +1,13 @@
 ---
 title: "SPExportMethodType Simple Type (DeploymentExportSettings)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPExportMethodType Simple Type (DeploymentExportSettings) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cf806690-29b1-4aea-b1ef-b4cc3550ad8f
-description: "Last modified: March 09, 2015"
 ---
 
 # SPExportMethodType Simple Type (DeploymentExportSettings)

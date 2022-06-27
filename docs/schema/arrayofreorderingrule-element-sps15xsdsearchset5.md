@@ -1,13 +1,13 @@
 ---
 title: "ArrayOfReorderingRule element (SPS15XSDSearchSet5)"
+description: Discusses the definition, elements and attributes for ArrayOfReorderingRule element (SPS15XSDSearchSet5).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: efc2b12a-6731-fc62-ebb1-044559d84473
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfReorderingRule element (SPS15XSDSearchSet5)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:ArrayOfReorderingRule  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |

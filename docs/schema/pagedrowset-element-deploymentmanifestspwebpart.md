@@ -1,13 +1,13 @@
 ---
 title: "PagedRowset Element (DeploymentManifest - SPWebPart)"
+description: "PagedRowset Element (DeploymentManifest - SPWebPart) represents a paged rowset on an instance of a SharePoint web part (WebPart) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dd9ba038-fc94-4dc2-aaf6-5fe6fc51edf2
-description: "Last modified: March 09, 2015"
 ---
 
 # PagedRowset Element (DeploymentManifest - SPWebPart)

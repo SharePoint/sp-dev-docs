@@ -1,13 +1,13 @@
 ---
 title: "ManifestFile element (DeploymentSystemData)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the ManifestFile element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 37164e6f-d94d-451c-80c1-5558bd4889ca
-description: "Last modified: March 09, 2015"
 ---
 
 # ManifestFile element (DeploymentSystemData)

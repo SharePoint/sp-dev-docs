@@ -1,7 +1,8 @@
 ---
 title: VariableTypes element
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes VariableTypes element and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

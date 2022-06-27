@@ -1,7 +1,8 @@
 ---
 title: Elements element (AppHostWebFeatures)
+description: Describes the Elements element (AppHostWebFeatures) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -16,7 +17,7 @@ ms.assetid: 52d0b0de-1541-1790-70d2-76d37013af74
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | ElementDefinitionCollection |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

@@ -1,7 +1,8 @@
 ---
 title: ElementFile element (ElementManifestReferences complexType)
+description: Describes the ElementFile element (ElementManifestReferences complexType) and provides the element information, a definition and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: c25a5ef2-b9ef-926d-cf7b-9a91168c9f1f
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | ElementManifestReference |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

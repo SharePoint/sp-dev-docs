@@ -1,7 +1,8 @@
 ---
 title: Associations element in Subscription
+description: Associations element in Subscription lists the subscription associations in this cache subscription.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -35,45 +36,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.md">Association element in Associations (Subscription Schema)</a></span></p></td>
-<td align="left"><p>A subscription association.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Association element in Associations (Subscription Schema)](association-element-in-associations-subscription-schema.md) | A subscription association. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.md">Subscription element (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The subscription that contains this list of associations.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Subscription element (Subscription Schema)](subscription-element-subscription-schema.md) | The subscription that contains this list of associations. |
 
 
 

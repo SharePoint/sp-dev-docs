@@ -1,13 +1,13 @@
 ---
 title: "ID element (ResultItemType complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0485ff68-32fc-e015-94fd-5001052e3686
-description: "Last modified: March 09, 2015"
+description: Learn more about ID element (ResultItemType complexType) (SPS15XSDSearchSet2).
 ---
 
 # ID element (ResultItemType complexType) (SPS15XSDSearchSet2)
@@ -15,7 +15,7 @@ description: "Last modified: March 09, 2015"
  
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

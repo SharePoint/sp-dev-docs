@@ -1,7 +1,7 @@
 ---
 title: "Site Deletion Confirmation schema"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: eddf35a6-8b40-4d6f-8ef1-4c3684a2f93f
-description: "Last modified: July 15, 2011"
+description: The Site Deletion Confirmation schema specifies the text that is sent in email messages to site owners to confirm site usage or to warn that the site will be automatically deleted.
 ---
 
 # Site Deletion Confirmation schema

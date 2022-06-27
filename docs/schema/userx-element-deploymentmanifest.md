@@ -1,13 +1,13 @@
 ---
 title: "UserX Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes UserX Element (DeploymentManifest) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ac4e829e-699c-4856-87a3-a3c534edd861
-description: "Last modified: March 09, 2015"
 ---
 
 # UserX Element (DeploymentManifest)

@@ -1,7 +1,8 @@
 ---
 title: AppPrincipalTypeDefinition simpleType
+description: Discusses the type information, definition, and enumeration values for AppPrincipalTypeDefinition simpleType.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ The add-in principal type.
 
 ## Type information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -64,9 +65,9 @@ The add-in principal type.
 </tbody>
 </table>
 
-<br/>
 
-<br/>
+
+
 
 
 

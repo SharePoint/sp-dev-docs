@@ -1,7 +1,8 @@
 ---
 title: "UpdateHandlerClassName element (AlertTemplates)"
+description: "UpdateHandlerClassName element (AlertTemplates) specifies a class name for an alert update handler."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 00e03c45-7a86-4328-9da6-633d317c41f8
-description: "Last modified: March 09, 2015"
 ---
 
 # UpdateHandlerClassName element (AlertTemplates)

@@ -1,8 +1,8 @@
 ---
 title: Right Element in AccessControlEntry (BDCMetadataResource Schema)
-description: Details on the Right Element in AccessControlEntry (BDCMetadataResource Schema)
+description: Describes the elements and attributes for Right Element in AccessControlEntry (BDCMetadataResource Schema).
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -92,24 +92,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md">AccessControlEntry Element in AccessControlList (BDCMetadataResource Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [AccessControlEntry Element in AccessControlList (BDCMetadataResource Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md) | |
 
 
 

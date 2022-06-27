@@ -1,7 +1,7 @@
 ---
 title: Role, inheritance, elevation of privilege, and password changes in SharePoint
 description: "A role consists of two parts: a role definition and a role assignment."
-ms.date: 09/25/2017
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -77,7 +77,7 @@ If the user account is a membership user, SharePoint queries the ASP.NET **RoleM
 
 
 
-If SharePoint can't obtain the user's group memberships from Active Directory or **<roleManager>**, the newly generated token contains only the user's unique security ID (SID). No exception is thrown, but an entry is written into the ULS server log. The new token is also written into the SharePoint database so that it will not be regenerated within 24 hours.
+If SharePoint can't obtain the user's group memberships from Active Directory or **\<roleManager\>**, the newly generated token contains only the user's unique security ID (SID). No exception is thrown, but an entry is written into the ULS server log. The new token is also written into the SharePoint database so that it will not be regenerated within 24 hours.
 
 
 

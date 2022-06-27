@@ -1,7 +1,8 @@
 ---
 title: Event Registrations
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
+description: Describes Event Registrations and includes information on how to register event handlers at the site or site collection level that you will use to implement filtering to respond to events.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

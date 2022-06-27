@@ -1,13 +1,13 @@
 ---
 title: "EventReceivers Element (DeploymentManifest - SPFile)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes EventReceiver Element (DeploymentManifest - SPFile) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f9e0096d-95b1-4cbc-852e-e5ea9f163d25
-description: "Last modified: March 09, 2015"
 ---
 
 # EventReceivers Element (DeploymentManifest - SPFile)

@@ -1,13 +1,13 @@
 ---
 title: "Feature Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Feature Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f5739e5c-be3b-4ce2-a540-7d98aeb03320
-description: "Last modified: March 09, 2015"
 ---
 
 # Feature Element (DeploymentManifest)

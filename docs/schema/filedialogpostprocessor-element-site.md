@@ -1,7 +1,8 @@
 ---
 title: "FileDialogPostProcessor element (Site)"
+description: Describes the definition, element, and attribute information for the FileDialogPostProcessor element (Site).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 5c1876ef-9e45-410f-85dc-e478b01aeaac
-description: "Last modified: March 09, 2015"
 ---
 
 # FileDialogPostProcessor element (Site)

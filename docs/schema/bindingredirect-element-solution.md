@@ -1,7 +1,7 @@
 ---
 title: "BindingRedirect element (Solution)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: 16ebf1ac-50a3-415a-9ea8-2d16c5a22fba
-description: Specifies a binding redirect for a solution.
+description: BindingRedirect element (Solution) specifies a binding redirect for a solution.
 ---
 
 # BindingRedirect element (Solution)

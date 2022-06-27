@@ -2,7 +2,7 @@
 title: AssociationGroups element in Entity (BDCMetadata Schema)
 description: Details on the AssociationGroups element in Entity (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -36,45 +36,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="40%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An **AssociationGroup**.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [AssociationGroup element in AssociationGroups (BDCMetadata Schema)](associationgroup-element-in-associationgroups-bdcmetadata-schema.md) | An **AssociationGroup**. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="40%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity element in Entities (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The external content type that this **AssociationGroups** element is associated with.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Entity element in Entities (BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md) | The external content type that this **AssociationGroups** element is associated with. |
 
 
 

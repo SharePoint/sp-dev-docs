@@ -2,7 +2,7 @@
 title: Identifiers Element in Entity (BDCMetadata Schema)
 description: Details on the Identifiers Element in Entity (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -36,45 +36,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identifier-element-in-identifiers-bdcmetadata-schema.md">Identifier Element in Identifiers (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>Specifies an identifier.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Identifier Element in Identifiers (BDCMetadata Schema)](identifier-element-in-identifiers-bdcmetadata-schema.md) | Specifies an identifier. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The external content type that contains this list of identifiers.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Entity Element in Entities (BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md) | The external content type that contains this list of identifiers. |
 
 
 

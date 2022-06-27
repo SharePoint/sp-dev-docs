@@ -1,13 +1,15 @@
 ---
-title: "PropertyRules element (PropertyRuleCollection complexType) (SPS15XSDSearchSet2)"
+title: "PropertyRules element (PropertyRuleCollection complexType) 
+(SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the PropertyRules element (PropertyRuleCollection complexType) 
+(SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9594a45e-b0b6-741b-b416-98cd770236ea
-description: "Last modified: March 09, 2015"
 ---
 
 # PropertyRules element (PropertyRuleCollection complexType) (SPS15XSDSearchSet2)
@@ -16,11 +18,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:ArrayOfPropertyRule  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**|tns:ArrayOfPropertyRule|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
    
 ## Definition
 

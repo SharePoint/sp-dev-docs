@@ -1,7 +1,7 @@
 ---
 title: Select audiences for SharePoint site templates
 description: Determine which audiences can access certain site templates.
-ms.date: 08/23/2021
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -10,6 +10,9 @@ ms.localizationpriority: high
 Site templates are available to everyone by default. You can also scope site templates so that they are only available to specific users or groups. For example, the accounting department may have specific site designs they use, but it may not make sense to share those site templates with everyone. 
 
 This article explains how you can control which users and groups can see specific site templates.
+
+> [!NOTE]
+> Users with the SharePoint Admin role assigned will see all site templates, regardless of scoping.
 
 ## Grant rights to a site template
 

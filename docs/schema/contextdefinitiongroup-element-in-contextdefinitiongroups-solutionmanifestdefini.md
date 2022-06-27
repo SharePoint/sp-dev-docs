@@ -1,7 +1,8 @@
 ---
 title: ContextDefinitionGroup Element in ContextDefinitionGroups
+description: Outlines the ContextDefinitionGroup element, which defines a context definition group containing a list of context definitions for one of the Outlook Item Types
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -98,47 +99,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>Defines a context for an external content type that is of this Outlook Item Type.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[ContextDefinition Element in ContextDefinitionGroup (SolutionManifestDefinitions Schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)|Defines a context for an external content type that is of this Outlook Item Type.|
 
 <br/>
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinitiongroups-element-in-solutiondefinition-solutionmanifestdefinition.md">ContextDefinitionGroups Element in SolutionDefinition (SolutionManifestDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The **ContextDefinitionGroups** element that contains this context definition group.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[ContextDefinitionGroups Element in SolutionDefinition (SolutionManifestDefinitions Schema)](contextdefinitiongroups-element-in-solutiondefinition-solutionmanifestdefinition.md)|The **ContextDefinitionGroups** element that contains this context definition group.|
 
 <br/>
 

@@ -1,7 +1,8 @@
 ---
 title: BDCMetadataResource schema
+description: This article contains links to more information to learn about BDCMetadataResource schema.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

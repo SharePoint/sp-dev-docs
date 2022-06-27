@@ -1,7 +1,8 @@
 ---
 title: Schema reference for SharePoint
+description: This section collects all SharePoint schemas into eight sections.
 manager: soliver
-ms.date: 9/14/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: overview
 ms.prod: sharepoint

@@ -1,7 +1,8 @@
 ---
 title: Template Element (WorkflowConfig)
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Template Element (WorkflowConfig) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -105,20 +106,13 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig Element</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|WWorkflowConfig Element](workflowconfig-element.md)
 
 ### Remarks
 
-Applications created to work as a declarative rules-based, code-free workflow editor can use the <span sdata="cer" target="M:websvcWebPartPages.WebPartPagesWebService.AssociateWorkflowMarkup(System.String,System.String ">**AssociateWorkflowMarkup(String, String)**</span> method of the <span sdata="cer" target="N:websvcWebPartPages">**websvcWebPartPages**</span> Web Service to create a workflow template and associate it to a SharePoint list specifying a workflow markup file, a workflow configuration file, and optionally, a workflow rules markup file.
+Applications created to work as a declarative rules-based, code-free workflow editor can use the **AssociateWorkflowMarkup(String, String)** method of the **websvcWebPartPages** Web Service to create a workflow template and associate it to a SharePoint list specifying a workflow markup file, a workflow configuration file, and optionally, a workflow rules markup file.
 
 For more information about creating an application that can act as a declarative rules-based, code-free workflow editor, see [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx).
 

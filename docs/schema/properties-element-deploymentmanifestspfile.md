@@ -1,13 +1,13 @@
 ---
 title: "Properties Element (DeploymentManifest - SPFile)"
+description: Describes the Properties element (DeploymentManifest - SPFile) and provides a definition, the type, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 57ce0f76-68ed-44d3-b6b8-8947650fcf8b
-description: "Last modified: March 09, 2015"
 ---
 
 # Properties Element (DeploymentManifest - SPFile)

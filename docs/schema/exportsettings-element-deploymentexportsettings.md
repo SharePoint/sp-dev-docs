@@ -1,13 +1,13 @@
 ---
 title: "ExportSettings element (DeploymentExportSettings)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes ExportSettings element (DeploymentExportSettings) and includes information on type, elements, and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0dabce09-2a1e-4688-a97b-5f3fc5b6ba67
-description: "Last modified: March 09, 2015"
 ---
 
 # ExportSettings element (DeploymentExportSettings)

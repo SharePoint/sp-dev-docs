@@ -1,7 +1,7 @@
 ---
 title: Consume multi-tenant enterprise APIs secured with Azure AD in SharePoint Framework
 description: Tutorial on using the AadHttpClient to connect to a multi-tenant enterprise API secured with Azure AD in SharePoint Framework solutions.
-ms.date: 12/21/2020
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -161,7 +161,7 @@ On the left blade, select **App registrations** and select the app that was auto
 
 ![The 'App registrations' button highlighted in the Azure portal](../images/use-aadhttpclient-enterpriseapi-app-registrations.png)
 
-On the **Expose an API** update the **App ID URI** field, change the ID of your Azure AD app, so that it begins with **https://yourtenant.onmicrosoft.com**, for example, `https://contoso.onmicrosoft.com/contoso-api`. This change is required, because your Azure AD app will be used by other tenants, and it will be necessary to ensure its uniqueness across all Azure Active Directories. 
+On the **Expose an API** update the **App ID URI** field, change the ID of your Azure AD app, so that it begins with **`https://yourtenant.onmicrosoft.com`**, for example, `https://contoso.onmicrosoft.com/contoso-api`. This change is required, because your Azure AD app will be used by other tenants, and it will be necessary to ensure its uniqueness across all Azure Active Directories. 
 
 ![App ID URI in the Azure portal](../images/use-aadhttpclient-enterpriseapi-appid-uri.png)
 

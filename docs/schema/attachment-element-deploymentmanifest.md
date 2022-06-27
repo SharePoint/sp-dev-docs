@@ -1,13 +1,13 @@
 ---
 title: "Attachment element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5c78cfef-9a58-42ae-a7ca-a5f2e61668ac
-description: "Last modified: March 09, 2015"
+description: Attachment element (DeploymentManifest) represents an instance of a Windows SharePoint Services 3.0 attachment object.
 ---
 
 # Attachment element (DeploymentManifest)

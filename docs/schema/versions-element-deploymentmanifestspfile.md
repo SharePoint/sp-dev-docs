@@ -1,13 +1,13 @@
 ---
 title: "Versions Element (DeploymentManifest - SPFile)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Versions Element (DeploymentManifest - SPFile) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b2d307aa-414e-4988-9a2a-5a85083c3100
-description: "Last modified: March 09, 2015"
 ---
 
 # Versions Element (DeploymentManifest - SPFile)

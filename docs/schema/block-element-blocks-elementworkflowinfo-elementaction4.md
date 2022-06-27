@@ -1,7 +1,8 @@
 ---
-title: Block element
+title: Block element 
+description: Learn about the Block element that represents visual building blocks on the workflow designer surface.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -27,7 +28,7 @@ Represents visual building blocks on the workflow designer surface.
 
 ## Element information
 
-|   |   |
+|  Information |  Location |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

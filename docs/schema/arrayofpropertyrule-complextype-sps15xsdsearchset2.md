@@ -1,20 +1,20 @@
 ---
 title: "ArrayOfPropertyRule complexType (SPS15XSDSearchSet2)"
+description: Discusses the definition, elements and attributes for ArrayOfPropertyRule complexType (SPS15XSDSearchSet2).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7f2bc3fb-51e9-c642-c1db-23d02be0e1c4
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfPropertyRule complexType (SPS15XSDSearchSet2)
 
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |

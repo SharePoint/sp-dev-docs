@@ -1,7 +1,8 @@
 ---
 title: Property Bag schema
+description: Describes the Property Bag schema and provides examples.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

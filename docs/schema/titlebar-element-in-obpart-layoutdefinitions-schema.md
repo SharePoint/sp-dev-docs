@@ -1,7 +1,8 @@
 ---
 title: TitleBar Element in OBPart
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes TitleBar Element in OBPart and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -64,24 +65,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The Office External Part this title bar belongs to.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)](obpart-element-in-arrayofobpart-layoutdefinitions-schema.md) | The Office External Part this title bar belongs to. |
 
 
 

@@ -1,13 +1,13 @@
 ---
 title: "SystemObjects Element (DeploymentSystemData)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes SystemObjects Element (DeploymentSystemData) and provides information elements and attributes, attributes, and type.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7100c23d-ec75-489d-8549-8ea765820489
-description: "Last modified: March 09, 2015"
 ---
 
 # SystemObjects Element (DeploymentSystemData)

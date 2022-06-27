@@ -1,13 +1,13 @@
 ---
 title: "ArrayOfReorderingRule complexType (SPS15XSDSearchSet5)"
+description: Discusses the definition, elements and attributes for ArrayOfReorderingRule complexType (SPS15XSDSearchSet5) which applies to SharePoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7b578356-3500-879f-e823-28bf42dd62d6
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfReorderingRule complexType (SPS15XSDSearchSet5)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |

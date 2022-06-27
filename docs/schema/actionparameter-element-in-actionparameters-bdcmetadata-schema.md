@@ -2,7 +2,7 @@
 title: ActionParameter element in ActionParameters (BDCMetadata Schema)
 description: Details on the  ActionParameter element in ActionParameters (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -122,54 +122,17 @@ The following sections describe attributes, child elements, and parent elements.
 <br/>
 
 ### Child elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized display names for the **ActionParameter**.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of the **ActionParameter**.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
+  
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names for the **ActionParameter**. |
+| [Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the **ActionParameter**. |
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **ActionParameters** element that contains this **ActionParameter**.</p></td>
-</tr>
-</tbody>
-</table>
-
-
+  
+| Element | Description |
+| --- | --- |
+| [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md) | The **ActionParameters** element that contains this **ActionParameter**. |
 
 
 

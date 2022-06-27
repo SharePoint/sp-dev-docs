@@ -1,7 +1,8 @@
 ---
 title: DataSourceRef Element (WorkflowInfo)
+description: DataSourceRef Element (WorkflowInfo) specifies the possible values from DataSource elements associated with the Action or Condition element.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

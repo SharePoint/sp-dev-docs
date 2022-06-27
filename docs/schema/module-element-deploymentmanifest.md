@@ -1,13 +1,13 @@
 ---
 title: "Module Element (DeploymentManifest)"
+description: Describes the Modifications element (DeploymentManifest) and provides a definition and the elements and attributes in SharePoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6c4ef8ae-88fa-4055-aaa3-9089ed609d40
-description: "Last modified: March 09, 2015"
 ---
 
 # Module Element (DeploymentManifest)

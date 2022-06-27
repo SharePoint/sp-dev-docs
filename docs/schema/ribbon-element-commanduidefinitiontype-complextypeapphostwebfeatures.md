@@ -1,7 +1,8 @@
 ---
 title: Ribbon element (CommandUIDefinitionType complexType)
+description: Describes the Ribbon element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 84f34bdc-14ec-58f2-1667-5adaae41be7e
 
 ## Element information
 
-|   |   |
+|Information|Value|
 |---|---|
 | **Element type**  | RibbonType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

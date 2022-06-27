@@ -1,7 +1,8 @@
 ---
 title: SupportedLocales element (PropertiesDefinition complexType)
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes SupportedLocales element (PropertiesDefinition complexType) and provides information elements and attributes.
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ Specifies the locales that the add-in supports. This element is required for add
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | SupportedLocalesDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

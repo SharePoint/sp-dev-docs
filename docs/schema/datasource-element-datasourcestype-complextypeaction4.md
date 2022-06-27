@@ -1,7 +1,8 @@
 ---
 title: DataSource element
+description: Learn about the DataSource element.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -26,7 +27,7 @@ ms.assetid: 020a3861-ae16-6031-6d91-a5c775f4cadd
 
 ## Element information
 
-|   |   |
+|  Information |  Location |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -103,47 +104,11 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="30%" />
-<col width="25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Required</p></th>
-<th align="left"><p>Description</p></th>
-<th align="left"><p>Possible values</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**InternalName**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Specifies the internal name for the data source for a reference from a <span sdata="link"><a href="datasourceref-element-fieldbind-elementruledesignertype-complextypeaction4.md">DataSourceRef element (FieldBind element) (ruleDesignerType complexType) (Action4)</a></span>.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Specifies a localizable display name for the data source.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**NameProperty**</p></td>
-<td align="left"><p>s:string</p></td>
-<td align="left"><p>required</p></td>
-<td align="left"><p>Specifies how to differentiate the user interface (UI) elements defined in a <span sdata="link"><a href="datasource-element-datasourcestype-complextypeaction4.md">DataSource element (dataSourcesType complexType) (Action4)</a></span>.</p><p>If the value begins with "Parent.", the value is retrieved from the parent of the action or composite step that declares the **DataSource** element.</p></td>
-<td align="left"><p>Values of the s:string type.</p></td>
-</tr>
-</tbody>
-</table>
+| Attribute | Type | Required | Description | Possible values |
+| --- | --- | --- | --- | --- |
+| **InternalName** | s:string | required | Specifies the internal name for the data source for a reference from a [DataSourceRef element (FieldBind element) (ruleDesignerType complexType) (Action4)](datasourceref-element-fieldbind-elementruledesignertype-complextypeaction4.md). | Values of the s:string type. |
+| **Name** | s:string | required | Specifies a localizable display name for the data source. | Values of the s:string type. |
+| **NameProperty** | s:string | required | Specifies how to differentiate the user interface (UI) elements defined in a [DataSource element (dataSourcesType complexType) (Action4)](datasource-element-datasourcestype-complextypeaction4.md). If the value begins with "Parent.", the value is retrieved from the parent of the action or composite step that declares the **DataSource** element. | Values of the s:string type. |
 
 
 

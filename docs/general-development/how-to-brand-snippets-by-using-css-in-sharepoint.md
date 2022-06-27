@@ -1,6 +1,7 @@
 ---
 title: Brand snippets by using CSS in SharePoint
-ms.date: 09/25/2017
+description: Describes how to style snippets by using CSS in SharePoint and provides example snippets with instructions on how to use them.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: d18d07b6-1a6b-4589-a65c-932b67cef595
 ms.localizationpriority: high

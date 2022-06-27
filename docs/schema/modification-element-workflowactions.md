@@ -1,7 +1,8 @@
 ---
 title: Modification Element (WorkflowActions)
+description: Describes the Modification element (WorkflowActions) and provides a definition and the elements and attributes in SharePoint.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

@@ -1,6 +1,7 @@
 ---
 title: Set external sharing on site collections in Office 365
-ms.date: 11/03/2017
+description: Describes how to set external sharing on site collections in Microsoft Office 365 and outlines how to use the Core.ExternalSharing application.
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
 # Set external sharing on site collections in Office 365

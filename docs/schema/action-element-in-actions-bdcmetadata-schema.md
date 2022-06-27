@@ -2,7 +2,7 @@
 title: Action element in Actions (BDCMetadata Schema)
 description: Details on the Action element in Actions (BDCMetadata Schema)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -98,60 +98,22 @@ The following sections describe attributes, child elements, and parent elements.
 </tbody>
 </table>
 
-<br/>
+</br>
 
 ### Child elements
+  
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the action. |
+| [Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the action. |
+| [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md) | The parameters of the action. |
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized names of the action.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of the action.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters element in Action (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The parameters of the action.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The list of actions of an external content type.</p></td>
-</tr>
-</tbody>
-</table>
-
+  
+| Element | Description |
+| --- | --- |
+| [Actions element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md) | The list of actions of an external content type. |
 
 
 

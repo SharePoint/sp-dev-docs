@@ -1,7 +1,8 @@
 ---
 title: Custom Action Definition schema
+description: Outlines the Custom Action Definition schema in Sharepoint. Custom actions are defined in XML documents and deployed as part of a feature.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

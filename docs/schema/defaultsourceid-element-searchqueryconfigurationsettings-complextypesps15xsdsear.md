@@ -1,13 +1,13 @@
 ---
 title: "DefaultSourceId element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2b512a35-c45e-4ca9-4298-e3da0221ba1e
-description: "Last modified: March 09, 2015"
+description: Learn more about DefaultSourceId element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3).
 ---
 
 # DefaultSourceId element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |

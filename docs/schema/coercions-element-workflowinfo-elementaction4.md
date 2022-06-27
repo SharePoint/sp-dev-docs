@@ -1,7 +1,8 @@
 ---
 title: Coercions element
+description: Coercions element specifies the available coercions for converting data from one form to another.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -9,7 +10,7 @@ ms.localizationpriority: medium
 ms.assetid: 0d790bac-681d-7e9c-5448-92df6305c037
 ---
 
-# Coercions element 
+# Coercions element
 
 (WorkflowInfo element) (Action4)
 
@@ -27,11 +28,11 @@ Specifies the available coercions for converting data from one form to another.
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  |  |
-| **Namespace**     |  |
-| **Schema file**   | Actions4.xsd |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | |
+| **Namespace** | |
+| **Schema File** | Actions4.xsd |
 
 ## Definition
 

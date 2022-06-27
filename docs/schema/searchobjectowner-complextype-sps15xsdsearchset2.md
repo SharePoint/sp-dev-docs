@@ -1,13 +1,13 @@
 ---
 title: "SearchObjectOwner complexType (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a071bfbc-d23d-d37f-b2b3-92878bbe11ec
-description: "Last modified: March 09, 2015"
+description: Learn more about SearchObjectOwner complexType (SPS15XSDSearchSet2).
 ---
 
 # SearchObjectOwner complexType (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |None  <br/> |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
+|**Extension base** |None   |
    
 ## Definition
 

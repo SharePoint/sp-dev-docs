@@ -1,6 +1,7 @@
 ---
 title: Following people and content REST API reference for SharePoint
-ms.date: 09/25/2017
+description: Describes finding SharePoint REST endpoints for following people and content by using the SocialRestFollowingManager and the PeopleManager resources.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: c05755df-846d-4a39-941d-950d066cc6d4
 ms.localizationpriority: high

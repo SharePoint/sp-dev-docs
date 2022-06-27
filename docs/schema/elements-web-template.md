@@ -1,7 +1,8 @@
 ---
 title: Elements (Web Template)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements(Web Template) and includes information about elements and attributes, remarks, and an example.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

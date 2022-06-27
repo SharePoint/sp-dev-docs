@@ -1,13 +1,13 @@
 ---
 title: "OptimizeForFrequentUse element (ResultItemType complexType) (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the OptimizeForFrequentUse element (ResultItemType complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 65dbacd9-39b4-5c9e-2c7a-7a5a4991d329
-description: "Last modified: March 09, 2015"
 ---
 
 # OptimizeForFrequentUse element (ResultItemType complexType) (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |xs:boolean  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**|xs:boolean|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
    
 ## Definition
 

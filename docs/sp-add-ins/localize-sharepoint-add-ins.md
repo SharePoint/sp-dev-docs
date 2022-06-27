@@ -1,7 +1,7 @@
 ---
 title: Localize SharePoint Add-ins
 description: Localize a SharePoint Add-in by using resource files, JavaScript resource files, and other techniques.
-ms.date: 12/26/2017
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -444,7 +444,7 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
 
 ### To test your add-in on an on-premises website
 
-1. Install the language pack in which you want to test your add-in. For more information, see [Install or uninstall language packs for SharePoint](https://technet.microsoft.com/library/cc262108.aspx) and [Download language packs for SharePoint Server 2013](https://www.microsoft.com/download/details.aspx?id=37140).
+1. Install the language pack in which you want to test your add-in. For more information, see [Install or uninstall language packs for SharePoint](/sharepoint/install/install-uninstall-language-packs-2019) and [Download language packs for SharePoint Server 2013](https://www.microsoft.com/download/details.aspx?id=37140).
 
 2. Open Central Administration for the farm.
 

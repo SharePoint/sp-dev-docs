@@ -1,7 +1,8 @@
 ---
 title: ComboBox element (CommandUIDefinitionType complexType)
+description: Describes the definition, element, and attribute information for ComboBox element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,12 +19,11 @@ ms.assetid: a9c03296-9144-b65f-c271-97ca3875f657
 
 ## Element information
 
-|   |   |
-|---|---|
-| **Element type**  | ComboBoxType |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
-
+| Information | Location |
+|-------------|----------|
+| **Element Type** | ComboBoxType |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 
