@@ -1,6 +1,7 @@
 ---
 title: Authorize provider-hosted add-in users at run time by using OAuth
-ms.date: 06/10/2022
+description: Describes how to authorize provider-hosted-add-in users at run time by using OAuth, outlines how to use the Core.DynamicPermissions add-in.
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 # Authorize provider-hosted add-in users at run time by using OAuth
@@ -78,7 +79,7 @@ When choosing  **Connect** on **Connect to Office 365**,  **Connect** in Control
 **TokenRepository.Connect** calls **TokenHelper.GetAuthorizationUrl** . **TokenHelper.GetAuthorizationUrl** returns the redirect URL to OAuthAuthorize.aspx using the **hostUrl** and the desired permissions on the SharePoint resource. OAuthAuthorize.aspx is used to authorize users using OAuth. When redirected to OAuthAuthorize.aspx, the user must sign in to Office 365, and then consent to the permissions the add-in is requesting, or trust the add-in. The desired permission on the SharePoint resource is **Web.Manage** . After user authorization, the code sample creates lists on the SharePoint site. To create lists on a SharePoint site, users must have **Web.Manage** permissions.
 
 > [!NOTE] 
-> **TokenHelper.GetAuthorizationUrl** returns a URL of the form **`https://contoso.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?IsDlg=1&amp;client_id=[Client ID]&amp;scope=Web.Manage&amp;response_type=code`** , where `[Client ID]` is the add-in's Client ID. If your add-in is registered through the Seller Dashboard, any Office 365 site can install the add-in. If your add-in is not registered through the Seller Dashboard, you must register your add-in by using appregnew.aspx, and then update Core.DynamicPermissionsWeb\web.config. To learn more, see[Register SharePoint Add-ins 2013](https://msdn.microsoft.com/library/be41a5dc-2af9-4fd9-bf4e-ad6dfa849524%28Office.15%29.aspx).
+> **TokenHelper.GetAuthorizationUrl** returns a URL of the form **https://contoso.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?IsDlg=1&amp;client_id=\<Client ID\>&amp;scope=Web.Manage&amp;response_type=code**, where **\<Client ID\>** is the add-in's Client ID. If your add-in is registered through the Seller Dashboard, any Office 365 site can install the add-in. If your add-in is not registered through the Seller Dashboard, you must register your add-in by using appregnew.aspx, and then update Core.DynamicPermissionsWeb\web.config. To learn more, see[Register SharePoint Add-ins 2013](https://msdn.microsoft.com/library/be41a5dc-2af9-4fd9-bf4e-ad6dfa849524%28Office.15%29.aspx).
 
 ```csharp
  public void Connect(string hostUrl)

@@ -1,6 +1,7 @@
 ---
 title: Embedding JavaScript into SharePoint
-ms.date: 06/10/2022
+description: Describes how to embed JavaScript into SharePoint, outlines why using namespaces is important, how to use namespaces, and provides additional references.
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 # Embedding JavaScript into SharePoint
