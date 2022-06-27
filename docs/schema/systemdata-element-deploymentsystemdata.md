@@ -1,13 +1,13 @@
 ---
 title: "SystemData Element (DeploymentSystemData)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes SystemData Element (DeploymentSystemData) and provides information elements and attributes, type, and additional remarks.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79e46615-3108-4103-9553-1d57938333b1
-description: "Last modified: March 09, 2015"
 ---
 
 # SystemData Element (DeploymentSystemData)

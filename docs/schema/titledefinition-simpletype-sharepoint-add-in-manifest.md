@@ -1,7 +1,8 @@
 ---
 title: TitleDefinition simpleType
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes TitleDefinition simpleType and specifies the friendly name of the SharePoint Add-in that appears in the user interface (UI).
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ Specifies the friendly name of the SharePoint Add-in that appears in the user in
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

@@ -1,7 +1,8 @@
 ---
 title: "TextBox element (Server Ribbon)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes TextBox element (Server Ribbon) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 49f7085a-7b2f-44eb-b7eb-39c55a102136
-description: "Last modified: March 09, 2015"
 ---
 
 # TextBox element (Server Ribbon)

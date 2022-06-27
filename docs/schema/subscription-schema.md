@@ -1,7 +1,8 @@
 ---
 title: Subscription schema
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
+description: Describes Subscription schema and contains the documentation for the Subscription schema (Subscription.xsd).
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
