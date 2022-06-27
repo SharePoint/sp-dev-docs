@@ -1,7 +1,8 @@
 ---
 title: SharePoint Add-in schemas
+description: Learn about SharePoint Add-in schemas, document schemas that support SharePoint Add-ins, including the App Manifest schema.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: overview
 ms.prod: sharepoint

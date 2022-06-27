@@ -1,7 +1,8 @@
 ---
 title: FieldBind element
+description: Outlines the usage, element information, a definition, and elements and attributes for the FieldBind element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

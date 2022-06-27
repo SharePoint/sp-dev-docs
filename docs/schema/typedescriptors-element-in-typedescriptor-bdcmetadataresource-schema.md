@@ -2,7 +2,7 @@
 title: TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)
 description: Details on the TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -34,42 +34,16 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md">TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="typedescriptor-element-in-parameter-bdcmetadataresource-schema.md">TypeDescriptor Element in Parameter (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md) |
+| [TypeDescriptor Element in Parameter (BDCMetadataResource Schema)](typedescriptor-element-in-parameter-bdcmetadataresource-schema.md) |
 
 
 

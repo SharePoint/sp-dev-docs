@@ -1,7 +1,7 @@
 ---
 title: "Analyze and use the scanner data: Modernize lists & libraries"
 description: Understand and process the scanner results to help your sites to get the most out of the modern list and library experience
-ms.date: 01/27/2021
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -22,7 +22,7 @@ The filtered data is then presented in a number of charts:
 
 ## Understand which sites you can "fix" to make them work using the modern list and library user interface
 
-Apply the following filter and confirm the "Only blocked due OOB reason(s)" shows only FALSE. Lists are marked as blocked by OOB reason if their list template is not yet built to present itself using the modern user interface. See [List templates available in the modern user interface](https://docs.microsoft.com/sharepoint/dev/transform/modernize-userinterface-lists-and-libraries#list-templates-available-in-the-modern-user-interface) to get a complete list of list templates that are supported.
+Apply the following filter and confirm the "Only blocked due OOB reason(s)" shows only FALSE. Lists are marked as blocked by OOB reason if their list template is not yet built to present itself using the modern user interface. See [List templates available in the modern user interface](/sharepoint/dev/transform/modernize-userinterface-lists-and-libraries#list-templates-available-in-the-modern-user-interface) to get a complete list of list templates that are supported.
 
 Filter | Validation
 ---------|----------
@@ -39,7 +39,7 @@ The render type results indicate the **key** reason why a list is not rendering 
 List page render type | Remediation steps
 ---------|----------
 **MultipeWebPart** | Lists are not showing up in modern because on their default view page there’s more than one web part. By default a list view page has only one XSLTListView web part. To remediate this you need to ensure there’s only the default XSLTListView web part on the list default view page (AllItems.aspx). You can programmatically do this using the LimitedWebPartManager API’s.
-**JSLinkCustomization** | List are not showing up in modern because they’re using JSLink to customize the list rendering. To remediate this you need to remove the JSLink customization at web part level. JSLink at field level is not blocking the list be is ignored in the modern experience. See the [Modernize customizations](https://docs.microsoft.com/sharepoint/dev/transform/modernize-customizations) article for guidance on how to build modern alternatives. Also note that you can use the additional data like the base template chart to get a view on which list templates use JSLink and use the JSLink graphs to understand whether it's JSLink defined at web part or field level.
-**XslLinkCustomization** | Lists are not showing up in modern because they’re using XslLink to customize the list rendering. To remediate this you need to remove the XslLink customizations. See the [Modernize customizations](https://docs.microsoft.com/sharepoint/dev/transform/modernize-customizations) article for guidance on how to build modern alternatives.
-**WebSettingsOff** or **SiteSettingsOff** | Lists are not showing up in modern because at web or site level modern list rendering has been disabled. To remediate this you need to disable the site or web level modern list and library blocking feature. See the [Maximize use of modern lists and libraries](https://docs.microsoft.com/sharepoint/dev/transform/modernize-userinterface-lists-and-libraries) article to learn more.
-**ListSettingsOff** | Lists are not showing up in modern because modern was disabled at list level. To remediate this you need to set the list experience to Auto or NewExperience. See the [Maximize use of modern lists and libraries](https://docs.microsoft.com/sharepoint/dev/transform/modernize-userinterface-lists-and-libraries) article to learn more.
+**JSLinkCustomization** | List are not showing up in modern because they’re using JSLink to customize the list rendering. To remediate this you need to remove the JSLink customization at web part level. JSLink at field level is not blocking the list be is ignored in the modern experience. See the [Modernize customizations](/sharepoint/dev/transform/modernize-customizations) article for guidance on how to build modern alternatives. Also note that you can use the additional data like the base template chart to get a view on which list templates use JSLink and use the JSLink graphs to understand whether it's JSLink defined at web part or field level.
+**XslLinkCustomization** | Lists are not showing up in modern because they’re using XslLink to customize the list rendering. To remediate this you need to remove the XslLink customizations. See the [Modernize customizations](/sharepoint/dev/transform/modernize-customizations) article for guidance on how to build modern alternatives.
+**WebSettingsOff** or **SiteSettingsOff** | Lists are not showing up in modern because at web or site level modern list rendering has been disabled. To remediate this you need to disable the site or web level modern list and library blocking feature. See the [Maximize use of modern lists and libraries](/sharepoint/dev/transform/modernize-userinterface-lists-and-libraries) article to learn more.
+**ListSettingsOff** | Lists are not showing up in modern because modern was disabled at list level. To remediate this you need to set the list experience to Auto or NewExperience. See the [Maximize use of modern lists and libraries](/sharepoint/dev/transform/modernize-userinterface-lists-and-libraries) article to learn more.

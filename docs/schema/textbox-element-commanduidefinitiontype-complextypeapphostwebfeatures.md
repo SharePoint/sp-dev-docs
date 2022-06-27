@@ -1,7 +1,8 @@
 ---
 title: TextBox element (CommandUIDefinitionType complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
+description: Describes TextBox element (CommandUIDefinitionType complexType) and includes information on elements and attributes
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 164eca19-d2e1-a5f7-6599-c6b622658eeb
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | TextBoxType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

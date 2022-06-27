@@ -1,13 +1,13 @@
 ---
 title: "SearchQueryConfigurationSettings complexType (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 66da239e-98dd-a812-4041-ffc248561236
-description: "Last modified: March 09, 2015"
+description: Learn more about SearchQueryConfigurationSettings complexType (SPS15XSDSearchSet3).
 ---
 
 # SearchQueryConfigurationSettings complexType (SPS15XSDSearchSet3)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
-|**Extension base** <br/> |None  <br/> |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Portability.xsd   |
+|**Extension base**  |None   |
    
 ## Definition
 

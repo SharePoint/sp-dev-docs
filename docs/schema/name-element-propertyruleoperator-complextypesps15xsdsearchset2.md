@@ -1,13 +1,13 @@
 ---
 title: "Name element (PropertyRuleOperator complexType) (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the Name element (PropertyRuleOperator complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d604ec50-f997-7292-2eec-8ca539d2e11b
-description: "Last modified: March 09, 2015"
 ---
 
 # Name element (PropertyRuleOperator complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

@@ -1,7 +1,8 @@
 ---
 title: Elements Element (List Instance)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (List Instance) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

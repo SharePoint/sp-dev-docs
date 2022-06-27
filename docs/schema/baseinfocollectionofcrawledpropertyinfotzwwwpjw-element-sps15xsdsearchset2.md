@@ -1,13 +1,13 @@
 ---
 title: "BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw element (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dd160001-78e1-d307-6dab-74f45c05cabb
-description: "Last modified: March 09, 2015"
+description: BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw element (SPS15XSDSearchSet2) in an XML element.
 ---
 
 # BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw element (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

@@ -1,7 +1,8 @@
 ---
 title: Dictionary element
+description: Describes the Dictionary element and provides the usage, the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

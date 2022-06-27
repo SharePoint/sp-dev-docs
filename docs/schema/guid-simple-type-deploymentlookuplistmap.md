@@ -1,13 +1,13 @@
 ---
 title: "Guid Simple Type (DeploymentLookupListMap)"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f7feaa49-5b51-45ae-be05-24a2c46c0b0b
-description: "Last modified: July 15, 2011"
+description: Guid Simple Type (DeploymentLookupListMap) supports the use of a globally unique identifier (GUID) as a Guid attribute field value.
 ---
 
 # Guid Simple Type (DeploymentLookupListMap)

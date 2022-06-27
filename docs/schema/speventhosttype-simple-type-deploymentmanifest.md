@@ -1,13 +1,13 @@
 ---
 title: "SPEventHostType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPEventHostType Simple Type (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 77928f8c-f509-40b9-8820-ac663487dd6f
-description: "Last modified: March 09, 2015"
 ---
 
 # SPEventHostType Simple Type (DeploymentManifest)

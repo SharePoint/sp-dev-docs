@@ -1,7 +1,8 @@
 ---
 title: Field Definitions
+description: Provides the XML schema definition and an example for Field Definitions in SharePoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

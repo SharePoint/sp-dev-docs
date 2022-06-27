@@ -1,7 +1,8 @@
 ---
 title: NavBarPage element (Module)
+decription: NavBarPage element (Module) provides information about the file specified as the home page in a module so that other pages can be linked to the page.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

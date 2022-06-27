@@ -1,7 +1,8 @@
 ---
 title: SupportedLanguages element (PropertiesDefinition complexType)
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes SupportedLanguages element (PropertiesDefinition complexType) and provides information elements and attributes.
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ Please do not use this element. It has been deprecated in favor of the **Support
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | SupportedLanguagesDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

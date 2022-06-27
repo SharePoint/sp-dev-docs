@@ -7,7 +7,7 @@ ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c11c4d2b-5994-f29f-d413-bdb60c37b215
-description: "Last modified: March 09, 2015"
+description: "Describes the ReorderingRule element (ArrayOfReorderingRule complexType) (SPS15XSDSearchSet5). Applies to SharePoint Server 2013."
 ---
 
 # ReorderingRule element (ArrayOfReorderingRule complexType) (SPS15XSDSearchSet5)
@@ -18,7 +18,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Value|
 |:-----|:-----|
 |**Element type** <br/> |tns:ReorderingRule  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |

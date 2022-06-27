@@ -1,7 +1,8 @@
 ---
 title: Default Workflow Conditions (WorkflowInfo)
+description: Conditions are rules that you configure to direct the flow of your workflow.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -34,114 +35,18 @@ By default, the WSS.ACTIONS file is installed in the following location in Share
 
 The following table lists the default workflow conditions that are included with SharePoint Foundation 2010. It also includes an example rule sentence for each condition, and the fields and values that apply.
 
-<table>
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Condition</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Compare** *<list or document library name>* **field**</p></td>
-<td align="left"><p>Instructs the workflow designer to compare a field in the current list or document library to a specified value.</p>
-<p>**Rule Sentence**:</p>
-<p>If fieldequalsvalue</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**field** - Displays a list of all fields in the current list.</p></li>
-<li><p>**equals** - Shows a list of operators that can be used to compare the field and value specified in the rule sentence.</p></li>
-<li><p>**value** - Presents a lookup dialog box that allows data binding to a SharePoint list item or directly to a text entry.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Compare any data source**</p></td>
-<td align="left"><p>Instructs the workflow designer to compare a field in any SharePoint list or document library in the current website to a specified value.</p>
-<p>**Rule Sentence**:</p>
-<p>If valueequalsvalue</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**value** - Displays a lookup control that allows data binding to any SharePoint list or document library item.</p></li>
-<li><p>**equals** - Shows a list of operators that can be used to compare the field and value that are specified in the rule sentence.</p></li>
-<li><p>**value** - Presents a lookup control that allows data binding to a SharePoint list item or directly to a text entry.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Title field contains keywords**</p></td>
-<td align="left"><p>Used to test whether specific keywords exist in the title field of the current list or document library item that the workflow is running on.</p>
-<p>**Rule Sentence**:</p>
-<p>If title field contains keywords</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**keywords** - Displays both a text editor dialog box where a text string can be entered for comparison, and a lookup dialog box for gathering information from another SharePoint Foundation 2010 list or document library item.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Modified in a specific date span**</p></td>
-<td align="left"><p>Checks the modified date of the item. If the modified date of a list item falls within a specified date range, this condition returns **true**.</p>
-<p>**Rule Sentence**:</p>
-<p>If modified between date and date</p>
-<p>**Fields:**</p>
-<ul>
-<li><p>**date** - Displays a date selector control and a lookup control. The date selector lets the workflow designer choose a specified date, and the lookup control enables the comparison of the current list item to another list or document library item.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Modified by a specific person**</p></td>
-<td align="left"><p>When a workflow is started that contains this condition, the list item is examined for last modified date. If the item was modified by the person who is specified in the workflow, this condition is satisfied and returns **true**.</p>
-<p>**Rule Sentence**:</p>
-<p>If modified by specific person</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**specific person** - This field opens a user selection dialog box. The workflow creator can use this condition to select a single person or group from the built-in server groups or from Active Directory directory service.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**Created in a specific date span**</p></td>
-<td align="left"><p>Checks the date that the item was created. If the creation date falls within a specified date range, this condition returns **true**.</p>
-<p>**Rule Sentence**:</p>
-<p>If modified between date and date</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**date** - Displays a date selector control and a lookup control. The date selector lets the workflow designer choose a specified date, and the lookup control enables the comparison of the current list item to another list or document library item.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**Created by a specific person**</p></td>
-<td align="left"><p>When a workflow is started that contains this condition, the list item is examined for its creator. If the item was modified by the person who is specified in the workflow, the condition is satisfied and returns **true**.</p>
-<p>**Rule Sentence**:</p>
-<p>If modified by specific person</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**specific person** - This field opens a user selection dialog box. The workflow creator can use this to select a single person or group from the built-in server groups or from Active Directory.</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**The file type is a specific type**</p></td>
-<td align="left"><p>Used to evaluate whether a file is of a certain type (for example, a Microsoft Word document, a Microsoft Excel worksheet, and so on.)</p>
-<p>**Rule Sentence**:</p>
-<p>If the file type is specific type</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**specific type** - Displays the field text editor. Enter a string value for the file type.</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**The file size in a specific range kilobytes**</p></td>
-<td align="left"><p>Used to evaluate whether a file is a specific size. This condition can be used to ensure that Word documents in a document library do not exceed a specific size.</p>
-<p>**Rule Sentence**:</p>
-<p>If the file size is between size and size kilobytes</p>
-<p>**Fields**:</p>
-<ul>
-<li><p>**size** - Displays a text box. Enter a number in kilobytes.</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
+  
+| Condition | Description |
+| --- | --- |
+| **Compare** *list or document library name* **field** | Instructs the workflow designer to compare a field in the current list or document library to a specified value. **Rule Sentence**:If fieldequalsvalue**Fields**:* **field** - Displays a list of all fields in the current list.* **equals** - Shows a list of operators that can be used to compare the field and value specified in the rule sentence.* **value** - Presents a lookup dialog box that allows data binding to a SharePoint list item or directly to a text entry. |
+| **Compare any data source** | Instructs the workflow designer to compare a field in any SharePoint list or document library in the current website to a specified value. **Rule Sentence**:If valueequalsvalue **Fields**:* **value** - Displays a lookup control that allows data binding to any SharePoint list or document library item.* **equals** - Shows a list of operators that can be used to compare the field and value that are specified in the rule sentence.* **value** - Presents a lookup control that allows data binding to a SharePoint list item or directly to a text entry. |
+| **Title field contains keywords** | Used to test whether specific keywords exist in the title field of the current list or document library item that the workflow is running on. **Rule Sentence**:If title field contains keywords **Fields**:* **keywords** - Displays both a text editor dialog box where a text string can be entered for comparison, and a lookup dialog box for gathering information from another SharePoint Foundation 2010 list or document library item. |
+| **Modified in a specific date span** | Checks the modified date of the item. If the modified date of a list item falls within a specified date range, this condition returns **true**. **Rule Sentence**:If modified between date and date **Fields:*** **date** - Displays a date selector control and a lookup control. The date selector lets the workflow designer choose a specified date, and the lookup control enables the comparison of the current list item to another list or document library item. |
+| **Modified by a specific person** | When a workflow is started that contains this condition, the list item is examined for last modified date. If the item was modified by the person who is specified in the workflow, this condition is satisfied and returns **true**. **Rule Sentence**:If modified by specific person **Fields**:* **specific person** - This field opens a user selection dialog box. The workflow creator can use this condition to select a single person or group from the built-in server groups or from Active Directory directory service. |
+| **Created in a specific date span** | Checks the date that the item was created. If the creation date falls within a specified date range, this condition returns **true**. **Rule Sentence**:If modified between date and date **Fields**:* **date** - Displays a date selector control and a lookup control. The date selector lets the workflow designer choose a specified date, and the lookup control enables the comparison of the current list item to another list or document library item. |
+| **Created by a specific person** | When a workflow is started that contains this condition, the list item is examined for its creator. If the item was modified by the person who is specified in the workflow, the condition is satisfied and returns **true**. **Rule Sentence**:If modified by specific person **Fields**:* **specific person** - This field opens a user selection dialog box. The workflow creator can use this to select a single person or group from the built-in server groups or from Active Directory. |
+| **The file type is a specific type** | Used to evaluate whether a file is of a certain type (for example, a Microsoft Word document, a Microsoft Excel worksheet, and so on.) **Rule Sentence**:If the file type is specific type **Fields**:* **specific type** - Displays the field text editor. Enter a string value for the file type. |
+| **The file size in a specific range kilobytes** | Used to evaluate whether a file is a specific size. This condition can be used to ensure that Word documents in a document library do not exceed a specific size. **Rule Sentence**:If the file size is between size and size kilobytes. **Fields**:* **size** - Displays a text box. Enter a number in kilobytes. |
 
 ## See also
 

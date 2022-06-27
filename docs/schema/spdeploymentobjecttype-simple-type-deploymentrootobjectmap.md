@@ -1,13 +1,13 @@
 ---
 title: "SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPDeploymentObjectType Simple Type (DeploymentRootObjectMap) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 484f7cea-b9f7-4545-9257-99509f87d1cc
-description: "Last modified: March 09, 2015"
 ---
 
 # SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)

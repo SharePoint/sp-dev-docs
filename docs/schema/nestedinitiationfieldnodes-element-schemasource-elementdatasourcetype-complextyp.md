@@ -1,7 +1,8 @@
 ---
 title: NestedInitiationFieldNodes element
+description: NestedInitiationFieldNodes element specifies that fields are retrieved from the schema of the data used to begin the workflow.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

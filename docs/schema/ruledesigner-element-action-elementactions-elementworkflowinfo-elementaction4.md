@@ -1,7 +1,8 @@
 ---
 title: RuleDesigner element (Action element)
+description: RuleDesigner element (Action element) contains information that allows the rendering of a declarative Action sentence in the visual workflow editor.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

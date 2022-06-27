@@ -1,7 +1,8 @@
 ---
 title: "Customization element (List)"
+description: Outlines attributes, child elements, parent elements, and occurrences for the Customization element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: b9abdfc7-93f8-4404-9133-b0e9d4c33b3c
-description: "Last modified: March 09, 2015"
 ---
 
 # Customization element (List)

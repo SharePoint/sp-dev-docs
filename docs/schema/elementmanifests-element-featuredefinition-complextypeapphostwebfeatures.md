@@ -1,7 +1,8 @@
 ---
 title: ElementManifests element (FeatureDefinition complexType)
+description: Describes the ElementManifests element (FeatureDefinition complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 5f720156-326c-d29e-a8f6-5ba12842ce0e
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | ElementManifestReferences |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

@@ -1,7 +1,8 @@
 ---
 title: Selected Type Definitions
+description: Learn more about Selected Type Definitions.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -1,13 +1,13 @@
 ---
 title: "Script element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 15350a26-d4bd-444e-a707-b2fc5cb3fcf7
-description: "Last modified: March 09, 2015"
+description: Script element (DeploymentManifest - SPWebPart) represents script to execute on deployment of an instance of a web part object.
 ---
 
 # Script element (DeploymentManifest - SPWebPart)

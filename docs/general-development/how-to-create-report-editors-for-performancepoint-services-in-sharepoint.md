@@ -1,7 +1,7 @@
 ---
 title: Create report editors for PerformancePoint Services in SharePoint
 description: Learn how to create the editor component of a custom report extension for PerformancePoint Services.
-ms.date: 09/25/2017
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -41,7 +41,7 @@ We recommend that you use the sample editor as a template. The sample shows how 
     - IDataSourceConsumer.cs
 
     > [!NOTE]
-    > The sample report obtains data from a filter, so it does not use **DataSourceConsumerHelper** or **IDataSourceConsumer** objects. However, if your report obtains data from a PerformancePoint Services data source, you can use the methods that are exposed by the **DataSourceConsumerHelper** class to retrieve data sources as described in [Create filter editors for PerformancePoint Services in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-create-filter-editors-for-performancepoint-services-in-sharepoint).
+    > The sample report obtains data from a filter, so it does not use **DataSourceConsumerHelper** or **IDataSourceConsumer** objects. However, if your report obtains data from a PerformancePoint Services data source, you can use the methods that are exposed by the **DataSourceConsumerHelper** class to retrieve data sources as described in [Create filter editors for PerformancePoint Services in SharePoint](/sharepoint/dev/general-development/how-to-create-filter-editors-for-performancepoint-services-in-sharepoint).
 
 1. In your editor class, add **using** directives for the following PerformancePoint Services namespaces:
 

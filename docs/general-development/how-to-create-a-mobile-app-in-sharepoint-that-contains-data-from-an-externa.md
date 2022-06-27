@@ -1,6 +1,7 @@
 ---
 title: Create a mobile app in SharePoint that contains data from an external data source
-ms.date: 09/25/2017
+description: Describes how to create a mobile app in SharePoint that contains data from an external data source by using Business Connectivity Services.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: f1d62256-aca0-4a59-8145-0add9e68a449
 ms.localizationpriority: medium
@@ -287,7 +288,7 @@ Now that the app is ready to run, you can test it using phone emulator.
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
--  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+-  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
     
   
 -  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

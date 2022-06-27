@@ -1,13 +1,13 @@
 ---
 title: "HasMultipleValues element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79b64f49-636a-e19d-f18c-771132602da6
-description: "Last modified: March 09, 2015"
+description: Learn about HasMultipleValues element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2).
 ---
 
 # HasMultipleValues element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

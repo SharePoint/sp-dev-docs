@@ -1,6 +1,7 @@
 ---
 title: Get started with workflows in SharePoint
-ms.date: 09/25/2017
+description: Describes how to get started with workflows in SharePoint and provides steps for creating a workflow using Visual Studio.
+ms.date: 06/09/2022
 keywords: vs.sharepointtools.workflow4.workflowlist,VS.SharePointTools.Workflow4.WorkflowName
 f1_keywords:
 - vs.sharepointtools.workflow4.workflowlist,VS.SharePointTools.Workflow4.WorkflowName

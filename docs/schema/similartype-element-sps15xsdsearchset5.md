@@ -1,13 +1,13 @@
 ---
 title: "SimilarType element (SPS15XSDSearchSet5)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9454ff12-42cf-55c7-7b18-eb38db8cab10
-description: "Last modified: March 09, 2015"
+description: Learn more about SimilarType element (SPS15XSDSearchSet5).
 ---
 
 # SimilarType element (SPS15XSDSearchSet5)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:SimilarType  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+|**Element type** |tns:SimilarType   |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query   |
+|**Schema file**|schema_Microsoft.Office.Server.Search.Query.xsd  |
    
 ## Definition
 

@@ -1,7 +1,8 @@
 ---
 title: "ListFormClosing element (List)"
+description: Outlines the ListFormClosing element (List) in Sharepoint, which defines the closing section in a form for a list.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 4c891d8c-273f-4161-a4ce-638359d380b4
-description: "Last modified: March 09, 2015"
 ---
 
 # ListFormClosing element (List)

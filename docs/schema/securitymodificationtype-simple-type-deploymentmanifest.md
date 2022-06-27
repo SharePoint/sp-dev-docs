@@ -1,13 +1,13 @@
 ---
 title: "SecurityModificationType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6ecf42b2-0c38-4ecf-b819-fa931965ab49
-description: "Last modified: March 09, 2015"
+description: SecurityModificationType Simple Type (DeploymentManifest) specifies the allowable security modifications for a specified user, user group, role, or role assignment.
 ---
 
 # SecurityModificationType Simple Type (DeploymentManifest)

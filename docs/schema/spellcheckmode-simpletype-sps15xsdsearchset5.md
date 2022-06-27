@@ -1,13 +1,13 @@
 ---
 title: "SpellcheckMode simpleType (SPS15XSDSearchSet5)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SpellcheckMode simpleType (SPS15XSDSearchSet5) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9184db70-e548-9918-03af-30e47585dc1e
-description: "Last modified: March 09, 2015"
 ---
 
 # SpellcheckMode simpleType (SPS15XSDSearchSet5)
@@ -18,11 +18,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Base type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+|**Base type** |xs:string  |
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Query.xsd  |
    
 ## Definition
 
@@ -41,8 +41,8 @@ description: "Last modified: March 09, 2015"
 
 |**Value**|**Description**|
 |:-----|:-----|
-|Off  <br/> |1  <br/> |
-|Suggest  <br/> |2  <br/> |
-|On  <br/> |4  <br/> |
+|Off  |1  |
+|Suggest  |2  |
+|On  |4  |
    
 

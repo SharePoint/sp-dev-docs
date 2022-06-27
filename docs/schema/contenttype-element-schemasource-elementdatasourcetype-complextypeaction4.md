@@ -1,7 +1,8 @@
 ---
 title: ContentType element
+description: Outlines information, a definition, elements and attributes for the ContentType element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -27,11 +28,11 @@ Specifies a content type from which to retrieve fields.
 
 ## Element information
 
-|   |   |
+| Resource  |  File |
 |---|---|
-| **Element type**  |  |
-| **Namespace**     |  |
-| **Schema file**   | Actions4.xsd |
+| Element type |  |
+| Namespace    |  |
+| Schema file   | Actions4.xsd |
 
 ## Definition
 

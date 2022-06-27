@@ -1,7 +1,8 @@
 ---
 title: ElementManifest element (ElementManifestReferences complexType)
+description: Describes the ElementManifest element (ElementManifestReferences complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 1f090666-9cc5-cd07-bb45-4d68fe51367e
 
 ## Element information
 
-|   |   |
+| Information | Definition |
 |---|---|
 | **Element type**  | ElementManifestReference |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

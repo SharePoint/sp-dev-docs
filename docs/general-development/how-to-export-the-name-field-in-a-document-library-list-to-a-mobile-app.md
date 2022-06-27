@@ -1,7 +1,7 @@
 ---
 title: Export the Name field in a Document Library list to a mobile app
 description: Export the Name field of a Document Library list to a mobile app by using the Visual Studio SharePoint List wizard.
-ms.date: 09/25/2017
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 901c2012-18c6-4dbd-a787-f8650a0cc7a8
 ms.localizationpriority: medium
@@ -151,7 +151,7 @@ public string m_fileUrl;
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
--  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+-  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
     
   
 -  [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

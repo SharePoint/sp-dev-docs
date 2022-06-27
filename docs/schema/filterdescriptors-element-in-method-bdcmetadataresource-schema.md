@@ -2,7 +2,7 @@
 title: FilterDescriptors Element in Method (BDCMetadataResource Schema)
 description: Details on the FilterDescriptors Element in Method (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -34,39 +34,15 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md">FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+|---------|
+| [FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadataresource-schema.md">Method Element in Methods (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+|---------|
+| [Method Element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md) |
 
 
 

@@ -1,13 +1,13 @@
 ---
 title: "BestBets element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 455490cc-8e5b-606b-aa80-441b6b77a14d
-description: "Last modified: March 09, 2015"
+description: Learn about BestBets element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3).
 ---
 
 # BestBets element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |q1:ArrayOfBestBet  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |

@@ -1,15 +1,13 @@
 ---
 title: "CategoriesAndCrawledProperties element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)"
-
-
+description: "Describes the definition, element, and attribute information for CategoriesAndCrawledProperties element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8530b1d3-6e1d-b99e-42e1-bd74399346a7
-description: "Last modified: March 09, 2015"
 ---
 
 # CategoriesAndCrawledProperties element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -18,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |q9:ArrayOfKeyValueOfguidCrawledPropertyInfoCollectionaSYUqUE_P  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
+| Information | Location |
+|-------------|----------|
+| **Element Type** | q9:ArrayOfKeyValueOfguidCrawledPropertyInfoCollectionaSYUqUE_P |
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability |
+| **Schema File** | schema_Microsoft.Office.Server.Search.Portability.xsd |
    
 ## Definition
 

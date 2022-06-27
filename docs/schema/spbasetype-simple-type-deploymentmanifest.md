@@ -1,13 +1,13 @@
 ---
 title: "SPBaseType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPBaseType Simple Type (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a8fbc636-ac36-4046-b3ab-d604d38ccaaf
-description: "Last modified: March 09, 2015"
 ---
 
 # SPBaseType Simple Type (DeploymentManifest)

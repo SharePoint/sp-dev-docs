@@ -1,7 +1,8 @@
 ---
 title: AppDefinition complexType
+description: Describes the AppDefinition complexType schema and provides the schema's type information, definition, child elements, and attributes.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -20,7 +21,7 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
 
 ## Type information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
 | **Schema file**  | appmanifest.xsd |

@@ -1,20 +1,20 @@
 ---
 title: "ArrayOfResultItemType complexType (SPS15XSDSearchSet2)"
+description: Discusses the definition, elements and attributes for ArrayOfResultItemType complexType (SPS15XSDSearchSet2).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2f15e573-c012-fbea-8fbb-1e5ae6c3a2b1
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfResultItemType complexType (SPS15XSDSearchSet2)
 
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |

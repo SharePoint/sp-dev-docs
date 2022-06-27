@@ -1,7 +1,8 @@
 ---
 title: "Document Icons schema"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
+description: Describes the Document Icons schema and includes the document icon elements.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: ddffbd19-b644-4155-ba9d-21f80d64fa84
-description: "Last modified: July 15, 2011"
 ---
 
 # Document Icons schema

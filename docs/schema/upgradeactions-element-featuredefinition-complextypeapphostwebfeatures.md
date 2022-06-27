@@ -1,7 +1,8 @@
 ---
 title: UpgradeActions element (FeatureDefinition complexType)
+description: Describes the definition, element, and attribute information for the UpgradeActions element (FeatureDefinition complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 221aecfb-1668-adc7-aa6e-8278d108553f
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | UpgradeActionsDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

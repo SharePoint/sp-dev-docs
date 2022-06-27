@@ -1,13 +1,13 @@
 ---
 title: "Script element (DeploymentManifest - SPView)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f20d0d2f-c7aa-415a-8f89-79df17ae0840
-description: "Last modified: March 09, 2015"
+description: Script element (DeploymentManifest - SPView) represents script to execute on deployment of an instance of a Windows SharePoint Services 3.0 view object.
 ---
 
 # Script element (DeploymentManifest - SPView)

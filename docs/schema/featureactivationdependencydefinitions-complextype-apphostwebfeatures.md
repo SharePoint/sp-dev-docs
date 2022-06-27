@@ -1,7 +1,8 @@
 ---
 title: FeatureActivationDependencyDefinitions complexType
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes FeatureActivationDependencyDefinitions complexType and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 5be98ace-5f25-ab96-ed1e-2b9a6b7b302b
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

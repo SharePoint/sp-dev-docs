@@ -1,13 +1,13 @@
 ---
 title: "SearchSchemaConfigurationSettings element (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6fda26fa-e925-3cff-00d4-b17f919165bd
-description: "Last modified: March 09, 2015"
+description: Learn about SearchSchemaConfigurationSettings element (SPS15XSDSearchSet3).
 ---
 
 # SearchSchemaConfigurationSettings element (SPS15XSDSearchSet3)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |tns:SearchSchemaConfigurationSettings  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
+|**Element type**  |tns:SearchSchemaConfigurationSettings|
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Portability.xsd  |
    
 ## Definition
 

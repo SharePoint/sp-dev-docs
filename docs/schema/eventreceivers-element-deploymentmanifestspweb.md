@@ -1,13 +1,13 @@
 ---
 title: "EventReceivers Element (DeploymentManifest - SPWeb)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes EventReceivers Element (DeploymentManifest - SPWeb) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e513a1ac-6367-452f-b039-b1d404e6573e
-description: "Last modified: March 09, 2015"
 ---
 
 # EventReceivers Element (DeploymentManifest - SPWeb)

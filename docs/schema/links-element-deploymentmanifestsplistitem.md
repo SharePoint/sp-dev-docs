@@ -1,13 +1,13 @@
 ---
 title: "Links Element (DeploymentManifest - SPListItem)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the Links element (DeploymentManifest - SPListItem) in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 50cf43a9-8c80-4bc7-9b57-a18f9dd59f94
-description: "Last modified: March 09, 2015"
 ---
 
 # Links Element (DeploymentManifest - SPListItem)

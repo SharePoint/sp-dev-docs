@@ -1,13 +1,13 @@
 ---
 title: "SPListTemplateType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/13/2022
+description: Describes SPListTemplateType Simple Type (DeploymentManifest) and includes information on type and additional remarks.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 089ff2a0-b7ff-4893-b243-43f76ceb5a74
-description: "Last modified: July 15, 2011"
 ---
 
 # SPListTemplateType Simple Type (DeploymentManifest)

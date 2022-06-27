@@ -1,7 +1,8 @@
 ---
 title: NormalizeDateTime element in Interpretation
+description: NormalizeDateTime element in Interpretation specifies the rule used to convert the representation of a date and time value to another representation.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -86,24 +87,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|-------|-----------|
+|[Interpretation element in TypeDescriptor (BDCMetadata Schema)](interpretation-element-in-typedescriptor-bdcmetadata-schema.md)|An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.|
 
 
 

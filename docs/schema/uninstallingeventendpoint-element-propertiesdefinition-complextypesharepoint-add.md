@@ -1,7 +1,8 @@
 ---
 title: UninstallingEventEndpoint element (PropertiesDefinition complexType)
+description: The UninstallingEventEndpoint element (PropertiesDefinition complexType) is the Url of the uninstalling event receiver endpoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ The Url of the uninstalling event receiver endpoint.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | UrlElementDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

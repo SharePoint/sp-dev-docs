@@ -1,7 +1,8 @@
 ---
 title: Field element (List Instance)
+description: Describes the definition, element, and attribute information for the Field element (List Instance), which defines a reference to a field.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -29,24 +30,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example, `<Field Name="ID"/>`).</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|
+|---------|-----------|
+|**Name**|Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example, \<Field Name="ID"/\>).|
 
 ### Child elements
 

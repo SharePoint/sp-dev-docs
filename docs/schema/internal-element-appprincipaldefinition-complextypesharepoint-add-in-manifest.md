@@ -1,7 +1,8 @@
 ---
 title: Internal element (AppPrincipalDefinition complexType)
+description: The presence of the Internal element (AppPrincipalDefinition complexType) means that the add-in is SharePoint-hosted, rather than provider-hosted.
 manager: soliver
-ms.date: 1/25/2016
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ The presence of this element means that the add-in is SharePoint-hosted, rather 
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  | Not defined |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

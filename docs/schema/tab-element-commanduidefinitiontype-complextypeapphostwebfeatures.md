@@ -1,7 +1,8 @@
 ---
 title: Tab element (CommandUIDefinitionType complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
+description: Describes Tab element (CommandUIDefinitionType complexType) and provides information elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: d787785a-24f8-f183-56ad-3ec39dc01334
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | TabType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

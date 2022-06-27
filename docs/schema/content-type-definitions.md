@@ -1,7 +1,8 @@
 ---
 title: Content Type Definitions
+description: Provides XML schema definition, elements and an example for the content type definitions in Sharepoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

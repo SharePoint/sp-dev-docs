@@ -1,13 +1,13 @@
 ---
 title: "Site Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 6/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cc6c37c3-c1b4-414b-a3b4-8bf5bcffe607
-description: "Last modified: March 09, 2015"
+description: Site Element (DeploymentManifest) represents an instance of a Windows SharePoint Services 3.0 site object.
 ---
 
 # Site Element (DeploymentManifest)

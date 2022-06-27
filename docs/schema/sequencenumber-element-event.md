@@ -1,7 +1,8 @@
 ---
 title: SequenceNumber Element (Event)
+description: SequenceNumber Element (Event) specifies the order to use for the event registration when more than one handler is associated with the feature.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

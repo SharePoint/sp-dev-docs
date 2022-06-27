@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 10/21/2021
+ms.date: 6/21/2022
 ms.localizationpriority: high
 ms.prod: sharepoint
 ---
@@ -110,7 +110,7 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
     ```typescript
     public render(): void {
       this.context.msGraphClientFactory
-      .getClient()
+      .getClient('3')
       .then((client: MSGraphClient): void => {
         // get information about the current user from the Microsoft Graph
         client

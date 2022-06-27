@@ -1,13 +1,13 @@
 ---
 title: "List element (DeploymentManifest)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the List element (DeploymentManifest) in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c9fd975a-7133-4d0a-a3a2-9072ef08feee
-description: "Last modified: March 09, 2015"
 ---
 
 # List element (DeploymentManifest)

@@ -1,7 +1,7 @@
 ---
 title: "GUIDMap element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: c5c7f525-c0c6-4ed8-97c1-b268fc7936a7
-description: "Last modified: March 09, 2015"
+description: Learn more about GUIDMap element (Site).
 ---
 
 # GUIDMap element (Site)

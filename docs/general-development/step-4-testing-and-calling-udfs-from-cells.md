@@ -1,6 +1,7 @@
 ---
 title: Step 4 Testing and Calling UDFs from Cells
-ms.date: 09/25/2017
+description: Provides steps and describes how to test the sample UDF that was created, deployed, and enabled in previous steps.
+ms.date: 06/14/2022
 ms.prod: sharepoint
 ms.assetid: d3e6aa72-2eb8-4b4b-a0eb-273486890d00
 ms.localizationpriority: medium

@@ -1,7 +1,8 @@
 ---
 title: "Validation element (List)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Validation element (List) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 75b104e3-db9f-421c-b648-1f4b87cbe489
-description: "Last modified: March 09, 2015"
 ---
 
 # Validation element (List)

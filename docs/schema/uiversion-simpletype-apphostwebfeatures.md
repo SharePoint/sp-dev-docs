@@ -1,7 +1,8 @@
 ---
 title: UIVersion simpleType
+description: Describes the definition and type information for UIVersion simpleType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: fa5af84e-f39a-eb78-979f-d0dd6490757f
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Base Type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

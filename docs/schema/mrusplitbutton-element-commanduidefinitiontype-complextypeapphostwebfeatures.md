@@ -1,7 +1,8 @@
 ---
 title: MRUSplitButton element (CommandUIDefinitionType complexType)
+description: Describes the definition, element, and attribute information for the MRUSplitButton element (CommandUIDefinitionType complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: b100cec4-2d26-e763-3eb7-df5c1523985d
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | MRUSplitButtonType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

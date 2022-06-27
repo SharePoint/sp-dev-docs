@@ -1,7 +1,8 @@
 ---
 title: Association element in Associations
+description: Association element in Associations represents a subscription association.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -102,53 +103,17 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames element in MetadataObject (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The list of the localized display names of this subscription association.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties element in MetadataObject (Subscription Schema)</a></span></p></td>
-<td align="left"><p>Not used by Business Connectivity Services in this release.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalues-element-in-association-subscription-schema.md">FilterValues element in Association (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The list of the filter values for the **Association** method instance execution.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|---|---|
+|[LocalizedDisplayNames element in MetadataObject (Subscription Schema)](localizeddisplaynames-element-in-metadataobject-subscription-schema.md)|The list of the localized display names of this subscription association.|
+|[Properties element in MetadataObject (Subscription Schema)](properties-element-in-metadataobject-subscription-schema.md)|Not used by Business Connectivity Services in this release.|
+|[FilterValues element in Association (Subscription Schema)](filtervalues-element-in-association-subscription-schema.md)|The list of the filter values for the **Association** method instance execution.|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.md">Associations element in Subscription (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The **Associations** element that contains this subscription association.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|---|---|
+|[Associations element in Subscription (Subscription Schema)](associations-element-in-subscription-subscription-schema.md)|The **Associations** element that contains this subscription association.|
 
 
 

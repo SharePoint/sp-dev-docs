@@ -1,7 +1,8 @@
 ---
 title: Synchronization Element (Event)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Synchronization Element (Event) and provides information elements and attributes, occurrences, and an example.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

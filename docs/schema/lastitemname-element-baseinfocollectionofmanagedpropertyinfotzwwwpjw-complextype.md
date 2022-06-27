@@ -1,13 +1,13 @@
 ---
 title: "LastItemName element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)"
+description: Describes the LastItemName element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2) and provides the element information, a definition, and elements and attributes.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7cef48ee-f339-9eed-88c1-efec351fc29b
-description: "Last modified: March 09, 2015"
 ---
 
 # LastItemName element (BaseInfoCollectionOfManagedPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Resource | File |
 |:-----|:-----|
-|**Element type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+| **Element type** |xs:string |
+| **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema** file |schema_Microsoft.Office.Server.Search.Administration.xsd |
    
 ## Definition
 

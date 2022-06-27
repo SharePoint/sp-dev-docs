@@ -1,7 +1,8 @@
 ---
 title: WorkflowActions Element (WorkflowActions)
+description: Describes the WorkflowActions element (WorkflowActions) and provides the element's definition, child elements, and additional references.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
