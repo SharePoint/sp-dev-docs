@@ -1,7 +1,7 @@
 ---
 title: "App_GlobalResourceFile element (Solution)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: 3ccb16a3-18fc-4cf5-afbd-b5ad5cc84ea5
-description: Specifies a global resource file for a solution.
+description: Describes the App_GlobalResourceFile element (Solution) schema and provides the schema's attributes and parent elements.
 ---
 
 # App_GlobalResourceFile element (Solution)

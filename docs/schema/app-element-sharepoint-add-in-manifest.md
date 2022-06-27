@@ -1,7 +1,8 @@
 ---
 title: App element (SharePoint Add-in Manifest)
+description: Describes the App element (SharePoint Add-in Manifest) schema and provides the schema's definition, child elements, and attributes.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -20,7 +21,7 @@ The top level node of the manifest of a SharePoint Add-in.
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | AppDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
