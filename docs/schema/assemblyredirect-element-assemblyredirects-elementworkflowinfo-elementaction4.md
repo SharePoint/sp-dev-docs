@@ -1,7 +1,8 @@
 ---
 title: AssemblyRedirect element
+description: Discusses the elements and attributes for AssemblyRedirect element which specifies a transformation from one binary file to another binary file.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -27,7 +28,7 @@ Specifies a transformation from one binary file to another binary file in a vers
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
