@@ -1,13 +1,13 @@
 ---
 title: "ViewFields Element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes ViewFields Element (DeploymentManifest - SPWebPart) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9b4599eb-f7cd-487b-8970-bc44000c8fde
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewFields Element (DeploymentManifest - SPWebPart)

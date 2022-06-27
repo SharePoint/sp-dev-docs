@@ -1,7 +1,8 @@
 ---
 title: VariableTypes Element (WorkflowInfo)
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes VariableTypes Element (WorkflowInfo) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:

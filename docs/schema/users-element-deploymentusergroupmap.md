@@ -1,13 +1,13 @@
 ---
 title: "Users Element (DeploymentUserGroupMap)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Users Element (DeploymentUserGroupMap) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 354acbee-d410-4d48-9375-16e44ca4388b
-description: "Last modified: March 09, 2015"
 ---
 
 # Users Element (DeploymentUserGroupMap)

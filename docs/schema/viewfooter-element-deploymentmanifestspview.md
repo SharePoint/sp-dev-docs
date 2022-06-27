@@ -1,13 +1,13 @@
 ---
 title: "ViewFooter Element (DeploymentManifest - SPView)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes ViewFooter Element (DeploymentManifest - SPView) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6961d53d-fbe2-4d38-85c2-524a39f49486
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewFooter Element (DeploymentManifest - SPView)

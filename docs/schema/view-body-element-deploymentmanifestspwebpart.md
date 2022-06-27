@@ -1,13 +1,13 @@
 ---
 title: "View Body Element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes View Body Element (DeploymentManifest - SPWebPart) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a6d3551b-0a3b-415a-a7dd-f83fddefaa19
-description: "Last modified: March 09, 2015"
 ---
 
 # View Body Element (DeploymentManifest - SPWebPart)
