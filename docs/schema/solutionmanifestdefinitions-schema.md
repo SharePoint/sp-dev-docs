@@ -1,7 +1,8 @@
 ---
 title: SolutionManifestDefinitions schema
+description: This section contains documentation for the Solution Manifest Definition schema (SolutionManifestDefinitions.xsd).
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

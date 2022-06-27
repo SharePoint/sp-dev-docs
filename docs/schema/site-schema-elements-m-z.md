@@ -1,7 +1,7 @@
 ---
 title: "Site schema elements M-Z"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: 782a6cd8-5b08-44f6-a6da-68337cafc596
-description: "Last modified: July 15, 2011"
+description: Learn about Site schema elements M-Z.
 ---
 
 # Site schema elements M-Z
