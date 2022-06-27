@@ -1,7 +1,8 @@
 ---
 title: "ArrayOfProperty element (List)"
+description: Discusses the attributes, child elements, and parent elements for ArrayOfProperty element (List).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +12,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: 0e6faff5-8298-4f07-b1e2-fe67aaa29162
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfProperty element (List)
@@ -44,6 +44,6 @@ None
 - Minimum: 0
 - Maximum: Unbounded  
 
-<br/> 
+ 
    
 

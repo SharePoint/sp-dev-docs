@@ -1,20 +1,20 @@
 ---
 title: "ArrayOfCrawledPropertyInfo element (SPS15XSDSearchSet2)"
+description: Discusses the definition, elements and attributes for ArrayOfCrawledPropertyInfo element (SPS15XSDSearchSet2).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 13763c07-7b09-4dd0-579a-66a932ed4441
-description: "Last modified: March 09, 2015"
 ---
 
 # ArrayOfCrawledPropertyInfo element (SPS15XSDSearchSet2)
 
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:ArrayOfCrawledPropertyInfo  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

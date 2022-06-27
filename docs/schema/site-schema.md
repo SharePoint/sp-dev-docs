@@ -1,7 +1,7 @@
 ---
 title: "Site schema"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: e711f6b0-2787-4a13-b0e9-140c3435c1e2
-description: "Last modified: July 15, 2011"
+description: The Site schema of Collaborative Application Markup Language is used to define metadata for creating websites, including the root site of site collections.
 ---
 
 # Site schema 

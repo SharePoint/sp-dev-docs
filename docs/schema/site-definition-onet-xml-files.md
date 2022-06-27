@@ -1,7 +1,8 @@
 ---
 title: Site Definition (Onet.xml) files
+description: Learn more about Site Definition (Onet.xml) files.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

@@ -1,13 +1,13 @@
 ---
 title: "DraftVisibilityType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes DraftVisibilityType Simple Type (DeploymentManifest) and includes Enumeration values.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1bd5d4fe-5ab7-4098-a9de-cd4a8d1adc21
-description: "Last modified: March 09, 2015"
 ---
 
 # DraftVisibilityType Simple Type (DeploymentManifest)

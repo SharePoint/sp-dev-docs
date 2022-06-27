@@ -1,7 +1,8 @@
 ---
 title: Spinner element (CommandUIDefinitionType complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes Spinner element (CommandUIDefinitionType complexType)) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 2db6c755-3082-82a7-f12a-608342829a10
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | SpinnerType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

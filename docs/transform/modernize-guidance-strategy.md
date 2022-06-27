@@ -97,7 +97,7 @@ During the Modernization you’ll be (optionally) setting the site’s theme to 
 - **Task:** Add the new theme to the tenant via:
   - Assigning the copied PowerShell to a variable: `$ContosoTheme = @{“themePrimary”=…`
   - Adding the theme: `Add-PnPTenantTheme -Palette $ContosoTheme -Identity “Contoso Corporate theme" -IsInverted:$false`
-  - See [add-pnptenanttheme](/powershell/module/sharepoint-pnp/add-pnptenanttheme) for more details
+  - See [add-pnptenanttheme](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantTheme.html) for more details
 
 ### Frequently Asked Questions
 

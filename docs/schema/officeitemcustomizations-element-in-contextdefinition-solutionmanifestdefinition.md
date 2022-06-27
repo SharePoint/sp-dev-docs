@@ -1,7 +1,8 @@
 ---
 title: OfficeItemCustomizations element in ContextDefinition
+description: OfficeItemCustomizations element in ContextDefinition describes Microsoft Outlook-specific customizations.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -31,25 +32,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**Description**</p></td>
-<td align="left"><p>Optional.</p>
-<p>Attribute type: **String**</p></td>
-</tr>
-</tbody>
-</table>
+|Attribute|Description|
+|---------|-----------|
+|**Description**|Optional.<br/>Attribute type: **String**|
 
 ### Child elements
 
@@ -57,28 +42,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md">ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
-
-<br/>
+|Element|Description|
+|-------|-----------|
+|[ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)||
 
 
 

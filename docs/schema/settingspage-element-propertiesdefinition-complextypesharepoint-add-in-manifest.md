@@ -1,7 +1,8 @@
 ---
 title: SettingsPage element (PropertiesDefinition complexType)
+description: Learn about SettingsPage element (PropertiesDefinition complexType).
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -22,7 +23,7 @@ For future use. This element currently has no function.
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  | UrlElementDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

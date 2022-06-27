@@ -1,7 +1,8 @@
 ---
 title: SimplePropertyDefinition complexType
+description: Learn more about SimplePropertyDefinition complexType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: 4d199cbb-d3d1-7d49-b0f2-eb67ecd7c3d2
 
 ## Type information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

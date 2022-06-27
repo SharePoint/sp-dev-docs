@@ -1,7 +1,8 @@
 ---
 title: ActivitySource element (Evaluation element)
+description: Discusses the definition, elements and attributes for ActivitySource element (Evaluation element).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -27,7 +28,7 @@ Specifies that the evaluation value is retrieved from the fields of the parent d
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

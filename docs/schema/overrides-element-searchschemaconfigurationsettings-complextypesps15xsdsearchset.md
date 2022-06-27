@@ -1,13 +1,13 @@
 ---
 title: "Overrides element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)"
+description: "Describes the definition, element, and attribute information for the Overrides element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1f00644b-77b0-db0b-ce78-488a650bf777
-description: "Last modified: March 09, 2015"
 ---
 
 # Overrides element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Element type** <br/> |q13:OverrideInfoCollection  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
+|**Element type**|q13:OverrideInfoCollection|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Portability.xsd|
    
 ## Definition
 

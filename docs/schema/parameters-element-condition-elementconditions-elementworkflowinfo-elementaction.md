@@ -1,7 +1,8 @@
 ---
 title: Parameters element (Condition element)
+description: Describes the Parameters element (Condition element) and provides the usage, the element information, a definition, the elements and attributes, and an example.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

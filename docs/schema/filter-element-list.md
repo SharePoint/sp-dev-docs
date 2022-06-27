@@ -1,7 +1,8 @@
 ---
 title: "Filter element (List)"
+description: Describes the definition, element, and attribute information for the Filter element (List).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,15 +12,14 @@ api_name:
 api_type:
 - schema
 ms.assetid: ead0986f-df31-4c3b-95f8-d1c8c1d836d5
-description: "Last modified: March 09, 2015"
 ---
 
 # Filter element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-```vb
-<Filter  Name = "Text"   Type = "Text"   Value = "Text" ></Filter> 
+
+```xml
+<Filter Name="Text" Type="Text" Value="Text" ></Filter> 
 ```
 
 ## Elements and attributes

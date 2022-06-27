@@ -1,13 +1,13 @@
 ---
 title: "InternalID element (ResultItemType complexType) (SPS15XSDSearchSet2)"
+description: Learn about InternalID element (ResultItemType complexType) (SPS15XSDSearchSet2).
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 61b7c55e-64d7-8cdc-ada6-db514bbeb748
-description: "Last modified: March 09, 2015"
 ---
 
 # InternalID element (ResultItemType complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

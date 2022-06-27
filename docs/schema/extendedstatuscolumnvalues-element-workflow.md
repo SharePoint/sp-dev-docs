@@ -1,7 +1,8 @@
 ---
 title: ExtendedStatusColumnValues Element (Workflow)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes ExtendedStatusColumnValues Element (Workflow) and includes information on elements and attributes, an example, and remarks.
 ms.audience: Developer
 ms.topic: reference
 keywords:

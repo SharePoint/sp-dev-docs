@@ -1,7 +1,8 @@
 ---
 title: ToggleButton element (CommandUIDefinitionType complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
+description: Describes ToggleButton element (CommandUIDefinitionType complexType) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: a0815122-d337-2a11-5e98-386b1fe4e709
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | ToggleButtonType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

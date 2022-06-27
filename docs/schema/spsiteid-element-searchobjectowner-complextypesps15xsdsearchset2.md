@@ -1,13 +1,13 @@
 ---
 title: "SPSiteId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPSiteId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2) and provides information on elements and attributes.
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a0e50693-85bd-63b9-8d69-7e7a6a593f37
-description: "Last modified: March 09, 2015"
 ---
 
 # SPSiteId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

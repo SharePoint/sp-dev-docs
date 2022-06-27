@@ -1,13 +1,13 @@
 ---
 title: "RowLimitExceeded element (DeploymentManifest - SPWebPart)"
+description: "RowLimitExceeded element (DeploymentManifest - SPWebPart) represents the means for displaying overflow data when a row limit is exceeded."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5fe03d39-4800-4333-ab03-377c6fa3871b
-description: "Last modified: March 09, 2015"
 ---
 
 # RowLimitExceeded element (DeploymentManifest - SPWebPart)

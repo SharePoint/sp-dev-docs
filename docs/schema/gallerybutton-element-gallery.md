@@ -1,7 +1,7 @@
 ---
 title: "GalleryButton element (Gallery) (Server Ribbon)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: aff7ea4c-6599-4770-bedb-e61e2158291f
-description: Defines a gallery button.
+description: GalleryButton element (Gallery) (Server Ribbon) defines a gallery button.
 ---
 
 # GalleryButton element (Gallery) (Server Ribbon)

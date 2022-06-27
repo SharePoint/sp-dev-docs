@@ -1,13 +1,13 @@
 ---
 title: "SPIncludeSecurity Simple Type (DeploymentExportSettings)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPIncludeSecurity Simple Type (DeploymentExportSettings) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e5fe8d3f-5010-41ad-a75e-dc40240dc870
-description: "Last modified: March 09, 2015"
 ---
 
 # SPIncludeSecurity Simple Type (DeploymentExportSettings)

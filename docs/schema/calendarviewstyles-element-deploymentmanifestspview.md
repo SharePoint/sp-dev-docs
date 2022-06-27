@@ -1,13 +1,13 @@
 ---
 title: "CalendarViewStyles element (DeploymentManifest - SPView)"
+description: "CalendarViewStyles element (DeploymentManifest - SPView) represents an object specifying the style of a SharePoint calendar view."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d13febe7-f623-415b-b49d-1e4a86b4e8b9
-description: "Last modified: March 09, 2015"
 ---
 
 # CalendarViewStyles element (DeploymentManifest - SPView)

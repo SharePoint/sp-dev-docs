@@ -1,7 +1,8 @@
 ---
 title: WorkflowActions4 schema reference
+description: Provides the schema map, elements, and types included in the WorkflowActions4 schema, including additional references.
 manager: laurawi
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

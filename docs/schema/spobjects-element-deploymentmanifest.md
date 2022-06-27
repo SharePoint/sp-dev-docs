@@ -1,13 +1,13 @@
 ---
 title: "SPObjects Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPObjects Element (DeploymentManifest) and includes information on type, elements, and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: af7fcfa9-22c1-4600-942f-b9a0419d0b65
-description: "Last modified: March 09, 2015"
 ---
 
 # SPObjects Element (DeploymentManifest)

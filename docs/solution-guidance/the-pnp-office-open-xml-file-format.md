@@ -1,7 +1,7 @@
 ---
 title: The PnP Office Open XML File format
-description: 
-ms.date: 06/05/2020
+description: Describes the PnP Office Open XML File Format, outlines how to manually edit and create PnP files, and provides additional references.
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
 

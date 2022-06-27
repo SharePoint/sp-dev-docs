@@ -1,7 +1,8 @@
 ---
 title: WorkflowInfo element (Action4)
+description: Describes the WorkflowInfo element (Action4) and provides the element's definition, usage, element information, and attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -391,11 +392,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

@@ -1,13 +1,13 @@
 ---
 title: "PagedRecurrenceRowset element (DeploymentManifest - SPView)"
+description: "PagedRecurrenceRowset element (DeploymentManifest - SPView) represents a row set returned from a paged recurrence on a SharePoint view (SPView) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 53a0de25-b57c-4f55-b508-75c38dac199d
-description: "Last modified: March 09, 2015"
 ---
 
 # PagedRecurrenceRowset element (DeploymentManifest - SPView)

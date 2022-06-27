@@ -1,13 +1,13 @@
 ---
 title: "Toolbar element (DeploymentManifest - SPView)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Toolbar element (DeploymentManifest - SPView) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: be18aca5-9bb2-4f65-a4af-e63b729b9c95
-description: "Last modified: March 09, 2015"
 ---
 
 # Toolbar element (DeploymentManifest - SPView)

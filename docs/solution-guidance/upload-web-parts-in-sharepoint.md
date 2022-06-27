@@ -1,6 +1,7 @@
 ---
 title: Upload web parts in SharePoint
-ms.date: 11/03/2017
+description: Describes how to upload web parts in SharePoint, outlines how to use the Core.AppScriptPart add-in, and provides additional references.
+ms.date: 06/07/2022
 ms.localizationpriority: high
 ---
 # Upload web parts in SharePoint
@@ -27,7 +28,7 @@ This article discusses pre-configuring the Script Editor Web Part to use JavaScr
 
 ## Before you begin
 
-To get started, download the [Core.AppScriptPart ](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.AppScriptPart) sample add-in from the [Office365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the [Core.AppScriptPart](https://github.com/pnp/PnP/tree/master/Samples/Core.AppScriptPart) sample add-in from the [Office365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
 
 ## Using the Core.AppScriptPart add-in
 

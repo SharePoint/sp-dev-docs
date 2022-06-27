@@ -1,7 +1,8 @@
 ---
 title: ElementDefinitionCollection complexType
+description: Describes the ElementDefinitionCollection complexType and provides the type information, a definition and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -18,7 +19,7 @@ ms.assetid: f0351444-6719-ef7b-ae5b-ca2478624444
 
 ## Type information
 
-|   |   |
+| Information  | Location |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

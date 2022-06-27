@@ -1,13 +1,13 @@
 ---
 title: "ListFormBody element (DeploymentManifest - SPView)"
+description: Outlines a definition, type, attributes, child elements, and parent elements for the ListFormBody element (DeploymentManifest - SPView) in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cfbbd832-9d11-479e-9d15-59a495ed19f3
-description: "Last modified: March 09, 2015"
 ---
 
 # ListFormBody element (DeploymentManifest - SPView)

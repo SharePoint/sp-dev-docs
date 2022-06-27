@@ -1,20 +1,20 @@
 ---
 title: "AuthenticationType element (AuthenticationInformation complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 132f76bd-0b31-4ddb-6171-c2d3ff1d42d9
-description: "Last modified: March 09, 2015"
+description: AuthenticationType element (AuthenticationInformation complexType) (SPS15XSDSearchSet2) is an XML element.
 ---
 
 # AuthenticationType element (AuthenticationInformation complexType) (SPS15XSDSearchSet2)
  
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:FederationAuthType  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

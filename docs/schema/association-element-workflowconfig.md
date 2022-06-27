@@ -1,7 +1,8 @@
 ---
 title: Association element (WorkflowConfig)
+description:  Association element (WorkflowConfig) contains the information necessary for a declarative rules-based, code-free workflow editor.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -94,16 +95,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig element</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|---|
+|[WorkflowConfig element](workflowconfig-element.md)|
 
 ### Remarks
 

@@ -1,13 +1,13 @@
 ---
 title: "PagedRecurrenceRowset element (DeploymentManifest - SPWebPart)"
+description: "PagedRecurrenceRowset element (DeploymentManifest - SPWebPart) represents a row set returned from a paged recurrence on an instance of a SharePoint web part (WebPart) object."
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5178c6d7-f7b2-4ccd-bb3a-18e43886b841
-description: "Last modified: March 09, 2015"
 ---
 
 # PagedRecurrenceRowset element (DeploymentManifest - SPWebPart)

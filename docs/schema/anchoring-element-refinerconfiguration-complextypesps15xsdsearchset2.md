@@ -1,20 +1,20 @@
 ---
 title: "Anchoring element (RefinerConfiguration complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dfc46658-9474-1aea-66a9-daaabac038a8
-description: "Last modified: March 09, 2015"
+description: Describes the Anchoring element (RefinerConfiguration complexType) schema and provides the schema's definition and attributes.
 ---
 
 # Anchoring element (RefinerConfiguration complexType) (SPS15XSDSearchSet2)
  
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:RefinerAnchoring  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

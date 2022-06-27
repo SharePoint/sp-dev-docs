@@ -1,7 +1,7 @@
 ---
 title: "BinarySerializedWebPart element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: d7a9bee2-4c6e-4247-9e8d-540ecf59177e
-description: "Last modified: March 09, 2015"
+description: Learn about BinarySerializedWebPart element (Site).
 ---
 
 # BinarySerializedWebPart element (Site)

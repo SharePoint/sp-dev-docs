@@ -1,7 +1,7 @@
 ---
 title: "ID element (View)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -11,7 +11,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: 170a56a9-1259-4e57-aabf-05d4758aed88
-description: "Last modified: March 09, 2015"
+description: ID element (View) renders the ID of the current item being displayed in an edit or display form.
 ---
 
 # ID element (View)

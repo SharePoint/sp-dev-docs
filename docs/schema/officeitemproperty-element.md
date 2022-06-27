@@ -1,7 +1,8 @@
 ---
 title: OfficeItemProperty element
+description: OfficeItemProperty element describes how to display a field of an external content type in Microsoft Outlook 2010.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

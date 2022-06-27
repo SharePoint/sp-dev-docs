@@ -1,7 +1,8 @@
 ---
 title: TypeDefinition simpleType
+description: Describes the TypeDefinition simpleType and provides a definition.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint
@@ -20,7 +21,7 @@ ms.assetid: f4d23160-091c-ca02-4997-0ea3dc33024f
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

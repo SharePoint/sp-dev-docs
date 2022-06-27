@@ -1,13 +1,13 @@
 ---
 title: "SsoAuthData element (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes SsoAuthData element (SPS15XSDSearchSet2) and provides information on elements and attributes.
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 05859e7e-776e-c687-97c1-729e49aef94e
-description: "Last modified: March 09, 2015"
 ---
 
 # SsoAuthData element (SPS15XSDSearchSet2)
@@ -16,7 +16,7 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+|Information|Location|
 |:-----|:-----|
 |**Element type** <br/> |tns:SsoAuthData  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

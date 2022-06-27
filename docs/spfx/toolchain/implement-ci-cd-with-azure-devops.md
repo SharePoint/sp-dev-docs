@@ -60,6 +60,7 @@ Once the Build Definition has been created, the first thing you need to do is in
 ### Restoring dependencies
 
 Because third party dependencies are not stored in the source control, you need to restore those before starting to build the project. To do so add a `npm` task and set the command to `install`.
+
 ![installing dependencies](../../images/azure-devops-spfx-03.png)
 
 ### Executing Unit Tests
@@ -207,6 +208,7 @@ When you create your continuous deployment environment, you can give a name and 
 ### Installing NodeJS
 
 By click on `1 job, 0 tasks` you can access the tasks configuration view, which works similarly to the build definition. Here, you can select the set of tasks that will run only for this specific environment.  This includes installing NodeJS version 10 or later.
+
 Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. If your project is based on SharePoint Framework version 1.7.1 or earlier, use version 8.X.
 
 ![Screenshot of the Node dot J S Tool Installer screen, showing the Display name and Version Spec fields.](../../images/azure-devops-spfx-13.png)
@@ -265,7 +267,7 @@ Add the following variables
 | catalogsite | Optional. Server relative Path of the App Catalog Site eg `sites/appcatalog` when uploading to a [site collection App Catalog](../../general-development/site-collection-app-catalog.md) |
 | password | Password of the user with administrative permissions on the tenant, do not forget to check the lockpad to mask it to other users |
 | username | Username of the user with administrative permissions on the tenant |
-| tenant | Optional. Tenant name in https://tenant.sharepoint.com eg `tenant` when uploading to a site collection App Catalog |
+| tenant | Optional. Tenant name in `https://tenant.sharepoint.com` eg `tenant` when uploading to a site collection App Catalog |
 
 ![Variables setup](../../images/azure-devops-spfx-18.png)  
 

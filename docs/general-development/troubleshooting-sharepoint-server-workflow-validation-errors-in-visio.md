@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting SharePoint Server workflow validation errors in Visio
-ms.date: 09/25/2017
+description: Provides an overview of SharePoint Server workflow validation errors in Visio and suggests actions to resolve them.
+ms.date: 06/14/2022
 ms.prod: sharepoint
 ms.assetid: c21cc3e2-45bd-4d34-a57d-dd0954436bd8
 ms.localizationpriority: medium

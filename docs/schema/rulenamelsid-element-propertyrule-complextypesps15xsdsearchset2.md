@@ -1,13 +1,13 @@
 ---
 title: "RuleNameLSID element (PropertyRule complexType) (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the RuleNameLSID element (PropertyRule complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4aaeb838-497e-eb8c-434b-05f8210c6cd7
-description: "Last modified: March 09, 2015"
 ---
 
 # RuleNameLSID element (PropertyRule complexType) (SPS15XSDSearchSet2)
@@ -16,11 +16,11 @@ description: "Last modified: March 09, 2015"
   
 ## Element information
 
-|||
+| Information | Location |
 |:-----|:-----|
-|**Element type** <br/> |q2:LocStringId  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
+|**Element type**|q2:LocStringId|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
    
 ## Definition
 

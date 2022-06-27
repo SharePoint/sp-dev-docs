@@ -1,13 +1,13 @@
 ---
 title: "SPViewScope Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes SPSiteSubscriptionId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2) and provides values for specifying the recursive scope of a specified view into a document library.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e636451e-751c-4783-96c5-043cd1e53c04
-description: "Last modified: March 09, 2015"
 ---
 
 # SPViewScope Simple Type (DeploymentManifest)

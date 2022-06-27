@@ -1,13 +1,13 @@
 ---
 title: "Field element (DeploymentManifest - DeploymentFieldTemplate)"
+description: Provides a definition, type, and elements and attributes for the Field element (DeploymentManifest - DeploymentFieldTemplate) in SharePoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5e1549be-c95f-4414-b72f-e9d0e124abd8
-description: "Last modified: March 09, 2015"
 ---
 
 # Field element (DeploymentManifest - DeploymentFieldTemplate)

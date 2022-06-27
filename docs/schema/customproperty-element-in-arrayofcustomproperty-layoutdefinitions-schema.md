@@ -1,7 +1,8 @@
 ---
 title: CustomProperty Element in ArrayOfCustomProperty
+description: Outlines attributes, child elements, and parent elements for the CustomProperty element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -64,25 +65,9 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties Element in UIElement (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The list of custom properties that contains this custom property.</p></td>
-</tr>
-</tbody>
-</table>
-
+|Element|Description|
+|----------|-----------|
+|[CustomProperties Element in UIElement (LayoutDefinitions Schema)](customproperties-element-in-uielement-layoutdefinitions-schema.md)|The list of custom properties that contains this custom property. |
 
 
 

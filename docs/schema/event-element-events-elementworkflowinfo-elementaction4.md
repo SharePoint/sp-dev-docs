@@ -1,7 +1,8 @@
 ---
 title: Event element
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Event Element and includes information on usage, elements, and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

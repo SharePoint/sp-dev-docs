@@ -1,7 +1,8 @@
 ---
 title: AddContentTypeField element (Feature)
+description: Discusses the definition, elements and attributes for AddContentTypeField element which specifies the content type field to add during a Feature upgrade.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint

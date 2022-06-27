@@ -1,7 +1,8 @@
 ---
 title: Client Web Part Definition schema
+description: Describes the Client web part, which is the backing structure of app parts. App parts are defined in XML documents and deployed as part of a Feature.
 manager: soliver
-ms.date: 12/7/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

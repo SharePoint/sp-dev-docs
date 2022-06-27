@@ -1,7 +1,8 @@
 ---
 title: Parameters Element in ActionDefinition
+description: Describes the Parameters element in ActionDefinition and provides the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -35,55 +36,19 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.md">ConstantParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **ConstantParameter** element defines a constant parameter for an action.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="expressionparameter-element-in-actionparameterdefinitions-solutionmanifestdeclar.md">ExpressionParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **ExpressionParameter** element defines a parameter for an action that can take a value from the context of the current item.</p></td>
-</tr>
-</tbody>
-</table>
+  
+| Element | Description |
+| --- | --- |
+| [ConstantParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)](constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.md) | The **ConstantParameter** element defines a constant parameter for an action. |
+| [ExpressionParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)](expressionparameter-element-in-actionparameterdefinitions-solutionmanifestdeclar.md) | The **ExpressionParameter** element defines a parameter for an action that can take a value from the context of the current item. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **UrlAction** element is used to execute a URL-based action.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **CodeMethodAction** element is used to execute a custom code action or one of the predefined actions that are provided by Microsoft Business Connectivity Services (BCS).</p></td>
-</tr>
-</tbody>
-</table>
-
+  
+| Element | Description |
+| --- | --- |
+| [UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)](urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | The **UrlAction** element is used to execute a URL-based action. |
+| [CodeMethodAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)](codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | The **CodeMethodAction** element is used to execute a custom code action or one of the predefined actions that are provided by Microsoft Business Connectivity Services (BCS). |
 
 <br/>
 

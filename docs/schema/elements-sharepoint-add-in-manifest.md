@@ -1,7 +1,8 @@
 ---
 title: Elements (SharePoint Add-in Manifest)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes Elements(SharePoint Add-in) and lists the elements in the SharePoint Add-in Manifest XML schema.
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

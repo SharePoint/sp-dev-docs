@@ -1,13 +1,13 @@
 ---
 title: "CrawledProperties element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)"
+description: Outlines information, a definition, and elements and attributes for the CrawledProperties element in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 499867cb-cb47-5868-ddd7-c6f563d2062f
-description: "Last modified: March 09, 2015"
 ---
 
 # CrawledProperties element (SearchSchemaConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -15,12 +15,11 @@ description: "Last modified: March 09, 2015"
  
   
 ## Element information
-
-|||
+|Name|Value|
 |:-----|:-----|
-|**Element type** <br/> |q10:CrawledPropertyInfoCollection  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
+|**Element type**  |q10:CrawledPropertyInfoCollection  |
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Portability.xsd   |
    
 ## Definition
 

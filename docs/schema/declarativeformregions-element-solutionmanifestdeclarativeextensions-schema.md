@@ -1,7 +1,8 @@
 ---
 title: DeclarativeFormRegions Element
+description: DeclarativeFormRegions Element lists the form regions in which external data will be displayed in Microsoft Outlook 2010.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
@@ -55,28 +56,10 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="https://msdn.microsoft.com/library/c5a3b837-76bb-98fc-d7b4-ffe9a44d95a0.aspx">FormRegion</a></p></td>
-<td align="left"><p>The form regions in which external data will be displayed in .</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.md">DeclarativeFormRegion Element in DeclarativeFormRegions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [FormRegion](https://msdn.microsoft.com/library/c5a3b837-76bb-98fc-d7b4-ffe9a44d95a0.aspx) | The form regions in which external data will be displayed in . |
+| [DeclarativeFormRegion Element in DeclarativeFormRegions (SolutionManifestDeclarativeExtensions Schema)](declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.md) |     |
 
 ### Parent elements
 

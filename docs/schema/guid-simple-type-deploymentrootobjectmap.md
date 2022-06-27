@@ -1,13 +1,13 @@
 ---
 title: "Guid Simple Type (DeploymentRootObjectMap))"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ca57d9ba-5b54-4ae5-8774-f86d619d6a22
-description: "Last modified: July 15, 2011"
+description: Guid Simple Type (DeploymentRootObjectMap) supports the use of a unique identifier (GUID) as a Guid attribute field value in the RootObject element of the DeploymentLRootObjectMap Schema.
 ---
 
 # Guid Simple Type (DeploymentRootObjectMap))

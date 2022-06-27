@@ -1,7 +1,8 @@
 ---
 title: Schema map (SharePoint Add-in Manifest)
+description: This topic shows the schema definition for SharePoint Add-in Manifest.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
 ms.prod: sharepoint

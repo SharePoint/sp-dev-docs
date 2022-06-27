@@ -1,13 +1,13 @@
 ---
 title: "ViewEmpty Element (DeploymentManifest - SPView)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes ViewEmpty Element (DeploymentManifest - SPView) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a17a9ba3-8b6e-4e03-b84d-9456ec7f5e61
-description: "Last modified: March 09, 2015"
 ---
 
 # ViewEmpty Element (DeploymentManifest - SPView)

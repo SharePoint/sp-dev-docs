@@ -1,13 +1,13 @@
 ---
 title: "QueryAuthenticationType simpleType (SPS15XSDSearchSet5)"
+description: "Describes the definition, type information, and enumeration values for QueryAuthenticationType simpleType (SPS15XSDSearchSet5)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9a7a4dd1-a39e-1873-2b39-7570365739c5
-description: "Last modified: March 09, 2015"
 ---
 
 # QueryAuthenticationType simpleType (SPS15XSDSearchSet5)
@@ -18,11 +18,11 @@ description: "Last modified: March 09, 2015"
   
 ## Type information
 
-|||
+| Information | Location |
 |:-----|:-----|
-|**Base type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
+|**Base type**|xs:string|
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Query.xsd|
    
 ## Definition
 

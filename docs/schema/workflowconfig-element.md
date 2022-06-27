@@ -1,7 +1,8 @@
 ---
 title: WorkflowConfig Element
+description: Describes the WorkflowConfig element and provides the element's definition, child elements, remarks, and additional references.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -43,19 +44,12 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="template-element-workflowconfig.md">Template Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="association-element-workflowconfig.md">Association Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="contenttypes-element-workflowconfig.md">ContentTypes Element (WorkflowConfig)</a></span></p>
-<p><span sdata="link"><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Child Elements|
+|:---|
+|[Template Element (WorkflowConfig)](template-element-workflowconfig.md)|
+|[Association Element (WorkflowConfig)](association-element-workflowconfig.md)|
+|[ContentTypes Element (WorkflowConfig)](contenttypes-element-workflowconfig.md)|
+|[Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)|
 
 ### Parent elements
 
