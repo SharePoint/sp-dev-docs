@@ -76,7 +76,7 @@ Now we will restrict access so that only the user `nestorw@contoso.com` can make
 - Run the [Grant-PnPHubSiteRights](https://pnp.github.io/powershell/cmdlets/Grant-PnPHubSiteRights.html) cmdlet to grant a user rights to the marketing hub site. We'll use `nestorw@contoso` in this example, but you can use any valid user on your tenant (you can specify multiple users by separating them with a comma):
 
    ```powershell
-    Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/marketing -Principals "nestorw@contoso" -Rights Join
+    Grant-PnPHubSiteRights -Identity https://contoso.sharepoint.com/sites/marketing -Principals "nestorw@contoso"
    ```
 
 ## Create and associate a new site
