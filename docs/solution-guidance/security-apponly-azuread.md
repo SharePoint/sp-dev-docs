@@ -1,7 +1,7 @@
 ---
 title: Granting access via Azure AD App-Only
 description: Granting access via Azure AD App-Only
-ms.date: 06/05/2020
+ms.date: 06/28/2022
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
