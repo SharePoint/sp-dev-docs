@@ -2,7 +2,7 @@
 title: Container element
 description: Describes the Container element (LayoutDefinitions Schema), which specifies the layout for the External Data Parts.
 manager: soliver
-ms.date: 06/28/2022
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.prod: sharepoint
