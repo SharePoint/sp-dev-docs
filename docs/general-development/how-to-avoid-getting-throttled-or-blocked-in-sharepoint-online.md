@@ -2,7 +2,7 @@
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked. .
 ms.date: 06/07/2022
-ms.prod: sharepoint
+ms.service: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -12,9 +12,9 @@ ms.localizationpriority: high
 Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked. 
 
 - [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling)
-- [How to handle throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#How-to-handle-throttling)
+- [How to handle throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#how-to-handle-throttling)
 - [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#common-throttling-scenarios-in-sharepoint-online)
-- [Scenario specific limits](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#Scenario-specific-limits)
+- [Scenario specific limits](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#scenario-specific-limits)
 - [What should you do if you get blocked in SharePoint Online?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-should-you-do-if-you-get-blocked-in-sharepoint-online)
 - [Additional resources](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#see-also)
 
@@ -49,7 +49,7 @@ That said, it is rare for a user to get throttled in SharePoint Online. The serv
 
 In addition to throttling by user account, limits are also applied to applications in a tenant. 
 
-Every application has its own limits in a tenant, which are based on the number of licenses purchased per organization (see the plans listed on [SharePoint Limits](https://docs.microsoft.com/en-us/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#limits-by-plan) for licenses included). Every request that an application makes across all API endpoints, including Microsoft Graph, CSOM and REST, counts towards the application’s usage.
+Every application has its own limits in a tenant, which are based on the number of licenses purchased per organization (see the plans listed on [SharePoint Limits](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#limits-by-plan) for licenses included). Every request that an application makes across all API endpoints, including Microsoft Graph, CSOM and REST, counts towards the application’s usage.
 
 SharePoint provides a variety of APIs. Different APIs have different costs depending on the complexity of the API. The cost of APIs is normalized by SharePoint and expressed by resource units. Application’s limits are also defined using resource units.
 
@@ -76,7 +76,7 @@ In terms of API costs, Microsoft Graph APIs have a predetermined resource unit c
 
 Delta with a token is the most efficient way to scan content in SharePoint, and we talk more in details at the [best practices for scanning applications](https://aka.ms/ScanGuidance). To help applications that follow the guidance, we lower the resource unit cost of delta requests with a token to 1 resource unit, although it is a multi-item query. The delta request without a token is considered a multi-item query and costs 2 resource units per request.
 
-In [batching](https://docs.microsoft.com/en-us/graph/json-batching), requests in a batch are evaluated individually by resource units. 
+In [batching](https://docs.microsoft.com/graph/json-batching), requests in a batch are evaluated individually by resource units. 
 
 CSOM and REST do not have a predetermined resource unit cost and they usually consume more resource units than Microsoft Graph APIs to achieve the same functionality. And in addition to resource unit limits, CSOM and REST are also subject to other internal resource limits, so if applications call CSOM and REST, they may experience more throttling than the limits described in this document. We highly recommend you choose Microsoft Graph APIs over CSOM and REST APIs when possible.
 
