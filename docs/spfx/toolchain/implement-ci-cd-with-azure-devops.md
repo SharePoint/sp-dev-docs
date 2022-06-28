@@ -52,8 +52,7 @@ The Build Definition, as its name suggests, includes all the definitions and the
 ### Installing NodeJS version 10
 
 Once the Build Definition has been created, the first thing you need to do is install NodeJS.  Make sure to install version 10, as SharePoint Framework depends on it.
-
-![installing node 10](../../images/azure-devops-spfx-02.png)
+![Screenshot of the Select a Source screen with the Azure Repos Git option being highlighted.](../../images/azure-devops-spfx-02.png)
 
 > [!NOTE] 
 > Make sure you specify `10.x` in the `Version Spec` field. If your project is based on SharePoint Framework 1.7.1 or earlier, use version 8.x.
@@ -212,7 +211,7 @@ By click on `1 job, 0 tasks` you can access the tasks configuration view, which 
 
 Add a `Node tool installer` task and define `10.X` in the `Version Spec` field. If your project is based on SharePoint Framework version 1.7.1 or earlier, use version 8.X.
 
-![installing node](../../images/azure-devops-spfx-13.png)
+![Screenshot of the Node dot J S Tool Installer screen, showing the Display name and Version Spec fields.](../../images/azure-devops-spfx-13.png)
 
 ### Installing the CLI for Microsoft 365
 
