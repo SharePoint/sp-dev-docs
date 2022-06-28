@@ -5,24 +5,23 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5e1549be-c95f-4414-b72f-e9d0e124abd8
 ---
 
 # Field element (DeploymentManifest - DeploymentFieldTemplate)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 field object ([SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)) that provides a field value for the specified template field. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a Windows SharePoint Services 3.0 field object ([SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)) that provides a field value for the specified template field.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="Field" 
-        type="SPField" 
-        minOccurs="1" maxOccurs="1" 
+<xs:element name="Field"
+        type="SPField"
+        minOccurs="1" maxOccurs="1"
 />
 USAGE
 <FieldTemplate>
@@ -68,7 +67,7 @@ USAGE
 ## Type
 
 **SPField**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -110,18 +109,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**Format** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**FillInChoice** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**SchemaXml** <br/> |xs:string  <br/> |Optional. Specifies the XML schema that defines the field.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [FieldTemplate Element (DeploymentManifest)](fieldtemplate-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
 - [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx)
-

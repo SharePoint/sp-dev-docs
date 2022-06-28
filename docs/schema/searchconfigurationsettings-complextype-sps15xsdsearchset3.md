@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7d59b1f0-7b6a-e9fe-ba69-b4d3cc55469b
 description: Learn about SearchConfigurationSettings complexType (SPS15XSDSearchSet3).
@@ -12,8 +11,8 @@ description: Learn about SearchConfigurationSettings complexType (SPS15XSDSearch
 
 # SearchConfigurationSettings complexType (SPS15XSDSearchSet3)
 
- 
-  
+
+
 ## Type information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn about SearchConfigurationSettings complexType (SPS15XSDSearch
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Portability.xsd  |
 |**Extension base** |None |
-   
+
 ## Definition
 
 ```XML
@@ -37,8 +36,8 @@ description: Learn about SearchConfigurationSettings complexType (SPS15XSDSearch
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -46,9 +45,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[SearchQueryConfigurationSettings](searchqueryconfigurationsettings-element-searchconfigurationsettings-complextype.md) <br/> |tns:ArrayOfSearchQueryConfigurationSettings  <br/> ||
 |[SearchRankingModelConfigurationSettings](searchrankingmodelconfigurationsettings-element-searchconfigurationsettings-comp.md) <br/> |tns:SearchRankingModelConfigurationSettings  <br/> ||
 |[SearchSchemaConfigurationSettings](searchschemaconfigurationsettings-element-searchconfigurationsettings-complextyp.md) <br/> |tns:SearchSchemaConfigurationSettings  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

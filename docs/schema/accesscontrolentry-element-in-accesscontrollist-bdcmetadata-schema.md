@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AccessControlEntry
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 85e24489-0a6b-dfda-fb03-474fe7b0d947
 ---
@@ -56,20 +55,13 @@ The following sections describe attributes, child elements, and parent elements.
 </table>
 
 ### Child elements
-  
+
 | Element | Description |
 | --- | --- |
 | [Right element in AccessControlEntry (BDCMetadata Schema)](right-element-in-accesscontrolentry-bdcmetadata-schema.md) | A **Right** element that specifies the permissions available to the security principal. |
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [AccessControlList element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | The access control list (ACL) that contains this ACE. |
-
-
-
-
-
-
-

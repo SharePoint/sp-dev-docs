@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystems
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d9bf0ca9-fb79-e3a5-cc84-9510d93798cb
 ---
@@ -36,21 +35,14 @@ None.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LobSystem Element in LobSystems (BDCMetadata Schema)](lobsystem-element-in-lobsystems-bdcmetadata-schema.md) | A LobSystem element that specifies a external system. |
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Model Element (BDCMetadata Schema)](model-element-bdcmetadata-schema.md) | An application definition (BDC model). |
-
-
-
-
-
-
-

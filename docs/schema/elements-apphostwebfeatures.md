@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 90375774-33ca-2b50-1578-9631f3e86d1a
 ---
@@ -14,8 +13,8 @@ ms.assetid: 90375774-33ca-2b50-1578-9631f3e86d1a
 
 This topic lists the elements in the **AppHostWebFeatures** XML schema.
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 - [ActivationDependencies element](activationdependencies-element-featuredefinition-complextypeapphostwebfeatures.md)
 
@@ -134,11 +133,3 @@ This topic lists the elements in the **AppHostWebFeatures** XML schema.
 - [UrlAction element](urlaction-element-customactiondefinition-complextypeapphostwebfeatures.md)
 
 - [VersionRange element](versionrange-element-upgradeactionsdefinition-complextypeapphostwebfeatures.md)
-
-
-
-
-
-
-
-

@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 69ed315f-2fe5-4a7e-8cdd-2d0c3703fd68
 ---
@@ -88,11 +87,3 @@ Following is a table that lists the selected simple types.
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-
-
-
-
-
-
-
-

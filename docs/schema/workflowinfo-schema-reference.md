@@ -5,7 +5,6 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f3bdcc70-15a0-44b2-9b01-330f13430354
 ---
@@ -147,7 +146,3 @@ The WorkflowInfo schema contains the following elements:
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [SharePoint Designer Workflow Overview](https://msdn.microsoft.com/library/5ef4e933-564e-4dea-b2f4-c1b621774969(Office.15).aspx)
 - [WorkflowInfo Schema and WorkflowActions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
- 

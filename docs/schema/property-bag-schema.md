@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dd003614-115e-4eb4-aa20-ffcfb0d0b805
 ---
@@ -44,10 +43,3 @@ The following example shows how to add a DaysToLive property and its value to th
         <Property Name="DaysToLive" Value="90" Type="int" />
     </PropertyBag>
 ```
-
-
-
-
-
-
-

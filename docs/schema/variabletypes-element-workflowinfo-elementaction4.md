@@ -5,12 +5,11 @@ ms.date: 06/14/2022
 description: Describes VariableTypes element and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e546438b-d8e4-fa02-d866-93a8ab955d49
 ---
 
-# VariableTypes element 
+# VariableTypes element
 
 (WorkflowInfo element) (Action4)
 
@@ -64,10 +63,10 @@ Container for **VariableType** elements, which specify the available types for l
          <xs:attribute name="Default" type="s:boolean" />
          <xs:attribute name="ItemIdType" type="s:boolean" />
          <xs:attribute name="Hidden" type="s:boolean" />
-      ``</xs:element>  
+      ``</xs:element>
            </xs:sequence>
            </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -125,11 +124,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

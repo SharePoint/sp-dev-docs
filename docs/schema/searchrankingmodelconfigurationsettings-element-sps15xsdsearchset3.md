@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 910293a7-8d77-d41e-4e38-d7da74a081eb
 description: Learn about SearchRankingModelConfigurationSettings element (SPS15XSDSearchSet3).
@@ -12,8 +11,8 @@ description: Learn about SearchRankingModelConfigurationSettings element (SPS15X
 
 # SearchRankingModelConfigurationSettings element (SPS15XSDSearchSet3)
 
- 
-  
+
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn about SearchRankingModelConfigurationSettings element (SPS15X
 |**Element type**|tns:SearchRankingModelConfigurationSettings |
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Portability.xsd |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ description: Learn about SearchRankingModelConfigurationSettings element (SPS15X
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

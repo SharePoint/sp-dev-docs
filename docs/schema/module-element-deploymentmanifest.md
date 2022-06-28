@@ -5,16 +5,15 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6c4ef8ae-88fa-4055-aaa3-9089ed609d40
 ---
 
 # Module Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint module ([SPModule](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPModule.aspx)) object, providing a collection of files and views that are used in a site template. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a SharePoint module ([SPModule](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPModule.aspx)) object, providing a collection of files and views that are used in a site template.
 
 ## Definition
 
@@ -37,8 +36,8 @@ USAGE
 
 ## Type
 
-[SPModule](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPModule.aspx) object. 
-  
+[SPModule](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPModule.aspx) object.
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -51,17 +50,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**Name** <br/> |xs:string  <br/> |Optional. Represents the name of the module.  <br/> |
 |**ParentWeb** <br/> |xs:string  <br/> |Optional. Specifies the parent website.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. Specifies the server-relative URL for the module.  <br/> |
-   
+
 ### Child elements
 
 [Properties Element (DeploymentManifest - SPModule)](properties-element-deploymentmanifestspmodule.md)
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPModule](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPModule.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

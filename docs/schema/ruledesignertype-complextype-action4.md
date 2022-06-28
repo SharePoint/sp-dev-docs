@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c6dc3108-1835-12a3-0403-9679247b4ac6
 ---
@@ -52,10 +51,10 @@ Base type for creating a [RuleDesigner element (defaultElementType complexType) 
                        <xs:attribute name="Value" type="s:string" use="required" />
                        <xs:attribute name="TypeFilter" type="s:string" />
                        <xs:attribute name="UnaryHides" type="s:string" />
-                       </xs:element>  
+                       </xs:element>
                      <xs:element name="DataSourceRef" minOccurs="1" maxOccurs="unbounded">
                        <xs:attribute name="Ref" type="s:string" />
-                     </xs:element>  
+                     </xs:element>
                   </xs:choice>
                   <xs:attribute name="Field" type="s:string" />
                   <xs:attribute name="Text" type="s:string" />
@@ -68,7 +67,7 @@ Base type for creating a [RuleDesigner element (defaultElementType complexType) 
                   <xs:attribute name="EventCategory" type="s:string" />
                   <xs:attribute name="DisplayName" type="s:string" />
               </xs:complexType>
-          </xs:element>  
+          </xs:element>
       </xs:sequence>
          <xs:attribute name="Sentence" type="s:string" />
     </xs:complexType>
@@ -131,11 +130,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

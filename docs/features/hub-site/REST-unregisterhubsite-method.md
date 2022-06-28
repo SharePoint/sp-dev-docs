@@ -1,13 +1,13 @@
 ---
 title: UnRegisterHubSite REST method
 description: Unregisters a hub site so that it is no longer a hub site.
-ms.date: 4/20/2018
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
 # UnRegisterHubSite
 
-Unregisters a hub site so that it is no longer a hub site. It will become a regular site. Any sites associated with the hub site will no longer be associated. This can take up to an hour to propagate. If you want to speed up the process, first remove any associated sites before unregistering the hub site. 
+Unregisters a hub site so that it is no longer a hub site. It will become a regular site. Any sites associated with the hub site will no longer be associated. This can take up to an hour to propagate. If you want to speed up the process, first remove any associated sites before unregistering the hub site.
 
 ## HTTP request
 

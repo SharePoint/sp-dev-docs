@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6b5cd80c-fd89-8ea1-3657-d711dc513976
 ---
 
-# FilterValue Element in FilterValues 
+# FilterValue Element in FilterValues
 
 (Subscription Schema)
 
@@ -48,11 +47,3 @@ None.
 |---------|-------------|
 | [FilterValues Element in Query (Subscription Schema)](filtervalues-element-in-query-subscription-schema.md) | The **FilterValues** element that contains this filter value. |
 | [FilterValues Element in Association (Subscription Schema)](filtervalues-element-in-association-subscription-schema.md) | The **FilterValues** element that contains this filter value. |
-
-
-
-
-
-
-
-

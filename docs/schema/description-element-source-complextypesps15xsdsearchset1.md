@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5407275e-b1c5-f715-3bc3-33c77d9edbc7
 ---
@@ -13,7 +12,7 @@ ms.assetid: 5407275e-b1c5-f715-3bc3-33c77d9edbc7
 # Description element (Source complexType) (SPS15XSDSearchSet1)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ ms.assetid: 5407275e-b1c5-f715-3bc3-33c77d9edbc7
 |**Element type** |xs:string |
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Administration.Query.xsd |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ ms.assetid: 5407275e-b1c5-f715-3bc3-33c77d9edbc7
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - feature. custom action [sharepoint 2010],custom action ID [SharePoint 2010]
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6889686e-f6e6-4da0-bfd4-099878614980
 ---
@@ -463,7 +462,7 @@ You can create a Feature that implements the [HideCustomAction](hidecustomaction
 
 <br/>
 
-## See also 
+## See also
 
 - [Custom Action Definition Schema](custom-action-definition-schema.md)
 - [How to: Add Actions to the User Interface](https://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)

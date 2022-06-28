@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
 api_type:
 - schema
 ms.assetid: a2e4f3fc-12b5-4fe3-a1ca-9a5c118479d3
-description: In CAML, used within the Where element to group filters in a query. 
+description: In CAML, used within the Where element to group filters in a query.
 ---
 
 # Or element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used within the [Where](where-element-query.md) element to group filters in a query. 
-  
+
+Used within the [Where](where-element-query.md) element to group filters in a query.
+
 ```XML
 <Or>
 </Or>
@@ -32,7 +31,7 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [And](and-element-query.md)
@@ -52,26 +51,26 @@ None
 - [Neq](neq-element-query.md)
 - [NotIncludes](notincludes-element-query.md)
 - [Or](or-element-query.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ### Remarks
 
-This element can be nested inside other **Or** and [And](and-element-query.md) elements. The server supports unlimited complicated queries. However, any given **Or** element can have only two disjuncts; that is, only two child elements. If you need to disjoin three or more conditions, you must nest the **Or** elements, as demonstrated by the second example in the following section. 
-  
+This element can be nested inside other **Or** and [And](and-element-query.md) elements. The server supports unlimited complicated queries. However, any given **Or** element can have only two disjuncts; that is, only two child elements. If you need to disjoin three or more conditions, you must nest the **Or** elements, as demonstrated by the second example in the following section.
+
 ## Examples
 
 The following example performs a query for cases in which values of the Status field either do not equal Completed or are **null**. The results are sorted in descending order according to the Modified field.
-  
+
 ```XML
 <Query>
   <OrderBy>
@@ -93,8 +92,8 @@ The following example performs a query for cases in which values of the Status f
 
 <br/>
 
-The following example shows how to disjoin three conditions. Note that the first pair of conditions is within their own **Or** element, which is itself a condition of an outer **Or** element. 
-  
+The following example shows how to disjoin three conditions. Note that the first pair of conditions is within their own **Or** element, which is itself a condition of an outer **Or** element.
+
 ```XML
 <Where>
   <Or>
@@ -116,5 +115,3 @@ The following example shows how to disjoin three conditions. Note that the first
 
 
 <br/>
-
-

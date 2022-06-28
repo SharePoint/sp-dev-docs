@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1cdd2292-2168-9cb9-a47b-b0917606a343
 ---
 
-# Field element (Fields element) 
+# Field element (Fields element)
 
 (SchemaSource element) (dataSourceType complexType) (Action4)
 
@@ -30,8 +29,8 @@ Specifies a field in which to display data obtained from the parent data source.
 
 ## Element information
 
-- **Element type**: 
-- **Namespace**: 
+- **Element type**:
+- **Namespace**:
 - **Schema file**: Actions4.xsd
 
 ## Definition
@@ -41,7 +40,7 @@ Specifies a field in which to display data obtained from the parent data source.
   <xs:attribute name="Name" type="s:string" />
   <xs:attribute name="DisplayName" type="s:string" />
   <xs:attribute name="Type" type="s:string" />
-</xs:element>  
+</xs:element>
 ```
 
 ## Elements and attributes

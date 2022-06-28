@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Returns the file extension for the specified file.
 # GetFileExtension element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the file extension for the specified file.
-  
+
 ```XML
 <GetFileExtension
   HTMLEncode = "TRUE" | "FALSE">
@@ -35,28 +34,28 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
-   
+
 ### Child elements
 
 - [Column](column-element-view.md)
 - [Field](field-element-view.md)
 - [LookupColumn](lookupcolumn-element-view.md)
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: Unbounded  
-   
+- Minimum: 0
+- Maximum: Unbounded
+
 ## Example
 
 The following line `<GetFileExtension>somefile.xls</GetFileExtension>` would return "xls".
-  
+
 The following example returns file extensions from the Lookup column, except in cases where extension equals "htm".
-  
+
 ```XML
 <Switch>
   <Expr>

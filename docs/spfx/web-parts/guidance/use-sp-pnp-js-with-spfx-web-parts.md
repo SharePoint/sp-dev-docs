@@ -2,7 +2,6 @@
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -91,25 +90,25 @@ npm install @pnp/logging @pnp/sp --save
 
    ```JS
    'use strict';
-   
+
    const build = require('@microsoft/sp-build-web');
-   
+
    build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
-   
+
    var getTasks = build.rig.getTasks;
    build.rig.getTasks = function () {
      var result = getTasks.call(build.rig);
-   
+
      result.set('serve', result.get('serve-deprecated'));
-   
+
      return result;
    };
-   
+
    // ********* ADDED *******
    // disable tslint
    build.tslintCmd.enabled = false;
    // ********* ADDED *******
-   
+
    build.initialize(require('gulp'));
    ```
 
@@ -325,7 +324,7 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
   private _updateTitles = async (): Promise<void> => {
     try {
       //Will create a batch call that will update the title of each item
-      //  in the library by adding `-Updated` to the end. 
+      //  in the library by adding `-Updated` to the end.
       const [batchedSP, execute] = this._sp.batched();
 
       //Clone items from the state

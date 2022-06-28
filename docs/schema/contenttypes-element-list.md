@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Contains references to content types to associate with lists that a
 # ContentTypes element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains references to content types to associate with lists that are created through the list definition.
-  
+
 ```XML
 <ContentTypes>
 </ContentTypes>
@@ -32,26 +31,26 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [ContentType](contenttype-element-contenttype.md)
 - [ContentTypeRef](contenttyperef-element-list.md)
-   
+
 ### Parent elements
 
 - [MetaData (List)](metadata-element-list.md)
 - [MetaData (Site)](metadata-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
 The following example shows a partial definition for a list that uses three content types.
-  
+
 ```XML
 <List xmlns:ows="Microsoft SharePoint" Title="Financial Documents"
   Direction="$Resources:Direction;" Url="Financial Documents"
@@ -75,4 +74,3 @@ The following example shows a partial definition for a list that uses three cont
 ## See also
 
 - [How to: Add a Content Type to a List](https://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666%28Office.15%29.aspx)
-

@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Identifier
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c4abf09b-10b6-0007-9214-35d5fe675be7
 ---
@@ -22,7 +21,7 @@ Specifies an identifier of an external content type.
 
 **Schema**: BDCMetadata
 
-> [!NOTE] 
+> [!NOTE]
 > The Business Data Connectivity (BDC) service enables the mapping of identifiers to fields with nullable data types. However, for primary identifiers, BDC causes an error when the value of these identifiers are **null**.
 
 ```XML
@@ -171,11 +170,3 @@ The following sections describe attributes, child elements, and parent elements.
 | Element | Description |
 | --- | --- |
 | [Identifiers Element in Entity (BDCMetadata Schema)](identifiers-element-in-entity-bdcmetadata-schema.md) | A list of identifiers of an external content type. |
-
-
-
-
-
-
-
-

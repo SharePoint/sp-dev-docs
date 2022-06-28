@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.MethodInstance
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 577ff9d0-706b-be7d-af5b-883e137cada8
 ---
@@ -22,11 +21,11 @@ Specifies a **MethodInstance**.
 
 **Schema**: BDCMetadata
 
-> [!NOTE] 
+> [!NOTE]
 > The following two cases in a BDC model result in an
 [InvalidOperationException](https://msdn.microsoft.com/library/frlrfSystemInvalidOperationExceptionClassTopic.aspx)
 at run time:
-> 
+>
 > - Two **SpecificFinder** method instances that return the same set of fields.
 > - Two **SpecificFinder** method instances that have the same number of fields and that share the same number of fields with another method instance, such as a **Finder**.
 
@@ -184,7 +183,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names of the **MethodInstance**. |
@@ -193,16 +192,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [MethodInstances Element in Method (BDCMetadata Schema)](methodinstances-element-in-method-bdcmetadata-schema.md) | The **MethodInstances** element that contains this **MethodInstance**. |
-
-
-
-
-
-
-
-
-

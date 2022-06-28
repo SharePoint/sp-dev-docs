@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 12fd8fb9-91eb-4f23-89d6-2870fb9e30a8
 ---
@@ -21,7 +20,7 @@ Describes how to display a field of an external content type in Microsoft Outloo
 **Schema**: SolutionManifestDefinitions
 
 ```XML
-<OfficeItemProperty PropertyName = "String" PropertyType = "PropertyType" ReadOnly = "Bolean" OutlookDisplayFormat = "String" Name = "String" Description = 
+<OfficeItemProperty PropertyName = "String" PropertyType = "PropertyType" ReadOnly = "Bolean" OutlookDisplayFormat = "String" Name = "String" Description =
 "String"> </OfficeItemProperty>
 ```
 
@@ -120,11 +119,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

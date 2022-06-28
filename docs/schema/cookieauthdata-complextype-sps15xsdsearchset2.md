@@ -5,22 +5,21 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 94086319-9184-17d6-2db7-c5a462e0a792
 ---
 
 # CookieAuthData complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 |Name|Value|
 |:-----|:-----|
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd   |
 |**Extension base**  |tns:AuthenticationData   |
-   
+
 ## Definition
 
 ```XML
@@ -39,17 +38,15 @@ ms.assetid: 94086319-9184-17d6-2db7-c5a462e0a792
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |[_Cookies](_cookies-element-cookieauthdata-complextypesps15xsdsearchset2.md) <br/> |q6:CookieCollection  <br/> ||
 |[_ErrorPageUrl](_errorpageurl-element-cookieauthdata-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

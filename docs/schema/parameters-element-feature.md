@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 87a46d01-d770-4b5c-9619-bf95ddfde200
 ---
@@ -19,7 +18,7 @@ Specifies the list of parameters to be applied during a Feature upgrade.
 ## Definition
 
 ```XML
-<Parameters> 
+<Parameters>
   <Parameter> </Parameter>
 </Parameters>
 ```
@@ -71,11 +70,3 @@ None
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

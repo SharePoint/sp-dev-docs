@@ -4,7 +4,6 @@ description: Outlines the list schema of Collaborative Application Markup Langua
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema

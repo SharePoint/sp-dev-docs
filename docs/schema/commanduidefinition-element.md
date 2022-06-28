@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4088b220-62d1-453f-ad95-859affffd4e4
 ---
@@ -185,56 +184,56 @@ The following example adds a new **My Custom Tab** tab with a group and three bu
       <CustomAction
         Id="MyCustomRibbonTab"
         Location="CommandUI.Ribbon.ListView"
-        RegistrationId="101" 
+        RegistrationId="101"
         RegistrationType="List">
           <CommandUIExtension>
             <CommandUIDefinitions>
               <CommandUIDefinition
                 Location="Ribbon.Tabs._children">
-                <Tab 
-                  Id="Ribbon.CustomTabExample" 
-                  Title="My Custom Tab" 
-                  Description="This holds my custom commands!" 
+                <Tab
+                  Id="Ribbon.CustomTabExample"
+                  Title="My Custom Tab"
+                  Description="This holds my custom commands!"
                   Sequence="501">
                 <Scaling
                   Id="Ribbon.CustomTabExample.Scaling">
                   <MaxSize
-                    Id="Ribbon.CustomTabExample.MaxSize" 
-                    GroupId="Ribbon.CustomTabExample.CustomGroupExample" 
+                    Id="Ribbon.CustomTabExample.MaxSize"
+                    GroupId="Ribbon.CustomTabExample.CustomGroupExample"
                     Size="OneLargeTwoMedium"/>
-                  <Scale 
+                  <Scale
                     Id="Ribbon.CustomTabExample.Scaling.CustomTabScaling"
-                    GroupId="Ribbon.CustomTabExample.CustomGroupExample" 
+                    GroupId="Ribbon.CustomTabExample.CustomGroupExample"
                     Size="OneLargeTwoMedium" />
                 </Scaling>
                 <Groups Id="Ribbon.CustomTabExample.Groups">
-                  <Group 
-                    Id="Ribbon.CustomTabExample.CustomGroupExample" 
-                    Description="This is a custom group!" 
-                    Title="Custom Group" 
-                    Sequence="52" 
+                  <Group
+                    Id="Ribbon.CustomTabExample.CustomGroupExample"
+                    Description="This is a custom group!"
+                    Title="Custom Group"
+                    Sequence="52"
                     Template="Ribbon.Templates.CustomTemplateExample">
                     <Controls Id="Ribbon.CustomTabExample.CustomGroupExample.Controls">
-                      <Button 
-                        Id="Ribbon.CustomTabExample.CustomGroupExample.HelloWorld" 
-                        Command="CustomTabExample.HelloWorldCommand" 
-                        Sequence="15" 
-                        Description="Says hello to the World!" 
-                        LabelText="Hello, World!" 
+                      <Button
+                        Id="Ribbon.CustomTabExample.CustomGroupExample.HelloWorld"
+                        Command="CustomTabExample.HelloWorldCommand"
+                        Sequence="15"
+                        Description="Says hello to the World!"
+                        LabelText="Hello, World!"
                         TemplateAlias="cust1"/>
-                      <Button 
-                        Id="Ribbon.CustomTabExample.CustomGroupExample.GoodbyeWorld" 
-                        Command="CustomTabExample.GoodbyeWorldCommand" 
-                        Sequence="17" 
-                        Description="Says good-bye to the World!" 
-                        LabelText="Good-bye, World!" 
+                      <Button
+                        Id="Ribbon.CustomTabExample.CustomGroupExample.GoodbyeWorld"
+                        Command="CustomTabExample.GoodbyeWorldCommand"
+                        Sequence="17"
+                        Description="Says good-bye to the World!"
+                        LabelText="Good-bye, World!"
                         TemplateAlias="cust2"/>
-                      <Button 
-                        Id="Ribbon.CustomTabExample.CustomGroupExample.LoveWorld" 
-                        Command="CustomTabExample.LoveWorldCommand" 
-                        Sequence="19" 
-                        Description="Says I love the World!" 
-                        LabelText="I love you, World!" 
+                      <Button
+                        Id="Ribbon.CustomTabExample.CustomGroupExample.LoveWorld"
+                        Command="CustomTabExample.LoveWorldCommand"
+                        Sequence="19"
+                        Description="Says I love the World!"
+                        LabelText="I love you, World!"
                         TemplateAlias="cust3"/>
                     </Controls>
                   </Group>
@@ -243,8 +242,8 @@ The following example adds a new **My Custom Tab** tab with a group and three bu
             </CommandUIDefinition>
             <CommandUIDefinition Location="Ribbon.Templates._children">
               <GroupTemplate Id="Ribbon.Templates.CustomTemplateExample">
-                <Layout 
-                  Title="OneLargeTwoMedium" 
+                <Layout
+                  Title="OneLargeTwoMedium"
                   LayoutTitle="OneLargeTwoMedium">
                   <Section Alignment="Top" Type="OneRow">
                     <Row>
@@ -265,13 +264,13 @@ The following example adds a new **My Custom Tab** tab with a group and three bu
           </CommandUIDefinitions>
           <CommandUIHandlers>
             <CommandUIHandler
-              Command="CustomTabExample.HelloWorldCommand" 
+              Command="CustomTabExample.HelloWorldCommand"
               CommandAction="javascript:alert('Hello, world!');" />
-            <CommandUIHandler 
-              Command="CustomTabExample.GoodbyeWorldCommand" 
+            <CommandUIHandler
+              Command="CustomTabExample.GoodbyeWorldCommand"
               CommandAction="javascript:alert('Good-bye, world!');" />
-            <CommandUIHandler 
-              Command="CustomTabExample.LoveWorldCommand" 
+            <CommandUIHandler
+              Command="CustomTabExample.LoveWorldCommand"
               CommandAction="javascript:alert('I love you, world!');" />
           </CommandUIHandlers>
         </CommandUIExtension>
@@ -280,10 +279,3 @@ The following example adds a new **My Custom Tab** tab with a group and three bu
 ```
 
 <br/>
-
-
-
-
-
-
-

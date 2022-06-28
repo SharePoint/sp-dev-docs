@@ -5,15 +5,14 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6fb13349-16fd-4fb6-b0d7-a469e276cb18
 ---
 
 # RoleAssignmentX Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents a security role assignment in cases where incremental changes to the base object are being deployed.
 
 ## Definition
@@ -45,8 +44,8 @@ USAGE
 
 ## Type
 
-**DeploymentRoleAssignmentX** (based on [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)) 
-  
+**DeploymentRoleAssignmentX** (based on [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx))
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -68,18 +67,17 @@ The following sections describe attributes, child elements, and parent elements.
 |**RoleId** <br/> |xs:string  <br/> |Optional. Identifier of the security role.  <br/> |
 |**GroupTitle** <br/> |xs:string  <br/> |Optional. Display name of the security group that is associated with the role.  <br/> |
 |**UserLogin** <br/> |xs:string  <br/> |Optional. Logon credential for users associated with the role.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
 - [RoleAssignment Element (DeploymentManifest)](roleassignment-element-deploymentmanifest.md)
-

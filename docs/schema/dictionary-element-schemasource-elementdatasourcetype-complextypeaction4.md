@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c3fa67ee-c8f0-d66c-751f-856b92932ab4
 ---
 
-# Dictionary element 
+# Dictionary element
 
 (SchemaSource element) (dataSourceType complexType) (Action4)
 
@@ -54,7 +53,7 @@ Specifies a dictionary of name-value pairs from which to retrieve fields.
 ```XML
     <xs:element name="Dictionary"  minOccurs="0" maxOccurs="1">
          <xs:attribute name="ValueFrom" type="s:string"  />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -118,11 +117,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 64a35165-b5cf-08f4-8469-a00fabda6a88
 ---
 
-# ActionNames element in OBPart 
+# ActionNames element in OBPart
 
 (LayoutDefinitions Schema)
 
@@ -35,19 +34,13 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-  
+
 | Element | Description |
 | --- | --- |
 | [ActionName element in ArrayOfActions (LayoutDefinitions Schema)](actionname-element-in-arrayofactions-layoutdefinitions-schema.md) | The name of the action. |
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [OBPart element in ArrayOfOBPart (LayoutDefinitions Schema)](obpart-element-in-arrayofobpart-layoutdefinitions-schema.md) | The Office External Part. |
-
-
-
-
-
-

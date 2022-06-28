@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 59c61fbb-1c20-674f-798c-11bc6976f4a7
 ---
 
-# Layouts Element in DeclarativeContextDefinition 
+# Layouts Element in DeclarativeContextDefinition
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -37,7 +36,7 @@ None.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Layout Element in Layouts (SolutionManifestDeclarativeExtensions Schema)](layout-element-in-layouts-solutionmanifestdeclarativeextensions-schema.md) | Specifies the location of the layout file that contains layout. |
@@ -45,7 +44,7 @@ None.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [DeclarativeContextDefinition Element (SolutionManifestDeclarativeExtensions Schema)](declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md) | Specifies the context definition the layouts are for. |
@@ -53,11 +52,3 @@ None.
 </br>
 
 </br>
-
-
-
-
-
-
-
-

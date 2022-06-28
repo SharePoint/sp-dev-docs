@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - upgrading - [sharepoint 2010], definition schema
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Upgrade schema
@@ -19,33 +18,33 @@ ms.assetid: 96d5e067-bea5-4a8e-8b21-db14eab60281
 # Upgrade Definition schema
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 The following elements and attributes are implemented within a site upgrade definition file.
-  
+
 [Config](config-element-upgrade.md)
-  
+
 - [WebTemplate](webtemplate-element-upgrade.md)
-  
+
   - [Lists](lists-element-upgrade.md)
-  
+
     - [List](list-element-upgrade.md)
-  
+
   - [Files](https://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2%28Office.15%29.aspx)
-  
+
     - [File](file-element-upgrade.md)
-  
+
   - [AppliedSiteFeatures](appliedsitefeatures-element-upgrade.md)
-  
+
     - [Feature](feature-element-upgrade.md)
-  
+
   - [AppliedWebFeatures](feature-element-upgrade.md)
-  
+
     - [Feature](feature-element-upgrade.md)
-  
+
 ## Example
 
 The following example outlines the format of an upgrade definition.
-  
+
 ```XML
 <Config xmlns = "urn:Microsoft.SharePoint.Upgrade">
   <WebTemplate
@@ -79,7 +78,7 @@ The following example outlines the format of an upgrade definition.
         FromPath = "{LocaleId}\STS\Lists\announce\DispForm.aspx"
         ToPath = "Features\AnnouncementsList\announce\DispForm.aspx" />
       <File
-        FromPath = "{LocaleId}\STS\Lists\announce\EditForm.aspx" 
+        FromPath = "{LocaleId}\STS\Lists\announce\EditForm.aspx"
         ToPath = "Features\AnnouncementsList\announce\EditForm.aspx"
         />
       <File
@@ -99,5 +98,3 @@ The following example outlines the format of an upgrade definition.
   </WebTemplate>
 </Config>
 ```
-
-

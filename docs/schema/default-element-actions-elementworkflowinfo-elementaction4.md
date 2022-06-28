@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c879a01f-9c59-bfba-5c2e-8a91b6c174cc
 ---
 
-# Default element (Actions element) 
+# Default element (Actions element)
 
 (WorkflowInfo element) (Action4)
 
@@ -55,7 +54,7 @@ Serves as a container for other elements and has no definable attributes.
 
 ```XML
     <xs:element name="Default"      type="defaultElementType" minOccurs="0"     maxOccurs="1"    >
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -113,11 +112,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

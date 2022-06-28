@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - features [sharepoint 2010], schemas,schemas [SharePoint 2010], Features,Features [SharePoint 2010]
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a9f6f15e-3489-4677-b579-db330638a853
 ---
@@ -56,10 +55,3 @@ In addition to describing the file format of [Feature.xml Files](feature-xml-fil
 - [Web Template XML](web-template-xml.md)
 
 - [Workflow Definitions](workflow-definitions.md)
-
- 
-
-
-
-
-

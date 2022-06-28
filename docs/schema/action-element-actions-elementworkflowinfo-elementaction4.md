@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 98829cd3-8f68-351b-6e33-c0e27e174b58
 ---
 
-# Action element 
+# Action element
 
 (Actions element) (WorkflowInfo element) (Action4)
 
@@ -192,7 +191,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Attributes
-  
+
 | Attribute | Type | Required | Description | Possible values |
 | --- | --- | --- | --- | --- |
 | **__SolutionId** | s:string | optional | Specifies a GUID that the client application writes to the implementation-specific action. The server uses the GUID to help locate the assembly at workflow runtime. | Values of the s:string type. |
@@ -210,9 +209,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 | **SandboxedFunction** | s:boolean | optional | If **true**, the client application inserts an implementation-specific action when this action is selected. The action should be configured to call a function defined by the conjunction of AssemblyName, ClassName, and FunctionName. If set, AssemblyName, ClassName, FunctionName, and __SolutionId must also be set. | Values of the s:boolean type. |
 | **ShapeImageUrl** | s:string | optional | The URL of a default icon shape-image file that is available for customization when creating custom actions or custom conditions. | Values of the s:string type. |
 | **UsesCurrentItem** | s:boolean | optional | Specifies whether a given workflow action can be used in a "site" workflow. Setting this to **true** means that the action cannot be used and is not available for site workflows. The copy/paste function on actions is also blocked. If this attribute value is not set, **false** is implied. | Values of the s:boolean type. |
-
-
-
-
-
-

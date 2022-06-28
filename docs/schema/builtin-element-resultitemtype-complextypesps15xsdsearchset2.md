@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 22e53efb-a9a4-89d6-d931-2204c16475fd
 ---
 
 # BuiltIn element (ResultItemType complexType) (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
 | Information | Location |
@@ -31,18 +30,16 @@ ms.assetid: 22e53efb-a9a4-89d6-d931-2204c16475fd
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

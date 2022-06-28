@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes Elements(SharePoint Add-in) and lists the elements in the SharePoint Add-in Manifest XML schema.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cbecb71a-63fc-5c28-d31e-5b7296c0ed23
 ---
@@ -16,7 +15,7 @@ ms.assetid: cbecb71a-63fc-5c28-d31e-5b7296c0ed23
 
 This topic lists the elements in the **SharePoint Add-in Manifest** XML schema.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 - [App element](app-element-sharepoint-add-in-manifest.md)
@@ -66,11 +65,3 @@ This topic lists the elements in the **SharePoint Add-in Manifest** XML schema.
 - [UpgradedEventEndpoint element](upgradedeventendpoint-element-propertiesdefinition-complextypesharepoint-add-in.md)
 
 - [WebTemplate element](webtemplate-element-propertiesdefinition-complextypesharepoint-add-in-manifest.md)
-
-
-
-
-
-
-
-

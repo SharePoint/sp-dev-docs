@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b39e8e21-490b-f498-1ac1-7d88f72532b9
 ---
 
-# NestedInitiationFieldNodes element 
+# NestedInitiationFieldNodes element
 
 (SchemaSource element) (dataSourceType complexType) (Action4)
 
@@ -53,7 +52,7 @@ Specifies that fields are retrieved from the schema of the data used to begin th
 
 ```XML
     <xs:element name="NestedInitiationFieldNodes" minOccurs="0"  maxOccurs="1">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -91,11 +90,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

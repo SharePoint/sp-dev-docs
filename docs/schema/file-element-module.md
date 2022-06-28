@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c270e4ce-8110-4da7-b0e7-c223604bfce7
 ---
@@ -26,7 +25,7 @@ Specifies a file to include within a module in a site definition.
   Level = Draft
   Name = string
   NavBarHome = "TRUE" | "FALSE"
-  Path = string  ReplaceContent = "TRUE" | "FALSE" 
+  Path = string  ReplaceContent = "TRUE" | "FALSE"
   Type = "Ghostable" | "GhostableInLibrary"
   Url = string>
   <AllUsersWebPart />
@@ -170,7 +169,7 @@ The following sections describe attributes, child elements, and parent elements.
 </table>
 
 
-## Example 
+## Example
 
 For an example of how this element is used, see [Modules](modules.md).
 
@@ -179,10 +178,3 @@ For an example of how this element is used, see [Modules](modules.md).
 
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-

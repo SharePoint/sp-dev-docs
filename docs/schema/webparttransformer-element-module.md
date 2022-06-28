@@ -5,7 +5,6 @@ ms.date: 06/15/2022
 description: Describes WebPartTransformer Element (Module) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 78bf89d0-9965-4da8-abe4-4e1b5349974b
 ---
@@ -19,8 +18,8 @@ Specifies the transformer for the web part.
 ## Definition
 
 ```XML
-<WebPartTransformer 
-   Assembly = string 
+<WebPartTransformer
+   Assembly = string
    Namespace = string />
 ```
 
@@ -90,10 +89,3 @@ None
 - [Modules](modules.md)
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-

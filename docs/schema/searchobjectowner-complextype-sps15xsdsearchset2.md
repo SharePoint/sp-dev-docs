@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a071bfbc-d23d-d37f-b2b3-92878bbe11ec
 description: Learn more about SearchObjectOwner complexType (SPS15XSDSearchSet2).
@@ -12,8 +11,8 @@ description: Learn more about SearchObjectOwner complexType (SPS15XSDSearchSet2)
 
 # SearchObjectOwner complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn more about SearchObjectOwner complexType (SPS15XSDSearchSet2)
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
 |**Extension base** |None   |
-   
+
 ## Definition
 
 ```XML
@@ -40,8 +39,8 @@ description: Learn more about SearchObjectOwner complexType (SPS15XSDSearchSet2)
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -52,9 +51,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[SPSiteId](spsiteid-element-searchobjectowner-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
 |[SPSiteSubscriptionId](spsitesubscriptionid-element-searchobjectowner-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
 |[SPWebId](spwebid-element-searchobjectowner-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

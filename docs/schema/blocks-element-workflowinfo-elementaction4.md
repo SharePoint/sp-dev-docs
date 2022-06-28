@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d7f1d00f-0f32-c744-65bd-cc2c8ceee2b9
 ---
 
-# Blocks element 
+# Blocks element
 
 (WorkflowInfo element) (Action4)
 
@@ -41,10 +40,10 @@ Provides container element for **Block** elements.
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Block" type="propertiesType" minOccurs="0" maxOccurs="unbounded" >
-                </xs:element>  
+                </xs:element>
            </xs:sequence>
         </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -102,11 +101,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

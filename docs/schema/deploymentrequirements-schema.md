@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f07210c3-2c1a-4c4d-b9b8-d9d30c57d8c8
 ---
@@ -22,7 +21,7 @@ The following table lists elements in the DeploymentRequirements.xsd schema file
 
 <br/>
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Requirement element (DeploymentRequirements)](requirement-element-deploymentrequirements.md) | Represents specific deployment export requirement objects (**SPRequirement**). |
@@ -34,11 +33,3 @@ The following table lists elements in the DeploymentRequirements.xsd schema file
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-
-

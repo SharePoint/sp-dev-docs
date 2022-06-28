@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies a binary resource to deploy to an existing Feature folder
 # Resource element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies a binary resource to deploy to an existing Feature folder.
-  
+
 ```XML
 <Resource
   Location="Text">
@@ -35,17 +34,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Location**  <br/> |Required **Text**. Specifies a location relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Resources](resources-element-solution.md)
-   
+
 ### Remarks
 
 Use this element to deploy a binary resource to an existing Feature folder.
-  
-

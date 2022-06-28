@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AssociationReference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e32c5267-53b0-9ff0-6e9a-1cb00d9f1d57
 ---
 
-# AssociationReference element in AssociationGroup 
+# AssociationReference element in AssociationGroup
 
 (BDCMetadata Schema)
 
@@ -83,11 +82,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [AssociationGroup element in AssociationGroups (BDCMetadata Schema)](associationgroup-element-in-associationgroups-bdcmetadata-schema.md) | The **AssociationGroup** that this **AssociationReference** belongs to. |
-
-
-
-
-
-
-
-

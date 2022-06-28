@@ -5,17 +5,16 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d0072541-fbe7-4ac4-2687-17b0829b8c43
 ---
 
-# Properties element (FeatureTemplateReference complexType) 
+# Properties element (FeatureTemplateReference complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
@@ -25,7 +24,7 @@ ms.assetid: d0072541-fbe7-4ac4-2687-17b0829b8c43
 | **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file** | apphostwebfeatures.xsd |
 
-## Definition 
+## Definition
 
 ```XML
     <xs:element name="Properties" type="FeaturePropertyDefinitions" minOccurs="0" maxOccurs="1"></xs:element>
@@ -60,7 +59,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Child elements
 
@@ -86,20 +85,12 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Attributes
 
 None.
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

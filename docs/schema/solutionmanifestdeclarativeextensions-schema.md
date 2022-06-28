@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 17fb7996-eca8-721e-aeea-17fedf29b16b
 ---
@@ -51,11 +50,3 @@ This section contains documentation for the **SolutionManifestDeclarativeExtensi
 - [Picture element in DeclarativeFormRegion (SolutionManifestDeclarativeExtensions schema)](picture-element-in-declarativeformregion-solutionmanifestdeclarativeextensions-s.md)
 
 - [UrlAction element in Actions (SolutionManifestDeclarativeExtensions schema)](urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md)
-
-
-
-
-
-
-
-

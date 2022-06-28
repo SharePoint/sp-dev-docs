@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.TypeDescriptors
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 322b2d3f-c92d-3c24-9f22-07b56396275b
 ---
@@ -46,11 +45,3 @@ None.
 | --- | --- |
 | [TypeDescriptor Element (BDCMetadata Schema)](typedescriptor-element-bdcmetadata-schema.md) |     |
 | [TypeDescriptor](https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) |     |
-
-
-
-
-
-
-
-

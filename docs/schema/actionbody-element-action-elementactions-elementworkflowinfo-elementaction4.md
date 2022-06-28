@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c9996ac3-be53-440c-8810-55b91031869b
 ---
 
-# ActionBody element 
+# ActionBody element
 
 (Action element) (Actions element) (WorkflowInfo element) (Action4)
 
@@ -45,10 +44,10 @@ Specifies the body of a custom action.
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="ActionBody" >
-                </xs:element>  
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes

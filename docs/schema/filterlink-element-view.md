@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Returns the URL for filtering a view; typically used in the toolbar
 # FilterLink element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the URL for filtering a view; typically used in the toolbars that appear above lists.
-  
+
 ```XML
 <FilterLink
   AutoHyperLink = "TRUE" | "FALSE"
@@ -53,43 +52,43 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-The **FilterLink** element returns a URL string like the following: 
-  
+The **FilterLink** element returns a URL string like the following:
+
 ```
 http://Site_Name/Lists/Events/AllItems.aspx?Filter=1&amp;View=%7b4A760E71%2dEBF2%2d4A88%2d9B2E%2dCFDE10E1825A%7d
 ```
 
 ## Example
 
-The following example uses the **FilterLink** element to construct a hyperlink for the filter icon, so that selecting the icon posts the URL for applying filter options in the list view. 
-  
+The following example uses the **FilterLink** element to construct a hyperlink for the filter icon, so that selecting the icon posts the URL for applying filter options in the list view.
+
 ```XML
-<HTML><![CDATA[ <a tabindex=2 ID=diidFilterButton class="ms-toolbar" 
+<HTML><![CDATA[ <a tabindex=2 ID=diidFilterButton class="ms-toolbar"
    title=]]></HTML>
 <HTML>"Filter"</HTML>
-<HTML><![CDATA[ ACCESSKEY=L href="javascript:" 
+<HTML><![CDATA[ ACCESSKEY=L href="javascript:"
    OnClick='javascript:SubmitFormPost("]]></HTML>
 <ScriptQuote NotAddingQuote="TRUE">
    <FilterLink Paged="FALSE"/>
 </ScriptQuote>
 <HTML><![CDATA[");javascript:return false;'>
-   <img src="/_layouts/images/tbfilter.gif" ID="tbbuttonstart1" 
+   <img src="/_layouts/images/tbfilter.gif" ID="tbbuttonstart1"
    alt=]]></HTML>
 <HTML>"Filter"</HTML>
 <HTML><![CDATA[ border=0 width=16 height=16></a></HTML>

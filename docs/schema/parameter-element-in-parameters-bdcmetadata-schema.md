@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Parameter
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 811cad0b-ba71-8be0-0765-3e0dec18a0d3
 ---
@@ -106,7 +105,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the parameter. |
@@ -115,15 +114,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Parameters Element in Method (BDCMetadata Schema)](parameters-element-in-method-bdcmetadata-schema.md) | The **Parameters** element that contains this parameter. |
-
-
-
-
-
-
-
-

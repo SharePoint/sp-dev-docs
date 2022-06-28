@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 93cb076a-c981-2655-2f01-4b3f5e6dfbce
 ---
 
-# FilterValues Element in Association 
+# FilterValues Element in Association
 
 (Subscription Schema)
 
@@ -45,11 +44,3 @@ None.
 | Element | Description |
 |---------|-------------|
 | [Association Element in Associations (Subscription Schema)](association-element-in-associations-subscription-schema.md) | The association that contains this list of filter values. |
-
-
-
-
-
-
-
-

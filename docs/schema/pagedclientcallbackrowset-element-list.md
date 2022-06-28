@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,8 +16,8 @@ description: Defines user interface elements to display for accessing subsequent
 # PagedClientCallbackRowset element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Defines user interface elements to display for accessing subsequent pages when the number of rows returned in a view surpasses the limit set by the [RowLimit](rowlimit-element-list.md) element. 
+
+Defines user interface elements to display for accessing subsequent pages when the number of rows returned in a view surpasses the limit set by the [RowLimit](rowlimit-element-list.md) element.
 
 ```XML
 <PagedClientCallbackRowset>
@@ -26,7 +25,7 @@ Defines user interface elements to display for accessing subsequent pages when t
 ```
 
 > [!NOTE]
-> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
+> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx).
 
 ## Elements and attributes
 
@@ -35,25 +34,25 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [View](view-element-list.md)
 - [ViewStyle](viewstyle-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
-The following example uses the **PagedClientCallbackRowset** element to define a link for viewing more list data on the subsequent page. 
-  
+The following example uses the **PagedClientCallbackRowset** element to define a link for viewing more list data on the subsequent page.
+
 ```XML
 <PagedClientCallbackRowset>
   <HTML><![CDATA[<TR><TD></TD><TD align=left Class="ms-vb">]]></HTML>
@@ -84,6 +83,5 @@ The following example uses the **PagedClientCallbackRowset** element to define a
 
 ## See also
 
-- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx) 
+- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 - [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
-

@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 40e63193-d08b-4770-b184-cb804ad68e9f
 ---
@@ -71,11 +70,3 @@ The **Class** element contains the fully qualified name of the class in the foll
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-

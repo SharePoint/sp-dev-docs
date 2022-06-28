@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site Deletion Confirmation schema
@@ -17,23 +16,21 @@ description: The Site Deletion Confirmation schema specifies the text that is se
 # Site Deletion Confirmation schema
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 The Site Deletion Confirmation schema specifies the text that is sent in email messages to site owners to confirm site usage or to warn that the site will be automatically deleted. This schema is defined in DEADWEB.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML)).
-  
+
 ## Site Deletion Confirmation elements
 
 [Email](email-element-site-deletion.md)
-  
-[Confirmation](confirmation-element-site-deletion.md)
-  
-[ConfirmationSubject](confirmationsubject-element-site-deletion.md)
-  
-[ConfirmationBody](confirmationbody-element-site-deletion.md)
-  
-[AutoDeleteWarning](autodeletewarning-element-site-deletion.md)
-  
-[AutoDeleteSubject](autodeletesubject-element-site-deletion.md)
-  
-[AutoDeleteBody](autodeletebody-element-site-deletion.md)
-  
 
+[Confirmation](confirmation-element-site-deletion.md)
+
+[ConfirmationSubject](confirmationsubject-element-site-deletion.md)
+
+[ConfirmationBody](confirmationbody-element-site-deletion.md)
+
+[AutoDeleteWarning](autodeletewarning-element-site-deletion.md)
+
+[AutoDeleteSubject](autodeletesubject-element-site-deletion.md)
+
+[AutoDeleteBody](autodeletebody-element-site-deletion.md)

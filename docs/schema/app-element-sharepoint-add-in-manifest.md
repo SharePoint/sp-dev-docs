@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d5f30dfe-7500-5f85-0f08-f4f220c0c692
 ---
@@ -16,7 +15,7 @@ ms.assetid: d5f30dfe-7500-5f85-0f08-f4f220c0c692
 
 The top level node of the manifest of a SharePoint Add-in.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -31,7 +30,7 @@ The top level node of the manifest of a SharePoint Add-in.
 
 ```XML 
     <xs:element name="App" type="AppDefinition" >
-    </xs:element>     
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -155,10 +154,3 @@ None.
 </tbody>
 </table>
 <br/><br/>
-
-
-
-
-
-
-

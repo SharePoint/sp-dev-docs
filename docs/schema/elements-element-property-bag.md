@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes Elements Element (Property Bag) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Property Bag Schema
@@ -71,11 +70,3 @@ None
 ## See also
 
 - [Property Bag Schema](property-bag-schema.md)
-
-
-
-
-
-
-
-

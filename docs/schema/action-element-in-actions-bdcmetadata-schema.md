@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Action Element
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f58b96c0-77a8-69d3-8710-fff03d4970b9
 ---
@@ -101,7 +100,7 @@ The following sections describe attributes, child elements, and parent elements.
 </br>
 
 ### Child elements
-  
+
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the action. |
@@ -110,14 +109,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [Actions element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md) | The list of actions of an external content type. |
-
-
-
-
-
-
-

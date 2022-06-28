@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c5f383ac-7e8e-a38e-4ccf-f509965f4789
 ---
 
 # PropertyRuleOperator complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |Information|Location|
@@ -21,7 +20,7 @@ ms.assetid: c5f383ac-7e8e-a38e-4ccf-f509965f4789
 |**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
 |**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
 |**Extension base**|None|
-   
+
 ## Definition
 
 ```XML
@@ -41,8 +40,8 @@ ms.assetid: c5f383ac-7e8e-a38e-4ccf-f509965f4789
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -54,9 +53,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[Name](name-element-propertyruleoperator-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
 |[NameLSID](namelsid-element-propertyruleoperator-complextypesps15xsdsearchset2.md) <br/> |q4:LocStringId  <br/> ||
 |[Representation](representation-element-propertyruleoperator-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

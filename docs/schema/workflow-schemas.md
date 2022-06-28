@@ -5,7 +5,6 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b36ded16-3ffd-4931-811e-c402c1e35b07
 ---
@@ -23,10 +22,3 @@ This section provides reference documentation schemas that support SharePoint wo
 - [Workflow configuration schema reference](workflow-configuration-schema-reference.md)
 
 - [WorkflowInfo schema reference](workflowinfo-schema-reference.md)
-
-
-
-
-
-
-

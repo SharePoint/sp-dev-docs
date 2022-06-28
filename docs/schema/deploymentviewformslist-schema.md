@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 03e692c1-b27c-465b-8714-d169cf1fc10c
 ---
@@ -32,11 +31,3 @@ The following table lists elements in the schema file DeploymentViewFormsList.xs
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-
-

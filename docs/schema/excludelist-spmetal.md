@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - SPMetal Parameters XML
@@ -17,9 +16,9 @@ description: Specifies that a list should be excluded from code generation.
 # ExcludeList element (SPMetal)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies that a list should be excluded from code generation.
-  
+
 ```XML
 <ExcludeList Name="Calendar" />
 ```
@@ -33,25 +32,25 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Name**  <br/> |The name of the list that is excluded.  <br/> |
-   
+
 ### Child elements
 
 None.
-  
+
 ### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[Web](web-spmetal.md) <br/> |Specifies the name and access level (public or internal) of the class (derived from **DataContext**) that SPMetal generates.  <br/> |
-   
+
 ### Remarks
 
-A **Web** element cannot have both a **List** element and an **ExcludeList** element that name the same list. 
-  
+A **Web** element cannot have both a **List** element and an **ExcludeList** element that name the same list.
+
 ## Example
 
-The following is an example of an **ExcludeList** element in use. 
-  
+The following is an example of an **ExcludeList** element in use.
+
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <Web AccessModifier="Internal" xmlns="http://schemas.microsoft.com/SharePoint/2009/spmetal">
@@ -72,6 +71,5 @@ The following is an example of an **ExcludeList** element in use.
 
 ## See also
 
-- [SPMetal Default Code Generation Rules](https://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx) 
+- [SPMetal Default Code Generation Rules](https://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436%28Office.15%29.aspx)
 - [Overriding SPMetal Defaults by Using a Parameters XML File](https://msdn.microsoft.com/library/209359b2-bd46-47b6-837d-3c0c2005cb19%28Office.15%29.aspx)
-

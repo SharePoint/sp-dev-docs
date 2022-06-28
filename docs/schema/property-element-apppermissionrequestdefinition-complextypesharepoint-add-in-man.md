@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 69cd6425-593f-c412-cb30-5e59ed341330
 ---
 
-# Property element (AppPermissionRequestDefinition complexType) 
+# Property element (AppPermissionRequestDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 69cd6425-593f-c412-cb30-5e59ed341330
 
 Add-in Permission Property.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -37,7 +36,7 @@ Add-in Permission Property.
          maxOccurs="1000"
         >
         </xs:element>
-```        
+```
 
 ## Elements and attributes
 
@@ -114,9 +113,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-

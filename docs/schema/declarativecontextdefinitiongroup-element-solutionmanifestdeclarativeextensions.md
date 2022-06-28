@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 427da5ae-bc81-34ae-84ad-b4d723650b9f
 ---
 
-# DeclarativeContextDefinitionGroup Element 
+# DeclarativeContextDefinitionGroup Element
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -18,7 +17,7 @@ ms.assetid: 427da5ae-bc81-34ae-84ad-b4d723650b9f
 
 The **DeclarativeContextDefinitionGroup** element derives from the **ContextDefinitionGroup** element. In intermediate declarative Microsoft Outlook 2010 solutions, this element is used to define a context definition group that contains a list of context definitions for one of the Outlook Item Types, such as Contact, Task, Post, or Calendar, or if showing data in a taskpane, an EntityView.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -116,12 +115,3 @@ None.
 
 
 <br/>
-
-
-
-
-
-
-
-
-

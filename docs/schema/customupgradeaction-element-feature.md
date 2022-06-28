@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 16a2182e-80aa-4184-8071-8f717ee5c572
 ---
@@ -21,7 +20,7 @@ This element references custom code that calls SharePoint's server object model.
 ## Definition
 
 ```XML
-<CustomUpgradeAction 
+<CustomUpgradeAction
   Name = string>
   <Parameters>
     <Parameter />
@@ -93,11 +92,3 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

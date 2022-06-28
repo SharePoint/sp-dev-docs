@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6fd97a40-247a-35db-cddc-24e9401a8c71
 ---
 
-# Associations element in Subscription 
+# Associations element in Subscription
 
 (Subscription Schema)
 
@@ -45,11 +44,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [Subscription element (Subscription Schema)](subscription-element-subscription-schema.md) | The subscription that contains this list of associations. |
-
-
-
-
-
-
-
-

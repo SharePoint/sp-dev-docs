@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f73d97e6-15d6-dae0-743c-aab2d66d741d
 ---
@@ -44,11 +43,3 @@ None.
 | Element |
 | --- |
 | [AssociationGroups element in Entity (BDCMetadataResource Schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

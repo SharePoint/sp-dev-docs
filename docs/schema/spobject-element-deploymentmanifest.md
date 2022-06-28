@@ -5,24 +5,23 @@ ms.date: 06/13/2022
 description: Describes SPObject Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1bdc823e-d556-4273-a091-92d41d9d9ace
 ---
 
 # SPObject Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents an instance of a top-level Windows SharePoint Services 3.0 object (**SPGenericObject**).
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="SPObject" 
-        type="SPGenericObject" 
-        minOccurs="0" maxOccurs="unbounded" 
+<xs:element name="SPObject"
+        type="SPGenericObject"
+        minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <SPObjects>
@@ -43,8 +42,8 @@ USAGE
 
 ## Type
 
-**SPGenericObject** ([Object](https://msdn.microsoft.com/library/System.Object.aspx)) 
-  
+**SPGenericObject** ([Object](https://msdn.microsoft.com/library/System.Object.aspx))
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -62,7 +61,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**ParentWebUrl** <br/> |xs:string  <br/> |Optional. URL to the parent website.  <br/> |
 |**ContenTypeId** <br/> |xs:string  <br/> |Optional. Specifies the object content type.  <br/> |
 |**Url** <br/> |xs:string  <br/> |Optional. URL to the object.  <br/> |
-   
+
 ### Child elements
 
 - [Site Element (DeploymentManifest)](site-element-deploymentmanifest.md)
@@ -86,14 +85,13 @@ The following sections describe attributes, child elements, and parent elements.
 - [RoleX Element (DeploymentManifest)](rolex-element-deploymentmanifest.md)
 - [RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md)
 - [Feature Element (DeploymentManifest)](feature-element-deploymentmanifest.md)
-   
+
 ### Parent elements
 
 - [SPObjects Element (DeploymentManifest)](spobjects-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPDeploymentObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPDeploymentObject.aspx)
 - [Object](https://msdn.microsoft.com/library/System.Object.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

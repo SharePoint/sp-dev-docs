@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3bcfca05-2eff-830a-b058-cba0184efc8d
 ---
 
-# ActionName element in ArrayOfActions 
+# ActionName element in ArrayOfActions
 
 (LayoutDefinitions Schema)
 
@@ -40,7 +39,7 @@ None.
 None.
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [ActionNames element in OBPart (LayoutDefinitions Schema)](actionnames-element-in-obpart-layoutdefinitions-schema.md) | The list of actions that contains this action. |
@@ -48,11 +47,3 @@ None.
 ## Text value
 
 **String**
-
-
-
-
-
-
-
-

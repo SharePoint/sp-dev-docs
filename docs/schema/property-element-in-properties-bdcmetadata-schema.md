@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Property
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2e6e8d5d-ef3b-c536-f3d1-ad2039b92c24
 ---
@@ -65,15 +64,7 @@ None.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The **Properties** element that contains this property. |
-
-
-
-
-
-
-
-

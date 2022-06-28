@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6bc9861e-3dbc-4c7f-b691-26ae54d0f106
 ---
@@ -60,11 +59,3 @@ None
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

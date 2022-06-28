@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: b334ab94-ecf1-4fe2-bfb7-20be79d5b072
-description: Used to return a global property of the current SharePoint site. 
+description: Used to return a global property of the current SharePoint site.
 ---
 
 # ProjectProperty element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-The **ProjectProperty** element can be used to return a global property of the current SharePoint site. 
-  
+
+The **ProjectProperty** element can be used to return a global property of the current SharePoint site.
+
 ```XML
 <ProjectProperty
   AutoHyperLink = "TRUE" | "FALSE"
@@ -53,30 +52,29 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
-The following line of code returns the **Title** property from the current website. 
-  
+The following line of code returns the **Title** property from the current website.
+
 ```XML
 <ProjectProperty Select="Title"/>
 ```
 
 ## See also
 
-- [ListProperty element (View)](listproperty-element-view.md)  
+- [ListProperty element (View)](listproperty-element-view.md)
 - [Property element (View)](property-element-view.md)
-

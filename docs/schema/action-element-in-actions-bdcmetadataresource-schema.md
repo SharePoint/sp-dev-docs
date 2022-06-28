@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c1031b46-28be-51f5-43bb-8d684cc52ee2
 ---
@@ -34,18 +33,14 @@ None.
 
 ### Child elements
 
-| Element |
-| --- |
+|                                                                            Element                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
-| [Properties element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
-| [ActionParameters element in Action (BDCMetadataResource Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md) |
-</br>
+| [Properties element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)                       |
+| [ActionParameters element in Action (BDCMetadataResource Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md)                           |
 
 ### Parent elements
 
-| Description |
-| --- |
+|                                                    Description                                                    |
+| ----------------------------------------------------------------------------------------------------------------- |
 | [Actions element in Entity (BDCMetadataResource Schema)](actions-element-in-entity-bdcmetadataresource-schema.md) |
-
-
-

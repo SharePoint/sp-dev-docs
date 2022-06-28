@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e1f48a2f-cd69-9457-7036-43e5bbfa10ac
 ---
 
-# Properties element (AppDefinition complexType) 
+# Properties element (AppDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: e1f48a2f-cd69-9457-7036-43e5bbfa10ac
 
 Contains information that is global to the add-in.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -34,7 +33,7 @@ Contains information that is global to the add-in.
 
 ```XML 
     <xs:element name="Properties"  type="PropertiesDefinition"  minOccurs="1"  maxOccurs="1">
-         </xs:element>     
+         </xs:element>
 ```
 
 ## Elements and attributes
@@ -139,9 +138,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-

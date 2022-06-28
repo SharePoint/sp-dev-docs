@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5af24ac1-a290-454d-b32b-bc7f7a4634f0
 ---
@@ -19,7 +18,7 @@ Specifies the upgrade actions for the Feature.
 ## Definition
 
 ```XML
-<UpgradeActions 
+<UpgradeActions
   ReceiverAssembly = string
   ReceiverClass = string>
   <AddContentTypeField />
@@ -75,11 +74,3 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

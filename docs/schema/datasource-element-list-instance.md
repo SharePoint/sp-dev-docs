@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d8a429ff-0b95-405f-89f7-cf62fb886115
 ---
@@ -85,14 +84,7 @@ Also, if BDC is being used, you must have four other **Property** element childr
           <Property Name="EntityNamespace" Value="Fully qualified namespace of the class that defines the external content type (entity)" />
           <Property Name="LobSystemInstance" Value="NameOfExternalDataSource" />
           <Property Name="SpecificFinder" Value="Name of method that reads a single item; for example ReadItem" />
-    </DataSource>    
+    </DataSource>   
 ```
 
 <br/>
-
-
-
-
-
-
-

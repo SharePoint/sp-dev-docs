@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cc5ed5c2-c362-4a61-af77-ff9e8f7e1cae
 ---
@@ -163,11 +162,3 @@ The following example is part of a Feature that replaces a button on the Server 
 ## See also
 
 - [Default Custom Action Locations and IDs](default-custom-action-locations-and-ids.md)
-
-
-
-
-
-
-
-

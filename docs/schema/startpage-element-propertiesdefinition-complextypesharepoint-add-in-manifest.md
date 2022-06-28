@@ -5,12 +5,11 @@ ms.date: 06/14/2022
 description: Describes StartPage element (PropertiesDefinition complexType) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3092674c-a6c3-9021-3d7e-e716562a4a4f
 ---
 
-# StartPage element (PropertiesDefinition complexType) 
+# StartPage element (PropertiesDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,12 +17,12 @@ ms.assetid: 3092674c-a6c3-9021-3d7e-e716562a4a4f
 
 Typically, the URL of the page visited when the SharePoint Add-in is launched. However, it can also be the URL of a controller method or a web service method that is invoked when the add-in is launched.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 When the child element of the [AppPrincipal](appprincipal-element-appdefinition-complextypesharepoint-add-in-manifest.md) element is not
 [Internal](internal-element-appprincipaldefinition-complextypesharepoint-add-in-manifest.md), the page specified
-in the **StartPage** element must be of a file type that supports the POST verb (in addition to GET) so that the OAuth context token can be sent on the body of the request. 
+in the **StartPage** element must be of a file type that supports the POST verb (in addition to GET) so that the OAuth context token can be sent on the body of the request.
 
 Common file types that are typically configured in web servers to support POST are aspx, php, and other types that support server-side code. Add-ins that have an Internal add-in principal do not use OAuth, and consequently, the start page of such add-ins can be a type that is not configured in the target web server to support POST. HTML files, for example, frequently do not support POST.
 
@@ -41,7 +40,7 @@ If the remote web server binds the remote component to a port other than 80 when
 
 <br/>
 
-The value of this element can contain certain tokens to represent information that is not known at development time. The "{StandardTokens}" above is an example. For more information, see [URL strings and tokens in SharePoint Add-ins](../sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md). 
+The value of this element can contain certain tokens to represent information that is not known at development time. The "{StandardTokens}" above is an example. For more information, see [URL strings and tokens in SharePoint Add-ins](../sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md).
 
 When you are debugging in Visual Studio, the Microsoft Office Developer Tools for Visual Studio use the token `~remoteWebUrl`</span>` in place of the protocol and domain, as in the following example.
 
@@ -70,7 +69,7 @@ If the add-in uses OAuth, the domain part of the StartPage value must exactly ma
 
 ```XML 
     <xs:element name="StartPage" type="UrlElementDefinition" minOccurs="1" maxOccurs="1" >
-         </xs:element>     
+         </xs:element>
 ```
 
 ## Elements and attributes

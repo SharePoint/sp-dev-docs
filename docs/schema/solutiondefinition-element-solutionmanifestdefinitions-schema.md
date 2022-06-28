@@ -5,18 +5,17 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1e7a8225-6a52-ba74-e109-2ec7eddaca3d
 ---
 
-# SolutionDefinition Element 
+# SolutionDefinition Element
 
 (SolutionManifestDefinitions Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies the root element of a Microsoft Business Connectivity Services (BCS) solution manifest file. A solution manifest file enables a solution developer to describe the user interface (UI), behavior, and business logic associated with a Microsoft Outlook Item Type such as Outlook Contact, Task, Post, or Calendar. 
+Specifies the root element of a Microsoft Business Connectivity Services (BCS) solution manifest file. A solution manifest file enables a solution developer to describe the user interface (UI), behavior, and business logic associated with a Microsoft Outlook Item Type such as Outlook Contact, Task, Post, or Calendar.
 
 For example, in the manifest file, a solution developer would be able to indicate that for an Outlook Item Type of Contact, a certain UI should be used (example, an Office External Part) and a specific method from the external system (for example, **UpdateCustomerInstance(ID, NewInstanceValues)** should be called when the data in the item changes. There will always be at least one namespace declaration on the **SolutionDefinition** element, typically:
 
@@ -56,11 +55,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

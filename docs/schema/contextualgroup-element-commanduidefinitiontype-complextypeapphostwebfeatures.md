@@ -5,17 +5,16 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a1098092-2383-d963-4fbd-8bd953a3c9b9
 ---
 
-# ContextualGroup element (CommandUIDefinitionType complexType) 
+# ContextualGroup element (CommandUIDefinitionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 | Name  | Value  |
@@ -71,11 +70,5 @@ None.
 
 None.
 
-<br/> 
-<br/> 
-
-
-
-
-
-
+<br/>
+<br/>

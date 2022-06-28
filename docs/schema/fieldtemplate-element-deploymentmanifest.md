@@ -5,15 +5,14 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0f78149f-bd51-4108-982b-c2f1b5a1509c
 ---
 
 # FieldTemplate Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents a template for a Windows SharePoint Services 3.0 field object (**SPField**).
 
 ## Definition
@@ -40,7 +39,7 @@ USAGE
 ## Type
 
 **DeploymentFieldTemplate**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -55,16 +54,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**Scope** <br/> |xs:string  <br/> |Specifies the scope for which the field template applies.  <br/> Optional on export; required on import.  <br/> |
 |**Description** <br/> |xs:string  <br/> |Optional. Description of the field template.  <br/> |
 |**Group** <br/> |xs:string  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 [Field Element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

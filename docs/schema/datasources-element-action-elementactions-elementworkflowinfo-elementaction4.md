@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d398e427-1f28-f4e2-e6b0-f2878f258a1b
 ---
 
-# DataSources element (Action element) 
+# DataSources element (Action element)
 
 (Actions element) (WorkflowInfo element) (Action4)
 
@@ -40,7 +39,7 @@ Specifies the data sources for an action.
 
 ```XML 
     <xs:element name="DataSources" type="dataSourcesType" minOccurs="0" maxOccurs="1" >
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -98,11 +97,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

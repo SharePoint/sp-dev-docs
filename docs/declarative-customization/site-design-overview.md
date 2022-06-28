@@ -1,7 +1,7 @@
 ---
 title: SharePoint site template and site script overview
 description: Use SharePoint site scripts and site templates to provide custom configurations to apply when new sites are created.
-ms.date: 09/28/2021
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -15,9 +15,9 @@ ms.localizationpriority: high
 > - Site templates created by your organization and set as the default template will automatically apply when new sites are created but can be updated by the site owner by selecting **Settings** and then **Apply a site template.**
 > - Site template version history is not currently available for the new site template experience but will be included in future iterations.
 
-Use site templates and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations. 
+Use site templates and site scripts to automate provisioning new or existing modern SharePoint sites that use your own custom configurations.
 
-When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created. 
+When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created.
 
 This article describes how you can use site templates and site scripts to provide custom configurations to apply when new sites are created.
 
@@ -27,11 +27,11 @@ Site templates can be used each time a new site is created to apply a consistent
 
 > [!NOTE]
 > - Site templates created using custom site scripts will display in the **From your organization** tab in the site template gallery.
-> - Custom site templates made by your organization will display in the site template gallery based on the type of site chosen by the user - either a communication site or a team site. Therefore, it is likely users will not see all site templates from your organization in the site template gallery. Soon, users will have the ability to browse all site templates provided by your organization regardless of which type of site was chosen.  
+> - Custom site templates made by your organization will display in the site template gallery based on the type of site chosen by the user - either a communication site or a team site. Therefore, it is likely users will not see all site templates from your organization in the site template gallery. Soon, users will have the ability to browse all site templates provided by your organization regardless of which type of site was chosen.
 
 You create site templates and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 
-1. Go to the SharePoint start page on your developer tenant. 
+1. Go to the SharePoint start page on your developer tenant.
 
 2. Choose **Create site**.
 
@@ -40,7 +40,7 @@ You create site templates and register them in SharePoint to one of the modern t
 3. Choose the type of site needed.
 
 - SharePoint will automatically create a communication site using the **Topic** site template.
-- Had you chosen the default Team site, SharePoint will create a new site using the **Team collaboration** template. 
+- Had you chosen the default Team site, SharePoint will create a new site using the **Team collaboration** template.
 
 For more information about how you can change the default site templates, see [Customize a default site template](customize-default-site-design.md).
 
@@ -54,7 +54,7 @@ When a site template is selected, SharePoint creates the new site, and runs site
 
 ## Anatomy of a site script
 
-Site scripts are JSON files that specify an ordered list of actions to run when creating the new site. The actions are run in the order listed. 
+Site scripts are JSON files that specify an ordered list of actions to run when creating the new site. The actions are run in the order listed.
 
 The following example is a script that has two top-level actions. First, it applies a theme that was previously created named **Contoso Explorers**. It then creates a **Customer Tracking** list.
 
@@ -131,11 +131,11 @@ For a complete list of available actions and their parameters, see the [JSON sch
 
 > [!NOTE]
 > - Actions marked with ** are automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
-> - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list. 
+> - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list.
 
-Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. 
+Site scripts can be run again on the same site after provisioning. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script.
 
-For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list. 
+For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list.
 
 We'd previously capped the limit of site script actions to 30. This remains the limit for scripts applied synchronously using the [Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/Invoke-SPOSiteDesign)  command, but based on customer feedback and support for additional actions we have bumped this limit to 300 actions (or 100,000 characters) when the scripts are applied asynchronously (either through the UI or using the [Add-SPOSiteDesignTask](/powershell/module/sharepoint-online/Add-SPOSiteDesignTask) command).
 
@@ -143,7 +143,7 @@ There is also a limit of 100 site scripts and 100 site templates per tenant.
 
 ## Using PowerShell or REST to work with site templates and site scripts
 
-You can create site templates and site scripts by using PowerShell or the REST API. The following example creates a site script and a site template that uses the site script. 
+You can create site templates and site scripts by using PowerShell or the REST API. The following example creates a site script and a site template that uses the site script.
 
 <!-- The PowerShell example loads the script from a file, while the REST example has the script inline. -->
 
@@ -166,7 +166,7 @@ C:\> Add-SPOSiteDesign `
   -Description "Creates customer list and applies standard theme"
 ```
 
-<!-- 
+<!--
 ```javascript
 var site_script = {
   "$schema": "schema.json",
@@ -262,13 +262,13 @@ If you use the PnP provisioning engine to automate site creation, you can use a 
 
 The process works as follows:
 
-1. The script instantiates your Power Automate flow using a URL with additional details. 
+1. The script instantiates your Power Automate flow using a URL with additional details.
 
-2. The flow sends a message to an Azure storage queue that you have configured. 
+2. The flow sends a message to an Azure storage queue that you have configured.
 
-3. The message triggers a call to an Azure function that you have configured. 
+3. The message triggers a call to an Azure function that you have configured.
 
-4. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations. 
+4. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations.
 
 For a step-by-step tutorial about how to configure your own Power Automate flow with PnP provisioning, see [Build a complete site template using the PnP provisioning engine](site-design-pnp-provisioning.md).
 
@@ -276,7 +276,7 @@ For a step-by-step tutorial about how to configure your own Power Automate flow 
 
 You can configure site templates to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site templates intended for them. For example, you might want the accounting department to only see site templates specifically for them. And the accounting site templates may not make sense to show to anyone else.
 
-By default, a site template can be viewed by everyone when it is created. Scopes are applied by using the **Grant-SPOSiteDesignRights** cmdlet or the **GrantSiteDesignRights** REST API.  You can specify the scope by user or a mail-enabled security group. 
+By default, a site template can be viewed by everyone when it is created. Scopes are applied by using the **Grant-SPOSiteDesignRights** cmdlet or the **GrantSiteDesignRights** REST API.  You can specify the scope by user or a mail-enabled security group.
 
 The following example shows how to add Nestor (a user at the fictional Contoso site) view rights on a site template.
 

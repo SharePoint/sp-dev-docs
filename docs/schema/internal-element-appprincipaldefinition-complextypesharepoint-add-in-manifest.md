@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d9694afe-e700-81a8-b76b-c42ebd1ff5f3
 ---
 
-# Internal element (AppPrincipalDefinition complexType) 
+# Internal element (AppPrincipalDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: d9694afe-e700-81a8-b76b-c42ebd1ff5f3
 
 The presence of this element means that the add-in is SharePoint-hosted, rather than provider-hosted.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -120,8 +119,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-

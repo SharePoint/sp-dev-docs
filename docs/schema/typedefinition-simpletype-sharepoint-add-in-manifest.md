@@ -5,18 +5,17 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f4d23160-091c-ca02-4997-0ea3dc33024f
 ---
 
-# TypeDefinition simpleType 
+# TypeDefinition simpleType
 
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -30,7 +29,7 @@ ms.assetid: f4d23160-091c-ca02-4997-0ea3dc33024f
 ## Definition
 
 ```XML
-      <xs:simpleType  name="TypeDefinition">          
+      <xs:simpleType  name="TypeDefinition">
         <xs:restriction base="xs:string">
           <xs:minLength value="1"/>
           <xs:maxLength value="255"/>

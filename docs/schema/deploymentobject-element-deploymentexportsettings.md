@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 128f7174-b2d1-4150-a966-c1abfc0e1bf8
 description: DeploymentObject element (DeploymentExportSettings) represents a deployment object or objects marked for export to the content migration package.
@@ -13,8 +12,8 @@ description: DeploymentObject element (DeploymentExportSettings) represents a de
 # DeploymentObject element (DeploymentExportSettings)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a deployment object or objects ([SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)) marked for export to the content migration package. 
+
+Represents a deployment object or objects ([SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)) marked for export to the content migration package.
 
 ## Definition
 
@@ -22,7 +21,7 @@ Represents a deployment object or objects ([SPExportObject](https://msdn.microso
 DECLARATION
 <xs:element
         name="DeploymentObject" type="SPExportObject"
-        minOccurs="0" maxOccurs="unbounded" 
+        minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <DeploymentObject
@@ -42,7 +41,7 @@ USAGE
 ## Type
 
 [SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -58,17 +57,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**ExcludeChildren** <br/> |xs:boolean  <br/> |Optional. Specifies whether to exclude child objects (descendants). The value is **true** if children are excluded. The default is **false**.  <br/> |
 |**IncludeDescendants** <br/> |[SPIncludeDescendents Simple Type (DeploymentExportSettings)](spincludedescendents-simple-type-deploymentexportsettings.md) <br/> |Optional. Enumeration providing values to specify which descendents, if any, to include in the content migration package.  <br/> |
 |**ExportChangeToken** <br/> |xs:string  <br/> |Optional. Specifies the change token to use when exporting incremental changes based on changes since the last export.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [ExportObjects element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
-   
+
 ## See also
 
 - [SPExportObject](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportObject.aspx)
 - [DeploymentExportSettings schema](deploymentexportsettings-schema.md)
-

@@ -5,17 +5,16 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 060aa8d2-a12a-ff26-2ca4-ebf9b6dc88f1
 ---
 
-# ApplyElementManifests element (UpgradeActionsGroup group) 
+# ApplyElementManifests element (UpgradeActionsGroup group)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
@@ -77,11 +76,5 @@ None.
 
 None.
 
-<br/> 
-<br/> 
-
-
-
-
-
-
+<br/>
+<br/>

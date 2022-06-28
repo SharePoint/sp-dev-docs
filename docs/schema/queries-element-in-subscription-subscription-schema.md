@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d094da28-8be1-a1fb-27f0-bd842044ad93
 ---
 
-# Queries Element in Subscription 
+# Queries Element in Subscription
 
 (Subscription Schema)
 
@@ -45,11 +44,3 @@ None.
 | Element | Description |
 |---------|-------------|
 | [Subscription Element (Subscription Schema)](subscription-element-subscription-schema.md) | The cache subscription that contains this list of queries. |
-
-
-
-
-
-
-
-

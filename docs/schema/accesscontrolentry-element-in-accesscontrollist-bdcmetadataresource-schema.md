@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: caff772b-9029-5fe0-5d93-fca836c1fcb2
 ---
@@ -51,21 +50,13 @@ The following sections describe attributes, child elements, and parent elements.
 </table>
 
 ### Child elements
-  
+
 | Element | Description |
 | --- | --- |
 | [Right element in AccessControlEntry (BDCMetadataResource Schema)](right-element-in-accesscontrolentry-bdcmetadataresource-schema.md) |     |
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [AccessControlList element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md) |     |
-
-
-
-
-
-
-
-

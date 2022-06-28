@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0d43d57f-356e-02eb-bf23-92a8bcdbd4ed
 description: Learn more about SearchQueryConfigurationSettings element (SPS15XSDSearchSet3).
@@ -12,8 +11,8 @@ description: Learn more about SearchQueryConfigurationSettings element (SPS15XSD
 
 # SearchQueryConfigurationSettings element (SPS15XSDSearchSet3)
 
- 
-  
+
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn more about SearchQueryConfigurationSettings element (SPS15XSD
 |**Element type**|tns:SearchQueryConfigurationSettings   |
 |**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability |
 |**Schema file**  |schema_Microsoft.Office.Server.Search.Portability.xsd  |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ description: Learn more about SearchQueryConfigurationSettings element (SPS15XSD
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

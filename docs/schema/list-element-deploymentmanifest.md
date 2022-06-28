@@ -5,16 +5,15 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c9fd975a-7133-4d0a-a3a2-9072ef08feee
 ---
 
 # List element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)) object.
 
 ## Definition
 
@@ -87,7 +86,7 @@ USAGE
 ## Type
 
 [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -144,23 +143,22 @@ The following sections describe attributes, child elements, and parent elements.
 |**Title** <br/> |xs:string  <br/> |Required. Display title for the list.  <br/> |
 |**Version** <br/> |xs:int  <br/> |Optional. Version number of the list.  <br/> |
 |**WriteSecurity** <br/> |xs:int  <br/> |Optional. Specifies the Write security setting for the list.  <br/> |
-   
+
 ### Child elements
 
 - [ContentTypes Element (DeploymentManifest)](contenttypes-element-deploymentmanifest.md)
 - [DeletedFields Element (DeploymentManifest)](deletedfields-element-deploymentmanifest.md)
-- [EventReceivers Element (DeploymentManifest - SPList)](eventreceivers-element-deploymentmanifestsplist.md) 
-- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md) 
-- [Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md) 
-- [Views Element (DeploymentManifest)](views-element-deploymentmanifest.md) 
-   
+- [EventReceivers Element (DeploymentManifest - SPList)](eventreceivers-element-deploymentmanifestsplist.md)
+- [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
+- [Forms Element (DeploymentManifest)](forms-element-deploymentmanifest.md)
+- [Views Element (DeploymentManifest)](views-element-deploymentmanifest.md)
+
 ### Parent elements
 
 - [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)
 - [SPListTemplateType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListTemplateType.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

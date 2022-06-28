@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dcb85c58-1ed8-4bb9-430e-f2a5c395c785
 ---
 
-# CodeMethodAction element in Actions 
+# CodeMethodAction element in Actions
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -209,8 +208,3 @@ The following sections describe attributes, child elements, and parent elements.
 | Element | Description |
 |---------|-------------|
 | [Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Actions** element that contains this action. |
-
-
-
-
-

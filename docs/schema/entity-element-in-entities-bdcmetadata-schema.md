@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Entity
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 ---
@@ -169,11 +168,3 @@ The following sections describe attributes, child elements, and parent elements.
 ## See also
 
 - [What Are External Content Types?](https://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
-
-
-
-
-
-
-
-

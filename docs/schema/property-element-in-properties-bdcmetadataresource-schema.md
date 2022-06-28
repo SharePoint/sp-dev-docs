@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 642aaff0-f011-7d6f-b677-538eb95eef89
 ---
@@ -64,11 +63,3 @@ None.
 | Element |
 | --- |
 | [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

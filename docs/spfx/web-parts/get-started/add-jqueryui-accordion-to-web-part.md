@@ -2,7 +2,6 @@
 title: Add the jQueryUI Accordion to your SharePoint client-side web part
 description: Adding the jQueryUI Accordion to your web part project involves creating a new web part.
 ms.date: 10/21/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -235,7 +234,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
 1. The jQueryUI project uses an external CSS file to implement it's user experience. Your web part needs to load this CSS file at runtime:
 
     1. To load a CSS file at runtime, use the SharePoint module loader by utilizing the `SPComponentLoader` object.
-    
+
         Add the following `import` statement.
 
         ```typescript
@@ -243,7 +242,7 @@ At this point, the project is configured to depend on jQuery and jQueryUI, but t
         ```
 
     1. Load the jQueryUI styles in the `JQueryWebPart` web part class by adding a constructor and use the `SPComponentLoader`.
-    
+
         Add the following constructor to your web part:
 
         ```typescript

@@ -5,18 +5,17 @@ manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fdd507be-29c5-eeb1-3cc1-b821ed81472d
 ---
 
-# AppPrerequisiteCollection complexType 
+# AppPrerequisiteCollection complexType
 
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -35,7 +34,7 @@ ms.assetid: fdd507be-29c5-eeb1-3cc1-b821ed81472d
          maxOccurs="500"
         >
         </xs:element>
-        
+
       </xs:sequence>
     </xs:complexType>
 ```
@@ -73,8 +72,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-

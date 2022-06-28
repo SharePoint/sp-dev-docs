@@ -7,18 +7,17 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Interpretation
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 730f9590-ab40-85b8-eb97-8fd9d8e33c8a
 ---
 
-# Interpretation Element in TypeDescriptor 
+# Interpretation Element in TypeDescriptor
 
 (BDCMetadata Schema)
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Specifies the rules to apply to the data stored in the data structures represented by a **TypeDescriptor**. These rules are typically specified to change the data values returned by an external system to make it easier to represent them in the user interface. When the data value is obtained from the external system, the specified rules must be applied in the order they are specified in the **Interpretation** element. 
+Specifies the rules to apply to the data stored in the data structures represented by a **TypeDescriptor**. These rules are typically specified to change the data values returned by an external system to make it easier to represent them in the user interface. When the data value is obtained from the external system, the specified rules must be applied in the order they are specified in the **Interpretation** element.
 
 The first rule must be applied to the data value received from the external system; the consecutive rules apply to the data value that result from the application of the previous rule. When the data value is sent to external system, the specified rules must be applied in the reverse order they are specified in the **Interpretation** element. The first rule must be applied to the data value received from the user; the consecutive rules apply to the data value that result from the application of the previous rule.
 
@@ -52,11 +51,3 @@ None.
 | --- | --- |
 | [TypeDescriptor](https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) | The **TypeDescriptor** element. |
 | [TypeDescriptor Element (BDCMetadata Schema)](typedescriptor-element-bdcmetadata-schema.md) |     |
-
-
-
-
-
-
-
-

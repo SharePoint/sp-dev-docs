@@ -5,12 +5,11 @@ ms.date: 06/13/2022
 description: Describes Entities Element in ContextDefinition and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 27aa622c-d0f3-2124-57f0-a515545dfed6
 ---
 
-# Entities Element in ContextDefinition 
+# Entities Element in ContextDefinition
 
 (SolutionManifestDefinitions Schema)
 
@@ -64,11 +63,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

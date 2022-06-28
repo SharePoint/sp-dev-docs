@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4fdc1fbf-b492-70e3-1fc8-bcff6f6727b9
 ---
@@ -44,11 +43,3 @@ None.
 | --- |
 | [TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md) |
 | [TypeDescriptor Element in Parameter (BDCMetadataResource Schema)](typedescriptor-element-in-parameter-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

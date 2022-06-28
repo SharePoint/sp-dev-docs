@@ -1,13 +1,13 @@
 ---
 title: "Migration guide for ISVs"
 description: "Learn about using the SharePoint Migration API."
-ms.date: 02/04/2021
+ms.date: 06/28/2021
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 audience: Dev
 ms.topic: article
-ms.prod: sharepoint-server-itpro
+ms.subservice: migration-tool
 ms.localizationpriority: high
 ms.collection:
   - SPMigration
@@ -26,7 +26,7 @@ To provide a stable platform and more reliable service, Microsoft is requesting 
 
 Migration is a background task application and should **not** be run in user mode. By transitioning to app-based authentication, you will benefit from the elastic capability of off-peak time to have more resources.
 
-> [!Note]
+> [!NOTE]
 > Microsoft will start enforcing the proper usage roles in Q1 2020. Vendors who continue to run migration in user roles can expect to experience increasing throttling and poor performance.
 
 To learn more on how to register an app ID and how to implement app-based authentication see:

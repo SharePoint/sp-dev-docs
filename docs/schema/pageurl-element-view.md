@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: 391d3fbe-d080-4e53-811f-df8e2642b12f
-description: Returns the absolute, encoded URL of the current page. 
+description: Returns the absolute, encoded URL of the current page.
 ---
 
 # PageUrl element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Returns the absolute, encoded URL of the current page. 
-  
+
+Returns the absolute, encoded URL of the current page.
+
 ```XML
 <PageUrl
   AutoHyperLink = "TRUE" | "FALSE"
@@ -53,24 +52,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
 |**WebRel** <br/> |Optional **Boolean**. **TRUE** to specify that the URL is a site-relative URL.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
-The following example uses the **PageUrl** element to return the URL of the current page and surrounds the column title with a link for filtering. 
-  
+The following example uses the **PageUrl** element to return the URL of the current page and surrounds the column title with a link for filtering.
+
 ```XML
 <HTML><![CDATA[ <A ID="diidSort ]]></HTML>
 <Property Select="Name" />
@@ -79,7 +78,7 @@ The following example uses the **PageUrl** element to return the URL of the curr
 <Property Select="DisplayName" HTMLEncode="TRUE" />
 <HTML><![CDATA[ " SORTINGFIELDS=" ]]></HTML>
 <FieldSortParams />
-<HTML><![CDATA[ " HREF="javascript:" 
+<HTML><![CDATA[ " HREF="javascript:"
    OnClick='javascript:SubmitFormPost(" ]]></HTML>
 <ScriptQuote NotAddingQuote="TRUE">
    <PageUrl />

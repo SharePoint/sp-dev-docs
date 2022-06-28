@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0e8825a9-29a0-48ee-bf97-2276e786fb46
 ---
@@ -21,7 +20,7 @@ Specifies a content type to provision on a list defined in the onet.xml schema.
 ```XML
 <ContentTypeBinding
     ContentTypeId="Text"
-    ListUrl="Text" 
+    ListUrl="Text"
     RootWebOnly="TRUE" | "FALSE"
 />
 ```
@@ -76,7 +75,7 @@ Lists defined in the onet.xml schema cannot be modified directly.
 Following is an example of the **ContentTypeBinding** element specifying the content type to bind to the specified list.
 
 ```XML
-    <?xml version="1.0" encoding="utf-8" ?> 
+    <?xml version="1.0" encoding="utf-8" ?>
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
         <ContentTypeBinding ContentTypeId="0x010102" ListUrl="Shared Documents" />
         <ContentTypeBinding ContentTypeId="0x010108" ListUrl="Shared Documents" />
@@ -86,11 +85,3 @@ Following is an example of the **ContentTypeBinding** element specifying the con
 ## See also
 
 - [Content Type Bindings](content-type-bindings.md)
-
-
-
-
-
-
-
-

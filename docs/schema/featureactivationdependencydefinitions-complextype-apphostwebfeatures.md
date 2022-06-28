@@ -5,16 +5,15 @@ ms.date: 06/13/2022
 description: Describes FeatureActivationDependencyDefinitions complexType and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5be98ace-5f25-ab96-ed1e-2b9a6b7b302b
 ---
 
-# FeatureActivationDependencyDefinitions complexType 
+# FeatureActivationDependencyDefinitions complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -70,10 +69,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

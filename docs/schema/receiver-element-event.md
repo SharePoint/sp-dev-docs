@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a9adf70d-8a6d-4201-9838-157150e9a18f
 ---
@@ -39,14 +38,14 @@ None
 <tr class="odd">
 <td align="left">
 <ul>
-<li><a href="assembly-element-event.md">Assembly</a></li> 
-<li><a href="class-element-event.md">Class</a></li> 
-<li><a href="data-element-event.md">Data</a></li> 
-<li><a href="filter-element-event.md">Filter Element (Event)</a></li> 
-<li><a href="name-element-event.md">Name</a></li> 
-<li><a href="sequencenumber-element-event.md">SequenceNumber</a></li> 
-<li><a href="solutionid-element-event.md">SolutionId Element (Event)</a></li> 
-<li><a href="synchronization-element-event.md">Synchronization Element (Event)</a></li> 
+<li><a href="assembly-element-event.md">Assembly</a></li>
+<li><a href="class-element-event.md">Class</a></li>
+<li><a href="data-element-event.md">Data</a></li>
+<li><a href="filter-element-event.md">Filter Element (Event)</a></li>
+<li><a href="name-element-event.md">Name</a></li>
+<li><a href="sequencenumber-element-event.md">SequenceNumber</a></li>
+<li><a href="solutionid-element-event.md">SolutionId Element (Event)</a></li>
+<li><a href="synchronization-element-event.md">Synchronization Element (Event)</a></li>
 <li><a href="type-element-event.md">Type</a></li>
 </ul>
 </td>
@@ -84,11 +83,3 @@ None
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-

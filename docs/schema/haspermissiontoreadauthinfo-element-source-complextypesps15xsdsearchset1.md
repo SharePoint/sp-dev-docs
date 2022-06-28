@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ad460beb-4a00-0f73-b27c-dd892ea3d4ea
 description: Learn about HasPermissionToReadAuthInfo element (Source complexType) (SPS15XSDSearchSet1).
@@ -13,7 +12,7 @@ description: Learn about HasPermissionToReadAuthInfo element (Source complexType
 # HasPermissionToReadAuthInfo element (Source complexType) (SPS15XSDSearchSet1)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn about HasPermissionToReadAuthInfo element (Source complexType
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ description: Learn about HasPermissionToReadAuthInfo element (Source complexType
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

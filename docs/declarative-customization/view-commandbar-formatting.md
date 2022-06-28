@@ -1,7 +1,7 @@
 ---
 title: Command bar customization syntax reference
 description: Command bar customization syntax reference
-ms.date: 02/23/2022
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 

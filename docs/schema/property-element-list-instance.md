@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 93b34073-8dd2-4b68-a692-c8ee6bb307bd
 ---
@@ -19,7 +18,7 @@ Specifies a property for a list instance.
 ## Definition
 
 ```XML
-<Property 
+<Property
   Name = string
   Value = string
   Type = int | string | DateTime />
@@ -92,11 +91,3 @@ None
 ### Remarks
 
 See the Remarks section of the topic [DataSource Element (List Instance)](datasource-element-list-instance.md) for information about the use of this element.
-
-
-
-
-
-
-
-

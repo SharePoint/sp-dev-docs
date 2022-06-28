@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: adbf1d38-f80f-45b0-b3c9-ceabcc1a75bd
 ---
@@ -24,8 +23,8 @@ The following table lists elements in the DeploymentManifest.xsd schema file. Th
 
 For documentation of types that are not exposed as elements, see [Selected Type Definitions](selected-type-definitions.md).
 
-> [!NOTE] 
-> Where an element is declared more than once, but in different type definitions, the type definition in which each element is declared is listed in parentheses beside the element. 
+> [!NOTE]
+> Where an element is declared more than once, but in different type definitions, the type definition in which each element is declared is listed in parentheses beside the element.
 >
 > For example, the **EventReceivers** element is declared four times, but each time in a different complex type definition: EventReceivers (SPFile), EventReceivers (SPList), EventReceivers (SPListItem), and EventReceivers (SPWeb).
 
@@ -551,11 +550,3 @@ This table describes simple types that do not have a one-to-one mapping with a d
 
 - [Selected Type Definitions](selected-type-definitions.md)
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-
-

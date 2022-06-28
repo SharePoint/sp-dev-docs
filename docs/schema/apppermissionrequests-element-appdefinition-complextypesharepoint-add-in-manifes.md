@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4e617622-78d3-3d23-677d-9957eb1fb107
 ---
 
-# AppPermissionRequests element (AppDefinition complexType) 
+# AppPermissionRequests element (AppDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 4e617622-78d3-3d23-677d-9957eb1fb107
 
 A list of resources that a SharePoint Add-in needs access to.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -36,7 +35,7 @@ A list of resources that a SharePoint Add-in needs access to.
         maxOccurs="1"
         >
   </xs:element>
-```        
+```
 
 ## Elements and attributes
 
@@ -123,11 +122,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

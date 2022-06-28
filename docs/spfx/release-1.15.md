@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.15 release notes
 description: Release notes for the SharePoint Framework v1.15 release
 ms.date: 06/21/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.15 release notes

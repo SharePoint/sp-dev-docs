@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9c2793b9-977f-02e7-0f85-906aedd411ed
 ---
@@ -19,7 +18,7 @@ ms.assetid: 9c2793b9-977f-02e7-0f85-906aedd411ed
 |**Element type** |q16:ArrayOfKeyValueOfstringOverrideInfoy6h3NzC8 |
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd |
-   
+
 ## Definition
 
 ```XML
@@ -29,18 +28,16 @@ ms.assetid: 9c2793b9-977f-02e7-0f85-906aedd411ed
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

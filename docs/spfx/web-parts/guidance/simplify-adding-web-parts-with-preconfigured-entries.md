@@ -2,7 +2,6 @@
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
 ms.date: 06/22/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Simplify adding web parts with preconfigured entries

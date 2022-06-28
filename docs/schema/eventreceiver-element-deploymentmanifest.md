@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes EventReceiver Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f7dc71ad-48b8-4df9-aa93-46440207375a
 
@@ -13,17 +12,17 @@ ms.assetid: f7dc71ad-48b8-4df9-aa93-46440207375a
 
 # EventReceiver Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a SharePoint event receiver object instance ([SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)). Depending on the event receiver collection specified, the event receiver can listen for events on [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx), [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx), [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx), or [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) objects. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents a SharePoint event receiver object instance ([SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)). Depending on the event receiver collection specified, the event receiver can listen for events on [SPFile](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFile.aspx), [SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx), [SPListItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPListItem.aspx), or [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) objects.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="EventReceiver" 
-        type="SPEventReceiverDefinition" 
-        minOccurs="0" maxOccurs="unbounded" 
+<xs:element name="EventReceiver"
+        type="SPEventReceiverDefinition"
+        minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <EventReceivers>
@@ -49,7 +48,7 @@ USAGE
 ## Type
 
 [SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -71,20 +70,19 @@ The following sections describe attributes, child elements, and parent elements.
 |**Filter**  <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Credential**  <br/> |xs:int  <br/> |Optional.  <br/> |
 |**ItemId**  <br/> |xs:int  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
-None 
-   
+None
+
 ### Parent elements
 
 - [EventReceivers Element (DeploymentManifest - SPFile)](eventreceivers-element-deploymentmanifestspfile.md)
 - [EventReceivers Element (DeploymentManifest - SPList)](eventreceivers-element-deploymentmanifestsplist.md)
 - [EventReceivers Element (DeploymentManifest - SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md)
 - [EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md)
-   
+
 ## See also
 
 - [SPEventReceiverDefinition](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPEventReceiverDefinition.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

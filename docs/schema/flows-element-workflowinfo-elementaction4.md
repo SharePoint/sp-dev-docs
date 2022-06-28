@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4f6ec6ed-2443-2364-b01d-2e60b68c2d39
 ---
 
-# Flows element 
+# Flows element
 
 (WorkflowInfo element) (Action4)
 
@@ -62,17 +61,17 @@ Container element for individual [Flow element (Flows element) (WorkflowInfo ele
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="RuleDesigner" type="ruleDesignerType" minOccurs="1" maxOccurs="1">
-                            </xs:element>  
+                            </xs:element>
                             <xs:element name="Parameters" type="parametersType" minOccurs="1"     maxOccurs="1">
-                            </xs:element>  
+                            </xs:element>
                         </xs:sequence>
                         <xs:attribute name="Name" type="s:string" use="required" />
                         <xs:attribute name="Category" type="s:string" use="required" />
                     </xs:complexType>
-                </xs:element>  
+                </xs:element>
            </xs:sequence>
         </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -130,11 +129,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

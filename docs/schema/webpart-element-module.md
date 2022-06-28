@@ -5,7 +5,6 @@ ms.date: 06/15/2022
 description: Describes WebPart Element (Module) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 83ad21a9-edcd-40fa-9989-b62ea3f225fa
 ---
@@ -19,25 +18,25 @@ Specifies the configuration information for a web part that has been serialized 
 ## Definition
 
 ```XML
-<WebPart 
-   AllUsers = string 
-   Assembly = string 
-   Cache = string 
-   Class = string 
-   DisplayName = string 
-   Flags = string 
-   FrameState = integer 
-   IsIncluded = "TRUE" | "FALSE" 
-   List = string 
-   PerUser = string 
-   SolutionId = string 
-   Src = string 
-   Type = integer 
-   Url = string 
-   Version = string 
-   View = string 
-   WebId = string 
-   WebPartIdProperty = string 
+<WebPart
+   AllUsers = string
+   Assembly = string
+   Cache = string
+   Class = string
+   DisplayName = string
+   Flags = string
+   FrameState = integer
+   IsIncluded = "TRUE" | "FALSE"
+   List = string
+   PerUser = string
+   SolutionId = string
+   Src = string
+   Type = integer
+   Url = string
+   Version = string
+   View = string
+   WebId = string
+   WebPartIdProperty = string
    WPTypeId = string />
 ```
 
@@ -175,10 +174,3 @@ None
 - [Modules](modules.md)
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-

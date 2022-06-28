@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6aaeaec0-9cbd-714b-ad6f-ef5a6afa0917
 ---
 
-# RuleDesigner element (Default element) 
+# RuleDesigner element (Default element)
 
 (Conditions element) (WorkflowInfo element) (Action4)
 
@@ -57,7 +56,7 @@ Contains information that allows the rendering of a declarative sentence in the 
 
 ```XML
     <xs:element name="RuleDesigner" type="ruleDesignerType">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -142,11 +141,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

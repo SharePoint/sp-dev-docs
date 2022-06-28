@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design - PnP PowerShell cmdlets
 description: Use PnP PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 06/07/2022
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 

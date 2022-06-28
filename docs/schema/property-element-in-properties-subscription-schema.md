@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ac84b248-6d84-3815-5f66-03e431fa9221
 ---
@@ -63,15 +62,7 @@ None.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Properties Element in MetadataObject (Subscription Schema)](properties-element-in-metadataobject-subscription-schema.md) |     |
-
-
-
-
-
-
-
-

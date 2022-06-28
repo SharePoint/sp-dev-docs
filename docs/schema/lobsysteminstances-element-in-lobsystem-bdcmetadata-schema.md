@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystemInstances
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 122e419a-0497-afdf-1117-a82ab429f3eb
 ---
@@ -36,21 +35,14 @@ None.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LobSystemInstance Element in LobSystemInstances (BDCMetadata Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadata-schema.md) | An external system instance. |
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LobSystem Element in LobSystems (BDCMetadata Schema)](lobsystem-element-in-lobsystems-bdcmetadata-schema.md) | An external system. |
-
-
-
-
-
-
-

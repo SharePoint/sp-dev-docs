@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 03145de9-325c-b108-cd24-14aaa890a0c8
 ---
 
-# DeclarativeFormRegions Element 
+# DeclarativeFormRegions Element
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -69,11 +68,3 @@ None.
 
 
 <br/>
-
-
-
-
-
-
-
-

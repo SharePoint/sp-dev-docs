@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes the Document Converter Definition schema and includes a list of the elements in the Document Converter Definition schema.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cd110fe6-2968-4dd7-80fa-0269fa01251b
 ---
@@ -46,12 +45,3 @@ The following example is the document converter definition file for a custom doc
 ## See also
 
 - [Using Features in SharePoint Foundation](https://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx)
-
-
-
-
-
-
-
-
-

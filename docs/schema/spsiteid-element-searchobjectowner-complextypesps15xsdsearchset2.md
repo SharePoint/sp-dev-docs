@@ -5,15 +5,14 @@ ms.date: 06/13/2022
 description: Describes SPSiteId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2) and provides information on elements and attributes.
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a0e50693-85bd-63b9-8d69-7e7a6a593f37
 ---
 
 # SPSiteId element (SearchObjectOwner complexType) (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ ms.assetid: a0e50693-85bd-63b9-8d69-7e7a6a593f37
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ ms.assetid: a0e50693-85bd-63b9-8d69-7e7a6a593f37
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

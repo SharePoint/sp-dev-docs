@@ -5,12 +5,11 @@ ms.date: 06/14/2022
 description: Describes View Element in EntityInstanceDefinition and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b8e5572f-cf9d-f8c2-a271-e722a11bbfa3
 ---
 
-# View Element in EntityInstanceDefinition 
+# View Element in EntityInstanceDefinition
 
 (SolutionManifestDefinitions Schema)
 
@@ -90,11 +89,3 @@ The following sections describe attributes, child elements, and parent elements.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

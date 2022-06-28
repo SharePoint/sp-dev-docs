@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ff84af75-d4f5-885b-f728-534a101c38b8
 ---
 
-# Children element in Container 
+# Children element in Container
 
 (LayoutDefinitions Schema)
 
@@ -49,11 +48,3 @@ None.
 |Element|Description|
 |-------|-----------|
 |[Container element (LayoutDefinitions Schema)](container-element-layoutdefinitions-schema.md)|The layout for the External Data Parts.|
-
-
-
-
-
-
-
-

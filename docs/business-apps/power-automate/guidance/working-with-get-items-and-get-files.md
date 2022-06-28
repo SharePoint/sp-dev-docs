@@ -1,8 +1,8 @@
 ---
 title: In-depth analysis into 'Get items' and 'Get files' SharePoint actions for flows in Power Automate
 description: In this article, learn more about the SharePoint actions get items & get files actions with Power Automate.
-ms.date: 06/20/2022
-search.app: 
+ms.date: 06/28/2022
+search.app:
   - Flow
 search.appverid: met150
 ---
@@ -16,7 +16,7 @@ The **Get items** and **Get files** SharePoint actions for flows in Power Automa
 First, and of primary consideration, the **Get items** action only works with lists, whereas the **Get files** action only works with libraries.
 
 ## Item limits
-The default item limit is 100 and items are paginated by default as well. 
+The default item limit is 100 and items are paginated by default as well.
 
 If you are using the default options, and simply specifying the site address and list or library name, Power Automate returns 100 items from the list or library.
 
@@ -30,7 +30,7 @@ If you go beyond 5,000 item limit, Power Automate fails and generates an error d
 
 ## Limit items to a specific folder
 By default, this action returns all items or files in the list or library, recursively, from all folders, if available. You can change this behavior by doing the following:
-* To select a specific folder in the list or library, use _Limit Entries_ to Folder property. 
+* To select a specific folder in the list or library, use _Limit Entries_ to Folder property.
 * To limit entries to that specific folder or within all sub-folders, use _Include Nested Items_ property.
 
 ![Limit entries to folder in Get items action](../../../images/flow-get-items-limit-entries-to-folder.png)
@@ -66,7 +66,7 @@ Other examples:
 * startswith(Title, 'A') and Start_x0020_Date gt 'formatDateTime(utcNow(),'yyyy-MM-dd')'
   * formatDateTime(utcNow(),'yyyy-MM-dd') is an expression.
 * Country/Title eq 'New Zealand'
-  * Country is a lookup column in the list and Title is a column in the referenced list. 
+  * Country is a lookup column in the list and Title is a column in the referenced list.
 
 ![ODATA filter queries in Get items action](../../../images/flow-get-items-filter-query.png)
 
@@ -106,4 +106,3 @@ The format is the column name followed by asc or desc depending on ascending or 
 
 ### Known Limitation
 While using Get items on lists with more than 5000 items with a filter query, you may observe that no records are returned if there are no items matching the filter query in the first 5000 items. To fix this, enable Pagination on Get items from the action settings menu when working with lists with more than 5000 items.
-

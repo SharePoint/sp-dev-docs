@@ -2,7 +2,6 @@
 title: Build your first Form customizer extension)
 description: Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type.
 ms.date: 06/21/2022
-ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
 
@@ -173,7 +172,7 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     ![Accept loading debug scripts](../../../images/ext-forcustomizer-accept-debug-scripts.png)
 
-    Notice how the the custom component is rendered in the page based on the custom content which we updated to the render method. 
+    Notice how the the custom component is rendered in the page based on the custom content which we updated to the render method.
 
     ![List view with from customizer rendered with default outpu](../../../images/ext-forcustomizer-default-output.png)
 
@@ -237,7 +236,7 @@ Now that we have created the baseline component and tested that it works properl
     // This already exists in YOUR code
     export default class HelloWorldFormCustomizer
       extends BaseFormCustomizer<IHelloWorldFormCustomizerProperties> {
-    
+
     // Added for the item to show in the form; use with edit and view form
     private _item: {
       Title?: string;
@@ -285,8 +284,8 @@ Now that we have created the baseline component and tested that it works properl
       public render(): void {
         // render view form
         if (this.displayMode === FormDisplayMode.Display) {
-          
-          this.domElement.innerHTML = 
+
+          this.domElement.innerHTML =
                         `<div class="${styles.basics}">
                           <label for="title">${strings.Title}</label>
                           <br />
@@ -300,7 +299,7 @@ Now that we have created the baseline component and tested that it works properl
         }
         // render new/edit form
         else {
-          this.domElement.innerHTML = 
+          this.domElement.innerHTML =
                       `<div class="${styles.basics}">
                         <label for="title">${strings.Title}</label><br />
                         <input type="text" id="title" value="${this._item?.Title || ''}"/>

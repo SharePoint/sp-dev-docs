@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.TypeDescriptor
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ae423de8-c13b-aea5-d47b-17ef786fb5a7
 ---
 
-# TypeDescriptor Element 
+# TypeDescriptor Element
 
 (BDCMetadata Schema)
 
@@ -177,15 +176,7 @@ The following sections describe attributes, child elements, and parent elements.
 | [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md) | The child **TypeDescriptors** of the **TypeDescriptor**. |
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md) |     |
-
-
-
-
-
-
-
-

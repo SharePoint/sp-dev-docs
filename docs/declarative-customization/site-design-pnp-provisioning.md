@@ -1,7 +1,7 @@
 ---
 title: Calling the PnP provisioning engine from a site script
 description: Build a complete SharePoint site design using the PnP provisioning engine
-ms.date: 06/03/2022
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -216,7 +216,7 @@ Copy the following provisioning template XML to a new file and save the file as 
     ```
 
     Replace **[insertyourAppIdHere]** with the value that the `Register-PnPAzureApp` cmdlet returned for AzureAppId.
-    
+
     Replace **'contoso.onmicrosoft.com'** with your tenant details.
 
 ## Create the site design

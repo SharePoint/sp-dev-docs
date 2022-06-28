@@ -1,11 +1,10 @@
 ---
 title: BinarySerializedWebPart element (Module)
-description: BinarySerializedWebPart element (Module) specifies a web part that has been serialized into binary data. 
+description: BinarySerializedWebPart element (Module) specifies a web part that has been serialized into binary data.
 manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 924e8a3f-0ec6-48c8-9337-6597c21dc7d1
 ---
@@ -87,9 +86,3 @@ None
 - [Modules](modules.md)
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-

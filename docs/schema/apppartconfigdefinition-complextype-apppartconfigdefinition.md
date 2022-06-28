@@ -5,18 +5,17 @@ manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 01abeb84-0904-12b8-c7ea-aae75a2b87e4
 ---
 
-# AppPartConfigDefinition complexType 
+# AppPartConfigDefinition complexType
 
 (AppPartConfigDefinition)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -71,9 +70,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-

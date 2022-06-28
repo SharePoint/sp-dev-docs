@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,7 +16,7 @@ ms.assetid: b9abdfc7-93f8-4404-9133-b0e9d4c33b3c
 # Customization element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 ```XML
 <Customization><ArrayOfProperty
 </Customization>
@@ -30,20 +29,18 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [ArrayOfProperty](arrayofproperty-element-list.md)
-   
+
 ### Parent elements
 
 - [Field](field-element-list.md)
-   
+
 ## Occurrences
 
 - Minimum: 0
-- Maximum: 1  
+- Maximum: 1
 
-<br/> 
-   
-
+<br/>

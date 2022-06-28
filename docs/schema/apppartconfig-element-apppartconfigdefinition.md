@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 95395db7-c2c2-a74a-3e56-7555adc768b7
 ---
@@ -16,7 +15,7 @@ ms.assetid: 95395db7-c2c2-a74a-3e56-7555adc768b7
 
 The top level node of an app part configuration file.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -71,10 +70,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

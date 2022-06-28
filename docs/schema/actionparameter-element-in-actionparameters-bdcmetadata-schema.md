@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.ActionParameter
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1f5fa96a-1bff-f007-984d-a644cbbb2648
 ---
@@ -24,14 +23,14 @@ Specifies the parameters of a URL-based action. Defines how to parameterize the 
 
 The URL attribute of a URL-based action can receive parameters by using the ActionParameter element.
 
-> [!IMPORTANT] 
-> **ActionParameters** can either represent identifier values, or values that correspond to **TypeDescriptors** in a **SpecificFinder** of the **Entity**. 
-> 
+> [!IMPORTANT]
+> **ActionParameters** can either represent identifier values, or values that correspond to **TypeDescriptors** in a **SpecificFinder** of the **Entity**.
+>
 > The **ActionParameter** represents an identifier value when the **IdOrdinal** property is present. The value of the property specifies the index of the identifier whose value this **ActionParameter** represents. If the **IdOrdinal** property is not specified, the **ActionParameter** represents a **TypeDescriptor**, and the **Name** attribute specifies which type descriptor is being represented. The **Name** attribute is specified as a **Dotted Path**.
 
 The **ActionParameter** element accepts the following property.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Properties are case-sensitive.
 
 ### Properties
@@ -122,20 +121,14 @@ The following sections describe attributes, child elements, and parent elements.
 <br/>
 
 ### Child elements
-  
+
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names for the **ActionParameter**. |
 | [Properties element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the **ActionParameter**. |
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [ActionParameters element in Action (BDCMetadata Schema)](actionparameters-element-in-action-bdcmetadata-schema.md) | The **ActionParameters** element that contains this **ActionParameter**. |
-
-
-
-
-
-

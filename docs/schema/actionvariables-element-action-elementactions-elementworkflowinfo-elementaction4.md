@@ -4,12 +4,11 @@ manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 69d4c465-600d-9d78-6ed9-1e024ec8ad1d
 ---
 
-# ActionVariables element (Action element) 
+# ActionVariables element (Action element)
 
 (Actions element) (WorkflowInfo element) (Action4)
 
@@ -46,10 +45,10 @@ Specifies local variables for the action.
                <xs:sequence>
          <xs:element name="ActionVariables"     >
 
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -87,11 +86,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

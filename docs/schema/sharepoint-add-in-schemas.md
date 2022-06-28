@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: overview
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 68be63fc-cc31-4003-be2e-58303d74dda0
 ---
@@ -22,12 +21,5 @@ Document schemas that support SharePoint Add-ins, including the App Manifest sch
 
 - [AppPartConfigDefinition schema reference](apppartconfigdefinition-schema-reference.md)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
-
-
-
-
-
-
-

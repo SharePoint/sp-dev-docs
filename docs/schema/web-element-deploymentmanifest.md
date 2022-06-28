@@ -5,16 +5,15 @@ ms.date: 06/15/2022
 description: Describes Web Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 85e854c0-c567-48a9-9031-f709a4e7a785
 ---
 
 # Web Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a SharePoint Foundation website ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)) object. A website is one of the top-level SharePoint Foundation objects. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a SharePoint Foundation website ([SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)) object. A website is one of the top-level SharePoint Foundation objects.
 
 ## Definition
 
@@ -88,7 +87,7 @@ USAGE
 ## Type
 
 [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -149,19 +148,18 @@ The following sections describe attributes, child elements, and parent elements.
 |**WorkDayEndHour** <br/> |xs:short  <br/> |Optional. Specifies the default hour at which the work day ends on the calendar in use on the server.  <br/> |
 |**WorkDays** <br/> |xs:short  <br/> |Optional. Specifies the default work days on the calendar in use on the server.  <br/> |
 |**WorkDayStartHour** <br/> |xs:short  <br/> |Optional. Specifies the default hour at which the work day starts on the calendar in use on the server.  <br/> |
-   
+
 ### Child elements
 
 - [Properties Element (DeploymentManifest - SPWeb)](properties-element-deploymentmanifestspweb.md)
-- [EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md) 
-   
+- [EventReceivers Element (DeploymentManifest - SPWeb)](eventreceivers-element-deploymentmanifestspweb.md)
+
 ### Parent elements
 
 - [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx)
 - [SPRegionalSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

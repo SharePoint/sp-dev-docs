@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: ImmediateNotificationExcludedFields element (AlertTemplates) specif
 # ImmediateNotificationExcludedFields element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies fields to exclude from an immediate notification alert message.
-  
+
 ```XML
 <ImmediateNotificationExcludedFields>
   Field1; Field2; ... Fieldn
@@ -33,17 +32,15 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-  
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [Properties](properties-element-alerttemplates.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Properties element (AlertTemplates)](properties-element-alerttemplates.md).
-  
-

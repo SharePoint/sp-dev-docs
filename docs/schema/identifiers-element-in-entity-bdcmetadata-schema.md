@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Identifiers
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6566cb43-4f9e-9a2e-7ec0-89057d7daacc
 ---
@@ -45,11 +44,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [Entity Element in Entities (BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md) | The external content type that contains this list of identifiers. |
-
-
-
-
-
-
-
-

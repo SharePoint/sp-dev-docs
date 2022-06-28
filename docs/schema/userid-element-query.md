@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, contains the unique ID number of the currently authenticat
 # UserID element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains the unique ID number of the currently authenticated user of a site, as defined in the UserInfo table of the content database.
-  
+
 ```XML
 <UserID>
 </UserID>
@@ -32,24 +31,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Value](value-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ## Example
 
-The following query returns cases where either the Author or Editor field is equal to the current value of the **UserID** element, and it returns the results in ascending order with the **Title** field first, and then the FirstName field. 
-  
+The following query returns cases where either the Author or Editor field is equal to the current value of the **UserID** element, and it returns the results in ascending order with the **Title** field first, and then the FirstName field.
+
 ```XML
 <Query>
   <Where>
@@ -78,4 +77,3 @@ The following query returns cases where either the Author or Editor field is equ
 ```
 
 <br/>
-

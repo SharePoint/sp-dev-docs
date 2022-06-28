@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.ConvertType
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c474cf2c-b631-f3c9-daf1-f05d3e0d385f
 ---
 
-# ConvertType Element in Interpretation 
+# ConvertType Element in Interpretation
 
 (BDCMetadata Schema)
 
@@ -24,11 +23,11 @@ Specifies the rule to convert the data type of a data value into another data ty
 
 **Schema**: BDCMetadata
 
-The Convert element specifies the rule to convert the data type of a data value into another data type. When the rules are applied in order, this rule specifies the data type of the data value to be converted to the data type specified by the BDCType attribute. When the rules are applied in reverse order, this rule specifies the data type of the data value to be converted to the data type specified by the **LOBType** attribute. 
+The Convert element specifies the rule to convert the data type of a data value into another data type. When the rules are applied in order, this rule specifies the data type of the data value to be converted to the data type specified by the BDCType attribute. When the rules are applied in reverse order, this rule specifies the data type of the data value to be converted to the data type specified by the **LOBType** attribute.
 
 For example, this rule can specify converting a date value obtained from an external system, into a culture and locale sensitive string which will eventually be displayed to the user, and converting the updated value for that string back into the date that is compatible with the external system.
 
-> [!WARNING] 
+> [!WARNING]
 > **ConvertType** does not support non-Gregorian calendars for conversions between **System.String** and **System.DateTime**.
 
 ```XML
@@ -87,10 +86,3 @@ None.
 |Element|Description|
 |----------|-----------|
 |[Interpretation Element in TypeDescriptor (BDCMetadata Schema)](interpretation-element-in-typedescriptor-bdcmetadata-schema.md)|The rules to apply to the data stored in the data structures that are represented by a **TypeDescriptor**.|
-
-
-
-
-
-
-

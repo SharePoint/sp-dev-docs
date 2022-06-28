@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 86ddee43-cc12-227d-4efc-17a1671894d8
 ---
@@ -44,9 +43,3 @@ None.
 | Element |
 | --- |
 | [ActionParameters element in Action (BDCMetadataResource Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md) |
-
-
-
-
-
-

@@ -5,17 +5,16 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c25a5ef2-b9ef-926d-cf7b-9a91168c9f1f
 ---
 
-# ElementFile element (ElementManifestReferences complexType) 
+# ElementFile element (ElementManifestReferences complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
@@ -64,13 +63,13 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Child elements
 
 None.
 
-<br/> 
+<br/>
 
 ### Attributes
 
@@ -101,12 +100,5 @@ None.
 </tr>
 </tbody>
 </table>
-<br/> 
-<br/> 
-
-
-
-
-
-
-
+<br/>
+<br/>

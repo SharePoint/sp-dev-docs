@@ -5,16 +5,15 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 67a3c058-34d2-4b96-ae8d-b4faf6e194a9
 ---
 
 # Properties Element (DeploymentManifest - SPAttachment)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a collection of properties on a Windows SharePoint Services 3.0 attachment. Use the Attachments property of the **SPListItem** class to retrieve a collection of attachements for a list item. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents a collection of properties on a Windows SharePoint Services 3.0 attachment. Use the Attachments property of the **SPListItem** class to retrieve a collection of attachements for a list item.
 
 ## Definition
 
@@ -34,7 +33,7 @@ USAGE
 ## Type
 
 **Dictionary**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -42,16 +41,15 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 [Property Element (DeploymentManifest)](property-element-deploymentmanifest.md)
-   
+
 ### Parent elements
 
 [Attachment Element (DeploymentManifest)](attachment-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

@@ -5,15 +5,14 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 76bf9339-6d33-48a5-b59f-a5d5317c9778
 ---
 
 # Role Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents an instance of a Windows SharePoint Services 3.0 deployment role (**DeploymentRole**) object.
 
 ## Definition
@@ -39,8 +38,8 @@ USAGE
 
 ## Type
 
-**DeploymentRole** (based on [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)) 
-  
+**DeploymentRole** (based on [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx))
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -56,19 +55,19 @@ The following sections describe attributes, child elements, and parent elements.
 |**Hidden** <br/> |xs:boolean  <br/> |Required. Specifies whether the role is hidden; **true** if the role is hidden, otherwise, **false**.  <br/> |
 |**RoleOrder** <br/> |xs:string  <br/> |Optional. Specifies the order in which permission levels are displayed on the **Permission Levels** page of a site collection.  <br/> |
 |**Type** <br/> |xs:string  <br/> |Optional. Specifies the role type, as listed in the [Microsoft.SharePoint.SPRoleType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleType.aspx) enumeration.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [Roles Element (DeploymentManifest)](roles-element-deploymentmanifest.md)
-   
+
 ### Remarks
 
-The value of the **RoleID** property corresponds to the unique member ID for the role, which is specified in the [SPMember.ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx) property of the [SPMember](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.aspx) class. 
-  
+The value of the **RoleID** property corresponds to the unique member ID for the role, which is specified in the [SPMember.ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx) property of the [SPMember](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.aspx) class.
+
 ## See also
 
 - [SPRole](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRole.aspx)
@@ -76,4 +75,3 @@ The value of the **RoleID** property corresponds to the unique member ID for the
 - [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx)
 - [SPRoleType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleType.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

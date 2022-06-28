@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 83b560be-7aef-fb36-616d-16217334cf92
 ---
 
-# UrlAction Element in Actions 
+# UrlAction Element in Actions
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -18,7 +17,7 @@ ms.assetid: 83b560be-7aef-fb36-616d-16217334cf92
 
 The **CodeMethodAction** element is used to execute a URL-based action in Microsoft Outlook 2010.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -138,11 +137,3 @@ The following sections describe attributes, child elements, and parent elements.
 | Element | Description |
 |---------|-------------|
 | [Actions Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Actions** element that contains this action. |
-
-
-
-
-
-
-
-

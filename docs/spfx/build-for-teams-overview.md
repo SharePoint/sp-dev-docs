@@ -2,7 +2,6 @@
 title: Build for Microsoft Teams using SharePoint Framework
 description: By building Microsoft Teams applications using SharePoint Framework, you can save costs on hosting infrastructure and simplify the deployment and operation process.
 ms.date: 06/15/2020
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 

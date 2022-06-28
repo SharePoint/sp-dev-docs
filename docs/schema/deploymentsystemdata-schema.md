@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5b098a6e-37ea-4155-b234-1649edd2495a
 ---
@@ -22,7 +21,7 @@ The following table lists elements in the schema file DeploymentSystemData.xsd f
 
 <br/>
 
-  
+
 | Element | Description |
 | --- | --- |
 | [ManifestFile element (DeploymentSystemData)](manifestfile-element-deploymentsystemdata.md) | Represents system data files exported to the content migration package and listed on the deployment manifest. |
@@ -39,11 +38,3 @@ The following table lists elements in the schema file DeploymentSystemData.xsd f
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-
-

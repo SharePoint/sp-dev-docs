@@ -2,7 +2,6 @@
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -64,7 +63,7 @@ You can also follow the steps in this article by watching the video on the Micro
 1. Open **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.manifest.json**.
 
     This file defines your extension type and a unique identifier for your extension. You’ll need this ID later when you debug and deploy your extension to SharePoint.
-    
+
      ```json
      {
        "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
@@ -73,7 +72,7 @@ You can also follow the steps in this article by watching the video on the Micro
         "alias": "HelloWorldApplicationCustomizer",
         "componentType": "Extension",
         "extensionType": "ApplicationCustomizer",
-        
+
         // The "*" signifies that the version should be taken from the package.json
         "version": "*",
         "manifestVersion": 2,

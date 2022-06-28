@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Specifies site collection Features to activate in site collections 
 # SiteFeatures element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies site collection Features to activate in site collections that are created through the site definition.
-  
+
 ```XML
 <SiteFeatures>
 </SiteFeatures>
@@ -32,22 +31,20 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Feature](feature-element-site.md)
-   
+
 ### Parent elements
 
 - [Configuration](configuration-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ### Remarks
 
-Microsoft SharePoint Foundation activates features specified within the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file in the order that they are listed. Consequently, you must specify Features that are depended upon before Features that depend upon them. 
-  
-
+Microsoft SharePoint Foundation activates features specified within the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file in the order that they are listed. Consequently, you must specify Features that are depended upon before Features that depend upon them.

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0c401210-8f56-70d1-a337-ac7ad529ef16
 ---
 
-# Identities Element in Subscription 
+# Identities Element in Subscription
 
 (Subscription Schema)
 
@@ -45,11 +44,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [Subscription Element (Subscription Schema)](subscription-element-subscription-schema.md) | The cache subscription that contains this list of explicit identities. |
-
-
-
-
-
-
-
-

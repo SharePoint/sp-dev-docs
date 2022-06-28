@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b5080a9d-a72e-57ec-efd6-18f8ea0e184e
 ---
 
 # ManagedDataType simpleType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 |Name|Value|
 |:-----|:-----|
@@ -51,5 +50,3 @@ ms.assetid: b5080a9d-a72e-57ec-efd6-18f8ea0e184e
 |YesNo  <br/> ||
 |Binary  <br/> ||
 |Double  <br/> ||
-   
-

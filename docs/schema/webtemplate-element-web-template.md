@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Web Template schema
@@ -21,8 +20,8 @@ ms.assetid: ff4ba91a-cc5f-47ff-9101-a7651f452185
 Configures several aspects of a custom web template and the websites that are created from it. This element is in an elements.xml file that is inside the .wsp file that packages a web template.
 
 - [Elements (Web Template)](elements-web-template.md)
-  
-- [WebTemplate Element (Web Template)](webtemplate-element-web-template.md) 
+
+- [WebTemplate Element (Web Template)](webtemplate-element-web-template.md)
 
 ## Definition
 
@@ -83,34 +82,34 @@ The following includes an example of a **WebTemplate** element.
 
 ```XML
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <WebTemplate 
-        AdjustHijriDays="0" 
-        AlternateCssUrl="" 
-        AlternateHeader="" 
-        BaseTemplateID="9" 
-        BaseTemplateName="BLOG" 
-        BaseConfigurationID="0" 
-        CalendarType="1" 
-        Collation="25" 
-        ContainsDefaultLists="TRUE" 
-        CustomizedCssFiles="" 
-        CustomJSUrl="" 
-        Description="A 4th Generation Blog Site." 
-        ExcludeFromOfflineClient="FALSE" 
-        Locale="1033" 
-        Name="BlogIV" 
-        ParserEnabled="TRUE" 
-        PortalName="" 
-        PortalUrl="" 
-        PresenceEnabled="TRUE" 
-        ProductVersion="4" 
-        QuickLaunchEnabled="TRUE" 
-        Subweb="TRUE" 
-        SyndicationEnabled="TRUE" 
-        Time24="FALSE" 
-        TimeZone="13" 
-        Title="Our Blog" 
-        TreeViewEnabled="FALSE" 
+      <WebTemplate
+        AdjustHijriDays="0"
+        AlternateCssUrl=""
+        AlternateHeader=""
+        BaseTemplateID="9"
+        BaseTemplateName="BLOG"
+        BaseConfigurationID="0"
+        CalendarType="1"
+        Collation="25"
+        ContainsDefaultLists="TRUE"
+        CustomizedCssFiles=""
+        CustomJSUrl=""
+        Description="A 4th Generation Blog Site."
+        ExcludeFromOfflineClient="FALSE"
+        Locale="1033"
+        Name="BlogIV"
+        ParserEnabled="TRUE"
+        PortalName=""
+        PortalUrl=""
+        PresenceEnabled="TRUE"
+        ProductVersion="4"
+        QuickLaunchEnabled="TRUE"
+        Subweb="TRUE"
+        SyndicationEnabled="TRUE"
+        Time24="FALSE"
+        TimeZone="13"
+        Title="Our Blog"
+        TreeViewEnabled="FALSE"
         UIVersionConfigurationEnabled="FALSE" />
     </Elements>
 ```
@@ -118,11 +117,3 @@ The following includes an example of a **WebTemplate** element.
 ## See also
 
 - [Working with Site Templates and Definitions](https://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
-
-
-
-
-
-
-
-

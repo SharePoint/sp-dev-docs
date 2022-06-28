@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -35,20 +34,18 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Name** <br/> |Required **Text**. Specifies the text that appears in the navigation area of other pages that link to the page.  <br/> |
 |**Url** <br/> |Optional **Text**.  <br/> |
-   
+
 ### Child elements
 
-None 
-   
+None
+
 ### Parent elements
 
 - [NavBar](navbar-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d334d1ef-f7a4-d709-3b9b-ce564aa60890
 ---
 
-# Association element in Associations 
+# Association element in Associations
 
 (Subscription Schema)
 
@@ -114,11 +113,3 @@ The following sections describe attributes, child elements, and parent elements.
 |Element|Description|
 |---|---|
 |[Associations element in Subscription (Subscription Schema)](associations-element-in-subscription-subscription-schema.md)|The **Associations** element that contains this subscription association.|
-
-
-
-
-
-
-
-

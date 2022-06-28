@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0aee8955-b6ec-4128-b121-13dfd09f84d7
 ---
@@ -19,8 +18,8 @@ Specifies the GUID of the GUIDMap.
 ## Definition
 
 ```XML
-<GUID 
-   Id = string 
+<GUID
+   Id = string
    ListUrl = string />
 ```
 
@@ -90,11 +89,3 @@ None
 - [Modules](modules.md)
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-
-

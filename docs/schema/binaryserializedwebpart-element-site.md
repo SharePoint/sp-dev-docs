@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,7 +16,7 @@ description: Learn about BinarySerializedWebPart element (Site).
 # BinarySerializedWebPart element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 ```XML
 <BinarySerializedWebPart>  <GUIDMap>    <GUID      Id = "Text"      ListUrl = "Text"/>  </GUIDMap></BinarySerializedWebPart>
 ```
@@ -29,22 +28,20 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [GUIDMap](guidmap-element-site.md)
 - [WebPart](webpart-element-site.md)
-   
+
 ### Parent elements
 
 - [File](file-element.md)
 - [View](view-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

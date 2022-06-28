@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 66da239e-98dd-a812-4041-ffc248561236
 description: Learn more about SearchQueryConfigurationSettings complexType (SPS15XSDSearchSet3).
@@ -12,8 +11,8 @@ description: Learn more about SearchQueryConfigurationSettings complexType (SPS1
 
 # SearchQueryConfigurationSettings complexType (SPS15XSDSearchSet3)
 
- 
-  
+
+
 ## Type information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn more about SearchQueryConfigurationSettings complexType (SPS1
 |**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  |
 |**Schema file**  |schema_Microsoft.Office.Server.Search.Portability.xsd   |
 |**Extension base**  |None   |
-   
+
 ## Definition
 
 ```XML
@@ -44,8 +43,8 @@ description: Learn more about SearchQueryConfigurationSettings complexType (SPS1
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -60,9 +59,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[ResultTypes](resulttypes-element-searchqueryconfigurationsettings-complextypesps15xsdsearchse.md) <br/> |q4:ArrayOfResultItemType  <br/> ||
 |[Sources](sources-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.md) <br/> |q5:ArrayOfSource  <br/> ||
 |[UserSegments](usersegments-element-searchqueryconfigurationsettings-complextypesps15xsdsearchs.md) <br/> |q6:ArrayOfUserSegment  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

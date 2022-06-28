@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
 api_type:
 - schema
 ms.assetid: de7dba66-d71d-45cc-9d8a-7f62a9de6a19
-description: Defines the scaling behavior for controls in a Group element. 
+description: Defines the scaling behavior for controls in a Group element.
 ---
 
 # GroupTemplate element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Defines the scaling behavior for controls in a [Group](group-element-ribbon.md) element. 
-  
+
+Defines the scaling behavior for controls in a [Group](group-element-ribbon.md) element.
+
 ```XML
 <GroupTemplate
   Id="Text"
@@ -37,24 +36,24 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Id** <br/> |Required. A string that unambiguously identifies the element, such as "Ribbon.Templates.CustomTemplateExample".  <br/> |
 |**ClassName** <br/> |Optional. The name of a CSS class selector to apply to the group.  <br/> |
-   
+
 ### Child elements
 
 - [Layout](layout-element.md)
-   
+
 ### Parent elements
 
 - [RibbonTemplates](ribbontemplates.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
 The following example defines a custom group template.
-  
+
 ```XML
 <GroupTemplate Id="Ribbon.Templates.CustomTemplateExample">
   <Layout
@@ -76,5 +75,3 @@ The following example defines a custom group template.
 </GroupTemplate>
 
 ```
-
-
