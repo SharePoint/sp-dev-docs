@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Returns the value of a specified column in the List of Lists table.
 # ListProperty element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the value of a specified column in the List of Lists table.
-  
+
 ```XML
 <ListProperty
   AutoHyperLink = "TRUE" | "FALSE"
@@ -55,40 +54,39 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, `%c3%ab` for character `ë`.  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL and not to encode the forward slash (`/`).  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: Unbounded (1 within [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md))  
-   
+- Minimum: 0
+- Maximum: Unbounded (1 within [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md))
+
 ## Example
 
-The following example defines the link to display when the number of items exceeds the limit set for the page through the [RowLimit](rowlimit-element-list.md) element. The example uses the **ListProperty** element to return the URL for the default view. 
-  
+The following example defines the link to display when the number of items exceeds the limit set for the page through the [RowLimit](rowlimit-element-list.md) element. The example uses the **ListProperty** element to return the URL for the default view.
+
 ```XML
 <RowLimitExceeded>
-   <HTML><![CDATA[<table class="ms-summarycustombody" cellpadding=0 
+   <HTML><![CDATA[<table class="ms-summarycustombody" cellpadding=0
       cellspacing=0 border=0>
          <TR><TD Class="ms-vb"><a href="]]></HTML>
    <ListProperty Select='DefaultViewUrl'/>
    <HTML><![CDATA[" ID=onetidMoreEvts>]]></HTML>
    <HTML>(More Events...)</HTML>
    <HTML><![CDATA[</a></TD></TR>
-      <tr><td height="8"><IMG SRC="/_layouts/images/blank.gif" width=1 
+      <tr><td height="8"><IMG SRC="/_layouts/images/blank.gif" width=1
          height=8 alt=""></td></tr></table>]]></HTML>
 </RowLimitExceeded>
 ```
 
 ## See also
 
-- [Property element (View)](property-element-view.md)  
+- [Property element (View)](property-element-view.md)
 - [SetList element (View)](setlist-element-view.md)
-

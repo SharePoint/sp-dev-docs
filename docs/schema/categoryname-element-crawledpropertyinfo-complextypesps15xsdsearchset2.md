@@ -1,27 +1,26 @@
 ---
 title: "CategoryName element (CrawledPropertyInfo complexType) (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for CategoryName element (CrawledPropertyInfo complexType) (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a088c171-8f0d-162f-73f3-cbe639601310
-description: "Last modified: March 09, 2015"
 ---
 
 # CategoryName element (CrawledPropertyInfo complexType) (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
-|||
-|:-----|:-----|
-|**Element type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+| Information | Location |
+|-------------|----------|
+| **Element Type** | xs:string |
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema File** | schema_Microsoft.Office.Server.Search.Administration.xsd |
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

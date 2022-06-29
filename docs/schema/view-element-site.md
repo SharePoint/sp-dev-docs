@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Used within a site definition to specify a list view for a page wit
 # View element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Used within a site definition to specify a list view for a page within a module.
-  
+
 ```XML
 <View
   AggregateView = "TRUE" | "FALSE"
@@ -81,22 +80,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**Url** <br/> |Optional **URL**. Specifies the URL for the view.  <br/> |
 |**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the web part within a zone.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
-   
+
 ### Child elements
 
 - [BinarySerializedWebPart](binaryserializedwebpart-element-site.md)
-   
+
 ### Parent elements
 
 - [File](file-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-For an example that uses the **View** element, see [Module element (Site)](module-element-site.md).  
-  
-
+For an example that uses the **View** element, see [Module element (Site)](module-element-site.md).

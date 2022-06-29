@@ -1,12 +1,12 @@
 ---
 title: Parameter Element (WorkflowInfo)
+description: Describes the Parameter element (WorkflowInfo) and provides a definition, the elements and attributes, and an example.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dd8766fd-0424-4f88-a8ce-8466fc178bce
 ---
@@ -278,6 +278,3 @@ The following example demonstrates how to construct a **Parameter** element so t
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-

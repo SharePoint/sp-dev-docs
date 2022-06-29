@@ -1,10 +1,10 @@
 ---
 title: Web Template XML
+description: Describes the Web Template XML as it applies to SharePoint 2016, SharePoint Foundation 2013, SharePoint Online, and SharePoint Server 2013.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Web Template schema
@@ -26,11 +26,3 @@ The Web Template XML provides information about the basic structure and settings
 ## See also
 
 - [Site Types: WebTemplates and Site Definitions](https://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -2,10 +2,9 @@
 title: AssociationGroup element in AssociationGroups (BDCMetadataResource Schema)
 description: Details on the AssociationGroup element in AssociationGroups (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f73d97e6-15d6-dae0-743c-aab2d66d741d
 ---
@@ -34,47 +33,13 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [LocalizedDisplayNames element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
+| [Properties element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadataresource-schema.md">AssociationGroups element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element |
+| --- |
+| [AssociationGroups element in Entity (BDCMetadataResource Schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.md) |

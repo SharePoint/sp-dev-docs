@@ -1,6 +1,7 @@
 ﻿---
 title: Keyword Query Language (KQL) syntax reference
-ms.date: 07/22/2019
+description: Describes how to construct KQL queries for Search in SharePoint and steps on how to use property restrictions and operators in KQL queries.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 ms.localizationpriority: high

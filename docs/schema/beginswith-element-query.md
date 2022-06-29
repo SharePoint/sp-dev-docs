@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, searches for a string at the start of a column that holds 
 # BeginsWith element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Searches for a string at the start of a column that holds **Text** or **Note** field type values. 
-  
+
+Searches for a string at the start of a column that holds **Text** or **Note** field type values.
+
 ```XML
 <BeginsWith>
   <FieldRef Name = "Field_Name"/>
@@ -35,13 +34,13 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-query.md)
 - [Value](value-element-query.md)
 - [XML](xml-element.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
@@ -49,21 +48,21 @@ None
 - [Expr2](expr2-element-view.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ## Example
 
-The following example uses the **BeginsWith** element within a string that is assigned to the **Query** property to return the titles of items within a list where a Journal column begins with "City". 
-  
+The following example uses the **BeginsWith** element within a string that is assigned to the **Query** property to return the titles of items within a list where a Journal column begins with "City".
+
 ```XML
 SPWeb mySite = SPControl.GetContextWeb(Context);
 SPList list = mySite.Lists["List_Name "];
 SPQuery query = new SPQuery();
-query.Query = "<Where><BeginsWith><FieldRef Name="Journal"/>" + 
+query.Query = "<Where><BeginsWith><FieldRef Name="Journal"/>" +
    "<Value Type="Note">City</Value></BeginsWith></Where>";
 SPListItemCollection myItems = list.GetItems(query);
 foreach (SPListItem item in myItems)
@@ -75,4 +74,3 @@ foreach (SPListItem item in myItems)
 ## See also
 
 - [Contains element (Query)](contains-element-query.md)
-

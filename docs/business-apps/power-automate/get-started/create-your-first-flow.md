@@ -1,10 +1,10 @@
 ---
 title: Send an email when a new item is created or modified in a SharePoint list
 description: Send an email when a new item is created or modified in a SharePoint list
-ms.date: 06/14/2021
-ms.prod: sharepoint
+ms.date: 06/28/2022
+ms.service: sharepoint-online
 ms.localizationpriority: high
-search.app: 
+search.app:
   - Flow
 search.appverid: met150
 ---
@@ -26,10 +26,10 @@ Before proceeding with these instructions, make sure your SharePoint site is set
 
     * Create a flow
     * See your flows
-    * Configure flows 
+    * Configure flows
 
     ![Create a flow from Projects list](../../../images/lists-integrate-power-automate-create-flow.png)
-    
+
     > [!NOTE]
     > If they are available for the list or library here, you may see other options on the **Automate** menu, such as **Set a reminder** and other flows.
 

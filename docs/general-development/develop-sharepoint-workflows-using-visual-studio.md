@@ -1,7 +1,7 @@
 ---
 title: Develop SharePoint workflows using Visual Studio
 description: "SharePoint supports two primary workflow development environments for authoring workflows: SharePoint Designer and Visual Studio. This article summarizes both and discusses the advantages and disadvantages of each."
-ms.date: 02/05/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 28f5d3b1-6fe8-4b1f-8c4e-b11105fe6f46
 ms.localizationpriority: high
@@ -95,7 +95,7 @@ To debug on-premises workflows in Visual Studio, you need to temporarily allow t
 
 To debug SharePoint Online workflows in Visual Studio, perform the following steps:
 
-1. If you're behind a firewall, you may need to install a proxy client (such as the  [Forefront Threat Management Gateway (TMG) Client](https://www.microsoft.com/download/details.aspx?displaylang=en&amp;id=10504)), depending on your company's network topology.
+1. If you're behind a firewall, you may need to install a proxy client (such as the  [Forefront Threat Management Gateway (TMG) Client](/previous-versions/tn-archive/cc441520(v=technet.10))), depending on your company's network topology.
 1. Register for a Microsoft Azure account if you haven't already, and then sign into that account.
 
     For information about how to register for a Microsoft Azure account, see  [Microsoft Azure](https://azure.microsoft.com/).

@@ -1,8 +1,7 @@
 ---
 title: Site Provisioning
 description: Site Provisioning
-ms.date: 12/12/2018
-ms.prod: sharepoint
+ms.date: 06/28/2022
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint
@@ -15,16 +14,16 @@ ms.localizationpriority: medium
 Site provisioning is a highly requested capability in the fields of SharePoint customization. In fact, most of the companies have the functional requirement to make it possible for qualified end-users to create sites based on templates, so that they can reuse the same information architecture, the same branding, and the same User Experience, across multiple sites.
 From a developer perspective you need to make it possible to programmatically create sites, and too programmatically provision a custom Information Architecture (IA) on those sites.
 
-Just for the sake of making an example, think about having a "project site" template, that you can use to create a site dedicated to every single project you work on. And the same need applies to sites targeting customers, suppliers, etc. 
+Just for the sake of making an example, think about having a "project site" template, that you can use to create a site dedicated to every single project you work on. And the same need applies to sites targeting customers, suppliers, etc.
 
 However, it is also fundamental to have a provisioning technique that allows you to easily provision sites based on templates, and which potentially provides life cycle management of those templates. In fact, if you update a template that you already used to create sites, it would be really helpful to be able to update all the existing site instances, based on that updated template.
 
-Nowadays there are many techniques to provision sites and their Information Architecture, and in this article you will find a list of the most interesting ones, together with their target platform. 
+Nowadays there are many techniques to provision sites and their Information Architecture, and in this article you will find a list of the most interesting ones, together with their target platform.
 
 ## High-level guideline/general rules
 Here follow some general high-level guidelines and rules that matter whenever you need to provision a site.
 * Try to isolate the Information Architecture from the other elements like branding, custom content, UI elements, etc. so that you can do proper maintenance of the IA, independently from the other elements.
-* Within the Information Architecture define Site Columns and Content Types at the Site Collection level only, and reuse them in any sub Site of the Site Collection, rather than having Site Columns and Content Types defined at the sub Site level. 
+* Within the Information Architecture define Site Columns and Content Types at the Site Collection level only, and reuse them in any sub Site of the Site Collection, rather than having Site Columns and Content Types defined at the sub Site level.
 > [!NOTE]
 > For further details about Site Collections vs. Sub Sites, please read the [dedicated section in this document](#SiteCollectionVsSite).
 * Avoid renaming or changing out-of-the-box artifacts, prefer using custom elements instead. For example, avoid renaming the *Title* field of any content type, because this could lead to unpredictable issues, considering that the existence of the *Title* field is often assumed as a guarantee by developers.
@@ -38,9 +37,9 @@ The Remote provisioning technique relies on using remote technologies like CSOM 
 It can be used both in SharePoint 2013/2016 on-premises, and in SharePoint Online.
 
 ### Articles
-* [Site provisioning in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/site-provisioning-sharepoint-add-in)
+* [Site provisioning in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/site-provisioning-sharepoint-add-in)
 * [Site provisioning techniques and remote provisioning in SharePoint 2013](https://blogs.msdn.microsoft.com/vesku/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint-2013/)
-* [Create SharePoint content types by using CSOM](https://docs.microsoft.com/sharepoint/dev/solution-guidance/create-sharepoint-content-types-by-using-csom)
+* [Create SharePoint content types by using CSOM](/sharepoint/dev/solution-guidance/create-sharepoint-content-types-by-using-csom)
 
 ### Samples
 * [Asynchronous site collection creation with WebJob](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Async.WebJob)
@@ -62,8 +61,8 @@ Moreover, the PnP provisioning engine supports versioning and delta handling, so
 The PnP provisioning engine can target both classic sites, as well as modern sites.
 
 ### Articles
-* [Introducing the PnP provisioning engine](https://docs.microsoft.com/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine)
-* [PnP provisioning engine and the core library](https://docs.microsoft.com/sharepoint/dev/solution-guidance/pnp-provisioning-engine-and-the-core-library)
+* [Introducing the PnP provisioning engine](/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine)
+* [PnP provisioning engine and the core library](/sharepoint/dev/solution-guidance/pnp-provisioning-engine-and-the-core-library)
 
 ### Samples
 * [Getting started with the PnP provisioning engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console)
@@ -89,8 +88,7 @@ It's a technique to create a new site based on the Information Architecture of a
 
 ### Articles
 * [Web Templates](https://msdn.microsoft.com/library/aa979709%28v=office.14%29.aspx)
-* [SharePoint 2010 and web templates](https://blogs.msdn.microsoft.com/vesku/2010/10/14/sharepoint-2010-and-web-templates)
-* [Save, download, and upload a SharePoint site as a template](https://docs.microsoft.com/sharepoint/dev/general-development/save-download-and-upload-a-sharepoint-site-as-a-template)
+* [Save, download, and upload a SharePoint site as a template](/sharepoint/dev/general-development/save-download-and-upload-a-sharepoint-site-as-a-template)
 * [Site definitions vs. Web templates](https://blogs.msdn.microsoft.com/vesku/2011/07/22/site-definitions-vs-web-templates/)
 
 ## Site definitions
@@ -114,7 +112,7 @@ List definitions allow you to define a list template that you can reuse to creat
 
 ### Articles
 * [How to: Create a Custom List Definition](https://msdn.microsoft.com/library/ms466023%28v=office.14%29.aspx)
-* [List instance in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/list-instance-sharepoint-add-in)
+* [List instance in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/list-instance-sharepoint-add-in)
 
 ### Samples
 * [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)
@@ -126,7 +124,7 @@ _**Applies to:** SharePoint Server 2016 | SharePoint Server 2013_
 List templates target on-premises only and leverage a .STP template file that you can upload into the *List Templates* gallery of a site, and use to create multiple instances of lists based on a common list template. The List templates are an old technique, which work on SharePoint on-premises only, and that shouldn't be used anymore, because could represent a road block for migrating to the cloud and to SharePoint Online.
 
 ### Articles
-* [List definition / list template in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/list-definition-template-sharepoint-add-in)
+* [List definition / list template in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/list-definition-template-sharepoint-add-in)
 
 ### Samples
 * [ECM.DocumentLibraries](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.DocumentLibraries)
@@ -142,7 +140,7 @@ The Feature stapling capability can be used on-premises to customize existing si
 
 ### Articles
 * [SharePoint 2010 and web templates](https://blogs.msdn.microsoft.com/vesku/2010/10/14/sharepoint-2010-and-web-templates)
-* [Feature Stapling in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/feature-stapling-sharepoint-add-in)
+* [Feature Stapling in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/feature-stapling-sharepoint-add-in)
 
 ### Samples
 * [Creating sub sites using an add-in for SharePoint](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.SubSiteCreationApp)

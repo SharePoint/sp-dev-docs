@@ -1,7 +1,7 @@
 ---
 title: Designing a SharePoint web part
 description: Use three types of property panes to design and develop web parts that fit your business or customer needs.
-ms.date: 01/23/2018
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -57,7 +57,7 @@ Use accordion panes when you need to apply categorization for a complex web part
 
 ### Steps pane
 
-Use a steps pane to group properties in multiple steps or pages when you need the web part to be configured in a linear order, or when choices in the first step affect the options that display in the second or third step. 
+Use a steps pane to group properties in multiple steps or pages when you need the web part to be configured in a linear order, or when choices in the first step affect the options that display in the second or third step.
 
 **Step 1 of the steps pane**
 
@@ -67,7 +67,7 @@ In step 1, the back button is disabled and the next button is enabled.
 
 <br/>
 
-**Step 2 of the steps pane** 
+**Step 2 of the steps pane**
 
 In step 2, the back and next buttons are enabled.
 
@@ -75,7 +75,7 @@ In step 2, the back and next buttons are enabled.
 
 <br/>
 
-**Step 3 of the steps pane** 
+**Step 3 of the steps pane**
 
 In step 3, the next button is disabled and the back button is enabled.
 
@@ -85,5 +85,3 @@ In step 3, the next button is disabled and the back button is enabled.
 ## See also
 
 - [Designing great SharePoint experiences](design-guidance-overview.md)
-
-

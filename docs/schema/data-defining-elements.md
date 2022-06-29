@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e873b640-c1ee-436a-81ef-ae8f6a439e61
 description:  CAML field rendering elements are designed for use when rendering individual field values.
@@ -13,13 +12,13 @@ description:  CAML field rendering elements are designed for use when rendering 
 # Data-defining elements
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Collaborative Application Markup Language (CAML) has two major kinds of elements: those for page rendering, and those for field rendering and schema definition. The CAML field rendering elements are designed for use when rendering individual field values. These can appear in field type definitions or, more commonly, in [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) at  `\\Program Files\Common Files\Microsoft Shared\web server extensions\12\TEMPLATES\XML`.
-  
+
 ## Field rendering and schema definition
 
 A field is a column or an attribute containing information that a user can add to a list. Each list on a website based on Microsoft SharePoint Foundation has metadata stored in the database. The format of the schema is an XML structure, such as the following:
-  
+
 ```XML
 <Fields>
   <Field Type="Counter" Name="ID"/>
@@ -27,8 +26,8 @@ A field is a column or an attribute containing information that a user can add t
 </Fields>
 ```
 
-To simplify the implementation of the various field types, and to allow for a higher degree of flexibility in rendering the various fields, [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) contains information about the rendering and behavior of each field type. The [Field](field-element-list.md) element renders different HTML depending on the data type of the field in question, and FldTypes.xml defines the data types and rendering patterns for each kind of field. The following table presents the schema used in this file. 
-  
+To simplify the implementation of the various field types, and to allow for a higher degree of flexibility in rendering the various fields, [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) contains information about the rendering and behavior of each field type. The [Field](field-element-list.md) element renders different HTML depending on the data type of the field in question, and FldTypes.xml defines the data types and rendering patterns for each kind of field. The following table presents the schema used in this file.
+
 |**Name**|**Data type**|**Description**|
 |:-----|:-----|:-----|
 |**Column2Suffix** <br/> |**Text** <br/> |Contains text to append to base column name to derive **ColumnName2** from **ColumnName** (for two-column fields such as **URL**).  <br/> |
@@ -45,13 +44,13 @@ To simplify the implementation of the various field types, and to allow for a hi
 |**TypeName** <br/> |**Text** <br/> |Specifies a name in the definition of a field type.  <br/> |
 |**SQLType** <br/> |**Text** <br/> |Determines the underlying SQL data type for the given field. Examples are nvarchar(255), memo, integer, float. Used to generate the appropriate SQL (CREATE TABLE) for creation of a field of this type.  <br/> |
 |**SQLType2** <br/> |**Text** <br/> |When not blank, gives the type of a secondary column to create for the current field (see URL field type, for example).  <br/> |
-   
+
 ## Display modes and display patterns
 
 Each of the display modes (**Display**, **Edit**, and **New**) contains a definition of how to render each of the field data types that are supported by SharePoint Foundation.
-  
+
 For each display mode there is a display pattern, or CAML-rendering expression. Some CAML elements are used specifically in display patterns. Others can be used in either context, for page rendering or for field rendering, but are used primarily in rendering fields. The following intrinsic CAML-rendering elements are used to build templates that can include both static HTML and data, as well as metadata of the field being rendered.
-  
+
 |**Element**|**Description**|
 |:-----|:-----|
 |[Column](column-element-view.md) <br/> |Returns the raw data value for a particular field.  <br/> |
@@ -71,8 +70,7 @@ For each display mode there is a display pattern, or CAML-rendering expression. 
 |[Property](property-element-view.md) <br/> |Returns the property from the current **ForEach** context.  <br/> |
 |[ScriptQuote](scriptquote-element-view.md) <br/> |Used for rendering text from the server that must be interpreted as a quoted string.  <br/> |
 |[TodayISO](todayiso-element.md) <br/> |Renders today's date and time in ISO format.  <br/> |
-   
+
 ## See also
 
 - [HTML-rendering elements](html-rendering-elements.md)
-

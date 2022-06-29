@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 45d7c1b5-39dd-f86b-0a07-b2187d0de04a
 description: "Describes the RefinerAnchoring simpleType (SPS15XSDSearchSet2)."
@@ -12,8 +11,8 @@ description: "Describes the RefinerAnchoring simpleType (SPS15XSDSearchSet2)."
 
 # RefinerAnchoring simpleType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |Info type|Value|
@@ -21,7 +20,7 @@ description: "Describes the RefinerAnchoring simpleType (SPS15XSDSearchSet2)."
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -46,5 +45,3 @@ description: "Describes the RefinerAnchoring simpleType (SPS15XSDSearchSet2)."
 |Complete  <br/> ||
 |Prefix  <br/> ||
 |Suffix  <br/> ||
-   
-

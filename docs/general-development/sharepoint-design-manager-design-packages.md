@@ -1,6 +1,7 @@
 ---
 title: SharePoint Design Manager design packages
-ms.date: 09/25/2017
+description: Describes how to build and export the visual design of a SharePoint site collection as a package that can be imported for customer installation.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 85ad1993-4d75-4806-9097-b934865a899a
 ms.localizationpriority: high

@@ -1,7 +1,7 @@
 ---
 title: Working with Web Services in SharePoint Workflows using Visual Studio 2012
 description: Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
-ms.date: 01/06/2020
+ms.date: 06/10/2022
 ms.prod: sharepoint
 ms.assetid: 5ffaa585-a872-4e14-bc0e-4a38c6a16b04
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
 
-**Provided by:** [Andrew Connell](https://www.andrewconnell), [Voitanos](https://www.voitanos.io)
+**Provided by:** [Andrew Connell](https://www.andrewconnell.com), [Voitanos](https://www.voitanos.io)
 
 > [!NOTE]
 > SharePoint 2010 workflows have been retired since August 1, 2020 for new tenants and removed from existing tenants on November 1, 2020. If you’re using SharePoint 2010 workflows, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2010 workflow retirement](https://support.microsoft.com/office/sharepoint-2010-workflow-retirement-1ca3fff8-9985-410a-85aa-8120f626965f).

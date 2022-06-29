@@ -1,7 +1,7 @@
 ---
 title: Make batch requests with the REST APIs
 description: Use the $batch query option with the REST/OData APIs.
-ms.date: 07/20/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -16,7 +16,7 @@ SharePoint Online (and on-premises SharePoint 2016 and later) and the Office 365
 
 The following is a reminder of the major points:
 
-- The request URL consists of the root service URL and the `$batch` option; for example, **https://fabrikam.sharepoint.com/_api/$batch** or **https://fabrikam.office365.com/api/v1.0/me/$batch**.
+- The request URL consists of the root service URL and the `$batch` option; for example, **`https://fabrikam.sharepoint.com/_api/$batch`** or **`https://fabrikam.office365.com/api/v1.0/me/$batch`**.
 - The HTTP request body is MIME type *multipart/mixed*.
 - The body of the request is divided into parts that are separated from each other by a boundary string that is specified in the header of the request.
 - Each part of the body has its own HTTP verb and REST URL, and its own internal body when applicable.

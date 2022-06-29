@@ -2,7 +2,6 @@
 title: Deployment options for SharePoint Framework solutions for Microsoft Teams
 description: Learn what options are available to deploy SharePoint Framework solutions for Microsoft Teams
 ms.date: 01/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Deployment options for SharePoint Framework solutions for Microsoft Teams
@@ -51,11 +50,11 @@ If a SPFx solution contains multiple web parts designated for use in Microsoft T
 
 > [!NOTE]
 > If you are curious on the generated package structure, you can use use the following REST API to download the package for specific solutions:
-> 
+>
 > `_api/web/tenantappcatalog/downloadteamssolution(id)/$value`
-> 
+>
 > id is the numeric identifier of the solution in the app catalog library.
-> 
+>
 > You can request this API in the context of your app catalog, for example with URL of `https://[yourtenant]].sharepoint.com/sites/appcatalog/_api/web/tenantappcatalog/downloadteamssolution(12)/$value`. API call will start download process of the generated manifest package.
 
 

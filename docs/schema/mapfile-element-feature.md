@@ -1,10 +1,10 @@
 ---
 title: MapFile element (Feature)
+description: Describes the definition, element, and attribute information for MapFile element (Feature), which specifies a mapping between files during a Feature upgrade.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9e5e6eb7-89c7-4fb8-baff-e08cdce7ba18
 ---
@@ -18,7 +18,7 @@ Specifies a mapping between files during a Feature upgrade.
 ## Definition
 
 ```XML
-<MapFile 
+<MapFile
   FromPath = string
   ToPath = string />
 ```
@@ -82,11 +82,3 @@ None
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

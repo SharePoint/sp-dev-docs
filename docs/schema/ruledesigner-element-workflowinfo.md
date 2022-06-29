@@ -1,12 +1,12 @@
 ---
 title: RuleDesigner Element (WorkflowInfo)
+description: RuleDesigner Element (WorkflowInfo) contains information that is needed to render a workflow sentence in a declarative, code-free workflow editor.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dd956283-103a-42e9-b082-58f7f3c3dbfc
 ---
@@ -122,8 +122,3 @@ The following XML demonstrates how to construct a **RuleDesigner** element so th
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-

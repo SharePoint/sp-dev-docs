@@ -1,6 +1,7 @@
 ---
 title: Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
-ms.date: 09/25/2017
+description: Demonstrates how to use web services in SharePoint Designer 2013 workflows.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: bc8769c6-ae71-4519-abf3-c1b6fb071059
 ms.localizationpriority: high

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Contains what is rendered in an IfEqual or IfNew element, based on 
 # Then element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Contains what is rendered in an [IfEqual](ifequal-element-view.md) or [IfNew](ifnew-element-view.md) element, based on whether the contents of the [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md) elements are equal or new, respectively. 
-  
+
+Contains what is rendered in an [IfEqual](ifequal-element-view.md) or [IfNew](ifnew-element-view.md) element, based on whether the contents of the [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md) elements are equal or new, respectively.
+
 ```XML
 <Then>
 </Then>
@@ -32,29 +31,29 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [IfEqual](ifequal-element-view.md)
 - [IfHasRights](ifhasrights-element-view.md)
 - [IfNew](ifnew-element-view.md)
 - [IfSubString](ifsubstring-element-view.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
+- Maximum: 1
 
-<br/> 
-   
+<br/>
+
 ## Example
 
-The following example uses the **IfEqual** element to render either the [Then](then-element-view.md) element or the [Else](else-element-view.md) element, based on whether the contents of the [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md) elements are equal. 
-  
+The following example uses the **IfEqual** element to render either the [Then](then-element-view.md) element or the [Else](else-element-view.md) element, based on whether the contents of the [Expr1](expr1-element-view.md) and [Expr2](expr2-element-view.md) elements are equal.
+
 ```XML
 <IfEqual>
   <Expr1><Today/></Expr1>
@@ -66,7 +65,6 @@ The following example uses the **IfEqual** element to render either the [Then](t
 
 ## See also
 
-- [Else element (View)](else-element-view.md) 
-- [Expr1 element (View)](expr1-element-view.md) 
+- [Else element (View)](else-element-view.md)
+- [Expr1 element (View)](expr1-element-view.md)
 - [Expr2 element (View)](expr2-element-view.md)
-

@@ -1,10 +1,10 @@
 ---
 title: Elements Element (Module)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (Module) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ac8cd872-30aa-4f0c-8ee5-d4242dab4350
 ---
@@ -65,7 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 None
 
-## Example 
+## Example
 
 For an example of how this element is used, see [Modules](modules.md).
 
@@ -73,11 +73,3 @@ For an example of how this element is used, see [Modules](modules.md).
 
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-
-

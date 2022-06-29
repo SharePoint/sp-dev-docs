@@ -1,6 +1,7 @@
 ---
 title: Working with the SharePoint Workflow Services Client Side Object Model
-ms.date: 09/25/2017
+description: Demonstrates how to use the SharePoint client-side object model (CSOM) API to create and control Workflow Manager 1.0 workflow definitions and instances.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: e180c2fb-a903-4ded-884e-b7584fa99189
 ms.localizationpriority: high

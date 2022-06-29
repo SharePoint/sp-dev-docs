@@ -1,7 +1,7 @@
 ---
 title: Implement business logic and data validation in a Windows Phone app for SharePoint
 description: Implement data validation in a Windows Phone app created by using the Windows Phone SharePoint List Application template.
-ms.date: 01/05/2020
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: fbbedc38-9651-4cd6-b523-d93cbf1cd39d
 ms.localizationpriority: medium
@@ -215,5 +215,5 @@ The validation logic in this sample enforces given business rules by indicating 
 - [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
 - [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
 - [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
-- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 - [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

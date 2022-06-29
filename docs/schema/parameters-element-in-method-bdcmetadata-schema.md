@@ -1,13 +1,12 @@
 ---
 title: Parameters Element in Method (BDCMetadata Schema)
-description: Details on the Parameters Element in Method (BDCMetadata Schema)
+description: Describes the Parameters element in Method (BDCMetadata Schema) and provides the elements and attributes.
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Parameters
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 343f4c25-e122-1a4c-2b80-bb8f25e3cc82
 ---
@@ -36,50 +35,14 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameter-element-in-parameters-bdcmetadata-schema.md">Parameter Element in Parameters (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>A parameter.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Element | Description |
+| --- | --- |
+| [Parameter Element in Parameters (BDCMetadata Schema)](parameter-element-in-parameters-bdcmetadata-schema.md) | A parameter. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The method these parameters belong to.</p></td>
-</tr>
-</tbody>
-</table>
 
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md) | The method these parameters belong to. |

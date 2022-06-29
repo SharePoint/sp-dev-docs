@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Contains a web part in a module of a site definition.
 # AllUsersWebPart element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains a web part in a module of a site definition.
-  
+
 ```XML
 <AllUsersWebPart
   ID = "Text"    WebPartOrder = "Integer"
@@ -38,23 +37,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**ID** <br/> |Optional **Text**.  <br/> |
 |**WebPartOrder** <br/> |Optional **Integer**. Specifies the vertical positioning of the web part within a zone.  <br/> |
 |**WebPartZoneID** <br/> |Optional **Text**. Specifies the zone for the web part.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [File](file-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ### Remarks
 
-For an example that uses the **AllUsersWebPart** element, see [Module element (Site)](module-element-site.md). 
-  
-
-
+For an example that uses the **AllUsersWebPart** element, see [Module element (Site)](module-element-site.md).

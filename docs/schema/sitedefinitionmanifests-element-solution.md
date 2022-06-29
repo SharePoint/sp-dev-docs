@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies the site definitions to include in the solution.
 # SiteDefinitionManifests element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the site definitions to include in the solution.
-  
+
 ```XML
 <SiteDefinitionManifests
   <SiteDefinitionManifest
@@ -38,17 +37,15 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)
-   
+
 ### Parent elements
 
 - [Solution](solution-element-solution.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

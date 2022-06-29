@@ -2,12 +2,11 @@
 title: Entity Element in Entities (BDCMetadata Schema)
 description: Details on the Entity Element in Entities (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Entity
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a8455bc4-12d8-85e0-146e-5d1d8579e1f5
 ---
@@ -132,50 +131,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The localized display names of this external content type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The properties of this external content type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-bdcmetadata-schema.md">AccessControlList Element (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The access control list (ACL) of this external content type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="identifiers-element-in-entity-bdcmetadata-schema.md">Identifiers Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The identifiers of the external content type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadata-schema.md">Methods Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The methods of the external content type.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadata-schema.md">AssociationGroups Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The association groups of the external content type.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The actions of the external content type.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized display names of this external content type. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of this external content type. |
+| [AccessControlList Element (BDCMetadata Schema)](accesscontrollist-element-bdcmetadata-schema.md) | The access control list (ACL) of this external content type. |
+| [Identifiers Element in Entity (BDCMetadata Schema)](identifiers-element-in-entity-bdcmetadata-schema.md) | The identifiers of the external content type. |
+| [Methods Element in Entity (BDCMetadata Schema)](methods-element-in-entity-bdcmetadata-schema.md) | The methods of the external content type. |
+| [AssociationGroups Element in Entity (BDCMetadata Schema)](associationgroups-element-in-entity-bdcmetadata-schema.md) | The association groups of the external content type. |
+| [Actions Element in Entity (BDCMetadata Schema)](actions-element-in-entity-bdcmetadata-schema.md) | The actions of the external content type. |
 
-<br/>
 
 ### Parent elements
 
@@ -192,7 +157,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entities-element-in-lobsystem-bdcmetadata-schema.md">Entities Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span><a href="entities-element-in-lobsystem-bdcmetadata-schema.md">Entities Element in LobSystem (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The list of external content types in this external system.</p></td>
 </tr>
 </tbody>
@@ -203,11 +168,3 @@ The following sections describe attributes, child elements, and parent elements.
 ## See also
 
 - [What Are External Content Types?](https://msdn.microsoft.com/library/2d8d2614-faaa-4ba2-a897-615a383c36a9(Office.15).aspx)
-
-
-
-
-
-
-
-

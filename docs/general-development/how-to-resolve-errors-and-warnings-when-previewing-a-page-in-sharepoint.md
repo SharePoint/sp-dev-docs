@@ -1,7 +1,7 @@
 ---
 title: Resolve errors and warnings when previewing a page in SharePoint
 description: After you convert an HTML file into a SharePoint master page, or after you create a page layout, you can preview that page in the browser. But before you can preview a master page or page layout, you may have to resolve any issues that prevent the server-side preview from rendering your page.
-ms.date: 06/22/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 03f72f65-b22b-4304-be92-f44ce0619372
 ms.localizationpriority: high
@@ -28,7 +28,7 @@ Here are the preview errors and warnings that you might encounter, and help for 
 
 ### Resolution
 
-SharePoint pages are already wrapped in a **\<form\>** tag so that ASP.NET can do post-backs (specifically, a SharePoint.master page contains the **<SharePoint:SharePointForm>** tag that creates an actual **\<form\>** tag when an associated content page is rendered). So, including a **\<form\>** tag on your master page or page layout means that there would be nested **\<form\>** tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any **\<form\>** tags, save the page, and then refresh the preview.
+SharePoint pages are already wrapped in a **\<form\>** tag so that ASP.NET can do post-backs (specifically, a SharePoint.master page contains the **\<SharePoint:SharePointForm\>** tag that creates an actual **\<form\>** tag when an associated content page is rendered). So, including a **\<form\>** tag on your master page or page layout means that there would be nested **\<form\>** tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any **\<form\>** tags, save the page, and then refresh the preview.
 
 If you want an HTML **\<form\>** tag in the page layout, you should put the form within a content placeholder with the ID **PlaceHolderUtilityContent** by adding this code to your HTML page layout:
 

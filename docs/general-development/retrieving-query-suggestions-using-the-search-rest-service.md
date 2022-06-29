@@ -1,6 +1,7 @@
 ---
 title: Retrieving query suggestions using the Search REST service
-ms.date: 09/25/2017
+description: Describes how to use the Search REST service to retrieve query suggestions from Search in SharePoint.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: a64c5bec-64a8-4752-9c72-433d1c864aed
 ms.localizationpriority: high

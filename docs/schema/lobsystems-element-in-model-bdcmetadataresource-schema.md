@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 01/27/2021
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e26b7780-1968-f70f-1b9f-53dc30f90ea6
 ---
@@ -31,45 +30,12 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
+|Element|
+|----|
+|[LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md)|
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md">LobSystem Element in LobSystems (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
 
 ### Parent elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadataresource-schema.md">Model Element (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+|Element|
+|----|
+|[Model Element (BDCMetadataResource Schema)](model-element-bdcmetadataresource-schema.md)|

@@ -1,8 +1,7 @@
 ---
 title: Use the MSGraphClient to connect to Microsoft Graph
 description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
-ms.date: 12/04/2020
-ms.prod: sharepoint
+ms.date: 6/21/2022
 ms.localizationpriority: high
 ---
 
@@ -38,7 +37,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
         // ...
 
         this.context.msGraphClientFactory
-          .getClient()
+          .getClient('3')
           .then((client: MSGraphClient): void => {
             // use MSGraphClient here
           });
@@ -56,7 +55,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
         // ...
 
         this.context.msGraphClientFactory
-          .getClient()
+          .getClient('3')
           .then((client: MSGraphClient): void => {
             // get information about the current user from the Microsoft Graph
             client
@@ -95,7 +94,7 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
         // ...
 
         this.context.msGraphClientFactory
-          .getClient()
+          .getClient('3')
           .then((client: MSGraphClient): void => {
             // get information about the current user from the Microsoft Graph
             client

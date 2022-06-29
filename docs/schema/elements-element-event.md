@@ -1,10 +1,10 @@
 ---
 title: Elements Element (Event)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (Event) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 06de57cf-9f25-4949-91de-5c9dda88da69
 ---
@@ -68,11 +68,3 @@ None
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-

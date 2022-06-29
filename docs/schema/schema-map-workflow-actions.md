@@ -1,10 +1,10 @@
 ---
 title: Schema map (Workflow actions)
+description: This topic shows the schema definition for Schema file name.
 manager: laurawi
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d7e60875-b06d-9475-d823-08079b376ef3
 ---
@@ -20,10 +20,10 @@ This topic shows the schema definition for **Schema file name**.
 <xs:schema
       elementFormDefault
         =" qualified"
-                                  
+
         s
         =" http://www.w3.org/2001/XMLSchema"
-                                  
+
         core
         =" http://schemas.microsoft.com/sharepoint/soap/"
                                   >
@@ -46,14 +46,14 @@ This topic shows the schema definition for **Schema file name**.
       <xs:element name="RuleDesigner"
          type="ruleDesignerType">
       </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="ItemKeyType"
       type="s:string"
         />
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="Condition"
          minOccurs="0"
         maxOccurs="unbounded"
@@ -65,13 +65,13 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="1"
        >
      </xs:element>
-     
+
         <xs:element name="Parameters"
          type="parametersType" minOccurs="1"
         maxOccurs="1"
        >
      </xs:element>
-     
+
           </xs:all>
         <xs:attribute name="Type"
       type="s:string"
@@ -104,7 +104,7 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="And"
       type="s:string"
@@ -123,7 +123,7 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="Actions"
          minOccurs="0"
         maxOccurs="1"
@@ -135,7 +135,7 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="1"
        >
      </xs:element>
-     
+
         <xs:element name="Action"
          minOccurs="0"
         maxOccurs="unbounded"
@@ -147,19 +147,19 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="1"
        >
      </xs:element>
-     
+
         <xs:element name="RuleDesigner"
          type="ruleDesignerType" minOccurs="1"
         maxOccurs="1"
        >
      </xs:element>
-     
+
         <xs:element name="DataSources"
          type="dataSourcesType" minOccurs="0"
         maxOccurs="1"
        >
      </xs:element>
-     
+
         <xs:element name="Modifications"
          minOccurs="0"
         maxOccurs="1"
@@ -183,11 +183,11 @@ This topic shows the schema definition for **Schema file name**.
          use="required"
         />
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="ActionVariables"
          minOccurs="0"
         maxOccurs="1"
@@ -197,11 +197,11 @@ This topic shows the schema definition for **Schema file name**.
         <xs:element name="ActionVariables"
         >
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="ActionBody"
          minOccurs="0"
         maxOccurs="1"
@@ -211,11 +211,11 @@ This topic shows the schema definition for **Schema file name**.
         <xs:element name="ActionBody"
         >
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="ActionConditions"
          minOccurs="0"
         maxOccurs="1"
@@ -225,11 +225,11 @@ This topic shows the schema definition for **Schema file name**.
         <xs:element name="ActionConditions"
         >
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
           </xs:all>
         <xs:attribute name="Name"
       type="s:string"
@@ -281,7 +281,7 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="Sequential"
       type="s:string"
@@ -291,7 +291,7 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="CompositeSteps"
          minOccurs="0"
         maxOccurs="1"
@@ -307,7 +307,7 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="1"
        >
      </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="Name"
       type="s:string"
@@ -333,11 +333,11 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="VariableTypes"
          minOccurs="0"
         maxOccurs="1"
@@ -367,11 +367,11 @@ This topic shows the schema definition for **Schema file name**.
       type="s:boolean"
         />
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="AssemblyRedirects"
          minOccurs="0"
         maxOccurs="1"
@@ -389,11 +389,11 @@ This topic shows the schema definition for **Schema file name**.
          use="required"
         />
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="Coercions"
          minOccurs="0"
         maxOccurs="1"
@@ -411,7 +411,7 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="1"
        >
      </xs:element>
-     
+
           </xs:all>
         <xs:attribute name="Name"
       type="s:string"
@@ -459,11 +459,11 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="Events"
          minOccurs="0"
         maxOccurs="1"
@@ -495,11 +495,11 @@ This topic shows the schema definition for **Schema file name**.
          use="required"
         />
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="Flows"
          minOccurs="0"
         maxOccurs="1"
@@ -517,13 +517,13 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="1"
        >
      </xs:element>
-     
+
         <xs:element name="Parameters"
          type="parametersType" minOccurs="1"
         maxOccurs="1"
        >
      </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="Name"
       type="s:string"
@@ -535,11 +535,11 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="Blocks"
          minOccurs="0"
         maxOccurs="1"
@@ -551,18 +551,18 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="unbounded"
        >
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
           </xs:all>
         <xs:attribute name="Language"
       type="s:string"
         />
           </xs:complexType>
      </xs:element>
-     
+
               <xs:complexType name="ruleDesignerType">
               <xs:sequence>
         <xs:element name="FieldBind"
@@ -590,7 +590,7 @@ This topic shows the schema definition for **Schema file name**.
       type="s:string"
         />
      </xs:element>
-     
+
         <xs:element name="DataSourceRef"
          minOccurs="1"
         maxOccurs="unbounded"
@@ -599,7 +599,7 @@ This topic shows the schema definition for **Schema file name**.
       type="s:string"
         />
      </xs:element>
-     
+
           </xs:choice>
         <xs:attribute name="Field"
       type="s:string"
@@ -635,7 +635,7 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="Sentence"
       type="s:string"
@@ -646,7 +646,7 @@ This topic shows the schema definition for **Schema file name**.
         <xs:element name="RuleDesigner"
          type="ruleDesignerType">
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
               <xs:complexType name="parametersType">
@@ -689,7 +689,7 @@ This topic shows the schema definition for **Schema file name**.
       type="s:string"
         />
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
               <xs:complexType name="propertiesType">
@@ -715,7 +715,7 @@ This topic shows the schema definition for **Schema file name**.
       type="s:string"
         />
      </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="Name"
       type="s:string"
@@ -733,7 +733,7 @@ This topic shows the schema definition for **Schema file name**.
         maxOccurs="unbounded"
        >
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
               <xs:complexType name="dataSourceType">
@@ -762,11 +762,11 @@ This topic shows the schema definition for **Schema file name**.
       type="s:string"
         />
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="ContentType"
          minOccurs="0"
         maxOccurs="1"
@@ -775,7 +775,7 @@ This topic shows the schema definition for **Schema file name**.
       type="s:string"
         />
      </xs:element>
-     
+
         <xs:element name="Dictionary"
          minOccurs="0"
         maxOccurs="1"
@@ -784,17 +784,17 @@ This topic shows the schema definition for **Schema file name**.
       type="s:string"
         />
      </xs:element>
-     
+
         <xs:element name="NestedInitiationFieldNodes"
          minOccurs="0"
         maxOccurs="1"
        >
      </xs:element>
-     
+
           </xs:choice>
           </xs:complexType>
      </xs:element>
-     
+
         <xs:element name="Evaluation"
         >
               <xs:complexType>
@@ -802,18 +802,18 @@ This topic shows the schema definition for **Schema file name**.
         <xs:element name="ActivitySource"
         >
      </xs:element>
-     
+
         <xs:element name="HashtableSource"
         >
         <xs:attribute name="HashtableFrom"
       type="s:string"
         />
      </xs:element>
-     
+
           </xs:choice>
           </xs:complexType>
      </xs:element>
-     
+
           </xs:sequence>
         <xs:attribute name="InternalName"
       type="s:string"
@@ -855,11 +855,11 @@ This topic shows the schema definition for **Schema file name**.
         <xs:element name="ActivityBody"
         >
      </xs:element>
-     
+
           </xs:sequence>
           </xs:complexType>
      </xs:element>
-     
+
           </xs:all>
         <xs:attribute name="Name"
       type="s:string"
@@ -874,16 +874,8 @@ This topic shows the schema definition for **Schema file name**.
         />
           </xs:complexType>
      </xs:element>
-     
+
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
-```                        
-
-
-
-
-
-
-
-
+```

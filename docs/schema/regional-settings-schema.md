@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Regional Settings schema
@@ -17,27 +16,27 @@ description: "The Regional Settings schema defines the time zones, locales, lang
 # Regional Settings schema
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 The Regional Settings schema is used to define the time zones, locales, languages, and currencies implemented within a SharePoint Foundation deployment. This schema is expressed primarily through two files located in the setup directory, RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) and TIMEZONE.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\CONFIG).
-  
-You can access or modify regional settings through various members of the following classes in the [Microsoft.SharePoint](https://msdn.microsoft.com/library/Microsoft.SharePoint.aspx) namespace: 
-  
+
+You can access or modify regional settings through various members of the following classes in the [Microsoft.SharePoint](https://msdn.microsoft.com/library/Microsoft.SharePoint.aspx) namespace:
+
 [SPRegionalSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRegionalSettings.aspx)
-  
+
 [SPTimeZone](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPTimeZone.aspx)
-  
+
 [SPTimeZoneCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPTimeZoneCollection.aspx)
-  
+
 [SPTimeZoneInformation](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPTimeZoneInformation.aspx)
-  
+
 [SPLocale](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLocale.aspx)
-  
+
 [SPLocaleCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLocaleCollection.aspx)
-  
+
 [SPLanguage](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLanguage.aspx)
-  
+
 [SPLanguageCollection](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPLanguageCollection.aspx)
-  
+
 ## Regional Settings elements
 
 ### RGNLSTNG.XML
@@ -60,7 +59,7 @@ You can access or modify regional settings through various members of the follow
 
 [TimeZones](timezones-element-regional-settings.md)
 
-  
+
 ### TIMEZONE.XML
 
 [Bias](bias-element-regional-settings.md)
@@ -86,4 +85,3 @@ You can access or modify regional settings through various members of the follow
 [TimeZone](timezone-element-regional-settings.md)
 
 [TimeZones](timezones-element-regional-settings.md)
-

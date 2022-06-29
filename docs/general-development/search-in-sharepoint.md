@@ -1,6 +1,7 @@
 ---
 title: Search in SharePoint
-ms.date: 05/12/2020
+description: Provides an overview of searching in SharePoint and details the search architecture and search extensibility points.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 59220f81-0e5e-4945-8056-cf0a116446cb
 ms.localizationpriority: high
@@ -221,7 +222,7 @@ Table 1 shows the APIs that you can use to program Search in SharePoint and wher
 **Table 1. Search APIs**
 
 
-|**API name**|**Class library or schema and path**|
+|API name|Class library or schema and path|
 |:-----|:-----|
 |.NET client object model (CSOM)  <br/> |Microsoft.SharePoint.Client.Search.dll <br/>%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI  <br/> |
 |Silverlight CSOM  <br/> |Microsoft.SharePoint.Client.Search.Silverlight.dll <br/>%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS\\ClientBin  <br/> |

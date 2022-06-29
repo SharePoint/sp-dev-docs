@@ -1,15 +1,15 @@
 ---
 title: UpgradedEventEndpoint element (PropertiesDefinition complexType)
+description: Describes the definition, element, and attribute information for the UpgradedEventEndpoint element (PropertiesDefinition complexType).
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 09a93d44-d295-47bb-f91c-d243178b0f53
 ---
 
-# UpgradedEventEndpoint element (PropertiesDefinition complexType) 
+# UpgradedEventEndpoint element (PropertiesDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: 09a93d44-d295-47bb-f91c-d243178b0f53
 
 The Url of the upgraded event receiver endpoint.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | UrlElementDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -36,7 +36,7 @@ The Url of the upgraded event receiver endpoint.
          maxOccurs="1"
         >
         </xs:element>
-```        
+```
 
 ## Elements and attributes
 
@@ -77,5 +77,3 @@ None.
 <br/>
 
 <br/>
-
-

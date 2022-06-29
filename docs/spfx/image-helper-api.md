@@ -2,7 +2,6 @@
 title: Image Helper API
 description: Learn how to use the Image Helper API in the SharePoint Framework to provide web-friendly optimized image links.
 ms.date: 02/25/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Image Helper API

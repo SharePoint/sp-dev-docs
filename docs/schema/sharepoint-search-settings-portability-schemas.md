@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 9/18/2015
 ms.audience: Developer
 ms.topic: overview
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f06f101e-b2e6-4e3e-9194-f750ab28d966
 description: The search settings portability schemas describe the XML files you need when you port SharePoint 2013 Search settings from one installation to another.
@@ -30,12 +29,5 @@ The search settings portability schemas describe the XML files you need when you
 
 <br/>
 
-> [!NOTE] 
+> [!NOTE]
 > You can [download the schemas](https://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip).
-
-
-
-
-
-
-

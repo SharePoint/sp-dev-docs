@@ -1,8 +1,7 @@
 ---
 title: Responding to changes
 description: Responding to changes
-ms.date: 12/12/2018
-ms.prod: sharepoint
+ms.date: 06/28/2022
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint
@@ -16,7 +15,7 @@ Responding to changes is a very common requirement for SharePoint customizations
 
 ## High-level guideline/general rules
 Before digging into the details of the various options that you have to handle changes, let's see some common high-level guidelines and general rules:
-* Whenever you need to manage an event coming from SharePoint, try to apply an asynchronous pattern, where you collect the basic information about the happening, you give back control to SharePoint, and you use a background job to process the real business logic for the event. You can use an Azure Function, an Azure Web Job, or whatever else background job technique to process the event. At the same time you can use a queue, or a database table, or any other reliable persistence storage to store information about the event that will be processed. Upon receival of the event from SharePoint, you store the information in the persistence layer, and afterwards you raise the background job. 
+* Whenever you need to manage an event coming from SharePoint, try to apply an asynchronous pattern, where you collect the basic information about the happening, you give back control to SharePoint, and you use a background job to process the real business logic for the event. You can use an Azure Function, an Azure Web Job, or whatever else background job technique to process the event. At the same time you can use a queue, or a database table, or any other reliable persistence storage to store information about the event that will be processed. Upon receival of the event from SharePoint, you store the information in the persistence layer, and afterwards you raise the background job.
 * If you are processing a synchronous event, try to avoid as much as you can blocking SharePoint. Rather refer to the asynchronous pattern described in the previous bullet.
 * Consider using an App-Only security model, whenever you need to do background processing of an event, so that you will not need to make the users' credentials flow into your event handling service/solution. Nevertheless, there are some activities which simply cannot be executed within an App-Only context. If that is the case, try to pass in a secure way an OAuth Access Token to the background job, rather than a set of user's credentials. The fact that an Access Token expires, and has a limited and pre-defined set of permission scopes associated, will keep the overall solution more secure.
 
@@ -28,13 +27,13 @@ The Webhooks are a modern option, available in SharePoint Online only at the tim
 For further details about Webhooks you can read the following articles, inspect the following samples and solutions, or watch the following videos.
 
 ### Articles
-* [Overview of SharePoint webhooks](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks)
-* [Get started with SharePoint webhooks](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/get-started-webhooks)
-* [Using Azure Functions with SharePoint webhooks](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/sharepoint-webhooks-using-azure-functions)
-* [SharePoint list webhooks](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks)
+* [Overview of SharePoint webhooks](/sharepoint/dev/apis/webhooks/overview-sharepoint-webhooks)
+* [Get started with SharePoint webhooks](/sharepoint/dev/apis/webhooks/get-started-webhooks)
+* [Using Azure Functions with SharePoint webhooks](/sharepoint/dev/apis/webhooks/sharepoint-webhooks-using-azure-functions)
+* [SharePoint list webhooks](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks)
 
 ### Samples
-* [SharePoint webhooks sample reference implementation](https://docs.microsoft.com/sharepoint/dev/apis/webhooks/webhooks-reference-implementation)
+* [SharePoint webhooks sample reference implementation](/sharepoint/dev/apis/webhooks/webhooks-reference-implementation)
 * [SharePoint Web Hooks Azure AD reference implementation](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples/WebHooks.List.AzureAD)
 * [SharePoint Web Hooks reference implementation](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples/WebHooks.List)
 * [Sample Node.js SharePoint webhook application](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples/WebHooks.Nodejs)
@@ -51,12 +50,12 @@ _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 The Remote Event Receivers are a capability introduced with the SharePoint Add-In model, and they target both SharePoint on-premises 2013/2016 and SharePoint Online. The idea is to have a SOAP endpoint, usually implemented using Windows Communication Foundation (WCF), which can be invoked by SharePoint upon the happening of events. The Remote Event Receivers provide both -ing events, which are notified while something is happening, and -ed events, which are notified after something already happened. As such, a Remote Event Receiver can even cancel an event that is happening. The family of events that can be tracked are related to lists, items, sites, permissions, and many others. Here follows a list of topics that you can inspect to dig into the Remote Event Receivers.
 
 ### Articles
-* [Create a remote event receiver in SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins)
-* [Use remote event receivers in SharePoint](https://docs.microsoft.com/sharepoint/dev/solution-guidance/use-remote-event-receivers-in-sharepoint)
-* [Event receivers and list event receivers in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in)
-* [Handle events in SharePoint Add-ins](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/handle-events-in-sharepoint-add-ins)
-* [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](https://docs.microsoft.com/sharepoint/dev/sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in)
-* [Sandbox solution transformation guidance - Event receivers](https://docs.microsoft.com/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance-event-receivers)
+* [Create a remote event receiver in SharePoint Add-ins](/sharepoint/dev/sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins)
+* [Use remote event receivers in SharePoint](/sharepoint/dev/solution-guidance/use-remote-event-receivers-in-sharepoint)
+* [Event receivers and list event receivers in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in)
+* [Handle events in SharePoint Add-ins](/sharepoint/dev/sp-add-ins/handle-events-in-sharepoint-add-ins)
+* [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](/sharepoint/dev/sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in)
+* [Sandbox solution transformation guidance - Event receivers](/sharepoint/dev/solution-guidance/sandbox-solution-transformation-guidance-event-receivers)
 
 ### Samples
 * [SharePoint List Item Change Monitor](https://github.com/SharePoint/PnP/tree/master/Samples/Core.ListItemChangeMonitor)
@@ -94,9 +93,9 @@ Another option that you have are the workflows for SharePoint 2013/2016, which a
 One third and last option is using Microsoft Flow, which - at the time of this writing - is a cloud-only flow definition and management tool. It is really powerful whenever you need to process events with custom user's defined processes, where the key business users self-design their processes.
 
 ### Articles
-* [Workflows in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/workflows-in-sharepoint)
-* [Workflows, actions (activities), events, and forms in the SharePoint Add-in model](https://docs.microsoft.com/sharepoint/dev/solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in)
-* [Call web services from SharePoint workflows](https://docs.microsoft.com/sharepoint/dev/solution-guidance/call-web-services-from-sharepoint-workflows)
+* [Workflows in SharePoint](/sharepoint/dev/general-development/workflows-in-sharepoint)
+* [Workflows, actions (activities), events, and forms in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in)
+* [Call web services from SharePoint workflows](/sharepoint/dev/solution-guidance/call-web-services-from-sharepoint-workflows)
 * [Introducing Microsoft Flow integration for SharePoint Document Libraries](https://flow.microsoft.com/blog/flow-in-spo-document-libraries/)
 
 ### Videos

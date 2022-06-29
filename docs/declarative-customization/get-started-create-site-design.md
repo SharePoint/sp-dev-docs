@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site templates and site scripts
 description: Create site templates to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
-ms.date: 09/28/2021
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -102,7 +102,7 @@ C:\> Add-SPOSiteDesign
  -Description "Tracks key customer data in a list"
 ```
 
-The previous cmdlet creates a new site template named Contoso customer tracking. 
+The previous cmdlet creates a new site template named Contoso customer tracking.
 
 | Parameter            | Value                | Site template type |
 | :------------------- | :------------------- |:----------------|
@@ -133,7 +133,7 @@ Now that you've added a site script and site template, you can use it to create 
 8. Once applied, your new template will display under the tab in the template viewer titled **From your organization.**
 9. When the new template has been applied, you will see the custom list on the page.
 
-### Apply to an existing site 
+### Apply to an existing site
 
 You can also apply a published site template to existing sites. On the home page of the site, site owners can navigate to **Settings** and then **Apply a site template** to browse and apply templates provided by your organization and Microsoft.
 

@@ -1,28 +1,28 @@
 ---
 title: ClientWebPartDefinitionContentType simpleType
+description: Describes the definition, type information, and enumeration values for ClientWebPartDefinitionContentType simpleType.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f097071f-3a01-20c3-1178-860270677478
 ---
 
-# ClientWebPartDefinitionContentType simpleType 
+# ClientWebPartDefinitionContentType simpleType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
-|---|---|
-| **Base Type**  | xs:string |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| Information | Location |
+|-------------|----------|
+| **Base Type** | xs:string |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | apphostwebfeatures.xsd |
 
 ## Definition
 
@@ -58,10 +58,3 @@ ms.assetid: f097071f-3a01-20c3-1178-860270677478
 <br/>
 
 <br/>
-
-
-
-
-
-
-

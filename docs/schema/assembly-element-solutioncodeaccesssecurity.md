@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies an assembly in a solution's code access security policy.
 # Assembly element (Solution - CodeAccessSecurity)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies an assembly in a solution's code access security policy.
-  
+
 ```XML
 <Assembly
   Name = "Text"
@@ -39,17 +38,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**Name** <br/> |Optional **Text**. The name of the assembly.  <br/> |
 |**PublicKeyBlob** <br/> |Optional **Text**. The assembly's public key, in binary format.  <br/> |
 |**Version** <br/> |Optional **Text**. The version of the assembly.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Assemblies](assemblies-element-solutioncodeaccesssecurity.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

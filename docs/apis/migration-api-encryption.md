@@ -1,10 +1,11 @@
 ---
 title: OneDrive for Business and SharePoint Online Migration API – Encryption
+description: "How to pass encrypted content at rest to the API securely."
+ms.date: 6/20/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
-ms.date: 6/20/2018
-description: "How to pass encrypted content at rest to the API securely."
+ms.subservice: migration-tool
 ms.localizationpriority: medium
 ---
 
@@ -20,18 +21,19 @@ Content
 
 - Files
 - Manifest
-    - Metadata
-    - Permissions
-    - List items
-    - Taxonomy
-    - Logs (created by SharePoint Online to report back on the migration results)
+  - Metadata
+  - Permissions
+  - List items
+  - Taxonomy
+  - Logs (created by SharePoint Online to report back on the migration results)
 - Queue
-    - Real time reportig on the progress
+  - Real time reportig on the progress
 
 ## What is the encryption feature?
 
-When using the encryption parameter, everything listed above will be encrypted at rest and the key will need to be preserved in order to read the logs and the real time progress. 
-The main benefits is making the content useless for a malicious user who would manage to breach into the Azure container. 
+When using the encryption parameter, everything listed above will be encrypted at rest and the key will need to be preserved in order to read the logs and the real time progress.
+
+The main benefits is making the content useless for a malicious user who would manage to breach into the Azure container.
 
 This comes with a small cost of performance. This feature is optional when using the API and it is recommended to only use it for the most confidential information since it does reduce the speed of the migration by a small portion. Microsoft destroys the key once the migration job is finished and there is no way to recover the key if lost, not even from support.
 
@@ -58,10 +60,10 @@ Example:
 
 ## Extra requirement
 
-For the encryption, each file must be encrypted and have an IV assigned to it. The encryption method should follow the AES CBC 256 Standard. A unique, cryptographically-random IV must be generated for every file including the manifests in the package and should be stored as a property on each files. Use the AesCryptoServiceProvider.GenerateIV method to generate a unique random IV for each file. 
+For the encryption, each file must be encrypted and have an IV assigned to it. The encryption method should follow the AES CBC 256 Standard. A unique, cryptographically-random IV must be generated for every file including the manifests in the package and should be stored as a property on each files. Use the AesCryptoServiceProvider.GenerateIV method to generate a unique random IV for each file.
 
-- Name = [IV] 
-- Value = [Base64encoded byte array of the IV]
+- **Name**: [IV]
+- **Value**: [Base64encoded byte array of the IV]
 
 ## Reading the queue when encrypted
 
@@ -72,13 +74,13 @@ It is important to remember the Job ID. Without the specific key used for the jo
 Here is the JSON content in the queue message
 
 ```json
-{"Label", "Encrypted"},
-{"JobId", "[JobId value]"},
-{"IV", "[IV value in base64format]"},     
-{"Content", "[encrypted message in base64string]"}  
+{"Label": "Encrypted"},
+{"JobId": "[JobId value]"},
+{"IV": "[IV value in base64format]"},
+{"Content": "[encrypted message in base64string]"}
 ```
 
 Once the messages are decrypted, they will be the same as the API without encryption.
 
->[!NOTE]
->The **Migration** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center. 
+> [!NOTE]
+> The **Migration** is not available for users of Office 365 operated by 21Vianet in China. It is also not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.

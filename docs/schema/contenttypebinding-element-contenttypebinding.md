@@ -1,10 +1,10 @@
 ---
 title: ContentTypeBinding Element (ContentTypeBinding)
+description: Outlines information, a definition, elements and attributes for the ContentTypeBinding element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0e8825a9-29a0-48ee-bf97-2276e786fb46
 ---
@@ -20,7 +20,7 @@ Specifies a content type to provision on a list defined in the onet.xml schema.
 ```XML
 <ContentTypeBinding
     ContentTypeId="Text"
-    ListUrl="Text" 
+    ListUrl="Text"
     RootWebOnly="TRUE" | "FALSE"
 />
 ```
@@ -60,29 +60,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None</p></td>
-</tr>
-</tbody>
-</table>
+None
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="elements-element-contenttypebinding.md">Elements Element (ContentTypeBinding)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[Elements Element (ContentTypeBinding)](elements-element-contenttypebinding.md)
 
 ### Remarks
 
@@ -93,7 +75,7 @@ Lists defined in the onet.xml schema cannot be modified directly.
 Following is an example of the **ContentTypeBinding** element specifying the content type to bind to the specified list.
 
 ```XML
-    <?xml version="1.0" encoding="utf-8" ?> 
+    <?xml version="1.0" encoding="utf-8" ?>
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
         <ContentTypeBinding ContentTypeId="0x010102" ListUrl="Shared Documents" />
         <ContentTypeBinding ContentTypeId="0x010108" ListUrl="Shared Documents" />
@@ -103,11 +85,3 @@ Following is an example of the **ContentTypeBinding** element specifying the con
 ## See also
 
 - [Content Type Bindings](content-type-bindings.md)
-
-
-
-
-
-
-
-

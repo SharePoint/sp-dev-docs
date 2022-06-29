@@ -2,7 +2,6 @@
 title: Explore Geolocation capability via property pane of card-desinger card in Adaptive Card Extension
 description: Geolocation is a new action that the SharePoint Adaptive Card Extension framework supports, and in this tutorial we see how we can explore this capability via the property pane of the card-designer card.
 ms.date: 04/06/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -25,7 +24,7 @@ Next, click the pencil icon adjacent to this card to open the property pane.
 
 Here, first set the `card size` to `Large`.
 
-To provide descriptive labels, change `Title` to `GeoLocation`, `Heading` to `GeoLocation Demo` and `description` to `Demo GeoLocation Actions`. 
+To provide descriptive labels, change `Title` to `GeoLocation`, `Heading` to `GeoLocation Demo` and `description` to `Demo GeoLocation Actions`.
 
 ![Adding strings in the property pane of card designer card](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionPropertyPaneStrings.png)
 
@@ -63,7 +62,7 @@ Now close the property pane and click `Preview` from the top right hand corner o
 - Clicking on `My location` will open a map showing your current location
 - Clicking on `Show custom location` will open a map showing your custom location (Mount Everest)
 
-You can now check out the three geolocation actions that you introduced via the property pane. 
+You can now check out the three geolocation actions that you introduced via the property pane.
 
 ![Card-Designer card with geolocation actions configured](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionPropertyPaneCardGenerated.png)
 

@@ -1,15 +1,15 @@
 ---
 title: SchemaSource element
+description: SchemaSource element specifies how data source fields are displayed.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: aeeb657e-126d-7783-bf73-93b98c52b60b
 ---
 
-# SchemaSource element 
+# SchemaSource element
 
 (dataSourceType complexType) (Action4)
 
@@ -64,21 +64,21 @@ Specifies how data source fields are displayed.
          <xs:attribute name="Name" type="s:string" />
          <xs:attribute name="DisplayName" type="s:string" />
          <xs:attribute name="Type" type="s:string" />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="ContentType" minOccurs="0" maxOccurs="1">
          <xs:attribute name="IDFrom" type="s:string" />
-      </xs:element>  
+      </xs:element>
          <xs:element name="Dictionary" minOccurs="0" maxOccurs="1">
          <xs:attribute name="ValueFrom" type="s:string" />
-      </xs:element>  
+      </xs:element>
          <xs:element name="NestedInitiationFieldNodes" minOccurs="0" maxOccurs="1">
-      </xs:element>  
+      </xs:element>
            </xs:choice>
            </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -151,11 +151,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

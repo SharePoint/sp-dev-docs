@@ -458,7 +458,7 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.15 - June 1, 2022
+    - name: SPFx v1.15 - June 21, 2022
       href: spfx/release-1.15.md      
     - name: SPFx v1.14 - February 17, 2022
       href: spfx/release-1.14.md
@@ -501,7 +501,7 @@
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
   - name: SharePoint Framework Learn module
-    href: https://docs.microsoft.com/en-us/learn/paths/m365-sharepoint-associate/
+    href: /learn/paths/m365-sharepoint-associate/
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -555,7 +555,7 @@
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Viva Connections Extensibility Learn module
-    href: https://docs.microsoft.com/en-us/learn/paths/m365-extend-viva-connections/   
+    href: /learn/paths/m365-extend-viva-connections/   
 - name: Business Apps & Process Automation
   items:
   - name: Overview
@@ -2055,8 +2055,6 @@
     href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
-    - name: What's new in Migration API
-      href: apis/migration-api-whats-new.md
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
     - name: Migration permission guidance

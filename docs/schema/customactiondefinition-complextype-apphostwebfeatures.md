@@ -1,24 +1,23 @@
 ---
 title: CustomActionDefinition complexType
+description: Outlines information, a definition, and elements and attributes for the CustomActionDefinition complexType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8d49604c-98e1-e207-bc0e-de79ad3a8ff6
 ---
 
-# CustomActionDefinition complexType 
+# CustomActionDefinition complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
-
-|   |   |
+| Name  | Value  |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
@@ -232,9 +231,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 <br/>
-
-
-
-
-
-

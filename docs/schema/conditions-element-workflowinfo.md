@@ -6,7 +6,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 930e0d1c-a01a-4557-a58b-209621f1632e
 ---
@@ -21,7 +20,7 @@ When you are using a code-free workflow editor to develop workflows, conditions 
 
 The **Conditions** element is the parent element for all **Condition** elements.
 
-> [!NOTE] 
+> [!NOTE]
 > The attributes listed in the following table are only read from the default WSS.ACTIONS file and cannot be overridden in any custom .ACTIONS files.
 
 ## Definition
@@ -139,11 +138,3 @@ The following example demonstrates how to format the **Conditions** element so t
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
 - [WorkflowInfo element](workflowinfo-element-workflowinfo.md)
-
-
-
-
-
-
-
-

@@ -1,10 +1,10 @@
 ---
 title: Schema reference for SharePoint
+description: This section collects all SharePoint schemas into eight sections.
 manager: soliver
-ms.date: 9/14/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: overview
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e9c97a17-51ad-43ba-a94a-5078bcb83c74
 ---
@@ -34,9 +34,4 @@ This section collects all SharePoint schemas into eight sections, providing easy
 
 ## See also
 
-- [SharePoint glossary](../general-development/sharepoint-glossary.md) 
-
-
-
-
-
+- [SharePoint glossary](../general-development/sharepoint-glossary.md)

@@ -1,12 +1,12 @@
 ---
 title: ContentTypes element (WorkflowConfig)
+description: Provides a definition, example, elements and attributes for the ContentTypes element WorkflowConfig in Sharepoint.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8f42a4a9-8238-48e7-949d-3efd95c44b4c
 ---
@@ -43,30 +43,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttype-element-workflowconfig.md">ContentType Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+[ContentType Element (WorkflowConfig)](contenttype-element-workflowconfig.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="workflowconfig-element.md">WorkflowConfig Element</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
+[WorkflowConfig Element](workflowconfig-element.md)
 
 ### Remarks
 
@@ -84,11 +65,11 @@ The following example shows a **ContentTypes** element that contains a single co
 
 ```XML
       <ContentTypes>
-        <ContentType 
-          Name="Review New Document" 
+        <ContentType
+          Name="Review New Document"
           ContentTypeID=
-            "0x0108010086C115D5C5C27B439C22EB22F050B49B00DD9F97273595EA4BA32838A26054BF08" 
-          Form="/Workflows/Notify Me/Review New Document.aspx" 
+            "0x0108010086C115D5C5C27B439C22EB22F050B49B00DD9F97273595EA4BA32838A26054BF08"
+          Form="/Workflows/Notify Me/Review New Document.aspx"
           Description="Workflow used to review new documents">
           <Fields/>
         </ContentType>
@@ -101,11 +82,3 @@ The following example shows a **ContentTypes** element that contains a single co
 - [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
-
-
-
-
-
-
-
-

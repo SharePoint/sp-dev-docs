@@ -2,7 +2,6 @@
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
 ms.date: 02/10/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---

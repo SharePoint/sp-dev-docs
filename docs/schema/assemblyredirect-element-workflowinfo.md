@@ -1,12 +1,12 @@
 ---
 title: AssemblyRedirect element (WorkflowInfo)
+description: AssemblyRedirect element specifies a transformation from one binary file to another binary file in a versioned binary file system.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 74ddbc41-2cc4-433d-a38c-9dae695ea434
 ---
@@ -78,11 +78,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

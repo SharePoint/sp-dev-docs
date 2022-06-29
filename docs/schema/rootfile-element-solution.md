@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies a root path to which solution files are copied.
 # RootFile element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies a root path to which solution files are copied.
-  
+
 ```XML
 <RootFile
   Location = "Text">
@@ -35,19 +34,19 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Location** <br/> |Required **Text**. A path that is relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [RootFiles](rootfiles-element-solution.md)
-   
+
 ### Remarks
 
 Use this element to deploy a localization resource that is shared by several features. Shared localization resources are located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources folder. For example, the following XML deploys three shared localization resource files.
-  
+
 ```XML
 <RootFiles>
   <RootFile Location="Resources\wingtip.resx" />
@@ -62,7 +61,7 @@ For more information about using shared localization resources, see the descript
 <br/>
 
 Localization resources used by extensions to the Central Administration user interface are located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Config\AdminResources folder. The following XML deploys localization resource files to that folder.
-  
+
 ```XML
 <RootFiles>
   <RootFile Location="Config\AdminResources\wingtip.resx" />
@@ -71,5 +70,3 @@ Localization resources used by extensions to the Central Administration user int
 </RootFiles>
 
 ```
-
-
