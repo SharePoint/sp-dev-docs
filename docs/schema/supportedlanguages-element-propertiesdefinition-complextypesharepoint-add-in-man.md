@@ -5,12 +5,11 @@ ms.date: 06/14/2022
 description: Describes SupportedLanguages element (PropertiesDefinition complexType) and provides information elements and attributes.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7a8da886-5731-9abd-2911-5cd268bba4cf
 ---
 
-# SupportedLanguages element (PropertiesDefinition complexType) 
+# SupportedLanguages element (PropertiesDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 7a8da886-5731-9abd-2911-5cd268bba4cf
 
 Please do not use this element. It has been deprecated in favor of the **SupportedLocales** element.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -32,7 +31,7 @@ Please do not use this element. It has been deprecated in favor of the **Support
 ## Definition
 
 ```XML 
-    <xs:element name="SupportedLanguages" type="SupportedLanguagesDefinition" minOccurs="0" maxOccurs="1"></xs:element>     
+    <xs:element name="SupportedLanguages" type="SupportedLanguagesDefinition" minOccurs="0" maxOccurs="1"></xs:element>
 ```
 
 ## Elements and attributes
@@ -77,10 +76,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-
-

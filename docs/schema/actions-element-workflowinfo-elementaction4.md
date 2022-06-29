@@ -4,12 +4,11 @@ manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9323e205-67aa-89b9-45db-2a050cead9e1
 ---
 
-# Actions element (WorkflowInfo element) 
+# Actions element (WorkflowInfo element)
 
 (Action4)
 
@@ -46,20 +45,20 @@ Allows you to create custom workflow activities and expand the palette of availa
          <xs:element name="Default"      type="defaultElementType" minOccurs="0"     maxOccurs="1"    >
 
 
-      </xs:element>  
+      </xs:element>
          <xs:element name="Action"      minOccurs="0"     maxOccurs="unbounded"    >
                <xs:complexType>
                <xs:all>
          <xs:element name="Parameters"      type="parametersType" minOccurs="0"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="RuleDesigner"      type="ruleDesignerType" minOccurs="1"     maxOccurs="1"    >
 
 
-      </xs:element>  
+      </xs:element>
          <xs:element name="DataSources"      type="dataSourcesType" minOccurs="0"     maxOccurs="1"    >
 
 
-      </xs:element>  
+      </xs:element>
          <xs:element name="Modifications"      minOccurs="0"     maxOccurs="1"    >
 
 
@@ -71,10 +70,10 @@ Allows you to create custom workflow activities and expand the palette of availa
          <xs:attribute name="TypeId"   type="s:string"      use="required"     />
          <xs:attribute name="NameFormat"   type="s:string"      use="required"     />
          <xs:attribute name="FormURN"   type="s:string"      use="required"     />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="ActionVariables"      minOccurs="0"     maxOccurs="1"    >
 
 
@@ -83,10 +82,10 @@ Allows you to create custom workflow activities and expand the palette of availa
          <xs:element name="ActionVariables"     >
 
 
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="ActionBody"      minOccurs="0"     maxOccurs="1"    >
 
 
@@ -95,10 +94,10 @@ Allows you to create custom workflow activities and expand the palette of availa
          <xs:element name="ActionBody"     >
 
 
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="ActionConditions"      minOccurs="0"     maxOccurs="1"    >
 
 
@@ -107,10 +106,10 @@ Allows you to create custom workflow activities and expand the palette of availa
          <xs:element name="ActionConditions"     >
 
 
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="ClassName"   type="s:string"      use="required"     />
@@ -128,12 +127,12 @@ Allows you to create custom workflow activities and expand the palette of availa
          <xs:attribute name="SandboxedFunction"   type="s:boolean"     />
          <xs:attribute name="ShapeImageUrl"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="Sequential"   type="s:string"     />
          <xs:attribute name="Parallel"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -230,11 +229,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

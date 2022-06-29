@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, associationcategories element
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4296c120-5ebc-4b22-97cd-214146d5a65e
 ---
@@ -95,11 +94,3 @@ The following example specifies that the workflow can be associated with lists o
 - [Workflow Definitions](workflow-definitions.md)
 - [Workflows in Windows SharePoint Services](https://msdn.microsoft.com/library/be0888d4-20b2-4d39-bf28-2d8a71829d8e(Office.15).aspx)
 - [Workflow Deployment Using Features](https://msdn.microsoft.com/library/ad294f09-483d-4e87-bd19-fa37795ed558(Office.15).aspx)
-
-
-
-
-
-
-
-

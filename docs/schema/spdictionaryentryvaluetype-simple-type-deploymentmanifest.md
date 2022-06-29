@@ -5,15 +5,14 @@ ms.date: 06/13/2022
 description: Describes SPDictionaryEntryValueType Simple Type (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e0d2ac1f-b516-48f3-b291-ad32d1f2ab39
 ---
 
 # SPDictionaryEntryValueType Simple Type (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Indicates the data type of the specified field value.
 
 ## Definition
@@ -50,8 +49,7 @@ Indicates the data type of the specified field value.
 |**Double** <br/> |Treats as a **Double** data type.  <br/> |
 |**LongText** <br/> |Treats as a **String** data type.  <br/> |
 |**Empty** <br/> |No value.  <br/> |
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

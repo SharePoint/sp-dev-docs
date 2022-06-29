@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.DestinationEntity
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 15c53c3b-888d-67c7-af7d-ef36922eeebc
 ---
 
-# DestinationEntity Element in Association 
+# DestinationEntity Element in Association
 
 (BDCMetadata Schema)
 
@@ -66,15 +65,7 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md) |
-
-
-
-
-
-
-
-

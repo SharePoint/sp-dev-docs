@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fad74037-ed09-81cc-60f2-df2297b38bd7
 ---
@@ -83,11 +82,3 @@ This section contains documentation for the **BDC Metadata Resource schema (BDCM
 - [TypeDescriptor element in TypeDescriptors (BDCMetadataResource schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md)
 
 - [TypeDescriptors element in TypeDescriptor (BDCMetadataResource schema)](typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md)
-
-
-
-
-
-
-
-

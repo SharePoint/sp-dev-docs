@@ -5,7 +5,6 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1c0112de-0139-e64d-d3d6-658541695391
 ---
@@ -36,11 +35,3 @@ The SharePoint workflow actions schema (Action4.xsd) lets you create custom acti
 - [Microsoft.SharePoint.WorkflowServices](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflowservices.aspx)
 - [Microsoft.SharePoint.WorkflowServices.Activities](https://msdn.microsoft.com/library/office/microsoft.sharepoint.workflowservices.activities.aspx)
 - [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](https://msdn.microsoft.com/library/ee342461.aspx)
-
-
-
- 
-
-
-
-

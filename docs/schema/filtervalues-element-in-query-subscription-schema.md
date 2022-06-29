@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 41eea6a6-336c-1397-41fb-b0b0bd389d60
 ---
 
-# FilterValues Element in Query 
+# FilterValues Element in Query
 
 (Subscription Schema)
 
@@ -45,10 +44,3 @@ None.
 | Element | Description |
 |---------|-------------|
 | [Query Element in Queries (Subscription Schema)](query-element-in-queries-subscription-schema.md) | The query that this list of filter values belongs to. |
-
-
-
-
-
-
-

@@ -5,17 +5,16 @@ description: Describes the Label element (CommandUIDefinitionType complexType) a
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e81bc60f-f474-78b4-084d-230f19448407
 ---
 
-# Label element (CommandUIDefinitionType complexType) 
+# Label element (CommandUIDefinitionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
@@ -60,26 +59,18 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Child elements
 
 None.
 
-<br/> 
+<br/>
 
 ### Attributes
 
 None.
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

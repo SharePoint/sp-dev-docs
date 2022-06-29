@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b754baf8-6db5-4f40-a1b3-67fb925d0319
 ---
@@ -22,7 +21,7 @@ The following table lists elements in the DeploymentRootObjectMap.xsd schema fil
 
 <br/>
 
-  
+
 | Element | Description |
 | --- | --- |
 | [RootObject element (DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md) | Represents an instance of a root object in a root object map exported to the content migration package. |
@@ -35,10 +34,3 @@ The following table lists elements in the DeploymentRootObjectMap.xsd schema fil
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-

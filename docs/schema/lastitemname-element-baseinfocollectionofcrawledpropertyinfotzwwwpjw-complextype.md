@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dd4d27e9-7c98-dfb3-814e-cff45fca33fe
 ---
 
 # LastItemName element (BaseInfoCollectionOfCrawledPropertyInfoTzWWwPjw complexType) (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
 | Resource | File |
@@ -21,7 +20,7 @@ ms.assetid: dd4d27e9-7c98-dfb3-814e-cff45fca33fe
 | **Element type** |xs:string |
 | **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
 | **Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ ms.assetid: dd4d27e9-7c98-dfb3-814e-cff45fca33fe
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

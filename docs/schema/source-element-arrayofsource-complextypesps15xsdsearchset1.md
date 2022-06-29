@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4d9e36f1-9104-5129-350f-08e2476de6b8
 description: Learn more about Source element (ArrayOfSource complexType) (SPS15XSDSearchSet1).
@@ -13,7 +12,7 @@ description: Learn more about Source element (ArrayOfSource complexType) (SPS15X
 # Source element (ArrayOfSource complexType) (SPS15XSDSearchSet1)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn more about Source element (ArrayOfSource complexType) (SPS15X
 |**Element type**  |tns:Source   |
 |**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query   |
 |**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.Query.xsd   |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ description: Learn more about Source element (ArrayOfSource complexType) (SPS15X
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

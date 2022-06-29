@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.MethodInstances
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dae3aeae-e72a-0b52-1348-f5e5cd31109f
 ---
@@ -36,7 +35,7 @@ None.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md) | An association. |
@@ -44,17 +43,7 @@ None.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md) | The method that this method instance belongs to. |
-
-
-
-
-
-
-
-
-
-

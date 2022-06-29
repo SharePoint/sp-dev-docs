@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 334e3037-6f5c-01b2-ed1a-6f568087f196
 ---
 
-# Coercion element 
+# Coercion element
 
 (Coercions element) (WorkflowInfo element) (Action4)
 
@@ -41,7 +40,7 @@ Specifies a coercion for converting data from one form to another.
         <xs:complexType>
             <xs:all>
                 <xs:element name="Parameters"      type="coercionParametersType" minOccurs="0"     maxOccurs="1"    >
-                </xs:element>  
+                </xs:element>
             </xs:all>
             <xs:attribute name="Name"   type="s:string"      use="required"     />
             <xs:attribute name="Assembly"   type="s:string"     />
@@ -56,7 +55,7 @@ Specifies a coercion for converting data from one form to another.
             <xs:attribute name="Id"   type="s:string"      use="required"     />
             <xs:attribute name="SourceProperty"   type="s:string"      use="required"     />
         </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -145,10 +144,3 @@ In the following example coercion definition, the coercion with the name `AsDNGu
               Culture=neutral, PublicKeyToken=31bf3856ad364e35"
           SourceProperty="Value">
 ```
-
-
-
-
-
-
-

@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8bc6e087-8530-8a5e-144c-a7790e8d716a
 description: Learn more about SortableType simpleType (SPS15XSDSearchSet2).
@@ -12,8 +11,8 @@ description: Learn more about SortableType simpleType (SPS15XSDSearchSet2).
 
 # SortableType simpleType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn more about SortableType simpleType (SPS15XSDSearchSet2).
 |**Base type**  |xs:string  |
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
 |**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd  |
-   
+
 ## Definition
 
 ```XML
@@ -40,5 +39,3 @@ description: Learn more about SortableType simpleType (SPS15XSDSearchSet2).
 |:-----|:-----|
 |Enabled  <br/> ||
 |Latent  <br/> ||
-   
-

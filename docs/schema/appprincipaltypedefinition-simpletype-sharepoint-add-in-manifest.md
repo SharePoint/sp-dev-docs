@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b9118c51-c78a-2643-7b27-2456cd9eb282
 ---
 
-# AppPrincipalTypeDefinition simpleType 
+# AppPrincipalTypeDefinition simpleType
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: b9118c51-c78a-2643-7b27-2456cd9eb282
 
 The add-in principal type.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -64,14 +63,3 @@ The add-in principal type.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-

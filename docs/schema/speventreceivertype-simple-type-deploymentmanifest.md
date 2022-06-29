@@ -5,15 +5,14 @@ ms.date: 06/13/2022
 description: Describes SPEventReceiverType Simple Type (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7a666a1a-62fb-4371-aa88-a89018982fee
 ---
 
 # SPEventReceiverType Simple Type (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Specifies the available event receivers.
 
 ## Definition
@@ -98,8 +97,7 @@ Specifies the available event receivers.
 |WebDeleting  <br/> |Indicates a site is being deleted.  <br/> |
 |WebMoved  <br/> |Indicates a site was moved.  <br/> |
 |WebMoving  <br/> |Indicates a site is being moved.  <br/> |
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

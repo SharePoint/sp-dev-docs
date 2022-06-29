@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0317f92e-a422-0431-2693-514aa9892c9e
 ---
 
-# DebugInfo element (AutoDeployedWebApplication element) 
+# DebugInfo element (AutoDeployedWebApplication element)
 
 (AppPrincipalDefinition complexType) (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 0317f92e-a422-0431-2693-514aa9892c9e
 
 For possible future use only.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -32,7 +31,7 @@ For possible future use only.
 ## Definition
 
 ```XML 
-    <xs:element name="DebugInfo"  type="AutoDeployedWebApplicationDebugInfoDefinition" minOccurs="0"></xs:element>     
+    <xs:element name="DebugInfo"  type="AutoDeployedWebApplicationDebugInfoDefinition" minOccurs="0"></xs:element>
 ```
 
 ## Elements and attributes
@@ -117,9 +116,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-

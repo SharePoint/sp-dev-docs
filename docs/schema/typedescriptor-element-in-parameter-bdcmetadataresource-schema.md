@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: caba1444-c21c-b1c4-b10e-295647a81e6d
 ---
 
-# TypeDescriptor Element in Parameter 
+# TypeDescriptor Element in Parameter
 
 (BDCMetadataResource Schema)
 
@@ -47,11 +46,3 @@ None.
 | Element |
 | --- |
 | [Parameter Element in Parameters (BDCMetadataResource Schema](parameter-element-in-parameters-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

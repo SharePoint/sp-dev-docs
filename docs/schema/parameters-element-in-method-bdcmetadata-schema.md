@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Parameters
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 343f4c25-e122-1a4c-2b80-bb8f25e3cc82
 ---
@@ -36,22 +35,14 @@ None.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Parameter Element in Parameters (BDCMetadata Schema)](parameter-element-in-parameters-bdcmetadata-schema.md) | A parameter. |
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md) | The method these parameters belong to. |
-
-
-
-
-
-
-
-

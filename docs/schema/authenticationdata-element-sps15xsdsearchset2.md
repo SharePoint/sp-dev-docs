@@ -4,14 +4,13 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ca8cbf0-9123-8716-4de7-d13014e06f7a
 description: AuthenticationData element (SPS15XSDSearchSet2) is an XML element.
 ---
 
 # AuthenticationData element (SPS15XSDSearchSet2)
- 
+
 ## Element information
 
 |Information|Location|
@@ -19,7 +18,7 @@ description: AuthenticationData element (SPS15XSDSearchSet2) is an XML element.
 |**Element type** <br/> |tns:AuthenticationData  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -29,18 +28,16 @@ description: AuthenticationData element (SPS15XSDSearchSet2) is an XML element.
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

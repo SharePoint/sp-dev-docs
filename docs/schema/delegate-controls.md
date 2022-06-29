@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f07f0d06-2d14-4c6d-bb87-b44ec98b50e6
 ---
@@ -29,8 +28,8 @@ The following example specifies a control and tool tips to implement for the inp
 ```XML 
     <?xml version="1.0" encoding="utf-8" ?>
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-      <Control 
-        Id="SmallSearchInputBox" 
+      <Control
+        Id="SmallSearchInputBox"
         Sequence="100"
         ControlSrc="~/_controltemplates/searcharea.ascx">
         <Property Name="SearchTextToolTip">Search this site</Property>
@@ -45,11 +44,3 @@ The following example specifies a control and tool tips to implement for the inp
 
 - [Delegate Control (Control Templatization)](https://msdn.microsoft.com/library/e979328d-4985-4ed6-9085-7ff32a998dfc(Office.15).aspx)
 - [How to: Customize a Delegate Control](https://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
-
-
-
- 
-
-
-
-

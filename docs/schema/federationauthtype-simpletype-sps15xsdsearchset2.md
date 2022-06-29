@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 16c3b9eb-d3b8-919e-be2c-99a492e290fe
 ---
 
 # FederationAuthType simpleType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 | Resource | File |
@@ -21,7 +20,7 @@ ms.assetid: 16c3b9eb-d3b8-919e-be2c-99a492e290fe
 | **Base type** | xs:string |
 | **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
 | **Schema file** | schema_Microsoft.Office.Server.Search.Administration.xsd |
-   
+
 ## Definition
 
 ```XML
@@ -70,5 +69,3 @@ ms.assetid: 16c3b9eb-d3b8-919e-be2c-99a492e290fe
 |PerUserBasicAuth  <br/> |15  <br/> |
 |Custom  <br/> |16  <br/> |
 |PerUserCustom  <br/> |17  <br/> |
-   
-

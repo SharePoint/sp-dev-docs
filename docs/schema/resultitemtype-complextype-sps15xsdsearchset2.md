@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 3/9/2015
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 603dee83-8bb5-018a-c519-9c4f98f4fd1f
 description: "Last modified: March 09, 2015"
@@ -12,8 +11,8 @@ description: "Last modified: March 09, 2015"
 
 # ResultItemType complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |||
@@ -21,7 +20,7 @@ description: "Last modified: March 09, 2015"
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
 |**Extension base** <br/> |None  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -47,8 +46,8 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -66,9 +65,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[RulePriority](rulepriority-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
 |[Rules](rules-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |tns:PropertyRuleCollection  <br/> ||
 |[SourceID](sourceid-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

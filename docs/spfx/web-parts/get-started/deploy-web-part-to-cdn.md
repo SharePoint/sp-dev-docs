@@ -2,7 +2,6 @@
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ---
 # Deploy your SharePoint client-side web part to Azure CDN
 

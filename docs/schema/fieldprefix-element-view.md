@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Obsolete. Returns the Microsoft Office namespace "urn:schemas-micro
 # FieldPrefix element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Obsolete. Returns the Microsoft Office namespace `urn:schemas-microsoft-com:office:office#`, which is added to every field name for Office compatibility.
-  
+
 ```XML
 <FieldPrefix>
 </FieldPrefix>
@@ -32,24 +31,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: Unbounded 
-   
+- Minimum: 0
+- Maximum: Unbounded
+
 ## Example
 
-The following excerpt from the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file uses the **FieldPrefix** element to return the Microsoft Office namespace in defining the rendering pattern for new items of the **Threading** field type. 
-  
+The following excerpt from the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file uses the **FieldPrefix** element to return the Microsoft Office namespace in defining the rendering pattern for new items of the **Threading** field type.
+
 ```XML
 <RenderPattern Name="NewPattern" DisplayName="NewPattern">
    <HTML><![CDATA[ <INPUT TYPE=HIDDEN NAME=" ]]></HTML>
@@ -64,4 +63,3 @@ The following excerpt from the [FldTypes.xml](https://msdn.microsoft.com/library
 ```
 
 <br/>
-

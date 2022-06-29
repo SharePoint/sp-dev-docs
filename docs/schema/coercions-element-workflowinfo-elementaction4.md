@@ -5,7 +5,6 @@ manager: laurawi
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0d790bac-681d-7e9c-5448-92df6305c037
 ---
@@ -46,7 +45,7 @@ Specifies the available coercions for converting data from one form to another.
                <xs:all>
          <xs:element name="Parameters"      type="coercionParametersType" minOccurs="0"     maxOccurs="1"    >
 
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="Assembly"   type="s:string"     />
@@ -61,10 +60,10 @@ Specifies the available coercions for converting data from one form to another.
          <xs:attribute name="Id"   type="s:string"      use="required"     />
          <xs:attribute name="SourceProperty"   type="s:string"      use="required"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -122,11 +121,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

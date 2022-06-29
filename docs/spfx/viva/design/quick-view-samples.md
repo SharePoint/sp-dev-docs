@@ -2,7 +2,6 @@
 title: Viva Connections Adaptive Card Extension Quick View samples
 description: Provides Viva Connections Adaptive Card extension Quick View samples and outlines various GitHub samples for Quick View templates.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

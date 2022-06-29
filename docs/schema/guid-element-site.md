@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -34,18 +33,16 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Id** <br/> |Optional **Text**.  <br/> |
 |**ListUrl** <br/> |Optional **Text**.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [GUIDMap](guidmap-element-site.md)
-   
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: Unbounded 
-   
-
+- Minimum: 0
+- Maximum: Unbounded

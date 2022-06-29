@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Method
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 70e87a9e-4959-0a7b-3f37-ddec36473ff4
 ---
@@ -58,10 +57,3 @@ The following sections describe attributes, child elements, and parent elements.
 |Element|Description|
 |-------|-----------|
 |[Methods Element in Entity (BDCMetadata Schema)](methods-element-in-entity-bdcmetadata-schema.md)|A list of methods of an external content type.|
-
-
-
-
-
-
-

@@ -4,12 +4,11 @@ manager: laurawi
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c9b3ceac-85d2-7b04-5b1b-f16f154de9f3
 ---
 
-# Conditions element 
+# Conditions element
 
 (WorkflowInfo element) (Action4)
 
@@ -44,18 +43,18 @@ In the workflow rule designer, represents corresponding, underlying functions th
                <xs:complexType>
                <xs:sequence>
          <xs:element name="RuleDesigner"      type="ruleDesignerType">
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="ItemKeyType"   type="s:string" />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
          <xs:element name="Condition"  minOccurs="0"  maxOccurs="unbounded">
                <xs:complexType>
                <xs:all>
          <xs:element name="RuleDesigner"      type="ruleDesignerType" minOccurs="1"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="Parameters"      type="parametersType" minOccurs="1"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Type"   type="s:string"     />
          <xs:attribute name="Name"   type="s:string"      use="required"     />
@@ -67,7 +66,7 @@ In the workflow rule designer, represents corresponding, underlying functions th
          <xs:attribute name="ClassName"   type="s:string"     />
          <xs:attribute name="ShapeImageUrl"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="And"   type="s:string"     />
          <xs:attribute name="Or"   type="s:string"     />
@@ -75,7 +74,7 @@ In the workflow rule designer, represents corresponding, underlying functions th
          <xs:attribute name="Else"   type="s:string"     />
          <xs:attribute name="Not"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -137,7 +136,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Attributes
 
-> [!NOTE] 
+> [!NOTE]
 > The attributes listed in the following table are only read from the default ACTIONS file and cannot be overridden in any custom .ACTIONS file.
 
 <table>
@@ -202,11 +201,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

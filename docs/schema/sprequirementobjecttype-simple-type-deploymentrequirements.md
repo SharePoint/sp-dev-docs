@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes SPRequirementObjectType Simple Type (DeploymentRequirements) and provides values for the Type attribute on the Requirement Element.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 978bd557-f853-42ea-b1c0-55d5a59983af
 ---
@@ -13,7 +12,7 @@ ms.assetid: 978bd557-f853-42ea-b1c0-55d5a59983af
 # SPRequirementObjectType Simple Type (DeploymentRequirements)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Provides values for the **Type** attribute on the [Requirement Element](requirement-element-deploymentrequirements.md). The value specifies the object type of the specified deployment requirement.
 
 ## Definition
@@ -38,9 +37,8 @@ Provides values for the **Type** attribute on the [Requirement Element](requirem
 |**WebTemplate** <br/> |Specifies that the requirement object type is a Web template (**SPWebTemplate**).  <br/> |
 |**WebPart** <br/> |Specifies that the requirement object type is a web part (**SPWebPart**).  <br/> |
 |**Language** <br/> |Specifies that the requirement object type is a language pack.  <br/> |
-   
+
 ## See also
 
 - [DeploymentRequirements Schema](deploymentrequirements-schema.md)
 - [Requirement Element (DeploymentRequirements)](requirement-element-deploymentrequirements.md)
-

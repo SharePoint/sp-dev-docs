@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c493345d-44bd-ed3b-56ec-2b53b14605a3
 description: Learn about Boost element (ReorderingRule complexType) (SPS15XSDSearchSet5).
@@ -12,10 +11,10 @@ description: Learn about Boost element (ReorderingRule complexType) (SPS15XSDSea
 
 # Boost element (ReorderingRule complexType) (SPS15XSDSearchSet5)
 
- 
-  
+
+
  **Applies to:** SharePoint Server 2013
-  
+
 ## Element information
 
 |Information|Location|
@@ -23,7 +22,7 @@ description: Learn about Boost element (ReorderingRule complexType) (SPS15XSDSea
 |**Element type** <br/> |xs:int  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -33,18 +32,16 @@ description: Learn about Boost element (ReorderingRule complexType) (SPS15XSDSea
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

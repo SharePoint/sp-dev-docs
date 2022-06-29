@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6ba448d6-26ec-f918-ac4d-136809236752
 ---
 
-# AppPrincipal element (AppDefinition complexType) 
+# AppPrincipal element (AppDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 6ba448d6-26ec-f918-ac4d-136809236752
 
 The add-in principal information.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -33,7 +32,7 @@ The add-in principal information.
 
 ```XML 
     <xs:element name="AppPrincipal" type="AppPrincipalDefinition" minOccurs="1" maxOccurs="1">
-    </xs:element>     
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -105,12 +104,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-
-

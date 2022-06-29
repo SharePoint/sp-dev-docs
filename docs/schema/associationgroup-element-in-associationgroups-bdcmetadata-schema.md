@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AssociationGroup
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: db30622e-3c2b-2735-9360-a702196cbcff
 ---
@@ -81,11 +80,3 @@ The following sections describe attributes, child elements, and parent elements.
 | Element | Description |
 | --- | --- |
 | [AssociationGroups element in Entity (BDCMetadata Schema)](associationgroups-element-in-entity-bdcmetadata-schema.md) | The **AssociationGroups** element that contains this **AssociationGroup**. |
-
-
-
-
-
-
-
-

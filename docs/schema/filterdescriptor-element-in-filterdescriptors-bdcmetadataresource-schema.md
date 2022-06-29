@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6817792b-e0c4-6092-a576-2759ea28045a
 ---
@@ -44,10 +43,3 @@ None.
 | Element |
 |---------|
 | [FilterDescriptors Element in Method (BDCMetadataResource Schema)](filterdescriptors-element-in-method-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-

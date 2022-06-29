@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.DefaultValues
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 635295d1-0f85-6308-976b-d0cb483dece6
 ---
 
-# DefaultValues Element in TypeDescriptor 
+# DefaultValues Element in TypeDescriptor
 
 (BDCMetadata Schema)
 
@@ -48,11 +47,3 @@ None.
 | --- | --- |
 | [TypeDescriptor](https://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) | The **TypeDescriptor** that these **DefaultValues** belong to. |
 | [TypeDescriptor Element (BDCMetadata Schema)](typedescriptor-element-bdcmetadata-schema.md) |     |
-
-
-
-
-
-
-
-

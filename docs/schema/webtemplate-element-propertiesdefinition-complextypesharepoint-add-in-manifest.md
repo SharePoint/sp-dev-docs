@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 62302903-e97a-a9a3-a64e-13176a7c4e1e
 ---
@@ -18,7 +17,7 @@ ms.assetid: 62302903-e97a-a9a3-a64e-13176a7c4e1e
 
 The web template to use when creating an add-in web.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -34,7 +33,7 @@ The web template to use when creating an add-in web.
 
 ```XML 
     <xs:element name="WebTemplate"  type="WebTemplateDefinition"  minOccurs="0"  maxOccurs="1">
-    </xs:element>     
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -57,7 +56,7 @@ None.
 
 ### Attributes
 
-  
+
 | Attribute | Type | Required | Description | Possible values |
 | --- | --- | --- | --- | --- |
 | FeatureId (obsolete) | [GUID](guid-simpletype-sharepoint-add-in-manifest.md) | optional | The Id of the Feature that contains the WebTemplate. | Obsolete. Do not use. Values of the GUID type. |

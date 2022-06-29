@@ -5,7 +5,6 @@ ms.date: 06/14/2022
 description: Describes VersionRange Element (Feature) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cd715e38-6ec3-43b2-8007-6d0ed8865d91
 ---
@@ -19,7 +18,7 @@ Specifies a range of previous versions of the Feature to which the upgrade actio
 ## Definition
 
 ```XML
-<VersionRange 
+<VersionRange
   BeginVersion = string
   EndVersion = string>
   <AddContentTypeField />
@@ -35,7 +34,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-> [!TIP] 
+> [!TIP]
 > The **BeginVersion** and **EndVersion** attributes set the range of previous versions of the Feature to which the child upgrade elements are applied. The **BeginVersion** value is *inclusive*, but the **EndVersion** attribute is *exclusive*.
 
 <table>
@@ -87,11 +86,3 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

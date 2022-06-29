@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f5deff87-c593-41b9-840e-43da5649a7dc
 ---
@@ -74,11 +73,3 @@ The following table lists simple types that are defined in the schema but are no
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-
-

@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes Elements Element (List Instance) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f1f56a35-be5d-429c-a5ca-e88c99cbe441
 ---
@@ -71,10 +70,3 @@ None
 For an example of how this element is used, see [List Instances](list-instances.md).
 
 <br/>
-
-
-
-
-
-
-

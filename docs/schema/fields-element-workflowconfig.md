@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint Workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6b49e059-250e-4b9f-b32e-72ca5fe150c9
 ---
@@ -62,13 +61,13 @@ The element also contains a Fields element, which in turn contains a Field eleme
 This example has been edited for clarity.
 
 ```XML
-    <Initiation 
+    <Initiation
         URL="Workflows/Notify Me/Notify Me.aspx">
       <Fields>
-        <Field 
-          Name="Reason_for_Review" 
+        <Field
+          Name="Reason_for_Review"
           …
-          DisplayName="Reason for Review" 
+          DisplayName="Reason for Review"
           …
         >
           <Default>Standard review of new documents</Default>
@@ -86,8 +85,3 @@ This example has been edited for clarity.
 - [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
-
-
-
-
-

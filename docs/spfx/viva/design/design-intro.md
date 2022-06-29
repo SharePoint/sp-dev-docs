@@ -2,7 +2,6 @@
 title: Design guidance for Viva Connections cards
 description: Design guidance for Viva Connections cards
 ms.date: 06/27/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Design guidance for Viva Connections cards
@@ -22,7 +21,7 @@ To learn more about how to create custom cards, see Getting Started - Adaptive C
 
 ### What is a Dashboard?
 
-The Viva Connections Dashboard is the digital toolset for your employees. You can create a curated experience using dashboard cards to give your employees access to their most critical content and tools. 
+The Viva Connections Dashboard is the digital toolset for your employees. You can create a curated experience using dashboard cards to give your employees access to their most critical content and tools.
 
 The cards are designed to enable quick task completion by interacting with a card directly or by opening a quick view.
 

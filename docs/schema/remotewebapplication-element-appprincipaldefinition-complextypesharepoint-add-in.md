@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 516ed600-9f2c-10b4-0110-a8237d4da382
 ---
 
-# RemoteWebApplication element (AppPrincipalDefinition complexType) 
+# RemoteWebApplication element (AppPrincipalDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 516ed600-9f2c-10b4-0110-a8237d4da382
 
 Specifies properties of a provider-hosted SharePoint Add-in.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -34,7 +33,7 @@ Specifies properties of a provider-hosted SharePoint Add-in.
 ```XML 
     <xs:element name="RemoteWebApplication" >
       <xs:attribute name="ClientId" type="AppPermissionAppPrincipalDefinition" use="required"/>
-    </xs:element>     
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -105,9 +104,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-

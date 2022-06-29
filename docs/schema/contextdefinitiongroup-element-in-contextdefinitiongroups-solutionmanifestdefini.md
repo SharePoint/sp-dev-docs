@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 39f8840b-4970-041d-f0d8-13168662249c
 ---
 
-# ContextDefinitionGroup Element in ContextDefinitionGroups 
+# ContextDefinitionGroup Element in ContextDefinitionGroups
 
 (SolutionManifestDefinitions Schema)
 
@@ -113,11 +112,3 @@ The following sections describe attributes, child elements, and parent elements.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bccc46e6-d8a3-d3b7-6517-d7aee670e602
 ---
 
-# DataSourceRef element 
+# DataSourceRef element
 
 (FieldBind element) (ruleDesignerType complexType) (Action4)
 
@@ -39,7 +38,7 @@ Specifies the possible values from the [DataSource element (dataSourcesType comp
 ```XML 
     <xs:element name="DataSourceRef"      minOccurs="1"     maxOccurs="unbounded"    >
          <xs:attribute name="Ref"   type="s:string"     />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -103,11 +102,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

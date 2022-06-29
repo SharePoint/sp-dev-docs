@@ -1,7 +1,7 @@
 ---
 title: CLI for Microsoft 365 commands for SharePoint hub sites
 description: Use CLI for Microsoft 365 to create and manage SharePoint hub sites.
-ms.date: 06/05/2020
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 

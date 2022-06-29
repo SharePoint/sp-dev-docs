@@ -1,13 +1,13 @@
 ---
 title: SyncHubSiteTheme REST method
 description: Applies any theme updates from the parent hub site.
-ms.date: 6/18/2019
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
 # SyncHubSiteTheme
 
-Applies any theme updates from the parent hub site. 
+Applies any theme updates from the parent hub site.
 
 ## HTTP request
 

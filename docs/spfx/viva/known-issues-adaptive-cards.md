@@ -2,7 +2,6 @@
 title: Known issues for Adaptive Cards in Viva Connections Mobile
 description: Known issues for Adaptive Cards in Viva Connections Mobile.
 ms.date: 10/29/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Known issues for Adaptive Cards in Viva Connections Mobile

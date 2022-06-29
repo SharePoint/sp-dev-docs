@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - content migration [sharepoint 2010],content migration schema
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6741b149-815d-48eb-91d9-691a47195faf
 ---
 
-# Content migration schemas 
+# Content migration schemas
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -40,10 +39,3 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 ## See also
 
 - [Content Migration](https://msdn.microsoft.com/library/626286f9-71b3-4b3c-9bac-a7bca059463f(Office.15).aspx)
-
-
-
-
-
-
-

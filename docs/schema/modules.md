@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4f43e194-322e-4eca-9c96-8ad9f13818bd
 ---
 
-# Modules 
+# Modules
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
@@ -92,11 +91,3 @@ The next example registers a Feature that includes two files and that specifies 
 
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-
-

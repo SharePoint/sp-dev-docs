@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2c77a8ea-5cbf-4539-a9e3-b7f41f13e496
 ---
@@ -21,14 +20,14 @@ Actions represent the Microsoft SharePoint Foundation 2010 implementation of Win
 ## Location of default workflow actions
 
 Default workflow actions are contained in the WSS.ACTIONS file, which is an XML file that lists all default conditions and actions that are available to the workflow editor. (For information about the default workflow conditions that are included in the WSS.ACTIONS file, see
-[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md).) 
+[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md).)
 
 By default, the
 WSS.ACTIONS file is installed in the following location in SharePoint Foundation 2010:
 
 ```%WSSRoot%\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\14\\TEMPLATE\\1033\\Workflow```
 
-> [!NOTE] 
+> [!NOTE]
 > Direct modification of the WSS.ACTIONS file is not recommended or supported. However, you can expand the actions that are available to your code-free workflow editor by creating and adding additional custom .ACTIONS files to the same directory. SharePoint Foundation parses all files that have the .ACTIONS file name extension and creates a combined list that it then presents to the declarative, code-free workflow editor.
 
 ### Default workflow actions
@@ -240,11 +239,3 @@ The following table lists the default workflow actions that are included with Sh
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-
-

@@ -1,8 +1,9 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
 description: In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
-ms.date: 06/10/2021
-search.app: 
+ms.date: 06/28/2022
+ms.service: power-automate
+search.app:
   - Flow
 search.appverid: met150
 ---
@@ -25,7 +26,7 @@ Triggers the flow when you create an item, and each time you modify it in a Shar
 
 ### When an item or a file is modified
 
-Triggers the flow when you modify an item or a file in a SharePoint list or a document library. 
+Triggers the flow when you modify an item or a file in a SharePoint list or a document library.
 
 For more info about how to use this trigger, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
 
@@ -40,7 +41,7 @@ Allows users of lists to trigger a flow after selecting an item in a list.
 > [!NOTE]
 > Only flows within the default environment can be executed manually from a SharePoint list.
 
-### When a file is classified by a content understanding model 
+### When a file is classified by a content understanding model
 Triggers the flow when a SharePoint Syntex content understanding model classifies a file, shown in the classification date property of the file.
 
 For more info about when SharePoint Syntex and how it classifies files see: [Introduction to Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding)
@@ -167,9 +168,9 @@ Gets all the columns or file properties changed since and until a specified time
 For more info about how to use this action, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
 
 > [!NOTE]
-> - The list or library should have versioning configured in order to infer what columns or properties got modified since last change. 
+> - The list or library should have versioning configured in order to infer what columns or properties got modified since last change.
 > - Only column changes are suported for lists and libraries.
-> - File content changes are not supported. 
+> - File content changes are not supported.
 > - Attachment changes are not supported.
 > - _Trigger Window Start Token_ & _Trigger Window End Token_ are only available when you use _when an item or file is modified_ trigger.
 
@@ -298,7 +299,7 @@ The following tables list all of the actions and triggers that are supported for
 | When a file is deleted | No | No | Yes<sup>2</sup> |
 | Resolve Person | No | No | Yes |
 | Set content approval status | No | No | Yes |
- 
+
 > [!NOTE]
 > 1. Does not support “Limit Columns by View”.
 > 1. While this trigger is supported for SharePoint 2019, flows created using this trigger may encounter the following issues:

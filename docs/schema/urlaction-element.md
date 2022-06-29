@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: eb7a0573-bd6b-4946-a319-c24905859662
 ---
@@ -88,11 +87,3 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

@@ -2,7 +2,6 @@
 title: Build your first Field Customizer extension
 description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.custom: scenarios:getting-started
 ---
 

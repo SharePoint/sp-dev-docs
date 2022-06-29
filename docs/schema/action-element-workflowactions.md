@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 41ebbda6-cfba-4abc-8474-7f2003eb94bf
 ---
@@ -49,7 +48,7 @@ Contains the information that is needed for the workflow engine to process a wor
 The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
-  
+
 | Attribute | Description |
 | --- | --- |
 | **Name** | Required **text**. Represents the description of the workflow action that is displayed to the workflow editor. |
@@ -103,11 +102,3 @@ The following sections describe attributes, child elements, and parent elements.
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3cb10648-a1ac-9aba-5273-efc0aa34041c
 ---
 
-# Layout Element in Layouts 
+# Layout Element in Layouts
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -18,7 +17,7 @@ ms.assetid: 3cb10648-a1ac-9aba-5273-efc0aa34041c
 
 The **Layout** element is used to specify the location of the layout file that contains layout information for the external data part.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -74,14 +73,14 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Properties](https://msdn.microsoft.com/library/9c1b404f-2cab-313d-a1ec-529325bae676.aspx) | Can contain a property named **AssociatedActionType** to specify the type of action that is associated with this layout. Accepted values are Edit, Create, and ViewDetails. |
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Layouts Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](layouts-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Layouts** element that contains this layout. |
@@ -89,9 +88,3 @@ The following sections describe attributes, child elements, and parent elements.
 </br>
 
 </br>
-
-
-
-
-
-

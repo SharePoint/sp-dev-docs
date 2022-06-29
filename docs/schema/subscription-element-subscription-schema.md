@@ -5,12 +5,11 @@ ms.date: 06/14/2022
 description: Describes Subscription element and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1eaeefb2-8b18-bf8c-3594-f72ac27cd74d
 ---
 
-# Subscription element 
+# Subscription element
 
 (Subscription schema)
 
@@ -109,11 +108,3 @@ The following sections describe attributes, child elements, and parent elements.
 ### Parent elements
 
 None.
-
-
-
-
-
-
-
-

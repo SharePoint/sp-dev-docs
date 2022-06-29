@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Upgrade schema
@@ -17,9 +16,9 @@ description: Contains definitions for how existing lists should be upgraded on a
 # Lists element (Upgrade)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains definitions for how existing lists should be upgraded on a list template by list template basis.
-  
+
 ```XML
 <Lists>
   <List
@@ -43,22 +42,20 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [List](list-element-upgrade.md)
-   
+
 ### Parent elements
 
 - [WebTemplate](webtemplate-element-upgrade.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: 1
-   
+
 ## Example
 
 For an example of how this element is used, see [Upgrade Definition schema](upgrade-definition-schema.md).
-  
-

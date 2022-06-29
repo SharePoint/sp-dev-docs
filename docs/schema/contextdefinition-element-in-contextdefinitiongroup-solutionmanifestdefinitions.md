@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 082dcea0-3ac6-b534-08c2-3ab87f3348a8
 ---
 
-# ContextDefinition Element in ContextDefinitionGroup 
+# ContextDefinition Element in ContextDefinitionGroup
 
 (SolutionManifestDefinitions Schema)
 
@@ -47,7 +46,7 @@ The following sections describe attributes, child elements, and parent elements.
 <tr class="odd">
 <td align="left"><p>**ContentType**</p></td>
 <td align="left"><p>Required.</p>
-<p>The type name of this context in Microsoft Outlook 2010. This can be different from the name of the external content type in the model. The value you specify here affects the name of the Outlook Item Type as it will appear in the Outlook object model. In Outlook, the name will be appended to the Outlook Item Type and the full name of an external content type will be `OutlookDOCS-LESSTHANOutlookItemTypeDOCS-GREATERTHANDOCS-LESSTHANContentTypeDOCS-GREATERTHAN`<br/>For example, a Customer external type could be `OutlookContactCustomer` in Outlook if it is visualized as an Outlook Contact. 
+<p>The type name of this context in Microsoft Outlook 2010. This can be different from the name of the external content type in the model. The value you specify here affects the name of the Outlook Item Type as it will appear in the Outlook object model. In Outlook, the name will be appended to the Outlook Item Type and the full name of an external content type will be `OutlookDOCS-LESSTHANOutlookItemTypeDOCS-GREATERTHANDOCS-LESSTHANContentTypeDOCS-GREATERTHAN`<br/>For example, a Customer external type could be `OutlookContactCustomer` in Outlook if it is visualized as an Outlook Contact.
 <p>If the external content type is visualized in a task pane in Outlook, the content type has to be in the following format: `length_of_entity_namespace length_of_entity_name length_of_view_name entity_namespace entity_name view_name position_of_entity_namespace`<br/>For example, `12 12 24 AWWSExample OrderHeader GetSalesOrderHeaderById 9`.</p>
 <p>If you use the object model to work on the Outlook items, this is the naming scheme you will use to identify your Outlook items.</p>
 <p>Attribute type: **String**</p></td>
@@ -81,11 +80,3 @@ The following sections describe attributes, child elements, and parent elements.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

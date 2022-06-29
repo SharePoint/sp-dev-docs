@@ -2,7 +2,6 @@
 title: Recommendations for working with CSS in SharePoint Framework solutions
 description: Use CSS to define how your SharePoint Framework customization should look and behave.
 ms.date: 1/24/2018
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -35,13 +34,13 @@ todoWebPart\components
 
 ## Use Sass
 
-In SharePoint Framework, you can use both CSS and Sass. Sass is a superset of CSS and offers you a number of features such as variables, nesting selectors, or mixins, all of which simplify working with and managing CSS styles over the long term. 
+In SharePoint Framework, you can use both CSS and Sass. Sass is a superset of CSS and offers you a number of features such as variables, nesting selectors, or mixins, all of which simplify working with and managing CSS styles over the long term.
 
 For a complete set of features, see the [Sass website](http://sass-lang.com). All valid CSS is also valid Sass, which is very helpful if you haven't worked with Sass before and want to gradually learn its capabilities.
 
 ## Avoid using IDs in markup
 
-Using SharePoint Framework, you build customizations that end-users add to SharePoint. It's impossible to tell upfront if the particular customization is used only once on a page or if there are multiple instances of it. 
+Using SharePoint Framework, you build customizations that end-users add to SharePoint. It's impossible to tell upfront if the particular customization is used only once on a page or if there are multiple instances of it.
 
 To avoid issues, you should always assume that there are multiple instances of your customization on the same page. With that in mind, you should avoid using any IDs in your markup. IDs are meant to be unique on a page, and if a user adds your web part to the page twice, it violates this premise, possibly leading to errors.
 
@@ -304,18 +303,14 @@ For more information about auto-prefixing, see the [autoprefixer](https://github
 
 ## Integrate Office UI Fabric
 
-By making your customizations look and behave like the standard functionality of SharePoint and Office 365, you make it easier for end-users to work with them. Office UI Fabric offers you a set of controls and styles to use in your customizations to seamlessly integrate with the existing user experience. 
+By making your customizations look and behave like the standard functionality of SharePoint and Office 365, you make it easier for end-users to work with them. Office UI Fabric offers you a set of controls and styles to use in your customizations to seamlessly integrate with the existing user experience.
 
 For more information about using Office UI Fabric in SharePoint Framework, see [Using Office UI Fabric Core and Fabric React in SharePoint Framework](./office-ui-fabric-integration.md).
 
 ## Use theme colors
 
-SharePoint allows users to choose the theme color for their sites. In your SharePoint Framework customizations, you should follow the theme selected by the users to make your customization look like an integral part of the site rather than unnecessarily stand out. 
+SharePoint allows users to choose the theme color for their sites. In your SharePoint Framework customizations, you should follow the theme selected by the users to make your customization look like an integral part of the site rather than unnecessarily stand out.
 
-Because the theme is set by users on their site, you cannot tell upfront which colors your customization should use, but SharePoint Framework can dynamically load the currently active color scheme automatically for you. 
+Because the theme is set by users on their site, you cannot tell upfront which colors your customization should use, but SharePoint Framework can dynamically load the currently active color scheme automatically for you.
 
 For more information about this capability, see [Use theme colors in your SharePoint Framework customizations](./use-theme-colors-in-your-customizations.md).
-
-
-
-

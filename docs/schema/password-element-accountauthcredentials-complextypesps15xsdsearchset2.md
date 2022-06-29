@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f53fe49d-6b40-643d-2660-4f06e0fb0914
 ---
 
 # Password element (AccountAuthCredentials complexType) (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
 | Resource | File |
@@ -21,7 +20,7 @@ ms.assetid: f53fe49d-6b40-643d-2660-4f06e0fb0914
 | **Element type** |xs:string  <br/> |
 | **Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 | **Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ ms.assetid: f53fe49d-6b40-643d-2660-4f06e0fb0914
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

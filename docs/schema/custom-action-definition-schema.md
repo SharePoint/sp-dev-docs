@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6e8dc354-7a26-412c-816f-b6dc4d2fe55c
 ---
@@ -44,16 +43,16 @@ The following example shows an XML file whose contents replace default actions i
 
 ```XML 
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-       <CustomActionGroup 
+       <CustomActionGroup
           Id="PortalAnalytics"
           Location="Microsoft.SharePoint.Administration.ApplicationManagement"
           Title="Usage Reporting"
           Sequence="50" />
-       <CustomAction 
+       <CustomAction
           Id="ManageAnalytics"
           GroupId="PortalAnalytics"
        Location="Microsoft.SharePoint.Administration.ApplicationManagement"
-          Sequence="10" 
+          Sequence="10"
           Title="Configure usage reporting" >
           <UrlAction Url="_layouts/SpUsageConfig.aspx"/>
        </CustomAction>
@@ -95,11 +94,3 @@ The following example shows an XML file whose contents replace default actions i
 - [Declarative Customization of the Server Ribbon](https://msdn.microsoft.com/library/520af36e-2675-4a35-a837-a95f7265bac8(Office.15).aspx)
 - [Default Server Ribbon Customization Locations](https://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx)
 - [Walkthrough: Replacing a Button on the Server Ribbon](https://msdn.microsoft.com/library/93841d22-954c-4352-b81a-0d7bbdafc247(Office.15).aspx)
-
-
-
-
- 
-
-
-

@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 42c04adb-4809-40ac-d145-a7a103883b2b
 ---
 
-# Modification element 
+# Modification element
 
 (Modifications element) (Action element) (Actions element) (WorkflowInfo element) (Action4)
 
@@ -60,7 +59,7 @@ Specifies a workflow modification.
          <xs:attribute name="TypeId" type="s:string" use="required" />
          <xs:attribute name="NameFormat" type="s:string" use="required" />
          <xs:attribute name="FormURN" type="s:string" use="required" />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -138,11 +137,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

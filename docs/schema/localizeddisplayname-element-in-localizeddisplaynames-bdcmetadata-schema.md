@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LocalizedDisplayName
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 93fb80ef-6347-b463-da90-4980d872678e
 ---
@@ -59,15 +58,7 @@ None.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The **LocalizedDisplayNames** element that contains this **LocalizedDisplayName**. |
-
-
-
-
-
-
-
-

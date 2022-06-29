@@ -1,11 +1,10 @@
 ---
 title: Module Element (Module)
-description: Describes the Module element (Module) and provides a definition, the elements and attributes, and an example. 
+description: Describes the Module element (Module) and provides a definition, the elements and attributes, and an example.
 manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1e7fd643-5029-4158-910e-2ab5396efcb4
 ---
@@ -168,7 +167,7 @@ The following sections describe attributes, child elements, and parent elements.
 The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a web part page, the module definition can specify which web parts should be included on the page.
 
 
-## Example 
+## Example
 
 For an example of how this element is used, see [Modules](modules.md).
 
@@ -177,10 +176,3 @@ For an example of how this element is used, see [Modules](modules.md).
 
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-

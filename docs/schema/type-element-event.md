@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8eb27a56-626b-430e-9e67-61f77b7b0db5
 ---
@@ -68,11 +67,3 @@ The **Type** element contains an integer corresponding to one of the **Microsoft
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-

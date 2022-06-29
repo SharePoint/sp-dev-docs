@@ -2,7 +2,6 @@
 title: Tutorial - Use GraphHttpClient to call Microsoft Graph
 description: Use the GraphHttpClient class to make calls to the Microsoft Graph REST API by using the get(), post(), and fetch() methods.
 ms.date: 01/18/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

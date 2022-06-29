@@ -2,7 +2,6 @@
 title: Supporting section backgrounds
 description: The available options for implementing support in your web parts for section backgrounds.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ---
 
 # Supporting section backgrounds

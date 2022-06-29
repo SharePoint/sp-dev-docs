@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AccessControlList
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b7f97740-5d2c-f91a-1028-10e2890d4a99
 ---
 
-# AccessControlList element 
+# AccessControlList element
 
 (BDCMetadata Schema)
 
@@ -39,13 +38,13 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-  
+
 | Element | Description |
 | --- | --- |
 | [AccessControlEntry element in AccessControlList (BDCMetadata Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md) | An access control entry (ACE). |
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [Model element (BDCMetadata Schema)](model-element-bdcmetadata-schema.md) | A model containing external content types in a business application. |

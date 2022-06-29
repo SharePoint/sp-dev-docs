@@ -1,7 +1,7 @@
 ---
 title: Performance
 description: Outlines how performance is one of the important factors that influence user-experience and how efficiently users can work with the portal.
-ms.date: 06/07/2022
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 # Performance

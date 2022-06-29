@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.AssociationGroups
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b50c2648-daea-d8c0-039a-b95590b9924c
 ---
@@ -45,11 +44,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [Entity element in Entities (BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md) | The external content type that this **AssociationGroups** element is associated with. |
-
-
-
-
-
-
-
-

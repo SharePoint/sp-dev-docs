@@ -4,16 +4,15 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c056038b-b4c1-4293-b21c-c65c6277e59e
 description: Guid Simple Type (DeploymentExportSettings) supports the use of globally unique identifiers (GUIDs) as attribute field values in elements of the DeploymentExportSettings Schema.
 ---
 
 # Guid Simple Type (DeploymentExportSettings)
-  
+
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Supports the use of globally unique identifiers (GUIDs) as attribute field values in elements of the DeploymentExportSettings Schema.
 
 ## Definition
@@ -28,4 +27,3 @@ Supports the use of globally unique identifiers (GUIDs) as attribute field value
 ## See also
 
 - [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-

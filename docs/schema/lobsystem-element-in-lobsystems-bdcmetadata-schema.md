@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystem
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d4e58d7d-a628-8093-97fe-7c3136e8f6f2
 ---
@@ -120,15 +119,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LobSystems Element in Model (BDCMetadata Schema)](lobsystems-element-in-model-bdcmetadata-schema.md) | Specifies a list of external systems in this model. |
-
-
-
-
-
-
-
-

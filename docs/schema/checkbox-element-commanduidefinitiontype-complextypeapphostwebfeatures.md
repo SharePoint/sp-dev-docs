@@ -5,17 +5,16 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d3dd2b0b-a8b0-b004-4e14-042152f2e377
 ---
 
-# CheckBox element (CommandUIDefinitionType complexType) 
+# CheckBox element (CommandUIDefinitionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
@@ -71,12 +70,5 @@ None.
 ### Attributes
 
 None.
-<br/> 
-<br/> 
-
-
-
-
-
-
-
+<br/>
+<br/>

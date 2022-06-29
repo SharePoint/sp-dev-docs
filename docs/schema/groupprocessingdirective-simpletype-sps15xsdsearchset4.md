@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a54abbfa-db7a-1590-ca27-2f0241899fe9
 description: Learn about GroupProcessingDirective simpleType (SPS15XSDSearchSet4).
@@ -12,10 +11,10 @@ description: Learn about GroupProcessingDirective simpleType (SPS15XSDSearchSet4
 
 # GroupProcessingDirective simpleType (SPS15XSDSearchSet4)
 
- 
-  
+
+
  **Applies to:** SharePoint Server 2013
-  
+
 ## Type information
 
 |Information|Location|
@@ -23,7 +22,7 @@ description: Learn about GroupProcessingDirective simpleType (SPS15XSDSearchSet4
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.Rules.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -42,5 +41,3 @@ description: Learn about GroupProcessingDirective simpleType (SPS15XSDSearchSet4
 |:-----|:-----|
 |Stop  <br/> ||
 |Continue  <br/> ||
-   
-

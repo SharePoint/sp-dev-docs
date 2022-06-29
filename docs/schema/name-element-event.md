@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b9f80322-8412-4a01-a1b1-ea3ad1d2db27
 ---
@@ -65,11 +64,3 @@ None
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-

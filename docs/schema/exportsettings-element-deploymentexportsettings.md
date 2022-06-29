@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes ExportSettings element (DeploymentExportSettings) and includes information on type, elements, and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0dabce09-2a1e-4688-a97b-5f3fc5b6ba67
 ---
@@ -13,7 +12,7 @@ ms.assetid: 0dabce09-2a1e-4688-a97b-5f3fc5b6ba67
 # ExportSettings element (DeploymentExportSettings)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Deployment export settings root element, which provides an XML wrapper for the deployment export settings container object and provides a means for exporting content to a content migration package.
 
 ## Definition
@@ -42,7 +41,7 @@ USAGE
 ## Type
 
 [SPExportSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportSettings.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -59,17 +58,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**IncludeSecurity** <br/> |[SPIncludeSecurity Simple Type (DeploymentExportSettings)](spincludesecurity-simple-type-deploymentexportsettings.md) <br/> |Optional. Enumeration specifying which level of deployment security to apply to the export settings.  <br/> |
 |**IncludeVersions** <br/> |[SPIncludeVersions Simple Type (DeploymentExportSettings)](spincludeversions-simple-type-deploymentexportsettings.md) <br/> |Optional. Enumeration specifying which export version settings to provide for the content migration package.  <br/> |
 |**SiteUrl** <br/> |xs:string  <br/> |Optional. URL to the site containing the content that is being exported.  <br/> |
-   
+
 ### Child elements
 
 - [ExportObjects element (DeploymentExportSettings)](exportobjects-element-deploymentexportsettings.md)
-   
+
 ### Parent elements
 
 None
-   
+
 ## See also
 
 - [SPExportSettings](https://msdn.microsoft.com/library/Microsoft.SharePoint.Deployment.SPExportSettings.aspx)
 - [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
-

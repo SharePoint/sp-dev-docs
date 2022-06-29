@@ -5,16 +5,15 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d284a192-92df-42d1-e84b-3521c5551d0e
 ---
 
-# CustomActionDefinitions complexType 
+# CustomActionDefinitions complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -69,9 +68,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-

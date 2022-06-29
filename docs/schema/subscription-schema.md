@@ -5,7 +5,6 @@ ms.date: 06/14/2022
 description: Describes Subscription schema and contains the documentation for the Subscription schema (Subscription.xsd).
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 43e40fe9-ac57-e09d-b7b2-f8ef2ba5b7a4
 ---
@@ -43,11 +42,3 @@ This section contains the documentation for the **Subscription schema (Subscript
 - [Query element in Queries (Subscription schema)](query-element-in-queries-subscription-schema.md)
 
 - [Subscription element (Subscription schema)](subscription-element-subscription-schema.md)
-
-
-
-
-
-
-
-

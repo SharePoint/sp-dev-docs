@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 16b5dcb6-d4cb-5b74-28d6-a58732b7d2b6
 ---
@@ -13,14 +12,14 @@ ms.assetid: 16b5dcb6-d4cb-5b74-28d6-a58732b7d2b6
 # LocStringId simpleType (SPS15XSDSearchSet6)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Type information
 |Name|Value|
 |:-----|:-----|
 |**Base type** |xs:string   |
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search |
 |**Schema file** |schema_Microsoft.Office.Server.Search.xsd   |
-   
+
 ## Definition
 
 ```XML
@@ -105,5 +104,3 @@ ms.assetid: 16b5dcb6-d4cb-5b74-28d6-a58732b7d2b6
 |Type_PowerPoint  <br/> ||
 |Type_VideoFile  <br/> ||
 |Type_Task  <br/> ||
-   
-

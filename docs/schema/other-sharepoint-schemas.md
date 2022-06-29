@@ -1,11 +1,10 @@
 ---
 title: Other SharePoint schemas
-description: This section provides schema reference documentation for additional SharePoint XML schemas. 
+description: This section provides schema reference documentation for additional SharePoint XML schemas.
 manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: overview
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bf0e4b97-a47b-4c49-a336-6644925470f1
 ---
@@ -31,10 +30,3 @@ This section provides schema reference documentation for additional SharePoint X
 - [Upgrade Definition schema](upgrade-definition-schema.md)
 
 - [dsQueryResponse schema](dsqueryresponse-schema.md)
-
- 
-
-
-
-
-

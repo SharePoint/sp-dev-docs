@@ -5,7 +5,6 @@ ms.date: 06/15/2022
 description: Describes WebPartConnection element (Module) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 20bf718c-4ba6-4808-a014-f17ce9b9bde0
 ---
@@ -19,14 +18,14 @@ Specifies the web part connections for a module.
 ## Definition
 
 ```XML
-<WebPartConnection 
-   ID = string 
-   ConsumerID = string 
-   ProviderID = string 
-   ConsumerConnectionPointID = string 
-   ProviderConnectionPointID = string 
-   TargetPageUrl = string 
-   CrossPageConnectionID = string 
+<WebPartConnection
+   ID = string
+   ConsumerID = string
+   ProviderID = string
+   ConsumerConnectionPointID = string
+   ProviderConnectionPointID = string
+   TargetPageUrl = string
+   CrossPageConnectionID = string
    CrossPageSchema = string />
 ```
 
@@ -137,10 +136,3 @@ The following sections describe attributes, child elements, and parent elements.
 - [Modules](modules.md)
 - [Module](https://msdn.microsoft.com/library/e5eeed6e-d785-496d-82b5-08d153588045(Office.15).aspx)
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6(Office.15).aspx)
-
-
-
-
-
-
-

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a8155b3f-7afd-ee92-af0d-64ac1452d539
 ---
 
-# Picture Element in DeclarativeFormRegion 
+# Picture Element in DeclarativeFormRegion
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -18,7 +17,7 @@ ms.assetid: a8155b3f-7afd-ee92-af0d-64ac1452d539
 
 The **Picture** element is used to describe the icon to use for a form region in Microsoft Outlook 2010.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -65,7 +64,7 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Parent elements
-  
+
 | Element | Description |
 | --- | --- |
 | [DeclarativeFormRegion Element in DeclarativeFormRegions (SolutionManifestDeclarativeExtensions Schema)](declarativeformregion-element-in-declarativeformregions-solutionmanifestdeclarat.md) | The form region that this picture is for. |
@@ -73,11 +72,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

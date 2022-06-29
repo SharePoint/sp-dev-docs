@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0b044271-8af7-d772-c606-7d67109558ba
 ---
 
-# AssemblyRedirects element 
+# AssemblyRedirects element
 
 (WorkflowInfo element) (Action4)
 
@@ -43,10 +42,10 @@ Specifies transformations from one binary file to another binary file in a versi
                 <xs:element name="AssemblyRedirect"  >
                     <xs:attribute name="From"   type="s:string"      use="required"  />
                     <xs:attribute name="To"   type="s:string"      use="required"  />
-                </xs:element>  
+                </xs:element>
            </xs:sequence>
         </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -102,11 +101,3 @@ Specifies transformations from one binary file to another binary file in a versi
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0cb3c1b0-96c7-0f7c-5451-3c60c5b5aca7
 ---
 
-# DeclarativeFormRegion Element in DeclarativeFormRegions 
+# DeclarativeFormRegion Element in DeclarativeFormRegions
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -18,7 +17,7 @@ ms.assetid: 0cb3c1b0-96c7-0f7c-5451-3c60c5b5aca7
 
 The **DeclarativeFormRegion** element is used to describe the form region in which external data is displayed in Microsoft Outlook 2010.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -133,11 +132,3 @@ The following sections describe attributes, child elements, and parent elements.
 | Element | Description |
 | --- | --- |
 | [DeclarativeFormRegions Element (SolutionManifestDeclarativeExtensions Schema)](declarativeformregions-element-solutionmanifestdeclarativeextensions-schema.md) | The **DeclarativeFormRegions** element that contains this form region. |
-
-
-
-
-
-
-
-

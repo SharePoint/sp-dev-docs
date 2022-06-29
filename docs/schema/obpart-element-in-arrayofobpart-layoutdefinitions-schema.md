@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f50e24c6-674b-241f-5af6-1b6205be93be
 ---
 
-# OBPart element in ArrayOfOBPart 
+# OBPart element in ArrayOfOBPart
 
 (LayoutDefinitions Schema)
 
@@ -161,11 +160,3 @@ The following sections describe attributes, child elements, and parent elements.
 |Element|Description|
 |-------|-----------|
 |[Children element in Container (LayoutDefinitions Schema)](children-element-in-container-layoutdefinitions-schema.md)||
-
-
-
-
-
-
-
-

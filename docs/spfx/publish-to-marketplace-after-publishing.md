@@ -2,7 +2,6 @@
 title: Maintain and support your published app
 description: Tips to maintain and support your SharePoint Framework app after publishing it to the Marketplace
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -33,4 +32,3 @@ Tenant App Catalog administrators can update applications acquired from the Mark
 ## Applications listed in the SharePoint category
 
 All SharePoint Framework applications published in the Marketplace are listed in the **SharePoint** category. At this moment, it is not possible to specify a custom category. Also, even if you configured web parts in your application to be exposed in Microsoft Teams, the application will still be listed in the **SharePoint** category.
-

@@ -1,7 +1,7 @@
 ---
 title: Format calendar view to customize SharePoint
-description: Customize calendar views in SharePoint lists and libraries 
-ms.date: 02/23/2022
+description: Customize calendar views in SharePoint lists and libraries
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 

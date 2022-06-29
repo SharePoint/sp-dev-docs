@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 903d18c8-eb4e-46a4-8350-480e5906eebf
 ---
@@ -22,7 +21,7 @@ The following table lists elements in the DeploymentUserGroupMap.xsd schema file
 
 <br/>
 
-  
+
 | Element | Description |
 | --- | --- |
 | [Group element (DeploymentUserGroupMap)](group-element-deploymentusergroupmap.md) | Represents a deployment group object instance (**DeploymentGroup**) exported to the content migration package. |
@@ -37,10 +36,3 @@ The following table lists elements in the DeploymentUserGroupMap.xsd schema file
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-

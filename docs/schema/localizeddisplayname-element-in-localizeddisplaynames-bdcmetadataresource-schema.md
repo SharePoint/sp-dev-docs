@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 22df0505-2024-a38d-38ea-6f614758fae6
 ---
@@ -59,11 +58,3 @@ None.
 | Element |
 | --- |
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

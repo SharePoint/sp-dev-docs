@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
 api_type:
 - schema
 ms.assetid: 71f578c2-6343-4d8d-a251-739f8f53bf07
-description: Specifies a stylesheet parameter binding to make a resource available to the XSL that renders the view. 
+description: Specifies a stylesheet parameter binding to make a resource available to the XSL that renders the view.
 ---
 
 # ParameterBinding element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Specifies a stylesheet parameter binding to make a resource available to the XSL that renders the view. 
-  
+
+Specifies a stylesheet parameter binding to make a resource available to the XSL that renders the view.
+
 ```vb
 <ParameterBinding  Name = "Text"  Location = "Text" />
 ```
@@ -37,7 +36,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 In addition to specifying a localized resource in a .resx file, the **Location** attribute can be used to specify the values indicated in the following table.
 
-#### Location attribute values 
+#### Location attribute values
 
 |**Context**|**Format**|
 |:-----|:-----|
@@ -50,20 +49,19 @@ In addition to specifying a localized resource in a .resx file, the **Location**
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [ParameterBindings](parameterbindings-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## See also
 
 - [XSLT Parameter Bindings](https://msdn.microsoft.com/library/0e63af9c-c94b-4425-8b93-989dad1dd49d%28Office.15%29.aspx)
-- [XSLT Global Parameters](https://msdn.microsoft.com/library/13abde86-c820-42bd-863a-c9c8829255a6%28Office.15%29.aspx) 
-- [How to: Implement Resources in Custom List Views](https://msdn.microsoft.com/library/f8a01a0b-0538-4c4a-b2af-30c3f7f1ff4b%28Office.15%29.aspx)  
+- [XSLT Global Parameters](https://msdn.microsoft.com/library/13abde86-c820-42bd-863a-c9c8829255a6%28Office.15%29.aspx)
+- [How to: Implement Resources in Custom List Views](https://msdn.microsoft.com/library/f8a01a0b-0538-4c4a-b2af-30c3f7f1ff4b%28Office.15%29.aspx)
 - [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-

@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bb7f173c-c9a8-4e71-94bf-743fed55378f
 ---
@@ -21,7 +20,7 @@ Describes how external data should appear in Microsoft Outlook 2010 and what oth
 **Schema**: SolutionManifestDefinitions
 
 ```XML
-<OfficeItemCustomizations xsl:type="OutlookItemCustomizations" ItemTypeDisplayName = "String" 
+<OfficeItemCustomizations xsl:type="OutlookItemCustomizations" ItemTypeDisplayName = "String"
 MessageClass = "String" Description = "String"> </OfficeItemCustomizations>
 ```
 
@@ -51,10 +50,3 @@ The following sections describe attributes, child elements, and parent elements.
 |Element|Description|
 |-------|-----------|
 |**OfficeItemCustomizations**|Describes Outlook-specific customizations.|
-
-
-
-
-
-
-

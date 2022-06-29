@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b6d52c67-103f-487f-bb94-58e338e7d03f
 ---
@@ -22,20 +21,20 @@ SharePoint Foundation 2010 provides a number of default, or predefined, workflow
 
 ## Location of default workflow conditions
 
-Default workflow conditions are contained in the WSS.ACTIONS file, which is an XML file that lists all default conditions and actions that are available to the workflow editor. (For information about the default workflow actions that are included in the WSS.ACTIONS file, see [Default Workflow Actions](default-workflow-actions-workflowinfo.md).) 
+Default workflow conditions are contained in the WSS.ACTIONS file, which is an XML file that lists all default conditions and actions that are available to the workflow editor. (For information about the default workflow actions that are included in the WSS.ACTIONS file, see [Default Workflow Actions](default-workflow-actions-workflowinfo.md).)
 
 By default, the WSS.ACTIONS file is installed in the following location in SharePoint Foundation 2010:
 
 ```%WSSRoot%\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\12\\TEMPLATE\\1033\\Workflow```
 
-> [!NOTE] 
+> [!NOTE]
 > Direct modification of the WSS.ACTIONS file is not recommended or supported. However, you can expand the conditions that are available to your code-free workflow editor by creating and adding additional custom .ACTIONS files to the same directory. SharePoint Foundation 2010 parses all files that have the .ACTIONS file name extension and creates a combined list that it then presents to the declarative, code-free workflow editor.
 
 ### Default workflow conditions
 
 The following table lists the default workflow conditions that are included with SharePoint Foundation 2010. It also includes an example rule sentence for each condition, and the fields and values that apply.
 
-  
+
 | Condition | Description |
 | --- | --- |
 | **Compare** *list or document library name* **field** | Instructs the workflow designer to compare a field in the current list or document library to a specified value. **Rule Sentence**:If fieldequalsvalue**Fields**:* **field** - Displays a list of all fields in the current list.* **equals** - Shows a list of operators that can be used to compare the field and value specified in the rule sentence.* **value** - Presents a lookup dialog box that allows data binding to a SharePoint list item or directly to a text entry. |
@@ -53,11 +52,3 @@ The following table lists the default workflow conditions that are included with
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-
-

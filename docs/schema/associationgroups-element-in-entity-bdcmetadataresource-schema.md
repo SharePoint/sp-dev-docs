@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c9d772b7-8070-9354-49bf-689720c47b33
 ---
@@ -43,11 +42,3 @@ None.
 | Element |
 | --- |
 | [Entity element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

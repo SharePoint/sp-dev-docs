@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LobSystemInstance
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a0c37891-ef4f-58af-445c-5ff4d5ad6cef
 ---
@@ -68,7 +67,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of this external system instance. |
@@ -76,15 +75,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [LobSystemInstances Element in LobSystem (BDCMetadata Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md) | A list of external system instances. |
-
-
-
-
-
-
-
-

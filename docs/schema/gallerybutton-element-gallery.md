@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: GalleryButton element (Gallery) (Server Ribbon) defines a gallery b
 # GalleryButton element (Gallery) (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a gallery button.
-  
+
 ```XML
 <GalleryButton
   Alt="Text"
@@ -83,18 +82,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**ToolTipDescription** <br/> |Optional. The text that appears in the body of the tooltip.  <br/> |
 |**ToolTipHelpKeyWord** <br/> |Optional. The keyword that is used by context-sensitive Help.  <br/> |
 |**ToolTipShortcutKey** <br/> |Optional. The text to display for the shortcut key in the tooltip. For example, if the shortcut key for the control is Alt+J, the value for this attribute is "Alt+J". The tooltip will display the text for the shortcut key in parentheses after the tooltip title: "(Alt+J)".  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [Gallery](gallery-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: unbounded 
-   
-
+- Maximum: unbounded

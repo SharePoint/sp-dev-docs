@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 57efcd92-6cd3-465e-af3b-12a17d6b2c35
 ---
@@ -42,7 +41,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-  
+
 | Attribute | Description |
 | --- | --- |
 | **Title** | Optional **Text**. |
@@ -100,7 +99,7 @@ For more information about association and initiation forms, see [Workflow Assoc
 Following is an example of the **Workflow** element in a workflow definition elements file. The example has been edited for clarity.
 
 ```XML
-    <?xml version="1.0" encoding="utf-8" ?> 
+    <?xml version="1.0" encoding="utf-8" ?>
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
       <Workflow
             Name="AdventureWorksWorkflow"
@@ -131,11 +130,3 @@ Following is an example of the **Workflow** element in a workflow definition ele
 - [Workflow Association and Initiation Forms (Windows SharePoint Services)](https://msdn.microsoft.com/library/ffdfe5a7-f860-47b0-80e0-2dc2bd36ed38(Office.15).aspx)
 - [Workflow Modification Forms (Windows SharePoint Services)](https://msdn.microsoft.com/library/fba5147d-70a7-4f83-8efc-2fe0a5d0b4a7(Office.15).aspx)
 - [Workflow Task Forms (Windows SharePoint Services)](https://msdn.microsoft.com/library/327137dd-9a2b-4df6-be48-582a4b41aaa9(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 020a3861-ae16-6031-6d91-a5c775f4cadd
 ---
 
-# DataSource element 
+# DataSource element
 
 (dataSourcesType complexType) (Action4)
 
@@ -37,7 +36,7 @@ ms.assetid: 020a3861-ae16-6031-6d91-a5c775f4cadd
 
 ```XML
     <xs:element name="DataSource"      type="dataSourceType" minOccurs="0"     maxOccurs="unbounded"    >
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -109,11 +108,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 | **InternalName** | s:string | required | Specifies the internal name for the data source for a reference from a [DataSourceRef element (FieldBind element) (ruleDesignerType complexType) (Action4)](datasourceref-element-fieldbind-elementruledesignertype-complextypeaction4.md). | Values of the s:string type. |
 | **Name** | s:string | required | Specifies a localizable display name for the data source. | Values of the s:string type. |
 | **NameProperty** | s:string | required | Specifies how to differentiate the user interface (UI) elements defined in a [DataSource element (dataSourcesType complexType) (Action4)](datasource-element-datasourcestype-complextypeaction4.md). If the value begins with "Parent.", the value is retrieved from the parent of the action or composite step that declares the **DataSource** element. | Values of the s:string type. |
-
-
-
-
-
-
-
-

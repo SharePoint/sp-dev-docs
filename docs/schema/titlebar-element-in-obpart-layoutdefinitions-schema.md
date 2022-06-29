@@ -5,12 +5,11 @@ ms.date: 06/14/2022
 description: Describes TitleBar Element in OBPart and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b8f24906-53c6-cc28-9472-f0a507fec064
 ---
 
-# TitleBar Element in OBPart 
+# TitleBar Element in OBPart
 
 (LayoutDefinitions Schema)
 
@@ -68,11 +67,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)](obpart-element-in-arrayofobpart-layoutdefinitions-schema.md) | The Office External Part this title bar belongs to. |
-
-
-
-
-
-
-
-

@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6ae5810a-4bc9-417e-945d-dd39a0eeb350
 ---
@@ -96,11 +95,3 @@ When the control is instantiated, the properties specified in this element are a
 ## See also
 
 - [How to: Customize a Delegate Control](https://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
-
-
-
-
-
-
-
-

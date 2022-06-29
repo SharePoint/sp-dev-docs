@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 61b7c55e-64d7-8cdc-ada6-db514bbeb748
 ---
 
 # InternalID element (ResultItemType complexType) (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ ms.assetid: 61b7c55e-64d7-8cdc-ada6-db514bbeb748
 |**Element type** <br/> |ser:guid  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ ms.assetid: 61b7c55e-64d7-8cdc-ada6-db514bbeb748
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

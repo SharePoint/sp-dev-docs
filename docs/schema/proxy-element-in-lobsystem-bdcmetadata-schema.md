@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Proxy
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ec2e7b0-156f-ff4a-a87b-fe5764e4875b
 ---
 
-# Proxy element in LobSystem 
+# Proxy element in LobSystem
 
 (BDCMetadata Schema)
 
@@ -51,11 +50,3 @@ None.
 ## Text value
 
 **String**
-
-
-
-
-
-
-
-

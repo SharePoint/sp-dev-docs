@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 02d78e54-b260-d2ca-757c-6a3ebb7ae120
 ---
@@ -19,7 +18,7 @@ ms.assetid: 02d78e54-b260-d2ca-757c-6a3ebb7ae120
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
 |**Extension base** <br/> |None  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -33,16 +32,14 @@ ms.assetid: 02d78e54-b260-d2ca-757c-6a3ebb7ae120
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |[SearchQueryConfigurationSettings](searchqueryconfigurationsettings-element-arrayofsearchqueryconfigurationsettings.md) <br/> |tns:SearchQueryConfigurationSettings  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

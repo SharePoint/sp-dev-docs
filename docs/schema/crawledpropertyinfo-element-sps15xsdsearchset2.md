@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2696d09b-6ebe-03fd-7396-cdf61ec188fd
 ---
 
 # CrawledPropertyInfo element (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 |Name|Value|
 |:-----|:-----|
@@ -30,18 +29,16 @@ ms.assetid: 2696d09b-6ebe-03fd-7396-cdf61ec188fd
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

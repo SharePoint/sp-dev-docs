@@ -5,7 +5,6 @@ ms.date: 06/15/2022
 description: Describes View schema elements G-L, which applies to SharePoint 2016, SharePoint Foundation 2013, SharePoint Online, SharePoint Server 2013.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,51 +16,51 @@ ms.assetid: d7b7f560-446c-4343-85a0-41e8c6af7b08
 # View schema elements G-L
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 - [GetFileExtension](getfileextension-element-view.md)
-  
+
 - [GetVar](getvar-element-view.md)
-  
+
 - [HTML](html-element-view.md)
-  
+
 - [HttpHost](httphost-element-view.md)
-  
+
 - [HttpPath](httppath-element-view.md)
-  
+
 - [HttpVDir](httpvdir-element-view.md)
-  
+
 - [ID](id-element-view.md)
-  
+
 - [Identity](identity-element-view.md)
-  
+
 - [IfEqual](ifequal-element-view.md)
-  
+
 - [IfHasRights](ifhasrights-element-view.md)
-  
+
 - [IfNeg](ifneg-element-view.md)
-  
+
 - [IfNew](ifnew-element-view.md)
-  
+
 - [IfSubString](ifsubstring-element-view.md)
-  
+
 - [Join](join-element-view.md)
-  
+
 - [Joins](joins-element-view.md)
-  
+
 - [Length](length-element-view.md)
-  
+
 - [Limit](limit-element-view.md)
-  
+
 - [List](list-element-view.md)
-  
+
 - [ListProperty](listproperty-element-view.md)
-  
+
 - [ListUrl](listurl-element-view.md)
-  
+
 - [ListUrlDir](listurldir-element-view.md)
-  
+
 - [LookupColumn](lookupcolumn-element-view.md)
-  
+
 
 ## See also
 

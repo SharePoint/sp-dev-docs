@@ -1,7 +1,7 @@
 ---
 title: Reactive and nonreactive SharePoint web parts
 description: Reactive web parts are client-side only; nonreactive web parts have elements that require a server to operate.
-ms.date: 01/23/2018 
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 

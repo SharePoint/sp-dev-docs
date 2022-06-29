@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e63f9c59-018f-4438-a861-f0d3db3b8e7f
 description: Group Element (DeploymentUserGroupMap) represents an instance of a deployment group object for generating the group map file exported to the content migration package.
@@ -13,17 +12,17 @@ description: Group Element (DeploymentUserGroupMap) represents an instance of a 
 # Group Element (DeploymentUserGroupMap)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Represents an instance of a deployment group (**DeploymentGroup**) object for generating the group map (UserGroup.xml) file exported to the content migration package.
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element 
-    name="Group" 
-    type="DeploymentGroup" 
-    minOccurs="0" maxOccurs="unbounded" 
+<xs:element
+    name="Group"
+    type="DeploymentGroup"
+    minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <Groups>
@@ -47,7 +46,7 @@ USAGE
 ## Type
 
 **DeploymentGroup**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -66,16 +65,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**AllowRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether the deployment group accepts requests to join or leave the deployment group: **true** if the group accepts such requests.  <br/> |
 |**AutoAcceptRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether the deployment group automatically accepts requests to join or leave the deployment group; **true** if the group automatically accepts such requests.  <br/> |
 |**RequestToJoinLeaveEmailSetting** <br/> |xs:string  <br/> |Optional. Provides the email address to which users can send requests to join or leave the deployment group.  <br/> |
-   
+
 ### Child elements
 
 [Member Element (DeploymentUserGroupMap)](member-element-deploymentusergroupmap.md)
-   
+
 ### Parent elements
 
 [Groups Element (DeploymentUserGroupMap)](groups-element-deploymentusergroupmap.md)
-   
+
 ## See also
 
 - [DeploymentUserGroupMap Schema](deploymentusergroupmap-schema.md)
-

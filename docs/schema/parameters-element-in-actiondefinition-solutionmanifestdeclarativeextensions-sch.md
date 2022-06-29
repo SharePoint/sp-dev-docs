@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 70ecf495-6f5d-abb5-c8cc-a3c88faf186b
 ---
 
-# Parameters Element in ActionDefinition 
+# Parameters Element in ActionDefinition
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -18,7 +17,7 @@ ms.assetid: 70ecf495-6f5d-abb5-c8cc-a3c88faf186b
 
 The **Parameters** element lists all the parameters that an action accepts.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -36,7 +35,7 @@ The following sections describe attributes, child elements, and parent elements.
 None.
 
 ### Child elements
-  
+
 | Element | Description |
 | --- | --- |
 | [ConstantParameter Element in ActionParameterDefinitions (SolutionManifestDeclarativeExtensions Schema)](constantparameter-element-in-actionparameterdefinitions-solutionmanifestdeclarat.md) | The **ConstantParameter** element defines a constant parameter for an action. |
@@ -44,7 +43,7 @@ None.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [UrlAction Element in Actions (SolutionManifestDeclarativeExtensions Schema)](urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | The **UrlAction** element is used to execute a URL-based action. |
@@ -53,10 +52,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

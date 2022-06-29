@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - document converter schema, elements element
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a27e2255-7d35-404d-b9e2-8f6acc8df318
 ---
@@ -71,11 +70,3 @@ The following sections describe attributes, child elements, and parent elements.
 ## See also
 
 - [Document Converter](document-converter.md)
-
-
-
-
-
-
-
-

@@ -1,10 +1,9 @@
 ---
 title: Enterprise Content Management
 description: This article is about services, capabilities, and options to manage ECM and content in SharePoint, with links to additional resources.
-ms.date: 06/07/2022
+ms.date: 06/28/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
 ms.localizationpriority: medium
@@ -145,7 +144,7 @@ Site classification allows managing clusters of sites based on their classificat
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
-Information Rights Management (IRM) helps prevent sensitive information from being printed, forwarded, saved, edited, or copied by unauthorized people. With IRM in SharePoint Online, you can limit the actions that users can take on files that have been downloaded from lists or libraries. 
+Information Rights Management (IRM) helps prevent sensitive information from being printed, forwarded, saved, edited, or copied by unauthorized people. With IRM in SharePoint Online, you can limit the actions that users can take on files that have been downloaded from lists or libraries.
 
 ### Articles
 

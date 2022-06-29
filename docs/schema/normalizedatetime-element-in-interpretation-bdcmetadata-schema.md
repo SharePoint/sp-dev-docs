@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bbae3bfa-0754-d576-2bee-1ac0e8508a57
 ---
 
-# NormalizeDateTime element in Interpretation 
+# NormalizeDateTime element in Interpretation
 
 (BDCMetadata Schema)
 
@@ -90,11 +89,3 @@ None.
 |Element|Description|
 |-------|-----------|
 |[Interpretation element in TypeDescriptor (BDCMetadata Schema)](interpretation-element-in-typedescriptor-bdcmetadata-schema.md)|An **Interpretation** element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.|
-
-
-
-
-
-
-
-

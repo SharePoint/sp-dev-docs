@@ -7,12 +7,11 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.SourceEntity
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 19fb5f38-4e85-7fb0-2562-281b9a9ffbef
 ---
 
-# SourceEntity Element in Association 
+# SourceEntity Element in Association
 
 (BDCMetadata Schema)
 
@@ -70,11 +69,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [Association Element in MethodInstances (BDCMetadata Schema)](association-element-in-methodinstances-bdcmetadata-schema.md) | The **Association** that contains this element. |
-
-
-
-
-
-
-
-

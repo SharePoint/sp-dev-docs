@@ -5,22 +5,21 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8c4106a9-2ca6-a114-94a2-2d3ac56f654c
 ---
 
 # ManagedPropertyInfo complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 |Name|Value|
 |:-----|:-----|
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
 |**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
 |**Extension base** |tns:BaseInfo  |
-   
+
 ## Definition
 
 ```XML
@@ -64,8 +63,8 @@ ms.assetid: 8c4106a9-2ca6-a114-94a2-2d3ac56f654c
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -97,9 +96,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[SortableType](sortabletype-element-managedpropertyinfo-complextypesps15xsdsearchset2.md) <br/> |tns:SortableType  <br/> ||
 |[TokenNormalization](tokennormalization-element-managedpropertyinfo-complextypesps15xsdsearchset2.md) <br/> |xs:boolean  <br/> ||
 |[UpdateGroup](updategroup-element-managedpropertyinfo-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

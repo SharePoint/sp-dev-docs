@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.FilterDescriptor
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ce0a852-38f9-75d2-8258-27c57418f53c
 ---
@@ -177,12 +176,3 @@ The following sections describe attributes, child elements, and parent elements.
 | Element | Description |
 |---------|-------------|
 | [FilterDescriptors Element in Method (BDCMetadata Schema)](filterdescriptors-element-in-method-bdcmetadata-schema.md) | A list of filter descriptors of a method. |
-
-
-
-
-
-
-
-
-

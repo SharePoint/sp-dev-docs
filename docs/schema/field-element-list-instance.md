@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d9c472d5-0eb5-4502-aec5-347a9f289055
 ---
@@ -70,10 +69,3 @@ None
 For an example of how this element is used, see [List Instances](list-instances.md).
 
 <br/>
-
-
-
-
-
-
-

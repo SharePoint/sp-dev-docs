@@ -2,7 +2,6 @@
 title: Isolated web parts
 description: Overview of the isolated web parts capability in the SharePoint Framework
 ms.date: 08/05/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

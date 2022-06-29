@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7e38207d-be3b-ea12-aac1-0dd657a33c21
 ---
@@ -95,11 +94,3 @@ None.
 | Element | Description |
 |---------|-------------|
 | [AccessControlEntry Element in AccessControlList (BDCMetadataResource Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md) | |
-
-
-
-
-
-
-
-

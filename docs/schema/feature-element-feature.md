@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 265cd648-1a7e-410f-a1d7-0da8c64b4006
 ---
@@ -23,9 +22,9 @@ Defines a Feature to activate or deactivate at a specified scope.
   ActivateOnDefault = "TRUE" | "FALSE"
   AlwaysForceInstall = "TRUE" | "FALSE"
   AutoActivateInCentralAdmin = "TRUE" | "FALSE"
-  Creator = "Text" 
+  Creator = "Text"
   DefaultResourceFile =  "Text"
-  Description = "Text" 
+  Description = "Text"
   Hidden = "TRUE" | "FALSE"
   Id = "Text"
   ImageUrl = "Text"
@@ -94,11 +93,3 @@ SharePoint Foundation supports only low-order ASCII characters, and no spaces, f
 ## Example
 
 For an example of how this element is used, see [Feature.xml Files](feature-xml-files.md).
-
-
-
-
-
-
-
-

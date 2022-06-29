@@ -5,18 +5,17 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
 ---
 
-# AppDefinition complexType 
+# AppDefinition complexType
 
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -30,37 +29,37 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
 ## Definition
 
 ```XML
-    <xs:complexType name="AppDefinition">     
+    <xs:complexType name="AppDefinition">
       <xs:all>
         <xs:element name="AppPrincipal"  type="AppPrincipalDefinition"
          minOccurs="1"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="AppPermissionRequests"  type="AppPermissionRequestsDefinition"
          minOccurs="0"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="Properties"  type="PropertiesDefinition"
          minOccurs="1"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="RemoteEndpoints"  type="RemoteEndpointsDefinition"
          minOccurs="0"
          maxOccurs="1"
         >
         </xs:element>
-        
+
         <xs:element name="AppPrerequisites"  type="AppPrerequisiteCollection"
          minOccurs="0"
          maxOccurs="1"
         >
-        </xs:element>   
+        </xs:element>
       </xs:all>
 
         <xs:attribute name="ProductID"
@@ -88,7 +87,7 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
          use="required"
         />
     </xs:complexType>
-```          
+```
 
 
 ## Elements and attributes
@@ -209,11 +208,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

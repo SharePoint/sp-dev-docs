@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 21669885-4372-4501-b00b-439de30ce0e3
 ---
@@ -18,7 +17,7 @@ ms.assetid: 21669885-4372-4501-b00b-439de30ce0e3
 
 The **FieldBind** element is a child of the **RuleDesigner** element. These elements are used together to create a readable sentence that describes a condition that needs to be evaluated or an activity that must be executed. When constructed correctly, these elements can also be used to insert variables (such as hyperlinks) within the sentence, so that the code-free workflow editor can substitute dynamic values into the workflow while it is running. The **FieldBind** element maps the inputs from the workflow creator to parameters that are then passed to Microsoft SharePoint Foundation 2010.
 
-> [!NOTE] 
+> [!NOTE]
 > Using custom designer types or custom field types is not supported when creating workflows using SharePoint Designer unless they are a subtype of an existing supported type, or if otherwise compatible with supported designer or parameter types.
 
 ## Definition
@@ -321,9 +320,9 @@ The following example demonstrates how to construct the **FieldBind** element wi
 
 ```XML
     <RuleDesigner Sentence="%1">
-       <FieldBind Field="MyParameter1" 
-                  Text="text" Id="1"       
-                  DesignerType="Dropdown" 
+       <FieldBind Field="MyParameter1"
+                  Text="text" Id="1"
+                  DesignerType="Dropdown"
                   TypeFrom="MyParameter1">
           <Option Name="Display Name" Value="Display Value"/>
        </FieldBind>
@@ -334,11 +333,3 @@ The following example demonstrates how to construct the **FieldBind** element wi
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-
-

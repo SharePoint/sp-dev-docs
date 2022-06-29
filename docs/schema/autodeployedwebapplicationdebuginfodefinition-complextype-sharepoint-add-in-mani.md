@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 01b2ddb3-33b1-e65c-f3ee-623ddbad94c6
 ---
 
-# AutoDeployedWebApplicationDebugInfoDefinition complexType 
+# AutoDeployedWebApplicationDebugInfoDefinition complexType
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 01b2ddb3-33b1-e65c-f3ee-623ddbad94c6
 
 The add-in principal information used for debugging purposes.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -46,7 +45,7 @@ The add-in principal information used for debugging purposes.
        use="optional"
       />
     </xs:complexType>
-```          
+```
 
 ## Elements and attributes
 
@@ -101,11 +100,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

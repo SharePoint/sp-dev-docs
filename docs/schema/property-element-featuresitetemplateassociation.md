@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 60db0486-d2c3-4c97-a98e-260f6c9193e2
 ---
@@ -74,11 +73,3 @@ None
 ## Example
 
 For an example of how this element is used, see [Feature/Site Template Associations](feature-site-template-associations.md).
-
-
-
-
-
-
-
-

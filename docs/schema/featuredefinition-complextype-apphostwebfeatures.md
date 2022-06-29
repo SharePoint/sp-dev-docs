@@ -5,16 +5,15 @@ ms.date: 06/13/2022
 description: Describes FeatureDefinition complexType and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ab1de98a-64f7-c8d1-0b64-7650cb100167
 ---
 
-# FeatureDefinition complexType 
+# FeatureDefinition complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -253,10 +252,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 <br/>
-
-
-
-
-
-
-

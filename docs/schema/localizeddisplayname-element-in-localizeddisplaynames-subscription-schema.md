@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f6fd7c82-4d2b-12f4-7c42-dd11f48919bf
 ---
@@ -60,11 +59,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames Element in MetadataObject (Subscription Schema)](localizeddisplaynames-element-in-metadataobject-subscription-schema.md) | A list of localized display names. |
-
-
-
-
-
-
-
-

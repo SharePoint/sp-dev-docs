@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e50544d6-34c0-3cf8-a749-d129b7d6aa27
 ---
 
-# Fields element (SchemaSource element) 
+# Fields element (SchemaSource element)
 
 (dataSourceType complexType) (Action4)
 
@@ -51,10 +50,10 @@ Container for instances of the [Field element (Action4)](field-element-fields-el
                   <xs:attribute name="Name" type="s:string" />
                   <xs:attribute name="DisplayName" type="s:string" />
                   <xs:attribute name="Type" type="s:string" />
-                </xs:element>  
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -112,11 +111,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

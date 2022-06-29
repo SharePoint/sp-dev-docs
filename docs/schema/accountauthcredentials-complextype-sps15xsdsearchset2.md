@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
 ---
@@ -19,7 +18,7 @@ ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
 |**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
 |**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd   |
 |**Extension base**  |tns:AuthenticationData   |
-   
+
 ## Definition
 
 ```XML
@@ -38,17 +37,15 @@ ms.assetid: fb7d56a6-5985-2379-7183-6bee6fcd3f90
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |[_UserName](_username-element-accountauthcredentials-complextypesps15xsdsearchset2.md)  |xs:string   ||
 |[Password](password-element-accountauthcredentials-complextypesps15xsdsearchset2.md)  |xs:string   ||
-   
+
 ### Attributes
 
 None.
-  
-

@@ -2,7 +2,6 @@
 title: Deploy your client-side web part to a SharePoint page (Hello World part 3)
 description: Deploy your client-side web part to SharePoint and see it working on a modern SharePoint page.
 ms.date: 02/10/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -140,7 +139,7 @@ Notice that you can see if there's any exceptions or issues in the package by lo
 
     ![Installed app](../../../images/app-installed-your-site.png)
 
-    The client-side solution and the web part are installed on your developer site. 
+    The client-side solution and the web part are installed on your developer site.
 
 
 The **Site Contents** page shows you the installation status of your client-side solution. Make sure the installation is complete before going to the next step.

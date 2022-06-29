@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
 api_type:
 - schema
 ms.assetid: f3c0c837-6d70-40e9-8d8a-e2064c5dad83
-description: Contains the collection of document library templates that are available for creating document libraries. 
+description: Contains the collection of document library templates that are available for creating document libraries.
 ---
 
 # DocumentTemplates element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Contains the collection of document library templates that are available for creating document libraries. This collection is listed in the **Template Type** drop-down list box on the **New Document Library** page. 
-  
+
+Contains the collection of document library templates that are available for creating document libraries. This collection is listed in the **Template Type** drop-down list box on the **New Document Library** page.
+
 ```XML
 <DocumentTemplates>
 </DocumentTemplates>
@@ -32,24 +31,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [DocumentTemplate](documenttemplate-element-site.md)
-   
+
 ### Parent elements
 
 - [Project](project-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
 The following excerpt from the [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) file for the standard SharePoint Foundation site definition (**STS**) defines the document templates that are available by default.
-  
+
 ```XML
 <DocumentTemplates>
     <DocumentTemplate Path="STS" Name="" DisplayName="$Resources:core,doctemp_None;" Type="100" Default="FALSE" Description="$Resources:core,doctemp_None_Desc;" />
@@ -110,5 +109,3 @@ The following excerpt from the [Onet.xml](https://msdn.microsoft.com/library/b99
     </DocumentTemplate>
   </DocumentTemplates>
 ```
-
-

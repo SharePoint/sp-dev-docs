@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, documenttemplate element
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7434d1f8-551a-425c-8b9b-d4e961cd4f5e
 ---
@@ -74,7 +73,7 @@ The following sections describe attributes, child elements, and parent elements.
 The following example specifies a document template for a content type. In this case, the path specified is relative to the server base URL.
 
 ```XML
-    <ContentType 
+    <ContentType
     …
       <DocumentTemplate TargetName="/_layouts/NewCTDoc.aspx" />
     </ContentType>
@@ -84,10 +83,3 @@ The following example specifies a document template for a content type. In this 
 
 - [Content Type Definitions](content-type-definitions.md)
 - [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 title: Commanding within a web part
 description: Commanding within a web part consists of a single line of commands that sits under the web part title.
-ms.date: 06/03/2022
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
@@ -10,8 +10,6 @@ ms.localizationpriority: medium
 Commanding within a web part consists of a single line of commands that sits under the web part title. These commands contain an icon and text, for example the `+` (plus) icon and the text **Add**. The command bar can be extended to support multiple commands. However, be aware of overloading the web part with too many commands. Also, note how the commands reflow when the web part is placed in different columns, or when the page reflows to smaller screen sizes.
 
 ![Single +Add command under the title](../images/Commanding_Events_1column_01.png)
-
-<br/>
 
 ![Multiple commands on the left, and secondary commands on the right](../images/Commanding_Doclib_multiplecommands_05.png)
 
@@ -30,8 +28,6 @@ A common command is **Add** for many web parts that require content to be create
 Core commands, even when the web part has only one command such as **Add**, should sit under the title to create consistency and discoverability, and to support easy reflow across all column sizes. Long web part titles should wrap to two lines, but not interfere with the placement of the commands.
 
 ![Two-column reflow and title wrap](../images/Commanding_Events_2column_03.png)
-
-<br/>
 
 ![Three-column reflow and title wrap](../images/Commanding_Events_3column_04.png)
 

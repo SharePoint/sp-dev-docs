@@ -5,15 +5,14 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7a305e0f-5605-4083-bf6a-71e50c601ec9
 ---
 
 # RoleAssignment Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents an instance of a deployment role assignment (**DeploymentRoleAssignment**) object.
 
 ## Definition
@@ -40,8 +39,8 @@ USAGE
 
 ## Type
 
-**DeploymentRoleAssignment** (based on [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)) 
-  
+**DeploymentRoleAssignment** (based on [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx))
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -57,17 +56,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**ObjectType** <br/> |xs:string  <br/> |Required. Type of the role assignment object.  <br/> |
 |**ObjectUrl** <br/> |xs:string  <br/> |Required. URL to the role assignment object.  <br/> |
 |**AnonymousPermMask** <br/> |xs:string  <br/> |Optional. Permission mask for anonymous users.  <br/> |
-   
+
 ### Child elements
 
 [Assignment Element (DeploymentManifest)](assignment-element-deploymentmanifest.md)
-   
+
 ### Parent elements
 
 [RoleAssignments Element (DeploymentManifest)](roleassignments-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPRoleAssignment](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPRoleAssignment.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8d94069d-51a9-4e1d-0269-5fd9d8a04114
 ---
 
-# RuleDesigner element (Action element) 
+# RuleDesigner element (Action element)
 
 (Actions element) (WorkflowInfo element) (Action4)
 
@@ -57,7 +56,7 @@ Contains information that allows the rendering of a declarative **Action** sente
 
 ```XML
     <xs:element name="RuleDesigner" type="ruleDesignerType" minOccurs="1" maxOccurs="1">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -142,11 +141,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

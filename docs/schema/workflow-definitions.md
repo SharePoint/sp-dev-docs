@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow schemas, overview
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 34e1e631-e1b5-437b-a861-029ef327d3d3
 ---
@@ -53,11 +52,3 @@ The structure of the workflow definition schema is as follows.
 ## See also
 
 - [Workflow Deployment Using Features](https://msdn.microsoft.com/library/ad294f09-483d-4e87-bd19-fa37795ed558(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -2,7 +2,6 @@
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -58,7 +57,7 @@ this.context.pageContext
         <h3>Welcome to SharePoint Framework!</h3>
         <div>Web part description: <strong>${escape(this.properties.description)}</strong></div>
         <div>Web part test: <strong>${escape(this.properties.test)}</strong></div>
-        <div>Loading from: <strong>${escape(this.context.pageContext.web.title)}</strong></div>        
+        <div>Loading from: <strong>${escape(this.context.pageContext.web.title)}</strong></div>
       </div>
     </section>`;
     ```

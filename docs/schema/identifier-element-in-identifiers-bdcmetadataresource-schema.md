@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f1e3324e-5259-8f2f-e1d4-11139819c7c9
 ---
@@ -58,11 +57,3 @@ The following sections describe attributes, chiidentifiers-element-in-entity-bdc
 | Element |
 | --- |
 | [Identifiers Element in Entity (BDCMetadataResource Schema)](identifiers-element-in-entity-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

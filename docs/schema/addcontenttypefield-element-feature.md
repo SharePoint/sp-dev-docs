@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cb04a3ac-f41a-4ffe-aaa1-d4bf3fb6347d
 ---
@@ -19,7 +18,7 @@ Specifies the content type field to add during a Feature upgrade.
 ## Definition
 
 ```XML
-<AddContentTypeField 
+<AddContentTypeField
   ContentTypeId = string
   FieldId = string
   PushDown = TRUE | FALSE />
@@ -88,11 +87,3 @@ None
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

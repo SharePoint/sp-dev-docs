@@ -1,7 +1,7 @@
 ---
 title: Multi-Geo Capabilities
 description: The Multi-Geo Capabilities in Office 365 are a feature that helps multinational customers address their data residency requirements in Office 365.
-ms.date: 06/07/2022
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +12,7 @@ Multinational companies that have offices around the world often have needs to s
 
 Multi-Geo enables a single Office 365 tenant to span across multiple Office 365 datacenter geographies (geos), and gives customers the ability to store their Exchange, SharePoint, and OneDrive data, at-rest, on a per-user basis, in their chosen geos.
 
-In this article you can find further details about the Multi-Geo Capabilities, as well as code samples, and videos. 
+In this article you can find further details about the Multi-Geo Capabilities, as well as code samples, and videos.
 
 ### Articles
 * [Introduction to OneDrive and SharePoint Online Multi-Geo Preview](/sharepoint/dev/solution-guidance/multigeo-introduction    )

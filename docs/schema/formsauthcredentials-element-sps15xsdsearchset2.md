@@ -5,15 +5,14 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 58de7e07-32fd-104b-7f06-ac4113e5148b
 ---
 
 # FormsAuthCredentials element (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
 | Information | Location |
@@ -21,7 +20,7 @@ ms.assetid: 58de7e07-32fd-104b-7f06-ac4113e5148b
 | **Element Type** | tns:FormsAuthCredentials |
 | **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
 | **Schema File** | schema_Microsoft.Office.Server.Search.Administration.xsd |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ ms.assetid: 58de7e07-32fd-104b-7f06-ac4113e5148b
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

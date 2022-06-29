@@ -5,17 +5,16 @@ ms.date: 06/14/2022
 description: Describes ToggleButton element (CommandUIDefinitionType complexType) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a0815122-d337-2a11-5e98-386b1fe4e709
 ---
 
-# ToggleButton element (CommandUIDefinitionType complexType) 
+# ToggleButton element (CommandUIDefinitionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
@@ -25,13 +24,13 @@ ms.assetid: a0815122-d337-2a11-5e98-386b1fe4e709
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |
 
-## Definition 
+## Definition
 
 ```XML
     <xs:element name="ToggleButton" type="ToggleButtonType"></xs:element>
 ```
 
-## Elements and attributes 
+## Elements and attributes
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
 
@@ -60,26 +59,18 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Child elements
 
 None.
 
-<br/> 
+<br/>
 
 ### Attributes
 
 None.
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

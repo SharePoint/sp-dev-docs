@@ -2,7 +2,6 @@
 title: Building a query suggestion extension using SharePoint Framework
 description: Tutorial on creating a query suggestion extension with SharePoint Framework
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 
@@ -48,7 +47,7 @@ Be sure you have completed the procedures in the following articles before you b
     * Select **SharePoint Online only (latest)**, and then select Enter.
     * Select **Use the current folder** as the location for the files.
     * Select **N** as we want this extension to be explicitly installed on specific site given the automated configuration which will be applied
-    * Select **N** on the question if solution contains unique permissions.  
+    * Select **N** on the question if solution contains unique permissions.
     * Select **Extension** as the client-side component type to be created.
     * Select **Search Query Modifier** as the client-side extension to be created.
 
@@ -58,7 +57,7 @@ Be sure you have completed the procedures in the following articles before you b
 1. The next set of prompts asks for specific information about your web part:
 
     * Enter **MyQueryExtension** for the extension name, and then select Enter.
-    * Enter **My first query extension** as the description of the extension, and then select Enter. 
+    * Enter **My first query extension** as the description of the extension, and then select Enter.
     * Accept the default **No JavaScript framework** option for the framework, and then select Enter to continue.
 
     ![Yeoman prompts](../../../images/query-extension-yeoman.png)

@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 67b9e2e8-b769-9d79-478e-acb613617513
 ---
@@ -43,11 +42,3 @@ None.
 | Element |
 | --- |
 | [LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-

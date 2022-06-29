@@ -1,11 +1,11 @@
 ---
-title: Group customization syntax reference	
-description: Group customization syntax reference	
-ms.date: 10/18/2021
+title: Group customization syntax reference
+description: Group customization syntax reference
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
-# Group customization syntax reference	
+# Group customization syntax reference
 
 ## groupProps
 

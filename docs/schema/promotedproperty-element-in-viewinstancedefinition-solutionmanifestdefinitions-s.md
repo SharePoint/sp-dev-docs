@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 12a4acb8-df31-bdca-1dea-b6534c7c6195
 ---
 
-# PromotedProperty Element in ViewInstanceDefinition 
+# PromotedProperty Element in ViewInstanceDefinition
 
 (SolutionManifestDefinitions Schema)
 
@@ -85,7 +84,7 @@ None.
 
 ### Parent elements
 
-  
+
 | Element | Description |
 | --- | --- |
 | [View Element in EntityInstanceDefinition (SolutionManifestDefinitions Schema)](view-element-in-entityinstancedefinition-solutionmanifestdefinitions-schema.md) | The view this promoted property belongs to. |
@@ -93,11 +92,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

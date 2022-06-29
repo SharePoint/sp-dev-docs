@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Defines the internal data types used in the list infrastructure of 
 # Field element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines the internal data types used in the list infrastructure of a SharePoint website. A field is a column or attribute of information that a user can add to a list.
-  
+
 ```XML
 <Field
   Aggregation = "sum" | "count" | "average" | "min" | "max" | "merge" | "plaintext" | "first" | "last"
@@ -76,7 +75,7 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   ListItemMenuAllowed = "Text"
   Max = "Number"
   MaxLength = "Integer"
-  Min = "Number" 
+  Min = "Number"
   Mult = "TRUE" | "FALSE"
   Name = "Text"
   NegativeFormat = "MinusSign" | "Parens"
@@ -121,7 +120,7 @@ Defines the internal data types used in the list infrastructure of a SharePoint 
   StripWS = "TRUE" | "FALSE"
   SuppressNameDisplay = "TRUE" | "FALSE"
   TextOnly = "TRUE" | "FALSE"
-  Title = "Text" 
+  Title = "Text"
   Type = "Data_Type"
   UniqueId = "Text"
   UnlimitedLengthInDocumentLibrary = "TRUE" | "FALSE"
@@ -261,7 +260,7 @@ The following sections describe attributes, child elements, and parent elements:
 |**Width** <br/> |Optional **Integer**. Specifies the width in pixels of the images that are displayed for users in the User Information list.  <br/> |
 |**WikiLinking** <br/> |Optional **Boolean**. **TRUE** to specify that wiki links, which appear in the form of double brackets (`[[…]]`), become translated into HTML links, which use the `<A>` tag.  <br/> |
 |**XName** <br/> |Optional **Text**. Used internally in XML forms to identify fields that have been added, deleted, or modified. This attribute is not intended for public use.  <br/> |
-   
+
 ### Child elements
 
 - [CHOICES](choices-element-list.md)
@@ -275,45 +274,45 @@ The following sections describe attributes, child elements, and parent elements:
 - [FormulaDisplayNames](formuladisplaynames-element-list.md)
 - [MAPPINGS](mappings-element-list.md)
 - [Validation](validation-element-list.md)
-   
+
 ### Parent elements
 
 - [Fields](fields-element-list.md)
 - [ProjectedFields](projectedfields-element-view.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded when the parent is [Fields](fields-element-view.md). When the parent is [ProjectedFields](projectedfields-element-view.md), the maximum is the difference between the maximum number of allowed fields in the primary list that is being queried and the number of fields already in the list.  
-   
+- Maximum: Unbounded when the parent is [Fields](fields-element-view.md). When the parent is [ProjectedFields](projectedfields-element-view.md), the maximum is the difference between the maximum number of allowed fields in the primary list that is being queried and the number of fields already in the list.
+
 ### Remarks
 
-To create a custom field definition for a list definition that is based on a default SharePoint Foundation field type, use the **Field (List - Definition)** element within a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file. 
+To create a custom field definition for a list definition that is based on a default SharePoint Foundation field type, use the **Field (List - Definition)** element within a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file.
 
-To create a custom field definition as a pluggable Feature that is based on a default field type and that can be reused across websites and lists within a site collection, use the [Field (Field)](field-element-field.md) element to define a custom [site column](https://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx). 
+To create a custom field definition as a pluggable Feature that is based on a default field type and that can be reused across websites and lists within a site collection, use the [Field (Field)](field-element-field.md) element to define a custom [site column](https://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx).
 
-To create a [custom field type](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element. 
-  
-Fields can be referenced from View definitions as well as from expressions in computed field rendering elements. Use the [Field (View)](field-element-view.md) element to return a formatted field value for display within a view, and use the [Column (View)](column-element-view.md) element to return the raw data value of the field. 
+To create a [custom field type](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element.
 
-The syntax for referencing a field is as follows: 
-  
+Fields can be referenced from View definitions as well as from expressions in computed field rendering elements. Use the [Field (View)](field-element-view.md) element to return a formatted field value for display within a view, and use the [Column (View)](column-element-view.md) element to return the raw data value of the field.
+
+The syntax for referencing a field is as follows:
+
 ```XML
 <Field Name="FieldName"/>
 ```
 
-By default, the field is rendered with the default attributes for that field definition as specified in the previous table. Any of the field attributes can be overridden in the CAML markup of the **FieldRef** attribute, which overrides the definition given for the field itself (The **Type** attribute for a field cannot be changed). 
-  
-To display the user-defined display name of a field, you can use `<Property Select="DisplayName"/>`.  
-  
+By default, the field is rendered with the default attributes for that field definition as specified in the previous table. Any of the field attributes can be overridden in the CAML markup of the **FieldRef** attribute, which overrides the definition given for the field itself (The **Type** attribute for a field cannot be changed).
+
+To display the user-defined display name of a field, you can use `<Property Select="DisplayName"/>`.
+
 Within a **Fields** element enumeration, the **Name** attribute can be omitted. For some field references, the raw data stored for the field can be accessed by using `<Column/>`.
-  
+
 Some properties of fields from forms and from certain aspects of the authoring UI can be rendered through the **Property** element, for example, `<Property Select="Description"/>` or `<Property Select="Type"/>`. These elements simply retrieve the value of any field attribute or child element (**Property**) by name.
-  
-In addition to the preceding types, the following predefined fields are used with the **Field** element: 
+
+In addition to the preceding types, the following predefined fields are used with the **Field** element:
 
 <br/>
-  
+
 |**Name**|**Description**|
 |:-----|:-----|
 |**Created** <br/> |A field that contains a **DateTime** value specifying the time that the item was created (in UTC).  <br/> |
@@ -327,12 +326,12 @@ In addition to the preceding types, the following predefined fields are used wit
 
 
 > [!NOTE]
-> The fields returned in a **Fields** enumeration are affected by the display mode. Fields that are marked with the **Hidden** attribute are never returned. Fields that are marked with the **ReadOnly** attribute are not returned if a form is being rendered (if **Fields** is called from within a **ListForm** element). Fields that are marked with the **ShowInNewForm** attribute are not returned in the NEW or PREVIEWNEW display modes. Fields marked with the **ShowInFileDlg** attribute are not returned when rendering the **NewForm** dialog form. 
-  
+> The fields returned in a **Fields** enumeration are affected by the display mode. Fields that are marked with the **Hidden** attribute are never returned. Fields that are marked with the **ReadOnly** attribute are not returned if a form is being rendered (if **Fields** is called from within a **ListForm** element). Fields that are marked with the **ShowInNewForm** attribute are not returned in the NEW or PREVIEWNEW display modes. Fields marked with the **ShowInFileDlg** attribute are not returned when rendering the **NewForm** dialog form.
+
 ## Example
 
-The following example uses the **Field** element to specify options for a list named Area list: 
-  
+The following example uses the **Field** element to specify options for a list named Area list:
+
 ```XML
 <Field Type="Choice" BaseType="Text" Name="Area">
   <CHOICES>
@@ -354,15 +353,13 @@ The following example uses the **Field** element to specify options for a list n
 
 ## See also
 
-- [Column element (View)](column-element-view.md) 
-- [Column2 element (View)](column2-element-view.md) 
+- [Column element (View)](column-element-view.md)
+- [Column2 element (View)](column2-element-view.md)
 - [Field element (Field)](field-element-field.md)
-- [Field element (View)](field-element-view.md)  
+- [Field element (View)](field-element-view.md)
 - [Field element (Site)](field-element-site.md)
-- [Field element (Field Types)](field-element-field-types.md)  
-- [Field element (Field Types Property Schema)](field-element-field-types-property-schema.md)  
-- [Field element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)  
-- [Field element (DeploymentManifest - FieldDataCollection)](field-element-deploymentmanifestfielddatacollection.md)  
-- [Field element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)  
-
-
+- [Field element (Field Types)](field-element-field-types.md)
+- [Field element (Field Types Property Schema)](field-element-field-types-property-schema.md)
+- [Field element (DeploymentManifest - DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)
+- [Field element (DeploymentManifest - FieldDataCollection)](field-element-deploymentmanifestfielddatacollection.md)
+- [Field element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)

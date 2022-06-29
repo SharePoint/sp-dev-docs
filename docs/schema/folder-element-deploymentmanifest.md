@@ -5,16 +5,15 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79010d5f-246c-45bd-a11c-18dc09e84455
 ---
 
 # Folder Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 folder ([SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)) object. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a Windows SharePoint Services 3.0 folder ([SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)) object.
 
 ## Definition
 
@@ -48,7 +47,7 @@ USAGE
 ## Type
 
 [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -71,17 +70,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**ModifiedBy** <br/> |xs:string  <br/> |Optional. User who last modified the folder.  <br/> |
 |**TimeCreated** <br/> |xs:dateTime  <br/> |Optional. Date/time value specifying the time the folder was created.  <br/> |
 |**TimeLastModified** <br/> |xs:dateTime  <br/> |Optional. Date-time value specifying the time the folder was last modified.  <br/> |
-   
+
 ### Child elements
 
 [Properties Element (DeploymentManifest - SPFolder)](properties-element-deploymentmanifestspfolder.md)
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

@@ -1,8 +1,7 @@
 ---
 title: Responding to changes
 description: Responding to changes
-ms.date: 06/07/2022
-ms.prod: sharepoint
+ms.date: 06/28/2022
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint
@@ -16,7 +15,7 @@ Responding to changes is a very common requirement for SharePoint customizations
 
 ## High-level guideline/general rules
 Before digging into the details of the various options that you have to handle changes, let's see some common high-level guidelines and general rules:
-* Whenever you need to manage an event coming from SharePoint, try to apply an asynchronous pattern, where you collect the basic information about the happening, you give back control to SharePoint, and you use a background job to process the real business logic for the event. You can use an Azure Function, an Azure Web Job, or whatever else background job technique to process the event. At the same time you can use a queue, or a database table, or any other reliable persistence storage to store information about the event that will be processed. Upon receival of the event from SharePoint, you store the information in the persistence layer, and afterwards you raise the background job. 
+* Whenever you need to manage an event coming from SharePoint, try to apply an asynchronous pattern, where you collect the basic information about the happening, you give back control to SharePoint, and you use a background job to process the real business logic for the event. You can use an Azure Function, an Azure Web Job, or whatever else background job technique to process the event. At the same time you can use a queue, or a database table, or any other reliable persistence storage to store information about the event that will be processed. Upon receival of the event from SharePoint, you store the information in the persistence layer, and afterwards you raise the background job.
 * If you are processing a synchronous event, try to avoid as much as you can blocking SharePoint. Rather refer to the asynchronous pattern described in the previous bullet.
 * Consider using an App-Only security model, whenever you need to do background processing of an event, so that you will not need to make the users' credentials flow into your event handling service/solution. Nevertheless, there are some activities which simply cannot be executed within an App-Only context. If that is the case, try to pass in a secure way an OAuth Access Token to the background job, rather than a set of user's credentials. The fact that an Access Token expires, and has a limited and pre-defined set of permission scopes associated, will keep the overall solution more secure.
 

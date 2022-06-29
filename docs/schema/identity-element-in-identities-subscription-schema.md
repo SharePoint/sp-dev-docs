@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: de3b9e21-c45c-b6fc-8c5d-e5e3cf55bd1e
 ---
 
-# Identity element in Identities 
+# Identity element in Identities
 
 (Subscription Schema)
 
@@ -43,11 +42,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [Identities Element in Subscription (Subscription Schema)](identities-element-in-subscription-subscription-schema.md) | An **Identities** element that lists the serialized values of identities. |
-
-
-
-
-
-
-
-

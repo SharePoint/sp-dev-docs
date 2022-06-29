@@ -1,7 +1,7 @@
 ---
 title: Transformation
-description: Office 365 and SharePoint evolve continuously. As new capabilities are added, it might be necessary to update the existing configuration and customizations. 
-ms.date: 06/10/2022
+description: Office 365 and SharePoint evolve continuously. As new capabilities are added, it might be necessary to update the existing configuration and customizations.
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 # Transformation

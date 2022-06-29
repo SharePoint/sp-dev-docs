@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4c8a77e8-9c71-14cb-051a-170978ecc32a
 ---
 
-# ContextEventHandlers Element in DeclarativeContextDefinition 
+# ContextEventHandlers Element in DeclarativeContextDefinition
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -50,11 +49,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

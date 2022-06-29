@@ -9,7 +9,6 @@ f1_keywords:
 - SharePoint workflows
 keywords:
 - customizing site definitions,site definition configurations [SharePoint 2010]
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8c873040-28c8-4fa9-a411-6638af47131b
 ---
@@ -137,11 +136,3 @@ The following example shows a Template element for a workflow configuration.
 - [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
-
-
-
-
-
-
-
-

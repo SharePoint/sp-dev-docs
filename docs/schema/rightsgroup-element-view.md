@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: 2581816d-83ce-4206-9dcc-da6edd82ae52
-description: Specifies a permission that the current user must have to permit the contents of the Then clause within an IfHasRight element to be displayed. 
+description: Specifies a permission that the current user must have to permit the contents of the Then clause within an IfHasRight element to be displayed.
 ---
 
 # RightsGroup element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Specifies a permission that the current user must have to permit the contents of the [Then](then-element-view.md) clause within an [IfHasRight](ifhasrights-element-view.md) element to be displayed. 
-  
+
+Specifies a permission that the current user must have to permit the contents of the [Then](then-element-view.md) clause within an [IfHasRight](ifhasrights-element-view.md) element to be displayed.
+
 ```XML
 <RightsGroup
     Permission = "Required">
@@ -66,20 +65,18 @@ The following sections describe attributes, child elements, and parent elements.
 |**PermViewPages="Required"** <br/> |View pages in a website.  <br/> |
 |**PermViewUsageData="Required"** <br/> |View reports on website usage.  <br/> |
 |**PermViewVersions="Required"** <br/> |View versions of items.  <br/> |
-   
+
 ### Child elements
 
-None 
-   
+None
+
 ### Parent elements
 
 - [RightsChoices](rightschoices-element-view.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

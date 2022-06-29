@@ -2,7 +2,6 @@
 title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
 ms.date: 02/08/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Advanced Quick View Functionality
@@ -89,7 +88,7 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
     }
     ```
 
-1. Finally locate the `fetchData()` method in the same class and modify the map function inside it, to: 
+1. Finally locate the `fetchData()` method in the same class and modify the map function inside it, to:
 
     ```typescript
     ...

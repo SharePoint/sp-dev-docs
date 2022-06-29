@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/07/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8dd91808-4eaf-e13a-70d4-8ff2638afcb0
 ---
@@ -28,18 +27,16 @@ ms.assetid: 8dd91808-4eaf-e13a-70d4-8ff2638afcb0
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

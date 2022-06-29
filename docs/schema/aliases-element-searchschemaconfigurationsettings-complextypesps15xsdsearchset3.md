@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 348dc47c-bd20-cff8-a405-61d15b409a9c
 ---
@@ -19,7 +18,7 @@ ms.assetid: 348dc47c-bd20-cff8-a405-61d15b409a9c
 |**Element type**  |q8:AliasInfoCollection   |
 |**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability   |
 |**Schema file**  |schema_Microsoft.Office.Server.Search.Portability.xsd   |
-   
+
 ## Definition
 
 ```XML
@@ -29,18 +28,16 @@ ms.assetid: 348dc47c-bd20-cff8-a405-61d15b409a9c
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

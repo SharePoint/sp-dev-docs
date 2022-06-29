@@ -1,7 +1,7 @@
 ---
 title:  Designing for section backgrounds using semantic slots
 description: Learn how to design your web part to take advantage of section backgrounds using semantic slots.
-ms.date: 06/09/2022
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
@@ -29,7 +29,7 @@ In the table below, you can see all eight palette colors defined for the bodyTe
 
 ![Example table showing semantic slots on light and dark theme variants](../images/doc-semantic-slot-940px-table.png)
 
-|         |      Light themes      |      Dark themes       |
+| Weight  |      Light themes      |      Dark themes       |
 | ------- | ---------------------- | ---------------------- |
 | None    | neutralPrimary #333333 | neutralPrimary #ffffff |
 | Neutral | neutralPrimary #333333 | neutralPrimary #ffffff |

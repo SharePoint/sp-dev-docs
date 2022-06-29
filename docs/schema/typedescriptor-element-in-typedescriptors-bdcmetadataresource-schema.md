@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cd038ff1-1c67-7632-9180-044efe6e2314
 ---
 
-# TypeDescriptor Element in TypeDescriptors 
+# TypeDescriptor Element in TypeDescriptors
 
 (BDCMetadataResource Schema)
 
@@ -61,9 +60,3 @@ The following sections describe attributes, child elements, and parent elements.
 | Element |
 | --- |
 | [TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)](typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md) |
-
-
-
-
-
-

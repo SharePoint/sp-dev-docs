@@ -5,16 +5,15 @@ ms.date: 06/15/2022
 description: Describes WebStructure Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 574ed628-f2bf-44d7-8c76-7c4dc07f9c4e
 ---
 
 # WebStructure Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents a specification of an instance of a website structure object type ([SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)) for implementation on content migration. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents a specification of an instance of a website structure object type ([SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)) for implementation on content migration.
 
 ## Definition
 
@@ -35,8 +34,8 @@ USAGE
 
 ## Type
 
-**DeploymentWebStructure** (based on [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)) 
-  
+**DeploymentWebStructure** (based on [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx))
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -48,17 +47,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**WebId** <br/> |[Guid Simple Type (DeploymentManifest)](guid-simple-type-deploymentmanifest.md) <br/> |Optional. Unique identifier of the website for which the structure is provided.  <br/> |
 |**WebUrl** <br/> |xs:string  <br/> |Optional. URL to the website.  <br/> |
 |**UserSharedNavigation** <br/> |xs:boolean  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
-   
+
 ## See also
 
 - [SPObjectType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPObjectType.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

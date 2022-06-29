@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: af9f83d8-8325-3ede-d7b0-bb82c0445eb9
 ---
 
-# InstalledEventEndpoint element (PropertiesDefinition complexType) 
+# InstalledEventEndpoint element (PropertiesDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: af9f83d8-8325-3ede-d7b0-bb82c0445eb9
 
 The Url of the installed event receiver endpoint.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
@@ -37,7 +36,7 @@ The Url of the installed event receiver endpoint.
         maxOccurs="1"
         >
    </xs:element>
-```        
+```
 
 ## Elements and attributes
 
@@ -81,8 +80,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-

@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/14/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1bfe838d-25de-6977-64d2-75c3b7dffd08
 description: Learn more about SecurableAuthData complexType (SPS15XSDSearchSet2).
@@ -12,8 +11,8 @@ description: Learn more about SecurableAuthData complexType (SPS15XSDSearchSet2)
 
 # SecurableAuthData complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |Information|Location|
@@ -21,7 +20,7 @@ description: Learn more about SecurableAuthData complexType (SPS15XSDSearchSet2)
 |**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
 |**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.xsd   |
 |**Extension base**  |tns:AuthenticationData   |
-   
+
 ## Definition
 
 ```XML
@@ -41,8 +40,8 @@ description: Learn more about SecurableAuthData complexType (SPS15XSDSearchSet2)
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -50,9 +49,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[_NameValuePairs](_namevaluepairs-element-securableauthdata-complextypesps15xsdsearchset2.md) <br/> |q7:ArrayOfKeyValueOfstringstring  <br/> ||
 |[_SecurableNameValuePairs](_securablenamevaluepairs-element-securableauthdata-complextypesps15xsdsearchset2.md) <br/> |q8:ArrayOfKeyValueOfstringSecureStringX9wx7DhE  <br/> ||
 |[SerializableSecurableNameValuePairs](serializablesecurablenamevaluepairs-element-securableauthdata-complextypesps15xs.md) <br/> |q9:ArrayOfKeyValueOfstringstring  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

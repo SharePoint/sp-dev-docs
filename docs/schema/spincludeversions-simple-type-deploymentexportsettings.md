@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 description: Describes SPIncludeVersions Simple Type (DeploymentExportSettings) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ee0fc690-0494-4f2b-8f52-b34457e07a7e
 ---
@@ -13,8 +12,8 @@ ms.assetid: ee0fc690-0494-4f2b-8f52-b34457e07a7e
 # SPIncludeVersions Simple Type (DeploymentExportSettings)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Provides values for the **IncludeVersions** attribute on the [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md). 
+
+Provides values for the **IncludeVersions** attribute on the [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md).
 
 ## Definition
 
@@ -38,13 +37,12 @@ Provides values for the **IncludeVersions** attribute on the [ExportSettings Ele
 |**CurrentVersion** <br/> |Specifies the current version of the export object.  <br/> |
 |**LastMajorAndMinor** <br/> |Specifies the version of the export object using both major and minor version numbers.  <br/> |
 |**All** <br/> |Specifies that all available versions of the export object will be included.  <br/> |
-   
+
 ### Remarks
 
 The value of the SPIncludeVersions simple type specifies which export object version to include in the content migration package.
-  
+
 ## See also
 
 - [DeploymentExportSettings Schema](deploymentexportsettings-schema.md)
 - [ExportSettings Element (DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)
-

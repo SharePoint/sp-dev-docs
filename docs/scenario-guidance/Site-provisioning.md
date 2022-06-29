@@ -1,8 +1,7 @@
 ---
 title: Site Provisioning
 description: Site Provisioning
-ms.date: 06/10/2022
-ms.prod: sharepoint
+ms.date: 06/28/2022
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: sharepoint
@@ -15,16 +14,16 @@ ms.localizationpriority: medium
 Site provisioning is a highly requested capability in the fields of SharePoint customization. In fact, most of the companies have the functional requirement to make it possible for qualified end-users to create sites based on templates, so that they can reuse the same information architecture, the same branding, and the same User Experience, across multiple sites.
 From a developer perspective you need to make it possible to programmatically create sites, and too programmatically provision a custom Information Architecture (IA) on those sites.
 
-Just for the sake of making an example, think about having a "project site" template, that you can use to create a site dedicated to every single project you work on. And the same need applies to sites targeting customers, suppliers, etc. 
+Just for the sake of making an example, think about having a "project site" template, that you can use to create a site dedicated to every single project you work on. And the same need applies to sites targeting customers, suppliers, etc.
 
 However, it is also fundamental to have a provisioning technique that allows you to easily provision sites based on templates, and which potentially provides life cycle management of those templates. In fact, if you update a template that you already used to create sites, it would be really helpful to be able to update all the existing site instances, based on that updated template.
 
-Nowadays there are many techniques to provision sites and their Information Architecture, and in this article you will find a list of the most interesting ones, together with their target platform. 
+Nowadays there are many techniques to provision sites and their Information Architecture, and in this article you will find a list of the most interesting ones, together with their target platform.
 
 ## High-level guideline/general rules
 Here follow some general high-level guidelines and rules that matter whenever you need to provision a site.
 * Try to isolate the Information Architecture from the other elements like branding, custom content, UI elements, etc. so that you can do proper maintenance of the IA, independently from the other elements.
-* Within the Information Architecture define Site Columns and Content Types at the Site Collection level only, and reuse them in any sub Site of the Site Collection, rather than having Site Columns and Content Types defined at the sub Site level. 
+* Within the Information Architecture define Site Columns and Content Types at the Site Collection level only, and reuse them in any sub Site of the Site Collection, rather than having Site Columns and Content Types defined at the sub Site level.
 > [!NOTE]
 > For further details about Site Collections vs. Sub Sites, please read the [dedicated section in this document](#SiteCollectionVsSite).
 * Avoid renaming or changing out-of-the-box artifacts, prefer using custom elements instead. For example, avoid renaming the *Title* field of any content type, because this could lead to unpredictable issues, considering that the existence of the *Title* field is often assumed as a guarantee by developers.

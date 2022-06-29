@@ -5,12 +5,11 @@ ms.date: 06/14/2022
 description: Describes SupportedLocalesDefinition complexType and provides information elements and attributes.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 0efd105a-d89e-039c-3f64-cc78d8160503
 ---
 
-# SupportedLocalesDefinition complexType 
+# SupportedLocalesDefinition complexType
 
 (SharePoint Add-in Manifest)
 
@@ -18,7 +17,7 @@ ms.assetid: 0efd105a-d89e-039c-3f64-cc78d8160503
 
 Specifies the locales that an add-in supports.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -72,11 +71,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

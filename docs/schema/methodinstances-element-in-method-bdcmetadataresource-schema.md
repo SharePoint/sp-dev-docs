@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 25eec00b-98be-e684-076d-c591a093d5f5
 ---
@@ -44,12 +43,3 @@ None.
 | Element |
 | --- |
 | [Method Element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md) |
-
-
-
-
-
-
-
-
-

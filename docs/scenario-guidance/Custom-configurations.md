@@ -1,7 +1,7 @@
 ---
 title: Scenario Guidance - Custom configurations
 description: Scenario guidance on where and how to store configuration values.
-ms.date: 06/07/2022
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
@@ -78,7 +78,7 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 _**Applies to:** Office 365 | SharePoint Server_
 
-Description. 
+Description.
 
 ### Articles
 

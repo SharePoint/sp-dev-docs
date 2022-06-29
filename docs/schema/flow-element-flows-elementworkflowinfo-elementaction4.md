@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c94f34a7-6f7f-23d1-893c-b8d7bd5853a4
 ---
 
-# Flow element 
+# Flow element
 
 (Flows element) (WorkflowInfo element) (Action4)
 
@@ -59,14 +58,14 @@ Represents the activity underlying the **Go to a stage** action in the visual wo
        <xs:complexType>
           <xs:sequence>
              <xs:element name="RuleDesigner" type="ruleDesignerType" minOccurs="1"  maxOccurs="1">
-             </xs:element>  
+             </xs:element>
              <xs:element name="Parameters" type="parametersType" minOccurs="1" maxOccurs="1">
              </xs:element>
           </xs:sequence>
           <xs:attribute name="Name" type="s:string" use="required" />
           <xs:attribute name="Category" type="s:string" use="required" />
        </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -93,11 +92,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |-----------|------|----------|-------------|-----------|
 | **Category** | s:string | required | Specifies the ribbon category in the visual designer user interface (in this case, **Common Flows**) that contains the **Go to a stage** action. | Values of the s:string type. |
 | **Name** | s:string | required | Specifies the string that identifies the action in the visual designer user interface. In this case, the name is **Go to a stage**. | Values of the s:string type. |
-
-
-
-
-
-
-
-

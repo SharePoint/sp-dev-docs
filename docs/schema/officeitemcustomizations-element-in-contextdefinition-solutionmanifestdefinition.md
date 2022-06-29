@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 79c8b258-dbc7-37f2-7ff5-4ea58eb376ca
 ---
 
-# OfficeItemCustomizations element in ContextDefinition 
+# OfficeItemCustomizations element in ContextDefinition
 
 (SolutionManifestDefinitions schema)
 
@@ -45,11 +44,3 @@ None.
 |Element|Description|
 |-------|-----------|
 |[ContextDefinition element in ContextDefinitionGroup (SolutionManifestDefinitions schema)](contextdefinition-element-in-contextdefinitiongroup-solutionmanifestdefinitions.md)||
-
-
-
-
-
-
-
-

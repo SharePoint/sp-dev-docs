@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
 api_type:
 - schema
 ms.assetid: 95180186-5185-479e-b682-33fd3b8cea31
-description: Defines a color picker control. 
+description: Defines a color picker control.
 ---
 
 # ColorPicker element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Defines a color picker control. 
-  
+
+Defines a color picker control.
+
 ```XML
 <ColorPicker
      Command="Text"
@@ -47,25 +46,25 @@ The following sections describe attributes, child elements, and parent elements.
 |**QueryCommand** <br/> |Optional. The name of the command to execute when polling for state information.  <br/> |
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**TemplateAlias** <br/> |Optional. A string that matches the value of the **TemplateAlias** attribute for a [ControlRef](controlref-element.md) element, an [OverflowArea](overflowarea-element.md) element, or an [OverflowSection](overflowsection-element.md) element in a [GroupTemplate](grouptemplate-element.md) element. The **TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.  <br/> |
-   
+
 ### Child elements
 
 - [Colors](colors-element.md)
-   
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Controls](controls-element-menusection.md) (MenuSection)  
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Controls](controls-element-menusection.md) (MenuSection)
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
+- Maximum: unbounded
+
 ## Example
 
 The following example defines a color picker control as part of a flyout menu.
-  
+
 ```XML
 <CommandUIDefinition
   Location="Ribbon.ListItem.Workflow.Controls._children">
@@ -165,5 +164,3 @@ The following example defines a color picker control as part of a flyout menu.
 </CommandUIDefinition>
 
 ```
-
-

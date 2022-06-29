@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 57993a33-3551-dded-7e63-1a412e3e70ae
 description: "Describes the ReorderingRule complexType (SPS15XSDSearchSet5). Applies to SharePoint Server 2013."
@@ -12,10 +11,10 @@ description: "Describes the ReorderingRule complexType (SPS15XSDSearchSet5). App
 
 # ReorderingRule complexType (SPS15XSDSearchSet5)
 
- 
-  
+
+
  **Applies to:** SharePoint Server 2013
-  
+
 ## Type information
 
 |Information|Value|
@@ -23,7 +22,7 @@ description: "Describes the ReorderingRule complexType (SPS15XSDSearchSet5). App
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
 |**Extension base** <br/> |None  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -39,8 +38,8 @@ description: "Describes the ReorderingRule complexType (SPS15XSDSearchSet5). App
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -48,9 +47,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[Boost](boost-element-reorderingrule-complextypesps15xsdsearchset5.md) <br/> |xs:int  <br/> ||
 |[MatchType](matchtype-element-reorderingrule-complextypesps15xsdsearchset5.md) <br/> |tns:ReorderingRuleMatchType  <br/> ||
 |[MatchValue](matchvalue-element-reorderingrule-complextypesps15xsdsearchset5.md) <br/> |xs:string  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

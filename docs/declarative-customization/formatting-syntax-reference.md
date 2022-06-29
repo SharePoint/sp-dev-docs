@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 02/22/2022
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -25,7 +25,7 @@ Any other value will result in an error.
 
 ### filepreview
 
-Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document libary. 
+Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document libary.
 If the thumbnail loads successfully, a small [brand type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/office-brand-icons) is visible on the bottom left. If the thumbanil fails to load (or if the file type doesn't support thumbnails), a [file type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/file-type-icons) is shown instead.
 
 ```json
@@ -306,7 +306,7 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
       }
     }
     ```
-    
+
 - **share**:  Clicking the button will open the sharing dialog. Below is an example of this type of button.
 
     ```JSON
@@ -319,7 +319,7 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
       }
     }
     ```
-    
+
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.

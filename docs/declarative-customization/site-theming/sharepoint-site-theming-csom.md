@@ -1,13 +1,13 @@
 ---
 title: SharePoint site theming - CSOM development
-description: The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint. 
-ms.date: 06/03/2022
+description: The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
 # SharePoint site theming: CSOM development
 
-The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.    
+The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nug
 
 ## CSOM code example
 
-The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __GetAllTenantThemes__ method to return a list of themes. 
+The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __GetAllTenantThemes__ method to return a list of themes.
 
 > [!NOTE]
 > * The URL used to create the context object includes the _-admin_ suffix because **TenantAdministration** methods work with the admin site.
@@ -191,4 +191,3 @@ __Return type:__ ClientResult\<bool\>
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
-

@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b7bda9df-1c1b-4a63-95cb-d092073e22cb
 ---
@@ -70,11 +69,3 @@ The **Data** element contains a string that is limited to 255 characters.
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-

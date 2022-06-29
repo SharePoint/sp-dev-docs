@@ -5,24 +5,23 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1af74fb6-0e33-4e84-8b49-5e7027100699
 ---
 
 # FieldRef Element (DeploymentManifest - SPFieldCollection)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents field data to display in a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)). 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents field data to display in a Windows SharePoint Services 3.0 list ([SPList](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPList.aspx)).
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="FieldRef" 
-        type="SPFieldLink" 
-        minOccurs="0" maxOccurs="unbounded" 
+<xs:element name="FieldRef"
+        type="SPFieldLink"
+        minOccurs="0" maxOccurs="unbounded"
 />
 USAGE
 <Fields>
@@ -51,7 +50,7 @@ USAGE
 ## Type
 
 [SPField](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -75,22 +74,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**ShowInEditForm** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**DisplayName** <br/> |xs:string  <br/> |Optional.  <br/> |
 |**Node** <br/> |xs:string  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 - [Field Element (DeploymentManifest - SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)
 - [FieldRef Element (DeploymentManifest - SPFieldCollection)](fieldref-element-deploymentmanifestspfieldcollection.md)
-   
+
 ### Parent elements
 
 - [Fields Element (DeploymentManifest - SPList)](fields-element-deploymentmanifestsplist.md)
-   
+
 ### Remarks
 
 This element can contain instances of itself, and can therefore be either a parent or child of itself.
-  
+
 ## See also
 
 - [SPFieldLink](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFieldLink.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

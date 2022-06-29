@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8649a351-d45c-94d3-cc1e-9fc4e418c45c
 ---
@@ -45,7 +44,7 @@ Base type … xxxxx.
     <xs:complexType name="defaultElementType">
         <xs:sequence>
             <xs:element name="RuleDesigner" type="ruleDesignerType">
-            </xs:element>  
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 ```
@@ -81,11 +80,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

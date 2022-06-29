@@ -1,7 +1,7 @@
 ---
 title: Using site designs and Power Automate to track site creation requests
 description: Invoke a Power Automate flow using the site script triggerFlow action to capture the site creation event and build a site directory. This tutorial is intended to illustrate a simple example of using site designs and Power Automate.
-ms.date: 06/05/2020
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -9,21 +9,21 @@ ms.localizationpriority: high
 
 Site designs are a powerful extensibility mechanism for customizing - and standardizing - the look and feel of your site collections. One of the script actions - **triggerFlow** - can be used to call custom solutions to apply configurations we don't support natively. Power Automate flows can also be used for business automation - in this case, used with site designs to track the creation of sites!
 
-This article describes how to build a simple site directory using a site design and Power Automate. Whenever a site is created using this site design, details of the site are captured and written to a SharePoint list. 
+This article describes how to build a simple site directory using a site design and Power Automate. Whenever a site is created using this site design, details of the site are captured and written to a SharePoint list.
 
 The steps in this article illustrate the following components:
 
-- A SharePoint list 
+- A SharePoint list
 - A site design and a site script
 - Power Automate
 
-You'll first create the SharePoint list and then it will be referenced in your Power Automate flow - which will be triggered by the site design applied after the site is created. 
+You'll first create the SharePoint list and then it will be referenced in your Power Automate flow - which will be triggered by the site design applied after the site is created.
 
 ## Create your site directory list
 
-You need to first set up the list that will be used to record all the sites created using this site design. 
+You need to first set up the list that will be used to record all the sites created using this site design.
 
-1. Select a site collection to host your list. 
+1. Select a site collection to host your list.
 
 2. Create a new list named "Site Directory"
 
@@ -37,14 +37,14 @@ You need to first set up the list that will be used to record all the sites crea
 
 ## Create the flow
 
-In order to capture the site creation event and create the corresponding list item, you need to create a flow - which can then be referenced in your site design's site script: 
+In order to capture the site creation event and create the corresponding list item, you need to create a flow - which can then be referenced in your site design's site script:
 
 1. Go to the [Power Automate](https://flow.microsoft.com) site, sign in, and choose **+ Automated—from blank* at the top of the page.
 
 2. Click **Skip** on the next screen
 
 2. Choose **Search connectors and triggers** to select your trigger
- 
+
 3. Search for **Request**, and then choose **Request - When a HTTP Request is received [PREMIUM]**. **NOTE**: The **Request** trigger is now **PREMIUM** and will therefore require additional licensing.
 
 4. Enter the following JSON as your request body:
@@ -83,23 +83,23 @@ In order to capture the site creation event and create the corresponding list it
     }
   ```
 
-5. Select **+ New Step**. 
+5. Select **+ New Step**.
 
 6. Search for **Create item**, and select **SharePoint - Create item**.
- 
+
 7. Enter the site address where the list above was created.
- 
+
 8. Select the "Site Directory" list you created in the previous step.
 
-9. Enter a value for the **Title** field - this will be the same value for each list item. For example: "Contoso Travel: New Project Site Created". 
+9. Enter a value for the **Title** field - this will be the same value for each list item. For example: "Contoso Travel: New Project Site Created".
 
-10. For each field in your list form, add the corresponding element from the Dynamic Content picker. When you are done your action should look something like this: 
+10. For each field in your list form, add the corresponding element from the Dynamic Content picker. When you are done your action should look something like this:
 
 ![Screenshot of a flow named 'When an HTTP request is received', showing the URL, Request body, Queue name, and Message fields](images/site-directory-flow-configuration.png)
 
-11. Choose **Save**. This generates the HTTP Post URL that you will need to copy for your site script `triggerFlow` action. 
+11. Choose **Save**. This generates the HTTP Post URL that you will need to copy for your site script `triggerFlow` action.
 
-14. Choose the first step in your flow ('When an HTTP request is received') and copy the URL. 
+14. Choose the first step in your flow ('When an HTTP request is received') and copy the URL.
 
 15. Save your flow.
 
@@ -113,7 +113,7 @@ In order to capture the site creation event and create the corresponding list it
     Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
    ```
 
-3. Now you can get the existing site designs. 
+3. Now you can get the existing site designs.
 
    ```powershell
     Get-SPOSiteDesign
@@ -144,7 +144,7 @@ To create a site design, you first need to create a site script. A site design i
     }
    ```
 
-2. Select the JSON again and copy it again to your clipboard. 
+2. Select the JSON again and copy it again to your clipboard.
 
 3. Open PowerShell and enter the following to copy the script into a variable and create the site script:
 
@@ -154,7 +154,7 @@ To create a site design, you first need to create a site script. A site design i
     Get-SPOSiteScript
    ```
 
-4. You will see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you created, and copy it to the clipboard. 
+4. You will see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you created, and copy it to the clipboard.
 
 5. Use the following command to create the site design:
 
@@ -175,4 +175,3 @@ Your new site design should show up as a design option. Notice that the site des
 
 - [SharePoint site design and site script overview](site-design-overview.md)
 - [Calling the PnP provisioning engine from a site script](site-design-pnp-provisioning.md)
-

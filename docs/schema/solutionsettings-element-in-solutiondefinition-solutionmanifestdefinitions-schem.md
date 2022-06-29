@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d8930948-e804-18ee-7c4b-b0bd39ccf62a
 ---
 
-# SolutionSettings Element in SolutionDefinition 
+# SolutionSettings Element in SolutionDefinition
 
 (SolutionManifestDefinitions Schema)
 
@@ -94,13 +93,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [SolutionDefinition Element (SolutionManifestDefinitions Schema)](solutiondefinition-element-solutionmanifestdefinitions-schema.md) | The solution definition these settings belong to. |
-
-
-
-
-
-
-
-
-
-

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a gallery.
 # Gallery element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a gallery.
-  
+
 ```XML
 <Gallery
   Command="Text"
@@ -49,23 +48,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**QueryCommand** <br/> |Optional. The name of the command to execute when polling for state information.  <br/> |
 |**Sequence** <br/> |Optional. An integer that specifies the order of placement among sibling XML nodes.  <br/> |
 |**Width** <br/> |Required. The width of the gallery in pixels.  <br/> |
-   
+
 ### Child elements
 
 - [GalleryButton](gallerybutton-element-gallery.md)
-   
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [MenuSection](menusection-element.md) 
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [MenuSection](menusection-element.md)
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: 1  
-   
+- Maximum: 1
+
 ### Remarks
 
-A gallery is a graphically rich list box. The items in a gallery are usually mutually exclusive choices, and the result of a choice is visually previewed either by an image or by a rendered HTML fragment. 
-  
-
+A gallery is a graphically rich list box. The items in a gallery are usually mutually exclusive choices, and the result of a choice is visually previewed either by an image or by a rendered HTML fragment.

@@ -5,7 +5,6 @@ manager: arnek
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cfbd8224-2af9-f6f2-a162-334eb67c0667
 ---
@@ -13,7 +12,7 @@ ms.assetid: cfbd8224-2af9-f6f2-a162-334eb67c0667
 # Name element (Source complexType) (SPS15XSDSearchSet1)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Element information
 
 |Information|Location|
@@ -21,7 +20,7 @@ ms.assetid: cfbd8224-2af9-f6f2-a162-334eb67c0667
 |**Element type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ ms.assetid: cfbd8224-2af9-f6f2-a162-334eb67c0667
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

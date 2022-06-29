@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6793ccee-0f76-f798-eeb8-c1f9309d7685
 ---
@@ -16,7 +15,7 @@ ms.assetid: 6793ccee-0f76-f798-eeb8-c1f9309d7685
 
 This topic shows the schema definition for **SharePoint Add-in Manifest**.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 <br/>
@@ -221,10 +220,3 @@ This topic shows the schema definition for **SharePoint Add-in Manifest**.
         </xs:simpleType>
     </xs:schema>
 ```
-
-
-
-
-
-
-

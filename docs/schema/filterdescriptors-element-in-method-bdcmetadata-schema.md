@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.FilterDescriptors
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 33d8e418-ddbb-e1ac-b145-836ed9f36e5c
 ---
@@ -45,11 +44,3 @@ None.
 | Element | Description |
 |---------|-------------|
 | [Method Element in Methods (BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md) | The method this list of filter descriptors belongs to. |
-
-
-
-
-
-
-
-

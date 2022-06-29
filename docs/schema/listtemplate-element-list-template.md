@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e565ead9-adcb-4a90-97e3-04850719420a
 ---
@@ -26,7 +25,7 @@ Specifies a list definition that is available as an option for creating lists on
   BaseType = "0" | "1" | "3" |"4" | "5"
   CacheSchema = "TRUE" | "FALSE"
   Catalog = "TRUE" | "FALSE"
-  Category = "Libraries" | "Communications" | "Tracking" | 
+  Category = "Libraries" | "Communications" | "Tracking" |
     "Custom Lists"
   Default = "TRUE" | "FALSE"
   Description = "Text"
@@ -71,7 +70,7 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 
-  
+
 | Attribute | Description |
 | --- | --- |
 | \*\*AllowDeletion\*\* | Optional \*\*Boolean\*\*. \*\*TRUE\*\* to specify that lists created through the template cannot be deleted; otherwise, \*\*FALSE\*\*. |
@@ -128,11 +127,3 @@ None
 ## Example
 
 For an example of how this element is used, see [List Template Files](list-template-files.md).
-
-
-
-
-
-
-
-
