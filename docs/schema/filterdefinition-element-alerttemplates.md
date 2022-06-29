@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Defines an alert template filter.
 # FilterDefinition element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Defines an alert template filter. To modify existing filters or create additional filters, modify the **FilterDefinition** element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using Collaborative Application Markup Language (CAML). 
-  
+
+Defines an alert template filter. To modify existing filters or create additional filters, modify the **FilterDefinition** element of the appropriate template. Define the [Query](query-element-alerttemplates.md) element inside the filter by using Collaborative Application Markup Language (CAML).
+
 ```XML
 <FilterDefinition>
   <FriendlyName>
@@ -43,21 +42,21 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-  
+
 ### Child elements
 
 - [FriendlyName](friendlyname-element-alerttemplates.md)
-- [ShortName](shortname-element-alerttemplates.md) 
-- [Query](query-element-alerttemplates.md) 
-   
+- [ShortName](shortname-element-alerttemplates.md)
+- [Query](query-element-alerttemplates.md)
+
 ### Parent elements
 
 - [Filters](filters-element-alerttemplates.md)
-   
+
 ## Example
 
 The following query creates an alert event if the event date, end date, or location changes.
-  
+
 ```XML
 <FilterDefinition>
   <FriendlyName>$Resources:Alerts_4_filter;</FriendlyName>
@@ -82,5 +81,3 @@ The following query creates an alert event if the event date, end date, or locat
 </FilterDefinition>
 
 ```
-
-

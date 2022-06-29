@@ -1,28 +1,27 @@
 ---
 title: "WebPart Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebPart Element (DeploymentManifest) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3375a67e-a346-4818-93bf-cb2c127aeaa2
-description: "Last modified: March 09, 2015"
 ---
 
 # WebPart Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents an instance of a SharePoint Foundation top-level web part object (**SPWebPart**).
 
 ## Definition
 
 ```XML
 DECLARATION
-<xs:element name="WebPart" 
-        type="SPWebPart" 
-        minOccurs="1" maxOccurs="unbounded" 
+<xs:element name="WebPart"
+        type="SPWebPart"
+        minOccurs="1" maxOccurs="unbounded"
 />
 USAGE
 <SPWebPart>
@@ -30,7 +29,7 @@ USAGE
             <xs:choice minOccurs="0" maxOccurs="25">
                   <xs:element name="Script" />
                   <xs:element name="PagedRowset" />
-                  <xs:element name="PagedClientCallbackRowset" 
+                  <xs:element name="PagedClientCallbackRowset"
                   <xs:element name="PagedRecurrenceRowset" />
                   <xs:element name="ViewFields" type="SPFieldLinkCollection" />
                   <xs:element name="ViewData" />
@@ -40,13 +39,13 @@ USAGE
                   <xs:element name="Toolbar" />
                   <xs:element name="Formats" />
                   <xs:element name="Aggregations" />
-                  <xs:element name="ViewStyle" 
+                  <xs:element name="ViewStyle"
                   <xs:element name="ViewBody" />
                   <xs:element name="ViewEmpty" />
                   <xs:element name="ViewFooter" />
                   <xs:element name="ViewHeader" />
                   <xs:element name="ViewBidiHeader"/>
-                  <xs:element name="GroupByFooter" 
+                  <xs:element name="GroupByFooter"
                   <xs:element name="GroupByHeader" />
                   <xs:element name="CalendarViewStyles" />
                   <xs:element name="ListFormBody" />
@@ -89,7 +88,7 @@ USAGE
 ## Type
 
 [WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -126,7 +125,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**WebPartOrder** <br/> |xs:string  <br/> |Optional. Specifies the ordering of contents in the web part.  <br/> |
 |**WebPartTypeId** <br/> |xs:string  <br/> |Optional. Specifies the identifier of the web part type.  <br/> |
 |**WebPartZoneID** <br/> |xs:string  <br/> |Optional. Specifies the identifier of the web part zone.  <br/> |
-   
+
 ### Child elements
 
 
@@ -152,18 +151,17 @@ The following sections describe attributes, child elements, and parent elements.
 - [GroupByHeader (DeploymentManifest - SPWebPart)](groupbyheader-deploymentmanifestspwebpart.md)
 - [CalendarViewStyles Element (DeploymentManifest - SPWebPart)](calendarviewstyles-element-deploymentmanifestspwebpart.md)
 - [ListFormBody Element (DeploymentManifest - SPWebPart)](listformbody-element-deploymentmanifestspwebpart.md)
-   
+
 ### Parent elements
 
 - [WebParts Element (DeploymentManifest)](webparts-element-deploymentmanifest.md)|
-   
+
 ### Remarks
 
-Web Parts can derive from either of two base classes - an ASP.NET web part ([WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)), or a SharePoint Foundation web part ([WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)). 
-  
+Web Parts can derive from either of two base classes - an ASP.NET web part ([WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)), or a SharePoint Foundation web part ([WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)).
+
 ## See also
 
 - [WebPart](https://msdn.microsoft.com/library/Microsoft.SharePoint.WebPartPages.WebPart.aspx)
 - [WebPart](https://msdn.microsoft.com/library/System.Web.UI.WebControls.WebParts.WebPart.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

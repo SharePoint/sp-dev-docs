@@ -2,20 +2,19 @@
 title: Implement Continuous Integration and Continuous deployment using Azure Pipelines
 description: Streamlining the build and deployment process by automating manual steps using Azure Pipelines.
 ms.date: 12/02/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Implement Continuous Integration and Continuous deployment using Azure Pipelines
-Azure Pipelines is the newer version of the Azure DevOps build and release features.  
+Azure Pipelines is the newer version of the Azure DevOps build and release features.
 
-This article explains the steps involved in setting up your Azure Pipelines environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.  
+This article explains the steps involved in setting up your Azure Pipelines environment with Continuous Integration and Continuous Deployment to automate your SharePoint Framework builds, unit tests, and deployment.
 
 ## Choosing between Azure Multi-stage Pipelines and Azure DevOps builds and releases
 
-There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.  
-Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.  
+There are currently two approaches available to implement continuous integration, and deployment in Azure DevOps.
+Azure builds and releases is the historic one, featuring a graphical edition experience and storing the definitions in a JSON document hidden from the user.
 
-Azure multi-stage Pipelines relies on pipeline definitions stored as YAML files on the repository providing transparency, version history, and repeatability.  
+Azure multi-stage Pipelines relies on pipeline definitions stored as YAML files on the repository providing transparency, version history, and repeatability.
 Both approaches are described for the SharePoint Framework:
 
 - [Azure Build and Release](./implement-ci-cd-with-azure-devops.md)
@@ -23,8 +22,8 @@ Both approaches are described for the SharePoint Framework:
 
 ## Implementing Continuous Integration and Continuous testing
 
-The continuous integration and continuous testing stage are described by the following YAML template.  
-Copy the following content in a new file at the root of the project called __azure-pipelines-build-template.yml__. 
+The continuous integration and continuous testing stage are described by the following YAML template.
+Copy the following content in a new file at the root of the project called __azure-pipelines-build-template.yml__.
 
 ```YAML
 parameters:
@@ -96,16 +95,16 @@ jobs:
         displayName: 'Publish Artifact: drop'
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > You can comment out/remove the _PublishCodeCoverageResults_, _PublishTestResults_ and _npm test_ tasks if you do not have any unit test implement and/or do not want unit tests to run.
 
-> [!NOTE] 
+> [!NOTE]
 > You can find the latest version of this file on the [sample](https://github.com/SharePoint/sp-dev-build-extensions/tree/master/samples/azure-devops-ci-cd-spfx)
 
 ## Implementing Continuous Deployment
 
-The continuous deployment stage is described by the following YAML template.  
-Copy the following content in a new file at the root of the project called __azure-pipelines-deploy-template.yml__.  
+The continuous deployment stage is described by the following YAML template.
+Copy the following content in a new file at the root of the project called __azure-pipelines-deploy-template.yml__.
 
 ```YAML
 parameters:
@@ -149,14 +148,14 @@ jobs:
           displayName: Deploy SharePoint package
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > You can find the latest version of this file on the [sample](https://github.com/SharePoint/sp-dev-build-extensions/tree/master/samples/azure-devops-ci-cd-spfx)
 
 ## Defining the Pipeline structure
 
-Now that the build and deploy stages are defined in their respective templates, it needs to be assembled as a Multi-stage pipeline.  
-This document will describe the structure of the pipeline as well as the different environments in use.  
-Copy the following content in a new file at the root of the project called __azure-pipelines.yml__.  
+Now that the build and deploy stages are defined in their respective templates, it needs to be assembled as a Multi-stage pipeline.
+This document will describe the structure of the pipeline as well as the different environments in use.
+Copy the following content in a new file at the root of the project called __azure-pipelines.yml__.
 
 ```YAML
 name: $(TeamProject)_$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
@@ -187,18 +186,18 @@ stages:
         variable_group_name: qa_configuration
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > You can find the latest version of this file on the [sample](https://github.com/SharePoint/sp-dev-build-extensions/tree/master/samples/azure-devops-ci-cd-spfx)
 
-> [!NOTE] 
+> [!NOTE]
 > You can define multiple environments and by duplicating the __deployqa__ stage and providing different parameters. If you do so, make sure the stage name, the job name, the target environment and the variable group name are unique.
 
-> [!NOTE] 
+> [!NOTE]
 > You can conditionally deploy to different environments leveraging [conditions](/azure/devops/pipelines/process/conditions?tabs=yaml)
 
 ## Configuring the credentials for the environments
 
-Secrets should never be committed to a repository for security reasons. The pipeline described in the previous steps makes use of _variable groups_ to keep configuration values secret. The variable groups need to be created for each environment and the name needs to match what is described in the pipeline definition (here __qa_configuration__).  
+Secrets should never be committed to a repository for security reasons. The pipeline described in the previous steps makes use of _variable groups_ to keep configuration values secret. The variable groups need to be created for each environment and the name needs to match what is described in the pipeline definition (here __qa_configuration__).
 To create the variable group, follow these steps:
 
 1. Sign-in to Azure DevOps, navigate to your project
@@ -209,5 +208,5 @@ To create the variable group, follow these steps:
     - m365_user_password: the user password of the account
     - m365_app_catalog_site_url: the url of the app catalog site collection
 
-> [!NOTE] 
+> [!NOTE]
 > You can select the lockpad icon next to the variable value input to mark it as sensitive and have Azure DevOps hide the value from other users and from the logs.

@@ -1,10 +1,10 @@
 ---
 title: DeploymentRequirements schema
+description: The DeploymentRequirements schema provides validation for the Requirements.xml file exported to the content migration package.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f07210c3-2c1a-4c4d-b9b8-d9d30c57d8c8
 ---
@@ -21,43 +21,15 @@ The following table lists elements in the DeploymentRequirements.xsd schema file
 
 <br/>
 
-<table>
-<colgroup>
-<col width="40%" />
-<col width="60%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a></span></p></td>
-<td align="left"><p>Represents specific deployment export requirement objects (**SPRequirement**).</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="requirements-element-deploymentrequirements.md">Requirements element (DeploymentRequirements)</a></span></p></td>
-<td align="left"><p>Represents a container of deployment export requirement objects.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="sprequirementobjecttype-simple-type-deploymentrequirements.md">SPRequirementObjectType Simple Type (DeploymentRequirements)</a></span></p></td>
-<td align="left"><p>Enumeration simple type that provides values for the **Type** attribute on the <span sdata="link"><a href="requirement-element-deploymentrequirements.md">Requirement element (DeploymentRequirements)</a>. The value specifies the object type of the deployment requirement specified with the content migration package.</p></td>
-</tr>
-</tbody>
-</table>
+
+| Element | Description |
+| --- | --- |
+| [Requirement element (DeploymentRequirements)](requirement-element-deploymentrequirements.md) | Represents specific deployment export requirement objects (**SPRequirement**). |
+| [Requirements element (DeploymentRequirements)](requirements-element-deploymentrequirements.md) | Represents a container of deployment export requirement objects. |
+| [SPRequirementObjectType Simple Type (DeploymentRequirements)](sprequirementobjecttype-simple-type-deploymentrequirements.md) | Enumeration simple type that provides values for the **Type** attribute on the [Requirement element (DeploymentRequirements)](requirement-element-deploymentrequirements.md). The value specifies the object type of the deployment requirement specified with the content migration package. |
 
 <br/>
 
 ## See also
 
 - [Content migration schemas](content-migration-schemas.md)
-
-
-
-
-
-
-
-

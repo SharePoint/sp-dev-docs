@@ -1,27 +1,26 @@
 ---
 title: "MappingInfo complexType (SPS15XSDSearchSet2)"
+description: "Describes the definition, element, and attribute information for the MappingInfo complexType (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9f76cdfb-9587-98cc-768f-bc22433c088f
-description: "Last modified: March 09, 2015"
 ---
 
 # MappingInfo complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:BaseInfo  <br/> |
-   
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
+|**Extension base**|tns:BaseInfo|
+
 ## Definition
 
 ```XML
@@ -43,20 +42,18 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|[CrawledPropertyName](crawledpropertyname-element-mappinginfo-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-|[CrawledPropset](crawledpropset-element-mappinginfo-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
-|[ManagedPid](managedpid-element-mappinginfo-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
-|[MappingOrder](mappingorder-element-mappinginfo-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
-|[SchemaId](schemaid-element-mappinginfo-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
-   
+|[CrawledPropertyName](crawledpropertyname-element-mappinginfo-complextypesps15xsdsearchset2.md)|xs:string||
+|[CrawledPropset](crawledpropset-element-mappinginfo-complextypesps15xsdsearchset2.md)|ser:guid||
+|[ManagedPid](managedpid-element-mappinginfo-complextypesps15xsdsearchset2.md)|xs:int||
+|[MappingOrder](mappingorder-element-mappinginfo-complextypesps15xsdsearchset2.md)|xs:int||
+|[SchemaId](schemaid-element-mappinginfo-complextypesps15xsdsearchset2.md)|xs:int||
+
 ### Attributes
 
 None.
-  
-

@@ -1,15 +1,15 @@
 ---
 title: AppPrerequisites element (AppDefinition complexType)
+description: Outlines information, a definition, and elements and attributes for the AppPrerequisites element in Sharepoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7622b55f-01a1-2c39-9daa-7cfb1a3c890f
 ---
 
-# AppPrerequisites element (AppDefinition complexType) 
+# AppPrerequisites element (AppDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,16 +17,15 @@ ms.assetid: 7622b55f-01a1-2c39-9daa-7cfb1a3c890f
 
 A list of prerequisites that a SharePoint Add-in depends on.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
+**Element type**: AppPrerequisiteCollection
 
-|   |   |
-|---|---|
-| **Element type**  | AppPrerequisiteCollection |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
+**Namespace**: `http://schemas.microsoft.com/sharepoint/2012/app/manifest`
+
+**Schema file**: appmanifest.xsd
 
 ## Definition
 
@@ -36,7 +35,7 @@ A list of prerequisites that a SharePoint Add-in depends on.
         maxOccurs="1"
         >
    </xs:element>
-```       
+```
 
 ## Elements and attributes
 
@@ -100,10 +99,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-
-

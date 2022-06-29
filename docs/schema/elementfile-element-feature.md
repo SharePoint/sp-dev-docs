@@ -1,10 +1,10 @@
 ---
 title: ElementFile Element (Feature)
+description: Describes the ElementFile element (Feature) and provides a definition, the elements and attributes, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bd43638e-8f18-4a0d-b122-1c055f97aa71
 ---
@@ -105,10 +105,3 @@ In the following example, the **ElementFile** element is used to deploy language
 ```
 
 <br/>
-
-
-
-
-
-
-

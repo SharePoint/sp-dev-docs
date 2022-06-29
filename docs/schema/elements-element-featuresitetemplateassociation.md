@@ -1,10 +1,10 @@
 ---
 title: Elements Element (FeatureSiteTemplateAssociation)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (FeatureSiteTemplateAssociation) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f70b3c4a-f9f4-43f0-8828-0d09d92a9cd3
 ---
@@ -75,11 +75,3 @@ None
 ## Example
 
 For an example of how this element is used, see [Feature/Site Template Associations](feature-site-template-associations.md).
-
-
-
-
-
-
-
-

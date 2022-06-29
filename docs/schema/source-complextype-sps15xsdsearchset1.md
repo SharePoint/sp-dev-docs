@@ -1,27 +1,26 @@
 ---
 title: "Source complexType (SPS15XSDSearchSet1)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fce44c4e-eaab-e94b-bff7-c08795fb5cc1
-description: "Last modified: March 09, 2015"
+description: Learn more about Source complexType (SPS15XSDSearchSet1).
 ---
 
 # Source complexType (SPS15XSDSearchSet1)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  <br/> |
-|**Extension base** <br/> |None  <br/> |
-   
+|**Namespace**  |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query   |
+|**Schema file**  |schema_Microsoft.Office.Server.Search.Administration.Query.xsd  |
+|**Extension base**  |None   |
+
 ## Definition
 
 ```XML
@@ -50,8 +49,8 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -72,9 +71,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[Owner](owner-element-source-complextypesps15xsdsearchset1.md) <br/> |q2:SearchObjectOwner  <br/> ||
 |[ProviderId](providerid-element-source-complextypesps15xsdsearchset1.md) <br/> |ser:guid  <br/> ||
 |[QueryTransform](querytransform-element-source-complextypesps15xsdsearchset1.md) <br/> |q3:QueryTransform  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

@@ -1,15 +1,15 @@
 ---
 title: CodeMethodAction element in Actions
+description: The CodeMethodAction element is used to execute a custom code action or to execute one of the predefined actions provided by Microsoft Business Connectivity Services (BCS).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dcb85c58-1ed8-4bb9-430e-f2a5c395c785
 ---
 
-# CodeMethodAction element in Actions 
+# CodeMethodAction element in Actions
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -199,52 +199,12 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>Actions can take parameters. The **Parameters** element lists the parameters of the action.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)](parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md) | Actions can take parameters. The **Parameters** element lists the parameters of the action. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **Actions** element that contains this action.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
-
-
-<br/>
-
-
-
-
-
+| Element | Description |
+|---------|-------------|
+| [Actions element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Actions** element that contains this action. |

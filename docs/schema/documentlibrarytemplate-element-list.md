@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
 api_type:
 - schema
 ms.assetid: eb0ec0a6-82a9-4f92-8d82-c685c287e9e1
-description: Used in the wire protocol that the server uses to export list metadata to the SharePoint Designer client. This element specifies which file serves as the template document for a document library. 
+description: Used in the wire protocol that the server uses to export list metadata to the SharePoint Designer client. This element specifies which file serves as the template document for a document library.
 ---
 
 # DocumentLibraryTemplate element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used in the wire protocol that the server uses to export list metadata to the SharePoint Designer client. This element specifies which file serves as the template document for a document library. 
-  
+
+Used in the wire protocol that the server uses to export list metadata to the SharePoint Designer client. This element specifies which file serves as the template document for a document library.
+
 ```XML
 <DocumentLibraryTemplate>
 </DocumentLibraryTemplate>
@@ -32,24 +31,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Metadata](metadata-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
+- Maximum: 1
+
 ## Example
 
 The following example indicates that the document library whose schema is currently being retrieved has MyDocLib/Forms/template.htm as its template:
-  
+
 ```XML
 <List>
   <MetaData>
@@ -66,6 +65,5 @@ The following example indicates that the document library whose schema is curren
 - [DocumentTemplate element (Site)](documenttemplate-element-site.md)
 - [DocumentTemplates element (Site)](documenttemplates-element-site.md)
 
-   
-<br/> 
 
+<br/>

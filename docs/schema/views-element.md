@@ -1,10 +1,10 @@
 ---
 title: Views Element
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes Views Element and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 42034deb-a75a-4ad3-9494-b43fd33bc907
 ---
@@ -76,11 +76,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

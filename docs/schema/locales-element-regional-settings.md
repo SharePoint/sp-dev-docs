@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Regional Settings schema
@@ -17,9 +16,9 @@ description: Used in RGNLSTNG.XML to contain the collection of locales defined i
 # Locales element (Regional Settings)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Used in RGNLSTNG.XML (%ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1033\XML) to contain the collection of locales defined in regional settings.
-  
+
 ```XML
 <Locales>
   <Locale
@@ -36,20 +35,18 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Locale](locale-element-regional-settings.md)
-   
+
 ### Parent elements
 
 - [RegionalSettings](regionalsettings-element-regional-settings.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
+- Maximum: 1
 
-<br/> 
-   
-
+<br/>

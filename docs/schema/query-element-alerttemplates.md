@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Specifies a query for the alert template filter.
 # Query element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Specifies a query for the alert template filter. Define the query element inside the filter by using Collaborative Application Markup Language (CAML). For more information about CAML query schema, see [Query schema](query-schema.md). The **Query** element in the Alerts schema contains no **Where** element. 
-  
+
+Specifies a query for the alert template filter. Define the query element inside the filter by using Collaborative Application Markup Language (CAML). For more information about CAML query schema, see [Query schema](query-schema.md). The **Query** element in the Alerts schema contains no **Where** element.
+
 ```XML
 <Query>
   <GroupBy>
@@ -38,18 +37,16 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-  
+
 ### Child elements
 
-- [GroupBy](groupby-element-query.md) 
-- [OrderBy](orderby-element-query.md) 
-   
+- [GroupBy](groupby-element-query.md)
+- [OrderBy](orderby-element-query.md)
+
 ### Parent elements
 
 - [FilterDefinition](filterdefinition-element-alerttemplates.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [FilterDefinition element (AlertTemplates)](filterdefinition-element-alerttemplates.md).
-  
-

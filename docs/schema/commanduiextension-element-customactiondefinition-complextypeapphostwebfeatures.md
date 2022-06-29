@@ -5,17 +5,16 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 20aba05e-5c24-f8f4-2773-b6563f97aeab
 ---
 
-# CommandUIExtension element (CustomActionDefinition complexType) 
+# CommandUIExtension element (CustomActionDefinition complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
@@ -101,12 +100,5 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-<br/> 
-<br/> 
-
-
-
-
-
-
-
+<br/>
+<br/>

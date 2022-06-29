@@ -1,10 +1,9 @@
 ---
 title: "Module element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Specifies files and "all user" web parts with which to provision a 
 # Module element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies files and "all user" web parts with which to provision a website.
-  
+
 ```XML
 <Module>
   HyperlinkBaseUrl = "Text"
@@ -48,31 +47,31 @@ The following sections describe attributes, child elements, and parent elements.
 |**Path** <br/> | Optional **Text**. Specifies the physical path to the file set relative to %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\SiteTemplates\ \_Site\_Definition_.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
 |**RootWebOnly** <br/> |Optional **Boolean**. **TRUE** if the files specified in the module are installed only in the top-level website of the site collection.  <br/> |
 |**SetupPath** <br/> | Optional **Text**. Specifies the physical path to a folder in the SharePoint Foundation setup directory %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE) that contains a file to include in the module.<br/><br/>Can only contain the following characters:  <br/>  alphanumeric  <br/>  hyphen (**-**)  <br/>  underscore (**\_**)  <br/>  period (**.**)  <br/>  space ( )  <br/> |
-|**Url** <br/> | Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.<br/><br/>The **Url** attribute cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  |  <br/>  ~  <br/>  \x7f  <br/> |
-   
+|**Url** <br/> | Optional **Text**. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path** is not specified, the value of **Url** is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.<br/><br/>The **Url** attribute cannot contain the following characters:  <br/>  \"  <br/>  #  <br/>  %  <br/>  &amp;  <br/>  \*  <br/>  :  <br/>  \<  <br/>  \>  <br/>  ?  <br/>  \\  <br/>  {  <br/>  }  <br/>  \|  <br/>  ~  <br/>  \x7f  <br/> |
+
 ### Child elements
 
 - [File](file-element.md)
-   
+
 ### Parent elements
 
 - [Modules](modules-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-A detailed **Module** element appears in a **Modules** element directly under the **Project** element of an  `Onet.xml` file. Each such module is referenced by at least one other **Module** element that is in a **Configuration** element of the same file. 
-  
-The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a web part page, the module definition can specify which web parts should be included on the page. 
-  
+A detailed **Module** element appears in a **Modules** element directly under the **Project** element of an  `Onet.xml` file. Each such module is referenced by at least one other **Module** element that is in a **Configuration** element of the same file.
+
+The **Module** element specifies a file or collection of files and a location where the files are installed during site creation. If the file is a web part page, the module definition can specify which web parts should be included on the page.
+
 ## Example
 
-The following example from [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) defines the views and files to include within a module. 
-  
+The following example from [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx) defines the views and files to include within a module.
+
 ```XML
 <Module Name="Default" Url="" Path="">
   <File Url="default.aspx" NavBarHome="True">
@@ -98,4 +97,3 @@ The following example from [Onet.xml](https://msdn.microsoft.com/library/b99d665
 ## See also
 
 - [How to: Provision a File](https://msdn.microsoft.com/library/438d5a75-7f39-4fa9-a365-d86e8ba967b6%28Office.15%29.aspx)
-

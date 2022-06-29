@@ -1,30 +1,30 @@
 ---
 title: Feature element (FeatureTemplateReferences complexType)
+description: Outlines information, a definition, and elements and attributes for the FeatureTemplateReferences complexType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b4acdfbf-74c2-7baa-b29b-332478ed56e8
 ---
 
-# Feature element (FeatureTemplateReferences complexType) 
+# Feature element (FeatureTemplateReferences complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+|  Resource | File  |
 |---|---|
-| **Element type**  | FeatureTemplateReference |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| **Element type** | FeatureTemplateReference |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
 
-## Definition 
+## Definition
 
 ```XML
     <xs:element name="Feature" type="FeatureTemplateReference" minOccurs="0" maxOccurs="unbounded"></xs:element>
@@ -38,7 +38,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 None.
 
-<br/> 
+<br/>
 
 ### Child elements
 
@@ -108,14 +108,6 @@ None.
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

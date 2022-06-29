@@ -1,22 +1,22 @@
 ---
 title: Feature element (AppHostWebFeatures)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes Feature element (AppHostWebFeatures) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2d490115-671e-8fa3-f90f-446d92b5bd71
 ---
 
 # Feature element (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | FeatureDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -36,7 +36,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 None.
 
-<br/> 
+<br/>
 
 ### Child elements
 
@@ -77,7 +77,7 @@ None.
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Attributes
 
@@ -228,14 +228,6 @@ None.
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

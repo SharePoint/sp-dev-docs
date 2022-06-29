@@ -1,8 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/25/2020
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.custom: scenarios:getting-started
 ---
 
@@ -206,11 +205,11 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
 1. The **Command One** button is not visible based on the code, until one row is selected in the document library. Upload or create a document to the library and confirm that the second button is visible.
 
-    ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-doc-select.png)
+    ![Screenshot of Command One being selected with the Item A order being highlighted.](../../../images/ext-com-default-customizer-doc-select.png)
 
 1. Select **Command Two** to see how the dialog control works, which is used in the default output from the solution scaffolding when the ListView Command Set is selected as the extension type.
 
-    ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-btn-click.png)
+    ![Screenshot of an Alert message reading This command is always visible with the O K option being highlighted.](../../../images/ext-com-default-customizer-btn-click.png)
 
 ### More details about serve.json options
 

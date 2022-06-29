@@ -1,10 +1,10 @@
 ---
 title: Site Definition (Onet.xml) files
+description: Learn more about Site Definition (Onet.xml) files.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 170d526a-49c7-41c6-9295-47bd21b1ba7d
 ---
@@ -23,9 +23,9 @@ SharePoint Foundation activates Features specified within the [Onet.xml](https:/
 The following example shows the [Feature](feature-element-site.md) element used to specify Features and Feature properties in a site definition configuration.
 
 ```XML
-    <Configuration ID="0" Name="Publishing"> 
+    <Configuration ID="0" Name="Publishing">
        <Lists>
-          <List Title="Web Part Gallery" Type="113" Url="_catalogs/wp" 
+          <List Title="Web Part Gallery" Type="113" Url="_catalogs/wp"
              RootWebOnly="True" />
        </Lists>
        <SiteFeatures>
@@ -44,7 +44,7 @@ The following example shows the [Feature](feature-element-site.md) element used 
                 <Property Key="CopyLayouts" Value="true"/>
              </Properties>
           </Feature>
-       </WebFeatures>    
+       </WebFeatures>
        <Modules></Modules>
     </Configuration>
 ```
@@ -54,11 +54,3 @@ The following example shows the [Feature](feature-element-site.md) element used 
 - [Site schema](site-schema.md)
 - [Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
 - [WebTemp.xml](https://msdn.microsoft.com/library/199bbb65-d12f-475d-b157-31a1bffe84c8(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -2,12 +2,11 @@
 title: LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadata Schema)
 description: Details on the LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadata Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.LocalizedDisplayName
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 93fb80ef-6347-b463-da90-4980d872678e
 ---
@@ -59,29 +58,7 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **LocalizedDisplayNames** element that contains this **LocalizedDisplayName**.</p></td>
-</tr>
-</tbody>
-</table>
 
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The **LocalizedDisplayNames** element that contains this **LocalizedDisplayName**. |

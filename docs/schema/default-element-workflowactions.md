@@ -1,12 +1,12 @@
 ---
 title: Default element (WorkflowActions)
+description: Default element (WorkflowActions) serves as a container for other elements and has no definable attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: befc0004-2f98-4cd9-9b5a-d7450e9a958d
 ---
@@ -69,8 +69,3 @@ None
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-

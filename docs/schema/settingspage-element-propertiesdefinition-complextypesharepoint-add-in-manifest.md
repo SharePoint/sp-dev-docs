@@ -1,15 +1,15 @@
 ---
 title: SettingsPage element (PropertiesDefinition complexType)
+description: Learn about SettingsPage element (PropertiesDefinition complexType).
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d6ae1710-208e-abc8-e029-21662990ad24
 ---
 
-# SettingsPage element (PropertiesDefinition complexType) 
+# SettingsPage element (PropertiesDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: d6ae1710-208e-abc8-e029-21662990ad24
 
 For future use. This element currently has no function.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  | UrlElementDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -32,7 +32,7 @@ For future use. This element currently has no function.
 
 ```XML 
     <xs:element name="SettingsPage"  type="UrlElementDefinition" minOccurs="0" maxOccurs="1">
-    </xs:element>     
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -78,9 +78,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-

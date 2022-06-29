@@ -1,25 +1,25 @@
 ---
 title: "SharePoint Online Import Migration API"
-ms.prod: sharepoint
-ms.date: 05/19/2022
+description: "This article provides in depth information on how to use the SPO Migration API."
+ms.date: 06/28/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
 search.appverid: MET150
-description: "This article provides in depth information on how to use the SPO Migration API."
+ms.subservice: migration-tool
 ms.localizationpriority: high
 ---
 # SharePoint Import Migration API (CreationMigrationJob)
 
 ## API Documention
 
-The following API description is based upon use of the SharePoint Client Side Object Model (CSOM). We do recommend using NuGet packages when you reference CSOM in your solution. 
+The following API description is based upon use of the SharePoint Client Side Object Model (CSOM). We do recommend using NuGet packages when you reference CSOM in your solution.
 
 You can find latest version of the SharePoint Online Client Side Object Model (CSOM) package from the [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/). Use the ID `Microsoft.SharePointOnline.CSOM`.
 
 > [!Important]
 > Files larger than 15 GB must now create the required checksum using [QuickXorHash](/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
-> 
+>
 > The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirement.
 >
 > The previous method of MD5Hash is still required for files smaller than 2 GB; however this requirement will be removed at some point in the future.
@@ -417,25 +417,25 @@ In the Manifest container one file is named Manifest.xml. There are 2 optional a
 **Example for files over 15 GB:**
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?> 
-<SPObjects xmlns="urn:deployment-manifest-schema"> 
-  <SPObject Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ObjectType="SPFolder" ParentId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents"> 
-    <Folder Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Url="Shared Documents" Name="Shared Documents" ParentFolderId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" ContainingDocumentLibrary="a69654d6-eb09-4638-aa6b-a7e8ff86f555" TimeCreated="2021-01-06T18:50:15" TimeLastModified="2021-01-06T18:50:15" SortBehavior="1" /> 
-  </SPObject> 
-  <SPObject Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ObjectType="SPDocumentLibrary" ParentId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents"> 
-    <DocumentLibrary Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" BaseTemplate="DocumentLibrary" RootFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" RootFolderUrl="/Shared Documents" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Title="Documents" HasUniqueRoleAssignments="true"> 
-      <ContentTypes /> 
-    </DocumentLibrary> 
-  </SPObject> 
-  <SPObject Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ObjectType="SPFile" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
-    <File Url="Shared Documents/MyFile.txt" Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Name="MyFile.txt" ListItemIntId="1" ListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" TimeCreated="2021-01-06T18:43:38" TimeLastModified="2018-06-07T17:54:28" Version="1.0" FileValue="MyFile.txt" FileSize="17662712" Author="1" ModifiedBy="1" Checksum="3k59aOUae2xygD5B/jtxY4x0Xko=" /> 
-  </SPObject> 
-  <SPObject Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ObjectType="SPListItem" ParentId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt"> 
-    <ListItem FileUrl="Shared Documents/MyFile.txt" DocType="File" ParentFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Order="100" Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" Name="MyFile.txt" DirName="/Shared Documents" IntId="1" DocId="aef2bb11-7ee8-4343-87cd-5938d260e647" Version="1.0" Author="1" ModifiedBy="1" TimeLastModified="2018-06-07T17:54:28" TimeCreated="2021-01-06T18:43:38" ModerationStatus="Approved"> 
-      <Fields /> 
-    </ListItem> 
-  </SPObject> 
-</SPObjects> 
+<?xml version="1.0" encoding="utf-8"?>
+<SPObjects xmlns="urn:deployment-manifest-schema">
+  <SPObject Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ObjectType="SPFolder" ParentId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents">
+    <Folder Id="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Url="Shared Documents" Name="Shared Documents" ParentFolderId="d43a7f16-e50b-4591-861f-684e78e89e12" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" ContainingDocumentLibrary="a69654d6-eb09-4638-aa6b-a7e8ff86f555" TimeCreated="2021-01-06T18:50:15" TimeLastModified="2021-01-06T18:50:15" SortBehavior="1" />
+  </SPObject>
+  <SPObject Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ObjectType="SPDocumentLibrary" ParentId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents">
+    <DocumentLibrary Id="a69654d6-eb09-4638-aa6b-a7e8ff86f555" BaseTemplate="DocumentLibrary" RootFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" RootFolderUrl="/Shared Documents" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Title="Documents" HasUniqueRoleAssignments="true">
+      <ContentTypes />
+    </DocumentLibrary>
+  </SPObject>
+  <SPObject Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ObjectType="SPFile" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt">
+    <File Url="Shared Documents/MyFile.txt" Id="aef2bb11-7ee8-4343-87cd-5938d260e647" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Name="MyFile.txt" ListItemIntId="1" ListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" TimeCreated="2021-01-06T18:43:38" TimeLastModified="2018-06-07T17:54:28" Version="1.0" FileValue="MyFile.txt" FileSize="17662712" Author="1" ModifiedBy="1" Checksum="3k59aOUae2xygD5B/jtxY4x0Xko=" />
+  </SPObject>
+  <SPObject Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ObjectType="SPListItem" ParentId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentWebUrl="/" Url="/Shared Documents/MyFile.txt">
+    <ListItem FileUrl="Shared Documents/MyFile.txt" DocType="File" ParentFolderId="75be48d8-59a5-4558-8dd8-5eb2c4e94bc5" Order="100" Id="52e75f2f-e8d7-4c6d-bf06-3b98d8429e0f" ParentWebId="2f887e64-876b-4fa7-bb03-0a9ca1cf3d33" ParentListId="a69654d6-eb09-4638-aa6b-a7e8ff86f555" Name="MyFile.txt" DirName="/Shared Documents" IntId="1" DocId="aef2bb11-7ee8-4343-87cd-5938d260e647" Version="1.0" Author="1" ModifiedBy="1" TimeLastModified="2018-06-07T17:54:28" TimeCreated="2021-01-06T18:43:38" ModerationStatus="Approved">
+      <Fields />
+    </ListItem>
+  </SPObject>
+</SPObjects>
  ```
 
 **Example for files under 2 GB:**
@@ -501,7 +501,7 @@ Follow these guidelines when generating the **UserGroup.XML** in the submitted p
 
 
 > [!Important]
-> As of March 2, 2022, the Migration API now validates and enforces a maximum of one identifier per user in a single package. 
+> As of March 2, 2022, the Migration API now validates and enforces a maximum of one identifier per user in a single package.
 >
 > While using a non-UPN email won't result in a failed job, it may bring unexpected results in SharePoint Online.
 
@@ -512,7 +512,7 @@ The following examples show the correct and incorrect ways of entering the user 
 In this case, the user has the following identifiers:
 
 - **UPN**: robert@contoso.com
-- **Email**: robert.downey@contoso.com. 
+- **Email**: robert.downey@contoso.com.
 
 
 **Correct**
@@ -565,7 +565,7 @@ If the Migration API was unable to resolve a user using the login provided in th
 ### Helpful Resources
 
 - [SharePoint Online Client Components SDK](https://www.microsoft.com/download/details.aspx?id=42038)
-- [Azure Windows Azure SDK for .NET - 2.4](https://www.microsoft.com/download/details.aspx?id=43709)
+- [Azure Windows Azure SDK for .NET - 2.4](https://azure.microsoft.com/downloads/)
 - [Bulk Creation of OneDrive for Business sites](https://msdn.microsoft.com/library/office/jj163783(v=office.15).aspx)
 - [Restrictions and limitations when you sync SharePoint libraries to your computer through OneDrive for Business](https://support.office.com/article/restrictions-and-limitations-when-you-sync-files-and-folders-7787566e-c352-4bd4-9409-fd100a0165f6)
 - [Types of files that cannot be added to a list or library](https://support.office.com/Article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3?ui=en-US&rs=en-US&ad=US)
@@ -656,9 +656,9 @@ Included below are the XSD files used for package validation in the import pipel
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema targetNamespace="urn:deployment-exportsettings-schema" elementFormDefault="qualified" 
-  xmlns="urn:deployment-exportsettings-schema" 
-  xmlns:mstns="urn:deployment-exportsettings-schema" 
+<xs:schema targetNamespace="urn:deployment-exportsettings-schema" elementFormDefault="qualified"
+  xmlns="urn:deployment-exportsettings-schema"
+  xmlns:mstns="urn:deployment-exportsettings-schema"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <!-- Guid SimpleType definition -->
@@ -774,9 +774,9 @@ There is no change from current published full 2013 package schema.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema targetNamespace="urn:deployment-manifest-schema" elementFormDefault="qualified" 
-  xmlns="urn:deployment-manifest-schema" 
-  xmlns:mstns="urn:deployment-manifest-schema" 
+<xs:schema targetNamespace="urn:deployment-manifest-schema" elementFormDefault="qualified"
+  xmlns="urn:deployment-manifest-schema"
+  xmlns:mstns="urn:deployment-manifest-schema"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <!-- From CoreDefinitions.xsd -->
@@ -1545,9 +1545,9 @@ There is no change from current published [full 2013 package schema](../schema/c
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema targetNamespace="urn:deployment-rootobjectmap-schema" elementFormDefault="qualified" 
-  xmlns="urn:deployment-rootobjectmap-schema" 
-  xmlns:mstns="urn:deployment-rootobjectmap-schema" 
+<xs:schema targetNamespace="urn:deployment-rootobjectmap-schema" elementFormDefault="qualified"
+  xmlns="urn:deployment-rootobjectmap-schema"
+  xmlns:mstns="urn:deployment-rootobjectmap-schema"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <!-- Guid SimpleType definition -->

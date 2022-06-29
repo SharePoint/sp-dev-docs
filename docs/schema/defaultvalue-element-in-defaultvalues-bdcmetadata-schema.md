@@ -1,17 +1,17 @@
 ---
 title: DefaultValue Element in DefaultValues
+description: DefaultValue Element in DefaultValues represents a default value.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.DefaultValue
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ddb67f64-6361-7b59-6724-4680484d585d
 ---
 
-# DefaultValue Element in DefaultValues 
+# DefaultValue Element in DefaultValues
 
 (BDCMetadata Schema)
 
@@ -90,29 +90,6 @@ None.
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md">DefaultValues Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+| --- | --- |
+| [DefaultValues Element in TypeDescriptor (BDCMetadata Schema)](defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md) |     |

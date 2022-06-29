@@ -1,7 +1,7 @@
 ---
 title: Support and convert SharePoint field types for Windows Phone apps
 description: Implement data-conversion logic to support SharePoint field types in Windows Phone apps.
-ms.date: 12/29/2020
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 301e6e58-5153-4ca9-a419-8ae0535ebbed
 ms.localizationpriority: medium
@@ -462,5 +462,5 @@ Now the Identifier field is shown on the Display form as well as on the List for
 - [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
 - [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
 - [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
-- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 - [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

@@ -1,8 +1,7 @@
 ---
 title: Using single part app pages in SharePoint Online
 description: Using single part app pages in SharePoint Online
-ms.date: 12/13/2021
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -58,7 +57,7 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/marketing
 Set-PnPPage -Identity "Page" -LayoutType SingleWebPartAppPage
 ```
 
-> Refer to the [PnP PowerShell documentation](/powershell/module/sharepoint-pnp/set-PnPPage) for complete details and examples on this cmdlet.
+> Refer to the [PnP PowerShell documentation](https://pnp.github.io/powershell/cmdlets/Set-PnPPage.html) for complete details and examples on this cmdlet.
 
 # [CLI for Microsoft 365](#tab/o365cli)
 
@@ -67,7 +66,7 @@ m365 login
 m365 spo listitem set --webUrl https://contoso.sharepoint.com/sites/marketing --listTitle "Site Pages" --id 3 --PageLayoutType SingleWebPartAppPage
 ```
 
-> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365/cmd/spo/listitem/listitem-set.html) for complete details and examples on this command.
+> Refer to the [CLI for Microsoft 365 documentation](https://pnp.github.io/cli-microsoft365) for complete details and examples on this command.
 
 ---
 

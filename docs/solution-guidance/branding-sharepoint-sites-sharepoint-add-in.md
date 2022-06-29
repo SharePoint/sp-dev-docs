@@ -1,7 +1,7 @@
 ---
 title: Branding SharePoint sites in the SharePoint Add-in model
 description: The approach you take to brand SharePoint sites is different in the new SharePoint Add-in model than it was with Full Trust Code / Farm Solutions.
-ms.date: 01/27/2021
+ms.date: 06/10/2022
 ms.localizationpriority: high
 ---
 # Branding SharePoint sites in the SharePoint Add-in model
@@ -158,7 +158,7 @@ You can change the composed look for a SharePoint site via the web browser or th
 
 ## Use the SharePoint color palette tool to create a color palette for a SharePoint theme
 
-The [SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182) (pictured below) is easy to use and allows you to create the color scheme for a SharePoint theme.  This tool provides a *what you see is what you get* editing experience.  When you save the color schemes this tool creates it generates a .spcolor file.
+The [SharePoint color palette tool](https://techcommunity.microsoft.com/t5/sharepoint/download-sharepoint-color-palette-tool/m-p/63394) (pictured below) is easy to use and allows you to create the color scheme for a SharePoint theme.  This tool provides a *what you see is what you get* editing experience.  When you save the color schemes this tool creates it generates a .spcolor file.
 
 ![The SharePoint Color Palette Tool](media/Recipes/Themes/color-palette-tool.png)
 
@@ -326,7 +326,7 @@ The following chart summarizes all your options to brand a SharePoint site at a 
 
 ## Related links
 
-- [SharePoint color palette tool](https://www.microsoft.com/download/details.aspx?id=38182)
+- [SharePoint color palette tool](https://techcommunity.microsoft.com/t5/sharepoint/download-sharepoint-color-palette-tool/m-p/63394)
 - Ignite 2015 - [Deep Dive into Safe SharePoint Branding in Office 365 Using Repeatable Patterns and Practices](https://channel9.msdn.com/Events/Ignite/2015/BRK3164)
 - [Customize your SharePoint site UI by using JavaScript](Customize-your-SharePoint-site-UI-by-using-JavaScript.md)
 - Guidance articles at [https://aka.ms/OfficeDevPnPGuidance](https://aka.ms/OfficeDevPnPGuidance "Guidance Articles")

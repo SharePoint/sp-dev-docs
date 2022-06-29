@@ -2,7 +2,6 @@
 title: Hyperlinking considerations in SharePoint Framework
 description: Considerations when hyperlinking on a modern page with regard to smart or absolute navigation
 ms.date: 07/01/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

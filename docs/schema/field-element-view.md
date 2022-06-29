@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: 491dd867-2dea-485e-a0b8-b33e53094bba
-description: Returns the formatted value of a field for use within a view definition. 
+description: Returns the formatted value of a field for use within a view definition.
 ---
 
 # Field element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Returns the formatted value of a field for use within a View definition. 
-  
+
+Returns the formatted value of a field for use within a View definition.
+
 ```XML
 <Field
   AutoHyperLink = "TRUE" | "FALSE"
@@ -49,28 +48,28 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded (1 within [UrlBaseName](urlbasename-element-view.md)) 
-   
+- Maximum: Unbounded (1 within [UrlBaseName](urlbasename-element-view.md))
+
 ### Remarks
 
 Use the **Field (View)** element to return a formatted field value for display within a view, and use the [Column](column-element-view.md) element to return the raw data value of the field. The **Field** element does not specify attributes when it is used within [UrlBaseName](urlbasename-element-view.md), and only **Name** is specified when it is used within [Expr1](expr1-element-view.md), [Expr2](expr2-element-view.md), or [Row](row-element-site.md).
-  
-To create a custom field definition as a pluggable Feature that is based on a default SharePoint Foundation field type and that can be reused across sites and lists, use the [Field (Field)](field-element-field.md) element to define a custom [site column](https://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx). 
 
-To create a custom field definition for a list definition based on a default field type, use the [Field (List - Definition)](field-element-list.md) element within a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file. 
+To create a custom field definition as a pluggable Feature that is based on a default SharePoint Foundation field type and that can be reused across sites and lists, use the [Field (Field)](field-element-field.md) element to define a custom [site column](https://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432%28Office.15%29.aspx).
 
-To create a [custom field type](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element. 
-  
+To create a custom field definition for a list definition based on a default field type, use the [Field (List - Definition)](field-element-list.md) element within a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file.
+
+To create a [custom field type](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element.
+
 <br/>

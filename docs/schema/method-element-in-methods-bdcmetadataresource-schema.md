@@ -1,10 +1,10 @@
 ---
 title: Method element in Methods (BDCMetadataResource)
+description: Method element in Methods (BDCMetadataResource) specifies localized display names, properties, and permissions for a Method Element in Methods (BDCMetadata Schema).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 533c94af-e18a-75af-1ef8-e42811534a12
 ---
@@ -19,6 +19,7 @@ Specifies localized display names, properties, and permissions, in any combinati
 
 **Schema**: BDCMetadataResource
 
+## Definition
 ```
 <Method Name = "String"> </Method>
 ```
@@ -33,59 +34,17 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.md">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="filterdescriptors-element-in-method-bdcmetadataresource-schema.md">FilterDescriptors Element in Method (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-method-bdcmetadataresource-schema.md">Parameters Element in Method (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadataresource-schema.md">MethodInstances Element in Method (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Element|
+|-------|
+|[LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)|
+|[Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)|
+|[AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md)|
+|[FilterDescriptors Element in Method (BDCMetadataResource Schema)](filterdescriptors-element-in-method-bdcmetadataresource-schema.md)|
+|[Parameters Element in Method (BDCMetadataResource Schema)](parameters-element-in-method-bdcmetadataresource-schema.md)|
+|[MethodInstances Element in Method (BDCMetadataResource Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.md)|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="methods-element-in-entity-bdcmetadataresource-schema.md">Methods Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+|Element|
+|-------|
+|[Methods Element in Entity (BDCMetadataResource Schema)](methods-element-in-entity-bdcmetadataresource-schema.md)|

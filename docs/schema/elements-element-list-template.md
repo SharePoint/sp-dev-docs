@@ -1,10 +1,10 @@
 ---
 title: Elements Element (List Template)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (List Template) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 54222223-2931-4953-8bdb-e74addb862f4
 ---
@@ -18,7 +18,7 @@ Top-level element in a Feature manifest file that contains Feature element decla
 ## Definition
 
 ```XML
-<Elements 
+<Elements
   Id = "Text">
 </Elements>
 ```
@@ -69,11 +69,3 @@ None
 ## Example
 
 For an example of how this element is used, see [List Template Files](list-template-files.md).
-
-
-
-
-
-
-
-

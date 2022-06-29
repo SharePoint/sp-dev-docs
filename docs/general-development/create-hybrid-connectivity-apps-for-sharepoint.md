@@ -1,6 +1,7 @@
 ---
 title: Create hybrid connectivity apps for SharePoint
-ms.date: 09/25/2017
+description: This is an article with links to learn about the process of developing and deploying apps for SharePoint hybrid connectivity solutions.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 311f036e-3442-4497-b35e-442b665462d3
 ms.localizationpriority: medium
@@ -26,7 +27,7 @@ For a complete description of how to configure a working hybrid solution, see  [
     
 
 > **Caution:**
-> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](https://www.microsoft.com/microsoftservices/deploy.aspx). 
+> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](https://www.microsoft.com/en-us/microsoft-365/products-apps-services). 
   
     
     

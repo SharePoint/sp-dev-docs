@@ -1,27 +1,25 @@
 ---
 title: "CrawledPropertyInfo complexType (SPS15XSDSearchSet2)"
+description: Outlines information, a definition, and elements and attributes for the CrawledPropertyInfo complexType in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6a4d1072-03d8-3141-d6d9-6a384c2795b8
-description: "Last modified: March 09, 2015"
 ---
 
 # CrawledPropertyInfo complexType (SPS15XSDSearchSet2)
 
- 
-  
-## Type information
 
-|||
+
+## Type information
+|Name|Value|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:BaseInfo  <br/> |
-   
+|**Namespace** |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration   |
+|**Schema file** |schema_Microsoft.Office.Server.Search.Administration.xsd  |
+|**Extension base** |tns:BaseInfo   |
+
 ## Definition
 
 ```XML
@@ -45,8 +43,8 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -58,9 +56,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[Propset](propset-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
 |[Samples](samples-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md) <br/> |q12:ArrayOfstring  <br/> ||
 |[SchemaId](schemaid-element-crawledpropertyinfo-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

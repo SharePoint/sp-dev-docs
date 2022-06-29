@@ -1,6 +1,7 @@
 ---
 title: Back up and restore SharePoint using a VSS requestor
-ms.date: 09/25/2017
+description: Describes how to back up and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: cab5ba90-bd23-4cec-82d7-529e3f86ba88
 ms.localizationpriority: medium

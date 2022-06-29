@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 25eeee29-60ba-b21e-f170-5400a81b72bf
 description: Lists the elements in the schema_Microsoft.Office.Server.Search.Query.Rules XML schema.
@@ -15,17 +14,15 @@ description: Lists the elements in the schema_Microsoft.Office.Server.Search.Que
 **Applies to:** SharePoint Server 2013
 
 This topic lists the elements in the **schema_Microsoft.Office.Server.Search.Query.Rules** XML schema.
-  
-- [BoundVariableOrigin element](boundvariableorigin-element-sps15xsdsearchset4.md)
-    
-- [GroupProcessingDirective element](groupprocessingdirective-element-sps15xsdsearchset4.md)
-    
-- [LicenseType element](licensetype-element-sps15xsdsearchset4.md)
-    
-- [MatchingOptions element](matchingoptions-element-sps15xsdsearchset4.md)
-    
-- [QueryActionEnableOnClickThroughOptions element](queryactionenableonclickthroughoptions-element-sps15xsdsearchset4.md)
-    
-- [QueryTransformParentType element](querytransformparenttype-element-sps15xsdsearchset4.md)
-    
 
+- [BoundVariableOrigin element](boundvariableorigin-element-sps15xsdsearchset4.md)
+
+- [GroupProcessingDirective element](groupprocessingdirective-element-sps15xsdsearchset4.md)
+
+- [LicenseType element](licensetype-element-sps15xsdsearchset4.md)
+
+- [MatchingOptions element](matchingoptions-element-sps15xsdsearchset4.md)
+
+- [QueryActionEnableOnClickThroughOptions element](queryactionenableonclickthroughoptions-element-sps15xsdsearchset4.md)
+
+- [QueryTransformParentType element](querytransformparenttype-element-sps15xsdsearchset4.md)

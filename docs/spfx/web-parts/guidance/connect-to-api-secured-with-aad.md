@@ -2,7 +2,6 @@
 title: Connect to API secured with Azure Active Directory (Azure AD)
 description: Guidance about connecting to APIs secured with Azure AD.
 ms.date: 02/11/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
@@ -359,7 +358,7 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
       webPartId?: string;
     }
     ```
-    
+
   The `popUp` property and the `callback` function are both already implemented in ADAL JS but aren't exposed in the TypeScript typings of the standard `Config` interface. You need them in order to allow users to sign in to your web parts by using a pop-up window instead of redirecting them to the Azure AD sign-in page.
 
 1. Load the ADAL JS patch, the custom configuration interface, and your configuration object into the main component of your web part.
@@ -376,17 +375,17 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
     ```typescript
     export default class UpcomingMeetings extends React.Component<IUpcomingMeetingsProps, IUpcomingMeetingsState> {
       private authCtx: adal.AuthenticationContext;
-    
+
       constructor(props: IUpcomingMeetingsProps, state: IUpcomingMeetingsState) {
         super(props);
-    
+
         this.state = {
           loading: false,
           error: null,
           upcomingMeetings: [],
           signedIn: false
         };
-    
+
         const config: IAdalConfig = adalConfig;
         config.webPartId = this.props.webPartId;
         config.popUp = true;
@@ -397,7 +396,7 @@ For ADAL JS to work correctly in SharePoint Framework web parts, you have to con
             return previousState;
           });
         };
-    
+
         this.authCtx = new AuthenticationContext(config);
         AuthenticationContext.prototype._singletonInstance = undefined;
       }

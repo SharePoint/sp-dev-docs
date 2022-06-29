@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies a code access security policy for a solution.
 # PolicyItem element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies a code access security policy for a solution.
-  
+
 ```XML
 <PolicyItem>
   <PermissionSet
@@ -42,18 +41,16 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Assemblies](assemblies-element-solutioncodeaccesssecurity.md)
 - [PermissionSet](permissionset-element-solution.md)
-   
+
 ### Parent elements
 
 - [CodeAccessSecurity](codeaccesssecurity-element-solution.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

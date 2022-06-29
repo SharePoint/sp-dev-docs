@@ -1,10 +1,10 @@
 ---
 title: Business connectivity services (BCS) schemas
+description: "Provides reference documentation for the Microsoft Business Connectivity Services (BCS) XML schemas."
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b02774df-6ce9-45d5-ae5b-88bebf6d441a
 ---
@@ -28,10 +28,3 @@ This section provides reference documentation for the Microsoft Business Connect
 - [BDCMetadataResource schema](bdcmetadataresource-schema.md)
 
 <!-- [BDCSchemaAnnotations schema](https://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
-
- 
-
-
-
-
-

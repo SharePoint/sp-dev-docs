@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 20f7d2de-a99d-fde6-c8e3-e401bb42d2f4
 ---
 
-# Condition element 
+# Condition element
 
 (Conditions element) (WorkflowInfo element) (Action4)
 
@@ -48,9 +47,9 @@ Represents a Condition statement, which is part of a rule sentence that can be d
                <xs:complexType>
                <xs:all>
          <xs:element name="RuleDesigner"      type="ruleDesignerType" minOccurs="1"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
          <xs:element name="Parameters"      type="parametersType" minOccurs="1"     maxOccurs="1"    >
-      </xs:element>  
+      </xs:element>
            </xs:all>
          <xs:attribute name="Type"   type="s:string"     />
          <xs:attribute name="Name"   type="s:string"      use="required"     />
@@ -62,7 +61,7 @@ Represents a Condition statement, which is part of a rule sentence that can be d
          <xs:attribute name="ClassName"   type="s:string"     />
          <xs:attribute name="ShapeImageUrl"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -237,11 +236,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 Each **Condition** element also corresponds to a **Boolean** method inside a specified SharePoint workflow library. These methods are used to evaluate values passed by their parameters and return either **true** or **false**.
 
 A **Condition** element contains information about the Microsoft .NET assembly where the condition code is implemented, and also the parameters that are required to make the function call. It also contains information about how the **Condition** statement should be displayed to the workflow editor.
-
-
-
-
-
-
-
-

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1290b4ef-956f-4775-82cc-07f9b812c0f9
 ---
@@ -114,16 +113,8 @@ The following sections describe attributes, child elements, and parent elements.
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
 
-A **Receivers** tag can imply a site-wide event registration or an event registration for the root Web. The **Scope** attribute is used to define at what level the event receivers are applied. If the **Receivers** tag has no **ListTemplateId** or **ListUrl** attribute, the event receiver is registered at the same scope as the Feature. 
+A **Receivers** tag can imply a site-wide event registration or an event registration for the root Web. The **Scope** attribute is used to define at what level the event receivers are applied. If the **Receivers** tag has no **ListTemplateId** or **ListUrl** attribute, the event receiver is registered at the same scope as the Feature.
 
 For example, a Feature that is scoped to the Web results in an event receiver being added to an event receiver collection that is scoped to the Web.
 
 <br/>
-
-
-
-
-
-
-
-

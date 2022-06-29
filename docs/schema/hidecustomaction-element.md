@@ -1,10 +1,10 @@
 ---
 title: HideCustomAction Element
+description: HideCustomAction Element hides an existing action that is implemented by default within the framework of Windows SharePoint Services Features.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: afa42678-945d-4d8c-a5b3-8a1ca37831d1
 ---
@@ -101,11 +101,3 @@ Different actions may require using different CustomAction attributes to identif
 ## See also
 
 - [Default Custom Action Locations and IDs](default-custom-action-locations-and-ids.md)
-
-
-
-
-
-
-
-

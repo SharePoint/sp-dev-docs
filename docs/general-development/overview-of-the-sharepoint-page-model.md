@@ -1,6 +1,7 @@
 ---
 title: Overview of the SharePoint page model
-ms.date: 09/25/2017
+description: Provides an overview of the revised SharePoint page model, including master pages, page layouts, and pages.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 808b1af3-89ab-4f02-89cc-ea86cb1f9a6e
 ms.localizationpriority: high
@@ -49,7 +50,7 @@ SharePoint uses templates to define and render the pages that a site displays. T
   
     
     
-![Master page, page layout, and page](../images/101_page_model_overview.gif)
+![Diagram that shows the master page defining the page layout, which then defines the page.](../images/101_page_model_overview.gif)
   
     
     
@@ -290,7 +291,7 @@ The rendered page is what site visitors see. When a page is requested by the bro
   
     
     
-![Master page, page layout, and page](../images/112_master_plus_layout_plus_page.gif)
+![Diagram that shows the master page merged with the page layout, which then defines the page.](../images/112_master_plus_layout_plus_page.gif)
   
     
     

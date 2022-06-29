@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Specifies the site-relative URL for the directory that contains a d
 # UrlDirName element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the site-relative URL for the directory that contains a document.
-  
+
 ```XML
 <UrlDirName>
 </UrlDirName>
@@ -32,24 +31,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ## Example
 
-The following example uses the **UrlDirName** element to construct the absolute URL for a thumbnail image in a picture library. 
-  
+The following example uses the **UrlDirName** element to construct the absolute URL for a thumbnail image in a picture library.
+
 ```XML
 <DisplayPattern>
    <HttpHost />
@@ -70,11 +69,10 @@ The following example uses the **UrlDirName** element to construct the absolute 
 ```
 
 If the image file has a .jpg extension and is contained in a picture library on a subsite, the example creates a URL in the following form:
-  
+
  `http://Server_Name/Subsite_Name/Library_Name/_t/File_Base_Name/_jpg.jpg`
-  
+
 ## See also
 
 - [URL element (View)](url-element-view.md)
 - [UrlBaseName element (View)](urlbasename-element-view.md)
-

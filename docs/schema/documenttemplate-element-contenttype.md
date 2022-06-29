@@ -1,12 +1,12 @@
 ---
 title: DocumentTemplate Element (ContentType)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes the DocumentTemplate Element and includes sections that describe attributes, child elements, and parent elements.
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - content type definition schema, documenttemplate element
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7434d1f8-551a-425c-8b9b-d4e961cd4f5e
 ---
@@ -31,25 +31,9 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**TargetName**</p></td>
-<td align="left"><p>Optional **Text**. Specifies the path to the document template. This path can be absolute, relative to the server base URL, or relative to the content type's resource folder.</p></td>
-</tr>
-</tbody>
-</table>
+| Attribute | Description |
+| --- | --- |
+| **TargetName** | Optional **Text**. Specifies the path to the document template. This path can be absolute, relative to the server base URL, or relative to the content type's resource folder. |
 
 ### Child elements
 
@@ -72,33 +56,24 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="contenttype-element-contenttype.md">ContentType Element (ContentType)</a></span></p></td>
+<td align="left"><p><span><a href="contenttype-element-contenttype.md">ContentType Element (ContentType)</a></span></p></td>
 </tr>
 </tbody>
 </table>
 
 ### Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
+|     |
+| --- |
+| Minimum: 0 |
+| Maximum: 1 |
 
 ## Example
 
 The following example specifies a document template for a content type. In this case, the path specified is relative to the server base URL.
 
 ```XML
-    <ContentType 
+    <ContentType
     …
       <DocumentTemplate TargetName="/_layouts/NewCTDoc.aspx" />
     </ContentType>
@@ -108,10 +83,3 @@ The following example specifies a document template for a content type. In this 
 
 - [Content Type Definitions](content-type-definitions.md)
 - [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
-
-
-
-
-
-
-

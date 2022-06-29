@@ -1,10 +1,10 @@
 ---
 title: propertiesType complexType (Action4)
+description: Describes the propertiesType complexType (Action4) and provides the type information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b70e4eac-5848-8936-cd1d-8b532402635f
 ---
@@ -49,7 +49,7 @@ Base type for defining a [Property element (propertiesType complexType) (Action4
                 <xs:attribute name="DisplayName" type="s:string" />
                 <xs:attribute name="Description" type="s:string" />
                 <xs:attribute name="TypeFrom" type="s:string" />
-            </xs:element>  
+            </xs:element>
         </xs:sequence>
         <xs:attribute name="Name" type="s:string" use="required" />
         <xs:attribute name="DisplayName" type="s:string" use="required" />
@@ -120,11 +120,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

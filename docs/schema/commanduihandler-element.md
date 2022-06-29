@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 49935cf5-d97c-4909-af7b-ead7e76b4c4b
 ---
@@ -102,7 +101,7 @@ The following example defines a button command and a corresponding handler.
                {
                  if (client.readyState == 4)
                  {
-                   if (client.status == 200) 
+                   if (client.status == 200)
                    {
                      // client.responseText is mailto string
                      window.location = ('mailto:' + client.responseText);
@@ -111,20 +110,20 @@ The following example defines a button command and a corresponding handler.
                }
                function invokeEmailContacts()
                {
-                 var params = 'itemids=' + getItemIds(); 
+                 var params = 'itemids=' + getItemIds();
                  // Posting to EmailContacts.ashx to get the mailto string
-                 var site='{SiteUrl}'; 
+                 var site='{SiteUrl}';
                  var url = site + '/_layouts/emailcontacts.ashx?listId={ListId}';
                  client = null;
                  client = new XMLHttpRequest();
                  client.onreadystatechange =  handleReadyStateChange;
-                 client.open('POST', url, true);         
+                 client.open('POST', url, true);
                  client.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
                  client.setRequestHeader('Content-length', params.length);
                  client.send(params);
-               }      
+               }
                invokeEmailContacts();"
-             
+
           EnabledScript="javascript:
                function enableEmailContacts()
                {
@@ -139,10 +138,3 @@ The following example defines a button command and a corresponding handler.
 ```
 
 <br/>
-
-
-
-
-
-
-

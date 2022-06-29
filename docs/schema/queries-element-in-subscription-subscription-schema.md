@@ -1,15 +1,15 @@
 ---
 title: Queries Element in Subscription
+description: Describes the elements and attributes for Queries Element in Subscription, which is a list of queries that this cache subscription contains.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d094da28-8be1-a1fb-27f0-bd842044ad93
 ---
 
-# Queries Element in Subscription 
+# Queries Element in Subscription
 
 (Subscription Schema)
 
@@ -35,50 +35,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="query-element-in-queries-subscription-schema.md">Query Element in Queries (Subscription Schema)</a></span></p></td>
-<td align="left"><p>A query (**Finder** or **IDEnumerator** method instance) that returns the external items to populate in the cache.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [Query Element in Queries (Subscription Schema)](query-element-in-queries-subscription-schema.md) | A query (**Finder** or **IDEnumerator** method instance) that returns the external items to populate in the cache. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="subscription-element-subscription-schema.md">Subscription Element (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The cache subscription that contains this list of queries.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+|---------|-------------|
+| [Subscription Element (Subscription Schema)](subscription-element-subscription-schema.md) | The cache subscription that contains this list of queries. |

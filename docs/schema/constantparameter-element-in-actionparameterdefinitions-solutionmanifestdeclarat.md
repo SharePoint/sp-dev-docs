@@ -5,12 +5,11 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 12b3bdb6-09d0-b59a-e36c-6f8f628bfd27
 ---
 
-# ConstantParameter element in ActionParameterDefinitions 
+# ConstantParameter element in ActionParameterDefinitions
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -137,4 +136,3 @@ None.
 | Element | Description |
 | --- | --- |
 |[Parameters element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)](parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md)|The **Parameters** element that contains all the parameters of an action.|
-

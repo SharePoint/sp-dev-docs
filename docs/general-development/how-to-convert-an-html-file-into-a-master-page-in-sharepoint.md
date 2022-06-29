@@ -1,6 +1,7 @@
 ---
 title: Convert an .html file into a master page in SharePoint
-ms.date: 09/25/2017
+description: Describes how to convert an .html into a SharePoint master page .master file and provides steps and code examples.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: a76ab289-3256-45de-ac63-d5112a74e3c7
 ms.localizationpriority: high

@@ -1,8 +1,7 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
-ms.date: 02/10/2022
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -58,7 +57,7 @@ this.context.pageContext
         <h3>Welcome to SharePoint Framework!</h3>
         <div>Web part description: <strong>${escape(this.properties.description)}</strong></div>
         <div>Web part test: <strong>${escape(this.properties.test)}</strong></div>
-        <div>Loading from: <strong>${escape(this.context.pageContext.web.title)}</strong></div>        
+        <div>Loading from: <strong>${escape(this.context.pageContext.web.title)}</strong></div>
       </div>
     </section>`;
     ```
@@ -100,7 +99,7 @@ You need a list model to start working with SharePoint list data. To retrieve th
 
 ## Retrieve lists from SharePoint site
 
-Next you need to retrieve lists from the current site. You'll use SharePoint REST APIs to retrieve the lists from the site, which are located at **https://yourtenantprefix.sharepoint.com/_api/web/lists**.
+Next you need to retrieve lists from the current site. You'll use SharePoint REST APIs to retrieve the lists from the site, which are located at **`https://yourtenantprefix.sharepoint.com/_api/web/lists`**.
 
 SharePoint Framework includes a helper class `spHttpClient` to execute REST API requests against SharePoint. It adds default headers, manages the digest needed for writes, and collects telemetry that helps the service to monitor the performance of an application.
 

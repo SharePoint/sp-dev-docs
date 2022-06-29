@@ -1,13 +1,13 @@
 ---
 title: SharePoint site theming - CSOM development
-description: The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint. 
-ms.date: 04/19/2018
+description: The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
 # SharePoint site theming: CSOM development
 
-The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.    
+The SharePoint client-side object model (CSOM) provides access to the SharePoint object model from code that is running locally or on a different server than SharePoint.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nug
 
 ## CSOM code example
 
-The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __GetAllTenantThemes__ method to return a list of themes. 
+The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __GetAllTenantThemes__ method to return a list of themes.
 
 > [!NOTE]
 > * The URL used to create the context object includes the _-admin_ suffix because **TenantAdministration** methods work with the admin site.
@@ -80,7 +80,7 @@ public class SPOTheme 
 
 ## Applying a theme
 
-There's currently no supported CSOM API to programmatically apply a theme to a specific site. For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview)
+There's currently no supported CSOM API to programmatically apply a theme to a specific site. For information on applying custom themes to individual site collections see [SharePoint site design and site script overview](/sharepoint/dev/declarative-customization/site-design-overview)
 
 ## Methods/properties of the Microsoft.Online.SharePoint.TenantAdministration.Tenant class
 
@@ -92,7 +92,7 @@ Add a theme to the tenant.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Parameters:__ string name, string themeJson<br/>
-__Return type:__ ClientResult<bool>
+__Return type:__ ClientResult\<bool\>
 
 ### DeleteTenantTheme public method
 
@@ -108,7 +108,7 @@ Retrieve all the themes that are currently available in the tenant, including an
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Parameters:__ none<br/>
-__Return type:__ ClientObjectList<ThemeProperties>
+__Return type:__ ClientObjectList\<ThemeProperties\>
 
 ### GetTenantTheme public method
 
@@ -131,7 +131,7 @@ Update the settings for an existing theme.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Parameters:__ string name, string themeJson<br/>
-__Return type:__ ClientResult<bool>
+__Return type:__ ClientResult\<bool\>
 
 ## Methods of the Microsoft.Online.SharePoint.TenantManagement.Tenant class
 
@@ -143,7 +143,7 @@ Add a theme to the tenant.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
 __Parameters:__ string name, string themeJson<br/>
-__Return type:__ ClientResult<bool>
+__Return type:__ ClientResult\<bool\>
 
 ### GetAllTenantThemes public method
 
@@ -151,7 +151,7 @@ Retrieve all the themes that are currently available in the tenant, including an
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
 __Parameters:__ none<br/>
-__Return type:__ ClientObjectList<ThemeProperties>
+__Return type:__ ClientObjectList\<ThemeProperties\>
 
 ### GetHideDefaultThemes public method
 
@@ -159,7 +159,7 @@ Read the current setting for whether to hide default themes in the theme picker 
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
 __Parameters:__ none<br/>
-__Return type:__ ClientResult<bool>
+__Return type:__ ClientResult\<bool\>
 
 ### GetTenantTheme public method
 
@@ -183,7 +183,7 @@ Update the settings for an existing theme.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
 __Parameters:__ string name, string themeJson<br/>
-__Return type:__ ClientResult<bool>
+__Return type:__ ClientResult\<bool\>
 
 ## See also
 
@@ -191,4 +191,3 @@ __Return type:__ ClientResult<bool>
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
-

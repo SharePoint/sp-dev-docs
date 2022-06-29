@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b280a03d-dfdc-4d29-98b0-3e4bcb0f8231
 description: Used in an HtmlTransInfo.xml file to direct requests to the URL for handling the requests when the client computer does not have the 2007 Microsoft Office system installed.
@@ -13,9 +12,9 @@ description: Used in an HtmlTransInfo.xml file to direct requests to the URL for
 # Mapping element
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Used in an HtmlTransInfo.xml file (`\Program Files\Common Files\Microsoft Shared\web server extensions\12TEMPLATE\XML`) to direct requests to the URL for handling the requests when the client computer does not have the 2007 Microsoft Office system installed.
-  
+
 ```XML
 <Mapping
   AcceptHeader = "Text"
@@ -37,18 +36,18 @@ The following sections describe attributes, child elements, and parent elements.
 |**Extension** <br/> |Optional **Text**. Specifies the file name extension for the document type.  <br/> |
 |**HandlerUrl** <br/> |Optional **Text**. Specifies the URL of a converter program used by the server to handle a request when the client computer does not have Microsoft Office system installed.  <br/> |
 |**ProgId** <br/> |Optional **Text**. Specifies the name of the ActiveX control used to open the type of document.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [HtmlTrInfo](htmltrinfo-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 <br/>

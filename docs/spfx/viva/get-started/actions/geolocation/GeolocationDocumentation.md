@@ -2,20 +2,19 @@
 title: Location capabilities in Adaptive Card Extension
 description: Geolocation is a new action that the SharePoint Adaptive Card Extension framework supports, which enables third party developers to come up with their location specific scenarios.
 ms.date: 04/06/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Location capabilities in Adaptive Card Extension
 
 > [!NOTE]
 > The geolocation capability in Adaptive Card Extension will be available in SPFx v1.15.
-> 
+>
 > So make sure that you have installed it before proceeding further.
-> 
+>
 > For more information on installing the SPFx v1.15 Preview, see [SharePoint Framework v1.15 release notes](../../../../release-1.15.md).
-> 
+>
 > This tutorial also assumes that you have already built a SharePoint Adaptive Card Extension.
-> 
+>
 > To learn how to create your first SharePoint Adaptive Card Extension, try out [this tutorial](../../../get-started/build-first-sharepoint-adaptive-card-extension.md).
 
 ### New action types for geolocation
@@ -91,12 +90,12 @@ The following examples describe the geolocation action and their purpose.
     When this action gets invoked, user's current geolocation is fetched and is passed to the Third Party Developer via the onAction callback.
 
     > [!NOTE]
-    > In this case, map doesn't show up. 
+    > In this case, map doesn't show up.
 
 1. **Select location from a map**
 
     In your template JSON, introduce the following action:
-    
+
     ```json
     "actions": [{
       type: 'VivaAction.GetLocation',
@@ -110,20 +109,20 @@ The following examples describe the geolocation action and their purpose.
 1. **Display user's current location**
 
     In your template JSON, introduce the following action:
-    
+
     ```json
     "actions": [{
       type: 'VivaAction.ShowLocation',
       id: 'Show Location'
     }]
     ```
-    
+
     When this action gets invoked, a map opens up and the user's current location coordinates are shown on it.
 
 1. **Display a specified location**
 
     In your template JSON, introduce the following action:
-    
+
     ```json
     "actions": [{
       type: 'VivaAction.ShowLocation',
@@ -136,7 +135,7 @@ The following examples describe the geolocation action and their purpose.
       }
     }]
     ```
-    
+
     When this action gets invoked, a map opens up and it shows the location coordinates specified in the action.
 
 ### Access geolocation actions via card-designer card's property pane

@@ -5,16 +5,15 @@ manager: soliver
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1e7626eb-2820-374e-ae39-be3a3178b2ab
 ---
 
-# CommandUIExtensionType complexType 
+# CommandUIExtensionType complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -76,10 +75,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-

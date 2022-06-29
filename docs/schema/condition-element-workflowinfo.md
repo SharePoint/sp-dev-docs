@@ -7,7 +7,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2f33746f-e028-45ae-a48f-cc37ae0e73b4
 ---
@@ -160,14 +159,14 @@ The following example shows how to expose a **Condition** element to the code-fr
 ```XML
     <WorkflowInfo Language="en-us">
        <Conditions And="and" Or="or" Not="not" When="If" Else="ElseIf">
-          <Condition 
-                  AppliesTo="list" 
+          <Condition
+                  AppliesTo="list"
                   Assembly="MyWorkflowProject.Workflow1,
                             PublicKeyToken=71e9bce111e9429c,
                             Version=1.0.0.0,
-                            Culture=neutral" 
+                            Culture=neutral"
                   ClassName="MyWorkflowProject.Workflow1.MyClass"
-                  FunctionName="IsOrderComplete" 
+                  FunctionName="IsOrderComplete"
                   Name="Check if item in %1 is a complete order"
                   Type="Custom"
                   UsesCurrentItem="True">
@@ -182,11 +181,3 @@ The following example shows how to expose a **Condition** element to the code-fr
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 title: Customizing ranking models to improve relevance in SharePoint
 description: Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
-ms.date: 12/14/2020
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 ms.localizationpriority: high
@@ -79,7 +79,7 @@ $twoLinearStagesRankingModel.RankingModelXML > filename.xml
 ### To deploy a custom ranking model
 
 1. From the list of available ranking models, copy the GUID of the ranking model that you want to use as a template. (See  [To list all available ranking models](#to-list-all-available-ranking-models) for the sequence of Windows PowerShell cmdlets to use.)
-1. Run the following sequence of Windows PowerShell cmdlets using the GUID copied in step 1 for  _<GUID>_.
+1. Run the following sequence of Windows PowerShell cmdlets using the GUID copied in step 1 for  _\<GUID\>_.
 
     ```powershell
     $ssa = Get-SPEnterpriseSearchServiceApplication
@@ -133,7 +133,7 @@ To retrieve the rank detail, you need to be the administrator of the Search serv
 ### To retrieve the rank detail
 
 1. Open the SharePoint Management Shell as an Administrator.
-1. Run the following sequence of Windows PowerShell cmdlets, and substitute  _<query_text>_ and _<url>_ with actual values.
+1. Run the following sequence of Windows PowerShell cmdlets, and substitute  _\<query_text\>_ and _<url>_ with actual values.
 
 ```powershell
 $app = Get-SPEnterpriseSearchServiceApplication
@@ -151,7 +151,7 @@ $resultTables[([Microsoft.Office.Server.Search.Query.ResultType]::RelevantResult
 
 SharePoint provides the **ExplainRank** page that is located in the layouts folder ( `<searchCenter>/_layouts/15/`). This page contains detailed information on the rank score for each rank feature based on a given search query, a document ID, and an optional ranking model ID. The information is obtained and parsed from the rank detail.
 
-You can access the **ExplainRank** page with the following URL: **http://<searchCenter>/_layouts/15/ExplainRank.aspx?q={x}&amp;d={y}&amp;rm={z}**
+You can access the **ExplainRank** page with the following URL: **http://\<searchCenter\>/_layouts/15/ExplainRank.aspx?q={x}&amp;d={y}&amp;rm={z}**
 
 Where:
 

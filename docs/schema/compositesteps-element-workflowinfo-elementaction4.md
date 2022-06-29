@@ -5,12 +5,11 @@ manager: laurawi
 ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7c83ff1e-71c3-d864-cfca-3070af296553
 ---
 
-# CompositeSteps element 
+# CompositeSteps element
 
 (WorkflowInfo element) (Action4)
 
@@ -45,7 +44,7 @@ Container for the steps in a composite workflow activity, which are represented 
                <xs:sequence>
          <xs:element name="DataSources"      type="dataSourcesType" minOccurs="0"     maxOccurs="1"    >
 
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="ClassName"   type="s:string"      use="required"     />
@@ -54,10 +53,10 @@ Container for the steps in a composite workflow activity, which are represented 
          <xs:attribute name="Order"   type="s:nonNegativeInteger"     />
          <xs:attribute name="Description"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -113,11 +112,3 @@ Container for the steps in a composite workflow activity, which are represented 
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

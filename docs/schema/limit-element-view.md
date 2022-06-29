@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Truncates text to a specified size.
 # Limit element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Truncates text to a specified size.
-  
+
 ```XML
 <Limit
   AutoHyperLink = "TRUE" | "FALSE"
@@ -57,32 +56,32 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, `%c3%ab` for character `ë`.  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 - [Column](column-element-view.md)
 - [More](more-element-view.md)
 - [Text](text-element-view.md)
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-Note that the **Limit** element will not break words. For example, `<Limit Len=3>Microsoft Corporation</Limit>` returns Microsoft, not Mic. 
-  
+Note that the **Limit** element will not break words. For example, `<Limit Len=3>Microsoft Corporation</Limit>` returns Microsoft, not Mic.
+
 ## Example
 
 The following example limits the text of the **Body** field to 250 characters and puts an ellipsis ( `...`) after the string if it is cut off.
-  
+
 ```XML
-<Limit Len="250" MoreText="..." AutoHyperLink="TRUE" 
+<Limit Len="250" MoreText="..." AutoHyperLink="TRUE"
   AutoNewLine="TRUE">
   <Column Name="Body"/>
 </Limit>

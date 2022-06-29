@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: a992fb73-66c2-44d4-9df8-45fcb0cc5970
 description: Shows the schema definition for schema_Microsoft.Office.Server.Search.Query.Rules.
@@ -15,7 +14,7 @@ description: Shows the schema definition for schema_Microsoft.Office.Server.Sear
 **Applies to:** SharePoint Server 2013
 
 This topic shows the schema definition for **schema_Microsoft.Office.Server.Search.Query.Rules**.
-  
+
 ```XML
 <xs:schema tns="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query.Rules" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:simpleType name="LicenseType"></xs:simpleType>
@@ -51,5 +50,3 @@ This topic shows the schema definition for **schema_Microsoft.Office.Server.Sear
 </xs:schema>
 
 ```
-
-
