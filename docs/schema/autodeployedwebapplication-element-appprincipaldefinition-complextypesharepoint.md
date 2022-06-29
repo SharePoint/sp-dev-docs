@@ -1,15 +1,15 @@
 ---
 title: AutoDeployedWebApplication element (AppPrincipalDefinition complexType)
+description: AutoDeployedWebApplication element (AppPrincipalDefinition complexType). Do not use. For possible future use only.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: fbdf0dec-58f9-e419-c543-7729f9ee7523
 ---
 
-# AutoDeployedWebApplication element (AppPrincipalDefinition complexType) 
+# AutoDeployedWebApplication element (AppPrincipalDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: fbdf0dec-58f9-e419-c543-7729f9ee7523
 
 Do not use. For possible future use only.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information  | Location  |
 |---|---|
 | **Element type**  | Not defined |
 | **Namespace**  |  `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -32,13 +32,13 @@ Do not use. For possible future use only.
 
 ```XML 
     <xs:element name="AutoDeployedWebApplication">
-      <xs:complexType>           
+      <xs:complexType>
       <xs:sequence>
         <xs:element name="DebugInfo"  type="AutoDeployedWebApplicationDebugInfoDefinition" minOccurs="0">
-        </xs:element>     
+        </xs:element>
       </xs:sequence>
-      </xs:complexType>       
-    </xs:element>     
+      </xs:complexType>
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -103,9 +103,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-

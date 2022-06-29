@@ -1,6 +1,7 @@
 ---
 title: Upgrade site customizations for SharePoint
-ms.date: 09/25/2017
+description: Learn about potential issues and get recommendations for upgrading SharePoint 2010 site customizations to SharePoint.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 4b515860-69ae-4af8-8013-cd071c0ddca6
 ms.localizationpriority: medium
@@ -17,7 +18,7 @@ SharePoint introduces significant changes to the user interface (UI) that let yo
 This article will help SharePoint developers and those responsible for administering the upgrade process from SharePoint 2010 to identify potential problems after upgrading.
 ## General recommendations for upgrading
 
-In general, we recommend that you create a new "evaluation" site where you can test your customizations and redesign them for a SharePoint environment. For more information about creating an evaluation site collection, see  [Upgrade a site collection](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/upgrade-a-site-collection-HA102865473.aspx?CTT=5&amp;origin=HA104034491).
+In general, we recommend that you create a new "evaluation" site where you can test your customizations and redesign them for a SharePoint environment. For more information about creating an evaluation site collection, see  [Upgrade a site collection](/sharepoint/upgrade-and-update/upgrade-a-site-collection-to-sharepoint-2013).
   
     
     
@@ -47,13 +48,13 @@ Table 1 lists the possible after-upgrade problems for custom components and info
 -  [Plan to upgrade a site collection](https://technet.microsoft.com/library/ff191199.aspx)
     
   
--  [Branding issues that may occur when upgrading to SharePoint](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/branding-issues-that-may-occur-when-upgrading-to-sharepoint-HA104052656.aspx?CTT=5&amp;origin=HA104034491)
+-  [Branding issues that may occur when upgrading to SharePoint](/SharePoint/upgrade-and-update/branding-issues-that-may-occur-when-upgrading-to-sharepoint-2013)
     
   
--  [Upgrade a site collection](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/upgrade-a-site-collection-HA102865473.aspx?CTT=5&amp;origin=HA104034491)
+-  [Upgrade a site collection](/sharepoint/upgrade-and-update/upgrade-a-site-collection-to-sharepoint-2013)
     
   
--  [Troubleshoot site collection upgrade issues](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/troubleshoot-site-collection-upgrade-issues-HA104037311.aspx?CTT=5&amp;origin=HA104034491)
+-  [Troubleshoot site collection upgrade issues](/sharepoint/troubleshoot/administration/troubleshoot-site-collection-upgrade-issue)
     
   
 

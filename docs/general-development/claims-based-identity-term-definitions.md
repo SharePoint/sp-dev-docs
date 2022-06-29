@@ -1,6 +1,7 @@
 ---
 title: Claims-based identity term definitions
-ms.date: 09/25/2017
+description: Definitions of key terms related to claims-based identity.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 0f3decb5-dcd8-432f-9bb8-533f2d01bef7
 ms.localizationpriority: medium

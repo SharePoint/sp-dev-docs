@@ -2,7 +2,6 @@
 title: Use Microsoft Graph Toolkit to connect your solution to Microsoft Graph
 description: Use Microsoft Graph Toolkit to easily connect your SharePoint Framework web parts and extensions to Microsoft Graph.
 ms.date: 06/01/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

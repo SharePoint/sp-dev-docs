@@ -1,27 +1,26 @@
 ---
 title: "FormsAuthCredentials complexType (SPS15XSDSearchSet2)"
+description: "Describes the definition, type, element, and attribute information for FormsAuthCredentials complexType (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5059c9ce-bd07-88e6-0227-bfc6e6759ef7
-description: "Last modified: March 09, 2015"
 ---
 
 # FormsAuthCredentials complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
-|||
-|:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:SecurableAuthData  <br/> |
-   
+| Information | Location |
+|-------------|----------|
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema File** | schema_Microsoft.Office.Server.Search.Administration.xsd |
+| **Extension Base** | tns:SecurableAuthData |
+
 ## Definition
 
 ```XML
@@ -42,8 +41,8 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -52,9 +51,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[_AuthSubmissionMethod](_authsubmissionmethod-element-formsauthcredentials-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
 |[_AuthSubmissionPath](_authsubmissionpath-element-formsauthcredentials-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
 |[_ErrorPageUrl](_errorpageurl-element-formsauthcredentials-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

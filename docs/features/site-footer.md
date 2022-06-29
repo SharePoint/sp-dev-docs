@@ -1,7 +1,7 @@
 ---
 title: Overview of the SharePoint Site footer
 description: SharePoint Site footers can be used to show a logo or set of links/labels in a modern SharePoint site. They can be configured using the UI settings or by using APIs.
-ms.date: 06/06/2020
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -10,13 +10,13 @@ ms.localizationpriority: high
 Footers are a common branding / navigation control in websites and portals. SharePoint Communication sites will have an out-of-the box footer control, which can be controlled either using UI elements or by using APIs. This control supports following elements
 
 - 8 links or labels
-- Footer logo 
+- Footer logo
 - Footer name
 
 > [!IMPORTANT]
-> Footer will be enabled by default for all new communication sites after the feature is rolled out. Along with this update, the content bar (also referred to as the “social bar”) - which contains the Like, Comment, View and Save for Later icons - will be docked permanently on top of the Comments section on all modern pages and news posts. 
+> Footer will be enabled by default for all new communication sites after the feature is rolled out. Along with this update, the content bar (also referred to as the “social bar”) - which contains the Like, Comment, View and Save for Later icons - will be docked permanently on top of the Comments section on all modern pages and news posts.
 
-## Sample footer 
+## Sample footer
 
 Following picture demonstrates a footer with a logo, footer name and labels and links.
 
@@ -27,7 +27,7 @@ Following picture demonstrates a footer with a logo, footer name and labels and 
 You can control the footer existence with a `FooterEnabled` property in the `Web` object. Following PowerShell scripts shows how this can be done using [PnP PowerShell cmdlets](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets):
 
 ```powershell
-Connect-PnPOnline -Url "<SiteURL>" –Credentials (Get-Credential) 
+Connect-PnPOnline -Url "<SiteURL>" –Credentials (Get-Credential)
 Set-PnPFooter -Enabled:$false # for disabling the footer
 Set-PnPFooter -Enabled:$true # for enabling the footer
 ```

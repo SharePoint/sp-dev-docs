@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 06df3649-fa8b-f6d2-6265-c43613a637b2
 description: "Describes the ResubmitFlag simpleType (SPS15XSDSearchSet5). Applies to SharePoint Server 2013."
@@ -12,8 +11,8 @@ description: "Describes the ResubmitFlag simpleType (SPS15XSDSearchSet5). Applie
 
 # ResubmitFlag simpleType (SPS15XSDSearchSet5)
 
- **Applies to:** SharePoint Server 2013
-  
+**Applies to:** SharePoint Server 2013
+
 ## Type information
 
 |Information type|Value|
@@ -28,5 +27,3 @@ description: "Describes the ResubmitFlag simpleType (SPS15XSDSearchSet5). Applie
 <xs:simpleType name="ResubmitFlag"></xs:simpleType>
 
 ```
-
-

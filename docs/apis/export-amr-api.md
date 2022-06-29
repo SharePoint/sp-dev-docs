@@ -1,11 +1,12 @@
 ---
 title: "SharePoint Migration Export (Asynchronous Metadata Read) API"
 description: This document targets ISVs and any third-party vendors/developers who are developing and maintaining a migration tool.
-ms.date: 07/31/2020
+ms.date: 06/28/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: pamgreen
 audience: ITPro
+ms.subservice: migration-tool
 ms.topic: article
 ms.localizationpriority: high
 ms.collection:

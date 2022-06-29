@@ -1,10 +1,10 @@
 ---
 title: Schema map (AppHostWebFeatures)
+description: This topic shows the schema definition for AppHostWebFeatures.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d64d36be-8a19-6fd8-2798-0cbac949649b
 ---
@@ -13,12 +13,12 @@ ms.assetid: d64d36be-8a19-6fd8-2798-0cbac949649b
 
 This topic shows the schema definition for **AppHostWebFeatures**.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ```XML 
     <?xml version="1.0" encoding="utf-8"?>
-    <xs:schema id="WSS" targetNamespace="http://schemas.microsoft.com/sharepoint/" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/sharepoint/" xmlns:mstns="http://schemas.microsoft.com/sharepoint/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" attributeFormDefault="unqualified">  
+    <xs:schema id="WSS" targetNamespace="http://schemas.microsoft.com/sharepoint/" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/sharepoint/" xmlns:mstns="http://schemas.microsoft.com/sharepoint/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" attributeFormDefault="unqualified">
       <xs:include id="CoreDefinitions" schemaLocation="coredefinitions.xsd" />
       <xs:include id="CommandUI" schemaLocation="cui.xsd" />
 
@@ -365,10 +365,3 @@ This topic shows the schema definition for **AppHostWebFeatures**.
 
     </xs:schema>
 ```
-
-
-
-
-
-
-

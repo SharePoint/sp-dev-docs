@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Defines a document library template for the New Document Library pa
 # DocumentTemplate element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a document library template for the New Document Library page in a website based on Microsoft SharePoint Foundation.
-  
+
 ```XML
 <DocumentTemplate
   Default = "TRUE" | "FALSE"
@@ -46,24 +45,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**Path** <br/> |Optional **Text**. The name of the site definition to which the document template belongs.  <br/> |
 |**Type** <br/> |Required **Integer**. A unique ID for the template.  <br/> |
 |**XMLForm** <br/> |Optional **Boolean**. **TRUE** if the document template applies to a form library.  <br/> |
-   
+
 ### Child elements
 
 - [DocumentTemplateFiles](documenttemplatefiles-element-site.md)
-   
+
 ### Parent elements
 
 - [DocumentTemplates](documenttemplates-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
 The following example defines a Microsoft Office Excel 2007 document library template.
-  
+
 ```XML
 <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Excel;" Type="103" Description="$Resources:core,doctemp_Excel_Desc;">
   <DocumentTemplateFiles>

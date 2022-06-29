@@ -1,6 +1,7 @@
 ---
 title: Follow documents, sites, and tags by using the REST service in SharePoint
-ms.date: 09/25/2017
+description: Describes how to create SharePoint-hosted apps that use the REST service to follow content and to get followed content.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
 ms.localizationpriority: high
@@ -67,7 +68,7 @@ To perform Following Content tasks by using the REST API, you send HTTP **GET** 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
   
 > [!NOTE]
-> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](https://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to sign up for a Developer Site and start using Napa.
+> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) to sign up for a Developer Site and start using Napa.
   
     
     

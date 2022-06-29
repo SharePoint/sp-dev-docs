@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,14 +16,14 @@ description: Specifies the application resource files to include in the solution
 # ApplicationResourceFiles element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the application resource files to include in the solution.
-  
+
 ```XML
 <ApplicationResourceFiles>
-  <ApplicationResourceFile 
+  <ApplicationResourceFile
     Location=string/>
-  <App_GlobalResourceFile 
+  <App_GlobalResourceFile
     Location=string/>
 </ApplicationResourceFiles>
 ```
@@ -36,19 +35,16 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-- [ApplicationResourceFile](applicationresourcefile-element-solution.md) 
-- [App_GlobalResourceFile](app_globalresourcefile-element-solution.md) 
-   
+- [ApplicationResourceFile](applicationresourcefile-element-solution.md)
+- [App_GlobalResourceFile](app_globalresourcefile-element-solution.md)
+
 ### Parent elements
 
 - [Solution](solution-element-solution.md)
-   
+
 ### Remarks
 
 Use this element to deploy binary resources to an Internet Information Services (IIS) website used by a SharePoint Foundation Web Application. Files specified by [ApplicationResourceFile](applicationresourcefile-element-solution.md) child elements are deployed to a virtual directory named `wpresources`. Files specified by [App_GlobalResourceFile](app_globalresourcefile-element-solution.md) child elements are deployed to a virtual directory named `App_GlobalResources`.
-  
-
-

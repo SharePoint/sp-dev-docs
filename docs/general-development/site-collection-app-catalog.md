@@ -1,7 +1,7 @@
 ---
 title: Use the site collection app catalog
 description: Using site collection app catalogs, SharePoint tenant administrators can decentralize the management and scope the deployment of SharePoint add-ins and SharePoint Framework solutions to specific sites.
-ms.date: 09/07/2020
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: fdf7ecb1-9951-475b-b058-3285fba77b68
 ms.localizationpriority: high
@@ -48,7 +48,7 @@ You can configure and manage site collection app catalogs using the SharePoint O
 > [!NOTE]
 > Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) from November 2017 or newer.
 
-Alternatively, you can use the [CLI for Microsoft 365](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The CLI for Microsoft 365 is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Using [PnP PowerShell](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) to [create the app catalog](/powershell/module/sharepoint-pnp/add-pnpsitecollectionappcatalog) or [remove the app catalog](/powershell/module/sharepoint-pnp/remove-pnpsitecollectionappcatalog) is also an option when using Windows.
+Alternatively, you can use the [CLI for Microsoft 365](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The CLI for Microsoft 365 is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Using [PnP PowerShell](/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets) to [create the app catalog](https://pnp.github.io/powershell/cmdlets/Add-PnPSiteCollectionAppCatalog.html) or [remove the app catalog](https://pnp.github.io/powershell/cmdlets/Remove-PnPSiteCollectionAppCatalog.html) is also an option when using Windows.
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 

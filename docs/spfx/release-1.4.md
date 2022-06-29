@@ -2,7 +2,6 @@
 title: SharePoint Framework v1.4 release notes
 description: Release notes for the SharePoint Framework v1.4 release
 ms.date: 09/08/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.4 release notes
@@ -63,7 +62,7 @@ ms.localizationpriority: high
 - Add `preloadListItemProperties` to the `preloadOptions` section of the client-side application manifest
 - Add a "tags" property to the web part manifest
 - Introduce the ability to specify a relative path to an icon in a web part or extension manifest
-- Enable the `preloadComponents` field to be used with other client-side component manifest types 
+- Enable the `preloadComponents` field to be used with other client-side component manifest types
 
 ### @microsoft/sp-webpart-base
 

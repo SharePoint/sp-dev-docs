@@ -1,12 +1,12 @@
 ---
 title: BDCMetadata schema
+description: This article contains links to more information to learn about BDCMetadata schema.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.BDCMetadata
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2c1ec1fb-1072-c1bc-d40f-9dc09d2c9246
 ---
@@ -100,11 +100,3 @@ This section contains the documentation for the **BDC Model schema (BDCMetadata.
 - [TypeDescriptor element (BDCMetadata schema)](typedescriptor-element-bdcmetadata-schema.md)
 
 - [TypeDescriptors element in TypeDescriptor (BDCMetadata schema)](typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md)
-
-
-
-
-
-
-
-

@@ -1,15 +1,15 @@
 ---
 title: Default element (Conditions element)
+description: The Default element is a container for other elements.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 17472e6d-2b05-757a-f897-26b66a763882
 ---
 
-# Default element (Conditions element) 
+# Default element (Conditions element)
 
 (WorkflowInfo element) (Action4)
 
@@ -57,11 +57,11 @@ The **Default** element is a container for other elements.
                <xs:complexType>
                <xs:sequence>
          <xs:element name="RuleDesigner"      type="ruleDesignerType">
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="ItemKeyType"   type="s:string"     />
            </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -149,11 +149,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Remarks
 
 When you create workflows by using a declarative environment, such as SharePoint Designer, the .ACTIONS file that is installed on the server is combined into a single list of items and displayed to the workflow editor. SharePoint searches for existing workflow conditions, but if it finds a condition that is not represented by an entry in an .ACTIONS file, the **Default** element sentence is displayed for that condition.
-
-
-
-
-
-
-
-

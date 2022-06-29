@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,17 +16,17 @@ description: Top-level element for a solution manifest file.
 # Solution element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Top-level element for a solution manifest file.
-  
+
 ```XML
-<Solution 
-  Description = string 
+<Solution
+  Description = string
   DeploymentServerType = "ApplicationServer" | "WebFrontEnd"
-  ResetWebServer = "TRUE" | "FALSE" 
-  ResetWebServerModeOnUpgrade = "Recycle" | "StartStop" 
+  ResetWebServer = "TRUE" | "FALSE"
+  ResetWebServerModeOnUpgrade = "Recycle" | "StartStop"
   SharePointProductVersion = string
-  SolutionId = string 
+  SolutionId = string
   Title = string>
 </Solution>
 ```
@@ -47,7 +46,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**SharePointProductVersion** <br/> |Optional **string**. Specifies the version of Microsoft SharePoint Foundation.  <br/> |
 |**SolutionId** <br/> |Optional **string**. Contains the GUID for the solution.  <br/> |
 |**Title** <br/> |Optional **string**. Specifies the title of the solution.  <br/> |
-   
+
 ### Child elements
 
 - [ActivationDependencies](activationdependencies-element-solution.md)
@@ -60,13 +59,11 @@ The following sections describe attributes, child elements, and parent elements.
 - [SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md)
 - [RootFiles](rootfiles-element-solution.md)
 - [TemplateFiles](templatefiles-element-solution.md)
-   
+
 ### Parent elements
 
 None
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

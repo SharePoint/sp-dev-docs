@@ -1,6 +1,7 @@
 ---
 title: Create a VSS requestor for use with SharePoint
-ms.date: 09/25/2017
+description: Describes how to create a requestor for use with the Volume Shadow Copy Service (VSS) writer for Microsoft SharePoint.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 63b3145b-ece2-4acf-b58a-fd8b50303030
 ms.localizationpriority: medium

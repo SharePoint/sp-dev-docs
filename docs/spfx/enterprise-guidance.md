@@ -1,8 +1,7 @@
 ---
 title: SharePoint Framework enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 07/01/2020
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -147,7 +146,7 @@ A recommendation is for IT administrators to keep track of what CDNs are used an
 
 ### Microsoft 365 Public CDN
 
-The [Microsoft 365 Public CDN](https://developer.microsoft.com/blogs/general-availability-of-office-365-cdn) is a new capability in Microsoft 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images, and CSS styles in a CDN to provide better performance. The Microsoft 365 Public CDN is a geo-distributed caching feature that keeps static assets as close to the end users' browsers requesting them.
+The [Microsoft 365 Public CDN](/microsoft-365/enterprise/content-delivery-networks) is a new capability in Microsoft 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images, and CSS styles in a CDN to provide better performance. The Microsoft 365 Public CDN is a geo-distributed caching feature that keeps static assets as close to the end users' browsers requesting them.
 
 Administrators can enable the Microsoft 365 Public CDN capability on one or more document libraries, which will serve as the origin for the static assets. Administration of the libraries and the CDN is done by using the SharePoint Online PowerShell cmdlets. The assets in the document library will be replicated to the Microsoft 365 CDN and be accessible through the Microsoft 365 Public CDN URLs generated and associated with the document library. Any updates to the assets will be reflected on the CDN end-points within 15 minutes. Any assets within the document libraries will be available for anonymous users, through the CDN end point.
 

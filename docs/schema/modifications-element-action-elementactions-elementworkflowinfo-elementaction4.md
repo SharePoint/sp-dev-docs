@@ -1,15 +1,15 @@
 ---
 title: Modifications element
+description: Describes the Modifications element and provides the usage, element information, a definition, and elements and attributes in SharePoint.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c2c25f2d-f252-6769-5924-c13571a0c763
 ---
 
-# Modifications element 
+# Modifications element
 
 (Action element) (Actions element) (WorkflowInfo element) (Action4)
 
@@ -64,10 +64,10 @@ Container for **Modification** element collections that specify modifications as
          <xs:attribute name="TypeId" type="s:string" use="required" />
          <xs:attribute name="NameFormat" type="s:string" use="required" />
          <xs:attribute name="FormURN" type="s:string" use="required" />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -125,11 +125,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

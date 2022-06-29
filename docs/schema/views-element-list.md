@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Contains an enumeration of the views that are used in a list.
 # Views element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains an enumeration of the views that are used in a list.
-  
+
 ```XML
 <Views>
 </Views>
@@ -32,25 +31,25 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [View](view-element-list.md)
-   
+
 ### Parent elements
 
 - [MetaData (List)](metadata-element-list.md)
 - [MetaData (Site)](metadata-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
+- Maximum: 1
+
 ## Example
 
-The following example illustrates a collection of [View](view-element-list.md) elements contained by a **Views** element. The first view, "Summary," displays a sequence of paragraphs. The [Query](query-element-list.md) element specifies not only a sort order (in order of modification date), but also a filter (only show items whose **Expires** property is greater than or equal to today's date). 
-  
+The following example illustrates a collection of [View](view-element-list.md) elements contained by a **Views** element. The first view, "Summary," displays a sequence of paragraphs. The [Query](query-element-list.md) element specifies not only a sort order (in order of modification date), but also a filter (only show items whose **Expires** property is greater than or equal to today's date).
+
 ```XML
 <Views>
   <View Type="HTML" Name="Summary">
@@ -100,4 +99,3 @@ The following example illustrates a collection of [View](view-element-list.md) e
 ## See also
 
 - [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-

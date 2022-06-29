@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Provides information about the file specified as the home page in a
 # NavBarPage element (Site - Module)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Provides information about the file specified as the home page in a module so that other pages can be linked to the page.
-  
+
 ```XML
 <NavBarPage
   ID = "Integer"
@@ -39,24 +38,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**ID** <br/> |Required **Integer**. Specifies the ID for the page.  <br/> |
 |**Name** <br/> |Required **Text**. Specifies the text that appears in the navigation area of other pages that link to the page.  <br/> |
 |**Position** <br/> | Optional **Text**. Specifies the position of the UI element represented by the **NavBarPage** element with respect to the top navigational area on a page.<br/><br/>Possible values include the following:  <br/> **Start** — add the node at the start (left/top in English) of the top navigational area.  <br/> **End** — add the node to the end (right/bottom in English) of the top navigational area. Default.  <br/> **Number between 1001 and 2000** — add the node after (right/below in English) another **NavBarPage** element whose ID matches the specified value.  <br/> |
-   
+
 ### Child elements
 
-None 
-   
+None
+
 ### Parent elements
 
 - [File](file-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ## Example
 
-The following example uses the **NavBarPage** element to specify information about the home page in a module. 
-  
+The following example uses the **NavBarPage** element to specify information about the home page in a module.
+
 ```XML
 <Module Name="Default" Url="" Path="">
   <File Url="default.aspx" NavBarHome="True">
@@ -81,4 +80,3 @@ The following example uses the **NavBarPage** element to specify information abo
 ## See also
 
 - [Module element (Site)](module-element-site.md)
-

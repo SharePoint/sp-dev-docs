@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f359ffa3-7128-cb4f-27f1-495943e74bf3
 description: "Describes the RespectPriority element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2). If the schema defines specific requirements, see the Definition section."
@@ -12,8 +11,8 @@ description: "Describes the RespectPriority element (ManagedPropertyInfo complex
 
 # RespectPriority element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Element information
 
 |Information type|Value|
@@ -31,18 +30,16 @@ description: "Describes the RespectPriority element (ManagedPropertyInfo complex
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

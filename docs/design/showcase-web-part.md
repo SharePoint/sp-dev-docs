@@ -1,7 +1,7 @@
 ---
 title: "SharePoint web part design showcase: Create a To-Do list property pane"
 description: Create a To-Do list web part that uses a single pane and is reactive.
-ms.date: 01/23/2018 
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -15,7 +15,7 @@ This article describes how to create a To-Do list web part. This example uses th
 1. Add a description to help users understand more about the web part and its properties.
 
 	In this example, the description is "Select a source for your to-dos and customize the display for the list of tasks."
-	
+
 	![Adding a description](../images/design-showcase-01.png)
 
 	<br/>
@@ -76,7 +76,7 @@ This article describes how to create a To-Do list web part. This example uses th
 
 	<br/>
 
-9. The property pane controls the UI. Tasks with pivots enabled are displayed via the Display check boxes in the property pane. 
+9. The property pane controls the UI. Tasks with pivots enabled are displayed via the Display check boxes in the property pane.
 
 	![Property pane controlling web part items](../images/design-showcase-12.png)
 

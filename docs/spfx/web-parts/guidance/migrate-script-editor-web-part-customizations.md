@@ -2,7 +2,6 @@
 title: Migrate existing Script Editor web part customizations to the SharePoint Framework
 description: The benefits of migrating existing client-side customizations to the SharePoint Framework and things to consider when planning the migration.
 ms.date: 06/27/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

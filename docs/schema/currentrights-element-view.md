@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Returns the rights permissions for the current list item or list as
 # CurrentRights element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the rights permissions for the current list item or list as a string.
-  
+
 ```XML
 <CurrentRights>
 </CurrentRights>
@@ -32,20 +31,18 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: Unbounded  
+- Minimum: 0
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

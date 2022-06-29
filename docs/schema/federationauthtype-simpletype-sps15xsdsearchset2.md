@@ -1,29 +1,26 @@
 ---
 title: "FederationAuthType simpleType (SPS15XSDSearchSet2)"
-
-
+description: Outlines information, a definition, and enumeration values for the FederationAuthType simpleType (SPS15XSDSearchSet2) in Sharepoint.
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 16c3b9eb-d3b8-919e-be2c-99a492e290fe
-description: "Last modified: March 09, 2015"
 ---
 
 # FederationAuthType simpleType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
-|||
+| Resource | File |
 |:-----|:-----|
-|**Base type** <br/> |xs:string  <br/> |
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-   
+| **Base type** | xs:string |
+| **Namespace** | http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+| **Schema file** | schema_Microsoft.Office.Server.Search.Administration.xsd |
+
 ## Definition
 
 ```XML
@@ -72,5 +69,3 @@ description: "Last modified: March 09, 2015"
 |PerUserBasicAuth  <br/> |15  <br/> |
 |Custom  <br/> |16  <br/> |
 |PerUserCustom  <br/> |17  <br/> |
-   
-

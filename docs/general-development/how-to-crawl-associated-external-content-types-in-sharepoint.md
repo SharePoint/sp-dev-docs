@@ -1,6 +1,7 @@
 ---
 title: Crawl associated external content types in SharePoint
-ms.date: 09/25/2017
+description: Describes how to use the search properties in the Business Data Connectivity (BDC) service metadata model for crawling associations.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 187ec42e-f749-4e22-abef-1df604143063
 ms.localizationpriority: medium

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Returns a variable in the context of rendering the page. Variables 
 # GetVar element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns a variable in the context of rendering the page. Variables can be set either locally to the current level of XML or globally to the page.
-  
+
 ```XML
 <GetVar
   AutoHyperlink = "TRUE" | "FALSE"
@@ -55,30 +54,30 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, `%c3%ab` for character `ë`.  <br/> |
 |**URLEncodeAsUrl** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: Unbounded  
-   
+- Minimum: 0
+- Maximum: Unbounded
+
 ### Remarks
 
-The **GetVar** element is often used within an [Expr](expr-element-view.md) element in a [Switch](switch-element-view.md) or [IfEqual](ifequal-element-view.md) element. 
-  
-If **Scope="Request"** is specified in the [SetVar](setvar-element-view.md) element, a variable assignment will take effect anywhere on the current page. Otherwise, the assignment affects only children of the **SetVar** element. 
-  
+The **GetVar** element is often used within an [Expr](expr-element-view.md) element in a [Switch](switch-element-view.md) or [IfEqual](ifequal-element-view.md) element.
+
+If **Scope="Request"** is specified in the [SetVar](setvar-element-view.md) element, a variable assignment will take effect anywhere on the current page. Otherwise, the assignment affects only children of the **SetVar** element.
+
 ## Example
 
-The following example uses the **GetVar** element to return current filtering information for determining what text to display in the toolbar above the list. 
-  
+The following example uses the **GetVar** element to return current filtering information for determining what text to display in the toolbar above the list.
+
 ```XML
 <Switch>
    <Expr>
@@ -103,9 +102,8 @@ The following example uses the **GetVar** element to return current filtering in
 </Switch>
 ```
 
-If filter choices are open on the list and the **Filter** variable contains 1, **Hide Filter Choices** is displayed. If not, the default action implements a second **Switch** statement that evaluates a second variable, **FilterField1**. If the value of **FilterField1** is an empty string, no filter is applied and **Filter** is displayed in the toolbar; otherwise, the default action is to display **Change Filter**. 
-  
+If filter choices are open on the list and the **Filter** variable contains 1, **Hide Filter Choices** is displayed. If not, the default action implements a second **Switch** statement that evaluates a second variable, **FilterField1**. If the value of **FilterField1** is an empty string, no filter is applied and **Filter** is displayed in the toolbar; otherwise, the default action is to display **Change Filter**.
+
 ## See also
 
 - [SetVar element (View)](setvar-element-view.md)
-

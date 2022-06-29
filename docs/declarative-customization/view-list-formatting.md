@@ -1,7 +1,7 @@
 ---
 title: Format list view to customize SharePoint
 description: Customize how list views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements and the styles to be applied to those elements.
-ms.date: 10/18/2021
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -27,7 +27,7 @@ This example applies the class `sp-field-severity--severeWarning` to a list row 
 ```JSON
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
-   "additionalRowClass": "=if([$DueDate] <= @now, 'sp-field-severity--severeWarning', '')"
+  "additionalRowClass": "=if([$DueDate] <= @now, 'sp-field-severity--severeWarning', '')"
 }
 ```
 
@@ -434,7 +434,7 @@ In this example the `footerFormatter` is set to format the list footer and the `
 
 ### rowFormatter
 
-Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Formatting syntax reference](./formatting-syntax-reference.md). 
+Optional element. Specifies a JSON object that describes a list row format. The schema of this JSON object is identical to the schema of a column format. For details on this schema and its capabilities, see [Formatting syntax reference](./formatting-syntax-reference.md).
 
 > [!NOTE]
 > Using the `rowFormatter` property will override anything specified in the `additionalRowClass` property. They are mutually exclusive.
@@ -447,7 +447,7 @@ Despite sharing the same schema, there are some differences in behavior between 
 
 ### additionalRowClass
 
-Optional element. Specifies a CSS class(es) that is applied to the entire row. Supports expressions. 
+Optional element. Specifies a CSS class(es) that is applied to the entire row. Supports expressions.
 
 `additionalRowClass` only takes effect when there is no `rowFormatter` element specified. If a `rowFormatter` is specified, then `additionalRowClass` is ignored.
 
@@ -457,7 +457,7 @@ Optional element. Specifies whether the ability to select rows in the view is di
 
 ### hideColumnHeader
 
-Optional element. Specifies whether the column headers in the view are hidden or not. `false` is the default behavior inside a list view (meaning column headers will be visible). `true` means that the view will not display column headers. 
+Optional element. Specifies whether the column headers in the view are hidden or not. `false` is the default behavior inside a list view (meaning column headers will be visible). `true` means that the view will not display column headers.
 
 ### groupProps
 

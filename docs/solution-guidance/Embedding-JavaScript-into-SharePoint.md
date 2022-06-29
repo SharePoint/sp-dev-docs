@@ -1,6 +1,7 @@
 ---
 title: Embedding JavaScript into SharePoint
-ms.date: 11/03/2017
+description: Describes how to embed JavaScript into SharePoint, outlines why using namespaces is important, how to use namespaces, and provides additional references.
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 # Embedding JavaScript into SharePoint
@@ -85,4 +86,3 @@ Files attached with JSLink are **not** re-executed on MDS navigation, use the As
 
 * [Wictor Wilén - The correct way to execute javascript functions in SharePoint MDS enabled sites](http://www.wictorwilen.se/the-correct-way-to-execute-javascript-functions-in-sharepoint-2013-mds-enabled-sites)
 * [Hugh Wood - SharePoint JavaScript context development - AsyncDeltaManager](https://rencore.com/blog/sharepoint-javascript-context-development-part-4-the-way-of-the-async-delta-manager/)
-* [Marc Anderson - Execute JavaScript after MDS (re)load](http://blog.symprogress.com/2013/09/sharepoint-2013-execute-javascript-function-after-mds-load/)

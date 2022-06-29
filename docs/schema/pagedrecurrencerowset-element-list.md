@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,11 +16,11 @@ description: Contains the definition of the page to display for a recurring item
 # PagedRecurrenceRowset element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Contains the definition of the page to display for a recurring item in an events list when the number of items in the recurrence surpasses the limit set by the [RowLimit](rowlimit-element-list.md) element. 
-  
+
+Contains the definition of the page to display for a recurring item in an events list when the number of items in the recurrence surpasses the limit set by the [RowLimit](rowlimit-element-list.md) element.
+
 Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx).
-  
+
 ```XML
 <PagedRecurrenceRowset>
 </PagedRecurrenceRowset>
@@ -34,25 +33,25 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [View](view-element-list.md)
 - [ViewStyle](viewstyle-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
+- Maximum: 1
+
 ## Example
 
-The following example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for announcements lists defines how to display items when the number of items exceeds the value specified by the [RowLimit](rowlimit-element-list.md) element. 
-  
+The following example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for announcements lists defines how to display items when the number of items exceeds the value specified by the [RowLimit](rowlimit-element-list.md) element.
+
 ```XML
 <PagedRecurrenceRowset>
    <HTML><![CDATA[ <TABLE width="100%" border=0>
@@ -74,7 +73,7 @@ The following example from the [Schema.xml](https://msdn.microsoft.com/library/c
          <HTML><![CDATA[ ");javascript:return false;'>
             <img src="/_layouts/images/prev.gif" border=0 alt=" ]]>
                <![CDATA[ Previous ]]>
-               <![CDATA[ "></A><A HREF="javascript:" 
+               <![CDATA[ "></A><A HREF="javascript:"
                   OnClick='javascript:SubmitFormPost("]]></HTML>
          <ScriptQuote NotAddingQuote="TRUE">
             <PageUrl />
@@ -86,7 +85,7 @@ The following example from the [Schema.xml](https://msdn.microsoft.com/library/c
          <HTML><![CDATA[ </A> ]]></HTML>
       </Default>
    </Switch>
-   <HTML><![CDATA[ </TD><TD align=right nowrap 
+   <HTML><![CDATA[ </TD><TD align=right nowrap
       Class="ms-vb"> ]]></HTML>
    <Switch>
       <Expr>
@@ -94,7 +93,7 @@ The following example from the [Schema.xml](https://msdn.microsoft.com/library/c
       </Expr>
       <Case Value="" />
       <Default>
-         <HTML><![CDATA[<A HREF="javascript:" 
+         <HTML><![CDATA[<A HREF="javascript:"
             OnClick='javascript:SubmitFormPost(" ]]></HTML>
          <ScriptQuote NotAddingQuote="TRUE">
             <PageUrl />
@@ -103,7 +102,7 @@ The following example from the [Schema.xml](https://msdn.microsoft.com/library/c
          </ScriptQuote>
          <HTML><![CDATA[ ");javascript:return false;'> ]]></HTML>
          <HTML>Next</HTML>
-         <HTML><![CDATA[ </A><A id=onetidNext HREF="javascript:" 
+         <HTML><![CDATA[ </A><A id=onetidNext HREF="javascript:"
             OnClick='javascript:SubmitFormPost("]]></HTML>
          <ScriptQuote NotAddingQuote="TRUE">
             <PageUrl />
@@ -122,6 +121,5 @@ The following example from the [Schema.xml](https://msdn.microsoft.com/library/c
 
 ## See also
 
-- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
+- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 - [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
-

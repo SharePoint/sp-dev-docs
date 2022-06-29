@@ -1,15 +1,15 @@
 ---
 title: DataSources element (CompositeStep element)
+description: DataSources element (CompositeStep element) specifies the data sources for a composite step.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 780cd2b8-97d2-c8b3-d56b-9a0e1e72338b
 ---
 
-# DataSources element (CompositeStep element) 
+# DataSources element (CompositeStep element)
 
 (CompositeSteps element) (WorkflowInfo element) (Action4)
 
@@ -29,7 +29,7 @@ Specifies the data sources for a composite step.
 
 ## Element information
 
-|   |   |
+|  Information | Location  |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -39,7 +39,7 @@ Specifies the data sources for a composite step.
 
 ```XML
     <xs:element name="DataSources" type="dataSourcesType" minOccurs="0"maxOccurs="1">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -97,11 +97,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

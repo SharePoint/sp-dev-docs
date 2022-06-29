@@ -5,7 +5,6 @@ manager: soliver
 ms.date: 12/14/2020
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cfefe8e5-2656-4d71-bb4e-5f991a800598
 ---

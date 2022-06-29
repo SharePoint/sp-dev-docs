@@ -1,10 +1,10 @@
 ---
 title: Elements Element (Field)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (Field) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b49c74f7-4c79-4dc9-b755-dd1ed9e55c4f
 ---
@@ -76,11 +76,3 @@ For an example of how this element is used, see [Field Definitions](field-defini
 - [Field Element(List)](field-element-list.md)
 - [Columns](https://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432(Office.15).aspx)
 - [Introduction to Columns](https://msdn.microsoft.com/library/2482a1a0-c75e-40a9-9cdb-bc1548dc10c0(Office.15).aspx)
-
-
-
-
-
-
-
-

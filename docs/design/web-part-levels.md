@@ -1,7 +1,7 @@
 ---
 title:  Web part levels
 description: Learn about SharePoint web part levels, secondary state toolbars, and the selection model.
-ms.date: 08/13/2018
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 When designing a SharePoint web part, you sometimes need to have a secondary interaction level; for example, an item in a list or an individual photo in a gallery. This article explains how to use secondary state toolbars, default commands, scale, and interaction states to select an individual item.
 
-Secondary web part configurations and toolbars follow the same patterns as single state web parts, such as an image or file viewer. Second-level items can have their own toolbars and respective property pane, to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be a clear separation between configuration options in web parts that have two levels. We recommend that you keep the Source, Filtering, and Layout configuration, as well as any additional options that affect the web part as a whole, at the first level. 
+Secondary web part configurations and toolbars follow the same patterns as single state web parts, such as an image or file viewer. Second-level items can have their own toolbars and respective property pane, to make it easy for authors to configure the web part with meaningful content and data. Keep in mind that there should be a clear separation between configuration options in web parts that have two levels. We recommend that you keep the Source, Filtering, and Layout configuration, as well as any additional options that affect the web part as a whole, at the first level.
 
 The following are some web part examples to use as reference:
 
@@ -27,7 +27,7 @@ Secondary toolbars are used on individual items in a web part layout that need t
 
 ## Selection states
 
-Second-level toolbars within a web part have three core commands: Edit, Move, and Remove. It's important to consider the implementation of the selection states when building a web part with a secondary level. 
+Second-level toolbars within a web part have three core commands: Edit, Move, and Remove. It's important to consider the implementation of the selection states when building a web part with a secondary level.
 
 The second-level toolbar should only display when the author selects (clicks/taps) an individual item. Do not show all the second-level toolbars for every items at once, as this can overwhelm the user. Additionally, do not have the toolbar appear on hover, as this might cause usability issues with devices that support touch.
 

@@ -1,15 +1,15 @@
 ---
 title: ActionConditions element (Action element)
+description: Discusses the definition, elements and attributes for ActionConditions element (Action element) for SharePoint Server 2013.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 ---
 
-# ActionConditions element (Action element) 
+# ActionConditions element (Action element)
 
 (Actions element) (WorkflowInfo element) (Action4)
 
@@ -29,7 +29,7 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -43,10 +43,10 @@ ms.assetid: 57949d5d-6bdf-d343-ee73-2502afde5ecb
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="ActionConditions"  >
-                </xs:element>  
+                </xs:element>
            </xs:sequence>
         </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -84,11 +84,3 @@ None.
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

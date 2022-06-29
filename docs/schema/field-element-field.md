@@ -1,10 +1,10 @@
 ---
 title: Field element (Field)
+description: Describes the definition, element, and attribute information for the Field element (Field), which defines a site column.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5f0342fb-3643-4d63-8b6a-a2688538e8e3
 ---
@@ -70,7 +70,7 @@ Defines a site column.
   List="Text"
   Max="Number"
   MaxLength="Integer"
-  Min="Number" 
+  Min="Number"
   Mult="TRUE" | "FALSE"
   Name="Text"
   NegativeFormat="MinusSign" | "Parens"
@@ -116,7 +116,7 @@ Defines a site column.
   StripWS="TRUE" | "FALSE"
   SuppressNameDisplay="TRUE" | "FALSE"
   TextOnly="TRUE" | "FALSE"
-  Title="Text" 
+  Title="Text"
   Type="Data_Type"
   UniqueId="Text"
   UnlimitedLengthInDocumentLibrary="TRUE" | "FALSE"
@@ -266,7 +266,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Remarks
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > When defining a custom field, you must specify the ID, Type, Name, DisplayName, and Group attributes for the field to appear correctly in Microsoft SharePoint Foundation. Statement completion in Microsoft Visual Studio erroneously indicates that you need only the first three of these attributes when in fact all five are required.
 
 ### Example

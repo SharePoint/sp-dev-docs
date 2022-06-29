@@ -1,10 +1,10 @@
 ---
 title: Elements Element (Delegate Control)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Elements Element (Delegate Control) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5d808d27-b023-4a74-a8e4-01a0b790d1a0
 ---
@@ -82,11 +82,3 @@ For an example of how this element is used, see [Delegate Controls](delegate-con
 ## See also
 
 - [How to: Customize a Delegate Control](https://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 603dee83-8bb5-018a-c519-9c4f98f4fd1f
 description: "Describes the ResultItemType complexType (SPS15XSDSearchSet2). If the schema defines specific requirements, see the Definition section."
@@ -12,8 +11,8 @@ description: "Describes the ResultItemType complexType (SPS15XSDSearchSet2). If 
 
 # ResultItemType complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |Information type|Value|
@@ -47,8 +46,8 @@ description: "Describes the ResultItemType complexType (SPS15XSDSearchSet2). If 
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -70,5 +69,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-  
-

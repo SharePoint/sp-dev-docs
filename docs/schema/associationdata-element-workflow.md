@@ -1,12 +1,12 @@
 ---
 title: AssociationData element (Workflow)
+description: AssociationData element (Workflow) specifies any custom, valid XML data to pass to the workflow association form.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, associationdata element
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 878ef52b-94e2-4218-a499-56c1416340ba
 ---
@@ -70,11 +70,3 @@ None
 - [Workflows in Windows SharePoint Services](https://msdn.microsoft.com/library/be0888d4-20b2-4d39-bf28-2d8a71829d8e(Office.15).aspx)
 - [Workflow Deployment Using Features](https://msdn.microsoft.com/library/ad294f09-483d-4e87-bd19-fa37795ed558(Office.15).aspx)
 - [Workflow Association and Initiation Forms (Windows SharePoint Services)](https://msdn.microsoft.com/library/ffdfe5a7-f860-47b0-80e0-2dc2bd36ed38(Office.15).aspx)
-
-
-
-
-
-
-
-

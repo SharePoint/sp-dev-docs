@@ -1,10 +1,10 @@
 ---
 title: Control Element (Delegate Control)
+description: Outlines the Control element in Sharepoint, which identifies the control to implement in a delegate control.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8ba77ea5-4625-42d9-a535-1703bb5801f9
 ---
@@ -101,11 +101,3 @@ When implementing a user control, use the **ControlSrc** attribute. When impleme
 ## See also
 
 - [How to: Customize a Delegate Control](https://msdn.microsoft.com/library/9db44a39-33df-43d9-b873-3b41310090af(Office.15).aspx)
-
-
-
-
-
-
-
-

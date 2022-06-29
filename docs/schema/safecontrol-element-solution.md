@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Adds or removes a control assembly from the safe controls list for 
 # SafeControl element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Adds or removes a control assembly from the safe controls list for a solution. 
-  
+
+Adds or removes a control assembly from the safe controls list for a solution.
+
 ```XML
 <SafeControl
   Assembly = "Text"
@@ -43,17 +42,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**Safe** <br/> |Optional **Boolean**. **TRUE** to add the control to the safe controls list; **FALSE** to remove it.  <br/> |
 |**SafeAgainstScript** <br/> |Optional **Boolean**. **TRUE** to allow property editing by a Contributor; **FALSE** to disable property editing for Contributors.  <br/> |
 |**TypeName** <br/> |Optional **Text**. The control type.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [SafeControls](safecontrols-element-solution.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

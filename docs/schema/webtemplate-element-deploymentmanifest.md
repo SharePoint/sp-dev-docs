@@ -1,20 +1,19 @@
 ---
 title: "WebTemplate Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f605e30e-722f-4e22-99e2-62bdb079d23b
-description: "Last modified: March 09, 2015"
+description: Describes the WebTemplate element (DeploymentManifest) and provides the element's definition, type, parent elements, and attributes.
 ---
 
 # WebTemplate Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents an instance of a Windows SharePoint Services 3.0 Web template ([SPWebTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebTemplate.aspx)) object, which provides the site definition used to create the site, or the name of the site defintion from which the site template used to create the site was derived. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents an instance of a Windows SharePoint Services 3.0 Web template ([SPWebTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebTemplate.aspx)) object, which provides the site definition used to create the site, or the name of the site defintion from which the site template used to create the site was derived.
 
 ## Definition
 
@@ -41,7 +40,7 @@ USAGE
 ## Type
 
 [SPWebTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebTemplate.aspx) object
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -58,17 +57,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**IsUnique** <br/> |xs:boolean  <br/> |Optional. Specifies whether the site created using the site definition or site template inherits from its parent website. The value is **true** if the site does not inherit from its parent website.  <br/> |
 |**Name** <br/> |xs:string  <br/> |Optional. Represents the name of the site definition or site template.  <br/> |
 |**Title** <br/> |xs:string  <br/> |Optional. Represents the display name of the site definition or site template.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)|
-   
+
 ## See also
 
 - [SPWebTemplate](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWebTemplate.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

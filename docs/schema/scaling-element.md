@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines tab scaling.
 # Scaling element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines tab scaling.
-  
+
 ```XML
 <Scaling
   Id="Text"
@@ -35,22 +34,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Id** <br/> |Required. A string that identifies the element, such as "Ribbon.Documents.Scaling".  <br/> |
-   
+
 ### Child elements
 
-- [MaxSize](maxsize-element.md) 
-- [Scale](scale-element.md) 
-   
+- [MaxSize](maxsize-element.md)
+- [Scale](scale-element.md)
+
 ### Parent elements
 
 - [Tab](tab-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## See also
 
 - [Walkthrough: Adding a Tab to the Server Ribbon](https://msdn.microsoft.com/library/3d1fb8b6-4c9b-4801-9bba-6d2f5caee0d9%28Office.15%29.aspx)
-

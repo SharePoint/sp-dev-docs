@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Top-level element that contains the definition of a list.
 # List element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Top-level element that contains the definition of a list.
-  
+
 ```XML
 <List
   BaseType = "Integer" | "Text"
@@ -47,7 +46,7 @@ Top-level element that contains the definition of a list.
   Type = "Integer"
   Url = "URL"
   URLEncode = "TRUE" | "FALSE"
-  VersioningEnabled = "TRUE" | "FALSE" 
+  VersioningEnabled = "TRUE" | "FALSE"
   WebImageHeight = "Integer"
   WebImageWidth = "Integer">
 </List>
@@ -91,36 +90,36 @@ The following sections describe attributes, child elements, and parent elements.
 |**VersioningEnabled** <br/> |Optional **Boolean**. **TRUE** to specify within a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file that versioning be enabled by default for document libraries created through the list definition. Setting this attribute has no effect on existing document libraries. If **TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.  <br/> |
 |**WebImageHeight** <br/> |Optional **Integer**. Specifies the height, in pixels, of an image in a picture library.  <br/> |
 |**WebImageWidth** <br/> |Optional **Integer**. Specifies the width, in pixels, of an image in a picture library.  <br/> |
-   
+
 ### Child elements
 
 - [MetaData](metadata-element-list.md)
-   
+
 ### Parent elements
 
 None
-   
+
 ### Occurrences
 
-- Minimum: 0 
-- Maximum: 1 
-   
+- Minimum: 0
+- Maximum: 1
+
 ### Remarks
 
-When used as the root element in the schema file for a list, the **List** element must contain the Microsoft SharePoint Foundation **ows:** namespace declaration. The following lines show the opening of a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for document libraries: 
-  
+When used as the root element in the schema file for a list, the **List** element must contain the Microsoft SharePoint Foundation **ows:** namespace declaration. The following lines show the opening of a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for document libraries:
+
 ```XML
-<List 
-  xmlns:ows="Microsoft SharePoint" 
-  Name="Documents" 
-  Title="$Resources:shareddocuments_Title;" 
-  Direction="$Resources:Direction;" 
-  Url="Shared Documents" 
+<List
+  xmlns:ows="Microsoft SharePoint"
+  Name="Documents"
+  Title="$Resources:shareddocuments_Title;"
+  Direction="$Resources:Direction;"
+  Url="Shared Documents"
   BaseType="1">
 ```
 
 In a list schema, the [MetaData](metadata-element-list.md) element contains the different parts of the list definition. Use an empty **List** element (**\<List /\>**) to return the title of the current list.
-  
-In a site definition ([Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx)), the **List** element does not contain a [MetaData](metadata-element-list.md) section, but it can contain a [Data](data-element-site.md) section through which to specify default column values for the given list type. 
-  
+
+In a site definition ([Onet.xml](https://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1%28Office.15%29.aspx)), the **List** element does not contain a [MetaData](metadata-element-list.md) section, but it can contain a [Data](data-element-site.md) section through which to specify default column values for the given list type.
+
 <br/>

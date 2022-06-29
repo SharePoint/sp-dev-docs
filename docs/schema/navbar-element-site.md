@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Contains the definition of the navigation area for either the top l
 # NavBar element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains the definition of the navigation area for either the top links of all pages within a site or for the Quick Launch area of the home page.
-  
+
 ```XML
 <NavBar
   Body = "Text"
@@ -47,41 +46,39 @@ The following sections describe attributes, child elements, and parent elements.
 |**Separator** <br/> |Optional **Text**. Specifies the separator to use between items in the navigation bar.  <br/> |
 |**Suffix** <br/> |Optional **Text**. Contains the closing tag for the table that contains the navigation bar.  <br/> |
 |**Url** <br/> |Optional **Text**.  <br/> |
-   
+
 ### Child elements
 
 - [NavBarLink](navbarlink-element-site.md)
 - [NavBarPage](navbarpage-element-sitemodule.md)
-   
+
 ### Parent elements
 
 - [NavBars](navbars-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
 The following example defines the top navigation area of a home page.
-  
+
 ```XML
-<NavBar Name="SharePoint Top Navbar" Separator="&amp;nbsp;&amp;nbsp;&amp;nbsp;" 
-   Body="<a ID='onettopnavbar#LABEL_ID#' href='#URL#' 
+<NavBar Name="SharePoint Top Navbar" Separator="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+   Body="<a ID='onettopnavbar#LABEL_ID#' href='#URL#'
       accesskey='J'>#LABEL#</a>" ID="1002">
-   <NavBarLink Name="Documents and Lists" 
+   <NavBarLink Name="Documents and Lists"
       Url="_layouts/[%=System.Threading.Thread.CurrentThread.
       CurrentUICulture.LCID%]/viewlsts.aspx" />
-   <NavBarLink Name="Create" 
+   <NavBarLink Name="Create"
       Url="_layouts/[%=System.Threading.Thread.CurrentThread.
          CurrentUICulture.LCID%]/create.aspx" />
-   <NavBarLink Name="Site Settings" 
+   <NavBarLink Name="Site Settings"
       Url="_layouts/[%=System.Threading.Thread.CurrentThread.
          CurrentUICulture.LCID%]/settings.aspx" />
-   <NavBarLink Name="Help" 
+   <NavBarLink Name="Help"
       Url="javascript:HelpWindowKey("helphome")" />
 </NavBar>
 ```
-
-

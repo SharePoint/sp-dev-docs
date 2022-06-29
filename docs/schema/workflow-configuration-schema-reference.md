@@ -1,10 +1,10 @@
 ---
 title: Workflow configuration schema reference
+description: Describes the workflow configuration schema reference and provides the schema's definition, code, and various elements in the workflow configuration schema.
 manager: laurawi
-ms.date: 11/16/2014
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 63824239-6eb2-4cf1-ba84-44eace4d3781
 ---
@@ -83,22 +83,22 @@ Elements have been edited for readability.
       >
       </Association>
       <ContentTypes>
-        <ContentType 
-          Name="Review New Document" 
+        <ContentType
+          Name="Review New Document"
           ContentTypeID=
-            "0x0108010086C115D5C5C27B439C22EB22F050B49B00DD9F97273595EA4BA32838A26054BF08" 
-          Form="/Workflows/Notify Me/Review New Document.aspx" 
+            "0x0108010086C115D5C5C27B439C22EB22F050B49B00DD9F97273595EA4BA32838A26054BF08"
+          Form="/Workflows/Notify Me/Review New Document.aspx"
           Description="Workflow used to review new documents">
           <Fields/>
         </ContentType>
       </ContentTypes>
-      <Initiation 
+      <Initiation
         URL="Workflows/Notify Me/Notify Me.aspx">
         <Fields>
-          <Field 
-            Name="Reason_for_Review" 
+          <Field
+            Name="Reason_for_Review"
             …
-            DisplayName="Reason for Review" 
+            DisplayName="Reason for Review"
             …
           >
             <Default>Standard review of new documents</Default>
@@ -116,9 +116,3 @@ Elements have been edited for readability.
 - [Workflow Development for SharePoint Foundation](https://msdn.microsoft.com/library/ad7a5bf2-fab0-4b30-ae0b-46b15f16b491(Office.15).aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [SharePoint Designer Workflow Overview](https://msdn.microsoft.com/library/5ef4e933-564e-4dea-b2f4-c1b621774969(Office.15).aspx)
-
-
-
- 
-
-

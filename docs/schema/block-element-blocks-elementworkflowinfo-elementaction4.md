@@ -1,15 +1,15 @@
 ---
 title: Block element
+description: Learn about the Block element that represents visual building blocks on the workflow designer surface.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: f41f1e4f-28bd-ea1b-fa73-27e74ced264c
 ---
 
-# Block element 
+# Block element
 
 (Blocks element) (WorkflowInfo element) (Action4)
 
@@ -27,7 +27,7 @@ Represents visual building blocks on the workflow designer surface.
 
 ## Element information
 
-|   |   |
+|  Information |  Location |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -37,7 +37,7 @@ Represents visual building blocks on the workflow designer surface.
 
 ```XML
     <xs:element name="Block" type="propertiesType" minOccurs="0" maxOccurs="unbounded" >
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -128,11 +128,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

@@ -1,19 +1,18 @@
 ---
 title: "DraftVisibilityType Simple Type (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes DraftVisibilityType Simple Type (DeploymentManifest) and includes Enumeration values.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1bd5d4fe-5ab7-4098-a9de-cd4a8d1adc21
-description: "Last modified: March 09, 2015"
 ---
 
 # DraftVisibilityType Simple Type (DeploymentManifest)
-  
+
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the type of user who can view a draft document.
 
 ## Definition
@@ -35,8 +34,7 @@ Specifies the type of user who can view a draft document.
 |**Reader** <br/> |Specifies reader, author, or approver can view the item.  <br/> |
 |**Author** <br/> |Specifies author can view the item.  <br/> |
 |**Approver** <br/> |Specifies approver can view the item.  <br/> |
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

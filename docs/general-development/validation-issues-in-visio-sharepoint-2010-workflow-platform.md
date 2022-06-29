@@ -1,6 +1,7 @@
 ---
 title: Validation issues in Visio (SharePoint 2010 Workflow platform)
-ms.date: 09/25/2017
+description: This article describes validation issues that might arise when you use the SharePoint 2010 Workflow platform in SharePoint Designer 2013.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 416c8269-3c4e-40f4-bc20-a625f07a4dac
 ms.localizationpriority: medium
@@ -205,7 +206,7 @@ Example:
   
     
     
-![Parallel activities that are also sequential](../images/spd15-wf-error6.JPG)
+![Parallel activities that are also sequential are not allowed.](../images/spd15-wf-error6.JPG)
   
     
     
@@ -241,7 +242,7 @@ To avoid having connectors point to the same activity from multiple paths, try d
   
     
     
-![Parallel activities that are also sequential](../images/spd15-wf-error8.JPG)
+![To avoid having connectors point to the same activity from multiple paths, try duplicating the activity.](../images/spd15-wf-error8.JPG)
   
     
     
@@ -253,7 +254,7 @@ Example:
   
     
     
-![Parallel activities that are also sequential](../images/spd15-wf-error9.JPG)
+![Example of parallel activities that are also sequential.](../images/spd15-wf-error9.JPG)
   
     
     
@@ -269,7 +270,7 @@ If dealing with parallel blocks in sequential steps (usually found in workflows 
   
     
     
-![Parallel activities that are also sequential](../images/spd15-wf.JPG)
+![Try using the "Add a Comment" shape between the two parallel blocks so that the steps are separated cleanly.](../images/spd15-wf.JPG)
   
     
     

@@ -4,16 +4,15 @@ manager: soliver
 ms.date: 9/16/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: dd652de3-bd44-2997-4dbd-5037171455e4
 ---
 
-# ClientWebPartDefinition complexType 
+# ClientWebPartDefinition complexType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
@@ -136,10 +135,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 <br/>
-
-
-
-
-
-
-

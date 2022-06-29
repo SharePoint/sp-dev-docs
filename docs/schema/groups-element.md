@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines the groups of controls on a tab.
 # Groups element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines the groups of controls on a tab.
-  
+
 ```XML
 <Groups
   Id="Text"
@@ -35,25 +34,25 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Id** <br/> |Required. A string that identifies the element, such as "Ribbon.DocLibListForm.Edit.Groups".  <br/> |
-   
+
 ### Child elements
 
 - [Group](group-element-ribbon.md)
-   
+
 ### Parent elements
 
-- [CommandUIDefinition](commanduidefinition-element.md) 
-- [Tab](tab-element.md) 
-   
+- [CommandUIDefinition](commanduidefinition-element.md)
+- [Tab](tab-element.md)
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
 The following XML fragment defines a tab that contains zero groups of controls.
-  
+
 ```XML
 <Tab Id="Ribbon.Read" Sequence="100" Command="ReadTab" Description="" Title="$Resources:core,TabRead;" CssClass="ms-browseTab">
   <Scaling Id="Ribbon.Read.Scaling">
@@ -62,5 +61,3 @@ The following XML fragment defines a tab that contains zero groups of controls.
   </Groups>
 </Tab>
 ```
-
-

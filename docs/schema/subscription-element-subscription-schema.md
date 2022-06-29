@@ -1,15 +1,15 @@
 ---
 title: Subscription element
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes Subscription element and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1eaeefb2-8b18-bf8c-3594-f72ac27cd74d
 ---
 
-# Subscription element 
+# Subscription element
 
 (Subscription schema)
 
@@ -97,49 +97,14 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-subscription-schema.md">LocalizedDisplayNames element in MetadataObject (Subscription schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-subscription-schema.md">Properties element in MetadataObject (Subscription schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="identities-element-in-subscription-subscription-schema.md">Identities element in Subscription (Subscription schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="queries-element-in-subscription-subscription-schema.md">Queries element in Subscription (Subscription schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="associations-element-in-subscription-subscription-schema.md">Associations element in Subscription (Subscription schema)</a></span></p></td>
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [LocalizedDisplayNames element in MetadataObject (Subscription schema)](localizeddisplaynames-element-in-metadataobject-subscription-schema.md) |     |
+| [Properties element in MetadataObject (Subscription schema)](properties-element-in-metadataobject-subscription-schema.md) |     |
+| [Identities element in Subscription (Subscription schema)](identities-element-in-subscription-subscription-schema.md) |     |
+| [Queries element in Subscription (Subscription schema)](queries-element-in-subscription-subscription-schema.md) |     |
+| [Associations element in Subscription (Subscription schema)](associations-element-in-subscription-subscription-schema.md) |     |
 
 ### Parent elements
 
 None.
-
-
-
-
-
-
-
-

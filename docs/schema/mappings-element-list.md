@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
 api_type:
 - schema
 ms.assetid: 9d76858e-04a2-4bf6-92d0-f44dcba11937
-description: Contains mappings of values to the choices displayed within a Choice field. 
+description: Contains mappings of values to the choices displayed within a Choice field.
 ---
 
 # MAPPINGS element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Contains mappings of values to the choices displayed within a **Choice** field. 
-  
+
+Contains mappings of values to the choices displayed within a **Choice** field.
+
 ```XML
 <MAPPINGS>
     <MAPPING
@@ -36,24 +35,24 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [MAPPING](mapping-element-list.md)
-   
+
 ### Parent elements
 
 - [Field](field-element-list.md)
-   
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: 1 
-   
+- Minimum: 0
+- Maximum: 1
+
 ## Example
 
-The following excerpt shows how to implement the **MAPPINGS** element in a **Choice** field. 
-  
+The following excerpt shows how to implement the **MAPPINGS** element in a **Choice** field.
+
 ```XML
 <Field ID="{c15b34c3-ce7d-490a-b133-3f4de8801b76}" Type="Choice" Name="Status" DisplayName="$Resources:core,Tasks_Status;" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Status">
   <CHOICES>
@@ -75,4 +74,3 @@ The following excerpt shows how to implement the **MAPPINGS** element in a **Cho
 ```
 
 <br/>
-

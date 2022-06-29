@@ -1,7 +1,7 @@
 ---
 title: Authoring pages in a SharePoint site
 description: Author pages using Edit mode, Published mode, and consider the mobile view.
-ms.date: 1/23/2018
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -11,14 +11,14 @@ Authoring pages in SharePoint is a simple process, but it does require some fami
 
 <!-- Do we have content about the design principles that we can link to here? -->
 
-The SharePoint page authoring experience has two modes: 
+The SharePoint page authoring experience has two modes:
 
 - **Edit**. Allows page authors to add and configure web parts to add content to a page.
-- **Published**. Allows your team or audience to view content and interact with web parts. 
+- **Published**. Allows your team or audience to view content and interact with web parts.
 
 ## Edit mode
 
-When creating a new page, users have access to the authoring UI to add content to and customize the page content. 
+When creating a new page, users have access to the authoring UI to add content to and customize the page content.
 
 <img alt="Edit control" src="../images/design-authoring-edit-01.png" width="850">
 
@@ -38,7 +38,7 @@ The add hint is a horizontal line with a plus icon that is visible when a web pa
 
 ### Toolbar
 
-A vertical toolbar and bounding box is part of the framework for every web part and is provided by the page. Each web part has an edit and delete action in the toolbar. 
+A vertical toolbar and bounding box is part of the framework for every web part and is provided by the page. Each web part has an edit and delete action in the toolbar.
 
 <img alt="Expanded toolbar" src="../images/design-authoring-toolbar.png" width="850">
 
@@ -76,7 +76,7 @@ UI can change within the web part; for example, text can become a text field, or
 
 ### Property panes
 
-Property panes are invoked via the **Edit** icon on the toolbar. Property panes should primarily contain configuration settings that enable or disable features that either show on the page, or make a call to a service to display content. 
+Property panes are invoked via the **Edit** icon on the toolbar. Property panes should primarily contain configuration settings that enable or disable features that either show on the page, or make a call to a service to display content.
 
 ![Expanded pane](../images/design-authoring-panes.png)
 

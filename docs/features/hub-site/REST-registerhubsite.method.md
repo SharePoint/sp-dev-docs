@@ -1,7 +1,7 @@
 ---
 title: RegisterHubSite REST method
 description: Registers an existing site as a hub site.
-ms.date: 6/18/2019
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 

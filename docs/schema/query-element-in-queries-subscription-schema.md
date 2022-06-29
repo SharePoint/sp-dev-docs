@@ -4,12 +4,11 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2de9afb8-7c23-7f22-a48b-07a4f31154cc
 ---
 
-# Query Element in Queries 
+# Query Element in Queries
 
 (Subscription Schema)
 
@@ -131,11 +130,3 @@ The following sections describe attributes, child elements, and parent elements.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
