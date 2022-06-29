@@ -1,6 +1,6 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
-description: Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample client-side object model (CSOM) and REST code you can use to make your task easier.
+description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked. .
 ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
@@ -9,126 +9,156 @@ ms.localizationpriority: high
 
 # Avoid getting throttled or blocked in SharePoint Online
 
-Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample client-side object model (CSOM) and REST code you can use to make your task easier.
+Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked. 
 
 - [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-is-throttling)
+- [How to handle throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#how-to-handle-throttling)
 - [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#common-throttling-scenarios-in-sharepoint-online)
-- [Throttling limits](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#throttling-limits)
-- [Best practices to handle throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#best-practices-to-handle-throttling)
-- [How to decorate your traffic to avoid getting throttled?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#how-to-decorate-your-http-traffic-to-avoid-throttling)
-- [GitHub CSOM code samples: SharePoint Online Throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md)
+- [Scenario specific limits](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#scenario-specific-limits)
 - [What should you do if you get blocked in SharePoint Online?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#what-should-you-do-if-you-get-blocked-in-sharepoint-online)
 - [Additional resources](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#see-also)
 
-Does this sound familiar? You're running a CSOM process - for example, to migrate files in SharePoint Online - but you keep getting throttled. Or even worse, you get blocked. What's going on and what can you do to make it stop?
+Does this sound familiar? You're running an application - for example, to scan files in SharePoint Online - but you get throttled. Or even worse, you get blocked. What's going on and what can you do to make it stop?
 
 ## What is throttling?
 
-SharePoint Online uses throttling to maintain optimal performance and reliability of the SharePoint Online service. Throttling limits the number of user actions or concurrent calls (by script or code) to prevent overuse of resources.
-
-That said, it is rare for a user to get throttled in SharePoint Online. The service is robust, and it is designed to handle high volume. If you do get throttled, 99% of the time it is because of custom code. That doesn't mean that there aren't other ways to get throttled, just that they're less common. For example, you spin up 10 machines and have a sync client going on all 10. On each sync 1 TB of content. This would likely get you throttled.
-
-![How throttling happens](../images/3b9184db-99a4-416e-ba1e-7f8653484cee.png)
+SharePoint Online uses throttling to maintain optimal performance and reliability of the SharePoint Online service. Throttling limits the number of API calls or operations within a time window to prevent overuse of resources.
 
 ### What happens when you get throttled in SharePoint Online?
 
-When a user exceeds usage limits, SharePoint Online throttles any further requests from that user account for a short period. All user actions are throttled while the throttle is in effect.
+When usage limits are exceeded, SharePoint Online throttles any further requests from that client for a short period.
 
-- For requests that a user performs directly in the browser, SharePoint Online redirects you to the throttling information page, and the requests fail.
-- For all other requests, including CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
+For requests that a user performs directly in the browser, SharePoint Online redirects you to the throttling information page, and the requests fail.
 
-If the offending process continues to exceed usage limits, SharePoint Online might completely block the process; in this case, you won't see any successful requests and Microsoft will notify you of the block in the Office 365 Message Center.
+For requests that an application makes, including Microsoft Graph, CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
+
+- HTTP 429 indicates the calling application sent too many requests in a time window and exceeded a predetermined limit.
+- HTTP 503 indicates the service is not ready to handle the request. The common cause is that the service is experiencing temporary load spikes than expected.
+
+In both cases, a `Retry-After` header is included in the response indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling.
+
+If the offending application continues to exceed usage limits, SharePoint Online may completely block the application or specific request patterns from the application; in this case, the application will keep getting HTTP status code 503, and Microsoft will notify the tenant of the block in the Office 365 Message Center.
+
+### User Throttling
+
+Throttling limits the number of calls and operations collectively made by applications on behalf of a user to prevent overuse of resources.
+
+That said, it is rare for a user to get throttled in SharePoint Online. The service is robust, and it is designed to handle high volume. If you do get throttled, 99% of the time it is because of custom code, such as custom web parts, complex list view and queries, or custom apps users run. That doesn’t mean that there aren’t other ways to get throttled, just that they’re less common. For example, one user syncing a large amount of data across 10 machines at the same time could trigger throttling.
 
 ### Application Throttling
 
-In addition to throttling by user account, limits are also applied to each application in a tenant. Every application in SharePoint Online has its own available resources per tenant, but multiple applications running against the same tenant ultimately share from the same resource bucket and in rare occurrences can cause rate limiting.
-In these cases, SharePoint Online will attempt to prioritize interactive user requests over background activities.
+In addition to throttling by user account, limits are also applied to applications in a tenant. 
 
-## Common throttling scenarios in SharePoint Online
+Every application has its own limits in a tenant, which are based on the number of licenses purchased per organization (see the plans listed on [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#limits-by-plan) for licenses included). Every request that an application makes across all API endpoints, including Microsoft Graph, CSOM and REST, counts towards the application’s usage.
 
-The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.
+SharePoint provides a variety of APIs. Different APIs have different costs depending on the complexity of the API. The cost of APIs is normalized by SharePoint and expressed by resource units. Application’s limits are also defined using resource units.
 
-- **Sporadic traffic**
+The table below defines the resource unit limits for an application in a tenant:
 
-    Constant load or repetitive complex queries against SharePoint Online must be optimized for low impact. Failing to follow [best practices for scanning applications](https://aka.ms/ScanGuidance) that process files in bulk will likely result in throttling. These apps include sync engines, backup providers, search indexers, classification engines, data loss prevention tools, and any other tool, which attempts to reason over the entirety of data and apply changes to it.
+|  License count  |   0 – 1k  |  1k – 5k  |  5k - 15k | 15k - 50k |    50k+   |
+| --------------- | --------- | --------- | --------- | --------- | --------- | 
+|   App 1 minute  |   1,200   |   2,400   |   3,600   |   4,800   |   6,000   |
+|    App daily    | 1,200,000 | 2,400,000 | 3,600,000 | 4,800,000 | 6,000,000 |
 
-    For example, after migrating files to SharePoint Online, you run a custom CSOM or REST script to update metadata on the files. The CSOM/REST script is updating a large number of files at a high frequency, which triggers throttling. Similarly, an autocomplete UI widget using REST services, making too many calls to lists during each end-user operation, may also cause throttling, depending on what other operations are consuming resources at the same time.
+> [!NOTE]
+> We reserve the right to change the resource unit limits.
 
-    ![Sporadic throttling](../images/a61afe25-9597-403f-b3fa-d3f630155021.png)
+In terms of API costs, Microsoft Graph APIs have a predetermined resource unit cost per request:
 
-- **Overwhelming traffic**
+| Resource units per request | Operations                                              |
+| -------------------------- | ------------------------------------------------------- |
+| 1	                         | <li>Single item query, such as get item <li>Delta with a token |
+| 2	                         | <li>Multi item query, such as list children, except delta with a token <li>Create, update, delete and upload |
+| 5	                         | <li>All permission resource operations, including $expand=permissions |
 
-    A single process dramatically exceeds throttling limits, continually, over a long time period.
+> [!NOTE]
+> We reserve the right to change the API resource unit cost.
 
-  - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
-  - You're running a load-testing script on SharePoint Online and you get throttled. Load testing isn't allowed on SharePoint Online.
-  - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
-  - Running the OneDrive Sync client while also running migration applications or applications that crawl sites and write back data can result in high request volumes that may trigger throttling. 
+Delta with a token is the most efficient way to scan content in SharePoint, and we talk more in details at the [best practices for scanning applications](https://aka.ms/ScanGuidance). To help applications that follow the guidance, we lower the resource unit cost of delta requests with a token to 1 resource unit, although it is a multi-item query. The delta request without a token is considered a multi-item query and costs 2 resource units per request.
 
-    ![Steady throttling](../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
+In [batching](/graph/json-batching), requests in a batch are evaluated individually by resource units. 
 
-- **Unsupported use cases**
+CSOM and REST do not have a predetermined resource unit cost and they usually consume more resource units than Microsoft Graph APIs to achieve the same functionality. And in addition to resource unit limits, CSOM and REST are also subject to other internal resource limits, so if applications call CSOM and REST, they may experience more throttling than the limits described in this document. We highly recommend you choose Microsoft Graph APIs over CSOM and REST APIs when possible.
 
-    Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
+Since application limits are in resource units, the actual request rate, such as requests per minute, depends on application’s API choice and the corresponding API resource unit cost. In general, you can estimate the request rate using an average of 2 resource units per request and divide resource unit limits by 2 to get the estimated request rate.
 
-- **Creating multiple AppIDs for the same application**
+Although each application has its own limits within a tenant and we allow tenants to run more than one application, multiple applications running against the same tenant share the same resource bucket and in rare occurrences can cause rate limiting when too many applications send requests at the time. 
 
-    Do not create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resource of the tenant. Historically some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant.
+## How to handle throttling?
 
-## Throttling limits
-
-### When using app-only authentication with Sites.Read.All permission
-
-When you are using SharePoint Online search APIs with app-only authentication and the app having `Sites.Read.All` permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content).
-
-To ensure the service remains fast and reliable, queries using such permission are throttled at 25 QPS. The search query will return with a 429 response and you can retry the query after 2 minutes. When waiting for 429 recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making additional calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
-
-### When searching for people search results
-
-When searching using a result source that requests people results, we may throttle any requests exceeding a limit of 25 QPS. This limit applies jointly to all requests using the out-of-the-box "Local People Results" result source and all requests using custom people search result sources.
-
-If you have applications or components which are causing your people search requests to get throttled, we recommend that you:
-1. Consider if the requests are really necessary for your application. For example, if you are using a custom search site which makes many simultaneous queries, check whether some of those requests can be removed without any significant impact to your organization's search experience. Alternatively, consider trying our modern people search experience in [Microsoft Search](/microsoftsearch/get-started-search-in-sharepoint-online) by searching from the [SharePoint](http://sharepoint.com/) start page. People search in Microsoft Search has been optimised for better performance and more relevant results.
-2. Avoid making concurrent requests. For example, instead of issuing 10 requests all at once, issue them consecutively - only issue the next query after the previous one has completed. You may need to consider caching these results if you need them quickly, for example on a page load.
-3. Try consolidating the requests into a single query. For example, instead making 10 simultaneous queries for `WorkEmail:user1@constoso.com`, `WorkEmail:user2@constoso.com`,..., `WorkEmail:user10@contoso.com`, try the single query, `WorkEmail:user1@constoso.com WorkEmail:user2@constoso.com ... WorkEmail:user10@contoso.com`.
-4. Consider using the [Microsoft Graph API](/graph/people-example#search-people) if a high-request-volume scenario (in excess of 25 QPS) is truly necessary.
-
-### Other scenarios
-
-For all other scenarios, we continually monitor resource usage on SharePoint Online. Then depending on usage, we fine-tune thresholds so users can consume the maximum number of resources without degrading the reliability and performance of SharePoint Online. Application limits are set based on the overall user traffic, usage and a few other factors of the tenant. We do this because setting and publishing exact throttling limits would in fact result in more restrictive limits.
-
-That's why it's so important for your code to honor the `Retry-After` HTTP header value; this lets your code run as fast as possible on any given day, and it lets your code back off "just enough" if it hits throttling limits. The code samples later in this article show you how to use the `Retry-After` HTTP header.
-
-## Best practices to handle throttling
-
-- Reduce the number of operations per request
-- Reduce the frequency of calls
+Below is a quick summary of the best practices to handle throttling:
+- Reduce the number of concurrent requests
+- Avoid request spikes
 - Choose Microsoft Graph APIs over CSOM and REST APIs when possible
+- Leverage the `Retry-After` and `RateLimit` HTTP headers
 - Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
-- Leverage the `Retry-After` HTTP header
 
-Microsoft Graph is cloud born APIs that have the latest improvements and optimizations. In general, Microsoft Graph consumes less resource than CSOM and REST to achieve the same functionality. Hence, adopting Microsoft Graph can improve application's performance and reduce throttling.
+As stated earlier, Microsoft Graph is cloud born APIs that have the latest improvements and optimizations. In general, Microsoft Graph consumes less resource than CSOM and REST to achieve the same functionality. Hence, adopting Microsoft Graph can improve application's performance and reduce throttling.
 
-If you do run into throttling, we require leveraging the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed.
+If you do run into throttling, we require leveraging the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed. The `RateLimit` HTTP headers send you early signals when you are close to limits and you can proactively reduce requests to avoid hitting the throttle.
 
-The `Retry-After` HTTP header is the fastest way to handle being throttled because SharePoint Online dynamically determines the right time to try again. In other words, aggressive retries work against you because even though the calls fail, they still accrue against your usage limits. Following the `Retry-After` HTTP header will ensure the shortest delay.
+### Retry-after header
 
-For information about ways to monitor your SharePoint Online activity, see [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86).
+When applications experience throttling, SharePoint Online returns a `Retry-After` HTTP header in the request indicating how long in seconds the calling application should wait before retrying or making a new request. 
 
-For a broader discussion of throttling on the Microsoft Cloud, see [Throttling Pattern](/previous-versions/msp-n-p/dn589798(v=pandp.10)).
+Honoring the `Retry-After` HTTP header is the fastest way to handle being throttled because SharePoint Online dynamically determines the right time to try again. 
 
-## How to decorate your http traffic to avoid throttling?
+Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling. In other words, aggressive retries work against calling applications because even though the calls fail, they still count towards usage limits. Honoring the `Retry-After` HTTP header will ensure the shortest delay and reduce wasting quotas in throttled requests.
 
-To ensure and maintain high-availability, some traffic may be throttled. Throttling happens when system health is at stake and one of the criteria used for throttling is traffic decoration, which impacts directly on the prioritization of the traffic. Well-decorated traffic will be prioritized over traffic, which isn't properly decorated.
+### RateLimit headers - beta
 
-### What is definition of undecorated traffic?
+In addition to the `Retry-After` header in the response of throttled requests, SharePoint Online also returns the [IETF RateLimit headers](https://github.com/ietf-wg-httpapi/ratelimit-headers) for selected limits in certain conditions to help applications manage rate limiting. We recommend applications to take advantage of these headers to avoid hitting throttle. 
+- `RateLimit-Limit` contains the limit in the current time window.
+- `RateLimit-Remaining` indicates the remaining quota in the current window.
+- `RateLimit-Reset` indicates the number of seconds until the quota is refilled.
 
-- Traffic is undecorated if there's no AppID/AppTitle and User Agent string in CSOM or REST API call to SharePoint Online. The User Agent string should be in a specific format as described below.
+> [!NOTE]
+> These headers are currently in **beta** and subject to change. At the time when the headers were adopted, the IETF specification was in draft. The current implementation is based on the [draft-03](https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-ratelimit-headers-03) of the IETF specification. There is the potential for changes when the specification is final, and we will adapt to those changes in the future.  
 
-### What are the recommendations?
+The `RateLimit` headers are returned on a **best-efforts** basis, so applications may not receive the headers under all conditions. Additionally, there are other limits that are not presented in the `RateLimit` headers, so applications can get throttled even before reaching the limit described in the `RateLimit` headers. 
+Below is the list of limits that we support the `RateLimit` headers for. The policies and values are subject to change:
+
+| limit                      | Condition                 | limit value   | Description                                                                                                      |
+| -------------------------- | ------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------- |
+| App 1 minute resource unit | Usage >= 80% of the limit | Resource unit | When an application consumes 80% or more of its app 1 minute limit, the limit, remaining and reset are returned. | 
+
+Below are some examples to help you understand the `RateLimit` headers:
+
+- An application has consumed 90% of its resource unit quota (1,080 out of 1,200), and its consumption is within all the limits that apply to it. The request succeeds and the `RateLimit` headers are returned.
+```
+HTTP/1.1 200 Ok
+RateLimit-Limit: 1200
+RateLimit-Remaining: 120
+RateLimit-Reset: 5
+```
+
+- An application has consumed 100% of its resource unit quota, so it gets throttled due to this policy. The request is throttled and the `RateLimit` headers are returned. The `Retry-After` matches the `RateLimit-Reset`.
+```
+HTTP/1.1 429 Too Many Requests
+Retry-After: 31
+RateLimit-Limit: 1200
+RateLimit-Remaining: 0
+RateLimit-Reset: 31
+```
+
+- An application has consumed 90% of its resource unit quota but its consumption has already reached other limits that the `RateLimit` headers do not support. In this case, the request is throttled and the `RateLimit` headers are not returned to avoid confusion although the condition to return the headers is satisfied.
+```
+HTTP/1.1 429 Too Many Requests
+Retry-After: 9
+```
+
+### How to decorate your http traffic?
+
+Well-decorated traffic will be prioritized over traffic that isn't properly decorated.
+
+What is the definition of undecorated traffic?
+
+- Traffic is undecorated if there's no AppID/AppTitle and User Agent string in API calls to SharePoint Online. The User Agent string should be in a specific format as described below.
+- If you are developing a web application executing in the browser, most modern browsers don't allow overwriting the User Agent string and you don't need to implement it.
+
+What are the recommendations?
 
 - If you've created an application, the recommendation is to register and use AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
-
     > [!NOTE]
     > Refer to the [Microsoft identity documentation](/azure/active-directory/develop/), such as the [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app) page, for information on creating an Azure AD application.
 
@@ -144,125 +174,48 @@ To ensure and maintain high-availability, some traffic may be throttled. Throttl
 > [!NOTE]
 > Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. It is also fine to append existing user agent string with the requested information.
 
-> [!NOTE]
-> If you are developing front end components executing in the browser, most of modern browsers don't allow overwriting the user agent string and you don't need to implement this.
+## Common throttling scenarios in SharePoint Online
 
-### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
+The most common causes of per-user throttling in SharePoint Online are client-side object model (CSOM) or Representational State Transfer (REST) code that performs too many actions too frequently.
 
-```csharp
-// Get access to source site
-using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
-{
-  //Provide account and pwd for connecting to SharePoint Online
-  var passWord = new SecureString();
-  foreach (char c in pwd.ToCharArray()) passWord.AppendChar(c);
-  ctx.Credentials = new SharePointOnlineCredentials("contoso@contoso.onmicrosoft.com", passWord);
+- **Sporadic traffic**
 
-  // Add our User Agent information
-  ctx.ExecutingWebRequest += delegate (object sender, WebRequestEventArgs e)
-  {
-      e.WebRequestExecutor.WebRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
-  };
+    Constant load or repetitive complex queries against SharePoint Online must be optimized for low impact. Failing to follow [best practices for scanning applications](https://aka.ms/ScanGuidance) that process files in bulk will likely result in throttling. These apps include sync engines, backup providers, search indexers, classification engines, data loss prevention tools, and any other tool, which attempts to reason over the entirety of data and apply changes to it.
 
-  // Normal CSOM Call with custom User-Agent information
-  Web site = ctx.Web;
-  ctx.Load(site);
-  ctx.ExecuteQuery();
-}
-```
+- **Overwhelming traffic**
 
-### Example of decorating traffic with User agent when using REST APIs
+    A single process dramatically exceeds throttling limits, continually, over a long time period.
 
-Following sample is in C# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
+  - You used web services to build a tool to synchronize user profile properties. The tool updates user profile properties based on information from your line-of-business (LOB) human resources (HR) system. The tool makes calls at too high a frequency.
+  - You're running a load-testing script on SharePoint Online and you get throttled. Load testing isn't allowed on SharePoint Online.
+  - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
+  - Running the OneDrive Sync client while also running migration applications or applications that crawl sites and write back data can result in high request volumes that may trigger throttling. 
 
-```csharp
-HttpWebRequest endpointRequest = (HttpWebRequest) HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
-endpointRequest.Method = "GET";
-endpointRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
-endpointRequest.Accept = "application/json;odata=nometadata";
-endpointRequest.Headers.Add("Authorization", "Bearer " + accessToken);
-HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse();
-```
+- **Unsupported use cases**
 
-### CSOM Code sample: ExecuteQueryWithIncrementalRetry extension method
+    Unsupported use of SharePoint Online may experience throttling. Using SharePoint and OneDrive as an intermediary service between Microsoft 365 and another repository is an example of an unsupported use case.
 
-> [!NOTE]
-> You'll need to use SharePoint Online CSOM version 16.1.8316.1200 (December 2018 version) or higher.
+- **Creating multiple AppIDs for the same application**
 
-Add this extension method in a static class and use `ExecuteQueryWithIncrementalRetry` instead of `ExecuteQuery` to make your code handle throttling requests.
+    Do not create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resource of the tenant. Historically some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant.
 
-```csharp
-public static void ExecuteQueryWithIncrementalRetry(this ClientContext clientContext, int retryCount)
-{
-  int retryAttempts = 0;
-  int retryAfterInterval = 0;
-  bool retry = false;
-  ClientRequestWrapper wrapper = null;
-  if (retryCount <= 0)
-  {
-    throw new ArgumentException("Provide a retry count greater than zero.");
-  }
+## Scenario specific limits
 
-  // Do while retry attempt is less than retry count
-  while (retryAttempts < retryCount)
-  {
-    try
-    {
-      if (!retry)
-      {
-        clientContext.ExecuteQuery();
-        return;
-      }
-      else
-      {
-        //increment the retry count
-        retryAttempts++;
+### When using app-only authentication with Sites.Read.All permission
 
-        // retry the previous request using wrapper
-        if (wrapper != null && wrapper.Value != null)
-        {
-          clientContext.RetryQuery(wrapper.Value);
-          return;
-        }
-        // retry the previous request as normal
-        else
-        {
-          clientContext.ExecuteQuery();
-          return;
-        }
-      }
-    }
-    catch (WebException ex)
-    {
-        var response = ex.Response as HttpWebResponse;
-        // Check if request was throttled - http status code 429
-        // Check is request failed due to server unavailable - http status code 503
-        if (response != null && (response.StatusCode == (HttpStatusCode)429 || response.StatusCode == (HttpStatusCode)503))
-        {
-          wrapper = (ClientRequestWrapper)ex.Data["ClientRequest"];
-          retry = true;
+When you are using SharePoint Online search APIs with app-only authentication and the app having Sites.Read.All permission (or stronger), the app will be registered with full permissions and is allowed to query all your SharePoint Online content (including user’s private ODB content).
 
-          // Determine the retry after value - use the `Retry-After` header
-          retryAfterInterval = Int32.Parse(response.GetResponseHeader("Retry-After"));
+To ensure the service remains fast and reliable, queries using such permission are throttled at 25 requests per second. The search query will return with an http 429 response. When waiting for throttling recovery, you should ensure to pause all search query requests you may be making to the service using similar app-only permission. Making additional calls while receiving throttle responses will extend the time it takes for your app to become unthrottled.
 
-          // Delay for the requested seconds
-          Thread.Sleep(retryAfterInterval * 1000);
-        }
-        else
-        {
-          throw;
-        }
-    }
-  }
-  throw new MaximumRetryAttemptedException($"Maximum retry attempts {retryCount}, has be attempted.");
-}
+### When searching for people search results
 
-[Serializable]
-public class MaximumRetryAttemptedException : Exception
-{
-  public MaximumRetryAttemptedException(string message) : base(message) { }
-}
-```
+When searching using a result source that requests people results, we may throttle any requests exceeding a limit of 25 requests per second. This limit applies jointly to all requests using the out-of-the-box "Local People Results" result source and all requests using custom people search result sources.
+
+If you have applications or components which are causing your people search requests to get throttled, we recommend that you:
+1. Consider if the requests are really necessary for your application. For example, if you are using a custom search site which makes many simultaneous queries, check whether some of those requests can be removed without any significant impact to your organization's search experience. Alternatively, consider trying our modern people search experience in [Microsoft Search](/microsoftsearch/get-started-search-in-sharepoint-online) by searching from the [SharePoint](http://sharepoint.com/) start page. People search in Microsoft Search has been optimised for better performance and more relevant results.
+2. Avoid making concurrent requests. For example, instead of issuing 10 requests all at once, issue them consecutively - only issue the next query after the previous one has completed. You may need to consider caching these results if you need them quickly, for example on a page load.
+3. Try consolidating the requests into a single query. For example, instead making 10 simultaneous queries for `WorkEmail:user1@constoso.com`, `WorkEmail:user2@constoso.com`,..., `WorkEmail:user10@contoso.com`, try the single query, `WorkEmail:user1@constoso.com WorkEmail:user2@constoso.com ... WorkEmail:user10@contoso.com`.
+4. Consider using the [Microsoft Graph API](/graph/people-example#search-people) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
 
 ## What should you do if you get blocked in SharePoint Online?
 
