@@ -1,7 +1,7 @@
 ---
 title: Connect to new Microsoft 365 group - CSOM development
 description: Client-side object model development for connecting to a new Microsoft 365 group operation.
-ms.date: 11/18/2020
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -23,7 +23,7 @@ You also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nug
 
 ## CSOM code example
 
-The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __CreateGroupForSite__ method to return a list of themes. 
+The following example shows how to create a __Microsoft.Online.SharePoint.TenantAdministration.Tenant__ object and call the __CreateGroupForSite__ method to return a list of themes.
 
 > [!NOTE]
 > * The URL used to create the context object includes the _-admin_ suffix, because **TenantAdministration** methods work with the admin site.
@@ -84,6 +84,3 @@ __type:__ Microsoft.Online.SharePoint.TenantAdministration.GroupCreationParams<b
 
 - [Overview of the "Connect to new Microsoft 365 group" feature](groupify-overview.md)
 - [Modernize your classic SharePoint sites](../../transform/modernize-classic-sites.md)
-
-
-

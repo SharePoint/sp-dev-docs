@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3d0d2fd5-344d-95df-c6c4-743a30e925ba
 description: "Describes the QueryRules element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)."
@@ -12,8 +11,8 @@ description: "Describes the QueryRules element (SearchQueryConfigurationSettings
 
 # QueryRules element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)
 
- 
-  
+
+
 ## Element information
 
 |Info type|Value|
@@ -21,7 +20,7 @@ description: "Describes the QueryRules element (SearchQueryConfigurationSettings
 |**Element type** <br/> |q3:ArrayOfQueryRule  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Portability.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -31,18 +30,16 @@ description: "Describes the QueryRules element (SearchQueryConfigurationSettings
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

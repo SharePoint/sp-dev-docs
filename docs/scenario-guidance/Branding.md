@@ -1,7 +1,7 @@
 ---
 title: Scenario Guidance - Branding
 description: Scenario guidance on branding options with SharePoint.
-ms.date: 04/06/2022
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 # Branding
@@ -80,7 +80,7 @@ The classic SharePoint user experience is based on ASP.NET master pages and page
 
 - [SharePoint 2013/2016/Online Responsive UI](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UI.Responsive)
 - [SharePoint Modernization scanner](https://github.com/SharePoint/sp-dev-modernization/tree/master/Tools/SharePoint.Modernization)
-- [PnP Starter Intranet for SharePoint 2013/2016 and SharePoint Online](https://dev.office.com/patterns-and-practices-detail/11128)
+- [PnP Starter Intranet for SharePoint 2013/2016 and SharePoint Online](https://github.com/pnp/PnP/tree/master/Solutions/Business.StarterIntranet)
 
 ### Videos
 
@@ -149,14 +149,14 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 - [Master pages in the SharePoint Add-in model](../solution-guidance/master-pages-sharepoint-add-in.md)
 - [SharePoint Page Layouts and Master Pages (ECM)](https://msdn.microsoft.com/library/office/ms543497(v=office.14).aspx)
 - [Master Pages](https://msdn.microsoft.com/library/office/ms443795(v=office.14).aspx)
-- [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/tree/master/Archive/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model)
+- [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/blob/master/SharePoint/AddIns/14%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model/Readme.md)
 - [Branding SharePoint sites in the SharePoint Add-in model](../solution-guidance/branding-sharepoint-sites-sharepoint-add-in.md)
 
 ### Videos
 
 - [PnP Webcast - Customizations options with SharePoint Online “modern” experiences](https://www.youtube.com/watch?v=724Spxu3hF4)
 - [Learn best practices for customizing and branding SharePoint Team Sites](https://www.youtube.com/watch?v=2AxN-G56-d4)
-- [Office Dev PnP Web Cast – Branding SharePoint using add-in model techniques](/office/blogs/branding-sharepoint-using-add-in-model-techniques)
+- [Office Dev PnP Web Cast – Branding SharePoint using add-in model techniques](/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 
 ### Solutions
 
@@ -199,9 +199,9 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 
 ### Samples
 
-- [CSS injection pattern](https://dev.office.com/patterns-and-practices-detail/1852)
-- [AlternateCssUrl & SiteLogoUrl properties in web object](https://dev.office.com/patterns-and-practices-detail/1849)
-- [Making out-of-the-box Seattle master responsive](https://dev.office.com/patterns-and-practices-detail/5823)
+- [CSS injection pattern](https://github.com/pnp/PnP/tree/master/Samples/Branding.InjectResponsiveCSS/Branding.InjectResponsiveCSS)
+- [AlternateCssUrl & SiteLogoUrl properties in web object](https://github.com/pnp/PnP/tree/master/Samples/Branding.AlternateCSSAndSiteLogo)
+- [Making out-of-the-box Seattle master responsive](https://github.com/pnp/PnP/tree/master/Samples/Branding.InjectResponsiveCSS)
 
 ## Script Embedding and DOM manipulation
 
@@ -222,7 +222,7 @@ Script Embedding means a pattern where custom JavaScript is added on the page wh
 
 - [JavaScript injection in SharePoint Online - Office 365 Developer Patterns and Practices](https://channel9.msdn.com/Blogs/Office-365-Dev/JavaScript-injection-in-SharePoint-Online-Office-365-Developer-Patterns-and-Practices)
 - [How to update your SharePoint pages via the embedding of JavaScript](https://channel9.msdn.com/blogs/OfficeDevPnP/JavaScript-embedding-demo)
-- [Office Dev PnP Web Cast – JavaScript development patterns with SharePoint](/office/blogs/javascript-development-patterns-with-sharepoint)
+- [Office Dev PnP Web Cast – JavaScript development patterns with SharePoint](/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
 
 ### Samples
 
@@ -231,4 +231,4 @@ Script Embedding means a pattern where custom JavaScript is added on the page wh
 - [Core.EmbedJavaScript - Shows basic JavaScript embedding scenarios](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.EmbedJavaScript)
 - [Core.EmbedJavaScriptJSOM - Shows how to do JavaScript embedding from SP hosted add-in](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.EmbedJavaScriptJSOM)
 - [Core.EmbedJavaScript.HeaderFooter - Shows how to add custom header and footer with JavaScript embed pattern](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.EmbedJavaScript.HeaderFooter)
-- [CDN Manager](https://dev.office.com/patterns-and-practices-detail/5822)
+- [CDN Manager](https://github.com/pnp/PnP/tree/master/Solutions/Core.CDNManager)

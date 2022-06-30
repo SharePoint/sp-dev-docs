@@ -4,12 +4,11 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b8da155c-7f37-461a-84ab-99a41b0720ea
 ---
 
-# Container element 
+# Container element
 
 (LayoutDefinitions Schema)
 
@@ -106,11 +105,3 @@ The following sections describe attributes, child elements, and parent elements.
 ### Parent elements
 
 None.
-
-
-
-
-
-
-
-

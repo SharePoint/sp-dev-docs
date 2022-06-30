@@ -1,15 +1,15 @@
 ---
 title: CustomProperties Element in UIElement
+description: Outlines attributes, child elements, and parent elements for the CustomProperties element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bbc6c6f3-7c1d-f777-fbe8-c5d5d432c8ec
 ---
 
-# CustomProperties Element in UIElement 
+# CustomProperties Element in UIElement
 
 (LayoutDefinitions Schema)
 
@@ -35,54 +35,13 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperty-element-in-arrayofcustomproperty-layoutdefinitions-schema.md">CustomProperty Element in ArrayOfCustomProperty (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>A custom property of a Container or an Office External Part.</p></td>
-</tr>
-</tbody>
-</table>
+|Element|Description|
+|----------|-----------|
+|[CustomProperty Element in ArrayOfCustomProperty (LayoutDefinitions Schema)](customproperty-element-in-arrayofcustomproperty-layoutdefinitions-schema.md)|A custom property of a Container or an Office External Part.|
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="container-element-layoutdefinitions-schema.md">Container Element (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The container that these custom properties belong to.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="obpart-element-in-arrayofobpart-layoutdefinitions-schema.md">OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)</a></span></p></td>
-<td align="left"><p>The Office External Part that these custom properties belong to.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+|Element|Description|
+|----------|-----------|
+|[Container Element (LayoutDefinitions Schema)](container-element-layoutdefinitions-schema.md)|The container that these custom properties belong to.|
+|[OBPart Element in ArrayOfOBPart (LayoutDefinitions Schema)](obpart-element-in-arrayofobpart-layoutdefinitions-schema.md)|The Office External Part that these custom properties belong to.|

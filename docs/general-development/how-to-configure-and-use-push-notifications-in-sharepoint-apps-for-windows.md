@@ -1,7 +1,7 @@
 ---
 title: Configure and use push notifications in SharePoint apps for Windows Phone
 description: Create a solution in SharePoint Server for sending push notifications and develop a Windows Phone app for receiving the notifications.
-ms.date: 12/22/2020
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 68fa2138-86d9-4e35-9c7c-5cd292087b80
 ms.localizationpriority: medium
@@ -1130,5 +1130,5 @@ When you add an item to the Jobs SharePoint list, the code in the event receiver
 - [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
 - [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
 - [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
-- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 - [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

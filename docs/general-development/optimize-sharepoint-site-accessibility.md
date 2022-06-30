@@ -1,6 +1,7 @@
 ---
 title: Optimize SharePoint site accessibility
-ms.date: 09/25/2017
+description: Describes how to improve SharePoint page accessibility and the SharePoint site experience for users with a variety of accessibility needs.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 0a3fbfb3-1a0b-4902-9317-525cf2f63d98
 ms.localizationpriority: medium

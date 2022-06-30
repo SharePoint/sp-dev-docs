@@ -1,7 +1,7 @@
 ---
 title: Use multiple SharePoint lists in a Windows Phone app
 description: Create Windows Phone apps that use data from multiple SharePoint lists.
-ms.date: 01/06/2021
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 5251d35a-d659-49b3-8e0d-dfd4a7faee6b
 ms.localizationpriority: medium
@@ -676,5 +676,5 @@ From this form (the List form for the Orders list) you can add, edit, or delete 
 - [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
 - [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)
 - [Microsoft SharePoint SDK for Windows Phone 8](https://www.microsoft.com/download/details.aspx?id=36818)
-- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570)
+- [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233)
 - [Microsoft SharePoint SDK for Windows Phone 7.1](https://www.microsoft.com/download/details.aspx?id=30476)

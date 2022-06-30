@@ -1,9 +1,8 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 03/31/2022
+ms.date: 06/28/2022
 ms.localizationpriority: high
-ms.service: sharepoint-online
 ---
 
 # Site template JSON schema
@@ -67,19 +66,19 @@ Use the **createSPList** verb to create a new SharePoint list.
 - `templateType`: Which template to apply to the list. Typically, you would use value 100. The full list of template type values is documented in [SPListTemplateType enumeration](/previous-versions/office/sharepoint-server/ms413878(v=office.15)) - but the ones we currently support include:
 
   | List Template Name | Enum |
-  |--------------|---------|
-  |Generic List | 100|
-  |Document Library | 101|
-  |Survey | 102|
-  |Links | 103|
-  |Announcements | 104|
-  |Contacts | 105|
-  |Events | 106|
-  |Tasks | 107|
-  |Discussion Board | 108|
-  |PictureLibrary | 109|
-  |Site Pages | 119|
-  |Issue Tracking | 1100|
+  | ------------------ | ---- |
+  | Generic List       | 100  |
+  | Document Library   | 101  |
+  | Survey             | 102  |
+  | Links              | 103  |
+  | Announcements      | 104  |
+  | Contacts           | 105  |
+  | Events             | 106  |
+  | Tasks              | 107  |
+  | Discussion Board   | 108  |
+  | PictureLibrary     | 109  |
+  | Site Pages         | 119  |
+  | Issue Tracking     | 1100 |
 
   If you use 101 or 119 and reference the default names ("Documents" or "Site Pages"), you can modify the library created with the template. See example below.
 - `subactions`: An array of actions that run in the order listed to create your list.
@@ -724,7 +723,7 @@ Get-Content '<Folder_location_to_site_script>\site-script.json' -Raw -Encoding U
 Use the `applyTheme` verb to add a custom theme to the site. For more information about how to construct and upload these themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview.md). This site action only works for applying custom themes; to apply one of our in-product SharePoint themes, create a copy as a custom one and reference that one.
 
 > [!NOTE]
-> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 
 #### JSON value
 
@@ -783,7 +782,7 @@ Use the `setSiteBranding` verb to specify the navigation layout, the header layo
 
 > [!NOTE]
 > Setting the navigation layout only works on the communication site template and for the hub navigation.
-> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 
 #### JSON value
 
@@ -827,7 +826,7 @@ Use the `setSiteLogo` verb to specify a logo for your site.
 ## Join a hub site
 
 > [!NOTE]
-> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 
 Use the `joinHubSite` verb to join the site to a designated hub site.
 
@@ -950,7 +949,7 @@ Use the `triggerFlow` verb to kick off a custom flow.
 ## Configure regional settings
 
 > [!NOTE]
-> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 
 Use the `setRegionalSettings` action to configure the regional settings of the site (*/_layouts/15/regionalsetng.aspx*).
 
@@ -976,7 +975,7 @@ Use the `setRegionalSettings` action to configure the regional settings of the s
 ## Add users (principals) to SharePoint Groups
 
 > [!NOTE]
-> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 
 Use the `addPrincipalToSPGroup` action to manage addition of users and groups to select default SharePoint groups. For more information, see [Understanding SharePoint Groups](https://support.office.com/article/Understanding-SharePoint-groups-94D9B261-161E-4ACE-829E-ECA1C8CD2EB8). This action can be used for licensed users, security groups, and Microsoft 365 groups.
 
@@ -1016,7 +1015,7 @@ Use the `addPrincipalToSPGroup` action to manage addition of users and groups to
 ## Manage guest access
 
 > [!NOTE]
-> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites). 
+> This action is automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 
 Use the `setSiteExternalSharingCapability` action to manage guest access. For more information, see [Manage external sharing for your SharePoint Online environment](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85).
 

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: In CAML, used in queries to compare the dates in a recurring event 
 # DateRangesOverlap element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used in queries to compare the dates in a recurring event with a specified **DateTime** value to determine whether they overlap. 
-  
+
+Used in queries to compare the dates in a recurring event with a specified **DateTime** value to determine whether they overlap.
+
 ```XML
 <DateRangesOverlap>
   <FieldRef Name = "Field_Name"/>
@@ -35,28 +34,28 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-query.md)
 - [Value](value-element-query.md)
 - [XML](xml-element.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ## Example
 
 The following example compares the event date and end date of a recurring event with the current date and time.
-  
+
 ```XML
 <Query>
    <Where>
@@ -73,4 +72,3 @@ The following example compares the event date and end date of a recurring event 
 ```
 
 <br/>
-

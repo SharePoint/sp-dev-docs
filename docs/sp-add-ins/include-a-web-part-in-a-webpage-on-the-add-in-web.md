@@ -1,7 +1,7 @@
 ---
 title: Include a web part on a webpage in the add-in web
 description: Include an out-of-the-box web part on a page in the add-in web of a SharePoint Add-in.
-ms.date: 06/22/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -25,7 +25,7 @@ For a code sample that illustrates the guidance of this topic, see [OfficeDev/Co
     ```
 
     > [!WARNING]
-    > It is possible to add a web part element, such as **<WebPartPages:XsltListViewWebPart>** as a child of the **WebPartZone**. But this is generally a bad practice in a SharePoint Add-in. If the add-in ever needs to be updated, a web part element inserted in the .aspx file can cause the update to fail in some scenarios with the message "A web part with this ID has already been added to this page." We recommend that you add web parts to the elements manifest for the page as described later in this procedure.
+    > It is possible to add a web part element, such as **\<WebPartPages:XsltListViewWebPart\>** as a child of the **WebPartZone**. But this is generally a bad practice in a SharePoint Add-in. If the add-in ever needs to be updated, a web part element inserted in the .aspx file can cause the update to fail in some scenarios with the message "A web part with this ID has already been added to this page." We recommend that you add web parts to the elements manifest for the page as described later in this procedure.
 
 1. Open the element manifest file for the page. This is usually called elements.xml and is located in the same project folder as the .aspx file.
 1. In the **File** element for the page, add a child **AllUsersWebPart** element, and set its **WebPartZoneID** to the value of the web part zone that you created on the page, as this example shows.

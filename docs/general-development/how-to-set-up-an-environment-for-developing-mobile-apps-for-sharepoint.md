@@ -1,6 +1,7 @@
 ---
 title: Set up an environment for developing mobile apps for SharePoint
-ms.date: 09/25/2017
+description: Describes the system requirements and configuring a development environment for SharePoint mobility projects.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: acaf556d-e20d-478d-8c59-2efd8efb9dcb
 ms.localizationpriority: medium
@@ -87,7 +88,7 @@ To develop SharePoint Add-ins for use on Windows Phone 7, you need to set up you
     
     
 
-1. On a computer with a supported client operating system, install  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=27570).
+1. On a computer with a supported client operating system, install  [Windows Phone SDK 7.1](https://www.microsoft.com/download/details.aspx?id=29233).
     
     > [!NOTE]
     > An earlier version of the Windows Phone SDK was named the Windows Phone Developer Tools. 

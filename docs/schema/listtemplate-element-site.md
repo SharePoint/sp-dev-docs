@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Specifies a list definition that is available as an option for crea
 # ListTemplate element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies a list definition that is available as an option for creating lists on the **Create Page**.
-  
+
 ```XML
 <ListTemplate
   AllowDeletion = "TRUE" | "FALSE"
@@ -28,7 +27,7 @@ Specifies a list definition that is available as an option for creating lists on
   BaseType = "0" | "1" |"3" | "4" | "5"
   CacheSchema = "TRUE" | "FALSE"
   Catalog = "TRUE" | "FALSE"
-  Category = "Libraries" | "Communications" | "Tracking" | 
+  Category = "Libraries" | "Communications" | "Tracking" |
     "Custom Lists"
   Default = "TRUE" | "FALSE"
   Description = "Text"
@@ -112,22 +111,20 @@ The following sections describe attributes, child elements, and parent elements.
 |**Unique** <br/> |Optional **Boolean**. **TRUE** to specify that the list definition or list template can only be used to create a list during site creation and cannot be used to create a list through the object model or user interface after the site template or definition is applied. Setting this attribute to **TRUE** has the effect of making the list hidden so that it does not appear as an option on the **Create Page** or on the **Documents and Lists** page.  <br/> |
 |**UseRootFolderForNavigation** <br/> |Optional **Boolean**. **TRUE** to specify that a link to the list that is displayed in **Quick Launch** points to the root folder so that users go to a custom welcome page, instead of to the default list view page.<br/><br/>**NOTE**: If a custom welcome URL is not set for the list, rendering a link to the root folder is functionally equivalent to linking to the default list view.           |
 |**VersioningEnabled** <br/> |Optional **Boolean**. **TRUE** to specify that versioning is enabled by default in lists created through the list definition; otherwise, **FALSE**.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [ListTemplates](listtemplates-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ### Remarks
 
 In SharePoint Foundation, the list template for a standard SharePoint list is usually defined within the element manifest file of the Feature that contains the list definition. For more information about list template Features, see [List template files](list-template-files.md).
-  
-

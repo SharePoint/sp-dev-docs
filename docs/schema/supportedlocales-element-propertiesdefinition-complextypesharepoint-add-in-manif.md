@@ -1,15 +1,15 @@
 ---
 title: SupportedLocales element (PropertiesDefinition complexType)
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes SupportedLocales element (PropertiesDefinition complexType) and provides information elements and attributes.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 49bde91a-8d7a-be17-4c91-82c9c19f0f61
 ---
 
-# SupportedLocales element (PropertiesDefinition complexType) 
+# SupportedLocales element (PropertiesDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: 49bde91a-8d7a-be17-4c91-82c9c19f0f61
 
 Specifies the locales that the add-in supports. This element is required for add-ins that are submitted to the Office Store. Its primary purpose is to populate the **spstore** UI with a list of supported locales.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | SupportedLocalesDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -90,7 +90,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-> [!WARNING] 
+> [!WARNING]
 > Although the **maxOccurs** attribute for the **SupportedLocale** element in the XSD for the add-in manifest markup is set to 256, the Office Store may set a lower effective maximum. As of the release of SharePoint 2013, there is an effective maximum of 25 **SupportedLocale** elements in the parent **SupportedLocales** element.
 
 ### Attributes
@@ -100,6 +100,3 @@ None.
 <br/>
 
 <br/>
-
-
-

@@ -1,15 +1,15 @@
 ---
 title: FieldBind element
+description: Outlines the usage, element information, a definition, and elements and attributes for the FieldBind element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 7fbdbd63-d0b4-d888-9f7c-e9f029f87478
 ---
 
-# FieldBind element 
+# FieldBind element
 
 (ruleDesignerType complexType) (Action4)
 
@@ -62,10 +62,10 @@ The **FieldBind** element is a child of the **RuleDesigner** element. Used toget
          <xs:attribute name="Value" type="s:string" use="required" />
          <xs:attribute name="TypeFilter" type="s:string" />
          <xs:attribute name="UnaryHides" type="s:string" />
-      </xs:element>  
+      </xs:element>
          <xs:element name="DataSourceRef" minOccurs="1" maxOccurs="unbounded">
          <xs:attribute name="Ref" type="s:string" />
-      </xs:element>  
+      </xs:element>
            </xs:choice>
          <xs:attribute name="Field"   type="s:string" />
          <xs:attribute name="Text"   type="s:string"  />
@@ -78,7 +78,7 @@ The **FieldBind** element is a child of the **RuleDesigner** element. Used toget
          <xs:attribute name="EventCategory"   type="s:string" />
          <xs:attribute name="DisplayName"   type="s:string" />
            </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -252,11 +252,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

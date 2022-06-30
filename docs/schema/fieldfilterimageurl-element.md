@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: cbafc593-010d-4278-af89-e38295da9a67
 description: Returns the URL to the icon that is used to indicate filtering on a list.
@@ -13,9 +12,9 @@ description: Returns the URL to the icon that is used to indicate filtering on a
 # FieldFilterImageURL element
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Returns the URL to the icon that is used to indicate filtering on a list.
-  
+
 ```XML
 <FieldFilterImageURL>
 </FieldFilterImageURL>
@@ -28,28 +27,28 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ### Remarks
 
-This element is used in the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file in the HeaderPattern sections. 
-  
+This element is used in the [FldTypes.xml](https://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx) file in the HeaderPattern sections.
+
 ## Example
 
-The following excerpt uses the **FieldFilterImageURL** element to assemble the `<IMG>` tag for displaying the filter image. 
-  
+The following excerpt uses the **FieldFilterImageURL** element to assemble the `<IMG>` tag for displaying the filter image.
+
 ```XML
 <HTML><![CDATA[ <IMG SRC=" ]]></HTML>
 <FieldFilterImageURL />
@@ -62,4 +61,3 @@ The following excerpt uses the **FieldFilterImageURL** element to assemble the `
 
 - [FieldSortImageURL element](fieldsortimageurl-element.md)
 - [FieldSortParams element (View)](fieldsortparams-element-view.md)
-

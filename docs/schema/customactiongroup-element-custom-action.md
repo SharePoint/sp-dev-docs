@@ -1,10 +1,10 @@
 ---
 title: CustomActionGroup Element (Custom Action)
+description: Outlines information, a definition, and elements and attributes for the CustomActionGroup element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 2ef32bbe-06b8-4bba-bba7-86e457579eaf
 ---
@@ -102,11 +102,3 @@ To ensure that a custom action group section is displayed within a link section 
 ## See also
 
 - [Default Custom Action Locations and IDs](default-custom-action-locations-and-ids.md)
-
-
-
-
-
-
-
-

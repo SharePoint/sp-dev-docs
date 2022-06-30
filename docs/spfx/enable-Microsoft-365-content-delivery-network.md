@@ -2,7 +2,6 @@
 title: Enable the Microsoft 365 CDN
 description: Enable the Microsoft 365 CDN on your Microsoft 365 Tenant
 ms.date: 02/08/2021
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 # Enable the Microsoft 365 CDN

@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: 9ded692b-91e0-43aa-a142-12aaeeee8a90
-description: Returns the sort direction on a list, rendering Asc or Desc based on whether the field has been sorted and on the current default sort direction for the field.  
+description: Returns the sort direction on a list, rendering Asc or Desc based on whether the field has been sorted and on the current default sort direction for the field.
 ---
 
 # FieldSortParams element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Returns the sort direction on a list, rendering **Asc** or **Desc** based on whether the field has been sorted and on the current default sort direction for the field. Rendering of this field is conditional and depends on the current sorting URL sent in the request to the server. 
-  
+
+Returns the sort direction on a list, rendering **Asc** or **Desc** based on whether the field has been sorted and on the current default sort direction for the field. Rendering of this field is conditional and depends on the current sorting URL sent in the request to the server.
+
 ```XML
 <FieldSortParams
   AutoHyperLink = "TRUE" | "FALSE"
@@ -51,24 +50,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded  
-   
+- Maximum: Unbounded
+
 ## Example
 
-The following example creates a default URL for a sort on a list. The **FieldSortParams** element is used to return the sort direction, which is assigned to the **SORTINGFIELDS** attribute in the resulting `<A>` tag. 
-  
+The following example creates a default URL for a sort on a list. The **FieldSortParams** element is used to return the sort direction, which is assigned to the **SORTINGFIELDS** attribute in the resulting `<A>` tag.
+
 ```XML
 <Default>
    <HTML><![CDATA[<A ID="diidSort]]></HTML>
@@ -78,7 +77,7 @@ The following example creates a default URL for a sort on a list. The **FieldSor
    <Property Select='DisplayName' HTMLEncode='TRUE'/>
    <HTML><![CDATA[" SORTINGFIELDS="]]></HTML>
    <FieldSortParams/>
-   <HTML><![CDATA[" HREF="javascript:" 
+   <HTML><![CDATA[" HREF="javascript:"
       OnClick='javascript:SubmitFormPost("]]></HTML>
    <ScriptQuote NotAddingQuote="TRUE">
       <PageUrl/>
@@ -110,6 +109,5 @@ The following example creates a default URL for a sort on a list. The **FieldSor
 
 ## See also
 
-- [FieldFilterImageURL element](fieldfilterimageurl-element.md)  
+- [FieldFilterImageURL element](fieldfilterimageurl-element.md)
 - [FieldSortImageURL element](fieldsortimageurl-element.md)
-

@@ -1,10 +1,10 @@
 ---
 title: SolutionId Element (Event)
+description: SolutionId Element (Event) specifies the unique ID of the solution for the event receiver.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 44b66b3e-09b2-4e31-b51a-2e2c263e2b5a
 ---
@@ -63,11 +63,3 @@ None
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-

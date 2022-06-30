@@ -1,7 +1,7 @@
 ---
 title: PnP timer job framework
 description: Describes set of classes designed to ease the creation of background processes that operate against SharePoint sites.
-ms.date: 5/9/2018
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 
@@ -21,7 +21,7 @@ For a video introduction to timer jobs, see the video [Introduction to the PnP t
 In this section, you will learn how to create a very simple timer job. The goal of this sample is to provide the reader a quick view; later on we provide a more detailed explanation of the timer job framework.
 
 > [!NOTE]
-> For a more extensive PnP solution with ten individual timer job examples, from "Hello world" samples to actual content expiration jobs, see [Core.TimerJobs.Samples](https://github.com/SharePoint/PnP/tree/dev/Solutions/Core.TimerJobs.Samples).
+> For a more extensive PnP solution with ten individual timer job examples, from "Hello world" samples to actual content expiration jobs, see [Core.TimerJobs.Samples](https://github.com/pnp/PnP/tree/master/Solutions/Core.TimerJobs.Samples).
 
 The following steps describe how to create a simple timer job.
 

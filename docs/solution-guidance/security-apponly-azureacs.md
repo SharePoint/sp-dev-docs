@@ -1,7 +1,7 @@
 ---
 title: Granting access using SharePoint App-Only
 description: Granting access using SharePoint App-Only
-ms.date: 04/20/2021
+ms.date: 06/28/2022
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
@@ -25,7 +25,7 @@ Navigate to a site in your tenant (e.g. https://contoso.sharepoint.com) and then
 > [!IMPORTANT]
 > Store the retrieved information (client id and client secret) since you'll need this in the next step!
 
-Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx. Once the page is loaded add your client id and look up the created principal:
+Next step is granting permissions to the newly created principal. Since we're granting tenant scoped permissions this granting can only be done via the appinv.aspx page on the tenant administration site. You can reach this site via `https://contoso-admin.sharepoint.com/_layouts/15/appinv.aspx`. Once the page is loaded add your client id and look up the created principal:
 
 ![Grant permissions to new principal](media/apponly/sharepointapponly2.png)
 
@@ -58,11 +58,11 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/demo -ClientId [Your
 
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 
-In a first step, you add the SharePoint PnP Sites Core library nuget package: https://www.nuget.org/packages/SharePointPnPCoreOnline. Once that’s done you can use below code construct:
+In a first step, you add the PnP Framework library nuget package: https://www.nuget.org/packages/PnP.Framework. Once that’s done you can use below code construct:
 
 ```csharp
 string siteUrl = "https://contoso.sharepoint.com/sites/demo";
-using (var cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext(siteUrl, "[Your Client ID]", "[Your Client Secret]"))
+using (var cc = new AuthenticationManager().GetACSAppOnlyContext(siteUrl, "[Your Client ID]", "[Your Client Secret]"))
 {
     cc.Load(cc.Web, p => p.Title);
     cc.ExecuteQuery();

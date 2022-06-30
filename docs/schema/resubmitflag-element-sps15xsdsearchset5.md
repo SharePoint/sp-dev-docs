@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 45466d2b-9534-30df-f10e-2439c1cb26d0
 description: "Last modified: March 09, 2015"
@@ -12,10 +11,10 @@ description: "Last modified: March 09, 2015"
 
 # ResubmitFlag element (SPS15XSDSearchSet5)
 
- 
-  
+
+
  **Applies to:** SharePoint Server 2013
-  
+
 ## Element information
 
 |||
@@ -23,7 +22,7 @@ description: "Last modified: March 09, 2015"
 |**Element type** <br/> |tns:ResubmitFlag  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -33,18 +32,16 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Parent elements
 
 None.
-  
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

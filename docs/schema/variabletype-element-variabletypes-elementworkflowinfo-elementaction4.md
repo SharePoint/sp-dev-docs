@@ -1,15 +1,15 @@
 ---
 title: VariableType element
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes VariableType element and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 90dac5a4-51c4-d178-fb00-3db3ac79f365
 ---
 
-# VariableType element 
+# VariableType element
 
 (VariableTypes element) (WorkflowInfo element) (Action4)
 
@@ -58,7 +58,7 @@ Specifies a type that can be used for local variables in the workflow.
          <xs:attribute name="Default" type="s:boolean" />
          <xs:attribute name="ItemIdType" type="s:boolean"  />
          <xs:attribute name="Hidden" type="s:boolean" />
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -155,11 +155,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

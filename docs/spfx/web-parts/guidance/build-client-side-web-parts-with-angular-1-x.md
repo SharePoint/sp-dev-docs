@@ -2,7 +2,6 @@
 title: Tutorial - Build SharePoint Framework client-side web parts with AngularJS
 description: Use AngularJS to build a client-side web part to manage To Do items and style it using Office UI Fabric.
 ms.date: 05/18/2021
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

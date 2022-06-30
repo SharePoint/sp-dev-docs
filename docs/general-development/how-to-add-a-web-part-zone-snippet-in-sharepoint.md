@@ -1,6 +1,7 @@
 ---
 title: Add a web part zone snippet in SharePoint
-ms.date: 09/25/2017
+description: Describes how to add a web part zone snippet in SharePoint and provides a list of Web part zone properties used to restrict content authors.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 7583b217-200c-4569-8f88-fe975c8ebd72
 ms.localizationpriority: high

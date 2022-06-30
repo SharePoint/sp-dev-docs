@@ -1,6 +1,7 @@
 ---
 title: eDiscovery in SharePoint
-ms.date: 09/25/2017
+description: Describes eDiscovery features in SharePoint and provides details on prerequisites, site holds, the eDiscovery programming model, and eDiscovery types.
+ms.date: 06/09/2022
 ms.prod: sharepoint
 ms.assetid: 45cb324a-75f5-444d-a0fa-5c223df19016
 ms.localizationpriority: high
@@ -93,7 +94,7 @@ SharePoint provides a Microsoft .NET server programming model that you can use t
 **Table 1. eDiscovery types**
 
 
-|**Type**|**Description**|
+|Type|Description|
 |:-----|:-----|
 | [Case](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Case.aspx) <br/> |Represents an eDiscovery case. Associated with a specified  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object, a case can be closed by a specified date or as a specific action. Cases can contain source groups, locations, mailboxes, custodians, saved searches, exports, export configurations for specified IDs, queries, and lists of all of the source groups, custodians, and locations in this **Case** object. <br/> |
 | [Custodian](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.Custodian.aspx) <br/> |Represents the person who is responsible for keeping records for an eDiscovery case.  <br/> |

@@ -1,6 +1,7 @@
 ---
 title: Search connector framework in SharePoint
-ms.date: 09/25/2017
+description: Describes the SharePoint indexing connectors and the connector framework, and how to create custom BCS indexing connectors to search external systems.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 38560a3b-69c6-4a56-97ca-3625bbd5755e
 ms.localizationpriority: high
@@ -145,7 +146,7 @@ To crawl external data, you have to add one of the content source types that sup
 **Table 1. Content source types that support BCS indexing connectors**
 
 
-|**Content source type**|**Description**|
+|Content source type|Description|
 |:-----|:-----|
 |Line of Business Data  <br/> |Use this content source for database and web service BCS indexing connectors.  <br/> |
 |Custom Repository  <br/> |Use this content source for .NET and custom BCS indexing connectors.  <br/> |
@@ -259,7 +260,7 @@ Table 2 describes the stereotyped operations that apply when you create a BCS in
 **Table 2. BCS stereotyped operations supported by Search in SharePoint**
 
 
-|**Operation**|**Description**|
+|Operation|Description|
 |:-----|:-----|
 |Finder  <br/> |Core operation required when creating a BCS connector. This operation retrieves the list of items of the external content source. See  [Implementing a Finder](https://msdn.microsoft.com/library/a0cb7cfe-8758-4057-aa85-03071536745e%28Office.15%29.aspx).  <br/> |
 |SpecificFinder  <br/> |Core operation required when creating a BCS connector. This operation retrieves individual items from the external content source. See  [Implementing a SpecificFinder](https://msdn.microsoft.com/library/9b6effa5-20ce-4ce7-a8dc-0fd601eb0f23%28Office.15%29.aspx).  <br/> |

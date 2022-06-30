@@ -1,6 +1,7 @@
 ---
 title: SharePoint Application Lifecycle Management
-ms.date: 09/25/2017
+description: Describes common application lifecycle management concepts and practices to apply to application development that uses SharePoint technologies.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a
 ms.localizationpriority: high
@@ -353,7 +354,7 @@ To achieve continuous integration, the build definition can be triggered when de
   
     
     
-ForSharePoint applications, developers should use the  [Office/SharePoint Continuous Integration with TFS 2012](http://officesharepointci.codeplex.com/) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure [Visual Studio Team Services](https://www.visualstudio.com/vso/) or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint Continuous Integration with TFS 2012 documentation](http://officesharepointci.codeplex.com/documentation).
+For SharePoint applications, developers should use the  [Office/SharePoint Continuous Integration with TFS 2012](https://social.technet.microsoft.com/wiki/contents/articles/25850.sharepoint-2013-continues-integration-with-tfs-2013-release-and-build-management-part-3.aspx) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure [Visual Studio Team Services](https://www.visualstudio.com/vso/) or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint Continuous Integration with TFS 2012 documentation](https://social.technet.microsoft.com/wiki/contents/articles/25850.sharepoint-2013-continues-integration-with-tfs-2013-release-and-build-management-part-3.aspx).
   
     
     

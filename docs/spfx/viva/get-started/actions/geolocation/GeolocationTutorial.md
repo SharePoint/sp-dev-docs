@@ -2,14 +2,13 @@
 title: Create an Adaptive Card Extension with geolocation action
 description: Step by step guide on creating Adaptive Card Extension for Geolocation action.
 ms.date: 04/06/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with geolocation action
 
 > [!NOTE]
 > This tutorial assumes that you have installed the SPFx v1.14
-> 
+>
 > For more information on installing the SPFx v1.14, see [SharePoint Framework v1.14 release notes](../../../../release-1.14.md).
 
 ## Scaffold an Adaptive Card Extension project
@@ -37,7 +36,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
 - Locate and open the file **./config/serve.json** in your project.
 - Locate the property `initialPage`:
- 
+
     ```json
     {
       "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
@@ -49,7 +48,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
 - Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-At this point, if you do `gulp serve`, then you will see the `GeoLocation` card: 
+At this point, if you do `gulp serve`, then you will see the `GeoLocation` card:
 
 ![See the GeoLocation card icon in the webpart toolbox](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionAppIcon.png)
 
@@ -65,7 +64,7 @@ In the Quick View, we will provide three buttons which will perform the followin
 - Let user choose a location from the map
 - Show a specific location on the map
 
-### Update the labels that will show up on the card 
+### Update the labels that will show up on the card
 
 Before we start adding the actions, let us first update the strings that you will see on the card.
 
@@ -93,7 +92,7 @@ Add the following:
 
 ```typescript
 ShowCurrentLocation: string;
-``` 
+```
 
 to the `IGeoLocationAdaptiveCardExtensionStrings` interface.
 
@@ -218,7 +217,7 @@ Here, add the following `states` to the `IGeoLocationAdaptiveCardExtensionState`
 ```typescript
 latitude: string;
 longitude: string;
-```  
+```
 
 Next, in the `onInit` function, change `this.state={}` to
 
@@ -251,16 +250,16 @@ longitude: "Longitude: " + this.state.longitude
 
 So far we have created defined our geolocation actions and wired in our states. Now we can finally implement the `onAction` function, which gives the ability to the Third Party Developer to decide what they wish to do with the location coordinates that the user has shared with them.
 
-For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts**) and import the `IActionArguments` interface, as follows:
+For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/geoLocation/quickView/QuickView.ts**) and import the `IGetLocationActionArguments` interface, as follows:
 
 ```typescript
-import IActionArguments from @microsoft/sp-adaptive-card-extension-base
+import {IGetLocationActionArguments} from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
 Finally, introduce the following `onAction` function in the QuickView class:
 
 ```typescript
-public onAction(action: IActionArguments): void {
+public onAction(action: IGetLocationActionArguments): void {
   if (action.type === 'VivaAction.GetLocation') {
     this.setState({
       latitude: action.location.latitude.toString(),

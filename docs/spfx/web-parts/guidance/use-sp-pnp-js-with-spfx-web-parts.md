@@ -1,8 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 02/24/2022
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ---
 
@@ -91,25 +90,25 @@ npm install @pnp/logging @pnp/sp --save
 
    ```JS
    'use strict';
-   
+
    const build = require('@microsoft/sp-build-web');
-   
+
    build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
-   
+
    var getTasks = build.rig.getTasks;
    build.rig.getTasks = function () {
      var result = getTasks.call(build.rig);
-   
+
      result.set('serve', result.get('serve-deprecated'));
-   
+
      return result;
    };
-   
+
    // ********* ADDED *******
    // disable tslint
    build.tslintCmd.enabled = false;
    // ********* ADDED *******
-   
+
    build.initialize(require('gulp'));
    ```
 
@@ -117,7 +116,7 @@ npm install @pnp/logging @pnp/sp --save
 
 Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within SPFx, we need to rely on the [context](/javascript/api/sp-webpart-base/webpartcontext) object supplied by the framework.
 
-There are [two ways](https://pnp.github.io/pnpjs/sp/docs/#getting-started-sharepoint-framework) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
+There are [two ways](https://pnp.github.io/pnpjs/getting-started) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
 
 1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp project configuratino file (more on this file below):
 
@@ -325,7 +324,7 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
   private _updateTitles = async (): Promise<void> => {
     try {
       //Will create a batch call that will update the title of each item
-      //  in the library by adding `-Updated` to the end. 
+      //  in the library by adding `-Updated` to the end.
       const [batchedSP, execute] = this._sp.batched();
 
       //Clone items from the state
@@ -377,7 +376,7 @@ You can delete existing items by selecting the trashcan icon, or you can add new
 
 ### Next steps
 
-The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/documentation/getting-started/).
+The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/getting-started).
 
 ## See also
 

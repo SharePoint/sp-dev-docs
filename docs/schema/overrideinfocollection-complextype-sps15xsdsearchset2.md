@@ -1,27 +1,26 @@
 ---
 title: "OverrideInfoCollection complexType (SPS15XSDSearchSet2)"
+description: "Describes the definition, type, element, and attribute information for the OverrideInfoCollection complexType (SPS15XSDSearchSet2)."
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 1aadf191-a236-b357-9acb-0201a21c2bbc
-description: "Last modified: March 09, 2015"
 ---
 
 # OverrideInfoCollection complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
-|||
+|Information|Location|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |tns:BaseInfoCollectionOfOverrideInfoTzWWwPjw  <br/> |
-   
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration|
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd|
+|**Extension base**|tns:BaseInfoCollectionOfOverrideInfoTzWWwPjw|
+
 ## Definition
 
 ```XML
@@ -31,14 +30,12 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 None.
-  
+
 ### Attributes
 
 None.
-  
-

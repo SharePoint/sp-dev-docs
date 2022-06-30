@@ -6,7 +6,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 8c6e3c71-4e1b-4068-bb03-6d5b0dcdd888
 ---
@@ -30,31 +29,31 @@ The following XML is an example of how an .ACTIONS file could be constructed to 
                    Or="or"
                    When="If">
           <Condition AppliesTo="list"
-                     Assembly="Assembly.Name, 
-                               Version=0.0.0.0, 
-                               Culture=neutral, 
+                     Assembly="Assembly.Name,
+                               Version=0.0.0.0,
+                               Culture=neutral,
                                PublicKeyToken=GUID"
-                     ClassName="Fully qualified 
+                     ClassName="Fully qualified
                                 class name"
                      FunctionName="Boolean method name
-                                   implemented in 
+                                   implemented in
                                    class"
-                     Name="Name to be displayed in 
+                     Name="Name to be displayed in
                            workflow editor"
                      Type="Advanced"
                      UsesCurrentItem="true">
-             <RuleDesigner Sentence="Sentence to be 
-                                     displayed to the 
+             <RuleDesigner Sentence="Sentence to be
+                                     displayed to the
                                      workflow editor">
                 <FieldBind DesignerType="Date"
-                           Field="Parameter that 
+                           Field="Parameter that
                                   FieldBind maps to"
                            Function="true"
                            Id="Unique positive Integer"
-                           Text="Text to be displayed 
+                           Text="Text to be displayed
                                  as a hyperlink"
-                           TypeFrom="Parameter that a 
-                                     non-Operator derives 
+                           TypeFrom="Parameter that a
+                                     non-Operator derives
                                      its type from"
                            Value="Reserved for future use">
                    <Option Name="Option1" Value="Value1" />
@@ -70,20 +69,20 @@ The following XML is an example of how an .ACTIONS file could be constructed to 
        </Conditions>
        <Actions>
           <Action Name="Action name displayed in editor">
-             <RuleDesigner Sentence="Sentence to be 
+             <RuleDesigner Sentence="Sentence to be
                                      displayed to the
                                      workflow editor">
                 <FieldBind DesignerType="CreateListItem"
-                           Field="Parameter that FieldBind 
+                           Field="Parameter that FieldBind
                                   maps to"
                            Function="true"
                            Id="Unique positive Integer"
-                           OperatorTypeFrom="Parameter 
-                                             Operator derives 
+                           OperatorTypeFrom="Parameter
+                                             Operator derives
                                              its type from"
-                           Text="Text to be displayed 
+                           Text="Text to be displayed
                                  as a hyperlink"
-                           TypeFrom="Parameter non-Operator 
+                           TypeFrom="Parameter non-Operator
                                      derives its type from"
                            Value="Reserved for future use">
                 </FieldBind>
@@ -99,11 +98,3 @@ The following XML is an example of how an .ACTIONS file could be constructed to 
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

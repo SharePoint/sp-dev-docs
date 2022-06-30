@@ -1,12 +1,12 @@
 ---
 title: Fields element (WorkflowConfig)
+description: Describes the definition, element, and attribute information for the Fields element (WorkflowConfig).
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
-- SharePoint workflows
-ms.prod: sharepoint
+- SharePoint Workflows
 ms.localizationpriority: medium
 ms.assetid: 6b49e059-250e-4b9f-b32e-72ca5fe150c9
 ---
@@ -28,44 +28,17 @@ Represents a collection of the data fields included on the workflow initiation f
 
 The following sections describe attributes, child elements, and parent elements.
 
-### Attributes
+|Attributes|
+|----------|
+|None.|
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>None.</p></td>
-</tr>
-</tbody>
-</table>
+|Child elements|
+|--------------|
+|[Field Element (Field)](field-element-field.md) (see Remarks)|
 
-### Child elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="field-element-field.md">Field Element (Field)</a></span> (see Remarks)</p></td>
-</tr>
-</tbody>
-</table>
-
-### Parent elements
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="initiation-element-workflowconfig.md">Initiation Element (WorkflowConfig)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+|Parent elements|
+|---------------|
+|[Initiation Element (WorkflowConfig)](initiation-element-workflowconfig.md)|
 
 ### Remarks
 
@@ -88,13 +61,13 @@ The element also contains a Fields element, which in turn contains a Field eleme
 This example has been edited for clarity.
 
 ```XML
-    <Initiation 
+    <Initiation
         URL="Workflows/Notify Me/Notify Me.aspx">
       <Fields>
-        <Field 
-          Name="Reason_for_Review" 
+        <Field
+          Name="Reason_for_Review"
           …
-          DisplayName="Reason for Review" 
+          DisplayName="Reason for Review"
           …
         >
           <Default>Standard review of new documents</Default>
@@ -112,8 +85,3 @@ This example has been edited for clarity.
 - [Workflow Development for Windows SharePoint Services](https://msdn.microsoft.com/library/office/ms414613.aspx)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Office SharePoint Designer Overview](https://msdn.microsoft.com/library/office/ms454098.aspx)
-
-
-
-
-

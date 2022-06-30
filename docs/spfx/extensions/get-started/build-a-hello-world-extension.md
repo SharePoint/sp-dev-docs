@@ -1,8 +1,7 @@
 ---
 title: Build your first SharePoint Framework Extension (Hello World part 1)
 description: Create an extension project, and then code and debug your Application Customizer.
-ms.date: 05/31/2022
-ms.prod: sharepoint
+ms.date: 06/13/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -64,7 +63,7 @@ You can also follow the steps in this article by watching the video on the Micro
 1. Open **./src/extensions/helloWorld/HelloWorldApplicationCustomizer.manifest.json**.
 
     This file defines your extension type and a unique identifier for your extension. You’ll need this ID later when you debug and deploy your extension to SharePoint.
-    
+
      ```json
      {
        "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-extension-manifest.schema.json",
@@ -73,7 +72,7 @@ You can also follow the steps in this article by watching the video on the Micro
         "alias": "HelloWorldApplicationCustomizer",
         "componentType": "Extension",
         "extensionType": "ApplicationCustomizer",
-        
+
         // The "*" signifies that the version should be taken from the package.json
         "version": "*",
         "manifestVersion": 2,
@@ -135,7 +134,7 @@ You can't use the SharePoint Workbench to test SharePoint Framework Extensions. 
 
 1. Update pageURL to match your own tenant, which you want to use for testing. You can use any URL with modern experience. *For example, a welcome page of a new group associated team site, which would mean something like the following URL:*
 
-    **https://sppnp.sharepoint.com/sites/yoursite/SitePages/Home.aspx**
+    **`https://sppnp.sharepoint.com/sites/yoursite/SitePages/Home.aspx`**
 
     Your **serve.json** file should look similar to the following (updated with your tenant details):
 

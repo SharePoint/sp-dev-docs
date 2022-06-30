@@ -1,10 +1,10 @@
 ---
 title: OfficeItemProperties element
+description: Describes the definition, element, and attribute information for the OfficeItemProperties element, which describes the fields of an external content type.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e9509ca9-8dbe-48d9-b90a-bf0dd27fbb36
 ---
@@ -76,11 +76,3 @@ None.
 <br/>
 
 <br/>
-
-
-
-
-
-
-
-

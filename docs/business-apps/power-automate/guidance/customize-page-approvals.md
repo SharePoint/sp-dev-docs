@@ -1,7 +1,7 @@
 ---
 title: Customize SharePoint page approvals to meet your needs
 description: With the help of flows in Power Automate, you can configure page approval to add to the standard publishing process for a site. The default publishing flow meets your basic needs.
-ms.date: 07/12/2020
+ms.date: 06/28/2022
 search.app:
   - Flow
 search.appverid: met150
@@ -44,5 +44,3 @@ Occasionally, the default approval action may not help in tracking and auditing 
 ![Parallel approvals in flow](../../../images/parallel-approvals-in-flow.png)
 
 To learn more, see [Create parallel approval workflows with Power Automate](/power-automate/parallel-modern-approvals).
-
-

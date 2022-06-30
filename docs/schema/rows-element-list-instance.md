@@ -1,10 +1,10 @@
 ---
 title: Rows Element (List Instance)
+description: Describes the definition, element, and attribute information for the Rows Element (List Instance), which contains a collection of Row elements.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 28b2c8b4-5df8-4430-97ef-663a7cc30142
 ---
@@ -84,11 +84,3 @@ The **Rows** element is used within the [Data](data-element-site.md) element of 
 For an example of how this element is used, see [List Instances](list-instances.md).
 
 <br/>
-
-
-
-
-
-
-
-

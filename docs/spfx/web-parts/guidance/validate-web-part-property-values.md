@@ -2,7 +2,6 @@
 title: Validate web part property values
 description: Validate property values in SharePoint Framework client-side web parts by validating the value directly inside a web part's code, or by calling an external API.
 ms.date: 02/11/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

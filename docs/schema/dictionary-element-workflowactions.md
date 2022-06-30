@@ -1,12 +1,12 @@
 ---
 title: Dictionary element (WorkflowActions)
+description: Describes the Dictionary element (WorkflowActions) and provides a definition, and the elements and attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e4ae6f71-70d7-4a91-a3f5-4c6604c2b0ff
 ---
@@ -73,10 +73,3 @@ None
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-

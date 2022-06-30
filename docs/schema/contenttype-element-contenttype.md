@@ -1,10 +1,10 @@
 ---
 title: ContentType Element (ContentType)
+description: Outlines information, a definition, example, elements and attributes for the ContentType element in Sharepoint.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 6/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ce8f6c58-a488-4eb0-a5fb-941e97b2bd92
 ---
@@ -232,8 +232,3 @@ The following example is the content type definition of the **Document** content
 - [Content Types](https://msdn.microsoft.com/library/f5e56c7c-f699-466c-a7ad-3d91a7d219a1(Office.15).aspx)
 - [How to: Add a Content Type to a Site](https://msdn.microsoft.com/library/8c448bfb-4036-451c-ac7d-2eccf13ccd5e(Office.15).aspx)
 - [How to: Add a Content Type to a SharePoint List](https://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666(Office.15).aspx)
-
-
-
-
-

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d0a43250-3ad2-4f55-8ac5-7d82e32eb9cb
 ---
@@ -18,14 +17,14 @@ Represents a Feature on which activation of the current Feature depends.
 ## Definition
 
 ```XML
-<ActivationDependency 
-  FeatureDescription = string 
-  FeatureId = Guid 
-  FeatureTitle = string 
-  MinimumVersion = string 
-  SolutionId = Guid 
-  SolutionName = string 
-  SolutionTitle = string 
+<ActivationDependency
+  FeatureDescription = string
+  FeatureId = Guid
+  FeatureTitle = string
+  MinimumVersion = string
+  SolutionId = Guid
+  SolutionName = string
+  SolutionTitle = string
   SolutionUrl = string>
 </ActivationDependency>
 ```
@@ -122,11 +121,3 @@ Microsoft SharePoint Foundation does not support a cross-scope activation depend
 ## Example
 
 For an example of how this element is used, see [Feature.xml Files](feature-xml-files.md).
-
-
-
-
-
-
-
-

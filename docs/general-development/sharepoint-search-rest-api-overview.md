@@ -1,7 +1,7 @@
 ---
 title: SharePoint Search REST API overview
 description: Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
-ms.date: 04/12/2022
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -14,7 +14,7 @@ When you query in the context of a SharePoint Online user, you get results from:
 - Content in SharePoint Online site collections
 - Content in Microsoft 365 groups
 - Shared OneDrive for Business content (content that's accessible for others than the owner of the OneDrive for Business)
-- Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](https://docs.microsoft.com/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint)
+- Content from SharePoint Server that's been indexed via a cloud search Service application. [Learn about cloud hybrid search.](/sharepoint/hybrid/learn-about-cloud-hybrid-search-for-sharepoint)
 
 ## Content Delivery Network (CDN) Support
 

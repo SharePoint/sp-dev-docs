@@ -1,10 +1,10 @@
 ---
 title: Content Type Definitions
+description: Provides XML schema definition, elements and an example for the content type definitions in Sharepoint.
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: edb7c69f-736d-4808-b137-48b6861b4caa
 ---
@@ -43,7 +43,7 @@ The following list maps the relationships between elements in the schema definit
 
 ## Example
 
-The following example shows an element manifest for a Feature that provisions two files to use as document templates, creates four custom site columns, and creates three site content types. 
+The following example shows an element manifest for a Feature that provisions two files to use as document templates, creates four custom site columns, and creates three site content types.
 
 Note that the first new content type, Financial Document, is derived from the built-in Document content type. Financial Document, in turn, is the parent content type for the new Purchase Order and Invoice content types. In the definitions for both of these last two content types, the built-in field Title is referenced so that its DisplayName attribute can be given a custom value.
 
@@ -157,11 +157,3 @@ Note that the first new content type, Financial Document, is derived from the bu
 - [Deploying Content Types](https://msdn.microsoft.com/library/f680072c-3759-4141-b027-165ac0795a72(Office.15).aspx)
 - [How to: Add a Content Type to a Site](https://msdn.microsoft.com/library/8c448bfb-4036-451c-ac7d-2eccf13ccd5e(Office.15).aspx)
 - [How to: Add a Content Type to a SharePoint List](https://msdn.microsoft.com/library/5ae6e295-a406-4f90-920f-030c0dfcd666(Office.15).aspx)
-
-
-
-
- 
-
-
-

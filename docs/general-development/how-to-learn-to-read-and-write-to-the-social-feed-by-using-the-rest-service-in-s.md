@@ -1,6 +1,7 @@
 ---
 title: Read and write to the social feed by using the REST service in SharePoint
-ms.date: 09/25/2017
+description: Describes how to create a SharePoint-hosted app that uses the REST service to publish a post and get a personal feed for the current user.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 1da8d484-3666-42c3-8a8f-8b3ef93e96e9
 ms.localizationpriority: medium
@@ -17,7 +18,7 @@ Create a SharePoint-hosted app that uses the REST service to publish a post and 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
   
 > [!NOTE]
-> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](https://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to find out how to sign up for a Developer Site and start using Napa.
+> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) to find out how to sign up for a Developer Site and start using Napa.
   
     
     

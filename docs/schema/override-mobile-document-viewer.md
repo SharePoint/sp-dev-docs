@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Mobile Document Viewer XML
@@ -15,9 +14,9 @@ description: Specifies an alternative URL to which a mobile device is redirected
 # Override element (Mobile Document Viewer)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies an alternative URL to which a mobile device is redirected when it can use an alternative viewer to open the files of the specified type.
-  
+
 ```XML
 <Override ... />
 ```
@@ -33,21 +32,21 @@ The following sections describe attributes, child elements, and parent elements.
 |**FilePath** <br/> |The website-relative path to the request handler for devices that are capable of opening documents of the specified type in some other viewer.  <br/> |
 |**AppendSourceUrl** <br/> |**True** if a source query ID should be appended to the URL of the handler; otherwise, **false**. The source query value is the path to the document.  <br/> |
 |**OueryID** <br/> |An alternative query for the one that is specified in the parent \<MobileDocViewer\> element.  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 |**Element**|**Description**|
 |:-----|:-----|
 |[BrowserCondition](browsercondition-mobile-document-viewer.md) <br/> |Identifies a browser condition under which redirection to a page that hosts a viewer for a specified type of document is overridden because the browser can open documents of a specified type directly.  <br/> |
-   
+
 ## Example
 
 The following example shows this element in use.
-  
+
 ```XML
 <MobileDocViewers>
   <MobileDocViewer Name="docx" FilePath="/_layouts/mobile/mWord.aspx" FeatureId="8DFAF93D-E23C-4471-9347-07368668DDAF" QueryId="doc" AppendSourceUrl="true" >
@@ -62,4 +61,3 @@ The following example shows this element in use.
 ## See also
 
 - [Developing Mobile Document Viewers](https://msdn.microsoft.com/library/acd5386d-7808-4fd8-843f-0a4ac9ddd6b0%28Office.15%29.aspx)
-

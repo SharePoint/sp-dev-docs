@@ -6,7 +6,6 @@ ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9758b06a-a1ff-4352-bc25-7fd84a8932bd
 ---
@@ -17,14 +16,14 @@ ms.assetid: 9758b06a-a1ff-4352-bc25-7fd84a8932bd
 
 The Actions schema that is used to validate custom .ACTIONS files does not actually exist in the form of an .xsd file on the server file system. The following XML is only a representation of that schema, to ease development. Valid values have been furnished where available and strings that represent the type of data that is required for an attribute have also been provided.
 
-> [!NOTE] 
+> [!NOTE]
 > This schema reference is for XML development purposes and should be used only when creating .ACTIONS files in a developer environment, not a production environment. This XML has been formatted for readability.
 
 ## Actions schema example
 
 ```XML 
     <?xml version="1.0" encoding="utf-8"?>
-    <xs:schema elementFormDefault="qualified"  
+    <xs:schema elementFormDefault="qualified"
                xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:element name="WorkflowInfo">
         <xs:complexType>
@@ -32,20 +31,20 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
             <xs:element name="Conditions">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:choice minOccurs="0" 
+                  <xs:choice minOccurs="0"
                              maxOccurs="unbounded">
-                    <xs:element name="Default" 
+                    <xs:element name="Default"
                                 type="defaultElementType"
-                                maxOccurs="1" 
+                                maxOccurs="1"
                                 minOccurs="0" />
-                    <xs:element name="Condition" 
-                                minOccurs="0" 
+                    <xs:element name="Condition"
+                                minOccurs="0"
                                 maxOccurs="unbounded">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="RuleDesigner" 
+                          <xs:element name="RuleDesigner"
                                       type="ruleDesignerType" />
-                          <xs:element name="Parameters" 
+                          <xs:element name="Parameters"
                                       type="parametersType" />
                         </xs:sequence>
                         <xs:attribute name="Type">
@@ -58,20 +57,20 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                         <xs:attribute name="Name">
                           <xs:simpleType>
                             <xs:restriction base="xs:string">
-                              <xs:enumeration value="Name 
+                              <xs:enumeration value="Name
                                      displayed Workflow editor."/>
                             </xs:restriction>
                           </xs:simpleType>
                         </xs:attribute>
-                        <xs:attribute name="AppliesTo" 
+                        <xs:attribute name="AppliesTo"
                                       type="appliesToTypes" />
-                        <xs:attribute name="UsesCurrentItem" 
+                        <xs:attribute name="UsesCurrentItem"
                                       type="xs:boolean" />
                         <xs:attribute name="FunctionName">
                           <xs:simpleType>
                             <xs:restriction base="xs:string">
                               <xs:enumeration value="Boolean
-                                                     method 
+                                                     method
                                                      implemented
                                                      in class" />
                             </xs:restriction>
@@ -80,10 +79,10 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                         <xs:attribute name="Assembly">
                           <xs:simpleType>
                             <xs:restriction base="xs:string">
-                              <xs:enumeration 
-                                       value="Assembly.Name, 
-                                       Version=0.0.0.0, 
-                                       Culture=neutral, 
+                              <xs:enumeration
+                                       value="Assembly.Name,
+                                       Version=0.0.0.0,
+                                       Culture=neutral,
                                        PublicKeyToken=PublicKeyToken" />
                             </xs:restriction>
                           </xs:simpleType>
@@ -142,16 +141,16 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
             <xs:element name="Actions">
               <xs:complexType>
                 <xs:sequence>
-                  <xs:choice minOccurs="0" 
+                  <xs:choice minOccurs="0"
                              maxOccurs="unbounded">
-                    <xs:element name="Default" 
+                    <xs:element name="Default"
                                 type="defaultElementType" />
                     <xs:element name="Action">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:choice minOccurs="0" 
+                          <xs:choice minOccurs="0"
                                      maxOccurs="unbounded">
-                            <xs:element name="Parameters" 
+                            <xs:element name="Parameters"
                                         type="parametersType" />
                             <xs:element name="RuleDesigner"
                                         type="ruleDesignerType" />
@@ -168,7 +167,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                         <xs:attribute name="ClassName">
                           <xs:simpleType>
                             <xs:restriction base="xs:string">
-                              <xs:enumeration value="Namespace qualified 
+                              <xs:enumeration value="Namespace qualified
                                                      class name" />
                             </xs:restriction>
                           </xs:simpleType>
@@ -176,10 +175,10 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                         <xs:attribute name="Assembly">
                           <xs:simpleType>
                             <xs:restriction base="xs:string">
-                              <xs:enumeration 
-                                     value="Assembly.Name, 
-                                     Version=0.0.0.0, 
-                                     Culture=neutral, 
+                              <xs:enumeration
+                                     value="Assembly.Name,
+                                     Version=0.0.0.0,
+                                     Culture=neutral,
                                      PublicKeyToken=PublicKeyToken" />
                             </xs:restriction>
                           </xs:simpleType>
@@ -187,12 +186,12 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                         <xs:attribute name="Category">
                           <xs:simpleType>
                             <xs:restriction base="xs:string">
-                              <xs:enumeration value="Filter 
+                              <xs:enumeration value="Filter
                                                      category" />
                             </xs:restriction>
                           </xs:simpleType>
                         </xs:attribute>
-                        <xs:attribute name="CreatesTask" 
+                        <xs:attribute name="CreatesTask"
                                       type="xs:boolean" />
                         <xs:attribute name="CreatesInList">
                           <xs:simpleType>
@@ -203,11 +202,11 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                             </xs:restriction>
                           </xs:simpleType>
                         </xs:attribute>
-                        <xs:attribute name="AppliesTo" 
+                        <xs:attribute name="AppliesTo"
                                       type="appliesToTypes" />
-                        <xs:attribute name="ListModeration" 
+                        <xs:attribute name="ListModeration"
                                       type="xs:boolean" />
-                        <xs:attribute name="UsesCurrentItem" 
+                        <xs:attribute name="UsesCurrentItem"
                                       type="xs:boolean" />
                       </xs:complexType>
                     </xs:element>
@@ -244,16 +243,16 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
          <xs:element name="FieldBind" minOccurs="0" maxOccurs="unbounded">
            <xs:complexType>
              <xs:sequence>
-               <xs:element name="Option" 
-                           minOccurs="0" 
+               <xs:element name="Option"
+                           minOccurs="0"
                            maxOccurs="unbounded">
                  <xs:complexType>
                    <xs:sequence>
                    </xs:sequence>
                    <xs:attribute name="Name" type="xs:string" />
-                   <xs:attribute name="TypeFilter" 
+                   <xs:attribute name="TypeFilter"
                                  type="xs:string" />
-                   <xs:attribute name="UnaryHides" 
+                   <xs:attribute name="UnaryHides"
                                  type="xs:string" />
                    <xs:attribute name="Value" type="xs:string" />
                  </xs:complexType>
@@ -262,7 +261,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
              <xs:attribute name="Field">
                <xs:simpleType>
                  <xs:restriction base="xs:string">
-                   <xs:enumeration value="Parameter name that this 
+                   <xs:enumeration value="Parameter name that this
                                           FieldBind maps to" />
                  </xs:restriction>
                </xs:simpleType>
@@ -270,7 +269,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
              <xs:attribute name="OperatorTypeFrom">
                <xs:simpleType>
                  <xs:restriction base="xs:string">
-                   <xs:enumeration value="Parameter that an Operator 
+                   <xs:enumeration value="Parameter that an Operator
                                           derives its type from" />
                  </xs:restriction>
                </xs:simpleType>
@@ -279,7 +278,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                <xs:simpleType>
                  <xs:restriction base="xs:string">
                    <xs:enumeration value="Parameter that non-
-                                          Operator derives its type 
+                                          Operator derives its type
                                           from" />
                  </xs:restriction>
                </xs:simpleType>
@@ -330,7 +329,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
                 <xs:attribute name="Text">
                   <xs:simpleType>
                     <xs:restriction base="xs:string">
-                      <xs:enumeration value="Text to be displayed 
+                      <xs:enumeration value="Text to be displayed
                                              as a hyperlink" />
                     </xs:restriction>
                   </xs:simpleType>
@@ -341,7 +340,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
           <xs:attribute name="Sentence">
             <xs:simpleType>
               <xs:restriction base="xs:string">
-                <xs:enumeration value="Sentence to be displayed to the 
+                <xs:enumeration value="Sentence to be displayed to the
                                        workflow editor" />
               </xs:restriction>
             </xs:simpleType>
@@ -354,8 +353,8 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
         </xs:complexType>
         <xs:complexType name="parametersType">
           <xs:sequence>
-            <xs:element name="Parameter" 
-                        minOccurs="0" 
+            <xs:element name="Parameter"
+                        minOccurs="0"
                         maxOccurs="unbounded">
         <xs:complexType>
         <xs:sequence />
@@ -372,7 +371,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
         <xs:attribute name="Name">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="Parameter name referred to in 
+            <xs:enumeration value="Parameter name referred to in
                                    FieldBind Field attribute" />
           </xs:restriction>
         </xs:simpleType>
@@ -380,7 +379,7 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
       <xs:attribute name="InitialValue">
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="Initial value displayed 
+            <xs:enumeration value="Initial value displayed
                                    by FieldBind control" />
                 </xs:restriction>
               </xs:simpleType>
@@ -406,11 +405,3 @@ The Actions schema that is used to validate custom .ACTIONS files does not actua
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

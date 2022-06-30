@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Defines the query for a view.
 # Query element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines the query for a view.
-  
+
 ```XML
 <Query>  <Where>
     ...
@@ -39,26 +38,26 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [GroupBy](groupby-element-query.md)
 - [OrderBy](orderby-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Parent elements
 
 - [View](view-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
+- Maximum: 1
+
 ## Example
 
-The following example queries the Status field for cases where the value does not equal Completed or is **null**, returning the results according to a descending sort on the Modified field. The **Where** element contains an **Or** element to group the filters. 
-  
+The following example queries the Status field for cases where the value does not equal Completed or is **null**, returning the results according to a descending sort on the Modified field. The **Where** element contains an **Or** element to group the filters.
+
 ```XML
 <Query>
   <OrderBy>
@@ -82,4 +81,3 @@ The following example queries the Status field for cases where the value does no
 
 - [Query schema](query-schema.md)
 - [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-

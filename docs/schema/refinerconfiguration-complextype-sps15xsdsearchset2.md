@@ -4,7 +4,6 @@ manager: arnek
 ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ed726d55-576d-1801-4bc7-310389d8e93b
 description: "Describes the RefinerConfiguration complexType (SPS15XSDSearchSet2)."
@@ -12,8 +11,8 @@ description: "Describes the RefinerConfiguration complexType (SPS15XSDSearchSet2
 
 # RefinerConfiguration complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
 |Info type|Value|
@@ -21,7 +20,7 @@ description: "Describes the RefinerConfiguration complexType (SPS15XSDSearchSet2
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
 |**Extension base** <br/> |None  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -40,8 +39,8 @@ description: "Describes the RefinerConfiguration complexType (SPS15XSDSearchSet2
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
@@ -52,9 +51,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 |[Intervals](intervals-element-refinerconfiguration-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
 |[Resolution](resolution-element-refinerconfiguration-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
 |[Type](type-element-refinerconfiguration-complextypesps15xsdsearchset2.md) <br/> |tns:RefinerType  <br/> ||
-   
+
 ### Attributes
 
 None.
-  
-

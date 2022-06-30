@@ -1,12 +1,12 @@
 ---
 title: Modification_GUID_Name Element (Workflow)
+description: Describes the Modification_GUID_Name element (Workflow) and provides a definition, the elements and attributes, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
 keywords:
 - workflow definition schema, modification_guid_name element (workflow)
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ca629084-42d0-4e22-9559-34ed1158b30a
 ---
@@ -68,7 +68,7 @@ None
 
 The modification name is displayed as the link text for the modification link on the workflow status page.
 
-To specify a modification form, you must first set the <span sdata="cer" target="P:Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification.ModificationId"><span class="nolink">ModificationId</span></span> property of the <span sdata="cer" target="T:Microsoft.SharePoint.WorkflowActions.EnableWorkflowModification"><span class="nolink">EnableWorkflowModification</span></span> activity to the GUID you generated for your modification form. You can have multiple modifications available in your workflow; you must assign each modification a unique identifier.
+To specify a modification form, you must first set the ModificationId property of the EnableWorkflowModification activity to the GUID you generated for your modification form. You can have multiple modifications available in your workflow; you must assign each modification a unique identifier.
 
 ## Example
 
@@ -85,13 +85,3 @@ The following example specifies a modification name of **Add a New Reviewer**. T
 - [Workflow Definitions](workflow-definitions.md)
 - [Workflows in Windows SharePoint Services](https://msdn.microsoft.com/library/be0888d4-20b2-4d39-bf28-2d8a71829d8e(Office.15).aspx)
 - [Workflow Deployment Using Features](https://msdn.microsoft.com/library/ad294f09-483d-4e87-bd19-fa37795ed558(Office.15).aspx)
-
-
-
-
-
-
-
-
-
-

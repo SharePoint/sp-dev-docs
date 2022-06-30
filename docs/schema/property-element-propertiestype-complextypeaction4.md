@@ -1,15 +1,15 @@
 ---
 title: Property element (propertiesType complexType)
+description: Describes the Property element (propertiesType complexType) and provides the usage, the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 86e5f37b-d8ec-2825-2d4d-03da34be47d0
 ---
 
-# Property element (propertiesType complexType) 
+# Property element (propertiesType complexType)
 
 (Action4)
 
@@ -59,7 +59,7 @@ A property of the parent [Block element (Blocks element) (WorkflowInfo element) 
          <xs:attribute name="DisplayName" type="s:string" />
          <xs:attribute name="Description" type="s:string" />
          <xs:attribute name="TypeFrom" type="s:string" />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -151,11 +151,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

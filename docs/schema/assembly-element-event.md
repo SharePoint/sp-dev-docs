@@ -1,10 +1,10 @@
 ---
 title: Assembly element (Event)
+description: Discusses the definition, elements and attributes for Assembly element (Event) which is used to handle events through the receiver.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 92b6f66c-a2af-4505-9287-91c29716a052
 ---
@@ -70,11 +70,3 @@ The **Assembly** element contains a string in the following format:
 ## Example
 
 For an example of how this element is used, see [Event Registrations](event-registrations.md).
-
-
-
-
-
-
-
-
