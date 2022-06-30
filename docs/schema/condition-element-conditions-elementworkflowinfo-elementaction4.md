@@ -1,7 +1,8 @@
 ---
 title: Condition element
+description: Describes the Condition element, which represents a part of a rule sentence that can be displayed in a declarative, rules-based, code-free workflow editor.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -33,7 +34,7 @@ Represents a Condition statement, which is part of a rule sentence that can be d
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

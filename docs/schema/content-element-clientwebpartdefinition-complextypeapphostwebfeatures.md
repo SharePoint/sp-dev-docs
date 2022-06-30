@@ -1,7 +1,8 @@
 ---
 title: Content element (ClientWebPartDefinition complexType)
+description: Describes the Content element (ClientWebPartDefinition complexType), including element information, attributes, and parent and child elements.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -17,7 +18,7 @@ ms.assetid: afe44678-bdae-e38e-297e-bcfc6ffcb020
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  | ClientWebPartDefinitionContent |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

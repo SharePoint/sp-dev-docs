@@ -1,7 +1,8 @@
 ---
 title: CompositeSteps element (WorkflowInfo)
+description: Describes the CompositeSteps element (WorkflowInfo), which is a container for the steps in a composite workflow activity.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
