@@ -35,7 +35,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 |Attribute|Description|
 | --- | --- |
-|**ListTemplateId**|Optional **Text**. Specifies the index of the list template to which the event receiver applies. For a list of the default list template types, see [SPListTemplateType](T:Microsoft.SharePoint.SPListTemplateType).|
+|**ListTemplateId**|Optional **Text**. Specifies the index of the list template to which the event receiver applies. For a list of the default list template types, see [SPListTemplateType](///dotnet/api/microsoft.sharepoint.splisttemplate.type).|
 |**ListTemplateOwner**|Optional **Text**. Specifies the GUID of the list template owner if the list template is registered through Features, or the name of the site definition if the list template is registered by a site definition.|
 |**ListUrl**|Optional **string**. Specifies the URL of the list to which the event receiver applies.|
 |**RootWebOnly**|Optional **Boolean**. **True** if the event receiver applies only to the root Web; otherwise, **False**.|
