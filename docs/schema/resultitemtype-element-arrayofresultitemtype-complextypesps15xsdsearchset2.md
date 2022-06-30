@@ -16,6 +16,7 @@ description: "Describes the ResultItemType element (ArrayOfResultItemType comple
 ## Element information
 
 |Information type|Value|
+|:-----|:-----|
 |**Element type**|tns:ResultItemType |
 |**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
 |**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd |
