@@ -21,7 +21,7 @@ ms.assetid: d50c57c6-a824-6c46-fe86-4a3c1da3ddcb
 
 ## Type information
 
-|   |   |
+|Information type|Value|
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
 | **Schema file**  | appmanifest.xsd |
