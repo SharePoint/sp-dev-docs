@@ -1,12 +1,12 @@
 ---
 title: "QueryTransform element (Source complexType) (SPS15XSDSearchSet1)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
 ms.assetid: 7bc707da-2c18-4112-ef3e-51d64f59d34a
-description: "Last modified: March 09, 2015"
+description: "Describes the QueryTransform element (Source complexType) (SPS15XSDSearchSet1). Applies to SharePoint Server 2013."
 ---
 
 # QueryTransform element (Source complexType) (SPS15XSDSearchSet1)
@@ -15,7 +15,7 @@ description: "Last modified: March 09, 2015"
 
 ## Element information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Element type** <br/> |q3:QueryTransform  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration.Query  <br/> |

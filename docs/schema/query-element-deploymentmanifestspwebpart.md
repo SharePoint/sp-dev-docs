@@ -1,12 +1,12 @@
 ---
 title: "Query Element (DeploymentManifest - SPWebPart)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
 ms.assetid: 6f38c731-c8b2-44e4-8292-b65f888870c8
-description: "Last modified: March 09, 2015"
+description: "Describes the Query Element (DeploymentManifest - SPWebPart), which represents a query on an instance of a Windows SharePoint Services 3.0 view SPView object."
 ---
 
 # Query Element (DeploymentManifest - SPWebPart)
