@@ -1,7 +1,8 @@
 ---
 title: "ActivationDependencies element (Solution)"
+description: Discusses the definition, elements, and attributes for ActivationDependencies element (Solution).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 07/01/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium

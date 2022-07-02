@@ -1,7 +1,8 @@
 ---
 title: Actions element (WorkflowInfo)
+description: Discusses the definition, elements and attributes for Actions element (WorkflowInfo) which can be used to build workflows that address business needs.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 07/01/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
