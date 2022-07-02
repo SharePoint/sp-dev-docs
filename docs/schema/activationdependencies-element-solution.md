@@ -11,7 +11,6 @@ api_name:
 api_type:
 - schema
 ms.assetid: d6ea8200-bea4-4366-9244-e0eceda99942
-description: Specifies the activation dependencies for a solution.
 ---
 
 # ActivationDependencies element (Solution)
