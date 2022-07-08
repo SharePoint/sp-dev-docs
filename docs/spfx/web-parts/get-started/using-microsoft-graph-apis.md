@@ -100,7 +100,7 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
 1. Add the following `import` statements after the existing `import` statements at the top fo the file:
 
     ```typescript
-    import { MSGraphClient } from '@microsoft/sp-http';
+    import { MSGraphClientV3 } from '@microsoft/sp-http';
     import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
     ```
 
