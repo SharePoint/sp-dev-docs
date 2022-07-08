@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # SPO provided Migration Azure container and queue
 
-Microsoft’s Migration API requires the use of an Azure container for temporary storage. To simplify the process, you are now provided with a default container while using the migration API. If you choose, you can still provide your own Azure container.
+Microsoft’s Migration API requires the use of an Azure container for temporary storage. To simplify the process, you are now provided with a default container while using the migration API. To use the provided container you will need to [decorate your traffic correctly](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#how-to-decorate-your-http-traffic) to avoid throttling. If you choose, you can still provide your own Azure container.
 
 ## Encryption is required
 
