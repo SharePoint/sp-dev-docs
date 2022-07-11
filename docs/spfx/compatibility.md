@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development tools and libraries compatibility
 description: Find which versions of the SharePoint Framework are compatible with each version of SharePoint, development tools and libraries.
-ms.date: 06/23/2022
+ms.date: 07/11/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework development tools and libraries compatibility
@@ -33,12 +33,12 @@ The following table lists SharePoint Framework and compatible versions of common
 
 |              SPFx               |   Node.js (LTS) |                    NPM                    |   TypeScript   |    React    |
 | ------------------------------- | --------------- | ----------------------------------------- | -------------- | ----------- |
-| [1.15](release-1.15.md)         | v12,  v14,  v16 | v5, v6, v7, v8                            | v4.5           | v16.13.1    |
-| [1.14](release-1.14.md)         | v12,  v14       | v5, v6                                    | v3.9           | v16.13.1    |
+| [1.15.0](release-1.15.md)       | v12,  v14,  v16 | v5, v6, v7, v8                            | v4.5           | v16.13.1    |
+| [1.14.0](release-1.14.md)       | v12,  v14       | v5, v6                                    | v3.9           | v16.13.1    |
 | [1.13.1](release-1.13.1.md)     | v12,  v14       | v5, v6                                    | v3.9           | v16.13.1    |
 | [1.13.0](release-1.13.md)       | v12,  v14       | v5, v6                                    | v3.9           | v16.13.1    |
 | [1.12.1](release-1.12.1.md)     | v10, v12,  v14  | v5, v6                                    | v3.7           | v16.9.0     |
-| ~~[1.12.0](release-1.12.0.md)~~ | ~~ v12,  v10~~  | ~~v5, v6~~                                | ~~v3.7~~       | ~~v16.9.0~~ |
+| ~~[1.12.0](release-1.12.0.md)~~ | ~~v12,  v10~~   | ~~v5, v6~~                                | ~~v3.7~~       | ~~v16.9.0~~ |
 | [1.11.0](release-1.11.0.md)     | v10             | v5, v6                                    | v3.3           | v16.8.5     |
 | [1.10.0](release-1.10.0.md)     | v8,  v10        | v5, v6                                    | v3.3           | v16.8.5     |
 | [1.9.1](release-1.9.1.md)       | v8,  v10        | v5, v6                                    | v2.9           | v16.8.5     |
