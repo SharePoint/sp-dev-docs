@@ -15,6 +15,8 @@ Footers are a common branding / navigation control in websites and portals. Shar
 
 > [!IMPORTANT]
 > Footer will be enabled by default for all new communication sites after the feature is rolled out. Along with this update, the content bar (also referred to as the “social bar”) - which contains the Like, Comment, View and Save for Later icons - will be docked permanently on top of the Comments section on all modern pages and news posts.
+>
+> Footers don't appear in sites on mobile devices or apps.
 
 ## Sample footer
 
