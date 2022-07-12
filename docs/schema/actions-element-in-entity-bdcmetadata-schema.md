@@ -2,7 +2,7 @@
 title: Actions element in Entity (BDCMetadata Schema)
 description: Specifies a list of actions of an external content type.
 manager: soliver
-ms.date: 07/01/2022
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -20,7 +20,7 @@ Specifies a list of actions of an external content type.
 
 **Schema**: BDCMetadata
 
-```XML
+```xml
 <Actions></Actions>
 ```
 

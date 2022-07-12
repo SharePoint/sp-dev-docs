@@ -2,7 +2,7 @@
 title: Actions element in Entity (BDCMetadataResource Schema)
 description: Details on the Actions element in Entity (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 07/01/2022
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ For more information, see [Actions element in Entity (BDCMetadata Schema)](actio
 
 **Schema**: BDCMetadataResource
 
-```
+```xml
 <Actions></Actions>
 ```
 

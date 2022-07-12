@@ -2,7 +2,7 @@
 title: "ActivationDependencies element (Solution)"
 description: Discusses the definition, elements, and attributes for ActivationDependencies element (Solution).
 manager: soliver
-ms.date: 07/01/2022
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.assetid: d6ea8200-bea4-4366-9244-e0eceda99942
 
 Specifies the activation dependencies for a solution.
 
-```XML
+```xml
 <ActivationDependencies />
 ```
 
