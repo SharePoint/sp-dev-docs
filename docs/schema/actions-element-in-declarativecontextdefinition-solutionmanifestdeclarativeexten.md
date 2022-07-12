@@ -2,7 +2,7 @@
 title: Actions element in DeclarativeContextDefinition
 description: Discusses the definition, elements and attributes for Actions element in DeclarativeContextDefinition.
 manager: soliver
-ms.date: 07/01/2022
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -21,8 +21,8 @@ Lists the actions associated with the context definition.
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
-```
-<Actions > </Actions>
+```xml
+<Actions> </Actions>
 ```
 
 ## Elements and attributes
@@ -45,7 +45,3 @@ None.
 | Element | Description |
 | --- | --- |
 | [DeclarativeContextDefinition element (SolutionManifestDeclarativeExtensions Schema)](declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md) | The context definition that is associated with this external content type. |
-
-<br/>
-
-<br/>

@@ -1,7 +1,7 @@
 ---
 title: ActivationDependency element (Feature)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -16,7 +16,7 @@ Represents a Feature on which activation of the current Feature depends.
 
 ## Definition
 
-```XML
+```xml
 <ActivationDependency
   FeatureDescription = string
   FeatureId = Guid
@@ -35,52 +35,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-<table>
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**FeatureDescription**</p></td>
-<td align="left"><p>Optional **string**. The description of the Feature dependency.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**FeatureId**</p></td>
-<td align="left"><p>Required **Guid**. The ID of the Feature dependency.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**FeatureTitle**</p></td>
-<td align="left"><p>Optional **string**. The title of the Feature dependency.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**MinimumVersion**</p></td>
-<td align="left"><p>Optional **string**. The minimum version of the Feature dependency. This attribute must use the pattern *n.n.n.n*, where each occurrence of *n* is a numeric value.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**SolutionId**</p></td>
-<td align="left"><p>Optional **Guid**. The ID of the solution dependency.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**SolutionName**</p></td>
-<td align="left"><p>Optional **string**. The name of the solution dependency.</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p>**SolutionTitle**</p></td>
-<td align="left"><p>Optional **string**. The title of the solution dependency.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p>**SolutionUrl**</p></td>
-<td align="left"><p>Optional **string**. The URL of the solution dependency.</p></td>
-</tr>
-</tbody>
-</table>
+|       Attribute        |                                                                             Description                                                                             |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **FeatureDescription** | Optional **string**. The description of the Feature dependency.                                                                                                     |
+| **FeatureId**          | Required **Guid**. The ID of the Feature dependency.                                                                                                                |
+| **FeatureTitle**       | Optional **string**. The title of the Feature dependency.                                                                                                           |
+| **MinimumVersion**     | Optional **string**. The minimum version of the Feature dependency. This attribute must use the pattern *n.n.n.n*, where each occurrence of *n* is a numeric value. |
+| **SolutionId**         | Optional **Guid**. The ID of the solution dependency.                                                                                                               |
+| **SolutionName**       | Optional **string**. The name of the solution dependency.                                                                                                           |
+| **SolutionTitle**      | Optional **string**. The title of the solution dependency.                                                                                                          |
+| **SolutionUrl**        | Optional **string**. The URL of the solution dependency.                                                                                                            |
 
 ### Child elements
 
@@ -88,31 +52,12 @@ None
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="activationdependencies-element-feature.md">ActivationDependencies</a></p></td>
-</tr>
-</tbody>
-</table>
+- [ActivationDependencies](activationdependencies-element-feature.md)
 
 ### Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: Unbounded</p></td>
-</tr>
-</tbody>
-</table>
-
+-Minimum: 0
+-Maximum: Unbounded
 
 ### Remarks
 

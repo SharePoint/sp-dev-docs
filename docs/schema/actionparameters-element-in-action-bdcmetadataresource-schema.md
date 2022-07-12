@@ -2,7 +2,7 @@
 title: ActionParameters element in Action (BDCMetadataResource Schema)
 description: Details on the ActionParameters element in Action (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 07/01/2022
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -20,7 +20,7 @@ For more information, see [ActionParameters element in Action (BDCMetadata Schem
 **Schema**: BDCMetadataResource
 
 
-```
+```xml
 <ActionParameters></ActionParameters>
 ```
 
