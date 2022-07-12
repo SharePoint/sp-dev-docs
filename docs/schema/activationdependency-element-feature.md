@@ -1,5 +1,6 @@
 ---
 title: ActivationDependency element (Feature)
+description: Discusses the definition, elements and attributes for ActivationDependency element (Feature).
 manager: soliver
 ms.date: 07/12/2022
 ms.audience: Developer
