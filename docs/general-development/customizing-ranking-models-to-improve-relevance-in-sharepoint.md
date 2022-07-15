@@ -133,7 +133,7 @@ To retrieve the rank detail, you need to be the administrator of the Search serv
 ### To retrieve the rank detail
 
 1. Open the SharePoint Management Shell as an Administrator.
-1. Run the following sequence of Windows PowerShell cmdlets, and substitute  _\<query_text\>_ and _\<url>_ with actual values.
+1. Run the following sequence of Windows PowerShell cmdlets, and substitute  _\<query_text\>_ and _\<url\>_ with actual values.
 
 ```powershell
 $app = Get-SPEnterpriseSearchServiceApplication
