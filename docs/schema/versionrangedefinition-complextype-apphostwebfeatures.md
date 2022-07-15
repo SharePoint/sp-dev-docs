@@ -1,7 +1,7 @@
 ---
 title: VersionRangeDefinition complexType
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 07/15/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -17,7 +17,7 @@ ms.assetid: e2e2ff43-f3a6-1060-d8b2-bae4ea9b2a41
 
 ## Type information
 
-|   |   |
+|   | Value |
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
 | **Schema file**  | apphostwebfeatures.xsd |

@@ -1,7 +1,7 @@
 ---
 title: DocumentTemplate Element (ContentType)
 manager: soliver
-ms.date: 06/13/2022
+ms.date: 07/15/2022
 description: Describes the DocumentTemplate Element and includes sections that describe attributes, child elements, and parent elements.
 ms.audience: Developer
 ms.topic: reference
@@ -63,7 +63,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Occurrences
 
-|     |
+| Occurrences |
 | --- |
 | Minimum: 0 |
 | Maximum: 1 |
