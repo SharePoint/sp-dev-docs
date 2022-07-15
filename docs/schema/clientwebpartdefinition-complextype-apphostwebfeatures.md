@@ -1,5 +1,6 @@
 ---
 title: ClientWebPartDefinition complexType
+description: Describes the ClientWebPartDefinition complexType type information, definition, elements, and attributes.
 manager: soliver
 ms.date: 07/15/2022
 ms.audience: Developer

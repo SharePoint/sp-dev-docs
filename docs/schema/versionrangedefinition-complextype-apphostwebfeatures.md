@@ -1,5 +1,6 @@
 ---
 title: VersionRangeDefinition complexType
+description: Describes the VersionRangeDefinition complexType type information, definition, elements, and attributes.
 manager: soliver
 ms.date: 07/15/2022
 ms.audience: Developer
