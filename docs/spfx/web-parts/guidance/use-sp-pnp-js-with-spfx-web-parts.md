@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 06/13/2022
+ms.date: 07/22/2022
 ms.localizationpriority: high
 ---
 
@@ -118,7 +118,7 @@ Because the @pnp/sp library constructs REST requests, it needs to know the URL t
 
 There are [two ways](https://pnp.github.io/pnpjs/getting-started) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
 
-1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp project configuratino file (more on this file below):
+1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp project configuration file (more on this file below):
 
     ```typescript
     import { getSP } from './pnpjsConfig';
