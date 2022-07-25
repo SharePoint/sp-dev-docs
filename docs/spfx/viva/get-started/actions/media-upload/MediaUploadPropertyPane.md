@@ -54,7 +54,7 @@ Finally, for the `Secondary Button`, set the `Title` to `Select multiple media` 
 
 ![Set the on-click action to "Select Media" from the drop-down menu for the secondary button and enable multiple file uploading](./img/mediaUploadPropertyPaneSecondaryButtonAction.PNG)
 
-### Try the geolocation actions
+### Try the Select Media action
 
 Now close the property pane and click `Preview` from the top right hand corner of the page:
 
