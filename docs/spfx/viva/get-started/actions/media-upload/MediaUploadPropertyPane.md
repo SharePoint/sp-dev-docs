@@ -52,7 +52,7 @@ Ensure that `Allow Multiple Capture` is toggled on.
 
 Finally, for the `Secondary Button`, set the `Title` to `Select multiple media` and from its action drop-down menu, select `Select Media`.
 
-![Set the on-click action to "Select Media" from the drop-down menu for the secondary button and enable multiple file uploading](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionPropertyPaneSecondaryButtonAction.png)
+![Set the on-click action to "Select Media" from the drop-down menu for the secondary button and enable multiple file uploading](./img/mediaUploadPropertyPaneSecondaryButtonAction.PNG)
 
 ### Try the geolocation actions
 
