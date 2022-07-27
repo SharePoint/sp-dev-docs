@@ -151,7 +151,7 @@ Replace the content of this file with the following:
   "body": [
     {
       "type": "TextBlock",
-      "text": "Time to load up some files!"
+      "text": "${filesUploaded}"
     }
   ],
   "actions": [
@@ -203,14 +203,14 @@ We'll need to make a few quick changes will first introduce new states. First lo
 Here, add the following `states` to the `IMediaUploadAdaptiveCardExtensionState` interface:
 
 ```typescript
-filesUploaded: string[];
+filesUploaded: string;
 ```
 
 Next, in the `onInit` function, change `this.state={}` to
 
 ```typescript
 this.state = {
-    filesUploaded: []
+    filesUploaded: ''
 };
 ```
 
@@ -221,7 +221,7 @@ Locate and open the following file in your project: **./src/adaptiveCardExtensio
 Add the following properties to the `IQuickViewData` interface:
 
 ```typescript
-filesUploaded: string[];
+filesUploaded: string;
 ```
 
 and then add the following two lines in the returned object of `data` getter:
@@ -240,15 +240,23 @@ For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/mediaUpload
 import {ISelectMediaActionArguments} from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
-Finally, introduce the following `onAction` function in the QuickView class:
+Finally, introduce the following `onAction` function in the QuickView class so that we can attain a list of our files:
 
 ```typescript
 public onAction(action: ISelectMediaActionArguments): void {
   if (action.type === 'VivaAction.SelectMedia') {
+    // media is an array of attachment objects which contain the content and filename
     this.setState({
-        filesUploaded: action.media
+        filesUploaded: action.media.map(attachment => attachment.fileName).join(',')
     });
   }
 }
 ```
 
+So now, whenever the `VivaAction.SelectMedia` action is triggered from your Quick View, depending on the parameters that were passed, the Adaptive Card Extension framework will pass a media attachment to the `onAction` callback. In the implementation shared above, we check if the `action` type is of type `VivaAction.SelectMedia`, and if it is, then we re-render the Quick View by doing a `setState`, in which we update the `filesUploaded` text-block.
+
+At this point, you can run **gulp serve** again and see how all the changes you made so far came together.
+
+This is it! Congratulations on successfully creating you Adaptive Card Extension with media upload action.
+
+![Two media uploaded](./img/mediaUploadTutorialFileNames.PNG)
