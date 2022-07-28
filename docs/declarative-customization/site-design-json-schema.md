@@ -927,7 +927,7 @@ Use the `triggerFlow` verb to kick off a custom flow.
 <!-- update this with example from trigger workflow topic -->
 
 > [!TIP]
-> The article [Calling Power Automate from a site script](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-trigger-flow-tutorial) provides an end-to-end example.
+> The article [Calling Power Automate from a site script](/sharepoint/dev/declarative-customization/site-design-trigger-flow-tutorial) provides an end-to-end example.
 
 #### JSON values
 
