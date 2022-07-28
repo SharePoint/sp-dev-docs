@@ -1,7 +1,7 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 06/28/2022
+ms.date: 07/28/2022
 ms.localizationpriority: high
 ---
 
@@ -925,6 +925,9 @@ To enable the web scoped feature that allows for Events Lists to be created (fea
 
 Use the `triggerFlow` verb to kick off a custom flow.
 <!-- update this with example from trigger workflow topic -->
+
+> [!TIP]
+> The article [Calling Power Automate from a site script](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-trigger-flow-tutorial) provides an end-to-end example.
 
 #### JSON values
 
