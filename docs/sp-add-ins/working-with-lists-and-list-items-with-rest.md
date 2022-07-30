@@ -1,7 +1,7 @@
 ---
 title: Working with lists and list items with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
-ms.date: 06/13/2022
+ms.date: 07/31/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -589,7 +589,7 @@ The following example shows how to update a list item.
 POST https://{site_url}/_api/web/lists/GetByTitle('Test')/items({item_id})
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
-Content-Type: "application/json"
+Content-Type: "application/json;odata=verbose"
 Content-Length: {length of request body as integer}
 If-Match: "{etag or *}"
 X-HTTP-Method: "MERGE"
@@ -611,7 +611,7 @@ The following example shows how to delete a list item.
 POST https://{site_url}/_api/web/lists/GetByTitle('Test')/items({item_id})
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
-Content-Type: "application/json"
+Content-Type: "application/json;odata=verbose"
 If-Match: "{etag or *}"
 X-HTTP-Method: "DELETE"
 ```
