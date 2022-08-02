@@ -26,6 +26,7 @@ This allows users to upload media content via an ACE. The current size limitatio
 The ACE action for Select Media is: `VivaAction.SelectMedia`.
 
 The parameters that it takes are as follows:
+
 - `mediaType`: This is set to image by default as audio is still under works.
 - `allowMultipleCapture` [OPTIONAL]: This enables multiple files to be added at once.
   - This is enabled by default.
@@ -35,24 +36,25 @@ The parameters that it takes are as follows:
 
 ```typescript
 {
-    /**
-     * Specify the specific media type that should be selected
-     */
-    mediaType: MediaType;
-    /**
-     * Allow multiple images to be selected.
-     */
-    allowMultipleCapture?: boolean;
-    /**
-     * Max file size that can be uploaded.
-     */
-    maxSizePerFile?: number;
-    /**
-     * File formats supported for upload.
-     */
-    supportedFileFormats?: string[];
+  /**
+   * Specify the specific media type that should be selected
+   */
+  mediaType: MediaType;
+  /**
+   * Allow multiple images to be selected.
+   */
+  allowMultipleCapture?: boolean;
+  /**
+   * Max file size that can be uploaded.
+   */
+  maxSizePerFile?: number;
+  /**
+   * File formats supported for upload.
+   */
+  supportedFileFormats?: string[];
 }
 ```
+
 ### Tutorial and Examples
 
 You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over a step by step guide on how to create a card with the available media upload action.
@@ -61,14 +63,14 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
   In your template json file add the following action:
   ```json
   "actions": [
-        {
-          "type": "VivaAction.SelectMedia",
-          "id": "Select Media",
-          "title": "Upload Image",
-          "parameters": {
-            "mediaType": "MediaType.Image"
-          }
-        }
+    {
+      "type": "VivaAction.SelectMedia",
+      "id": "Select Media",
+      "title": "Upload Image",
+      "parameters": {
+        "mediaType": "MediaType.Image"
+      }
+    }
   ]
   ```
 
@@ -76,15 +78,15 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
   In your template json file add the following action:
   ```json
   "actions": [
-        {
-          "type": "VivaAction.SelectMedia",
-          "id": "Select Media",
-          "title": "Upload Image",
-          "parameters": {
-            "mediaType": "MediaType.Image",
-            "allowMultipleCapture": true
-          }
-        }
+    {
+      "type": "VivaAction.SelectMedia",
+      "id": "Select Media",
+      "title": "Upload Image",
+      "parameters": {
+        "mediaType": "MediaType.Image",
+        "allowMultipleCapture": true
+      }
+    }
   ]
   ```
 
@@ -92,15 +94,15 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
   In your template json file add the following action:
   ```json
   "actions": [
-        {
-          "type": "VivaAction.SelectMedia",
-          "id": "Select Media",
-          "title": "Upload Image",
-          "parameters": {
-            "mediaType": "MediaType.Image",
-            "supportedFileFormats": "jpg"
-          }
-        }
+    {
+      "type": "VivaAction.SelectMedia",
+      "id": "Select Media",
+      "title": "Upload Image",
+      "parameters": {
+        "mediaType": "MediaType.Image",
+        "supportedFileFormats": "jpg"
+      }
+    }
   ]
   ```
 
@@ -108,15 +110,15 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
 In your template json file add the following action:
   ```json
   "actions": [
-        {
-          "type": "VivaAction.SelectMedia",
-          "id": "Select Media",
-          "title": "Upload Image",
-          "parameters": {
-            "mediaType": "MediaType.Image",
-            "supportedFilemaxSizePerFileFormats": 1000
-          }
-        }
+    {
+      "type": "VivaAction.SelectMedia",
+      "id": "Select Media",
+      "title": "Upload Image",
+      "parameters": {
+        "mediaType": "MediaType.Image",
+        "supportedFilemaxSizePerFileFormats": 1000
+      }
+    }
   ]
   ```
 

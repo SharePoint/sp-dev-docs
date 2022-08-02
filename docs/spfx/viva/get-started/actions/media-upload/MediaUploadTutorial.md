@@ -210,7 +210,7 @@ Next, in the `onInit` function, change `this.state={}` to
 
 ```typescript
 this.state = {
-    filesUploaded: ''
+  filesUploaded: ''
 };
 ```
 
