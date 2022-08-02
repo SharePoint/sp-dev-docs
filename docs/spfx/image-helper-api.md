@@ -1,7 +1,7 @@
 ---
 title: Image Helper API
 description: Learn how to use the Image Helper API in the SharePoint Framework to provide web-friendly optimized image links.
-ms.date: 02/25/2022
+ms.date: 07/25/2022
 ms.localizationpriority: high
 ---
 # Image Helper API
@@ -32,7 +32,7 @@ SharePoint's server-side image processing has a list of resolution breakpoints w
 
 While you can specify any width to resize the image to, SharePoint will pick the nearest largest resolution breakpoint. For example, if you specify `width: 250`, the resized image width will be 400 px.
 
-If you specify the optional `height` property, SharePoint the width isn't adjusted to the nearest breakpoint. But if the `height property is omitted, SharePoint automatically determines the height of the resized image using the width & width breakpoint while maintaining the aspect ratio for the image.
+If you specify the optional `height` property, the width isn't adjusted to the nearest breakpoint. But if the `height` property is omitted, SharePoint automatically determines the height of the resized image using the height & width breakpoint while maintaining the aspect ratio for the image.
 
 > [!TIP]
 > Omitting the `height` property provides the quickest response from the SharePoint
@@ -51,7 +51,7 @@ Next, import it into your project where you plan to use the API:
 import { ImageHelper, IImageHelperRequest } from "@microsoft/sp-image-helper";
 ```
 
-Next, use the API to obtain a thumbnail image of an existing file in SharePoint. In this case, we've uploaded a file from the [Microsoft News Image Gallery](https://news.microsoft.com/imagegallery) site. In this example, we're using a file that's 1.2 MB in size with a resolution of 1920x1080... not an ideal web friendly format:
+Next, use the API to obtain a thumbnail image of an existing file in SharePoint. In this case, we've uploaded a file from the [Microsoft News Image Gallery](https://news.microsoft.com/imagegallery) site. In this example, we're using a file that's 1.2 MB in size with a resolution of 1920x1080 which is not an ideal web friendly format:
 
 ![Screenshot of the details panel of the original image.](../images/image-helper-api-01.png)
 
@@ -89,9 +89,9 @@ This resized image is only 30 kB in size with a resolution of 400x225, a signifi
 
 For the images to be available to be served from a private CDN, the following requirements must be met:
 
-- the private CDN feature must be enabled
-- the source file must be available within an origin to the CDN
-- SharePoint's server-side preprocessing must know that the web part property is an image property
+- The private CDN feature must be enabled.
+- The source file must be available within an origin to the CDN.
+- SharePoint's server-side preprocessing must know that the web part property is an image property.
 
 To make SharePoint's server-side processing aware of the image property, list the properties where image Urls are stored in the web part's **manifest.json** `imageLinkPropertyNames` property:
 
