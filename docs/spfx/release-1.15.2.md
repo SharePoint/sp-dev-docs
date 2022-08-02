@@ -23,7 +23,7 @@ npm install @microsoft/generator-sharepoint@latest --global
 ## Upgrading projects from v1.15.0 to v1.15.2
 
 1. In the project's **package.json** file, identify all SPFx v1.15.0 packages. For each SPFx package:
-    1. Uninstall the existing v1.14 package:
+    1. Uninstall the existing v1.15 package:
 
         ```console
         npm uninstall @microsoft/{spfx-package-name}@1.15.0
