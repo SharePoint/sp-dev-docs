@@ -61,7 +61,7 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
 
 1. **Upload an image**
   
-  In your template json file add the following action:
+    In your template json file add the following action:
   
     ```json
     "actions": [
