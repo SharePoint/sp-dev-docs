@@ -36,22 +36,22 @@ The parameters that it takes are as follows:
 
 ```typescript
 {
-  /**
-   * Specify the specific media type that should be selected
-   */
-  mediaType: MediaType;
-  /**
-   * Allow multiple images to be selected.
-   */
-  allowMultipleCapture?: boolean;
-  /**
-   * Max file size that can be uploaded.
-   */
-  maxSizePerFile?: number;
-  /**
-   * File formats supported for upload.
-   */
-  supportedFileFormats?: string[];
+    /**
+     * Specify the specific media type that should be selected
+     */
+    mediaType: MediaType;
+    /**
+     * Allow multiple images to be selected.
+     */
+    allowMultipleCapture?: boolean;
+    /**
+     * Max file size that can be uploaded.
+     */
+    maxSizePerFile?: number;
+    /**
+     * File formats supported for upload.
+     */
+    supportedFileFormats?: string[];
 }
 ```
 
@@ -63,72 +63,72 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
   
   In your template json file add the following action:
   
-  ```json
-  "actions": [
-    {
-      "type": "VivaAction.SelectMedia",
-      "id": "Select Media",
-      "title": "Upload Image",
-      "parameters": {
-        "mediaType": "MediaType.Image"
-      }
-    }
-  ]
-  ```
+    ```json
+    "actions": [
+        {
+            "type": "VivaAction.SelectMedia",
+            "id": "Select Media",
+            "title": "Upload Image",
+            "parameters": {
+              "mediaType": "MediaType.Image"
+            }
+        }
+    ]
+    ```
 
 1. **Upload multiple images**
   
-  In your template json file add the following action:
+    In your template json file add the following action:
   
-  ```json
-  "actions": [
-    {
-      "type": "VivaAction.SelectMedia",
-      "id": "Select Media",
-      "title": "Upload Image",
-      "parameters": {
-        "mediaType": "MediaType.Image",
-        "allowMultipleCapture": true
-      }
-    }
-  ]
-  ```
+    ```json
+    "actions": [
+        {
+            "type": "VivaAction.SelectMedia",
+            "id": "Select Media",
+            "title": "Upload Image",
+            "parameters": {
+                  "mediaType": "MediaType.Image",
+                  "allowMultipleCapture": true
+            }
+        }
+    ]
+    ```
 
 1. **Upload only JPG images**
   
-  In your template json file add the following action:
+    In your template json file add the following action:
   
-  ```json
-  "actions": [
-    {
-      "type": "VivaAction.SelectMedia",
-      "id": "Select Media",
-      "title": "Upload Image",
-      "parameters": {
-        "mediaType": "MediaType.Image",
-        "supportedFileFormats": "jpg"
-      }
-    }
-  ]
-  ```
+    ```json
+    "actions": [
+        {
+            "type": "VivaAction.SelectMedia",
+            "id": "Select Media",
+            "title": "Upload Image",
+            "parameters": {
+                "mediaType": "MediaType.Image",
+                "supportedFileFormats": "jpg"
+            }
+        }
+    ]
+    ```
 
 1. **Upload allow only small images to be uploaded**
 
-  In your template json file add the following action:
+    In your template json file add the following action:
   
-  ```json
-  "actions": [
-    {
-      "type": "VivaAction.SelectMedia",
-      "id": "Select Media",
-      "title": "Upload Image",
-      "parameters": {
-        "mediaType": "MediaType.Image",
-        "supportedFilemaxSizePerFileFormats": 1000
-      }
-    }
-  ]
-  ```
+    ```json
+    "actions": [
+        {
+            "type": "VivaAction.SelectMedia",
+            "id": "Select Media",
+            "title": "Upload Image",
+            "parameters": {
+                "mediaType": "MediaType.Image",
+                "supportedFilemaxSizePerFileFormats": 1000
+            }
+        }
+    ]
+    ```
 
 ### Access media upload action via card-designer card's property pane
 
