@@ -90,11 +90,11 @@ The SelectMedia action can be configured as shown below:
 The action will be rendered as below:
 
 
-![Concepts](../images/release-notes/114/file-action.jpg)
+![Select file button](../images/release-notes/114/file-action.jpg)
 
 The Select Media Action can be used to select Images from your native device. In the browser it uses the file picker to help access relavant files:
 
-![Concepts](../images/release-notes/114/media-panel.jpg)
+![Select file panel](../images/release-notes/114/media-panel.jpg)
 
 
 ### Updates to ESLint rules
