@@ -60,7 +60,9 @@ The parameters that it takes are as follows:
 You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over a step by step guide on how to create a card with the available media upload action.
 
 1. **Upload an image**
+  
   In your template json file add the following action:
+  
   ```json
   "actions": [
     {
@@ -75,7 +77,9 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
   ```
 
 1. **Upload multiple images**
+  
   In your template json file add the following action:
+  
   ```json
   "actions": [
     {
@@ -91,7 +95,9 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
   ```
 
 1. **Upload only JPG images**
+  
   In your template json file add the following action:
+  
   ```json
   "actions": [
     {
@@ -107,7 +113,9 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
   ```
 
 1. **Upload allow only small images to be uploaded**
-In your template json file add the following action:
+
+  In your template json file add the following action:
+  
   ```json
   "actions": [
     {
