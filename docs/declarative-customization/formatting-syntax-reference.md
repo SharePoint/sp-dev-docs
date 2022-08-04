@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 06/28/2022
+ms.date: 08/03/2022
 ms.localizationpriority: high
 ---
 
@@ -580,6 +580,8 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent": "=cos(5)"` results in _0.28366218546322625_
 - **sin**: returns the sine of a number
   - `"txtContent": "=sin(90)"` results in _0.8939966636005579_
+- **toDateString()**: returns a date in a short-friendly format
+  - `"txtContent": "=toDateString(@now)"` result doesn't vary based on user's locale and it will look like _"Wed Aug 03 2022"_
 - **toLocaleString()**: returns a language sensitive representation of a date
   - `"txtContent":"=toLocaleString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019, 1:22:24 PM"_
 - **toLocaleDateString()**: returns a language sensitive representation of just the date portion of a date
