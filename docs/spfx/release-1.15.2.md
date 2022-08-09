@@ -70,7 +70,7 @@ ISPFxAdaptiveCard.actions?: (
 
 The location actions can be configured as shown below:
 
-```typescript
+```json
   actions: [
     {
       type: 'VivaAction.GetLocation',
@@ -87,7 +87,7 @@ The location actions can be configured as shown below:
 
 The SelectMedia action can be configured as shown below:
 
-```typescript
+```json
   actions: [
     {
       type: 'VivaAction.SelectMedia',
