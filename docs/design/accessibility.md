@@ -1,7 +1,7 @@
 ---
 title: Accessibility in SharePoint web part design
 description: Guidelines for adding accessibility to your web part.
-ms.date: 06/28/2022
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 # Accessibility in SharePoint web part design
@@ -98,19 +98,61 @@ The following image shows theme colors on the left and neutral colors on the rig
 
 ![Neutral and Theme colors for minimum readable contrast](../images/themes-colors-blue-neutral-theme-2.png)
 
-|       Theme colors       |       Neutral colors        |
-| ------------------------ | --------------------------- |
-| themeDarker: #004578     | black: #000000              |
-| themeDark: #005a9e       | neutralDark: #212121        |
-| themeDarkAlt: #106ebe    | neutralPrimary: #333        |
-| themePrimary: #0078d7    | neutralPrimaryAlt: #3c3c3c  |
-|                          | neutralSecondary: #666666   |
-|                          | neutralTertiary: #a6a6a6    |
-| themeSecondary: #2b88d8  | neutralTertiaryAlt: #c8c8c8 |
-| themeTertiary: #71afe5   | neutralLight: #eaeaea       |
-| themeLight: #c7e0f4      | neutralLighter: #f4f4f4     |
-| themeLighter: #deecf9    | neutralLighterAlt: #f8f8f8  |
-| themeLighterAlt: #eff6fc | white: #fff                 |
+<!--I replaced this image because it doesn't even make sense; the text to the right of each box does not match what's in the box, and none are labeled "theme." 
+![Neutral and Theme colors for minimum readable contrast](../images/accessibility-illustration-12.png)-->
+
+<br/>
+
+<table>
+<tr>
+    <th>Theme colors</th>
+    <th>Neutral colors</th> 
+  </tr>
+<tr>
+<td style="color:white; background-color:#004578">themeDarker: #004578</td>
+<td style="color:white; background-color:#000000">black: #000000</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#005a9e">themeDark: #005a9e</td>
+<td style="color:white; background-color:#212121">neutralDark: #212121</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#106ebe">themeDarkAlt: #106ebe</td>
+<td style="color:white; background-color:#333">neutralPrimary: #333</td>
+</tr>
+<tr>
+<td rowspan="3" style="font-weight:bold; vertical-align:middle; color:white; background-color:#0078d7">themePrimary: #0078d7</td>
+<td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
+</tr>
+<tr>
+<td style="color:white; background-color:#2b88d8">themeSecondary: #2b88d8</td>
+<td style="color:black; background-color:#c8c8c8">neutralTertiaryAlt: #c8c8c8</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#71afe5">themeTertiary: #71afe5</td>
+<td style="color:black; background-color:#eaeaea">neutralLight: #eaeaea</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#c7e0f4">themeLight: #c7e0f4</td>
+<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#deecf9">themeLighter: #deecf9</td>
+<td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
+</tr>
+<tr>
+<td style="color:black; background-color:#eff6fc">themeLighterAlt: #eff6fc</td>
+<td style="color:black; background-color:#fff">white: #fff</td>
+</tr>
+</table>
+
+<br/>
 
 ## High contrast
 

@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" site pages
 description: Use custom branding in SharePoint Online, add "modern" pages programmatically, and add, delete, or update client-side web parts on "modern" pages.
-ms.date: 02/21/2021
+ms.date: 07/15/2022
 ms.localizationpriority: high
 ---
 
@@ -39,9 +39,6 @@ These customizations are currently not supported for "modern" pages:
 > [!NOTE]
 > - We don't support combining "modern" page functionality with "classic" SharePoint publishing portals. By default, the "modern" page functionality is not enabled on "classic" SharePoint publishing portals.
 > - In June 2017, [SharePoint Framework Extensions went into developer preview](https://developer.microsoft.com/office/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](https://aka.ms/spfx-extensions).
-> - In May 2017, during the SharePoint Virtual Summit, we announced [communication sites with configurable page layouts](https://www.microsoft.com/microsoft-365/blog/2017/05/16/new-sharepoint-and-onedrive-capabilities-accelerate-your-digital-transformation-2/).
-
-<a name="themingimpact"> </a>
 
 ## Custom branding
 
@@ -49,9 +46,8 @@ If your site happens to use a custom theme, this theme is respected in the "mode
 
 **Modern page with custom branding coming from theme settings**
 
-<img src="media/modern-experiences/modern-page-with-custom-theme.png" alt="Modern page with custom branding coming from theme settings" width="600">
+![Modern page with custom branding coming from theme settings](media/modern-experiences/modern-page-with-custom-theme.png)
 
-<a name="sitesversusmodernpages"> </a>
 ## Why a site may not have "modern" pages functionality
 
 The "modern" pages are delivered by using the Site Pages web scoped feature (B6917CB1-93A0-4B97-A84D-7CF49975D4EC), so when this feature is activated, your site has the option to use "modern" pages. When Microsoft rolled out this feature, we enabled this for all "modern" team sites (GROUP#0 sites) and for most "classic" team sites (STS#0).
@@ -59,8 +55,6 @@ The "modern" pages are delivered by using the Site Pages web scoped feature (B69
 If a "classic" team site had a high count of web parts or wiki pages, the feature was not automatically enabled, and the same applies to "classic" team sites with the publishing feature enabled. If you want "modern" page functionality on these sites, you can still activate the Site Pages feature. This also implies that sites based on other templates do not have the "modern" pages functionality enabled.
 
 The previous paragraph talked about how the "modern" page feature was enabled on existing sites. When you create a new "modern" or "classic" team site (GROUP#0 or STS#0), the "modern" Site Pages feature is enabled at provisioning time. The "modern" Site Pages feature is not enabled on sites that are based on other templates.
-
-<a name="configuremodernpages"> </a>
 
 ## Configuring the end user experience
 
@@ -106,7 +100,6 @@ By default, users can add comments (July 2017) on "modern" pages. If your organi
 > - Microsoft.Online.SharePoint.TenantAdministration.SiteProperties.CommentsOnSitePagesDisabled
 > - Microsoft.SharePoint.Client.Site.CommentsOnSitePagesDisabled
 
-
 ## Programming "modern" pages
 
 ### Adding "modern" pages
@@ -127,10 +120,7 @@ item["BannerImageUrl"] = "/_layouts/15/images/sitepagethumbnail.png";
 item.Update();
 clientContext.Load(item);
 clientContext.ExecuteQuery();
-
 ```
-
-<br/>
 
 When using PnP (as of the March 2017 release), you can leverage our extension methods, which gives you a model for adding a page easily:
 
@@ -199,7 +189,6 @@ imageWebPart.Properties["imgWidth"] = 1002;
 imageWebPart.Properties["imgHeight"] = 469;
 page5.AddControl(imageWebPart);
 page5.Save("page5.aspx");
-
 ```
 
 #### Add a custom client-side web part
@@ -239,7 +228,6 @@ myPage.AddControl(txt1, -1);
 
 // Manipulate the control order on the page...e.g. move a control to the back
 myPage.Controls[1].Order = 10;
-
 ```
 
 #### Delete a control

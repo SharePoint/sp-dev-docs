@@ -1,7 +1,7 @@
 ---
 title: "ControlRef element (Server Ribbon)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 07/15/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -57,7 +57,7 @@ Controls do not necessarily support all display modes. The following table lists
 
 <br/>
 
-||**Small**|**Medium**|**Large**|**Menu**|**Menu16**|**Menu32**|
+|**Control**|**Small**|**Medium**|**Large**|**Menu**|**Menu16**|**Menu32**|
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|
 |[Button](button-element.md) <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |X  <br/> |
 |[CheckBox](checkbox-element.md) <br/> |X  <br/> |X  <br/> |||||

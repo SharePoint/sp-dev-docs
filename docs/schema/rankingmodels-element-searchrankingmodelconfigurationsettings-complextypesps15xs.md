@@ -1,12 +1,12 @@
 ---
 title: "RankingModels element (SearchRankingModelConfigurationSettings complexType) (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: 88c68026-ddad-5877-f982-885fc853b2f2
-description: "Last modified: March 09, 2015"
+description: "Describes the RankingModels element (SearchRankingModelConfigurationSettings complexType) (SPS15XSDSearchSet3)."
 ---
 
 # RankingModels element (SearchRankingModelConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -15,7 +15,7 @@ description: "Last modified: March 09, 2015"
 
 ## Element information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Element type** <br/> |q7:ArrayOfstring  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |

@@ -1,12 +1,12 @@
 ---
 title: "RefinerType simpleType (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: 78485bdb-6003-aae8-6c0a-1fa911aab6bb
-description: "Last modified: March 09, 2015"
+description: "Describes the RefinerType simpleType (SPS15XSDSearchSet2)."
 ---
 
 # RefinerType simpleType (SPS15XSDSearchSet2)
@@ -15,7 +15,7 @@ description: "Last modified: March 09, 2015"
 
 ## Type information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

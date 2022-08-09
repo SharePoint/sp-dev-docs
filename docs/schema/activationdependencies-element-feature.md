@@ -1,7 +1,8 @@
 ---
 title: ActivationDependencies element (Feature)
+description: Discusses the definition, elements and attributes for ActivationDependencies element (Feature).
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -17,8 +18,7 @@ Specifies a list of features on which the activation of the current feature depe
 ## Definition
 
 ```XML
-<ActivationDependencies>
-</ActivationDependencies>
+<ActivationDependencies></ActivationDependencies>
 ```
 
 ## Elements and attributes
@@ -31,43 +31,16 @@ None
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="activationdependency-element-feature.md">ActivationDependency</a></p></td>
-</tr>
-</tbody>
-</table>
+- [ActivationDependency](activationdependency-element-feature.md)
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="feature-element-feature.md">Feature</a></p></td>
-</tr>
-</tbody>
-</table>
+- [Feature](feature-element-feature.md)
 
 ### Occurrences
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Minimum: 0</p>
-<p>Maximum: 1</p></td>
-</tr>
-</tbody>
-</table>
+- Minimum: 0
+- Maximum: 1
 
 ### Remarks
 
@@ -77,13 +50,10 @@ If the Feature on which the current Feature depends is hidden and inactive, it i
 
 If included within a [Feature](feature-element-feature.md) element, the following code example prevents the current Feature from being activated unless the Feature with the specified ID is activated.
 
-```XML
-    <ActivationDependencies>
-      <ActivationDependency
-        FeatureId="11111111-1111-1111-1111-111111111111" />
-    </ActivationDependencies>
+```xml
+<ActivationDependencies>
+  <ActivationDependency FeatureId="11111111-1111-1111-1111-111111111111" />
+</ActivationDependencies>
 ```
 
 For another example of how this element is used, see [Feature.xml Files](feature-xml-files.md).
-
-<br/>

@@ -1,7 +1,7 @@
 ---
 title: "Regional Settings schema"
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ api_name:
 api_type:
 - schema
 ms.assetid: 7c9dda02-a11e-4716-b6de-eda33c8d14c8
-description: "Last modified: July 15, 2011"
+description: "The Regional Settings schema defines the time zones, locales, languages, and currencies implemented within a SharePoint Foundation deployment."
 ---
 
 # Regional Settings schema

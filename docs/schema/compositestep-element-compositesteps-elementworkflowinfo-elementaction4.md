@@ -1,7 +1,8 @@
 ---
 title: CompositeStep element
+description: Describes the CompositeStep element, which represents a single step in a composite workflow activity.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -26,7 +27,7 @@ Represents a single step in a composite workflow activity.
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |

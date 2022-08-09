@@ -1,7 +1,8 @@
 ---
 title: Container element
+description: Describes the Container element (LayoutDefinitions Schema), which specifies the layout for the External Data Parts.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/07/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -37,14 +38,14 @@ The following sections describe attributes, child elements, and parent elements.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><p>Attribute</p></th>
-<th align="left"><p>Description</p></th>
+<th align="left">Attribute</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**ContainerType**</p></td>
-<td align="left"><p>Required.</p>
+<td align="left">**ContainerType**</td>
+<td align="left">Required.</p>
 <p>The container type.</p>
 <p>The following table lists the possible values for this attribute.</p>
 <div class="tableSection">
@@ -61,46 +62,28 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Stack</p></td>
-<td align="left"><p>Specifies that Office External Parts in this layout will be stacked vertically or horizontally.</p></td>
+<td align="left">Stack</td>
+<td align="left">Specifies that Office External Parts in this layout will be stacked vertically or horizontally.</td>
 </tr>
 </tbody>
 </table>
 </div></td>
 </tr>
 <tr class="even">
-<td align="left"><p>**FillParent**</p></td>
-<td align="left"><p>Optional.</p>
+<td align="left">**FillParent**</td>
+<td align="left">Optional.</p>
 <p>Specifies whether this layout element is maximized within its parent.</p>
-<p>Attribute type: **Boolean**</p></td>
+<p>Attribute type: **Boolean**</td>
 </tr>
 </tbody>
 </table>
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="customproperties-element-in-uielement-layoutdefinitions-schema.md">CustomProperties element in UIelement (LayoutDefinitions schema)</a></span></p></td>
-<td align="left"><p>The list of the custom properties.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="children-element-in-container-layoutdefinitions-schema.md">Children element in Container (LayoutDefinitions schema)</a></span></p></td>
-<td align="left"><p>The list of the Office External Parts in this layout.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+|[CustomProperties element in UIelement (LayoutDefinitions schema)](customproperties-element-in-uielement-layoutdefinitions-schema.md)|The list of the custom properties.|
+|[Children element in Container (LayoutDefinitions schema)](children-element-in-container-layoutdefinitions-schema.md)|The list of the Office External Parts in this layout.|
 
 ### Parent elements
 

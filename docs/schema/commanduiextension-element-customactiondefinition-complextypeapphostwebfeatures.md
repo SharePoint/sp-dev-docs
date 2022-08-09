@@ -1,7 +1,8 @@
 ---
 title: CommandUIExtension element (CustomActionDefinition complexType)
+description: Describes the CommandUIExtension element (CustomActionDefinition complexType), including element information, definitions, and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -17,7 +18,7 @@ ms.assetid: 20aba05e-5c24-f8f4-2773-b6563f97aeab
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  | CommandUIExtensionType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |

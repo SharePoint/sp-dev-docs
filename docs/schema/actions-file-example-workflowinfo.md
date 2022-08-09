@@ -1,7 +1,8 @@
 ---
-title: .ACTIONS File Example (WorkflowInfo)</td>
+title: .ACTIONS File Example (WorkflowInfo)
+description: "Discusses the definition, elements, and attributes for .ACTIONS File Example (WorkflowInfo) which can be used to import custom conditions."
 manager: laurawi
-ms.date: 11/16/2014
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -20,76 +21,75 @@ This example shows the general structure of a valid .ACTIONS file that can be us
 
 The following XML is an example of how an .ACTIONS file could be constructed to add **Conditions** or **Actions** elements to the default list.
 
-```XML
-    <?xml version="1.0" encoding="utf-8"?>
-    <WorkflowInfo Language="en-us">
-       <Conditions And="and"
-                   Else="Else If"
-                   Not="not"
-                   Or="or"
-                   When="If">
-          <Condition AppliesTo="list"
-                     Assembly="Assembly.Name,
-                               Version=0.0.0.0,
-                               Culture=neutral,
-                               PublicKeyToken=GUID"
-                     ClassName="Fully qualified
-                                class name"
-                     FunctionName="Boolean method name
-                                   implemented in
-                                   class"
-                     Name="Name to be displayed in
-                           workflow editor"
-                     Type="Advanced"
-                     UsesCurrentItem="true">
-             <RuleDesigner Sentence="Sentence to be
-                                     displayed to the
-                                     workflow editor">
-                <FieldBind DesignerType="Date"
-                           Field="Parameter that
-                                  FieldBind maps to"
-                           Function="true"
-                           Id="Unique positive Integer"
-                           Text="Text to be displayed
-                                 as a hyperlink"
-                           TypeFrom="Parameter that a
-                                     non-Operator derives
-                                     its type from"
-                           Value="Reserved for future use">
-                   <Option Name="Option1" Value="Value1" />
-                </FieldBind>
-             </RuleDesigner>
-             <Parameters>
-                <Parameter Direction="In"
-                           InitialValue=""
-                           Name="MyParameter"
-                           Type="System.String, mscorlib" />
-             </Parameters>
-          </Condition>
-       </Conditions>
-       <Actions>
-          <Action Name="Action name displayed in editor">
-             <RuleDesigner Sentence="Sentence to be
-                                     displayed to the
-                                     workflow editor">
-                <FieldBind DesignerType="CreateListItem"
-                           Field="Parameter that FieldBind
-                                  maps to"
-                           Function="true"
-                           Id="Unique positive Integer"
-                           OperatorTypeFrom="Parameter
-                                             Operator derives
-                                             its type from"
-                           Text="Text to be displayed
-                                 as a hyperlink"
-                           TypeFrom="Parameter non-Operator
-                                     derives its type from"
-                           Value="Reserved for future use">
-                </FieldBind>
-             </RuleDesigner>
-          </Default>
-       </Actions>
-    </WorkflowInfo>
+```xml
+<WorkflowInfo Language="en-us">
+    <Conditions And="and"
+                Else="Else If"
+                Not="not"
+                Or="or"
+                When="If">
+      <Condition AppliesTo="list"
+                  Assembly="Assembly.Name,
+                            Version=0.0.0.0,
+                            Culture=neutral,
+                            PublicKeyToken=GUID"
+                  ClassName="Fully qualified
+                            class name"
+                  FunctionName="Boolean method name
+                                implemented in
+                                class"
+                  Name="Name to be displayed in
+                        workflow editor"
+                  Type="Advanced"
+                  UsesCurrentItem="true">
+          <RuleDesigner Sentence="Sentence to be
+                                  displayed to the
+                                  workflow editor">
+            <FieldBind DesignerType="Date"
+                        Field="Parameter that
+                              FieldBind maps to"
+                        Function="true"
+                        Id="Unique positive Integer"
+                        Text="Text to be displayed
+                              as a hyperlink"
+                        TypeFrom="Parameter that a
+                                  non-Operator derives
+                                  its type from"
+                        Value="Reserved for future use">
+                <Option Name="Option1" Value="Value1" />
+            </FieldBind>
+          </RuleDesigner>
+          <Parameters>
+            <Parameter Direction="In"
+                        InitialValue=""
+                        Name="MyParameter"
+                        Type="System.String, mscorlib" />
+          </Parameters>
+      </Condition>
+    </Conditions>
+    <Actions>
+      <Action Name="Action name displayed in editor">
+          <RuleDesigner Sentence="Sentence to be
+                                  displayed to the
+                                  workflow editor">
+            <FieldBind DesignerType="CreateListItem"
+                        Field="Parameter that FieldBind
+                              maps to"
+                        Function="true"
+                        Id="Unique positive Integer"
+                        OperatorTypeFrom="Parameter
+                                          Operator derives
+                                          its type from"
+                        Text="Text to be displayed
+                              as a hyperlink"
+                        TypeFrom="Parameter non-Operator
+                                  derives its type from"
+                        Value="Reserved for future use">
+            </FieldBind>
+          </RuleDesigner>
+      </Default>
+    </Actions>
+</WorkflowInfo>
 ```
 
 ## See also

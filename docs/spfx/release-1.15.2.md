@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.15.2 release notes
 description: Release notes for the SharePoint Framework v1.15.2 release
-ms.date: 08/02/2022
+ms.date: 08/09/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.15.2 release notes
@@ -40,13 +40,22 @@ npm install @microsoft/generator-sharepoint@latest --global
 ## New features and capabilities
 
 ### Enable Service Principal Registration at Permission Scope Approval Time
-When an SPFx solution requires access to APIs we allow administrators to pre-approve those permission scopes for the whole tenant in the "API Access" page in Tenant Admin.
 
-However, previously we assumed and required that API to be already present in the tenant (either via an app principal or Service Principal in case of multi-tenant APIs) and, if that's not the case, we generated an error during the permissions scope approval.
+When a SPFx solution requires access to APIs, we allow administrators to pre-approve those permission scopes for the whole tenant in the "API Access" page in Tenant Admin.
+
+Previously it was assumed and required that API to be already present in the tenant (either via an app principal or Service Principal in case of multi-tenant APIs) and, if that's not the case, there was an error during the permissions scope approval.
 
 Now developers are able to specify **optional** attributes `appId` and `replyUrl` in `webApiPermissionRequests` section of `package-solution.json`.
 
-### New Action types for media - General Availability.
+When these attributes are present, administartors are presented standard Azure AD app registration consent as part of the API approval process.
+
+### New Action types for media - General Availability
+
+Media upload action type is now generally available.
+
+* [Media upload in Adaptive Card Extension](viva/get-started/actions/media-upload/MediaUploadDocumentation.md)
+* [Tutorial - Create an Adaptive Card Extension with the select media action](viva/get-started/actions/media-upload/MediaUploadTutorial.md)
+* [Explore Media Upload capability via property pane of card-designer card in Adaptive Card Extension](viva/get-started/actions/media-upload/MediaUploadPropertyPane.md)
 
 ```typescript
 ISPFxAdaptiveCard.actions?: (
@@ -60,7 +69,8 @@ ISPFxAdaptiveCard.actions?: (
 ```
 
 The location actions can be configured as shown below:
-```typescript
+
+```json
   actions: [
     {
       type: 'VivaAction.GetLocation',
@@ -76,7 +86,8 @@ The location actions can be configured as shown below:
 ```
 
 The SelectMedia action can be configured as shown below:
-```typescript
+
+```json
   actions: [
     {
       type: 'VivaAction.SelectMedia',
@@ -89,21 +100,19 @@ The SelectMedia action can be configured as shown below:
 
 The action will be rendered as below:
 
-
-![Concepts](../images/release-notes/114/file-action.jpg)
+![Select file button](../images/release-notes/114/file-action.jpg)
 
 The Select Media Action can be used to select Images from your native device. In the browser it uses the file picker to help access relavant files:
 
-![Concepts](../images/release-notes/114/media-panel.jpg)
-
+![Select file panel](../images/release-notes/114/media-panel.jpg)
 
 ### Updates to ESLint rules
-Based on received feedback, we "relaxed" applied ESLint rules to removed forced opinionated coding styles practices.
-Also, all the rules are added directly to the `eslintrc.js` file for simpler further modifications.
+
+Based on the received feedback from the ecosystem, we "relaxed" applied ESLint rules to removed forced opinionated coding styles practices. These rules are now also added directly to the `eslintrc.js` file for simpler further modifications in environment level.
 
 ### Defer loading AdaptiveCardExtension Quick View
-When an ACE is loaded on a page we load both the card view and quick view. However, we don't need load the quick view until it is interacted with.
-By defer loading a quick view, we will gain performance when loading an ACE.
+
+When an ACE is loaded on a page we load both the card view and quick view. However, we don't need load the quick view until it is interacted with. By defer loading a quick view, we will gain performance when loading an ACE.
 
 Below is an example to defer load quick view.
 
@@ -117,6 +126,7 @@ this.quickViewNavigator.register(
   ).then((component) => new component.QuickView())
 );
 ```
+
 `this.quickViewNavigator.register` callback argument now allows to return a `Promise<TView>` or `TView` directly: `() => TView | Promise<TView>`
 
 ## Fixed Issues

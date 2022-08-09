@@ -1,7 +1,8 @@
 ---
 title: RemoteEndpointsDefinition complexType
+description: Describes the RemoteEndpointsDefinition complexType. Applies to SharePoint Add-ins, SharePoint Foundation 2013, and SharePoint Server 2013.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
 ms.localizationpriority: medium
@@ -19,7 +20,7 @@ ms.assetid: d50c57c6-a824-6c46-fe86-4a3c1da3ddcb
 
 ## Type information
 
-|   |   |
+|Information type|Value|
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
 | **Schema file**  | appmanifest.xsd |
