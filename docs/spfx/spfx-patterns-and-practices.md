@@ -60,7 +60,7 @@ The first and foremost best practice for SPFx solutions is building solution str
 
 * **helpers:** 
 
-    * `helpers` folder contains static/non-static classes that helps you to execute small reusable functions. i.e. UIHelper.ts, DateHelper.ts
+    * `helpers` folder contains static/non-static classes that helps you to execute small reusable functions. i.e. `UIHelper.ts`, `DateHelper.ts`
 
 * **hooks:** 
 
@@ -72,7 +72,7 @@ The first and foremost best practice for SPFx solutions is building solution str
 
 * **controls:** 
 
-    * `controls` folder contains common UI classes or function components which will be used across all webparts in solution. For example, SpinnerOverlay.tsx which can be used to display spinner with overlay for long operations.
+    * `controls` folder contains common UI classes or function components which will be shared across all webparts in solution. For example, `SpinnerOverlay.tsx` which can be used to display spinner with overlay for long operations.
 
 ## Business Logic Implementation
 
@@ -219,7 +219,7 @@ Each service contains basically two components:
 1. interface (contract)
 2. class
 
-The interface or contract implementation here let you to implement dependency injection design pattern to achieve loosely coupled solution architecture. 
+The interface or contract implementation here let you to implement dependency injection design pattern to achieve loosely coupled solution architecture.
 
 With help of 'ServiceScope', you can inject required dependencies. ServiceScope is kind of IoC container which stores the service keys (kind of index) for all the services defined including out-of-box SPFx components.
 
@@ -255,23 +255,23 @@ As you see in the above example, productService object will be created based on 
 
 ## UI Guidelines
 
-* The main react component (i.e. HelloWord.tsx) should be used to define only master layout. If your component contains header and footer, it is always a good idea to keep them in separate components.
+* The main react component (i.e. `HelloWord.tsx`) should be used to define only master layout. If your component contains header and footer, it is always a good idea to keep them in separate components.
 * Identify all the smallest possible components required for your UI design.
 
   For example, if you want to build simple Products List web part, you may consider following components
-  1. ProductsList.tsx
-  2. Product.tsx
-  3. SearchBar.tsx
-  4. Paging.tsx
+  1. `ProductsList.tsx`
+  2. `Product.tsx`
+  3. `SearchBar.tsx`
+  4. `Paging.tsx`
 
 * If you're building rich complex UI and if you have identified a large set of UI components, you can probably create separate folders to group them.
 * These UI components should only contain rendering logic. Do not add any business logic or data access code in these components.
 * You should not add multiple function components/classes to single file.
 * Consider keeping the code minimal in render method.
 * Consider handling exception properly. Log the exception details with logger components and present generic informative message for end-user on screen. 
-* Do not hardcode strings including generic messages. Use string labels defined in language files (en-us.js) located at src > webparts > myWebPart > loc
+* Do not hardcode strings including generic messages. Use string labels defined in language files (`en-us.js`) located at `src > webparts > myWebPart > loc`
 * Do not store large objects in session/local storages
-* Consider importing leaf level components while importing third party libraries. For example, if you want to import PrimayButton from Office Fabric library, use import { PrimaryButton } from "@fluentui/react/lib/Button"; rather than import { PrimaryButton } from "@fluentui/react";. This will help you to keep your package size compact. This can be very useful in scenarios where you would want to build home page components which are required to be performance effective at first load.
+* Consider importing leaf level components while importing third party libraries. For example, if you want to import `PrimayButton` from Office Fabric library, use `import { PrimaryButton } from "@fluentui/react/lib/Button";` rather than `import { PrimaryButton } from "@fluentui/react";`. This will help you to keep your package size compact. This can be very useful in scenarios where you would want to build home page components which are required to be performance effective at first load.
 
 ## General Coding Guidelines
 
@@ -282,7 +282,7 @@ As you see in the above example, productService object will be created based on 
 * Do not hardcode predefined numbers/strings. Use constants instead.
 * Use enum wherever required. Do not use numbers or strings to indicate discrete values.
 * Add inline comments for complex code logic or wherever required. But do not over-do.
-* It is always good to keep your code beautiful. 
+* The following tips can be helpful to keep your code beautiful:
     * Make brackets aligned properly.
     * Keep your code properly indented. Use 'Format Document' (Shift+Alt+F) feature of VS Code.
     * Do not put unnecessary blank lines.
