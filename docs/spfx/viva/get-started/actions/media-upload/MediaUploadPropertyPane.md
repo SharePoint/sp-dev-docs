@@ -5,7 +5,7 @@ ms.date: 08/09/2022
 ms.localizationpriority: high
 ---
 
-# Explore Media Upload capability via property pane of card-designer card in Adaptive Card Extension.
+# Explore Media Upload capability via property pane of card-designer card in Adaptive Card Extension
 
 In this tutorial we'll see how we can explore this capability via the property pane of the card-designer card.
 

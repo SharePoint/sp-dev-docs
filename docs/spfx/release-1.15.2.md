@@ -110,7 +110,7 @@ The Select Media Action can be used to select Images from your native device. In
 
 Based on the received feedback from the ecosystem, we "relaxed" applied ESLint rules to removed forced opinionated coding styles practices. These rules are now also added directly to the `eslintrc.js` file for simpler further modifications in environment level.
 
-### Defer loading AdaptiveCardExtension Quick View
+### Defer loading Adaptive Card Extension Quick View
 
 When an ACE is loaded on a page we load both the card view and quick view. However, we don't need load the quick view until it is interacted with. By defer loading a quick view, we will gain performance when loading an ACE.
 

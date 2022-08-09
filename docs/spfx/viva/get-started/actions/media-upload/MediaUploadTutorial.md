@@ -25,7 +25,7 @@ When prompted, enter the following values (select the default option for all pro
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
 
-## Update your project's hosted workbench URL.
+## Update your project's hosted workbench URL
 
 When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
 
