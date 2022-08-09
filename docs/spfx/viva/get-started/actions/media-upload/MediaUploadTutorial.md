@@ -1,6 +1,6 @@
 ---
-title: Create an Adpative Card Extension with the select media action
-description: Step by step guid on how to create an Adaptive Card Extension with the select media action.
+title: Create an Adaptive Card Extension with the select media action
+description: Step by step guide on how to create an Adaptive Card Extension with the select media action.
 ms.date: 07/25/2022
 ms.localizationpriority: high
 ---
@@ -43,21 +43,21 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
 - Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-At this point, if you do `gulp serve`, then you will see the `MediaUpload` card:
+At this point, if you do `gulp serve`, then you'll see the `MediaUpload` card:
 
 ![See the MediaUpload card icon in the webpart toolbox](./img/mediaUploadTutorialACE.PNG)
 
 ## Add media upload action to your Adaptive Card Extension
 
-At this point we have out of the box Adaptive Card Extension code. Now it's time to flare things up with selecting media from the Card and Quick views.
+At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with selecting media from the Card and Quick views.
 
-In the Card View, we will provide a button which will perform the following actions:
+In the Card View, we'll provide a button that will perform the following actions:
 
 - Upload an image file
 
 ### Update the labels that will show up on the card
 
-Before we start adding the actions, let us first update the strings that you will see on the card.
+Before we start adding the actions, let us first update the strings that you'll see on the card.
 
 For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/mediaUpload/loc/en-us.js**
 
@@ -89,7 +89,7 @@ to the `IMediaUploadAdaptiveCardExtensionStrings` interface.
 
 ### Add actions on the Card View
 
-As mentioned earlier, on the Card View, we will add a button, which will allow the user to upload a png file when clicking the Card View.
+As mentioned earlier, on the Card View, we'll add a button, which will allow the user to upload a png file when clicking the Card View.
 
 Locate and open the following file in your project: **./src/adaptiveCardExtensions/mediaUpload/cardView/CardView.ts**
 
@@ -134,7 +134,7 @@ With the changes made so far, your Card View would look like:
 
 ### Add actions on the Quick View
 
-In the Quick View, we will introduce buttons for 3 actions:
+In the Quick View, we will introduce buttons for three actions:
 
 - Upload a png file
 - Upload a jpg file
@@ -192,7 +192,7 @@ After adding these actions, your Quick View would look like:
 
 ### Set up the state for our Adaptive Card Extension
 
-So far we have created our Card View and Quick View. If you do a `gulp serve` at this point, then you will be able to perform the actions that were described above.
+So far we have created our Card View and Quick View. If you do a `gulp serve` at this point, then you'll be able to perform the actions that were described above.
 
 But now, let us take it a notch higher.
 

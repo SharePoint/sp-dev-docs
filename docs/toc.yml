@@ -530,6 +530,8 @@
     href: spfx/viva/overview-viva-connections.md
   - name: Location capabilities in Adaptive Card Extension
     href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
+  - name: Media upload in Adaptive Card Extension
+    href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
   - name: Design Guidance
     items:
     - name: Introduction
@@ -553,7 +555,11 @@
     - name: Create an Adaptive Card Extension with geolocation action
       href: spfx/viva/get-started/actions/geolocation/GeolocationTutorial.md
     - name: Geolocation capabilities with the property pane of an ACE
-      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md     
+      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md
+    - name: Create an Adpative Card Extension with the select media action
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadTutorial.md
+    - name: Media Upload capability via property pane of an ACE
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Viva Connections Extensibility Learn module
