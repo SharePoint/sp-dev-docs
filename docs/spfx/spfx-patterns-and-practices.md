@@ -221,7 +221,7 @@ Each service contains basically two components:
 
 The interface or contract implementation here let you to implement dependency injection design pattern to achieve loosely coupled solution architecture. 
 
-With help of 'ServiceScope', you can inject required dependencies. [ServiceScope](https://docs.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest) is kind of IoC container which stores the service keys (kind of index) for all the services defined including out-of-box SPFx components.
+With help of 'ServiceScope', you can inject required dependencies. ServiceScope is kind of IoC container which stores the service keys (kind of index) for all the services defined including out-of-box SPFx components.
 
 In some cases, if your business logic is not too complex, you can simply combine business and core service implementation as follows.
 
