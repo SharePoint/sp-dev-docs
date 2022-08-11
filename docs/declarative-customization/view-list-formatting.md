@@ -1,7 +1,7 @@
 ---
 title: Format list view to customize SharePoint
 description: Customize how list views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements and the styles to be applied to those elements.
-ms.date: 06/28/2022
+ms.date: 08/10/2022
 ms.localizationpriority: high
 ---
 
@@ -42,7 +42,7 @@ This example was adopted from a column formatting example, [Conditional formatti
 }
 ```
 
-You can find this sample with additional details here: [Conditional formatting based on choice field](https://github.com/SharePoint/sp-dev-list-formatting/tree/master/view-samples/text-conditional-format)
+You can find this sample with additional details here: [Conditional formatting based on choice field](https://github.com/pnp/list-formatting/tree/master/view-samples/status-rowclass)
 
 ### Example: Alternate Row Formatting based on Modulus
 
