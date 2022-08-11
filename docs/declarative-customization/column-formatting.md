@@ -707,6 +707,7 @@ The following column types support column formatting:
 * Average Rating
 * Likes
 * Approval Status
+* Attachments
 
 The following are currently **not** supported:
 

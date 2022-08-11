@@ -74,6 +74,7 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'exportCSV'
 'export'
 'editInGridView'
+'exitGridView'
 'sync'
 'uploadTemplate'
 'addTemplate'
