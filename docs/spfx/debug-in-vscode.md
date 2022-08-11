@@ -1,8 +1,7 @@
 ---
 title: Debug SharePoint Framework solutions in Visual Studio Code
 description: Prerequisites and steps for configuring Visual Studio Code for debugging SharePoint Framework solutions.
-ms.date: 04/25/2022
-ms.prod: sharepoint
+ms.date: 07/15/2022
 ms.localizationpriority: high
 ---
 # Debug SharePoint Framework solutions in Visual Studio Code
@@ -15,27 +14,13 @@ You can also see the required steps to enable debugging in Visual Studio Code in
 
 ## Prerequisites
 
-The easiest way to configure Visual Studio Code to debug SharePoint Framework solutions is by using the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) or [Debugger for Edge](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-edge) Visual Studio Code extensions.
+The easiest way to configure Visual Studio Code (VS Code) to debug SharePoint Framework solutions is by using the [JavaScript Debugger](https://github.com/microsoft/vscode-js-debug) included in VS Code to debug Chrome & Edge.
 
-The default SharePoint Framework web parts and extensions project templates include the prerequisites and prompt for the required Visual Studio Code extensions to install. In this case, it prompts to install Debugger for Chrome Visual Studio Code extension.
-
-You also need **Google Chrome**. [Download and install the latest version of Google Chrome](https://www.google.com/chrome/browser/desktop/index.html).
+You also need **Google Chrome** or **Microsoft Edge**.
 
 ## Debug configurations
 
-You can locate the debug configurations in the **./vscode/launch.json** file under the Visual Studio Code workspace folder. The **launch.json** contains two debug configurations:
-
-- Local workbench configuration
-- Hosted workbench configuration
-
-## Debug solution using local workbench
-
-When building SharePoint Framework solutions, you can use the local workbench to verify that your web part is working correctly. Using the local workbench is convenient for testing all scenarios that do not require communicating with SharePoint as well as for offline development.
-
-With Visual Studio Code configured for debugging SharePoint Framework solutions by using Google Chrome and the local workbench, you can verify that everything is working as expected.
-
-> [!IMPORTANT]
-> Local workbench does not support using Internet Explorer 11. Please use more modern browser.
+You can locate the debug configurations in the **./vscode/launch.json** file under the Visual Studio Code workspace folder.
 
 ### Configure a breakpoint
 
@@ -58,12 +43,12 @@ With Visual Studio Code configured for debugging SharePoint Framework solutions 
 
 After the gulp task is finished, move the focus to the code area of Visual Studio Code and select <kbd>F5</kbd> (or on the **Debug** menu, select the **Start Debugging** option).
 
-The debug mode in Visual Studio Code starts, changing the color of the status bar to orange and opening a new window of Google Chrome showing the local version of the SharePoint Workbench.
+The debug mode in Visual Studio Code starts, changing the color of the status bar to orange and opening a new window of Google Chrome showing the SharePoint Workbench.
 
 > [!NOTE]
 > At this point the breakpoint is disabled because the web part's code hasn't been loaded yet. SharePoint Framework loads web parts on demand only after they have been added to the page.
 
-![Visual Studio Code in debug mode displayed next to Google Chrome showing the local version of the SharePoint workbench](../images/vscode-debugging-chrome-started.png)
+![Visual Studio Code in debug mode displayed next to Google Chrome showing the SharePoint workbench](../images/vscode-debugging-chrome-started.png)
 
 ### Add a web part to the canvas
 
@@ -101,7 +86,7 @@ When building SharePoint Framework solutions, you'll be doing such tests regular
 
     ![Microsoft 365 login page displayed in Google Chrome after starting debugging in the hosted workbench](../images/vscode-debugging-o365-login.png)
 
-1. After you sign in, add the web part to the canvas and refresh the workbench, just like you did with the local workbench. You will see the breakpoint in Visual Studio Code be hit, and you're able to inspect variables and step through the code.
+1. After you sign in, add the web part to the canvas and refresh the workbench. You will see the breakpoint in Visual Studio Code be hit, and you're able to inspect variables and step through the code.
 
     ![Breakpoint hit in Visual Studio Code when debugging a SharePoint Framework client-side web part in the hosted workbench](../images/vscode-debugging-breakpoint-hit-o365.png)
 
@@ -185,75 +170,6 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
 > [!NOTE]
 > In order for you to debug with Microsoft Edge, you'll have to install the **Windows 10 April 2018 Update** which includes the Microsoft Edge DevTools Protocol.
 
-### Create debug configuration for local workbench
-
-1. In Visual Studio Code, activate the **Debug** pane.
-
-    ![Debug pane activated in Visual Studio Code](../images/vscode-debugging-vscode-debug.png)
-
-1. In the top section of the pane, open the **Configurations** list, and select the **Add Configuration** option.
-
-    ![The Add Configuration option highlighted in the debug configurations drop-down](../images/vscode-debugging-add-debug-configuration.png)
-
-1. In the list of debug environments, select **Edge** or **Chrome**.
-
-    ![Chrome highlighted as the debug environment for the new configuration](../images/vscode-debugging-edge-chrome-environment.png)
-
-1. For **Edge**, replace the contents of the generated **.vscode/launch.json** file with:
-
-    ```json
-    {
-      "version": "0.2.0",
-      "configurations": [
-        {
-          "name": "Local workbench",
-          "type": "msedge",
-          "request": "launch",
-          "url": "https://localhost:4321/temp/workbench.html",
-          "webRoot": "${workspaceRoot}",
-          "sourceMaps": true,
-          "sourceMapPathOverrides": {
-            "webpack:///.././src/*": "${webRoot}/src/*",
-            "webpack:///../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../../src/*": "${webRoot}/src/*"
-          }
-        }
-      ]
-    }
-    ```
-
-    This configuration uses the **Edge** debugger provided with the **Debugger for Edge** extension. It points to the URL of the local workbench as the starting point. What is essential in debugging TypeScript code is the configuration of source maps that the debugger uses to map the JavaScript running in the browser to the original TypeScript code.
-
-1. For **Chrome**, replace the contents of the generated **.vscode/launch.json** file with:
-
-    ```json
-    {
-      "version": "0.2.0",
-      "configurations": [
-        {
-          "name": "Local workbench",
-          "type": "chrome",
-          "request": "launch",
-          "url": "https://localhost:4321/temp/workbench.html",
-          "webRoot": "${workspaceRoot}",
-          "sourceMaps": true,
-          "sourceMapPathOverrides": {
-            "webpack:///.././src/*": "${webRoot}/src/*",
-            "webpack:///../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../../src/*": "${webRoot}/src/*"
-          },
-          "runtimeArgs": [
-            "--remote-debugging-port=9222"
-          ]
-        }
-      ]
-    }
-    ```
-
-    This configuration uses the **Chrome** debugger provided with the **Debugger for Chrome** extension. It points to the URL of the local workbench as the starting point. What is essential in debugging TypeScript code is the configuration of source maps that the debugger uses to map the JavaScript running in the browser to the original TypeScript code.
-
 ### Create debug configuration for hosted workbench
 
 1. In Visual Studio Code, open the **.vscode/launch.json** file.
@@ -263,20 +179,6 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
     {
       "version": "0.2.0",
       "configurations": [
-        {
-          "name": "Local workbench",
-          "type": "msedge",
-          "request": "launch",
-          "url": "https://localhost:4321/temp/workbench.html",
-          "webRoot": "${workspaceRoot}",
-          "sourceMaps": true,
-          "sourceMapPathOverrides": {
-            "webpack:///.././src/*": "${webRoot}/src/*",
-            "webpack:///../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../../src/*": "${webRoot}/src/*"
-          }
-        },
         {
           "name": "Hosted workbench",
           "type": "msedge",
@@ -302,25 +204,8 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
       "version": "0.2.0",
       "configurations": [
         {
-          "name": "Local workbench",
-          "type": "chrome",
-          "request": "launch",
-          "url": "https://localhost:4321/temp/workbench.html",
-          "webRoot": "${workspaceRoot}",
-          "sourceMaps": true,
-          "sourceMapPathOverrides": {
-            "webpack:///.././src/*": "${webRoot}/src/*",
-            "webpack:///../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../src/*": "${webRoot}/src/*",
-            "webpack:///../../../../../src/*": "${webRoot}/src/*"
-          },
-          "runtimeArgs": [
-            "--remote-debugging-port=9222"
-          ]
-        },
-        {
           "name": "Hosted workbench",
-          "type": "chrome",
+          "type": "pwa-chrome",
           "request": "launch",
           "url": "https://contoso.sharepoint.com/_layouts/workbench.aspx",
           "webRoot": "${workspaceRoot}",
@@ -332,7 +217,8 @@ If you're using an older version of SharePoint Framework Yeoman generator or wan
             "webpack:///../../../../../src/*": "${webRoot}/src/*"
           },
           "runtimeArgs": [
-            "--remote-debugging-port=9222"
+            "--remote-debugging-port=9222",
+            "-incognito"
           ]
         }
       ]

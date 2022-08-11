@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a section of a layout.
 # Section element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a section of a layout.
-  
+
 ```XML
 <Section
   Type="Divider | OneRow | TwoRow | ThreeRow"
@@ -37,24 +36,24 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Type** <br/> | Optional. An enumeration value that specifies the type of section.<br/><br/> **Divider**. The section cannot contain child [Row](row-element.md) elements.  <br/> **OneRow**. The section can contain one child **Row** element.  <br/> **TwoRow**. The section can contain two child **Row** elements.  <br/> **ThreeRow**. The section can contain three child **Row** elements.  <br/> |
 |**Alignment** <br/> | Optional. An enumeration value that specifies the vertical alignment of controls within the section.<br/><br/> **Top**. Control icons are aligned to the top edge of their row.  <br/> **Middle**. Control icons are aligned in the middle of their row.  <br/><br/>  The default alignment is **Top**.  <br/> |
-   
+
 ### Child elements
 
 - [Row](row-element.md)
-   
+
 ### Parent elements
 
 - [Layout](layout-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded 
-   
+- Maximum: unbounded
+
 ## Example
 
 The following example defines a layout with two sections of different types.
-  
+
 ```XML
 <Layout Title="Large">
   <Section Type="OneRow">
@@ -79,5 +78,3 @@ The following example defines a layout with two sections of different types.
   </Section>
 </Layout>
 ```
-
-

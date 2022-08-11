@@ -1,12 +1,12 @@
 ---
 title: CompositeSteps element (WorkflowInfo)
+description: Describes the CompositeSteps element (WorkflowInfo), which is a container for the steps in a composite workflow activity.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 9e0f6f95-0a41-4272-8b10-9f642acb5437
 ---
@@ -67,11 +67,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-
-
-
-
-
-
-
-

@@ -1,15 +1,15 @@
 ---
 title: CompositeStep element
+description: Describes the CompositeStep element, which represents a single step in a composite workflow activity.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4d132d2f-d222-d59d-6cf9-c1199df236db
 ---
 
-# CompositeStep element 
+# CompositeStep element
 
 (CompositeSteps element) (WorkflowInfo element) (Action4)
 
@@ -27,7 +27,7 @@ Represents a single step in a composite workflow activity.
 
 ## Element information
 
-|   |   |
+| Name | Value |
 |---|---|
 | **Element type**  |  |
 | **Namespace**     |  |
@@ -41,7 +41,7 @@ Represents a single step in a composite workflow activity.
                <xs:sequence>
          <xs:element name="DataSources"  type="dataSourcesType" minOccurs="0"  maxOccurs="1">
 
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
          <xs:attribute name="Name"   type="s:string"      use="required"     />
          <xs:attribute name="ClassName"   type="s:string"      use="required"     />
@@ -50,7 +50,7 @@ Represents a single step in a composite workflow activity.
          <xs:attribute name="Order"   type="s:nonNegativeInteger"     />
          <xs:attribute name="Description"   type="s:string"     />
            </xs:complexType>
-      </xs:element>  
+      </xs:element>
 ```
 
 ## Elements and attributes
@@ -169,11 +169,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

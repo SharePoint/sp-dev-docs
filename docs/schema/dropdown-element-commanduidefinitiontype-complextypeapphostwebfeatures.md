@@ -1,24 +1,24 @@
 ---
 title: DropDown element (CommandUIDefinitionType complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
+description: Describes DropDown element (CommandUIDefinitionType complexType) and includes element information, attributes, and parent and child elements.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 02ae200c-9856-b264-2303-36ce7c44e520
 ---
 
-# DropDown element (CommandUIDefinitionType complexType) 
+# DropDown element (CommandUIDefinitionType complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | DropDownType |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -71,11 +71,5 @@ None.
 
 None.
 
-<br/> 
-<br/> 
-
-
-
-
-
-
+<br/>
+<br/>

@@ -2,7 +2,6 @@
 title: Use the developer dashboard
 description: Use the developer dashboard to get more information about the SharePoint Framework components on the page
 ms.date: 10/21/2020
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 # Use the developer dashboard

@@ -1,15 +1,15 @@
 ---
 title: Event element
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Event Element and includes information on usage, elements, and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: af057e04-856c-3f9d-e62b-e08242956d7a
 ---
 
-# Event element 
+# Event element
 
 (Events element) (WorkflowInfo element) (Action4)
 
@@ -57,7 +57,7 @@ Specifies a workflow event from among available workflow events. 
          <xs:attribute name="EventGroup" type="s:string" use="required" />
          <xs:attribute name="Category" type="s:string" use="required" />
          <xs:attribute name="RankDefault" type="s:string" use="required" />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -149,11 +149,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

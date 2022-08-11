@@ -1,12 +1,12 @@
 ---
 title: Evaluation Element (WorkflowActions)
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Evaluation Element (WorkflowActions) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5b0fea56-7518-41d3-ac59-5b208a09e2bc
 ---
@@ -67,9 +67,3 @@ None
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-

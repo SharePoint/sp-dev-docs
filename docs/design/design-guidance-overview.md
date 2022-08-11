@@ -1,7 +1,7 @@
 ---
 title: Designing great SharePoint experiences
 description: Create compelling SharePoint experiences and effectively communicate your brand and message to your audience.
-ms.date: 1/23/2018
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 
@@ -14,7 +14,7 @@ SharePoint is a platform that delivers content to more than 200,000 organization
 ![SharePoint communication site on multiple devices](../images/design-guidance-overview.png)
 
 
-## SharePoint design principles 
+## SharePoint design principles
 
 SharePoint builds on the design principles that shape the Office and Microsoft product families. These principles help the design stay true to our product goals and user needs.
 
@@ -38,7 +38,7 @@ We search for what’s possible beyond today’s way of getting things done. We�
 
 Accessibility is developing an equal experience for all users that enables individuals to adjust their user experience to meet their unique visual, hearing, dexterity, cognitive, and speech needs. SharePoint believes strongly in providing accessible experiences for everyone, everywhere, and in optimizing our experiences to reflect the needs of all of our customers.
 
-<!-- These seem like fairly high-level principles; it would be good to think about how to convey how these principles manifest in the design. Can you add a design example to each section that illustrate the principle? --> 
+<!-- These seem like fairly high-level principles; it would be good to think about how to convey how these principles manifest in the design. Can you add a design example to each section that illustrate the principle? -->
 
 ## See also
 

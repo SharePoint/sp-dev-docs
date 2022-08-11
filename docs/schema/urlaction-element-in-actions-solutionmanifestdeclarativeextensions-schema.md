@@ -1,15 +1,15 @@
 ---
 title: UrlAction Element in Actions
+description: Describes UrlAction Element in Actions. The CodeMethodAction element is used to execute a URL-based action in Microsoft Outlook 2010.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 83b560be-7aef-fb36-616d-16217334cf92
 ---
 
-# UrlAction Element in Actions 
+# UrlAction Element in Actions
 
 (SolutionManifestDeclarativeExtensions Schema)
 
@@ -17,7 +17,7 @@ ms.assetid: 83b560be-7aef-fb36-616d-16217334cf92
 
 The **CodeMethodAction** element is used to execute a URL-based action in Microsoft Outlook 2010.
 
-**Namespace**: 
+**Namespace**:
 `http://schemas.microsoft.com/office/2009/05/BusinessApplications/Manifest/DeclarativeExtensions`
 
 **Schema**: SolutionManifestDeclarativeExtensions
@@ -128,54 +128,12 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md">Parameters Element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>Actions can take parameters. The **Parameters** element lists the parameters of the action.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [Parameters Element in ActionDefinition (SolutionManifestDeclarativeExtensions Schema)](parameters-element-in-actiondefinition-solutionmanifestdeclarativeextensions-sch.md) | Actions can take parameters. The **Parameters** element lists the parameters of the action. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md">Actions Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The **Actions** element that contains this action.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
-
-<br/>
-
-
-
-
-
-
-
-
+| Element | Description |
+|---------|-------------|
+| [Actions Element in DeclarativeContextDefinition (SolutionManifestDeclarativeExtensions Schema)](actions-element-in-declarativecontextdefinition-solutionmanifestdeclarativeexten.md) | The **Actions** element that contains this action. |

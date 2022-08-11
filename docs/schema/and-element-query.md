@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,22 +16,22 @@ description: In CAML, used within the Where element to group filters in a query 
 # And element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used within the [Where](where-element-query.md) element to group filters in a query for a view. 
-  
+
+Used within the [Where](where-element-query.md) element to group filters in a query for a view.
+
 ```XML
 <And>
 </And>
 ```
 
-## Elements and attributes  
+## Elements and attributes
 
-The following sections describe attributes, child elements, and parent elements.  
+The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [And](and-element-query.md)
@@ -52,26 +51,26 @@ None
 - [Neq](neq-element-query.md)
 - [NotIncludes](notincludes-element-query.md)
 - [Or](or-element-query.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
 - Maximum: Unbounded
-   
+
 ### Remarks
 
-This element can be nested inside other **And** and [Or](or-element-query.md) elements. The server supports unlimited complicated queries. However, any given **And** element can have only two conjuncts; that is, only two child elements. If you need to conjoin three or more conditions, you must nest the **And** elements, as demonstrated by the third example in the following section. 
-  
+This element can be nested inside other **And** and [Or](or-element-query.md) elements. The server supports unlimited complicated queries. However, any given **And** element can have only two conjuncts; that is, only two child elements. If you need to conjoin three or more conditions, you must nest the **And** elements, as demonstrated by the third example in the following section.
+
 ## Examples
 
 The following example conveys criteria for a query on the ProductID field: (ProductID = J1539 AND ProductID = J9862) AND (ProductID = J0394 OR ProductID = J4589).
-  
+
 ```XML
 <And>
   <And>
@@ -99,8 +98,8 @@ The following example conveys criteria for a query on the ProductID field: (Prod
 
 <br/>
 
-The following example performs a query for cases in which values of the **Status** field do not equal Completed and values of the **Sent** field are **null**. The records returned are sorted in descending order according to values of the **Modified** field. 
-  
+The following example performs a query for cases in which values of the **Status** field do not equal Completed and values of the **Sent** field are **null**. The records returned are sorted in descending order according to values of the **Modified** field.
+
 ```XML
 <Query>
   <OrderBy>
@@ -122,8 +121,8 @@ The following example performs a query for cases in which values of the **Status
 
 <br/>
 
-The following example shows how to conjoin three conditions. Note that the first pair of conditions is within their own **And** element, which is itself a condition of an outer **And** element. 
-  
+The following example shows how to conjoin three conditions. Note that the first pair of conditions is within their own **And** element, which is itself a condition of an outer **And** element.
+
 ```XML
 <Where>
   <And>
@@ -144,5 +143,3 @@ The following example shows how to conjoin three conditions. Note that the first
 ```
 
 <br/>
-
-

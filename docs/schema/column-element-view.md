@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: 577395b8-0a8d-4317-85cf-b0f674c93b92
-description: Returns the raw data value for a particular field, as opposed to the formatted version provided by the Field element. 
+description: Returns the raw data value for a particular field, as opposed to the formatted version provided by the Field element.
 ---
 
 # Column element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Returns the raw data value for a particular field, as opposed to the formatted version provided by the [Field](field-element-view.md) element. In the case of a **Lookup** field, **Column** returns the local value (an ID number in the list that references another list), while the [LookupColumn](lookupcolumn-element-view.md) element returns the data from the foreign table. 
-  
+
+Returns the raw data value for a particular field, as opposed to the formatted version provided by the [Field](field-element-view.md) element. In the case of a **Lookup** field, **Column** returns the local value (an ID number in the list that references another list), while the [LookupColumn](lookupcolumn-element-view.md) element returns the data from the foreign table.
+
 ```XML
 <Column
   AutoHyperLink = "TRUE" | "FALSE"
@@ -29,7 +28,7 @@ Returns the raw data value for a particular field, as opposed to the formatted v
   Format="DateTime"
     HTMLEncode = "TRUE" | "FALSE"
     Name = "Text"
-    ShowField = "Text" 
+    ShowField = "Text"
     StripWS = "TRUE" | "FALSE"
   SubColumnNumber = Integer
     URLEncode = "TRUE" | "FALSE"
@@ -57,31 +56,30 @@ The following sections describe attributes, child elements, and parent elements.
 |**SubColumnNumber** <br/> |Optional **Integer**.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0 
+- Minimum: 0
 - Maximum: Unbounded (1 within [Limit](limit-element-view.md))
-   
+
 ### Remarks
 
-Note that when an empty **Column** element (`<Column/>`) is used, it is sensitive to the current setting of the `DisplayMode` variable. The display mode is set implicitly according to the current command being used. 
+Note that when an empty **Column** element (`<Column/>`) is used, it is sensitive to the current setting of the `DisplayMode` variable. The display mode is set implicitly according to the current command being used.
 
 If a view or item is being displayed, `DisplayMode` is set to **Display**. If an item is being created from a form, `DisplayMode` is set to **New**. If an existing item is being edited, `DisplayMode` is set to **Edit**. The `DisplayMode` variable can be overridden in the page by setting it directly, for example, `<SetVar Name="DisplayMode">Edit</SetVar>`.
-  
-Using `<Column/>` to render a date field or a number field will render the data in the locale of the server because `<Column/>` renders numeric values according to the locale-specific rules of the server. 
-  
+
+Using `<Column/>` to render a date field or a number field will render the data in the locale of the server because `<Column/>` renders numeric values according to the locale-specific rules of the server.
+
 ## See also
 
-- [Column2 element (View)](column2-element-view.md)  
-- [Field element (View)](field-element-view.md)  
+- [Column2 element (View)](column2-element-view.md)
+- [Field element (View)](field-element-view.md)
 - [LookupColumn element (View)](lookupcolumn-element-view.md)
-

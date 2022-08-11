@@ -1,6 +1,7 @@
 ---
 title: Build farm solutions in SharePoint
-ms.date: 09/25/2017
+description: This is an article providing links for documentation about developing, packaging and deploying build farm solutions in SharePoint.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: 96c32f08-ad93-49af-b8d0-9d194a48cc79
 ms.localizationpriority: high

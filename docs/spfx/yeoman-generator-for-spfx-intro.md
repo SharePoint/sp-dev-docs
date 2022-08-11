@@ -2,7 +2,6 @@
 title: Yeoman generator for the SharePoint Framework
 description: On this page, learn how to use the Yeoman generator for the SharePoint Framework to create SPFx projects.
 ms.date: 02/10/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Yeoman generator for the SharePoint Framework

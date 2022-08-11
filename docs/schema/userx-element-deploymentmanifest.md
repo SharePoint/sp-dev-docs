@@ -1,20 +1,19 @@
 ---
 title: "UserX Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/14/2022
+description: Describes UserX Element (DeploymentManifest) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: ac4e829e-699c-4856-87a3-a3c534edd861
-description: "Last modified: March 09, 2015"
 ---
 
 # UserX Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
-Represents incremental changes to an [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx) object defintion during an incremental deployment. 
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Represents incremental changes to an [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx) object defintion during an incremental deployment.
 
 ## Definition
 
@@ -41,8 +40,8 @@ USAGE
 
 ## Type
 
-**DeploymentUserX** (based on [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx)) 
-  
+**DeploymentUserX** (based on [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx))
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -60,17 +59,16 @@ The following sections describe attributes, child elements, and parent elements.
 |**Name** <br/> |xs:string  <br/> |Required. Provides the display name of the user.  <br/> |
 |**Operation** <br/> |[SecurityModificationType Simple Type (DeploymentManifest)](securitymodificationtype-simple-type-deploymentmanifest.md) <br/> |Required. Enumeration type that provides values to specify which security modifications are allowed.  <br/> |
 |**SystemId** <br/> |xs:string  <br/> |Optional.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [SPUser](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPUser.aspx)
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

@@ -1,19 +1,18 @@
 ---
 title: "GroupX Element (DeploymentManifest)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3a227232-a224-4c30-b7b5-ce722f1f0eb9
-description: "Last modified: March 09, 2015"
+description: GroupX Element (DeploymentManifest) represents an instance of a top-level Windows SharePoint Services 3.0 deployment group object.
 ---
 
 # GroupX Element (DeploymentManifest)
 
-**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013 
-  
+**Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
 Represents an instance of a top-level Windows SharePoint Services 3.0 deployment group object.
 
 ## Definition
@@ -45,7 +44,7 @@ USAGE
 ## Type
 
 **DeploymentGroupX**
-  
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -66,16 +65,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**OnlyAllowMembersViewMembership** <br/> |xs:boolean  <br/> |Optional. Specifies whether only group members can view the list of deployment group members; **true** if only group members can view the list.  <br/> |
 |**AllowRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether users can request to join or leave the deployment group; **true** if users can request to join or leave the group..  <br/> |
 |**AutoAcceptRequestToJoinLeave** <br/> |xs:boolean  <br/> |Optional. Specifies whether requests to join or leave the deployment group are automatically accepted; **true** if requests are automatically accepted.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 [SPObject Element (DeploymentManifest)](spobject-element-deploymentmanifest.md)
-   
+
 ## See also
 
 - [DeploymentManifest Schema](deploymentmanifest-schema.md)
-

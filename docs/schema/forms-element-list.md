@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,27 +16,27 @@ description: Contains the collection of forms in a list definition or in a base 
 # Forms element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains the collection of forms in a list definition or in a base list type of a site definition.
-  
+
 ```XML
-<Forms>  
-    <Form    
-        Default = "TRUE" | "FALSE"    
-        Path = "Text"    
-        SetupPath = "Text"    
-        Template = "Text"    
-        Type = "DisplayForm" | "EditForm" | "NewForm"    
-        Url = "URL"    
-        UseDefaultListFormWebPart = "TRUE" | "FALSE"    
-        UseLegacyForm = "TRUE" | "FALSE"    
-        WebPartZoneID = "Text">    
-        <WebParts>      
-            <AllUsersWebPart        
-                WebPartOrder = Integer        
-                WebPartZoneID = "Text">          <![CDATA[...]]>      
-            </AllUsersWebPart>    
-        </WebParts>  
+<Forms>
+    <Form
+        Default = "TRUE" | "FALSE"
+        Path = "Text"
+        SetupPath = "Text"
+        Template = "Text"
+        Type = "DisplayForm" | "EditForm" | "NewForm"
+        Url = "URL"
+        UseDefaultListFormWebPart = "TRUE" | "FALSE"
+        UseLegacyForm = "TRUE" | "FALSE"
+        WebPartZoneID = "Text">
+        <WebParts>
+            <AllUsersWebPart
+                WebPartOrder = Integer
+                WebPartZoneID = "Text">          <![CDATA[...]]>
+            </AllUsersWebPart>
+        </WebParts>
     </Form>
 </Forms>
 ```
@@ -49,22 +48,20 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [Form](form-element-list.md)
-   
+
 ### Parent elements
 
 - [Default](default-element-listfield.md)
 - [MetaData (List)](metadata-element-list.md)
 - [MetaData (Site)](metadata-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
+- Maximum: 1
 
-<br/> 
-   
-
+<br/>

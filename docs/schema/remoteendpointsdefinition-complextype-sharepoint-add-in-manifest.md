@@ -1,26 +1,26 @@
 ---
 title: RemoteEndpointsDefinition complexType
+description: Describes the RemoteEndpointsDefinition complexType. Applies to SharePoint Add-ins, SharePoint Foundation 2013, and SharePoint Server 2013.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: d50c57c6-a824-6c46-fe86-4a3c1da3ddcb
 ---
 
-# RemoteEndpointsDefinition complexType 
+# RemoteEndpointsDefinition complexType
 
 (SharePoint Add-in Manifest)
 
 **Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+|Information type|Value|
 |---|---|
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
 | **Schema file**  | appmanifest.xsd |
@@ -38,7 +38,7 @@ ms.assetid: d50c57c6-a824-6c46-fe86-4a3c1da3ddcb
         </xs:element>
       </xs:sequence>
     </xs:complexType>
-```          
+```
 
 ## Elements and attributes
 
@@ -73,9 +73,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-

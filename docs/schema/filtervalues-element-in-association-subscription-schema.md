@@ -1,15 +1,15 @@
 ---
 title: FilterValues Element in Association
+description: Describes the FilterValues Element in Association, which specifies a list of filter values to use for an association method instance in this cache subscription.
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 93cb076a-c981-2655-2f01-4b3f5e6dfbce
 ---
 
-# FilterValues Element in Association 
+# FilterValues Element in Association
 
 (Subscription Schema)
 
@@ -35,50 +35,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="filtervalue-element-in-filtervalues-subscription-schema.md">FilterValue Element in FilterValues (Subscription Schema)</a></span></p></td>
-<td align="left"><p>A filter value for this association method instance.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+|---------|-------------|
+| [FilterValue Element in FilterValues (Subscription Schema)](filtervalue-element-in-filtervalues-subscription-schema.md) | A filter value for this association method instance. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-associations-subscription-schema.md">Association Element in Associations (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The association that contains this list of filter values.</p></td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-
-
+| Element | Description |
+|---------|-------------|
+| [Association Element in Associations (Subscription Schema)](association-element-in-associations-subscription-schema.md) | The association that contains this list of filter values. |

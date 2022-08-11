@@ -1,15 +1,15 @@
 ---
 title: Parameters element (Coercion element)
+description: Describes the Parameters element (Coercion element) and provides the usage, the element information, a definition, and the elements and attributes.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: e7990cac-8f21-2881-3428-3aa9866d666e
 ---
 
-# Parameters element (Coercion element) 
+# Parameters element (Coercion element)
 
 (Coercions element) (WorkflowInfo element) (Action4)
 
@@ -56,7 +56,7 @@ Container for **Parameter** elements that includes descriptions of the parameter
 
 ```XML
     <xs:element name="Parameters" type="coercionParametersType" minOccurs="0" maxOccurs="1">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -114,11 +114,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

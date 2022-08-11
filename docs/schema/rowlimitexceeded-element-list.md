@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,17 +16,17 @@ description: Specifies alternate rendering when a row limit is exceeded. Execute
 # RowLimitExceeded element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies alternate rendering when a row limit is exceeded. It executes if the **Paged** attribute of the [Row](row-element-site.md) element is not set to **TRUE**.
 
 ```XML
 <RowLimitExceeded>
 </RowLimitExceeded>
 ```
-  
+
 > [!NOTE]
-> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
-  
+> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx).
+
 ## Elements and attributes
 
 The following sections describe attributes, child elements, and parent elements.
@@ -35,27 +34,27 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [View](view-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
 The following example provides a link to more items if the row limit is exceeded.
-  
+
 ```XML
 <RowLimitExceeded>
-   <HTML><![CDATA[ <table class="ms-summarycustombody" cellpadding=0 
+   <HTML><![CDATA[ <table class="ms-summarycustombody" cellpadding=0
          cellspacing=0 border=0 rules=rows>
       <TR><TD Class="ms-vb"><a href=" ]]></HTML>
    <ListProperty Select="DefaultViewUrl" />
@@ -70,8 +69,7 @@ The following example provides a link to more items if the row limit is exceeded
 
 ## See also
 
-- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)  
-- [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx) 
-- [RowLimit element (List)](rowlimit-element-list.md) 
+- [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
+- [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
+- [RowLimit element (List)](rowlimit-element-list.md)
 - [Rows element (Site)](rows-element-site.md)
-

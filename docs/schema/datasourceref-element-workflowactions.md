@@ -1,12 +1,12 @@
 ---
 title: DataSourceRef Element (WorkflowActions)
+description: DataSourceRef Element (WorkflowActions) specifies the possible values from DataSource elements associated with the Action element.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b95d9950-522f-45f2-8bd1-6c69f3bf09e7
 ---
@@ -72,10 +72,3 @@ None
 
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-
-

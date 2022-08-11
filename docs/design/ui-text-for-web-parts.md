@@ -1,41 +1,41 @@
 ---
 title: UI text guidelines for SharePoint web parts
 description: Use simple, understandable, and concise UI text to create effective web parts in SharePoint.
-ms.date: 01/23/2018 
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 
 # UI text guidelines for SharePoint web parts
- 
+
 One aspect of creating effective web parts in SharePoint is to use simple, understandable, and concise UI text. By keeping your message clear and easy to understand, you ensure that customers move through your experiences quickly and can identify the content they are looking for. This article provides guidance for writing UI text for key areas within SharePoint web parts.
 
 
 ## Capitalization
 
-Use sentence casing (first letter of first word is capitalized, the rest all lowercase) for all UI elements, including buttons, page titles, and control labels. 
+Use sentence casing (first letter of first word is capitalized, the rest all lowercase) for all UI elements, including buttons, page titles, and control labels.
 
 
 Always capitalize:
 
 - The first word of a new sentence.
 - The word following a colon in a title or heading. For example, "Step 1: Begin by entering your account information."
-- Proper nouns, such as the names of people, cities, and so on. 
+- Proper nouns, such as the names of people, cities, and so on.
 
-<img alt="An image web part with sentence-style capitalization highlighted" src="../images/design-uitext-01.png" width="800">
+<img alt="Screenshot of an image alternative-text web part with sentence-style capitalization highlighted" src="../images/design-uitext-01.png" width="800">
 
 <br/>
 
-<img alt="An image web part with sentence-style capitalization highlighted" src="../images/design-uitext-02.png" width="800">
+<img alt="Screenshot of an image gallery add web part with sentence-style capitalization highlighted" src="../images/design-uitext-02.png" width="800">
 
 ## Punctuation
 
 Follow the basic rules of punctuation to avoid grammatical errors in your experience. The following table provides guidance and reminders about what punctuation to use when, and why.
 
 |Punctuation  |Guidance                                        |Example          |
-|-------------|------------------------------------------------|-----------------|          
-|Colons (:)  | Use colons if you are introducing a list in the web part description.<br/>Don't use colons in UI labels.| Choose one of the following: Cats, Dogs, Quokkas    |                        
+|-------------|------------------------------------------------|-----------------|
+|Colons (:)  | Use colons if you are introducing a list in the web part description.<br/>Don't use colons in UI labels.| Choose one of the following: Cats, Dogs, Quokkas    |
 |Commas (,)  | Use serial commas (including before the word "and").  |I like cats, birds, and dogs. |
-|Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Don't use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |  
+|Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Don't use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |
 |Periods (.) | Use periods as you normally would for descriptions.<br/>Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
 
 
@@ -46,18 +46,18 @@ Crafting the right tone in your product communication is essential to building a
 
 **Do:**
 
-- Use a casual, conversational tone in the UI. 
+- Use a casual, conversational tone in the UI.
 - Use contractions. For example, use "can't" instead of "cannot".
 - Read your UI text out loud to test the tone. Does it sound like everyday language?
-- Use simple words. 
-- Remove technical details if they're not relevant to the user experience. 
+- Use simple words.
+- Remove technical details if they're not relevant to the user experience.
 - Use "Please" only if you are inconveniencing the user. Avoid overuse.
-- Use "Sorry" only in error messages in SharePoint that result in serious problems for the customer. 
+- Use "Sorry" only in error messages in SharePoint that result in serious problems for the customer.
 
 
 **Don't:**
 
-- Clutter the UI text with unnecessary repetition. Make every word meaningful. 
+- Clutter the UI text with unnecessary repetition. Make every word meaningful.
 
 
 ## Pronouns
@@ -109,8 +109,8 @@ Make an effort to link strategically to help articles. Try to anticipate where t
 
 **Do:**
 
-- Keep the in-product help links specific. Ensure that the target article is appropriate. When the user opens the article, they should be able to locate the information they need. 
-- Use natural language for your hyperlinks.  
+- Keep the in-product help links specific. Ensure that the target article is appropriate. When the user opens the article, they should be able to locate the information they need.
+- Use natural language for your hyperlinks.
 
 <!-- You might want to provide an example of "natural" language. -->
 
@@ -118,7 +118,7 @@ Make an effort to link strategically to help articles. Try to anticipate where t
 
 - Put a help article link next to every UI element. This results in visual noise.
 - Include multiple links that go to the same target in the same UI.
-- Use "click here" for the text for your hyperlink. 
+- Use "click here" for the text for your hyperlink.
 
 <img alt="An image of the More information and examples as the help link text" src="../images/design-uitext-05.png" width="800">
 
@@ -134,7 +134,7 @@ Hint text, or ghost text, is the text element you display in a UI element, typic
 
 - Repeat the label. For example, if you have a text box with the label **Name**, the hint text **Enter name** is redundant and potentially confusing.
 
-The following hint text is for the embed web part. The text field can accept a secure website address or an iframe embed code. The text shows an example of both. 
+The following hint text is for the embed web part. The text field can accept a secure website address or an iframe embed code. The text shows an example of both.
 
 <img alt="Web part hint text" src="../images/design-uitext-06.png" width="800">
 

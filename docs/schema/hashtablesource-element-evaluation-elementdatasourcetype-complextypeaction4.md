@@ -1,15 +1,15 @@
 ---
 title: HashtableSource element
+description: The HashtableSource element specifies the hash table from which the evaluation value is retrieved.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 4451f408-3a3a-e9ac-759a-572bcc7da96c
 ---
 
-# HashtableSource element 
+# HashtableSource element
 
 (Evaluation element) (dataSourceType complexType) (Action4)
 
@@ -21,7 +21,7 @@ Specifies the hash table from which the evaluation value is retrieved.
 
 ```XML
     <Evaluation>
-        <ActivitySource />    
+        <ActivitySource />
         <HashtableSource />
     </Evaluation>
 ```
@@ -54,7 +54,7 @@ Specifies the hash table from which the evaluation value is retrieved.
 ```XML
     <xs:element name="HashtableSource">
          <xs:attribute name="HashtableFrom" type="s:string" />
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -118,11 +118,3 @@ None.
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

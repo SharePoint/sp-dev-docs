@@ -1,24 +1,24 @@
 ---
 title: VersionRange element (UpgradeActionsDefinition complexType)
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/14/2022
+description: Describes VersionRange element (UpgradeActionsDefinition complexType) and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: b07b2138-93cd-4c67-473d-b9b9d138eff1
 ---
 
-# VersionRange element (UpgradeActionsDefinition complexType) 
+# VersionRange element (UpgradeActionsDefinition complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Element type**  | VersionRangeDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -59,13 +59,13 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Child elements
 
 None.
 
-<br/> 
+<br/>
 
 ### Attributes
 
@@ -104,14 +104,6 @@ None.
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

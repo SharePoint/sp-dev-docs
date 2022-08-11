@@ -1,15 +1,15 @@
 ---
 title: VersionDefinition simpleType
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
+description: Describes VersionDefinition simpleType and provides information on elements and attributes.
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 711c0dd3-1a2b-2dfb-e822-ca3edf1657d4
 ---
 
-# VersionDefinition simpleType 
+# VersionDefinition simpleType
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: 711c0dd3-1a2b-2dfb-e822-ca3edf1657d4
 
 Identifies a version for a feature, capability, add-in, product, or other software component.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
 
-|   |   |
+| Information | Location |
 |---|---|
 | **Base type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |

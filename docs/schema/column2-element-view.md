@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: 1d9e0e0a-b1e7-4c12-a147-aab199ae681c
-description: Used in rendering a hyperlink. In Microsoft SharePoint Foundation, hyperlinks are stored as two separate values. 
+description: Used in rendering a hyperlink. In Microsoft SharePoint Foundation, hyperlinks are stored as two separate values.
 ---
 
 # Column2 element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used in rendering a hyperlink. In Microsoft SharePoint Foundation, hyperlinks are stored as two separate values. The actual URL value is stored as one value, and the descriptive text is stored as the other. In a **Link** field, `<Column/>` returns the value of the URL, and `<Column2/>` returns the descriptive text of the hyperlink. 
-  
+
+Used in rendering a hyperlink. In Microsoft SharePoint Foundation, hyperlinks are stored as two separate values. The actual URL value is stored as one value, and the descriptive text is stored as the other. In a **Link** field, `<Column/>` returns the value of the URL, and `<Column2/>` returns the descriptive text of the hyperlink.
+
 ```XML
 <Column2
   AutoHyperLink = "TRUE" | "FALSE"
@@ -55,24 +54,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
-   
+- Maximum: Unbounded
+
 ## Example
 
 The following [Switch](switch-element-view.md) statement evaluates the **Column2** value and, if it is empty, sets the HTML encoding of the [Column](column-element-view.md) element value (in other words, of the URL) to **TRUE**. Otherwise, it sets the HTML encoding of the URL's descriptive text to **TRUE**.
-  
+
 ```XML
 <Switch>
   <Expr>
@@ -90,4 +89,3 @@ The following [Switch](switch-element-view.md) statement evaluates the **Column2
 ## See also
 
 - [Column element (View)](column-element-view.md)
-

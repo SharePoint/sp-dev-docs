@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Contains field references for totals columns or calculated columns;
 # Aggregations element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains field references for totals columns or calculated columns; in other words, for fields to which a function is applied.
-  
+
 ```XML
 <Aggregations
   Value = "Text">
@@ -37,24 +36,24 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Value** <br/> |Optional **Text**. Set **On** to specify that total rows are enabled for the datasheet view; otherwise, do not specify this attribute.  <br/> |
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-list.md)
-   
+
 ### Parent elements
 
 - [View](view-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1 
-   
+- Maximum: 1
+
 ## Example
 
-The following example uses the **Aggregations** element to contain references for a totals column and a calculated column in a datasheet view. The first reference specifies that the Count function is applied to the **Title** column; the second reference specifies that the Sum function is applied to the **Number** column. 
-  
+The following example uses the **Aggregations** element to contain references for a totals column and a calculated column in a datasheet view. The first reference specifies that the Count function is applied to the **Title** column; the second reference specifies that the Sum function is applied to the **Number** column.
+
 ```XML
 <View>
    ...
@@ -66,4 +65,3 @@ The following example uses the **Aggregations** element to contain references fo
 ```
 
 <br/>
-

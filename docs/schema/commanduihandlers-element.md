@@ -1,10 +1,10 @@
 ---
 title: CommandUIHandlers element
+description: Describes the CommandUIHandlers element, which contains elements that define handlers for user interface events.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 18dc2366-b5e2-4a57-a9f6-5ce8ffb184c2
 ---
@@ -68,11 +68,3 @@ None
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-

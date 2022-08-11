@@ -1,6 +1,7 @@
 ---
 title: Connect SharePoint app parts by using SignalR
-ms.date: 11/03/2017
+description: Describes how to Connect SharePoint app parts by using SignalR and outlines how to use the Core.ConnectedAppParts application.
+ms.date: 06/13/2022
 ms.localizationpriority: medium
 ---
 # Connect SharePoint app parts by using SignalR

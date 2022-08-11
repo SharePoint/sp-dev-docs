@@ -1,8 +1,9 @@
 ---
 title: Social Media
+description: Please monitor and follow the Microsoft 365 community and Microsoft 365, Office, and SharePoint developers on social media.
 author: andrewconnell
 ms.author: v-johnco
-ms.date: 2/5/2020
+ms.date: 06/03/2022
 ms.audience: Developer
 ms.prod: sharepoint
 ms.localizationpriority: high

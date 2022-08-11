@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - AlertTemplates schema
@@ -17,9 +16,9 @@ description: Specifies whether event types associated with the alert template ar
 # EventTypes element (AlertTemplates)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies whether event types associated with the alert template are visible in the new alert page.
-  
+
 ```XML
 <EventTypes IsVisible = "True" | "False"/>
 ```
@@ -33,17 +32,15 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**IsVisible** <br/> |**True** if event types are visible; otherwise, **False**.  <br/> |
-   
+
 ### Child elements
 
 None
-  
+
 ### Parent elements
 
 - [FilterDefinition](filterdefinition-element-alerttemplates.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [AlertTemplates element (AlertTemplates)](alerttemplates-element-alerttemplates.md).
-  
-

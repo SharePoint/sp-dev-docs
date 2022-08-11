@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
@@ -17,9 +16,9 @@ description: Used within the Limit element to demarcate the text that is truncat
 # Text element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Used within the [Limit](limit-element-view.md) element to demarcate the text that is truncated when the [More](more-element-view.md) element is also specified. 
-  
+
+Used within the [Limit](limit-element-view.md) element to demarcate the text that is truncated when the [More](more-element-view.md) element is also specified.
+
 ```XML
 <Text>
 </Text>
@@ -32,20 +31,18 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Limit](limit-element-view.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
+- Maximum: 1
 
-<br/> 
-   
-
+<br/>

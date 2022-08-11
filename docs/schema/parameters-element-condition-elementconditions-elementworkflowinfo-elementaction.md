@@ -1,15 +1,15 @@
 ---
 title: Parameters element (Condition element)
+description: Describes the Parameters element (Condition element) and provides the usage, the element information, a definition, the elements and attributes, and an example.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 634793ca-8e14-818d-1e5c-3dd2b7b1626d
 ---
 
-# Parameters element (Condition element) 
+# Parameters element (Condition element)
 
 (Conditions element) (WorkflowInfo element) (Action4)
 
@@ -28,7 +28,7 @@ Container for **Parameter** elements that includes descriptions of the parameter
             <RuleDesigner />
         </Condition>
     </Conditions>
-```           
+```
 
 ## Element information
 
@@ -57,7 +57,7 @@ Container for **Parameter** elements that includes descriptions of the parameter
 
 ```XML
     <xs:element name="Parameters" type="parametersType" minOccurs="1"     maxOccurs="1">
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -162,10 +162,3 @@ The following example demonstrates how to construct the **Parameters** element s
 ```
 
 <br/>
-
-
-
-
-
-
-

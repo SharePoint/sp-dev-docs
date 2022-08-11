@@ -1,41 +1,40 @@
 ---
 title: "WebPart element (Site)"
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/15/2022
+description: Describes WebPart element (Site) and includes information on elements and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
 api_type:
 - schema
 ms.assetid: 012954bc-c7f4-44ac-93a4-4b972e4f03d1
-description: "Last modified: March 09, 2015"
 ---
 
 # WebPart element (Site)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 ```XML
-<WebPart  
-    AllUsers = "Text"  
-    Assembly = "Text"  
-    Cache = "Text"  
-    Class = "Text"  
-    DisplayName = "Text"  
-    Flags = "Text"  
-    FrameState = "Integer"  
-    IsIncluded = "TRUE" | "FALSE"  
-    List = "Text"  
-    PerUser = "Text"  
-    SolutionId = "Text"  
-    Src = "Text"  
-    Type = "Integer"  
-    Url = "Text"  
-    Version = "Text" 
-    WebPartIdProperty = "Text"  
+<WebPart
+    AllUsers = "Text"
+    Assembly = "Text"
+    Cache = "Text"
+    Class = "Text"
+    DisplayName = "Text"
+    Flags = "Text"
+    FrameState = "Integer"
+    IsIncluded = "TRUE" | "FALSE"
+    List = "Text"
+    PerUser = "Text"
+    SolutionId = "Text"
+    Src = "Text"
+    Type = "Integer"
+    Url = "Text"
+    Version = "Text"
+    WebPartIdProperty = "Text"
     WPTypeId = "Text">
 </WebPart>
 ```
@@ -65,20 +64,18 @@ The following sections describe attributes, child elements, and parent elements.
 |**Version** <br/> |Optional **Text**.  <br/> |
 |**WebPartIdProperty** <br/> |Optional **Text**.  <br/> |
 |**WPTypeId** <br/> |Optional **Text**.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [BinarySerializedWebPart](binaryserializedwebpart-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 1
-- Maximum: Unbounded  
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

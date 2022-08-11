@@ -1,15 +1,15 @@
 ---
 title: Events element
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/13/2022
+description: Describes Event element and includes information on usage, elements, and attributes.
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3208edea-ca11-3976-9738-a306b8faa3d5
 ---
 
-# Events element 
+# Events element
 
 (WorkflowInfo element) (Action4)
 
@@ -60,10 +60,10 @@ Represents a collection of individual **Events** element instances.
          <xs:attribute name="EventGroup" type="s:string" use="required"  />
          <xs:attribute name="Category" type="s:string"  use="required"  />
          <xs:attribute name="RankDefault" type="s:string" use="required" />
-      </xs:element>  
+      </xs:element>
            </xs:sequence>
            </xs:complexType>
-    </xs:element>  
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -121,11 +121,3 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 ### Attributes
 
 None.
-
-
-
-
-
-
-
-

@@ -1,15 +1,15 @@
 ---
 title: AppPrincipal element (AppDefinition complexType)
+description: Discusses the definition, elements and attributes for AppPrincipal element (AppDefinition complexType) which applies to SharePoint.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/14/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 6ba448d6-26ec-f918-ac4d-136809236752
 ---
 
-# AppPrincipal element (AppDefinition complexType) 
+# AppPrincipal element (AppDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: 6ba448d6-26ec-f918-ac4d-136809236752
 
 The add-in principal information.
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+|Information|Location|
 |---|---|
 | **Element type**  | AppPrincipalDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -32,7 +32,7 @@ The add-in principal information.
 
 ```XML 
     <xs:element name="AppPrincipal" type="AppPrincipalDefinition" minOccurs="1" maxOccurs="1">
-    </xs:element>     
+    </xs:element>
 ```
 
 ## Elements and attributes
@@ -63,7 +63,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
+
 
 ### Child elements
 
@@ -99,17 +99,8 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/>
+
 
 ### Attributes
 
 None.
-
-<br/>
-<br/>
-
-
-
-
-
-

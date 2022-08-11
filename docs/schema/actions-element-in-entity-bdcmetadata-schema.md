@@ -2,12 +2,11 @@
 title: Actions element in Entity (BDCMetadata Schema)
 description: Specifies a list of actions of an external content type.
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - VS.SharePointTools.BDC.Actions
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c5a6c08d-a3df-61db-3ce3-1e6837bbf221
 ---
@@ -21,7 +20,7 @@ Specifies a list of actions of an external content type.
 
 **Schema**: BDCMetadata
 
-```XML
+```xml
 <Actions></Actions>
 ```
 
@@ -35,42 +34,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadata-schema.md">Action element in Actions (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An action of an external content type.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Action element in Actions (BDCMetadata Schema)](action-element-in-actions-bdcmetadata-schema.md) | An action of an external content type. |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity element in Entities (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The external content type that these actions belong to.</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [Entity element in Entities (BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md) | The external content type that these actions belong to. |

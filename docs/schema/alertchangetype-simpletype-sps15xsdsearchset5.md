@@ -1,27 +1,26 @@
 ---
 title: "AlertChangeType simpleType (SPS15XSDSearchSet5)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 07/15/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 3f7286b9-dab0-3629-5734-308ba2b430cc
-description: "Last modified: March 09, 2015"
+description: "Describes the AlertChangeType simpleType (SPS15XSDSearchSet5) type information, definition, and enumeration values."
 ---
 
 # AlertChangeType simpleType (SPS15XSDSearchSet5)
 
 **Applies to:** SharePoint Server 2013
-  
+
 ## Type information
 
-|||
+|| Value |
 |:-----|:-----|
 |**Base type** <br/> |xs:string  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Query  <br/> |
 |**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Query.xsd  <br/> |
-   
+
 ## Definition
 
 ```XML
@@ -42,5 +41,3 @@ description: "Last modified: March 09, 2015"
 |Discovered  <br/> |1  <br/> |
 |Modified  <br/> |2  <br/> |
 |DiscoveredOrModified  <br/> |3  <br/> |
-   
-

@@ -1,30 +1,30 @@
 ---
 title: Property element (FeaturePropertyDefinitions complexType)
+description: Describes the Property element (FeaturePropertyDefinitions complexType) and provides the element information, a definition, and the elements and attributes.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/13/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 5fd3a969-0f50-a8d3-1342-9c98668ee32a
 ---
 
-# Property element (FeaturePropertyDefinitions complexType) 
+# Property element (FeaturePropertyDefinitions complexType)
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
+> [!NOTE]
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+| Resource | File  |
 |---|---|
-| **Element type**  | FeaturePropertyDefinitions |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
-| **Schema file**  | apphostwebfeatures.xsd |
+| **Element type** | FeaturePropertyDefinitions |
+| **Namespace** | `http://schemas.microsoft.com/sharepoint/` |
+| **Schema file** | apphostwebfeatures.xsd |
 
-## Definition 
+## Definition
 
 ```XML
     <xs:element name="Property" type="FeaturePropertyDefinition" minOccurs="0" maxOccurs="unbounded"></xs:element>
@@ -64,13 +64,13 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
 ### Child elements
 
 None.
 
-<br/> 
+<br/>
 
 ### Attributes
 
@@ -109,14 +109,6 @@ None.
 </tbody>
 </table>
 
-<br/> 
+<br/>
 
-<br/> 
-
-
-
-
-
-
-
-
+<br/>

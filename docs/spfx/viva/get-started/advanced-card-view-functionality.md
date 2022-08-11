@@ -2,7 +2,6 @@
 title: Advanced Card View Functionality
 description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
 ms.date: 02/18/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # Advanced Card View Functionality
@@ -435,7 +434,7 @@ The settings for this cache can be configured by overriding the following method
     };
   }
   ```
-  
+
 ### Rehydrating from cached ACE state
 
 The subset of the ACE state that is cached can be configured by overriding the following method:
@@ -443,7 +442,7 @@ The subset of the ACE state that is cached can be configured by overriding the f
   ```typescript
   protected getCachedState(state: TState): Partial<TState>;
   ```
- 
+
 The object returned by this method will be serialized and cached. By default, no state is cached. In the next call to `onInit`, the deserialized value will be passed to onInit as part of the `ICachedLoadParameters`
 
   ```typescript

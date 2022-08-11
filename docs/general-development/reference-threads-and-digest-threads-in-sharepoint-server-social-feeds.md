@@ -1,6 +1,7 @@
 ---
 title: Reference threads and digest threads in SharePoint social feeds
-ms.date: 09/25/2017
+description: Describes reference threads and digest threads, which may be included in the collection of threads that make up a social feed in SharePoint.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: 58e68fb2-ba40-4861-912f-355e119a1c41
 ms.localizationpriority: medium
@@ -33,7 +34,7 @@ You can identify a reference thread by its  [ThreadType](https://msdn.microsoft.
 **Table 1. Types of reference thread**
 
 
-|**Reference type**|**Description**|
+|Reference type|Description|
 |:-----|:-----|
 | [LikeReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) **** <br/> |A reference to a post that a user likes.  <br/> |
 | [MentionReference](https://msdn.microsoft.com/library/microsoft.sharepoint.client.social.socialthreadtype.aspx) <br/> |A reference to a post that mentions a user.  <br/> |

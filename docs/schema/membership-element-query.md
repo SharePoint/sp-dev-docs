@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Query schema
@@ -17,9 +16,9 @@ description: Defines a filter based on the type of membership for the user.
 # Membership element (Query)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a filter based on the type of membership for the user.
-  
+
 ```XML
 <Membership
   Type = "Text">
@@ -35,26 +34,26 @@ The following sections describe attributes, child elements, and parent elements.
 |**Attribute**|**Description**|
 |:-----|:-----|
 |**Type** <br/> | Required **Text**. Specifies the type of membership for the user. Possible values include the following:<br/><br/> **SPWeb.AllUsers** <br/> **SPGroup** <br/> **SPWeb.Groups** <br/> **CurrentUserGroups** <br/> **SPWeb.Users** <br/> |
-   
+
 ### Child elements
 
 - [FieldRef](fieldref-element-query.md)
-   
+
 ### Parent elements
 
 - [And](and-element-query.md)
 - [Or](or-element-query.md)
 - [Where](where-element-query.md)
-   
+
 ### Occurrences
 
-- Minimum: 0 
+- Minimum: 0
 - Maximum: Unbounded
-   
+
 ### Remarks
 
 The following example defines a filter for cases where the user is either assigned a task based on membership in a group or assigned a task directly.
-  
+
 ```XML
 <Or>
   <Membership Type=\"CurrentUserGroups\">
@@ -70,4 +69,3 @@ The following example defines a filter for cases where the user is either assign
 ```
 
 <br/>
-

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Solution Schema
@@ -17,9 +16,9 @@ description: Specifies the class resources of an assembly that is included in a 
 # ClassResources element (Solution)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Specifies the class resources of an assembly that is included in a solution.
-  
+
 ```XML
 <ClassResources>
     <ClassResource
@@ -37,17 +36,15 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
 - [ClassResource](classresource-element-solution.md)
-   
+
 ### Parent elements
 
 - [Assembly](assembly-element-solutionassemblies.md)
-   
+
 ## Example
 
 For an example of how this element is used, see [Solution schema](solution-schema.md).
-  
-

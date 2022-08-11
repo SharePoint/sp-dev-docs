@@ -1,12 +1,12 @@
 ---
 title: DataSources Element (WorkflowInfo)
+description: DataSources Element (WorkflowInfo) specifies the data sources for the action or composite step.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bce09f90-e337-4e32-a25e-3c1073d52420
 ---
@@ -68,9 +68,3 @@ None
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-

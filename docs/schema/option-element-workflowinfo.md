@@ -1,12 +1,12 @@
 ---
 title: Option Element (WorkflowInfo)
+description: The Option Element (WorkflowInfo) is used to populate DesignerType drop-down list box controls that are not data bound.
 manager: laurawi
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
 - SharePoint workflows
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: c82dc727-b3e1-4c1b-80c4-a9d689795eaa
 ---
@@ -159,64 +159,64 @@ The following XML demonstrates how to construct an **Option** element so that it
 
 ```XML
     <RuleDesigner Sentence="%1">
-       <FieldBind Field="MyParameter1" 
-                  Text="text" Id="1"       
-                  DesignerType="Operator" 
+       <FieldBind Field="MyParameter1"
+                  Text="text" Id="1"
+                  DesignerType="Operator"
                   OperatorTypeFrom="MyParameter1">
             <Option Name="equals" Value="Equal"/>
             <Option Name="not equals" Value="NotEqual"/>
-            <Option Name="is greater than" 
+            <Option Name="is greater than"
                     Value="GreaterThan"
                     TypeFilter="System.Double;System.Int32;
                                 System.Uint32;System.DateTime"/>
-            <Option Name="is greater than or equal to"   
+            <Option Name="is greater than or equal to"
                     Value="GreaterThanOrEqual"
                     TypeFilter="System.Double;System.Int32;
                                 System.Uint32;System.DateTime"/>
-            <Option Name="is less than" 
+            <Option Name="is less than"
                     Value="LessThan"
                     TypeFilter="System.Double;System.Int32;
                                 System.Uint32;System.DateTime"/>
-            <Option Name="is less than or equal to" 
+            <Option Name="is less than or equal to"
                     Value="LessThanOrEqual"
                     TypeFilter="System.Double;System.Int32;
                                 System.Uint32;System.DateTime"/>
-            <Option Name="is empty" 
+            <Option Name="is empty"
                     Value="IsEmpty"
-                    TypeFilter="System.String" 
+                    TypeFilter="System.String"
                     UnaryHides="right"/>
-            <Option Name="is not empty" 
+            <Option Name="is not empty"
                     Value="NotIsEmpty"
-                    TypeFilter="System.String" 
+                    TypeFilter="System.String"
                     UnaryHides="right"/>
-            <Option Name="begins with" 
+            <Option Name="begins with"
                     Value="StartsWith"
                     TypeFilter="System.String"/>
-            <Option Name="does not begin with" 
+            <Option Name="does not begin with"
                     Value="NotStartsWith"
                     TypeFilter="System.String"/>
-            <Option Name="ends with" 
+            <Option Name="ends with"
                     Value="EndsWith"
                     TypeFilter="System.String"/>
-            <Option Name="does not end with" 
+            <Option Name="does not end with"
                     Value="NotEndsWith"
                     TypeFilter="System.String"/>
-            <Option Name="contains" 
+            <Option Name="contains"
                     Value="Contains"
                     TypeFilter="System.String"/>
-            <Option Name="does not contain" 
+            <Option Name="does not contain"
                     Value="NotContains"
                     TypeFilter="System.String"/>
-            <Option Name="matches regular expression" 
+            <Option Name="matches regular expression"
                     Value="Matches"
                     TypeFilter="System.String"/>
-            <Option Name="equals (ignoring case)" 
+            <Option Name="equals (ignoring case)"
                     Value="EqualNoCase"
                     TypeFilter="System.String"/>
-            <Option Name="contains (ignoring case)" 
+            <Option Name="contains (ignoring case)"
                     Value="ContainsNoCase"
                     TypeFilter="System.String"/>
-            <Option Name="equals (ignoring time)" 
+            <Option Name="equals (ignoring time)"
                     Value="EqualNoTime"
                     TypeFilter="System.DateTime"/>
          </FieldBind>
@@ -230,9 +230,3 @@ The following XML demonstrates how to construct an **Option** element so that it
 - [Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 - [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/office/bb417436.aspx)
 - [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/office/bb897626.aspx)
-
-
-
-
-
-

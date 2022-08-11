@@ -1,26 +1,25 @@
 ---
 title: "ResultItemType complexType (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/13/2022
 ms.audience: ITPro
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 603dee83-8bb5-018a-c519-9c4f98f4fd1f
-description: "Last modified: March 09, 2015"
+description: "Describes the ResultItemType complexType (SPS15XSDSearchSet2). If the schema defines specific requirements, see the Definition section."
 ---
 
 # ResultItemType complexType (SPS15XSDSearchSet2)
 
- 
-  
+
+
 ## Type information
 
-|||
+|Information type|Value|
 |:-----|:-----|
-|**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |
-|**Schema file** <br/> |schema_Microsoft.Office.Server.Search.Administration.xsd  <br/> |
-|**Extension base** <br/> |None  <br/> |
+|**Namespace**|http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration |
+|**Schema file**|schema_Microsoft.Office.Server.Search.Administration.xsd |
+|**Extension base**|None |
    
 ## Definition
 
@@ -47,28 +46,26 @@ description: "Last modified: March 09, 2015"
 
 ## Elements and attributes
 
-If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section. 
-  
+If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
+
 ### Child elements
 
 |**Element**|**Type**|**Description**|
 |:-----|:-----|:-----|
-|[BuiltIn](builtin-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:boolean  <br/> ||
-|[DisplayProperties](displayproperties-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-|[DisplayTemplateUrl](displaytemplateurl-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-|[ID](id-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
-|[InternalID](internalid-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
-|[IsDeleted](isdeleted-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:boolean  <br/> ||
-|[LastModifiedDate](lastmodifieddate-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:dateTime  <br/> ||
-|[Name](name-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:string  <br/> ||
-|[OptimizeForFrequentUse](optimizeforfrequentuse-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:boolean  <br/> ||
-|[Owner](owner-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |tns:SearchObjectOwner  <br/> ||
-|[RulePriority](rulepriority-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |xs:int  <br/> ||
-|[Rules](rules-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |tns:PropertyRuleCollection  <br/> ||
-|[SourceID](sourceid-element-resultitemtype-complextypesps15xsdsearchset2.md) <br/> |ser:guid  <br/> ||
+|[BuiltIn](builtin-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:boolean ||
+|[DisplayProperties](displayproperties-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:string ||
+|[DisplayTemplateUrl](displaytemplateurl-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:string ||
+|[ID](id-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:int ||
+|[InternalID](internalid-element-resultitemtype-complextypesps15xsdsearchset2.md)|ser:guid ||
+|[IsDeleted](isdeleted-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:boolean ||
+|[LastModifiedDate](lastmodifieddate-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:dateTime ||
+|[Name](name-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:string ||
+|[OptimizeForFrequentUse](optimizeforfrequentuse-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:boolean ||
+|[Owner](owner-element-resultitemtype-complextypesps15xsdsearchset2.md)|tns:SearchObjectOwner ||
+|[RulePriority](rulepriority-element-resultitemtype-complextypesps15xsdsearchset2.md)|xs:int ||
+|[Rules](rules-element-resultitemtype-complextypesps15xsdsearchset2.md)|tns:PropertyRuleCollection ||
+|[SourceID](sourceid-element-resultitemtype-complextypesps15xsdsearchset2.md)|ser:guid ||
    
 ### Attributes
 
 None.
-  
-

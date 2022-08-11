@@ -1,15 +1,15 @@
 ---
 title: RemoteEndpoint element (RemoteEndpointsDefinition complexType)
+description: Describes the RemoteEndpoint element (RemoteEndpointsDefinition complexType). Applies to SharePoint Add-ins, SharePoint Foundation 2013, and SharePoint Server 2013.
 manager: soliver
-ms.date: 9/17/2015
+ms.date: 06/10/2022
 ms.audience: Developer
 ms.topic: article
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: 779c6b36-6789-43d9-b5ef-f6de23ed5543
 ---
 
-# RemoteEndpoint element (RemoteEndpointsDefinition complexType) 
+# RemoteEndpoint element (RemoteEndpointsDefinition complexType)
 
 (SharePoint Add-in Manifest)
 
@@ -17,12 +17,12 @@ ms.assetid: 779c6b36-6789-43d9-b5ef-f6de23ed5543
 
 Declares an individual remote endpoint that the SharePoint Add-in may access through the JSOM method SP.WebProxy.invoke().
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Element information
 
-|   |   |
+|Info type|Value|
 |---|---|
 | **Element type**  | RemoteEndpointDefinition |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
@@ -106,9 +106,3 @@ None.
 
 <br/>
 <br/>
-
-
-
-
-
-

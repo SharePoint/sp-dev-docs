@@ -1,6 +1,7 @@
 ---
 title: Upgrade web templates for SharePoint
-ms.date: 09/25/2017
+description: Learn about updating customized SharePoint 2010 web templates for use in SharePoint after a self-service upgrade.
+ms.date: 06/10/2022
 ms.prod: sharepoint
 ms.assetid: 69048e4c-6d6d-4e4e-b74c-7c72ae444354
 ms.localizationpriority: medium
@@ -137,7 +138,6 @@ To add the default functionality back to the template, you must modify the Onet.
 <a name="bk_addresources"> </a>
 
 -  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint.md)
--  [SharePoint 2010 and web templates](https://docs.microsoft.com/archive/blogs/vesku/sharepoint-2010-and-web-templates)
 -  [Plan to upgrade a site collection](https://technet.microsoft.com/library/ff191199.aspx)
 -  [Plan for site collection upgrades in SharePoint](https://technet.microsoft.com/library/ff191199.aspx)
     

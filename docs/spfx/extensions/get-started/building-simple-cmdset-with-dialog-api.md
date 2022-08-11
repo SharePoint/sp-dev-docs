@@ -1,11 +1,9 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 06/25/2020
-ms.prod: sharepoint
+ms.date: 07/15/2022
 ms.custom: scenarios:getting-started
 ---
-
 # Build your first ListView Command Set extension
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
@@ -37,11 +35,9 @@ You can follow these steps by watching the video on the Microsoft 365 Platform C
 1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
 
     - **What is your solution name?**: command-extension
-    - **Which baseline packages do you want to target for your component(s)?** SharePoint Online only (latest)
     - **Which type of client-side component to create?**: Extension
     - **Which type of client-side extension to create?** ListView Command Set
     - **What is your Command Set name?** HelloWorld
-    - **What is your Command Set description?** HelloWorld description
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** extension. This usually takes 1-3 minutes.
 
@@ -206,11 +202,11 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
 1. The **Command One** button is not visible based on the code, until one row is selected in the document library. Upload or create a document to the library and confirm that the second button is visible.
 
-    ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-doc-select.png)
+    ![Screenshot of Command One being selected with the Item A order being highlighted.](../../../images/ext-com-default-customizer-doc-select.png)
 
 1. Select **Command Two** to see how the dialog control works, which is used in the default output from the solution scaffolding when the ListView Command Set is selected as the extension type.
 
-    ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-btn-click.png)
+    ![Screenshot of an Alert message reading This command is always visible with the O K option being highlighted.](../../../images/ext-com-default-customizer-btn-click.png)
 
 ### More details about serve.json options
 

@@ -1,10 +1,10 @@
 ---
 title: PropertyBag Element (Property Bag)
+description: Describes the PropertyBag element (Property Bag) and provides a definition, the elements and attributes, and an example.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Property Bag Schema
@@ -115,11 +115,3 @@ The following sections describe attributes, child elements, and parent elements.
 ## Example
 
 For an example of how this element is used, see [Property Bag Schema](property-bag-schema.md).
-
-
-
-
-
-
-
-

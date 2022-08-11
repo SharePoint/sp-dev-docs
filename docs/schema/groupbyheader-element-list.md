@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,7 +16,7 @@ description: Contains the definition of a Group By Header section in a view of a
 # GroupByHeader element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Contains the definition of a Group By Header section in a view of a list.
 
 ```XML
@@ -26,8 +25,8 @@ Contains the definition of a Group By Header section in a view of a list.
 ```
 
 > [!NOTE]
-> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx). 
-  
+> Most standard Microsoft SharePoint Foundation 2010 list views ignore this element. For more information, see [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx).
+
 
 ## Elements and attributes
 
@@ -36,25 +35,25 @@ The following sections describe attributes, child elements, and parent elements.
 ### Attributes
 
 None
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [View](view-element-list.md)
 - [ViewStyle](viewstyle-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  <br/> 
-   
+- Maximum: 1  <br/>
+
 ## Example
 
-The following example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for custom lists defines the Group By Header section in a view. 
-  
+The following example from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for custom lists defines the Group By Header section in a view.
+
 ```XML
 <GroupByHeader>
   <HTML><![CDATA[<TBODY id="titl]]></HTML>
@@ -72,10 +71,10 @@ The following example from the [Schema.xml](https://msdn.microsoft.com/library/c
     </Default>
   </Switch>
   <HTML><![CDATA[><TD colspan="100" nowrap>
-    <img src="/_layouts/images/blank.gif" alt="" height=1 
+    <img src="/_layouts/images/blank.gif" alt="" height=1
     width=]]></HTML>
   <GetVar Name="GroupByIndent"/>
-  <HTML><![CDATA[><a href="javascript:" 
+  <HTML><![CDATA[><a href="javascript:"
     onclick="javascript:ExpCollGroup(']]></HTML>
   <GetVar Name="GroupByLevelString"/>
   <HTML><![CDATA[','img_]]></HTML>
@@ -99,4 +98,3 @@ The following example from the [Schema.xml](https://msdn.microsoft.com/library/c
 
 - [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
 - [XMLDefinition and CAML View Schema](https://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922%28Office.15%29.aspx)
-

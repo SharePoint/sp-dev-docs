@@ -1,7 +1,7 @@
 ---
 title: Authorization Code OAuth flow for SharePoint Add-ins
 description: The OAuth flow for add-ins that request permission to access SharePoint resources on the fly, and how to use the **OAuthAuthorize.aspx** page and the SharePoint redirect URI.
-ms.date: 06/22/2021
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -67,13 +67,13 @@ A user browses to the Contoso photo-printing website, where the UI indicates tha
 
 In this example, the URL is **https://contoso.com/print/home.aspx**
 
-The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: **https://fabrikam.sharepoint.com/**
+The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: **`https://fabrikam.sharepoint.com/`**
 
 #### Step 2: The add-in redirects to the SharePoint site authorization URL
 
 ![Three-legged OAuth Flow - step 2](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_2.png)
 
-When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to **https://fabrikam.sharepoint.com/**; this redirect is an HTTP 302 Redirect Response.
+When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to **`https://fabrikam.sharepoint.com/`**; this redirect is an HTTP 302 Redirect Response.
 
 If you're using Microsoft .NET, `Response.Redirect` is one of several ways you can do the redirect from your code. Using the **TokenHelper.cs** file in your project, your code can call the overloaded `GetAuthorizationUrl` method (using the overload with three arguments). This method constructs the **OAuthAuthorize.aspx** redirect URL for you. Or, your code can manually construct the URL.
 
@@ -128,7 +128,7 @@ The Fabrikam SharePoint Online site asks ACS to create a short-lived (approximat
 
 The Fabrikam SharePoint Online site redirects the browser back to Contoso via HTTP 302 Response. The URL construct for this redirection uses the redirect URI that was specified when the photo-printing add-in was registered. It also includes the authorization code as a query string.
 
-The redirect URL is structured like the following: **https://contoso.com/RedirectAccept.aspx?code=<authcode>**
+The redirect URL is structured like the following: **`https://contoso.com/RedirectAccept.aspx?code=[authcode]`**
 
 #### Step 6: The add-in uses the authorization code to request an access token from ACS, which validates the request, invalidates the authorization code, and then sends access and refresh tokens to the add-in
 

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - List schema
@@ -17,9 +16,9 @@ description: Defines the toolbar of a list view, which is the section of a view 
 # Toolbar element (List)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines the toolbar of a list view, which is the section of a view that is rendered above the view header.
-  
+
 ```XML
 <Toolbar
   Position = "After"
@@ -37,26 +36,26 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Position** <br/> |Optional **Text**. If **Position = "After"** is specified, the toolbarappears below the view body. If not specified, the toolbar appears above the view body.  <br/> |
 |**Type** <br/> |Required **Text**. Specifies the kind of toolbar; this can be set to either **Standard** or **FreeForm**.  <br/> |
-   
+
 ### Child elements
 
-Numerous 
-   
+Numerous
+
 ### Parent elements
 
 - [MetaData (List)](metadata-element-list.md)
 - [MetaData (Site)](metadata-element-site.md)
 - [View](view-element-list.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: 1  
-   
+- Maximum: 1
+
 ## Example
 
-The following excerpt from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for custom lists defines the **New** command of the toolbar, displaying the option to create items only to users with permission to add list items. 
-  
+The following excerpt from the [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file for custom lists defines the **New** command of the toolbar, displaying the option to create items only to users with permission to add list items.
+
 ```XML
 <Toolbar Position="After" Type="Freeform">
   <IfHasRights>
@@ -75,4 +74,3 @@ The following excerpt from the [Schema.xml](https://msdn.microsoft.com/library/c
 ## See also
 
 - [List Views](https://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17%28Office.15%29.aspx)
-

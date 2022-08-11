@@ -1,6 +1,7 @@
 ---
 title: Business Connectivity Services programmers reference for SharePoint
-ms.date: 09/25/2017
+description: Article with links to find reference information to create solutions using Business Connectivity Services (BCS) in SharePoint.
+ms.date: 06/07/2022
 ms.prod: sharepoint
 ms.assetid: cfc9bdf8-ddf3-40e1-83d9-dbd304cebd57
 ms.localizationpriority: medium

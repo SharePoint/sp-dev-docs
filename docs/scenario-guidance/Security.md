@@ -1,7 +1,7 @@
 ---
 title: Security
 description: Lists resources about how SharePoint supports security for user access at the website, list, list or library folder, and item levels.
-ms.date: 06/07/2022
+ms.date: 06/28/2022
 ms.localizationpriority: medium
 ---
 # Security
@@ -44,13 +44,13 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 ### Samples
 
-- [Dynamically request permissions for an add-in](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.DynamicPermissions)
+- [Dynamically request permissions for an add-in](https://github.com/pnp/PnP/tree/master/Samples/Core.DynamicPermissions)
 - [PnP-IdentityModel](https://github.com/SharePoint/PnP-IdentityModel)
 - [Azure Active Directory implicit flow authentication samples](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-aad-implicitflow)
-- [An ASP.NET Core implementation of the TokenHelper and SharePointContext classes for use in SharePoint Apps (AspNetCore.Authentication)](https://dev.office.com/patterns-and-practices-detail/10979)
-- [Office 365 Python Flask App Authentication (Python.Office365.AppAuthentication)](https://dev.office.com/patterns-and-practices-detail/7269)
-- [Access SharePoint data with the Cross Domain JavaScript Library](https://dev.office.com/code-samples-detail/5814)
-- [Access SharePoint data with the Cross Domain JavaScript Library and the REST\OData endpoints](https://dev.office.com/code-samples-detail/5815)
+- [An ASP.NET Core implementation of the TokenHelper and SharePointContext classes for use in SharePoint Apps (AspNetCore.Authentication)](https://github.com/pnp/PnP/tree/master/Solutions/AspNetCore.Authentication)
+- [Office 365 Python Flask App Authentication (Python.Office365.AppAuthentication)](https://github.com/pnp/PnP/tree/master/Samples/Python.Office365.AppAuthentication)
+- [Access SharePoint data with the Cross Domain JavaScript Library](https://github.com/OfficeDev/SharePoint-Add-in-JSOM-CrossDomain)
+- [Access SharePoint data with the Cross Domain JavaScript Library and the REST\OData endpoints](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-CrossDomain)
 
 ## App-only access to SharePoint
 

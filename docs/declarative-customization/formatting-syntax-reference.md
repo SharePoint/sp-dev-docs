@@ -25,7 +25,7 @@ Any other value will result in an error.
 
 ### filepreview
 
-Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document libary. 
+Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document libary.
 If the thumbnail loads successfully, a small [brand type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/office-brand-icons) is visible on the bottom left. If the thumbanil fails to load (or if the file type doesn't support thumbnails), a [file type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/file-type-icons) is shown instead.
 
 ```json
@@ -312,7 +312,7 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
       }
     }
     ```
-    
+
 - **share**:  Clicking the button will open the sharing dialog. Below is an example of this type of button.
 
     ```JSON
@@ -325,7 +325,7 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
       }
     }
     ```
-    
+
 - **delete**: Clicking the button will open the delete confirmation dialog.
 - **editProps**:  Clicking the button will open the item properties page in edit mode.
 - **openContextMenu**:  Clicking the button will open the item's default context menu.
@@ -590,6 +590,8 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent": "=cos(5)"` results in _0.28366218546322625_
 - **sin**: returns the sine of a number
   - `"txtContent": "=sin(90)"` results in _0.8939966636005579_
+- **toDateString()**: returns a date in a short-friendly format
+  - `"txtContent": "=toDateString(@now)"` result doesn't vary based on user's locale and it will look like _"Wed Aug 03 2022"_
 - **toLocaleString()**: returns a language sensitive representation of a date
   - `"txtContent":"=toLocaleString(@now)"` results vary based on user's locale, but en-us looks like _"2/5/2019, 1:22:24 PM"_
 - **toLocaleDateString()**: returns a language sensitive representation of just the date portion of a date

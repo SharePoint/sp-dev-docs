@@ -1,24 +1,23 @@
 ---
 title: CustomActionRegistrationType simpleType
+description: Outlines information, a definition, and enumeration values for the CustomActionRegistrationType simpleType in Sharepoint.
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 06/09/2022
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: bee593c6-802f-8d0c-d619-4adbcc6b1aae
 ---
 
-# CustomActionRegistrationType simpleType 
+# CustomActionRegistrationType simpleType
 
 (AppHostWebFeatures)
 
-> [!NOTE] 
+> [!NOTE]
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 ## Type information
-
-|   |   |
+| Name  | Value  |
 |---|---|
 | **Base Type**  | xs:string |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -73,10 +72,3 @@ ms.assetid: bee593c6-802f-8d0c-d619-4adbcc6b1aae
 <br/>
 
 <br/>
-
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 ---
 title: Format board view to customize SharePoint
 description: Customize how board views in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements and the styles to be applied to those elements.
-ms.date: 02/09/2022
+ms.date: 06/28/2022
 ms.localizationpriority: high
 ---
 

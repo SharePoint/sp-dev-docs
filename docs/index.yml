@@ -6,7 +6,6 @@ summary: Build SharePoint Framework solutions or take advantage of other extensi
 metadata:
   title: SharePoint developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Build SharePoint Framework solutions or take advantage of other extensibility options in SharePoint and in Microsoft 365 in general. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: sharepoint #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   ms.audience: Developer # Optional; Remove if no collection is used.
   author: VesaJuvonen #Required; your GitHub user alias, with correct capitalization.
@@ -24,7 +23,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Overview of the SharePoint Framework
-            url: /sharepoint/dev/spfx/sharepoint-framework-overview      
+            url: /sharepoint/dev/spfx/sharepoint-framework-overview
       - linkListType: get-started
         links:
           - text: Set up your SharePoint Framework development environment
@@ -38,8 +37,8 @@ landingContent:
           - text: Build Microsoft Teams tab using SharePoint Framework - Tutorial
             url: /sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab
           - text: Use Microsoft Graph in your SharePoint Framework solution
-            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis         
-  
+            url: /sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis
+
   # Card (optional)
   - title: Contact us
     linkLists:
@@ -68,9 +67,9 @@ landingContent:
           - text: SharePoint Framework Web Part
             url: https://aka.ms/spfx-webparts
           - text: Column and View formatting samples
-            url: https://aka.ms/list-formatting           
+            url: https://aka.ms/list-formatting
           - text: SharePoint Framework Extensions
-            url: https://aka.ms/spfx-extensions                          
+            url: https://aka.ms/spfx-extensions
 
   # Card (optional)
   - title: Capabilities and Features
@@ -113,7 +112,7 @@ landingContent:
           - text: PnP Core SDK.NET library
             url: https://pnp.github.io/pnpcore/
           - text: PnP PowerShell
-            url: https://pnp.github.io/powershell/            
+            url: https://pnp.github.io/powershell/
           - text: CLI for Microsoft 365
             url: https://pnp.github.io/cli-microsoft365/
           - text: SharePoint Framework React Controls
@@ -149,7 +148,7 @@ landingContent:
 
   # Card
   - title: SharePoint webhooks
-    linkLists:      
+    linkLists:
       - linkListType: overview
         links:
           - text: Overview of SharePoint webhooks
@@ -185,4 +184,4 @@ landingContent:
           - text: Avoid getting throttled or blocked in SharePoint Online
             url: /sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online
           - text: Modernize your classic SharePoint sites
-            url: /sharepoint/dev/transform/modernize-classic-sites            
+            url: /sharepoint/dev/transform/modernize-classic-sites

@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Site schema
@@ -17,9 +16,9 @@ description: Specifies a custom property value to implement within the Feature.
 # Property element (Site - Feature)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Specifies a custom property value to implement within the Feature. 
-  
+
+Specifies a custom property value to implement within the Feature.
+
 ```XML
 <Property
     Key = "Text"
@@ -37,20 +36,18 @@ The following sections describe attributes, child elements, and parent elements.
 |:-----|:-----|
 |**Key** <br/> |Required **Text**. Specifies the name of the property.  <br/> |
 |**Value** <br/> |Required **Text**. Specifies the value to which the property is set.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
 - [Properties](properties-element-site.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: Unbounded 
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>

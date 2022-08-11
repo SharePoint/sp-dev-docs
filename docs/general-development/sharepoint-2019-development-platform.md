@@ -1,6 +1,7 @@
 ---
 title: SharePoint Server 2019 development platform
-ms.date: 01/29/2020
+description: Describes the SharePoint Server 2019 development platform and details the platform's supported and unsupported capabilities.
+ms.date: 06/13/2022
 ms.prod: sharepoint
 ms.assetid: e0602381-ae11-41be-6a7e-9e47e9f246d6
 ms.localizationpriority: high

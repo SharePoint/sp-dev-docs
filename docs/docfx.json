@@ -34,21 +34,33 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "uhfHeaderID": "MSDocsHeader-Dev_SharePoint",
+      "uhfHeaderID": "MSDocsHeader-M365-IT",
       "extendBreadcrumb": "true",
       "breadcrumb_path":"/sharepoint/dev/breadcrumb/toc.json",
       "ms.suite": "office",
       "ms.author": "vesaj",
       "author": "VesaJuvonen",
       "ms.topic": "conceptual",
-      "ms.suite": "office",
-      "ms.service": "sharepoint",
       "feedback_system": "GitHub",
       "feedback_github_repo": "SharePoint/sp-dev-docs",
       "feedback_product_url": "https://aka.ms/spdev-uservoice",
       "search.appverid": "MET150"
     },
     "fileMetadata": {
+      "ms.prod": {
+        "solution-guidance/**.md": "sharepoint",
+        "spfx/**.md": "sharepoint"
+      },
+      "ms.service": {
+        "apis/**.md": "sharepoint-online",
+        "business-apps/power-apps/**.md": "powerapps",
+        "business-apps/power-automate/guidance/**.md": "power-automate",
+        "declarative-customization/**.md": "sharepoint-online",
+        "design/**.md": "sharepoint-online",
+        "features/**.md": "sharepoint-online",
+        "scenario-guidance/**.md": "sharepoint-online",
+        "schema/**.md": "sharepoint-online"
+      },
       "ms.technology":{
         "spfx-apis/rest/**.md": "sharepoint-framework",
         "general-development/**.md": "sharepoint-framework",

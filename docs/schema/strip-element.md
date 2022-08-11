@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - Server Ribbon schema
@@ -17,9 +16,9 @@ description: Defines a horizontally scrolling strip that contains one or more co
 # Strip element (Server Ribbon)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
+
 Defines a horizontally scrolling strip that contains one or more controls.
-  
+
 ```XML
 <Strip />
 ```
@@ -35,20 +34,20 @@ None
 ### Child elements
 
 - [ControlRef](controlref-element.md)
-   
+
 ### Parent elements
 
 - [Row](row-element.md)
-   
+
 ### Occurrences
 
 - Minimum: 0
-- Maximum: unbounded  
-   
+- Maximum: unbounded
+
 ## Example
 
 The following example defines a strip with three controls for paging forward and backward.
-  
+
 ```XML
 <Row>
   <Strip>
@@ -58,5 +57,3 @@ The following example defines a strip with three controls for paging forward and
   </Strip>
 </Row>
 ```
-
-

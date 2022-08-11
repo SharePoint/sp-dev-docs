@@ -1,7 +1,7 @@
 ---
 title: Granting access via Azure AD App-Only
 description: Granting access via Azure AD App-Only
-ms.date: 06/05/2020
+ms.date: 06/28/2022
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
@@ -233,12 +233,12 @@ You can now perform operations through PnP PowerShell against your SharePoint On
 
 ## Using this principal in your application using the SharePoint PnP Sites Core library
 
-In a first step, you add the SharePointPnPCoreOnline library NuGet package: https://www.nuget.org/packages/SharePointPnPCoreOnline.
+In a first step, you add the PnP Framework library NuGet package: https://www.nuget.org/packages/PnP.Framework.
 
 Once that’s done you can use below code construct:
 
 ```csharp
-using OfficeDevPnP.Core;
+using PnP.Framework;
 using System;
 
 namespace AzureADCertAuth
@@ -247,8 +247,8 @@ namespace AzureADCertAuth
     {
         static void Main(string[] args)
         {
-            string siteUrl = "https://contoso.sharepoint.com/sites/demo";
-            using (var cc = new AuthenticationManager().GetAzureADAppOnlyAuthenticatedContext(siteUrl, "<application id>", "contoso.onmicrosoft.com", @"C:\BertOnlineAzureADAppOnly.pfx", "<password>"))
+            var authManager = new AuthenticationManager("<application id>", "c:\\temp\\mycert.pfx", "<password>", "contoso.onmicrosoft.com");
+            using (var cc = authManager.GetAzureADAppOnlyAuthenticatedContext("https://contoso.sharepoint.com/sites/demo"))
             {
                 cc.Load(cc.Web, p => p.Title);
                 cc.ExecuteQuery();

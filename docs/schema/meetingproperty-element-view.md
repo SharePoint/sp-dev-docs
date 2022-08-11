@@ -4,22 +4,21 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-ms.prod: sharepoint
 ms.localizationpriority: medium
 api_name:
 - View schema
 api_type:
 - schema
 ms.assetid: 3ec34c23-df03-4678-b1cc-56436911ae76
-description: Represents a property of a list in a Meeting Workspace site. 
+description: Represents a property of a list in a Meeting Workspace site.
 ---
 
 # MeetingProperty element (View)
 
 **Applies to:** SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
-  
-Represents a property of a list in a Meeting Workspace site. 
-  
+
+Represents a property of a list in a Meeting Workspace site.
+
 ```XML
 <MeetingProperty
   AutoHyperLink = "TRUE" | "FALSE"
@@ -53,20 +52,18 @@ The following sections describe attributes, child elements, and parent elements.
 |**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
 |**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
 |**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
-   
+
 ### Child elements
 
 None
-   
+
 ### Parent elements
 
-Numerous 
-   
+Numerous
+
 ### Occurrences
 
-- Minimum: 0  
-- Maximum: Unbounded  
+- Minimum: 0
+- Maximum: Unbounded
 
-<br/> 
-   
-
+<br/>
