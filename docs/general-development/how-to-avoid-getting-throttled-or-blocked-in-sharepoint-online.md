@@ -30,7 +30,7 @@ When usage limits are exceeded, SharePoint Online throttles any further requests
 
 For requests that a user performs directly in the browser, SharePoint Online redirects you to the throttling information page, and the requests fail.
 
-For requests that an application makes, including [Microsoft Graph](https://graph.microsoft.com), CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
+For requests that an application makes, including [Microsoft Graph](/graph), CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
 
 - HTTP 429 indicates the calling application sent too many requests in a time window and exceeded a predetermined limit.
 - HTTP 503 indicates the service isn't ready to handle the request. The common cause is that the service is experiencing temporary load spikes then expected.
@@ -49,7 +49,7 @@ That said, it's rare for a user to get throttled in SharePoint Online. The servi
 
 In addition to throttling by user account, limits are also applied to applications in a tenant. 
 
-Every application has its own limits in a tenant, which are based on the number of licenses purchased per organization (see the plans listed on [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#limits-by-plan) for licenses included). Every request that an application makes across all API endpoints, including [Microsoft Graph](https://graph.microsoft.com), CSOM and REST, counts towards the application’s usage.
+Every application has its own limits in a tenant, which are based on the number of licenses purchased per organization (see the plans listed on [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#limits-by-plan) for licenses included). Every request that an application makes across all API endpoints, including [Microsoft Graph](/graph), CSOM and REST, counts towards the application’s usage.
 
 SharePoint provides various APIs. Different APIs have different costs depending on the complexity of the API. The cost of APIs is normalized by SharePoint and expressed by resource units. Application’s limits are also defined using resource units.
 
@@ -63,7 +63,7 @@ The table below defines the resource unit limits for an application in a tenant:
 > [!NOTE]
 > We reserve the right to change the resource unit limits.
 
-In terms of API costs, [Microsoft Graph APIs](https://graph.microsoft.com) have a predetermined resource unit cost per request:
+In terms of API costs, [Microsoft Graph APIs](/graph) have a predetermined resource unit cost per request:
 
 | Resource units per request | Operations                                              |
 | -------------------------- | ------------------------------------------------------- |
@@ -78,7 +78,7 @@ Delta with a token is the most efficient way to scan content in SharePoint, and 
 
 In [batching](/graph/json-batching), requests in a batch are evaluated individually by resource units. 
 
-CSOM and REST don't have a predetermined resource unit cost and they usually consume more resource units than [Microsoft Graph APIs](https://graph.microsoft.com) to achieve the same functionality. And in addition to resource unit limits, CSOM and REST are also subject to other internal resource limits, so if applications call CSOM and REST, they may experience more throttling than the limits described in this document. We highly recommend you choose [Microsoft Graph APIs](https://graph.microsoft.com) over CSOM and REST APIs when possible.
+CSOM and REST don't have a predetermined resource unit cost and they usually consume more resource units than [Microsoft Graph APIs](/graph) to achieve the same functionality. And in addition to resource unit limits, CSOM and REST are also subject to other internal resource limits, so if applications call CSOM and REST, they may experience more throttling than the limits described in this document. We highly recommend you choose [Microsoft Graph APIs](/graph) over CSOM and REST APIs when possible.
 
 Since application limits are in resource units, the actual request rate, such as requests per minute, depends on application’s API choice and the corresponding API resource unit cost. In general, you can estimate the request rate using an average of 2 resource units per request and divide resource unit limits by 2 to get the estimated request rate.
 
@@ -89,11 +89,11 @@ Although each application has its own limits within a tenant and we allow tenant
 Below is a quick summary of the best practices to handle throttling:
 - Reduce the number of concurrent requests
 - Avoid request spikes
-- Choose [Microsoft Graph APIs](https://graph.microsoft.com) over CSOM and REST APIs when possible
+- Choose [Microsoft Graph APIs](/graph) over CSOM and REST APIs when possible
 - Use the `Retry-After` and `RateLimit` HTTP headers
 - Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
 
-As stated earlier, [Microsoft Graph](https://graph.microsoft.com) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](https://graph.microsoft.com) consumes less resource than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](https://graph.microsoft.com) can improve application's performance and reduce throttling.
+As stated earlier, [Microsoft Graph](/graph) is cloud born APIs that have the latest improvements and optimizations. In general, [Microsoft Graph](/graph) consumes less resource than CSOM and REST to achieve the same functionality. Hence, adopting [Microsoft Graph](/graph) can improve application's performance and reduce throttling.
 
 If you do run into throttling, we require using the `Retry-After` HTTP header to ensure minimum delay until the throttle is removed. The `RateLimit` HTTP headers send you early signals when you're close to limits and you can proactively reduce requests to avoid hitting the throttle.
 
@@ -227,5 +227,5 @@ If we block your subscription, we'll notify you of the block in the Office 365 M
 
 - [Diagnosing performance issues with SharePoint Online](https://support.office.com/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
-- [Microsoft Graph dev center](https://graph.microsoft.com)
-- [Microsoft Graph throttling guidance](https://docs.microsoft.com/graph/throttling)
+- [Microsoft Graph dev center](/graph)
+- [Microsoft Graph throttling guidance](/graph/throttling)
