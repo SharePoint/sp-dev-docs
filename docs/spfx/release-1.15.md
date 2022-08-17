@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.15 release notes
 description: Release notes for the SharePoint Framework v1.15 release
-ms.date: 08/08/2022
+ms.date: 08/17/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.15 release notes
@@ -168,7 +168,7 @@ interface ICacheSettings {
    * Whether cache is enabled. Default: true
    */
   isEnabled: boolean;
-  
+
   /**
    * Expiry time in seconds. Default: 86400 seconds (24 hours)
    */
@@ -218,7 +218,7 @@ State caching and the cache expiry time can be used to determine when expensive 
 Caching can help significantly improve the perceived performance for your Adaptive Card Extension.
 
 
-### Error Handler Method 
+### Error Handler Method
 
 This method will be invoked when an Action throws an error.
 
@@ -268,8 +268,9 @@ The Select Media Action can be used to select Images from your native device. In
 
 ## Deprecations
 
-- Deprecated SPComponentLoader#getManifests due to runtime performance overhead.
+- Deprecated **SPComponentLoader** `getManifests()` method due to runtime performance overhead.
 - Removed API from `@microsoft/sp-http` - `MSGraphClientFactory.getClient()`
+- Dropped support for Node.js v12.
 
 ## Fixed Issues
 
