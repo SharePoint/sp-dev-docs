@@ -1,7 +1,7 @@
 ---
 title: Command bar customization syntax reference
 description: Command bar customization syntax reference
-ms.date: 06/28/2022
+ms.date: 08/12/2022
 ms.localizationpriority: high
 ---
 
@@ -74,6 +74,7 @@ Mandatory property to uniquely identify a command in the Command bar. Valid keys
 'exportCSV'
 'export'
 'editInGridView'
+'exitGridView'
 'sync'
 'uploadTemplate'
 'addTemplate'

@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 06/28/2022
+ms.date: 08/12/2022
 ms.localizationpriority: high
 ---
 
@@ -707,6 +707,7 @@ The following column types support column formatting:
 * Average Rating
 * Likes
 * Approval Status
+* Attachments
 
 The following are currently **not** supported:
 
