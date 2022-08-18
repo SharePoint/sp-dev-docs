@@ -114,6 +114,15 @@ this.context.sdks.microsoftTeams
 >
 > You should use `this.context.sdks.microsoftTeams` for all solutions created with the SharePoint Framework v1.10 and later.
 
+## What Teams JS SDK version to use?
+
+The SharePoint Framework provides access to the Teams JS SDK instance and context using `sdks.microsoftTeams` property in the [context's API](https://docs.microsoft.com/en-us/javascript/api/sp-webpart-base/webpartcontext?view=sp-typescript-latest#@microsoft-sp-webpart-base-webpartcontext-sdks-member).
+Using this API assures the supported version of Teams JS is loaded and initialized.
+
+Few crucial details to keep in mind:
+- Installing and initializing custom versions of Teams JS SDK is **unsupported**.
+- Although Teams JS SDK types are tied to the SPFx version used in the solution, the actual version loaded to the tenant may differ. We guarantee backward compatibility on our end. For example, a solution built with SPFx 1.14 will have types from Teams JS 1.10.0, and SPFx 1.15.2 will have types from Teams JS 1.12.1, but the actual loaded version can be 2.1.0. 
+
 ## See also
 
 - [Building Microsoft Teams tab using SharePoint Framework - Tutorial](web-parts/get-started/using-web-part-as-ms-teams-tab.md)
