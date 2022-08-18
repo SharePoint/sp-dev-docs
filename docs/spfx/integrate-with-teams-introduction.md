@@ -116,7 +116,7 @@ this.context.sdks.microsoftTeams
 
 ## What Teams JS SDK version to use?
 
-The SharePoint Framework provides access to the Teams JS SDK instance and context using `sdks.microsoftTeams` property in the [context's API](https://docs.microsoft.com/javascript/api/sp-webpart-base/webpartcontext?view=sp-typescript-latest#@microsoft-sp-webpart-base-webpartcontext-sdks-member).
+The SharePoint Framework provides access to the Teams JS SDK instance and context using `sdks.microsoftTeams` property in the [context's API](/javascript/api/sp-webpart-base/webpartcontext#@microsoft-sp-webpart-base-webpartcontext-sdks-member).
 Using this API assures the supported version of Teams JS is loaded and initialized.
 
 Few crucial details to keep in mind:
