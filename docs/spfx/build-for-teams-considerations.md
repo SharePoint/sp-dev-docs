@@ -32,6 +32,12 @@ SharePoint Framework is meant to extend UI of the services it’s being used wit
 
 SharePoint Framework solutions consist only of client-side code. If your solution requires server-side code for example to run long-running operations, scheduled processes or connecting to other systems that don’t support the OAuth implicit flow, you would need to build this functionality separately and expose it through an API secured with Azure Active Directory. Your SharePoint Framework solution would then [securely connect to this API on behalf of the current user](use-aadhttpclient.md).
 
+## Teams JS SDK
+
+SharePoint Framework provides access to Teams JS SDK via `sdks.microsoftTeams` property in the [context's API](/javascript/api/sp-webpart-base/webpartcontext#@microsoft-sp-webpart-base-webpartcontext-sdks-member).
+> [!IMPORTANT]
+> Installing and initializing custom versions of Teams JS SDK is **unsupported**. This is applicable to any SPFx component, including web parts, extensions, adaptive cards, and libraries.
+
 ## Deployment
 
 SharePoint Online can automatically create the Microsoft Teams app manifest and app package for SharePoint Framework solutions deployed to the tenant's app catalog, or they can use a developer-provided Microsoft Teams app package. Refer to [Deployment options for SharePoint Framework solutions for Microsoft Teams](deployment-spfx-teams-solutions.md) for detail on these options.
