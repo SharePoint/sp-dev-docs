@@ -119,8 +119,8 @@ this.context.sdks.microsoftTeams
 The SharePoint Framework provides access to the Teams JS SDK instance and context using `sdks.microsoftTeams` property in the [context's API](/javascript/api/sp-webpart-base/webpartcontext#@microsoft-sp-webpart-base-webpartcontext-sdks-member).
 Using this API assures the supported version of Teams JS is loaded and initialized.
 
-Few crucial details to keep in mind:
-- Installing and initializing custom versions of Teams JS SDK is **unsupported**.
+Few details to keep in mind:
+- Installing and initializing custom versions of Teams JS SDK is **unsupported**. This is applicable to any SPFx component, including web parts, extensions, adaptive cards, and libraries.
 - Although Teams JS SDK types are tied to the SPFx version used in the solution, the actual version loaded to the tenant may differ. We guarantee backward compatibility on our end. For example, a solution built with SPFx 1.14 will have types from Teams JS 1.10.0, and SPFx 1.15.2 will have types from Teams JS 1.12.1, but the actual loaded version can be 2.1.0. 
 
 ## See also
