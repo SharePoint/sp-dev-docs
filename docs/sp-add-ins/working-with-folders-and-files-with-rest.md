@@ -1,7 +1,7 @@
 ---
 title: Working with folders and files with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on folders and files with the SharePoint REST interface.
-ms.date: 06/07/2022
+ms.date: 08/18/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -117,7 +117,7 @@ Authorization: "Bearer " + accessToken
 You can also **retrieve a file when you know its URL**, as in the following example.
 
 ```http
-GET https://{site_url}/_api/web/GetFileByServerRelativeUrl('/Folder Name/{file_name})/$value
+GET https://{site_url}/_api/web/GetFileByServerRelativeUrl('/Folder Name/{file_name}')/$value
 Authorization: "Bearer " + accessToken
 ```
 
@@ -201,7 +201,7 @@ The following example shows how to **update a file by using the PUT method**.
 > **PUT** is the only method that you can use to update a file. The **MERGE** method is not allowed.
 
 ```http
-POST https://{site_url}/_api/web/GetFileByServerRelativeUrl('/Folder Name/{file_name})/$value
+POST https://{site_url}/_api/web/GetFileByServerRelativeUrl('/Folder Name/{file_name}')/$value
 Authorization: "Bearer " + accessToken
 Content-Length: {length of request body as integer}
 X-HTTP-Method: "PUT"
@@ -270,11 +270,13 @@ function uploadFileBinary() {
   else {
     requestExecutor = new SP.RequestExecutor(document.getElementById("TxtWebUrl").value);
   }
+  
   var body = "";
   for (var i = 0; i < 1000; i++) {
     var ch = i % 256;
     body = body + String.fromCharCode(ch);
   }
+  
   var info = {
     url: "_api/web/lists/getByTitle('Shared Documents')/RootFolder/Files/Add(url='a.dat', overwrite=true)",
     method: "POST",
@@ -284,6 +286,7 @@ function uploadFileBinary() {
     error: fail,
     state: "Update"
   };
+  
   requestExecutor.executeAsync(info);
 }
 
@@ -294,7 +297,7 @@ function uploadFileBinary() {
 The following example shows how to **retrieve all of the files that are attached to a list item**.
 
 ```http
-GET https://{site_url}/_api/web/lists/getbytitle('{list_title}')/items({item+id})/AttachmentFiles/
+GET https://{site_url}/_api/web/lists/getbytitle('{list_title}')/items({item_id})/AttachmentFiles/
 Authorization: "Bearer " + accessToken
 Accept: "application/json;odata=verbose"
 ```
