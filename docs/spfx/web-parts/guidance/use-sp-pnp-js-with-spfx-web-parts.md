@@ -144,7 +144,7 @@ There are [two ways](https://pnp.github.io/pnpjs/getting-started) to ensure that
 
 ## Add a project configuration file
 
-Next, let's create a project configuration file for PnPjs. This file allows us to set up the imports we will need for hte project as well as initialize a instance of the sp object for use on any of our other components.
+Next, let's create a project configuration file for PnPjs. This file allows us to set up the imports we will need for the project as well as initialize a instance of the sp object for use on any of our other components.
 
 Note all the imports for webs, lists, items, and batching. In our component we will be making calls to get items from a library, so we need to include those imports for future reference. In addition we create a variable that will hold our configured instance of the `SharePoint Querable` that will be created with the factory instance. If you'll recall from our `onInit` function above we're calling the exported getSP with the SPFx context passed in as a property. By doing so we're able to establish context with the PnPjs library so that we can subsequently make calls to the SharePoint API. Subsequent calls to `getSP` without the context will return the object that has alredy been configured.
 
