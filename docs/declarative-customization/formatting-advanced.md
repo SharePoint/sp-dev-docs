@@ -96,7 +96,7 @@ This example uses `customCardProps`, `openOnEvent`, `directionalHint` and `isBea
   "customCardProps": {
     "formatter": {
       "elmType": "div",
-      "txtContent": "Define your formatter options inside the customCarProps/formatter property"
+      "txtContent": "Define your formatter options inside the customCardProps/formatter property"
     },
     "openOnEvent": "hover",
     "directionalHint": "bottomCenter",
