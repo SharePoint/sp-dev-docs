@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.15 release notes
 description: Release notes for the SharePoint Framework v1.15 release
-ms.date: 08/17/2022
+ms.date: 08/24/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.15 release notes
@@ -270,7 +270,6 @@ The Select Media Action can be used to select Images from your native device. In
 
 - Deprecated **SPComponentLoader** `getManifests()` method due to runtime performance overhead.
 - Removed API from `@microsoft/sp-http` - `MSGraphClientFactory.getClient()`
-- Dropped support for Node.js v12.
 
 ## Fixed Issues
 
