@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 04/25/2022
+ms.date: 08/19/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -133,7 +133,7 @@ Following are some tools that might come in handy as well:
 - [Fiddler](https://www.telerik.com/fiddler)
 - [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
 - [Windows Terminal](https://github.com/Microsoft/Terminal)
-- [Cmder for Windows](http://cmder.net/)
+- [Cmder for Windows](https://cmder.app/)
 - [Oh My Zsh for macOS](http://ohmyz.sh/)
 - [Git source control tools](https://git-scm.com/)
 
