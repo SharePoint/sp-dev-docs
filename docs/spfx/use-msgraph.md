@@ -1,7 +1,7 @@
 ---
 title: Use the MSGraphClientV3 to connect to Microsoft Graph
 description: Use the MSGraphClientV3 class to make calls to the Microsoft Graph REST API.
-ms.date: 9/29/2022
+ms.date: 8/29/2022
 ms.localizationpriority: high
 ---
 
