@@ -10,7 +10,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-- beta.0 **Released:** August 30, 2022
+- beta.1 **Released:** August 30, 2022
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
@@ -117,7 +117,7 @@ We're rolling our support for teams-js v2. `this.context.sdks.microsoftTeams.tea
 
 ### Remove NodeJS 12 and 14 support
 
-Starting with 1.16.0-beta.0, we're removing support for NodeJS 12 and 14. We will continue to support NodeJS 16.
+Starting with 1.16.0-beta.1, we're removing support for NodeJS 12 and 14. We will continue to support NodeJS 16.
 
 ## Deprecations
 
