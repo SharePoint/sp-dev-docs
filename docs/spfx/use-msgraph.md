@@ -1,35 +1,37 @@
 ---
-title: Use the MSGraphClient to connect to Microsoft Graph
-description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
-ms.date: 6/21/2022
+title: Use the MSGraphClientV3 to connect to Microsoft Graph
+description: Use the MSGraphClientV3 class to make calls to the Microsoft Graph REST API.
+ms.date: 08/29/2022
 ms.localizationpriority: high
 ---
 
-# Use the MSGraphClient to connect to Microsoft Graph
+# Use the MSGraphClientV3 to connect to Microsoft Graph
 
-When building SharePoint Framework solutions, you can easily connect to the Microsoft Graph by using the **MSGraphClient**.
+When building SharePoint Framework solutions, you can easily connect to the Microsoft Graph by using the **MSGraphClientV3**.
 
 ## MSGraphClient overview
 
-**MSGraphClient** is a new HTTP client introduced in SharePoint Framework v1.6.0 that simplifies connecting to the Microsoft Graph inside SharePoint Framework solutions. **MSGraphClient** wraps the existing [Microsoft Graph JavaScript Client Library](https://www.npmjs.com/package/@microsoft/microsoft-graph-client), offering developers the same capabilities as when using the client library in other client-side solutions.
+**MSGraphClientV3** is a new HTTP client introduced in SharePoint Framework v1.15.0 that simplifies connecting to the Microsoft Graph inside SharePoint Framework solutions. **MSGraphClientV3** wraps the [Microsoft Graph JavaScript Client Library v3](https://www.npmjs.com/package/@microsoft/microsoft-graph-client), offering developers the same capabilities as when using the client library in other client-side solutions.
 
-While you could use the Microsoft Graph JavaScript Client Library in your solution directly, **MSGraphClient** handles authenticating against the Microsoft Graph for you, which allows you to focus on building your solution.
+**MSGraphClientV3** replaces **MSGraphClient** which was introduced in SharePoint Framework v1.6.0. **MSGraphClient** wrapped the Microsoft Graph JavaScript Client Library v1.
+
+While you could use the Microsoft Graph JavaScript Client Library in your solution directly, **MSGraphClientV3** handles authenticating against the Microsoft Graph for you, which allows you to focus on building your solution.
 
 ## Use the MSGraphClient in your solution
 
 > [!NOTE]
-> The **MSGraphClient** is available only in projects built using SharePoint Framework v1.6.0 and later. While the **MSGraphClient** is explained in this article by using a client-side web part, you can also use it in SharePoint Framework Extensions.
+> The **MSGraphClientV3** is available only in projects built using SharePoint Framework v1.15.0 and later. While the **MSGraphClientV3** is explained in this article by using a client-side web part, you can also use it in SharePoint Framework Extensions.
 
 > [!NOTE]
-> The single sign-on for the **MSGraphClient** is only available in SharePoint Online today. You can leverage the client for on premises developments but your users will be requested to sign in again within the webpart.
+> The single sign-on for the **MSGraphClientV3** is only available in SharePoint Online today. You can leverage the client for on premises developments but your users will be requested to sign in again within the webpart.
 
-1. To use the **MSGraphClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
+1. To use the **MSGraphClientV3** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
     ```typescript
-    import { MSGraphClient } from '@microsoft/sp-http';
+    import { MSGraphClientV3 } from '@microsoft/sp-http';
     ```
 
-1. **MSGraphClient** is exposed through the **MSGraphClientFactory** available on the web part context. To get a reference to MSGraphClient, in your code add:
+1. **MSGraphClientV3** is exposed through the **MSGraphClientFactory** available on the web part context. To get a reference to MSGraphClient, in your code add:
 
     ```typescript
     export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
@@ -38,7 +40,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
 
         this.context.msGraphClientFactory
           .getClient('3')
-          .then((client: MSGraphClient): void => {
+          .then((client: MSGraphClientV3): void => {
             // use MSGraphClient here
           });
       }
@@ -47,7 +49,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
     }
     ```
 
-1. After you have the reference to the **MSGraphClient** instance, start communicating with the Microsoft Graph by using its JavaScript Client Library syntax:
+1. After you have the reference to the **MSGraphClientV3** instance, start communicating with the Microsoft Graph by using its JavaScript Client Library syntax:
 
     ```typescript
     export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
@@ -56,7 +58,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
 
         this.context.msGraphClientFactory
           .getClient('3')
-          .then((client: MSGraphClient): void => {
+          .then((client: MSGraphClientV3): void => {
             // get information about the current user from the Microsoft Graph
             client
               .api('/me')
@@ -95,11 +97,11 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
 
         this.context.msGraphClientFactory
           .getClient('3')
-          .then((client: MSGraphClient): void => {
+          .then((client: MSGraphClientV3): void => {
             // get information about the current user from the Microsoft Graph
             client
               .api('/me')
-              .get((error, user: MicrosoftGraph.User, rawResponse?: any) => {
+              .get((error: any, user: MicrosoftGraph.User, rawResponse?: any) => {
                 // handle the response
             });
           });
