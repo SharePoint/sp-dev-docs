@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 08/12/2022
+ms.date: 08/30/2022
 ms.localizationpriority: high
 ---
 
@@ -370,8 +370,10 @@ The `actionParams` attribute can have the following options when using the `exec
 Add a custom card to the element, that shows up on hover or click event. Following customization is available -
 
 - `"formatter"`: JSON object that defines formatting for custom cards.
-- `"openOnEvent"`: Event on which the customCard should open. `"click"` or `"hover"` are the two allowed values.
-- `"directionalHint"`: Specify the direction relative to the target in which custom card will be positioned.
+- `"openOnEvent"`: Event on which the customCard should open.
+  - Valid values: `click`, `hover`
+- `"directionalHint"`: Specify the direction relative to the target in which custom card will be positioned. This is the preferred location but is not guaranteed depending on space.
+  - Valid values: `bottomAutoEdge`, `bottomCenter`, `bottomLeftEdge`, `bottomRightEdge`, `leftBottomEdge`, `leftCenter`, `leftTopEdge`, `rightBottomEdge`, `rightCenter`, `rightTopEdge`, `topAutoEdge`, `topCenter`, `topLeftEdge`, `topRightEdge`
 - `"isBeakVisible"`: Specify if the beak is to be shown or not.
 - `"beakStyle"`: Specifies the style object for custom card's beak.
 
