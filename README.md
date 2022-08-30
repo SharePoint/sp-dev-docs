@@ -4,7 +4,7 @@ The SharePoint Framework (SPFx) is a page and part model that enables client-sid
 
 * [Official SharePoint Framework Documentation](https://aka.ms/spfx)
 
-This repository contains the raw documents published to docs.microsoft.com site.
+This repository contains the raw documents published to Microsoft Docs.
 
 ## Questions & Help
 
@@ -14,7 +14,7 @@ You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365D
 
 ## SharePoint Framework Releases
 
-Review all the SPFx releases here from the initial GA release in February 2017 in the docs: https://docs.microsoft.com/sharepoint/dev/spfx/roadmap
+Review all the SPFx releases here from the [initial GA release in February 2017](https://docs.microsoft.com/sharepoint/dev/spfx/roadmap)
 
 ## Get Started
 
@@ -27,7 +27,7 @@ Review all the SPFx releases here from the initial GA release in February 2017 i
 
 * [Background and Philosophy](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
 * [Design Great Web Parts](https://docs.microsoft.com/sharepoint/dev/design/design-guidance-overview)
-* [API Docs](/javascript/api/sp-application-base)
+* [API Docs](https://docs.microsoft.com/javascript/api/sp-application-base)
 
 ## Updates & Feedback
 
@@ -49,7 +49,7 @@ Please see following guidance if you are planning to submit changes on the Share
 
 * [Contribution guidance](https://github.com/SharePoint/sp-dev-docs/blob/master/.github/CONTRIBUTING.md)
 * [How to Create Good Pull Requests](https://github.com/SharePoint/sp-dev-docs/wiki/How-to-Create-Good-Pull-Requests)
-* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.docs.microsoft.com/help/contribute/?branch=master) for docs.microsoft.com contributors
+* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.docs.microsoft.com/help/contribute/?branch=master) for Microsoft Docs contributors
 
 ## Have Fun
 
