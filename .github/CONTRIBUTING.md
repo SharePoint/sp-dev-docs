@@ -108,14 +108,14 @@ remove: Total 10 (delta 1), reused 10 (delta 1)
 Unpacking objects: 100% (10/10), done.
 ```
 
-## Switch to `master` branch
+## Switch to `main` branch
 
-In order to add your changes, you will need to do those in the `master` branch.
+In order to add your changes, you will need to do those in the `main` branch.
 
-Type the following command in the console to switch to `master` branch:
+Type the following command in the console to switch to `main` branch:
 
 ```
-git checkout master
+git checkout main
 ```
 
 Now, you can update existing docs or add new docs to the docs repo.
@@ -131,15 +131,15 @@ Depending on the doc's intent, you can choose to add your doc into  `basics` or 
 
 ## Submit a pull request
 
-Once you have completed adding your changes, you can submit a pull request. 
+Once you have completed adding your changes, you can submit a pull request.
 
-Navigate to the forked sp-dev-docs repo in your account. Make sure your current branch is `master` branch.
+Navigate to the forked sp-dev-docs repo in your account. Make sure your current branch is `main` branch.
 
-Once you are in the `master` branch, you should see a message stating `This branch is 1 commit ahead of SharePoint:master` and next to it will be a `Pull request` link.
+Once you are in the `main` branch, you should see a message stating `This branch is 1 commit ahead of Sharepoint:main` and next to it will be a `Pull request` link.
 
 ![Submit a pull request to sp-dev-docs repo](../images/contribute-docs-submit-pr.png)
 
-Click the `Pull request` link to start a new pull request. Make sure you use this [template](PULL_REQUEST_TEMPLATE.md) to fill in your changes. Make sure you are creating this pull request against the `master` branch.
+Click the `Pull request` link to start a new pull request. Make sure you use this [template](PULL_REQUEST_TEMPLATE.md) to fill in your changes. Make sure you are creating this pull request against the `main` branch.
 
 Once you have all the information, click the `Create pull request` button to submit your pull request.
 
