@@ -132,7 +132,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: SharePoint sites and content API overview
-            url: https://docs.microsoft.com/graph/sharepoint-concept-overview
+            url: /graph/sharepoint-concept-overview
 
   # Card (optional)
   - title: SharePoint REST service
@@ -140,7 +140,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Get to know the SharePoint REST service
-            url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
+            url: /sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service
       - linkListType: reference
         links:
           - text: Complete basic operations

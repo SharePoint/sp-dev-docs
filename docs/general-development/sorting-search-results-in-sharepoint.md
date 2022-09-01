@@ -463,8 +463,8 @@ Table 2 explains the parameters to the random sort specification.
 |**Parameter**|**Description**|**Required**|
 |:-----|:-----|:-----|
 | _Seed_ <br/> |The seed for the random value generation.  <br/> The seed value is input to a function that generates a random number. This random number is used in the final sorting.Using only the  _seed_ option will give you a randomly sorted query result set. The sorting order for the same query (when using the same seed) may change after an index update. <br/> |Yes  <br/> |
-| _Hashfield_ <br/> |A managed property that is used as the hash value for the random generation. You can use this parameter to ensure that the sorting order for the same query (when using the same seed) does not change after an index update.  <br/> The managed property must be of type  [Integer]https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) and must be [Sortable()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedPropertyInfo.Sortable.aspx). You may fill this managed property with random or unique values (for example a sequence number populated by an item processing stage). <br/> |No  <br/> |
-   
+| _Hashfield_ <br/> |A managed property that is used as the hash value for the random generation. You can use this parameter to ensure that the sorting order for the same query (when using the same seed) does not change after an index update.  <br/> The managed property must be of type  [Integer](/previous-versions/office/developer/sharepoint-2010/ms500214(v%3Doffice.14)) and must be [Sortable()](/previous-versions/office/sharepoint-server/jj263514(v=office.15)). You may fill this managed property with random or unique values (for example a sequence number populated by an item processing stage). <br/> |No  <br/> |
+
 By providing the same seed for equal queries, items will be presented in the same order. This enables you to preserve the same random order when paging through search results. Use the  _hashfield_ parameter if you want to preserve the same random order when an index update accidentally occurs between the queries.
   
     
