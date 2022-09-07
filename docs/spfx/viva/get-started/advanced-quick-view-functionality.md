@@ -115,7 +115,6 @@ Since the `onAction()` handler has not been changed to handle the item click, se
 ## Create a new quick view
 
 1. Create a new file to hold a new Quick View card: **./src/adaptiveCardExtensions/helloWorld/quickView/DetailedQuickViewTemplate.json**.
-1. Create a new file to hold a new Quick View card: **./src/adaptiveCardExtensions/helloWorld/quickView/DetailedQuickViewTemplate.json**.
 1. Add the following JSON to the **DetailedQuickViewTemplate.json** file:
 
     ```json
