@@ -434,13 +434,13 @@ An optional property, that allows overriding the default styles of file type ico
 
 Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects.
 
-Expressions can be written using Excel-style expressions in SharePoint Online, or by using Abstract Syntax Tree expressions in SharePoint Online and SharePoint 2019.
+Expressions can be written using Excel-style expressions in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update, or by using Abstract Syntax Tree expressions in SharePoint Online, SharePoint Server Subscription Edition, and SharePoint Server 2019.
 
 All fields in ViewFields can be referred in expresisons, even if it is marked `Explicit`.
 
 ### Excel-style expressions
 
-All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online (not SharePoint 2019).
+All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update. This style of expression is not available in SharePoint Server Subscription Edition before the Version 22H2 feature update nor SharePoint Server 2019.
 
 This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to \`\` otherwise:
 
