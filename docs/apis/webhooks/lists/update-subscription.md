@@ -1,8 +1,7 @@
 ---
 title: Update a subscription
 description: Updates a webhook subscription on a SharePoint list.
-ms.date: 02/08/2018
-ms.prod: sharepoint
+ms.date: 09/06/2022
 ms.localizationpriority: medium
 ---
 
@@ -57,7 +56,7 @@ Name | Type | Description
 -----|------|------------
 notificationUrl|string|The service URL to send notifications to.
 expirationDateTime|date|The date the notification will expire and be deleted.
-client-clientState|string|Optional. Opaque string passed back to the client on all notifications.<br/>You can use this for validating notifications or tagging different subscriptions.
+clientState|string|Optional. Opaque string passed back to the client on all notifications.<br/>You can use this for validating notifications or tagging different subscriptions.
 
 
 ## Response
