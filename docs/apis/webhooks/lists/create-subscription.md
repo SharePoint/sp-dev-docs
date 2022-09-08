@@ -83,9 +83,15 @@ Content-Type: application/json
 
 ## URL validation
 
-Before a new subscription is created, SharePoint sends a request with a validation token in the body of the request to the service URL provided. Your service must respond to this request by returning the validation token.
+**IMPORTANT - Before a new subscription is created, SharePoint sends a request with a validation token in the querystring of the request to the notification URL provided. Your service must respond to this request by returning the validation token. If your service fails to validate the request in this way, the subscription is not created.**
 
-If your service fails to validate the request in this way, the subscription is not created.
+### Example
+
+```
+{
+    return new OkObjectResult(req.Query["validationtoken"].ToString());
+}
+```
 
 ## See also
 
