@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 08/19/2022
+ms.date: 09/19/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -28,7 +28,7 @@ This version is the currently recommended version of Node.js to use with the Sha
 > [!IMPORTANT]
 > Node.js is frequently updated and available on multiple platforms including macOS, Windows, and Linux. Because the exact download links change frequently, they aren't linked to from this page. Instead, use the details below to determine which installer to download for your platform.
 >
-> Be aware that Node.js maintains two different releases at all times: LTS & Current version. The SharePoint Framework is only supported on LTS versions. For more information about Node.js's Long Term Support (LTS) releases, see: [Node.js > Releases](https://nodejs.org/en/about/releases/).
+> Be aware that Node.js maintains two different releases at all times: LTS & Current version. The SharePoint Framework is only supported on LTS versions. For more information about Node.js's Long Term Support (LTS) releases, see: [Node.js > Releases](https://nodejs.org/en/download/releases/).
 
 > [!TIP]
 > The Node.js website always recommends the latest installer for both the LTS & Current releases. To download specific versions of Node.js versions, use the [Node.js > Downloads > Previous Releases](https://nodejs.org/en/download/releases/) page.
