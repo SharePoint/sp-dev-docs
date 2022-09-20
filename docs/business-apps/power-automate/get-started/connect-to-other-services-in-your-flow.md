@@ -73,4 +73,4 @@ In this article, we will connect to Microsoft Teams and post a message to one of
 
 ## Next steps
 
-Learn new skills and discover Power Automate with step-by-step guidance by exploring learning paths and modules available here: [Power Automate Learning Paths](/learn/browse/?term=Power%20Automate&products=power-automate).
+Learn new skills and discover Power Automate with step-by-step guidance by exploring learning paths and modules available here: [Power Automate Learning Paths](/training/browse/?term=Power%20Automate&products=power-automate).

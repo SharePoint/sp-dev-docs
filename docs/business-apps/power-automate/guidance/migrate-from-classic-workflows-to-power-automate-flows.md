@@ -90,7 +90,7 @@ See the following tables that compare the workflow terminologies, triggers, and 
 While the following lists show some of the most common workflow capabilities, Power Automate offers many more features, and is actively updated with new features. We highly recommend visiting the following Power Automate websites for guided learning:
 
 - [Microsoft SharePoint Connector in Power Automate](../sharepoint-connector-actions-triggers.md)
-- [Learn Power Automate](/learn/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
+- [Learn Power Automate](/training/browse/?products=power-automate&term=Power%20Automate&terms=Power%20Automate)
 - [Power Automate Documentation](/power-automate)
 
 ### Workflow concepts

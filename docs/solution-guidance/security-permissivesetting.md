@@ -113,7 +113,7 @@ This script can be used as a starting basis for a site collection scoped remedia
 
 ```PowerShell
 # This script does rename .htm and .html files to .aspx files. Doing so enables these files to be "executed" in SharePoint Online 
-# which has it's file handling configured to be strict. See https://docs.microsoft.com/sharepoint/dev/solution-guidance/security-permissivesetting 
+# which has it's file handling configured to be strict. See https://learn.microsoft.com/sharepoint/dev/solution-guidance/security-permissivesetting 
 # for more details
 
 function PermissiveRemediateASiteCollection

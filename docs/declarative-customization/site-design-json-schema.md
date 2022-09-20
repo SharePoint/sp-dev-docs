@@ -652,13 +652,13 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
     },
 {
   "verb": "addNavLink",
-  "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview",
+  "url": "https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview",
   "displayName": "SharePoint Site Design Overview",
   "parentDisplayName": "Documents"
 },
 {
   "verb": "addNavLink",
-  "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
+  "url": "https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
   "displayName": "About Site Footer",
   "navComponent":"Footer"
 },
