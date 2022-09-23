@@ -1,27 +1,24 @@
 ---
 title: Overview of SharePoint webhooks
 description: Build applications that subscribe to receive notifications on specific events that occur in SharePoint.
-ms.date: 02/08/2018
-ms.prod: sharepoint
+ms.date: 09/23/2022
 ms.localizationpriority: high
 ---
-
-
 # Overview of SharePoint webhooks
 
 SharePoint webhooks enable developers to build applications that subscribe to receive notifications on specific events that occur in SharePoint. When an event is triggered, SharePoint sends an HTTP POST payload to the subscriber. Webhooks are easier to develop and consume than Windows Communication Foundation (WCF) services used by SharePoint Add-in remote event receivers because webhooks are regular HTTP services (web API).
 
-Currently webhooks are only enabled for SharePoint list items. SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so that your application can be aware of changes to a SharePoint list without polling the service. For more information, see [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks.md). 
+Currently webhooks are only enabled for SharePoint list items. SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so that your application can be aware of changes to a SharePoint list without polling the service. For more information, see [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks.md).
 
 ## Creating webhooks
 
-To create a new SharePoint webhook, you add a new subscription to the specific SharePoint resource, such as a SharePoint list. 
+To create a new SharePoint webhook, you add a new subscription to the specific SharePoint resource, such as a SharePoint list.
 
 The following information is required for creating a new subscription:
 
 - **Resource**. The resource endpoint URL you are creating the subscription for. For example, a SharePoint List API URL.
 - **Server notification URL**. Your service endpoint URL. SharePoint sends an HTTP POST to this endpoint when events occur in the specified resource.
-- **Expiration date**. The expiration date for your subscription. The expiration date should not be more than 180 days. By default, subscriptions are set to expire 180 days from when they are created. 
+- **Expiration date**. The expiration date for your subscription. The expiration date should not be more than 180 days. By default, subscriptions are set to expire 180 days from when they are created.
 
 You can also include the following information if needed:
 
@@ -145,9 +142,9 @@ If an error occurs while sending the notification to your application, SharePoin
 
 ## Expiration
 
-Webhook subscriptions are set to expire after 180 days by default if an **expirationDateTime** value is not specified. 
+Webhook subscriptions are set to expire after 180 days by default if an **expirationDateTime** value is not specified.
 
-You need to set an expiration date when creating the subscription. The expiration date should be less than 180 days. Your application is expected to handle the expiration date according to your application's needs by updating the subscription periodically. 
+You need to set an expiration date when creating the subscription. The expiration date should be less than 180 days. Your application is expected to handle the expiration date according to your application's needs by updating the subscription periodically.
 
 ## Retry mechanism
 

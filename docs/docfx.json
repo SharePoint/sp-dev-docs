@@ -52,7 +52,9 @@
         "spfx/**.md": "sharepoint"
       },
       "ms.service": {
-        "apis/**.md": "sharepoint-online",
+        "apis/*.md": "sharepoint-online",
+        "apis/webhooks/**.md": "sharepoint-online",
+        "apis/syntex/*.md": "microsoft-365-enterprise",
         "business-apps/power-apps/**.md": "powerapps",
         "business-apps/power-automate/guidance/**.md": "power-automate",
         "declarative-customization/**.md": "sharepoint-online",
