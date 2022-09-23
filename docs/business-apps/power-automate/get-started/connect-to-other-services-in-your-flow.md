@@ -1,7 +1,7 @@
 ---
 title: Connect your flow to other services
 description: Connect your flow to 200+ services available in Power Automate, and build an integrated experience to perform actions in the services.
-ms.date: 06/28/2022
+ms.date: 09/23/2022
 ms.service: sharepoint-online
 ms.localizationpriority: high
 search.app:
