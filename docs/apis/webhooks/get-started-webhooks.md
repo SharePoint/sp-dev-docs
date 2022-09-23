@@ -1,17 +1,14 @@
 ---
 title: Get started with SharePoint webhooks
 description: Build an application that adds and handles SharePoint webhook requests.
-ms.date: 03/14/2018
-ms.prod: sharepoint
+ms.date: 09/23/2022
 ms.localizationpriority: high
 ---
-
-
 # Get started with SharePoint webhooks
 
 This article describes how to build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
 
-You will use plain HTTP requests, which is useful for helping you understand how webhooks work.  
+You will use plain HTTP requests, which is useful for helping you understand how webhooks work.
 
 To complete the step-by-step instructions in this article, download and install the following tools:
 
@@ -23,14 +20,14 @@ To complete the step-by-step instructions in this article, download and install 
 
 ## Step 1: Register an Azure AD application for Postman client
 
-In order for the Postman client to communicate with SharePoint, you need to register a Microsoft Azure Active Directory (Azure AD) app in your Azure AD tenant associated with your Office 365 tenant. 
+In order for the Postman client to communicate with SharePoint, you need to register a Microsoft Azure Active Directory (Azure AD) app in your Azure AD tenant associated with your Office 365 tenant.
 
 1. Ensure that you register the application as a **Web Application**.
 
 2. To access SharePoint Online, it's important to grant the Azure AD app permissions to the **Office 365 SharePoint Online** application and select the **read and write items and lists in all site collections** permission.
 
-	> [!NOTE] 
-	> For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](/azure/active-directory/develop/active-directory-integrating-applications#adding-an-application). 
+	> [!NOTE]
+	> For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](/azure/active-directory/develop/active-directory-integrating-applications#adding-an-application).
 
 3. Enter the following endpoint as the Reply (Redirect) URL for the app. This is the endpoint to which Azure AD will send the authentication response, including the access token, if authentication was successful.
 
@@ -43,7 +40,7 @@ In order for the Postman client to communicate with SharePoint, you need to regi
 5. The following properties are required in later steps, so copy them to a safe place:
 
 	* Client Id
-	* Client Secret 
+	* Client Secret
 
 ## Step 2: Build a webhook receiver
 
@@ -55,15 +52,15 @@ For this project, use the Visual Studio Web API project to build the webhook rec
 
 2. Select **File** > **New** > **Project**.
 
-3. In the **Templates** pane, select **Installed Templates**, and expand the **Visual C#** node. 
+3. In the **Templates** pane, select **Installed Templates**, and expand the **Visual C#** node.
 
-4. Under **Visual C#**, select **Web**. 
+4. Under **Visual C#**, select **Web**.
 
-5. In the list of project templates, select **ASP.NET Web Application**. 
+5. In the list of project templates, select **ASP.NET Web Application**.
 
 6. Name the project **SPWebhooksReceiver**, and select **OK**.
 
-7. In the **New ASP.NET Project** dialog, select the **Web API** template from the **ASP.NET 4.5.** group. 
+7. In the **New ASP.NET Project** dialog, select the **Web API** template from the **ASP.NET 4.5.** group.
 
 8. Change the authentication to **No Authentication** by selecting the **Change Authentication** button.
 
@@ -134,7 +131,7 @@ Because multiple notifications can be submitted to your webhook receiver in a si
 
 #### Add SharePoint webhook client state
 
-Webhooks provide the ability to use an optional string value that is passed back in the notification message for your subscription. This can be used to verify that the request is indeed coming from the source you trust, which in this case is SharePoint. 
+Webhooks provide the ability to use an optional string value that is passed back in the notification message for your subscription. This can be used to verify that the request is indeed coming from the source you trust, which in this case is SharePoint.
 
 Add a client state value with which the application can verify the incoming requests.
 
@@ -214,8 +211,8 @@ Now build the webhook receiver controller that handles the incoming requests fro
 
 	        if (!string.IsNullOrEmpty(clientStateHeaderValue) && clientStateHeaderValue.Equals(webhookClientState))
 	        {
-	            traceWriter.Trace(Request, "SPWebhooks", 
-	                TraceLevel.Info, 
+	            traceWriter.Trace(Request, "SPWebhooks",
+	                TraceLevel.Info,
 	                string.Format("Received client state: {0}", clientStateHeaderValue));
 
 	            var queryStringParams = HttpUtility.ParseQueryString(Request.RequestUri.Query);
@@ -226,9 +223,9 @@ Now build the webhook receiver controller that handles the incoming requests fro
 	                validationToken = queryStringParams.GetValues("validationtoken")[0].ToString();
 	                httpResponse.Content = new StringContent(validationToken);
 
-	                traceWriter.Trace(Request, "SPWebhooks", 
-	                    TraceLevel.Info, 
-	                    string.Format("Received validation token: {0}", validationToken));                        
+	                traceWriter.Trace(Request, "SPWebhooks",
+	                    TraceLevel.Info,
+	                    string.Format("Received validation token: {0}", validationToken));
 	                return httpResponse;
 	            }
 	            else
@@ -246,8 +243,8 @@ Now build the webhook receiver controller that handles the incoming requests fro
 	                    }
 	                    catch (JsonException ex)
 	                    {
-	                        traceWriter.Trace(Request, "SPWebhooks", 
-	                            TraceLevel.Error, 
+	                        traceWriter.Trace(Request, "SPWebhooks",
+	                            TraceLevel.Error,
 	                            string.Format("JSON deserialization error: {0}", ex.InnerException));
 	                        return httpResponse;
 	                    }
@@ -260,17 +257,17 @@ Now build the webhook receiver controller that handles the incoming requests fro
 	                             //you can send this to an Azure queue to be processed later
 	                            //for this sample, we just log to the trace
 
-	                            traceWriter.Trace(Request, "SPWebhook Notification", 
+	                            traceWriter.Trace(Request, "SPWebhook Notification",
 	                                TraceLevel.Info, string.Format("Resource: {0}", notification.Resource));
-	                            traceWriter.Trace(Request, "SPWebhook Notification", 
+	                            traceWriter.Trace(Request, "SPWebhook Notification",
 	                                TraceLevel.Info, string.Format("SubscriptionId: {0}", notification.SubscriptionId));
-	                            traceWriter.Trace(Request, "SPWebhook Notification", 
+	                            traceWriter.Trace(Request, "SPWebhook Notification",
 	                                TraceLevel.Info, string.Format("TenantId: {0}", notification.TenantId));
-	                            traceWriter.Trace(Request, "SPWebhook Notification", 
+	                            traceWriter.Trace(Request, "SPWebhook Notification",
 	                                TraceLevel.Info, string.Format("SiteUrl: {0}", notification.SiteUrl));
-	                            traceWriter.Trace(Request, "SPWebhook Notification", 
+	                            traceWriter.Trace(Request, "SPWebhook Notification",
 	                                TraceLevel.Info, string.Format("WebId: {0}", notification.WebId));
-	                            traceWriter.Trace(Request, "SPWebhook Notification", 
+	                            traceWriter.Trace(Request, "SPWebhook Notification",
 	                                TraceLevel.Info, string.Format("ExpirationDateTime: {0}", notification.ExpirationDateTime));
 
 	                        });
@@ -312,7 +309,7 @@ Now build the webhook receiver controller that handles the incoming requests fro
 
 	You should see ngrok running.
 
-4. Copy the **Forwarding** HTTPS address. You will use this address as the service proxy for SharePoint to send requests. 
+4. Copy the **Forwarding** HTTPS address. You will use this address as the service proxy for SharePoint to send requests.
 
 ## Step 5: Add webhook subscription using Postman
 
@@ -328,8 +325,8 @@ Postman makes it really simple to work with APIs. The first step is to configure
 
 4. Select the **Get New Access Token** button.
 
-5. In the dialog window, enter the following: 
-    * **Auth URL**: 
+5. In the dialog window, enter the following:
+    * **Auth URL**:
        * `https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2F<_your-sharepoint-tenant-url-without-https_>`
        * Replace `your-sharepoint-tenant-url-without-https` with your tenant url without the **https** prefix.
     * **Access Token URL**: `https://login.microsoftonline.com/common/oauth2/token`
@@ -359,10 +356,10 @@ You need to manage webhooks for the default document library, which is provision
 	```
 
 2. Replace _site-collection_ with your site collection.
-	
+
 	Postman executes your request and if successful, you should see the result.
 
-3. Copy the **Id** from the results. Later you will use the **Id** to make webhook requests.   
+3. Copy the **Id** from the results. Later you will use the **Id** to make webhook requests.
 
 ### Add webhook subscription
 
@@ -403,7 +400,7 @@ Now that you have the required information, construct the query and the request 
 
 	![postman add webhook body](../../images/postman-add-webhook-body.png)
 
-9. Make sure the **expirationDateTime** is at most 6 months from today. 
+9. Make sure the **expirationDateTime** is at most 6 months from today.
 
 10. Make sure you are debugging the webhook receiver as in Step 4.
 
@@ -439,9 +436,9 @@ Now that you have the required information, construct the query and the request 
 		validationToken = queryStringParams.GetValues("validationtoken")[0].ToString();
 		httpResponse.Content = new StringContent(validationToken);
 
-		traceWriter.Trace(Request, "SPWebhooks", 
-			TraceLevel.Info, 
-			string.Format("Received validation token: {0}", validationToken));                        
+		traceWriter.Trace(Request, "SPWebhooks",
+			TraceLevel.Info,
+			string.Format("Received validation token: {0}", validationToken));
 		return httpResponse;
 	}
 	```
@@ -486,7 +483,7 @@ Now you'll run queries in Postman to get the subscription details.
 	https://site-collection/_api/web/lists('list-id')/subscriptions('subscription-id')
 	```
 
-7. Replace `subscription-id` with your subscription id. 
+7. Replace `subscription-id` with your subscription id.
 
 ## Step 7: Test webhook notification
 
@@ -521,7 +518,7 @@ Now add a file to the Documents library and test if you get a notification from 
 	iisexpress.exe Information: 0 : Message='ExpirationDateTime: 2016-10-27T16:17:57.0000000Z'
 	```
 
-This project only writes the information to the trace log. However, in your receiver, you send this information into a table or a queue that can process the received data to get information from SharePoint. 
+This project only writes the information to the trace log. However, in your receiver, you send this information into a table or a queue that can process the received data to get information from SharePoint.
 
 With this data, you can construct the URL and use the [GetChanges](https://msdn.microsoft.com/library/office/dn531433.aspx#bk_ListGetChanges) API to get the latest changes.
 
