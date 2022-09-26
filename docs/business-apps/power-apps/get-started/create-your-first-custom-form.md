@@ -135,9 +135,3 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
     The version of the custom form that appears in SharePoint is the most recently published version.
 
 1. In SharePoint, verify the intended functionality of your app.
-
-## Next steps
-
-Congratulations on creating your custom form.
-
-In the next topic, we will create a standalone app using data from a SharePoint list.
