@@ -193,7 +193,7 @@ The following C# properties are added to return System.Uri with unambiguous enco
 #### Get Folders
 
 ```
-url: http://site url/_api/web/GetFolderByServerRelativePath(decodedUrl='folder name')
+url: http://site url/_api/web/GetFolderByServerRelativePath(decodedUrl='library name/folder name')
 method: GET
 headers:
   Authorization: "Bearer " + accessToken
