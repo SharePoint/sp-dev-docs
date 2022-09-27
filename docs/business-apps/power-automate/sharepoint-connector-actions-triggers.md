@@ -1,7 +1,7 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
 description: In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
-ms.date: 06/28/2022
+ms.date: 09/27/2022
 ms.service: power-automate
 search.app:
   - Flow
