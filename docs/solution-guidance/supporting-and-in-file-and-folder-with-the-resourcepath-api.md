@@ -1,10 +1,9 @@
 ---
 title: 'Supporting % and # in files and folders with the ResourcePath API'
 description: 'New APIs have been added to the SharePoint Online client object model (CSOM) surface to provide support for # and % characters.'
-ms.date: 4/22/2020
+ms.date: 09/27/2022
 ms.localizationpriority: high
 ---
-
 # Supporting % and # in files and folders with the ResourcePath API
 
 Support for % and # in files and folders is being deployed within SharePoint Online. Unfortunately, due to existing API structures and calling patterns, working with these file names can sometimes become ambiguous. You can find [more background behind this on our developer blog](https://developer.microsoft.com/office/blogs/upcoming-changes-to-sharepoint-and-onedrive-for-business-apis-to-support-and-in-file-names). 
