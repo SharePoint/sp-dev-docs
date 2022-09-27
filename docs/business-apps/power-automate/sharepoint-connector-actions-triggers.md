@@ -50,13 +50,23 @@ For more info about when SharePoint Syntex and how it classifies files see: [Int
 
 Triggers the flow when you create a file in a document library, and returns only the custom file properties associated with that file.
 
-### When a file is created in a folder
+### When a file is created in a folder [deprecated]
+
+> [!NOTE]
+> This trigger is deprecated and may not work as expected.
 
 Triggers the flow when you create a file in a SharePoint folder. This trigger does not run if you add or update a file in a subfolder inside the folder this trigger is operating on. If the flow is required to trigger on subfolders, create different flows for one or more subfolder(s).
 
 ### When a file is created or modified (properties only)
 
 Triggers the flow when you create a file, and each time you modify the file properties in a library. Returns only the custom file properties associated with that file.
+
+### When a file is created or modified in a folder [deprecated]
+
+> [!NOTE]
+> This trigger is deprecated and may not work as expected.
+
+Triggers when a file is created, and also each time it is modified in a SharePoint folder. The trigger does not fire if a file is added/updated in a subfolder. If it is required to trigger on subfolders, multiple triggers should be created.
 
 ### When a file is created or modified in a folder (properties only)
 
@@ -103,7 +113,10 @@ Checks out a file in a document library to prevent others from editing the docum
 
 Copies a file. Works similarly to the **Copy to** command in SharePoint libraries. After copying, returns info about the new file.
 
-### Copy file (deprecated)
+### Copy file [deprecated]
+
+> [!NOTE]
+> This action is deprecated and may not work as expected.
 
 Copies a file to a SharePoint site.
 
@@ -318,7 +331,7 @@ The following tables list all of the actions and triggers that are supported for
 | Get file content | Yes | Yes | Yes |
 | Create file | Yes<sup>1</sup> | Yes<sup>1</sup> | Yes<sup>1</sup> |
 | Update file | Yes | Yes | Yes |
-| Copy file (deprecated)<sup>2</sup>| Yes | Yes | Yes |
+| Copy file [deprecated]<sup>2</sup>| Yes | Yes | Yes |
 | List folder | Yes | Yes | Yes |
 | Extract folder | Yes | Yes | Yes |
 | Get attachments | Yes | Yes | Yes |
@@ -333,18 +346,19 @@ The following tables list all of the actions and triggers that are supported for
 
 > [!NOTE]
 > 1. Does not support creating a large file by uploading it as a set of chunks.
-> 1. This action includes "(deprecated)" in its display name. The "Copy file" action is different from this action.
+> 1. This action includes "[deprecated]" in its display name. The "Copy file" action is different from this action.
 > 1. This action only supports OData parameters, which excludes parameters such as "Limit Entries to Folder", "Include Nested Items", and "Limit Columns by View".
 > 1. Does not support “Limit Columns by View”.
 
-### Deprecated triggers
+### Deprecated triggers and actions
 
 These triggers are deprecated and are no longer actively maintained. While they are still present in the Microsoft SharePoint Connector, we recommend not utilizing deprecated triggers or actions in any new applications or solutions.
 
-| Trigger    | Supported Version    | Suggested Alternative    |
-| :-- | :-- | :-- |
-| When a file is created in a folder | SharePoint 2019 | When a file is created (properties only)  |
-| When a file is created or modified in a folder | SharePoint 2019 | When a file is created or modified (properties only)  |
+| Name    | Type    | Supported Version    | Suggested Alternative    |
+| :-- | :-- | :-- | :-- |
+| When a file is created in a folder [deprecated] | Trigger |SharePoint 2019 | When a file is created (properties only)  |
+| When a file is created or modified in a folder [deprecated] | Trigger | SharePoint 2019 | When a file is created or modified (properties only)  |
+| Copy file [deprecated] | Action | SharePoint 2019 | Copy file  |
 
 ## Known limitations
 
