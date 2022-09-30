@@ -24,7 +24,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
    ```powershell
     $site_script = '
     {
-        "$schema": "schema.json",
+        "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
             "actions": [
                 {
                     "verb": "createSPList",
@@ -64,9 +64,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
                         }
                     ]
                 }
-            ],
-                "bindata": { },
-        "version": 1
+            ]
     }
     '
    ```
