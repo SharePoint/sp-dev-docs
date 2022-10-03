@@ -442,7 +442,7 @@ All fields in ViewFields can be referred in expresisons, even if it is marked `E
 
 All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update. This style of expression is not available in SharePoint Server Subscription Edition before the Version 22H2 feature update nor SharePoint Server 2019.
 
-This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to \`\` otherwise:
+This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to `''` otherwise:
 
 ```JSON
 =if(@me != [$Author.email], 'none', '')
@@ -622,7 +622,9 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_
 - **toUpperCase**: returns the value converted to upper case (only works on strings) - _Only available in SharePoint Online_
   - `"txtContent":"=toUpperCase('DogFood')"` results in _"DOGFOOD"_
+  
 **Binary operators** - The following are operators that expect two operands:
+
 - **indexOf**: takes 2 operands. The first is the text (or array) you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string (or array). Indexes start at 0. If the search term is not found within the text (or array), -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
   - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
   - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
@@ -658,7 +660,7 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent": "=removeFrom(@currentField, 'Choice 4')"` returns an array with 'Choice 4' removed from the @currentField array
   - `"txtContent": "=removeFrom(@currentField, 'kaylat@contoso.com')"` returns an array with 'kaylat@contoso.com' removed from the @currentField array
 - **split**: divides the given string into an ordered list of substrings by searching for the given pattern, and returns an array of these substrings
-  - `"txtContent": "=removeFrom('Hello World', ' ')"` returns an array with 2 strings - 'Hello' and 'World' 
+  - `"txtContent": "=split('Hello World', ' ')"` returns an array with 2 strings - 'Hello' and 'World' 
 - **addDays**: returns a datetime object with days added (or deducted) from the given datetime value
   - `"txtContent": "=addDays(Date('11/14/2021'), 3)"` returns a 11/17/2021, 12:00:00 AM
   - `"txtContent": "=addDays(Date('11/14/2021'), -1)"` returns a 11/13/2021, 12:00:00 AM
@@ -680,7 +682,7 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
   - `"txtContent":"=replace([$MultiChoiceField], 'Choice 1', 'Choice 2')"` returns an array replacing Choice 1 with Choice 2
   - `"txtContent":"=replace([$MultiUserField], @me, 'kaylat@contoso.com')"` returns an array replacing @me with 'kaylat@contoso.com'
-- **replaceAll**: searches a string for a specified value and returns a new string (or array) where the specified value is replaced. 
+- **replaceAll**: searches a string for a specified value and returns a new string (or array) where the specified value is replaced. Incase of string, all instances of the value will be replaced.
   - `"txtContent":"=replaceAll('H-e-l-l-o W-o-r-l-d', '-', '')"` results in _Hello World_
 - **padStart**: pads the current string with another string until the resulting string reaches the given length. The padding is applied from the start of the current string.
   - `"txtContent":"=padStart('DogFood', 10, 'A')"` results in _AAADogFood_
@@ -718,9 +720,9 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 - \+
 - indexOf ( *for string length workaround* )
 
-`+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text"`
+`+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text'"`
 
-`indexOf` Since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string.
+`indexOf` since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string.
 
 ## Operands
 
