@@ -4,7 +4,7 @@ description: Solutions Deployment and Maintenance
 ms.date: 06/28/2022
 author: vesajuvonen
 ms.author: vesaj
-ms.topic: sharepoint
+ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
