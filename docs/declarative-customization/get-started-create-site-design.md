@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site templates and site scripts
 description: Create site templates to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need.
-ms.date: 06/28/2022
+ms.date: 09/30/2022
 ms.localizationpriority: high
 ---
 
@@ -24,7 +24,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
    ```powershell
     $site_script = '
     {
-        "$schema": "schema.json",
+        "$schema": "https://developer.microsoft.com/json-schemas/sp/site-design-script-actions.schema.json",
             "actions": [
                 {
                     "verb": "createSPList",
@@ -64,9 +64,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
                         }
                     ]
                 }
-            ],
-                "bindata": { },
-        "version": 1
+            ]
     }
     '
    ```
