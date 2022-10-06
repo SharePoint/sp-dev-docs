@@ -8,8 +8,6 @@ ms.date: 08/09/2022
 > [!NOTE]
 > The media upload capability in Adaptive Card Extension is available in SPFx v1.15.2.
 >
-> So make sure that you have installed it before proceeding further.
->
 > For more information on installing the SPFx v1.15.2, see [SharePoint Framework v1.15.2 release notes](../../../../release-1.15.2.md).
 >
 > This tutorial also assumes that you have already built a SharePoint Adaptive Card Extension.
@@ -20,7 +18,7 @@ ms.date: 08/09/2022
 
 ### Select Media
 
-Allows users to upload media content via an Adaptice Card Extension (ACE). The current size limitation is 1 MB per image. A user may specify any image type to be uploaded. **Note**: _If an image type isn't specified, then an error indicating only images can be uploaded will show up._
+Allows users to upload media content via an Adaptive Card Extension (ACE). The current size limitation is 1 MB per image. A user may specify any image type to be uploaded. **Note**: _If an image type isn't specified, then an error indicating only images can be uploaded will show up._
 
 The ACE action for Select Media is: `VivaAction.SelectMedia`.
 
