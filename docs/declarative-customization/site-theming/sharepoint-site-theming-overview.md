@@ -32,6 +32,7 @@ The following predefined themes are available by default:
 * __Purple__
 * __Green__
 * __Gray__
+* __Periwinkle__
 * __Dark Yellow__ (inverted theme)
 * __Dark Blue__ (inverted theme)
 
@@ -46,7 +47,7 @@ In addition to the default themes, you can select from supplementary themes. The
 
 <!-- Verify that it's okay to use the concept of "modern" themes/pages here? -->
 
-To select from the available themes for a SharePoint site, choose the __gear icon (⚙️)__ in the top right corner of the screen, and then select __Change the look__. You'll be presented with a list of themes to choose from, which might include default themes and/or custom themes depending on how your site has been configured.
+To select from the available themes for a SharePoint site, choose the __gear icon (⚙️)__ in the top right corner of the screen, select __Change the look__, then select __theme__. You'll be presented with a list of themes to choose from, which might include default themes and/or custom themes depending on how your site has been configured.
 
 The following image shows how the default themes are presented in the theme picker dialog box.
 
@@ -54,11 +55,11 @@ The following image shows how the default themes are presented in the theme pick
 
 When you choose a theme in the list, those color settings are instantly applied to the page so that you can see what the selected theme will look like.
 
-After you've found a theme that you want to use, choose **Apply** to save your selection, or choose **Cancel** to revert to your current theme.
+After you've found a theme that you want to use, choose **Save** to save your selection, or choose **Cancel** to revert to your current theme.
 
 ## Work with classic themes
 
-You can still use the classic themes by choosing the link to **Classic change the look options** under the modern themes listed under **Change the look**. Because the modern SharePoint UI differs from the classic UI, however, some limitations apply when you use classic themes with modern pages.
+You can still use the classic themes by choosing the link to **Classic change the look options** at the bottom of the **Change the look** panel. Because the modern SharePoint UI differs from the classic UI, however, some limitations apply when you use classic themes with modern pages.
 
 When you select a classic theme, a modern theme is generated from the settings in the classic theme, including the **isInverted** flag, the background image, and the color settings for **ContentAccent1**, **PageBackground**, and **BackgroundOverlay**. If **isInverted** is set to **True**, neutral colors such as **NeutralDark** and **NeutralLight** will be reversed.
 
