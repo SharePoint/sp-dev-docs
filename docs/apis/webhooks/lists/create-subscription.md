@@ -1,12 +1,10 @@
 ---
 title: Create a new subscription
 description: Creates a new webhook subscription on a SharePoint list.
-ms.date: 02/08/2018
+ms.date: 10/20/2020
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
-
-
 # Create a new subscription 
 
 Creates a new webhook subscription on a SharePoint list. 
@@ -33,7 +31,7 @@ List|Manage
 
 ## HTTP request
 
-```
+```http
 POST /_api/web/lists('list-id')/subscriptions
 ```
 
@@ -83,13 +81,14 @@ Content-Type: application/json
 
 ## URL validation
 
-**IMPORTANT - Before a new subscription is created, SharePoint sends a request with a validation token in the querystring of the request to the notification URL provided. Your service must respond to this request by returning the validation token. If your service fails to validate the request in this way, the subscription is not created.**
+> [!IMPORTANT]
+> Before a new subscription is created, SharePoint sends a request with a validation token in the querystring of the request to the notification URL provided. Your service must respond to this request by returning the validation token. If your service fails to validate the request in this way, the subscription is not created.**
 
 ### Example
 
-```
+```csharp
 {
-    return new OkObjectResult(req.Query["validationtoken"].ToString());
+  return new OkObjectResult(req.Query["validationtoken"].ToString());
 }
 ```
 
