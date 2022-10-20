@@ -1,7 +1,7 @@
 ---
-title: SharePoint Syntex document understanding model REST API
-description: Overview of the SharePoint Syntex document understanding model REST API.
-ms.date: 09/23/2022
+title: Microsoft Syntex document understanding model REST API
+description: Overview of the Microsoft Syntex document understanding model REST API.
+ms.date: 10/20/2022
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -12,7 +12,7 @@ ms.collection: m365initiative-syntex
 ms.localizationpriority: high
 ---
 
-# SharePoint Syntex document understanding model REST API
+# Microsoft Syntex document understanding model REST API
 
 You can use the SharePoint REST interface to create a document understanding model, apply or remove the model to one or more libraries, and obtain or update information about the model.
 
