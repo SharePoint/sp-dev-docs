@@ -2,12 +2,11 @@
 title: Create a new subscription
 description: Creates a new webhook subscription on a SharePoint list.
 ms.date: 10/20/2020
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
-# Create a new subscription 
+# Create a new subscription
 
-Creates a new webhook subscription on a SharePoint list. 
+Creates a new webhook subscription on a SharePoint list.
 
 ## Permissions
 
@@ -17,7 +16,7 @@ The application must have at least edit permissions to the SharePoint list where
 
 You must grant the Azure AD app the permissions specified in the following table:
 
-Application | Permission 
+Application | Permission
 ------------|------------
 Office 365 SharePoint Online|Read and write items and lists in all site collections.
 
@@ -25,7 +24,7 @@ Office 365 SharePoint Online|Read and write items and lists in all site collecti
 
 You must grant the SharePoint Add-in the following permission(s) or higher:
 
-Scope | Permission rights 
+Scope | Permission rights
 ------|------------
 List|Manage
 
@@ -39,7 +38,7 @@ POST /_api/web/lists('list-id')/subscriptions
 
 Include the following properties in the request body.
 
-Name | Type | Description 
+Name | Type | Description
 -----|------|------------
 resource|string|The URL of the list to receive notifications from.
 notificationUrl|string|The service URL to send notifications to.
@@ -73,7 +72,7 @@ Content-Type: application/json
 
 {
     "id": "a8e6d5e6-9f7f-497a-b97f-8ffe8f559dc7",
-    "expirationDateTime": "2016-04-27T16:17:57Z",    
+    "expirationDateTime": "2016-04-27T16:17:57Z",
     "notificationUrl": "https://91e383a5.ngrok.io/api/webhook/handlerequest",
     "resource": "5c77031a-9621-4dfc-bb5d-57803a94e91d"
 }

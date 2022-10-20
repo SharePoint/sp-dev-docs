@@ -1,33 +1,30 @@
 ---
 title: Update a subscription
 description: Updates a webhook subscription on a SharePoint list.
-ms.date: 02/08/2018
-ms.prod: sharepoint
+ms.date: 09/23/2022
 ms.localizationpriority: medium
 ---
-
-
 # Update a subscription
 
 Updates a webhook subscription on a SharePoint list.
 
 ## Permissions
 
-The application must have at least edit permissions to the SharePoint list where the subscription will be updated.  
+The application must have at least edit permissions to the SharePoint list where the subscription will be updated.
 
 ### If your application is a Microsoft Azure Active Directory (Azure AD) application
 
 You must grant the Azure AD application the permissions specified in the following table. A subscription can only be updated by the Azure AD application that created it.
 
-Application | Permission 
+Application | Permission
 ------------|------------
-Office 365 SharePoint Online|Read and write items and lists in all site collections. 
+Office 365 SharePoint Online|Read and write items and lists in all site collections.
 
 ### If your application is a SharePoint Add-in
 
 You must grant the SharePoint Add-in the following permission(s) or higher. A subscription can only be updated by the SharePoint Add-in that created it.
 
-Scope | Permission rights 
+Scope | Permission rights
 ------|------------
 List|Manage
 
@@ -53,11 +50,11 @@ Content-Type: application/json
 
 Include the following properties in the request body.
 
-Name | Type | Description 
+Name | Type | Description
 -----|------|------------
 notificationUrl|string|The service URL to send notifications to.
 expirationDateTime|date|The date the notification will expire and be deleted.
-client-clientState|string|Optional. Opaque string passed back to the client on all notifications.<br/>You can use this for validating notifications or tagging different subscriptions.
+clientState|string|Optional. Opaque string passed back to the client on all notifications.<br/>You can use this for validating notifications or tagging different subscriptions.
 
 
 ## Response

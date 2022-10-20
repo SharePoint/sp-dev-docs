@@ -1,7 +1,7 @@
 ---
 title: Working with Web Services in SharePoint Workflows using Visual Studio 2012
 description: Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
-ms.date: 06/10/2022
+ms.date: 10/15/2022
 ms.prod: sharepoint
 ms.assetid: 5ffaa585-a872-4e14-bc0e-4a38c6a16b04
 ms.localizationpriority: medium

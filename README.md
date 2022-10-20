@@ -14,20 +14,20 @@ You can also tweet / follow [@Microsoft365Dev](https://twitter.com/Microsoft365D
 
 ## SharePoint Framework Releases
 
-Review all the SPFx releases here from the [initial GA release in February 2017](https://docs.microsoft.com/sharepoint/dev/spfx/roadmap)
+Review all the SPFx releases here from the [initial GA release in February 2017](https://learn.microsoft.com/sharepoint/dev/spfx/roadmap)
 
 ## Get Started
 
-* [Setup your Office 365 Developer Tenant](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
-* [Setup your Machine](https://docs.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
-* [Go build your first web part](https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
+* [Setup your Office 365 Developer Tenant](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-developer-tenant)
+* [Setup your Machine](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
+* [Go build your first web part](https://learn.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part)
 
 
 ## Learn More
 
-* [Background and Philosophy](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
-* [Design Great Web Parts](https://docs.microsoft.com/sharepoint/dev/design/design-guidance-overview)
-* [API Docs](https://docs.microsoft.com/javascript/api/sp-application-base)
+* [Background and Philosophy](https://learn.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
+* [Design Great Web Parts](https://learn.microsoft.com/sharepoint/dev/design/design-guidance-overview)
+* [API Docs](https://learn.microsoft.com/javascript/api/sp-application-base)
 
 ## Updates & Feedback
 
@@ -49,7 +49,7 @@ Please see following guidance if you are planning to submit changes on the Share
 
 * [Contribution guidance](https://github.com/SharePoint/sp-dev-docs/blob/master/.github/CONTRIBUTING.md)
 * [How to Create Good Pull Requests](https://github.com/SharePoint/sp-dev-docs/wiki/How-to-Create-Good-Pull-Requests)
-* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.docs.microsoft.com/help/contribute/?branch=master) for Microsoft Docs contributors
+* If you are a Microsoft contributor, please review official guidance from our [internal documentation](https://review.learn.microsoft.com/help/contribute/?branch=main) for Microsoft Docs contributors
 
 ## Have Fun
 

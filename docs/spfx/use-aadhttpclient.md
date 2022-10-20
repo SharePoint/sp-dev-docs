@@ -18,7 +18,7 @@ Client-side applications that are incapable of storing a secret, such as SharePo
 Developers building client-side solutions are responsible for implementing authorization by using the OAuth implicit flow in their application. In SharePoint Framework solutions, that's already done as part of the framework through **MSGraphClient** and **AadHttpClient**, both of which are introduced in SharePoint Framework v1.4.1.
 
 > [!NOTE]
-> If you build solutions on a version of the SharePoint Framework earlier than v1.4.1, you can still connect to resources secured with Azure AD. In this case, you need to implement the OAuth implicit flow by using [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js). For more information, see [Connect to API secured with Azure Active Directory](./web-parts/guidance/connect-to-api-secured-with-aad.md).
+> If you build solutions on a version of the SharePoint Framework earlier than v1.4.1, you can still connect to resources secured with Azure AD. In this case, you need to implement the OAuth implicit flow by directly using [Microsoft identity platfomr authentication libraries](https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-v2-libraries). For more information, see [Connect to API secured with Azure Active Directory](./web-parts/guidance/connect-to-api-secured-with-aad.md).
 
 As part of the SharePoint Framework, a specific process is defined for how developers can request permissions and administrators can manage permissions to resources secured with Azure AD. The following schema illustrates this process.
 
@@ -247,7 +247,7 @@ Global and SharePoint administrators can use the [CLI for Microsoft 365](https:/
 
 Introduced in v1.4.1, the SharePoint Framework simplifies connecting to APIs secured with Azure AD. Using the new **AadHttpClient**, you can easily connect to APIs secured with Azure AD without having to implement authentication and authorization yourself.
 
-Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL JS by using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and is available in the Azure AD of all Office 365 tenants.
+Internally, the **AadHttpClient** implements the Azure AD OAuth flow leveraging Microsoft identity platform authentication libraries by using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and is available in the Azure AD of all Office 365 tenants.
 
 1. To use the **AadHttpClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 

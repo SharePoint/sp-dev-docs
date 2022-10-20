@@ -1,8 +1,7 @@
 ---
 title: Customize a form for a SharePoint list
 description: Customize a form for a SharePoint list
-ms.date: 05/18/2021
-ms.prod: sharepoint
+ms.date: 09/27/2022
 ms.localizationpriority: high
 ---
 
@@ -135,9 +134,3 @@ To hide the **Attachments** field if the project owner is Nestor Wilke, follow t
     The version of the custom form that appears in SharePoint is the most recently published version.
 
 1. In SharePoint, verify the intended functionality of your app.
-
-## Next steps
-
-Congratulations on creating your custom form.
-
-In the next topic, we will create a standalone app using data from a SharePoint list.
