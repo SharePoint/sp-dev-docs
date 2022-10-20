@@ -1,7 +1,7 @@
 ---
 title: Microsoft Syntex document understanding model REST API
 description: Overview of the Microsoft Syntex document understanding model REST API.
-ms.date: 09/23/2022
+ms.date: 10/20/2022
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
