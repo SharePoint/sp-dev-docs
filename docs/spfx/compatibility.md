@@ -14,16 +14,17 @@ Because SharePoint Online and the on-premises versions of SharePoint Server have
 
 SharePoint Online always uses the latest version of the SharePoint Framework, but SharePoint 2016 and SharePoint 2019 only support the versions that match the server-side dependencies of the deployed packages.
 
-|       SharePoint version       | Supported SPFx version |                                   Supported features                                    |
-| ------------------------------ | ---------------------- | --------------------------------------------------------------------------------------- |
-| SharePoint Online              | All versions           | All features                                                                            |
-| SharePoint Server 2019         | v1.4.1 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
-| SharePoint 2016 Feature Pack 2 | v1.1                   | SPFx client-side web parts hosted in classic SharePoint pages.                          |
+|       SharePoint version               | Supported SPFx version |                                   Supported features                                    |
+| ---------------------------------------| ---------------------- | --------------------------------------------------------------------------------------- |
+| SharePoint Online                      | All versions           | All features                                                                            |
+| SharePoint Server Subscription Edition | v1.4.1 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
+| SharePoint Server 2019                 | v1.4.1 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
+| SharePoint 2016 Feature Pack 2         | v1.1                   | SPFx client-side web parts hosted in classic SharePoint pages.                          |
 
 For more information about SharePoint Framework development with SharePoint 2016 Feature Pack 2 and SharePoint 2019, see:
 
 - [SharePoint Framework development with SharePoint 2016 Feature Pack 2](sharepoint-2016-support.md)
-- [SharePoint Framework development with SharePoint Server 2019](sharepoint-2019-support.md)
+- [SharePoint Framework development with SharePoint Server 2019](sharepoint-2019-support.md) - this guidance applies also for SharePoint Server Subscription Edition
 
 ## SPFx development environment compatibility
 
