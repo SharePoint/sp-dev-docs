@@ -56,7 +56,7 @@ Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/demo -ClientId [Your
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
 
-## Using this principal in your application using the SharePoint PnP Sites Core library
+## Using this principal in your application using the PnP Framework library
 
 In a first step, you add the PnP Framework library nuget package: https://www.nuget.org/packages/PnP.Framework. Once that’s done you can use below code construct:
 
@@ -70,7 +70,7 @@ using (var cc = new AuthenticationManager().GetACSAppOnlyContext(siteUrl, "[Your
 };
 ```
 
-## Using this principal in your application without using the PnP Sites Core library
+## Using this principal in your application without using the PnP Framework library
 
 Once the principal is created and consented you can use the principal's id and secret to request an access. The TokenHelper.cs class will grab the id and secret from the application's configuration file.
 
