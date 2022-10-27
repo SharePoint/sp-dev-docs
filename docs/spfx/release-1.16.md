@@ -159,7 +159,8 @@ Starting with 1.16.0-beta.1, we're removing support for NodeJS 12 and 14. We'll 
 
 ## Deprecations
 
-None for now.
+- Deprecated @microsoft/office-ui-fabric-react-bundle package. Use @fluentui/react instead.
+- Deprecated context.sdks.microsoftTeams.context. Use context.sdks.microsoftTeams.teamJs.app.getContext instead.
 
 ## Fixed Issues
 
