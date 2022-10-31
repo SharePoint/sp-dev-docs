@@ -175,7 +175,7 @@ For browser client environments:
 - Target SharePoint APIs via the SharePoint REST APIs (use JSOM only if necessary).
 	- Use the cross-domain library if you target a different site collection.
 - Target your custom Web APIs via REST.
-	- Use Azure AD Authentication Library for JavaScript (ADAL.js) and Implicit OAuth flow.
+	- Use Microsoft Authentication Library for JavaScript and Implicit OAuth flow.
 - Target third-party APIs via REST (or SOAP if necessary).
 
 <a name="bk_clientSideDal"> </a> 
