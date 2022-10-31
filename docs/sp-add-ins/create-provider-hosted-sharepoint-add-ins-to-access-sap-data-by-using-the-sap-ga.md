@@ -57,11 +57,11 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
     1. Select Azure ACS as the authentication system. (Your SharePoint Add-in uses this system if it accesses SharePoint. It does not use this system when it accesses SAP Gateway for Microsoft.) Select **Finish**.
 
 1. After the project is created, you are prompted to sign in to the Office 365 account. Use the credentials of an account administrator; for example `Bob@<O365_domain>.onmicrosoft.com`.
-1. There are two projects in the Visual Studio solution: the SharePoint Add-in proper project and an ASP.NET web forms project. Add the **Active Directory Authentication Library** (ADAL) package to the ASP.NET project with these steps:
+1. There are two projects in the Visual Studio solution: the SharePoint Add-in proper project and an ASP.NET web forms project. Add the **Microsoft Authentication Library** (MSAL) package to the ASP.NET project with these steps:
 
     1. Right-click the **References** folder in the ASP.NET project (named **SAP2SharePointWeb** in the continuing example), and select **Manage NuGet Packages**.
     1. In the dialog that opens, select **Online** on the left. Enter **Microsoft.IdentityModel.Clients.ActiveDirectory** in the search box.
-    1. When the ADAL library appears in the search results, select the **Install** button, and accept the license when prompted.
+    1. When the MSAL library appears in the search results, select the **Install** button, and accept the license when prompted.
 
 1. Add the Json.net package to the ASP.NET project with these steps:
 
