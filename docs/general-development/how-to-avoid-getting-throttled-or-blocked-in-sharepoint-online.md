@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 09/23/2022
+ms.date: 11/01/2022
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
