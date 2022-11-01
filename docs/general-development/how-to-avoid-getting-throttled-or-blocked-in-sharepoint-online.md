@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 09/23/2022
+ms.date: 11/01/2022
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
@@ -146,7 +146,8 @@ RateLimit-Reset: 31
 HTTP/1.1 429 Too Many Requests
 Retry-After: 9
 ```
-
+Additional information can be found in [Prevent throttling in your application by using RateLimit headers in SharePoint Online](https://devblogs.microsoft.com/microsoft365dev/prevent-throttling-in-your-application-by-using-ratelimit-headers-in-sharepoint-online/)
+    
 ### How to decorate your http traffic?
 
 Well-decorated traffic will be prioritized over traffic that isn't properly decorated.
@@ -228,3 +229,4 @@ If we block your subscription, we'll notify you of the block in the Office 365 M
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/article/capacity-planning-and-load-testing-sharepoint-online-c932bd9b-fb9a-47ab-a330-6979d03688c0)
 - [Microsoft Graph dev center](/graph)
 - [Microsoft Graph throttling guidance](/graph/throttling)
+- [Prevent throttling in your application by using RateLimit headers in SharePoint Online](https://devblogs.microsoft.com/microsoft365dev/prevent-throttling-in-your-application-by-using-ratelimit-headers-in-sharepoint-online/)
