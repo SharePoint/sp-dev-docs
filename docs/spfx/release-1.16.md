@@ -10,6 +10,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- rc.0 **Released:** November 2, 2022
 - beta.2 **Released:** October 26, 2022
 - beta.1 **Released:** August 30, 2022
 
