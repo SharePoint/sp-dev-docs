@@ -1,7 +1,7 @@
 ---
 title: Create provider-hosted SharePoint Add-ins to access SAP data
 description: Design a SharePoint Add-in to get authorized access to SAP by using the SAP Gateway for Microsoft.
-ms.date: 05/01/2020
+ms.date: 11/03/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
@@ -60,7 +60,7 @@ For a similar description and a diagram of the flow for accessing SharePoint, se
 1. There are two projects in the Visual Studio solution: the SharePoint Add-in proper project and an ASP.NET web forms project. Add the **Microsoft Authentication Library** (MSAL) package to the ASP.NET project with these steps:
 
     1. Right-click the **References** folder in the ASP.NET project (named **SAP2SharePointWeb** in the continuing example), and select **Manage NuGet Packages**.
-    1. In the dialog that opens, select **Online** on the left. Enter **Microsoft.IdentityModel.Clients.ActiveDirectory** in the search box.
+    1. In the dialog that opens, select **Online** on the left. Enter **Microsoft.Identity.Client** in the search box.
     1. When the MSAL library appears in the search results, select the **Install** button, and accept the license when prompted.
 
 1. Add the Json.net package to the ASP.NET project with these steps:
