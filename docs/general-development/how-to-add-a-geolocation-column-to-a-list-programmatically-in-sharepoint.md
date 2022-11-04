@@ -44,7 +44,7 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
 Follow these steps to add the Geolocation column to a list. This must be done programmatically with CSOM or PowerShell
   
 ### To add the Geolocation column to a list using PnP PowerShell
-1. Open the SharePoint Online Management Shell
+1. Open PowerShell
 2. Connect to the site you wish to add the column to
 ```csharp
 Connect-PnPOnline -url "https://TENANT.sharepoint.com/sites/SITEURL"
