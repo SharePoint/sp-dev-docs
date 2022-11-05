@@ -1,7 +1,7 @@
 ---
 title: Overview of SharePoint Framework (SPFx) Extensions
 description: Use SPFx Extensions to customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views.
-ms.date: 06/19/2020
+ms.date: 11/05/2022
 ms.localizationpriority: high
 ---
 
