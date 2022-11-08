@@ -1,13 +1,13 @@
 ---
 title: Overview of SharePoint Framework (SPFx) Extensions
 description: Use SPFx Extensions to customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views.
-ms.date: 11/05/2022
+ms.date: 11/08/2022
 ms.localizationpriority: high
 ---
 
 # Overview of SharePoint Framework Extensions
 
-You can use SharePoint Framework (SPFx) Extensions to extend the SharePoint user experience. With SPFx Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views and forms. SPFx Extensions are available in all Microsoft 365 subscriptions for production usage.
+You can use SharePoint Framework (SPFx) Extensions to extend the SharePoint user experience. With SPFx Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, list data views, and forms. SPFx Extensions are available in all Microsoft 365 subscriptions for production usage.
 
 SPFx Extensions enable you to extend the SharePoint user experience within modern pages and document libraries, while using the familiar SPFx tools and libraries for client-side development. Specifically, the SPFx includes four extension types:
 
