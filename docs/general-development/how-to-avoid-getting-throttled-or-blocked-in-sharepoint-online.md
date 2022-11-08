@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 11/01/2022
+ms.date: 11/08/2022
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
@@ -198,7 +198,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
 
 - **Creating multiple AppIDs for the same application**
 
-    Don't create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resource of the tenant. Historically some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant. When this can not be avoided, each instance of custom code that interacts with SharePoint Online should be architected to account for throttling being present. 
+    Don't create separate AppIDs where the applications essentially perform the same operations, such as backup or data loss prevention. Applications running against the same tenant ultimately share the same resource of the tenant. Historically some applications have tried this approach to get around the application throttling but ended up exhausting the tenant’s resource and causing multiple applications to be throttled in the tenant.
 ## Scenario specific limits
 
 ### When using app-only authentication with Sites.Read.All permission
