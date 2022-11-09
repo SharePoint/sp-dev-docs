@@ -78,7 +78,7 @@ To download an example, see the following code sample posted by SharePoint MVP [
 
 SharePoint includes a REST service that enables you to remotely execute queries against the SharePoint Search service from client applications by using any technology that supports REST web requests. The Search REST service exposes two endpoints, **query** and **suggest**, and will support both **GET** and **POST** operations. Results are returned in either XML or JavaScript Object Notation (JSON) format.
 
-The following is the access point for the service:  `https://{site_url}/_api/search/`. You can also specify the site in the URL, as follows:  `https://{site_url}/site/_api/search/`. The search service returns results from the entire site collection, so the same results are returned for both ways to access the service.
+The following is the access point for the service: `https://{site_url}/_api/search/` using the root site as the query entry point. You can also specify another site in the URL, as follows:  `https://{site_url}/site/_api/search/`. The URL prefix before `/_api/search/` will use the default result source defined at that site/scope and query rules will also be contextual to the URL used, unless parameters are used to override this behavior. Unless any specific search configuration is made at a site, the results are the the same for both ways to access the service.
 
 See [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md) and [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service.md) for more information.
 
