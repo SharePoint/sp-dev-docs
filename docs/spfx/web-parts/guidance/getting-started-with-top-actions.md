@@ -13,6 +13,9 @@ Today, users need to be aware of the web part property panels to find out the ad
 
 > At the time of writing this article, Top Actions only supports rendering a drop down and button command.
 
+
+![Top Actions Example](../../../images/webpart-top-actions.png)
+
 ## Getting started
 
 > [!TIP]
