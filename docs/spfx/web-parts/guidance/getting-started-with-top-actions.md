@@ -146,8 +146,22 @@ public getTopActionsConfiguration(): ITopActions | undefined {
 ```
 
 ## Advanced configurations
-For advanced configurations of your top action commands, checkout the type definitions from `@microsoft/sp-property-pane`. Currently, the two supported topActions, button and drop down, can be defined using the same structure as `IPropertyPaneChoiceGroupOption` and `IPropertyPaneButtonProps`. From here you can see how to use features like icons, aria labels, disable state, and more.
+For advanced configurations of your top action commands, checkout the type definitions from `@microsoft/sp-property-pane` and `@microsoft/sp-top-actions`. Currently, the two supported top action commands, button and drop down, can be defined using a subset of the types `IPropertyPaneChoiceGroupOption` and `IPropertyPaneButtonProps`. From here you can see how to use features like icons, aria labels, disable state, and more.
+
+For `IPropertyPaneButtonProps`, currently supported properties are `icon`, `text`, `ariaLabel`, `disabled`
+
+For `IPropertyPaneChoiceGroupOption`, currently supported porperty is `options` and from that array we support `key`, `text`, `iconProps.officeFabricIconFontName`, `imageSize`, `checked`, `title`
+
+> [!WARNING]
+> The APIs used for Top Actions are subject to change as the feature graduates to stable status.
 
 ```typescript
 import { IPropertyPaneButtonProps, IPropertyPaneChoiceGroupOption } from '@microsoft/sp-property-pane'
+import { ITopActions } from '@microsoft/sp-top-actions';
 ```
+### See more
+[Top Actions API](/javascript/api/sp-top-actions)
+
+[IPropertyPaneButtonProps](/javascript/api/sp-webpart-base/ipropertypanebuttonprops)
+
+[IPropertyPaneChoiceGroupOption](/javascript/api/sp-webpart-base/ipropertypanechoicegroupoption)
