@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.16 preview release notes
 description: Release notes for the SharePoint Framework v1.16 preview release
-ms.date: 10/26/2022
+ms.date: 11/14/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.16 release notes
@@ -154,9 +154,9 @@ We're rolling our support for teams-js v2. `this.context.sdks.microsoftTeams.tea
 > [!TIP]
 > Teams JavaScript SDK v2 enables new scenarios for developers. See following announcement for additional details on the Teams JS SDK v2 capabilities - [Microsoft Teams JS SDK v2 is now generally available](https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-js-sdk-v2-is-now-generally-available/)
 
-### Remove NodeJS 12 and 14 support
+### Remove NodeJS v12 and v14 support
 
-Starting with 1.16.0-beta.1, we're removing support for NodeJS 12 and 14. We'll continue to support NodeJS 16.
+Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16 LTS.
 
 ## Deprecations
 
