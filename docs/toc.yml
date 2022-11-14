@@ -520,6 +520,8 @@
     href: spfx/build-for-teams-considerations.md
   - name: Deployment SPFx solutions to Microsoft Teams
     href: spfx/deployment-spfx-teams-solutions.md
+  - name: Teams apps for SharePoint, Teams, Outlook, and Office
+    href: spfx/office/overview.md
   - name: Tutorials
     items:
     - name: Build Microsoft Teams channel/group tabs with SPFx
