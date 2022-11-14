@@ -6,7 +6,7 @@ ms.date: 11/14/2022
 
 # Adding support for Top Actions
 
-Today, users need to be aware of the web part property panels to find out the additional options each web part provides. This is a common piece of feedback where users want actions surfacing in context of where they are without having to rely on opening something to get to those options. Therefore, we are now surfacing most common configurations from a web part's property panel directly on to the web part's toolbar. These common configurations are referred to as the web part's Top Actions.
+Today, users need to be aware of the web part property panels to find out the additional options each web part provides. This is a common piece of feedback where users want actions surfacing in context of where they are without having to rely on opening something to get to those options. Therefore, we are now allowing to surface most common configurations from a web part's property panel directly on to the web part's toolbar. These common configurations are referred to as the web part's Top Actions.
 
 > [!IMPORTANT]
 > This feature is still preview status as part of the 1.16 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.17 release.
