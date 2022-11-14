@@ -63,7 +63,7 @@ Set a data version for this preconfigured entry. This is optional and can be use
 Starting this version, developers can install `@microsoft/microsoft-graph-client` to reference tasks or middlewares from the SDK, for example, `LargeFileUploadTask`. SPFx will automatically externalize the dependency and load it from the CDN.
 
 > [!NOTE]
-> See [Ability to check supported versions](#sdk-versions) to check what version of MS Graph SDK to install.
+> See [Ability to check supported versions](#ability-to-check-supported-versions-of-ms-graph-and-teams-sdk) to check what version of MS Graph SDK to install.
 
 `MSGraphClientFactory` now allows to pass `Options` parameter when initializing the client. It also contains new method `getClientWithMiddleware` to initialize the client with middleware.
 Developers can also get the MS Graph client instance using `MSGraphClientV3.client` property. This instance can be used to call MS Graph tasks like large file upload.
