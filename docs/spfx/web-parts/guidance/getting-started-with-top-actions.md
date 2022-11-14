@@ -1,7 +1,7 @@
 ---
 title: Adding support for Top Actions
 description: Top Actions is a SharePoint Framework feature that allows web part developers to add commands to a web part's toolbar
-ms.date: 11/15/2022
+ms.date: 11/14/2022
 ---
 
 # Adding support for Top Actions
