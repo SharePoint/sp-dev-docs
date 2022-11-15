@@ -458,17 +458,17 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.16 - November 2, 2022
-      href: spfx/release-1.16.md      
+    - name: SPFx v1.16.0 - November 2, 2022
+      href: spfx/release-1.16.md
     - name: SPFx v1.15.2 - August 2, 2022
       href: spfx/release-1.15.2.md
-    - name: SPFx v1.15 - June 21, 2022
-      href: spfx/release-1.15.md      
-    - name: SPFx v1.14 - February 17, 2022
+    - name: SPFx v1.15.0 - June 21, 2022
+      href: spfx/release-1.15.md
+    - name: SPFx v1.14.0 - February 17, 2022
       href: spfx/release-1.14.md
     - name: SPFx v1.13.1 - November 23, 2021
       href: spfx/release-1.13.1.md
-    - name: SPFx v1.13 - October 21, 2021
+    - name: SPFx v1.13.0 - October 21, 2021
       href: spfx/release-1.13.md
     - name: SPFx v1.12.1 - April 28, 2021
       href: spfx/release-1.12.1.md
@@ -520,6 +520,8 @@
     href: spfx/build-for-teams-considerations.md
   - name: Deployment SPFx solutions to Microsoft Teams
     href: spfx/deployment-spfx-teams-solutions.md
+  - name: Teams apps for SharePoint, Teams, Outlook, and Office
+    href: spfx/office/overview.md
   - name: Tutorials
     items:
     - name: Build Microsoft Teams channel/group tabs with SPFx
@@ -565,7 +567,7 @@
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Viva Connections Extensibility Learn module
-    href: /training/paths/m365-extend-viva-connections/   
+    href: /training/paths/m365-extend-viva-connections/
 - name: Business Apps & Process Automation
   items:
   - name: Overview

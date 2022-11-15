@@ -1,13 +1,13 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 08/19/2022
+ms.date: 11/14/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
 # Set up your SharePoint Framework development environment
 
-You can use any text editor to build SharePoint Framework solutions. You can use a macOS, Windows, or Linux environment as well.
+You can use any text editor to build SharePoint Framework (SPFx) solutions. You can use a macOS, Windows, or Linux environment as well.
 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
@@ -42,11 +42,9 @@ You can check if you already have Node.js already installed, including installed
 node --version
 ```
 
-The SharePoint Framework v1.15.0 is supported on the following Node.js versions:
+The SharePoint Framework v1.18.0 is supported on the following Node.js versions:
 
-- Node.js v16.15.0+ (*Gallium*)
-- Node.js v14.15.0+ (*Fermium*)
-- Node.js v12.13.0+ (*Erbium*)
+- Node.js v16 LTS (v16.13.x - v16.18.x, *aka: Gallium*)
 
 > [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint on-prem deployments, refer to the additional pages listed in the [See also](#see-also) section for more information.
@@ -56,7 +54,6 @@ The SharePoint Framework v1.15.0 is supported on the following Node.js versions:
 You can use any code editor or IDE that supports client-side development to build your web part, such as:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Atom](https://atom.io)
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
 The steps and examples in this documentation use [Visual Studio Code](https://code.visualstudio.com/), but you can use any editor of your choice.
@@ -87,7 +84,7 @@ npm install gulp-cli --global
 [Yeoman](https://yeoman.io/) helps you kick-start new projects, and prescribes best practices and tools to help you stay productive. SharePoint client-side development tools include a Yeoman generator for creating new web parts. The generator provides common build tools, common boilerplate code, and a common playground website to host web parts for testing.
 
 > [!IMPORTANT]
-> Yeoman version 4.x is required for the SharePoint Framework 1.13 forward.
+> Yeoman v4.x is required by the SPFx v1.13 forward.
 
 Enter the following command to install Yeoman:
 
@@ -158,6 +155,11 @@ Depending on your scenario, you may need to maintain different development envir
 - Docker
 - Node Version Manager (NVM)
 
+> [!TIP]
+> For more information on NVM, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
+> - [NVM](https://github.com/creationix/nvm) for macOS
+> - [nvm-windows](https://github.com/coreybutler/nvm-windows) for Windows
+
 ## Troubleshooting
 
 ### Check the version of globally installed packages
@@ -173,7 +175,9 @@ npm list --global --depth=0️
 If you're having trouble trusting your self-signed certificate when you run **gulp trust-dev-cert** & you've verified that the correct versions of all dependencies are installed, one solution we usually see resolve the issue is to uninstall all globally installed packages, uninstall Node.js, reboot & start again.
 
 In some cases, executing the command **gulp trust-dev-cert**, doesn't have the wanted effect of trusting the self-signed development certificate on your machine. In rare cases such as these, you may need to delete a hidden folder that's generated in your profile folder.
+
 Locate & delete the folder **{{homedir}}/.gcb-serve-data** for SPFx version earlier than v1.12.1. For later versions delete folder **{{homedir}}/.rushstack** then try to trust the self-signed development certificate again. Otherwise running **gulp untrust-dev-cert** will have same effect to remove the certificate files from the profile folder.
+
 In case the certificate is not added to the Trusted Root Certification Authority despite running **gulp trust-dev-cert** because of some policies blocking the action, the **rushstack-serve.pem** file from **{{homedir}}/.rushstack** folder can be imported manually into the Certificate Manager under Trusted Root Certification Authority with a local admin account.
 
 ### Unable to Install Packages with NPM - Corporate Proxies
