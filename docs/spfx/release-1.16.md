@@ -161,7 +161,9 @@ Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16.
 > [!NOTE]
 > Node.js v18 support is scheduled for the first half of the 2023 calendar year.
 
-## Preview features
+## Preview Features and Capabilities
+
+Following features are still in preview status as part of the 1.16 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.17 release.
 
 ### Web part Top Actions
 
@@ -195,7 +197,7 @@ export interface ITopActions {
 
 See more details on the code level guidance from the following article
 
-* [link](https://www.fi)
+* [Adding support for Top Actions](web-parts/guidance/getting-started-with-top-actions.md))
 
 
 ## Deprecations

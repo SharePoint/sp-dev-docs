@@ -446,14 +446,16 @@
       href: spfx/supported-extensibility-platforms-overview.md
     - name: SharePoint Online
       href: spfx/spfx-sharepoint-online.md
+    - name: Microsoft Teams
+      href: /sharepoint/dev/spfx/build-for-teams-overview
+    - name: Extend Outlook and Office
+      href: /sharepoint/dev/spfx/office/overview
+    - name: Microsoft Viva Connections
+      href: /sharepoint/dev/spfx/viva/overview-viva-connections
     - name: SharePoint 2019 & SE support
       href: spfx/sharepoint-2019-support.md
     - name: SharePoint 2016 support
-      href: spfx/sharepoint-2016-support.md
-    - name: Microsoft Teams
-      href: /sharepoint/dev/spfx/build-for-teams-overview
-    - name: Microsoft Viva Connections
-      href: /sharepoint/dev/spfx/viva/overview-viva-connections
+      href: spfx/sharepoint-2016-support.md      
   - name: Release notes & roadmap
     items:
     - name: Overview

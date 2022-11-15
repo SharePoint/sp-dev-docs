@@ -6,8 +6,6 @@ ms.localizationpriority: high
 ---
 # Extend Outlook and Office with the SharePoint Framework
 
-[!INCLUDE [spfx-release-beta](../../../includes/snippets/spfx-release-beta.md)]
-
 The SharePoint Framework (SPFx) v1.16 release added support for the [Microsoft Teams JavaScript client SDK v2](/javascript/api/overview/msteams-client). The Microsoft Teams JavaScript client SDK v2 introduced the ability to enable [Teams apps to run in Outlook at Office, in addition to Microsoft Teams](/microsoftteams/platform/m365-apps/overview).
 
 With this improvement in SPFx v1.16, developers can now use the SPFx to create apps for Outlook and Office using the [existing support for creating apps for Microsoft Teams](/sharepoint/dev/spfx/build-for-teams-overview).
