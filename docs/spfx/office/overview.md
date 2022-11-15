@@ -1,7 +1,7 @@
 ---
 title: Extend Outlook and Office with the SharePoint Framework
 description: Learn how you can use the SharePoint Framework to create apps for Microsoft 365, including Microsoft Teams, Outlook, and Office clients
-ms.date: 11/14/2022
+ms.date: 11/15/2022
 ms.localizationpriority: high
 ---
 # Extend Outlook and Office with the SharePoint Framework
