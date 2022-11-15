@@ -42,7 +42,7 @@ You can check if you already have Node.js already installed, including installed
 node --version
 ```
 
-The SharePoint Framework v1.18.0 is supported on the following Node.js versions:
+The SharePoint Framework v1.16.0 is supported on the following Node.js versions:
 
 - Node.js v16 LTS (v16.13.x - v16.18.x, *aka: Gallium*)
 
