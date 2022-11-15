@@ -1,30 +1,26 @@
 ---
-title: SharePoint Framework v1.16 preview release notes
-description: Release notes for the SharePoint Framework v1.16 preview release
-ms.date: 11/14/2022
+title: SharePoint Framework v1.16 release notes
+description: Release notes for the SharePoint Framework v1.16 release
+ms.date: 11/15/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.16 release notes
 
-This release introduces updates across the features around Microsoft Viva, Microsoft Teams and SharePoint.
+This release introduces updates across the features around Microsoft Viva, Microsoft Teams, Outlook, Office and SharePoint.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
-
-- rc.0 **Released:** November 2, 2022
-- beta.2 **Released:** October 26, 2022
-- beta.1 **Released:** August 30, 2022
+**Released:** November 15, 2022
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install the latest preview version
+## Install the latest version
 
-Install the preview release of the SharePoint Framework (SPFx) by including the **@next** tag:
+Install the latest release of the SharePoint Framework (SPFx) by including the **@latest** tag:
 
 ```console
 npm install @microsoft/generator-sharepoint@next --global
-```
+``` 
 
-## Upgrading projects from v1.15.2 to v1.16 preview
+## Upgrading projects from v1.15.2 to v1.16
 
 1. In the project's **package.json** file, identify all SPFx v1.15.2 packages. For each SPFx package:
     1. Uninstall the existing v1.15.2 package:
@@ -33,15 +29,58 @@ npm install @microsoft/generator-sharepoint@next --global
         npm uninstall @microsoft/{spfx-package-name}@1.15.2
         ```
 
-    2. Install the new v1.16 preview package:
+    2. Install the new v1.16 package:
 
         ```console
-        npm install @microsoft/{spfx-package-name}@next --save --save-exact
+        npm install @microsoft/{spfx-package-name}@latest --save --save-exact
         ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
+
+### Publish Teams solutions build with SPFx to Outlook and Office
+
+As this SPFx version supports the Teams JavaScript SDK v2, you can now start building experiences also for Outlook and for Office.com (Microsoft 365 app) with SharePoint Framework (SPFx). This will enable the same solution to be exposed within Microsoft, Outlook, Office.com and in SharePoint without specific code changes.
+
+You can use the Teams JavaScript SDK v2 to detect the host of the solution as shown on the following code. If the `this.context.sdks.microsoftTeams` is empty, then code is executed in the SharePoint.
+
+```typescript
+// if running in Microsoft Teams, Outlook, or Office...
+if (!!this.context.sdks.microsoftTeams) {
+  const teamsContext = await this.context.sdks.microsoftTeams.teamsJs.app.getContext();
+  switch (teamsContext.app.host.name.toLowerCase()) {
+    case 'teams':
+      // RUNNING IN MICROSOFT TEAMS
+    case 'office':
+      // RUNNING IN OFFICE / OFFICE.COM
+    case 'outlook':
+      // RUNNING IN OUTLOOK
+    default:
+      throw new Error('Unknown host');
+  }
+} else {
+  // RUNNING IN SHAREPOINT
+}
+```
+
+See more details around these options from following article
+
+* [Extend Outlook and Office with the SharePoint Framework](office/overview.md)
+
+> [!Important]
+> Using the Teams SDK v2 within the SharePoint Framework solutions is generally available starting from the 1.16 version, enabling usage of the Teams SDK v2 immediately.
+> Support for publishing Teams apps (including SPFx solutions) within the Outlook and in Office.com (Microsoft 365 app) is however still in preview and is planned to be generally available for both mobile and desktop experiences within the first half of calendar year 2023.
+
+### Teams JavaScript SDK v2 support
+
+This version supports the teams-js v2. `this.context.sdks.microsoftTeams.teamsJs` will return version 2 of the SDK. `this.context.sdks.microsoftTeams.context` will still return v1 context for backward compatibility.
+
+> [!NOTE]
+> teams-js v2 is backward compatible with teams-js v1. We will continue to support v1 for existing solutions.
+
+> [!TIP]
+> Teams JavaScript SDK v2 enables new scenarios for developers. See following announcement for additional details on the Teams JS SDK v2 capabilities - [Microsoft Teams JS SDK v2 is now generally available](https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-js-sdk-v2-is-now-generally-available/)
 
 ### teams-js v2 typings support
 
@@ -97,9 +136,39 @@ public renderCompleted(didUpdate: boolean): void { /* ... */ }
 
 Adding a new optional property `imageAltText` for `IImageCardParameters` will add `alt` text attribute to the image html element.
 
+### New Form Customizer context properties
+
+#### List item fields' values
+
+Form Customizer's context for Edit and Display forms now contains the list item fields' values in standard `odata` format.
+
+```typescript
+IFormCustomizerContext.item?: IListItem;
+```
+
+#### List form JSON formatting configuration
+
+Form Customizer's context provides information about applied list form JSON Formatting. Use `contentType` property to access the configuration.
+
+```typescript
+IFormCustomizerContext.contentType.ClientFormCustomFormatter: string | undefined;
+```
+
+### Remove NodeJS v12 and v14 support
+
+Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16.
+
+> [!NOTE]
+> Node.js v18 support is scheduled for the first half of the 2023 calendar year.
+
+## Preview features
+
 ### Web part Top Actions
 
 Top Actions allow developers to add custom actions to web part's command bar. The feature is similar to property pane controls, but based on cleaner UI approach.
+
+> [!NOTE]
+> Top Actions is released as a preview version as part of the 1.16 release.
 
 ![Top Actions](../images/webpart-top-actions.png)
 
@@ -124,39 +193,10 @@ export interface ITopActions {
 > Although type of Top Action Configuration is `IPropertyPaneField<any>` we currently support buttons and choice groups only.
 > It means you can use either `PropertyPaneChoiceGroup(...)` and `PropertyPaneButton(...)`, or specify your own configurations that will resolve to `IPropertyPaneField<IPropertyPaneChoiceGroupProps>` and `IPropertyPaneField<IPropertyPaneButtonProps>`
 
+See more details on the code level guidance from the following article
 
-### New Form Customizer context properties
+* [link](https://www.fi)
 
-#### List item fields' values
-
-Form Customizer's context for Edit and Display forms now contains the list item fields' values in standard `odata` format.
-
-```typescript
-IFormCustomizerContext.item?: IListItem;
-```
-
-#### List form JSON formatting configuration
-
-Form Customizer's context provides information about applied list form JSON Formatting. Use `contentType` property to access the configuration.
-
-```typescript
-IFormCustomizerContext.contentType.ClientFormCustomFormatter: string | undefined;
-```
-
-### Teams JavaScript SDK v2 support
-
-We're rolling our support for teams-js v2. `this.context.sdks.microsoftTeams.teamsJs` will return v2 as soon as service code is rolled out to the tenant. `this.context.sdks.microsoftTeams.context` will still return v1 context for backward compatibility.
-
-> [!NOTE]
-> teams-js v2 is backward compatible with teams-js v1. We will continue to support v1 for existing solutions.
-> We will add support for teams-js v2 context in later beta releases.
-
-> [!TIP]
-> Teams JavaScript SDK v2 enables new scenarios for developers. See following announcement for additional details on the Teams JS SDK v2 capabilities - [Microsoft Teams JS SDK v2 is now generally available](https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-js-sdk-v2-is-now-generally-available/)
-
-### Remove NodeJS v12 and v14 support
-
-Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16 LTS.
 
 ## Deprecations
 
@@ -165,8 +205,15 @@ Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16 LTS.
 
 ## Fixed Issues
 
-### September-October Timeframe
+Here's a list of specific issues fixed around SharePoint Framework since the previous public release.
 
+### August-November Timeframe
+
+- [#8146](https://github.com/SharePoint/sp-dev-docs/issues/8146) - SPFX Application Customizer breaks Anonymous Links for PDF Files
+- [#8266](https://github.com/SharePoint/sp-dev-docs/issues/8266) - SPFx 1.15 - Form Customiser does not work in View History
+- [#8272](https://github.com/SharePoint/sp-dev-docs/issues/8272) - SPFx 1.15 - Getting error when use form customier to view existing list item in Classic mode
+- [#8279](https://github.com/SharePoint/sp-dev-docs/issues/8279) - New icons in production environments
+- [#8301](https://github.com/SharePoint/sp-dev-docs/issues/8301) - Error When Revisiting Custom Teams ?app=portals App
 - [#8372](https://github.com/SharePoint/sp-dev-docs/issues/8372) - Applying permissions on Form Customizer
 - [#8379](https://github.com/SharePoint/sp-dev-docs/issues/8379) - SPFx `ListViewCommandSet` - `this.context.listView.selectedRows` is wrong in grouped lists
 - [#8467](https://github.com/SharePoint/sp-dev-docs/issues/8467) - Buttons (`onClick` events) in `BaseDialog` no longer working - ListView Command Set
@@ -178,11 +225,3 @@ Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16 LTS.
 - [#8331](https://github.com/SharePoint/sp-dev-docs/issues/8331) - Mechanism to version the preconfiguredEntries in the manifest
 - [#8510](https://github.com/SharePoint/sp-dev-docs/issues/8510) - SPFx sudden Minified React error #321
 - [#8496](https://github.com/SharePoint/sp-dev-docs/issues/8496) - React version mismatch causes property pane not displaying
-
-### August Timeframe
-
-- [#8146](https://github.com/SharePoint/sp-dev-docs/issues/8146) - SPFX Application Customizer breaks Anonymous Links for PDF Files
-- [#8266](https://github.com/SharePoint/sp-dev-docs/issues/8266) - SPFx 1.15 - Form Customiser does not work in View History
-- [#8272](https://github.com/SharePoint/sp-dev-docs/issues/8272) - SPFx 1.15 - Getting error when use form customier to view existing list item in Classic mode
-- [#8279](https://github.com/SharePoint/sp-dev-docs/issues/8279) - New icons in production environments
-- [#8301](https://github.com/SharePoint/sp-dev-docs/issues/8301) - Error When Revisiting Custom Teams ?app=portals App
