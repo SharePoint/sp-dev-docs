@@ -1,7 +1,7 @@
 ---
 title: Deploy your extension to SharePoint (Hello World part 3)
 description: Deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages.
-ms.date: 06/13/2022
+ms.date: 11/22/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -83,7 +83,7 @@ For this tutorial, we don't need this file as we'll be activating solution in a 
 
 ### Ensure that definitions are taken into account within the build pipeline
 
-The **./config/package-solution.json** file defines the package metadata. To ensure that the **element.xml** file is taken into account while the solution is being packaged, the default scaffolding includes the required configuration to define a Feature Framework feature definition in the solution package.
+The **./config/package-solution.json** file defines the package metadata. To ensure that the **elements.xml** file is taken into account while the solution is being packaged, the default scaffolding includes the required configuration to define a Feature Framework feature definition in the solution package.
 
 The original `elementManifests` property in the **./config/package-solution.json** file looks like this:
 

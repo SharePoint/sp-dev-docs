@@ -1,7 +1,7 @@
 ---
 title: Build your first Field Customizer extension
 description: Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
-ms.date: 06/13/2022
+ms.date: 11/22/2022
 ms.custom: scenarios:getting-started
 ---
 
@@ -279,7 +279,7 @@ Look at the XML in this file. The `ClientSideComponentId` property has been auto
 
 Open the **./config/package-solution.json** file.
 
-The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution package is created, the default scaffolding of this file is updated to include additional details for a feature definition. This feature definition is used to provision and execute the **elements.xml** file.
+The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **elements.xml** file is taken into account while the solution package is created, the default scaffolding of this file is updated to include additional details for a feature definition. This feature definition is used to provision and execute the **elements.xml** file.
 
 Also notice that the `includeClientSideAssets` attribute is set to `true`. This means the JavaScript assets will be included in the **\*.sppkg** file:
 

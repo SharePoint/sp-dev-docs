@@ -1,7 +1,7 @@
 ---
 title: Add a custom content type to a SharePoint-hosted SharePoint Add-in
 description: Create a custom content type, run the add-in, and test it.
-ms.date: 01/06/2021
+ms.date: 11/22/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -69,12 +69,12 @@ In this article, you add a custom content type to the Employee Orientation Share
 
 1. Select **OK** to close the dialog box, and then save and close the file.
 
-### Modify the schema.xml file and element.xml file
+### Modify the schema.xml file and elements.xml file
 
 1. Open the schema.xml file.
 1. Find the **Fields** element. It should have three **Field** elements: **Title**, **Division**, and **OrientationStage**. (These elements may be on a single line in this generated file. If so, separate them with line breaks.)
-1. Leave the file open, and in **Solution Explorer**, expand the **Site Columns** folder and the **Division** node, and then open the elements.xml file for **Division**. The **Field** element for **Division** in schema.xml should exactly duplicate the **Field** element in the **Division** elements.xml. If there is not an exact match, copy the **Field** element from the site column elements.xml file and paste it in place of the mismatched **Field** element in the schema.xml file. Close the element.xml file.
-1. Open the elements.xml file for **OrientationStage**. Here, too, there must be an exact match of the  **Field** elements in the two files for **OrientationStage**, including all child elements, such as the **CHOICES** and **MAPPINGS** elements. If there isn't, copy the **Field** in the elements.xml file and paste it in place of the mismatched **Field** element in the schema.xml file. Close the element.xml file.
+1. Leave the file open, and in **Solution Explorer**, expand the **Site Columns** folder and the **Division** node, and then open the elements.xml file for **Division**. The **Field** element for **Division** in schema.xml should exactly duplicate the **Field** element in the **Division** elements.xml. If there is not an exact match, copy the **Field** element from the site column elements.xml file and paste it in place of the mismatched **Field** element in the schema.xml file. Close the elements.xml file.
+1. Open the elements.xml file for **OrientationStage**. Here, too, there must be an exact match of the  **Field** elements in the two files for **OrientationStage**, including all child elements, such as the **CHOICES** and **MAPPINGS** elements. If there isn't, copy the **Field** in the elements.xml file and paste it in place of the mismatched **Field** element in the schema.xml file. Close the elements.xml file.
 1. Still in the schema.xml file, in the **View** element whose **BaseViewID** value is "1", find the child **ViewFields** element, and then add the following two **FieldRef** elements as children of it. They may already be there but missing an **ID** attribute. If so, add the ID attribute.
 
     ```xml
