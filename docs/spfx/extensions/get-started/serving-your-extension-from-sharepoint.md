@@ -1,7 +1,7 @@
 ---
 title: Deploy your extension to SharePoint (Hello World part 3)
 description: Deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages.
-ms.date: 06/13/2022
+ms.date: 11/22/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---

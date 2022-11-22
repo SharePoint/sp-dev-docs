@@ -1,7 +1,7 @@
 ---
 title: Build your first ListView Command Set extension
 description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
-ms.date: 07/15/2022
+ms.date: 11/22/2022
 ms.custom: scenarios:getting-started
 ---
 # Build your first ListView Command Set extension

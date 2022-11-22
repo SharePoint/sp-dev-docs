@@ -1,7 +1,7 @@
 ---
 title: Programmatically deploy a custom button in the provider-hosted add-in
 description: Register a custom ribbon button with a custom list in the same provider-hosted SharePoint Add-in.
-ms.date: 12/04/2017
+ms.date: 11/22/2022
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---

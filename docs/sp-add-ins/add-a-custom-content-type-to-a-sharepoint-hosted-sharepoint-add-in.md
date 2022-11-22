@@ -1,7 +1,7 @@
 ---
 title: Add a custom content type to a SharePoint-hosted SharePoint Add-in
 description: Create a custom content type, run the add-in, and test it.
-ms.date: 01/06/2021
+ms.date: 11/22/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
