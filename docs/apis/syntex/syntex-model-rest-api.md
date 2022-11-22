@@ -9,12 +9,12 @@ ms.reviewer: ssquires
 audience: admin
 ms.topic: reference
 ms.collection: m365initiative-syntex
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 
-# Microsoft Syntex document understanding model REST API
+# Microsoft Syntex unstructured document processing model REST API
 
-You can use the SharePoint REST interface to create a document understanding model, apply or remove the model to one or more libraries, and obtain or update information about the model.
+You can use the SharePoint REST interface to create an unstructured document processing model, apply or remove the model to one or more libraries, and obtain or update information about the model.
 
 The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option.
 
@@ -29,15 +29,15 @@ Before you get started, make sure that you're familiar with the following:
 
 ## REST commands
 
-The following REST commands are available for working with Syntex document understanding models:
+The following REST commands are available for working with Syntex unstructured document processing models:
 
 - [Create model](rest-createmodel-method.md) – Creates a model and its associated content type.
-- [GetByUniqueId](rest-getbyuniqueid-method.md) – Gets or updates information about a SharePoint Syntex document understanding model.
-- [GetByTitle](rest-getbytitle-method.md) – Gets or updates information about a SharePoint Syntex document understanding model using the model title.
-- [Apply model](rest-applymodel-method.md) – Applies (or syncs) a trained document understanding model to one or more libraries.
+- [GetByUniqueId](rest-getbyuniqueid-method.md) – Gets or updates information about a Syntex unstructured document processing model.
+- [GetByTitle](rest-getbytitle-method.md) – Gets or updates information about a Syntex unstructured document processing model using the model title.
+- [Apply model](rest-applymodel-method.md) – Applies (or syncs) a trained unstructured document processing model to one or more libraries.
 - [Get model and library information](rest-getmodelandlibraryinfo.md) – Gets information about a model and the library where it has been applied.
-- [UpdateModelSettings](rest-updatemodelsettings-method.md) – Updates available models settings (associated retention label and model description) for a SharePoint Syntex document understanding model.
-- [BatchDelete](rest-batchdelete-method.md) – Removes an applied document understanding model from one or more libraries.
+- [UpdateModelSettings](rest-updatemodelsettings-method.md) – Updates available models settings (associated retention label and model description) for a Syntex unstructured document processing model.
+- [BatchDelete](rest-batchdelete-method.md) – Removes an applied unstructured document processing model from one or more libraries.
 - [Create file classification request](rest-createclassificationrequest.md) – Creates a request to classify a specified file or files using the applied model.
 - [Create folder classification request](rest-createclassificationrequest.md) – Creates a request to classify an entire folder using the applied model.
 
@@ -54,4 +54,4 @@ The remove model method just removes the model from one or more libraries where 
 
 ## See also
 
-[Document understanding overview](/microsoft-365/contentunderstanding/document-understanding-overview)
+[Unstructured document processing overview](/microsoft-365/contentunderstanding/document-understanding-overview)
