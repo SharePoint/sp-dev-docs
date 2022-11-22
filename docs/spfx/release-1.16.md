@@ -197,7 +197,7 @@ export interface ITopActions {
 
 See more details on the code level guidance from the following article
 
-* [Adding support for Top Actions](web-parts/guidance/getting-started-with-top-actions.md))
+* [Adding support for Top Actions](web-parts/guidance/getting-started-with-top-actions.md)
 
 
 ## Deprecations
