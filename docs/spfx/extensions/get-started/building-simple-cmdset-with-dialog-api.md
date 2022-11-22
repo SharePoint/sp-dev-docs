@@ -318,7 +318,7 @@ Possible location values that can be used with a ListView Command Set:
 
 Open the file **./config/package-solution.json**.
 
-The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution package is created, the default scaffolding of this file is updated to include additional details for a feature definition. This feature definition is used to provision and execute the **elements.xml** file.
+The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **elements.xml** file is taken into account while the solution package is created, the default scaffolding of this file is updated to include additional details for a feature definition. This feature definition is used to provision and execute the **elements.xml** file.
 
 > [!NOTE]
 > You can use **ClientSideInstance.xml** to automatically deploy your extensions cross all sites in your tenant. More details around this option from [Tenant Wide Deployment of SharePoint Framework Extensions](../basics/tenant-wide-deployment-extensions.md) article. As this solution is intended configured not to use tenant-scope option, this xml file is ignored when solution is activated in the app catalog.

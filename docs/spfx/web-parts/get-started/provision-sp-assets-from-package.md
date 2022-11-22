@@ -74,7 +74,7 @@ To provision SharePoint assets to sites with feature framework elements, we need
 - List instances
 - List instances with custom schema
 
-### Add an element.xml file for SharePoint definitions
+### Add an elements.xml file for SharePoint definitions
 
 In the following steps, we define the needed structure to be provisioned.
 
@@ -239,7 +239,7 @@ There are a few things to take note of from this XML:
 - Make sure you define a **unique GUID** for the `id` property in the `feature` property.
 - You can technically have multiple features in the package because the `features` property is an array. However, this isn't recommended.
 - **elements.xml** is referenced under `elementManifests` so that it's properly packaged for the feature definition as an element manifest file.
-- You can have multiple **element.xml** files in the definition, and they would be executed in the order they're mentioned in the JSON definition. Typically, you should avoid using multiple **element.xml** files because this adds unnecessary complexity. You can define all needed assets in a single **element.xml** file.
+- You can have multiple **elements.xml** files in the definition, and they would be executed in the order they're mentioned in the JSON definition. Typically, you should avoid using multiple **elements.xml** files because this adds unnecessary complexity. You can define all needed assets in a single **elements.xml** file.
 
 ## Deploy and test asset provisioning
 
