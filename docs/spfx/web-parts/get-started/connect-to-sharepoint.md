@@ -1,7 +1,7 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello World part 2)
 description: Access functionality and data in SharePoint and provide a more integrated experience for end users.
-ms.date: 06/13/2022
+ms.date: 11/22/2022
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -9,7 +9,7 @@ ms.custom: scenarios:getting-started
 
 Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users.
 
-You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/5M3zDpgxIMs]
 
@@ -43,7 +43,7 @@ this.context.pageContext
 ```
 
 1. Within Visual Studio Code, locate & open **.\src\webparts\helloWorld\HelloWorldWebPart.ts**.
-1. Inside the `render()` method, replace the **innerHTML** code block with the following:
+1. Inside the `render()` method, replace the `innerHTML` code block with the following:
 
     ```tsx
     this.domElement.innerHTML = `
@@ -96,7 +96,6 @@ You need a list model to start working with SharePoint list data. To retrieve th
 
     The **ISPList** interface holds the SharePoint list information that we're connecting to.
 
-
 ## Retrieve lists from SharePoint site
 
 Next you need to retrieve lists from the current site. You'll use SharePoint REST APIs to retrieve the lists from the site, which are located at **`https://yourtenantprefix.sharepoint.com/_api/web/lists`**.
@@ -119,10 +118,11 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
 
     ```typescript
     private _getListData(): Promise<ISPLists> {
-      return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`, SPHttpClient.configurations.v1)
+      return this.context.spHttpClient.get(`${this.context.pageContext.web.absoluteUrl}/_api/web/lists?$filter=Hidden eq false`, SPHttpClient.configurations.v1)
         .then((response: SPHttpClientResponse) => {
           return response.json();
-        });
+        })
+        .catch(() => {});
     }
     ```
 
@@ -133,7 +133,7 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
 
 ## Add new styles
 
-The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-processor, and specifically uses the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html), which is fully compliant with normal CSS syntax. Sass extends the CSS language and allows you to use features such as variables, nested rules, and inline imports to organize and create efficient style sheets for your web parts. The SharePoint Framework already comes with a SCSS compiler that converts your Sass files to normal CSS files, and also provides a typed version to use during development.
+The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-processor, and specifically uses the [SCSS syntax](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html), which is fully compliant with normal CSS syntax. Sass extends the CSS language and allows you to use features such as variables, nested rules, and inline imports to organize and create efficient style sheets for your web parts. The SharePoint Framework already comes with an SCSS compiler that converts your Sass files to normal CSS files, and also provides a typed version to use during development.
 
 ### To add new styles
 
@@ -141,7 +141,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
 
     By default, the styles are scoped to your web part. You can see that as the styles are defined under `.helloWorld`.
 
-2. Add the following styles after the `.links` style:
+1. Add the following styles after the `.links` style:
 
     ```css
     .list {
@@ -173,7 +173,7 @@ The SharePoint Framework uses [Sass](http://sass-lang.com/) as the CSS pre-proce
     }
     ```
 
-3. Save the file.
+1. Save the file.
 
     Gulp rebuilds the code in the console as soon as you save the file. This generates the corresponding typings in the **HelloWorldWebPart.module.scss.ts** file. After compiled to TypeScript, you can then import and reference these styles in your web part code.
 
@@ -214,20 +214,20 @@ Open the `HelloWorldWebPart` class.
 
     This method references the new CSS styles added earlier by using the `styles` variable and is used to render list information that will be received from REST API.
 
-2. Save the file.
-3. Add the following private method inside the `HelloWorldWebPart` class to call the method to retrieve list data:
+1. Save the file.
+1. Add the following private method inside the `HelloWorldWebPart` class to call the method to retrieve list data:
 
     ```typescript
     private _renderListAsync(): void {
       this._getListData()
         .then((response) => {
           this._renderList(response.value);
-        });
+        })
+        .catch(() => {});
     }
     ```
 
-4. Save the file.
-
+1. Save the file.
 
 ## Retrieve list data
 
@@ -269,4 +269,4 @@ Open the `HelloWorldWebPart` class.
 
 Congratulations on connecting your web part to SharePoint list data!
 
-You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md). You'll learn how to deploy and preview the Hello World web part in a SharePoint page.
+You can continue building out your Hello World web part in the next article [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md). You'll learn how to deploy and preview the Hello World web part in a SharePoint page.
