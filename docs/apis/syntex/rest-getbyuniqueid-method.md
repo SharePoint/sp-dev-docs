@@ -1,6 +1,6 @@
 ---
 title: GetByUniqueId
-description: Use REST API to get or update information about a SharePoint Syntex document understanding model.
+description: Use REST API to get or update information about a Microsoft Syntex document understanding model.
 ms.date: 09/23/2022
 ms.author: chucked
 author: chuckedmonson
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # GetByUniqueId
 
-Gets or updates information about a SharePoint Syntex document understanding model (see [example](rest-getbyuniqueid-method.md#examples)).
+Gets or updates information about a Microsoft Syntex document understanding model (see [example](rest-getbyuniqueid-method.md#examples)).
 
 ## HTTP request
 

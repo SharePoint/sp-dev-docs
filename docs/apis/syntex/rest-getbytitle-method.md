@@ -1,6 +1,6 @@
 ---
 title: GetByTitle
-description: Use REST API to get or update information about a SharePoint Syntex document understanding model using the model title.
+description: Use REST API to get or update information about a Microsoft Syntex document understanding model using the model title.
 ms.date: 09/23/2022
 ms.author: chucked
 author: chuckedmonson
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # GetByTitle
 
-Gets or updates information about a SharePoint Syntex document understanding model using the model title (see [example](rest-getbytitle-method.md#examples)).
+Gets or updates information about a Microsoft Syntex document understanding model using the model title (see [example](rest-getbytitle-method.md#examples)).
 
 ## HTTP request
 

@@ -2096,7 +2096,7 @@
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
         href: apis/migration-api-encryption.md
-  - name: SharePoint Syntex REST API
+  - name: Microsoft Syntex REST API
     items:
       - name: Overview
         href: apis/syntex/syntex-model-rest-api.md

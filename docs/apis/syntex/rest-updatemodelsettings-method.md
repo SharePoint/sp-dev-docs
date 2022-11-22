@@ -1,6 +1,6 @@
 ---
 title: UpdateModelSettings
-description: Use REST API to update available models settings for a SharePoint Syntex document understanding model.
+description: Use REST API to update available models settings for a Microsoft Syntex document understanding model.
 ms.date: 09/23/2022
 ms.author: chucked
 author: chuckedmonson
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # UpdateModelSettings
 
-Updates available models settings (associated retention label and model description) for a SharePoint Syntex document understanding model (see [example](rest-updatemodelsettings-method.md#examples)).
+Updates available models settings (associated retention label and model description) for a Microsoft Syntex document understanding model (see [example](rest-updatemodelsettings-method.md#examples)).
 
 ## HTTP request
 
