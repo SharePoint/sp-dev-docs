@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 8/24/2022
+ms.date: 11/24/2022
 ms.localizationpriority: high
 ---
 
@@ -127,6 +127,7 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
                     The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
                 </p>
             </div>
+            <div id="spListContainer" />
           </div>`;
 
           // List the latest emails based on what we got from the Graph
