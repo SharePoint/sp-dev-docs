@@ -1,7 +1,7 @@
 ---
 title: Manage list item and file permissions with Power Automate
 description: "SharePoint connector in Power Automate lets you grant access, create sharing links, or rescind access for items or folders."
-ms.date: 06/28/2022
+ms.date: 12/01/2022
 search.app:
   - Flow
 search.appverid: met150
@@ -37,7 +37,7 @@ Depending on the user, you may want to grant them either access to edit or read.
 
 The permission roles map to [simplified standard SharePoint permission groups](/sharepoint/modern-experience-sharing-permissions):
 - Members
-- Owners
+- Visitors
 
 ### Using custom-defined roles to grant access
 In advanced scenarios where you need to specify a custom-defined permission role, you can do so in the flow action by entering a custom value for the *Roles* property in the following format:
