@@ -17,7 +17,7 @@ The following API description is based upon use of the SharePoint Client Side Ob
 
 You can find latest version of the SharePoint Online Client Side Object Model (CSOM) package from the [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/). Use the ID `Microsoft.SharePointOnline.CSOM`.
 
-> [!Important]
+> [!IMPORTANT]
 > Files larger than 15 GB must now create the required checksum using [QuickXorHash](/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
 >
 > The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirement.
