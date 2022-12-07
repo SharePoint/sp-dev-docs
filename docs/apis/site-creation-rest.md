@@ -44,6 +44,7 @@ body:
     "Lcid": 1033,
     "ShareByEmailEnabled":false,
     "Classification":"Low Business Impact",
+    "SensitivityLabel": "<Your sensitivity label ID>",
     "Description":"Description",
     "WebTemplate":"SITEPAGEPUBLISHING#0",
     "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
@@ -56,6 +57,8 @@ body:
 > [!IMPORTANT]
 > If you use an app-only context to create the site collection the **Owner property is required**. In other cases this is an optional property and if not present will default to the user calling the REST endpoint.
 
+> [!NOTE]
+> The "Classification" parameter only sets the value visible on the site, but doesn't apply the label on the site. Use the new parameter "SensitivityLabel" to actually apply the label on your site collection.
 
 The site design id can be retrieved by using the [Get-SPOSiteDesign](/powershell/module/sharepoint-online/get-spositedesign) (Microsoft SharePoint Online Management Shell) or [Get-PnPSiteDesign](/sharepoint/dev/declarative-customization/site-design-pnppowershell) (PnP PowerShell) cmdlets. If you want to apply an out-of-the-box available site design, use the following values:
 
