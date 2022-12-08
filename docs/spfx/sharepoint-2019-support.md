@@ -29,28 +29,118 @@ The [Team-based development on the SharePoint Framework](team-based-development-
 
 ### Node.js, Gulp CLI, and Yeoman versions
 
-The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SPFx. In these cases, you may need to install specific versions of the tools. Because SPFx v1.4.1 is only supported on Node.js v6 and Node.js v8, you need to ensure you have a supported version of Node.js installed as well as an older version of Gulp CLI and Yeoman.
+The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SPFx. In these cases, you may need to install specific versions of the tools. We recommend you install Node.js v8.9.4, gulp v3.9.1 and Yeoman v2.0.6.
 
-> [!NOTE]
-> The Gulp team introduced a separate package, [gulp-cli](https://www.npmjs.com/package/gulp-cli), that should be installed globally. It can be used by projects that use either Gulp v3 & Gulp v4.
->
-> Learn more about the gulp-cli here: [gulpjs/gulp/#2324](https://github.com/gulpjs/gulp/issues/2324).
+## Steps for Web Part development and deployment with SPFx
 
-Microsoft recommends using the most recent version of the Yeoman generator for the SharePoint Framework ([@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint)) that supports creating on-premises projects: SPFx v1.10.0.
+### Prepare the environment for SPFx development
 
-> [!IMPORTANT]
-> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.md). However, SPFx 1.4.1 is only supported on Node.js v6 and Node.js v8. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework (v1.10.0) that works on the same version of Node.js (v6 or v8) that SPFx v1.4.1 is supported on. Solution structure is created then with the v1.4.1 version packages as long as you select the environmen target properly in the Yeoman generator flow.
+1. Install Node.js
 
-1. Install [Node.js v8.17.0](https://nodejs.org/download/release/v8.17.0/)
-1. Install global dependencies
+   Install `Node.js v8.9.4`; if you have `nvm` installed, use `nvm` to install `8.9.4`. Verify the version if you have `Node.js` installed.
+2. Install Yeoman and gulp
+   
+   Specify the version:
+   - npm install -g gulp@3.9.1 
+   - npm install -g yo@2.0.6 
+3. Install Yeoman SharePoint Generator
+   
+   npm install `-g @microsoft/generator-sharepoint@1.9.1`. Version `1.9.1` is not the only choice, but this version can work correctly. 
 
-    ```console
-    npm install gulp-cli@2.3.0 --global
-    npm install yo@2.0.6 --global
-    npm install @microsoft/generator-sharepoint@1.10.0 --global
-    ```
+### Develop SharePoint Framework Web Part
 
-For more information, see [SharePoint Framework development tools and libraries compatibility](compatibility.md).
+1. Create a directory for SPFx solution.
+  
+   `md spfx-webpart-onprem` 
+2. Navigate to the above created directory. 
+   
+   `cd spfx-webpart-onprem`   
+3. Run Yeoman SharePoint Generator to create the solution.
+ 
+   `yo @microsoft/sharepoint` 
+
+   The Yeoman generator will allow you to provide details regarding the intended solution.
+   Ensure three baseline packages are available.
+
+4. Select SharePoint 2019 onwards, including SharePoint Online.
+
+   Once the solution is created, select `package.json` to check if the SPFx version is 1.4.1.
+
+### Verify SPFx Web Part on local SharePoint workbench
+
+1. Browse to the **SPFx solution** directory.
+ 
+2. Run `gulp serve`.
+   
+   `workbench.aspx` opens, you can add your web part to the page.
+
+### Deploy SPFx solution to the SharePoint Server
+
+#### Create service applications
+
+**Prerequisites**
+
+Ensure the following service applications are enabled on the SharePoint Server:
+- App Management Service 
+- Microsoft SharePoint Foundation Subscription Settings Service
+- Managed Metadata Web Service
+
+In Central Admin site, you can create App Management Service application and Managed Metadata Web Service application by clicking **Application Management--> Manage service applications**.
+
+To create SharePoint Foundation Subscription Settings Service, use the following PowerShell command:
+
+```powershell
+$sa = New-SPSubscriptionSettingsServiceApplication -ApplicationPool $applicationPoolName -Name $serviceApplicationName -DatabaseName $dataBaseName 
+
+New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
+```
+
+#### Prepare .sppkg package
+
+1. Bundle the solution
+   `gulp bundle --ship` 
+2. Package the solution 
+   `gulp package-solution –ship` 
+
+#### Create and configure App catalog site
+
+To create a local admin account, follow these steps:
+
+1. From the **Central Administration** site, go to **Apps** and then click **Manage App Catalog**.
+2. To create the app catallog site, select **Web Application**. 
+3. Click **Create a new app catalog site** and then click **OK**.
+4. On the Create App Catalog page, enter site information.
+
+   > [!NOTE]
+> You need to use the above created local admin account as site collection administrator.
+> Ensure using no system account as site admin.
+
+To configure the local admin account, follow these steps:
+
+1. From the **Central Administration** site, go to **Apps** and then click **Configure APP URLS**.
+2. Configure the App domain and App prefix.
+
+
+#### Upload the Package to App Catalog
+
+Follow these steps to upload the SPFx package to the app catalog to make it available on all sites:
+
+1. From the SharePoint App Catalog site, click **Apps for SharePoint**.
+2. Click **Upload** to add SPFx package from *\sharepoint\solution* location.
+3. Click **Deploy**.
+
+#### Add SPFx solution to modern SharePoint site 
+
+1. From the Modern SharePoint site click **Site Contents--> New --> App**.
+2. Add your SPFx solution to this site by clicking your **SPFx solution**. 
+   You can view the web part in Site contents list after adding it to the site collection. 
+
+#### Add SPFx Web Part to modern page
+
+Follow these steps to add your SPFx web part to the modern page in this site collection:
+
+1. 
+ 
 
 ## Determine which version was used for a solution
 
