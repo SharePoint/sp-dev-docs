@@ -37,7 +37,7 @@ Follow these steps for web part development and deployment with SPFx:
 
 - Prepare the environment for SPFx development
 - Develop SharePoint Framework web part
-- Verify SPFx Web Part on local SharePoint workbench
+- Verify SPFx web part on local SharePoint workbench
 - Deploy SPFx solution to the SharePoint Server
 
 ### Prepare the environment for SPFx development
@@ -53,7 +53,6 @@ Follow these steps for web part development and deployment with SPFx:
 3. Install Yeoman SharePoint Generator
    
    npm install `-g @microsoft/generator-sharepoint@1.9.1`. Version `1.9.1` is not the only choice, but this version can work correctly.
-
 
 ### Develop SharePoint Framework web part
 
@@ -73,7 +72,7 @@ Follow these steps for web part development and deployment with SPFx:
    
     :::image type="content" source="viva/get-started/actions/media-upload/img/Picture1.png" alt-text="This is Yoeman":::
 
-4. Select SharePoint 2019 onwards, including SharePoint Online.
+4. Select **SharePoint 2019 onwards, including SharePoint Online**.
 
    Once the solution is created, select `package.json` to check if the SPFx version is 1.4.1.
    
