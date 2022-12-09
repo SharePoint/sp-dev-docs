@@ -31,7 +31,14 @@ The [Team-based development on the SharePoint Framework](team-based-development-
 
 The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SPFx. In these cases, you may need to install specific versions of the tools. We recommend you install Node.js v8.9.4, gulp v3.9.1 and Yeoman v2.0.6.
 
-## Steps for Web Part development and deployment with SPFx
+## Manuals for web part development and deployment with SPFx
+
+Follow these steps for web part development and deployment with SPFx:
+
+- Prepare the environment for SPFx development
+- Develop SharePoint Framework web part
+- Verify SPFx Web Part on local SharePoint workbench
+- Deploy SPFx solution to the SharePoint Server
 
 ### Prepare the environment for SPFx development
 
@@ -40,14 +47,15 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
    Install `Node.js v8.9.4`; if you have `nvm` installed, use `nvm` to install `8.9.4`. Verify the version if you have `Node.js` installed.
 2. Install Yeoman and gulp
    
-   Specify the version:
-   - npm install -g gulp@3.9.1 
-   - npm install -g yo@2.0.6 
+   Specify these versions:
+   - `npm install -g gulp@3.9.1` 
+   - `npm install -g yo@2.0.6` 
 3. Install Yeoman SharePoint Generator
    
-   npm install `-g @microsoft/generator-sharepoint@1.9.1`. Version `1.9.1` is not the only choice, but this version can work correctly. 
+   npm install `-g @microsoft/generator-sharepoint@1.9.1`. Version `1.9.1` is not the only choice, but this version can work correctly.
 
-### Develop SharePoint Framework Web Part
+
+### Develop SharePoint Framework web part
 
 1. Create a directory for SPFx solution.
   
@@ -60,21 +68,36 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
    `yo @microsoft/sharepoint` 
 
    The Yeoman generator will allow you to provide details regarding the intended solution.
-   Ensure three baseline packages are available.
+   
+   Ensure the following three baseline packages are available.
+   
+    :::image type="content" source="viva/get-started/actions/media-upload/img/Picture1.png" alt-text="This is Yoeman":::
 
 4. Select SharePoint 2019 onwards, including SharePoint Online.
 
    Once the solution is created, select `package.json` to check if the SPFx version is 1.4.1.
+   
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-2.png" alt-text="this is picture 2":::
 
-### Verify SPFx Web Part on local SharePoint workbench
+### Verify SPFx web part on local SharePoint workbench
 
 1. Browse to the **SPFx solution** directory.
  
 2. Run `gulp serve`.
    
    `workbench.aspx` opens, you can add your web part to the page.
+   
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-3.png" alt-text="This is picture 3":::
 
 ### Deploy SPFx solution to the SharePoint Server
+
+You can deploy the SPFx solution to the SharePoint Server in these steps:
+
+- Create service applications
+- Prepare .sppkg package
+- Create and configure app catalog site
+- Add SPFx solution to modern SharePoint site
+- Add SPFx Web Part to modern page
 
 #### Create service applications
 
@@ -86,6 +109,8 @@ Ensure the following service applications are enabled on the SharePoint Server:
 - Managed Metadata Web Service
 
 In Central Admin site, you can create App Management Service application and Managed Metadata Web Service application by clicking **Application Management--> Manage service applications**.
+
+:::image type="content" source="viva/get-started/actions/media-upload/img/picture-4.png" alt-text="This is picture 4":::
 
 To create SharePoint Foundation Subscription Settings Service, use the following PowerShell command:
 
@@ -102,46 +127,72 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 2. Package the solution 
    `gulp package-solution –ship` 
 
-#### Create and configure App catalog site
+#### Create and configure app catalog site
 
 To create a local admin account, follow these steps:
 
 1. From the **Central Administration** site, go to **Apps** and then click **Manage App Catalog**.
-2. To create the app catallog site, select **Web Application**. 
+
+   Create a local admin as user01.
+   
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-5.png" alt-text="This is picture 5.":::
+
+2. Create the app catalog site by selecting **Web Application**. 
 3. Click **Create a new app catalog site** and then click **OK**.
 4. On the Create App Catalog page, enter site information.
 
    > [!NOTE]
-> You need to use the above created local admin account as site collection administrator.
-> Ensure using no system account as site admin.
+   > You need to use the above created local admin account as site collection administrator.
+   > Ensure using no system account as site admin.
 
 To configure the local admin account, follow these steps:
 
 1. From the **Central Administration** site, go to **Apps** and then click **Configure APP URLS**.
+
+:::image type="content" source="viva/get-started/actions/media-upload/img/picture-6.png" alt-text="this is picture 6.":::
+
 2. Configure the App domain and App prefix.
 
-
-#### Upload the Package to App Catalog
+#### Upload the package to app catalog
 
 Follow these steps to upload the SPFx package to the app catalog to make it available on all sites:
 
 1. From the SharePoint App Catalog site, click **Apps for SharePoint**.
 2. Click **Upload** to add SPFx package from *\sharepoint\solution* location.
+   
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-7.png" alt-text="this is picture 7.":::
+
 3. Click **Deploy**.
 
 #### Add SPFx solution to modern SharePoint site 
 
+Follow these steps to add your SPFx solution to modern SharePoint site:
+
 1. From the Modern SharePoint site click **Site Contents--> New --> App**.
+
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-8.png" alt-text="this is image 8.":::
+
 2. Add your SPFx solution to this site by clicking your **SPFx solution**. 
-   You can view the web part in Site contents list after adding it to the site collection. 
+
+   :::image type="content" source="viva/get-started/actions/media-upload/img/image-9.png" alt-text="this is image 9":::
+   
+   You can view the web part in Site contents list after adding it to the site collection.
+   
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-10.png" alt-text="this is picture 10.":::
 
 #### Add SPFx Web Part to modern page
 
 Follow these steps to add your SPFx web part to the modern page in this site collection:
 
-1. 
- 
+1. Open an existing or a new modern page.
+2. Click **Edit** and then click **+** sign to add your SPFx web part to the page. 
+   
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-11.png" alt-text="this is picture 11.":::
 
+3. You can view the added web part.
+   
+   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-12.png" alt-text="This is picture 12.":::
+ 
 ## Determine which version was used for a solution
 
 If you have existing SharePoint Framework solutions and you'd like to confirm which version of the SharePoint Framework was used for them, you'll need to check the following locations:
