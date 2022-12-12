@@ -52,27 +52,23 @@ Follow these steps for web part development and deployment with SharePoint Frame
    - `npm install -g yo@2.0.6` 
 3. Install Yeoman SharePoint Generator
    
-   npm install `-g @microsoft/generator-sharepoint@1.9.1`. Version `1.9.1` is not the only choice, but this version can work correctly.
+   npm install `-g @microsoft/generator-sharepoint@1.9.1`. Although not the only option, version `1.9.1` can function appropriately.
 
 ### Develop SharePoint Framework web part
 
-1. Create a directory for SharePoint Framework solution.
-  
-   `md spfx-webpart-onprem` 
-2. Navigate to the above created directory. 
-   
-   `cd spfx-webpart-onprem`   
-3. Run Yeoman SharePoint Generator to create the solution.
- 
-   `yo @microsoft/sharepoint` 
+1. Create a directory for SharePoint Framework solution with `md spfx-webpart-onprem`.
+
+2. Navigate to the above created directory with `cd spfx-webpart-onprem`.   
+
+3. Run Yeoman SharePoint Generator to create the solution with `yo @microsoft/sharepoint`. 
 
    The Yeoman SharePoint generator will allow you to provide details regarding the intended solution.
    
-   Ensure the following three baseline packages are available.
+   Ensure the following three baseline packages are available:
    
     :::image type="content" source="viva/get-started/actions/media-upload/img/Picture1.png" alt-text="This is Yoeman":::
 
-4. Select **SharePoint 2019 onwards, including SharePoint Online**.
+4. Click **SharePoint 2019 onwards, including SharePoint Online**.
 
    Once the solution is created, click `package.json` to check if the SharePoint Framework version is 1.4.1.
    
@@ -137,7 +133,7 @@ To create a local admin account, follow these steps:
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-5.png" alt-text="This is picture 5.":::
 
 2. Create the app catalog site by clicking **Web Application**. 
-3. Click **Create a new app catalog site** and then click **OK**.
+3. Click **Create a new app catalog site**, and then click **OK**.
 4. On the Create App Catalog page, enter site information.
 
    > [!NOTE]
@@ -184,7 +180,7 @@ Follow these steps to add your SharePoint Framework solution to modern SharePoin
 Follow these steps to add your SharePoint Framework web part to the modern page:
 
 1. Open an existing or a new modern page.
-2. Click **Edit** and then click **+** sign to add your SharePoint Framework web part to the page. 
+2. Click **Edit**, and then click the **+** sign to add your SharePoint Framework web part to the page. 
    
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-11.png" alt-text="this is picture 11.":::
 
