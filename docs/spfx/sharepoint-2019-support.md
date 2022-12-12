@@ -66,7 +66,7 @@ Follow these steps for web part development and deployment with SharePoint Frame
  
    `yo @microsoft/sharepoint` 
 
-   The Yeoman generator will allow you to provide details regarding the intended solution.
+   The Yeoman SharePoint generator will allow you to provide details regarding the intended solution.
    
    Ensure the following three baseline packages are available.
    
@@ -146,7 +146,7 @@ To create a local admin account, follow these steps:
 
 To configure the local admin account, follow these steps:
 
-1. From the **Central Administration** site, go to **Apps** and then click **Configure App URLS**.
+1. From the **Central Administration** site, go to **Apps** and then click **Configure App URLs**.
 
   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-6.png" alt-text="this is picture 6.":::
 
@@ -167,7 +167,7 @@ Follow these steps to upload the SharePoint Framework package to the app catalog
 
 Follow these steps to add your SharePoint Framework solution to modern SharePoint site:
 
-1. From the Modern SharePoint site, click **Site Contents--> New --> App**.
+1. From the Modern SharePoint site, click **Site Contents --> New --> App**.
 
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-8.png" alt-text="this is image 8.":::
 
