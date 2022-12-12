@@ -74,7 +74,7 @@ Follow these steps for web part development and deployment with SharePoint Frame
 
 4. Select **SharePoint 2019 onwards, including SharePoint Online**.
 
-   Once the solution is created, select `package.json` to check if the SharePoint Framework version is 1.4.1.
+   Once the solution is created, click `package.json` to check if the SharePoint Framework version is 1.4.1.
    
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-2.png" alt-text="this is picture 2":::
 
@@ -136,7 +136,7 @@ To create a local admin account, follow these steps:
    
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-5.png" alt-text="This is picture 5.":::
 
-2. Create the app catalog site by selecting **Web Application**. 
+2. Create the app catalog site by clicking **Web Application**. 
 3. Click **Create a new app catalog site** and then click **OK**.
 4. On the Create App Catalog page, enter site information.
 
@@ -146,7 +146,7 @@ To create a local admin account, follow these steps:
 
 To configure the local admin account, follow these steps:
 
-1. From the **Central Administration** site, go to **Apps** and then click **Configure APP URLS**.
+1. From the **Central Administration** site, go to **Apps** and then click **Configure App URLS**.
 
   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-6.png" alt-text="this is picture 6.":::
 
@@ -167,7 +167,7 @@ Follow these steps to upload the SharePoint Framework package to the app catalog
 
 Follow these steps to add your SharePoint Framework solution to modern SharePoint site:
 
-1. From the Modern SharePoint site click **Site Contents--> New --> App**.
+1. From the Modern SharePoint site, click **Site Contents--> New --> App**.
 
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-8.png" alt-text="this is image 8.":::
 
