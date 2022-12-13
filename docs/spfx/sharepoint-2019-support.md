@@ -23,7 +23,7 @@ Starting from v1.3, the SharePoint Framework Yeoman generator supports scaffoldi
 
 When you're developing SharePoint Framework client-side web parts, you need Internet connectivity to access npm packages. This is required when solutions are being scaffolded by using the SharePoint Framework Yeoman templates.
 
-If Internet access isn't available for the development machines, you can set up a local on-premises registry for the required npm packages. However, this requires additional software and a significant amount of work to set up and maintain local package versions with packages in the actual npm gallery.
+If Internet access isn't available for the development machines, you can set up a local on-premises registry for the required npm packages. However, this requires more software and a significant amount of work to set up and maintain local package versions with packages in the actual npm gallery.
 
 The [Team-based development on the SharePoint Framework](team-based-development-on-sharepoint-framework.md) guidance document includes different options for development environment setup including when you might need to support multiple SharePoint Framework versions.
 
@@ -184,7 +184,7 @@ Follow these steps to add your SharePoint Framework web part to the modern page:
    
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-11.png" alt-text="this is picture 11.":::
 
-3. You can view the added web part.
+3. You can view the added web part on the page.
    
    :::image type="content" source="viva/get-started/actions/media-upload/img/picture-12.png" alt-text="This is picture 12.":::
  
