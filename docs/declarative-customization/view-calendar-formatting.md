@@ -1,7 +1,7 @@
 ---
 title: Format calendar view to customize SharePoint
 description: Customize calendar views in SharePoint lists and libraries
-ms.date: 07/01/2022
+ms.date: 23/12/2022
 ms.localizationpriority: high
 ---
 
@@ -16,11 +16,17 @@ Groups the command bar customization options. For details on `commandBarProps`, 
 ## See also
 - [Command bar customization syntax reference](./view-commandbar-formatting.md)
 
+### List setup before creating a calendar view and applying a JSON formatting
+Before creating a new calendar view, a list should include all the required columns to be used in any JSON formatting.
+After creating a calendar view, if more columns are required, go to the [List Settings page](https://support.microsoft.com/en-us/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add them to a calendar view.
+
 ### Conditional view formatting based on a specific column
 
 The following image shows an example of conditional formatting applied to a calendar view, based on a single choice column named **PROJECT**:
 
 ![SharePoint list calendar formatting](../images/calendar-view-formatting.png)
+
+**Note**: before creating a new calendar view, make sure the PROJECT column is already existing to apply the JSON code illustrated below. Alternatively, go the [List Settings page](https://support.microsoft.com/en-us/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add the single choice PROJECT column to a calendar view. 
 
 In this example, **PROJECT** column has the following options:
 - Project A
@@ -42,3 +48,4 @@ The JSON code below makes use of SharePoint Online Modern UI classes to apply co
 The gif image below shows the final result:
 
 ![SharePoint list calendar formatting result](../images/calendar-view-formatting-result.gif)
+
