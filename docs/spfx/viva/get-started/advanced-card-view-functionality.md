@@ -166,7 +166,7 @@ Next, add support for calling the SharePoint REST API and adding the retrieved i
 1. Request the list data using the SPFx **SPHttpClient** API. Add the following to the class that implements the ACE:
 
     ```typescript
-    import { SPHttpClient } from '@microsoft/sp-http';
+    import { SPHttpClient } from '@microsoft/sp-http-base';
 
     ..
 
