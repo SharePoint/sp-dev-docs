@@ -120,7 +120,7 @@ Next, let's update the state of the ACE. When the state changes, it will trigger
     }
     ```
 
-1. Temporarily remove where the `state` is referenced in the ACE and Views by updating the `onPropertyPaneFieldChanged()` method:
+1. Temporarily remove where the `state` is referenced in the ACE and Views by adding the `onPropertyPaneFieldChanged()` method:
 
     ```typescript
     // tslint:disable-next-line: no-any
