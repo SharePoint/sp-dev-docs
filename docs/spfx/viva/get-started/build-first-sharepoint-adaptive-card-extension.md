@@ -338,12 +338,13 @@ Let's change this:
 next, remove the reference to `this.properties.description` from the Card view:
 
 1. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts**.
-1. Remove the `description` property in the returned object:
+1. Edit the `description` property in the returned object to be an empty string:
 
     ```typescript
     public get data(): IPrimaryTextCardParameters {
       return {
-        primaryText: strings.PrimaryText
+        primaryText: strings.PrimaryText,
+        description: ''
       };
     }
     ```
