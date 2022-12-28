@@ -1013,6 +1013,8 @@ The following example shows how a approval status field might be used on a curre
 ### "[$FieldName]"
 
 The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row by specifying the **internal name** of the field surrounded by square brackets and preceded by a dollar sign: `[$InternalName]`. For example, to get the value of a field with an internal name of "MarchSales", use `[$MarchSales]`.
+> [!NOTE]
+> Reference to other fields will work only if they are included in the same view.
 
 If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
