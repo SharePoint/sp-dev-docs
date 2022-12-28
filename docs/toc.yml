@@ -446,25 +446,33 @@
       href: spfx/supported-extensibility-platforms-overview.md
     - name: SharePoint Online
       href: spfx/spfx-sharepoint-online.md
+    - name: Microsoft Teams
+      href: /sharepoint/dev/spfx/build-for-teams-overview
+    - name: Extend Outlook and Office
+      href: /sharepoint/dev/spfx/office/overview
+    - name: Microsoft Viva Connections
+      href: /sharepoint/dev/spfx/viva/overview-viva-connections
     - name: SharePoint 2019 & SE support
       href: spfx/sharepoint-2019-support.md
     - name: SharePoint 2016 support
-      href: spfx/sharepoint-2016-support.md
-    - name: Microsoft Teams
-      href: /sharepoint/dev/spfx/build-for-teams-overview
-    - name: Microsoft Viva Connections
-      href: /sharepoint/dev/spfx/viva/overview-viva-connections
+      href: spfx/sharepoint-2016-support.md      
   - name: Release notes & roadmap
     items:
     - name: Overview
       href: spfx/roadmap.md
-    - name: SPFx v1.15 - June 21, 2022
-      href: spfx/release-1.15.md      
-    - name: SPFx v1.14 - February 17, 2022
+    - name: SPFx v1.16.1 - November 30, 2022
+      href: spfx/release-1.16.1.md
+    - name: SPFx v1.16.0 - November 15, 2022
+      href: spfx/release-1.16.md
+    - name: SPFx v1.15.2 - August 2, 2022
+      href: spfx/release-1.15.2.md
+    - name: SPFx v1.15.0 - June 21, 2022
+      href: spfx/release-1.15.md
+    - name: SPFx v1.14.0 - February 17, 2022
       href: spfx/release-1.14.md
     - name: SPFx v1.13.1 - November 23, 2021
       href: spfx/release-1.13.1.md
-    - name: SPFx v1.13 - October 21, 2021
+    - name: SPFx v1.13.0 - October 21, 2021
       href: spfx/release-1.13.md
     - name: SPFx v1.12.1 - April 28, 2021
       href: spfx/release-1.12.1.md
@@ -501,7 +509,7 @@
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
   - name: SharePoint Framework Learn module
-    href: /learn/paths/m365-sharepoint-associate/
+    href: /training/paths/m365-sharepoint-associate/
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -516,6 +524,8 @@
     href: spfx/build-for-teams-considerations.md
   - name: Deployment SPFx solutions to Microsoft Teams
     href: spfx/deployment-spfx-teams-solutions.md
+  - name: Teams apps for SharePoint, Teams, Outlook, and Office
+    href: spfx/office/overview.md
   - name: Tutorials
     items:
     - name: Build Microsoft Teams channel/group tabs with SPFx
@@ -528,6 +538,8 @@
     href: spfx/viva/overview-viva-connections.md
   - name: Location capabilities in Adaptive Card Extension
     href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
+  - name: Media upload in Adaptive Card Extension
+    href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
   - name: Design Guidance
     items:
     - name: Introduction
@@ -551,11 +563,15 @@
     - name: Create an Adaptive Card Extension with geolocation action
       href: spfx/viva/get-started/actions/geolocation/GeolocationTutorial.md
     - name: Geolocation capabilities with the property pane of an ACE
-      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md     
+      href: spfx/viva/get-started/actions/geolocation/GeolocationPropertyPane.md
+    - name: Create an Adpative Card Extension with the select media action
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadTutorial.md
+    - name: Media Upload capability via property pane of an ACE
+      href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Viva Connections Extensibility Learn module
-    href: /learn/paths/m365-extend-viva-connections/   
+    href: /training/paths/m365-extend-viva-connections/
 - name: Business Apps & Process Automation
   items:
   - name: Overview
@@ -2055,6 +2071,8 @@
     href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
     items:
+    - name: What's new in the Migration API
+      href: apis/migration-api-whats-new.md
     - name: Migration Guidance for ISVs
       href: apis/migration-isv-guidance.md
     - name: Migration permission guidance
@@ -2080,7 +2098,7 @@
         href: apis/migration-api-azure-container-and-queue.md
       - name: Encryption
         href: apis/migration-api-encryption.md
-  - name: SharePoint Syntex REST API
+  - name: Microsoft Syntex REST API
     items:
       - name: Overview
         href: apis/syntex/syntex-model-rest-api.md

@@ -1,7 +1,7 @@
 ---
 title: Simplify adding web parts with preconfigured entries
 description: Use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
-ms.date: 06/22/2022
+ms.date: 07/19/2022
 ms.localizationpriority: high
 ---
 # Simplify adding web parts with preconfigured entries
@@ -25,7 +25,7 @@ One of the properties specified in the web part manifest is the `preconfiguredEn
 
 ```json
 {
-  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
 
   "id": "6737645a-4443-4210-a70e-e5e2a219133a",
   "alias": "GalleryWebPart",
@@ -34,7 +34,7 @@ One of the properties specified in the web part manifest is the `preconfiguredEn
   "manifestVersion": 2,
 
   "preconfiguredEntries": [{
-    "groupId": "1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489", // Discover
+    "groupId": "1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489", // Discovery
     "group": { "default": "Under Development" },
     "title": { "default": "Gallery" },
     "description": { "default": "Shows items from the selected list" },
@@ -98,7 +98,7 @@ There are seven out-of-the-box groups as shown in the following table. Use the g
 |           Group name            |                   ID                   |                                           Group includes...                                            |
 | ------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | Text, media, and content        | `cf066440-0614-43d6-98ae-0b31cf14c7c3` | Web parts that display text, multi-media, documents, information from the web, and other rich content. |
-| Discover                        | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489` | Web parts that organize, group, and filter content to help users discover information.                 |
+| Discovery                        | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489` | Web parts that organize, group, and filter content to help users discover information.                 |
 | Communication and collaboration | `75e22ed5-fa14-4829-850a-c890608aca2d` | Web parts that facilitate information sharing, team work, and social interactions.                     |
 | Planning and process            | `1bc7927e-4a5e-4520-b540-71305c79c20a` | Web parts that empower team productivity with the use of planning and process tools.                   |
 | Business and intelligence       | `4aca9e90-eff5-4fa1-bac7-728f5f157b66` | Web parts for tracking and analyzing data, and for integrating business flow with pages.               |

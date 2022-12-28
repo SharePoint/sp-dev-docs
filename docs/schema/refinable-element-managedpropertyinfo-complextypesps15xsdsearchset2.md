@@ -1,12 +1,12 @@
 ---
 title: "Refinable element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: b75c3bae-3b9d-37a4-5040-0221b510a840
-description: "Last modified: March 09, 2015"
+description: "Describes the Refinable element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)."
 ---
 
 # Refinable element (ManagedPropertyInfo complexType) (SPS15XSDSearchSet2)
@@ -15,7 +15,7 @@ description: "Last modified: March 09, 2015"
 
 ## Element information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Element type** <br/> |xs:boolean  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

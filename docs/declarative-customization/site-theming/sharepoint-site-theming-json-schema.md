@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming - JSON schema
 description: The new SharePoint site theming features use a JSON schema to store color settings and other information about each theme.
-ms.date: 06/28/2022
+ms.date: 10/20/2022
 ms.localizationpriority: high
 ---
 
@@ -457,6 +457,58 @@ The following code shows how to define a dictionary in PowerShell for the Gray t
   accent: '#0078d4'
 }
 ```
+
+## Periwinkle theme
+
+The following table shows the color palette used by the Periwinkle theme.
+
+|       Theme colors       |       Neutral colors        |
+| ------------------------ | --------------------------- |
+| themeDarker: #383966     | black: #000000              |
+| themeDark: #3D3E78       | neutralDark: #201f1e        |
+| themeDarkAlt: #444791    | neutralPrimary: #323130     |
+| themePrimary: #5B5FC7    | neutralPrimaryAlt: #3b3a39  |
+|                          | neutralSecondary: #605e5c   |
+|                          | neutralTertiary: #a19f9d    |
+| themeSecondary: #7579EB  | neutralTertiaryAlt: #c8c6c4 |
+| themeTertiary: #7F85F5   | neutralLight: #edebe9       |
+| themeLight: #AAB1FA      | neutralLighter: #f3f2f1     |
+| themeLighter: #B6BCFA    | neutralLighterAlt: #faf9f8  |
+| themeLighterAlt: #C5CBFA | white: #fff                 |
+
+The following code shows how to define a dictionary in PowerShell for the Periwinkle theme's color palette.
+
+```powershell
+{ 
+  themeDarker: '#383966', 
+  themeDark: '#3D3E78', 
+  themeDarkAlt: '#444791', 
+  themePrimary: '#5B5FC7', 
+  themeSecondary: '#7579EB', 
+  themeTertiary: '#7F85F5', 
+  themeLight: '#AAB1FA', 
+  themeLighter: '#B6BCFA', 
+  themeLighterAlt: '#C5CBFA', 
+  black: '#000000', 
+  neutralDark: '#201f1e', 
+  neutralPrimary: '#323130', 
+  neutralPrimaryAlt: '#3b3a39', 
+  neutralSecondary: '#605e5c', 
+  neutralTertiary: '#a19f9d', 
+  neutralTertiaryAlt: '#c8c6c4', 
+  neutralLight: '#edebe9', 
+  neutralLighter: '#f3f2f1', 
+  neutralLighterAlt: '#faf9f8', 
+  white: '#fff', 
+  neutralQuaternaryAlt: '#dadada', 
+  neutralQuaternary: '#d0d0d0', 
+  neutralSecondaryAlt: '#767676', 
+  primaryBackground: '#fff', 
+  primaryText: '#333',
+  accent: '#5B5FC7'
+}
+```
+
 
 ## Dark Yellow theme
 

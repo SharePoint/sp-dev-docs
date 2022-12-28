@@ -1,12 +1,12 @@
 ---
 title: "QueryRules element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: 3d0d2fd5-344d-95df-c6c4-743a30e925ba
-description: "Last modified: March 09, 2015"
+description: "Describes the QueryRules element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)."
 ---
 
 # QueryRules element (SearchQueryConfigurationSettings complexType) (SPS15XSDSearchSet3)
@@ -15,7 +15,7 @@ description: "Last modified: March 09, 2015"
 
 ## Element information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Element type** <br/> |q3:ArrayOfQueryRule  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Portability  <br/> |

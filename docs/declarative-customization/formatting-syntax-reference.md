@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 08/03/2022
+ms.date: 10/04/2022
 ms.localizationpriority: high
 ---
 
@@ -198,6 +198,12 @@ An optional property that specifies style attributes to apply to the element spe
 '--inline-editor-border-style'
 '--inline-editor-border-radius'
 '--inline-editor-border-color'
+
+'-webkit-line-clamp'
+
+'object-fit'
+'transform' // Only translate(arg) and translate(arg, arg) are currently supported
+
 ```
 
 The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section.
@@ -278,11 +284,11 @@ An optional property that is meant for debugging. It outputs error messages and 
 
 ## forEach
 
-An optional property that allows an element to duplicate itself for each member of a specific multi-value field. The value of `"forEach"` property should be in the format of either `"iteratorName in @currentField"` or `"iteratorName in [$FieldName]"`.
+An optional property that allows an element to duplicate itself for each member of a specific multi-value field or an array. The value of `"forEach"` property should be in the format of either `"iteratorName in @currentField"` or `"iteratorName in [$FieldName]"` or `"iteratorName in Expression-Returning-An-Array"`.
 
 `iteratorName` represents the name of iterator variable that is used to represent the current member of the multi-value field. The name of the iterator can be any combination of alphanumeric characters and underscore (`_`) that does not start with a digit.
 
-The field used in the loop must be in a supported field type with multi-value option enabled: Person, Lookup, and Choice.
+The field used in the loop must be in a supported field type with multi-value option enabled: Person, Lookup, and Choice. An expression returning an array can also be used.
 
 In the element with `forEach` or its children elements, the iterator variable can be referred as if it is a new field. The index of the iterator can be accessed with `loopIndex` operator.
 
@@ -364,8 +370,10 @@ The `actionParams` attribute can have the following options when using the `exec
 Add a custom card to the element, that shows up on hover or click event. Following customization is available -
 
 - `"formatter"`: JSON object that defines formatting for custom cards.
-- `"openOnEvent"`: Event on which the customCard should open. `"click"` or `"hover"` are the two allowed values.
-- `"directionalHint"`: Specify the direction relative to the target in which custom card will be positioned.
+- `"openOnEvent"`: Event on which the customCard should open.
+  - Valid values: `click`, `hover`
+- `"directionalHint"`: Specify the direction relative to the target in which custom card will be positioned. This is the preferred location but is not guaranteed depending on space.
+  - Valid values: `bottomAutoEdge`, `bottomCenter`, `bottomLeftEdge`, `bottomRightEdge`, `leftBottomEdge`, `leftCenter`, `leftTopEdge`, `rightBottomEdge`, `rightCenter`, `rightTopEdge`, `topAutoEdge`, `topCenter`, `topLeftEdge`, `topRightEdge`
 - `"isBeakVisible"`: Specify if the beak is to be shown or not.
 - `"beakStyle"`: Specifies the style object for custom card's beak.
 
@@ -426,13 +434,15 @@ An optional property, that allows overriding the default styles of file type ico
 
 Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects.
 
-Expressions can be written using Excel-style expressions in SharePoint Online, or by using Abstract Syntax Tree expressions in SharePoint Online and SharePoint 2019.
+Expressions can be written using Excel-style expressions in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update, or by using Abstract Syntax Tree expressions in SharePoint Online, SharePoint Server Subscription Edition, and SharePoint Server 2019.
+
+All fields in ViewFields can be referred in expresisons, even if it is marked `Explicit`.
 
 ### Excel-style expressions
 
-All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online (not SharePoint 2019).
+All Excel-style expressions begin with an equal (`=`) sign. This style of expression is only available in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update. This style of expression is not available in SharePoint Server Subscription Edition before the Version 22H2 feature update nor SharePoint Server 2019.
 
-This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to \`\` otherwise:
+This simple conditional expression evaluates to `none` if `@me` is not equal to `[$Author.email]`, and evaluates to `''` otherwise:
 
 ```JSON
 =if(@me != [$Author.email], 'none', '')
@@ -544,6 +554,7 @@ Operators specify the type of operation to perform. The following operators are 
 - startsWith
 - endsWith
 - replace
+- replaceAll
 - padStart
 - padEnd
 - getUserImage
@@ -551,6 +562,7 @@ Operators specify the type of operation to perform. The following operators are 
 - addMinutes
 - appendTo
 - removeFrom
+- split
 
 **Binary arithmetic operators** - The following are the standard arithmetic binary operators that expect two operands:
 
@@ -610,7 +622,9 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=getYear(Date('12/26/1981'))"` results in _1981_
 - **toUpperCase**: returns the value converted to upper case (only works on strings) - _Only available in SharePoint Online_
   - `"txtContent":"=toUpperCase('DogFood')"` results in _"DOGFOOD"_
+  
 **Binary operators** - The following are operators that expect two operands:
+
 - **indexOf**: takes 2 operands. The first is the text (or array) you would like to search within, the second is the text you would like to search for. Returns the index value of the first occurrence of the search term within the string (or array). Indexes start at 0. If the search term is not found within the text (or array), -1 is returned. This operator is case-sensitive. - _Only available in SharePoint Online_
   - `"txtContent": "=indexOf('DogFood', 'Dog')"` results in _0_
   - `"txtContent": "=indexOf('DogFood', 'F')"` results in _3_
@@ -645,6 +659,8 @@ Operators specify the type of operation to perform. The following operators are 
 - **removeFrom**: returns an array with the given entry removed from the given array, if present
   - `"txtContent": "=removeFrom(@currentField, 'Choice 4')"` returns an array with 'Choice 4' removed from the @currentField array
   - `"txtContent": "=removeFrom(@currentField, 'kaylat@contoso.com')"` returns an array with 'kaylat@contoso.com' removed from the @currentField array
+- **split**: divides the given string into an ordered list of substrings by searching for the given pattern, and returns an array of these substrings
+  - `"txtContent": "=split('Hello World', ' ')"` returns an array with 2 strings - 'Hello' and 'World' 
 - **addDays**: returns a datetime object with days added (or deducted) from the given datetime value
   - `"txtContent": "=addDays(Date('11/14/2021'), 3)"` returns a 11/17/2021, 12:00:00 AM
   - `"txtContent": "=addDays(Date('11/14/2021'), -1)"` returns a 11/13/2021, 12:00:00 AM
@@ -666,6 +682,8 @@ Operators specify the type of operation to perform. The following operators are 
   - `"txtContent":"=replace('Hello world', 'world', 'everyone')"` results in _Hello everyone_
   - `"txtContent":"=replace([$MultiChoiceField], 'Choice 1', 'Choice 2')"` returns an array replacing Choice 1 with Choice 2
   - `"txtContent":"=replace([$MultiUserField], @me, 'kaylat@contoso.com')"` returns an array replacing @me with 'kaylat@contoso.com'
+- **replaceAll**: searches a string for a specified value and returns a new string (or array) where the specified value is replaced. Incase of string, all instances of the value will be replaced.
+  - `"txtContent":"=replaceAll('H-e-l-l-o W-o-r-l-d', '-', '')"` results in _Hello World_
 - **padStart**: pads the current string with another string until the resulting string reaches the given length. The padding is applied from the start of the current string.
   - `"txtContent":"=padStart('DogFood', 10, 'A')"` results in _AAADogFood_
   - `"txtContent":"=padStart('DogFood', 10, 'AB')"` results in _ABADogFood_
@@ -702,9 +720,9 @@ See [here](./column-formatting.md#formatting-multi-value-fields) for examples.
 - \+
 - indexOf ( *for string length workaround* )
 
-`+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text"`
+`+` can be used when there is a need to concatenate strings, for instance : `"txtContent": "=[$column1] + ' ' + [$column2] + 'some other text'"`
 
-`indexOf` Since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string.
+`indexOf` since the operator `length` doesn't work for string value types ( it will return 1 or 0 ), `indexOf` can serve us as a nice workaround to get the length of a string, for instance: `indexOf([$column1] + '^', '^')`. We will use `'^'` or any other character we may want to use to find out the end of the string.
 
 ## Operands
 
@@ -1149,3 +1167,15 @@ This also works with field name
   "txtContent": "[$FieldName.displayValue]"
 }
 ```
+
+### "@isSelected"
+
+This will evaluate to `true` for selected item(s) in a view and `false` otherwise.
+
+### "@lcid"
+
+This will evaluate to the LCID of current culture. This can be used to format the date, time and numbers.
+
+### "@UIlcid"
+
+This will evaluate to the LCID of current UI culture. This can be used to show localized display strings.

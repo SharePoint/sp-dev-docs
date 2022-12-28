@@ -1,7 +1,7 @@
 ---
 title: Use column formatting to customize SharePoint
 description: Customize how fields in SharePoint lists and libraries are displayed by constructing a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements.
-ms.date: 06/28/2022
+ms.date: 09/08/2022
 ms.localizationpriority: high
 ---
 
@@ -51,7 +51,7 @@ To preview the formatting, select **Preview**. To commit your changes, select **
 The easiest way to use column formatting is to start from an example and edit it to apply to your specific field. The following sections contain examples that you can copy, paste, and edit for your scenarios. There are also several samples available in the [SharePoint/sp-dev-column-formatting repository](https://github.com/SharePoint/sp-dev-column-formatting).
 
 > [!NOTE]
-> All examples in this document refer to the JSON schema used in SharePoint Online. To format columns on SharePoint 2019, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
+> All examples in this document refer to the JSON schema used in SharePoint Online and SharePoint Server Subscription Edition starting with the Version 22H2 feature update. To format columns in SharePoint 2019 or SharePoint Server Subscription Edition before the Version 22H2 feature update, please use `https://developer.microsoft.com/json-schemas/sp/v1/column-formatting.schema.json` as the schema.
 
 
 ## Display field values (basic)
@@ -707,6 +707,7 @@ The following column types support column formatting:
 * Average Rating
 * Likes
 * Approval Status
+* Attachments
 
 The following are currently **not** supported:
 

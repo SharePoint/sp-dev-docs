@@ -5,7 +5,7 @@ ms.date: 12/14/2020
 ms.prod: sharepoint
 author: vesajuvonen
 ms.author: vesaj
-ms.topic: sharepoint
+ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 

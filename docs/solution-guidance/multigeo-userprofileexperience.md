@@ -1,7 +1,7 @@
 ---
 title: Work with user profiles in a Multi-Geo tenant
 description: Define a preferred data location for a user, detect a user's profile location and personal site URL, and read and update default and custom user profile properties.
-ms.date: 06/10/2022
+ms.date: 11/17/2022
 ms.localizationpriority: medium
 ---
 
@@ -127,6 +127,9 @@ You can add company-specific user profile properties to user profiles in SharePo
 
 - Custom user profile properties are created at the geo location level. If you create a property in the Europe geo location, that property is not available in the other geo locations. As a best practice, create custom user profile properties in all geo locations. This reduces the risk that data will be lost when a user moves across geo locations.
 - You must read and update custom user profile properties at the geo location level. If you created a custom property in all geo locations, you need to iterate over the geo locations and update the property for all  users.
+
+> [!NOTE]
+> For a custom profile property to show up for a user in people search results, the property must be created and set in at least the user's profile location. E.g., for a user with a profile located in NAM, the custom property must be set in at least the NAM geo in order to show up in people search results; for a user with a profile located in EUR, the custom property would have to be set in at least EUR.
 
 ```csharp
 // For SharePoint Online custom properties, use the following approach.

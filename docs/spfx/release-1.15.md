@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework v1.15 release notes
 description: Release notes for the SharePoint Framework v1.15 release
-ms.date: 06/21/2022
+ms.date: 08/24/2022
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.15 release notes
 
-This release introduces updates across the features around Microsoft Viva, Microsoft Teams and SharePoint.
+This release introduces updates across the features around Microsoft Viva, Microsoft Teams, and SharePoint.
 
 **Released:** June 21, 2022
 
@@ -67,7 +67,7 @@ this.context.msGraphClientFactory.getClient('3');
 
 ### TypeScript v4 Support
 
-SharePoint Framework solutions now support TypeScript v4.5
+SharePoint Framework solutions now support [TypeScript v4.5](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-5.html).
 
 ### ESLint Support
 
@@ -117,26 +117,35 @@ Show Location | Not Supported | Supported | Supported
 
 The location actions can be configured as shown below:
 
-```typescript
-  actions: [
+```json
+  "actions": [
     {
-      type: 'VivaAction.GetLocation',
-      id: 'Get Location',
-      parameters: {chooseLocationOnMap: true}
-    }
+      "type": "VivaAction.GetLocation",
+      "id": "Get Location",
+      "title": "Where am I",
+      "parameters": {
+        "chooseLocationOnMap": true
+      }
+    },
     {
-      type: 'VivaAction.ShowLocation',
-      id: 'Show Location',
-      parameters: parameters: {locationCoordinates: {latitude: 40, longitude: 40}}
+      "type": "VivaAction.ShowLocation",
+      "id": "Show Location",
+      "title": "Continue",
+      "parameters": {
+        "locationCoordinates": {
+          "latitude": 40,
+          "longitude": 40
+        }
+      }
     }
   ]
 ```
 
-The actions  will be rendered as below
-
-Location Action:
+The actions will be rendered as below:
 
 ![Screenshot of location action](../images/release-notes/114/location-action.jpg)
+
+__Location Action:__
 
 The Location Action can be used to get your current location, show your current or a custom location on a map, and choose your current location from a map. In the browser it uses Bing Maps as the mapping interface:
 
@@ -159,6 +168,7 @@ interface ICacheSettings {
    * Whether cache is enabled. Default: true
    */
   isEnabled: boolean;
+
   /**
    * Expiry time in seconds. Default: 86400 seconds (24 hours)
    */
@@ -170,6 +180,7 @@ interface ICacheSettings {
    */
   cachedCardView?: () => BaseCardView;
 }
+
 BaseAdaptiveCardExtension.getCacheSettings(): Partial<ICacheSettings>;
 ```
 
@@ -196,6 +207,7 @@ loaded from a cached card view, then `cachedLoadParameters` will be `undefined`.
 interface ICachedLoadParameters {
     state: TState;
 }
+
 BaseAdaptiveCardExtension.onInit(cachedLoadParameters?: ICachedLoadParameters): Promise<void>;
 ```
 
@@ -206,7 +218,9 @@ State caching and the cache expiry time can be used to determine when expensive 
 Caching can help significantly improve the perceived performance for your Adaptive Card Extension.
 
 
-### Error Handler Method. This method will be invoked when an Action throws an error
+### Error Handler Method
+
+This method will be invoked when an Action throws an error.
 
 ```typescript
 BaseView.onActionError(error: IActionErrorArguments): void
@@ -226,15 +240,22 @@ Select Media  | Supported   | Supported | Supported
 
 The SelectMedia can be configured as shown below:
 
-```typescript
-  actions: [
+```json
+"actions": [
     {
-      type: 'VivaAction.SelectMedia',
-      id: 'Select File',
-      parameters: {mediaType: MediaType.Image, allowMultipleCapture: true, maxSizePerFile : 200000, supportedFileFormats: ['jpg']},
-      title: 'Select File'
+      "type": "VivaAction.SelectMedia",
+      "id": "Select Files",
+      "parameters": {
+        "mediaType": "MediaType.Image",
+        "allowMultipleCapture": true,
+        "maxSizePerFile": 200000,
+        "supportedFileFormats": [
+          "jpg"
+        ]
+      },
+      "title": "Select Files"
     }
-  ]
+]
 ```
 
 Select Media Action rendering:
@@ -247,7 +268,7 @@ The Select Media Action can be used to select Images from your native device. In
 
 ## Deprecations
 
-- Deprecated SPComponentLoader#getManifests due to runtime performance overhead.
+- Deprecated **SPComponentLoader** `getManifests()` method due to runtime performance overhead.
 - Removed API from `@microsoft/sp-http` - `MSGraphClientFactory.getClient()`
 
 ## Fixed Issues

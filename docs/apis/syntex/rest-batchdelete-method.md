@@ -1,16 +1,15 @@
 ---
 title: BatchDelete
+description: Use REST API to remove an applied document understanding model from one or more libraries.
+ms.date: 09/23/2022
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
 ms.reviewer: ssquires
 audience: admin
 ms.topic: reference
-ms.prod: microsoft-365-enterprise
-search.appverid: 
 ms.collection: m365initiative-syntex
 ms.localizationpriority: high
-description: Use REST API to remove an applied document understanding model from one or more libraries.
 ---
 
 # BatchDelete
@@ -70,7 +69,7 @@ None
 |--------|-------|------------|
 |StatusCode|int|The HTTP status code.|
 |ErrorMessage|string|The error message which tells what's wrong when apply the model to the document library.|
-|Publication|MachineLearningPublicationEntityData|It specifies the model info and the target document library.| 
+|Publication|MachineLearningPublicationEntityData|It specifies the model info and the target document library.|
 
 ### MachineLearningPublicationEntityData
 
@@ -90,16 +89,16 @@ In this sample, the ID of the Contoso Contract document understanding model is `
 #### Sample request
 
 ```HTTP
-{ 
-    "publications": [ 
-        { 
-            "ModelUniqueId": "7645e69d-21fb-4a24-a17a-9bdfa7cb63dc", 
-            "TargetSiteUrl": "https://constco.sharepoint-df.com/sites/docsite", 
-            "TargetWebServerRelativeUrl": "/sites/docsite ", 
-            "TargetLibraryServerRelativeUrl": "/sites/dcocsite/joedcos" 
-        } 
-    ] 
-} 
+{
+    "publications": [
+        {
+            "ModelUniqueId": "7645e69d-21fb-4a24-a17a-9bdfa7cb63dc",
+            "TargetSiteUrl": "https://constco.sharepoint-df.com/sites/docsite",
+            "TargetWebServerRelativeUrl": "/sites/docsite ",
+            "TargetLibraryServerRelativeUrl": "/sites/dcocsite/joedcos"
+        }
+    ]
+}
 ```
 
 #### Sample response

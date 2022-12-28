@@ -1,7 +1,7 @@
 ---
 title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
-ms.date: 02/08/2022
+ms.date: 09/08/2022
 ms.localizationpriority: high
 ---
 # Advanced Quick View Functionality
@@ -114,7 +114,6 @@ Since the `onAction()` handler has not been changed to handle the item click, se
 
 ## Create a new quick view
 
-1. Create a new file to hold a new Quick View card: **./src/adaptiveCardExtensions/helloWorld/quickView/DetailedQuickViewTemplate.json**.
 1. Create a new file to hold a new Quick View card: **./src/adaptiveCardExtensions/helloWorld/quickView/DetailedQuickViewTemplate.json**.
 1. Add the following JSON to the **DetailedQuickViewTemplate.json** file:
 

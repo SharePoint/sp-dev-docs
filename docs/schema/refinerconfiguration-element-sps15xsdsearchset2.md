@@ -1,12 +1,12 @@
 ---
 title: "RefinerConfiguration element (SPS15XSDSearchSet2)"
 manager: arnek
-ms.date: 3/9/2015
+ms.date: 06/10/2022
 ms.audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: b7798bf1-1548-32a2-5a70-bfac7bf7ccf9
-description: "Last modified: March 09, 2015"
+description: "Describes the RefinerConfiguration element (SPS15XSDSearchSet2)"
 ---
 
 # RefinerConfiguration element (SPS15XSDSearchSet2)
@@ -15,7 +15,7 @@ description: "Last modified: March 09, 2015"
 
 ## Element information
 
-|||
+|Info type|Value|
 |:-----|:-----|
 |**Element type** <br/> |tns:RefinerConfiguration  <br/> |
 |**Namespace** <br/> |http://schemas.datacontract.org/2004/07/Microsoft.Office.Server.Search.Administration  <br/> |

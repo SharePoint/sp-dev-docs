@@ -1,7 +1,7 @@
 ---
 title:  SharePoint Developer GitHub repositories
 description: List of different SharePoint Developer GitHub repositories and their description
-ms.date: 06/07/2022
+ms.date: 09/23/2022
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -20,7 +20,7 @@ There are numerous SharePoint Developer GitHub repositories, which all have diff
 
 | Repository | Description |
 |--------|--------|
-| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at `https://docs.microsoft.com/sharepoint/dev/` |
+| [sp-dev-docs](https://github.com/SharePoint/sp-dev-docs) | Source for SharePoint dev documentation exposed at `https://learn.microsoft.com/sharepoint/dev/` |
 | [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) | Samples and tutorial code around SharePoint Framework client-side web parts |
 | [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions) | Samples and tutorial code around SharePoint Framework extensions |
 | [sp-dev-modernization](https://github.com/SharePoint/sp-dev-modernization) | Solutions, tools and script to help you modernize your sites |

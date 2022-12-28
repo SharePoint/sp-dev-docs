@@ -1,7 +1,7 @@
 ---
 title: Site template JSON schema
 description: JSON schema reference for building site templates for SharePoint.
-ms.date: 06/28/2022
+ms.date: 09/23/2022
 ms.localizationpriority: high
 ---
 
@@ -652,13 +652,13 @@ Use the `addNavLink` verb to add a new navigation link to the site QuickLaunch o
     },
 {
   "verb": "addNavLink",
-  "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview",
+  "url": "https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview",
   "displayName": "SharePoint Site Design Overview",
   "parentDisplayName": "Documents"
 },
 {
   "verb": "addNavLink",
-  "url": "https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
+  "url": "https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema#add-a-navigation-link",
   "displayName": "About Site Footer",
   "navComponent":"Footer"
 },
@@ -925,6 +925,9 @@ To enable the web scoped feature that allows for Events Lists to be created (fea
 
 Use the `triggerFlow` verb to kick off a custom flow.
 <!-- update this with example from trigger workflow topic -->
+
+> [!TIP]
+> The article [Calling Power Automate from a site script](/sharepoint/dev/declarative-customization/site-design-trigger-flow-tutorial) provides an end-to-end example.
 
 #### JSON values
 

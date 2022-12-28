@@ -1,7 +1,7 @@
 ---
 title: Elevated privileges
 description: Use the app-only policy or service accounts to elevate privileges in SharePoint Add-ins or other remotely hosted solutions.
-ms.date: 04/22/2020
+ms.date: 11/01/2020
 ms.localizationpriority: medium
 ---
 # Elevated privileges
@@ -41,8 +41,6 @@ You can't use the app-only policy with the following APIs:
 
 * Search
 
-* Taxonomy (this only applies to scenarios that write to the managed metadata service)
-
 To use the app-only policy, you first must grant permissions to the add-in by using appinv.aspx. The following code from AppManifest.xml file shows how to set the app-only policy and the permissions for your add-in.
 
 ```xml
@@ -53,8 +51,7 @@ To use the app-only policy, you first must grant permissions to the add-in by us
 
 Using the app-only policy requires that your add-in use either low-trust or high-trust authorization. The policy is not available with the SharePoint cross-domain JavaScript library, which is a third way of getting authorized access to SharePoint resources.
 
-> [!TIP]
-> To allow to use app-only access for writing to Taxonomy Term Store, you'll need to explicitly add `app@sharepoint` identity as a Term Store Administrator in the Taxonomy Term Store administrative user interface. This grants the app-only identity needed permissions for write operations. You do not need to perform this step for read operations.
+app@sharepoint permission no longer works in the modern term store user interface. That’s because app@sharepoint permission is no longer required for an app to perform taxonomy write operations, as long as the app is registered in Azure AD with the required resource consents for app-only taxonomy access.
 
 ### Low-trust authorization
 

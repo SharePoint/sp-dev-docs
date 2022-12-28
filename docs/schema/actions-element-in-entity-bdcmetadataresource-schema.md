@@ -2,7 +2,7 @@
 title: Actions element in Entity (BDCMetadataResource Schema)
 description: Details on the Actions element in Entity (BDCMetadataResource Schema)
 manager: soliver
-ms.date: 01/27/2021
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ For more information, see [Actions element in Entity (BDCMetadata Schema)](actio
 
 **Schema**: BDCMetadataResource
 
-```
+```xml
 <Actions></Actions>
 ```
 
@@ -33,36 +33,12 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="action-element-in-actions-bdcmetadataresource-schema.md">Action element in Actions (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [Action element in Actions (BDCMetadataResource Schema)](action-element-in-actions-bdcmetadataresource-schema.md) |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadataresource-schema.md">Entity element in Entities (BDCMetadataResource Schema)</a></span></p></td>
-</tr>
-</tbody>
-</table>
+| Element |
+| --- |
+| [Entity element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md) |

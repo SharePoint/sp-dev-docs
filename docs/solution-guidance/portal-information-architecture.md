@@ -1,7 +1,7 @@
 ---
 title: Information architecture guidance for SharePoint Online portals
 description: Describes site organization patterns, and guidelines for incorporating permissions, search, taxonomy, and large media in your SharePoint Online portal.
-ms.date: 06/10/2022
+ms.date: 19/12/2022
 ms.localizationpriority: high
 ---
 
@@ -42,6 +42,7 @@ Don't:
 
 - **Have too many top-level parent portal site collections**. This will cause confusion and can have adverse impacts on management, security considerations, usability, navigation, and adoption in general.
 - **Use deep hierarchies in a single site collection with unique permissions**. This can cause performance challenges.
+- **Have too many sub sites in a single site collection**. All sites in a site collection are stored together in the same SQL database. This can potentially affect site and server (on-premises) performance, depending on how your site collections and sites are structured, and depending on the purpose of the sites.
 - **Bury content**. Content that is too deep impacts discoverability as well as adoption. If the user cannot find the content that they are looking for after a few levels, they will abandon their efforts and deem the portal as inefficient, which in turn, kills adoption. 
 - **Keep stale content**. Nobody likes stale content, and after a few times of seeing it, they won't come back for that reason. 
 - **Not use content disposition strategies**. These are needed to help avoid stale content and to stay within the defined capacity boundaries. 

@@ -4,7 +4,7 @@ description: "Describes the definition, element, and attribute information for t
 manager: arnek
 ms.date: 06/28/2022
 ms.audience: ITPro
-ms.topic: articleF
+ms.topic: conceptual
 ms.localizationpriority: medium
 ms.assetid: 9594a45e-b0b6-741b-b416-98cd770236ea
 ---

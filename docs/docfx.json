@@ -34,7 +34,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "uhfHeaderID": "MSDocsHeader-Dev_SharePoint",
+      "uhfHeaderID": "MSDocsHeader-M365-IT",
       "extendBreadcrumb": "true",
       "breadcrumb_path":"/sharepoint/dev/breadcrumb/toc.json",
       "ms.suite": "office",
@@ -52,7 +52,9 @@
         "spfx/**.md": "sharepoint"
       },
       "ms.service": {
-        "apis/**.md": "sharepoint-online",
+        "apis/*.md": "sharepoint-online",
+        "apis/webhooks/**.md": "sharepoint-online",
+        "apis/syntex/*.md": "microsoft-365-enterprise",
         "business-apps/power-apps/**.md": "powerapps",
         "business-apps/power-automate/guidance/**.md": "power-automate",
         "declarative-customization/**.md": "sharepoint-online",

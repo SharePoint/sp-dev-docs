@@ -1,7 +1,7 @@
 ---
 title: Building Microsoft Teams Tabs using SharePoint Framework
 description: You can build your Microsoft Teams tabs using SharePoint Framework and utilize the tooling
-ms.date: 10/11/2021
+ms.date: 11/14/2022
 ---
 # Building Microsoft Teams Tabs using SharePoint Framework
 
@@ -103,16 +103,28 @@ There's an alternative way to deploy your solution, which will for instance allo
 The page context in a web part contains a reference to the Teams JavaScript SDK so that you can easily get access on the Teams context when your web part is rendered as a tab.
 
 ```javascript
-this.context.sdks.microsoftTeams
+this.context.sdks.microsoftTeams.teamJs.app.getContext()
 ```
 
 > [!NOTE]
 > For more information on the Microsoft Teams tab context, see [Microsoft Teams development documentation](/microsoftteams/platform/concepts/tabs/tabs-context).
 
 > [!IMPORTANT]
-> The property `this.context.microsoftTeams` has been deprecated in the SharePoint Framework v1.10 release.
+> The process of obtaining the Microsoft Teams context with the SPFx API has changed a few times over time. For example, you may be familiar with the following properties that would return the Microsoft Teams context:
 >
-> You should use `this.context.sdks.microsoftTeams` for all solutions created with the SharePoint Framework v1.10 and later.
+> - The property `this.context.microsoftTeams` was [deprecated in the SharePoint Framework v1.10 release](release-1.10.0.md).
+> - The property `this.context.sdks.microsoftTeams` was [deprecated in the SharePoint Framework v1.16 release](release-1.16.md).
+
+## What Teams JavaScript client SDK version to use?
+
+The SharePoint Framework provides access to the Teams JavaScript client SDK instance and context using `sdks.microsoftTeams.teamsJs.app.getContext()` method in the [context's API](/javascript/api/sp-webpart-base/webpartcontext#@microsoft-sp-webpart-base-webpartcontext-sdks-member).
+
+Using this API assures the supported version of Teams JavaScript client SDK is loaded and initialized.
+
+Few details to keep in mind:
+
+- Installing and initializing custom versions of Teams JavaScript client SDK is **unsupported**. This is applicable to any SPFx component, including web parts, extensions, adaptive cards, and libraries.
+- Although Teams JavaScript client SDK types are tied to the SPFx version used in the solution, the actual version loaded to the tenant may differ. We guarantee backward compatibility on our end. For example, a solution built with SPFx 1.14 will have types from Teams JavaScript client SDK v1.10.0, and SPFx v1.15.2 will have types from Teams JavaScript client SDK v1.12.1, but the actual loaded version of the Teams JavaScript client can be v2.1.0.
 
 ## See also
 

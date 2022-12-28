@@ -1,7 +1,8 @@
 ---
 title: ActivationDependencies element (FeatureDefinition complexType)
+description: Discusses the definition, elements and attributes for ActivationDependencies element (FeatureDefinition complexType).
 manager: soliver
-ms.date: 9/16/2015
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -17,7 +18,7 @@ ms.assetid: 79b463d1-7b48-a56d-f9b5-0b0a3f91375b
 
 ## Element information
 
-|   |   |
+| Name  | Details  |
 |---|---|
 | **Element type**  | FeatureActivationDependencyDefinitions |
 | **Namespace**  | `http://schemas.microsoft.com/sharepoint/` |
@@ -25,8 +26,8 @@ ms.assetid: 79b463d1-7b48-a56d-f9b5-0b0a3f91375b
 
 ## Definition
 
-```XML
-    <xs:element name="ActivationDependencies" type="FeatureActivationDependencyDefinitions" minOccurs="0" maxOccurs="1"></xs:element>
+```xml
+<xs:element name="ActivationDependencies" type="FeatureActivationDependencyDefinitions" minOccurs="0" maxOccurs="1"></xs:element>
 ```
 
 ## Elements and attributes
@@ -35,58 +36,16 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="feature-element-apphostwebfeatures.md">Feature</a></p></td>
-<td align="left"><p><a href="featuredefinition-complextype-apphostwebfeatures.md">FeatureDefinition</a></p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
+|                     Element                      |                                   Type                                   | Description |
+| ------------------------------------------------ | ------------------------------------------------------------------------ | ----------- |
+| [Feature](feature-element-apphostwebfeatures.md) | [FeatureDefinition](featuredefinition-complextype-apphostwebfeatures.md) |             |
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Type</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><a href="activationdependency-element-featureactivationdependencydefinitions-complextypea.md">ActivationDependency</a></p></td>
-<td align="left"><p><a href="featureactivationdependencydefinition-complextype-apphostwebfeatures.md">FeatureActivationDependencyDefinition</a></p></td>
-<td align="left"><p></p></td>
-</tr>
-</tbody>
-</table>
+|                                                   Element                                                   |                                                       Type                                                       | Description |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
+| [ActivationDependency](activationdependency-element-featureactivationdependencydefinitions-complextypea.md) | [FeatureActivationDependencyDefinition](featureactivationdependencydefinition-complextype-apphostwebfeatures.md) |             |
 
 ### Attributes
 
 None.
-
-<br/>
-
-<br/>

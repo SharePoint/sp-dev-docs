@@ -1,7 +1,7 @@
 ---
 title: Advanced formatting concepts
 description: Advanced formatting concepts
-ms.date: 06/28/2022
+ms.date: 08/24/2022
 ms.localizationpriority: high
 ---
 # Advanced formatting concepts
@@ -96,7 +96,7 @@ This example uses `customCardProps`, `openOnEvent`, `directionalHint` and `isBea
   "customCardProps": {
     "formatter": {
       "elmType": "div",
-      "txtContent": "Define your formatter options inside the customCarProps/formatter property"
+      "txtContent": "Define your formatter options inside the customCardProps/formatter property"
     },
     "openOnEvent": "hover",
     "directionalHint": "bottomCenter",

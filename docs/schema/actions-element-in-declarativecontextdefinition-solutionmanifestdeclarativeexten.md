@@ -1,7 +1,8 @@
 ---
 title: Actions element in DeclarativeContextDefinition
+description: Discusses the definition, elements and attributes for Actions element in DeclarativeContextDefinition.
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 07/12/2022
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -20,8 +21,8 @@ Lists the actions associated with the context definition.
 
 **Schema**: SolutionManifestDeclarativeExtensions
 
-```
-<Actions > </Actions>
+```xml
+<Actions> </Actions>
 ```
 
 ## Elements and attributes
@@ -34,50 +35,13 @@ None.
 
 ### Child elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">UrlAction element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>Enables you to compose a URL. You can embed one or more fields from the external content type's view into the URL.</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span sdata="link"><a href="codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md">CodeMethodAction element in Actions (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>Execute a custom code action or one of the predefined actions provided by Microsoft Business Connectivity Services (BCS).</p></td>
-</tr>
-</tbody>
-</table>
+| Element | Description |
+| --- | --- |
+| [UrlAction element in Actions (SolutionManifestDeclarativeExtensions Schema)](urlaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | Enables you to compose a URL. You can embed one or more fields from the external content type's view into the URL. |
+| [CodeMethodAction element in Actions (SolutionManifestDeclarativeExtensions Schema)](codemethodaction-element-in-actions-solutionmanifestdeclarativeextensions-schema.md) | Execute a custom code action or one of the predefined actions provided by Microsoft Business Connectivity Services (BCS). |
 
 ### Parent elements
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><p>Element</p></th>
-<th align="left"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p><span sdata="link"><a href="declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md">DeclarativeContextDefinition element (SolutionManifestDeclarativeExtensions Schema)</a></span></p></td>
-<td align="left"><p>The context definition that is associated with this external content type.</p></td>
-</tr>
-</tbody>
-</table>
-
-<br/>
-
-<br/>
+| Element | Description |
+| --- | --- |
+| [DeclarativeContextDefinition element (SolutionManifestDeclarativeExtensions Schema)](declarativecontextdefinition-element-solutionmanifestdeclarativeextensions-schem.md) | The context definition that is associated with this external content type. |

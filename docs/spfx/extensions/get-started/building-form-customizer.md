@@ -1,11 +1,11 @@
 ---
-title: Build your first Form customizer extension)
+title: Build your first Form customizer extension
 description: Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type.
-ms.date: 06/21/2022
+ms.date: 07/21/2022
 ms.custom: scenarios:getting-started
 ---
 
-# Build your first Form Customizer extension (preview)
+# Build your first Form Customizer extension
 
 Form customizers are SharePoint Framework components giving you an option to override the form experience in a list or library level by associating the component to the used content type. Form customizer components can be used in SharePoint Online, and you build them using  modern JavaScript tools and libraries.
 

@@ -1,7 +1,7 @@
 ---
 title: "Migration API What's new"
 description: "Learn about the new features and updates to the Migration API."
-ms.date: 06/28/2022
+ms.date: 11/20/2022
 ms.reviewer: jhendr
 author: JoanneHendrickson
 ms.author: jhendr
@@ -16,6 +16,12 @@ ms.custom: admindeeplinkSPO
 
 Check here to see what features or updates have been added to the Migration API. Here's a summary of what's included.
 
-##  Fixes
+## New requirement
 
-- **Changes to how Import API handles users**. As a response to issues arising from broken OneDrive scenarios when importing duplicate users, the API now blocks and detect duplicate user entries in UserGroup.xml. For details see: [Entering user identifiers in UserGroup.xml](/sharepoint/dev/apis/migration-api-overview#entering-user-identifiers-in-usergroup.xml).
+Beginning January 1, 2023, the SourceType field will be mandatory when calling the Migration API. Starting October 1st, 2022, a warning message will be sent if the field is missing.
+
+To learn more, including examples, see: **[SharePoint Import Migration API - ExportSettings.xml](/sharepoint/dev/apis/migration-api-overview#exportsettingsxml)**
+
+## Fixes
+
+- **Changes to how Import API handles users**. As a response to issues arising from broken OneDrive scenarios when importing duplicate users, the API now blocks and detect duplicate user entries in UserGroup.xml. For details see: [Entering user identifiers in UserGroup.xml](/sharepoint/dev/apis/migration-api-overview#entering-user-identifiers-in-usergroup.xml). 

@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 description: "This article provides in depth information on how to use the SPO Migration API."
-ms.date: 06/28/2022
+ms.date: 12/05/2022
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -17,7 +17,7 @@ The following API description is based upon use of the SharePoint Client Side Ob
 
 You can find latest version of the SharePoint Online Client Side Object Model (CSOM) package from the [NuGet gallery](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/). Use the ID `Microsoft.SharePointOnline.CSOM`.
 
-> [!Important]
+> [!IMPORTANT]
 > Files larger than 15 GB must now create the required checksum using [QuickXorHash](/onedrive/developer/code-snippets/quickxorhash). We have provided an example [here](#what-is-stored-in-those-azure-blob-containers).
 >
 > The QuickXorHash/Checksum has to be computed for the original file **before** encryption (if the file is being encrypted). This is different from the MD5hash requirement.
@@ -57,7 +57,8 @@ The required permissions are as follows in the Azure Storage API:
 (SharedAccessBlobPermissions.Read | SharedAccessBlobPermissions.List)
 ```
 
-**Note:** The change to enforce Read and List permissions on the SAS token is coming in a future build. Until then it will not be enforced. However, it is a best practice to use these values.
+> [!NOTE]
+> The change to enforce Read and List permissions on the SAS token is coming in a future build. Until then it will not be enforced. However, it is a best practice to use these values.
 
 All files in the container must have at least a single snapshot applied to them to ensure that no file modification is made by the customer during the import. Any file that does not have a snapshot will be skipped during import and have an error thrown, although the job will attempt to continue the import. The import pipeline will use the latest snapshot of the file available at the time of import. The following is an example of the code that might be used to create a snapshot on a file after it is uploaded to Azure Blob Storage:
 
@@ -286,7 +287,7 @@ SPMigrationJobState is an enumeration that tracks possible major states in the i
 
 ## Import Package Structure
 
-Package structure is based on a constrained version of the Content Deployment package schema. Documentation for the original full schema can be found at [docs.microsoft.com](../schema/content-migration-schemas.md). Until published on docs.microsoft.com, the constrained structure can be found in this document in the appendix.
+Package structure is based on a constrained version of the Content Deployment package schema. Documentation for the original full schema can be found in [Content migration schemas](../schema/content-migration-schemas.md). Until published on Microsoft Docs, the constrained structure can be found in this document in the appendix.
 
 |      XML file      |           Schema File           |                                                                                                                                                                                                                                                       Description                                                                                                                                                                                                                                                        |
 | ------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -310,6 +311,38 @@ The main requirement for the structure is that the FileValue references in the *
 The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](../schema/content-migration-schemas.md).
 
 The main requirement is that the ExportSettings `SiteUrl` value must be populated with a URL consistent with the source URL used for the rest of the import package. In the case of file shares as a source, the URL would be pre-specified to be the source URL in the rest of the package, whereas a package generated through an export operation at a source site would be its original source site collection URL.
+
+#### SourceType required
+
+Beginning January 1, 2023, the SourceType field will be mandatory when calling the Migration API. Starting October 1st, 2022, a warning message will be sent if the field is missing.
+
+Accepted SourceType values:
+
+- AmazonS3
+- AzureStorage
+- Box
+- Dropbox
+- Egnyte
+- FileShare
+- GoogleCloudStorage
+- GoogleDrive
+- MicrosoftStream
+- OneDrive
+- SharePointOnline
+- SharePointOnPremServer
+- Other
+
+When declaring to **Other**, include *DetailedSource* to provide us the detailed information. 
+
+**Example**:
+
+```powershell
+<ExportSettings xmlns="urn:deployment-exportsettings-schema" SiteUrl="https://some site url" FileLocation="some paths" IncludeSecurity="All" SourceType="Other" DetailedSource="My special source type not in the list"> 
+  <ExportObjects> 
+    <DeploymentObject Id="GUID for list" Type="List" ParentId="GUID for web" /> 
+  </ExportObjects> 
+</ExportSettings> 
+```
 
 ### LookupListMap.XML
 

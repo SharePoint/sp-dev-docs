@@ -1,7 +1,7 @@
 ---
 title: Building SharePoint Framework solutions, which use Microsoft Graph
 description: Getting started tutorial on using Microsoft Graph with SharePoint Framework solutions
-ms.date: 6/21/2022
+ms.date: 11/24/2022
 ms.localizationpriority: high
 ---
 
@@ -44,7 +44,8 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
     - **Do you want to allow the tenant admin the choice of being able to deploy the solution to all sites immediately without running any feature deployment or adding apps in sites?**: Yes
     - **Which type of client-side component to create?**: WebPart
-    - **Which framework would you like to use?**: No JavaScript framework
+    - **What is your Web part name?**: MyFirstGraphWebPart
+    - **Which framework would you like to use?**: No framework
 
     At this point, Yeoman installs the required dependencies and scaffolds the solution files. Creation of the solution might take a few minutes. Yeoman scaffolds the project to include your **MyFirstGraphWebPart** web part as well.
 
@@ -100,17 +101,17 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
 1. Add the following `import` statements after the existing `import` statements at the top fo the file:
 
     ```typescript
-    import { MSGraphClient } from '@microsoft/sp-http';
+    import { MSGraphClientV3 } from '@microsoft/sp-http';
     import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
     ```
 
-1. Update the `render()` method as follows. Notice how we're using the `MSGraphClient` object for the Microsoft Graph calls. This object abstracts the access token handling, so that as a developer, you can concentrate on your business logic.
+1. Update the `render()` method as follows. Notice how we're using the `MSGraphClientV3` object for the Microsoft Graph calls. This object abstracts the access token handling, so that as a developer, you can concentrate on your business logic.
 
     ```typescript
     public render(): void {
       this.context.msGraphClientFactory
       .getClient('3')
-      .then((client: MSGraphClient): void => {
+      .then((client: MSGraphClientV3): void => {
         // get information about the current user from the Microsoft Graph
         client
         .api('/me/messages')
@@ -119,21 +120,18 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
         .get((error, messages: any, rawResponse?: any) => {
 
           this.domElement.innerHTML = `
-          <div class="${ styles.myFirstGraphWebPart}">
-          <div class="${ styles.container}">
-            <div class="${ styles.row}">
-              <div class="${ styles.column}">
-                <span class="${ styles.title}">Welcome to SharePoint!</span>
-                <p class="${ styles.subTitle}">Use Microsoft Graph in SharePoint Framework.</p>
-                <div id="spListContainer" />
-              </div>
+          <div class="${styles.myFirstGraphWebPart}">
+            <div>
+                <h3>Welcome to SharePoint Framework!</h3>
+                <p>
+                    The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
+                </p>
             </div>
-          </div>
+            <div id="spListContainer" />
           </div>`;
 
           // List the latest emails based on what we got from the Graph
           this._renderEmailList(messages.value);
-
         });
       });
     }
@@ -145,7 +143,7 @@ In this case, we'll modify the code to use Microsoft Graph to get access on the 
     private _renderEmailList(messages: MicrosoftGraph.Message[]): void {
       let html: string = '';
       for (let index = 0; index < messages.length; index++) {
-        html += `<p class="${styles.description}">Email ${index + 1} - ${escape(messages[index].subject)}</p>`;
+        html += `<p class="${styles.welcome}">Email ${index + 1} - ${escape(messages[index].subject)}</p>`;
       }
 
       // Add the emails to the placeholder

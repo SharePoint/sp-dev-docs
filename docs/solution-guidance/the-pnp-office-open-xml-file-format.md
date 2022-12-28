@@ -1,7 +1,7 @@
 ---
 title: The PnP Office Open XML File format
 description: Describes the PnP Office Open XML File Format, outlines how to manually edit and create PnP files, and provides additional references.
-ms.date: 06/07/2022
+ms.date: 11/08/2022
 ms.localizationpriority: high
 ---
 
@@ -76,7 +76,7 @@ The easiest way to create a PnP file is to extract a template from a site and sp
 
 ```powershell
 Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yoursite
-Get-PnPProvisioningTemplate -Out myfile.pnp
+Get-PnPSiteTemplate -Out myfile.pnp
 ```
 
 [!INCLUDE [pnp-powershell](../../includes/snippets/open-source/pnp-powershell.md)]
@@ -88,17 +88,17 @@ This will however not give you the ability to modify the template easily. The be
 1. Extract a template as an XML file and provide the configuration file:
     ```powershell
     Connect-PnPOnline -Url https://yourtenant.sharepoint.com/sites/yoursite
-    Get-PnPProvisioningTemplate -Out myfile.xml -Configuration ./yourconfiguration.json
+    Get-PnPSiteTemplate -Out myfile.xml -Configuration ./yourconfiguration.json
     ```
 1. You will notice that one or more additional folders will have been created in your folder. These contain the actual files. When you open the XML file you'll notice ```<pnp:File />``` elements pointing to those files.
 1. Read the template into an in-memory object and save it as an PnP file:
     ```powershell
-    $template = Read-PnPProvisioningTemplate -Path myfile.xml
-    Save-PnPProvisioningTemplate -Out myfile.pnp -Template $template
+    $template = Read-PnPSiteTemplate -Path myfile.xml
+    Save-PnPSiteTemplate -Out myfile.pnp -Template $template
     ```
 
 > [!NOTE] 
-> You can also save a tenant template using PnP PowerShell substitute ```Read-PnPProvisioningTemplate``` with ```Read-PnPTenantTemplate``` and ```Save-PnPProvisioningTemplate``` with ```Save-PnPTenantTemplate```. Refer to [PnP Provisioning Tenant Template](pnp-provisioning-tenant-templates.md) for more information about Tenant templates.
+> You can also save a tenant template using PnP PowerShell substitute ```Read-PnPSiteTemplate``` with ```Read-PnPTenantTemplate``` and ```Save-PnPSiteTemplate``` with ```Save-PnPTenantTemplate```. Refer to [PnP Provisioning Tenant Template](pnp-provisioning-tenant-templates.md) for more information about Tenant templates.
 
 
 ## See also
