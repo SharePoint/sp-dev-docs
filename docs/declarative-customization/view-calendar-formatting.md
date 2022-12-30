@@ -17,8 +17,10 @@ Groups the command bar customization options. For details on `commandBarProps`, 
 - [Command bar customization syntax reference](./view-commandbar-formatting.md)
 
 ### List setup before creating a calendar view and applying a JSON formatting
+
 Before creating a new calendar view, a list should include all the required columns to be used in any JSON formatting.
-After creating a calendar view, if more columns are required, go to the [List Settings page](https://support.microsoft.com/en-us/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add them to a calendar view.
+
+After creating a calendar view, if more columns are required, go to the [List Settings page](https://support.microsoft.com/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add them to a calendar view.
 
 ### Conditional view formatting based on a specific column
 
@@ -26,7 +28,7 @@ The following image shows an example of conditional formatting applied to a cale
 
 ![SharePoint list calendar formatting](../images/calendar-view-formatting.png)
 
-**Note**: before creating a new calendar view, make sure the PROJECT column is already existing to apply the JSON code illustrated below. Alternatively, go the [List Settings page](https://support.microsoft.com/en-us/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add the single choice PROJECT column to a calendar view. 
+**Note**: before creating a new calendar view, make sure the PROJECT column is already existing to apply the JSON code illustrated below. Alternatively, go the [List Settings page](https://support.microsoft.com/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add the single choice PROJECT column to a calendar view. 
 
 In this example, **PROJECT** column has the following options:
 - Project A
