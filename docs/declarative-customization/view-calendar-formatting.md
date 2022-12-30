@@ -28,7 +28,8 @@ The following image shows an example of conditional formatting applied to a cale
 
 ![SharePoint list calendar formatting](../images/calendar-view-formatting.png)
 
-**Note**: before creating a new calendar view, make sure the PROJECT column is already existing to apply the JSON code illustrated below. Alternatively, go the [List Settings page](https://support.microsoft.com/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add the single choice PROJECT column to a calendar view. 
+> ![NOTE]
+> Before creating a new calendar view, make sure the PROJECT column is already existing to apply the JSON code illustrated below. Alternatively, go the [List Settings page](https://support.microsoft.com/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add the single choice PROJECT column to a calendar view. 
 
 In this example, **PROJECT** column has the following options:
 - Project A
