@@ -252,7 +252,7 @@ Now you can update the **GraphConsumer** React component under the **./src/webpa
    } from "office-ui-fabric-react";
    import * as React from "react";
 
-   import { AadHttpClient, MSGraphClient } from "@microsoft/sp-http";
+   import { AadHttpClient, MSGraphClientV3  } from "@microsoft/sp-http";
    import { escape } from "@microsoft/sp-lodash-subset";
 
    import { ClientMode } from "./ClientMode";
@@ -453,11 +453,11 @@ When you package and deploy your solution, you (or an admin) will have to grant 
 You can now implement the methods to consume the Microsoft Graph. You have two options:
 
 - Use the **AadHttpClient** client object
-- Use the **MSGraphClient** client object
+- Use the **MSGraphClientV3** client object
 
 The **AadHttpClient** client object is useful for consuming any REST API. You can use it to consume Microsoft Graph or any other third-party (or first-party) REST API.
 
-The **MSGraphClient** client object can consume the Microsoft Graph only. Internally it uses the **AadHttpClient** client object and supports the fluent syntax of the Microsoft Graph SDK.
+The **MSGraphClientV3** client object can consume the Microsoft Graph only. Internally it uses the **AadHttpClient** client object and supports the fluent syntax of the Microsoft Graph SDK.
 
 ### Using AadHttpClient
 
@@ -524,9 +524,9 @@ private _searchWithAad = (): void => {
 
 The `get()` method gets the URL of the OData request as the input argument. A successful request returns a JSON object with the response.
 
-### Using MSGraphClient
+### Using MSGraphClientV3
 
-If you're targeting Microsoft Graph, you can use the **MSGraphClient** client object, which provides a more fluent syntax.
+If you're targeting Microsoft Graph, you can use the **MSGraphClientV3** client object, which provides a more fluent syntax.
 
 The following example shows the implementation of the `_searchWithGraph()` method of the sample solution.
 
@@ -537,8 +537,8 @@ private _searchWithGraph = () : void => {
   console.log("Using _searchWithGraph() method");
 
   this.props.context.msGraphClientFactory
-    .getClient()
-    .then((client: MSGraphClient) => {
+    .getClient('3')
+    .then((client: MSGraphClientV3) => {
       // From https://github.com/microsoftgraph/msgraph-sdk-javascript sample
       client
         .api("users")
@@ -575,7 +575,7 @@ private _searchWithGraph = () : void => {
 }
 ```
 
-You get an instance of the `MSGraphClient` type by calling the `context.msGraphClientFactory.getClient()` method.
+You get an instance of the `MSGraphClientV3` type by calling the `context.msGraphClientFactory.getClient('3')` method.
 
 You then use the fluent API of the Microsoft Graph SDK to define the OData query that runs against the target Microsoft Graph endpoint.
 
