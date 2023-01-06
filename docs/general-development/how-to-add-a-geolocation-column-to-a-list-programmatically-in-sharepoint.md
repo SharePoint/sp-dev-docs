@@ -1,7 +1,7 @@
 ---
 title: Add a Geolocation column to a list programmatically in SharePoint
 description: Learn how to programmatically add a Geolocation column to a list in SharePoint. Integrate location information and maps in SharePoint lists and location-based websites by using the new Geolocation field creating your own Geolocation-based field type.
-ms.date: 11/22/2022
+ms.date: 01/06/2023
 ms.prod: sharepoint
 ms.assetid: f31a3594-c328-4731-b8eb-5da6b85103ad
 ms.localizationpriority: high
@@ -38,19 +38,19 @@ Follow these steps to add the Geolocation column to a list. This must be done pr
 1. Open PowerShell
 1. Connect to the site you wish to add the column to
 
-    ```csharp
+    ```powershell
     Connect-PnPOnline -url "https://TENANT.sharepoint.com/sites/SITEURL"
     ```
 
 1. Open the list you wish to add the column to
 
-    ```csharp
+    ```powershell
     $list = Get-PnPList -Identity "LISTNAME"
     ```
 
 1. #Add the Geolocation field - Change parameters as necessary
 
-    ```csharp
+    ```powershell
     Add-PnPField -List $list -Type GeoLocation -DisplayName "GeoLocationField" -InternalName "GeoLocationField" -AddToDefaultView -Required
     ```
 
