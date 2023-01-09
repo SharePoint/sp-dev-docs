@@ -67,7 +67,7 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
             "id": "Select Media",
             "title": "Upload Image",
             "parameters": {
-              "mediaType": "MediaType.Image"
+              "mediaType": MediaType.Image
             }
         }
     ]
@@ -84,7 +84,7 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
             "id": "Select Media",
             "title": "Upload Image",
             "parameters": {
-                  "mediaType": "MediaType.Image",
+                  "mediaType": MediaType.Image,
                   "allowMultipleCapture": true
             }
         }
@@ -102,7 +102,7 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
             "id": "Select Media",
             "title": "Upload Image",
             "parameters": {
-                "mediaType": "MediaType.Image",
+                "mediaType": MediaType.Image,
                 "supportedFileFormats": "jpg"
             }
         }
@@ -120,7 +120,7 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
             "id": "Select Media",
             "title": "Upload Image",
             "parameters": {
-                "mediaType": "MediaType.Image",
+                "mediaType": MediaType.Image,
                 "supportedFilemaxSizePerFileFormats": 1000
             }
         }
