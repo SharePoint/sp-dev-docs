@@ -1,7 +1,7 @@
 ---
 title: Media upload in Adaptive Card Extension
 description: Media upload is a new action that the SharePoint Adaptive Card Extension framework supports, which enables third party developers to upload data content to sharepoint.
-ms.date: 08/09/2022
+ms.date: 01/09/2023
 ---
 # Media upload in Adaptive Card Extension
 
