@@ -119,7 +119,7 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
 1. Bundle the solution with `gulp bundle --ship`.
           
-2. Package the solution with `gulp package-solution –ship`.
+2. Package the solution with `gulp package-solution --ship`.
    
 
 #### Create and configure app catalog site
