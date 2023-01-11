@@ -336,6 +336,14 @@ X-RequestDigest: "{form_digest_value}"
 "Contents of file"
 ```
 
+The following example shows how to **delete a file that is attached to a list item**.
+
+```http
+DELETE https://{site_url}/_api/web/lists/getbytitle('{list_title}')/items({item_id})/AttachmentFiles('{file_name}')
+Authorization: "Bearer " + accessToken
+Accept: "application/json;odata=verbose"
+```
+
 ## See also
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
