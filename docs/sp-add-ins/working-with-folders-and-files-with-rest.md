@@ -1,7 +1,7 @@
 ---
 title: Working with folders and files with REST
 description: Perform basic create, read, update, and delete (CRUD) operations on folders and files with the SharePoint REST interface.
-ms.date: 08/18/2022
+ms.date: 01/12/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -334,6 +334,14 @@ X-HTTP-Method: "PUT"
 X-RequestDigest: "{form_digest_value}"
 
 "Contents of file"
+```
+
+The following example shows how to **delete a file that is attached to a list item**.
+
+```http
+DELETE https://{site_url}/_api/web/lists/getbytitle('{list_title}')/items({item_id})/AttachmentFiles('{file_name}')
+Authorization: "Bearer " + accessToken
+Accept: "application/json;odata=verbose"
 ```
 
 ## See also
