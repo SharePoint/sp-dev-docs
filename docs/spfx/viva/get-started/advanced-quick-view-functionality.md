@@ -1,7 +1,7 @@
 ---
 title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
-ms.date: 09/08/2022
+ms.date: 01/12/2023
 ms.localizationpriority: high
 ---
 # Advanced Quick View Functionality
