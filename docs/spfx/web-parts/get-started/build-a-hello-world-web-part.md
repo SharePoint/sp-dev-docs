@@ -42,6 +42,16 @@ At this point, Yeoman creates the project scaffolding (folders & files) and inst
 
 When the project scaffolding and dependency install process are complete, Yeoman will display a message similar to the following indicating it was successful:
 
+      _=+#####!
+   ###########|       .-----------------------------------.
+   ###/    (##|(@)    |          Congratulations!         |
+   ###  ######|   \   |   Solution webpart-1 is created.  |
+   ###/   /###|   (@) |  Run gulp serve to play with it!  |
+   #######  ##|   /   '-----------------------------------'
+   ###     /##|(@)
+   ###########|
+      **=+####!
+
 > [!IMPORTANT]
 > NPM may display warnings and error messages during the installation of dependencies while it runs the `npm install` command. You can safely ignore these log warnings & error messages.
 >
