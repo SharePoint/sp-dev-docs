@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 02/10/2022
+ms.date: 01/19/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -42,15 +42,17 @@ At this point, Yeoman creates the project scaffolding (folders & files) and inst
 
 When the project scaffolding and dependency install process are complete, Yeoman will display a message similar to the following indicating it was successful:
 
-      _=+#####!
-   ###########|       .-----------------------------------.
-   ###/    (##|(@)    |          Congratulations!         |
-   ###  ######|   \   |   Solution webpart-1 is created.  |
-   ###/   /###|   (@) |  Run gulp serve to play with it!  |
-   #######  ##|   /   '-----------------------------------'
-   ###     /##|(@)
-   ###########|
-      **=+####!
+```console
+_=+#####!
+###########|       .-----------------------------------.
+###/    (##|(@)    |          Congratulations!         |
+###  ######|   \   |   Solution webpart-1 is created.  |
+###/   /###|   (@) |  Run gulp serve to play with it!  |
+#######  ##|   /   '-----------------------------------'
+###     /##|(@)
+###########|
+**=+####!
+```
 
 > [!IMPORTANT]
 > NPM may display warnings and error messages during the installation of dependencies while it runs the `npm install` command. You can safely ignore these log warnings & error messages.
