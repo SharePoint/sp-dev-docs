@@ -123,7 +123,7 @@ Next, you need to deploy the package that was generated to the app catalog.
 
     ![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png)
 
-3. Select **Deploy**.
+3. Select **Enable app**.
 
 Notice that you can see if there's any exceptions or issues in the package by looking the **App Package Error Message** column in the app catalog.
 
