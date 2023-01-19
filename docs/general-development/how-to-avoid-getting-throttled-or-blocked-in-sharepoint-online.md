@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 11/08/2022
+ms.date: 01/19/2023
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
@@ -33,7 +33,7 @@ For requests that a user performs directly in the browser, SharePoint Online red
 For requests that an application makes, including [Microsoft Graph](/graph), CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
 
 - HTTP 429 indicates the calling application sent too many requests in a time window and exceeded a predetermined limit.
-- HTTP 503 indicates the service isn't ready to handle the request. The common cause is that the service is experiencing temporary load spikes then expected.
+- HTTP 503 indicates the service isn't ready to handle the request. The common cause is that the service is experiencing more temporary load spikes than expected.
 
 In both cases, a `Retry-After` header is included in the response indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling.
 
