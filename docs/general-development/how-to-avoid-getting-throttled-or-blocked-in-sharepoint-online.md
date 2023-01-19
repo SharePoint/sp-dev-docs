@@ -33,7 +33,7 @@ For requests that a user performs directly in the browser, SharePoint Online red
 For requests that an application makes, including [Microsoft Graph](/graph), CSOM or REST calls, SharePoint Online returns HTTP status code 429 ("Too many requests") or 503 ("Server Too Busy") and the requests will fail.
 
 - HTTP 429 indicates the calling application sent too many requests in a time window and exceeded a predetermined limit.
-- HTTP 503 indicates the service isn't ready to handle the request. The common cause is that the service is experiencing temporary load spikes then expected.
+- HTTP 503 indicates the service isn't ready to handle the request. The common cause is that the service is experiencing more temporary load spikes than expected.
 
 In both cases, a `Retry-After` header is included in the response indicating how long the calling application should wait before retrying or making a new request. Throttled requests count towards usage limits, so failure to honor `Retry-After` may result in more throttling.
 
