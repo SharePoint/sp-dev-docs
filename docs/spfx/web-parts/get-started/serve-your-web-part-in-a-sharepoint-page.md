@@ -1,7 +1,7 @@
 ---
 title: Deploy your client-side web part to a SharePoint page (Hello World part 3)
 description: Deploy your client-side web part to SharePoint and see it working on a modern SharePoint page.
-ms.date: 02/10/2022
+ms.date: 01/26/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -123,7 +123,7 @@ Next, you need to deploy the package that was generated to the app catalog.
 
     ![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png)
 
-3. Select **Deploy**.
+3. Select **Enable app**.
 
 Notice that you can see if there's any exceptions or issues in the package by looking the **App Package Error Message** column in the app catalog.
 
