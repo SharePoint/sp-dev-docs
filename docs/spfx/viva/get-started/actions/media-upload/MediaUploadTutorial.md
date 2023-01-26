@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the select media action
 description: Step by step guide on how to create an Adaptive Card Extension with the select media action.
-ms.date: 07/25/2022
+ms.date: 01/26/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with select media action
@@ -101,7 +101,7 @@ public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined
     {
       title: strings.UploadPNG,
       action: {
-        type: 'VivaAction.SelectMedia'
+        type: 'VivaAction.SelectMedia',
         parameters: {
             mediaType: MediaType.Image
         }
@@ -224,7 +224,7 @@ Add the following properties to the `IQuickViewData` interface:
 filesUploaded: string;
 ```
 
-and then add the following two lines in the returned object of `data` getter:
+and then add the following line in the returned object of `data` getter:
 
 ```typescript
 filesUploaded: this.state.filesUploaded
