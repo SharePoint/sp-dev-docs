@@ -1,7 +1,7 @@
 ---
 title: Building Microsoft Teams Tabs using SharePoint Framework
 description: You can build your Microsoft Teams tabs using SharePoint Framework and utilize the tooling
-ms.date: 11/14/2022
+ms.date: 01/27/2023
 ---
 # Building Microsoft Teams Tabs using SharePoint Framework
 
@@ -103,7 +103,7 @@ There's an alternative way to deploy your solution, which will for instance allo
 The page context in a web part contains a reference to the Teams JavaScript SDK so that you can easily get access on the Teams context when your web part is rendered as a tab.
 
 ```javascript
-this.context.sdks.microsoftTeams.teamJs.app.getContext()
+this.context.sdks.microsoftTeams.teamsJs.app.getContext()
 ```
 
 > [!NOTE]
