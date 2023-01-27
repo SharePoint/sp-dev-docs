@@ -428,6 +428,8 @@
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator for the SharePoint Framework
       href: spfx/yeoman-generator-for-spfx-intro.md
+    - name: Configure SASS processing during builds
+      href: spfx/toolchain/configure-sass.md
     - name: Microsoft Graph Toolkit
       href: spfx/use-microsoft-graph-toolkit.md
   - name: Debugging
@@ -455,7 +457,7 @@
     - name: SharePoint 2019 & SE support
       href: spfx/sharepoint-2019-support.md
     - name: SharePoint 2016 support
-      href: spfx/sharepoint-2016-support.md      
+      href: spfx/sharepoint-2016-support.md
   - name: Release notes & roadmap
     items:
     - name: Overview
