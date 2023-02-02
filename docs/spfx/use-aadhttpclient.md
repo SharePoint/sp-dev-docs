@@ -1,7 +1,7 @@
 ---
 title: Connect to Azure AD-secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 06/13/2022
+ms.date: 01/31/2023
 ms.localizationpriority: high
 ---
 
@@ -18,7 +18,7 @@ Client-side applications that are incapable of storing a secret, such as SharePo
 Developers building client-side solutions are responsible for implementing authorization by using the OAuth implicit flow in their application. In SharePoint Framework solutions, that's already done as part of the framework through **MSGraphClient** and **AadHttpClient**, both of which are introduced in SharePoint Framework v1.4.1.
 
 > [!NOTE]
-> If you build solutions on a version of the SharePoint Framework earlier than v1.4.1, you can still connect to resources secured with Azure AD. In this case, you need to implement the OAuth implicit flow by directly using [Microsoft identity platfomr authentication libraries](https://learn.microsoft.com/en-us/azure/active-directory/develop/reference-v2-libraries). For more information, see [Connect to API secured with Azure Active Directory](./web-parts/guidance/connect-to-api-secured-with-aad.md).
+> If you build solutions on a version of the SharePoint Framework earlier than v1.4.1, you can still connect to resources secured with Azure AD. In this case, you need to implement the OAuth implicit flow by directly using [Microsoft identity platform authentication libraries](/azure/active-directory/develop/reference-v2-libraries). For more information, see [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 As part of the SharePoint Framework, a specific process is defined for how developers can request permissions and administrators can manage permissions to resources secured with Azure AD. The following schema illustrates this process.
 
