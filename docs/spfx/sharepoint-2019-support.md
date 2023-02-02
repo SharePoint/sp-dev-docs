@@ -66,13 +66,13 @@ Follow these steps for web part development and deployment with SharePoint Frame
    
    Ensure the following three baseline packages are available:
    
-    :::image type="content" source="viva/get-started/actions/media-upload/img/Picture1.png" alt-text="This is Yoeman":::
+   :::image type="content" source="../images/screenshot_1.png" alt-text="This is screenshot 1.":::
 
 4. Click **SharePoint 2019 onwards, including SharePoint Online**.
 
    Once the solution is created, click `package.json` to check if the SharePoint Framework version is 1.4.1.
    
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-2.png" alt-text="this is picture 2":::
+   :::image type="content" source="../images/screenshot_2.png" alt-text="This is screenshot 2.":::
 
 ### Verify SharePoint Framework web part on local SharePoint workbench
 
@@ -82,7 +82,7 @@ Follow these steps for web part development and deployment with SharePoint Frame
    
    `workbench.aspx` opens, you can add your web part to the page.
    
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-3.png" alt-text="This is picture 3":::
+   :::image type="content" source="../images/screenshot_3.png" alt-text="This is screenshot 3.":::
 
 ### Deploy SharePoint Framework solution to the SharePoint Server
 
@@ -105,7 +105,7 @@ Ensure the following service applications are enabled on the SharePoint Server:
 
 In Central Admin site, you can create App Management Service application and Managed Metadata Web Service application by clicking **Application Management --> Manage service applications**.
 
-:::image type="content" source="viva/get-started/actions/media-upload/img/picture-4.png" alt-text="This is picture 4":::
+:::image type="content" source="../images/screenshot_4.png" alt-text="This is screenshot 4.":::
 
 To create SharePoint Foundation Subscription Settings Service, use the following PowerShell command:
 
@@ -130,7 +130,7 @@ To create and configure App Catalog site, follow these steps:
 
    Create a local admin as user01.
    
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-5.png" alt-text="This is picture 5.":::
+   :::image type="content" source="../images/screenshot_5.png" alt-text="This is screenshot 5.":::
 
 2. Create the app catalog site by clicking **Web Application**. 
 3. Click **Create a new app catalog site**, and then click **OK**.
@@ -144,7 +144,7 @@ To configure App URLs, follow these steps:
 
 1. From the **Central Administration** site, go to **Apps** and then click **Configure App URLs**.
 
-  :::image type="content" source="viva/get-started/actions/media-upload/img/picture-6.png" alt-text="this is picture 6.":::
+      :::image type="content" source="../images/screenshot_8.png" alt-text="This is screenshot 8.":::
 
 2. Configure the App domain and App prefix.
 
@@ -153,11 +153,10 @@ To configure App URLs, follow these steps:
 Follow these steps to upload the SharePoint Framework package to the app catalog to make it available on all sites:
 
 1. From the SharePoint App Catalog site, click **Apps for SharePoint**.
-2. Click **Upload** to add SharePoint Framework package from *\sharepoint\solution* location.
-   
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-7.png" alt-text="this is picture 7.":::
-
+2. Click **Upload** to add SharePoint Framework package from *\sharepoint\solution* location. 
 3. Click **Deploy**.
+
+   :::image type="content" source="../images/screenshot_9.png" alt-text="This is screenshot 9.":::
 
 #### Add SharePoint Framework solution to modern SharePoint site 
 
@@ -165,15 +164,16 @@ Follow these steps to add your SharePoint Framework solution to modern SharePoin
 
 1. From the Modern SharePoint site, click **Site Contents --> New --> App**.
 
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-8.png" alt-text="this is image 8.":::
+   
+   :::image type="content" source="../images/screenshot_10.png" alt-text="This is screenshot 10.":::
 
 2. Add your SharePoint Framework solution to this site by clicking your **SPFx solution**. 
 
-   :::image type="content" source="viva/get-started/actions/media-upload/img/image-9.png" alt-text="this is image 9":::
+   :::image type="content" source="../images/screenshot_11.png" alt-text="This is screenshot 11.":::
    
    You can view the web part in Site contents list after adding it to the site collection.
    
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-10.png" alt-text="this is picture 10.":::
+   :::image type="content" source="../images/screenshot_12.png" alt-text="This is screenshot 12.":::
 
 #### Add SharePoint Framework web part to modern page
 
@@ -182,11 +182,11 @@ Follow these steps to add your SharePoint Framework web part to the modern page:
 1. Open an existing or a new modern page.
 2. Click **Edit**, and then click the **+** sign to add your SharePoint Framework web part to the page. 
    
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-11.png" alt-text="this is picture 11.":::
+   :::image type="content" source="../images/screenshot_13.png" alt-text="This is screenshot 13.":::
 
 3. You can view the added web part on the page.
    
-   :::image type="content" source="viva/get-started/actions/media-upload/img/picture-12.png" alt-text="This is picture 12.":::
+   :::image type="content" source="../images/screenshot_14.png" alt-text="This is screenshot 14.":::
  
 ## Determine which version was used for a solution
 
