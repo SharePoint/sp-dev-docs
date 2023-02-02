@@ -1,12 +1,13 @@
 ---
-title: SharePoint Framework development with SharePoint Server 2019 & SharePoint Server SE
-description: SharePoint Server 2019 supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
+title: SharePoint Framework development with SharePoint Server 2019 & SharePoint Server Subscription Edition
+description: SharePoint Server 2019 and SharePoint Server Subscription Edition (SE) both support SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
 ms.date: 06/10/2022
 ms.localizationpriority: high
 ---
-# SharePoint Framework development with SharePoint Server 2019 & SharePoint Server SE
 
-SharePoint Server 2019 supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
+# SharePoint Framework development with SharePoint Server 2019 & SharePoint Server Subscription Edition
+
+SharePoint Server 2019 and SharePoint Server Subscription Edition (SE) both support SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
 
 > [!IMPORTANT]
 > SharePoint Server Subscription Edition (SE) has all the same dependencies and requirements for the SharePoint Framework as SharePoint Server 2019.
@@ -27,18 +28,18 @@ If Internet access isn't available for the development machines, you can set up 
 
 The [Team-based development on the SharePoint Framework](team-based-development-on-sharepoint-framework.md) guidance document includes different options for development environment setup including when you might need to support multiple SharePoint Framework versions.
 
-### Node.js, Gulp CLI, and Yeoman versions
+### Node.js, gulp-cli, and Yeoman versions
 
-The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SharePoint Framework. In these cases, you may need to install specific versions of the tools. We recommend you install Node.js v8.9.4, gulp v3.9.1 and Yeoman v2.0.6.
+The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SharePoint Framework. In these cases, you may need to install specific versions of the tools. We recommend you install Node.js v8.9.4, gulp v3.9.1, and Yeoman v2.0.6.
 
 ## Manuals for web part development and deployment with SharePoint Framework
 
 Follow these steps for web part development and deployment with SharePoint Framework:
 
-- Prepare the environment for SharePoint Framework development
-- Develop SharePoint Framework web part
-- Verify SharePoint Framework web part on local SharePoint workbench
-- Deploy SharePoint Framework solution to the SharePoint Server
+1. Prepare the environment for SharePoint Framework development
+2. Develop SharePoint Framework web part
+3. Verify SharePoint Framework web part on local SharePoint workbench
+4. Deploy SharePoint Framework solution to the SharePoint Server
 
 ### Prepare the environment for SharePoint Framework development
 
@@ -52,7 +53,7 @@ Follow these steps for web part development and deployment with SharePoint Frame
    - `npm install -g yo@2.0.6` 
 3. Install Yeoman SharePoint Generator
    
-   npm install `-g @microsoft/generator-sharepoint@1.9.1`. Although not the only option, version `1.9.1` can function appropriately.
+   `npm install3 -g @microsoft/generator-sharepoint@1.9.1`. Although not the only option, version `1.9.1` can function appropriately.
 
 ### Develop SharePoint Framework web part
 
@@ -68,9 +69,9 @@ Follow these steps for web part development and deployment with SharePoint Frame
    
    :::image type="content" source="../images/screenshot_1.png" alt-text="This is screenshot 1.":::
 
-4. Click **SharePoint 2019 onwards, including SharePoint Online**.
+4. Select **SharePoint 2019 onwards, including SharePoint Online**.
 
-   Once the solution is created, click `package.json` to check if the SharePoint Framework version is 1.4.1.
+   Once the solution is created, select `package.json` to check if the SharePoint Framework version is 1.4.1.
    
    :::image type="content" source="../images/screenshot_2.png" alt-text="This is screenshot 2.":::
 
@@ -88,11 +89,11 @@ Follow these steps for web part development and deployment with SharePoint Frame
 
 You can deploy the SharePoint Framework solution to the SharePoint Server in these steps:
 
-- Create service applications
-- Prepare .sppkg package
-- Create and configure app catalog site
-- Add SharePoint Framework solution to modern SharePoint site
-- Add SharePoint Framework web part to modern page
+1. Create service applications
+2. Prepare .sppkg package
+3. Create and configure app catalog site
+4. Add SharePoint Framework solution to modern SharePoint site
+5. Add SharePoint Framework web part to modern page
 
 #### Create service applications
 
@@ -103,7 +104,7 @@ Ensure the following service applications are enabled on the SharePoint Server:
 - Microsoft SharePoint Foundation Subscription Settings Service
 - Managed Metadata Web Service
 
-In Central Admin site, you can create App Management Service application and Managed Metadata Web Service application by clicking **Application Management --> Manage service applications**.
+In Central Admin site, you can create App Management Service application and Managed Metadata Web Service application by selecting **Application Management --> Manage service applications**.
 
 :::image type="content" source="../images/screenshot_4.png" alt-text="This is screenshot 4.":::
 
@@ -126,15 +127,15 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
 To create and configure App Catalog site, follow these steps:
 
-1. From the **Central Administration** site, go to **Apps** and then click **Manage App Catalog**.
+1. From the **Central Administration** site, go to **Apps** and then select **Manage App Catalog**.
 
    Create a local admin as user01.
    
    :::image type="content" source="../images/screenshot_5.png" alt-text="This is screenshot 5.":::
 
-2. Create the app catalog site by clicking **Web Application**. 
-3. Click **Create a new app catalog site**, and then click **OK**.
-4. On the Create App Catalog page, enter site information.
+2. Create the app catalog site by selecting **Web Application**. 
+3. Select **Create a new app catalog site**, and then select **OK**.
+4. On the **Create App Catalog** page, enter site information.
 
    > [!NOTE]
    > You need to use the above created local admin account as site collection administrator.
@@ -142,7 +143,7 @@ To create and configure App Catalog site, follow these steps:
 
 To configure App URLs, follow these steps:
 
-1. From the **Central Administration** site, go to **Apps** and then click **Configure App URLs**.
+1. From the **Central Administration** site, go to **Apps** and then select **Configure App URLs**.
 
       :::image type="content" source="../images/screenshot_8.png" alt-text="This is screenshot 8.":::
 
@@ -152,9 +153,9 @@ To configure App URLs, follow these steps:
 
 Follow these steps to upload the SharePoint Framework package to the app catalog to make it available on all sites:
 
-1. From the SharePoint App Catalog site, click **Apps for SharePoint**.
-2. Click **Upload** to add SharePoint Framework package from *\sharepoint\solution* location. 
-3. Click **Deploy**.
+1. From the SharePoint App Catalog site, select **Apps for SharePoint**.
+2. Select **Upload** to add SharePoint Framework package from *\sharepoint\solution* location. 
+3. Select **Deploy**.
 
    :::image type="content" source="../images/screenshot_9.png" alt-text="This is screenshot 9.":::
 
@@ -162,12 +163,12 @@ Follow these steps to upload the SharePoint Framework package to the app catalog
 
 Follow these steps to add your SharePoint Framework solution to modern SharePoint site:
 
-1. From the Modern SharePoint site, click **Site Contents --> New --> App**.
+1. From the Modern SharePoint site, select **Site Contents --> New --> App**.
 
    
    :::image type="content" source="../images/screenshot_10.png" alt-text="This is screenshot 10.":::
 
-2. Add your SharePoint Framework solution to this site by clicking your **SPFx solution**. 
+2. Add your SharePoint Framework solution to this site by selecting your **SPFx solution**. 
 
    :::image type="content" source="../images/screenshot_11.png" alt-text="This is screenshot 11.":::
    
@@ -180,7 +181,7 @@ Follow these steps to add your SharePoint Framework solution to modern SharePoin
 Follow these steps to add your SharePoint Framework web part to the modern page:
 
 1. Open an existing or a new modern page.
-2. Click **Edit**, and then click the **+** sign to add your SharePoint Framework web part to the page. 
+2. Select **Edit**, and then select the **+** sign to add your SharePoint Framework web part to the page. 
    
    :::image type="content" source="../images/screenshot_13.png" alt-text="This is screenshot 13.":::
 
@@ -211,7 +212,7 @@ For more information, see [issue #1002](https://github.com/SharePoint/sp-dev-doc
 
 ## See also
 
-- [SharePoint Framework Overview](sharepoint-framework-overview.md)
-- [SharePoint Server 2019 development platform](../general-development/sharepoint-2019-development-platform.md)
-- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2019](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2019/)
-- [Definitive guide for developers: SharePoint Framework for SharePoint Server SE](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-subscription-edition/)
+- [SharePoint Framework Overview](sharepoint-framework-overview.md).
+- [SharePoint Server 2019 development platform](../general-development/sharepoint-2019-development-platform.md).
+- [Definitive guide for developers: SharePoint Framework for SharePoint Server 2019](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-2019/).
+- [Definitive guide for developers: SharePoint Framework for SharePoint Server SE](https://www.voitanos.io/blog/definitive-guide-sharepoint-framework-sharepoint-server-subscription-edition/).
