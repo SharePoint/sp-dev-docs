@@ -15,13 +15,12 @@ Groups the command bar customization options. For details on `commandBarProps`, 
 
 ## See also
 - [Command bar customization syntax reference](./view-commandbar-formatting.md)
+---
+### Pre-requisite : List setup before creating a calendar view and applying a JSON formatting
 
-### List setup before creating a calendar view and applying a JSON formatting
-
-Before creating a new calendar view, a list should include all the required columns to be used in any JSON formatting.
-
-After creating a calendar view, if more columns are required, go to the [List Settings page](https://support.microsoft.com/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add them to a calendar view.
-
+- Before creating a new calendar view, a list should include all the required columns to be used in any JSON formatting.
+- After creating a calendar view, if more columns are required, go to the [List Settings page](https://support.microsoft.com/office/edit-list-settings-4d35793b-246e-42a3-990c-563a83795b7f) to create and add them to a calendar view.
+---
 ### Conditional view formatting based on a specific column
 
 The following image shows an example of conditional formatting applied to a calendar view, based on a single choice column named **PROJECT**:
