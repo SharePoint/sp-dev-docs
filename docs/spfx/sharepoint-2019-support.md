@@ -37,31 +37,31 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
 Follow these steps for web part development and deployment with SharePoint Framework:
 
 1. Prepare the environment for SharePoint Framework development
-2. Develop SharePoint Framework web part
-3. Verify SharePoint Framework web part on local SharePoint workbench
-4. Deploy SharePoint Framework solution to the SharePoint Server
+1. Develop SharePoint Framework web part
+1. Verify SharePoint Framework web part on local SharePoint workbench
+1. Deploy SharePoint Framework solution to the SharePoint Server
 
 ### Prepare the environment for SharePoint Framework development
 
 1. Install Node.js
 
-   Install `Node.js v8.9.4`; if you have `nvm` installed, use `nvm` to install `8.9.4`. Verify the version if you have `Node.js` installed.
-2. Install Yeoman and Gulp
+   Install **Node.js v8.9.4**; if you have **nvm** installed, use **nvm** to install **8.9.4**. Verify the version if you have **Node.js** installed.
+1. Install Yeoman and Gulp
    
    Specify these versions:
-   - `npm install -g gulp@3.9.1` 
-   - `npm install -g yo@2.0.6` 
-3. Install Yeoman SharePoint Generator
+   - **npm install -g gulp@3.9.1** 
+   - **npm install -g yo@2.0.6** 
+1. Install Yeoman SharePoint Generator
    
-   `npm install3 -g @microsoft/generator-sharepoint@1.9.1`. Although not the only option, version `1.9.1` can function appropriately.
+   **npm install3 -g @microsoft/generator-sharepoint@1.9.1**. Although not the only option, version **1.9.1** can function appropriately.
 
 ### Develop SharePoint Framework web part
 
-1. Create a directory for SharePoint Framework solution with `md spfx-webpart-onprem`.
+1. Create a directory for SharePoint Framework solution with **md spfx-webpart-onprem**.
 
-2. Navigate to the above created directory with `cd spfx-webpart-onprem`.   
+1. Navigate to the above created directory with **cd spfx-webpart-onprem**.   
 
-3. Run Yeoman SharePoint Generator to create the solution with `yo @microsoft/sharepoint`. 
+1. Run Yeoman SharePoint Generator to create the solution with **yo @microsoft/sharepoint**. 
 
    The Yeoman SharePoint generator will allow you to provide details regarding the intended solution.
    
@@ -69,9 +69,9 @@ Follow these steps for web part development and deployment with SharePoint Frame
    
    :::image type="content" source="../images/screenshot_1.png" alt-text="This is screenshot 1.":::
 
-4. Select **SharePoint 2019 onwards, including SharePoint Online**.
+1. Select **SharePoint 2019 onwards, including SharePoint Online**.
 
-   Once the solution is created, select `package.json` to check if the SharePoint Framework version is 1.4.1.
+   Once the solution is created, select **package.json** to check if the SharePoint Framework version is 1.4.1.
    
    :::image type="content" source="../images/screenshot_2.png" alt-text="This is screenshot 2.":::
 
@@ -79,9 +79,9 @@ Follow these steps for web part development and deployment with SharePoint Frame
 
 1. Browse to the **SPFx solution** directory.
  
-2. Run `gulp serve`.
+1. Run **gulp serve**.
    
-   `workbench.aspx` opens, you can add your web part to the page.
+   **workbench.aspx** opens, you can add your web part to the page.
    
    :::image type="content" source="../images/screenshot_3.png" alt-text="This is screenshot 3.":::
 
@@ -90,14 +90,12 @@ Follow these steps for web part development and deployment with SharePoint Frame
 You can deploy the SharePoint Framework solution to the SharePoint Server in these steps:
 
 1. Create service applications
-2. Prepare .sppkg package
-3. Create and configure app catalog site
-4. Add SharePoint Framework solution to modern SharePoint site
-5. Add SharePoint Framework web part to modern page
+1. Prepare .sppkg package
+1. Create and configure app catalog site
+1. Add SharePoint Framework solution to modern SharePoint site
+1. Add SharePoint Framework web part to modern page
 
 #### Create service applications
-
-**Prerequisites**
 
 Ensure the following service applications are enabled on the SharePoint Server:
 - App Management Service 
@@ -118,9 +116,9 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
 #### Prepare .sppkg package
 
-1. Bundle the solution with `gulp bundle --ship`.
+1. Bundle the solution with **gulp bundle --ship**.
           
-2. Package the solution with `gulp package-solution --ship`.
+1. Package the solution with **gulp package-solution --ship**.
    
 
 #### Create and configure app catalog site
@@ -133,9 +131,9 @@ To create and configure App Catalog site, follow these steps:
    
    :::image type="content" source="../images/screenshot_5.png" alt-text="This is screenshot 5.":::
 
-2. Create the app catalog site by selecting **Web Application**. 
-3. Select **Create a new app catalog site**, and then select **OK**.
-4. On the **Create App Catalog** page, enter site information.
+1. Create the app catalog site by selecting **Web Application**. 
+1. Select **Create a new app catalog site**, and then select **OK**.
+1. On the **Create App Catalog** page, enter site information.
 
    > [!NOTE]
    > You need to use the above created local admin account as site collection administrator.
@@ -147,15 +145,15 @@ To configure App URLs, follow these steps:
 
       :::image type="content" source="../images/screenshot_8.png" alt-text="This is screenshot 8.":::
 
-2. Configure the App domain and App prefix.
+1. Configure the App domain and App prefix.
 
 #### Upload the package to app catalog
 
 Follow these steps to upload the SharePoint Framework package to the app catalog to make it available on all sites:
 
 1. From the SharePoint App Catalog site, select **Apps for SharePoint**.
-2. Select **Upload** to add SharePoint Framework package from *\sharepoint\solution* location. 
-3. Select **Deploy**.
+1. Select **Upload** to add SharePoint Framework package from *\sharepoint\solution* location. 
+1. Select **Deploy**.
 
    :::image type="content" source="../images/screenshot_9.png" alt-text="This is screenshot 9.":::
 
@@ -168,7 +166,7 @@ Follow these steps to add your SharePoint Framework solution to modern SharePoin
    
    :::image type="content" source="../images/screenshot_10.png" alt-text="This is screenshot 10.":::
 
-2. Add your SharePoint Framework solution to this site by selecting your **SPFx solution**. 
+1. Add your SharePoint Framework solution to this site by selecting your **SPFx solution**. 
 
    :::image type="content" source="../images/screenshot_11.png" alt-text="This is screenshot 11.":::
    
@@ -181,11 +179,11 @@ Follow these steps to add your SharePoint Framework solution to modern SharePoin
 Follow these steps to add your SharePoint Framework web part to the modern page:
 
 1. Open an existing or a new modern page.
-2. Select **Edit**, and then select the **+** sign to add your SharePoint Framework web part to the page. 
+1. Select **Edit**, and then select the **+** sign to add your SharePoint Framework web part to the page. 
    
    :::image type="content" source="../images/screenshot_13.png" alt-text="This is screenshot 13.":::
 
-3. You can view the added web part on the page.
+1. You can view the added web part on the page.
    
    :::image type="content" source="../images/screenshot_14.png" alt-text="This is screenshot 14.":::
  
