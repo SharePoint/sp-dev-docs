@@ -24,7 +24,7 @@ The ACE action for Select Media is: `VivaAction.SelectMedia`.
 
 The parameters that it takes are as follows:
 
-- `mediaType`: Currently set as image by default. Audio option will be supported in future.
+- `mediaType`: Currently set as image by default. Audio and documents, such as PDFs, are supported as well.
 - `allowMultipleCapture` [OPTIONAL]: Enables multiple files to be added at once.
   - This is enabled by default.
 - `maxSizePerFile` [OPTIONAL]: The limitation for the file size to be uploaded, suggested limitation is 1 MB.
@@ -51,6 +51,8 @@ The parameters that it takes are as follows:
     supportedFileFormats?: string[];
 }
 ```
+
+_Note: If a user uploads a file that is not supported in the format parameters, an error code of **InCorrectFileFormat** will be raised_
 
 ## Tutorial and Examples
 
