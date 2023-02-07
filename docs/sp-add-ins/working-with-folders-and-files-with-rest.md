@@ -242,7 +242,7 @@ X-RequestDigest: "{form_digest_value}"
 
 ## Working with large files by using REST
 
-When you need to upload a binary file that is larger than 1.5 megabytes (MB), the REST interface is your only option. For a code example that shows you how to upload a binary file that is smaller than 1.5 MB by using the SharePoint JavaScript object model, see [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md). The maximum size of a binary file that you can create with REST is 2 gigabytes (GB).
+When you need to upload a binary file that is larger than 1.5 megabytes (MB), the REST interface is your only option. For a code example that shows you how to upload a binary file that is smaller than 1.5 MB by using the SharePoint JavaScript object model, see [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md). The maximum size of a binary file that you can create with this REST endpoing is 262,144,000 bytes. 
 
 The following example shows how to **create a large binary file**.
 
