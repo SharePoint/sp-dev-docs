@@ -1,7 +1,7 @@
 ---
 title: Term mapping during cross site page transformation
 description: Explains how to the default term mapping works when transforming pages + also explains how to use a custom term mapping file
-ms.date: 09/02/2023
+ms.date: 02/09/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---

@@ -1,7 +1,7 @@
 ---
 title: Overview of the used web part mapping
 description: Explains which web parts are transformed and how
-ms.date: 09/02/2023
+ms.date: 02/09/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
