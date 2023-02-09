@@ -1,7 +1,7 @@
 ---
 title: Modernize Delve blogs and classic blogs
 description: Modernize your Delve blogs and classic blogs
-ms.date: 06/22/2021
+ms.date: 09/02/2023
 ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
