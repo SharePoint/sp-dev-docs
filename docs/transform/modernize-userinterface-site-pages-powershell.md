@@ -18,9 +18,9 @@ The page transformation engine can also be used from PowerShell. This allows it 
 
 [!code-powershell[transformpages](../../sp-dev-modernization/Scripts/PageTransformation/Convert-WikiAndWebPartPages.ps1 "Transform pages to modern pages using PowerShell")]
 
-## Options for the ConvertTo-PnPClientSidePage cmdlet
+## Options for the ConvertTo-PnPPage cmdlet
 
-The **ConvertTo-PnPClientSidePage** cmdlet is the key cmdlet to modernize a given page. Below table lists the command line parameters that you can use to control the page transformation via this cmdlet.
+The **ConvertTo-PnPPage** cmdlet is the key cmdlet to modernize a given page. Below table lists the command line parameters that you can use to control the page transformation via this cmdlet.
 
 Parameter | Default | Supported For | Description
 ----------|---------|---------------|------------

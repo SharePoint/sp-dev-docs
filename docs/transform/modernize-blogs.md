@@ -89,10 +89,10 @@ To run blog page transformation you do need to use [PnP PowerShell](https://aka.
 Connect-PnPOnline -Url https://contoso.sharepoint.com/sites/classicblog
 
 # Convert the blog post with title 'Financial results Q1 2019'
-ConvertTo-PnPClientSidePage -BlogPage -Identity "Financial results Q1 2019" -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/modernblog -LogType File -LogVerbose -LogFolder "c:\temp" -KeepPageCreationModificationInformation -PostAsNews -SetAuthorInPageHeader -CopyPageMetadata
+ConvertTo-PnPPage -BlogPage -Identity "Financial results Q1 2019" -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/modernblog -LogType File -LogVerbose -LogFolder "c:\temp" -KeepPageCreationModificationInformation -PostAsNews -SetAuthorInPageHeader -CopyPageMetadata
 ```
 
-Above `ConvertTo-PnPClientSidePage` cmdlet will read the classic blog page with title "Financial results Q1 2019" and create this as a modern page in the previously created modern blog site (https://contoso.sharepoint.com/sites/modernblog). The blog page transformation will:
+Above `ConvertTo-PnPPage` cmdlet will read the classic blog page with title "Financial results Q1 2019" and create this as a modern page in the previously created modern blog site (https://contoso.sharepoint.com/sites/modernblog). The blog page transformation will:
 
 - Retain the classic blog page author, editor, create and modified information (`-KeepPageCreationModificationInformation`)
 - Set the classic blog page author as author in the modern blog page header (`-SetAuthorInPageHeader`)
@@ -117,10 +117,10 @@ Below snippet shows how to convert a Delve blog post in a modern page.
 Connect-PnPOnline -Url https://contoso.sharepoint.com/portals/personal/joedoe
 
 # Convert the Delve blog post with title 'Financial results Q1 2019'
-ConvertTo-PnPClientSidePage -DelveBlogPage -Identity "Financial results Q1 2019" -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/modernblog -LogType File -LogVerbose -LogFolder "c:\temp" -KeepPageCreationModificationInformation -PostAsNews -SetAuthorInPageHeader -DelveKeepSubTitle
+ConvertTo-PnPPage -DelveBlogPage -Identity "Financial results Q1 2019" -Overwrite -TargetWebUrl https://contoso.sharepoint.com/sites/modernblog -LogType File -LogVerbose -LogFolder "c:\temp" -KeepPageCreationModificationInformation -PostAsNews -SetAuthorInPageHeader -DelveKeepSubTitle
 ```
 
-Above `ConvertTo-PnPClientSidePage` cmdlet will read the Delve blog page with title "Financial results Q1 2019" and create this as a modern page in the previously created modern blog site (https://contoso.sharepoint.com/sites/modernblog). The blog page transformation will:
+Above `ConvertTo-PnPPage` cmdlet will read the Delve blog page with title "Financial results Q1 2019" and create this as a modern page in the previously created modern blog site (https://contoso.sharepoint.com/sites/modernblog). The blog page transformation will:
 
 - Retain the Delve blog page author, editor, create and modified information (`-KeepPageCreationModificationInformation`)
 - Set the Delve blog page author as author in the modern blog page header (`-SetAuthorInPageHeader`)

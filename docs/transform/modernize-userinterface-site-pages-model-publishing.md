@@ -326,7 +326,7 @@ Now that the assembly has been defined you can use your functions and selectors 
 
 ### I want to keep the source page creation information
 
-When using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md) then use the `-KeepPageCreationModificationInformation` cmdlet in the `ConvertTo-PnPClientSidePage` cmdlet. When you're using the [.Net approach](modernize-userinterface-site-pages-dotnet.md) then set the `KeepPageCreationModificationInformation` parameter to true. Using this option will give the target page the Created, Modified, Author and Editor field values from the source page.
+When using the [PnP PowerShell approach](modernize-userinterface-site-pages-powershell.md) then use the `-KeepPageCreationModificationInformation` cmdlet in the `ConvertTo-PnPPage` cmdlet. When you're using the [.Net approach](modernize-userinterface-site-pages-dotnet.md) then set the `KeepPageCreationModificationInformation` parameter to true. Using this option will give the target page the Created, Modified, Author and Editor field values from the source page.
 
 > [!Note]
 > When you, as part of page transformation, promote the page as news or publish the page the Editor field will be set to the account running page transformation

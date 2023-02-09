@@ -120,7 +120,7 @@ By default a [Text](https://support.office.com/article/add-text-and-tables-to-yo
 
 ### SummaryLinks web part
 
-Summary links html is transformed to [QuickLinks](https://support.office.com/article/use-the-quick-links-web-part-e1df7561-209d-4362-96d4-469f85ab2a82) by default, but optionally you can generate html which then is shown using using the [Text](https://support.office.com/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part. To use HTML you need to set the needed mapping property: when using the `ConvertTo-PnPClientSidePage` [PnP PowerShell](https://aka.ms/sppnp-powershell) cmdlet you can specify the `-SummaryLinksToHtml` flag. When you're using .Net then you can set the flag as shown in below sample
+Summary links html is transformed to [QuickLinks](https://support.office.com/article/use-the-quick-links-web-part-e1df7561-209d-4362-96d4-469f85ab2a82) by default, but optionally you can generate html which then is shown using using the [Text](https://support.office.com/article/add-text-and-tables-to-your-page-with-the-text-web-part-729c0aa1-bc0d-41e3-9cde-c60533f2c801) web part. To use HTML you need to set the needed mapping property: when using the `ConvertTo-PnPPage` [PnP PowerShell](https://aka.ms/sppnp-powershell) cmdlet you can specify the `-SummaryLinksToHtml` flag. When you're using .Net then you can set the flag as shown in below sample
 
 ```csharp
 PageTransformationInformation pti = new PageTransformationInformation(page)
