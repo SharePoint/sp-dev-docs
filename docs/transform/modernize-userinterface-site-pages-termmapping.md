@@ -1,7 +1,7 @@
 ---
 title: Term mapping during cross site page transformation
 description: Explains how to the default term mapping works when transforming pages + also explains how to use a custom term mapping file
-ms.date: 03/06/2020
+ms.date: 02/09/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -44,4 +44,4 @@ Some things to note:
 - You can either choose a mapping based upon a path (a | delimited string of term labels) or choose to define the mapping based upon source and target term id's
 - If you're transforming from SharePoint 2010 then you'll need to specify **DEFAULT** as source term group name
 
-Creating the mapping file is the first step, to actually use it you need to specify the file via the `TermMappingFile` parameter to the `ConvertTo-PnPClientSidePage` cmdlet if you're using PnP PowerShell. If you're using .Net then you can specify the file via the  `TermMappingFile` attribute of the .Net page transformation configuration objects (`PageTransformationInformation` and `PublishingPageTransformationInformation`).
+Creating the mapping file is the first step, to actually use it you need to specify the file via the `TermMappingFile` parameter to the `ConvertTo-PnPPage` cmdlet if you're using PnP PowerShell. If you're using .Net then you can specify the file via the  `TermMappingFile` attribute of the .Net page transformation configuration objects (`PageTransformationInformation` and `PublishingPageTransformationInformation`).

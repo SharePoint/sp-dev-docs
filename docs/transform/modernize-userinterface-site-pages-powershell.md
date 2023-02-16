@@ -1,7 +1,7 @@
 ---
 title: Transform classic pages to modern pages using PowerShell
 description: Explains how to transform classic wiki and web part pages into modern pages using the SharePoint PowerShell
-ms.date: 07/08/2021
+ms.date: 02/09/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -18,9 +18,9 @@ The page transformation engine can also be used from PowerShell. This allows it 
 
 [!code-powershell[transformpages](../../sp-dev-modernization/Scripts/PageTransformation/Convert-WikiAndWebPartPages.ps1 "Transform pages to modern pages using PowerShell")]
 
-## Options for the ConvertTo-PnPClientSidePage cmdlet
+## Options for the ConvertTo-PnPPage cmdlet
 
-The **ConvertTo-PnPClientSidePage** cmdlet is the key cmdlet to modernize a given page. Below table lists the command line parameters that you can use to control the page transformation via this cmdlet.
+The **ConvertTo-PnPPage** cmdlet is the key cmdlet to modernize a given page. Below table lists the command line parameters that you can use to control the page transformation via this cmdlet.
 
 Parameter | Default | Supported For | Description
 ----------|---------|---------------|------------
