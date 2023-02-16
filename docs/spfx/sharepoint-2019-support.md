@@ -29,36 +29,39 @@ The [Team-based development on the SharePoint Framework](team-based-development-
 
 The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions don't match the same dependency matrix for the latest versions of SharePoint Framework. In these cases, you may need to install specific versions of the tools. We recommend you install Node.js v8.9.4, gulp v3.9.1, and Yeoman v2.0.6.
 
+> [!IMPORTANT]
+> The Yeoman generator for the SharePoint Framework, starting with v1.13.0, only supports projects for SharePoint Online. Learn more about this change in the [SharePoint Framework v1.13 release notes](release-1.13.md). However, SPFx 1.4.1 is only supported on Node.js v6 and Node.js v8. Therefore, you need to get the latest version of the Yeoman generator for the SharePoint Framework (v1.10.0) that works on the same version of Node.js (v6 or v8) that SPFx v1.4.1 is supported on. Solution structure is created then with the v1.4.1 version packages as long as you select the environmen target properly in the Yeoman generator flow.
+
 ## Manuals for web part development and deployment with SharePoint Framework
-
-Follow these steps for web part development and deployment with SharePoint Framework:
-
-1. Prepare the environment for SharePoint Framework development
-1. Develop SharePoint Framework web part
-1. Verify SharePoint Framework web part on local SharePoint workbench
-1. Deploy SharePoint Framework solution to the SharePoint Server
 
 ### Prepare the environment for SharePoint Framework development
 
 1. Install Node.js
 
-   Install **Node.js v8.9.4**; if you have **nvm** installed, use **nvm** to install **8.9.4**. Verify the version if you have **Node.js** installed.
+   Install [Node.js v8.9.4](https://nodejs.org/download/release/v8.9.4/); if you have installed nvm, you can use nvm to install `nvm install 8.9.4`
+ 
+   if you have installed Node.js, check the version
+ 
+   `node-v`
 1. Install Yeoman and Gulp
    
    Specify these versions:
-   - **npm install -g gulp@3.9.1** 
-   - **npm install -g yo@2.0.6** 
+   - `npm install -g gulp@3.9.1` 
+   - `npm install -g yo@2.0.6` 
 1. Install Yeoman SharePoint Generator
    
-   **npm install3 -g @microsoft/generator-sharepoint@1.9.1**. Although not the only option, version **1.9.1** can function appropriately.
+   `npm install-g @microsoft/generator-sharepoint@1.10.0`
 
 ### Develop SharePoint Framework web part
 
-1. Create a directory for SharePoint Framework solution with **md spfx-webpart-onprem**.
+1. Create a directory for SharePoint Framework solution. 
+   `md spfx-webpart-onprem`
 
-1. Navigate to the above created directory with **cd spfx-webpart-onprem**.   
+1. Navigate to the above created directory.
+   `cd spfx-webpart-onprem`   
 
-1. Run Yeoman SharePoint Generator to create the solution with **yo @microsoft/sharepoint**. 
+1. Run Yeoman SharePoint Generator to create the solution.
+    `yo @microsoft/sharepoint`
 
    The Yeoman SharePoint generator will allow you to provide details regarding the intended solution.
    
@@ -68,7 +71,7 @@ Follow these steps for web part development and deployment with SharePoint Frame
 
 1. Select **SharePoint 2019 onwards, including SharePoint Online**.
 
-   Once the solution is created, select **package.json** to check if the SharePoint Framework version is 1.4.1.
+   Once the solution is created, select package.json to check if the SharePoint Framework version is 1.4.1.
    
    :::image type="content" source="../images/screenshot_2.png" alt-text="This is screenshot 2.":::
 
@@ -76,21 +79,13 @@ Follow these steps for web part development and deployment with SharePoint Frame
 
 1. Browse to the **SPFx solution** directory.
  
-1. Run **gulp serve**.
+1. Run `gulp serve`.
    
-   **workbench.aspx** opens, you can add your web part to the page.
+   workbench.aspx opens, you can add your web part to the page.
    
    :::image type="content" source="../images/screenshot_3.png" alt-text="This is screenshot 3.":::
 
 ### Deploy SharePoint Framework solution to the SharePoint Server
-
-You can deploy the SharePoint Framework solution to the SharePoint Server in these steps:
-
-1. Create service applications
-1. Prepare .sppkg package
-1. Create and configure app catalog site
-1. Add SharePoint Framework solution to modern SharePoint site
-1. Add SharePoint Framework web part to modern page
 
 #### Create service applications
 
@@ -113,10 +108,13 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
 #### Prepare .sppkg package
 
-1. Bundle the solution with **gulp bundle --ship**.
+1. Bundle the solution.
+   `gulp bundle --ship`
           
-1. Package the solution with **gulp package-solution --ship**.
-   
+1. Package the solution.
+   `gulp package-solution --ship`
+
+    Verify SharePoint Framework web part on local SharePoint workbench 
 
 #### Create and configure app catalog site
 
@@ -154,7 +152,7 @@ Follow these steps to upload the SharePoint Framework package to the app catalog
 
    :::image type="content" source="../images/screenshot_9.png" alt-text="This is screenshot 9.":::
 
-#### Add SharePoint Framework solution to modern SharePoint site 
+### Add SharePoint Framework solution to modern SharePoint site 
 
 Follow these steps to add your SharePoint Framework solution to modern SharePoint site:
 
@@ -171,7 +169,7 @@ Follow these steps to add your SharePoint Framework solution to modern SharePoin
    
    :::image type="content" source="../images/screenshot_12.png" alt-text="This is screenshot 12.":::
 
-#### Add SharePoint Framework web part to modern page
+### Add SharePoint Framework web part to modern page
 
 Follow these steps to add your SharePoint Framework web part to the modern page:
 
