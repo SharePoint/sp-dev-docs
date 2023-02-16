@@ -1,7 +1,7 @@
 ---
 title: SharePoint site theming
 description: New options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections.
-ms.date: 09/20/2022
+ms.date: 02/16/2023
 ms.localizationpriority: high
 ---
 
@@ -75,7 +75,7 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
     * You are at least a site collection owner on the site where you want to disable modern site themes
     * You have read about [Execution Policies](https://technet.microsoft.com/library/dd347641.aspx)
 
-2. Download the latest PnP PowerShell from https://github.com/SharePoint/PnP-PowerShell/releases.
+2. Download the latest [PnP PowerShell](https://github.com/pnp/powershell).
 
     [!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
