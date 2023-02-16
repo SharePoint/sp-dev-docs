@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.16 release notes
 description: Release notes for the SharePoint Framework v1.16 release
-ms.date: 11/15/2022
+ms.date: 2/16/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.16 release notes
@@ -17,7 +17,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 Install the latest release of the SharePoint Framework (SPFx) by including the **@latest** tag:
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ``` 
 
 ## Upgrading projects from v1.15.2 to v1.16
