@@ -54,13 +54,16 @@ The dependencies for SPFx v1.4.1 frameworks, tools, and the associated versions 
 
 ### Develop SharePoint Framework web part
 
-1. Create a directory for SharePoint Framework solution. 
+1. Create a directory for SharePoint Framework solution.
+ 
    `md spfx-webpart-onprem`
 
 1. Navigate to the above created directory.
+
    `cd spfx-webpart-onprem`   
 
 1. Run Yeoman SharePoint Generator to create the solution.
+
     `yo @microsoft/sharepoint`
 
    The Yeoman SharePoint generator will allow you to provide details regarding the intended solution.
@@ -109,9 +112,11 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 #### Prepare .sppkg package
 
 1. Bundle the solution.
+
    `gulp bundle --ship`
           
 1. Package the solution.
+
    `gulp package-solution --ship`
 
     Verify SharePoint Framework web part on local SharePoint workbench 
