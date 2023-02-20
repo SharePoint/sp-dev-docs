@@ -1,7 +1,7 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
 description: Create a new web part project and preview it.
-ms.date: 01/19/2023
+ms.date: 02/20/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -66,7 +66,6 @@ For information about troubleshooting any errors, see [Known issues](../../known
 Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your web part, such as:
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Atom](https://atom.io)
 - [Webstorm](https://www.jetbrains.com/webstorm)
 
 The SharePoint Framework documentation uses Visual Studio Code in the steps and examples. Visual Studio Code (VS Code) is a lightweight but powerful source code editor from Microsoft that runs on your desktop. VS Code available for Windows, macOS, and Linux. It comes with built-in support for JavaScript, TypeScript, Node.js, and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP).
