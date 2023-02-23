@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.17 preview release notes
 description: Release notes for the SharePoint Framework v1.17 preview release
-ms.date: 2/16/2023
+ms.date: 2/23/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17 preview release notes
