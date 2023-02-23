@@ -21,13 +21,13 @@ Install the latest preview release of the SharePoint Framework (SPFx) by includi
 npm install @microsoft/generator-sharepoint@next --global
 ```
 
-## Upgrading projects from v1.15.2 to v1.16
+## Upgrading projects from v1.16.1 to v1.17
 
 1. In the project's **package.json** file, identify all SPFx v1.16.1 packages. For each SPFx package:
     1. Uninstall the existing v1.16.1 package:
 
         ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.15.2
+        npm uninstall @microsoft/{spfx-package-name}@1.16.1
         ```
 
     2. Install the new v1.16 package:
