@@ -10,14 +10,13 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-- beta.0 **Released:** February 23, 2023
+- beta.1 **Released:** February 23, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Install the latest preview version
 
-Install the latest preview release of the SharePoint Framework (SPFx) by including the **@next** tag:
-
+Install the latest preview release of the SharePoint Framework (SPFx) by including the **@next**
 ```console
 npm install @microsoft/generator-sharepoint@next --global
 ```
