@@ -318,29 +318,35 @@ finally {
 
 Add a [Managed Identity](/azure/app-service/overview-managed-identity) to the Azure Function and give this identity access (GET permission on Secrets) to the [KeyVault](/azure/app-service/app-service-key-vault-references).
 
-Below there is a slightly different call to the same AuthenticationManager method where we pass an actual certificate instead of a path to the certificate. An extra function is added to retrieve to certificate from the KeyVault using the managed identity of the Azure Function, this retrieval is seamless and transparent since the 'magic' happens in the AzureServiceTokenProvider.
+Below there is a slightly different call to the same AuthenticationManager method where we pass an actual certificate instead of a path to the certificate. An extra function is added to retrieve to certificate from the KeyVault using the managed identity of the Azure Function, this retrieval is seamless and transparent since the 'magic' happens in the DefaultAzureCredential.
+
+This sample uses two libraries to access the Key Vault:
+
+- [Azure.Identity](/dotnet/api/azure.identity) for authenticating to the Key Vault
+- [Azure.Security.KeyVault.Secrets](/dotnet/api/azure.security.keyvault.secrets) for getting the certificate
 
 ```csharp
-static void Main(string[] args)
+using Azure.Identity;
+using Azure.Security.KeyVault.Secrets;
+using Microsoft.SharePoint.Client;
+using System.Security.Cryptography.X509Certificates;
+
+using (var cc = new PnP.Framework.AuthenticationManager(
+    "<application id>",
+    GetKeyVaultCertificate("kv-spo", "AzureAutomationSPOAccess"),
+    "contoso.onmicrosoft.com").GetContext("https://contoso.sharepoint.com/sites/demo"))
 {
-	using (var cc = new AuthenticationManager(
-        "<application id>",
-        GetKeyVaultCertificate("kv-spo", "AzureAutomationSPOAccess"),
-        "contoso.onmicrosoft.com").GetContext("https://contoso.sharepoint.com/sites/demo"))
-    {
-		cc.Load(cc.Web, p => p.Title);
-		cc.ExecuteQuery();
-		log.Info("Via PnP, we have site: " + cc.Web.Title);
-    };
-}
+    cc.Load(cc.Web, p => p.Title);
+    cc.ExecuteQuery();
+    log.Info("Via PnP, we have site: " + cc.Web.Title);
+};
 
-
-internal static X509Certificate2 GetKeyVaultCertificate(string keyvaultName, string name)
+static X509Certificate2 GetKeyVaultCertificate(string keyvaultName, string name)
 {
     // Some steps need to be taken to make this work
     // 1. Create a KeyVault and upload the certificate
     // 2. Give the Function App the permission to GET certificates via Access Policies in the KeyVault
-    // 3. Call an explicit access token request to the management resource to https://vault.azure.net and use the URL of our Keyvault in the GetSecretMethod
+    // 3. Call an explicit access token request to the management resource to https://vault.azure.net and use the URL of our Keyvault in the GetSecret method
     Uri keyVaultUri = new Uri($"https://{keyvaultName}.vault.azure.net/");
 
     var client = new SecretClient(keyVaultUri, new DefaultAzureCredential());
