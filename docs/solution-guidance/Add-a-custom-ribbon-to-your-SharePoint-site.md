@@ -1,7 +1,7 @@
 ---
 title: Add a custom ribbon to your SharePoint site
 description: Describes how to add a custom ribbon to your SharePoint site and outlines how to use the Core.RibbonCommands application.
-ms.date: 06/13/2022
+ms.date: 28/02/2023
 ms.localizationpriority: high
 ---
 # Add a custom ribbon to your SharePoint site
@@ -22,7 +22,7 @@ The  [Core.RibbonCommands](https://github.com/SharePoint/PnP/tree/master/Samples
 ## Before you begin
 <a name="sectionSection0"> </a>
 
-To get started, download the  [Core.RibbonCommands](https://github.com/SharePoint/PnP/tree/master/Samples/Core.RibbonCommands) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP/tree/dev) project on GitHub.
+To get started, download the  [Core.RibbonCommands](https://github.com/SharePoint/PnP/tree/master/Samples/Core.RibbonCommands) sample add-in from the [Office 365 Developer patterns and practices](https://github.com/SharePoint/PnP) project on GitHub.
 
 ## Using the Core.RibbonCommands app
 <a name="sectionSection1"> </a>
