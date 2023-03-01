@@ -1,13 +1,13 @@
 ---
 title: Overview of the SharePoint Framework (SPFx)
 description: SPFx is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams.
-ms.date: 09/08/2021
+ms.date: 03/01/2023
 ms.localizationpriority: high
 ---
 
 # Overview of the SharePoint Framework
 
-The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready.
+The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams and Microsoft Viva. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready.
 
 The SPFx is the recommended SharePoint customization and extensibility model for developers. Due to tight integration between SharePoint Online, Microsoft Teams, and Microsoft Viva Connections, developers can also use SPFx to customize and extend all of these products. In fact, the SPFx is the only extensibility and customization option for Viva Connections.
 
@@ -33,6 +33,9 @@ The following are some of the key features included as part of the SPFx:
 The runtime model improves on the Script Editor web part. It includes a robust client API, an HttpClient object that handles authentication to SharePoint and Microsoft 365, contextual information, easy property definition and configuration, and more.
 
 If you work primarily with C#, you want to learn more about client-side JavaScript development. Most of your existing JavaScript knowledge related to SharePoint, however, is transferable, as the data models haven't changed, and you’ll use the same [REST services](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md) depending on your requirements. If you're a C# developer, TypeScript is a nice transition into the JavaScript world. The choice of IDE is up to you. Many developers like to use the cross-platform IDE [Visual Studio Code](https://code.visualstudio.com).
+
+> [!NOTE]
+> All supported scenarios for SharePoint Framework are included in the documentation. Any scenario which is not covered in the documentation, is considered as unsupported. If you need to validate the supportability of your planned scenario, please use the available Microsoft support channels.
 
 ## SharePoint Framework license
 
