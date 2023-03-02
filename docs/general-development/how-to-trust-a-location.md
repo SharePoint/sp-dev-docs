@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 keywords: how to,howdoi,howto,trusted location
 f1_keywords:
 - how to,howdoi,howto,trusted location
-ms.prod: sharepoint
 ms.assetid: 0f396c0b-f578-4d1a-9e6b-a75f352265ab
 ms.localizationpriority: medium
 ---

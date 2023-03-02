@@ -2,7 +2,6 @@
 title: Reference threads and digest threads in SharePoint social feeds
 description: Describes reference threads and digest threads, which may be included in the collection of threads that make up a social feed in SharePoint.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 58e68fb2-ba40-4861-912f-355e119a1c41
 ms.localizationpriority: medium
 ---

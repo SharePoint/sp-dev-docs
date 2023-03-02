@@ -2,7 +2,6 @@
 title: SharePoint Online Suite Navigation control
 description: Learn about master page markup for the Suite Navigation control in classic SharePoint Online.
 ms.date: 04/08/2022
-ms.prod: sharepoint
 ms.assetid: ba93e5c0-e591-48d0-a716-a08ec7ef6cea
 ms.localizationpriority: medium
 ---

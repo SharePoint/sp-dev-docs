@@ -2,7 +2,6 @@
 title: eDiscovery in SharePoint
 description: Describes eDiscovery features in SharePoint and provides details on prerequisites, site holds, the eDiscovery programming model, and eDiscovery types.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 45cb324a-75f5-444d-a0fa-5c223df19016
 ms.localizationpriority: high
 ---

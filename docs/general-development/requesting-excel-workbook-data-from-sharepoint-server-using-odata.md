@@ -2,7 +2,6 @@
 title: Requesting Excel workbook data from SharePoint Server using OData
 description: OData uses URLs to request information from a resource. You craft the URL in a specific way, using query options, to return the information that you are requesting.
 ms.date: 01/27/2021
-ms.prod: sharepoint
 ms.assetid: 2f846e96-6c9e-4ed2-9602-4081ad0ab135
 ms.localizationpriority: high
 ---

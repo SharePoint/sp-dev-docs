@@ -2,7 +2,6 @@
 title: Use Feature upgrade to apply new SharePoint master pages when upgrading from SharePoint 2010
 description: Learn how to reset a custom master page during the FeatureUpgrading event when you're upgrading a SharePoint site from the 2010 to the 2013 compatibility mode.
 ms.date: 01/06/2020
-ms.prod: sharepoint
 ms.assetid: de3169f1-715e-4f80-bfbf-caea744e2a0b
 ms.localizationpriority: medium
 ---

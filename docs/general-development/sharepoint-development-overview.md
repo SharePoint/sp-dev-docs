@@ -2,7 +2,6 @@
 title: SharePoint development overview
 description: Provides an overview of the SharePoint development platform and provides resources for developing with the SharePoint Framework.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
 ms.localizationpriority: high
 ---

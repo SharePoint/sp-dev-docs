@@ -2,7 +2,6 @@
 title: Create report editors for PerformancePoint Services in SharePoint
 description: Learn how to create the editor component of a custom report extension for PerformancePoint Services.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 # Create report editors for PerformancePoint Services in SharePoint

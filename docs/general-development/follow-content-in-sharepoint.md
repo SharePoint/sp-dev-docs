@@ -2,7 +2,6 @@
 title: Follow content in SharePoint
 description: Describes the APIs for programmatically following content in SharePoint and provides lists of SharePoint APIs.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 30e68cd6-6e55-4cf9-afd6-7139b0a97288
 ms.localizationpriority: medium
 ---

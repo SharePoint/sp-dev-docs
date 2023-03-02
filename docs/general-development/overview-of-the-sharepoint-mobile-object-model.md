@@ -2,7 +2,6 @@
 title: Overview of the SharePoint mobile object model
 description: Learn about the new public classes in the SharePoint server object model and Silverlight client object model that are used to develop integrated solutions for SharePoint and Windows Phone 7.5.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 72319846-d02d-49e7-b830-48eb8f5715cb
 ms.localizationpriority: medium
 ---

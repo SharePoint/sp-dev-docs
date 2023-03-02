@@ -2,7 +2,6 @@
 title: Step 1 Creating a ECMAScript Text File
 description: Provides steps and describes how to create an ECMAScript (JavaScript, JScript) text file and how to save the text file to a trusted document library.
 ms.date: 06/14/2022
-ms.prod: sharepoint
 ms.assetid: f1c2b359-5b0d-467d-a863-6732e23863b9
 ms.localizationpriority: medium
 ---

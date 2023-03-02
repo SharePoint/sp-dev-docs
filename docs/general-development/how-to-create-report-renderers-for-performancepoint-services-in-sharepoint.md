@@ -2,7 +2,6 @@
 title: Create report renderers for PerformancePoint Services in SharePoint
 description: Learn how to create the renderer component in a custom report extension for PerformancePoint Services.
 ms.date: 12/29/2020
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 

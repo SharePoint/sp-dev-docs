@@ -2,7 +2,6 @@
 title: Access external data by using REST in SharePoint
 description: Describes how to access external data from SharePoint by using REST URLs for BCS and provides an example that sets up an external list.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 0663cc8c-a736-434d-9858-6ce12ce7f748
 ms.localizationpriority: high
 ---

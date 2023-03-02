@@ -2,7 +2,6 @@
 title: Embed images, videos, and documents in posts in SharePoint
 description: Learn how to add  SocialAttachment objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint social feeds.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 9927b9e7-daea-4261-80fa-4cc25f489e22
 ms.localizationpriority: medium
 ---

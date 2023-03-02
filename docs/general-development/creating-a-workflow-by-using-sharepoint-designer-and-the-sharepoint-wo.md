@@ -2,7 +2,6 @@
 title: Creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform
 description: This is an article with links to learn about creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: c05e0127-c6f5-48b8-b8f2-cbcc30149c8b
 ms.localizationpriority: high
 ---

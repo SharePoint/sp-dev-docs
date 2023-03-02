@@ -2,7 +2,6 @@
 title: Authentication, authorization, and security in SharePoint
 ms.date: 06/13/2022
 description: Describes some of the enhancements added to SharePoint including updates in authentication, authorization, and security.
-ms.prod: sharepoint
 ms.assetid: 8734790c-eb75-4d78-9604-7cc23b33b693
 ms.localizationpriority: high
 ---

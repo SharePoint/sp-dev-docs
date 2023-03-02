@@ -2,7 +2,6 @@
 title: Understanding how to package and deploy workflow in SharePoint
 description: Provides an overview of the workflow packaging capabilities and describes how to package and deploy workflows in SharePoint Designer 2013.
 ms.date: 06/14/2022
-ms.prod: sharepoint
 ms.assetid: 545b4930-ac05-4c9d-9980-5818cb800cf1
 ms.localizationpriority: high
 ---

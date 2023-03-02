@@ -2,7 +2,6 @@
 title: Create a Windows Phone SharePoint list app
 description: Create a Windows Phone app in Visual Studio based on the Windows Phone SharePoint List Application template.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 3e40c475-f4c1-4a4f-a3e5-1a55f814d272
 ms.localizationpriority: medium
 ---

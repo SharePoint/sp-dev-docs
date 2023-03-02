@@ -5,7 +5,6 @@ ms.date: 06/27/2022
 keywords: blogger
 f1_keywords:
 - blogger
-ms.prod: sharepoint
 ms.assetid: c0b137cd-126d-4c74-a3f7-eb9debe3c35f
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,6 @@
 title: Prepare to set up and configure a SharePoint workflow development environment
 description: Learn how to set up a workflow development environment to develop SharePoint workflows as free-standing apps.
 ms.date: 06/10/2022
-ms.prod: sharepoint
 ms.assetid: b6a3321f-4131-4a8e-9cb7-7a1b4ab9e26b
 ms.localizationpriority: medium
 ---

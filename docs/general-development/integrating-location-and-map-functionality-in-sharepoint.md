@@ -2,7 +2,6 @@
 title: Integrating location and map functionality in SharePoint
 description: Describes how to integrate location and map functionality in SharePoint lists by using the new Geolocation field.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 10d4a904-ed27-4513-8c20-d2098aebf22c
 ms.localizationpriority: high
 ---

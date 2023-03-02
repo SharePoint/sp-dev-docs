@@ -2,7 +2,6 @@
 title: Use the client code library to access external data in SharePoint
 description: Describes how to use the SharePoint client object model to work with BCS objects in SharePoint using browser-based scripting.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: c280ae92-c52b-4658-b0f3-805fb215ef8e
 ms.localizationpriority: medium
 ---

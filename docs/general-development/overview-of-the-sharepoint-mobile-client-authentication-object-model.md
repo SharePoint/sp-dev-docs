@@ -2,7 +2,6 @@
 title: Overview of the SharePoint mobile client authentication object model
 description: Get an overview of development with the authentication APIs of the SharePoint client object model for Silverlight.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 00ee657f-a32a-495e-80b4-83ac0f60df44
 ms.localizationpriority: medium
 ---

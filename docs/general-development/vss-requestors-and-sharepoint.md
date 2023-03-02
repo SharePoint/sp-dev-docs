@@ -2,7 +2,6 @@
 title: VSS requestors and SharePoint
 description: Learn about how the requestor system of the Volume Shadow Copy Service (VSS) system works with Microsoft SharePoint.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: 0b2e5a4e-40f0-4ccf-a21a-7274921f2169
 ms.localizationpriority: medium
 ---

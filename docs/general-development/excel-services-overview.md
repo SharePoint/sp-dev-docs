@@ -2,7 +2,6 @@
 title: Excel Services Overview
 description: "Excel Services is a service application that enables you to load, calculate, and display Microsoft Excel workbooks on Microsoft SharePoint."
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 5fa22ebb-e507-4ffc-a425-e755502feae2
 ms.localizationpriority: high
 ---

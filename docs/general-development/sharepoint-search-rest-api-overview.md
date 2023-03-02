@@ -2,7 +2,6 @@
 title: SharePoint Search REST API overview
 description: Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 # SharePoint Search REST API overview

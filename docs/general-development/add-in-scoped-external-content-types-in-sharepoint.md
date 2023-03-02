@@ -2,7 +2,6 @@
 title: Add-in-scoped external content types in SharePoint
 description: Describes external content types that are installed or scoped at the add-in level in SharePoint and enable you to create data-rich SharePoint Add-ins using external data sources.
 ms.date: 06/10/2022
-ms.prod: sharepoint
 ms.assetid: a34cbbba-dc38-4d3d-b796-d54b5848bdfb
 ms.localizationpriority: medium
 ---

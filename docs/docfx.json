@@ -48,8 +48,7 @@
     },
     "fileMetadata": {
       "ms.prod": {
-        "solution-guidance/**.md": "sharepoint",
-        "spfx/**.md": "sharepoint"
+        "solution-guidance/**.md": "sharepoint"
       },
       "ms.service": {
         "apis/*.md": "sharepoint-online",
@@ -60,13 +59,17 @@
         "declarative-customization/**.md": "sharepoint-online",
         "design/**.md": "sharepoint-online",
         "features/**.md": "sharepoint-online",
+        "general-development/**.md": "sharepoint",
         "scenario-guidance/**.md": "sharepoint-online",
-        "schema/**.md": "sharepoint-online"
+        "schema/**.md": "sharepoint-online",
+        "spfx/**.md": "sharepoint"
+      },
+      "ms.subservice":{
+        "general-development/**.md": "sharepoint-framework",
+        "spfx/**.md": "sharepoint-framework"
       },
       "ms.technology":{
         "spfx-apis/rest/**.md": "sharepoint-framework",
-        "general-development/**.md": "sharepoint-framework",
-        "spfx/**.md": "sharepoint-framework",
         "spfx-apis/webhooks/**.md": "sharepoint-webhooks",
         "sp-addins/**.md": "sharepoint-addins"
       },

@@ -2,7 +2,6 @@
 title: Visio Services in SharePoint
 description: Visio Services in Microsoft SharePoint enables you to load, display, and interact programmatically with Visio .vsdx, .vsdm files and Visio Web Drawings (.vdw) on Microsoft SharePoint and Microsoft SharePoint Online.
 ms.date: 12/14/2020
-ms.prod: sharepoint
 ms.assetid: ed8c5d12-e17d-4ceb-b195-601c26824370
 ms.localizationpriority: medium
 ---

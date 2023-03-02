@@ -2,7 +2,6 @@
 title: Make custom CSS files themable in SharePoint
 description: Learn how to add comment-style markup to a CSS file so that it can be used in the SharePoint theming engine.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
 ms.localizationpriority: high
 ---

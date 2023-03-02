@@ -2,7 +2,6 @@
 title: Upgrade site customizations for SharePoint
 description: Learn about potential issues and get recommendations for upgrading SharePoint 2010 site customizations to SharePoint.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: 4b515860-69ae-4af8-8013-cd071c0ddca6
 ms.localizationpriority: medium
 ---

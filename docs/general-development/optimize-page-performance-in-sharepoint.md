@@ -2,7 +2,6 @@
 title: Optimize page performance in SharePoint
 description: Learn about features to improve performance in SharePoint pages and enhance experiences in geographically distributed implementations.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
 ms.localizationpriority: high
 ---

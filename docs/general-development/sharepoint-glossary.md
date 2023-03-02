@@ -4,7 +4,6 @@ manager: soliver
 ms.date: 4/18/2018
 ms.audience: Developer
 ms.topic: overview
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ms.assetid: be176603-ca27-40bf-a591-4aa7d0aed454
 description: "Find definitions for terms used in SharePoint developer documentation."

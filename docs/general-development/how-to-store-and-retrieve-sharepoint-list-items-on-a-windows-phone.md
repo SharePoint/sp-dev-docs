@@ -2,7 +2,6 @@
 title: Store and retrieve SharePoint list items on a Windows Phone
 description: Learn about the Windows Phone application life cycle and storing network data locally.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 14ca37a2-5b45-430d-9004-ff3016f89834
 ms.localizationpriority: medium
 ---

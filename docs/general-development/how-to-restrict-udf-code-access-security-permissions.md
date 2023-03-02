@@ -5,7 +5,6 @@ ms.date: 09/25/2017
 keywords: cas,how to,howdoi,howto,UDF list
 f1_keywords:
 - cas,how to,howdoi,howto,UDF list
-ms.prod: sharepoint
 ms.assetid: 4f022e0d-1fe3-4fab-b41f-82a0d628f77c
 ms.localizationpriority: medium
 ---

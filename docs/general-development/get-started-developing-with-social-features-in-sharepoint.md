@@ -2,7 +2,6 @@
 title: Get started developing with social features in SharePoint
 description: Describes how to get started with developing SharePoint social features and provides links to articles and tutorials.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 8852ce36-8309-45a7-a141-2e10ac17a123
 ms.localizationpriority: medium
 ---

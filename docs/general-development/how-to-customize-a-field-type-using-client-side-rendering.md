@@ -2,7 +2,6 @@
 title: Customize a field type using client-side rendering
 description: Learn how to customize a field type by using the client-side rendering technology in SharePoint.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
 ms.localizationpriority: medium
 ---

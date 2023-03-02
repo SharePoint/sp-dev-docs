@@ -2,7 +2,6 @@
 title: Custom security trimming for Search in SharePoint
 description: Learn about the two kinds of custom security trimmer interfaces, ISecurityTrimmerPre and ISecurityTrimmerPost, and the steps you must take to create a custom security trimmer.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
 ms.localizationpriority: medium
 ---

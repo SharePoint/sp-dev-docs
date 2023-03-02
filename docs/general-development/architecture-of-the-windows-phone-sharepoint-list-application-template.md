@@ -2,7 +2,6 @@
 title: Architecture of the Windows Phone SharePoint List Application template
 ms.date: 06/13/2022
 description: Describes the design pattern of projects created from the Windows Phone SharePoint List Application template. 
-ms.prod: sharepoint
 ms.assetid: 2c09bd02-bed0-4293-a4d4-1778692e246a
 ms.localizationpriority: medium
 ---

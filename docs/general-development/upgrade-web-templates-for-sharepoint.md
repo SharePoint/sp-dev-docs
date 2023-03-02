@@ -2,7 +2,6 @@
 title: Upgrade web templates for SharePoint
 description: Learn about updating customized SharePoint 2010 web templates for use in SharePoint after a self-service upgrade.
 ms.date: 06/10/2022
-ms.prod: sharepoint
 ms.assetid: 69048e4c-6d6d-4e4e-b74c-7c72ae444354
 ms.localizationpriority: medium
 ---

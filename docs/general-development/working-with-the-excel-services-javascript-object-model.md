@@ -2,7 +2,6 @@
 title: Working with the Excel Services JavaScript object model
 description: Learn about working with the Excel Services JavaScript object model and how two scenarios can affect how you write your code.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: 06219071-a7c1-4f54-b07f-7b7001592330
 ms.localizationpriority: medium
 ---

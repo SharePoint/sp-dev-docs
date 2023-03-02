@@ -2,7 +2,6 @@
 title: Claims-based identity and concepts in SharePoint
 description: Article with links to learn about the claims-based identity model and concepts in SharePoint.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: d96c7cf4-2e48-4223-a3c0-42368d079b74
 ms.localizationpriority: medium
 ---

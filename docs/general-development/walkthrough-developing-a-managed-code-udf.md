@@ -2,7 +2,6 @@
 title: Walkthrough Developing a Managed-Code UDF
 description: This walkthrough describes the process for developing Excel Services user-defined functions (UDFs) using Microsoft Visual C#.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: e6a00833-0606-4a7d-91c3-b89a6e340348
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,6 @@
 title: Create a workflow with elevated permissions by using the SharePoint Workflow platform
 description: Create SharePoint workflows that access objects in SharePoint that require elevated permissions. These solutions grant permissions to the workflow app and wrap actions with the App Step.
 ms.date: 12/29/2017
-ms.prod: sharepoint
 ms.assetid: 4656f6a0-36fd-4b7d-898e-8cd4bdbbda57
 ms.localizationpriority: high
 ---

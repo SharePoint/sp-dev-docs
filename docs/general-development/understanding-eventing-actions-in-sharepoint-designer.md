@@ -2,7 +2,6 @@
 title: Understanding Eventing Actions in SharePoint Designer 2013
 description: Provides an overview of Eventing Actions and describes how to use Eventing Actions in SharePoint Designer 2013.
 ms.date: 06/14/2022
-ms.prod: sharepoint
 ms.assetid: fe4ad8cf-2c6f-488d-8b33-6bf4357018ac
 ms.localizationpriority: high
 ---

@@ -2,7 +2,6 @@
 title: Follow people in SharePoint
 description: Describes the common programming tasks for following people in SharePoint and provides a list of APIs for programmatically following people.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 0fa2e235-63d0-41b1-9eed-4aeb2f59a14d
 ms.localizationpriority: medium
 ---

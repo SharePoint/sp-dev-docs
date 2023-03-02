@@ -2,7 +2,6 @@
 title: Accessing a Schema
 description: This topic shows one example of how you can access and look at a schema for the REST service in Excel Services.
 ms.date: 06/03/2022
-ms.prod: sharepoint
 ms.assetid: 02613912-36f6-4edc-a915-165d12e60bc8
 ms.localizationpriority: high
 ---

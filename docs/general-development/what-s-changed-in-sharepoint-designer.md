@@ -2,7 +2,6 @@
 title: What's changed in SharePoint Designer 2013
 description: Learn about features that are deprecated in or removed from SharePoint Designer 2013.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: f1cd30c9-9a73-428d-9151-f1813b43b020
 ms.localizationpriority: high
 ---

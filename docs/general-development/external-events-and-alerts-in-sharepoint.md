@@ -2,7 +2,6 @@
 title: External events and alerts in SharePoint
 description: Learn the concepts behind creating remote event receivers in SharePoint that can be attached to external lists and execute when the external data that the list represents is updated.
 ms.date: 09/25/2017
-ms.prod: sharepoint
 ms.assetid: e48e4812-a185-43c5-b243-04b1d79b88ee
 ms.localizationpriority: medium
 ---

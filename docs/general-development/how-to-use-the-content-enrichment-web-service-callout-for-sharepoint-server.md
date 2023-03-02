@@ -2,7 +2,6 @@
 title: Use the Content Enrichment web service callout for SharePoint Server
 description: Learn how to implement the Content Enrichment web service in SharePoint to modify the managed properties of crawled items before they are indexed.
 ms.date: 01/06/2021
-ms.prod: sharepoint
 ms.assetid: d4e44498-9a3d-4f2f-b5ba-6ebef9971dcb
 ms.localizationpriority: medium
 ---

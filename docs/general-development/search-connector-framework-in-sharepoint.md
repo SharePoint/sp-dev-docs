@@ -2,7 +2,6 @@
 title: Search connector framework in SharePoint
 description: Describes the SharePoint indexing connectors and the connector framework, and how to create custom BCS indexing connectors to search external systems.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 38560a3b-69c6-4a56-97ca-3625bbd5755e
 ms.localizationpriority: high
 ---

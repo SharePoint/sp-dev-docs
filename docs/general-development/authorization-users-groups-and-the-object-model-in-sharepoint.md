@@ -2,7 +2,6 @@
 title: Authorization, users, groups, and the object model in SharePoint
 ms.date: 06/13/2022
 description: Describes authorization, users, groups, and the object model in SharePoint.
-ms.prod: sharepoint
 ms.assetid: aacf3398-f0b5-48cb-9071-440b4c3a9dd1
 ms.localizationpriority: high
 ---

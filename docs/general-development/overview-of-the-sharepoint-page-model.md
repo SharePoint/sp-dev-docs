@@ -2,7 +2,6 @@
 title: Overview of the SharePoint page model
 description: Provides an overview of the revised SharePoint page model, including master pages, page layouts, and pages.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 808b1af3-89ab-4f02-89cc-ea86cb1f9a6e
 ms.localizationpriority: high
 ---
