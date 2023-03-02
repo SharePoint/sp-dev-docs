@@ -44,7 +44,7 @@ npm install @microsoft/generator-sharepoint@next --global
 
 Developers can specify `supportsSelfFramingInTeams` flag in a web part's manifest if the scenario requires the web part to render SharePoint page in the iframe.
 
-### Ability to specify claims parameter when requesting an AAD Oath2 token
+### Ability to specify claims parameter when requesting an AAD OAuth2 token
 
 `AADTokenProvider.getToken` definition was updated to allow specifying claims parameter:
 
