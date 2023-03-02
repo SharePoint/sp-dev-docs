@@ -64,6 +64,10 @@ Create a new CDN profile and associate the CDN endpoint with this BLOB container
 
     ![Screenshot of create CDN endpoint](../../../images/deploy-create-cdn-endpoint.png)
 
+1. To allow scripts to be cached by the SharePoint service worker, add an appropriate Cache-Control response header to the CDN endpoint.
+
+    ![Screenshot of add a cache control header](https://user-images.githubusercontent.com/904610/222584167-f98f7b39-2a18-49d6-8a25-465df05a2276.png)
+
 Because you associated the CDN endpoint with your storage account, you can also access the BLOB container at the following URL: **`http://spfxsamples.azureedge.net/azurehosted-webpart/`**
 
 Note, however, that you have not yet deployed the files.
