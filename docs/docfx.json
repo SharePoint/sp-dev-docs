@@ -69,7 +69,6 @@
         "spfx/**.md": "sharepoint-framework"
       },
       "ms.technology":{
-        "spfx-apis/rest/**.md": "sharepoint-framework",
         "spfx-apis/webhooks/**.md": "sharepoint-webhooks",
         "sp-addins/**.md": "sharepoint-addins"
       },
