@@ -64,7 +64,7 @@ In default.aspx.cs, choosing **Perform Personalized Search** calls the **btnPers
 
 - Uses **PeopleManager** to get all user profile properties for the user running this add-in.
 
-- Retrieves and checks the value of the **AboutMe** user profile property. If the value of the **AboutMe** property is **AppTest**, the search query retrieves all sites by using the query string  `contentclass:"STS_Site"`. If the value of the **AboutMe** property is not **AppTest**, the team site filter is appended to the query string (`WebTemplate=STS`), and the search query retrieves team sites only.
+- Retrieves and checks the value of the **AboutMe** user profile property. If the value of the **AboutMe** property is **AppTest**, the search query retrieves all sites by using the query string  `contentclass:"STS_Site"`. If the value of the **AboutMe** property isn't **AppTest**, the team site filter is appended to the query string (`WebTemplate=STS`), and the search query retrieves team sites only.
 
 - Calls the **ProcessQuery** method to retrieve the search results based on the supplied query string. **ProcessQuery** also demonstrates how to specify a list of properties to return with the search results.
 

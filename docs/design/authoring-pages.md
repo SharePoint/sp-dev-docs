@@ -7,9 +7,7 @@ ms.localizationpriority: high
 
 # Authoring pages in a SharePoint site
 
-Authoring pages in SharePoint is a simple process, but it does require some familiarity with the SharePoint environment, as well as an understanding of what and who you are designing the page for. A few basic principles, such as remembering to "Start simple" and "Build on what's working," are valuable things to consider as you start authoring. It's also a good idea to consistently remind yourself of your audience and the goals that you are trying to help them achieve.
-
-<!-- Do we have content about the design principles that we can link to here? -->
+Authoring pages in SharePoint is a simple process, but it does require some familiarity with the SharePoint environment, and an understanding of what and who you are designing the page for. A few basic principles, such as remembering to "Start simple" and "Build on what's working," are valuable things to consider as you start authoring. It's also a good idea to consistently remind yourself of your audience and the goals that you're trying to help them achieve.
 
 The SharePoint page authoring experience has two modes:
 
@@ -72,7 +70,7 @@ After the page is published, all editing UI is disabled for the viewer or reader
 
 ## Mobile view
 
-All SharePoint pages are [responsive](grid-and-responsive-design.md) to allow the content of the page to be viewed on mobile devices. While designing a web part, it is important to understand how the new SharePoint site pages render across different devices.
+All SharePoint pages are [responsive](grid-and-responsive-design.md) to allow the content of the page to be viewed on mobile devices. While designing a web part, it's important to understand how the new SharePoint site pages render across different devices.
 
 ![Mobile view of site](../images/design-authoring-mobile.png)
 

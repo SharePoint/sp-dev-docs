@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # UI text guidelines for SharePoint web parts
 
-One aspect of creating effective web parts in SharePoint is to use simple, understandable, and concise UI text. By keeping your message clear and easy to understand, you ensure that customers move through your experiences quickly and can identify the content they are looking for. This article provides guidance for writing UI text for key areas within SharePoint web parts.
+One aspect of creating effective web parts in SharePoint is to use simple, understandable, and concise UI text. By keeping your message clear and easy to understand, you ensure that customers move through your experiences quickly and can identify the content they're looking for. This article provides guidance for writing UI text for key areas within SharePoint web parts.
 
 ## Capitalization
 
@@ -27,12 +27,12 @@ Always capitalize:
 
 Follow the basic rules of punctuation to avoid grammatical errors in your experience. The following table provides guidance and reminders about what punctuation to use when, and why.
 
-|Punctuation  |Guidance                                        |Example          |
-|-------------|------------------------------------------------|-----------------|
-|Colons (:)  | Use colons if you are introducing a list in the web part description.<br/>Don't use colons in UI labels.| Choose one of the following: Cats, Dogs, Quokkas    |
-|Commas (,)  | Use serial commas (including before the word "and").  |I like cats, birds, and dogs. |
-|Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Don't use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |
-|Periods (.) | Use periods as you normally would for descriptions.<br/>Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
+| Punctuation  |                                                                               Guidance                                                                               |                                                       Example                                                       |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Colons (:)   | Use colons if you're introducing a list in the web part description.<br/>Don't use colons in UI labels.                                                             | Choose one of the following: Cats, Dogs, Quokkas                                                                    |
+| Commas (,)   | Use serial commas (including before the word "and").                                                                                                                 | I like cats, birds, and dogs.                                                                                       |
+| Ellipses (…) | Use ellipses to show truncation and for progress indicator strings.<br/>Don't use ellipses to indicate that the user must make further choices.                      | Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading…                                        |
+| Periods (.)  | Use periods as you normally would for descriptions.<br/>Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
 
 ## Voice and tone
 
@@ -41,11 +41,11 @@ Crafting the right tone in your product communication is essential to building a
 ### Do
 
 - Use a casual, conversational tone in the UI.
-- Use contractions. For example, use "can't" instead of "cannot".
+- Use contractions. For example, use "can't" instead of "can't".
 - Read your UI text out loud to test the tone. Does it sound like everyday language?
 - Use simple words.
 - Remove technical details if they're not relevant to the user experience.
-- Use "Please" only if you are inconveniencing the user. Avoid overuse.
+- Use "Please" only if you're inconveniencing the user. Avoid overuse.
 - Use "Sorry" only in error messages in SharePoint that result in serious problems for the customer.
 
 ### Don't

@@ -17,7 +17,7 @@ Reactive web parts are fully client-side web parts. This means that each compone
 
 ## Nonreactive web parts
 
-Nonreactive web parts are not fully client-side; generally, one or more properties need to make a call to set/pull or store data on a server. For nonreactive web parts, you should enable the **Apply** button at the bottom of the property pane.
+Nonreactive web parts aren't fully client-side; generally, one or more properties need to make a call to set/pull or store data on a server. For nonreactive web parts, you should enable the **Apply** button at the bottom of the property pane.
 
 You can also customize the **Apply** button to be a more specific action.
 

@@ -153,7 +153,7 @@ Scenario 3 shows how to update a multivalued user profile property. The followin
 To add new skills to the **SPS-Skills** user profile property from this add-in:
 
 1. Enter HTML5, and then choose **Add Skill**.
-1. Enter ASP.Net, and then choose **Add Skill**.
+1. Enter ASP.NET, and then choose **Add Skill**.
 1. Choose **Run scenario 3**.
 1. Verify that **Skills current value** shows the new list of skills for the user.
 1. Verify that the **SPS-Skills** user profile property for the user now shows the new list of skills.
