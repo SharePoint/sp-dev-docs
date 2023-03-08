@@ -2,7 +2,6 @@
 title: Step 3 Deploying and Enabling UDFs
 description: Describes how to deploy the sample UDF created in the previous step, allow UDFs to be called from a trusted location, and enable the UDF.
 ms.date: 06/14/2022
-ms.prod: sharepoint
 ms.assetid: 1e5e2a0a-041a-481c-a18b-578562a60e24
 ms.localizationpriority: medium
 ---

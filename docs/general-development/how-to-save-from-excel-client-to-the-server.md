@@ -5,7 +5,6 @@ ms.date: 06/13/2022
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: sharepoint
 ms.assetid: 28716ba5-0774-44df-833b-0034d2c63319
 ms.localizationpriority: medium
 ---

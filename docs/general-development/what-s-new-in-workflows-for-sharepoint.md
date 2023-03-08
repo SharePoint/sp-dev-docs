@@ -2,7 +2,6 @@
 title: What's new in workflows for SharePoint
 description: Learn about the capabilities and features that are new to workflows in SharePoint Server 2013.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: 1d51421b-61ac-46b6-a865-52f968ddc5b3
 ms.localizationpriority: high
 ---

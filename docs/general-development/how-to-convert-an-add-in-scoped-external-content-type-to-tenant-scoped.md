@@ -2,7 +2,6 @@
 title: Convert an add-in-scoped external content type to tenant-scoped
 description: Describes how to create an OData-based external content type using Visual Studio 2012 and import it into the BCS metadata store.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 35c5d670-e402-4641-b3c5-6f61ae1ec69b
 ms.localizationpriority: medium
 ---

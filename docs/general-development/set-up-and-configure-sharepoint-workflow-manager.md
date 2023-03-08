@@ -2,7 +2,6 @@
 title: Set up and configure Workflow Manager with SharePoint
 description: Describes how to set up and configure Workflow Manager Client 1.0 and pair it to function correctly with SharePoint.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 4cd68a3e-9c3b-4fb9-bb66-e96cf0faec69
 ms.localizationpriority: high
 ---

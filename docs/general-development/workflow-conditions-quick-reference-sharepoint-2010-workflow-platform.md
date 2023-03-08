@@ -2,7 +2,6 @@
 title: Workflow conditions quick reference (SharePoint 2010 Workflow platform)
 description: Learn about the workflow conditions that are available in the SharePoint 2010 Workflow Platform in Microsoft SharePoint Designer 2013.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: 71fab25b-d4f3-4871-b9ad-08d3537098fc
 ms.localizationpriority: high
 ---

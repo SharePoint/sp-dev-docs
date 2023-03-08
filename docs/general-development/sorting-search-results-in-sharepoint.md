@@ -2,7 +2,6 @@
 title: Sorting search results in SharePoint
 description: Sort search results programmatically—by ran k, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint.
 ms.date: 06/14/2022
-ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 

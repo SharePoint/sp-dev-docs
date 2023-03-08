@@ -2,7 +2,6 @@
 title: Using the pairing cmdlet Register-SPWorkflowService
 description: Learn how to use the cmdlet Register-SPWorkflowService to successfully pair SharePoint with Workflow Manager.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: 91fca6c2-60ca-4177-8560-2b310dac0e2c
 ms.localizationpriority: medium
 ---

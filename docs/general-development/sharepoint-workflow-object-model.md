@@ -2,7 +2,6 @@
 title: SharePoint workflow object model
 description: Provides an introduction to the workflow object model in SharePoint and lists SharePoint workflow namespaces and Microsoft.Office namespaces.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: be615a89-3201-4cd8-bbc7-15f3abf9f668
 ms.localizationpriority: medium
 ---

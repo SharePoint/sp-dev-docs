@@ -2,7 +2,6 @@
 title: Excel Services REST API
 description: Describes the Representational State Transfer (REST) API in Excel Services and provides links to articles and tutorials about the REST API.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 32033fea-873c-4781-900a-6946906066b0
 ms.localizationpriority: high
 ---

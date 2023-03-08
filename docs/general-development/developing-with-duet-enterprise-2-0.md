@@ -2,7 +2,6 @@
 title: Developing with Duet Enterprise 2.0
 description: Describes Duet Enterprise 2.0's features and details how to set up the developer environment, how to add an external content type, and more.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: c3ef38aa-559e-4832-95c7-75e222c77624
 ms.localizationpriority: medium
 ---

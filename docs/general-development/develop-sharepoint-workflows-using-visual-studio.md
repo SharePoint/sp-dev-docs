@@ -2,7 +2,6 @@
 title: Develop SharePoint workflows using Visual Studio
 description: "SharePoint supports two primary workflow development environments for authoring workflows: SharePoint Designer and Visual Studio. This article summarizes both and discusses the advantages and disadvantages of each."
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 28f5d3b1-6fe8-4b1f-8c4e-b11105fe6f46
 ms.localizationpriority: high
 ---

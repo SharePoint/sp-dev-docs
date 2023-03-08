@@ -2,7 +2,6 @@
 title: Content Management Interoperability Services (CMIS) in SharePoint
 description: This is an article with links to learn about the SharePoint implementation of version 1.0 of the OASIS Content Management Interoperability Services (CMIS) standard.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: a1def24c-b2db-4bf9-8d2c-02f5628832f8
 ms.localizationpriority: high
 ---

@@ -2,7 +2,6 @@
 title: What's new with SharePoint site development
 description: Learn about the new site authoring and publishing model in SharePoint that enables you to create publishing sites.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: ac1e9891-5ce9-4707-84e5-6e2fc02fda6b
 ms.localizationpriority: high
 ---

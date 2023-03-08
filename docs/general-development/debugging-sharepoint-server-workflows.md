@@ -2,7 +2,6 @@
 title: Debugging SharePoint workflows
 description: Demonstrates how SharePoint now relies on Workflow Manager 1.0 for all workflow processing and management, and demonstrates debugging options.
 ms.date: 10/15/2022
-ms.prod: sharepoint
 ms.assetid: a5adf39b-8640-4871-be60-b786dcf9fafc
 ms.localizationpriority: high
 ---

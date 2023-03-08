@@ -2,7 +2,6 @@
 title: Create custom SharePoint workflow forms with Visual Studio 2012
 description: This article uses SharePoint with the March 2013 Public Update applied and Office Developer tools for Visual Studio 2012. Everything in this article applies to both SharePoint on-premises deployments as well as Office 365.
 ms.date: 10/15/2022
-ms.prod: sharepoint
 ms.assetid: 26873259-330c-493f-b935-297a7a5a086d
 ms.localizationpriority: medium
 ---

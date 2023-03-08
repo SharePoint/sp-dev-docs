@@ -2,7 +2,6 @@
 title: Excel Services Known Issues and Tips
 description: Describes known issues and tips for working with Excel Services and provides links to related documentation.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: b4a41437-4f00-4f88-8510-627fa0252004
 ms.localizationpriority: medium
 ---

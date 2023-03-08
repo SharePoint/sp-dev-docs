@@ -2,7 +2,6 @@
 title: Role, inheritance, elevation of privilege, and password changes in SharePoint
 description: "A role consists of two parts: a role definition and a role assignment."
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 

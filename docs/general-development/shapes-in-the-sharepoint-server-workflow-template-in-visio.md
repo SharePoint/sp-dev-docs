@@ -2,7 +2,6 @@
 title: Shapes in the SharePoint Server workflow template in Visio
 description: Describes the shapes types in the SharePoint Workflow template in Visio 2013 and provides a list of shapes.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: f35bdf5d-c102-4e2d-8a23-1d2df17155b9
 ms.localizationpriority: high
 ---

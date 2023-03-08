@@ -5,7 +5,6 @@ ms.date: 06/09/2022
 keywords: excel services design
 f1_keywords:
 - excel services design
-ms.prod: sharepoint
 ms.assetid: e0349b4a-2d52-46c4-a167-801e9c24eaca
 ms.localizationpriority: medium
 ---

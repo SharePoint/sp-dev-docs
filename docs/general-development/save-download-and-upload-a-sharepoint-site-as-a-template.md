@@ -2,7 +2,6 @@
 title: Save, download, and upload a SharePoint site as a template
 description: Learn how to design and build robust applications by using SharePoint site templates.
 ms.date: 11/16/2021
-ms.prod: sharepoint
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
 ms.localizationpriority: high
 ---

@@ -2,7 +2,6 @@
 title: How-tos for SharePoint Development
 description: Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint, including how to set up your development environment and start building sites, mobile apps, and SharePoint Add-ins.
 ms.date: 04/13/2017
-ms.prod: sharepoint
 ms.assetid: ca78b080-0be4-4da4-b112-b86b1bde66e4
 ms.localizationpriority: high
 ---

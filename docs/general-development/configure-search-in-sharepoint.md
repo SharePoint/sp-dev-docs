@@ -2,7 +2,6 @@
 title: Configure search in SharePoint
 description: This is an article about configuring search in SharePoint.
 ms.date: 06/07/2022
-ms.prod: sharepoint
 ms.assetid: e447127c-2b11-4d65-b46e-01a18cdcdee5
 ms.localizationpriority: medium
 ---

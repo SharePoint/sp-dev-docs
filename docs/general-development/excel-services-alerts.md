@@ -5,7 +5,6 @@ ms.date: 06/09/2022
 keywords: errors
 f1_keywords:
 - errors
-ms.prod: sharepoint
 ms.assetid: a4e7030b-05c2-484e-b21f-46cba937b803
 ms.localizationpriority: medium
 ---

@@ -2,7 +2,6 @@
 title: Customizing ranking models to improve relevance in SharePoint
 description: Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
 ms.date: 07/15/2022
-ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 ms.localizationpriority: high
 ---

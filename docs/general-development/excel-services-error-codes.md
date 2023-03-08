@@ -5,7 +5,6 @@ ms.date: 09/25/2017
 keywords: alerts
 f1_keywords:
 - alerts
-ms.prod: sharepoint
 ms.assetid: ff128d67-f3ac-4a8f-ae8e-1e19e343014e
 ms.localizationpriority: high
 ---

@@ -2,7 +2,6 @@
 title: Excel Web Access
 description: Describes the Excel Web Access web part and provides its reference and links to tutorials related to Excel Web Access.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: eef8991d-0844-4b35-a092-33c957102dee
 ms.localizationpriority: medium
 ---

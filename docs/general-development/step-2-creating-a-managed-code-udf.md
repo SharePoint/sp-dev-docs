@@ -5,7 +5,6 @@ ms.date: 01/06/2021
 keywords: soap
 f1_keywords:
 - soap
-ms.prod: sharepoint
 ms.assetid: 3c9edf82-ee2d-41f0-9d66-e88e8dc0cc69
 ms.localizationpriority: medium
 ---

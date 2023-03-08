@@ -2,7 +2,6 @@
 title: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
 description: Describes how to build search-driven mobile apps for mobile devices that run on non-Windows operating systems.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
 ms.localizationpriority: medium
 ---

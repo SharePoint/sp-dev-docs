@@ -2,7 +2,6 @@
 title: Integrate maps with Windows Phone apps and SharePoint lists
 description: Learn how to integrate location information and maps in SharePoint lists and location-based web and mobile SharePoint Add-ins, by using the new Geolocation field, and by creating your own geolocation-based field types.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 7e0550bc-92d1-407f-b8ba-1371c63bd16e
 ms.localizationpriority: medium
 ---

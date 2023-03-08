@@ -2,7 +2,6 @@
 title: Incoming claims Signing into SharePoint
 description: Describes how sign-ins work with SharePoint Server and provides details on several types of sign-ins.
 ms.date: 06/13/2022
-ms.prod: sharepoint
 ms.assetid: 08c687aa-e485-4269-aea8-4333da3588a5
 ms.localizationpriority: medium
 ---

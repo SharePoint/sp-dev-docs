@@ -2,7 +2,6 @@
 title: Add a Geolocation column to a list programmatically in SharePoint
 description: Learn how to programmatically add a Geolocation column to a list in SharePoint. Integrate location information and maps in SharePoint lists and location-based websites by using the new Geolocation field creating your own Geolocation-based field type.
 ms.date: 01/06/2023
-ms.prod: sharepoint
 ms.assetid: f31a3594-c328-4731-b8eb-5da6b85103ad
 ms.localizationpriority: high
 ---

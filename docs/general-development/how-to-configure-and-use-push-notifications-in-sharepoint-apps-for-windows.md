@@ -2,7 +2,6 @@
 title: Configure and use push notifications in SharePoint apps for Windows Phone
 description: Create a solution in SharePoint Server for sending push notifications and develop a Windows Phone app for receiving the notifications.
 ms.date: 06/09/2022
-ms.prod: sharepoint
 ms.assetid: 68fa2138-86d9-4e35-9c7c-5cd292087b80
 ms.localizationpriority: medium
 ---

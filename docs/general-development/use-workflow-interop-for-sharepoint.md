@@ -2,7 +2,6 @@
 title: Use workflow interop for SharePoint
 description: A discussion using SharePoint workflow Interop in the Visual Studio 2012 workflow designer.
 ms.date: 01/06/2020
-ms.prod: sharepoint
 ms.localizationpriority: medium
 ---
 # Use workflow interop for SharePoint
