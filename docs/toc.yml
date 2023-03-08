@@ -512,8 +512,8 @@
       href: spfx/release-1.1.md
     - name: SPFx v1.0.0 - February 22, 2017
       href: spfx/release-1.0.0.md
-  - name: SharePoint Framework Learn module
-    href: /training/paths/m365-sharepoint-associate/
+  - name: Extend SharePoint with SPFx - Learning Path
+    href: /training/paths/m365-sharepoint-associate
 - name: Microsoft Teams
   items:
   - name: Overview
@@ -574,8 +574,10 @@
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
-  - name: Viva Connections Extensibility Learn module
-    href: /training/paths/m365-extend-viva-connections/
+  - name: Extend Viva Connections Learning Path
+    href: /training/paths/m365-extend-viva-connections
+  - name: Create ACE's for Viva Connections Learning Module
+    href: /training/modules/sharepoint-spfx-adaptive-card-extension-card-types
 - name: Business Apps & Process Automation
   items:
   - name: Overview
