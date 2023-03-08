@@ -1,12 +1,12 @@
 ---
 title: SharePoint Framework v1.17 preview release notes
 description: Release notes for the SharePoint Framework v1.17 preview release
-ms.date: 2/23/2023
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17 preview release notes
 
-This release introduces updates across the features around Microsoft Viva, Microsoft Teams, Outlook, Office and SharePoint.
+This release introduces updates across the features around Microsoft Viva, Microsoft Teams, Outlook, Office, and SharePoint.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
@@ -17,6 +17,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 ## Install the latest preview version
 
 Install the latest preview release of the SharePoint Framework (SPFx) by including the **@next**
+
 ```console
 npm install @microsoft/generator-sharepoint@next --global
 ```
@@ -40,16 +41,16 @@ npm install @microsoft/generator-sharepoint@next --global
 
 ## New features and capabilities
 
-### Support for SharePoint Pages iframing in Teams applications
+### Support for SharePoint Pages 'iframing' in Teams applications
 
-Developers can specify `supportsSelfFramingInTeams` flag in a web part's manifest if the scenario requires the web part to render SharePoint page in the iframe.
+Developers can specify `supportsSelfFramingInTeams` flag in a web part's manifest if the scenario requires the web part to render SharePoint page in an `<iframe>`.
 
 ### Ability to specify claims parameter when requesting an AAD OAuth2 token
 
 `AADTokenProvider.getToken` definition was updated to allow specifying claims parameter:
 
 ```typescript
-  getToken(resourceEndpoint: string, options?: IGetTokenOptions): Promise<string>;
+getToken(resourceEndpoint: string, options?: IGetTokenOptions): Promise<string>;
 ```
 
 where `IGetTokenOptions`:
@@ -64,6 +65,7 @@ interface IGetTokenOptions {
 ### Popup flow support in AadTokenProvider
 
 `AadTokenProvider` now supports popup flow. Developers should handle `AadTokenProvider.popupEvent: SPEvent<PopupEventArgs>` event to implement the flow.
+
 See `PopupEventArgs` definitions for more details.
 
 ### Support for aria-label in Property Pane's link control
@@ -89,7 +91,7 @@ interface IPropertyPaneLinkProps {
 
 Here's a list of specific issues fixed around SharePoint Framework since the previous public release.
 
-### December-February Timeframe
+### December-February Time Frame
 
 - [#8623](https://github.com/SharePoint/sp-dev-docs/issues/8623) - 1.16.1 Issue: Cannot find manifest for f9e737b7-f0df-4597-ba8c-3060f82380db_1.16.1. Store had [1.16.0]. Service worker version: (none),DurableN1=true
 - [#6091](https://github.com/SharePoint/sp-dev-docs/issues/6091) - Lazy loading of custom web parts in modern pages
