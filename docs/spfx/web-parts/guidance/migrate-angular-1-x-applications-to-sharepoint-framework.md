@@ -1,7 +1,7 @@
 ---
 title: Migrate AngularJS applications to SharePoint Framework
 description: Migrate an existing AngularJS application styled using ngOfficeUIFabric to a SharePoint Framework client-side web part.
-ms.date: 02/14/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 Many organizations have been using AngularJS v1.x for building SharePoint solutions in the past. This article shows how to migrate an existing AngularJS application styled using [ngOfficeUIFabric](https://github.com/ngOfficeUIFabric/ng-officeuifabric) - AngularJS directives for Office UI Fabric, to a SharePoint Framework client-side web part. The sample application used for this tutorial manages To Do items stored in a SharePoint list.
 
-<img alt="AngularJS application for managing To Do items stored in a SharePoint list" src="../../../images/ng-migration-original-angular-application.png" width="800">
+![AngularJS application for managing To Do items stored in a SharePoint list](../../../images/ng-migration-original-angular-application.png)
 
 The source of the AngularJS application is available on GitHub at [angular-migration/angular-todo](https://github.com/pnp/sp-dev-fx-webparts/tree/master/samples/angular-migration/angular-todo).
 
@@ -42,7 +42,7 @@ Before you start migrating your AngularJS application, create and set up a new S
     yo @microsoft/sharepoint
     ```
 
-1. When prompted, enter the following values (*select the default option for all prompts omitted below*):
+1. When prompted, enter the following values (*select the default option for all prompts omitted from the following list*):
 
     - **What is your solution name?**: angular-todo
     - **Which type of client-side component to create?**: Web Part
@@ -665,7 +665,7 @@ Even though the way the web part works hasn't changed, your code is improved. if
 
 ## Improve integration of the AngularJS application with the SharePoint Framework
 
-At this point, the AngularJS application works correctly and is wrapped in a SharePoint Framework client-side web part. While users can add the web part to the page, they cannot configure how the web part should work. All of the configuration is embedded in the AngularJS application's code. In this section, you'll extend the web part to allow configuration of the name of the list where the To Do items are stored and whether the web part should show finished tasks or not.
+At this point, the AngularJS application works correctly and is wrapped in a SharePoint Framework client-side web part. While users can add the web part to the page, they can't configure how the web part should work. All of the configuration is embedded in the AngularJS application's code. In this section, you'll extend the web part to allow configuration of the name of the list where the To Do items are stored and whether the web part should show finished tasks or not.
 
 ### Define web part properties
 
