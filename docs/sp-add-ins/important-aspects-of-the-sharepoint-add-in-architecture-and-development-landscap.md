@@ -1,7 +1,7 @@
 ---
 title: Important aspects of the SharePoint Add-in architecture and development landscape
-description: The architecture of and the model for SharePoint Add-ins, including add-in hosting and user interface options, deployment system, security system, and lifecycle. 
-ms.date: 11/02/2017
+description: The architecture of and the model for SharePoint Add-ins, including add-in hosting and user interface options, deployment system, security system, and lifecycle.
+ms.date: 03/08/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -12,7 +12,7 @@ ms.localizationpriority: high
 <a name="SPAppModelArch_SPCenteredVsCloudCentered"> </a>
 This article supplements the information in the article [SharePoint Add-ins](sharepoint-add-ins.md).
 
-The SharePoint Add-in model provides the following ways to host the components of a SharePoint Add-in: 
+The SharePoint Add-in model provides the following ways to host the components of a SharePoint Add-in:
 
 -  **Provider-hosted:** Add-ins that include at least one remote component and may also include SharePoint components. The non-SharePoint components are deployed by your logic on your hardware or cloud account, or deployed on the customer's hardware or cloud account using installation programs and instructions that you provide.
 
@@ -23,7 +23,7 @@ For more detailed information about hosting options and some guidance for how to
 <a name="SPComponents"> </a>
 ## Add-in webs, host webs, Features, and SharePoint components in add-ins
 
-The website to which a SharePoint Add-in is installed is called the host web. However, the significant parts of the SharePoint Add-in, whether they are SharePoint components or external components, are not deployed to the host web. External parts are deployed to external servers or cloud accounts. SharePoint components are deployed to a special website with its own domain. This is called the add-in web. 
+The website to which a SharePoint Add-in is installed is called the host web. However, the significant parts of the SharePoint Add-in, whether they are SharePoint components or external components, are not deployed to the host web. External parts are deployed to external servers or cloud accounts. SharePoint components are deployed to a special website with its own domain. This is called the add-in web.
 
 Only a limited set of UI elements that give users access to the add-in's other components are deployed to the host web. These UI components in the host web are deployed as part of a host web Feature—a Feature that is loose in the add-in package instead of inside a .wsp file. The components that are deployed to the add-in web are always in Features that are inside a .wsp file. Both kinds of Features must have **Web** scope. No other scope is possible for Features in SharePoint Add-ins.
 
@@ -34,16 +34,16 @@ As a general rule, any SharePoint component that does not include custom code th
 
 When a SharePoint Add-in is installed on a website, the add-in is listed on the **Site Contents** page of the host web. Users can start the add-in from that page. When opened in this way, the add-in runs in full-screen mode.
 
-Another way that a SharePoint Add-in can be surfaced is through an add-in part, a type of web part that is represented by the **ClientWebPart** class. This kind of web part is essentially a wrapper for an IFrame that would host a page of the add-in. In the simplest case, the only significant property of the web part is a URL that points to the page. 
+Another way that a SharePoint Add-in can be surfaced is through an add-in part, a type of web part that is represented by the **ClientWebPart** class. This kind of web part is essentially a wrapper for an `<iframe>` that would host a page of the add-in. In the simplest case, the only significant property of the web part is a URL that points to the page.
 
 But web parts can have custom properties that users can set in a Tool Part. Such properties could be used, for example, to set context information such as the user's ZIP Code or Postal Code. To include such an add-in part in your add-in, you create a host web Feature in the add-in and add declarative web part markup. Like any other web part, it appears in the SharePoint UI from which users add web parts. You can have more than one add-in part deployed with your add-in if you need even more variability. For example, a weather add-in can have an add-in part that shows current weather and a second add-in part that shows a weekly forecast. The two parts can have different sizes and functionality.
 
 > [!NOTE]
 > You can also deploy add-in parts to the add-in web. To implement this, the markup for the web part would be part of a Feature inside a .wsp file in the add-in package, not in the host web Feature.
 
-We recommend that you try to give your add-ins a SharePoint appearance to the extent possible, although that is not mandatory and may not always be the best choice. For more information about the user experience guidelines, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md). 
+We recommend that you try to give your add-ins a SharePoint appearance to the extent possible, although that is not mandatory and may not always be the best choice. For more information about the user experience guidelines, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md).
 
-There is, for example, a special master page called app.master. This page is optimized for use by the pages of add-ins. The app.master page is part of a new site definition that is included in SharePoint. 
+There is, for example, a special master page called app.master. This page is optimized for use by the pages of add-ins. The app.master page is part of a new site definition that is included in SharePoint.
 
 Another tool you can use to help your add-ins maintain a consistent look and feel with SharePoint is the chrome control that ships with SharePoint. This control enables you to add the SharePoint navigation header area to your add-in pages, including pages hosted externally. For more information about UX design in SharePoint Add-ins, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md). For more information about the chrome control, see [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md).
 
@@ -60,7 +60,7 @@ SharePoint introduces a new add-in permissions and security system.
 <a name="AppPermissions"> </a>
 ### Add-in permissions
 
-SharePoint Add-ins have permissions just as users and groups do. This enables an add-in to have a set of permissions that are different from the permissions of the user who is executing the add-in. 
+SharePoint Add-ins have permissions just as users and groups do. This enables an add-in to have a set of permissions that are different from the permissions of the user who is executing the add-in.
 
 You must request, in the add-in manifest file, the permissions that an add-in needs to run. The user who adds the add-in must grant these requests, and the user can only grant permissions that he or she has as a user. The grant must be for all the requested permissions or none of them to simplify the management of permissions for users and developers. (The add-in principal always has full control rights to the add-in web, so it only needs to request permissions to SharePoint resources in the host web or other locations outside the add-in web.)
 
@@ -79,14 +79,14 @@ A SharePoint Add-in that includes a remote web application that uses JavaScript 
 <a name="SPAppModelArch_Lifecycle"> </a>
 ## Add-in lifecycle
 
-The lifecycle for a SharePoint Add-in includes publishing, installing, upgrading, and uninstalling. For more information about these subjects, see [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md), [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md) and [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md). 
+The lifecycle for a SharePoint Add-in includes publishing, installing, upgrading, and uninstalling. For more information about these subjects, see [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md), [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md) and [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md).
 
 Note also that there is a mechanism by which tenant administrators can batch install a SharePoint Add-in to multiple websites. For more information, see [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md).
 
 <a name="Data"> </a>
 ## Data storage in SharePoint Add-ins
 
-SharePoint Add-ins can create and access any kind of data, including structured data, documents, and multimedia files. This data can be stored in SharePoint or in an external location. 
+SharePoint Add-ins can create and access any kind of data, including structured data, documents, and multimedia files. This data can be stored in SharePoint or in an external location.
 
 <a name="StructuredData"> </a>
 ### Structured data storage options
@@ -105,14 +105,14 @@ A SharePoint Add-in can use almost any kind of structured data storage, both ins
 <a name="UnStructuredData"> </a>
 ### Unstructured data storage options
 
-Documents, images, videos, audio files, and other kinds of unstructured data that is produced or used by a SharePoint Add-in can be stored in or outside SharePoint. Document libraries are a good choice for documents and are searchable via SharePoint search. A site asset library is often a good choice for multimedia files. 
+Documents, images, videos, audio files, and other kinds of unstructured data that is produced or used by a SharePoint Add-in can be stored in or outside SharePoint. Document libraries are a good choice for documents and are searchable via SharePoint search. A site asset library is often a good choice for multimedia files.
 
 Other options include Blob storage in your Microsoft Azure account or on your own servers. You can also store files in some non-Microsoft platforms or cloud services.
 
 <a name="AppMetadata"> </a>
 ### Add-in settings and other metadata storage options
 
-Metadata for a SharePoint Add-in, such as user preferences, location information, and other settings can be stored in several places. A hidden SharePoint list is sometimes a good choice. You can also use the property bag of the add-in web. Another option, for a provider-hosted add-in, is to use Azure Table storage. 
+Metadata for a SharePoint Add-in, such as user preferences, location information, and other settings can be stored in several places. A hidden SharePoint list is sometimes a good choice. You can also use the property bag of the add-in web. Another option, for a provider-hosted add-in, is to use Azure Table storage.
 
 <a name="DataAccess"> </a>
 ### Secure data access options
@@ -133,7 +133,7 @@ SharePoint provides health monitoring of add-ins and makes this information avai
 
 Some kinds of data are reported per-app and other kinds are reported per-app-instance. The primary items that the monitoring framework reports are as follows:
 
-- Use of the add-in, such as the number of times it has been installed (creating a new instance). 
+- Use of the add-in, such as the number of times it has been installed (creating a new instance).
 - Server resource consumption of each add-in instance.
 - Installation, upgrade, and run-time errors of each add-in instance.
 - An overall health indicator for each add-in instance of green, yellow, and red.
@@ -156,7 +156,7 @@ For Features, such as a Task list, the infrastructure verifies that the Feature 
 or
 
 - activatable, with **Web** scope, on the add-in web that is created when the add-in is installed.
- 
+
 > [!NOTE]
 > The add-in installation infrastructure will automatically activate such Features on the add-in web when it is created.
 
@@ -170,7 +170,7 @@ When your add-in needs access to SharePoint components outside of the add-in web
 <a name="Explicit"> </a>
 ### Explicitly register dependencies with AppPrerequisites
 
-When your add-in has a dependency that is not implied by its permission requests, you register each dependency with an **AppPrerequisite** element in the add-in manifest. There are three attributes in this element: **Type**, **ID**, and (optionally) **MinimumVersion**. 
+When your add-in has a dependency that is not implied by its permission requests, you register each dependency with an **AppPrerequisite** element in the add-in manifest. There are three attributes in this element: **Type**, **ID**, and (optionally) **MinimumVersion**.
 
 There are three possible prerequisite values for **Type**: `Feature`, `Capablility`, and `AutoProvisioning`. A Feature prerequisite is simply a SharePoint Feature that must be deployed and activated on the add-in web or a broader scope that includes the add-in web. A capability is a set of related Features and services that must be available on the add-in web. (`AutoProvisioning` is discussed in the next section.)
 
@@ -219,6 +219,3 @@ The following is an example of raw **AppPrerequisites** markup that registers th
 -  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
 -  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md).
 -  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md)
-    
- 
-

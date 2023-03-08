@@ -1,7 +1,7 @@
 ---
 title: Isolated web parts
 description: Overview of the isolated web parts capability in the SharePoint Framework
-ms.date: 08/05/2021
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 
@@ -28,7 +28,7 @@ Solutions using the isolated web parts capability, have a specific flag set in t
 
 After approving an isolated API permission request, SharePoint will create a separate Azure AD application in the Azure AD linked to the Microsoft 365 tenant. This Azure AD application is specific to the SharePoint Framework solution that requested API permissions and will have set OAuth permissions as requested by that solution. The return URL of that Azure AD application, which is used by the OAuth implicit flow, will be set to a unique domain that is tied to that specific SharePoint Framework application.
 
-All web parts from solutions using isolated permissions, when added to a page, will be displayed using an iframe pointing to a unique domain tied to the particular SharePoint Framework solution. This way, SharePoint Framework can enforce unique API permissions and ensure that no other solution or script in the tenant can obtain an access token to these APIs.
+All web parts from solutions using isolated permissions, when added to a page, will be displayed using an `<iframe>` pointing to a unique domain tied to the particular SharePoint Framework solution. This way, SharePoint Framework can enforce unique API permissions and ensure that no other solution or script in the tenant can obtain an access token to these APIs.
 
 ### Scaffolding a project that uses isolated permissions
 
@@ -45,7 +45,7 @@ If you answer **Yes**, the generator will add a flag to your project's configura
 
 ### Communicating with APIs
 
-Despite the web part using isolated permissions, there's nothing specific to how you obtain an access token to an API secured with Azure AD in your code. Additionally, even though on runtime isolated web parts will be loaded inside an iframe pointing to a unique domain, you can communicate with SharePoint REST API, the same way as you would in non-isolated web parts.
+Despite the web part using isolated permissions, there's nothing specific to how you obtain an access token to an API secured with Azure AD in your code. Additionally, even though on runtime isolated web parts will be loaded inside an `<iframe>` pointing to a unique domain, you can communicate with SharePoint REST API, the same way as you would in non-isolated web parts.
 
 ### Deploying solutions with isolated web parts
 
@@ -55,15 +55,15 @@ API permissions granted on the tenant-level can be used by any SharePoint Framew
 
 ### Using isolated web parts
 
-When added to the page, isolated web parts are displayed using an iframe. This iframe points to a unique domain assigned to the SharePoint Framework solution where the web part is located. This domain is also referenced in the return URL of the Azure AD application created to host the isolated permissions for the particular SharePoint Framework solution. Using the unique domain allows to ensure, that only web parts from the particular SharePoint Framework solution can obtain an access token for the isolated set of permissions.
+When added to the page, isolated web parts are displayed using an iframe. This `<iframe>` points to a unique domain assigned to the SharePoint Framework solution where the web part is located. This domain is also referenced in the return URL of the Azure AD application created to host the isolated permissions for the particular SharePoint Framework solution. Using the unique domain allows to ensure, that only web parts from the particular SharePoint Framework solution can obtain an access token for the isolated set of permissions.
 
 ### Property pane for isolated web parts
-Property pane for isolated web parts is rendered as a separate iframe with _additional_ instance of the same web part. It brings some specifics that developers should be aware of:
+Property pane for isolated web parts is rendered as a separate `<iframe>` with _additional_ instance of the same web part. It brings some specifics that developers should be aware of:
 - Isolated web part's lifecycle events such as `render` will be called twice: once for the web part itself and once for the property pane.
-- The property pane's iframe size is limited to the panel's dimensions. Take it into consideration if you plan to use modals or any wide controls in your property pane.
+- The property pane's `<iframe>` size is limited to the panel's dimensions. Take it into consideration if you plan to use modals or any wide controls in your property pane.
 
 ### Disposal of isolated web parts
-`onDispose` method for isolated web parts _may not be called_ as iframe removal from DOM automatically cleans all the resources, including socket connections, associated with the iframe's document.
+`onDispose` method for isolated web parts _may not be called_ as `<iframe>` removal from DOM automatically cleans all the resources, including socket connections, associated with the iframe's document.
 
 ### Upgrading existing project to use isolated permissions
 

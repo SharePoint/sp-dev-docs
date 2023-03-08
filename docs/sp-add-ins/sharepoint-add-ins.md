@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-ins
 description: Create self-contained extensions of SharePoint websites, called SharePoint Add-ins, that run without custom code on the SharePoint server.
-ms.date: 12/14/2020
+ms.date: 03/08/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -20,7 +20,7 @@ There are two basic kinds of SharePoint Add-ins: SharePoint-hosted and provider-
 - **The SharePoint websites where SharePoint Add-ins are installed, and from which users launch them, are called host webs.** The SharePoint components, however, are generally in a special child web of the host web called the add-in web.
 - **SharePoint Add-ins can fit into a SharePoint website in several ways**:
   - ![Immersive Full Page SharePoint app experience](../images/7298a25b-ed54-4953-a781-26c3f633866a.jpg): **As an immersive full-page experience** that can have the look and feel of a SharePoint page.
-  - ![App Part experience for SharePoint app](../images/90cd4b6e-462e-442e-92de-86b2d98282d0.jpg): **As part of a webpage, using a special kind of control called an add-in part**, to surface an iframe element that contains the add-in.
+  - ![App Part experience for SharePoint app](../images/90cd4b6e-462e-442e-92de-86b2d98282d0.jpg): **As part of a webpage, using a special kind of control called an add-in part**, to surface an `<iframe>` element that contains the add-in.
   - ![Custom action experience of SharePoint app](../images/3a14cfdc-51e1-446f-82d9-acb4f2bcbc0e.jpg): **As UI commands that extend ribbons and menus** for lists, documents, and more.
 - **All SharePoint Add-ins that users install get a tile on the Site Contents page of the SharePoint website.** Clicking the tile runs the add-in.
 - **A SharePoint Add-in is configured using an _add-in manifest_**—an XML file that declares the add-in's basic properties, where it runs, and what SharePoint should do when the add-in starts. Among other things, the manifest can specify what languages the add-in supports, what SharePoint services and functionality it depends on, and the permissions to the host web that the add-in needs. (SharePoint Add-ins have full control of their own add-in web.)

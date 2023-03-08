@@ -1,7 +1,7 @@
 ---
 title: UI text guidelines for SharePoint web parts
 description: Use simple, understandable, and concise UI text to create effective web parts in SharePoint.
-ms.date: 06/28/2022
+ms.date: 03/08/2023
 ms.localizationpriority: medium
 ---
 
@@ -134,7 +134,7 @@ Hint text, or ghost text, is the text element you display in a UI element, typic
 
 - Repeat the label. For example, if you have a text box with the label **Name**, the hint text **Enter name** is redundant and potentially confusing.
 
-The following hint text is for the embed web part. The text field can accept a secure website address or an iframe embed code. The text shows an example of both.
+The following hint text is for the embed web part. The text field can accept a secure website address or an `<iframe>` embed code. The text shows an example of both.
 
 <img alt="Web part hint text" src="../images/design-uitext-06.png" width="800">
 

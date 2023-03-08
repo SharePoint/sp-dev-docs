@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.14 release notes
 description: Release notes for the SharePoint Framework v1.14 release
-ms.date: 02/25/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.14 release notes
@@ -327,7 +327,7 @@ Learn more: [Image Helper API](image-helper-api.md)
 - [#4808](https://github.com/SharePoint/sp-dev-docs/issues/4808) - SPFX and react-dnd
 - [#4587](https://github.com/SharePoint/sp-dev-docs/issues/4587) - Will background sections be supported in domain isolated webparts (feature available for spfx 1.8.2 on wards)
 - [#4550](https://github.com/SharePoint/sp-dev-docs/issues/4550) - Single Part App Page doesn't prevent navigation when there are unsaved changes
-- [#5098](https://github.com/SharePoint/sp-dev-docs/issues/5098) - `this.context.propertyPane.open()` opens within iframe on isolated webparts
+- [#5098](https://github.com/SharePoint/sp-dev-docs/issues/5098) - `this.context.propertyPane.open()` opens within an `<iframe>` on isolated webparts
 - [#5227](https://github.com/SharePoint/sp-dev-docs/issues/5227) - QuickLaunch navigation (for SinglePageWebParts) fails
 - [#6779](https://github.com/SharePoint/sp-dev-docs/issues/6779) - Application customizers appear in "Lists" team tab after adding item to the list
 - [#5787](https://github.com/SharePoint/sp-dev-docs/issues/5787) - Check Fullmask Permission and the Bitwise JS Limit

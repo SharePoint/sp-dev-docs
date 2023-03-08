@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
-ms.date: 06/13/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 
@@ -65,7 +65,7 @@ Provider-hosted add-ins are add-ins that are executed remotely from SharePoint (
 
 The primary advantage of add-ins is isolation: because the actual code isn't executed in the SharePoint site browser, cross-site scripting protections prevent the add-in from getting the same access as the user has. Add-ins are limited to the permissions that the add-in was granted at install time. This makes add-ins a safer option for scenarios where an admin acquires an add-in from a third party, and it also allows Microsoft to have a Store from where you can download add-ins.
 
-The SharePoint Framework works side by side with both SharePoint-hosted and provider-hosted add-ins, but can also be used as an alternative in scenarios where only client-side scripting is required. For example, add-ins can add app parts to the site where they are hosted. These app parts are similar to web parts, but instead of running in the context of the page, they run in their own domain (App Web or provider-hosted web) within an Iframe on the page. This prevents the add-in from gaining the user context from the rest of the page.
+The SharePoint Framework works side by side with both SharePoint-hosted and provider-hosted add-ins, but can also be used as an alternative in scenarios where only client-side scripting is required. For example, add-ins can add app parts to the site where they are hosted. These app parts are similar to web parts, but instead of running in the context of the page, they run in their own domain (App Web or provider-hosted web) within an `<iframe>` on the page. This prevents the add-in from gaining the user context from the rest of the page.
 
 The SharePoint Framework doesn't run in an Iframe. Thanks to this, it can more seamlessly run in the context of the page with the full power of the user viewing the part. This is the key to enabling it to run with rich functionality, but at the same time this means that it doesn't have the same level of security controls as add-ins. SharePoint Framework solutions are due to this also being referred to as *full trust client-side solutions*. Iframes suffer from the problem that they aren't responsive, which results in the rendered webpage not being as fluent on a mobile phone or alternate screen size.
 

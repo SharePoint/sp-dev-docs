@@ -1,7 +1,7 @@
 ---
 title: Development models
 description: Development models
-ms.date: 06/28/2022
+ms.date: 03/08/2023
 author: vesajuvonen
 ms.author: vesaj
 ms.topic: article
@@ -51,7 +51,7 @@ The SharePoint Add-In model is a development model for SharePoint Online and Sha
 This goal adheres perfectly to the cloud offering model and philosophy. Users can discover and download SharePoint Add-ins from a public SharePoint add-in store or from their organization's corporate add-in catalog. With the SharePoint Add-In model you can create SharePoint-hosted and provider-hosted solutions. The former are just client-side and JavaScript based applications, hosted in SharePoint. The latter typically are .NET applications hosted on Microsoft Azure, or on any other hosting platform. With the SharePoint Add-In model you can create:
 
 * Full-page solutions: an immersive full-page experience that can have the look and feel of a SharePoint page.
-* App-Parts: parts of a webpage, using a special kind of control called an add-in part, to surface an iframe element that contains the add-in.
+* App-Parts: parts of a webpage, using a special kind of control called an add-in part, to surface an `<iframe>` element that contains the add-in.
 * UI Custom Actions: UI commands that extend ribbons and menus for lists, documents, and more.
 
 Moreover, a SharePoint Add-in can include classic SharePoint components such as lists, custom website pages, web parts, workflows, content types, and many other artifacts.

@@ -1,7 +1,7 @@
 ---
 title: SharePoint Add-ins UX design guidelines
 description: User experience (UX) design guidelines for add-ins in SharePoint, including choosing the chrome, using CSS, managing user licenses, and other design tasks.
-ms.date: 12/14/2020
+ms.date: 03/08/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -303,11 +303,11 @@ The page has to work nicely in an **iframe** across different domains, so you'll
 <WebPartPages:AllowFraming ID="AllowFraming1" runat="server" />
 ```
 
-Because you cannot enforce which domains your pages are iframed into, the pages you host in add-in parts are vulnerable to a clickjacking security attack. In clickjacking attacks, pages can be in an iframe on a malicious page, and users could be tricked into choosing buttons to take actions they're not aware of. When designing your page, you should be aware of this and make sure you're not exposing any functionality in the page for the part that would be dangerous if surfaced in a malicious page.
+Because you cannot enforce which domains your pages are `<iframe>`'d into, the pages you host in add-in parts are vulnerable to a clickjacking security attack. In clickjacking attacks, pages can be in an `<iframe>` on a malicious page, and users could be tricked into choosing buttons to take actions they're not aware of. When designing your page, you should be aware of this and make sure you're not exposing any functionality in the page for the part that would be dangerous if surfaced in a malicious page.
 
 Although users can manually set a different size on your part, you are able to set a particular size for the part in the part definition. You also have the ability to request that your part is resized dynamically through **postmessages**. By default, we recommend that your part choose sizes in increments of 30px (for example, 150px or 210px) so that when parts from different add-ins are mixed on the same page, the user can still get a sense that each of the parts was built to work in the same space. If your part is meant to mimic a tile from the getting started experience, it should have a height and width of 150px. If the part is meant to display in a side column to show details, it should have a width of 300px.
 
-If your part displays dynamic content, it's a good idea to request a resize to reduce having scrollbars embedded within a page. The following example shows you how to use **postmessages** to resize the part:
+If your part displays dynamic content, it's a good idea to request a resize to reduce having scroll bars embedded within a page. The following example shows you how to use **postmessages** to resize the part:
 
 ```javascript
 window.parent.postMessage('<message senderId={your ID}>resize(120, 300)</message>', {hostweburl});

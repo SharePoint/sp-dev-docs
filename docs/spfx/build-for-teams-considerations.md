@@ -1,7 +1,7 @@
 ---
 title: Considerations for building for Microsoft Teams using SharePoint Framework
 description: There are a number of things that you should take into account when building for Microsoft Teams using SharePoint Framework
-ms.date: 03/15/2021
+ms.date: 03/08/2023
 ms.localizationpriority: medium
 ---
 
@@ -22,7 +22,7 @@ When the solution is globally deployed in your tenant, users can add tabs to any
 
 If you have an existing web application, most likely you will not migrate it to SharePoint Framework. Since the application is already working, the easiest way to expose it in Microsoft Teams is by [creating a manifest for it](/microsoftteams/platform/tabs/what-are-tabs).
 
-Depending how your application is built, you might need to ensure that users can correctly sign into your application and that the application can securely access its APIs. When users work with your application in Microsoft Teams, the application loads inside an iframe and your authentication implementation needs to support this properly.
+Depending how your application is built, you might need to ensure that users can correctly sign into your application and that the application can securely access its APIs. When users work with your application in Microsoft Teams, the application loads inside an `<iframe>` and your authentication implementation needs to support this properly.
 
 ## Support for Microsoft Teams tabs and personal apps
 
