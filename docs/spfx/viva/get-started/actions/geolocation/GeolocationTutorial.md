@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with geolocation action
 description: Step by step guide on creating Adaptive Card Extension for Geolocation action.
-ms.date: 04/06/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with geolocation action
@@ -99,7 +99,6 @@ to the `IGeoLocationAdaptiveCardExtensionStrings` interface.
 ### Add actions on the Card View
 
 As mentioned earlier, on the Card View, we will add a button, which will show user their current location and on clicking the Card View, we will show the Quick View experience.
-
 
 We will first add the functionality for the button on the Card View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/geoLocation/cardView/CardView.ts**
 
@@ -274,3 +273,7 @@ So now, whenever the `VivaAction.GetLocation` action is triggered from your Quic
 At this point, you can run **gulp serve** again and see how all the changes you made so far came together.
 
 This is it! Congratulations on successfully creating you Adaptive Card Extension with geolocation actions.
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

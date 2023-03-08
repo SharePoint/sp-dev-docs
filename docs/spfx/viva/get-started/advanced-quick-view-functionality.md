@@ -1,7 +1,7 @@
 ---
 title: Advanced Quick View Functionality
 description: "This tutorial builds off the tutorial 'Advanced Card View Functionality'."
-ms.date: 01/12/2023
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Advanced Quick View Functionality
@@ -322,3 +322,7 @@ After this lab  you should be familiar with:
 - Handle actions from the Quick View
 - Use `onRenderTypeChanged()`
 - Advanced Quick View manipulation
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

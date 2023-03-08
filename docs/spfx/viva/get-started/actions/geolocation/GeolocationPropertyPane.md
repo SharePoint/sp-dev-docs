@@ -1,7 +1,7 @@
 ---
 title: Explore Geolocation capability via property pane of card-desinger card in Adaptive Card Extension
 description: Geolocation is a new action that the SharePoint Adaptive Card Extension framework supports, and in this tutorial we see how we can explore this capability via the property pane of the card-designer card.
-ms.date: 04/06/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 
@@ -68,3 +68,7 @@ You can now check out the three geolocation actions that you introduced via the 
 
 > [!NOTE]
 > This property-pane experience doesn't allow you to introduce onAction callback, and hence the action `Select location from a map` is actually a no-op.
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)
