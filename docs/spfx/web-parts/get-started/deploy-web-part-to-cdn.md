@@ -1,7 +1,7 @@
 ---
 title: Deploy your SharePoint client-side web part to Azure CDN
 description: Create a new sample web part and deploy its assets to an Azure CDN instead of using the default Office 365 CDN as the hosting solution.
-ms.date: 06/13/2022
+ms.date: 03/08/2023
 ---
 # Deploy your SharePoint client-side web part to Azure CDN
 
@@ -63,6 +63,10 @@ Create a new CDN profile and associate the CDN endpoint with this BLOB container
     For example, in the following screenshot, **spfxsamples** is the endpoint name, **Storage** is the origin type, and **spfxsamples.blob.core.windows.net** is the storage account.
 
     ![Screenshot of create CDN endpoint](../../../images/deploy-create-cdn-endpoint.png)
+
+1. To allow scripts to be cached by the SharePoint service worker, add an appropriate Cache-Control response header to the CDN endpoint.
+
+    ![Screenshot of add a cache control header](../../../images/deploy-create-cdn-cache-control-header.png)
 
 Because you associated the CDN endpoint with your storage account, you can also access the BLOB container at the following URL: **`http://spfxsamples.azureedge.net/azurehosted-webpart/`**
 
