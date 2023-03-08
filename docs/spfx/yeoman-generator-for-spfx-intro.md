@@ -1,7 +1,7 @@
 ---
 title: Yeoman generator for the SharePoint Framework
 description: On this page, learn how to use the Yeoman generator for the SharePoint Framework to create SPFx projects.
-ms.date: 02/10/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Yeoman generator for the SharePoint Framework
@@ -210,7 +210,7 @@ In the [SPFx v1.14 release](release-1.14.md), the following prompt was retired:
 
 > Will the components in the solution require permissions to access web APIs that are unique and not shared with other components in the tenant?
 
-This question is asking if the web parts within the solution should be rendered within an IFRAME in a unique domain, or in a DIV as the current page. The default option was **\[N\]o**.
+This question is asking if the web parts within the solution should be rendered within an `<iframe>` in a unique domain, or in a DIV as the current page. The default option was **\[N\]o**.
 
 > [!NOTE]
 > Learn more about this prompt: [Isolated web parts](web-parts/isolated-web-parts.md)

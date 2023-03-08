@@ -1,7 +1,7 @@
 ---
 title: Recommendations for working with CSS in SharePoint Framework solutions
 description: Use CSS to define how your SharePoint Framework customization should look and behave.
-ms.date: 1/24/2018
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 
@@ -12,7 +12,7 @@ When building SharePoint Framework solutions, you can use CSS to define how your
 
 ## SharePoint Framework customizations are part of the page
 
-When building SharePoint customizations using the add-in model, the solution is isolated from other elements on the page. Your code can be executed in an iframe as an add-in part, or as an immersive application that takes control of the whole page. In both cases, your code is not affected by other elements and styles defined on the page.
+When building SharePoint customizations using the add-in model, the solution is isolated from other elements on the page. Your code can be executed in an `<iframe>` as an add-in part, or as an immersive application that takes control of the whole page. In both cases, your code is not affected by other elements and styles defined on the page.
 
 SharePoint Framework solutions are a part of the page and integrate fully with the page's DOM. While this removes a number of restrictions that come with the add-in model, it exposes your solution to risk. Because it's a part of the page, unless explicitly isolated, all CSS styles present on the page apply to it, potentially resulting in an experience different from what you intended. To avoid such risks, you should define your CSS styles in such a way so that they won't affect anything else on the page other than your customization.
 
