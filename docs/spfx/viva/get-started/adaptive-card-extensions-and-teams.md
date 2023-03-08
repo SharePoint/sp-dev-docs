@@ -1,7 +1,7 @@
 ---
 title: Adaptive Card Extensions and Teams Apps
 description: "This tutorial builds off the tutorial 'Advanced Quick View Functionality'."
-ms.date: 07/22/2021
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Adaptive Card Extensions and Teams Apps
@@ -162,3 +162,7 @@ After this lab you should be familiar with:
 - Packaging and deployment of heterogeneous SPFx solutions
 - Manually creating a Teams deep link URL
 - Deep linking from an ACE to a Teams Personal Tab
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

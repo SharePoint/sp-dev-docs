@@ -1,21 +1,17 @@
 ---
 title: Location capabilities in Adaptive Card Extension
 description: Geolocation is a new action that the SharePoint Adaptive Card Extension framework supports, which enables third party developers to come up with their location specific scenarios.
-ms.date: 04/06/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Location capabilities in Adaptive Card Extension
 
-> [!NOTE]
-> The geolocation capability in Adaptive Card Extension will be available in SPFx v1.15.
+Microsoft added support for two geolocation actions, unique to Viva Connections, in the [SharePoint Framework (SPFx) v1.15 release](../../../../release-1.15.md).
+
+> [!IMPORTANT]
+> This tutorial also assumes that you've already built an SPFx Adaptive Card Extension.
 >
-> So make sure that you have installed it before proceeding further.
->
-> For more information on installing the SPFx v1.15 Preview, see [SharePoint Framework v1.15 release notes](../../../../release-1.15.md).
->
-> This tutorial also assumes that you have already built a SharePoint Adaptive Card Extension.
->
-> To learn how to create your first SharePoint Adaptive Card Extension, try out [this tutorial](../../../get-started/build-first-sharepoint-adaptive-card-extension.md).
+> To learn how to create your first an SPFx Adaptive Card Extension, try out [this tutorial](../../../get-started/build-first-sharepoint-adaptive-card-extension.md).
 
 ### New action types for geolocation
 
@@ -24,25 +20,44 @@ There are 2 Location actions:
 1. Get Location
 1. Show Location
 
-### Get Location:
+### Get Location
 
-Gives user’s current device location or opens a location picker and returns the location chosen by the user. In the browser it uses Bing Maps as the mapping interface.
+The `VivaAction.GetLocation` action takes user’s current device location or opens a location picker and returns the location chosen by the user. The Viva Connections browser client uses Bing Maps for the mapping experience:
 
-The ACE action for Get Location is: `VivaAction.GetLocation`.
+```json
+{
+  "id": "originLocation",
+  "type": "VivaAction.GetLocation",
+  "title": "Select location on the map",
+  "parameters": {
+    "chooseLocationOnMap": true
+  }
+}
+```
 
-It takes an optional boolean parameter: `ChooseLocationOnMap`.
+When the optional parameter property `ChooseLocationOnMap` is set to `true`, the action will open a map, and user will get to choose a location on the map. If set to `false` (*the default setting*), it will fetch user's current device location.
 
-If the property `ChooseLocationOnMap` is set to `true`, then the action will open a map, and user will get to choose a location on the map, otherwise, it will fetch user's current device location.
+### Show Location
 
-### Show Location:
+The `VivaAction.ShowLocation` action displays a map that displays the user's current location on the map or a specified location:
 
-With this action, a map shows up on the screen on which you can either show the user's current location on the map or you can show your specified coordinates on the map.
-
-The ACE action for Show Location is: `VivaAction.ShowLocation`.
+```json
+{
+  action: {
+    type: 'VivaAction.ShowLocation',
+    parameters: {
+      locationCoordinates: {
+        latitude: 28.6132039578389,
+        longitude: 77.229488240066
+      }
+    }
+  }
+}
+```
 
 It takes an optional location parameter: `locationCoordinates`.
 
-To show a specific location, you should pass the location coordinates (latitude and longitude) via the `locationCoordinates` parameter.
+To show a specific location, set the optional `locationCoordinates` property the location coordinates (*latitude and longitude*).
 
 The `locationCoordinates` object consists of the following properties:
 
@@ -143,12 +158,11 @@ The following examples describe the geolocation action and their purpose.
 If you don't want to write code, but still wish to see how the geolocation actions work, then you can explore [this tutorial](./GeolocationPropertyPane.md) which lets you create cards with geolocation actions via property pane.
 
 > [!NOTE]
-> Theses geolocation actions can be added on the card view or the buttons of the card view or inside the quick view.
+> Theses geolocation actions can be added on the CardView or the buttons of the CardView or inside the QuickView.
 
 ### Permission and error codes
 
-For the location APIs to work, the user has to grant the permission to access device's location.
-
+For the location APIs to work, the user must grant the browser permission to access device's location.
 
 Error Code        | Error Description
 ----------------- | -----------------
@@ -156,23 +170,27 @@ PermissionDenied  | User has denied the permission to access location
 InternalError     | An unexpected error happened while invoking the location APIs
 HostNotSupported  | The location action is being used in an unsupported environment
 
-
 ### Callbacks for Card Developers
 
 When the action `VivaAction.GetLocation` is invoked, we pass the fetched location coordinates via the onAction callback.
 
 > [!NOTE]
-> onAction callback is not invoked for `VivaAction.ShowLocation`.
+> `onAction` callback is not invoked for `VivaAction.ShowLocation`.
 
-For actions: `VivaAction.GetLocation` and `VivaAction.ShowLocation`, if the user lands into an error state, then an onError callback will get invoked, to which we pass the action name and the error code.
+For actions: `VivaAction.GetLocation` and `VivaAction.ShowLocation`, if the user lands into an error state, then an `onError` callback will get invoked, to which we pass the action name and the error code.
 
 ### Availability of geolocation actions
 
 > [!NOTE]
-> These new actions are **only available in the browser** currently. Viva Connections desktop and Viva Connections mobile support will be enabled later.
+> These new actions are currently **only available in the browser**. Viva Connections desktop and Viva Connections mobile support will be enabled later.
+
 After General Availability the support matrix for actions will look like:
 
-Action       | Viva Connection Desktop | Viva Connections Mobile | Browser
-------------- | ------------- | ------------- | -------------
-Get Location  | Not Supported | Supported | Supported
-Show Location | Not Supported | Supported | Supported
+   Action     | Viva Connection Desktop | Viva Connections Mobile |  Browser
+------------- | ----------------------- | ----------------------- | ---------
+Get Location  | Not Supported           | Supported               | Supported
+Show Location | Not Supported           | Supported               | Supported
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

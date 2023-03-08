@@ -1,15 +1,12 @@
 ---
 title: Advanced Card View Functionality
 description: "This tutorial builds off the tutorial 'Build your first SharePoint Adaptive Card Extension'."
-ms.date: 02/18/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Advanced Card View Functionality
 
 This tutorial builds off the following tutorial: [Build your first SharePoint Adaptive Card Extension](build-first-sharepoint-adaptive-card-extension.md)
-
-> [!IMPORTANT]
-> This feature is still preview status as part of the 1.14 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.15 release.
 
 In this tutorial, you'll implement advanced card view functionality. You'll build off the the previous tutorial and create a card view that's powered by data in a SharePoint list.
 
@@ -461,3 +458,7 @@ After this lab you should be familiar with:
 - Conditionally rendering Card view elements
 - Advanced Card view manipulation
 - Caching Card view and ACE state
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

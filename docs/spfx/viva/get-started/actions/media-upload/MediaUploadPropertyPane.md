@@ -1,15 +1,13 @@
 ---
 title: Explore Media Upload capability via property pane of card-designer card in Adaptive Card Extension
 description: Media Upload is a new action that the SharePoint Adaptive Card Extension framework supports. In this tutorial we'll see how we can explore this capability via the property pane of the card-designer card.
-ms.date: 08/09/2022
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 
 # Explore Media Upload capability via property pane of card-designer card in Adaptive Card Extension
 
 In this tutorial we'll see how we can explore this capability via the property pane of the card-designer card.
-
-we'll:
 
 - Update the card strings
 - Introduce media upload actions on the card view, primary button, and secondary button.
@@ -59,7 +57,11 @@ Finally, for the `Secondary Button`, set the `Title` to `Select multiple media` 
 Now close the property pane and click `Preview` from the top right hand corner of the page:
 
 - Click on the card to open up media upload and exit
-- Clicking `Select single media` will pull open the same modal 
+- Clicking `Select single media` will pull open the same modal
 - Clicking `Select multiple media` will open up the same modal but will allow the user to upload several files at once
 
 ![Multiple images uploaded at once](./img/mediaUploadPropertyPaneMultipleImages.PNG)
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)

@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the select media action
 description: Step by step guide on how to create an Adaptive Card Extension with the select media action.
-ms.date: 01/26/2023
+ms.date: 03/08/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with select media action
@@ -260,3 +260,7 @@ At this point, you can run **gulp serve** again and see how all the changes you 
 This is it! Congratulations on successfully creating you Adaptive Card Extension with media upload action.
 
 ![Two media uploaded](./img/mediaUploadTutorialFileNames.PNG)
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)
