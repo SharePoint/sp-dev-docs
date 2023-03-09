@@ -83,7 +83,7 @@ Ensure the following service applications are enabled on the SharePoint Server:
 
 In Central Admin site, you can create App Management Service application and Managed Metadata Web Service application by selecting **Application Management --> Manage service applications**.
 
-:::image type="content" source="../images/screenshot_4.png" alt-text="This is screenshot 4.":::
+:::image type="content" source="../../images/manage-service-application.png" alt-text="This is manage service application image.":::
 
 To create SharePoint Foundation Subscription Settings Service, use the following PowerShell command:
 
@@ -111,7 +111,7 @@ To create and configure App Catalog site, follow these steps:
 
    Create a local admin for subsequence use of as the site collection administrator.
    
-   :::image type="content" source="../images/screenshot_5.png" alt-text="This is screenshot 5.":::
+   :::image type="content" source="../../images/manage-app-catalogue.png" alt-text="This is manage app catalogue image.":::
 
 2. Create the app catalog site by selecting **Web Application**. 
 3. Select **Create a new app catalog site**, and then select **OK**.
@@ -125,7 +125,7 @@ To configure App URLs, follow these steps:
 
 1. From the **Central Administration** site, go to **Apps** and then select **Configure App URLs**.
 
-   :::image type="content" source="../images/configure-app-urls.png" alt-text="This is configure app urls image.":::
+   :::image type="content" source="../../images/configure-app-urls.png" alt-text="This is configure app urls image.":::
 
 2. Configure the App domain and App prefix.
 
