@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework development with SharePoint Server 2019 & SharePoint Server SE
 description: SharePoint Server 2019 & Subscription Edition (SE) supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
-ms.date: 06/10/2022
+ms.date: 03/14/2023
 ms.localizationpriority: high
 ---
 
