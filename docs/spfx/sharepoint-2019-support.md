@@ -103,7 +103,7 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
    Verify SharePoint Framework web part on local SharePoint workbench. 
 
-#### Create and configure app catalog site
+#### Create and configure App Catalog site
 
 To create and configure App Catalog site, follow these steps:
 
@@ -129,7 +129,7 @@ To configure App URLs, follow these steps:
 
 2. Configure the App domain and App prefix.
 
-#### Upload the package to app catalog
+#### Upload, install and add to app catalog
 
 For more tutorials about uploading the package to App Catalog and adding the web part to modern page, see [Deploy your client-side web part to a SharePoint page](web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md). 
 
