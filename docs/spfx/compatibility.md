@@ -24,7 +24,7 @@ SharePoint Online always uses the latest version of the SharePoint Framework, bu
 For more information about SharePoint Framework development with SharePoint 2016 Feature Pack 2 and SharePoint 2019, see:
 
 - [SharePoint Framework development with SharePoint 2016 Feature Pack 2](sharepoint-2016-support.md)
-- [SharePoint Framework development with SharePoint Server 2019](sharepoint-2019-support.md) - this guidance applies also for SharePoint Server Subscription Edition
+- [SharePoint Framework development with SharePoint Server 2019](sharepoint-server-2019-and-subscription-edition-support.md) - this guidance applies also for SharePoint Server Subscription Edition
 
 ## SPFx development environment compatibility
 
