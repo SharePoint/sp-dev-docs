@@ -1,7 +1,7 @@
 ﻿---
 title: Keyword Query Language (KQL) syntax reference
 description: Describes how to construct KQL queries for Search in SharePoint and steps on how to use property restrictions and operators in KQL queries.
-ms.date: 06/13/2022
+ms.date: 03/09/2023
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 ms.localizationpriority: high
 ---
@@ -82,7 +82,7 @@ For example, the following KQL queries return content items that contain the ter
   
     
     
-KQL queries don't support suffix matching.
+KQL queries don't support prefix matching with the wildcard * as prefix.
   
     
     
@@ -93,7 +93,7 @@ When you use phrases in a free-text KQL query, Search in SharePoint returns only
   
     
     
-KQL queries don't support suffix matching, so you can't use the wildcard operator before a phrase in free-text queries. However, you can use the wildcard operator after a phrase.
+KQL queries don't support prefix matching with the wildcard * as prefix, so you can't use the wildcard operator before a phrase in free-text queries. However, you can use the wildcard operator after a phrase.
   
     
     

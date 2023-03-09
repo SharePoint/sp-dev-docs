@@ -24,7 +24,7 @@
 > - Follow our guidance on [How To Create Good Pull Requests](https://github.com/SharePoint/sp-dev-docs/wiki/How-to-Create-Good-Pull-Requests).
 > - Target the `main` branch of this repo.
 > - When changing a page, ensure you update the `ms.date` front matter wih the current date in the format `MM/DD/YYYY`.
-> - Review all build checks and address the automated errors, warnigns, and suggestions.
+> - Review all build checks and address the automated errors, warnings, and suggestions.
 > - *NOTE: The live site is based on the `live` branch. Site owners periodically refresh `live` branch from the `main` branch so merged PRs won't immediately appear on the live site. Please be patient to see your changes appear on the live site.*
 >
 > **DELETE THIS SECTION BEFORE SUBMITTING**
