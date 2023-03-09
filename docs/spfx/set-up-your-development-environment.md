@@ -188,4 +188,4 @@ If your development environment is behind a corporate proxy, you need to configu
 
 - [SharePoint Framework development tools and libraries compatibility](compatibility.md)
 - [SharePoint Framework development with SharePoint Server 2016 Feature Pack 2](sharepoint-2016-support.md)
-- [SharePoint Framework development with SharePoint Server 2019](sharepoint-server-2019-and-subscription-edition-support.md)
+- [SharePoint Framework development with SharePoint Server 2019](sharepoint-2019-support.md)
