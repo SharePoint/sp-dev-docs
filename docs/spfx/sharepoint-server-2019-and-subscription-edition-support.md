@@ -125,7 +125,7 @@ To configure App URLs, follow these steps:
 
 1. From the **Central Administration** site, go to **Apps** and then select **Configure App URLs**.
 
-      :::image type="content" source="../../images/image_1.png" alt-text="This is image 1.":::
+   :::image type="content" source="../../images/screenshot-1.png" alt-text="This is screenshot 1.":::
 
 2. Configure the App domain and App prefix.
 
