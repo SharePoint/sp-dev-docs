@@ -82,7 +82,7 @@ For example, the following KQL queries return content items that contain the ter
   
     
     
-KQL queries don't support suffix matching.
+KQL queries don't support prefix matching.
   
     
     
@@ -93,7 +93,7 @@ When you use phrases in a free-text KQL query, Search in SharePoint returns only
   
     
     
-KQL queries don't support suffix matching, so you can't use the wildcard operator before a phrase in free-text queries. However, you can use the wildcard operator after a phrase.
+KQL queries don't support prefix matching, so you can't use the wildcard operator before a phrase in free-text queries. However, you can use the wildcard operator after a phrase.
   
     
     
