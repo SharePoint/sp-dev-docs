@@ -61,9 +61,9 @@ Microsoft recommends using the most recent version of the Yeoman generator for t
 ```   
 
 2. Install global dependencies.<br> 
-   npm install gulp-cli@2.3.0 --global<br>
-   npm install yo@2.0.6 --global<br>
-   npm install @microsoft/generator-sharepoint@1.10.0 --global<br> 
+   `npm install gulp-cli@2.3.0 --global`<br>
+   `npm install yo@2.0.6 --global`<br>
+   `npm install @microsoft/generator-sharepoint@1.10.0 --global`<br> 
 
 For more information, see [SharePoint Framework development tools and libraries compatibility](tools-and-libraries.md). 
 
@@ -71,7 +71,7 @@ For more information, see [SharePoint Framework development tools and librarie
 
 To create a new web part with SharePoint Framework , see [Build your first SharePoint client-side web part](web-parts/get-started/build-a-hello-world-web-part.md).
 
-To deploy your web part to SharePoint on-premises, unlike deploying to SharePoint Online, some dependent service applications and specific configurations on the SharePoint Server are required. 
+To deploy your web part to SharePoint on-premises, unlike deploying to SharePoint Online, some dependent service applications and specific configurations on the SharePoint Server are required, seeing below tutorials. You can contact SharePoint Server administrator if you do not have appropriate permission to check or configure. 
 
 ### Create service applications
 
@@ -96,10 +96,10 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 #### Prepare .sppkg package
 
 1. Bundle the solution.<br>
-   gulp bundle --ship
+   `gulp bundle --ship`
           
 1. Package the solution.<br>
-   gulp package-solution --ship
+   `gulp package-solution --ship`
 
    Verify SharePoint Framework web part on local SharePoint workbench. 
 
