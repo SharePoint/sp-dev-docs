@@ -93,7 +93,7 @@ $sa = New-SPSubscriptionSettingsServiceApplication -ApplicationPool $application
 New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 ```
 
-#### Prepare .sppkg package
+### Prepare .sppkg package
 
 1. Bundle the solution.<br>
    `gulp bundle --ship`
@@ -103,7 +103,7 @@ New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 
    Verify SharePoint Framework web part on local SharePoint workbench. 
 
-#### Create and configure App Catalog site
+### Create and configure App Catalog site
 
 To create and configure App Catalog site, follow these steps:
 
@@ -111,7 +111,7 @@ To create and configure App Catalog site, follow these steps:
 
    Create a local admin for subsequence use of as the site collection administrator.
    
-   :::image type="content" source="../images/manage-app-catalogue.png" alt-text="This is manage app catalog image.":::
+   :::image type="content" source="../images/manage-app-catalog.png" alt-text="This is manage app catalog image.":::
 
 2. Create the app catalog site by selecting **Web Application**. 
 3. Select **Create a new app catalog site**, and then select **OK**.
@@ -129,7 +129,7 @@ To configure App URLs, follow these steps:
 
 2. Configure the App domain and App prefix.
 
-#### Upload, install and add to app catalog
+### Upload, install and add to site and page
 
 For more tutorials about uploading the package to App Catalog and adding the web part to modern page, see [Deploy your client-side web part to a SharePoint page](web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md). 
 
