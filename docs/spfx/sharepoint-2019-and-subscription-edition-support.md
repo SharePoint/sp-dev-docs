@@ -12,6 +12,7 @@ SharePoint Server 2019 and Subscription Edition support SharePoint Framework cli
 > [!IMPORTANT]
 > SharePoint Server Subscription Edition (SE) has all the same dependencies and requirements for the SharePoint Framework as SharePoint Server 2019.
 
+
 ## Which version of the SharePoint Framework to use
 
 Because SharePoint Online and SharePoint Server 2019 have different release cycles for new capabilities, they also have different capabilities when it comes to the SharePoint Framework. SharePoint Online always uses the latest version of the SharePoint Framework, but SharePoint Server 2019 only supports the version that matches the server-side dependencies of the deployed packages.
