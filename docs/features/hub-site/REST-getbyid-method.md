@@ -110,6 +110,29 @@ https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-49
 }
 ```
 
+### Associate a hub with another hub (parent hub association)
+
+#### Sample request
+
+```HTTP
+POST
+https://contoso.sharepoint.com/_api/HubSites/GetById('f93eff08-5806-499c-92db-38800eefbe44')
+```
+
+```JSON
+{
+"__metadata": { "type": "SP.HubSite" },
+"Title":"Marketing hub site",
+"LogoUrl": "https://contoso.sharepoint.com/sites/marketing/SiteAssets/__hubLogo____hubLogo__.png",
+"Description": "Hub site for marketing coordination",
+"ParentHubSiteId":"269da5d4-6a9e-45a5-9502-a74d14977293"
+}
+```
+
+#### Sample response
+
+**Status code:** 204
+
 ## See also
 
 - [Hub site REST API](hub-site-rest-api.md)
