@@ -1,7 +1,7 @@
 ---
 title: GetById REST method
 description: Gets or updates information about a hub site.
-ms.date: 06/28/2022
+ms.date: 03/17/2023
 ms.localizationpriority: medium
 ---
 
@@ -29,8 +29,6 @@ POST /_api/HubSites/GetById
 |Accept|application/json;odata=verbose|
 |Content-Type|application/json;odata=verbose;charset=utf-8|
 |x-requestdigest|The appropriate digest for current site.|
-
-<br/>
 
 When using POST to update a hub site with new information, use the following additional header values:
 
@@ -63,8 +61,7 @@ For GET, no request body is needed. When using POST to update a hub site with ne
 #### Sample request
 
 ```HTTP
-GET
-https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-499c-92db-38800eefbe44'
+GET https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-499c-92db-38800eefbe44'
 ```
 
 #### Sample response
@@ -73,19 +70,19 @@ https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-49
 
 ```JSON
 {
-	"@odata.context": "https://contoso.sharepoint.com/_api/$metadata#hubsites/$entity",
-	"@odata.type": "#SP.HubSite",
-	"@odata.id": "https://contoso.sharepoint.com/_api/HubSites/GetById",
-	"@odata.etag": "\"3\"",
-	"@odata.editLink": "HubSites/GetById",
-	"Description": null,
-	"ID": "f93eff08-5806-499c-92db-38800eefbe44",
-	"LogoUrl": "https://contoso.sharepoint.com/sites/marketing/SiteAssets/__hubLogo____hubLogo__.png",
-	"SiteId": "f93eff08-5806-499c-92db-38800eefbe44",
-	"SiteUrl": "https://contoso.sharepoint.com/sites/marketing",
-	"Targets": "<acl><ace identityName=\"c:0t.c|tenant|0d4b97fc-37fb-4db3-84f3-d34243a3afac\" displayName=\"0t.c|tenant|0d4b97fc-37fb-4db3-84f3-d34243a3afac\" sid=\"\" binaryIdType=\"1\" binaryId=\"YzowdC5jfHRlbmFudHwwZDRiOTdmYy0zN2ZiLTRkYjMtODRmMy1kMzQyNDNhM2FmYWM=\" allowRights=\"1\" denyRights=\"0\" /></acl>",
-	"TenantInstanceId": "00000000-0000-0000-0000-000000000000",
-	"Title": ""
+  "@odata.context": "https://contoso.sharepoint.com/_api/$metadata#hubsites/$entity",
+  "@odata.type": "#SP.HubSite",
+  "@odata.id": "https://contoso.sharepoint.com/_api/HubSites/GetById",
+  "@odata.etag": "\"3\"",
+  "@odata.editLink": "HubSites/GetById",
+  "Description": null,
+  "ID": "f93eff08-5806-499c-92db-38800eefbe44",
+  "LogoUrl": "https://contoso.sharepoint.com/sites/marketing/SiteAssets/__hubLogo____hubLogo__.png",
+  "SiteId": "f93eff08-5806-499c-92db-38800eefbe44",
+  "SiteUrl": "https://contoso.sharepoint.com/sites/marketing",
+  "Targets": "<acl><ace identityName=\"c:0t.c|tenant|0d4b97fc-37fb-4db3-84f3-d34243a3afac\" displayName=\"0t.c|tenant|0d4b97fc-37fb-4db3-84f3-d34243a3afac\" sid=\"\" binaryIdType=\"1\" binaryId=\"YzowdC5jfHRlbmFudHwwZDRiOTdmYy0zN2ZiLTRkYjMtODRmMy1kMzQyNDNhM2FmYWM=\" allowRights=\"1\" denyRights=\"0\" /></acl>",
+  "TenantInstanceId": "00000000-0000-0000-0000-000000000000",
+  "Title": ""
 }
 ```
 
@@ -94,8 +91,7 @@ https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-49
 #### Sample request
 
 ```HTTP
-POST
-https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-499c-92db-38800eefbe44'
+POST https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-499c-92db-38800eefbe44'
 ```
 
 #### Sample response
@@ -109,6 +105,28 @@ https://contoso.sharepoint.com/_api/HubSites/GetById?hubSiteId='f93eff08-5806-49
   "Description": "Hub site for marketing coordination"
 }
 ```
+
+### Associate a hub with another hub (parent hub association)
+
+#### Sample request
+
+```HTTP
+POST https://contoso.sharepoint.com/_api/HubSites/GetById('f93eff08-5806-499c-92db-38800eefbe44')
+```
+
+```JSON
+{
+  "__metadata": { "type": "SP.HubSite" },
+  "Title":"Marketing hub site",
+  "LogoUrl": "https://contoso.sharepoint.com/sites/marketing/SiteAssets/__hubLogo____hubLogo__.png",
+  "Description": "Hub site for marketing coordination",
+  "ParentHubSiteId":"269da5d4-6a9e-45a5-9502-a74d14977293"
+}
+```
+
+#### Sample response
+
+**Status code:** 204
 
 ## See also
 
