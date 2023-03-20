@@ -455,7 +455,7 @@
     - name: Microsoft Viva Connections
       href: /sharepoint/dev/spfx/viva/overview-viva-connections
     - name: SharePoint 2019 support
-      href: spfx/sharepoint-2019-and-subscription-edition-support.md
+      href: spfx/sharepoint-2019-support.md
     - name: SharePoint 2016 support
       href: spfx/sharepoint-2016-support.md
   - name: Release notes & roadmap
