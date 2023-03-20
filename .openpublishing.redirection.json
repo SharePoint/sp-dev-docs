@@ -95,11 +95,6 @@
             "redirect_url": "docs/spfx/release-1.14.md",
             "redirect_document_id": false
         },
-        {
-            "source_path": "docs/spfx/sharepoint-2019-support.md",
-            "redirect_url": "docs/spfx/sharepoint-2019-and-subscription-edition-support.md",
-            "redirect_document_id": false
-            
-        }
+
     ]
 }
