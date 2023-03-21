@@ -294,7 +294,7 @@ After adding these changes, your Quick Views will look like:
 
 ### Implement the focusParameters function
 
-So far we have modified our quick view to have a simple title and subtitle. Now we can finally implement the `focusParameters` function, which gives the ability to the Third Party Developer to decide what they wish to set focus on in the quick view.
+So far we have modified our quick views to have a simple title, subtitle, and respective buttons to navigate to other quick views. Now we can finally implement the `focusParameters` function, which gives the ability to the Third Party Developer to decide what they wish to set focus on in the quick view.
 
 For this, open each respective QuickView file (**./src/adaptiveCardExtensions/focusFeature/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
 
@@ -302,23 +302,12 @@ For this, open each respective QuickView file (**./src/adaptiveCardExtensions/fo
 import { IFocusParameters } from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
-Finally, introduce the following `focusParameters` function in the QuickView class so that we set focus on an element. QuickView.ts and QuickView2.ts should look like:
+Finally, introduce the following `focusParameters` function in the QuickView class so that we set focus on an element. Each QuickView should look as follows:
 
 ```typescript
 public get focusParameters(): IFocusParameters {
   return {
-    focusTarget: 'forward-skip',
-    ariaLive: 'polite'
-  }
-}
-```
-
-QuickView3.ts should look like:
-
-```typescript
-public get focusParameters(): IFocusParameters {
-  return {
-    focusTarget: 'back',
+    focusTarget: 'quick-view-sub-title',
     ariaLive: 'polite'
   }
 }
