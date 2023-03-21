@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.17 preview release notes
 description: Release notes for the SharePoint Framework v1.17 preview release
-ms.date: 03/08/2023
+ms.date: 03/21/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17 preview release notes
@@ -10,6 +10,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- beta.3 **Released:** March 21, 2023
 - beta.1 **Released:** February 23, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
@@ -40,6 +41,45 @@ npm install @microsoft/generator-sharepoint@next --global
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
+
+### Teams JS SDK v2.9.1 support
+
+[Microsoft Teams JS SDK](https://learn.microsoft.com/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest&tabs=npm) was bumped to v2.9.1 to support new API, such as `LiveShare`.
+
+### Support for Microsoft Teams Manifest v1.16 in Sync to Teams
+
+"Sync to Teams" operation in SharePoint App Catalog now supports Teams Manifest v1.16. This means that any SPFx solution which is sync'd to Microsoft Teams is served served automatically across Microsoft 365 (Microsoft Teams, Outlook, Microsoft 365 app).
+
+### Ability to use SPFX_SERVE_TENANT_DOMAIN OS environment variable for serve configurations
+
+Developers can use the `SPFX_SERVE_TENANT_DOMAIN` OS environment variable to specify the tenant domain (or site URL) for serve configurations across different SPFx solutions. If a URL in the serve configuration (for example, `pageUrl` for Field Customizer) contains the `{tenantDomain}` placeholder, it will be automatically replaced with the variable's value.
+
+### Top Actions-specific types
+
+In previous versions Web Parts Top Actions' configuration was based on proxied Property Pane types. It led to some issues and confusion as not all the properties worked or were supported.
+
+In this version we introduce Top Actions-specific types to avoid confusion and make the configuration more clear.
+
+### onBeforeAction handler for Adaptive Card Extesions
+
+`onBeforeAction` handler is added to `BaseAdaptiveCardExtension` class to allow developers to run custom code before the action is executed.
+
+```typescript
+  /** @virtual */
+  onBeforeAction(action: IOnBeforeActionArguments): void;
+```
+
+> [!NOTE]
+> This method is not intended to be used to cancel the action or to change the flow. We do not recommend changing the state or the action argument.
+
+### Ability to specify initial focus element in an Adaptive Card Extension Quick View
+
+New `focusParameters` virtual property allows to set focus when the view is rendered for accessibility purposes. If not overriden, the focus element defaulted to the first actionable element of the quick view.
+
+```typescript
+  /** @virtual */
+  get focusParameters(): IFocusParameters | undefined;
+```
 
 ### Support for SharePoint Pages 'iframing' in Teams applications
 
@@ -90,6 +130,9 @@ interface IPropertyPaneLinkProps {
 ## Fixed Issues
 
 Here's a list of specific issues fixed around SharePoint Framework since the previous public release.
+
+### February-March Timeframe
+- [#8705](https://github.com/SharePoint/sp-dev-docs/issues/8705) - LiveShare SDK does not work in SPFx web part
 
 ### December-February Time Frame
 
