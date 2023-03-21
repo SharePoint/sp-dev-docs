@@ -1,11 +1,11 @@
 ---
-title: SharePoint Framework development with SharePoint Server 2019 & SharePoint Server SE
+title: SharePoint Framework development with SharePoint Server 2019 and Subscription Edition
 description: SharePoint Server 2019 & Subscription Edition (SE) supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
-ms.date: 03/14/2023
+ms.date: 03/22/2023
 ms.localizationpriority: high
 ---
 
-# SharePoint Framework development with SharePoint Server 2019 & SharePoint Server SE
+# SharePoint Framework development with SharePoint Server 2019 and Subscription Edition
 
 SharePoint Server 2019 and Subscription Edition support SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
 
@@ -72,67 +72,11 @@ For more information, see [SharePoint Framework development tools and librarie
 
 To create a new web part with SharePoint Framework , see [Build your first SharePoint client-side web part](web-parts/get-started/build-a-hello-world-web-part.md).
 
-To deploy your web part to SharePoint on-premises, unlike deploying to SharePoint Online, some dependent service applications and specific configurations on the SharePoint Server are required, seeing below tutorials. You can contact SharePoint Server administrator if you do not have appropriate permission to check or configure. 
+To deploy your web part to SharePoint on-premises, unlike deploying to SharePoint Online, some dependent service applications and specific configurations on the SharePoint Server are required. You can contact SharePoint Server administrator if you do not have appropriate permission to check or configure. 
 
-### Create service applications
-
-Ensure the following service applications are enabled on the SharePoint Server: 
-
-- App Management Service
-- Microsoft SharePoint Foundation Subscription Settings Service
-- Managed Metadata Web Service
-
-In Central Admin site, you can create App Management Service application and Managed Metadata Web Service application by selecting **Application Management --> Manage service applications**.
-
-:::image type="content" source="../images/manage-service-application.png" alt-text="This is manage service application image.":::
-
-To create SharePoint Foundation Subscription Settings Service, use the following PowerShell command:
-
-```powershell
-$sa = New-SPSubscriptionSettingsServiceApplication -ApplicationPool $applicationPoolName -Name $serviceApplicationName -DatabaseName $dataBaseName 
-
-New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
-```
-
-### Prepare .sppkg package
-
-1. Bundle the solution,
-   `gulp bundle --ship`
-          
-1. Package the solution,
-   `gulp package-solution --ship`
-
-   Verify SharePoint Framework web part on local SharePoint workbench. 
-
-### Create and configure App Catalog site
-
-To create and configure App Catalog site, follow these steps:
-
-1. From the **Central Administration** site, go to **Apps** and then select **Manage App Catalog**.
-
-   Create a local admin for subsequence use of as the site collection administrator.
-   
-   :::image type="content" source="../images/manage-app-catalog.png" alt-text="This is manage app catalog image.":::
-
-1. Create the app catalog site by selecting **Web Application**. 
-1. Select **Create a new app catalog site**, and then select **OK**.
-1. On the **Create App Catalog** page, enter site information.
-
-   > [!NOTE]
-   > You need to use the above created local admin account as site collection administrator.
-   > Ensure using no system account as site admin.
-
-To configure App URLs, follow these steps:
-
-1. From the **Central Administration** site, go to **Apps** and then select **Configure App URLs**.
-
-   :::image type="content" source="../images/configure-app-urls.png" alt-text="This is configure app urls image.":::
-
-1. Configure the App domain and App prefix.
-
-### Upload, install and add to site and page
-
-For more tutorials about uploading the package to App Catalog and adding the web part to modern page, see [Deploy your client-side web part to a SharePoint page](web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md). 
+1. Ensure App Management Service and other dependent service applications are configured, see [Configure an environment for apps for SharePoint Server](https://learn.microsoft.com/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint).
+1. Create and configure App Catalog site, see [Manage the App Catalog in SharePoint Server](https://learn.microsoft.com/sharepoint/administration/manage-the-app-catalog).
+1. Package and upload your web part, install it on your site, and add it to modern page, see [Deploy your client-side web part to a SharePoint page](web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md).
 
 ## Determine which version was used for a solution
 
