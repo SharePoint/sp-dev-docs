@@ -48,7 +48,7 @@ npm install @microsoft/generator-sharepoint@next --global
 
 ### Support for Microsoft Teams Manifest v1.16 in Sync to Teams
 
-"Sync to Teams" operation in SharePoint App Catalog now supports Teams Manifest v1.16. This means that any SPFx solution which is sync'd to Microsoft Teams is served served automatically across Microsoft 365 (Microsoft Teams, Outlook, Microsoft 365 app).
+"Sync to Teams" operation in SharePoint App Catalog now supports Teams Manifest v1.16. This means that any SPFx solution which is sync'd to Microsoft Teams is served automatically across Microsoft 365 (Microsoft Teams, Outlook, Microsoft 365 app).
 
 ### Ability to use SPFX_SERVE_TENANT_DOMAIN OS environment variable for serve configurations
 
@@ -60,7 +60,7 @@ In previous versions Web Parts Top Actions' configuration was based on proxied P
 
 In this version we introduce Top Actions-specific types to avoid confusion and make the configuration more clear.
 
-### onBeforeAction handler for Adaptive Card Extesions
+### onBeforeAction handler for Adaptive Card Extensions
 
 `onBeforeAction` handler is added to `BaseAdaptiveCardExtension` class to allow developers to run custom code before the action is executed.
 
@@ -74,7 +74,7 @@ In this version we introduce Top Actions-specific types to avoid confusion and m
 
 ### Ability to specify initial focus element in an Adaptive Card Extension Quick View
 
-New `focusParameters` virtual property allows to set focus when the view is rendered for accessibility purposes. If not overriden, the focus element defaulted to the first actionable element of the quick view.
+New `focusParameters` virtual property allows to set focus when the view is rendered for accessibility purposes. If not overridden, the focus element defaulted to the first actionable element of the quick view.
 
 ```typescript
   /** @virtual */
