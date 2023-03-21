@@ -5,12 +5,12 @@ ms.date: 03/15/2023
 ---
 # Focus feature in Adaptive Card Extension
 
-Microsoft added support for the focus feature, unique to Viva Connections, in the [SharePoint Framework (SPFx) v1.17](../../../../release-1.17.md) release.
+Microsoft added support for the focus feature, unique to Viva Connections, in the [SharePoint Framework (SPFx) v1.17](../../../release-1.17.md) release.
 
 > [!NOTE]
 > This tutorial also assumes that you've already built an SPFx Adaptive Card Extension.
 >
-> To learn how to create your first SPFx Adaptive Card Extension, try out [this tutorial](../../../get-started/build-first-sharepoint-adaptive-card-extension.md).
+> To learn how to create your first SPFx Adaptive Card Extension, try out [this tutorial](../../get-started/build-first-sharepoint-adaptive-card-extension.md).
 
 ## Focus Feature
 
@@ -53,7 +53,7 @@ This new function allows developers to customize what the focus element is by re
 
 ## Tutorial and Examples
 
-You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over a step by step guide on how to create a card with the available media upload action.
+You can take a look at [this tutorial](./FocusFeatureTutorial.md) which goes over a step by step guide on how to create a card with the available media upload action.
 
 1. **Read target information after once user is idle**
 
@@ -90,7 +90,7 @@ You can take a look at [this tutorial](./MediaUploadTutorial.md) which goes over
     }
     ```
 
-## Availability of media upload action
+## Availability of focus feature
 
 > [!NOTE]
 > Currently this feature is not supported in teams mobile.

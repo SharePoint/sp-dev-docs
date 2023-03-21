@@ -77,7 +77,7 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
 At this point, if you do `gulp serve`, then you'll see the `FocusFeature` card:
 
-![See the FocusFeature card icon in the webpart toolbox](./focusFeatureTutorialACE.png)
+![See the FocusFeature card icon in the webpart toolbox](./img/focusFeatureTutorialACE.png)
 
 ## Add focus feature to your Adaptive Card Extension Quick View
 
@@ -288,9 +288,9 @@ public onAction(action: IActionArguments): void {
 
 After adding these changes, your Quick Views will look like:
 
-![Card appearance after introducing changes in the first quick-view](./img/focusFeatureFirstView.PNG)
-![Card appearance after introducing changes in the second quick-view](./img/focusFeatureSecondView.PNG)
-![Card appearance after introducing changes in the third quick-view](./img/focusFeatureThirdView.PNG)
+![Card appearance after introducing changes in the first quick-view](./img/focusFeatureFirstView.png)
+![Card appearance after introducing changes in the second quick-view](./img/focusFeatureSecondView.png)
+![Card appearance after introducing changes in the third quick-view](./img/focusFeatureThirdView.png)
 
 ### Implement the focusParameters function
 
