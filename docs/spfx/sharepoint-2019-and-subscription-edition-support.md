@@ -74,8 +74,8 @@ To create a new web part with SharePoint Framework , see [Build your first Share
 
 To deploy your web part to SharePoint on-premises, unlike deploying to SharePoint Online, some dependent service applications and specific configurations on the SharePoint Server are required. You can contact SharePoint Server administrator if you do not have appropriate permission to check or configure. 
 
-1. Ensure App Management Service and other dependent service applications are configured, see [Configure an environment for apps for SharePoint Server](https://learn.microsoft.com/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint).
-1. Create and configure App Catalog site, see [Manage the App Catalog in SharePoint Server](https://learn.microsoft.com/sharepoint/administration/manage-the-app-catalog).
+1. Ensure App Management Service and other dependent service applications are configured, see [Configure an environment for apps for SharePoint Server](/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint).
+1. Create and configure App Catalog site, see [Manage the App Catalog in SharePoint Server](/sharepoint/administration/manage-the-app-catalog).
 1. Package and upload your web part, install it on your site, and add it to modern page, see [Deploy your client-side web part to a SharePoint page](web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md).
 
 ## Determine which version was used for a solution
