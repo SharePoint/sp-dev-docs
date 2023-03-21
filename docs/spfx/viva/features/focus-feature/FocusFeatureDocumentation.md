@@ -5,7 +5,7 @@ ms.date: 03/15/2023
 ---
 # Focus feature in Adaptive Card Extension
 
-Microsoft added support for the focus feature, unique to Viva Connections, in the [SharePoint Framework (SPFx) v1.15.2](../../../../release-1.15.2.md) release.
+Microsoft added support for the focus feature, unique to Viva Connections, in the [SharePoint Framework (SPFx) v1.17](../../../../release-1.17.md) release.
 
 > [!NOTE]
 > This tutorial also assumes that you've already built an SPFx Adaptive Card Extension.
