@@ -18,12 +18,44 @@ yo @microsoft/sharepoint
 
 When prompted, enter the following values (select the default option for all prompts omitted below):
 
-- **What is your solution name?** focus-feature-tutorial
+- **What is your solution name?** HelloWorld
 - **Which type of client-side component to create?** Adaptive Card Extension
 - **Which template do you want to use?** Primary Text Template
-- **What is your Adaptive Card Extension name?** FocusFeature
+- **What is your Adaptive Card Extension name?** HelloWorld
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
+
+Before moving forward, update the title and description fields of your ACE to give it a personal touch.
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "53b7c8c0-00cc-4d20-a0a7-529aa6dff29f",
+  "alias": "HelloWorldAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "Focus feature advanced I" },
+    "description": { "default": "Focus feature advanced I" },
+    "officeFabricIconFontName": "SharePointLogo",
+    "properties": {
+      "title": "Focus feature advanced I"
+    },
+    "cardSize": "Medium"
+  }]
+}
+```
 
 ## Update your project's hosted workbench URL
 
@@ -51,7 +83,7 @@ At this point, if you do `gulp serve`, then you'll see the `FocusFeature` card:
 
 At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with focusing on elements in the Quick view.
 
-In the Quick View, we will introduce buttons for twp actions:
+In the Quick View, we will introduce buttons for two actions:
 
 - Move to the next quick view
 - Move to the previous quick view
@@ -69,82 +101,239 @@ Replace the content of this file with the following:
     {
       "type": "TextBlock",
       "weight": "Bolder",
-      "text": "${title}"
+      "text": "${title}",
+      "id": "quick-view-title"
     },
     {
-      "type": "TextBlock",
-      "text": "${subTitle}",
-      "wrap": true,
-      "id": "textBlockB"
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${subTitle}",
+              "id": "quick-view-sub-title",
+              "wrap": true
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "ActionSet",
       "actions": [
-       {
-        "title": "Previous view",
-        "type": "Action.Submit",
-        "data": {
-         "id": "previous"
-        }    
-       },
-       {
-        "title": "Next view",
-        "type": "Action.Submit",
-        "data": {
-         "id": "next"
-        } 
-       }
+        {
+          "type": "Action.Submit",
+          "title": "Forward skip update",
+          "data": {
+            "id": "forward-skip"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Forward",
+          "data": {
+            "id": "forward"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Back",
+          "data": {
+            "id": "back"
+          }
+        }
       ]
-		}
-	]
+    }
+  ]
 }
 ```
 
-Add a `subTitle` property to the following file in your project: **./src/adaptiveCardExtensions/focusFeature/FocusFeatureAdaptiveCardExtension.manifest.json**
-
-```json
-"properties": {
-	"title": "FocusFeature",
-	"subTitle": "FocusTarget"
-}
-```
-
-Add a `subTitle` property to the IFocusFeatureAdaptiveCardExtensionProps in the following file: **./src/adaptiveCardExtensions/focusFeature/FocusFeatureAdaptiveCardExtension.ts**
+Next let's implement the logic that will allow us to navigate to the next quick view. We will leverage the QuickViewNavigator to manipulate the view stack.
 
 ```typescript
-export interface IFocusFeatureAdaptiveCardExtensionProps {
-  title: string;
-  subTitle: string;
+public onAction(action: IActionArguments): void {
+  if (action.type === 'Submit') {
+      const { id } = action.data;
+      if (id === 'back') {
+          this.quickViewNavigator.pop();
+      } else if (id === 'forward-skip') {
+          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_2, true);
+      } else {
+          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_2, false);
+      }
+  }
 }
 ```
 
-After adding these changes, your Quick View would look like:
+Create a new template file for the second quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/template/QuickViewTemplate2.json**
 
-![Card appearance after introducing changes in the quick-view](./img/focusFeatureTutorialQuickView.PNG)
+```json
+{
+   "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+   "type":"AdaptiveCard",
+   "version":"1.2",
+   "body":[
+      {
+         "type":"TextBlock",
+         "weight":"Bolder",
+         "text":"${title}",
+         "id": "quick-view-title"
+      },
+      {
+         "type":"TextBlock",
+         "text":"${subTitle}",
+         "id": "quick-view-sub-title",
+         "wrap":true
+      },
+      {
+         "type":"ActionSet",
+         "actions":[
+            {
+               "type":"Action.Submit",
+               "title":"Forward skip update",
+               "data":{
+                  "id":"forward-skip"
+               }
+            },
+            {
+               "type":"Action.Submit",
+               "title":"Forward",
+               "data":{
+                  "id":"forward"
+               }
+            },
+            {
+               "type":"Action.Submit",
+               "title":"Back",
+               "data":{
+                  "id":"back"
+               }
+            }
+         ]
+      }
+   ]
+}
+```
+
+Create a new file for the second quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView2.ts**
+We will add the following **onAction** function.
+
+```typescript
+public onAction(action: IActionArguments): void {
+  if (action.type === 'Submit') {
+      const { id } = action.data;
+      if (id === 'back') {
+          this.quickViewNavigator.pop();
+      } else if (id === 'forward-skip') {
+          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_3, true);
+      } else {
+          this.quickViewNavigator.push(QUICK_VIEW_REGISTRY_ID_3, false);
+      }
+  }
+}
+```
+
+Create a new template file for the third quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/template/QuickViewTemplate3.json**
+
+```json
+{
+  "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+  "type":"AdaptiveCard",
+  "version":"1.2",
+  "body":[
+     {
+        "type":"TextBlock",
+        "weight":"Bolder",
+        "text":"${title}",
+        "id":"quick-view-title"
+     },
+     {
+        "type":"TextBlock",
+        "text":"${subTitle}",
+        "id":"quick-view-sub-title",
+        "wrap":true
+     },
+     {
+        "type":"ActionSet",
+        "actions":[
+           {
+              "type":"Action.Submit",
+              "title":"Back",
+              "data":{
+                 "id":"back"
+              }
+           }
+        ]
+     }
+  ]
+}
+```
+
+Create a new file for the third quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView3.ts**
+We will add the following **onAction** function.
+
+```typescript
+public onAction(action: IActionArguments): void {
+  if (action.type === 'Submit') {
+      const { id } = action.data;
+      if (id === 'back') {
+          this.quickViewNavigator.pop();
+      }
+  }
+}
+```
+
+After adding these changes, your Quick Views will look like:
+
+![Card appearance after introducing changes in the first quick-view](./img/focusFeatureFirstView.PNG)
+![Card appearance after introducing changes in the second quick-view](./img/focusFeatureSecondView.PNG)
+![Card appearance after introducing changes in the third quick-view](./img/focusFeatureThirdView.PNG)
 
 ### Implement the focusParameters function
 
 So far we have modified our quick view to have a simple title and subtitle. Now we can finally implement the `focusParameters` function, which gives the ability to the Third Party Developer to decide what they wish to set focus on in the quick view.
 
-For this, open the QuickView.ts file (**./src/adaptiveCardExtensions/focusFeature/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
+For this, open each respective QuickView file (**./src/adaptiveCardExtensions/focusFeature/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
 
 ```typescript
 import { IFocusParameters } from '@microsoft/sp-adaptive-card-extension-base';
 ```
 
-Finally, introduce the following `focusParameters` function in the QuickView class so that we set focus on an element:
+Finally, introduce the following `focusParameters` function in the QuickView class so that we set focus on an element. QuickView.ts and QuickView2.ts should look like:
 
 ```typescript
 public get focusParameters(): IFocusParameters {
-	return {
-		focusTarget: "textBlockB",
-		ariaLive: 'polite'
-	}
+  return {
+    focusTarget: 'forward-skip',
+    ariaLive: 'polite'
+  }
+}
+```
+
+QuickView3.ts should look like:
+
+```typescript
+public get focusParameters(): IFocusParameters {
+  return {
+    focusTarget: 'back',
+    ariaLive: 'polite'
+  }
 }
 ```
 
 At this point, you can run **gulp serve** again and see how all the changes you made so far came together.
 
+This is it! Congratulations on successfully creating you Adaptive Card Extension with the focus feature.
+
 ![Aria Polite added](./img/focusFeatureTutorialQuickViewAriaSet.PNG)
 
-You might have noticed, if you run `document.activeElement` in the console, the element with the current focus is the close button. Why is this?
+## Notes with screen readers
+
+When loading your card for the first time, you will notice that the contents of the first quick view are read in their entirety. This is the default behaviour when a screen reader sees a dialog as it treats it as navigation. Subsequent loads of the quick view stack will not run into this. As you navigate back and forth threw quick views, you will notice that the element target is focused and will be the only thing to be read.
+
+## See Also
+
+- [Microsoft Learning: Create Adaptive Card Extensions (ACE) for Microsoft Viva Connections](/training/modules/sharepoint-spfx-adaptive-card-extension-card-types)
