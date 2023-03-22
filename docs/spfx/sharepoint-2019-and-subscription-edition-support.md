@@ -1,5 +1,6 @@
 ---
 title: SharePoint Framework development with SharePoint Server 2019 and Subscription Edition
+
 description: SharePoint Server 2019 & Subscription Edition (SE) supports SharePoint Framework client-side web parts in classic and modern pages, and extensions in modern pages.
 ms.date: 03/22/2023
 ms.localizationpriority: high
@@ -70,7 +71,7 @@ For more information, see [SharePoint Framework development tools and librarie
 
 ## Build and deploy your first web part with SharePoint Framework 
 
-To create a new web part with SharePoint Framework , see [Build your first SharePoint client-side web part](web-parts/get-started/build-a-hello-world-web-part.md).
+To create a new web part with SharePoint Framework, see [Build your first SharePoint client-side web part](web-parts/get-started/build-a-hello-world-web-part.md).
 
 To deploy your web part to SharePoint on-premises, unlike deploying to SharePoint Online, some dependent service applications and specific configurations on the SharePoint Server are required. You can contact SharePoint Server administrator if you do not have appropriate permission to check or configure. 
 
