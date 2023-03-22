@@ -13,7 +13,7 @@ In this section, learn what platforms support customizations and rely on the Sha
 
 SharePoint Online always has the broadest and most up-to-date support for the SPFx. The SPFx is also the recommended customization and extensibility development model for SharePoint Online.
 
-Learn more about using SPFx on SharePoint Server 2019 and Subscription Edition: [SPFx support for SharePoint Online](spfx-sharepoint-online.md).
+Learn more about using SPFx on SharePoint Online: [SPFx support for SharePoint Online](spfx-sharepoint-online.md).
 
 ## SharePoint Server SE
 
@@ -24,7 +24,7 @@ Learn more about using SPFx on SharePoint Server 2019 and Subscription Edition: 
 
 SharePoint Server 2019 includes support for the SPFx up to version v1.4.1.
 
-Learn more about using SPFx on SharePoint Server 2019: [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).
+Learn more about using SPFx on SharePoint Server 2019 and Subscription Edition: [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).
 
 ## SharePoint Server 2016
 
