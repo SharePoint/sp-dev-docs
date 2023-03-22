@@ -67,7 +67,7 @@ Microsoft recommends using the most recent version of the Yeoman generator for t
    npm install yo@2.0.6 --global
    npm install @microsoft/generator-sharepoint@1.10.0 --global`
 
-For more information, see [SharePoint Framework development tools and libraries compatibility](tools-and-libraries.md). 
+For more information, see  [SharePoint Framework development tools and libraries compatibility](tools-and-libraries.md). 
 
 ## Build and deploy your first web part with SharePoint Framework 
 
