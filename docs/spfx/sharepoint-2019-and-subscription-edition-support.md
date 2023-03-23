@@ -62,7 +62,7 @@ Microsoft recommends using the most recent version of the Yeoman generator for t
     }
     ```   
 
-2. Install global dependencies
+1. Install global dependencies
 
     ```console
    npm install gulp-cli@2.3.0 --global
