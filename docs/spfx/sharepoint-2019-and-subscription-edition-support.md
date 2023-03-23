@@ -51,7 +51,7 @@ Microsoft recommends using the most recent version of the Yeoman generator for t
 1. Install [Node.js v8.17.0](https://nodejs.org/download/release/v8.17.0/).<br>
    SPFx v1.4.1 is also supported on Node.js v12 and v14 (v12.18.1 and v14.17.1 to be specific), although there is an incompatible issue [gulp 3 wasn't compatible with Node 12+](https://github.com/gulpjs/gulp/issues/2324). The workaround to resolve this issue is to specify the version of graceful-fs component as 4+. You can create npm-shrinkwrap.json in the root folder of the project and input the following content, and then run “npm install”. Also, you can use package-lock.json to resolve this issue too.
 
-```powershell
+    ```powershell
     { 
 
       “dependencies”:{ 
@@ -60,7 +60,7 @@ Microsoft recommends using the most recent version of the Yeoman generator for t
           } 
        } 
     }
-```   
+    ```   
 
 2. Install global dependencies
 
