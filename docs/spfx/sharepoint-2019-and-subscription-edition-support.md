@@ -62,13 +62,13 @@ Microsoft recommends using the most recent version of the Yeoman generator for t
     }
 ```   
 
-1. Install global dependencies
+2. Install global dependencies
 
-```console
+    ```console
    npm install gulp-cli@2.3.0 --global
    npm install yo@2.0.6 --global
    npm install @microsoft/generator-sharepoint@1.10.0 --global
-```
+    ```
 
 For more information, see  [SharePoint Framework development tools and libraries compatibility](tools-and-libraries.md). 
 
