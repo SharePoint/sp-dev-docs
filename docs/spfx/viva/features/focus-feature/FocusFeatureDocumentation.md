@@ -10,7 +10,7 @@ Microsoft added support for the focus feature, unique to Viva Connections, in th
 > [!NOTE]
 > This tutorial also assumes that you've already built an SPFx Adaptive Card Extension.
 >
-> To learn how to create your first SPFx Adaptive Card Extension, try out [this tutorial](../../get-started/build-first-sharepoint-adaptive-card-extension.md).
+> To learn how to create your first SPFx Adaptive Card Extension, see [Build your first SharePoint Adaptive Card Extension](../../get-started/build-first-sharepoint-adaptive-card-extension.md).
 
 ## Focus Feature
 
