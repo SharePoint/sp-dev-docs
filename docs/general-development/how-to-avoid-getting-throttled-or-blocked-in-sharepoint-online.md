@@ -1,7 +1,7 @@
 ---
 title: Avoid getting throttled or blocked in SharePoint Online
 description: Find out about throttling in SharePoint Online and learn how to avoid being throttled or blocked.
-ms.date: 01/19/2023
+ms.date: 03/24/2023
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ms.localizationpriority: high
 ---
@@ -208,13 +208,13 @@ To ensure the service remains fast and reliable, queries using such permission a
 
 ### When searching for people search results
 
-When searching using a result source that requests people results, we may throttle any requests exceeding a limit of 25 requests per second. This limit applies jointly to all requests using the out-of-the-box "Local People Results" result source and all requests using custom people search result sources.
+When searching using a result source that requests people results, we may throttle any requests exceeding an organization-wide limit of 25 requests per second. This limit applies to all SharePoint search CSOM and REST requests using either the out-of-the-box "Local People Results" result source or a custom people search result source.
 
 If you have applications or components, which are causing your people search requests to get throttled, we recommend that you:
 1. Consider if the requests are necessary for your application. For example, if you're using a custom search site, which makes many simultaneous queries, check whether some of those requests can be removed without any significant impact to your organization's search experience. Alternatively, consider trying our modern people search experience in [Microsoft Search](/microsoftsearch/get-started-search-in-sharepoint-online) by searching from the [SharePoint](http://sharepoint.com/) start page. People search in Microsoft Search has been optimized for better performance and more relevant results.
 2. Avoid making concurrent requests. For example, instead of issuing 10 requests all at once, issue them consecutively - only issue the next query after the previous one has completed. You may need to consider caching these results if you need them quickly, for example of a page load.
 3. Try consolidating the requests into a single query. For example, instead making 10 simultaneous queries for `WorkEmail:user1@constoso.com`, `WorkEmail:user2@constoso.com`,..., `WorkEmail:user10@contoso.com`, try the single query, `WorkEmail:user1@constoso.com WorkEmail:user2@constoso.com ... WorkEmail:user10@contoso.com`.
-4. Consider using the [Microsoft Graph API](/graph/people-example#search-people) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
+4. Consider using the [Microsoft Graph API](/graph/search-concept-person) if a high-request-volume scenario (in excess of 25 requests per second) is truly necessary.
 
 ## What should you do if you get blocked in SharePoint Online?
 
