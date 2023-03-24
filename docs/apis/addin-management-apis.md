@@ -2,11 +2,11 @@
 title: SharePoint Add-in related APIs 
 description: We provided some Add-in related APIs to get Add-in's installation info and uninstall the Add-in. 
 audience: admin 
-ms.date: 03/28/2023 
+ms.date: 03/25/2023 
 ms.localizationpriority: medium
 ---
 
-# SharePoint Add-in restful APIs
+# SharePoint Add-in Management APIs
 This documentation will introduce some APIs which related to SharePoint Add-ins. They could help to have a clear view
 and better management of the Add-ins in tenant level, including these:
 - Get available Add-ins in sites
