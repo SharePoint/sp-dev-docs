@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.17 preview release notes
 description: Release notes for the SharePoint Framework v1.17 preview release
-ms.date: 03/21/2023
+ms.date: 03/28/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17 preview release notes
@@ -10,6 +10,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- rc.1 **Released:** March 28, 2023
 - beta.3 **Released:** March 21, 2023
 - beta.1 **Released:** February 23, 2023
 
@@ -46,9 +47,13 @@ npm install @microsoft/generator-sharepoint@next --global
 
 [Microsoft Teams JS SDK](https://learn.microsoft.com/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest&tabs=npm) was bumped to v2.9.1 to support new API, such as `LiveShare`.
 
+### Support for Adaptive Cards schema v1.5 in Adaptive Cards Extensions
+
+Adaptive Cards Extensions now support Adaptive Cards schema v1.5. For more information about the supported features in v1.5, see [Adaptive Cards schema v1.5](https://adaptivecards.io/explorer/AdaptiveCard.html) for more details.
+
 ### Support for Microsoft Teams Manifest v1.16 in Sync to Teams
 
-"Sync to Teams" operation in SharePoint App Catalog now supports Teams Manifest v1.16. This means that any SPFx solution which is sync'd to Microsoft Teams is served automatically across Microsoft 365 (Microsoft Teams, Outlook, Microsoft 365 app).
+*"Sync to Teams"* operation in SharePoint App Catalog now supports Teams Manifest v1.16. Any SPFx solution that is synchronized from app catalog to Microsoft Teams is available automatically across Microsoft 365 (Microsoft Teams, Outlook, Microsoft 365 app).
 
 ### Ability to use SPFX_SERVE_TENANT_DOMAIN OS environment variable for serve configurations
 
@@ -56,9 +61,9 @@ Developers can use the `SPFX_SERVE_TENANT_DOMAIN` OS environment variable to spe
 
 ### Top Actions-specific types
 
-In previous versions Web Parts Top Actions' configuration was based on proxied Property Pane types. It led to some issues and confusion as not all the properties worked or were supported.
+In previous versions, web part Top Actions' configuration was based on proxied property pane types. It led to some issues and confusion as not all the properties worked or were supported.
 
-In this version we introduce Top Actions-specific types to avoid confusion and make the configuration more clear.
+This version includes specific Top Actions-specific types to avoid confusion and make the configuration more clearer.
 
 ### onBeforeAction handler for Adaptive Card Extensions
 
@@ -85,7 +90,7 @@ New `focusParameters` virtual property allows to set focus when the view is rend
 
 Developers can specify `supportsSelfFramingInTeams` flag in a web part's manifest if the scenario requires the web part to render SharePoint page in an `<iframe>`.
 
-### Ability to specify claims parameter when requesting an AAD OAuth2 token
+### Ability to specify claims parameter when requesting an Azure Active Directory OAuth2 token
 
 `AADTokenProvider.getToken` definition was updated to allow specifying claims parameter:
 
@@ -106,7 +111,7 @@ interface IGetTokenOptions {
 
 `AadTokenProvider` now supports popup flow. Developers should handle `AadTokenProvider.popupEvent: SPEvent<PopupEventArgs>` event to implement the flow.
 
-See `PopupEventArgs` definitions for more details.
+For more details, see `PopupEventArgs` definitions in the API reference documentation.
 
 ### Support for aria-label in Property Pane's link control
 
@@ -132,7 +137,8 @@ interface IPropertyPaneLinkProps {
 Here's a list of specific issues fixed around SharePoint Framework since the previous public release.
 
 ### February-March Timeframe
-- [#8705](https://github.com/SharePoint/sp-dev-docs/issues/8705) - LiveShare SDK does not work in SPFx web part
+
+- [#8705](https://github.com/SharePoint/sp-dev-docs/issues/8705) - LiveShare SDK doesn't work in SPFx web part
 
 ### December-February Time Frame
 
