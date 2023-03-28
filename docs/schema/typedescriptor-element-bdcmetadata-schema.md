@@ -2,7 +2,7 @@
 title: TypeDescriptor Element
 description: Describes the TypeDescriptor element and provides the elements and attributes.
 manager: soliver
-ms.date: 06/10/2022
+ms.date: 03/28/2023
 ms.audience: Developer
 ms.topic: reference
 f1_keywords:
@@ -22,7 +22,6 @@ Specifies a **TypeDescriptor**.
 **Namespace**: `http://schemas.microsoft.com/windows/2007/BusinessDataCatalog`
 
 **Schema**: BDCMetadata
-
 
 ```XML
 <TypeDescriptor TypeName = "String" LobName = "String" IdentifierEntityNamespace = "String" IdentifierEntityName = "String" IdentifierName = "String" ForeignIdentifierAssociationName = "String" ForeignIdentifierAssociationEntityName = "String" ForeignIdentifierAssociationEntityNamespace = "String" AssociatedFilter = "String" IsCollection = "Boolean" ReadOnly = "Boolean" CreatorField = "Boolean" UpdaterField = "Boolean" PreUpdaterField = "Boolean" Significant = "Boolean" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </TypeDescriptor>
@@ -170,7 +169,7 @@ The following sections describe attributes, child elements, and parent elements.
 | Element | Description |
 | --- | --- |
 | [LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md) | The localized names of the **TypeDescriptor**. |
-| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the **TypeDescriptor**.<br><br>When the TypeDescriptor is of type **System.String**, the **Properties** element can contain a **Property** of type **System.Int32** with the **Name** attribute set to **Size**. The value of the **Property** specifies the expected maximum string length of the value of the data structure described by this **TypeDescriptor**. |
+| [Properties Element in MetadataObject (BDCMetadata Schema)](properties-element-in-metadataobject-bdcmetadata-schema.md) | The properties of the **TypeDescriptor**.<br /><br />When the TypeDescriptor is of type **System.String**, the **Properties** element can contain a **Property** of type **System.Int32** with the **Name** attribute set to **Size**. The value of the **Property** specifies the expected maximum string length of the value of the data structure described by this **TypeDescriptor**. |
 | [Interpretation Element in TypeDescriptor (BDCMetadata Schema)](interpretation-element-in-typedescriptor-bdcmetadata-schema.md) | The rules for the data stored by the data structure represented by the **TypeDescriptor**. |
 | [DefaultValues Element in TypeDescriptor (BDCMetadata Schema)](defaultvalues-element-in-typedescriptor-bdcmetadata-schema.md) | The default values of the **TypeDescriptor**. |
 | [TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)](typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md) | The child **TypeDescriptors** of the **TypeDescriptor**. |

@@ -1,7 +1,7 @@
 ---
 title: Global attributes for HTML-rendering elements
 manager: soliver
-ms.date: 11/16/2014
+ms.date: 03/28/2023
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -55,5 +55,3 @@ When **TRUE**, converts special characters, such as spaces, to quoted UTF-8 form
 ### URLEncodeAsURL
 
 Similar to **URLEncode**, but assumes that what is being encoded is a path component of a URL. For example, `<ows:XML URLEncodeAsURL="TRUE">SharePoint website</ows:XML>` renders `SharePoint%20website`. This attribute, unlike **URLEncode**, does not encode the forward slash (`/`).
-
-<br/>

@@ -1,7 +1,7 @@
 ---
 title: Customize the UX by using SharePoint provider-hosted add-ins
 description: Samples that show best practices for customizing SharePoint UX components.
-ms.date: 06/10/2022
+ms.date: 03/28/2023
 ms.localizationpriority: medium
 ---
 
@@ -10,18 +10,18 @@ ms.localizationpriority: medium
 This article describes samples that show best practices for customizing SharePoint UX components, including the following scenarios:
 
 - Page manipulation (adding and modifying a wiki page)
-    
+
 - Showing add-ins and data in modal dialog boxes
-    
+
 - Creating personalized UI elements
-    
+
 - Client-side rendering (deploying JSLink files that customize the rendering of fields in SharePoint lists)
-    
+
 - Web part and add-in part manipulation (remotely provision and run an add-in script part in a provider-hosted add-in)
-    
+
 - Data aggregation and caching (using HTML5 local storage and HTTP cookies to reduce the number of service calls to SharePoint)
 
-> [!NOTE] 
+> [!NOTE]
 > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 <a name="bmPageManipulate"> </a>
@@ -31,8 +31,8 @@ This article describes samples that show best practices for customizing SharePoi
 The [Core.ModifyPages](https://github.com/pnp/PnP/tree/master/Samples/Core.ModifyPages) sample includes two page manipulation scenarios:
 
 - Create a wiki page.
-- Modify the layout of a wiki page. 
-    
+- Modify the layout of a wiki page.
+
 This sample uses the default site pages library and existing out-of-the-box layouts. You can also update it to use a custom wiki page library and custom layouts. The add-in UI includes two buttons that create both wiki pages, and two links for viewing the wiki pages you create.
 
 **Start page for the page manipulation sample**
@@ -96,9 +96,9 @@ The sample code for the second scenario creates a new **WebPartEntity** instance
 
 ```javascript
 WebPartEntity wp2 = new WebPartEntity();
-wp2.WebPartXml = new LabHelper().WpPromotedLinks(linksID, string.Format("{0}/Lists/{1}", 
-                                                                Request.QueryString["SPHostUrl"], "Links"), 
-                                                                string.Format("{0}/{1}", Request.QueryString["SPHostUrl"], 
+wp2.WebPartXml = new LabHelper().WpPromotedLinks(linksID, string.Format("{0}/Lists/{1}",
+                                                                Request.QueryString["SPHostUrl"], "Links"),
+                                                                string.Format("{0}/{1}", Request.QueryString["SPHostUrl"],
                                                                 scenario2PageUrl), "$Resources:core,linksList");
 wp2.WebPartIndex = 1;
 wp2.WebPartTitle = "Links";
@@ -126,7 +126,7 @@ XmlDocument xd = new XmlDocument();
             xd.PreserveWhitespace = true;
             xd.LoadXml(wikiField);
 
-            // Sometimes the wikifield content seems to be surrounded by an additional div. 
+            // Sometimes the wikifield content seems to be surrounded by an additional div.
             XmlElement layoutsTable = xd.SelectSingleNode("div/div/table") as XmlElement;
             if (layoutsTable == null)
             {
@@ -187,7 +187,7 @@ XmlDocument xd = new XmlDocument();
 
 The [Core.Dialog](https://github.com/pnp/PnP/tree/master/Samples/Core.Dialog) sample shows two methods for embedding modal dialog box links. These links display a provider-hosted add-in page into a SharePoint host site. The add-in uses the client object model (CSOM) to create the custom action and JavaScript to start and display information inside the dialog box. Because some of this information comes from the host site, it also uses the JavaScript object model (JSOM) to retrieve information from the host site. And because the add-in is running in a different domain than the SharePoint host site, it also uses the SharePoint cross-domain library to make the calls to the host site.
 
-> [!NOTE] 
+> [!NOTE]
 > For more information about using the cross-domain library in this scenario, see [Access SharePoint data from add-ins using the cross-domain library](../sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
 
 The start page is the page that appears in the dialog box. To handle any differences in display given the display context (dialog box versus full-page), the add-in determines whether it's being displayed in a dialog box. It does this by using a query string parameter that is passed along with the links that start the dialog boxes.
@@ -211,12 +211,12 @@ When you choose the **Add menu item** button, the add-in creates a **CustomActio
 StringBuilder modelDialogScript = new StringBuilder(10);
 modelDialogScript.Append("javascript:var dlg=SP.UI.ModalDialog.showModalDialog({url: '");
 modelDialogScript.Append(String.Format("{0}", SetIsDlg("1")));
-modelDialogScript.Append("', dialogReturnValueCallback:function(res, val) {} });");       
+modelDialogScript.Append("', dialogReturnValueCallback:function(res, val) {} });");
 
 // Create a custom action.
 CustomActionEntity customAction = new CustomActionEntity()
 {
-  Title = "Office AMS Dialog sample",                
+  Title = "Office AMS Dialog sample",
   Description = "Shows how to start an add-in inside a dialog box.",
   Location = "Microsoft.SharePoint.StandardMenu",
   Group = "SiteActions",
@@ -268,7 +268,7 @@ cc.Web.AddLayoutToWikiPage("SitePages", WikiPageLayout.OneColumn, scenario1Page)
 WebPartEntity scriptEditorWp = new WebPartEntity();
 scriptEditorWp.WebPartXml = ScriptEditorWebPart();
 scriptEditorWp.WebPartIndex = 1;
-scriptEditorWp.WebPartTitle = "Script editor test"; 
+scriptEditorWp.WebPartTitle = "Script editor test";
 cc.Web.AddWebPartToWikiPage("SitePages", scriptEditorWp, scenario1Page, 1, 1, false);
 ```
 
@@ -354,7 +354,7 @@ public void AddPersonalizeJsLink(ClientContext ctx, Web web)
             string personalizeJsLink = string.Format("{0}/{1}?rev={2}", scenarioUrl, "personalize.js", revision);
 
             StringBuilder scripts = new StringBuilder(@"
-                var headID = document.getElementsByTagName('head')[0]; 
+                var headID = document.getElementsByTagName('head')[0];
                 var");
 
             scripts.AppendFormat(@"
@@ -382,7 +382,7 @@ public void AddPersonalizeJsLink(ClientContext ctx, Web web)
             var newAction = existingActions.Add();
             newAction.Description = "personalize";
             newAction.Location = "ScriptLink";
-            
+
             newAction.ScriptBlock = scriptBlock;
             newAction.Update();
             ctx.Load(web, s => s.UserCustomActions);
@@ -411,7 +411,7 @@ function RemoteManager_Inject() {
 
     var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";
 
-    // Load jQuery. 
+    // Load jQuery.
     loadScript(jQuery, function () {
 
         personalizeIt();
@@ -433,7 +433,7 @@ function personalizeIt() {
     fileref.setAttribute("src", "/_layouts/15/SP.UserProfiles.js");
     document.getElementsByTagName("head")[0].appendChild(fileref);
 
-    SP.SOD.executeOrDelayUntilScriptLoaded(function () {        
+    SP.SOD.executeOrDelayUntilScriptLoaded(function () {
 
         // Get localstorage values if they exist.
         buCode = localStorage.getItem("bucode");
@@ -446,7 +446,7 @@ function personalizeIt() {
         }
         else {
             personalized = false;
-        }        
+        }
 
         // If nothing is in localstorage, get profile data, which will also populate localstorage.
         if (buCode == "" || buCode == null) {
@@ -454,8 +454,8 @@ function personalizeIt() {
             personalized = false;
         }
         else {
-            // Check for expiration.            
-            if (isKeyExpired("buCodeTimeStamp")) {                
+            // Check for expiration.
+            if (isKeyExpired("buCodeTimeStamp")) {
                 getProfileData(clientContext);
 
                 if (buCode != "" || buCode != null) {
@@ -466,7 +466,7 @@ function personalizeIt() {
                     // Set personalized to false so that the code can check for a new image in case buCode was updated.
                     personalized = false;
                 }
-            }            
+            }
         }
 
         // Load image or make sure it is current based on the value in AboutMe.
@@ -503,7 +503,7 @@ function isKeyExpired(TimeStampKey) {
         }
     }
     else {
-        //default 
+        //default
         return true;
     }
 }
@@ -623,13 +623,13 @@ function bodyFiledTemplate(ctx) {
 
 ### Sample 3: Display an image with a document name
 
-Sample 3 shows you how to display an image next to a document name inside a document library. A red badge appears whenever the **Confidential** field value is set to **Yes**. 
+Sample 3 shows you how to display an image next to a document name inside a document library. A red badge appears whenever the **Confidential** field value is set to **Yes**.
 
 **Image display next to document name**
 
 ![Image display next to document name](media/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins/f2768dfd-ae05-4afc-8dbe-26dc4e7dca6d.png)
 
-The following JavaScript checks the **Confidential** field value and then customizes the **Name** field display based on the value of another field. The sample uses the image that is uploaded when you choose **Provision Samples**. 
+The following JavaScript checks the **Confidential** field value and then customizes the **Name** field display based on the value of another field. The sample uses the image that is uploaded when you choose **Provision Samples**.
 
 ```javascript
 function linkFilenameFiledTemplate(ctx) {
@@ -758,49 +758,48 @@ The following code sets up the template with a placeholder for displaying the er
 
 ```javascript
 function emailFiledTemplate(ctx) {
+  var formCtx = SPClientTemplates.Utility.GetFormContextForCurrentField(ctx);
 
-    var formCtx = SPClientTemplates.Utility.GetFormContextForCurrentField(ctx);
+  // Register a callback just before submit.
+  formCtx.registerGetValueCallback(formCtx.fieldName, function () {
+      return document.getElementById('inpEmail').value;
+  });
 
-    // Register a callback just before submit.
-    formCtx.registerGetValueCallback(formCtx.fieldName, function () {
-        return document.getElementById('inpEmail').value;
-    });
+  // Create container for various validations.
+  var validators = new SPClientForms.ClientValidation.ValidatorSet();
+  validators.RegisterValidator(new emailValidator());
 
-    // Create container for various validations.
-    var validators = new SPClientForms.ClientValidation.ValidatorSet();
-    validators.RegisterValidator(new emailValidator());
+  // Validation failure handler.
+  formCtx.registerValidationErrorCallback(formCtx.fieldName, emailOnError);
 
-    // Validation failure handler.
-    formCtx.registerValidationErrorCallback(formCtx.fieldName, emailOnError);
+  formCtx.registerClientValidator(formCtx.fieldName, validators);
 
-    formCtx.registerClientValidator(formCtx.fieldName, validators);
-
-    return "<span dir='none'><input type='text' value='" + formCtx.fieldValue + "'  maxlength='255' id='inpEmail' class='ms-long'> \
-            <br><span id='spnError' class='ms-formvalidation ms-csrformvalidation'></span></span>";
+  return "<span dir='none'><input type='text' value='" + formCtx.fieldValue + "'  maxlength='255' id='inpEmail' class='ms-long'> \
+          <br><span id='spnError' class='ms-formvalidation ms-csrformvalidation'></span></span>";
 }
 
 // Custom validation object to validate email format.
 emailValidator = function () {
-    emailValidator.prototype.Validate = function (value) {
-        var isError = false;
-        var errorMessage = "";
+  emailValidator.prototype.Validate = function (value) {
+    var isError = false;
+    var errorMessage = "";
 
-        //Email format Regex expression
-        var emailRejex = /\S+@\S+\.\S+/;
+    //Email format Regex expression
+    var emailRejex = /\S+@\S+\.\S+/;
 
-        if (!emailRejex.test(value) &amp;&amp; value.trim()) {
-            isError = true;
-            errorMessage = "Invalid email address";
-        }
+    if (!emailRejex.test(value) &amp;&amp; value.trim()) {
+      isError = true;
+      errorMessage = "Invalid email address";
+    }
 
-        // Send error message to error callback function (emailOnError).
-        return new SPClientForms.ClientValidation.ValidationResult(isError, errorMessage);
-    };
+    // Send error message to error callback function (emailOnError).
+    return new SPClientForms.ClientValidation.ValidationResult(isError, errorMessage);
+  };
 };
 
 // Add error message to spnError element under the input field element.
 function emailOnError(error) {
-    document.getElementById("spnError").innerHTML = "<span role='alert'>" + error.errorMessage + "</span>";
+  document.getElementById("spnError").innerHTML = "<span role='alert'>" + error.errorMessage + "</span>";
 }
 ```
 
@@ -816,102 +815,99 @@ The following code example modifies the **Title**, **AssignedTo**, and **Priorit
 
 ```javascript
 function readonlyFieldTemplate(ctx) {
+  // Reuse SharePoint JavaScript libraries.
+  switch (ctx.CurrentFieldSchema.FieldType) {
+    case "Text":
+    case "Number":
+    case "Integer":
+    case "Currency":
+    case "Choice":
+    case "Computed":
+      return SPField_FormDisplay_Default(ctx);
 
-    // Reuse SharePoint JavaScript libraries.
-    switch (ctx.CurrentFieldSchema.FieldType) {
-        case "Text":
-        case "Number":
-        case "Integer":
-        case "Currency":
-        case "Choice":
-        case "Computed":
-            return SPField_FormDisplay_Default(ctx);
+    case "MultiChoice":
+      prepareMultiChoiceFieldValue(ctx);
+      return SPField_FormDisplay_Default(ctx);
 
-        case "MultiChoice":
-            prepareMultiChoiceFieldValue(ctx);
-            return SPField_FormDisplay_Default(ctx);
+    case "Boolean":
+      return SPField_FormDisplay_DefaultNoEncode(ctx);
 
-        case "Boolean":
-            return SPField_FormDisplay_DefaultNoEncode(ctx);
+    case "Note":
+      prepareNoteFieldValue(ctx);
+      return SPFieldNote_Display(ctx);
 
-        case "Note":
-            prepareNoteFieldValue(ctx);
-            return SPFieldNote_Display(ctx);
+    case "File":
+      return SPFieldFile_Display(ctx);
 
-        case "File":
-            return SPFieldFile_Display(ctx);
+    case "Lookup":
+    case "LookupMulti":
+      return SPFieldLookup_Display(ctx);
 
-        case "Lookup":
-        case "LookupMulti":
-                return SPFieldLookup_Display(ctx);           
+    case "URL":
+      return RenderFieldValueDefault(ctx);
 
-        case "URL":
-            return RenderFieldValueDefault(ctx);
+    case "User":
+      prepareUserFieldValue(ctx);
+      return SPFieldUser_Display(ctx);
 
-        case "User":
-            prepareUserFieldValue(ctx);
-            return SPFieldUser_Display(ctx);
+    case "UserMulti":
+      prepareUserFieldValue(ctx);
+      return SPFieldUserMulti_Display(ctx);
 
-        case "UserMulti":
-            prepareUserFieldValue(ctx);
-            return SPFieldUserMulti_Display(ctx);
+    case "DateTime":
+      return SPFieldDateTime_Display(ctx);
 
-        case "DateTime":
-            return SPFieldDateTime_Display(ctx);
+    case "Attachments":
+      return SPFieldAttachments_Default(ctx);
 
-        case "Attachments":
-            return SPFieldAttachments_Default(ctx);
-
-        case "TaxonomyFieldType":
-            //Re-use JavaScript from the sp.ui.taxonomy.js SharePoint JavaScript library.
-            return SP.UI.Taxonomy.TaxonomyFieldTemplate.renderDisplayControl(ctx);
-    }
+    case "TaxonomyFieldType":
+      //Re-use JavaScript from the sp.ui.taxonomy.js SharePoint JavaScript library.
+      return SP.UI.Taxonomy.TaxonomyFieldTemplate.renderDisplayControl(ctx);
+  }
 }
 
 // User control needs specific formatted value to render content correctly.
 function prepareUserFieldValue(ctx) {
-    var item = ctx['CurrentItem'];
-    var userField = item[ctx.CurrentFieldSchema.Name];
-    var fieldValue = "";
+  var item = ctx['CurrentItem'];
+  var userField = item[ctx.CurrentFieldSchema.Name];
+  var fieldValue = "";
 
-    for (var i = 0; i < userField.length; i++) {
-        fieldValue += userField[i].EntityData.SPUserID + SPClientTemplates.Utility.UserLookupDelimitString + userField[i].DisplayText;
+  for (var i = 0; i < userField.length; i++) {
+    fieldValue += userField[i].EntityData.SPUserID + SPClientTemplates.Utility.UserLookupDelimitString + userField[i].DisplayText;
 
-        if ((i + 1) != userField.length) {
-            fieldValue += SPClientTemplates.Utility.UserLookupDelimitString
-        }
+    if ((i + 1) != userField.length) {
+      fieldValue += SPClientTemplates.Utility.UserLookupDelimitString
     }
+  }
 
-    ctx["CurrentFieldValue"] = fieldValue;
+  ctx["CurrentFieldValue"] = fieldValue;
 }
 
 // Choice control needs specific formatted value to render content correctly.
 function prepareMultiChoiceFieldValue(ctx) {
+  if (ctx["CurrentFieldValue"]) {
+    var fieldValue = ctx["CurrentFieldValue"];
 
-    if (ctx["CurrentFieldValue"]) {
-        var fieldValue = ctx["CurrentFieldValue"];
+    var find = ';#';
+    var regExpObj = new RegExp(find, 'g');
 
-        var find = ';#';
-        var regExpObj = new RegExp(find, 'g');
+    fieldValue = fieldValue.replace(regExpObj, '; ');
+    fieldValue = fieldValue.replace(/^; /g, '');
+    fieldValue = fieldValue.replace(/; $/g, '');
 
-        fieldValue = fieldValue.replace(regExpObj, '; ');
-        fieldValue = fieldValue.replace(/^; /g, '');
-        fieldValue = fieldValue.replace(/; $/g, '');
-
-        ctx["CurrentFieldValue"] = fieldValue;
-    }
+    ctx["CurrentFieldValue"] = fieldValue;
+  }
 }
 
 // Note control needs specific formatted value to render content correctly.
 function prepareNoteFieldValue(ctx) {
+  if (ctx["CurrentFieldValue"]) {
+    var fieldValue = ctx["CurrentFieldValue"];
+    fieldValue = "<div>" + fieldValue.replace(/\n/g, '<br />'); + "</div>";
 
-    if (ctx["CurrentFieldValue"]) {
-        var fieldValue = ctx["CurrentFieldValue"];
-        fieldValue = "<div>" + fieldValue.replace(/\n/g, '<br />'); + "</div>";
-
-        ctx["CurrentFieldValue"] = fieldValue;
-    }
-} 
+    ctx["CurrentFieldValue"] = fieldValue;
+  }
+}
 ```
 
 ### Sample 8: Hide fields
@@ -924,41 +920,36 @@ The following code finds the **Predecessors** field in the HTML of the form and 
 
 ```javascript
 (function () {
+  // jQuery library is required in this sample.
+  // Fallback to loading jQuery from a CDN path if the local is unavailable.
+  (window.jQuery || document.write('<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.0.min.js"><\/script>'));
 
-    // jQuery library is required in this sample.
-    // Fallback to loading jQuery from a CDN path if the local is unavailable.
-    (window.jQuery || document.write('<script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.0.min.js"><\/script>'));
+  // Create object that has the context information about the field that we want to render differently.
+  var hiddenFiledContext = {};
+  hiddenFiledContext.Templates = {};
+  hiddenFiledContext.Templates.OnPostRender = hiddenFiledOnPreRender;
+  hiddenFiledContext.Templates.Fields = {
+    // Apply the new rendering for Predecessors field in New and Edit forms.
+    "Predecessors": {
+      "NewForm": hiddenFiledTemplate,
+      "EditForm": hiddenFiledTemplate
+    }
+  };
 
-    // Create object that has the context information about the field that we want to render differently.
-    var hiddenFiledContext = {};
-    hiddenFiledContext.Templates = {}; 
-    hiddenFiledContext.Templates.OnPostRender = hiddenFiledOnPreRender;
-    hiddenFiledContext.Templates.Fields = {
-        // Apply the new rendering for Predecessors field in New and Edit forms.
-        "Predecessors": {
-            "NewForm": hiddenFiledTemplate,
-            "EditForm": hiddenFiledTemplate
-        }
-    };
-
-    SPClientTemplates.TemplateManager.RegisterTemplateOverrides(hiddenFiledContext);
-
+  SPClientTemplates.TemplateManager.RegisterTemplateOverrides(hiddenFiledContext);
 })();
 
 
 // This function provides the rendering logic.
 function hiddenFiledTemplate() {
-    return "<span class='csrHiddenField'></span>";
+  return "<span class='csrHiddenField'></span>";
 }
 
 // This function provides the rendering logic.
 function hiddenFiledOnPreRender(ctx) {
-    jQuery(".csrHiddenField").closest("tr").hide();
+  jQuery(".csrHiddenField").closest("tr").hide();
 }
-
 ```
-
-<a name="bmPersonalized"> </a>
 
 ## Web part and add-in part manipulation
 
@@ -972,47 +963,45 @@ The start page includes a **Run Scenario** button that deploys the add-in script
 var spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
 using (var clientContext = spContext.CreateUserClientContextForSPHost())
 {
-    var folder = clientContext.Web.Lists.GetByTitle("Web Part Gallery").RootFolder;
-    clientContext.Load(folder);
+  var folder = clientContext.Web.Lists.GetByTitle("Web Part Gallery").RootFolder;
+  clientContext.Load(folder);
+  clientContext.ExecuteQuery();
+
+  // Upload the OneDrive for Business Usage Guidelines.docx.
+  using (var stream = System.IO.File.OpenRead(Server.MapPath("~/userprofileinformation.webpart")))
+  {
+    FileCreationInformation fileInfo = new FileCreationInformation();
+    fileInfo.ContentStream = stream;
+    fileInfo.Overwrite = true;
+    fileInfo.Url = "userprofileinformation.webpart";
+    File file = folder.Files.Add(fileInfo);
     clientContext.ExecuteQuery();
+  }
 
-    // Upload the OneDrive for Business Usage Guidelines.docx.
-    using (var stream = System.IO.File.OpenRead(Server.MapPath("~/userprofileinformation.webpart")))
+  // Update the group for uploaded web part.
+  var list = clientContext.Web.Lists.GetByTitle("Web Part Gallery");
+  CamlQuery camlQuery = CamlQuery.CreateAllItemsQuery(100);
+  Microsoft.SharePoint.Client.ListItemCollection items = list.GetItems(camlQuery);
+  clientContext.Load(items);
+  clientContext.ExecuteQuery();
+  foreach (var item in items)
+  {
+    // Random group name to differentiate it from the rest.
+    if (item["FileLeafRef"].ToString().ToLowerInvariant() == "userprofileinformation.webpart")
     {
-        FileCreationInformation fileInfo = new FileCreationInformation();
-        fileInfo.ContentStream = stream;
-        fileInfo.Overwrite = true;
-        fileInfo.Url = "userprofileinformation.webpart";
-        File file = folder.Files.Add(fileInfo);
-        clientContext.ExecuteQuery();
+      item["Group"] = "add-in Script Part";
+      item.Update();
+      clientContext.ExecuteQuery();
     }
+  }
 
-    // Update the group for uploaded web part.
-    var list = clientContext.Web.Lists.GetByTitle("Web Part Gallery");
-    CamlQuery camlQuery = CamlQuery.CreateAllItemsQuery(100);
-    Microsoft.SharePoint.Client.ListItemCollection items = list.GetItems(camlQuery);
-    clientContext.Load(items);
-    clientContext.ExecuteQuery();
-    foreach (var item in items)
-    {
-        // Random group name to differentiate it from the rest.
-        if (item["FileLeafRef"].ToString().ToLowerInvariant() == "userprofileinformation.webpart")
-        {
-            item["Group"] = "add-in Script Part";
-            item.Update();
-            clientContext.ExecuteQuery();
-        }
-    }
-
-    lblStatus.Text = string.Format("add-in script part has been added to Web Part Gallery. You can find 'User Profile Information' script part under 'Add-in Script Part' group in the <a href='{0}'>host web</a>.", spContext.SPHostUrl.ToString());
+  lblStatus.Text = string.Format("add-in script part has been added to Web Part Gallery. You can find 'User Profile Information' script part under 'Add-in Script Part' group in the <a href='{0}'>host web</a>.", spContext.SPHostUrl.ToString());
 }
 ```
 
-<br/>
-
 After you finish this step, you can locate the **User profile information** add-in script part inside a new **Add-in Script Part** category in the Web Part Gallery. After you add the add-in script part to the page, the remotely running JavaScript controls the display of the information on the page.
 
-When you view the add-in script part in edit mode, you'll see that it embeds the JavaScript file that is running remotely. The userprofileinformation.js script uses the JSON to get user profile information from the host site. 
+When you view the add-in script part in edit mode, you'll see that it embeds the JavaScript file that is running remotely. The **userprofileinformation.js** script uses the JSON to get user profile information from the host site.
 
 ```javascript
 function sharePointReady() {
@@ -1025,7 +1014,7 @@ function sharePointReady() {
 
   SP.SOD.executeOrDelayUntilScriptLoaded(function () {
 
-    //Get Instance of People Manager Class.       
+    //Get Instance of People Manager Class.
     var peopleManager = new SP.UserProfiles.PeopleManager(clientContext);
 
     //Get properties of the current user.
@@ -1046,10 +1035,7 @@ function sharePointReady() {
     }));
   }, 'SP.UserProfiles.js');
 }
-
 ```
-
-<a name="bmPersonalized"> </a>
 
 ## Provisioning publishing features
 
@@ -1057,10 +1043,10 @@ The [Provisioning.PublishingFeatures](https://github.com/pnp/PnP/tree/master/Sam
 
 The provider-hosted add-in uses CSOM to provision commonly used UI elements on publishing sites, and it uses JavaScript to create more dynamic experiences in page layouts that you can deploy to publishing sites. It also shows the differences between using master pages and themes in publishing sites.
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > To make the functionality in this sample work, you need to activate the publishing features on your site. For information, see [Enable publishing features](https://support.office.com/article/Enable-publishing-features-479677a6-8b33-4ac7-907d-071c1c7e4518?CorrelationId=22291615-2acd-46be-8813-9e6c48d01a32&ui=en-US&rs=en-US&ad=US).
 
-The sample start page presents you with three scenarios for customizing the UI of publishing sites: 
+The sample start page presents you with three scenarios for customizing the UI of publishing sites:
 
 - Deploy page layouts.
 - Deploy master pages and themes.
@@ -1082,53 +1068,53 @@ The sample adds a new page layout by uploading a file to the Master Page Gallery
 
 ```javascript
 // Get the path to the file that you are about to deploy.
-            List masterPageGallery = web.GetCatalog((int)ListTemplateType.MasterPageCatalog);
-            Folder rootFolder = masterPageGallery.RootFolder;
-            web.Context.Load(masterPageGallery);
-            web.Context.Load(rootFolder);
-            web.Context.ExecuteQuery();
+List masterPageGallery = web.GetCatalog((int)ListTemplateType.MasterPageCatalog);
+Folder rootFolder = masterPageGallery.RootFolder;
+web.Context.Load(masterPageGallery);
+web.Context.Load(rootFolder);
+web.Context.ExecuteQuery();
 
-            var fileBytes = System.IO.File.ReadAllBytes(sourceFilePath);
+var fileBytes = System.IO.File.ReadAllBytes(sourceFilePath);
 
-            // Use CSOM to upload the file.
-            FileCreationInformation newFile = new FileCreationInformation();
-            newFile.Content = fileBytes;
-            newFile.Url = UrlUtility.Combine(rootFolder.ServerRelativeUrl, fileName);
-            newFile.Overwrite = true;
+// Use CSOM to upload the file.
+FileCreationInformation newFile = new FileCreationInformation();
+newFile.Content = fileBytes;
+newFile.Url = UrlUtility.Combine(rootFolder.ServerRelativeUrl, fileName);
+newFile.Overwrite = true;
 
-            Microsoft.SharePoint.Client.File uploadFile = rootFolder.Files.Add(newFile);
-            web.Context.Load(uploadFile);
-            web.Context.ExecuteQuery();
+Microsoft.SharePoint.Client.File uploadFile = rootFolder.Files.Add(newFile);
+web.Context.Load(uploadFile);
+web.Context.ExecuteQuery();
 
-            // Check out the file if needed.
-            if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
-            {
-                if (uploadFile.CheckOutType == CheckOutType.None)
-                {
-                    uploadFile.CheckOut();
-                }
-            }
+// Check out the file if needed.
+if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
+{
+  if (uploadFile.CheckOutType == CheckOutType.None)
+  {
+    uploadFile.CheckOut();
+  }
+}
 
-            // Get content type for ID to assign associated content type information.
-            ContentType associatedCt = web.GetContentTypeById(associatedContentTypeID);
+// Get content type for ID to assign associated content type information.
+ContentType associatedCt = web.GetContentTypeById(associatedContentTypeID);
 
-            var listItem = uploadFile.ListItemAllFields;
-            listItem["Title"] = title;
-            listItem["MasterPageDescription"] = description;
-            // Set the item as page layout.
-            listItem["ContentTypeId"] = Constants.PAGE_LAYOUT_CONTENT_TYPE;
-            // Set the associated content type ID property
-            listItem["PublishingAssociatedContentType"] = string.Format(";#{0};#{1};#", associatedCt.Name, associatedCt.Id);
-            listItem["UIVersion"] = Convert.ToString(15);
-            listItem.Update();
+var listItem = uploadFile.ListItemAllFields;
+listItem["Title"] = title;
+listItem["MasterPageDescription"] = description;
+// Set the item as page layout.
+listItem["ContentTypeId"] = Constants.PAGE_LAYOUT_CONTENT_TYPE;
+// Set the associated content type ID property
+listItem["PublishingAssociatedContentType"] = string.Format(";#{0};#{1};#", associatedCt.Name, associatedCt.Id);
+listItem["UIVersion"] = Convert.ToString(15);
+listItem.Update();
 
-            // Check in the page layout if needed.
-            if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
-            {
-                uploadFile.CheckIn(string.Empty, CheckinType.MajorCheckIn);
-                listItem.File.Publish(string.Empty);
-            }
-            web.Context.ExecuteQuery();
+// Check in the page layout if needed.
+if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
+{
+  uploadFile.CheckIn(string.Empty, CheckinType.MajorCheckIn);
+  listItem.File.Publish(string.Empty);
+}
+web.Context.ExecuteQuery();
 ```
 
 You can verify that your new page is using the new page layout by going to the **Pages** library of the host site.
@@ -1137,136 +1123,128 @@ You can verify that your new page is using the new page layout by going to the *
 
 Scenario 2 shows you how to deploy and set master pages and themes for the host site from a provider-hosted add-in. When you choose **Deploy master and use it** on the sample start page, the sample deploys and applies a custom master page to the host site. You can see the new master page by going to the home page of the site.
 
-The sample adds a new master page by uploading a *.master file to the Master Page Gallery and assigning it the master page content type. The following code takes the path to a *.master file (which you can deploy as a resource in your Visual Studio project) and adds it as a master page in the Master Page Gallery.
+The sample adds a new master page by uploading a **\*.master** file to the Master Page Gallery and assigning it the master page content type. The following code takes the path to a **\*.master** file (which you can deploy as a resource in your Visual Studio project) and adds it as a master page in the Master Page Gallery.
 
 ```javascript
 string fileName = Path.GetFileName(sourceFilePath);
+// Get the path to the file that you are about to deploy.
+List masterPageGallery = web.GetCatalog((int)ListTemplateType.MasterPageCatalog);
+Folder rootFolder = masterPageGallery.RootFolder;
+web.Context.Load(masterPageGallery);
+web.Context.Load(rootFolder);
+web.Context.ExecuteQuery();
 
-            // Get the path to the file that you are about to deploy.
-            List masterPageGallery = web.GetCatalog((int)ListTemplateType.MasterPageCatalog);
-            Folder rootFolder = masterPageGallery.RootFolder;
-            web.Context.Load(masterPageGallery);
-            web.Context.Load(rootFolder);
-            web.Context.ExecuteQuery();
+// Get the file name from the provided path.
+var fileBytes = System.IO.File.ReadAllBytes(sourceFilePath);
 
-            // Get the file name from the provided path.
-            var fileBytes = System.IO.File.ReadAllBytes(sourceFilePath);
+// Use CSOM to upload the file.
+FileCreationInformation newFile = new FileCreationInformation();
+newFile.Content = fileBytes;
+newFile.Url = UrlUtility.Combine(rootFolder.ServerRelativeUrl, fileName);
+newFile.Overwrite = true;
 
-            // Use CSOM to upload the file.
-            FileCreationInformation newFile = new FileCreationInformation();
-            newFile.Content = fileBytes;
-            newFile.Url = UrlUtility.Combine(rootFolder.ServerRelativeUrl, fileName);
-            newFile.Overwrite = true;
-
-            Microsoft.SharePoint.Client.File uploadFile = rootFolder.Files.Add(newFile);
-            web.Context.Load(uploadFile);
-            web.Context.ExecuteQuery();
+Microsoft.SharePoint.Client.File uploadFile = rootFolder.Files.Add(newFile);
+web.Context.Load(uploadFile);
+web.Context.ExecuteQuery();
 
 
-            var listItem = uploadFile.ListItemAllFields;
-            if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
-            {
-                if (uploadFile.CheckOutType == CheckOutType.None)
-                {
-                    uploadFile.CheckOut();
-                }
-            }
+var listItem = uploadFile.ListItemAllFields;
+if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
+{
+  if (uploadFile.CheckOutType == CheckOutType.None)
+  {
+    uploadFile.CheckOut();
+  }
+}
 
-            listItem["Title"] = title;
-            listItem["MasterPageDescription"] = description;
-            // Set content type as master page.
-            listItem["ContentTypeId"] = Constants.MASTERPAGE_CONTENT_TYPE;
-            listItem["UIVersion"] = uiVersion;
-            listItem.Update();
-            if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
-            {
-                uploadFile.CheckIn(string.Empty, CheckinType.MajorCheckIn);
-                listItem.File.Publish(string.Empty);
-            }
-            web.Context.Load(listItem);
-            web.Context.ExecuteQuery();
+listItem["Title"] = title;
+listItem["MasterPageDescription"] = description;
+// Set content type as master page.
+listItem["ContentTypeId"] = Constants.MASTERPAGE_CONTENT_TYPE;
+listItem["UIVersion"] = uiVersion;
+listItem.Update();
+if (masterPageGallery.ForceCheckout || masterPageGallery.EnableVersioning)
+{
+  uploadFile.CheckIn(string.Empty, CheckinType.MajorCheckIn);
+  listItem.File.Publish(string.Empty);
+}
+web.Context.Load(listItem);
+web.Context.ExecuteQuery();
 ```
-
-<br/>
 
 The next step is to set the URL of the new master page as the value for both the **MasterUrl** and **CustomMasterUrl** properties of the **Web** object that represents the site. The sample handles this with a single method that fetches the URL of the new master page in the Master Page Gallery and then assigns that value to the **Web.MasterUrl** and **Web.CustomMasterUrl** properties.
 
 ```javascript
 // Assign master page to the host web.
-                clientContext.Web.SetMasterPagesForSiteByName("contoso.master", "contoso.master");
-
+clientContext.Web.SetMasterPagesForSiteByName("contoso.master", "contoso.master");
 ```
-
-<br/>
 
 When you choose **Deploy theme and use it**, the sample deploys and applies a custom theme to the host site. The sample sets the color palette, background image, and font scheme of the theme by adding a new theme with those values (which you can deploy as resources inside your Visual Studio project) to the Theme Gallery. The following code creates the new theme.
 
 ```javascript
 List themesOverviewList = web.GetCatalog((int)ListTemplateType.DesignCatalog);
-           web.Context.Load(themesOverviewList);
-           web.Context.ExecuteQuery(); 
-                ListItemCreationInformation itemInfo = new ListItemCreationInformation();
-                Microsoft.SharePoint.Client.ListItem item = themesOverviewList.AddItem(itemInfo);
-                item["Name"] = themeName;
-                item["Title"] = themeName;
-                if (!string.IsNullOrEmpty(colorFileName))
-                {
-                    item["ThemeUrl"] = UrlUtility.Combine(rootWeb.ServerRelativeUrl, string.Format(Constants.THEMES_DIRECTORY, Path.GetFileName(colorFileName)));
-                }
-                if (!string.IsNullOrEmpty(fontFileName))
-                {
-                    item["FontSchemeUrl"] = UrlUtility.Combine(rootWeb.ServerRelativeUrl, string.Format(Constants.THEMES_DIRECTORY, Path.GetFileName(fontFileName)));
-                }
-                if (!string.IsNullOrEmpty(backgroundName))
-                {
-                    item["ImageUrl"] = UrlUtility.Combine(rootWeb.ServerRelativeUrl, string.Format(Constants.THEMES_DIRECTORY, Path.GetFileName(backgroundName)));
-                }
-                item["DisplayOrder"] = 11;
-                item.Update();
-                web.Context.ExecuteQuery();
+web.Context.Load(themesOverviewList);
+web.Context.ExecuteQuery();
+ListItemCreationInformation itemInfo = new ListItemCreationInformation();
+Microsoft.SharePoint.Client.ListItem item = themesOverviewList.AddItem(itemInfo);
+item["Name"] = themeName;
+item["Title"] = themeName;
+if (!string.IsNullOrEmpty(colorFileName))
+{
+  item["ThemeUrl"] = UrlUtility.Combine(rootWeb.ServerRelativeUrl, string.Format(Constants.THEMES_DIRECTORY, Path.GetFileName(colorFileName)));
+}
+if (!string.IsNullOrEmpty(fontFileName))
+{
+  item["FontSchemeUrl"] = UrlUtility.Combine(rootWeb.ServerRelativeUrl, string.Format(Constants.THEMES_DIRECTORY, Path.GetFileName(fontFileName)));
+}
+if (!string.IsNullOrEmpty(backgroundName))
+{
+  item["ImageUrl"] = UrlUtility.Combine(rootWeb.ServerRelativeUrl, string.Format(Constants.THEMES_DIRECTORY, Path.GetFileName(backgroundName)));
+}
+item["DisplayOrder"] = 11;
+item.Update();
+web.Context.ExecuteQuery();
 ```
-
-<br/>
 
 The next step is to set this new theme as the theme for the site. The following code does this by fetching the theme from the Theme Gallery and then applying its values to the host site.
 
 ```javascript
- CamlQuery query = new CamlQuery();
-                // Find the theme by themeName.
-                string camlString = string.Format(CAML_QUERY_FIND_BY_FILENAME, themeName);
-                query.ViewXml = camlString;
-                var found = themeList.GetItems(query);
-                rootWeb.Context.Load(found);
-                LoggingUtility.Internal.TraceVerbose("Getting theme: {0}", themeName);
-                rootWeb.Context.ExecuteQuery();
-                if (found.Count > 0)
-                {
-                    ListItem themeEntry = found[0];
+CamlQuery query = new CamlQuery();
+// Find the theme by themeName.
+string camlString = string.Format(CAML_QUERY_FIND_BY_FILENAME, themeName);
+query.ViewXml = camlString;
+var found = themeList.GetItems(query);
+rootWeb.Context.Load(found);
+LoggingUtility.Internal.TraceVerbose("Getting theme: {0}", themeName);
+rootWeb.Context.ExecuteQuery();
+if (found.Count > 0)
+{
+  ListItem themeEntry = found[0];
 
-                    / /Set the properties for applying the custom theme that was just uploaded.
-                    string spColorURL = null;
-                    if (themeEntry["ThemeUrl"] != null &amp;&amp; themeEntry["ThemeUrl"].ToString().Length > 0)
-                    {
-                        spColorURL = UrlUtility.MakeRelativeUrl((themeEntry["ThemeUrl"] as FieldUrlValue).Url);
-                    }
-                    string spFontURL = null;
-                    if (themeEntry["FontSchemeUrl"] != null &amp;&amp; themeEntry["FontSchemeUrl"].ToString().Length > 0)
-                    {
-                        spFontURL = UrlUtility.MakeRelativeUrl((themeEntry["FontSchemeUrl"] as FieldUrlValue).Url);
-                    }
-                    string backGroundImage = null;
-                    if (themeEntry["ImageUrl"] != null &amp;&amp; themeEntry["ImageUrl"].ToString().Length > 0)
-                    {
-                        backGroundImage = UrlUtility.MakeRelativeUrl((themeEntry["ImageUrl"] as FieldUrlValue).Url);
-                    }
+  // set the properties for applying the custom theme that was just uploaded.
+  string spColorURL = null;
+  if (themeEntry["ThemeUrl"] != null &amp;&amp; themeEntry["ThemeUrl"].ToString().Length > 0)
+  {
+    spColorURL = UrlUtility.MakeRelativeUrl((themeEntry["ThemeUrl"] as FieldUrlValue).Url);
+  }
+  string spFontURL = null;
+  if (themeEntry["FontSchemeUrl"] != null &amp;&amp; themeEntry["FontSchemeUrl"].ToString().Length > 0)
+  {
+    spFontURL = UrlUtility.MakeRelativeUrl((themeEntry["FontSchemeUrl"] as FieldUrlValue).Url);
+  }
+  string backGroundImage = null;
+  if (themeEntry["ImageUrl"] != null &amp;&amp; themeEntry["ImageUrl"].ToString().Length > 0)
+  {
+    backGroundImage = UrlUtility.MakeRelativeUrl((themeEntry["ImageUrl"] as FieldUrlValue).Url);
+  }
 
-                    // Set theme for demonstration.
-                    // TODO: Why is shareGenerated false? If deploying to root and inheriting, maybe use shareGenerated = true.
-                    web.ApplyTheme(spColorURL,
-                                        spFontURL,
-                                        backGroundImage,
-                                        false);
-                    web.Context.ExecuteQuery();
+  // Set theme for demonstration.
+  // TODO: Why is shareGenerated false? If deploying to root and inheriting, maybe use shareGenerated = true.
+  web.ApplyTheme(spColorURL,
+                      spFontURL,
+                      backGroundImage,
+                      false);
+  web.Context.ExecuteQuery();
 ```
 
 ### Scenario 3: Filter available page layouts and site templates
@@ -1280,30 +1258,24 @@ Scenario 3 shows you how to limit the options that users have when they apply te
 The sample sets both the default and available page layouts by passing the associated *.aspx files to methods to extension methods, as shown in the code.
 
 ```javascript
-                List<string> pageLayouts = new List<string>();
-                pageLayouts.Add("ContosoLinksBelow.aspx");
-                pageLayouts.Add("ContosoLinksRight.aspx");
-                clientContext.Web.SetAvailablePageLayouts(clientContext.Web, pageLayouts);
+List<string> pageLayouts = new List<string>();
+pageLayouts.Add("ContosoLinksBelow.aspx");
+pageLayouts.Add("ContosoLinksRight.aspx");
+clientContext.Web.SetAvailablePageLayouts(clientContext.Web, pageLayouts);
 
-                // Set default page layout for the site.
-                clientContext.Web.SetDefaultPageLayoutForSite(clientContext.Web, "ContosoLinksBelow.aspx");
-
+// Set default page layout for the site.
+clientContext.Web.SetDefaultPageLayoutForSite(clientContext.Web, "ContosoLinksBelow.aspx");
 ```
-
-<br/>
 
 The sample sets the available site templates by doing something similar. In this case, it passes the **WebTemplateEntity** instances that define each site template to an extension method called **SetAvailableWebTemplates**.
 
 ```javascript
 List<WebTemplateEntity> templates = new List<WebTemplateEntity>();
-                templates.Add(new WebTemplateEntity() { LanguageCode = "1035", TemplateName = "STS#0" });
-                templates.Add(new WebTemplateEntity() { LanguageCode = "", TemplateName = "STS#0" });
-                templates.Add(new WebTemplateEntity() { LanguageCode = "", TemplateName = "BLOG#0" });
-                clientContext.Web.SetAvailableWebTemplates(templates);
-
+templates.Add(new WebTemplateEntity() { LanguageCode = "1035", TemplateName = "STS#0" });
+templates.Add(new WebTemplateEntity() { LanguageCode = "", TemplateName = "STS#0" });
+templates.Add(new WebTemplateEntity() { LanguageCode = "", TemplateName = "BLOG#0" });
+clientContext.Web.SetAvailableWebTemplates(templates);
 ```
-
-<br/>
 
 All three of these extension methods&mdash;**SetAvailablePageLayouts**, **SetDefaultPageLayoutForSite**, and **SetAvailableWebTemplates**&mdash;work in the same way. They create XML documents that contain key/value pairs that define the available and default layouts and the available templates. They then pass these documents to an additional extension method called **SetPropertyBagValue**. This method is implemented in [OfficeDevPnP Core extension](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core). After it sets up the appropriate property bags, these property bags are then used to filter options in the interface.
 
@@ -1311,48 +1283,48 @@ Of the three methods, **SetAvailableWebTemplates** shows the full pattern.
 
 ```javascript
 public static void SetAvailableWebTemplates(this Web web, List<WebTemplateEntity> availableTemplates)
-        {
-            string propertyValue = string.Empty;
+{
+  string propertyValue = string.Empty;
 
-            LanguageTemplateHash languages = new LanguageTemplateHash();
-            foreach (var item in availableTemplates)
-            {
-                AddTemplateToCollection(languages, item);
-            }
+  LanguageTemplateHash languages = new LanguageTemplateHash();
+  foreach (var item in availableTemplates)
+  {
+    AddTemplateToCollection(languages, item);
+  }
 
-            if (availableTemplates.Count > 0)
-            {
-                XmlDocument xd = new XmlDocument();
-                XmlNode xmlNode = xd.CreateElement("webtemplates");
-                xd.AppendChild(xmlNode);
-                foreach (var language in languages)
-                {
-                    XmlNode xmlLcidNode = xmlNode.AppendChild(xd.CreateElement("lcid"));
-                    XmlAttribute xmlAttribute = xd.CreateAttribute("id");
-                    xmlAttribute.Value = language.Key;
-                    xmlLcidNode.Attributes.SetNamedItem(xmlAttribute);
+  if (availableTemplates.Count > 0)
+  {
+    XmlDocument xd = new XmlDocument();
+    XmlNode xmlNode = xd.CreateElement("webtemplates");
+    xd.AppendChild(xmlNode);
+    foreach (var language in languages)
+    {
+      XmlNode xmlLcidNode = xmlNode.AppendChild(xd.CreateElement("lcid"));
+      XmlAttribute xmlAttribute = xd.CreateAttribute("id");
+      xmlAttribute.Value = language.Key;
+      xmlLcidNode.Attributes.SetNamedItem(xmlAttribute);
 
-                    foreach (string item in language.Value)
-                    {
-                        XmlNode xmlWTNode = xmlLcidNode.AppendChild(xd.CreateElement("webtemplate"));
-                        XmlAttribute xmlAttributeName = xd.CreateAttribute("name");
-                        xmlAttributeName.Value = item;
-                        xmlWTNode.Attributes.SetNamedItem(xmlAttributeName);
-                    }
-                }
-                propertyValue = xmlNode.OuterXml;
-            }
-            // Save the XML entry to property bag.
-            web.SetPropertyBagValue(AvailableWebTemplates, propertyValue);
-            // Set that templates are not inherited.
-            web.SetPropertyBagValue(InheritWebTemplates, "False");
-
+      foreach (string item in language.Value)
+      {
+        XmlNode xmlWTNode = xmlLcidNode.AppendChild(xd.CreateElement("webtemplate"));
+        XmlAttribute xmlAttributeName = xd.CreateAttribute("name");
+        xmlAttributeName.Value = item;
+        xmlWTNode.Attributes.SetNamedItem(xmlAttributeName);
+      }
+    }
+    propertyValue = xmlNode.OuterXml;
+  }
+  // Save the XML entry to property bag.
+  web.SetPropertyBagValue(AvailableWebTemplates, propertyValue);
+  // Set that templates are not inherited.
+  web.SetPropertyBagValue(InheritWebTemplates, "False");
+}
 ```
 
 The **InheritWebTemplates** property bag makes sure that any templates that are normally inherited from the parent site also are ignored when you create subsites.
 
 ## See also
- 
-- [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages)   
+
+- [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages)
 - [Branding.ApplyBranding](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.ApplyBranding)
 - [UX components in SharePoint and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md)

@@ -1,7 +1,7 @@
 ---
 title: Field element (View)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 03/28/2023
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -38,16 +38,16 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|**AutoHyperLink** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, `www.microsoft.com`).  <br/> |
-|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.  <br/> |
-|**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (`&nbsp;`).  <br/> |
-|**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
-|**Name** <br/> |Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example,  `<Field Name="`_ID_`"/>`).  <br/> |
-|**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
-|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
-|**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
+|          Attribute          |                                                                                                 Description                                                                                                  |
+| :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AutoHyperLink**           | Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, `www.microsoft.com`).                                                                    |
+| **AutoHyperLinkNoEncoding** | Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears to be a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.                                          |
+| **AutoNewLine**             | Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (`&nbsp;`).                                                                |
+| **HTMLEncode**              | Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities. |
+| **Name**                    | Optional **Text**. Allows the **Field** element to be used outside the field rendering context by supplying an ID (for example,  `<Field Name="`_ID_`"/>`).                                                  |
+| **StripWS**                 | Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.                                                                                        |
+| **URLEncode**               | Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).                                                              |
+| **URLEncodeAsURL**          | Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.                                      |
 
 ### Child elements
 
@@ -71,5 +71,3 @@ To create a custom field definition as a pluggable Feature that is based on a de
 To create a custom field definition for a list definition based on a default field type, use the [Field (List - Definition)](field-element-list.md) element within a [Schema.xml](https://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56%28Office.15%29.aspx) file.
 
 To create a [custom field type](https://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13%28Office.15%29.aspx) that implements a custom class for special data validation and field rendering, use the [Field (Field Types)](field-element-field-types.md) element.
-
-<br/>
