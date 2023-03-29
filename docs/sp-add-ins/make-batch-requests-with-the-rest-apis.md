@@ -1,7 +1,7 @@
 ---
 title: Make batch requests with the REST APIs
 description: Use the $batch query option with the REST/OData APIs.
-ms.date: 06/13/2022
+ms.date: 03/29/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
@@ -21,6 +21,7 @@ The following is a reminder of the major points:
 - The body of the request is divided into parts that are separated from each other by a boundary string that is specified in the header of the request.
 - Each part of the body has its own HTTP verb and REST URL, and its own internal body when applicable.
 - A part can be a read operation (or function invocation), or a ChangeSet of one or more write operations (or function invocations). A ChangeSet is itself a MIME type *multipart/mixed*  with subparts that contain insert, update, or delete operations.
+- The request URL and the URLs inside the body must target the same site. All URLs are case-sensitive.
 
 > [!IMPORTANT]
 > SharePoint and Office 365 APIs aren't transactional and don't support "all or nothing" functionality for ChangeSets that have more than one operation within them. If any of the child operations fails, the others still complete and aren't rolled back.
