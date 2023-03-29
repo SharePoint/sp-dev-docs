@@ -30,8 +30,11 @@ The web template to use when creating an add-in web.
 
 ## Definition
 
-```XML 
-<xs:element name="WebTemplate"  type="WebTemplateDefinition"  minOccurs="0"  maxOccurs="1">
+```XML
+<xs:element name="WebTemplate"
+            type="WebTemplateDefinition"
+            minOccurs="0"
+            maxOccurs="1">
 </xs:element>
 ```
 
@@ -50,7 +53,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 None.
 
 ### Attributes
-
 
 | Attribute | Type | Required | Description | Possible values |
 | --- | --- | --- | --- | --- |

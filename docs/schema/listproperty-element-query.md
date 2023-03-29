@@ -40,7 +40,7 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|Attribute*|Description|
+|Attribute|Description|
 |:-----|:-----|
 |**AutoHyperLink** |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink, for example, `www.microsoft.com`.  |
 |**AutoHyperLinkNoEncoding** |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.  |

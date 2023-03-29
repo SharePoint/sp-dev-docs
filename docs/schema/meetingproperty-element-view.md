@@ -25,7 +25,7 @@ Represents a property of a list in a Meeting Workspace site.
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
   AutoNewLine = "TRUE" | "FALSE"
   Default = "Text"
-..ExpandXML = "TRUE" | "FALSE"
+  ExpandXML = "TRUE" | "FALSE"
   HTMLEncode = "TRUE" | "FALSE"
   Select = "Text"
   StripWS = "TRUE" | "FALSE"

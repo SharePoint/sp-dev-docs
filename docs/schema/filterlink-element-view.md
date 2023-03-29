@@ -25,7 +25,7 @@ Returns the URL for filtering a view; typically used in the toolbars that appear
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
   AutoNewLine = "TRUE" | "FALSE"
   Default = "Text"
-..ExpandXML = "TRUE" | "FALSE"
+  ExpandXML = "TRUE" | "FALSE"
   HTMLEncode = "TRUE" | "FALSE"
   Paged = "TRUE" | "FALSE"
   StripWS = "TRUE" | "FALSE"

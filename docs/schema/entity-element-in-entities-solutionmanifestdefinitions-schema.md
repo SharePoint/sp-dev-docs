@@ -20,7 +20,11 @@ Defines the external content type that this context definition is associated wit
 **Schema**: SolutionManifestDefinitions
 
 ```XML
-<Entity EntityTypeName = "String" EntityTypeNamespace = "String" Name = "String" Description = "String"> </Entity>
+<Entity EntityTypeName="String"
+        EntityTypeNamespace="String"
+        Name="String"
+        Description="String">
+</Entity>
 ```
 
 ## Elements and attributes

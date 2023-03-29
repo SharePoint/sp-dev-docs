@@ -25,7 +25,7 @@ Returns the sort direction on a list, rendering **Asc** or **Desc** based on whe
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
   AutoNewLine = "TRUE" | "FALSE"
   Default = "Text"
-..ExpandXML = "TRUE" | "FALSE"
+  ExpandXML = "TRUE" | "FALSE"
   HTMLEncode = "TRUE" | "FALSE"
   StripWS = "TRUE" | "FALSE"
   URLEncode = "TRUE" | "FALSE"

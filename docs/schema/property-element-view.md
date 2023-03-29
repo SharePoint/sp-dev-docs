@@ -25,7 +25,7 @@ Returns the property from the context of the current [ForEach](foreach-element-v
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
   AutoNewLine = "TRUE" | "FALSE"
   Default = "Text"
-..ExpandXML = "TRUE" | "FALSE"
+  ExpandXML = "TRUE" | "FALSE"
   HTMLEncode = "TRUE" | "FALSE"
   Name = "Text"
   OuterLookupField = "TRUE" | "FALSE"

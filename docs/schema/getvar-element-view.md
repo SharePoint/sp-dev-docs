@@ -29,7 +29,7 @@ Returns a variable in the context of rendering the page. Variables can be set ei
   HTMLEncode = "TRUE" | "FALSE"
   Name = "Text"
   Scope ="Request"
-    StripWS = "TRUE" | "FALSE"
+  StripWS = "TRUE" | "FALSE"
   URLEncode = "TRUE" | "FALSE"
   URLEncodeAsURL = "TRUE" | "FALSE">
 </GetVar>
