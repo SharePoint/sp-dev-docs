@@ -1,7 +1,7 @@
 ---
 title: Column element (View)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 03/28/2023
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -24,15 +24,15 @@ Returns the raw data value for a particular field, as opposed to the formatted v
   AutoHyperLink = "TRUE" | "FALSE"
   AutoHyperLinkNoEncoding = "TRUE" | "FALSE"
   AutoNewLine = "TRUE" | "FALSE"
-    Default = "Text"
+  Default = "Text"
   Format="DateTime"
-    HTMLEncode = "TRUE" | "FALSE"
-    Name = "Text"
-    ShowField = "Text"
-    StripWS = "TRUE" | "FALSE"
+  HTMLEncode = "TRUE" | "FALSE"
+  Name = "Text"
+  ShowField = "Text"
+  StripWS = "TRUE" | "FALSE"
   SubColumnNumber = Integer
-    URLEncode = "TRUE" | "FALSE"
-    URLEncodeAsURL = "TRUE" | "FALSE">
+  URLEncode = "TRUE" | "FALSE"
+  URLEncodeAsURL = "TRUE" | "FALSE">
 </Column>
 ```
 
@@ -42,20 +42,20 @@ The following sections describe attributes, child elements, and parent elements.
 
 ### Attributes
 
-|**Attribute**|**Description**|
-|:-----|:-----|
-|**AutoHyperLink** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`).  <br/> |
-|**AutoHyperLinkNoEncoding** <br/> |Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.  <br/> |
-|**AutoNewLine** <br/> |Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (`&nbsp;`).  <br/> |
-|**Default** <br/> |Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string (`""`).  <br/> |
-|**Format** <br/> |Optional **Text**. Controls the date formatting for date fields. Supported formats include **DateTime**, **DateOnly**, **TimeOnly**, **ISO8601**, **ISO8601Basic**, and **ISO8601Gregorian**.  <br/> |
-|**HTMLEncode** <br/> |Optional **Boolean**. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.  <br/> |
-|**Name** <br/> |Optional **Text**. Allows the **Column** element to be used outside the field rendering context by supplying an ID (for example,  `<Column Name="`_ID_`"/>`).  <br/> |
-|**ShowField** <br/> |Optional **Text**. The **ShowField** attribute can be set to the column name to display. By default, a hyperlinked text from the **Title** column of the record in the external list is displayed. But the **ShowField** attribute can be used to override that and display another field from the external list.  <br/> The following data types are allowed as targets of a **ShowField** attribute: **Text**, **Choice**, and **Counter**.  <br/> |
-|**StripWS** <br/> |Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.  <br/> |
-|**SubColumnNumber** <br/> |Optional **Integer**.  <br/> |
-|**URLEncode** <br/> |Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).  <br/> |
-|**URLEncodeAsURL** <br/> |Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) are not encoded.  <br/> |
+|        **Attribute**        |                                                                                                                                                                                                                   **Description**                                                                                                                                                                                                                    |
+| :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AutoHyperLink**          | Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`).                                                                                                                                                                                                                                                                                                        |
+| **AutoHyperLinkNoEncoding** | Optional **Boolean**. **TRUE** to surround text with `<A>` tags if the text appears like a hyperlink (for example, `www.microsoft.com`) but without HTML encoding.                                                                                                                                                                                                                                                                              |
+| **AutoNewLine**             | Optional **Boolean**. **TRUE** to insert `<BR>` tags into the text stream and to replace multiple spaces with a nonbreaking space (`&nbsp;`).                                                                                                                                                                                                                                                                                                 |
+| **Default**                 | Optional **Text**. Renders the text assigned to this attribute if the value returned by a selection is an empty string (`""`).                                                                                                                                                                                                                                                                                                                 |
+| **Format**                  | Optional **Text**. Controls the date formatting for date fields. Supported formats include **DateTime**, **DateOnly**, **TimeOnly**, **ISO8601**, **ISO8601Basic**, and **ISO8601Gregorian**.                                                                                                                                                                                                                                                   |
+| **HTMLEncode**              | Optional **Boolean**. **TRUE** to convert embedded characters so that they're displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.                                                                                                                                                                                                                                    |
+| **Name**                    | Optional **Text**. Allows the **Column** element to be used outside the field rendering context by supplying an ID (for example,  `<Column Name="_ID_"/>`).                                                                                                                                                                                                                                                                                   |
+| **ShowField**               | Optional **Text**. The **ShowField** attribute can be set to the column name to display. By default, a hyperlinked text from the **Title** column of the record in the external list is displayed. But the **ShowField** attribute can be used to override that and display another field from the external list.  The following data types are allowed as targets of a **ShowField** attribute: **Text**, **Choice**, and **Counter**.|
+| **StripWS**                 | Optional **Boolean**. **TRUE** to remove white space from the beginning and end of the value returned by the element.                                                                                                                                                                                                                                                                                                                         |
+| **SubColumnNumber**         | Optional **Integer**.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **URLEncode**               | Optional **Boolean**. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, `%c3%ab` for character `ë`).                                                                                                                                                                                                                                                                                               |
+| **URLEncodeAsURL**          | Optional **Boolean**. Like **URLEncode**, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (`/`) aren't encoded.                                                                                                                                                                                                                                                                         |
 
 ### Child elements
 
@@ -72,7 +72,7 @@ Numerous
 
 ### Remarks
 
-Note that when an empty **Column** element (`<Column/>`) is used, it is sensitive to the current setting of the `DisplayMode` variable. The display mode is set implicitly according to the current command being used.
+When an empty **Column** element (`<Column/>`) is used, it's sensitive to the current setting of the `DisplayMode` variable. The display mode is set implicitly according to the current command being used.
 
 If a view or item is being displayed, `DisplayMode` is set to **Display**. If an item is being created from a form, `DisplayMode` is set to **New**. If an existing item is being edited, `DisplayMode` is set to **Edit**. The `DisplayMode` variable can be overridden in the page by setting it directly, for example, `<SetVar Name="DisplayMode">Edit</SetVar>`.
 

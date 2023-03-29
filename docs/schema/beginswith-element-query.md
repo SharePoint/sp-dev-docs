@@ -1,7 +1,7 @@
 ---
 title: BeginsWith element (Query)
 manager: soliver
-ms.date: 3/9/2015
+ms.date: 03/28/2023
 ms.audience: Developer
 ms.topic: reference
 ms.localizationpriority: medium
@@ -62,8 +62,12 @@ The following example uses the **BeginsWith** element within a string that is as
 SPWeb mySite = SPControl.GetContextWeb(Context);
 SPList list = mySite.Lists["List_Name "];
 SPQuery query = new SPQuery();
-query.Query = "<Where><BeginsWith><FieldRef Name="Journal"/>" +
-   "<Value Type="Note">City</Value></BeginsWith></Where>";
+query.Query = "<Where>" +
+                "<BeginsWith>" +
+                  "<FieldRef Name="Journal"/>" +
+                  "<Value Type="Note">City</Value>" +
+                "</BeginsWith>" +
+              "</Where>";
 SPListItemCollection myItems = list.GetItems(query);
 foreach (SPListItem item in myItems)
 {
