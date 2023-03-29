@@ -36,11 +36,11 @@ At each step of the development process, it's important to keep performance in m
 |Option|Description|
 |:---|:---|
 |[Reduce the number of requests](#reduce-the-number-of-requests) | Fewer requests means fewer round-trips to the server, reducing latency.|
-|[Retrieve only the data you need](#RetrieveOnlyTheDataYouNeed) | Reduce the amount of data sent over the wire. Also reduces server load.|
-|[Provide a good page load experience](#ProvideAGoodUserExperience) | Keep your UI responsive to the user. For example, update the menus on the page *before* you start the download of 100+ records.|
-|[Use asynchronous calls and patterns whenever possible](#EverythingIsAsynchronous) | Polling is a heavier burden on performance than using an asynchronous call or callback.|
-|[Caching is key](#ClientSideCaching) | Caching further reduces the burden on the server while giving immediate performance improvement.|
-|[Prepare for more page views than you ever imagined](#PriceOfPopularity) | A data-heavy landing page is okay when you only have a few hits. But if you get thousands of hits, that can really impact performance.|
+|[Retrieve only the data you need](#retrieve-only-the-data-you-need) | Reduce the amount of data sent over the wire. Also reduces server load.|
+|[Provide a good page load experience](#provide-a-good-user-experience) | Keep your UI responsive to the user. For example, update the menus on the page *before* you start the download of 100+ records.|
+|[Use asynchronous calls and patterns whenever possible](#everything-is-asynchronous) | Polling is a heavier burden on performance than using an asynchronous call or callback.|
+|[Caching is key](#client-side-caching) | Caching further reduces the burden on the server while giving immediate performance improvement.|
+|[Prepare for more page views than you ever imagined](#the-price-of-popularity) | A data-heavy landing page is okay when you only have a few hits. But if you get thousands of hits, that can really impact performance.|
 
 ## What is my code doing
 
@@ -54,7 +54,7 @@ There are several ways to reduce requests and reduce request size.
 
 - Limit the number of JavaScript files in production. Separating your JavaScript files works well for development, but not so well for production. Combine your JavaScript files into a single JavaScript file, or as few JavaScript files as you can.
 - Shrink file sizes. Minimize your production JavaScript files by removing line breaks, white space, and comments. There are several JavaScript minify programs and websites that you can use to greatly reduce your JavaScript file sizes.
-- Use browser file caching to reduce requests. The updated [Loader Pattern](#LoaderPattern) below is a good way to expand upon this idea.
+- Use browser file caching to reduce requests. The updated [Loader Pattern](#the-loader-pattern) below is a good way to expand upon this idea.
 
 ### Retrieve only the data you need
 

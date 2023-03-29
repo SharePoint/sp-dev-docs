@@ -130,7 +130,7 @@ When your objective is to customize regions of a SharePoint page, you can use a 
 |Suite navigation|Any of the default master pages. |Can be hidden via the **Focus on Content** button.|
 |Suite links||Can be hidden via the **Focus on Content** button.|
 |Welcome menu|**\*.master**|Can be hidden via the **Focus on Content** button.|
-|Settings menu or gear|**\*.master**|For an example, see [FTC to CAM - Custom actions and property bag entries from SP Add-in](https://blogs.msdn.com/b/vesku/archive/2013/10/02/ftc-to-cam-custom-actions-and-property-bag-entries.aspx).|
+|Settings menu or gear|**\*.master**||
 |Help|**\*.master**||
 |Ribbon contextual tabs|Any default master page.|For examples, see the following: <ul><li>[SharePoint 2013 Duplicate Contextual Tabs](https://social.msdn.microsoft.com/Forums/sharepoint/df1e4e32-ef58-4b51-8ac8-a8c3690e648b/sharepoint-2013-duplicate-contextual-tabs?forum=sharepointdevelopment)</li><li>[Hide a Contextual ribbon tab](https://social.msdn.microsoft.com/Forums/sharepoint/a3640d58-afe1-41d0-ac83-bd7886c37355/hide-a-contextual-ribbon-tab?forum=crmdevelopment)</li><li>[Hide/Show contextual tab on click event of subgrid](https://social.msdn.microsoft.com/Forums/sharepoint/201306cf-5874-4778-b773-f870c67cee94/hideshow-contextual-tab-on-click-event-of-subgrid?forum=crmdevelopment)</li></ul>|
 |Quick access toolbar|**\*.master**|Can be hidden via the **Focus on Content** button.|

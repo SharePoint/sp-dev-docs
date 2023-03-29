@@ -50,7 +50,7 @@ If you're not using Napa on a developer site, you need the following:
 > [!NOTE]
 > For guidance about how to set up a development environment that fits your needs, see [SharePoint Add-ins](sharepoint-add-ins.md#two-types-of-sharepoint-add-ins-sharepoint-hosted-and-provider-hosted).
 
-The following sections describe the high-level steps for adding the picker to your add-in and then getting its user information from another client-side control. For the corresponding code, see [Code example: Using the client-side People Picker](#bk_example).
+The following sections describe the high-level steps for adding the picker to your add-in and then getting its user information from another client-side control. For the corresponding code, see [Code example: Using the client-side People Picker](#code-example-using-the-client-side-people-picker-in-a-sharepoint-hosted-add-in).
 
 You can use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins, but not in provider-hosted add-ins.
 
