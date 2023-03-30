@@ -45,11 +45,11 @@ If you are migrating a structure that has more than 100,000 children (such as fi
 
 To learn more about the service limits in SharePoint for Microsoft 365, see [SharePoint Limits](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits#items-in-lists-and-libraries).
 
-## Folders that contain fewer than 100,000 items
+## Folders with less than 100,000 items
 
 If your library (or list) has fewer than 100,000 items, and you have less than 50,000 unique scopes, you can migrate using the migration API and apply unique scopes to create folders with less 100K items to break inheritance as needed.
 
-## Folders that contain more than 100,000 items
+## Folders with more than 100,000 items
 
 If you have a folder with more than 100,000 items, we recommend one of the following approaches. Determine how many items are in your source or root folder, including lists or other object types. Scan and determine which folder structures have greater than 100,000 items.
 
@@ -61,7 +61,7 @@ For example, divide a single folder of 250,000 items into four folders at the ro
 
 Make sure that there are no more than 50,000 unique scopes in the structure: ideally less than 5,000.
 
-In this example, at the source, break up the structure into four folders, A, B, C, and D, each having less than 100,000 items. Then perform the migration. See the following illustration.
+In this example, at the source, break up the structure into four folders, A, B, C, and D, each having less than 100,000 items. Then perform the migration. For details, see the following illustration.
 
 ![Hierarchy ABCD](../images/hierarchy-ABCD.png)
 
