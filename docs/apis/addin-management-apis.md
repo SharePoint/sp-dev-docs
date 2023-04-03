@@ -7,8 +7,10 @@ ms.localizationpriority: medium
 ---
 
 # SharePoint Add-in Management APIs
+
 This documentation will introduce some APIs which related to SharePoint Add-ins. They could help to have a clear view
 and better management of the Add-ins in tenant level, including these:
+
 - Get available Add-ins in sites
 - Get Add-in permissions in site collections
 - Get tenant ACS service principals
@@ -19,6 +21,7 @@ and better management of the Add-ins in tenant level, including these:
 For more information about SharePoint Add-in, see [SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md).
 
 ## Prerequisites
+
 - App-only mode token. [Get token example](https://github.com/pnp/pnpcore/blob/dev/docs/polyglot/Getting%20started%20-%20application%20permissions.ipynb)
 - Called on the admin site. Example: https://www.contoso-admin.sharepoint.com
 - For uninstall Add-in API, the app needs to have Sites.FullControl.All permission. For others, the app needs at least Sites.Read.All permission.
@@ -134,7 +137,7 @@ POST {adminSiteUrl}/_api/web/AddinPermissions
 
 | Name    | Type   | Description                                                                                                                                                                                         |
 |---------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| feature | string | The feature name of the permissions, it should be one of these:<br/> <li> Taxonomy <br/> <li> Social <br/> <li> ProjectServer <br/> <li> Search <br/> <li> BcsConnection <br/> <li> Content         |
+| feature | string | The feature name of the permissions, it should be one of these:<ul> <li> Taxonomy <li> Social <li> ProjectServer <li> Search <li> BcsConnection  <li> Content </ul>                                 |
 | scope   | string | The scope of the permission.                                                                                                                                                                        |
 | right   | string | The right of the permission.                                                                                                                                                                        |
 | id      | Guid   | The id of the resource that the Add-in have permission to. For example, it may be the id of one specific project when the feature is ProjectServer and the scope is projectserver/projects/project. |
