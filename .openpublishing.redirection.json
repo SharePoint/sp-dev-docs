@@ -1,106 +1,104 @@
 {
-    "redirections": [
-        {
-            "source_path": "docs/apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md",
-            "redirect_url": "docs/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/determine-sharepoint-rest-service-endpoint-uris.md",
-            "redirect_url": "docs/sp-add-ins/determine-sharepoint-rest-service-endpoint-uris",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/get-to-know-the-sharepoint-rest-service.md",
-            "redirect_url": "docs/sp-add-ins/get-to-know-the-sharepoint-rest-service.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/make-batch-requests-with-the-rest-apis.md",
-            "redirect_url": "docs/sp-add-ins/make-batch-requests-with-the-rest-apis.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md",
-            "redirect_url": "docs/sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/set-custom-permissions-on-a-list-by-using-the-rest-interface.md",
-            "redirect_url": "docs/sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/synchronize-sharepoint-items-using-the-rest-service.md",
-            "redirect_url": "docs/sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/upload-a-file-by-using-the-rest-api-and-jquery.md",
-            "redirect_url": "docs/sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/use-odata-query-operations-in-sharepoint-rest-requests.md",
-            "redirect_url": "docs/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/working-with-folders-and-files-with-rest.md",
-            "redirect_url": "docs/sp-add-ins/working-with-folders-and-files-with-rest.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/apis/rest/working-with-lists-and-list-items-with-rest.md",
-            "redirect_url": "docs/sp-add-ins/working-with-lists-and-list-items-with-rest.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/schema/index.md",
-            "redirect_url": "docs/schema/upgrade-definition-schema.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in.md",
-            "redirect_url": "docs/sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/sp-add-ins/add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md",
-            "redirect_url": "docs/sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md",
-            "redirect_url": "docs/spfx/deployment-spfx-teams-solutions.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/general-development/office-365-cdn.md",
-            "redirect_url": "/office365/enterprise/use-office-365-cdn-with-spo",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md",
-            "redirect_url": "docs/spfx/yeoman-generator-for-spfx-intro.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/spfx/office-addins-create.md",
-            "redirect_url": "docs/spfx/release-1.14.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/spfx/web-parts/get-started/office-addins-tutorial.md",
-            "redirect_url": "docs/spfx/release-1.14.md",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "docs/spfx/sharepoint-2019-support.md",
-            "redirect_url": "docs/spfx/sharepoint-2019-and-subscription-edition-support.md",
-            "redirect_document_id": false
-        },
-
-    ]
-    
+  "redirections": [
+    {
+      "source_path": "docs/apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/determine-sharepoint-rest-service-endpoint-uris.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/determine-sharepoint-rest-service-endpoint-uris",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/get-to-know-the-sharepoint-rest-service.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/make-batch-requests-with-the-rest-apis.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/set-custom-permissions-on-a-list-by-using-the-rest-interface.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/synchronize-sharepoint-items-using-the-rest-service.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/synchronize-sharepoint-items-using-the-rest-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/upload-a-file-by-using-the-rest-api-and-jquery.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/use-odata-query-operations-in-sharepoint-rest-requests.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/working-with-folders-and-files-with-rest.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/working-with-folders-and-files-with-rest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/apis/rest/working-with-lists-and-list-items-with-rest.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/working-with-lists-and-list-items-with-rest",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/schema/index.md",
+      "redirect_url": "/sharepoint/dev/schema/upgrade-definition-schema",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sp-add-ins/add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md",
+      "redirect_url": "/sharepoint/dev/sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/web-parts/guidance/creating-team-manifest-manually-for-webpart.md",
+      "redirect_url": "/sharepoint/dev/spfx/deployment-spfx-teams-solutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/general-development/office-365-cdn.md",
+      "redirect_url": "/sharepoint/dev/office365/enterprise/use-office-365-cdn-with-spo",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md",
+      "redirect_url": "/sharepoint/dev/spfx/yeoman-generator-for-spfx-intro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/office-addins-create.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.14",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/web-parts/get-started/office-addins-tutorial.md",
+      "redirect_url": "/sharepoint/dev/spfx/release-1.14",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/spfx/sharepoint-2019-support.md",
+      "redirect_url": "/sharepoint/dev/spfx/sharepoint-2019-and-subscription-edition-support",
+      "redirect_document_id": false
+    }
+  ]
 }
