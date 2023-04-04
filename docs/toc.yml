@@ -2130,6 +2130,8 @@
     href: /dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
     href: /dotnet/api/?term=microsoft.sharepoint
+  - name: SharePoint Add-in Management APIs
+    href: apis/addin-management-apis.md
 - name: SharePoint schema reference
   href: schema/schema-reference-for-sharepoint.md
   items:
