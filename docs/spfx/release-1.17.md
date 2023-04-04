@@ -1,27 +1,23 @@
 ---
-title: SharePoint Framework v1.17 preview release notes
-description: Release notes for the SharePoint Framework v1.17 preview release
-ms.date: 03/28/2023
+title: SharePoint Framework v1.17 release notes
+description: Release notes for the SharePoint Framework v1.17 release
+ms.date: 04/04/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17 preview release notes
 
 This release introduces updates across the features around Microsoft Viva, Microsoft Teams, Outlook, Office, and SharePoint.
 
-[!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
-
-- rc.1 **Released:** March 28, 2023
-- beta.3 **Released:** March 21, 2023
-- beta.1 **Released:** February 23, 2023
+**Released:** April 4, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
 ## Install the latest preview version
 
-Install the latest preview release of the SharePoint Framework (SPFx) by including the **@next**
+Install the latest release of the SharePoint Framework (SPFx) by including the **@latest**
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
 ## Upgrading projects from v1.16.1 to v1.17
@@ -33,15 +29,25 @@ npm install @microsoft/generator-sharepoint@next --global
         npm uninstall @microsoft/{spfx-package-name}@1.16.1
         ```
 
-    2. Install the new v1.16 package:
+    2. Install the new v1.17 package:
 
         ```console
-        npm install @microsoft/{spfx-package-name}@next --save --save-exact
+        npm install @microsoft/{spfx-package-name}@latest --save --save-exact
         ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
 ## New features and capabilities
+
+* Updates and improvements on building Microsoft 365 wide experiences with **Microsoft Teams apps build with SharePoint Framework** – This model enables you to build auto-hosted apps in Microsoft 365, which are extended across Microsoft Teams, Outlook and Office 365 app (office.com). Any Microsoft Teams app build with SharePoint Framework is automatically now compliant with the requirements to get the app exposed across Microsoft 365.
+* Updates and improvements on the **Microsoft Viva extensibility build with SharePoint Framework**.
+* General availability of the **top actions for custom web parts in SharePoint**.
+* **Authentication improvements** with popup flow support for API authentication.
+* **Accessibility improvements** for the web part areas.
+* **Development time improvements** with central configuration of developer tenant details.
+* **Microsoft Teams JS SDK** version update to version **2.19.1** to support new APIs, such as Live Share SDK.
+* *“Sync to Teams”* functionality in SharePoint app catalog update to use **Teams Manifest v1.16** for the automatically created Microsoft Teams solution package – making all SPFx components exposed across the Microsoft 365 also with automatically generated packaging
+* Viva Connections **Adaptive Cards Extensions** update to support **Adaptive Cards schema v1.5.** - enabling tables and other new features for ACEs
 
 ### Teams JS SDK v2.9.1 support
 
@@ -63,7 +69,11 @@ Developers can use the `SPFX_SERVE_TENANT_DOMAIN` OS environment variable to spe
 
 In previous versions, web part Top Actions' configuration was based on proxied property pane types. It led to some issues and confusion as not all the properties worked or were supported.
 
-This version includes specific Top Actions-specific types to avoid confusion and make the configuration more clearer.
+This version includes specific Top Actions-specific types to avoid confusion and make the configuration more clear.
+
+See more details from documentation
+
+* [Adding support for Top Actions for web parts](web-parts/guidance/getting-started-with-top-actions.md)
 
 ### onBeforeAction handler for Adaptive Card Extensions
 
@@ -85,6 +95,11 @@ New `focusParameters` virtual property allows to set focus when the view is rend
   /** @virtual */
   get focusParameters(): IFocusParameters | undefined;
 ```
+
+See more details from documentation
+
+* [Focus feature in Adaptive Card Extension](viva/features/focus-feature/FocusFeatureDocumentation.md)
+* [Create an Adaptive Card Extension with the focus feature](viva/features/focus-feature/FocusFeatureTutorial.md)
 
 ### Support for SharePoint Pages 'iframing' in Teams applications
 
@@ -132,13 +147,15 @@ interface IPropertyPaneLinkProps {
 
 ## Deprecations
 
+-
+
 ## Fixed Issues
 
 Here's a list of specific issues fixed around SharePoint Framework since the previous public release.
 
 ### February-March Timeframe
 
-- [#8705](https://github.com/SharePoint/sp-dev-docs/issues/8705) - LiveShare SDK doesn't work in SPFx web part
+- [#8705](https://github.com/SharePoint/sp-dev-docs/issues/8705) - Live Share SDK doesn't work in SPFx web part
 
 ### December-February Time Frame
 

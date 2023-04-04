@@ -1,15 +1,13 @@
 ---
-title: Adding support for Top Actions
+title: Adding support for web part Top Actions
 description: Top Actions is a SharePoint Framework feature that allows web part developers to add commands to a web part's toolbar
-ms.date: 11/15/2022
+ms.date: 04/04/2023
 ms.localizationpriority: high
 ---
 
-# Adding support for Top Actions
+# Adding support for web part Top Actions
 
-[!INCLUDE [spfx-release-beta](../../../../includes/snippets/spfx-release-beta.md)]
-
-Today, users need to be aware of the web part property panels to find out the additional options each web part provides. This is a common piece of feedback where users want actions surfacing in context of where they are without having to rely on opening something to get to those options. Therefore, we are now allowing to surface most common configurations from a web part's property panel directly on to the web part's toolbar. These common configurations are referred to as the web part's Top Actions.
+Top actions provide an alternative and more end user friendlier way to expose the different options and configuration capabilities for web parts in edit mode. You can use top actions to surface most common configurations from the web part property panel directly in web part toolbar, which is exposed when the page is edited.
 
 ![Top Actions Example](../../../images/webpart-top-actions.png)
 
@@ -20,7 +18,7 @@ Today, users need to be aware of the web part property panels to find out the ad
 
 ### Define your Top Action configurations
 
-In the example below we are defining the callback function that will be used to pull the configurations for our Top Action commands.
+The example below defines the callback function that will be used to pull the configurations for our Top Action commands.
 
 > [!NOTE]
 > `getTopActionsConfiguration` must be defined as public on your web part's class.
@@ -38,10 +36,10 @@ public getTopActionsConfiguration(): ITopActions | undefined {
 
 ### Define your toolbar's user interface
 
-The `topActions` array is an ordered list of controls to render in the web part toolbar. In the example below we are defining one top action as a button interface.
+The `topActions` array is an ordered list of controls to render in the web part toolbar. The example below defines one top action as a button interface.
 
 ```typescript
-import { PropertyPaneFieldType } from '@microsoft/sp-property-pane';
+import { ITopActions, TopActionsFieldType } from '@microsoft/sp-top-actions';
 
 return {
   topActions: [
@@ -50,7 +48,7 @@ return {
       properties: {
         icon: 'Reset'
       },
-      type: PropertyPaneFieldType.Button
+      type: TopActionsFieldType.Button
     }
   ]
   ...
@@ -59,7 +57,7 @@ return {
 
 ### Execute the command when the user interacts
 
-The previous step demonstrated how to get a button to display in the web part's toolbar. Now we will perform an action when the user selects the button. Note that `actionName` was defined as `targetProperty` in the last step and since this is a button we can ignore the `newValue` that comes in.
+The previous step demonstrated how to get a button to display in the web part's toolbar. This step shows how to perform an action when the user selects the button. `actionName` was defined as `targetProperty` in the last step and since this is a button that can ignore the `newValue` that comes in.
 
 ```typescript
 return {
@@ -80,7 +78,7 @@ return {
 
 ### Button command
 
-The type interace for a button is similar to the property panel's button (`IPropertyPaneButtonProps`).
+The type interface for a button is similar to the property panel's button (`IPropertyPaneButtonProps`).
 
 ```typescript
 import { ITopActions, TopActionsFieldType } from '@microsoft/sp-top-actions';
@@ -153,7 +151,7 @@ public getTopActionsConfiguration(): ITopActions | undefined {
 
 ## Advanced configurations
 
-For advanced configurations of your top action commands, checkout the type definitions from `@microsoft/sp-top-actions`.
+For advanced configurations of your top action commands, see the type definitions from `@microsoft/sp-top-actions`.
 
 
 ```typescript

@@ -1,7 +1,7 @@
 ---
 title: Create an Adaptive Card Extension with the focus feature
 description: Step by step guide on how to create an Adaptive Card Extension with the focus feature.
-ms.date: 03/15/2023
+ms.date: 04/04/2023
 ms.localizationpriority: high
 ---
 # Create an Adaptive Card Extension with focus feature
@@ -83,14 +83,14 @@ At this point, if you do `gulp serve`, then you'll see the `FocusFeature` card:
 
 At this point, we have out of the box Adaptive Card Extension code. Now it's time to flare things up with focusing on elements in the Quick view.
 
-In the Quick View, we will introduce buttons for two actions:
+In the Quick View, we'll introduce buttons for two actions:
 
 - Move to the next quick view
 - Move to the previous quick view
 
-We will first define the template of the Quick View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/focusFeature/quickView/template/QuickViewTemplate.json**
+We'll first define the template of the Quick View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/focusFeature/quickView/template/QuickViewTemplate.json**
 
-Replace the content of this file with the following:
+Replace the content of this file as below:
 
 ```json
 {
@@ -151,7 +151,7 @@ Replace the content of this file with the following:
 }
 ```
 
-Next let's implement the logic that will allow us to navigate to the next quick view. We will leverage the QuickViewNavigator to manipulate the view stack.
+Next let's implement the logic that will allow us to navigate to the next quick view. We'll use the QuickViewNavigator to manipulate the view stack.
 
 ```typescript
 public onAction(action: IActionArguments): void {
@@ -219,7 +219,7 @@ Create a new template file for the second quick view: **./src/adaptiveCardExtens
 ```
 
 Create a new file for the second quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView2.ts**
-We will add the following **onAction** function.
+We'll add the following **onAction** function.
 
 ```typescript
 public onAction(action: IActionArguments): void {
@@ -273,7 +273,7 @@ Create a new template file for the third quick view: **./src/adaptiveCardExtensi
 ```
 
 Create a new file for the third quick view: **./src/adaptiveCardExtensions/focusFeature/quickView/QuickView3.ts**
-We will add the following **onAction** function.
+We'll add the following **onAction** function.
 
 ```typescript
 public onAction(action: IActionArguments): void {
@@ -289,12 +289,18 @@ public onAction(action: IActionArguments): void {
 After adding these changes, your Quick Views will look like:
 
 ![Card appearance after introducing changes in the first quick-view](./img/focusFeatureFirstView.png)
+
+Second quick view as 
+
 ![Card appearance after introducing changes in the second quick-view](./img/focusFeatureSecondView.png)
+
+Third quick view as 
+
 ![Card appearance after introducing changes in the third quick-view](./img/focusFeatureThirdView.png)
 
 ### Implement the focusParameters function
 
-So far we have modified our quick views to have a simple title, subtitle, and respective buttons to navigate to other quick views. Now we can finally implement the `focusParameters` function, which gives the ability to the Third Party Developer to decide what they wish to set focus on in the quick view.
+So far we'e modified our quick views to have a simple title, subtitle, and respective buttons to navigate to other quick views. Now we can finally implement the `focusParameters` function, which gives the ability to the Third Party Developer to decide what they wish to set focus on in the quick view.
 
 For this, open each respective QuickView file (**./src/adaptiveCardExtensions/focusFeature/quickView/QuickView.ts**) and import the `IFocusParameters` interface, as follows:
 
@@ -321,7 +327,7 @@ This is it! Congratulations on successfully creating you Adaptive Card Extension
 
 ## Notes with screen readers
 
-When loading your card for the first time, you will notice that the contents of the first quick view are read in their entirety. This is the default behaviour when a screen reader sees a dialog as it treats it as navigation. Subsequent loads of the quick view stack will not run into this. As you navigate back and forth threw quick views, you will notice that the element target is focused and will be the only thing to be read.
+When loading your card for the first time, you'll notice that the contents of the first quick view are read in their entirety. This is the default behavior when a screen reader sees a dialog as it treats it as navigation. Subsequent loads of the quick view stack won't run into this. As you navigate back and forth threw quick views, you'll notice that the element target is focused and will be the only thing to be read.
 
 ## See Also
 

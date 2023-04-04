@@ -1,7 +1,7 @@
 ---
 title: Focus feature in Adaptive Card Extension
-description: The focus feature allows 3P developers to determine focus of elements in the Quick View. 
-ms.date: 03/15/2023
+description: The focus feature allows developers to determine focus of elements in the Quick View. 
+ms.date: 04/04/2023
 ---
 # Focus feature in Adaptive Card Extension
 
@@ -14,7 +14,7 @@ Microsoft added support for the focus feature, unique to Viva Connections, in th
 
 ## Focus Feature
 
-Just like the way that developers can set a template and data via get data() and get template(), users will be able to hook into a new getter method that will allow them the flexibility to pass in an initial focus element on each render. If there is no implementation provided on the developers end, then a focus on the first tab-able element will be set.
+Just like the way that developers can set a template and data via `get data()` and `get template()`, users will be able to hook into a new getter method that will allow them the flexibility to pass in an initial focus element on each render. If implementation isn't provided by developer, then a focus on the first tab-able element will be set.
 
 ```typescript
 /**
@@ -53,7 +53,7 @@ This new function allows developers to customize what the focus element is by re
 
 ## Tutorial and Examples
 
-You can take a look at [this tutorial](./FocusFeatureTutorial.md) which goes over a step by step guide on how to create a card with the available media upload action.
+You can take a look at [this tutorial](./FocusFeatureTutorial.md), which goes over a step by step guide on how to create a card with the available media upload action.
 
 1. **Read target information after once user is idle**
 

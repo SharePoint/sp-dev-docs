@@ -195,6 +195,8 @@
         href: spfx/web-parts/basics/determine-web-part-width.md
       - name: Support section backgrounds
         href: spfx/web-parts/guidance/supporting-section-backgrounds.md
+      - name: Web part top actions
+        href: spfx/web-parts/guidance/getting-started-with-top-actions.md
       - name: Isolated web parts
         href: spfx/web-parts/isolated-web-parts.md
       - name: Single Part App Pages
@@ -544,6 +546,8 @@
     href: spfx/viva/get-started/actions/geolocation/GeolocationDocumentation.md
   - name: Media upload in Adaptive Card Extension
     href: spfx/viva/get-started/actions/media-upload/MediaUploadDocumentation.md
+  - name: Focus feature in Adaptive Card Extension
+    href: spfx/viva/features/focus-feature/FocusFeatureDocumentation.md
   - name: Design Guidance
     items:
     - name: Introduction
@@ -572,6 +576,8 @@
       href: spfx/viva/get-started/actions/media-upload/MediaUploadTutorial.md
     - name: Media Upload capability via property pane of an ACE
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
+    - name: Using focus feature in an ACE
+      href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path
@@ -2073,6 +2079,8 @@
     href: apis/sharepoint-rest-graph.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md
+  - name: SharePoint Add-in Management APIs
+    href: apis/addin-management-apis.md
   - name: Microsoft 365 Copy and Move API
     href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
@@ -2130,8 +2138,6 @@
     href: /dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
     href: /dotnet/api/?term=microsoft.sharepoint
-  - name: SharePoint Add-in Management APIs
-    href: apis/addin-management-apis.md
 - name: SharePoint schema reference
   href: schema/schema-reference-for-sharepoint.md
   items:
