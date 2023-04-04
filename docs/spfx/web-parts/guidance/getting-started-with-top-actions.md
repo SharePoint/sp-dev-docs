@@ -11,9 +11,6 @@ ms.localizationpriority: high
 
 Today, users need to be aware of the web part property panels to find out the additional options each web part provides. This is a common piece of feedback where users want actions surfacing in context of where they are without having to rely on opening something to get to those options. Therefore, we are now allowing to surface most common configurations from a web part's property panel directly on to the web part's toolbar. These common configurations are referred to as the web part's Top Actions.
 
-> [!IMPORTANT]
-> This feature is still preview status as part of the 1.16 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.17 release.At the time of writing this article, Top Actions only supports rendering a drop-down and button command.
-
 ![Top Actions Example](../../../images/webpart-top-actions.png)
 
 ## Getting started
@@ -86,16 +83,16 @@ return {
 The type interace for a button is similar to the property panel's button (`IPropertyPaneButtonProps`).
 
 ```typescript
-import { ITopActions } from '@microsoft/sp-top-actions';
-import { PropertyPaneFieldType } from '@microsoft/sp-property-pane';
+import { ITopActions, TopActionsFieldType } from '@microsoft/sp-top-actions';
 ...
 public getTopActionsConfiguration(): ITopActions | undefined {
   return {
     topActions: [
       {
         targetProperty: 'reset',
-        type: PropertyPaneFieldType.Button,
+        type: TopActionsFieldType.Button,
         properties: {
+          text: 'Reset',
           icon: 'Reset'
         }
       }
@@ -115,14 +112,13 @@ public getTopActionsConfiguration(): ITopActions | undefined {
 The type interface for a drop-down is similar to the property panel's choice group (`IPropertyPaneChoiceGroupOption`).
 
 ```typescript
-import { ITopActions } from '@microsoft/sp-top-actions';
-import { PropertyPaneFieldType } from '@microsoft/sp-property-pane';
+import { ITopActions, TopActionsFieldType } from '@microsoft/sp-top-actions';
 ...
 public getTopActionsConfiguration(): ITopActions | undefined {
   return {
     topActions: [{
       targetProperty: 'layout',
-      type: PropertyPaneFieldType.ChoiceGroup,
+      type: TopActionsFieldType.ChoiceGroup,
       properties: {
         options: [
           {
@@ -157,18 +153,13 @@ public getTopActionsConfiguration(): ITopActions | undefined {
 
 ## Advanced configurations
 
-For advanced configurations of your top action commands, checkout the type definitions from `@microsoft/sp-property-pane` and `@microsoft/sp-top-actions`. Currently, the two supported top action commands, button and drop-down, can be defined using a subset of the types `IPropertyPaneChoiceGroupOption` and `IPropertyPaneButtonProps`.
+For advanced configurations of your top action commands, checkout the type definitions from `@microsoft/sp-top-actions`.
 
-* For `IPropertyPaneButtonProps`, the currently supported properties are `icon`, `text`, `ariaLabel`, `disabled`
-* For `IPropertyPaneChoiceGroupOption`, the currently supported porperty is `options` and from that array we support `key`, `text`, `iconProps.officeFabricIconFontName`, `imageSize`, `checked`, `title`
 
 ```typescript
-import { IPropertyPaneButtonProps, IPropertyPaneChoiceGroupOption } from '@microsoft/sp-property-pane'
-import { ITopActions } from '@microsoft/sp-top-actions';
+import { ITopActions, ITopActionsButtonProps, ITopActionsDropdownProps } from '@microsoft/sp-top-actions';
 ```
 
 ### See more
 
 [Top Actions API](/javascript/api/sp-top-actions)
-[IPropertyPaneButtonProps](/javascript/api/sp-webpart-base/ipropertypanebuttonprops)
-[IPropertyPaneChoiceGroupOption](/javascript/api/sp-webpart-base/ipropertypanechoicegroupoption)
