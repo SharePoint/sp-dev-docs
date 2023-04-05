@@ -4,7 +4,7 @@ description: Release notes for the SharePoint Framework v1.17 release
 ms.date: 04/04/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.17 preview release notes
+# SharePoint Framework v1.17 release notes
 
 This release introduces updates across the features around Microsoft Viva, Microsoft Teams, Outlook, Office, and SharePoint.
 
@@ -12,7 +12,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
-## Install the latest preview version
+## Install the latest version
 
 Install the latest release of the SharePoint Framework (SPFx) by including the **@latest**
 
