@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 12/28/2022
+ms.date: 04/08/2023
 ms.localizationpriority: high
 ---
 
