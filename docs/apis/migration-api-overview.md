@@ -345,7 +345,7 @@ This file allows for transferring files in batch. When the ArchivedFiles.xml is 
 
 #### Prerequisites
 
-The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the[QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash?view=odsp-graph-online).
+The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the[QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash).
 
 QuickXorHash is created for the .zip file which concatenates all smaller files.
 
