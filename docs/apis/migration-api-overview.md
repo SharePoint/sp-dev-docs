@@ -339,14 +339,13 @@ The main requirement for the structure is that the FileValue references in the *
 
 ### ArchivedFiles.XML
 
-The **ArchivedFiles.XML** file, if included, is expected to be at the root of the Azure blob storage container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the[QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash). If small files in Manifest.xml are not archived (not showing in ArchiveFiles.xml), they still can be processed as before (equivalent to feature off).
+The **ArchivedFiles.XML** file, if included, is expected to be at the root of the Azure blob storage container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the [QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash). If small files in the Manifest.xml are not archived (not showing in ArchiveFiles.xml), they still can be processed as before (equivalent to feature off).
 
 This file allows for transferring files in batch. When the ArchivedFiles.xml is provided by the client (the default scenario), the server side will validate the correctness of the .xml schema, then import the files inside each pack. When ArchivedFiles.XML is not provide by the client, the feature will be disabled. 
 
 #### Prerequisites
 
-The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the[QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash).
-
+The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the [QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash).
 QuickXorHash is created for the .zip file which concatenates all smaller files.
 
 |Item|Requirement|
