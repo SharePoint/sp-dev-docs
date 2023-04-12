@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Online Import Migration API"
 description: "This article provides in depth information on how to use the SPO Migration API."
-ms.date: 03/28/2023
+ms.date: 04/10/2023
 ms.author: jhendr
 author: JoanneHendrickson
 manager: serdars
@@ -337,6 +337,49 @@ File content that is referenced within the manifest of the package structure mus
 
 The main requirement for the structure is that the FileValue references in the **Manifest.XML** file must refer to the exact name and physical hierarchy that the content is stored in within the Azure Blob Store location for import. The destination file names and folder hierarchy from the import operation aren't directly related to the physical naming and hierarchy and are instead defined through the **Manifest.XML** file.
 
+### ArchivedFiles.XML
+
+The **ArchivedFiles.XML** file, if included, is expected to be at the root of the Azure blob storage container defined by the CreateMigrationJob’s azureContainerManifestUri parameter. The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the [QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash). If small files in the Manifest.xml are not archived (not showing in ArchiveFiles.xml), they still can be processed as before (equivalent to feature off).
+
+This file allows for transferring files in batch. When the ArchivedFiles.xml is provided by the client (the default scenario), the server side will validate the correctness of the .xml schema, then import the files inside each pack. When ArchivedFiles.XML is not provide by the client, the feature will be disabled. 
+
+#### Prerequisites
+
+The QuickXorHash/Checksum has to be computed for the optional pack0.zip file using the [QuickXorHash Algorithm](/onedrive/developer/code-snippets/quickxorhash).
+QuickXorHash is created for the .zip file which concatenates all smaller files.
+
+|Item|Requirement|
+|:-----|:-----|
+|Encryption|The zip file must be encrypted.|
+|File size|Less than 100KB. Note: File size is calculated based on the encrypted file.|
+|Compression|Do not compress the small data files your are archiving into the zip file.|
+|Zip file size|Maximum size 10MB|
+|Zip files per package|Maximum of 2|
+
+#### Table 1: Example ArchivedFiles.XML file
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<ArchivedFiles>
+  <ArchivedFile Name="pack0.zip" Checksum="xxxxxx=">
+    <File FileValue="01.dat" />
+    <File FileValue="02.dat" />
+    <File FileValue="03.dat" />
+    <File FileValue="04.dat" />
+    <File FileValue="05.dat" />
+    <File FileValue="06.dat" />
+ </ArchivedFile>
+  <ArchivedFile Name="pack1.zip" Checksum="xxxxxx=">
+    <File FileValue="07.dat" />
+    <File FileValue="08.dat" />
+    <File FileValue="09.dat" />
+    <File FileValue="10.dat" />
+    <File FileValue="11.dat" />
+    <File FileValue="12.dat" />
+  </ArchivedFile>
+</ArchivedFiles>
+```
+    
 ### ExportSettings.XML
 
 The **ExportSettings.XML** file is expected to be at the root of the Azure Blob Store Container defined by the CreateMigrationJob’s `azureContainerManifestUri` parameter. This required file is validated using the constrained DeploymentExportSettings.XSD, which has some limited changes from current published [full 2013 package schema](../schema/content-migration-schemas.md).
