@@ -359,7 +359,6 @@ QuickXorHash is created for the .zip file which concatenates all smaller files.
 #### Table 1: Example ArchivedFiles.XML file
 
 ```xml
-
 <?xml version="1.0" encoding="utf-8"?>
 <ArchivedFiles>
   <ArchivedFile Name="pack0.zip" Checksum="xxxxxx=">
@@ -379,7 +378,6 @@ QuickXorHash is created for the .zip file which concatenates all smaller files.
     <File FileValue="12.dat" />
   </ArchivedFile>
 </ArchivedFiles>
-
 ```
     
 ### ExportSettings.XML
