@@ -1,7 +1,7 @@
 ---
 title: Formatting syntax reference
 description: Formatting syntax reference
-ms.date: 12/28/2022
+ms.date: 04/08/2023
 ms.localizationpriority: high
 ---
 
@@ -14,7 +14,7 @@ Specifies the type of element to create. Valid elements include:
 - div
 - span
 - a
-- img
+- [img](#img-src-security)
 - svg
 - path
 - button
@@ -26,7 +26,7 @@ Any other value will result in an error.
 ### filepreview
 
 Use the special elmType `filepreview` in conjunction with the `src` attribute set to [`@thumbnail.<Size>`](#thumbnails) to view thumbnails for files in your document libary.
-If the thumbnail loads successfully, a small [brand type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/office-brand-icons) is visible on the bottom left. If the thumbanil fails to load (or if the file type doesn't support thumbnails), a [file type icon](https://developer.microsoft.com/en-us/fluentui#/styles/web/file-type-icons) is shown instead.
+If the thumbnail loads successfully, a small [brand type icon](https://developer.microsoft.com/fluentui#/styles/web/office-brand-icons) is visible on the bottom left. If the thumbanil fails to load (or if the file type doesn't support thumbnails), a [file type icon](https://developer.microsoft.com/fluentui#/styles/web/file-type-icons) is shown instead.
 
 ```json
 "elmType": "filepreview",
@@ -34,6 +34,13 @@ If the thumbnail loads successfully, a small [brand type icon](https://developer
   "src": "@thumbnail.medium"
  }
 ```
+### img src security
+
+Images from the following domains are allowed:
+ - tenant domain, configured multi-geo domains and vanity domains (company.sharepoint.com)
+ - cdn.office.net, akamaihd.net, static2.sharepointonline.com CDNs
+ 
+most other external image sources are blocked by default in custom formatters. To include external images and allow specific domains or CDNs, the domain needs to be added to a site-level setting - [HTMLFieldSecurity](https://support.microsoft.com/office/allow-or-restrict-the-ability-to-embed-content-on-sharepoint-pages-e7baf83f-09d0-4bd1-9058-4aa483ee137b)
 
 ## txtContent
 
