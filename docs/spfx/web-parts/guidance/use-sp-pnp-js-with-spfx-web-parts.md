@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 07/22/2022
+ms.date: 04/12/2023
 ms.localizationpriority: high
 ---
 
@@ -293,10 +293,10 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
       //   - await resolves proimises making your code act syncronous, ergo Promise<IResponseItem[]> becomes IResponse[]
 
       //Extending our sp object to include caching behavior, this modification will add caching to the sp object itself
-      //this._sp.using(Caching("session"));
+      //this._sp.using(Caching({store:"session"}));
 
       //Creating a new sp object to include caching behavior. This way our original object is unchanged.
-      const spCache = spfi(this._sp).using(Caching("session"));
+      const spCache = spfi(this._sp).using(Caching({store:"session"}));
 
       const response: IResponseItem[] = await spCache.web.lists
         .getByTitle(this.LIBRARY_NAME)
