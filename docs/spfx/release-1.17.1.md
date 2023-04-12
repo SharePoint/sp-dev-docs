@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17.1 release notes
 
-This is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging, provides improved default scaffolding and few other minor adjustments which were in the previous [released 1.17 version](release-1.17.md).
+This is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging, provides improved default scaffolding and few other minor adjustments, which were in the previous [released 1.17 version](release-1.17.md).
 
 > [!TIP]
 > It's safe to keep on using SharePoint Framework 1.17 version, but we do recommend using always the latest version in the production, which in this case would be the 1.17.1, which has few minor improvements as listed below.
