@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 07/22/2022
+ms.date: 04/12/2023
 ms.localizationpriority: high
 ---
 
