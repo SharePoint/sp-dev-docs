@@ -31,7 +31,7 @@ To enable the popup experience, a tenant administrator must first enable the fea
 
 ### Handling the popupEvent
 
-SPFx components that wish to use the **AADTokenProvider** and want to implement the popup flow can do so by handling the [AADTokenProvider.popupEvent](/javascript/api/sp-http-base/aadtokenprovider?view=sp-typescript-latest#@microsoft-sp-http-base-aadtokenprovider-popupevent-member).
+SPFx components that wish to use the **AADTokenProvider** and want to implement the popup flow can do so by handling the [AADTokenProvider.popupEvent](/javascript/api/sp-http-base/aadtokenprovider#@microsoft-sp-http-base-aadtokenprovider-popupevent-member).
 
 > [!TIP]
 > Popups are commonly blocked by browsers unless they are initiated by a user action or gesture.
