@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.17 release notes
 description: Release notes for the SharePoint Framework v1.17 release
-ms.date: 04/04/2023
+ms.date: 04/13/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17 release notes
@@ -29,7 +29,7 @@ npm install @microsoft/generator-sharepoint@latest --global
         npm uninstall @microsoft/{spfx-package-name}@1.16.1
         ```
 
-    2. Install the new v1.17 package:
+    1. Install the new v1.17 package:
 
         ```console
         npm install @microsoft/{spfx-package-name}@latest --save --save-exact
@@ -39,19 +39,19 @@ npm install @microsoft/generator-sharepoint@latest --global
 
 ## New features and capabilities
 
-* Updates and improvements on building Microsoft 365 wide experiences with **Microsoft Teams apps build with SharePoint Framework** – This model enables you to build auto-hosted apps in Microsoft 365, which are extended across Microsoft Teams, Outlook and Office 365 app (office.com). Any Microsoft Teams app build with SharePoint Framework is automatically now compliant with the requirements to get the app exposed across Microsoft 365.
-* Updates and improvements on the **Microsoft Viva extensibility build with SharePoint Framework**.
-* General availability of the **top actions for custom web parts in SharePoint**.
-* **Authentication improvements** with popup flow support for API authentication.
-* **Accessibility improvements** for the web part areas.
-* **Development time improvements** with central configuration of developer tenant details.
-* **Microsoft Teams JS SDK** version update to version **2.19.1** to support new APIs, such as Live Share SDK.
-* *“Sync to Teams”* functionality in SharePoint app catalog update to use **Teams Manifest v1.16** for the automatically created Microsoft Teams solution package – making all SPFx components exposed across the Microsoft 365 also with automatically generated packaging
-* Viva Connections **Adaptive Cards Extensions** update to support **Adaptive Cards schema v1.5.** - enabling tables and other new features for ACEs
+- Updates and improvements on building Microsoft 365 wide experiences with **Microsoft Teams apps build with SharePoint Framework** – This model enables you to build auto-hosted apps in Microsoft 365, which are extended across Microsoft Teams, Outlook and Office 365 app (office.com). Any Microsoft Teams app build with SharePoint Framework is automatically now compliant with the requirements to get the app exposed across Microsoft 365.
+- Updates and improvements on the **Microsoft Viva extensibility build with SharePoint Framework**.
+- General availability of the **top actions for custom web parts in SharePoint**.
+- **Authentication improvements** with popup flow support for API authentication.
+- **Accessibility improvements** for the web part areas.
+- **Development time improvements** with central configuration of developer tenant details.
+- **Microsoft Teams JS SDK** version update to version **2.19.1** to support new APIs, such as Live Share SDK.
+- *“Sync to Teams”* functionality in SharePoint app catalog update to use **Teams Manifest v1.16** for the automatically created Microsoft Teams solution package – making all SPFx components exposed across the Microsoft 365 also with automatically generated packaging
+- Viva Connections **Adaptive Cards Extensions** update to support **Adaptive Cards schema v1.5.** - enabling tables and other new features for ACEs
 
-### Teams JS SDK v2.9.1 support
+### Microsoft Teams JS SDK v2.9.1 support
 
-[Microsoft Teams JS SDK](https://learn.microsoft.com/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest&tabs=npm) was bumped to v2.9.1 to support new API, such as `LiveShare`.
+[Microsoft Teams JS SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) was bumped to v2.9.1 to support new API, such as **LiveShare**.
 
 ### Support for Adaptive Cards schema v1.5 in Adaptive Cards Extensions
 
@@ -73,11 +73,11 @@ This version includes specific Top Actions-specific types to avoid confusion and
 
 See more details from documentation
 
-* [Adding support for Top Actions for web parts](web-parts/guidance/getting-started-with-top-actions.md)
+- [Adding support for Top Actions for web parts](web-parts/guidance/getting-started-with-top-actions.md)
 
 ### onBeforeAction handler for Adaptive Card Extensions
 
-`onBeforeAction` handler is added to `BaseAdaptiveCardExtension` class to allow developers to run custom code before the action is executed.
+The `onBeforeAction` handler is added to `BaseAdaptiveCardExtension` class to allow developers to run custom code before the action is executed.
 
 ```typescript
   /** @virtual */
@@ -98,8 +98,8 @@ New `focusParameters` virtual property allows to set focus when the view is rend
 
 See more details from documentation
 
-* [Focus feature in Adaptive Card Extension](viva/features/focus-feature/FocusFeatureDocumentation.md)
-* [Create an Adaptive Card Extension with the focus feature](viva/features/focus-feature/FocusFeatureTutorial.md)
+- [Focus feature in Adaptive Card Extension](viva/features/focus-feature/FocusFeatureDocumentation.md)
+- [Create an Adaptive Card Extension with the focus feature](viva/features/focus-feature/FocusFeatureTutorial.md)
 
 ### Support for SharePoint Pages 'iframing' in Teams applications
 
@@ -113,7 +113,7 @@ Developers can specify `supportsSelfFramingInTeams` flag in a web part's manifes
 getToken(resourceEndpoint: string, options?: IGetTokenOptions): Promise<string>;
 ```
 
-where `IGetTokenOptions`:
+Where `IGetTokenOptions`:
 
 ```typescript
 interface IGetTokenOptions {
@@ -144,10 +144,6 @@ interface IPropertyPaneLinkProps {
   // ...
 }
 ```
-
-## Deprecations
-
--
 
 ## Fixed Issues
 
