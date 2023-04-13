@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.17 release notes
 description: Release notes for the SharePoint Framework v1.17 release
-ms.date: 04/04/2023
+ms.date: 04/13/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.17 release notes
@@ -127,6 +127,8 @@ interface IGetTokenOptions {
 `AadTokenProvider` now supports popup flow. Developers should handle `AadTokenProvider.popupEvent: SPEvent<PopupEventArgs>` event to implement the flow.
 
 For more details, see `PopupEventArgs` definitions in the API reference documentation.
+
+For more information on implementing the popup flow, see [Working with the AADTokenProvider](use-aadtokenprovider.md).
 
 ### Support for aria-label in Property Pane's link control
 
