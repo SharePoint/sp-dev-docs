@@ -51,7 +51,7 @@ npm install @microsoft/generator-sharepoint@latest --global
 
 ### Microsoft Teams JS SDK v2.9.1 support
 
-[Microsoft Teams JS SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) was bumped to v2.9.1 to support new API, such as **LiveShare**.
+[Microsoft Teams JS SDK](/javascript/api/overview/msteams-client) was bumped to v2.9.1 to support new API, such as **LiveShare**.
 
 ### Support for Adaptive Cards schema v1.5 in Adaptive Cards Extensions
 
