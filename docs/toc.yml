@@ -323,6 +323,8 @@
       href: spfx/use-msgraph.md
     - name: Connect to APIs secured with Azure AD
       href: spfx/use-aadhttpclient.md
+    - name: Working with the AADTokenProvider
+      href: spfx/use-aadtokenprovider.md
     - name: Connect to anonymous APIs
       href: spfx/connect-to-anonymous-apis.md
     - name: Subscribe to list notifications
@@ -465,7 +467,7 @@
     - name: Overview
       href: spfx/roadmap.md
     - name: SPFx v1.17.1 - April 12, 2023
-      href: spfx/release-1.17.1.md      
+      href: spfx/release-1.17.1.md
     - name: SPFx v1.17 - April 4, 2023
       href: spfx/release-1.17.md
     - name: SPFx v1.16.1 - November 30, 2022

@@ -128,6 +128,8 @@ interface IGetTokenOptions {
 
 For more details, see `PopupEventArgs` definitions in the API reference documentation.
 
+For more information on implementing the popup flow, see [Working with the AADTokenProvider](use-aadtokenprovider.md).
+
 ### Support for aria-label in Property Pane's link control
 
 `PropertyPaneLink` now supports `ariaLabel` property.
