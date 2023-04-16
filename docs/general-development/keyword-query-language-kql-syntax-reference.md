@@ -1,7 +1,7 @@
 ﻿---
 title: Keyword Query Language (KQL) syntax reference
 description: Describes how to construct KQL queries for Search in SharePoint and steps on how to use property restrictions and operators in KQL queries.
-ms.date: 03/09/2023
+ms.date: 04/16/2023
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 ms.localizationpriority: high
 ---
@@ -390,7 +390,6 @@ Matches would include Microsoft Word documents authored by John Smith. This is t
  `author:"John Smith" AND filetype:docx`
 
 
-
 ### Grouping property restrictions within a KQL query
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2019_
 
@@ -430,13 +429,30 @@ can be rewritten as:
 > `title:page` return matches with the exact term *page* while `title:(page)` also return matches for the term *pages*.
 
 
+### Filter on items where a property is empty or contains a value
+_**Applies to:** Office 365 | SharePoint Online_
+
+For managed properties in the search schema which are set to be [Queryable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Queryable.aspx) you can use the wildcard operator (*) as the property expression to filter on items which either have a value or does not have a value.
+
+Syntax to return items where a property has a value:
+
+`<Property Name>:*`
+
+Syntax to return items where a property does not have a value:
+
+`NOT <Property Name>:*`
+
+The following example will return sites which are associated to a hub site, excluding the hub sites themselves:
+
+`(DepartmentId:* OR RelatedHubSites:*) AND contentclass:sts_site NOT IsHubSite:true`
+
+
 ## KQL operators for complex queries
 <a name="kql_operators"> </a>
 
 KQL syntax includes several operators that you can use to construct complex queries. 
   
-    
-    
+
 
 ### Boolean operators
 
