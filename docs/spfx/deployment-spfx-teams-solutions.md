@@ -20,9 +20,9 @@ SharePoint Online supports two options for deploying SPFx solutions to the Micro
 
 This capability is ideal when you have a simple implementation to expose automatically in Microsoft Teams.
 
-In this scenario, when an SPFx solution is uploaded to the SharePoint Online tenant app catalog, if the solution contains components for Microsoft Teams, the **Sync to Teams** button in the ribbon is enabled.
+In this scenario, when an SPFx solution is uploaded to the SharePoint Online tenant app catalog, if the solution contains components for Microsoft Teams, the **Add to Teams** button in the ribbon is enabled.
 
-:::image type="content" source="../images/sp-teams-sync-to-teams-button.png" alt-text="Sync to Teams":::
+:::image type="content" source="../images/spfx-add-to-teams.png" alt-text="Add to Teams":::
 
 This button will start the following process in SharePoint Online:
 
