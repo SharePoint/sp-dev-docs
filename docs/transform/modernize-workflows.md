@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 Modern business processes are essential for transforming organizational productivity in Microsoft 365. Since the release of SharePoint workflows, Microsoft has evolved workflow orchestration to not only encompass SharePoint, but all the productivity services you use with Microsoft 365 and beyond with Microsoft Power Automate. Power Automate connects to all Microsoft 365 services and over 220 other services to let an enterprise build custom workflows.
 
-With the continued investment in Power Automate as the universal solution to workflow orchestration, SharePoint 2010 workflows are retired as of November 2020. After November 2020, Microsoft 365 customers can use SharePoint 2013 workflows or Power Automate. However, SharePoint 2013 workflows will follow a similar retirement path in the future, so it's highly recommended to use Power Automate or other supported solutions.
+With the continued investment in Power Automate as the universal solution to workflow orchestration, SharePoint 2010 workflows are retired as of November 2020. SharePoint 2013 workflow has been retired since April 2023 and will be turned off for new tenants as of April 2, 2024. It will be removed from existing tenants and will be fully retired as of April 2, 2026. If you’re using SharePoint 2013 workflow, we recommend migrating to Power Automate or other supported solutions. For more info, see [SharePoint 2013 workflow retirement in Microsoft 365](https://aka.ms/sp-workflows-2013support). 
 
 ## Assessing your SharePoint 2013 workflow usage
 
