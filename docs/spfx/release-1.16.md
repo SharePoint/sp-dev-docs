@@ -1,7 +1,7 @@
 ---
 title: SharePoint Framework v1.16 release notes
 description: Release notes for the SharePoint Framework v1.16 release
-ms.date: 2/16/2023
+ms.date: 4/19/2023
 ms.localizationpriority: high
 ---
 # SharePoint Framework v1.16 release notes
@@ -96,6 +96,12 @@ SPFx now supports React 17 by default (scaffolded as part of the solution).
 ### Ability to set dataVersion in web part's manifest
 
 Set a data version for this preconfigured entry. This is optional and can be used in cases where the SPPKG is updated independently from code (e.g. hosted on a CDN). Web Parts can read this value for backwards compatibility with out of date default properties.
+
+### General availability of Search Query extensions
+
+Search Query extensions moved to the General Availability status with this version and can be used in the production.
+
+* [Modifying Microsoft Search experience using SharePoint Framework extensions](building-search-extensions.md)
 
 ### Ability to use tasks and middleware in Microsoft Graph v3
 

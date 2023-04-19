@@ -1,20 +1,18 @@
 ---
 title: Modifying Microsoft Search experience using SharePoint Framework extensions
 description: You can modify the Microsoft Search experiences using SharePoint Framework extensions
-ms.date: 06/19/2020
+ms.date: 04/19/2023
 ms.localizationpriority: medium
 ---
 
 # Modifying Microsoft Search experience using SharePoint Framework extensions
 
-The SharePoint Framework v1.10 release introduces Search Query extensions. These are SharePoint Framework (SPFx) extensions, which can be used to modify search query executed using the search experience.
-
-[!INCLUDE [developer-preview-notice](../../includes/snippets/developer-preview-notice.md)]
+Search Query extensions are SharePoint Framework (SPFx) extensions, which can be used to modify search query executed using the search experience.
 
 > [!IMPORTANT]
-> Even thought this extension is available in the SharePoint Framework v1.10 release, it's not supported in the SharePoint Online.
+> This feature moved to General Availability status with the SPFx v1.16 release.
 
-A query extension acts as a normal SharePoint Framework extension, but it will be invoked just before the search query is executed, so that the query can be potentially modified. During **preview**, query extensions have following characteristics:
+A query extension acts as a normal SharePoint Framework extension, but it will be invoked just before the search query is executed, so that the query can be potentially modified. Query extensions have following characteristics:
 
 - Query extensions only work in the context of SharePoint
 - You will need to explicitly enable query extensions in site or in site collection scope
@@ -25,10 +23,10 @@ A query extension acts as a normal SharePoint Framework extension, but it will b
 
 ## Development process
 
-You can start developing query extensions simply by using the SharePoint Framework v1.10 or later packages. As this feature is on preview status, you'll need to execute the Yeoman generator using the `--plusbeta` switch as demonstrated below.
+You can start developing query extensions for production simply by using the SharePoint Framework v1.16 or later packages. 
 
 ```console
-yo @microsoft/sharepoint --plusbeta
+yo @microsoft/sharepoint
 ```
 
 You can see a new option called **Search Query Modifier** under the extension selection to scaffold you a query extension component.
@@ -55,11 +53,11 @@ Technically you can also use the Tenant scoped deployment of SharePoint Framewor
 
 ## Deployment of your extension
 
-Deployment is a two-step process by default for the **Search Query Modifier** at least during the preview:
+Deployment is a two-step process by default for the **Search Query Modifier**:
 
 1. Deploy solution to SharePoint App Catalog
-1. Install solution to the site collection where you want to use the extension
-1. Create a custom search results page and configure it to be used in the site collection
+2. Install solution to the site collection where you want to use the extension
+3. Create a custom search results page and configure it to be used in the site collection
 
 You can configure custom search results page for a site collection from the site settings by clicking **Search Settings** and then enabling the custom search experience option.
 
