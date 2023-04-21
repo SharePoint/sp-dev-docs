@@ -5,7 +5,6 @@ ms.date: 04/21/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
-
 # Set up your SharePoint Framework development environment
 
 You can use any text editor to build SharePoint Framework (SPFx) solutions. You can use a macOS, Windows, or Linux environment as well.
@@ -24,7 +23,7 @@ You can also follow these steps by watching this video on the Microsoft 365 Plat
 
 Install the most recent LTS version of **[Node.js](https://www.nodejs.org) v16**.
 
-This version is the currently recommended version of Node.js to use with the SharePoint Framework (_unless otherwise specified below_).
+This version is the currently recommended version of Node.js to use with the SharePoint Framework (*unless otherwise specified below*).
 
 > [!IMPORTANT]
 > Node.js is frequently updated and available on multiple platforms including macOS, Windows, and Linux. Because the exact download links change frequently, they aren't linked to from this page. Instead, use the details below to determine which installer to download for your platform.
@@ -45,7 +44,7 @@ node --version
 
 The SharePoint Framework v1.17.1 is supported on the following Node.js versions:
 
-- Node.js v16 LTS (v16.13.x - v16.18.x, _aka: Gallium_)
+- Node.js v16 LTS (v16.13.x - v16.18.x, *aka: Gallium*)
 
 > [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint on-prem deployments, refer to the additional pages listed in the [See also](#see-also) section for more information.
@@ -158,7 +157,6 @@ Depending on your scenario, you may need to maintain different development envir
 
 > [!TIP]
 > For more information on NVM, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
->
 > - [NVM](https://github.com/creationix/nvm) for macOS
 > - [nvm-windows](https://github.com/coreybutler/nvm-windows) for Windows
 
