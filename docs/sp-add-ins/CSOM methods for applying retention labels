@@ -18,12 +18,10 @@ CSOM methods are available to apply (set) a retention label (ComplianceTag) on o
 > Some information relates to prerelease product that may be substantially modified before it’s released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## SetComplianceTagOnBulkItems
+
 This method can be used to set a ComplianceTag on one or many ListItems. It is strongly recommended to use this method for this purpose.
 
-<!-- {
-  "blockType": "ignored"
-}
--->
+
 ```c#
 public List<int> SetComplianceTagOnBulkItems( 
              List<int> itemIds, 
@@ -32,6 +30,7 @@ public List<int> SetComplianceTagOnBulkItems(
 ```
 
 ### Parameters
+
 'List' [Int](/en-us/dotnet/api/system.int32)
 
 'ItemsIds' [String](/dotnet/api/system.string)
@@ -48,25 +47,18 @@ Attribute [RemoteAttribute](/dotnet/api/microsoft.sharepoint.client.remoteattrib
 |:---|:---|
 |SharePoint CSOM|latest|
 
-
-
 ## Other
+
 > [!NOTE] It is strongly recommended to use SetComplianceTagOnBulkItems instead of these methods.
 
 The following methods are also available, but are no longer updated and may be subject to deprecation in the future. If you are using these methods, we strongly recommend use of the SetComplianceTagOnBulkItems method instead.
 
 * [SetComplianceTag](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetag?view=sharepoint-csom)
-
 * [SetComplianceTagWithExplicitMetaInfo](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithexplicitmetainfo?view=sharepoint-csom)
-
 * [SetComplianceTagWithExplicitMetasUpdate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithexplicitmetasupdate?view=sharepoint-csom)
-
 * [SetComplianceTagWithHold](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithhold?view=sharepoint-csom)
-
 * [SetComplianceTagWithMetaInfo](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithmetainfo?view=sharepoint-csomtnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithhold?view=sharepoint-csom)
-
 * [SetComplianceTagWithNoHold](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithnohold?view=sharepoint-csom)
-
 * [SetComplianceTagWithRecord](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithrecord?view=sharepoint-csom)
 
 
