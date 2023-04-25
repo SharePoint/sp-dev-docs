@@ -429,16 +429,16 @@ can be rewritten as:
 > `title:page` return matches with the exact term *page* while `title:(page)` also return matches for the term *pages*.
 
 
-### Filter on items where a property is empty or contains a value
+### Filter on items where a text property is empty or contains a value
 _**Applies to:** Office 365 | SharePoint Online_
 
-For managed properties in the search schema which are set to be [Queryable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Queryable.aspx) you can use the wildcard operator (*) as the property expression to filter on items which either have a value or does not have a value.
+For managed properties of type [Text](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedDataType#Text) in the search schema which are set to be [Queryable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.Queryable.aspx) you can use the wildcard operator (*) as the property expression to filter on items which either have a value or does not have a value.
 
-Syntax to return items where a property has a value:
+Syntax to return items where a text property has a value:
 
 `<Property Name>:*`
 
-Syntax to return items where a property does not have a value:
+Syntax to return items where a text property does not have a value:
 
 `NOT <Property Name>:*`
 
@@ -732,5 +732,3 @@ You can combine different parts of a keyword query by using the opening parenthe
 
 
 -  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
-    
-  
