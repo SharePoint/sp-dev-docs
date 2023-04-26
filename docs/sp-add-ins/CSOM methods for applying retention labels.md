@@ -2,7 +2,7 @@
 author: kyracatwork
 ms.author: kyrachurney
 ms.date: 4/18/2023
-title: CSOM methods for applying retention labels (setting ComplianceTags)
+title: CSOM methods for applying retention labels
 description: CSOM methods are available to apply (set) a retention label (ComplianceTag) on one or many items (ListItems) in SharePoint. 
 ---
 
@@ -49,7 +49,8 @@ Attribute [RemoteAttribute](/dotnet/api/microsoft.sharepoint.client.remoteattrib
 
 ## Other
 
-> [!NOTE] It is strongly recommended to use SetComplianceTagOnBulkItems instead of these methods.
+> [!NOTE] 
+It is strongly recommended to use SetComplianceTagOnBulkItems instead of these methods.
 
 The following methods are also available, but are no longer updated and may be subject to deprecation in the future. If you are using these methods, we strongly recommend use of the SetComplianceTagOnBulkItems method instead.
 
