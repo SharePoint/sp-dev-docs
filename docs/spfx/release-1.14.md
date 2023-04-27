@@ -21,7 +21,7 @@ This release introduces updates across the features around Microsoft Viva, Micro
         npm uninstall @microsoft/{spfx-package-name}@1.13.1
         ```
 
-    2. Install the new v1.14 package:
+    1. Install the new v1.14 package:
 
         ```console
         npm install @microsoft/{spfx-package-name}@1.14.0 --save --save-exact

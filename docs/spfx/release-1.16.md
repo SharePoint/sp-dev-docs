@@ -18,7 +18,7 @@ Install the latest release of the SharePoint Framework (SPFx) by including the *
 
 ```console
 npm install @microsoft/generator-sharepoint@latest --global
-``` 
+```
 
 ## Upgrading projects from v1.15.2 to v1.16
 
@@ -29,7 +29,7 @@ npm install @microsoft/generator-sharepoint@latest --global
         npm uninstall @microsoft/{spfx-package-name}@1.15.2
         ```
 
-    2. Install the new v1.16 package:
+    1. Install the new v1.16 package:
 
         ```console
         npm install @microsoft/{spfx-package-name}@latest --save --save-exact

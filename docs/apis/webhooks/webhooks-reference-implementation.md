@@ -133,14 +133,14 @@ The following diagram describes the complete end-to-end webhook flow.
 ![Webhooks reference implementation end-to-end flow](../../images/webhook-sample-end-to-end-flow.png)
 
 1. Your application creates a webhook subscription. When it does, it gets the current **changeToken** from the list it created the webhook for.
-2. Your application persists the **changeToken** in a persistent storage, such as SQL Azure in this case.
-3. A change in SharePoint occurs, and SharePoint calls your service endpoint.
-4. Your service endpoint serializes the notification request and stores it in a storage queue.
-5. Your web job sees the message in the queue and starts your message processing logic.
-6. Your message processing logic retrieves the last used change token from the persistent storage.
-7. Your message processing logic uses the `GetChanges()`API to determine what changed.
-8. The returned changes are processed and now your application performs what it needs to do based on the changes.
-9. Finally, the application persists the last retrieved **changeToken** so that next time it does not receive changes that were already processed.
+1. Your application persists the **changeToken** in a persistent storage, such as SQL Azure in this case.
+1. A change in SharePoint occurs, and SharePoint calls your service endpoint.
+1. Your service endpoint serializes the notification request and stores it in a storage queue.
+1. Your web job sees the message in the queue and starts your message processing logic.
+1. Your message processing logic retrieves the last used change token from the persistent storage.
+1. Your message processing logic uses the `GetChanges()`API to determine what changed.
+1. The returned changes are processed and now your application performs what it needs to do based on the changes.
+1. Finally, the application persists the last retrieved **changeToken** so that next time it does not receive changes that were already processed.
 
 ## Work with webhook renewal
 

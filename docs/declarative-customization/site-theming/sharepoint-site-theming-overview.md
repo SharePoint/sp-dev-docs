@@ -72,25 +72,24 @@ The modern site theming experience has been rolled out to classic site templates
 To do this, you must use a Windows PowerShell script with a CSOM (client-side object model) wrapper. We recommend using the PnP PowerShell enable feature command:
 
 1. Verify that you meet the following minimum requirements:
+
     * You are at least a site collection owner on the site where you want to disable modern site themes
     * You have read about [Execution Policies](https://technet.microsoft.com/library/dd347641.aspx)
 
-2. Download the latest [PnP PowerShell](https://github.com/pnp/powershell).
+1. Download the latest [PnP PowerShell](https://github.com/pnp/powershell).
 
     [!INCLUDE [pnp-powershell](../../../includes/snippets/open-source/pnp-powershell.md)]
 
-3. Enter `Connect-PnPOnline -Url <SiteUrl> -UseWebLogin` (replacing `<SiteUrl>` with the url of the site you wish to opt out of).
-
-4. Enter your credentials when prompted.
-
-5. To opt out of the site, you need to enable a feature:
+1. Enter `Connect-PnPOnline -Url <SiteUrl> -UseWebLogin` (replacing `<SiteUrl>` with the url of the site you wish to opt out of).
+1. Enter your credentials when prompted.
+1. To opt out of the site, you need to enable a feature:
 
     * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
     * Verify that nothing is returned from the previous command (this confirms the feature isn’t enabled yet)
     * Enter `Enable-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
     * Enter `Get-PnPFeature -Scope Site -Identity 5138468E-3D76-4F72-9DE4-E029F1245A7B`
 
-6. Verify that the following is returned:
+1. Verify that the following is returned:
 
     `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
 

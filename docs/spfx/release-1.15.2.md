@@ -29,7 +29,7 @@ npm install @microsoft/generator-sharepoint@latest --global
         npm uninstall @microsoft/{spfx-package-name}@1.15.0
         ```
 
-    2. Install the new v1.15.2 package:
+    1. Install the new v1.15.2 package:
 
         ```console
         npm install @microsoft/{spfx-package-name}@latest --save --save-exact

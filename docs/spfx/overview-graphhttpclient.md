@@ -45,12 +45,9 @@ export default class MyApplicationCustomizer
 To make a request to Microsoft Graph:
 
 1. Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **\@microsoft/sp-http** package.
-
-2. Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
-
-3. As parameters, specify the Microsoft Graph API that you want to call (start with the API version without a leading `/` - slash), followed by the **GraphHttpClient** configuration.
-
-4. Optionally, you can specify additional request headers that will be merged with the default headers set by **GraphHttpClient** (`'Accept': 'application/json'`, `'Authorization': 'Bearer [token]'` and `'Content-Type': 'application/json; charset=utf-8'`).
+1. Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
+1. As parameters, specify the Microsoft Graph API that you want to call (start with the API version without a leading `/` - slash), followed by the **GraphHttpClient** configuration.
+1. Optionally, you can specify additional request headers that will be merged with the default headers set by **GraphHttpClient** (`'Accept': 'application/json'`, `'Authorization': 'Bearer [token]'` and `'Content-Type': 'application/json; charset=utf-8'`).
 
 ## Considerations for using the **GraphHttpClient** class
 
