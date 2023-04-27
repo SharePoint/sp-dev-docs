@@ -21,7 +21,6 @@ CSOM methods are available to apply (set) a retention label (ComplianceTag) on o
 
 This method can be used to set a ComplianceTag on one or many ListItems. It is strongly recommended to use this method for this purpose.
 
-
 ```c#
 public List<int> SetComplianceTagOnBulkItems( 
              List<int> itemIds, 
@@ -31,13 +30,10 @@ public List<int> SetComplianceTagOnBulkItems(
 
 ### Parameters
 
-'List' [Int](/en-us/dotnet/api/system.int32)
-
-'ItemsIds' [String](/dotnet/api/system.string)
-
-'ListURL' [String](/dotnet/api/system.string)
-
-'ComplianceTagValue' [String](/dotnet/api/system.string)
+- 'List' [Int](/en-us/dotnet/api/system.int32)
+- 'ItemsIds' [String](/dotnet/api/system.string)
+- 'ListURL' [String](/dotnet/api/system.string)
+- 'ComplianceTagValue' [String](/dotnet/api/system.string)
 
 Attribute [RemoteAttribute](/dotnet/api/microsoft.sharepoint.client.remoteattribute)
 
@@ -50,17 +46,17 @@ Attribute [RemoteAttribute](/dotnet/api/microsoft.sharepoint.client.remoteattrib
 ## Other
 
 > [!NOTE] 
-It is strongly recommended to use SetComplianceTagOnBulkItems instead of these methods.
+> It is strongly recommended to use SetComplianceTagOnBulkItems instead of these methods.
 
 The following methods are also available, but are no longer updated and may be subject to deprecation in the future. If you are using these methods, we strongly recommend use of the SetComplianceTagOnBulkItems method instead.
 
-* [SetComplianceTag](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetag?view=sharepoint-csom)
-* [SetComplianceTagWithExplicitMetaInfo](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithexplicitmetainfo?view=sharepoint-csom)
-* [SetComplianceTagWithExplicitMetasUpdate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithexplicitmetasupdate?view=sharepoint-csom)
-* [SetComplianceTagWithHold](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithhold?view=sharepoint-csom)
-* [SetComplianceTagWithMetaInfo](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithmetainfo?view=sharepoint-csomtnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithhold?view=sharepoint-csom)
-* [SetComplianceTagWithNoHold](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithnohold?view=sharepoint-csom)
-* [SetComplianceTagWithRecord](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithrecord?view=sharepoint-csom)
+* [SetComplianceTag](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetag)
+* [SetComplianceTagWithExplicitMetaInfo](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithexplicitmetainfo)
+* [SetComplianceTagWithExplicitMetasUpdate](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithexplicitmetasupdate)
+* [SetComplianceTagWithHold](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithhold)
+* [SetComplianceTagWithMetaInfo](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithmetainfo)
+* [SetComplianceTagWithNoHold](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithnohold)
+* [SetComplianceTagWithRecord](/dotnet/api/microsoft.sharepoint.client.listitem.setcompliancetagwithrecord)
 
 
 
