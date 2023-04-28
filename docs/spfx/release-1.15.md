@@ -22,18 +22,19 @@ npm install @microsoft/generator-sharepoint@latest --global
 
 ## Upgrading projects from v1.14 to v1.15
 
-1. In the project's **package.json** file, identify all SPFx v1.14 packages. For each SPFx package:
-    1. Uninstall the existing v1.14 package:
+In the project's **package.json** file, identify all SPFx v1.14 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.14
-        ```
+1. Uninstall the existing v1.14 package:
 
-    1. Install the new v1.15 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.14
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@latest --save --save-exact
-        ```
+1. Install the new v1.15 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@latest --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

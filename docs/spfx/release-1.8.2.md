@@ -14,18 +14,19 @@ This is a minor patch release that mostly focuses on build and tooling issues, w
 
 ## Upgrading projects from v1.8.1 to v1.8.2
 
-1. In the project's **package.json** file, identify all SPFx v1.8.1 packages. For each SPFx package:
-    1. Uninstall the existing v1.8.1 package:
+In the project's **package.json** file, identify all SPFx v1.8.1 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.8.1
-        ```
+1. Uninstall the existing v1.8.1 package:
 
-    1. Install the refreshed v1.8.2 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.8.1
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.8.2.0 --save --save-exact
-        ```
+1. Install the refreshed v1.8.2 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.8.2.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
