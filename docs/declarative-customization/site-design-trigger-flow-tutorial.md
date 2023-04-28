@@ -105,7 +105,7 @@ In order to capture the site creation event and create the corresponding list it
     Get-SPOSiteDesign
     ```
 
-To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
+    To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
 
 1. Copy the following JSON code to your clipboard and modify it. Set the **url** property to the value that you copied when you created the flow. The URL looks similar to the following:
 

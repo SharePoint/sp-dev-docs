@@ -91,7 +91,9 @@ To do this, you must use a Windows PowerShell script with a CSOM (client-side ob
 
 1. Verify that the following is returned:
 
-    `ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b`
+    ```powershell
+    ClientSideThemingOptOut - 5138468e-3d76-4f72-9de4-e029f1245a7b
+    ```
 
 For more information about Windows PowerShell, see [PowerShell](/powershell/scripting/overview).
 
