@@ -36,7 +36,7 @@ The following commands are available for managing hub sites:
 |[hubsite rights grant](https://pnp.github.io/cli-microsoft365/cmd/spo/hubsite/hubsite-rights-grant)| Grants permissions to join the hub site for one or more principals |
 |[hubsite rights revoke](https://pnp.github.io/cli-microsoft365/cmd/spo/hubsite/hubsite-rights-revoke)| Revokes rights to join sites to the specified hub site for one or more principals |
 |[hubsite set](https://pnp.github.io/cli-microsoft365/cmd/spo/hubsite/hubsite-set)| Updates properties of the specified hub site |
-|[hubsite theme sync](https://pnp.github.io/cli-microsoft365/cmd/spo/hubsite/hubsite-theme-sync)| Applies any theme updates from the parent hub site. |
+|[hubsite theme sync](https://pnp.github.io/cli-microsoft365/cmd/spo/site/site-hubsite-theme-sync)| Applies any theme updates from the parent hub site. |
 |[hubsite unregister](https://pnp.github.io/cli-microsoft365/cmd/spo/hubsite/hubsite-unregister)| Unregisters the specifies site collection as a hub site |
 
 ## See also
