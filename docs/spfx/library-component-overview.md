@@ -15,6 +15,5 @@ Library components have following characteristics:
 
 - You can only host one library component version at the time in a tenant.
 - You can deploy and host library components in the tenant app catalog or the site app catalog.
-- It's not supported to have other component types included in a solution, which contains library component.
 
 You can reference library component in the SharePoint solution by defining the dependency in the **package.json** file. The bundling process detects this dependency and adds it as to the consuming component's manifest. This dependency will then be detected by the SharePoint Framework at runtime and load the library before loading the component's bundle.
