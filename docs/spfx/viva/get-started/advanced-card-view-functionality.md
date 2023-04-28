@@ -414,7 +414,7 @@ Select the **Next** button until you get to the last item in the list. The card 
 Starting in SPFx v1.14, ACEs have a client-side caching layer that can be configured to store:
 
 1. The latest rendered card.
-2. The state of the ACE.
+1. The state of the ACE.
 
 ### Rendering from cached Card view
 

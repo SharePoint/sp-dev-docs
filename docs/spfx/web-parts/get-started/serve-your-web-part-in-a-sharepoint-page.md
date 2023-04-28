@@ -106,7 +106,6 @@ The JavaScript files, CSS, and other assets are packaged in the package when the
 
 Next, you need to deploy the package that was generated to the app catalog.
 
-
 > [!NOTE]
 > If you do not have an app catalog, a SharePoint Online Admin can create one by following the instructions in this guide: [Use the App Catalog to make custom business apps available for your SharePoint Online environment](https://support.office.com/article/use-the-app-catalog-to-make-custom-business-apps-available-for-your-sharepoint-online-environment-0b6ab336-8b83-423f-a06b-bcc52861cba0).
 
@@ -115,7 +114,7 @@ Next, you need to deploy the package that was generated to the app catalog.
 
     ![New app catalog experience notice](../../../images/new-app-catalog-experience-notice.png)
 
-2. Upload or drag and drop the **helloworld-webpart.sppkg** to the app catalog.
+1. Upload or drag and drop the **helloworld-webpart.sppkg** to the app catalog.
 
     ![Upload solution to app catalog](../../../images/upload-solution-app-catalog.png)
 
@@ -123,7 +122,7 @@ Next, you need to deploy the package that was generated to the app catalog.
 
     ![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png)
 
-3. Select **Enable app**.
+1. Select **Enable app**.
 
 Notice that you can see if there's any exceptions or issues in the package by looking the **App Package Error Message** column in the app catalog.
 

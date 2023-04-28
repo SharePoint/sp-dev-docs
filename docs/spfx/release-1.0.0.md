@@ -14,18 +14,19 @@ Welcome to the General Availability of SPFx 1.0. It's been an exciting and inter
 
 ## Upgrading projects from preview versions to v1.0.0
 
-1. In the project's **package.json** file, identify all SPFx pre-v1 packages. For each SPFx package:
-    1. Uninstall the existing pre-v1 package:
+In the project's **package.json** file, identify all SPFx pre-v1 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}
-        ```
+1. Uninstall the existing pre-v1 package:
 
-    1. Install the refreshed v1.0.0 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.0.0.0 --save --save-exact
-        ```
+1. Install the refreshed v1.0.0 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.0.0.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

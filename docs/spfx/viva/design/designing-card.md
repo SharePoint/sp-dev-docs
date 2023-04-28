@@ -25,7 +25,6 @@ Each dashboard card has the following elements:
 :::image type="content" source="../../../images/viva-design/img_card_base.jpg" alt-text="Diagram showing the card container and card elements, showing the Time off and paid time off available options.":::
 
 1. **Container**: All card content sits within the container.
-
 1. **Icon**: Unique visual representation of this card. You can choose the icon from the pre-defined set or upload a customized icon.
 
     Icons from the pre-defined set are theme-friendly and will automatically adjust to light and dark themes using theme primary color.
@@ -33,7 +32,6 @@ Each dashboard card has the following elements:
     For customized icons, maximum size is 24 px by 24 px. Recommended formats are PNG or SVG. SVG icons scale better across different screen resolutions. Make sure the icon has a transparent background, and it looks good both on light and dark theme. Learn about SharePoint themes.
 
 1. **Title**: Typically the app name. All titles should be in sentence case.
-
 1. **Heading**: Most visually prominent text on the card. Used to communicate key information. Heading text can be static or dynamically updated. All headings should be in sentence case.
 
 When adding the title and heading, ensure the text does not truncate and can fit in the card width on both desktop and mobile in both card sizes (more information about sizes is given below) and all languages used. Truncated text can hide key information that might be necessary for the end user to complete the task. For the title, in most cases, a length of 10-12 characters should fit the card width well.
@@ -91,6 +89,7 @@ Here are the best practices for designing card interactions:
 
 > [!NOTE]
 > Due to lack of space:
+>
 > - Heading + Image layout does not have buttons with M size cards.
 > - Heading and Heading + Description layouts can only have one button with M size cards.
 
@@ -99,7 +98,6 @@ Here are the best practices for designing card interactions:
 ​​​​​​​Here are some example cards for how these layouts can be used
 
 :::image type="content" source="../../../images/viva-design/img_card_collections.jpg" alt-text="Screenshot showing various example cards, including cards for Shifts, Tasks, COVID 19, and Tutorials.":::
-
 
 ## Platforms and modes
 
