@@ -1,7 +1,7 @@
 ---
 title: Provision SharePoint assets from your SharePoint client-side web part
 description: SharePoint assets can be provisioned as part of the SharePoint Framework solution, and deployed to SharePoint sites when the solution is installed on it.
-ms.date: 11/22/2022
+ms.date: 05/03/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -9,6 +9,9 @@ ms.custom: scenarios:getting-started
 # Provision SharePoint assets from your SharePoint client-side web part
 
 SharePoint assets can be provisioned as part of the SharePoint Framework solution, and are deployed to SharePoint sites when the solution is installed on it.
+
+> [!NOTE]
+> \*.sppkg packages that contain SharePoint assets cannot be tenant deployed from the tenant application catalog, and cannot be used in a site application catalog.
 
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom client-side web part:
 
