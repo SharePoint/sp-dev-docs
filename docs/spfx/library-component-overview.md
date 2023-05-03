@@ -1,7 +1,7 @@
 ---
 title: Using library component type in SharePoint Framework
 description: Using library component type in SharePoint Framework
-ms.date: 06/19/2020
+ms.date: 05/03/2023
 ms.localizationpriority: high
 ---
 
