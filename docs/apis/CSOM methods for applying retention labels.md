@@ -4,7 +4,7 @@ description: CSOM methods are available to apply (set) a retention label (Compli
 author: kyracatwork
 ms.author: kyrachurney
 ms.date: 4/18/2023
-ms.prod: sharepoint
+ms.service: sharepoint
 ---
 
 # CSOM methods for applying retention labels (setting ComplianceTags)
