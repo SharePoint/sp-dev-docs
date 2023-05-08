@@ -12,7 +12,7 @@ Retention labels let you apply retention settings for governance control at the 
 
 Retention labels may classify contents as records, which place restrictions on what actions are allowed or blocked. [Learn more about declaring records by using retention labels](/microsoft-365/compliance/declare-records)
 
-CSOM methods are available to apply (set) a retention label (ComplianceTag) on one or many items (ListItems) in SharePoint. Retention labels can be applied using this method without being published by an existing label policy. 
+CSOM methods are available to apply (set) a retention label (ComplianceTag) on one or many items (ListItems) in SharePoint. Retention labels can be applied using this method without being published to the location by an existing label policy. 
 
 > [!IMPORTANT]
 > Some information relates to prerelease product that may be substantially modified before it’s released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
