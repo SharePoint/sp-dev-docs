@@ -22,7 +22,7 @@ We are looking into release more frequent smaller release to be available also i
 Install the latest release of the SharePoint Framework (SPFx) by including the **@latest** tag:
 
 ```console
-npm install @microsoft/generator-sharepoint@next --global
+npm install @microsoft/generator-sharepoint@latest --global
 ```
 
 ## Upgrading projects from v1.17 to v1.17.1
