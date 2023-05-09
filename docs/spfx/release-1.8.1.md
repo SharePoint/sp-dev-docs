@@ -14,18 +14,19 @@ This is a _minor bump_ that fixes the issues with the Yeoman generator, projects
 
 ## Upgrading projects from v1.8.0 to v1.8.1
 
-1. In the project's **package.json** file, identify all SPFx v1.8.0 packages. For each SPFx package:
-    1. Uninstall the existing v1.8.0 package:
+In the project's **package.json** file, identify all SPFx v1.8.0 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.8.0
-        ```
+1. Uninstall the existing v1.8.0 package:
 
-    1. Install the refreshed v1.8.1 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.8.0
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.8.1.0 --save --save-exact
-        ```
+1. Install the refreshed v1.8.1 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.8.1.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

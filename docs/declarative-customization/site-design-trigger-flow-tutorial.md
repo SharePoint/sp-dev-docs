@@ -24,110 +24,96 @@ You'll first create the SharePoint list and then it will be referenced in your P
 You need to first set up the list that will be used to record all the sites created using this site design.
 
 1. Select a site collection to host your list.
+1. Create a new list named "Site Directory"
+1. Configure the following fields:
 
-2. Create a new list named "Site Directory"
-
-3. Configure the following fields:
     - webUrl (Hyperlink or Picture)
     - webDescription (Single line of text)
     - creatorName (Single line of text)
     - creatorEmail (Single line of text)
     - createdTimeUTC (Single line of text)
 
-
 ## Create the flow
 
 In order to capture the site creation event and create the corresponding list item, you need to create a flow - which can then be referenced in your site design's site script:
 
 1. Go to the [Power Automate](https://flow.microsoft.com) site, sign in, and choose **+ Automated—from blank* at the top of the page.
+1. Click **Skip** on the next screen
+1. Choose **Search connectors and triggers** to select your trigger
+1. Search for **Request**, and then choose **Request - When a HTTP Request is received [PREMIUM]**. **NOTE**: The **Request** trigger is now **PREMIUM** and will therefore require additional licensing.
+1. Enter the following JSON as your request body:
 
-2. Click **Skip** on the next screen
-
-2. Choose **Search connectors and triggers** to select your trigger
-
-3. Search for **Request**, and then choose **Request - When a HTTP Request is received [PREMIUM]**. **NOTE**: The **Request** trigger is now **PREMIUM** and will therefore require additional licensing.
-
-4. Enter the following JSON as your request body:
-
-  ```json
-  {
-      "type": "object",
-      "properties": {
-        "webUrl": {
-          "type": "string"
-        },
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "event": {
-              "type": "string"
-            },
-            "product": {
-              "type": "string"
+    ```json
+    {
+        "type": "object",
+        "properties": {
+          "webUrl": {
+            "type": "string"
+          },
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string"
+              },
+              "product": {
+                "type": "string"
+              }
             }
+          },
+          "webDescription": {
+            "type": "string"
+          },
+          "creatorName": {
+            "type": "string"
+          },
+          "creatorEmail": {
+            "type": "string"
+          },
+          "createdTimeUTC": {
+            "type": "string"
           }
-        },
-        "webDescription": {
-          "type": "string"
-        },
-        "creatorName": {
-          "type": "string"
-        },
-        "creatorEmail": {
-          "type": "string"
-        },
-        "createdTimeUTC": {
-          "type": "string"
         }
       }
-    }
-  ```
+    ```
 
-5. Select **+ New Step**.
+1. Select **+ New Step**.
+1. Search for **Create item**, and select **SharePoint - Create item**.
+1. Enter the site address where the list above was created.
+1. Select the "Site Directory" list you created in the previous step.
+1. Enter a value for the **Title** field - this will be the same value for each list item. For example: "Contoso Travel: New Project Site Created".
+1. For each field in your list form, add the corresponding element from the Dynamic Content picker. When you are done your action should look something like this:
 
-6. Search for **Create item**, and select **SharePoint - Create item**.
+    ![Screenshot of a flow named 'When an HTTP request is received', showing the URL, Request body, Queue name, and Message fields](images/site-directory-flow-configuration.png)
 
-7. Enter the site address where the list above was created.
-
-8. Select the "Site Directory" list you created in the previous step.
-
-9. Enter a value for the **Title** field - this will be the same value for each list item. For example: "Contoso Travel: New Project Site Created".
-
-10. For each field in your list form, add the corresponding element from the Dynamic Content picker. When you are done your action should look something like this:
-
-![Screenshot of a flow named 'When an HTTP request is received', showing the URL, Request body, Queue name, and Message fields](images/site-directory-flow-configuration.png)
-
-11. Choose **Save**. This generates the HTTP Post URL that you will need to copy for your site script `triggerFlow` action.
-
-14. Choose the first step in your flow ('When an HTTP request is received') and copy the URL.
-
-15. Save your flow.
+1. Choose **Save**. This generates the HTTP Post URL that you will need to copy for your site script `triggerFlow` action.
+1. Choose the first step in your flow ('When an HTTP request is received') and copy the URL.
+1. Save your flow.
 
 ## Create the site design
 
 1. Open PowerShell and make sure that you have the latest [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588) installed.
+1. Connect to your tenant using **Connect-SPOService**.
 
-2. Connect to your tenant using **Connect-SPOService**.
-
-   ```powershell
+    ```powershell
     Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
-   ```
+    ```
 
-3. Now you can get the existing site designs.
+1. Now you can get the existing site designs.
 
-   ```powershell
+    ```powershell
     Get-SPOSiteDesign
-   ```
+    ```
 
-<br/>
+    To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
 
-To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
+1. Copy the following JSON code to your clipboard and modify it. Set the **url** property to the value that you copied when you created the flow. The URL looks similar to the following:
 
-1. Copy the following JSON code to your clipboard and modify it. Set the `url` property to the value that you copied when you created the flow. The URL looks similar to the following:
+    ```http
+    https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun
+    ```
 
-    `https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
-
-   ```json
+    ```json
     {
       "$schema": "schema.json",
       "actions": [
@@ -142,25 +128,24 @@ To create a site design, you first need to create a site script. A site design i
         }
       ]
     }
-   ```
+    ```
 
-2. Select the JSON again and copy it again to your clipboard.
+1. Select the JSON again and copy it again to your clipboard.
+1. Open PowerShell and enter the following to copy the script into a variable and create the site script:
 
-3. Open PowerShell and enter the following to copy the script into a variable and create the site script:
-
-   ```powershell
+    ```powershell
     $script = Get-Clipboard -Raw
     Add-SPOSiteScript -Title "Site Script to record site creation event" -Content $script
     Get-SPOSiteScript
-   ```
+    ```
 
-4. You will see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you created, and copy it to the clipboard.
+1. You will see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you created, and copy it to the clipboard.
+1. Use the following command to create the site design:
 
-5. Use the following command to create the site design:
-
-   ```powershell
+    ```powershell
     Add-SPOSiteDesign -Title "Record site creation" -Description "The creation of this site will be recorded in the site directory list" -SiteScripts [Paste the ID of the Site Script here] -WebTemplate "64"
-   ```
+    ```
+
 > [!NOTE]
 > The **Add-SPOSiteDesign** cmdlet associates the site design with the Team site. If you want to associate the design with a Communication site, use `-WebTemplate "68"`.
 
@@ -169,7 +154,6 @@ To create a site design, you first need to create a site script. A site design i
 To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. (If you have disabled self-service site creation, you'll need to create the site from the SharePoint Admin Center.)
 
 Your new site design should show up as a design option. Notice that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly.
-
 
 ## See also
 

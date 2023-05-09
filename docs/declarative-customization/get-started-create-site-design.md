@@ -123,13 +123,13 @@ Now that you've added a site script and site template, you can use it to create 
 1. Go to the home page of the SharePoint site that you are using for development.
 1. Choose **Create site**.
 1. Choose the type of site you need to use. SharePoint will create a team site using the Microsoft **Team collaboration template** or a communication site using the Microsoft **Topic** template unless another custom site template is set as default.
-2. Choose **Next**.
-4. In **Site name**, enter a name for the new site **Customer order tracking**.
-7. Choose **Finish**.
-5. Next, go to **Settings** and select **Apply a site template**.
-5. Select the site template you just created.
-8. Once applied, your new template will display under the tab in the template viewer titled **From your organization.**
-9. When the new template has been applied, you will see the custom list on the page.
+1. Choose **Next**.
+1. In **Site name**, enter a name for the new site **Customer order tracking**.
+1. Choose **Finish**.
+1. Next, go to **Settings** and select **Apply a site template**.
+1. Select the site template you just created.
+1. Once applied, your new template will display under the tab in the template viewer titled **From your organization.**
+1. When the new template has been applied, you will see the custom list on the page.
 
 ### Apply to an existing site
 
@@ -142,9 +142,9 @@ You can apply templates to existing site collections in bulk by using the [Invok
 1. Group-connected team sites
 1. Team sites that not connected to a Microsoft 365 group
 1. Communication sites
-2. Channel sites
-3. Classic team sites
-4. Classic publishing sites
+1. Channel sites
+1. Classic team sites
+1. Classic publishing sites
 
 The REST API to apply a site template to an existing site collection is **ApplySiteDesign**.
 

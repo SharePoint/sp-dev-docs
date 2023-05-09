@@ -14,18 +14,19 @@ This release introduces a new component type, Adaptive Card Extensions (ACE), th
 
 ## Upgrading projects from v1.12.1 to v1.13
 
-1. In the project's **package.json** file, identify all SPFx v1.12.1 packages. For each SPFx package:
-    1. Uninstall the existing v1.12.1 package:
+In the project's **package.json** file, identify all SPFx v1.12.1 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.12.1
-        ```
+1. Uninstall the existing v1.12.1 package:
 
-    1. Install the refreshed v1.13 {version-release} package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.12.1
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.13.0 --save --save-exact
-        ```
+1. Install the refreshed v1.13 {version-release} package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.13.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

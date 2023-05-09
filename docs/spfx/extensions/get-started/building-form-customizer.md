@@ -101,28 +101,24 @@ As by default the form customzier component does not render any information, let
 
 ```
 
-
 ## Debug your Form Customizer
 
 You can test and debug your Form Customizer within a live SharePoint Online site. You do not need to deploy your customizations to the tenant app catalog to do this, which makes the debugging experience simple and efficient.
 
-
-
 1. To test your extension, you'll need to first create list to test the customizer in. So move to the site in your SharePoint Online tenant where you want to test the form customizer.
-
-2. On the toolbar, select **New**, and then select **List**.
+1. On the toolbar, select **New**, and then select **List**.
 
     ![Creating a new list](../../../images/ext-forcustomizer-create-new-list.png)
 
-3. Choose **Blank list** from the new list creation experience
+1. Choose **Blank list** from the new list creation experience
 
     ![Selecting blank list](../../../images/ext-forcustomizer-blank-list.png)
 
-4. Create a new list named **Business**, and then select **Create**.
+1. Create a new list named **Business**, and then select **Create**.
 
     ![Creating a new list with name of Orders](../../../images/ext-forcustomizer-new-list-business.png)
 
-5. Within Visual Studio Code, open the **./config/serve.json** file.
+1. Within Visual Studio Code, open the **./config/serve.json** file.
 
     Update the `pageUrl` attributes to match a URL of the list which we created in the preview steps. After the changes, your **serve.json** should look like the following code:
 
@@ -146,17 +142,17 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     Let's call out few specific topics from serve.json file
 
-    * You can see multiple different configurations which can be used to debug new, edit and view forms with specific query parameter differences. You can define the used configuration in your gulp serve command, for example as `gulp serve --config=helloWorld_EditForm`
-    * componentId is automatically associated to be the first list formatting component in your solution (if you have multiple components)
-    * To simplify the debugging, you do not need to define target content type id to which the component is associated, but in the runtime the association is performed in content type level by updating at least one of the following properties in the content type:
-      * ContentType.**NewFormClientSideComponentId** - component id for new form
-      * ContentType.**NewFormClientSideComponentProperties** - optional configuration details
-      * ContentType.**DispFormClientSideComponentId** - component id for edit form
-      * ContentType.**DispFormClientSideComponentProperties** - optional configuration details
-      * ContentType.**EditFormClientSideComponentId** - component id display  form
-      * ContentType.**EditFormClientSideComponentProperties** - optional configuration details
+    - You can see multiple different configurations which can be used to debug new, edit and view forms with specific query parameter differences. You can define the used configuration in your gulp serve command, for example as `gulp serve --config=helloWorld_EditForm`
+    - componentId is automatically associated to be the first list formatting component in your solution (if you have multiple components)
+    - To simplify the debugging, you do not need to define target content type id to which the component is associated, but in the runtime the association is performed in content type level by updating at least one of the following properties in the content type:
+      - ContentType.**NewFormClientSideComponentId** - component id for new form
+      - ContentType.**NewFormClientSideComponentProperties** - optional configuration details
+      - ContentType.**DispFormClientSideComponentId** - component id for edit form
+      - ContentType.**DispFormClientSideComponentProperties** - optional configuration details
+      - ContentType.**EditFormClientSideComponentId** - component id display  form
+      - ContentType.**EditFormClientSideComponentProperties** - optional configuration details
 
-6. Compile your code and host the compiled files from the local machine by running this command:
+1. Compile your code and host the compiled files from the local machine by running this command:
 
     ```console
     gulp serve
@@ -168,14 +164,13 @@ You can test and debug your Form Customizer within a live SharePoint Online site
 
     This will start your default browser and load the page defined in **serve.json** file.
 
-7.  Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
+1. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
     ![Accept loading debug scripts](../../../images/ext-forcustomizer-accept-debug-scripts.png)
 
     Notice how the the custom component is rendered in the page based on the custom content which we updated to the render method.
 
     ![List view with from customizer rendered with default outpu](../../../images/ext-forcustomizer-default-output.png)
-
 
 ## Add form item editing capabilities to the sample
 
@@ -391,7 +386,6 @@ Now the code is complete to support minimal New, Edit and Display experiences an
 
 ![Custom form in the context of SharePoint](../../../images/ext-forcustomizer-custom-form.png)
 
-
 ## Deployment of your extension
 
 Whenever you are ready to start using your component, there are few steps to consider related on the component association to the content type. Steps for deployment are as follows:
@@ -400,4 +394,4 @@ Whenever you are ready to start using your component, there are few steps to con
 1. Install solution to the site collection where you want to use the extension if you are not using the tenant scoped deployment
 1. Associate the custom component to the content type using the specific properties in ContentType object. There are few options to do this:
    1. You can provision the used list and content type from your solution if you are using site scoped deployment option
-   2. You can associate the component to content types using REST or CSOM APIs. Notice that if you associate the component in the site collection or in the content type hub level, it's automatically inherited to all new content type instances
+   1. You can associate the component to content types using REST or CSOM APIs. Notice that if you associate the component in the site collection or in the content type hub level, it's automatically inherited to all new content type instances

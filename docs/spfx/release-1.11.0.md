@@ -16,18 +16,19 @@ New in this release, support for additional attributes in the solution for enabl
 
 ## Upgrading projects from v1.10 to v1.11
 
-1. In the project's **package.json** file, identify all SPFx v1.10 packages. For each SPFx package:
-    1. Uninstall the existing v1.10 package:
+In the project's **package.json** file, identify all SPFx v1.10 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.10
-        ```
+1. Uninstall the existing v1.10 package:
 
-    1. Install the refreshed v1.11 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.10
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.11 --save --save-exact
-        ```
+1. Install the refreshed v1.11 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.11 --save --save-exact
+    ```
 
 > [!IMPORTANT]
 > Be sure you update the **package-solution.json** with the new developers information as described in the article [Docs: SharePoint Framework toolchain - Update developer information](toolchain/sharepoint-framework-toolchain.md). Not providing such information will generate an error during gulp package-solution process.

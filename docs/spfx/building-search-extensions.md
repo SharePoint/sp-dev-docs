@@ -23,7 +23,7 @@ A query extension acts as a normal SharePoint Framework extension, but it will b
 
 ## Development process
 
-You can start developing query extensions for production simply by using the SharePoint Framework v1.16 or later packages. 
+You can start developing query extensions for production simply by using the SharePoint Framework v1.16 or later packages.
 
 ```console
 yo @microsoft/sharepoint
@@ -56,9 +56,9 @@ Technically you can also use the Tenant scoped deployment of SharePoint Framewor
 Deployment is a two-step process by default for the **Search Query Modifier**:
 
 1. Deploy solution to SharePoint App Catalog
-2. Install solution to the site collection where you want to use the extension
-3. Create a custom search results page and configure it to be used in the site collection
+1. Install solution to the site collection where you want to use the extension
+1. Create a custom search results page and configure it to be used in the site collection
 
 You can configure custom search results page for a site collection from the site settings by clicking **Search Settings** and then enabling the custom search experience option.
 
-![pic](../images/search-query-settings.png)
+![Search Query Settings](../images/search-query-settings.png)

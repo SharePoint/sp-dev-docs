@@ -14,18 +14,19 @@ This release introduces updates across the features around Microsoft Viva, Micro
 
 ## Upgrading projects from v1.13.1 to v1.14
 
-1. In the project's **package.json** file, identify all SPFx v1.13.1 packages. For each SPFx package:
-    1. Uninstall the existing v1.13.1 package:
+In the project's **package.json** file, identify all SPFx v1.13.1 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.13.1
-        ```
+1. Uninstall the existing v1.13.1 package:
 
-    2. Install the new v1.14 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.13.1
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.14.0 --save --save-exact
-        ```
+1. Install the new v1.14 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.14.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

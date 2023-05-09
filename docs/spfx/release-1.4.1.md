@@ -12,18 +12,19 @@ ms.localizationpriority: high
 
 ## Upgrading projects from v1.4 to v1.4.1
 
-1. In the project's **package.json** file, identify all SPFx v1.4 packages. For each SPFx package:
-    1. Uninstall the existing v1.4 package:
+In the project's **package.json** file, identify all SPFx v1.4 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.4
-        ```
+1. Uninstall the existing v1.4 package:
 
-    1. Install the refreshed v1.4.1 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.4
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@1.4.1.0 --save --save-exact
-        ```
+1. Install the refreshed v1.4.1 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@1.4.1.0 --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 

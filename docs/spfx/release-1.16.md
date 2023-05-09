@@ -18,22 +18,23 @@ Install the latest release of the SharePoint Framework (SPFx) by including the *
 
 ```console
 npm install @microsoft/generator-sharepoint@latest --global
-``` 
+```
 
 ## Upgrading projects from v1.15.2 to v1.16
 
-1. In the project's **package.json** file, identify all SPFx v1.15.2 packages. For each SPFx package:
-    1. Uninstall the existing v1.15.2 package:
+In the project's **package.json** file, identify all SPFx v1.15.2 packages. For each SPFx package:
 
-        ```console
-        npm uninstall @microsoft/{spfx-package-name}@1.15.2
-        ```
+1. Uninstall the existing v1.15.2 package:
 
-    2. Install the new v1.16 package:
+    ```console
+    npm uninstall @microsoft/{spfx-package-name}@1.15.2
+    ```
 
-        ```console
-        npm install @microsoft/{spfx-package-name}@latest --save --save-exact
-        ```
+1. Install the new v1.16 package:
+
+    ```console
+    npm install @microsoft/{spfx-package-name}@latest --save --save-exact
+    ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
 
@@ -64,11 +65,9 @@ if (!!this.context.sdks.microsoftTeams) {
 }
 ```
 
-See more details around these options from following article
+For more information, see: [Extend Outlook and Office with the SharePoint Framework](office/overview.md).
 
-* [Extend Outlook and Office with the SharePoint Framework](office/overview.md)
-
-> [!Important]
+> [!IMPORTANT]
 > Using the Teams SDK v2 within the SharePoint Framework solutions is generally available starting from the 1.16 version, enabling usage of the Teams SDK v2 immediately.
 > Support for publishing Teams apps (including SPFx solutions) within the Outlook and in Office.com (Microsoft 365 app) is however still in preview and is planned to be generally available for both mobile and desktop experiences within the first half of calendar year 2023.
 
@@ -80,7 +79,7 @@ This version supports the teams-js v2. `this.context.sdks.microsoftTeams.teamsJs
 > teams-js v2 is backward compatible with teams-js v1. We will continue to support v1 for existing solutions.
 
 > [!TIP]
-> Teams JavaScript SDK v2 enables new scenarios for developers. See following announcement for additional details on the Teams JS SDK v2 capabilities - [Microsoft Teams JS SDK v2 is now generally available](https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-js-sdk-v2-is-now-generally-available/)
+> Teams JavaScript SDK v2 enables new scenarios for developers. For more information on the Teams JS SDK v2 capabilities, see [Microsoft Teams JS SDK v2 is now generally available](https://devblogs.microsoft.com/microsoft365dev/microsoft-teams-js-sdk-v2-is-now-generally-available/).
 
 ### teams-js v2 typings support
 
@@ -95,7 +94,7 @@ SPFx now supports React 17 by default (scaffolded as part of the solution).
 
 ### Ability to set dataVersion in web part's manifest
 
-Set a data version for this preconfigured entry. This is optional and can be used in cases where the SPPKG is updated independently from code (e.g. hosted on a CDN). Web Parts can read this value for backwards compatibility with out of date default properties.
+Set a data version for this preconfigured entry. This is optional and can be used in cases where the SPPKG is updated independently from code (for example, hosted on a CDN). Web Parts can read this value for backwards compatibility with out of date default properties.
 
 ### General availability of Search Query extensions
 
@@ -169,7 +168,7 @@ Node.js v12 & v14 are no longer supported. SPFx v1.16 requires Node.js v16.
 
 ## Preview Features and Capabilities
 
-Following features are still in preview status as part of the 1.16 release and should not be used in production. We are looking into releasing them officially as part of the upcoming 1.17 release.
+Following features are still in preview status as part of the 1.16 release and shouldn't be used in production. We're looking into releasing them officially as part of the upcoming 1.17 release.
 
 ### Web part Top Actions
 
@@ -201,10 +200,7 @@ export interface ITopActions {
 > Although type of Top Action Configuration is `IPropertyPaneField<any>` we currently support buttons and choice groups only.
 > It means you can use either `PropertyPaneChoiceGroup(...)` and `PropertyPaneButton(...)`, or specify your own configurations that will resolve to `IPropertyPaneField<IPropertyPaneChoiceGroupProps>` and `IPropertyPaneField<IPropertyPaneButtonProps>`
 
-See more details on the code level guidance from the following article
-
-* [Adding support for Top Actions](web-parts/guidance/getting-started-with-top-actions.md)
-
+For more information on Top Actions, see [Adding support for Top Actions](web-parts/guidance/getting-started-with-top-actions.md).
 
 ## Deprecations
 
@@ -218,18 +214,18 @@ Here's a list of specific issues fixed around SharePoint Framework since the pre
 ### August-November Timeframe
 
 - [#8146](https://github.com/SharePoint/sp-dev-docs/issues/8146) - SPFX Application Customizer breaks Anonymous Links for PDF Files
-- [#8266](https://github.com/SharePoint/sp-dev-docs/issues/8266) - SPFx 1.15 - Form Customiser does not work in View History
-- [#8272](https://github.com/SharePoint/sp-dev-docs/issues/8272) - SPFx 1.15 - Getting error when use form customier to view existing list item in Classic mode
+- [#8266](https://github.com/SharePoint/sp-dev-docs/issues/8266) - SPFx 1.15 - Form Customizer doesn't work in View History
+- [#8272](https://github.com/SharePoint/sp-dev-docs/issues/8272) - SPFx 1.15 - Getting error when use form customizer to view existing list item in Classic mode
 - [#8279](https://github.com/SharePoint/sp-dev-docs/issues/8279) - New icons in production environments
-- [#8301](https://github.com/SharePoint/sp-dev-docs/issues/8301) - Error When Revisiting Custom Teams ?app=portals App
+- [#8301](https://github.com/SharePoint/sp-dev-docs/issues/8301) - Error When Revisiting Custom Teams `?app=portals` App
 - [#8372](https://github.com/SharePoint/sp-dev-docs/issues/8372) - Applying permissions on Form Customizer
 - [#8379](https://github.com/SharePoint/sp-dev-docs/issues/8379) - SPFx `ListViewCommandSet` - `this.context.listView.selectedRows` is wrong in grouped lists
 - [#8467](https://github.com/SharePoint/sp-dev-docs/issues/8467) - Buttons (`onClick` events) in `BaseDialog` no longer working - ListView Command Set
-- [#8483](https://github.com/SharePoint/sp-dev-docs/issues/8483) - Multi-paged Webpart Property Panes - Pagination doesn't work as expected, stopping users from accessing pages
+- [#8483](https://github.com/SharePoint/sp-dev-docs/issues/8483) - Multi-paged web part property panes - Pagination doesn't work as expected, stopping users from accessing pages
 - [#8484](https://github.com/SharePoint/sp-dev-docs/issues/8484) - Web part property pane breaks when using React and office-ui-fabric-react in property pane field label
-- [#8482](https://github.com/SharePoint/sp-dev-docs/issues/8482) - React version mismatch causing SPFX list extensions to fail in O365
-- [#8487](https://github.com/SharePoint/sp-dev-docs/issues/8487) - SharePoint React 17 Upgrade causing "Invalid Hook call" error in SPFx Webpart
-- [#7324](https://github.com/SharePoint/sp-dev-docs/issues/7324) - SPFx license does not permit commercial use
+- [#8482](https://github.com/SharePoint/sp-dev-docs/issues/8482) - React version mismatch causing SPFx list extensions to fail in O365
+- [#8487](https://github.com/SharePoint/sp-dev-docs/issues/8487) - SharePoint React 17 Upgrade causing "Invalid Hook call" error in SPFx web part
+- [#7324](https://github.com/SharePoint/sp-dev-docs/issues/7324) - SPFx license doesn't permit commercial use
 - [#8331](https://github.com/SharePoint/sp-dev-docs/issues/8331) - Mechanism to version the preconfiguredEntries in the manifest
 - [#8510](https://github.com/SharePoint/sp-dev-docs/issues/8510) - SPFx sudden Minified React error #321
 - [#8496](https://github.com/SharePoint/sp-dev-docs/issues/8496) - React version mismatch causes property pane not displaying
