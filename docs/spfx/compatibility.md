@@ -1,7 +1,9 @@
 ---
 title: SharePoint Framework development tools and libraries compatibility
 description: Find which versions of the SharePoint Framework are compatible with each version of SharePoint, development tools and libraries.
-ms.date: 05/13/2023
+
+ms.date: 05/12/2023
+
 ms.localizationpriority: high
 ---
 # SharePoint Framework development tools and libraries compatibility
