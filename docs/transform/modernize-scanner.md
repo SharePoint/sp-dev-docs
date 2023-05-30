@@ -1,7 +1,7 @@
 ---
 title: The SharePoint modernization scanner
 description: Gets you started with the SharePoint modernization scanner
-ms.date: 06/07/2022
+ms.date: 05/30/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
