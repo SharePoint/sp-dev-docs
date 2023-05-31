@@ -1,5 +1,5 @@
 ---
-title: SharePoint Framework v1.17.12 release notes
+title: SharePoint Framework v1.17.2 release notes
 description: Release notes for the SharePoint Framework v1.17.2 release
 ms.date: 05/09/2023
 ms.localizationpriority: high
@@ -25,7 +25,7 @@ Install the latest release of the SharePoint Framework (SPFx) by including the *
 npm install @microsoft/generator-sharepoint@latest --global
 ```
 
-## Upgrading projects from v1.17 to v1.17.1
+## Upgrading projects from v1.17 to v1.17.2
 
 1. In the project's **package.json** file, identify all SPFx v1.17 packages. For each SPFx package:
     1. Uninstall the existing v1.17 package:
