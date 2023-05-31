@@ -4,7 +4,7 @@ description: Release notes for the SharePoint Framework v1.17.3 release
 ms.date: 05/09/2023
 ms.localizationpriority: high
 ---
-# SharePoint Framework v1.17.2 release notes
+# SharePoint Framework v1.17.3 release notes
 
 This release is a _minor bump_ that fixes the issues around SharePoint Framework solution packaging as listed further down in this document.
 
