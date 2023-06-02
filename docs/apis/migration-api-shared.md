@@ -70,4 +70,4 @@ Using PRIME, content can be migrated by using SPFile/SPFolder objects with a doc
 Permissions migration is performed using the DeploymentRoleAssignments object with RoleAssignment entries representing specific scopes and Assignment entries representing assignments of specific roles to specific principals. Since this code ends up breaking inheritance for content and applying the specified role assignments, it has the same limitations as using other object model approaches to setting permissions in SharePoint.
 
 > [!NOTE]
-> The **Migration API** is not available for users of Office 365 operated by 21Vianet in China.
+> The **Migration API** is not available for users of Office 365 with the German cloud using the data trustee, *German Telekom*. However, it is supported for users in Germany whose data location is not in the German data center.
