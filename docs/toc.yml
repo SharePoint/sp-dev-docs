@@ -466,6 +466,8 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.17.3 - May 31, 2023
+      href: spfx/release-1.17.3.md 
     - name: SPFx v1.17.2 - May 9, 2023
       href: spfx/release-1.17.2.md
     - name: SPFx v1.17.1 - April 12, 2023

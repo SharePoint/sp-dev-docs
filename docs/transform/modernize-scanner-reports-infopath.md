@@ -1,12 +1,15 @@
 ---
 title: The SharePoint modernization scanner reports for the InfoPath scanner mode
 description: Explains the InfoPath output created by the modernization scanner
-ms.date: 10/23/2019
+ms.date: 05/30/2023
 ms.prod: sharepoint
 ms.localizationpriority: high
 ---
 
 # SharePoint Modernization scanner reports: InfoPath reports
+
+> [!Note]
+> Assessing your InfoPath usage should be done using the [Microsoft 365 Assessment tool](https://aka.ms/microsoft365assessmenttool)
 
 ## Excel dashboard
 
