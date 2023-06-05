@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 05/13/2023
+ms.date: 06/05/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -42,7 +42,7 @@ You can check if you already have Node.js already installed, including installed
 node --version
 ```
 
-The SharePoint Framework v1.17.2 is supported on the following Node.js versions:
+The SharePoint Framework v1.17.3 is supported on the following Node.js versions:
 
 - Node.js v16 LTS (v16.13.x - v16.18.x, *aka: Gallium*)
 
