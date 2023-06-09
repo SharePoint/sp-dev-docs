@@ -122,7 +122,7 @@ SharePoint Framework includes a helper class `spHttpClient` to execute REST API 
         .then((response: SPHttpClientResponse) => {
           return response.json();
         })
-        .catch(() => {});
+  
     }
     ```
 
@@ -223,7 +223,7 @@ Open the `HelloWorldWebPart` class.
         .then((response) => {
           this._renderList(response.value);
         })
-        .catch(() => {});
+   
     }
     ```
 
