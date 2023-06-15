@@ -59,7 +59,7 @@ Triggers the flow when you create a file in a SharePoint folder. This trigger do
 
 ### When a file is created or modified (properties only)
 
-Triggers the flow when you create a file, and each time you modify the file properties in a library. Returns only the custom file properties associated with that file.
+Triggers the flow when you create a file, and each time you modify the file properties in a library. Specify a value in the "Folder" property to target a specific folder; otherwise the trigger applies to the entire library. Returns only the custom file properties associated with that file.
 
 ### When a file is created or modified in a folder [deprecated]
 
@@ -67,10 +67,6 @@ Triggers the flow when you create a file, and each time you modify the file prop
 > This trigger is deprecated and may not work as expected.
 
 Triggers when a file is created, and also each time it is modified in a SharePoint folder. The trigger does not fire if a file is added/updated in a subfolder. If it is required to trigger on subfolders, multiple triggers should be created.
-
-### When a file is created or modified in a folder (properties only)
-
-Triggers the flow when you create a file, and each time you modify the file properties in the selected SharePoint folder. The trigger does not activate if you add or update a file in a subfolder. If the flow is required to trigger on subfolders, create different flows for one or more subfolder(s).
 
 ### When a file is deleted
 
