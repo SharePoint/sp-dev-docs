@@ -502,22 +502,24 @@ Unlike with `properties`, `state` isn't persisted past the current session and s
 
 Re-rendering happens when a property is updated in the PropertyPane or if `setState()` is called.
 
-When you update the Property Pane's **Description Field** value, it will update the description on the Card. Let's see how to do this:
-
-1. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/HelloWorldAdaptiveCardExtension.ts**.
-1. As a trivial example, update the `subTitle` value when the `description` is updated during the `onPropertyPaneFieldChanged` event. Add the following code to the ACE **HelloWorldAdaptiveCardExtension** class:
-
-    ```typescript
-    protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {
-      if (propertyPath === 'description') {
+As described above, when changing a **subTitle**  property during Quick View action handling, the `setState()` method is called:
+```typescript
+public onAction(action: IActionArguments): void {
+  if (action.type === 'Submit') {
+    const { id, message } = action.data;
+    switch (id) {
+      case 'button1':
+      case 'button2':
         this.setState({
-          subTitle: newValue
+          subTitle: message
         });
-      }
+        break;
     }
-    ```
+  }
+}
+```
 
-Passing a `Partial<TState>` object to `setState()` method will update all Views with the new values. Updating the **Card title** in the Property Pane will now update the `title` displayed on the Card View.
+Passing a `Partial<TState>` object to `setState()` method will update all Views with the new values.
 
 If no value or identical values are passed, a re-render will still occur.
 
