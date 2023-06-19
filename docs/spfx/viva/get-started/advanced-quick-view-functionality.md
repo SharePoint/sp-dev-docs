@@ -39,7 +39,7 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
     {
       "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
       "type": "AdaptiveCard",
-      "version": "1.2",
+      "version": "1.5",
       "body": [
         {
           "type": "Container",
@@ -88,7 +88,7 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
     }
     ```
 
-1. Finally locate the `fetchData()` method in the same class and modify the map function inside it, to:
+1. Locate the `fetchData()` method in the same class and modify the map function inside it, to:
 
     ```typescript
     ...
@@ -97,6 +97,18 @@ Start with the HelloWorld ACE from the previous tutorial, [Advanced Card View Fu
     )
     ...
     ```
+1. Finally locate **./src/adaptiveCardExtensions/helloWorld/cardView/CardView.ts** and update the `onCardSelection()` getter to:
+    ```typescript
+    public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
+      return {
+        type: 'QuickView',
+        parameters: {
+          view: QUICK_VIEW_REGISTRY_ID
+        }
+      };
+    }
+    ```
+    You will also need to import **QUICK_VIEW_REGISTRY_ID** from **../HelloWorldAdaptiveCardExtension**
 
 Build and launch the ACE in the hosted workbench:
 
@@ -121,7 +133,7 @@ Since the `onAction()` handler has not been changed to handle the item click, se
     {
       "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
       "type": "AdaptiveCard",
-      "version": "1.2",
+      "version": "1.5",
       "body": [
         {
           "type": "ColumnSet",
@@ -174,7 +186,7 @@ Since the `onAction()` handler has not been changed to handle the item click, se
 1. Add the following code to the **DetailedQuickView.ts** file:
 
     ```typescript
-    import { BaseAdaptiveCardView, IActionArguments, ISPFxAdaptiveCard } from '@microsoft/sp-adaptive-card-extension-base';
+    import { BaseAdaptiveCardQuickView, ISPFxAdaptiveCard } from '@microsoft/sp-adaptive-card-extension-base';
     import { IHelloWorldAdaptiveCardExtensionProps, IHelloWorldAdaptiveCardExtensionState } from '../HelloWorldAdaptiveCardExtension';
 
     export interface IDetailedViewData {
@@ -183,7 +195,7 @@ Since the `onAction()` handler has not been changed to handle the item click, se
       details: string;
     }
 
-    export class DetailedView extends BaseAdaptiveCardView<
+    export class DetailedView extends BaseAdaptiveCardQuickView<
       IHelloWorldAdaptiveCardExtensionProps,
       IHelloWorldAdaptiveCardExtensionState,
       IDetailedViewData
@@ -276,6 +288,7 @@ Update the Quick View to navigate between views:
       }
     }
     ```
+    You will also need to import `IActionArguments` from `@microsoft/sp-adaptive-card-extension-base`.
 
 Reload the workbench, select on the Card to open the Quick View, and select on an item in the Quick View.
 
