@@ -66,7 +66,7 @@ In the Quick View, we will provide three buttons which will perform the followin
 
 ### Update the labels that will show up on the card
 
-Before we start adding the actions, let us first update the strings that you will see on the card and use `PrimaryTextCardView` instead of `BasicCardView`.
+Before we start adding the actions, let us first update the strings that you will see on the card.
 
 For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/geoLocation/loc/en-us.js**
 
@@ -95,38 +95,6 @@ ShowCurrentLocation: string;
 ```
 
 to the `IGeoLocationAdaptiveCardExtensionStrings` interface.
-
-Lastly, locate and open the following file in your project: **./src/adaptiveCardExtensions/geoLocation/cardView/CardView.ts**
-Modify the `cardViewParameters` getter to use `PrimaryTextCardView` instead of `BasicCardView`:
-
-```typescript
-public get cardViewParameters(): ComponentsCardViewParameters {
-  return PrimaryTextCardView({
-    cardBar: {
-      componentName: 'cardBar',
-      title: this.properties.title
-    },
-    header: {
-      componentName: 'text',
-      text: strings.PrimaryText
-    },
-    body: {
-      componentName: 'text',
-      text: strings.Description
-    },
-    footer: {
-      componentName: 'cardButton',
-      title: strings.QuickViewButton,
-      action: {
-        type: 'QuickView',
-        parameters: {
-          view: QUICK_VIEW_REGISTRY_ID
-        }
-      }
-    }
-  });
-}
-```
 
 ### Add actions on the Card View
 
