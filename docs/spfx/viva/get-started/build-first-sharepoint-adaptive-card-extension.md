@@ -251,7 +251,7 @@ Initially, the Card is displayed in **Large** Card size. Let's switch to the **M
 
     :::image type="content" source="../../../images/viva-extensibility/lab1-size.png" alt-text="Select the card size":::
 
-    :::image type="content" source="../../../images/viva-extensibility/lab1-medium.png" alt-text="Rendered large ACE card":::
+    :::image type="content" source="../../../images/viva-extensibility/lab1-medium.png" alt-text="Rendered medium ACE card":::
 
 2. Now, the **Bing** button is hidden because **Medium** Card size for cards without an image only shows one button in the footer.
 
