@@ -20,7 +20,7 @@ When prompted, enter the following values (select the default option for all pro
 
 - **What is your solution name?** media-upload-tutorial
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Primary Text Template
+- **Which template do you want to use?** Generic Card Template
 - **What is your Adaptive Card Extension name?** MediaUpload
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
@@ -37,11 +37,11 @@ When you use the gulp task **serve**, by default it will launch a browser with t
       "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
       "port": 4321,
       "https": true,
-      "initialPage": "https://enter-your-SharePoint-site/_layouts/workbench.aspx"
+      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
     }
     ```
 
-- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
 At this point, if you do `gulp serve`, then you'll see the `MediaUpload` card:
 
@@ -93,12 +93,14 @@ As mentioned earlier, on the Card View, we'll add a button, which will allow the
 
 Locate and open the following file in your project: **./src/adaptiveCardExtensions/mediaUpload/cardView/CardView.ts**
 
-Here, replace the definition of `cardButtons` function with the following:
+Here, replace the definition of `footer` in `cardViewParameters` getter with the following:
 
 ```typescript
-public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
-  return [
-    {
+public get cardViewParameters(): ComponentsCardViewParameters {
+  return return PrimaryTextCardView({
+    // ...
+    footer: {
+      componentName: 'cardButton',
       title: strings.UploadPNG,
       action: {
         type: 'VivaAction.SelectMedia',
@@ -107,9 +109,10 @@ public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined
         }
       }
     }
-  ];
+  });
 }
 ```
+You will also need to import `MediaType` from `@microsoft/sp-adaptive-card-extensions-base`:
 
 With this change, we have configured a button with label `Upload PNG file` and on click action is `VivaAction.SelectMedia`, which load the file uploader modal.
 
@@ -147,7 +150,7 @@ Replace the content of this file with the following:
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
-  "version": "1.2",
+  "version": "1.5",
   "body": [
     {
       "type": "TextBlock",
