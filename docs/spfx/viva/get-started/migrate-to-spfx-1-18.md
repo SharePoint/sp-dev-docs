@@ -6,16 +6,16 @@ ms.localizationpriority: high
 ---
 
 # Migrate Adaptive Card Extensions to SharePoint Framework 1.18
-SharePoint Framework 1.18 introduces new base classes and modified approach for building Adaptive Card Extensions (ACEs) for Microsoft Viva Connections.
-The changes allow to switch from "templates"-based to more granular "components"-based card views. It allows to provide more flexibility to developers as well as increase amount of supported card views variants, or [permutations](./permutations).
+SharePoint Framework 1.18 introduces new base classes and a modified approach for building Adaptive Card Extensions (ACEs) for Microsoft Viva Connections.
+The changes allow us to switch from "templates"-based to more granular "components"-based card views. It will enable more flexibility for developers and increase the number of supported card views variants, or [permutations](./permutations).
 This article explains how to migrate your existing ACEs to the new approach.
 
 > [!NOTE]
-> All the changes described in this article are backward compatible. You can continue using your existing ACEs without any changes. However, we recommend to migrate your ACEs to the new approach to take advantage of the new features and capabilities.
+> All the changes described in this article are backward compatible. You can continue using your existing ACEs without any changes. However, we recommend migrating your ACEs to the new approach to take advantage of the new features and capabilities.
 
-## Migrate Quick Views to new base class
-With SPFx 1.18 we deprecate `BaseAdaptiveCardView` class and introduce `BaseAdaptiveCardQuickView` as a new base class for all quick views.
-The new base class provides the same functionality as the old one, so the migration is pretty straightforward.
+## Migrate Quick Views to the new base class
+With SPFx 1.18, we deprecate the `BaseAdaptiveCardView` class and introduce `BaseAdaptiveCardQuickView` as a new base class for all quick views.
+The new base class provides the same functionality as the old one, so the migration is straightforward.
 Update the definition of your quick view class to inherit from the new base class:
 
 ```ts
@@ -30,8 +30,8 @@ export class QuickView extends BaseAdaptiveCardQuickView<
 ```
 
 ## Migrate Card Views to new base class and configuration model
-With SPFx 1.18 we introduce new base class and configuration model for card views. Instead of having a separate base class for each card view "template" we introduce a new single base class `BaseComponentsCardView<TProperties = {}, TState = {}, TParameters extends ComponentsCardViewParameters = ITextCardViewParameters>`.
-With the new model instead of specifying `cardButtons` and `data` you must override `cardViewParameters` getter to provide both look and data for the card view.
+With SPFx 1.18, we introduce a new base class and configuration model for card views. Instead of having a separate base class for each card view "template", we provide a new single base class `BaseComponentsCardView<TProperties = {}, TState = {}, TParameters extends ComponentsCardViewParameters = ITextCardViewParameters>`.
+Instead of specifying `cardButtons` and `data`, you must override the `cardViewParameters` getter to provide both look and data for the card view.
 
 As part of the `cardViewParameters` property, you can specify the following:
 - **image**: Image parameters for the card view.
@@ -40,14 +40,14 @@ As part of the `cardViewParameters` property, you can specify the following:
 - **body**: Body components for the card view.
 - **footer**: Footer components for the card view.
 
-We also provide helper function to simplify the creation of the predefined views:
+We also provide helper functions to simplify the creation of the predefined views:
 ``ts
 function BasicCardView(configuration: IBasicTextCardViewConfiguration): ITextCardViewParameters;
 function PrimaryTextCardView(configuration: IPrimaryTextCardViewConfiguration): ITextCardViewParameters;
 function ImageCardView(configuration: IImageCardViewConfiguration): ITextCardViewParameters;
 ``
 
-These helpers can be also used to easily migrate your existing card views to the new model.
+These helpers can also be used to migrate your existing card views to the new model easily.
 
 So, the migration steps are:
 1. Update the definition of your card view class to inherit from the new base class:
@@ -64,8 +64,7 @@ export class CardView extends BaseComponentsCardView<
   }
 ```
 
-1. Override `cardViewParameters` getter to provide both look and data for the card view. You can use one of the helper functions to simplify the migration:
-
+1. Override the `cardViewParameters` getter to provide both look and data for the card view. You can use one of the helper functions to simplify the migration:
 
 ```ts
 import { BaseComponentsCardView, BasicCardView } from '@microsoft/sp-adaptive-card-extension-base';
@@ -77,13 +76,15 @@ import { BaseComponentsCardView, BasicCardView } from '@microsoft/sp-adaptive-ca
     });
   }
 ```
-1. Remove `cardButtons` and `data` properties from your card view class.
+
+1. Remove the `cardButtons` and `data` properties from your card view class.
 
 ## Examples
-Below are the examples of `cardViewParameters` getters for the default scaffolded Basic, Primary Text and Image Card Views.
+Below are the examples of `cardViewParameters` getters for the default scaffolded Basic, Primary Text, and Image Card Views.
 
 ### Basic Card View
 `cardButtons` and `data` properties for the scaffolded Basic Card View look like this:
+
 ```ts
   public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
     return [
@@ -108,6 +109,7 @@ Below are the examples of `cardViewParameters` getters for the default scaffolde
 ```
 
 The same configuration using `cardViewParameters`:
+
 ```ts
   public get cardViewParameters(): ITextCardViewParameters {
     return BasicCardView({
@@ -135,6 +137,7 @@ The same configuration using `cardViewParameters`:
 
 ### Primary Text Card View
 `cardButtons` and `data` properties for the scaffolded Primary Text Card View look like this:
+
 ```ts
   public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
     return [
@@ -160,6 +163,7 @@ The same configuration using `cardViewParameters`:
 ```
 
 The same configuration using `cardViewParameters`:
+
 ```ts
   public get cardViewParameters(): ITextCardViewParameters {
     return PrimaryTextCardView({
@@ -191,6 +195,7 @@ The same configuration using `cardViewParameters`:
 
 ### Image Card View
 `cardButtons` and `data` properties for the scaffolded Image Card View look like this:
+
 ```ts
   public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
     return [
