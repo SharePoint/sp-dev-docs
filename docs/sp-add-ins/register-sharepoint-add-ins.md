@@ -44,6 +44,9 @@ You can register your add-in in one of three ways, depending on where you are in
 |Use the AppRegNew.aspx page. |Use the AppRegNew form to register your SharePoint Add-in if you are using the add-in only in one tenant or farm.<br/><br/>For example, if you're creating add-ins for a single organization and you're going to distribute them via the organization add-in catalog, you can use the AppRegNew.aspx page of any website in a tenancy or farm to register the add-in.<br/><br/>You cannot publish an add-in that is registered with AppRegNew.aspx to the Office Store. For add-ins that are published to the Office Store, you must get an identity from the Seller Dashboard.|
 
 ### To register by using AppRegNew.aspx
+> [!NOTE]
+> Site owners are blocked to register ACS in AppRegNew.aspx by default. To enable it, use the command [Set-SPOTenant -SiteOwnerManageLegacyServicePrincipalEnabled $true](https://review.learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps&branch=pr-en-us-432#-siteownermanagelegacyserviceprincipalenabled).
+
 
 1. Go to `<site collection url>/_layouts/15/AppRegNew.aspx` by using a web browser.
 
