@@ -13,7 +13,7 @@ We're looking into release more frequent smaller release to be available also in
 > [!TIP]
 > It's safe to keep on using SharePoint Framework 1.17 version, but we do recommend always using the latest version in the production, which in this case would be the 1.17.4, which has few minor improvements as listed in this document.
 
-**Released:** May 31, 2023
+**Released:** June 21, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
