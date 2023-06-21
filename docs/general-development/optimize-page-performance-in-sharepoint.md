@@ -1,7 +1,7 @@
 ---
 title: Optimize page performance in SharePoint
 description: Learn about features to improve performance in SharePoint pages and enhance experiences in geographically distributed implementations.
-ms.date: 06/13/2022
+ms.date: 03/28/2023
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
 ms.localizationpriority: high
 ---
@@ -243,7 +243,7 @@ To use MDS, controls and web parts have to register page resources by using the 
 
 | Common practice for rendering content                                                                                                                                                                             | MDS-compliant alternative                                                                       |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------- |
-| `output.Write("<input type=\\"hidden\\" name=\\"");`<br>`output.Write(SPHttpUtility.NoEncode("HiddenField));`<br/>`output.Write("\\" value=\\"");`<br/>`output.Write(DigestValue);`<br/>`output.Write("\\" />");` | `SPPageContentManager.RegisterHiddenField(this, "HiddenField", DigestValue);`                   |
+| `output.Write("<input type=\\"hidden\\" name=\\"");`<br />`output.Write(SPHttpUtility.NoEncode("HiddenField));`<br />`output.Write("\\" value=\\"");`<br />`output.Write(DigestValue);`<br />`output.Write("\\" />");` | `SPPageContentManager.RegisterHiddenField(this, "HiddenField", DigestValue);`                   |
 | `Page.ClientScript.RegisterClientScriptBlock(typeof(MyType), "MyKey", "var myvar=1", true);`                                                                                                                      | `SPPageContentManager.RegisterClientScriptBlock(this, typeof(MyType), "MyKey", "var myvar=1");` |
 
 > [!NOTE]

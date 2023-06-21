@@ -1,7 +1,7 @@
 ---
 title: Tenant Wide Deployment of SharePoint Framework Extensions
 description: Activating SharePoint Framework extensions across tenant from centralized location.
-ms.date: 02/16/2021
+ms.date: 03/28/2023
 ms.localizationpriority: high
 ---
 # Tenant-wide Deployment of SharePoint Framework Extensions
@@ -141,8 +141,16 @@ Below xml definition shows how the optional values could be used as part of the 
 </Elements>
 ```
 
-When an administrator adds a  solution that has a **ClientSideInstance.xml** file inside of it to App Catalog, specific warning message is shows to ensure that presence of the automated configuration is known.
+## Trusting the solution during deployment
 
-![Trusting SharePoint Framework package deployed to tenant app catalog](../../../images/ext-tenant-wide-solution-deployment.png)
+When an administrator adds a solution that has a **ClientSideInstance.xml** file inside of it to App Catalog, specific warning message is shows to ensure that presence of the automated configuration is known.
+
+The following dialog is what administrators will see for app catalogs that use the classic experience, such as SharePoint on-premises deployments:
+
+![Trusting SharePoint Framework package deployed to tenant app catalog (classic experience)](../../../images/ext-tenant-wide-solution-deployment.png)
+
+A similar, but slightly different, dialog is shown for the SharePoint modern experience, such as SharePoint Online deployments:
+
+![Trusting SharePoint Framework package deployed to tenant app catalog (modern experience)](../../../images/ext-tenant-wide-solution-deployment-modern.png)
 
 After solution deployment, an administrator can change the deployment settings from the **Tenant Wide Extension** list.

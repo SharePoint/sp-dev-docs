@@ -32,22 +32,20 @@ Site templates can be used each time a new site is created to apply a consistent
 You create site templates and register them in SharePoint to one of the modern template sites: the Team site or the Communication site. You can see how this works in the following steps.
 
 1. Go to the SharePoint start page on your developer tenant.
-
-2. Choose **Create site**.
+1. Choose **Create site**.
 
    You'll see the two modern template sites: **Team site** and **Communication site**.
 
-3. Choose the type of site needed.
+1. Choose the type of site needed.
 
-- SharePoint will automatically create a communication site using the **Topic** site template.
-- Had you chosen the default Team site, SharePoint will create a new site using the **Team collaboration** template.
+    - SharePoint will automatically create a communication site using the **Topic** site template.
+    - Had you chosen the default Team site, SharePoint will create a new site using the **Team collaboration** template.
 
-For more information about how you can change the default site templates, see [Customize a default site template](customize-default-site-design.md).
+    For more information about how you can change the default site templates, see [Customize a default site template](customize-default-site-design.md).
 
-4. Navigate to the **Settings** icon, and select **Apply site template** to review Microsoft-provided site templates based on the type of site you chose in step three.
+1. Navigate to the **Settings** icon, and select **Apply site template** to review Microsoft-provided site templates based on the type of site you chose in step three.
 
 When a site template is selected, SharePoint creates the new site, and runs site scripts for the site template. The site scripts provide the details for the template such as creating new lists or applying a theme. These script actions are run in the background. When the scripts are complete the page will refresh to display the site script details.
-
 
 > [!NOTE]
 > Site templates can now be applied to previously created modern site collections. For more information, see the [REST API](site-design-rest-api.md) and [PowerShell](site-design-powershell.md) articles.
@@ -109,8 +107,6 @@ The following example is a script that has two top-level actions. First, it appl
 }
 ```
 
-<br/>
-
 Each action in a site script is specified by a **verb** value in the JSON. In the previous script, the first action is specified by the **applyTheme** verb. Next, the **createSPList** verb creates the list. Notice that the **createSPList** verb contains its own set of verbs that run additional actions on only the list.
 
 **Available actions include:**
@@ -130,6 +126,7 @@ Each action in a site script is specified by a **verb** value in the JSON. In th
 For a complete list of available actions and their parameters, see the [JSON schema](site-design-json-schema.md).
 
 > [!NOTE]
+>
 > - Actions marked with ** are automatically blocked for [channel sites](/sharepoint/teams-connected-sites).
 > - For libraries and lists, use the PowerShell command [Get-SPOSiteScriptFromList](/powershell/module/sharepoint-online/Get-SPOSiteScriptFromList) to create the site script syntax from an existing SharePoint list.
 
@@ -166,73 +163,7 @@ C:\> Add-SPOSiteDesign `
   -Description "Creates customer list and applies standard theme"
 ```
 
-<!--
-```javascript
-var site_script = {
-  "$schema": "schema.json",
-  "actions": [
-    {
-      "verb": "applyTheme",
-      "themeName": "Contoso Explorers"
-    },
-    {
-      "verb": "createSPList",
-      "listName": "Customer Tracking",
-      "templateType": 100,
-      "subactions": [
-        {
-          "verb": "SetDescription",
-          "description": "List of Customers and Orders"
-        },
-        {
-          "verb": "addSPField",
-          "fieldType": "Text",
-          "displayName": "Customer Name",
-          "isRequired": false,
-          "addToDefaultView": true
-        },
-        {
-          "verb": "addSPField",
-          "fieldType": "Number",
-          "displayName": "Requisition Total",
-          "addToDefaultView": true,
-          "isRequired": true
-        },
-        {
-          "verb": "addSPField",
-          "fieldType": "User",
-          "displayName": "Contact",
-          "addToDefaultView": true,
-          "isRequired": true
-        },
-        {
-          "verb": "addSPField",
-          "fieldType": "Note",
-          "displayName": "Meeting Notes",
-          "isRequired": false
-        }
-      ]
-    }
-  ],
-  "bindata": { },
-  "version": 1
-};
-
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title,Description=@desc)?@title='Contoso theme and list'&@desc='this script creates a list named customer tracking and sets the contoso explorers company theme'", site_script);
-
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign",{
-  info:{
-    Title:"Contoso customer tracking", Description:"Creates customer list and applies standard theme",  SiteScriptIds:["607aed52-6d61-490a-b692-c0f58a6981a1"],  WebTemplate:"64"
-   }
-  });
-```
-
--->
-
-<br/>
-
 In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript** REST API returns a site script ID. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPOSiteDesign** cmdlet or **CreateSiteDesign** REST API.
-
 
 | Parameter            | Value                | Site template type  |
 | :------------------- | :------------------- |:----------------|
@@ -241,14 +172,12 @@ In the previous example, the **Add-SPOSiteScript** cmdlet or **CreateSiteScript*
 | WebTemplate    | 68 | Communication site template |
 | WebTemplate    | 69 | Channel site template |
 
-
-
 For step-by-step information about creating a site template, see [Get started creating site templates.](get-started-create-site-design.md)
 
 > [!NOTE]
+>
 > - A site template can run multiple scripts. The script IDs are passed in an array, and they run in the order listed.
 > - The former term for site templates may still appear in certain cmdlet and script labels as "site design."
-
 
 ## PnP provisioning and customization using Power Automate
 
@@ -256,19 +185,14 @@ One action provided by site scripts is the ability to trigger a Power Automate f
 
 If you use the PnP provisioning engine to automate site creation, you can use a Power Automate flow to integrate with site templates. You can maintain all your existing provisioning scripts as well as create new custom provisioning scripts by using this technique.
 
-<br/>
-
 ![Process of triggering a Microsoft Flow](images/process-for-triggering-a-custom-flow.png)
 
 The process works as follows:
 
 1. The script instantiates your Power Automate flow using a URL with additional details.
-
-2. The flow sends a message to an Azure storage queue that you have configured.
-
-3. The message triggers a call to an Azure function that you have configured.
-
-4. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations.
+1. The flow sends a message to an Azure storage queue that you have configured.
+1. The message triggers a call to an Azure function that you have configured.
+1. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations.
 
 For a step-by-step tutorial about how to configure your own Power Automate flow with PnP provisioning, see [Build a complete site template using the PnP provisioning engine](site-design-pnp-provisioning.md).
 
@@ -286,12 +210,6 @@ Grant-SPOSiteDesignRights `
   -Principals "nestorw@onmicrosoft.com" `
   -Rights View
 ```
-
-<!--
-```javascript
-RestRequest("/_api/Microsoft.SharePoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.onmicrosoft.com”], grantedRights:1});
-```
--->
 
 For more information about working with scopes, see [Scoping access to site templates](site-design-scoping.md).
 

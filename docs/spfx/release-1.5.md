@@ -15,6 +15,7 @@ Key changes are around the introduction of the new *plusbeta* model and many oth
 ## Upgrading projects from v1.4.1 to v1.5
 
 1. In the project's **package.json** file, identify all SPFx v1.4.1 packages. For each SPFx package:
+
     1. Uninstall the existing v1.4.1 package:
 
         ```console

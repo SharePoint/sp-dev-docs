@@ -1,7 +1,7 @@
 ---
 title: Use the site collection app catalog
 description: Using site collection app catalogs, SharePoint tenant administrators can decentralize the management and scope the deployment of SharePoint add-ins and SharePoint Framework solutions to specific sites.
-ms.date: 06/09/2022
+ms.date: 05/19/2023
 ms.assetid: fdf7ecb1-9951-475b-b058-3285fba77b68
 ms.localizationpriority: high
 ---
@@ -87,7 +87,7 @@ Add-PnPSiteCollectionAppCatalog -site https://contoso.sharepoint.com/sites/marke
 Alternatively, use the `spo site appcatalog add` command if you are using the CLI for Microsoft 365:
 
 ```console
-m365 spo site appcatalog add --url https://contoso.sharepoint.com/sites/marketing
+m365 spo site appcatalog add --siteUrl https://contoso.sharepoint.com/sites/marketing
 ```
 
 After executing this script, the **Apps for SharePoint** library will be added to your site collection where you will be able to deploy SharePoint add-ins and SharePoint Framework solutions.

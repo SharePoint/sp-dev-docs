@@ -2,7 +2,7 @@
 title: WebTemplate element (PropertiesDefinition complexType)
 description: Describes the WebTemplate element (PropertiesDefinition complexType) and provides the element's definition, information, parent elements, and attributes.
 manager: soliver
-ms.date: 06/09/2022
+ms.date: 03/28/2023
 ms.audience: Developer
 ms.topic: article
 ms.localizationpriority: medium
@@ -22,18 +22,20 @@ The web template to use when creating an add-in web.
 
 ## Element information
 
-|  Resource |  File |
-|---|---|
-| **Element type**  | WebTemplateDefinition |
-| **Namespace**  | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
-| **Schema file**  | appmanifest.xsd |
-
+|     Resource     |                            File                             |
+| ---------------- | ----------------------------------------------------------- |
+| **Element type** | WebTemplateDefinition                                       |
+| **Namespace**    | `http://schemas.microsoft.com/sharepoint/2012/app/manifest` |
+| **Schema file**  | appmanifest.xsd                                             |
 
 ## Definition
 
-```XML 
-    <xs:element name="WebTemplate"  type="WebTemplateDefinition"  minOccurs="0"  maxOccurs="1">
-    </xs:element>
+```XML
+<xs:element name="WebTemplate"
+            type="WebTemplateDefinition"
+            minOccurs="0"
+            maxOccurs="1">
+</xs:element>
 ```
 
 ## Elements and attributes
@@ -42,22 +44,17 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Parent elements
 
-|Element|Type|Description
-|-------|----|-----------|
-<a href="properties-element-appdefinition-complextypesharepoint-add-in-manifest.md">Properties</a>|<a href="propertiesdefinition-complextype-sharepoint-add-in-manifest.md">PropertiesDefinition</a>|Contains information that is global to the add-in.|
-
-<br/>
+|                                         Element                                         |                                          Type                                          |                    Description                     |
+| --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| [Properties](properties-element-appdefinition-complextypesharepoint-add-in-manifest.md) | [PropertiesDefinition](propertiesdefinition-complextype-sharepoint-add-in-manifest.md) | Contains information that is global to the add-in. |
 
 ### Child elements
 
 None.
 
-<br/>
-
 ### Attributes
-
 
 | Attribute | Type | Required | Description | Possible values |
 | --- | --- | --- | --- | --- |
 | FeatureId (obsolete) | [GUID](guid-simpletype-sharepoint-add-in-manifest.md) | optional | The Id of the Feature that contains the WebTemplate. | Obsolete. Do not use. Values of the GUID type. |
-| Id  | [WebTemplateIdDefinition](webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md) | required | The Id of the WebTemplate that should be used when creating the add-in web. | This type is a string of the form `{hyphenated\_GUID}#web\_template_name`  <br>  <br>The hyphenated_GUID is the GUID of the add-in web Feature that contains the [WebTemplate Element (Web Template)](webtemplate-element-web-template.md) that defines the site type of the add-in web.  <br>  <br>The web\_template\_name is the value of the **Name** attribute of that [WebTemplate Element (Web Template)](webtemplate-element-web-template.md). Note that the braces `{}` and the `#` are mandatory. |
+| Id  | [WebTemplateIdDefinition](webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md) | required | The Id of the WebTemplate that should be used when creating the add-in web. | This type is a string of the form `{hyphenated\_GUID}#web\_template_name`  <br \><br \>The hyphenated_GUID is the GUID of the add-in web Feature that contains the [WebTemplate Element (Web Template)](webtemplate-element-web-template.md) that defines the site type of the add-in web. <br \><br \>The web\_template\_name is the value of the **Name** attribute of that [WebTemplate Element (Web Template)](webtemplate-element-web-template.md). Note that the braces `{}` and the `#` are mandatory. |

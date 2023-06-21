@@ -70,14 +70,14 @@ In following example configuration, `skipFeatureDeployment` is set to `true`, wh
 
 When the solution with the `skipFeatureDeployment` attribute set to `true` is deployed to the tenant app catalog, the administrator is given an option to configure the solution to be deployed centrally across the tenant.
 
-By default, the **Make this solution available to all sites in the organization** check box isn't selected. If the check box is selected by the administrator, components in the solutions are automatically visible and available across the tenant.
+By default, the **Enable this app and add it to all sites** check box is selected and components in the solutions are automatically visible and available across the tenant.
 
-![The "Make this solution available to all sites in the organization" setting is visible when solution is deployed to app catalog](../images/tenant-deploy-app-catalog.png)
+![The "Enable this app and add it to all sites" setting is visible when solution is deployed to app catalog](../images/spfx-add-to-all-sites.png)
 
 Notice that because the solution and site-specific upgrade actions are only available when you use the feature framework, there's no specific upgrade option for the centrally deployed solutions. These solutions can be updated by updating the solution-specific assets in the CDN and by updating and deploying the package in the app catalog. This automatically updates all existing component instances across the tenant to use the latest component assets, such as JavaScript files and updated CSS files.
 
 > [!WARNING]
-> For solution packages containing site extension(s), selecting the **Make this solution available to all sites in the organization** check box is only required to activate the site extension(s) initially. When updating existing solution packages, selecting the check box during deployment may create duplicate entries in the  **Tenant Wide Extension** list.
+> For solution packages containing site extension(s), selecting the **Enable this app and add it to all sites** check box is only required to activate the site extension(s) initially. When updating existing solution packages, selecting the check box during deployment may create duplicate entries in the  **Tenant Wide Extension** list.
 
 ## Client-side web part visibility on SharePoint sites
 
@@ -87,7 +87,7 @@ Web parts included in solutions that have been centrally deployed are immediatel
 
 [SharePoint Framework Extensions](./extensions/overview-extensions.md) are immediately available to be used on SharePoint sites. This means that they can be associated with `ClientSideComponentId` properties in the specific SharePoint elements, such as **fields** and **user custom actions**.
 
-Additionally, if an administrator selects the **Make this solution available to all sites in the organization** checkbox during deployment, automations in the solution package may create entries in the **Tenant Wide Extensions** list on the app catalog. Entries in this list manage tenant-wide activation of site extensions. The automations are described by the **ClientSideInstance.xml** file as referenced in **./config/package-solution.json**.
+Additionally, if an administrator selects the **Enable this app and add it to all sites** checkbox during deployment, automations in the solution package may create entries in the **Tenant Wide Extensions** list on the app catalog. Entries in this list manage tenant-wide activation of site extensions. The automations are described by the **ClientSideInstance.xml** file as referenced in **./config/package-solution.json**.
 
 For more information, see [Tenant Wide Deployment of SharePoint Framework Extensions](./extensions/basics/tenant-wide-deployment-extensions.md).
 

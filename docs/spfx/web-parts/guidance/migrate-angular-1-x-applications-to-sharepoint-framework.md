@@ -221,7 +221,7 @@ Although the web part is working correctly, it doesn't look the same as the Angu
     }
     ```
 
-2. In the **./src/webparts/toDo/ToDoWebPart.ts** file, in the `render()` method, change the application rendering template to use new Office UI Fabric icons.
+1. In the **./src/webparts/toDo/ToDoWebPart.ts** file, in the `render()` method, change the application rendering template to use new Office UI Fabric icons.
 
     ```typescript
     export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {

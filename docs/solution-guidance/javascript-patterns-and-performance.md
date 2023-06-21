@@ -1,18 +1,18 @@
 ---
 title: JavaScript Patterns and Performance
 description: Years ago, ASP.NET gave us server-side UI control rendering, and it was good. That server-side rendering, however, requires full trust code. Now that we have transitioned to SharePoint and Office 365, full trust code is no longer an option. That means server-side UI control rendering won't work for us any more.
-ms.date: 07/15/2022
+ms.date: 03/28/2023
 ms.localizationpriority: medium
 ---
 # JavaScript Patterns and Performance
 
 Years ago, ASP.NET gave us server-side UI control rendering, and it was good. That server-side rendering, however, requires full trust code. Now that we have transitioned to SharePoint and Office 365, full trust code is no longer an option. That means server-side UI control rendering won't work for us any more.
 
-Yet, businesses still need custom UI functionality for their websites and apps. That means custom UI functionality must be moved from the server-side to the client-side. 
+Yet, businesses still need custom UI functionality for their websites and apps. That means custom UI functionality must be moved from the server-side to the client-side.
 
 Client-side JavaScript is now the way to go for UI control rendering.
 
-## <a name="JavaScriptPatterns"></a> JavaScript Patterns
+## JavaScript Patterns
 
 Since client-side JavaScript is the path, what are the best ways to implement client-side JavaScript? How does one get started?
 
@@ -20,33 +20,33 @@ There are several options:
 
 |Option|Description|
 |:---|:---|
-|JavaScript Embedding | [Site.UserCustomActions](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.site.usercustomactions.aspx) or [Web.UserCustomActions](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.web.usercustomactions.aspx) allow for the inclusion of script directly into the page markup. This is used in the [Loader Pattern](#LoaderPattern) discussed below|
+|JavaScript Embedding | [Site.UserCustomActions](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.site.usercustomactions.aspx) or [Web.UserCustomActions](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.web.usercustomactions.aspx) allow for the inclusion of script directly into the page markup. This is used in the [Loader Pattern](#the-loader-pattern) discussed below|
 |Display Templates | Applies to Views and Search. You don't have to deploy any kind of an app or provider hosted code. It's simply a JavaScript file that can be uploaded to (for example) the style library to customize views. You can create any view required by using JavaScript|
 |SharePoint Hosted Add-Ins | Uses JSOM to communicate back to the host web or the add-in web. It gives access to the Web Proxy for cross domain calls|
 |Provider Hosted Add-Ins | Enables the creation of complex applications across a variety of technology stacks - while maintaining secure integration with SharePoint|
 |JSLink | Allows you to load one or more JavaScript files in many OOTB web parts and views|
 |ScriptEditor Webpart | Include script directly or loaded through script tags with markup to create complex single page applications hosted entirely within the SharePoint site|
 
-Don't think you are locked into these choices if you feel a different option would be better for your situation. 
+Don't think you are locked into these choices if you feel a different option would be better for your situation.
 
-## <a name="JavaScriptPerformance"></a> JavaScript Performance
+## JavaScript Performance
 
 At each step of the development process, it's important to keep performance in mind. Here are a few things that make a big difference in JavaScript performance:
 
 |Option|Description|
 |:---|:---|
-|[Reduce the number of requests](#ReduceTheNumberOfRequests) | Fewer requests means fewer round-trips to the server, reducing latency.|
-|[Retrieve only the data you need](#RetrieveOnlyTheDataYouNeed) | Reduce the amount of data sent over the wire. Also reduces server load.|
-|[Provide a good page load experience](#ProvideAGoodUserExperience) | Keep your UI responsive to the user. For example, update the menus on the page *before* you start the download of 100+ records.|
-|[Use asynchronous calls and patterns whenever possible](#EverythingIsAsynchronous) | Polling is a heavier burden on performance than using an asynchronous call or callback.| 
-|[Caching is key](#ClientSideCaching) | Caching further reduces the burden on the server while giving immediate performance improvement.|
-|[Prepare for more page views than you ever imagined](#PriceOfPopularity) | A data-heavy landing page is okay when you only have a few hits. But if you get thousands of hits, that can really impact performance.|
+|[Reduce the number of requests](#reduce-the-number-of-requests) | Fewer requests means fewer round-trips to the server, reducing latency.|
+|[Retrieve only the data you need](#retrieve-only-the-data-you-need) | Reduce the amount of data sent over the wire. Also reduces server load.|
+|[Provide a good page load experience](#provide-a-good-user-experience) | Keep your UI responsive to the user. For example, update the menus on the page *before* you start the download of 100+ records.|
+|[Use asynchronous calls and patterns whenever possible](#everything-is-asynchronous) | Polling is a heavier burden on performance than using an asynchronous call or callback.|
+|[Caching is key](#client-side-caching) | Caching further reduces the burden on the server while giving immediate performance improvement.|
+|[Prepare for more page views than you ever imagined](#the-price-of-popularity) | A data-heavy landing page is okay when you only have a few hits. But if you get thousands of hits, that can really impact performance.|
 
-## <a name="WhatIsMyCodeDoing"></a> What is my code doing
+## What is my code doing
 
 For performance, it's important to know what your code is doing at any point. This lets you identify ways to improve efficiency. Below are a few good ways to do just that.
 
-### <a name="ReduceTheNumberOfRequests"></a> Reduce the number of requests
+### Reduce the number of requests
 
 Always make the fewest and smallest requests possible. Each request you eliminate reduces the performance burden on the server and on the client. And making smaller requests further reduces the performance burden.
 
@@ -54,45 +54,45 @@ There are several ways to reduce requests and reduce request size.
 
 - Limit the number of JavaScript files in production. Separating your JavaScript files works well for development, but not so well for production. Combine your JavaScript files into a single JavaScript file, or as few JavaScript files as you can.
 - Shrink file sizes. Minimize your production JavaScript files by removing line breaks, white space, and comments. There are several JavaScript minify programs and websites that you can use to greatly reduce your JavaScript file sizes.
-- Use browser file caching to reduce requests. The updated [Loader Pattern](#LoaderPattern) below is a good way to expand upon this idea.
+- Use browser file caching to reduce requests. The updated [Loader Pattern](#the-loader-pattern) below is a good way to expand upon this idea.
 
-### <a name="RetrieveOnlyTheDataYouNeed"></a> Retrieve only the data you need
+### Retrieve only the data you need
 
 When requesting data, remember to focus your requests to what you actually need. Downloading an entire article to obtain the title, for example, will reduce performance quite a bit.
 
 - Use server filtering, select, and limits to minimize traffic over the wire.
 - Don't request all articles when you want only the first five, as another example.
-- Don't ask for the entire property bag if you want only one property. In one example, a script needed only one property, but requested the entire property bag, which turned out to be 800 KB. Also remember that the size of an object can change over time, so what is only a few kilobytes now can become megabytes in size later in the product lifecycle. 
+- Don't ask for the entire property bag if you want only one property. In one example, a script needed only one property, but requested the entire property bag, which turned out to be 800 KB. Also remember that the size of an object can change over time, so what is only a few kilobytes now can become megabytes in size later in the product lifecycle.
 
-### <a name="DontRequestDataYouWillDiscard"></a> Don't request data that you will discard unused
+### Don't request data that you will discard unused
 
-If you retrieve more data than you actually use, think of it as an opportunity to better filter your initial query. 
+If you retrieve more data than you actually use, think of it as an opportunity to better filter your initial query.
 
 - Request only the fields you need, like Name and Address, not the entire record.
 - Make specific, deliberate filter requests. For example, if you want to list the available articles, get the Title, PublishingDate, and Author. Leave the rest of the fields out of the request.
 
-### <a name="ProvideAGoodUserExperience"></a> Provide a good user experience
+### Provide a good user experience
 
 Jerky, inconsistent user interfaces impact not just performance, but also perceived performance. Write your code in such a way as to give a smooth experience.
 
 - Use a spinner to indicate that things are loading or taking time.
 - Understand the order of execution for your code, and shape it for the best user experience. For example, if you plan to retrieve a lot of data from the server, and you plan to change the user interface by hiding a menu, hide the menu first. That will prevent a staggered UI experience for the user.
 
-## <a name="EverythingIsAsynchronous"></a> Everything is Asynchronous
+## Everything is Asynchronous
 
-Every code activity in the browser should be considered asynchronous. Your files load in some order, you must wait for the DOM to load, and your requests back to SharePoint will complete at different speeds. 
+Every code activity in the browser should be considered asynchronous. Your files load in some order, you must wait for the DOM to load, and your requests back to SharePoint will complete at different speeds.
 
 - Understand how your code operates in time.
 - Use events and callbacks instead of polling.
 - Use promises. In jQuery they're called **Deferred** objects. There are similar concepts in Q, WinJS, and ES6.
 - Use the asynchronous call in favor of the non-asynchronous call.
 - Use asynchronous any time there could be a delay:
-	- During an AJAX request.
-	- During any significant DOM manipulation.
+  - During an AJAX request.
+  - During any significant DOM manipulation.
 
 Asynchronous patterns improve performance and responsiveness and allow for the effective chaining of dependent actions.
 
-## <a name="ClientSideCaching"></a> Client Side Caching
+## Client Side Caching
 
 Client side caching is one of the most often missed performance enhancements you can add to your code.
 
@@ -100,17 +100,18 @@ There are three different places you can cache your data:
 
 |Option|Description|
 |:---|:---|
-|Session Storage|Stores data as a key/value pair on the client. This is per session storage which is always stored as strings. <br /> JSON.stringify() will convert your JavaScript objects to strings which helps to store objects.
-|Local Storage|<p>Stores data as a key/value pair on the client. This is persistent across sessions which is always stored as strings.</p><p>JSON.stringify() will convert your JavaScript objects to strings which helps to store objects.</p>|
-|Local Database|Stores relational data on the client. Frequently uses SQL-Lite as the database engine.<br>Local Database storage is not always available on all browsers&mdash;Check target browser support
+|Session Storage|Stores data as a key/value pair on the client. This is per session storage which is always stored as strings. <br /><br /> `JSON.stringify()` will convert your JavaScript objects to strings which helps to store objects.
+|Local Storage|Stores data as a key/value pair on the client. This is persistent across sessions which is always stored as strings. <br /><br />`JSON.stringify()` will convert your JavaScript objects to strings which helps to store objects.|
+|Local Database|Stores relational data on the client. Frequently uses SQL-Lite as the database engine.<br /><br />Local Database storage is not always available on all browsers&mdash;Check target browser support
 
-When caching, keep in mind the storage limits available to you, and the freshness of your data. 
-- If you are reaching the end of your storage limits, it might be wise to remove the older or less important cached data. 
-- Different kinds of data can become stale faster than others. A list of news articles can be stale in five to ten minutes, but a user's profile name can often be safely cached for 24 hours or more. 
+When caching, keep in mind the storage limits available to you, and the freshness of your data.
+
+- If you are reaching the end of your storage limits, it might be wise to remove the older or less important cached data.
+- Different kinds of data can become stale faster than others. A list of news articles can be stale in five to ten minutes, but a user's profile name can often be safely cached for 24 hours or more.
 
 Local and session storage doesn't have expiration built-in, but cookies do. You can tie your stored data to a cookie to add expiration to your local and session storage. You can also create a storage wrapper that includes an expiration date and check this in your code.
 
-## <a name="PriceOfPopularity"></a> The Price of Popularity
+## The Price of Popularity
 
 How often is your page viewed? In the classic scenario, the corporate home page is set as the launch page for all browsers across the organization. Then you suddenly get far more traffic than you ever imagined. Every byte of content is suddenly magnified in the server performance and bandwidth that your home page consumes.
 
@@ -118,7 +119,7 @@ The solution: Go light on the home page and link to the other content.
 
 Data-heavy dashboards are also a candidate for a provider hosted app which can scale independently.
 
-## <a name="LoaderPattern"></a> The Loader Pattern
+## The Loader Pattern
 
 The goal of the loader pattern is to provide a way to embed an unknown number of remote scripts into a site without having to update the site. The updates can be done on the remote CDN and will update all sites.
 
@@ -155,7 +156,7 @@ static void Main(string[] args)
                                 } else {
                                     pnpLoadFiles();
                                 }
-                            });    
+                            });
                         });";
 
         // load the collection of existing links
@@ -278,7 +279,7 @@ From PnP-dev\Samples\Core.JavaScript\Core.JavaScript.CDN\js\pnp-loader.js
 
 This pattern eases deployment and updates to sites. It is especially useful when deploying or updating across thousands of site collections.
 
-## <a name="CachingCurrentUserInfo"></a> Caching the current user
+## Caching the current user
 
 If the user info is already cached, this function gets the data from the session cache. If the user info is not stored in the cache, it gets the specific user info we need and stores it in the cache.
 
@@ -340,7 +341,7 @@ From PnP-dev\Samples\Core.JavaScript\Core.JavaScript.CDN\js\pnp-core.js:
 }
 ```
 
-## <a name="CachingPatternUsingAsynchronousAndDeferred"></a> Caching pattern using asynchronous and Deferred
+## Caching pattern using asynchronous and Deferred
 
 Another caching pattern can be found in pnp-clientcache.js storageTest, which is taken from the modernizer storageTest. It contains functions for add, get, remove, and getOrAdd which will return the cached data if it's in the cache, or retrieve the data from the server and add it to the cache if it is not in the cache which saves writing repetitive code in the calling function. get uses JSON.parse to test for expiration since expiration is not a feature in local storage. _createPersistable stores the JavaScript object in the local storage cache.
 
@@ -434,7 +435,7 @@ caching: {
 
 For a more complex usage of asynchronous and Deferred, you can refer to the developer dashboard in pnp-clientcache.js
 
-## <a name="Resources"></a> Resources
+## Resources
 
 ### See Also
 - [Performance considerations in the SharePoint Add-in model](/sharepoint/dev/solution-guidance/performance-considerations-sharepoint-add-in)
