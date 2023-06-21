@@ -65,7 +65,7 @@ Ensure the following before you begin:
     > $params = @{
     >     PasswordCredential = @{
     >         DisplayName = "NewSecret" # Replace with a firendly name.
-    >         EndDateTime = "2025-01-01T00:00:00Z" # Optional. Specify the end date you want. Using ISO 8601 format and is always in UTC time.
+    >         EndDateTime = "2025-01-01T00:00:00Z" # Optional. Specify the end date you want. Using ISO 8601 format.
     >     }
     > }
     > ```
