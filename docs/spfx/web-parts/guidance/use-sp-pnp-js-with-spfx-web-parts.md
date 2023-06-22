@@ -1,7 +1,7 @@
 ---
 title: Use @pnp/sp (PnPJS) library with SharePoint Framework web parts
 description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching.
-ms.date: 04/12/2023
+ms.date: 06/22/2023
 ms.localizationpriority: high
 ---
 
@@ -55,7 +55,7 @@ You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tre
 
     ![Project as first opened in Visual Studio Code](../../../images/sp-pnp-js-guide-first-open.png)
 
-1. Set up the location of your SharePoint hosted workbench by modifying the `initialPage` value in the config/serve.json to point to your tenant/site.
+1. Set up the location of your SharePoint-hosted workbench by modifying the `initialPage` value in the config/serve.json to point to your tenant/site.
 
 ```json
 {
@@ -68,7 +68,7 @@ You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tre
 
 ## Install and set up @pnp/sp
 
-After your project is created, you must install and set up @pnp/sp package. In addition we'll use the @pnp/logging extension, but that is optional. These steps are common for any project type (React, etc).
+After your project is created, you must install and set up **@pnp/sp** package. In addition, we'll use the @pnp/logging extension, but that is optional. These steps are common for any project type (React, etc).
 
 ```console
 npm install @pnp/logging @pnp/sp --save
@@ -79,7 +79,7 @@ npm install @pnp/logging @pnp/sp --save
 >Note: PnPjs version 3.x is only supported in SPFx version 1.14 and higher and NodeJs version 12.x and higher.
 
 1. Update the rush stack compiler to 4.2. This is covered in this [great article by Elio](https://www.eliostruyf.com/define-the-typescript-version-you-want-to-use-in-sharepoint-framework/), but the steps are listed below.
-    - Uninstall existing rush stack compiler (replace the x with the version installed in your package.json file):
+    - Uninstall the existing rush stack compiler (replace the x with the version installed in your package.json file):
       `npm uninstall @microsoft/rush-stack-compiler-3.x`
     - Install 4.2 version:
       `npm i @microsoft/rush-stack-compiler-4.2`
@@ -118,13 +118,13 @@ Because the @pnp/sp library constructs REST requests, it needs to know the URL t
 
 There are [two ways](https://pnp.github.io/pnpjs/getting-started) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
 
-1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the pnp project configuration file (more on this file below):
+1. Open the **src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts** file, and add an import statement for the PnP project configuration file (more on this file below):
 
     ```typescript
     import { getSP } from './pnpjsConfig';
     ```
 
-1. In the `onInit()` method, update the code to appear as follows. Add the call to initialize our project configuration after the `super.onInit()` call. We do this after the `super.onInit()` to ensure that the framework has a chance to initialize anything required, and that we are setting up the library after those steps are completed.
+1. In the `onInit()` method, update the code to appear as follows. Add the call to initialize our project configuration after the `super.onInit()` call. We do this after the `super.onInit()` to ensure that the framework has a chance to initialize anything required and that we are setting up the library after those steps are completed.
 
     ```typescript
     /**
@@ -144,9 +144,9 @@ There are [two ways](https://pnp.github.io/pnpjs/getting-started) to ensure that
 
 ## Add a project configuration file
 
-Next, let's create a project configuration file for PnPjs. This file allows us to set up the imports we will need for the project as well as initialize a instance of the sp object for use on any of our other components.
+Next, let's create a project configuration file for PnPjs. This file allows us to set up the imports we will need for the project as well as initialize an instance of the sp object for use on any of our other components.
 
-Note all the imports for webs, lists, items, and batching. In our component we will be making calls to get items from a library, so we need to include those imports for future reference. In addition we create a variable that will hold our configured instance of the `SharePoint Querable` that will be created with the factory instance. If you'll recall from our `onInit` function above we're calling the exported getSP with the SPFx context passed in as a property. By doing so we're able to establish context with the PnPjs library so that we can subsequently make calls to the SharePoint API. Subsequent calls to `getSP` without the context will return the object that has alredy been configured.
+Note all the imports for webs, lists, items, and batching. In our component we will be making calls to get items from a library, so we need to include those imports for future reference. In addition, we create a variable that will hold our configured instance of the `SharePoint Querable` that will be created with the factory instance. If you'll recall from our `onInit` function above we're calling the exported getSP with the SPFx context passed in as a property. By doing so we're able to establish context with the PnPjs library so that we can subsequently make calls to the SharePoint API. Subsequent calls to `getSP` without the context will return the object that has already been configured.
 
 This sample also shows how we can add an additional `behavior` to the instance which enables logging for all the calls. This will use the default logging but we could expand to include our own logging functions.
 
@@ -175,7 +175,7 @@ export const getSP = (context?: WebPartContext): SPFI => {
 
 ## Add an interface file for the data model
 
-Add a new file in the root of the components folder called `interfaces.ts`. Replace the contents with the following defintions which will be referenced by our component.
+Add a new file in the root of the components folder called `interfaces.ts`. Replace the contents with the following definitions which will be referenced by our component.
 
 ```typescript
 // create File item to work with it internally
@@ -202,7 +202,7 @@ export interface IResponseItem {
 
 ## Update the default component
 
-Finally, we need to do a bit of cleanup to create our based component. First replace the entire contents of the PnPjsExample.tsx file with the following code.
+Finally, we need to do a bit of cleanup to create our base component. First, replace the entire contents of the **PnPjsExample.tsx** file with the following code.
 
 ```typescript
 import * as React from 'react';
@@ -290,7 +290,7 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
       // do PnP JS query, some notes:
       //   - .expand() method will retrive Item.File item but only Length property
       //   - .get() always returns a promise
-      //   - await resolves proimises making your code act syncronous, ergo Promise<IResponseItem[]> becomes IResponse[]
+      //   - await resolves promises making your code act synchronous, ergo Promise<IResponseItem[]> becomes IResponse[]
 
       //Extending our sp object to include caching behavior, this modification will add caching to the sp object itself
       //this._sp.using(Caching({store:"session"}));
@@ -364,7 +364,7 @@ export default class PnPjsExample extends React.Component<IPnPjsExampleProps, II
 
 ## Run the example
 
-Start the sample, and add the web part to your SharePoint-hosted Workbench (/_layouts/15/workbench.aspx) to see it in action.
+Start the sample, and add the web part to your SharePoint-hosted Workbench (**/_layouts/15/workbench.aspx**) to see it in action.
 
 ```console
 gulp serve --nobrowser
