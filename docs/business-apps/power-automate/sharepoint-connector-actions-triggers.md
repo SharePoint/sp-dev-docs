@@ -1,7 +1,7 @@
 ---
 title: Microsoft SharePoint Connector for Power Automate
 description: In Power Automate, Microsoft SharePoint Connector supports the following flow triggers and actions.
-ms.date: 09/27/2022
+ms.date: 06/22/2023
 ms.service: power-automate
 search.app:
   - Flow
@@ -48,7 +48,7 @@ For more info about when Microsoft Syntex and how it classifies files see: [Intr
 
 ### When a file is created (properties only)
 
-Triggers the flow when you create a file in a document library, and returns only the custom file properties associated with that file.
+Triggers the flow when you create a file in a document library and returns only the custom file properties associated with that file.
 
 ### When a file is created in a folder [deprecated]
 
@@ -70,7 +70,7 @@ Triggers when a file is created, and also each time it is modified in a SharePoi
 
 ### When a file is deleted
 
-Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is epxected to run, using a site collection user account.
+Triggers the flow when you delete a file in a document library. You can optionally specify a folder to watch. When you delete a folder, the trigger activates only once for the deleted folder, including its subfolders. To get the properties of the deleted file, you must connect this trigger to the associated SharePoint site on which the trigger is expected to run, using a site collection user account.
 
 ### For a selected file
 
@@ -99,7 +99,7 @@ Cancels hub join request. If applicable, specify the same Approval Correlation I
 
 ### Check in file
 
-Checks in a checked out file in a document library, which makes the version of the document available to others.
+Checks in a checked-out file in a document library, which makes the version of the document available to others.
 
 ### Check out file
 
@@ -172,13 +172,13 @@ Returns the list of attachments for the specified list item. To get to the conte
 
 Gets all the columns or file properties changed since and until a specified time interval. To get all the columns changed when an item or a file is modified:
 - Use the _when an item or file is modified_ trigger, and,
-- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the _when an item or file is modified_ trigger to infer what columnns changed since last time flow checked for item or file updates.
+- Use the _Trigger Window Start Token_ & _Trigger Window End Token_ outputs from the _when an item or file is modified_ trigger to infer what columns changed since the last time flow checked for item or file updates.
 
 For more info about how to use this action, see this tutorial video: [Introducing 'when an item or file modified' trigger and 'Get changes' action](https://youtu.be/AaWB3xlhJdc)
 
 > [!NOTE]
 > - The list or library should have versioning configured in order to infer what columns or properties got modified since last change.
-> - Only column changes are suported for lists and libraries.
+> - Only column changes are supported for lists and libraries.
 > - File content changes are not supported.
 > - Attachment changes are not supported.
 > - _Trigger Window Start Token_ & _Trigger Window End Token_ are only available when you use _when an item or file is modified_ trigger.
@@ -237,7 +237,7 @@ Grants access to an item or a folder in SharePoint to specific people.
 
 ### Join hub site
 
-Joins the requested site to the hub site. An Approval Token is required to complete the join successfully, if that hub requires approval. If applicable, specify the same Approval Correlation Id as used in the **Set hub site join status to pending** action.
+Joins the requested site to the hub site. An Approval Token is required to complete the join successfully if that hub requires approval. If applicable, specify the same Approval Correlation Id as used in the **Set hub site join status to pending** action.
 
 ### List folder
 
@@ -257,7 +257,7 @@ Moves a folder. Works similarly to the **Move to** command in SharePoint librari
 
 ### Resolve person
 
-Returns a single matching user value so it can be assigned to a column of type person. If there are no matches, or multiple matches, this action errors out.
+Returns a single matching user value so it can be assigned to a column of type person. If there are no matches or multiple matches, this action errors out.
 
 ### Send an HTTP request to SharePoint
 
@@ -368,9 +368,9 @@ When you build a Power Automate flow to be triggered for an item, or for creatin
 
 ### Move files and flow runs
 
-When you move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file does not alter any custom metadata, including when the file was created and modified. Hence, this action does not trigger any flows for those file updates associated in the library where it was moved.
+When you move one or more files from one document library to another, the original file is moved from the source library to the destination library. Moving the file does not alter any custom metadata, including when the file was created and modified. Hence, this action does not trigger any flows for those file updates associated with the library where it was moved.
 
-### Syncing files to your OneDrive for business and SharePoint document libraries
+### Syncing files to your OneDrive for Business and SharePoint document libraries
 
 When users sync one or more files from one document library to another, the original file is moved (synced) from your client to the destination library. Syncing the file will not alter any custom metadata including when the file was created and modified. Hence, this action will not trigger any flows for those file syncs in that library or in your OneDrive for business.
 
