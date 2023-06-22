@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use any text editor to build SharePoint Framework solutions. You can use macOS, Windows, or Linux.
-ms.date: 06/05/2023
+ms.date: 06/22/2023
 ms.localizationpriority: high
 ms.custom: scenarios:getting-started
 ---
@@ -12,7 +12,7 @@ You can use any text editor to build SharePoint Framework (SPFx) solutions. You 
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your Microsoft 365 tenant](./set-up-your-developer-tenant.md).
 
-You can also follow these steps by watching this video on the Microsoft 365 Platform Communtiy (PnP) YouTube Channel:
+You can also follow these steps by watching this video on the Microsoft 365 Platform Community (PnP) YouTube Channel:
 
 > [!Video https://www.youtube.com/embed/Cxx9MdjEiEw]
 
@@ -42,9 +42,9 @@ You can check if you already have Node.js already installed, including installed
 node --version
 ```
 
-The SharePoint Framework v1.17.3 is supported on the following Node.js versions:
+The SharePoint Framework v1.17.* is supported on the following Node.js versions:
 
-- Node.js v16 LTS (v16.13.x - v16.18.x, *aka: Gallium*)
+- Node.js v16 LTS (*aka: Gallium*)
 
 > [!CAUTION]
 > If you're building SharePoint Framework components for SharePoint on-prem deployments, refer to the additional pages listed in the [See also](#see-also) section for more information.
@@ -110,7 +110,7 @@ You should be using a modern web browser like [Microsoft Edge](https://www.micro
 
 ## Trusting the self-signed developer certificate
 
-The SharePoint Framework's local webserver, used when testing your custom solutions from your development environment, uses HTTPS by default. This is implemented using a development self-signed SSL certificate. Self-signed SSL certificates are not trusted by your developer environment. You must first configure your development environment to trust the certificate.
+The SharePoint Framework's local web server, used when testing your custom solutions from your development environment, uses HTTPS by default. This is implemented using a development self-signed SSL certificate. Self-signed SSL certificates are not trusted by your developer environment. You must first configure your development environment to trust the certificate.
 
 A utility task is included in every SharePoint Framework project in the form of a gulp task. You can elect to do this now, or wait until you create your first project as covered in the [Build your first SharePoint client-side web part (Hello World part 1)](web-parts/get-started/build-a-hello-world-web-part.md) tutorial.
 
@@ -125,13 +125,13 @@ gulp trust-dev-cert
 
 ## Optional tools
 
-Following are some tools that might come in handy as well:
+While not required for SPFx development, you may also find the following tools useful:
 
 - [Fiddler](https://www.telerik.com/fiddler)
 - [Postman](https://www.getpostman.com/docs/postman/launching_postman/navigating_postman)
 - [Windows Terminal](https://github.com/Microsoft/Terminal)
 - [Cmder for Windows](https://cmder.app/)
-- [Oh My Zsh for macOS](http://ohmyz.sh/)
+- [Oh My Zsh](http://ohmyz.sh/)
 - [Git source control tools](https://git-scm.com/)
 
 ## Next steps
@@ -140,14 +140,15 @@ You're now ready to [build your first client-side web part](web-parts/get-starte
 
 ## SPFx & SharePoint Server (on-prem)
 
-The SPFx is available on SharePoint Online (SPO), SharePoint Server 2019, & SharePoint Server 2016. The configuration instructions on this page assume you're creating solutions using the latest version of the SPFx for SharePoint Online.
+The SPFx is available on SharePoint Online (SPO), SharePoint Server Subscription Edition (SE), SharePoint Server 2019, & SharePoint Server 2016. The configuration instructions on this page assume you're creating solutions using the latest version of the SPFx for SharePoint Online.
 
 SharePoint Online contains all versions of the SPFx, including all previous and the latest version. Each SPFx solution contains information to tell SPO which SPFx runtime it depends.
 
 If you're building solutions for a SharePoint Server on-prem deployment, review to the [See also](#see-also) section for details on specific SharePoint versions. Each SharePoint on-prem only supports a specific version of SPFx. This can introduce complicated development environment configurations if you're creating different solutions for different SharePoint deployments.
 
-- **SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1.**
-- **SharePoint Server 2019 uses the SharePoint Framework (SPFx) v1.4.1.**
+- **SharePoint Server 2016 uses the SharePoint Framework (SPFx) v1.1.0.** *For more information, see [SharePoint Framework development with SharePoint Server 2016 Feature Pack 2](sharepoint-2016-support.md).*
+- **SharePoint Server 2019 uses the SharePoint Framework (SPFx) v1.4.1.** *For more information, see [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).*
+- **SharePoint Server Subscription Edition uses the SharePoint Framework (SPFx) v1.5.1.** *For more information, see [SharePoint Framework development with SharePoint Server 2019 and Subscription Edition](sharepoint-2019-and-subscription-edition-support.md).*
 
 Depending on your scenario, you may need to maintain different development environments. Developers have used the following approaches to address these challenges:
 
@@ -157,6 +158,7 @@ Depending on your scenario, you may need to maintain different development envir
 
 > [!TIP]
 > For more information on NVM, see [Better Node.js Install Management with Node Version Manager](https://www.voitanos.io/blog/better-node-js-install-management-with-node-version-manager/).
+>
 > - [NVM](https://github.com/creationix/nvm) for macOS
 > - [nvm-windows](https://github.com/coreybutler/nvm-windows) for Windows
 
@@ -182,7 +184,7 @@ In case the certificate is not added to the Trusted Root Certification Authority
 
 ### Unable to Install Packages with NPM - Corporate Proxies
 
-If your development environment is behind a corporate proxy, you need to configure NPM to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure NPM for a coporate web proxy](https://www.voitanos.io/blog/node-npm-fix-proxy-config/)
+If your development environment is behind a corporate proxy, you need to configure NPM to use that proxy. Refer to the [npm-config](https://docs.npmjs.com/misc/config) documents on how to configure your development environment behind a corporate proxy... specifically the **proxy** & **http-proxy** settings. More information: [Configure NPM for a corporate web proxy](https://www.voitanos.io/blog/node-npm-fix-proxy-config/)
 
 ## See also
 
