@@ -898,7 +898,7 @@ Now if you click on a person in the list, you should see a quick view of the per
 ```ts
   public get cardViewParameters(): ISearchCardViewParameters {
     // default value for the footer
-    const footer: IAdaptiveCardExtensionSearchFooterConfiguration = {
+    const footer: ICardSearchFooterConfiguration = {
       componentName: 'searchFooter',
       title: strings.Suggested,
       text: 'No suggestions found',
