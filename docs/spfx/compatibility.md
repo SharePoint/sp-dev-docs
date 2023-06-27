@@ -18,7 +18,7 @@ SharePoint Online always uses the latest version of the SharePoint Framework, bu
 | ---------------------------------------| ---------------------- | --------------------------------------------------------------------------------------- |
 | SharePoint Online                      | All versions           | All features                                                                            |
 | SharePoint Server Subscription Edition | v1.5 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
-| SharePoint Server 2019                 | v1.5 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
+| SharePoint Server 2019                 | v1.4.1 or lower        | SPFx client-side web parts in classic and modern pages, and extensions in modern pages. |
 | SharePoint 2016 Feature Pack 2         | v1.1                   | SPFx client-side web parts hosted in classic SharePoint pages.                          |
 
 For more information about SharePoint Framework development with SharePoint 2016 Feature Pack 2 and SharePoint 2019, see:
