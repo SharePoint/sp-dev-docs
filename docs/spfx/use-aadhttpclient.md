@@ -1,7 +1,7 @@
 ---
 title: Connect to Azure AD-secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 01/31/2023
+ms.date: 06/27/2023
 ms.localizationpriority: high
 ---
 
@@ -11,7 +11,7 @@ When building SharePoint Framework solutions, you might need to connect to an AP
 
 ## Web API permissions overview
 
-Azure AD secures a number of resources, from Office 365 to custom line-of-business applications built by the organization. To connect to these resources, applications must obtain a valid access token that grants them access to a particular resource. Applications can obtain an access token as part of the [OAuth authorization flow](/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Azure AD secures a number of resources, from Microsoft 365 to custom line-of-business applications built by the organization. To connect to these resources, applications must obtain a valid access token that grants them access to a particular resource. Applications can obtain an access token as part of the [OAuth authorization flow](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 Client-side applications that are incapable of storing a secret, such as SharePoint Framework solutions, use a specific type of OAuth flow named [OAuth implicit flow](/azure/active-directory/develop/active-directory-dev-understanding-oauth2-implicit-grant).
 
@@ -30,7 +30,7 @@ All permissions are granted to the whole tenant and not to a specific applicatio
 
 ## Discover available applications and permissions
 
-The target Azure AD that secures your Office 365 tenant determines which applications you can request permissions for in your solution. The list of available applications might depend on the Office 365 license that the organization is using and which line-of-business applications they registered in Azure AD. If you have sufficient permissions, there are several ways that you can see which applications and permission scopes are available in your tenant.
+The target Azure AD that secures your Microsoft 365 tenant determines which applications you can request permissions for in your solution. The list of available applications might depend on the Microsoft 365 license that the organization is using and which line-of-business applications they registered in Azure AD. If you have sufficient permissions, there are several ways that you can see which applications and permission scopes are available in your tenant.
 
 ### Use Azure portal or Azure AD admin center
 
@@ -170,6 +170,48 @@ If your SharePoint Framework solution requires permissions to specific resources
     > [!NOTE]
     > No matter if the administrator denies or approves the requested permissions, the solution can be deployed and used on sites. When building solutions that require additional permissions, you should never assume that the requested permissions have been granted.
 
+### Requesting permissions to Azure AD applications in another tenant
+
+The previous steps address adding a permission request to an Azure AD application defined in the same Azure AD tenant as your SharePoint Online tenant. However, when you want to grant a permission for an Azure AD application defined in another tenant (a multitenant Azure AD application), you must first add a service principal for that Azure AD application to your tenant.
+
+> [!NOTE]
+> This capability was added in the [SPFx v1.15.2 release](release-1.15.2.md).
+
+> [!IMPORTANT]
+> Azure AD applications have two types of principals. The application object is created when the Azure AD app is created; it is a *global* representation of the application across all tenants.
+>
+> Permissions are granted to service principals which are the *local* representation of the app for use in a specific tenant.
+>
+> When you create an Azure AD application in a tenant, both the application object & service principal are created in that tenant. But when you want to use the Azure AD application in another tenant, you must create a service principal for that application in your tenant.
+>
+> To learn more about Azure AD application principals, objects, and service principals, see: [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
+
+When you want to grant SharePoint Online permission to an Azure AD application defined in another tenant, you must include two additional properties in the SPFx project's **package-solution.json** file's `webApiPermissionRequests` entry:
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+  ..
+  "webApiPermissionRequests": [
+    {
+      "resource": "<API name as it's registered in Azure AD>",
+      "scope": "<required permission scope>",
+      "appId": "<GUID>",
+      "replyUrl": "<URL>"
+    }
+  ]
+  ..
+```
+
+The two additional properties are:
+
+- `appId`: This is the application object's ID for which a service principal will get created in the tenant.
+- `replyUrl`: This is the URL used by Azure AD during the consent and registration experience of the permission request.
+
+> [!IMPORTANT]
+> If either `appid` or `replyUrl` are included, they are both required. In other words, include both properties (*if you're referencing an Azure AD app registered in another tenant from your SharePoint Online tenant*) or neither property (*if you're referencing an Azure AD app registered in the same tenant as your SharePoint Online tenant*).
+
 ## Manage permission requests
 
 When you deploy SharePoint Framework solutions that request permissions to Azure AD applications, administrators are prompted to manage the permission request provided with the solution. Permission requests can be managed in several ways.
@@ -232,11 +274,10 @@ Global and SharePoint administrators can use the [CLI for Microsoft 365](https:/
     > Denying a permission request issued by a SharePoint Framework application doesn't prevent that application from being deployed in the app catalog and installed on sites.
 
 - To *view which permissions have been granted* in your tenant, use the **[spo serviceprincipal grant list](https://pnp.github.io/cli-microsoft365/cmd/spo/serviceprincipal/serviceprincipal-grant-list/)** command. For each grant, the command displays the following information:
-
-    - **ObjectId**: The unique identifier for the permission grant.
-    - **Resource**: The resource to which access has been granted.
-    - **ResourceId**: The objectId of the resource service principal to which access has been granted.
-    - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
+  - **ObjectId**: The unique identifier for the permission grant.
+  - **Resource**: The resource to which access has been granted.
+  - **ResourceId**: The objectId of the resource service principal to which access has been granted.
+  - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 
 - To *revoke a previously granted permission*, use the **[spo serviceprincipal grant revoke](https://pnp.github.io/cli-microsoft365/cmd/spo/serviceprincipal/serviceprincipal-grant-revoke/)** command. In the **grantId** parameter, specify the objectId of the grant that you want to revoke, which you can obtain by using the **spo serviceprincipal grant list** command.
 
@@ -247,7 +288,7 @@ Global and SharePoint administrators can use the [CLI for Microsoft 365](https:/
 
 Introduced in v1.4.1, the SharePoint Framework simplifies connecting to APIs secured with Azure AD. Using the new **AadHttpClient**, you can easily connect to APIs secured with Azure AD without having to implement authentication and authorization yourself.
 
-Internally, the **AadHttpClient** implements the Azure AD OAuth flow leveraging Microsoft identity platform authentication libraries by using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and is available in the Azure AD of all Office 365 tenants.
+Internally, the **AadHttpClient** implements the Azure AD OAuth flow leveraging Microsoft identity platform authentication libraries by using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and is available in the Azure AD of all Microsoft 365 tenants.
 
 1. To use the **AadHttpClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
@@ -307,11 +348,11 @@ Following are some considerations that you should take into account when working
 
 ### Request permissions via SharePoint Framework solutions
 
-At this moment, it's only possible to request additional permissions through a SharePoint Framework solution. The request is started when the solution package (.sppkg) containing a permissions request is deployed in the app catalog. After the request is started, it can be approved or denied by a global or SharePoint administrator.
+It's only possible to request additional permissions through a SharePoint Framework solution. The request is started when the solution package (**/*.sppkg**) containing a permissions request is deployed in the app catalog. After the request is started, it can be approved or denied by a global or SharePoint administrator.
 
-### Granted permissions apply to all solutions
+### Granted permissions apply to the entire tenant
 
-Although permissions to Azure AD resources are being requested by a SharePoint Framework solution, once granted, they apply to the whole tenant and can be leveraged by any solution in that tenant.
+Although permissions to Azure AD resources are being requested by a SharePoint Framework solution, once granted, they apply to the entire tenant and can be leveraged by any client-side request in that tenant. This includes SPFx solutions and non-SPFx solutions because.
 
 ### Removing solution doesn't revoke permissions
 
