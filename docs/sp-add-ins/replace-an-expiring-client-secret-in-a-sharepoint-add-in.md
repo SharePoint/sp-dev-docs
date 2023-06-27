@@ -8,16 +8,16 @@ ms.localizationpriority: high
 
 # Replace an expiring client secret in a SharePoint Add-in
 
-Client secrets for SharePoint Add-ins that are registered by using the AppRegNew.aspx page expire after one year. This article explains how to add a new secret for the add-in, and how to create a new client secret that is valid for a customized date.
+Client secrets for SharePoint Add-ins that are registered by using the **AppRegNew.aspx** page expire after one year. This article explains how to add a new secret for the add-in, and how to create a new client secret that is valid for a customized date.
 
 > [!NOTE]
-> This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets).
+> This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the **AppRegNew.aspx** page. If the add-in is registered on the Seller Dashboard, see [Create or update client IDs and secrets in the Seller Dashboard](/office/dev/store/create-or-update-client-ids-and-secrets).
 
 ## Recommended maintenance schedule
 
-We recommend to create new secrets a minimum of 30 days before they expire. This gives you a month of time before the old credentials expire.
+We recommend creating new secrets a minimum of 30 days before they expire. This gives you a month of time before the old credentials expire.
 
-We recommend to only remove secrets a minimum of 7 days after expiration, provided you have removed them from the application configuration.
+We recommend only removing secrets a minimum of 7 days after expiration, provided you have removed them from the application configuration.
 
 Removing an expired secret from ACS before you remove it from the application configuration will cause errors.
 
@@ -26,28 +26,30 @@ Removing an expired secret from ACS before you remove it from the application co
 Ensure the following before you begin:
 
 - You have installed Microsoft Graph Powershell SDK: [Install the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/installation)
-- You're a tenant administrator (or having `Application.ReadWrite.All` permission) for the Office 365 tenant where the add-in was registered with the AppRegNew.aspx page.
+- You're a tenant administrator (or having `Application.ReadWrite.All` permission) for the Microsoft 365 tenant where the add-in was registered with the **AppRegNew.aspx** page.
 
 ## Generate a new secret
 
-1. Create a client ID variable with the following line, using the client ID of the SharePoint Add-in as the parameter.
+1. Create a client ID variable with the following line, using the client ID of the SharePoint Add-in as the parameter:
 
     ```powershell
     $clientId = 'client id of the add-in'
     ```
-2. Connect to graph with `Application.ReadWrite.All` scope.
+1. Connect to graph with **Application.ReadWrite.All** scope:
 
     ```powershell
-    Connect-MgGraph -Scopes "Application.ReadWrite.All" # Login with corresponding scope. Should be tenant admin or anyone have the permission.
+    Connect-MgGraph -Scopes "Application.ReadWrite.All"
+    # login with the corresponding scope; this user should be a tenant admin or anyone granted this permission
     ```
-3. Generate a new client secret with the following lines:
+    
+1. Generate a new client secret with the following lines:
 
     ```powershell
     $appPrincipal = Get-MgServicePrincipal -Filter "AppId eq '$clientId'" # Get principal id by AppId
 
     $params = @{
         PasswordCredential = @{
-            DisplayName = "NewSecret" # Replace with a firendly name.
+            DisplayName = "NewSecret" # Replace with a friendly name.
         }
     }
 
@@ -57,10 +59,11 @@ Ensure the following before you begin:
     $result.EndDateTime # Print the end date.
     ```
 
-4. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
+1. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
 
     > [!TIP]
-    > By default, the secret lasts two years if you didn't specifiy the EndDateTime. You can customize by leveraging the example below to specify the EndDateTime.
+    > By default, the secret lasts two years if you didn't specify the EndDateTime. You can customize by leveraging the example below to specify the EndDateTime.
+    > 
     > ``` powershell
     > $params = @{
     >     PasswordCredential = @{
@@ -73,28 +76,28 @@ Ensure the following before you begin:
 ## Update the remote web application in Visual Studio to use the new secret
 
 > [!IMPORTANT]
-> If your add-in was originally created with a pre-release version of the Microsoft Office Developer Tools for Visual Studio, it may contain an out-of-date version of the TokenHelper.cs (or .vb) file. If the file does not contain the string "secondaryClientSecret", it is out of date and must be replaced before you can update the web application with a new secret. To obtain a copy of a release version of the file, you need Visual Studio 2012 or later. Create a new SharePoint Add-in project in Visual Studio. Copy the TokenHelper file from it to the web application project of your SharePoint Add-in.
+> If your add-in was originally created with a pre-release version of the Microsoft Office Developer Tools for Visual Studio, it may contain an out-of-date version of the **TokenHelper.[cs|vb]** file. If the file does not contain the string `secondaryClientSecret`, it is out of date and must be replaced before you can update the web application with a new secret. To obtain a copy of a release version of the file, you need Visual Studio 2012 or later. Create a new SharePoint Add-in project in Visual Studio. Copy the **TokenHelper.[cs|vb]** file from it to the web application project of your SharePoint Add-in.
 
-1. Open the SharePoint Add-in project in Visual Studio, and open the web.config file for the web application project. In the **appSettings** section, there are keys for the client ID and client secret. The following is an example:
+1. Open the SharePoint Add-in project in Visual Studio, and open the **web.config** file for the web application project. In the `appSettings` section, there are keys for the client ID and client secret. The following is an example:
 
     ```XML
     <appSettings>
       <add key="ClientId" value="your client id here" />
       <add key="ClientSecret" value="your old secret here" />
-        ... other settings may be here ...
+      ... other settings may be here ...
     </appSettings>
     ```
 
-1. Change the name of the **ClientSecret** key to `SecondaryClientSecret` as shown in the following example:
+1. Change the name of the `ClientSecret` key to `SecondaryClientSecret` as shown in the following example:
 
     ```XML
     <add key="SecondaryClientSecret" value="your old secret here" />
     ```
 
     > [!NOTE]
-    > If you are performing this procedure for the first time, there is no **SecondaryClientSecret** property entry at this point in the configuration file. However, if you are performing the procedure for a subsequent client secret expiration (second or third), the property **SecondaryClientSecret** is already present and contains the initial or already expired old secret. In this case, delete the **SecondaryClientSecret** property first before renaming **ClientSecret**.
+    > If you are performing this procedure for the first time, there is no `SecondaryClientSecret` property entry at this point in the configuration file. However, if you are performing the procedure for a subsequent client secret expiration (second or third), the property `SecondaryClientSecret` is already present and contains the initial or already expired old secret. In this case, delete the `SecondaryClientSecret` property first before renaming `ClientSecret`.
 
-1. Add a new **ClientSecret** key and give it your new client secret. Your markup should now look like the following:
+1. Add a new `ClientSecret` key and give it your new client secret. Your markup should now look like the following:
 
     ```XML
     <appSettings>
@@ -106,9 +109,9 @@ Ensure the following before you begin:
     ```
 
     > [!IMPORTANT]
-    > You will not be able to use the newly generated client secret until the current client secret expires. Therefore, changing the ClientId key to the new client secret without the SecondaryClientSecret key present will not work. You must follow the  procedure in this article and wait for the previous client secret to expire. You can then remove the SecondaryClientSecret if you want to.
+    > You will not be able to use the newly generated client secret until the current client secret expires. Therefore, changing the `ClientId` key to the new client secret without the `SecondaryClientSecret` key present will not work. You must follow the  procedure in this article and wait for the previous client secret to expire. You can then remove the SecondaryClientSecret if you want to.
 
-1. If you changed to a new TokenHelper file, rebuild the project.
+1. If you changed to a new **TokenHelper.[cs|vb]** file, rebuild the project.
 1. Republish the web application.
 
 ## See also
