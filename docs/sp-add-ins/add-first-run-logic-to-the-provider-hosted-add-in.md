@@ -293,7 +293,7 @@ Because the add-in now adds a list to the host web, not just items to an existin
 
 ## Run the add-in and test the first-run logic
 
-1. Open the **Site Contents** page of the Hong Kong store's website, and then remove the **Local Employees** list. 
+1. Open the **Site Contents** page of the Hong Kong SAR store's website, and then remove the **Local Employees** list. 
 
 2. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
 

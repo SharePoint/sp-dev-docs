@@ -27,7 +27,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 2. On the **New SharePoint Site** page, fill out the form for a new team site by entering these values (also shown in the following screen shot):
 
-   - **Title**: Fabrikam Hong Kong Store
+   - **Title**: Fabrikam Hong Kong SAR Store
    - **URL**: hongkong
     
    *Figure 1. Form for creating a new SharePoint subsite*
