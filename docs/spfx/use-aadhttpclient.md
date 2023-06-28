@@ -185,8 +185,12 @@ The previous steps address adding a permission request to an Azure AD applicatio
 > When you create an Azure AD application in a tenant, both the application object & service principal are created in that tenant. But when you want to use the Azure AD application in another tenant, you must create a service principal for that application in your tenant.
 >
 > To learn more about Azure AD application principals, objects, and service principals, see: [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).
+>
+> To learn more about single and multitenant Azure AD applications, see: [Tenancy in Azure Active Directory](/azure/active-directory/develop/single-and-multi-tenant-apps).
 
-When you want to grant SharePoint Online permission to an Azure AD application defined in another tenant, you must include two additional properties in the SPFx project's **package-solution.json** file's `webApiPermissionRequests` entry:
+When you want to grant SharePoint Online permissions to an Azure AD application defined to another tenant, the service principal needs to already exist on the tenant where SharePoint Online operates. Prior to SPFx v1.15.2, , SharePoint expected the service principal already existed. But SPFx v1.15.2 introduced a way to register the service principal during the permission request approval process.
+
+To do this, you must include two additional properties in the SPFx project's **package-solution.json** file's `webApiPermissionRequests` entry:
 
 ```json
 {
