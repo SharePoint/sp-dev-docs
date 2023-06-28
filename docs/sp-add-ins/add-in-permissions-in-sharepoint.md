@@ -297,7 +297,7 @@ When you are developing an add-in or troubleshooting an add-in, there may be occ
 
 1. Go to `http://{SharePointWebSite}_layouts/15/AppInv.aspx`, where  _\<SharePointWebSite\>_ is the URL of the website where the add-in is installed. Be careful not to add any query parameters on the URL. The form you need only appears on this page if the URL is exactly as shown.
 > [!NOTE]
-> Site owners are not allowed to update add-in permissions in AppInv.aspx page by default. More information can be found [here](/powershell/module/sharepoint-online/set-spotenant#-SocialBarOnSitePagesDisabled).
+> Site owners are not allowed to update add-in permissions in AppInv.aspx page by default. More information can be found [here](/powershell/module/sharepoint-online/set-spotenant#-socialbaronsitepagesdisabled).
 
 2. Enter the add-in's ID, also called the client ID, in the **Add-in Id** box, and then select **Lookup**. The other boxes on the form are then populated with information about the add-in.
 
