@@ -18,9 +18,9 @@ yo @microsoft/sharepoint
 
 When prompted, enter the following values (select the default option for all prompts omitted below):
 
-- **What is your solution name?** HelloWorld
+- **What is your solution name?** focus-feature
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Primary Text Template
+- **Which template do you want to use?** Geneic Card Template
 - **What is your Adaptive Card Extension name?** HelloWorld
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
@@ -30,7 +30,7 @@ Before moving forward, update the title and description fields of your ACE to gi
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
-  "id": "53b7c8c0-00cc-4d20-a0a7-529aa6dff29f",
+  "id": "2c2fb587-a351-40f9-83f7-0840e3ee857f",
   "alias": "HelloWorldAdaptiveCardExtension",
   "componentType": "AdaptiveCardExtension",
 
@@ -48,11 +48,11 @@ Before moving forward, update the title and description fields of your ACE to gi
     "group": { "default": "Dashboard" },
     "title": { "default": "Focus feature advanced I" },
     "description": { "default": "Focus feature advanced I" },
-    "officeFabricIconFontName": "SharePointLogo",
+    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20230308.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
     "properties": {
       "title": "Focus feature advanced I"
     },
-    "cardSize": "Medium"
+    "cardSize": "Large"
   }]
 }
 ```
@@ -69,11 +69,11 @@ When you use the gulp task **serve**, by default it will launch a browser with t
       "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
       "port": 4321,
       "https": true,
-      "initialPage": "https://enter-your-SharePoint-site/_layouts/workbench.aspx"
+      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
     }
     ```
 
-- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
 At this point, if you do `gulp serve`, then you'll see the `FocusFeature` card:
 
@@ -96,7 +96,7 @@ Replace the content of this file as below:
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
-  "version": "1.2",
+  "version": "1.5",
   "body": [
     {
       "type": "TextBlock",
@@ -174,7 +174,7 @@ Create a new template file for the second quick view: **./src/adaptiveCardExtens
 {
    "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
    "type":"AdaptiveCard",
-   "version":"1.2",
+   "version":"1.5",
    "body":[
       {
          "type":"TextBlock",
@@ -242,7 +242,7 @@ Create a new template file for the third quick view: **./src/adaptiveCardExtensi
 {
   "schema":"http://adaptivecards.io/schemas/adaptive-card.json",
   "type":"AdaptiveCard",
-  "version":"1.2",
+  "version":"1.5",
   "body":[
      {
         "type":"TextBlock",
