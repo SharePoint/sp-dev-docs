@@ -589,11 +589,11 @@
     - name: Media Upload capability via property pane of an ACE
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
     - name: Create a People Search Adaptive Card Extension
-      href: spfx/viva/get-started/build-people-search-adaptive-card-extension      
+      href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md    
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Migrate existing ACEs to SharePoint Framework 1.18
-      href: spf/viva/get-started/migrate-to-spfx-1-18.md
+      href: spfx/viva/get-started/migrate-to-spfx-1-18.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
   - name: Extend Viva Connections Learning Path

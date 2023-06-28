@@ -13,7 +13,7 @@ This tutorial provides step-by-step guidance on implementing People Search with 
 > [!NOTE]
 > This tutorial assumes that you have installed the SPFx v1.18 preview version.
 >
-> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../../../release-1.18.md).
+> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../release-1.18.md).
 
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension and using Microsoft Graph in SharePoint Framework solutions:
 
@@ -184,7 +184,7 @@ With this code in place, the Quick View displays the same query string as the Ca
 
 The next step is to implement the data source for the People Search ACE. The data source is responsible for fetching the data from the Microsoft Graph and returning it to the ACE.
 
-We use [List people](https://learn.microsoft.com/en-us/graph/api/user-list-people?view=graph-rest-1.0&tabs=http) endpoint to get search results and [Get a user](https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http) to display a Suggested item.
+We use [List people](https://learn.microsoft.com/graph/api/user-list-people?view=graph-rest-1.0&tabs=http) endpoint to get search results and [Get a user](https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0&tabs=http) to display a Suggested item.
 
 For these endpoints we need to request `People.Read` and `User.Read` scopes respectively.
 Locate and open the following file in your project: **./src/adaptiveCardExtensions/peopleSearch/config/package-solution.json**.
@@ -228,7 +228,7 @@ export interface IPerson {
 
 ### Implement People Search Service
 
-We use Service Locator pattern to inject the data service into the ACE. The pattern is represented by the [ServiceScope](https://learn.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest) class in SPFx.
+We use Service Locator pattern to inject the data service into the ACE. The pattern is represented by the [ServiceScope](https://learn.microsoft.com/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest) class in SPFx.
 
 Navigate to **./src/adaptiveCardExtensions/peopleSearch** and create a new folder called **peopleSearchService** with two files in there: **IPeopleSearchService.ts** and **PeopleSearchService.ts**.
 

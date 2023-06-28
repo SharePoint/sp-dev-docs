@@ -66,7 +66,7 @@ Developers can use `Execute` action for both card view and quick view actions.
 
 We introduce new default class for Adaptive Card Extensions card views. With these new class developers can specify a set of components that is rendered in a card view.
 
-For more information on the new designs, see [Designing Viva Connections custom cards for your dashboard](https://learn.microsoft.com/sharepoint/dev/spfx/viva/design/designing-card).
+For more information on the new designs, see [Designing Viva Connections custom cards for your dashboard](./viva/design/designing-card.md).
 
 ```typescript
 export abstract class BaseComponentsCardView<TProperties = {}, TState = {}, TParameters extends ComponentsCardViewParameters = ITextCardViewParameters> extends BaseCardView<TProperties, TState> {
@@ -115,7 +115,7 @@ export class CardView extends BaseComponentsCardView<
 
 With this release, we introduce more flexible way to configure card views for Adaptive Card Extensions. Developers can now "mix and match" components in a card view configuration based on allowed set of [variations](./viva/design/designing-card.md).
 
-Use new **Generic Card Template (preview)** in the generator to get started. Migration guide for existing projects is available [here](./permutations-migration-doc).
+Use new **Generic Card Template (preview)** in the generator to get started. Migration guide for existing projects is available [here](./viva/get-started/migrate-to-spfx-1-18.md).
 
 ### Ability to use text input in Adaptive Card Extensions' card views
 
