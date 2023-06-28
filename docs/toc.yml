@@ -2089,6 +2089,8 @@
     href: apis/alm-api-for-spfx-add-ins.md
   - name: CSOM methods for applying retention labels
     href: apis/csom-methods-for-applying-retention-labels.md
+  - name: SharePoint Add-in Management APIs
+    href: apis/addin-management-apis.md
   - name: Microsoft 365 Copy and Move API
     href: apis/spod-copy-move-api.md
   - name: SharePoint Migration Guidance
@@ -2146,8 +2148,6 @@
     href: /dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
     href: /dotnet/api/?term=microsoft.sharepoint
-  - name: SharePoint Add-in Management APIs
-    href: apis/addin-management-apis.md
 - name: SharePoint schema reference
   href: schema/schema-reference-for-sharepoint.md
   items:
