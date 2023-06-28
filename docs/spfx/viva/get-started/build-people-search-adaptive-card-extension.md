@@ -1,20 +1,22 @@
 ---
 title: Create a People Search Adaptive Card Extension
 description: Step by step guide on creating People Search Adaptive Card Extension.
-ms.date: 06/21/2023
+ms.date: 06/28/2023
 ms.localizationpriority: high
 ---
 # Create a People Search Adaptive Card Extension
 
 SharePoint Framework 1.18 introduces a new Search Card Template that can be used to implement various search scenarios.
+
 This tutorial provides step-by-step guidance on implementing People Search with ACEs and Microsoft Graph.
 
 > [!NOTE]
-> This tutorial assumes that you have installed the SPFx v1.18
+> This tutorial assumes that you have installed the SPFx v1.18 preview version.
 >
-> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.14 release notes](../../../../release-1.18.md).
+> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.18 release notes](../../../../release-1.18.md).
 
 Before you start, complete the procedures in the following articles to ensure that you understand the basic flow of creating a custom Adaptive Card Extension and using Microsoft Graph in SharePoint Framework solutions:
+
 - [Build your first SharePoint Adaptive Card Extension](./build-first-sharepoint-adaptive-card-extension.md)
 - [Use Microsoft Graph in your solution](../../web-parts/get-started/using-microsoft-graph-apis.md)
 
@@ -22,13 +24,13 @@ Before you start, complete the procedures in the following articles to ensure th
 
 Create a new project directory for your project and change your current folder to that directory.
 
-Create a new project by running the Yeoman SharePoint Generator from within the new directory you created:
+Create a new project by running the Yeoman SharePoint Generator from within the new directory you created.
 
 ```console
 yo @microsoft/sharepoint
 ```
 
-When prompted, enter the following values (select the default option for all prompts omitted below):
+When prompted, enter the following values (select the default option for all questions, which aren't mentioned):
 
 - **What is your solution name?** peoplesearch-tutorial
 - **Which type of client-side component to create?** Adaptive Card Extension
@@ -39,10 +41,10 @@ At this point, Yeoman installs the required dependencies and scaffolds the solut
 
 ## Update your project's hosted workbench URL.
 
-When you use the gulp task **serve**, by default it will launch a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
+When you use the gulp task **serve**, by default it opens a browser with the specified hosted workbench URL specified in your project. The default URL for the hosted workbench in a new project points to an invalid URL.
 
-- Locate and open the file **./config/serve.json** in your project.
-- Locate the property `initialPage`:
+- Locate and open the file **./config/serve.json** in your project
+- Locate the property `initialPage`
 
     ```json
     {
@@ -55,23 +57,31 @@ When you use the gulp task **serve**, by default it will launch a browser with t
 
 - Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
-At this point, if you do `gulp serve`, then you will see the **People Search** card:
+At this point, if you do `gulp serve`, then you see the **People Search** card:
 
 ![See the People Search card icon in the workbench toolbox](../../../../docs/images/viva-extensibility/people-search/toolbox.png)
 
-If you add the ACE to the workbench, you will see it already prepared for mock search scenarios:
+If you add the ACE to the workbench, you see it already prepared for mock search scenario.
+
 ![Default People Search card](../../../../docs/images/viva-extensibility/people-search/ace-default.png)
 
-And if you switch to Preview mode of the workbench, you can engage with it:
-- type in the search box and click on the search icon to see the results Quick View mockup
+If you switch to Preview mode of the workbench, you can engage with it:
+
+- type in the search box and select on the search icon to see the results Quick View mockup
+  
   ![Default Search Results Quick View](../../../../docs/images/viva-extensibility/people-search/qv-results-default.png)
-- click on the **Suggested** item to see a single item view
+  
+- Select on the **Suggested** item to see a single item view
+  
   ![Default Item Quick View](../../../../docs/images/viva-extensibility/people-search/qv-item-default.png)
 
 ## Explore the scaffolded code
+
 ### Explore the Card View
-Locate and open the following file in your project: **./src/adaptiveCardExtensions/peopleSearch/cardView/CardView.ts**.
-The card view implements `BaseComponentsCardView` class and implements `cardViewParameters` getter to specify the card configuration:
+
+- Locate and open the following file in your project: **./src/adaptiveCardExtensions/peopleSearch/cardView/CardView.ts**.
+- The card view implements `BaseComponentsCardView` class and implements `cardViewParameters` getter to specify the card configuration
+  
 ```ts
 export class CardView extends BaseComponentsCardView<IPeopleSearchAdaptiveCardExtensionProps, IPeopleSearchAdaptiveCardExtensionState, ISearchCardViewParameters> {
   public get cardViewParameters(): ISearchCardViewParameters {
@@ -120,14 +130,18 @@ export class CardView extends BaseComponentsCardView<IPeopleSearchAdaptiveCardEx
 ```
 
 The **body** section of the card view specifies the search box. The search button is configured to open the Quick View with the ID `SEARCH_RESULTS_QUICK_VIEW_REGISTRY_ID`. 
+
 The **footer** section of the card view specifies the suggested item. The suggested item is configured to open the Quick View with the ID `ITEM_QUICK_VIEW_REGISTRY_ID`.
 
 ### Explore the Quick Views
+
 There are two mock Quick Views in the scaffolded code: `SearchResultsQuickView` and `ItemQuickView`.
+
 The implementation of both is standard and can be found in the following files:
 **./src/adaptiveCardExtensions/peopleSearch/quickView/SearchResultsQuickView.ts** and **./src/adaptiveCardExtensions/peopleSearch/quickView/ItemQuickView.ts**.
 
-The important part of the `SearchResultsQuickView` implementation is `data` getter which specifies `queryString` value based on the `state` of the ACE:
+The important part of the `SearchResultsQuickView` implementation is `data` getter that specifies `queryString` value based on the `state` of the ACE:
+
 ```ts
   public get data(): ISearchResultsQuickViewData {
     return {
@@ -136,11 +150,15 @@ The important part of the `SearchResultsQuickView` implementation is `data` gett
     };
   }
 ```
-This approach allows to "share" the query string between the Card View and the Quick View. Below we will show how to set this state's property from the ACE.
+
+This approach allows to "share" the query string between the Card View and the Quick View. Below we show how to set this state's property from the ACE.
 
 ### Explore the ACE class
+
 The ACE class is located in the following file: **./src/adaptiveCardExtensions/peopleSearch/PeopleSearchAdaptiveCardExtension.ts** and mostly has the same code as [Generic Card View](./build-first-sharepoint-adaptive-card-extension.md).
-However, there is important difference: `PeopleSearchAdaptiveCardExtension` overrides `onBeforeAction` method to set `queryString` state's value before opening a `SearchResultsQuickView`:
+
+However, there's important difference: `PeopleSearchAdaptiveCardExtension` overrides `onBeforeAction` method to set `queryString` state's value before opening a `SearchResultsQuickView`.
+
 ```ts
   public onBeforeAction(action: IOnBeforeActionArguments): void {
     if (action.type === 'QuickView') {
@@ -157,15 +175,22 @@ However, there is important difference: `PeopleSearchAdaptiveCardExtension` over
     }
   }
 ```
-With this code in place, the Quick View will display the same query string as the Card View.
+
+With this code in place, the Quick View displays the same query string as the Card View.
 
 ## Implement People Search Service
+
 ### Request permissions scopes
-The next step is to implement the data source for the People Search ACE. The data source will be responsible for fetching the data from the Microsoft Graph and returning it to the ACE.
-We will use [List people](https://learn.microsoft.com/en-us/graph/api/user-list-people?view=graph-rest-1.0&tabs=http) endpoint to get search results as well as [Get a user](https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http) to display a Suggested item.
+
+The next step is to implement the data source for the People Search ACE. The data source is responsible for fetching the data from the Microsoft Graph and returning it to the ACE.
+
+We use [List people](https://learn.microsoft.com/en-us/graph/api/user-list-people?view=graph-rest-1.0&tabs=http) endpoint to get search results and [Get a user](https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=http) to display a Suggested item.
+
 For these endpoints we need to request `People.Read` and `User.Read` scopes respectively.
 Locate and open the following file in your project: **./src/adaptiveCardExtensions/peopleSearch/config/package-solution.json**.
-Add `webApiPermissions` property:
+
+Add `webApiPermissions` property as follows
+
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
@@ -184,8 +209,11 @@ Add `webApiPermissions` property:
 ```
 
 ### Defining Person model
-Navigate to **./src/adaptiveCardExtensions/peopleSearch** and create a new folder called **model** with **IPerson.ts** file in there.
-The file will contain the "model" or representation of a person/user:
+
+- Navigate to **./src/adaptiveCardExtensions/peopleSearch** and create a new folder called **model** with **IPerson.ts** file in there.
+
+The file contains the "model" or representation of a person/user.
+
 ```ts
 export interface IPerson {
   id: string;
@@ -199,9 +227,13 @@ export interface IPerson {
 ```
 
 ### Implement People Search Service
-We will use Service Locator pattern to inject the data service into the ACE. The pattern is represented by the [ServiceScope](https://learn.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest) class in SPFx.
+
+We use Service Locator pattern to inject the data service into the ACE. The pattern is represented by the [ServiceScope](https://learn.microsoft.com/en-us/javascript/api/sp-core-library/servicescope?view=sp-typescript-latest) class in SPFx.
+
 Navigate to **./src/adaptiveCardExtensions/peopleSearch** and create a new folder called **peopleSearchService** with two files in there: **IPeopleSearchService.ts** and **PeopleSearchService.ts**.
-The **IPeopleSearchService.ts** file will contain the "contract" for the service:
+
+The **IPeopleSearchService.ts** file contains the "contract" for the service.
+
 ```ts
 import { IPerson } from '../model/IPerson';
 
@@ -210,14 +242,16 @@ export interface IPeopleSearchService {
   getSuggested: () => Promise<IPerson>;
 }
 ```
+**PeopleSearchService.ts** file contains the implementation of the service with `ServiceKey` static field to register the service in the Service Scope.
 
-**PeopleSearchService.ts** file will contain the implementation of the service with `ServiceKey` static field to register the service in the Service Scope.
-Before the imlementation of the service, install the following dependencies:
+Before the implementation of the service, install the following dependencies from command line:
+
 ```bash
 npm install @microsoft/sp-http --save --save-exact
 ```
 
-The implementation of the service is shown below:
+The implementation of the service is as follows:
+
 ```ts
 import { ServiceKey, ServiceScope } from '@microsoft/sp-core-library';
 import { MSGraphClientFactory, MSGraphClientV3 } from '@microsoft/sp-http';
@@ -356,7 +390,10 @@ export class PeopleSearchService implements IPeopleSearchService {
 ```
 
 ### Update ACE's logic to use the service
-1. Locate and open **./src/adaptiveCardExtensions/peopleSearch/PeopleSearchAdaptiveCardExtension.ts** file. Update the `IPeopleSearchAdaptiveCardExtensionState` to add properties for a suggestion and search results:
+
+- Locate and open **./src/adaptiveCardExtensions/peopleSearch/PeopleSearchAdaptiveCardExtension.ts** file. 
+- Update the `IPeopleSearchAdaptiveCardExtensionState` to add properties for a suggestion and search results.
+
 ```ts
 export interface IPeopleSearchAdaptiveCardExtensionState {
   queryString?: string;
@@ -365,7 +402,8 @@ export interface IPeopleSearchAdaptiveCardExtensionState {
 }
 ```
 
-1. Update `onInit` to request the service from the Service Scope get the suggestion to display on the card:
+- Update `onInit` to request the service from the Service Scope get the suggestion to display on the card.
+
 ```ts
   public onInit(): Promise<void> {
     this.state = { };
@@ -390,7 +428,9 @@ export interface IPeopleSearchAdaptiveCardExtensionState {
 ```
 
 ### Update the Search Results Quick View to use the service and display the results
-1. Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/template/SearchResultsQuickViewTemplate.json**. Update it to display search results:
+
+- Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/template/SearchResultsQuickViewTemplate.json**. Update it to display search results.
+
 ```json
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -480,7 +520,10 @@ export interface IPeopleSearchAdaptiveCardExtensionState {
   ]
 }
 ```
-1. Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/SearchResultsQuickView.ts**. Update the `ISearchResultsQuickViewData` interface to add properties for the search results:
+
+- Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/SearchResultsQuickView.ts**. 
+- Update the `ISearchResultsQuickViewData` interface to add properties for the search results.
+
 ```ts
 export interface ISearchResultsQuickViewData {
   searchActionTitle: string;
@@ -501,11 +544,14 @@ export interface ISearchResultsQuickViewData {
 }
 ```
 
-1. Add `_lastQueryString` field to the `SearchResultsQuickView` class to store the last processed query string:
+- Add `_lastQueryString` field to the `SearchResultsQuickView` class to store the last processed query string.
+
 ```ts
   private _lastQueryString: string | undefined;
 ```
-1. Implement `_performSearch` method to request search results from the service:
+
+- Implement `_performSearch` method to request search results from the service.
+
 ```ts
   private _performSearch = (queryString: string): void => {
     // initiate search
@@ -523,7 +569,8 @@ export interface ISearchResultsQuickViewData {
   };
 ```
 
-1. Update `data` getter to initiate search if needed and return the data to display:
+- Update `data` getter to initiate search if needed and return the data to display.
+  
 ```ts
   public get data(): ISearchResultsQuickViewData {
     const isNewSearch: boolean = this._lastQueryString !== this.state.queryString;
@@ -546,7 +593,10 @@ export interface ISearchResultsQuickViewData {
     };
   }
 ```
-1. Run `gulp serve` to test the extension. Enter some text in the search box and click search icon button. You should see the following results:
+
+- Run `gulp serve` to test the extension. Enter some text in the search box and select search icon button. You should see the following results.
+
+   
 ![Search Results Quick View](../../../../docs/images/viva-extensibility/people-search/search-results.png)
 
 ### Perform search for the Search Results Quick View
@@ -569,11 +619,15 @@ export interface ISearchResultsQuickViewData {
     }
   }
 ```
-Now if you click on **Search** button in the Search Results Quick View, the results will be refreshed.
+
+Now if you select on **Search** button in the Search Results Quick View, the results are refreshed.
 
 ### Open Person card from the Search Results Quick View
+
 The next step is to open the Person card (`ItemQuickView`) when selecting a search result from the Search Results Quick View.
-1. Locate and open **./src/adaptiveCardExtensions/peopleSearch/PeopleSearchAdaptiveCardExtension.ts**. Update `IPeopleSearchAdaptiveCardExtensionState` to store the selected person:
+
+* Locate and open **./src/adaptiveCardExtensions/peopleSearch/PeopleSearchAdaptiveCardExtension.ts**. Update `IPeopleSearchAdaptiveCardExtensionState` to store the selected person:
+
 ```ts
 export interface IPeopleSearchAdaptiveCardExtensionState {
   queryString?: string;
@@ -582,7 +636,10 @@ export interface IPeopleSearchAdaptiveCardExtensionState {
   selectedPerson?: IPerson;
 }
 ```
-1. Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/template/SearchResultsQuickViewTemplate.json**. Add `selectAction` property to the `ColunSet` (see comment in the code):
+
+* Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/template/SearchResultsQuickViewTemplate.json**. 
+* Add `selectAction` property to the `ColunSet` (see comment in the code)
+
 ```json
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -680,7 +737,10 @@ export interface IPeopleSearchAdaptiveCardExtensionState {
   ]
 }
 ```
-1. Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/SearchResultsQuickView.ts**. Update `onAction` method to handle `selectPerson` event: set `selectedPerson` state's property and open the Person card:
+
+* Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/SearchResultsQuickView.ts**.
+* Update `onAction` method to handle `selectPerson` event: set `selectedPerson` state's property and open the Person card as follows:
+  
 ```ts
   public onAction(action: IActionArguments): void {
     if (action.type !== 'Submit' || !action.data) {
@@ -708,7 +768,10 @@ export interface IPeopleSearchAdaptiveCardExtensionState {
     }
   }
 ```
-1. Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/template/ItemQuickViewTemplate.json**. Update the markup to display selected person's information:
+
+* Locate and open **./src/adaptiveCardExtensions/peopleSearch/quickView/template/ItemQuickViewTemplate.json**
+* Update the markup to display selected person's information as follows
+
 ```json
 {
   "type": "AdaptiveCard",
@@ -876,13 +939,18 @@ export interface IPeopleSearchAdaptiveCardExtensionState {
   ]
 }
 ```
-1. Locate and open **./src/adaptiveCards/peopleSearch/quickView/ItemQuickView.ts**. Update `IItemQuickViewData`:
+
+* Locate and open **./src/adaptiveCards/peopleSearch/quickView/ItemQuickView.ts**
+* Update `IItemQuickViewData` as follows
+  
 ```ts
 export interface IItemQuickViewData {
   person: IPerson;
 }
 ```
-1. Update `data` getter to get `selectedPerson` from the state:
+
+* Update `data` getter to get `selectedPerson` from the state as follows
+
 ```ts
   public get data(): IItemQuickViewData {
     return {
@@ -890,11 +958,16 @@ export interface IItemQuickViewData {
     };
   }
 ```
-Now if you click on a person in the list, you should see a quick view of the person's details:
+
+Now if you select on a person in the list, you should see a quick view of the person's details:
+
 ![Person card](../../../../docs/images/viva-extensibility/people-search/qv-person.png)
 
 ## Display Suggested person in the card view
-1. Locate and open **./src/adaptiveCards/peopleSearch/cardView/CardView.ts**. Update `cardViewParameters` getter to use `suggested` value from the state:
+
+* Locate and open **./src/adaptiveCards/peopleSearch/cardView/CardView.ts**
+* Update `cardViewParameters` getter to use `suggested` value from the state as follows
+ 
 ```ts
   public get cardViewParameters(): ISearchCardViewParameters {
     // default value for the footer
@@ -945,5 +1018,7 @@ Now if you click on a person in the list, you should see a quick view of the per
       footer: footer
     });
 ```
-Now you will see the current user in the Suggested section of the card view. If you click on the user information, you will see the quick view of the person's details:
+
+Now you see the current user in the Suggested section of the card view. If you select on the user information, you see the quick view of the person's details.
+
 ![Suggested card](../../../../docs/images/viva-extensibility/people-search/qv-suggested.png)

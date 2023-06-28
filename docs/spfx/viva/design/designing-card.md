@@ -45,6 +45,7 @@ There are three types of cards layouts available to choose from.
 - Heading
 - Heading + Image
 - Heading + Description
+- Heading + Textbox
 
 All layouts come in two sizes: medium or large. Card size will determine how the space in the dashboard is utilized. It's useful to start with medium size cards. Use large size card if they are needed to showcase additional info that does not fit in the medium size.
 
@@ -65,6 +66,43 @@ Use when the description can add informational value to the heading and can make
 Images draw viewer's eye, so use images carefully either to create recognition of a familiar app or website, or increase overall visual prominence of the card on the dashboard. The image should meaningfully connect to the heading and/or title.
 
 :::image type="content" source="../../../images/viva-design/img_card_image.jpg" alt-text="Screenshot of the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
+
+### Heading + Textbox
+
+Use when you need to have input textbox capabilities on the card e.g. search or other related scenario.
+
+> [!NOTE]
+> This feature is currently in preview and released initially with the preview version of 1.18.
+
+:::image type="content" source="../../../images/viva-design/img-search-box-card.png" alt-text="Screenshot of a text box powered card layout.":::
+
+## Custom card layouts
+
+In addition to the defined card layout, we provide card components that you can combine to customize the card layout, within the limits of the design language and rules. There are a number of pre-defined combinations of components that you can choose from to create different card layouts. These are the possible combinations.
+
+> [!NOTE]
+> This feature is currently in preview and released initially with the preview version of 1.18.
+
+:::image type="content" source="../../../images/viva-design/img-custom-card-layouts.png" alt-text="Screenshot of the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
+
+| image 	| card bar 	| header 	|  body 	|  footer 	| Recommendations                       	|
+|:-----:	|:--------:	|:------:	|:-----:	|:-------:	|---------------------------------------	|
+|  yes  	|    yes   	|  text  	| empty 	| actions 	| Use the "Heading + Image" card layout 	|
+|  yes  	|    yes   	|  text	    | empty 	| empty     | Use the “Heading + Image” card layout    	|
+|  yes  	|    yes   	|  text	    | empty 	| input textbox | Allowed custom card layout permutation	|
+|  yes  	|    yes   	|  text	    | input 	| actions 	| Allowed custom card layout permutation     |
+|  yes  	|    yes   	|  text	    | input 	| empty     | Allowed custom card layout permutation	|
+|  yes  	|    yes   	|  empty	| input 	| actions 	| Allowed custom card layout permutation	|
+|  yes  	|    yes   	|  empty	| input 	| empty     | Allowed custom card layout permutation	|
+|  no   	|    yes   	|  text	    | empty     | actions 	| Use the "Heading + Image" card layout    	|
+|  no   	|    yes   	|  text    	| empty     | empty     | Use the "Heading + Image" card layout    	|
+|  no   	|    yes   	|  text    	| empty     | input textbox |  Allowed custom card layout permutation	|
+|  no   	|    yes   	|  empty	| input 	| actions 	| Allowed custom card layout permutation	|
+|  no   	|    yes   	|  empty	| input 	| empty     | Allowed custom card layout permutation	|
+|  no   	|    yes   	|  text    	| text  	| actions 	| Use the “Heading + Description” card layout	|
+|  no   	|    yes   	|  text    	| text  	| empty     | Use the “Heading + Description” card layout	|
+|  no   	|    yes   	|  text    	| input 	| actions 	| Allowed custom card layout permutation	|
+|  no   	|    yes   	|  text    	| input 	| empty     | Allowed custom card layout permutation	|
 
 ## Interaction
 

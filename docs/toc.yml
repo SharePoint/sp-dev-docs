@@ -466,8 +466,10 @@
     items:
     - name: Overview
       href: spfx/roadmap.md
+    - name: SPFx v1.18 - June 28, 2023
+      href: spfx/release-1.18.md      
     - name: SPFx v1.17.4 - June 21, 2023
-      href: spfx/release-1.17.4.md      
+      href: spfx/release-1.17.4.md
     - name: SPFx v1.17.3 - May 31, 2023
       href: spfx/release-1.17.3.md
     - name: SPFx v1.17.2 - May 9, 2023
@@ -586,6 +588,8 @@
       href: spfx/viva/get-started/actions/media-upload/MediaUploadTutorial.md
     - name: Media Upload capability via property pane of an ACE
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
+    - name: Create a People Search Adaptive Card Extension
+      href: spfx/viva/get-started/build-people-search-adaptive-card-extension      
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
     - name: Migrate existing ACEs to SharePoint Framework 1.18
