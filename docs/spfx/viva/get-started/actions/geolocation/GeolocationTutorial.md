@@ -7,9 +7,9 @@ ms.localizationpriority: high
 # Create an Adaptive Card Extension with geolocation action
 
 > [!NOTE]
-> This tutorial assumes that you have installed the SPFx v1.18
+> This tutorial assumes that you have installed the SPFx v1.14
 >
-> For more information on installing the SPFx v1.18, see [SharePoint Framework v1.14 release notes](../../../../release-1.18.md).
+> For more information on installing the SPFx v1.14, see [SharePoint Framework v1.14 release notes](../../../../release-1.14.md).
 
 ## Scaffold an Adaptive Card Extension project
 
@@ -25,7 +25,7 @@ When prompted, enter the following values (select the default option for all pro
 
 - **What is your solution name?** geolocation-tutorial
 - **Which type of client-side component to create?** Adaptive Card Extension
-- **Which template do you want to use?** Generic Card Template
+- **Which template do you want to use?** Primary Text Template
 - **What is your Adaptive Card Extension name?** GeoLocation
 
 At this point, Yeoman installs the required dependencies and scaffolds the solution files. This process might take few minutes.
@@ -42,11 +42,11 @@ When you use the gulp task **serve**, by default it will launch a browser with t
       "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
       "port": 4321,
       "https": true,
-      "initialPage": "https://{tenantDomain}/_layouts/workbench.aspx"
+      "initialPage": "https://enter-your-SharePoint-site/ _layouts/workbench.aspx"
     }
     ```
 
-- Change the `{tenantDomain}` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
+- Change the `enter-your-SharePoint-site` domain to the URL of your SharePoint tenant and site you want to use for testing. For example: `https://contoso.sharepoint.com/sites/devsite/_layouts/workbench.aspx`.
 
 At this point, if you do `gulp serve`, then you will see the `GeoLocation` card:
 
@@ -102,20 +102,18 @@ As mentioned earlier, on the Card View, we will add a button, which will show us
 
 We will first add the functionality for the button on the Card View. For this, locate and open the following file in your project: **./src/adaptiveCardExtensions/geoLocation/cardView/CardView.ts**
 
-Here, replace the definition of `footer` in `cardViewParameters` getter with the following:
+Here, replace the definition of `cardButtons` function with the following:
 
 ```typescript
-public get cardViewParameters(): ComponentsCardViewParameters {
-  return return PrimaryTextCardView({
-    // ...
-    footer: {
-      componentName: 'cardButton',
+public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
+  return [
+    {
       title: strings.ShowCurrentLocation,
       action: {
         type: 'VivaAction.ShowLocation'
       }
     }
-  });
+  ];
 }
 ```
 
@@ -158,7 +156,7 @@ Replace the content of this file with the following:
 {
   "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
-  "version": "1.5",
+  "version": "1.2",
   "body": [
     {
       "type": "TextBlock",
@@ -269,10 +267,6 @@ public onAction(action: IGetLocationActionArguments): void {
   }
 }
 ```
-
-After clicking on the `Get my location` button, the `onAction` function will be triggered and the Quick View will display the coordinates of the user's current location:
-
-![Card appearance after introducing changes in the quick-view](../../../../../../docs/images/viva-extensibility/geolocation/geoloactionQuickViewCoordinates.png)
 
 So now, whenever the `VivaAction.GetLocation` action is triggered from your Quick View, then depending on the parameters that were passed, the Adaptive Card Extension framework will either pass user's current coordinates or user's chosen coordinates to the `onAction` callback. In the implementation shared above, we check if the `action` type is of type `VivaAction.GetLocation`, and if it is, then we re-render the Quick View by doing a `setState`, in which we update the `latitude` and `longitude` text-blocks.
 
