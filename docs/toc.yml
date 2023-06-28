@@ -467,7 +467,7 @@
     - name: Overview
       href: spfx/roadmap.md
     - name: SPFx v1.18 - June 28, 2023
-      href: spfx/release-1.18.md      
+      href: spfx/release-1.18.md
     - name: SPFx v1.17.4 - June 21, 2023
       href: spfx/release-1.17.4.md
     - name: SPFx v1.17.3 - May 31, 2023
@@ -589,10 +589,10 @@
     - name: Media Upload capability via property pane of an ACE
       href: spfx/viva/get-started/actions/media-upload/MediaUploadPropertyPane.md
     - name: Create a People Search Adaptive Card Extension
-      href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md    
+      href: spfx/viva/get-started/build-people-search-adaptive-card-extension.md
     - name: Using focus feature in an ACE
       href: spfx/viva/features/focus-feature/FocusFeatureTutorial.md
-    - name: Migrate existing ACEs to SharePoint Framework 1.18
+    - name: Migrate existing ACEs to SharePoint Framework v1.18
       href: spfx/viva/get-started/migrate-to-spfx-1-18.md
   - name: Known issues
     href: spfx/viva/known-issues-adaptive-cards.md
@@ -2096,7 +2096,7 @@
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md
   - name: CSOM methods for applying retention labels
-    href: apis/csom-methods-for-applying-retention-labels.md    
+    href: apis/csom-methods-for-applying-retention-labels.md
   - name: SharePoint Add-in Management APIs
     href: apis/addin-management-apis.md
   - name: Microsoft 365 Copy and Move API
