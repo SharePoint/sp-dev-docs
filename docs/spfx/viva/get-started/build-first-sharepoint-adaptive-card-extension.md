@@ -66,7 +66,7 @@ The inner development loop with ACEs is similar to SPFx Web Parts. We can serve 
 gulp serve
 ```
 
-Once local webserver is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once local web server is running, navigate to the hosted Workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 Open the **Web Part Toolbox** and select your ACE:
 
@@ -400,7 +400,7 @@ Test your changes by refreshing the hosted workbench in the browser. It should p
 :::image type="content" source="../../../images/viva-extensibility/lab1-new-ql.png" alt-text="Updated ACE Quick View":::
 
 > [!TIP]
-> Learn more about Adaptive Cards at https://adaptivecards.io. This site also includes an Adaptive Cards Designer that lets you preview the rendering and structure of adaptive cards as you create them.
+> Learn more about Adaptive Cards at [adaptivecards.io](https://adaptivecards.io). This site also includes an Adaptive Cards Designer that lets you preview the rendering and structure of adaptive cards as you create them.
 
 At this point, you've modified your ACE to include two new buttons in the Quick View card. The next step is to implement what happens when these buttons are selected. This is done using *action handlers*.
 

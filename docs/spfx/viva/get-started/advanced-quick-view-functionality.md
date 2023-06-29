@@ -104,7 +104,7 @@ Build and launch the ACE in the hosted workbench:
 gulp serve
 ```
 
-Once the local webserver has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
+Once the local web server has loaded, navigate to the hosted workbench: `https://{tenant}.sharepoint.com/_layouts/15/workbench.aspx`
 
 Open the Toolbox and select your ACE. Select the Card to open the Quick View:
 
