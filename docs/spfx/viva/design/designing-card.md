@@ -78,12 +78,14 @@ Use when you need to have input textbox capabilities on the card e.g. search or 
 
 ## Custom card layouts
 
-In addition to the defined card layout, we provide card components that you can combine to customize the card layout, within the limits of the design language and rules. There are a number of pre-defined combinations of components that you can choose from to create different card layouts. These are the possible combinations.
+In addition to the defined card layout, we provide card components that you can combine to customize the card layout, within the limits of the design language and rules. There are a number of pre-defined combinations of components that you can choose from to create different card layouts. 
 
 > [!NOTE]
 > This feature is currently in preview and released initially with the preview version of 1.18.
 
 :::image type="content" source="../../../images/viva-design/img-custom-card-layouts.png" alt-text="Screenshot of the medium and large icons showing how an image appears for the medium card layout versus how it appears for the large card layout.":::
+
+These are the possible combinations.
 
 | image 	| card bar 	| header 	|  body 	|  footer 	| Recommendations                       	|
 |:-----:	|:--------:	|:------:	|:-----:	|:-------:	|---------------------------------------	|
