@@ -22,7 +22,7 @@ To support this scenario, a new event was added to the **AADTokenProvider** so d
 
 ### Enabling the popup flow experience
 
-To enable the popup experience, a tenant administrator must first enable the feature on the tenant. This is done using the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) to set the [`-IsEnableAppAuthPopupEnabled`](/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-isenableappauthpopupenabled) argument on the tenant.
+To enable the popup experience, a tenant administrator must first enable the feature on the tenant. This is done using the [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant) to set the [`-IsEnableAppAuthPopupEnabled`](/powershell/module/sharepoint-online/set-spotenant#-isenableappauthpopupenabled) argument on the tenant.
 
 > [!IMPORTANT]
 > The SPFx will always attempt to obtain an access token using the *silent SSO* first with the hidden `<iframe>`.
