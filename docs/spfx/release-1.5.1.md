@@ -25,7 +25,7 @@ In the project's **package.json** file, identify all SPFx v1.5 packages. For eac
 1. Install the refreshed v1.5.1 package:
 
     ```console
-    npm install @microsoft/{spfx-package-name}@1.5.1.0 --save --save-exact
+    npm install @microsoft/{spfx-package-name}@1.5.1 --save --save-exact
     ```
 
 [!INCLUDE [spfx-release-upgrade-tip](../../includes/snippets/spfx-release-upgrade-tip.md)]
