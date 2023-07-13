@@ -68,7 +68,7 @@ You can download the [full source](https://github.com/pnp/sp-dev-fx-webparts/tre
 
 ## Install and set up @pnp/sp
 
-After your project is created, you must install and set up **@pnp/sp** package. In addition, we'll use the @pnp/logging extension, but that is optional. These steps are common for any project type (React, etc).
+After your project is created, you must install and set up **@pnp/sp** package. In addition, we'll use the **@pnp/logging** extension, but that is optional. These steps are common for any project type (React, etc).
 
 ```console
 npm install @pnp/logging @pnp/sp --save
@@ -76,7 +76,8 @@ npm install @pnp/logging @pnp/sp --save
 
 ### For SPFx Version 1.14.x or those that aren't supporting typescript v4.x
 
->Note: PnPjs version 3.x is only supported in SPFx version 1.14 and higher and NodeJs version 12.x and higher.
+> [!NOTE]
+> PnPjs version 3.x is only supported in SPFx v1.14 and higher and NodeJs v12.x and higher.
 
 1. Update the rush stack compiler to 4.2. This is covered in this [great article by Elio](https://www.eliostruyf.com/define-the-typescript-version-you-want-to-use-in-sharepoint-framework/), but the steps are listed below.
     - Uninstall the existing rush stack compiler (replace the x with the version installed in your package.json file):
@@ -88,7 +89,7 @@ npm install @pnp/logging @pnp/sp --save
 
 1. Replace the contents of the gulpfile.js with:
 
-   ```JS
+   ```javascript
    'use strict';
 
    const build = require('@microsoft/sp-build-web');
@@ -114,7 +115,7 @@ npm install @pnp/logging @pnp/sp --save
 
 ### Update onInit in PnPjsExampleWebPart.ts
 
-Because the @pnp/sp library constructs REST requests, it needs to know the URL to send these requests. When operating within SPFx, we need to rely on the [context](/javascript/api/sp-webpart-base/webpartcontext) object supplied by the framework.
+Because the **@pnp/sp** library constructs REST requests, it needs to know the URL to send these requests. When operating within SPFx, we need to rely on the [context](/javascript/api/sp-webpart-base/webpartcontext) object supplied by the framework.
 
 There are [two ways](https://pnp.github.io/pnpjs/getting-started) to ensure that you have correctly set up your requests; we use the `onInit` method in this example.
 
@@ -175,7 +176,7 @@ export const getSP = (context?: WebPartContext): SPFI => {
 
 ## Add an interface file for the data model
 
-Add a new file in the root of the components folder called `interfaces.ts`. Replace the contents with the following definitions which will be referenced by our component.
+Add a new file in the root of the components folder called **interfaces.ts**. Replace the contents with the following definitions which will be referenced by our component.
 
 ```typescript
 // create File item to work with it internally
@@ -376,7 +377,7 @@ You can delete existing items by selecting the trashcan icon, or you can add new
 
 ### Next steps
 
-The @pnp/sp library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/getting-started).
+The **@pnp/sp** library contains a great range of functionality and extensibility. For samples, guidance, and hints about using and configuring the library, see the [Developer Guide](https://pnp.github.io/pnpjs/getting-started).
 
 ## See also
 
