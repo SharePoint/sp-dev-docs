@@ -20,7 +20,7 @@ A SharePoint Add-in can include custom actions, which is the SharePoint term for
 
 The custom button is going to be on the ribbon of a specific list that records the employees of the local store. In a later article in this series, you'll learn how to programmatically add a custom list to a host website, but for now you'll add one manually.
 
-1. From the home page of the Fabrikam Hong Kong Store, go to **Site Contents** > **Add an add-in** > **Custom List**. 
+1. From the home page of the Fabrikam Hong Kong SAR Store, go to **Site Contents** > **Add an add-in** > **Custom List**. 
 1. In the **Adding Custom List** dialog, specify **Local Employees** as the name, and then select **Create**. 
 1. On the **Site Contents** page, open the **Local Employees** list.
 1. On the **List** tab on the ribbon, select **List Settings**.
