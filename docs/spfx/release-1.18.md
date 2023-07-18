@@ -137,6 +137,34 @@ We introduce a new search card view for Adaptive Card Extensions that is intende
 
 ![Search Card View](../images/118-release-notes/ace-search-box.png)
 
+### Support onChange event for ACE TextInput and SearchBox
+Developers can now use onChange event for TextInput and SearchBox components in Adaptive Card Extensions.
+```typescript
+/**
+ * Text change event handler.
+ */
+onChange?: (newValue?: string) => void;
+```
+> [!NOTE]
+> The `onChange` event for TextInput and SearchBox is fully supported in the browser and in Teams desktop. Full support for Viva Connections mobile will be enabled later.
+
+### Ability to detect host's theme for Viva Connections Mobile
+Starting with this version developers have access to `hostContext` in the `AdaptiveCardExtensionContext` object. This property allows to detect host's theme.
+```typescript
+
+export type HostTheme = 'light' | 'dark' | undefined;
+
+export interface IHostContext {
+  /**
+ *
+ * theme is used to define what the the current colour scheme for the VCM app. It has currently 2 values
+      light: If VCM is in light mode, we use the theme 'light',
+      dark: If VCM is in dark mode, we use the theme 'dark'
+ */
+  theme: HostTheme;
+}
+```
+
 ### Fluent UI React v8 support
 
 Starting this version React templates use Fluent UI React v8 instead of v7.
