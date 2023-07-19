@@ -34,6 +34,7 @@ The following are important points to know about managed metadata in Multi-Geo t
 - In some cases, you might want a term group, term set, or terms to be available only in a satellite location, for example, a term that relates to a confidential project that applies to a specific geo location. In that case, you can choose to create the relevant terms in the applicable geo location. 
 
 - If you want the term group to be available only in the default location, use the `Set-SPOTenantTaxonomyReplicationParameters` PowerShell cmdlet to explicitly specify which term groups from the default location are replicated. This cmdlet is part of the [SharePoint Online Management Shell](https://www.microsoft.com/download/details.aspx?id=35588).
+
 > [!NOTE] In a multi-geo scenario, there are protected or special term sets within the term store space that will not be replicated, nor will anything under them be replicated. Those groups are:
 > - People
 > - Search Dictionaries
