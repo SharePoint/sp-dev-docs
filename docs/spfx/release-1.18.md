@@ -169,6 +169,9 @@ export interface IHostContext {
 
 Starting this version React templates use Fluent UI React v8 instead of v7.
 
+### Transparent outline icon for Teams-hosted web parts
+The default outline icon for Teams-hosted web parts is now transparent. This allows to meet the Teams design guidelines for application.
+
 ## Deprecations
 
 - `BaseAdaptiveCardView` - use `BaseAdaptiveCardQuickView` instead
@@ -176,7 +179,7 @@ Starting this version React templates use Fluent UI React v8 instead of v7.
 
 ## Fixed Issues
 
-This release didn't include fixes on any reported issues within the [SPFx issue list](https://github.com/SharePoint/sp-dev-docs/issues).
+- [#9010](https://github.com/SharePoint/sp-dev-docs/issues/9010) - Placeholder `{tenantDomain}` is not replaced with `SPFX_SERVE_TENANT_DOMAIN`.
 
 ## Feedback and issues
 
