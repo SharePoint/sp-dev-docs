@@ -14,8 +14,8 @@ To adapt to the dark mode release in Viva Connections Mobile, which is scheduled
 - Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. 
 - Replace the contents of this file with the following JSON: 
 
-        ```json
-        {
+    ```json
+    {
         "type": "AdaptiveCard",
         "body": [
             {
@@ -48,8 +48,8 @@ To adapt to the dark mode release in Viva Connections Mobile, which is scheduled
         ],
         "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
         "version": "1.3"
-        }
-        ```
+    }
+    ```
 
 - Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**. 
 - Add a variable **imageUrl** to the existing interface **IQuickViewData** and add **imageUrl value** to **data()** function.
