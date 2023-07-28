@@ -93,5 +93,12 @@ Currently dark themes are not supported for quick views on iOS and Android mobil
 
 :::image type="content" source="../../../images/viva-design/img_quickview_ios_theme.jpg" alt-text="Screenshot that shows how a card viewed on mobile appears in light mode and dark mode.":::
 
+We plan to introduce dark theme support in Quick View Mobile for both iOS and Android in early Q4 of CY23. The API (context.hostContext.theme) to get the theme in which Quick View is rendered of the Quick View will be available in [SPFx 1.18.0 package](https://learn.microsoft.com/en-us/javascript/api/sp-adaptive-card-extension-base?view=sp-typescript-latest)
+
+:::image type="content" source="../../../images/viva-design/img_quickview_new_ios_theme.png" alt-text="Screenshot that shows how a card quickview viewed on mobile will appear in light mode and dark mode.":::
+
+> [!IMPORTANT]
+> Please test your existing cards using [Adaptive Card designer](https://adaptivecards.io/designer) to make sure that the icons and images used in light mode for Quick View of the existing cards are compatible with dark mode as some discrepancies have been observed. Tenant admins will also be able to test their card Quick Views in dark mode. To update your card for the new theming, please follow the tutorial **'Making your Quick View compatible with Dark Mode in Mobile'**. 
+
 ### Behavior for links and Single sign-on
 For some cards, you will use links to URLs. Depending on the location of the content, links to URLs may display content in Microsoft Teams or elsewhere and Single sign-on (SSO) behavior can differ. Get more information about how links to URLs and SSO behave depending on the location of the content you are linking to. [Learn more](/viva/connections/create-dashboard.md#how-urls-and-single-sign-on-works)
