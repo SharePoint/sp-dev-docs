@@ -151,12 +151,9 @@ If you don't want to write up a new ACE but still want to see the media upload i
 
 ## Availability of media upload action
 
-> [!NOTE]
-> Currently this feature is not supported in teams mobile and will throw an error indicating that this.
-
    Action    | Viva Connection Desktop | Viva Connections Mobile |  Browser
 ------------ | ----------------------- | ----------------------- | ---------
-Select Media | Supported               | Not Supported           | Supported
+Select Media | Supported               | Supported               | Supported
 
 ## See Also
 
