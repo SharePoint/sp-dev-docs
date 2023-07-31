@@ -9,7 +9,7 @@ ms.localizationpriority: high
 > [!IMPORTANT]
 > The following tutorial is targeted specifically for Quick View in Mobile for Viva Connections iOS and Android.
 
-To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of CY23, please make sure that your card contents look compatible with both light and dark mode. An API (context.hostContext.theme) will be available in [SPFx 1.18.0 package](https://learn.microsoft.com/en-us/javascript/api/sp-adaptive-card-extension-base?view=sp-typescript-latest) to get the information about the theme of the mobile app. This will help with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, please follow these steps: 
+To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of CY23, please make sure that your card contents look compatible with both light and dark mode. An API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-base/ihostcontext)) will be available in SPFx 1.18.0 package to get the information about the theme of the mobile app. This will help with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, please follow these steps: 
 
 - Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. 
 - Replace the contents of this file with the following JSON: 
