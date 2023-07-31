@@ -74,7 +74,7 @@ export class QuickView extends BaseAdaptiveCardView<
     return {
       subTitle: strings.SubTitle,
       title: strings.Title,
-      imageUrl: strings.LightModeImageUrl
+      imageUrl: require('../assets/LightModeImage.png')
     };
   }
 
@@ -100,13 +100,13 @@ public get data(): IQuickViewData {
       return {
         subTitle: strings.SubTitle,
         title: strings.Title,
-        imageUrl: strings.DarkModeImageUrl
+        imageUrl: require('../assets/DarkModeImage.png')
       }
     } else {
       return {
         subTitle: strings.SubTitle,
         title: strings.Title,
-        imageUrl: strings.LightModeImageUrl
+        imageUrl: require('../assets/LightModeImage.png')
       }
     }
 }
