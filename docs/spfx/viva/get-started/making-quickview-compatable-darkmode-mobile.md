@@ -1,6 +1,6 @@
 ---
 title: Making your Quick View compatible with Dark Mode in Mobile
-description: Making your Adaptive Card QuickView compatible for both dark and light mode by using different resources for both scenarios.
+description: Making your Adaptive Card Quick View compatible for both dark and light mode by using different resources for both scenarios.
 ms.date: 07/28/2023
 ms.localizationpriority: high
 ---
@@ -96,18 +96,10 @@ export class QuickView extends BaseAdaptiveCardView<
 ```typescript
 public get data(): IQuickViewData {
     const isDarkTheme = (this.context.hostContext.theme == 'dark') ? true : false;
-    if(isDarkTheme) {
-      return {
-        subTitle: strings.SubTitle,
-        title: strings.Title,
-        imageUrl: require('../assets/DarkModeImage.png')
-      }
-    } else {
-      return {
-        subTitle: strings.SubTitle,
-        title: strings.Title,
-        imageUrl: require('../assets/LightModeImage.png')
-      }
+    return {
+      subTitle: strings.SubTitle,
+      title: strings.Title,
+      imageUrl: isDarkTheme ? require('../assets/DarkModeImage.png') : require('../assets/LightModeImage.png')
     }
 }
 ```

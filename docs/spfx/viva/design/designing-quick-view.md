@@ -93,7 +93,7 @@ Currently dark themes are not supported for quick views on iOS and Android mobil
 
 :::image type="content" source="../../../images/viva-design/img_quickview_ios_theme.jpg" alt-text="Screenshot that shows how a card viewed on mobile appears in light mode and dark mode.":::
 
-We plan to introduce dark theme support in Quick View Mobile for both iOS and Android in early Q4 of CY23. The API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-base/ihostcontext)) to get the theme in which Quick View is rendered of the Quick View will be available in SPFx 1.18.0 package.
+We plan to introduce dark theme support in Quick View in Viva Connections Mobile for both iOS and Android in early Q4 of CY23. The API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-base/ihostcontext)) to get the theme in which Quick View is rendered of the Quick View will be available in SPFx 1.18.0 package.
 
 :::image type="content" source="../../../images/viva-design/img_quickview_new_ios_theme.png" alt-text="Screenshot that shows how a card quickview viewed on mobile will appear in light mode and dark mode.":::
 
