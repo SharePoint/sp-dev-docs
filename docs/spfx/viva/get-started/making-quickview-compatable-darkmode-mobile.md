@@ -95,7 +95,7 @@ export class QuickView extends BaseAdaptiveCardView<
 
 ```typescript
 public get data(): IQuickViewData {
-    const isDarkTheme = (this.context.hostContext.theme == 'dark') ? true : false;
+    const isDarkTheme = (this.context.hostContext.theme === 'dark') ? true : false;
     return {
       subTitle: strings.SubTitle,
       title: strings.Title,
