@@ -83,6 +83,7 @@ export class QuickView extends BaseAdaptiveCardView<
   }
 }
 ```
+
 - We will get a Quick View in mobile iOS like this:
 
 :::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light.png" alt-text="Screenshot that shows how a image in quickview viewed on mobile will appear in light mode.":::
