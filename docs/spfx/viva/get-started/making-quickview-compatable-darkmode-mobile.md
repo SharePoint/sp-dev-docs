@@ -1,18 +1,20 @@
 ---
-title: Making your Quick View compatible with Dark Mode in Mobile
-description: Making your Adaptive Card Quick View compatible for both dark and light mode by using different resources for both scenarios.
-ms.date: 07/28/2023
+title: Making Quick View compatible with dark mode in mobile devices
+description: Making Adaptive Card Extension Quick View compatible for both dark and light mode by using different resources for both scenarios.
+ms.date: 08/08/2023
 ms.localizationpriority: high
 ---
-# Making your Quick View compatible with Dark Mode in Mobile
+# Making Quick View compatible with dark mode in mobile devices
 
 > [!IMPORTANT]
 > The following tutorial is targeted specifically for Quick View in Mobile for Viva Connections iOS and Android.
 
-To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of CY23, please make sure that your card contents look compatible with both light and dark mode. An API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-base/ihostcontext)) will be available in SPFx 1.18.0 package to get the information about the theme of the mobile app. This will help with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, please follow these steps: 
+To adapt to the dark mode release in Viva Connections Mobile, which is scheduled for early Q4 of CY23, make sure that your card contents look compatible with both light and dark mode. 
+
+An API ([context.hostContext.theme](/javascript/api/sp-adaptive-card-extension-base/ihostcontext)) will be available in SPFx 1.18.0 package to get the information about the theme of the mobile app. This helps with using associated assets like images compliant to the theme. If you want to use two different sets of data while keeping the existing view style, follow these steps:
 
 - Let’s create a basic card with an image in Quick View. Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/template/QuickViewTemplate.json**. 
-- Replace the contents of this file with the following JSON: 
+- Replace the contents of this file with the following JSON:
 
     ```json
     {
@@ -51,7 +53,7 @@ To adapt to the dark mode release in Viva Connections Mobile, which is scheduled
     }
     ```
 
-- Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**. 
+- Locate and open the following file: **./src/adaptiveCardExtensions/helloWorld/quickView/QuickView.ts**.
 - Add a variable **imageUrl** to the existing interface **IQuickViewData** and add **imageUrl value** to **data()** function.
 
 ```typescript
@@ -84,13 +86,13 @@ export class QuickView extends BaseAdaptiveCardView<
 }
 ```
 
-- We will get a Quick View in mobile iOS like this:
+- Quick View in mobile iOS looks like this:
 
-:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light.png" alt-text="Screenshot that shows how a image in quickview viewed on mobile will appear in light mode.":::
+:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light.png" alt-text="Screenshot that shows how an image in quick view viewed on mobile appears in light mode.":::
 
 - When we switch to dark mode, the image conflicts with the background.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_dark.png" alt-text="Screenshot that shows how the same image in quickview viewed on mobile will appear in dark mode."::: 
+:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_dark.png" alt-text="Screenshot that shows how the same image in quick view viewed on mobile appears in dark mode."::: 
 
 - To avoid this issue, we can assign different images for light and dark theme in **QuickView.ts**. Replace the existing code in the **data()** function with this snippet:
 
@@ -104,12 +106,12 @@ public get data(): IQuickViewData {
     }
 }
 ```
+
 - Now when we switch to dark mode, on opening the same Quick View we see for light and dark theme respectively.
 
-:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light_and_dark.png" alt-text="Screenshot that shows how a card quickview viewed on mobile will appear in light mode and dark mode with different images assigned.":::
+:::image type="content" source="../../../images/viva-design/img_quickview_tutorial_light_and_dark.png" alt-text="Screenshot that shows how a card quick view viewed on mobile appears in light mode and dark mode with different images assigned.":::
 
 Similarly, we can customize our icons, images, and other elements of Quick View to support both light and dark theme.
 
 > [!NOTE]
 > Please note that the value for ‘this.context.hostContext.theme’ is undefined for web and Teams app as they do not support dark theme and is only available for Viva Connections Mobile iOS and Android.
-
