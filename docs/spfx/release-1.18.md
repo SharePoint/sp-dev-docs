@@ -10,7 +10,7 @@ This release
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.3 **Released**: July 24, 2023
+beta.3 **Released**: August 1, 2023
 beta.2 **Released**: July 18, 2023
 beta.1 **Released**: June 28, 2023
 
