@@ -75,7 +75,7 @@ You can achieve the same result by either granting the permissions to a user or 
 
 | Category     | Group                                                                                                                                              | User                                                                                                     |
 | :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- |
-| Clarity      | A group can contain on or more accounts, typically not visible to the other site collection administrators                                         | User account is always visible, there’s no doubt about it                                                |
+| Clarity      | A group can contain one or more accounts, typically not visible to the other site collection administrators                                         | User account is always visible, there’s no doubt about it                                                |
 | Maintenance  | You can easily grant access by adding new members to the group                                                                                     | New members must be added to all sites                                                                   |
 | Tamper proof | A group can shield the actual accounts having access (e.g. legal account) and other admins are less likely to remove the permissions for the group | There’s full transparency, other admins might be more likely to remove the “weird” users from their site |
 
