@@ -6,13 +6,13 @@ ms.localizationpriority: high
 ---
 # SharePoint Framework v1.18 preview release notes
 
-This release
+This release focuses on new features within the Viva Connections side and evolving existing capabilities within the other areas on building Microsoft 365 solutions with SharePoint Framework.
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
-beta.3 **Released**: August 1, 2023
-beta.2 **Released**: July 18, 2023
-beta.1 **Released**: June 28, 2023
+- beta.3 **Released**: August 1, 2023
+- beta.2 **Released**: July 18, 2023
+- beta.1 **Released**: June 28, 2023
 
 [!INCLUDE [spfx-release-notes-common](../../includes/snippets/spfx-release-notes-common.md)]
 
