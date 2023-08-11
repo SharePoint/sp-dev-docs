@@ -15,7 +15,7 @@ Microsoft Graph Toolkit is a collection of reusable, framework-agnostic componen
 
 Microsoft Graph Toolkit makes it easy to use Microsoft Graph in your application. The following example shows calendar events of the signed-in user with just one line of code by using the [Agenda](/graph/toolkit/components/agenda?WT.mc_id=m365-29707-wmastyka) component.
 
-<iframe src="https://mgt.dev/iframe.html?id=components-mgt-agenda--simple&source=docs" height="500"></iframe>
+> [!VIDEO https://mgt.dev/iframe.html?id=components-mgt-agenda--simple&source=docs]
 
 [Open this example in mgt.dev](https://mgt.dev/?path=/story/components-mgt-agenda--simple&source=docs)
 
