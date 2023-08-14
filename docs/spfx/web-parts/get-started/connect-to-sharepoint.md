@@ -207,8 +207,9 @@ Open the `HelloWorldWebPart` class.
       </ul>`;
       });
 
-      const listContainer: Element = this.domElement.querySelector('#spListContainer');
-      listContainer.innerHTML = html;
+      if(this.domElement.querySelector('#spListContainer') != null) {
+        this.domElement.querySelector('#spListContainer')!.innerHTML = html;
+      }
     }
     ```
 
