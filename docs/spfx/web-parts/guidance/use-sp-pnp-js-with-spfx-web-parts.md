@@ -170,7 +170,7 @@ export const getSP = (context?: WebPartContext): SPFI => {
     // The LogLevel set's at what level a message will be written to the console
     _sp = spfi().using(SPFx(context)).using(PnPLogging(LogLevel.Warning));
   }
-  return _sp;
+  return _sp!;
 };
 ```
 
