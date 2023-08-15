@@ -10,6 +10,7 @@ This release focuses on new features within the Viva Connections side and evolvi
 
 [!INCLUDE [spfx-release-beta](../../includes/snippets/spfx-release-beta.md)]
 
+- beta.5 **Released**: August 15, 2023
 - beta.3 **Released**: August 1, 2023
 - beta.2 **Released**: July 18, 2023
 - beta.1 **Released**: June 28, 2023
@@ -44,13 +45,13 @@ In the project's **package.json** file, identify all SPFx v1.17.x packages. For 
 
 ## New features and capabilities
 
-Related updated documentation for the 1.18 preview release
+Related updated documentation for the 1.18 preview release:
 
 * [Designing Viva Connections custom cards for your dashboard](./viva//design//designing-card.md)
 * [Migrate Adaptive Card Extensions to SharePoint Framework 1.18](./viva/get-started/migrate-to-spfx-1-18.md)
 * [Tutorial - Create a People Search Adaptive Card Extension](./viva/get-started//build-people-search-adaptive-card-extension.md)
 
-New samples showcasing the new Viva Connections features
+New samples showcasing the new Viva Connections features:
 
 * [Start a Chat Text Box input Adaptive Card Extention](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-Start-Chat)
 * [Prompt Survey Adaptive Card Extension](https://github.com/pnp/sp-dev-fx-aces/tree/main/samples/InputCard-Prompt-Survey)
