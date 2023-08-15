@@ -162,7 +162,7 @@ import "@pnp/sp/lists";
 import "@pnp/sp/items";
 import "@pnp/sp/batching";
 
-var _sp: SPFI = null;
+var _sp: SPFI | null = null;
 
 export const getSP = (context?: WebPartContext): SPFI => {
   if (context != null) {
@@ -170,7 +170,7 @@ export const getSP = (context?: WebPartContext): SPFI => {
     // The LogLevel set's at what level a message will be written to the console
     _sp = spfi().using(SPFx(context)).using(PnPLogging(LogLevel.Warning));
   }
-  return _sp;
+  return _sp!;
 };
 ```
 
