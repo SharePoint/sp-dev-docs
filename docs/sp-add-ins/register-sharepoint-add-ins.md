@@ -45,7 +45,7 @@ You can register your add-in in one of three ways, depending on where you are in
 
 ### To register by using AppRegNew.aspx
 > [!NOTE]
-> Site collection admins are not allowed to register ACS in AppRegNew.aspx by default. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
+> Site collection admin is not allowed to register ACS in AppRegNew.aspx by default. For more information, see [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant#-siteownermanagelegacyserviceprincipalenabled).
 
 
 1. Go to `<site collection url>/_layouts/15/AppRegNew.aspx` by using a web browser.
